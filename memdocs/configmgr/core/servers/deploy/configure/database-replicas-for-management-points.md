@@ -1,8 +1,8 @@
 ---
-title: "Management point database replicas"
-titleSuffix: "Configuration Manager"
-description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
-ms.date: 05/12/2020
+title: Management point database replicas
+titleSuffix: Configuration Manager
+description: Use a database replica to reduce the CPU load placed on the site database server by management points.
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,237 +10,244 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Database replicas for management points for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database  server by management points as they service requests from clients.  
+Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database server by management points as they service requests from clients. When a management point uses a database replica, it requests data from the SQL Server computer that hosts the database replica instead of from the site database server.
 
--   When a management point uses a database replica, that management point requests data from the SQL Server computer that hosts the database replica instead of from the site database server.  
+This configuration can help reduce the CPU processing requirements on the site database server by offloading frequent processing tasks related to clients. An example of frequent processing tasks for clients includes sites where there are a large number of clients that make frequent requests for client policy.
 
--   This can help reduce the CPU processing requirements on the site database server by offloading frequent processing tasks related to clients.  An example of frequent processing tasks for clients includes sites where there are a large numbers of clients that make frequent requests for client policy  
+## About
 
+- Replicas are a partial copy of the site database that replicates to a separate instance of  SQL Server.
 
-##  <a name="bkmk_Prepare"></a> Prepare to use database replicas  
-**About database replicas for management points:**  
+  - Primary sites support a dedicated database replica for each management point at the site.
 
--   Replicas are a partial copy of the site database that is replicated to a separate instance of  SQL Server:  
+  - Secondary sites don't support database replicas.
 
-    -   Primary sites support a dedicated database replica for each management point at the site (Secondary sites do not support database replicas)  
+  - A single database replica can be used by more than a one management point from the same site.
 
-    -   A single database replica can be used by more than a one management point from the same site  
+  - A SQL Server can host multiple database replicas for use by different management points so long as each runs in a separate instance of SQL Server.
 
-    -   A SQL Server can host multiple database replicas for use by different management points so long as each runs in a separate instance of SQL Server  
+- Replicas synchronize a copy of the site database on a fixed schedule from data that the site's database server publishes for this purpose.
 
--   Replicas synchronize a copy of the site database on a fixed schedule  from data that is published by the sites database server for this purpose.  
+- You can configure management points to use a replica when you install it, or at a later time. For an existing management point, reconfigure it to use the database replica.
 
--   Management points can be configured to use a replica when you install the management point, or at a later time by reconfiguring the previously installed management point to use the database replica  
+- Regularly monitor the site database server and each database replica server to make sure that replication occurs between them. Make sure that the performance of the database replica server is sufficient for the site and client performance that you require.
 
--   Regularly monitor the site database server and each database replica server to ensure that replication occurs between them, and that the performance of the database replica server is sufficient for the site and client performance that you require  
+## Prerequisites
 
-**Prerequisites for database replicas:**  
+### SQL Server requirements
 
--   **SQL Server requirements:**  
+- The SQL Server that hosts the database replica has the same requirements as the site database server. The replica server doesn't need to run the same version or edition of SQL Server as the site database server, as long as it runs a supported version and edition of SQL Server. For more information, see [Support for SQL Server versions](../../../../core/plan-design/configs/support-for-sql-server-versions.md).
 
-    -   The SQL Server that hosts the database replica must meet the same requirements as the site database server. However, the replica server does not need to run the same version or edition of SQL Server as the site database server, as long as it runs a supported version and edition of SQL Server. For information see [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md)  
+- The SQL Server service on the computer that hosts the replica database must run as the **System** account.
 
-    -   The SQL Server Service on the computer that hosts the replica database must run as the **System** account.  
+- Both the SQL Server that hosts the site database and that hosts a database replica must have **SQL Server replication** installed.
 
-    -   Both the SQL Server that hosts the site database and that hosts a database replica must have **SQL Server replication** installed.  
+- The site database must *publish* the database replica, and each remote database replica server must *subscribe* to the published data.
 
-    -   The site database must **publish** the database replica, and each remote database replica server must **subscribe** to the published data.  
+- Configure both SQL Servers to support a **max text repl size** of 2 GB. For more information and how to configure this setting for SQL Server, see [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option).
 
-    -   Both the SQL Server that hosts the  site database and that hosts a database replica must be configured to support a **Max Text Repl Size** of 2 GB. For an example of how to configure this for SQL Server 2012, see [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option).  
+### Self-signed certificate
 
--   **Self-signed certificate:** To configure a database replica, you must create a self-signed certificate on the database replica server and make this certificate available to each management point that will use that database replica server.  
+To configure a database replica, create a self-signed certificate on the database replica server. Make this certificate available to each management point that will use that database replica server.
 
-    -   The certificate is automatically available to a management point that is installed on the database replica server.  
+- The certificate is automatically available to a management point that's installed on the database replica server.
 
-    -   To make this certificate available to remote management points, you must export the certificate and then add it to the **Trusted People** certificate store on the remote management point.  
+- To make this certificate available to remote management points, first export the certificate. Then add it to the **Trusted People** certificate store on the remote management point.
 
--   **Client notification:** To support client notification with a database replica for a management point, you must configure communication between the site database server and the database replica server for the **SQL Server Service Broker**. This requires you to:  
+### Client notification
 
-    -   Configure each database with information about the other database  
+To support client notification with a database replica for a management point, configure communication between the site database server and the database replica server for the **SQL Server Service Broker**:
 
-    -   Exchange certificates between the two databases for secure communication  
+- Configure each database with information about the other database.
 
-**Limitations when you use database replicas:**  
+- Exchange certificates between the two databases for secure communication.
 
--   When your site is configured to publish database replicas, the following procedures should be used in place of normal guidance:  
+## Limitations
 
-    -   [Uninstall a site server that publishes a database replica](#BKMK_DBReplicaOps_Uninstall)  
+- When you configure the site to publish database replicas, use the following procedures instead of the normal guidance:
 
-    -   [Move a site server database that publishes a database replica](#BKMK_DBReplicaOps_Move)  
+  - [Uninstall a site server that publishes a database replica](#BKMK_DBReplicaOps_Uninstall)
 
--   **Upgrades to Configuration Manager current branch**: Before you upgrade a site, either from System Center 2012 Configuration Manager to Configuration Manager current branch or updating Configuration Manager current branch to the latest release, you must disable database replicas for management points.  After your site upgrades, you can reconfigure the database replicas for management points.  
-
--   **Multiple replicas on a single SQL Server:**  If you configure  a database replica server to host multiple database replicas for management points (each replica must be on a separate instance) you must use a modified configuration script (from Step 4 of the following section)  to prevent overwriting the self-signed certificate in use by previously configured database replicas on that server.  
+  - [Move a site server database that publishes a database replica](#BKMK_DBReplicaOps_Move)
 
 - User deployments in Software Center won't work against a management point using a SQL Server replica. <!--sccmdocs-1011-->
 
-##  <a name="BKMK_DBReplica_Config"></a> Configure database replicas  
-To use configure a database replica, the following steps are required:  
+- Upgrades to Configuration Manager current branch: Before you upgrade a site, either from System Center 2012 Configuration Manager to Configuration Manager current branch or updating Configuration Manager current branch to the latest release, disable database replicas for management points. After your site upgrades, you can reconfigure the database replicas for management points.
 
--   [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB)  
+- Multiple replicas on a single SQL Server: If you configure separate instances of a database replica server to host multiple database replicas for management points, use a modified configuration script. As noted in step 4 of the process to [Configure database replicas](#BKMK_DBReplica_Cert), this action prevents overwriting the self-signed certificate in use by previously configured database replicas on that server.
 
--   [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv)  
+## <a name="BKMK_DBReplica_Config"></a> Configure
 
--   [Step 3 - Configure management points to use the database replica](#BKMK_DBReplica_ConfigMP)  
+To configure a database replica, the following steps are required:
 
--   [Step 4 -Configure a self-signed certificate for the database replica server](#BKMK_DBReplica_Cert)  
+- [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB)
 
--   [Step 5 - Configure the SQL Server Service Broker for the database replica server](#BKMK_DBreplica_SSB)  
+- [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv)
 
-###  <a name="BKMK_DBReplica_ConfigSiteDB"></a> Step 1 - Configure the site database server to Publish the database replica  
- Use the following procedure as an example of how to configure the site database server on a Windows Server 2008 R2 computer to publish the database replica. If you have a different operating system version, refer to your operating system documentation and adjust the steps in this procedure as necessary.  
+- [Step 3 - Configure management points to use the database replica](#BKMK_DBReplica_ConfigMP)
 
-##### To configure the site database server  
+- [Step 4 -Configure a self-signed certificate for the database replica server](#BKMK_DBReplica_Cert)
 
-1.  On the site database server, set the SQL Server Agent to automatically start.  
+- [Step 5 - Configure the SQL Server Service Broker for the database replica server](#BKMK_DBreplica_SSB)
 
-2.  On the site database server, create a local user group with the name **ConfigMgr_MPReplicaAccess**. You must add the computer account for each database replica server that you use at this site to this group to enable those database replica servers to synchronize with the published database replica.  
+### <a name="BKMK_DBReplica_ConfigSiteDB"></a> Step 1 - Configure the site database server to publish the database replica
 
-3.  On the site database server, configure a file share with the name **ConfigMgr_MPReplica**.  
+Use the following procedure as an example of how to configure the site database server to publish the database replica. The specific steps might vary depending upon the version of Windows Server.
 
-4.  Add the following permissions to the **ConfigMgr_MPReplica** share:  
+Do the following steps on the site database server:
 
-    > [!NOTE]  
-    >  If the SQL Server Agent uses an account other than the local system account, replace SYSTEM with that account name in the following list.  
+1. Set the SQL Server Agent to automatically start.
 
-    -   **Share Permissions**:  
+1. Create a local user group with the name **ConfigMgr_MPReplicaAccess**. For each database replica server that you use at this site, add its computer account to this group. This action enables those database replica servers to synchronize with the published database replica.
 
-        -   SYSTEM: **Write**  
+    > [!NOTE]
+    > You can also create a domain group for this purpose.
 
-        -   ConfigMgr_MPReplicaAccess: **Read**  
+1. Configure a file share with the name **ConfigMgr_MPReplica**.
 
-    -   **NTFS Permissions**:  
+1. Add the following permissions to the **ConfigMgr_MPReplica** share:
 
-        -   SYSTEM: **Full Control**  
+    > [!NOTE]
+    > If the SQL Server Agent uses an account other than the local system account, replace SYSTEM with that account name in the following list.
 
-        -   ConfigMgr_MPReplicaAccess: **Read**, **Read & execute**, **List folder contents**  
+    - Share permissions:
 
-5.  Use **SQL Server Management Studio** to connect to the site database and run the following stored procedure as a query: **spCreateMPReplicaPublication**  
+      - SYSTEM: **Change**
 
-When the stored procedure completes, the site database server is configured to publish the database replica.  
+      - ConfigMgr_MPReplicaAccess: **Read**
 
-###  <a name="BKMK_DBReplica_ConfigSrv"></a> Step 2 - Configuring the database replica server  
-The database replica server is a computer that runs SQL Server and that hosts a replica of the site database for management points to use. On a fixed schedule, the database replica server synchronizes its copy of the database with the database replica that is published by the site database server.  
+    - NTFS permissions:
 
-The database replica server must meet the same requirements as the site database server. However, the database replica server can run a different edition or version of SQL Server than the site database server uses. For information about the supported versions of SQL Server, see the [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md) topic.  
+      - SYSTEM: **Full Control**
 
-> [!IMPORTANT]  
->  The SQL Server Service on the computer that hosts the replica database must run as the System account.  
+      - ConfigMgr_MPReplicaAccess: **Read**, **Read & execute**, and **List folder contents**
 
-Use the following procedure as an example of how to configure a database replica server on a Windows Server 2008 R2 computer. If you have a different operating system version, refer to your operating system documentation and adjust the steps in this procedure as necessary.  
+1. Use **SQL Server Management Studio** to connect to the site database and run the following stored procedure as a query: `spCreateMPReplicaPublication`
 
-##### To configure the database replica server  
+    > [!NOTE]
+    > If you're using a domain group instead of a local group, change this SQL statement to: `EXEC spCreateMPReplicaPublication N'<DomainName>\ConfigMgr_MPReplicaAccess'`<!-- MEMDocs#527 -->
 
-1. On the database replica server, set the SQL Server Agent to automatic startup.  
+When the stored procedure completes, the site database server is configured to publish the database replica.
 
-2. On the database replica server, use **SQL Server Management Studio** to connect to the local server, browse to the **Replication** folder, click Local Subscriptions, and select **New Subscriptions** to start the **New Subscription Wizard**:  
+### <a name="BKMK_DBReplica_ConfigSrv"></a> Step 2 - Configure the database replica server
 
-   1. On the **Publication** page, in the **Publisher** list box, select **Find SQL Server Publisher**, enter the name of the sites database server, and then click **Connect**.  
+Use the following procedure as an example of how to configure a database replica server. The specific steps might vary depending upon the version of Windows Server.
 
-   2. Select **ConfigMgr_MPReplica**, and then click **Next**.  
+Do the following steps on the database replica server:
 
-   3. On the **Distribution Agent Location** page, select **Run each agent at its Subscriber (pull subscriptions)**, and click **Next**.  
+1. Set the SQL Server Agent to automatic startup.
 
-   4. On the **Subscribers** page do one of the following:  
+1. Use **SQL Server Management Studio** to connect to the local server. Browse to the **Replication** folder, select **Local Subscriptions**, and then select **New Subscriptions**. This action starts the **New Subscription Wizard**.
 
-      -   Select an existing database from the database replica server to use for the database replica, and then click **OK**.  
+    1. On the **Publication** page, select **Find SQL Server Publisher**. Enter the name of the site database server, and then select **Connect**.
 
-      -   Select **New database** to create a new database for the database replica. On the **New Database** page, specify a database name, and then click **OK**.  
+    1. Select **ConfigMgr_MPReplica**, and then select **Next**.
 
-   5. Click **Next** to continue.  
+    1. On the **Distribution Agent Location** page, select **Run each agent at its Subscriber (pull subscriptions)**, and then select **Next**.
 
-   6. On the **Distribution Agent Security** page, click the properties button **(....)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
+    1. On the **Subscribers** page, do one of the following actions:
 
-      > [!TIP]  
-      >  The properties button, **(....)**, is in the fourth column of the display box.  
+        - Select an existing database from the database replica server to use for the database replica, and then select **OK**.
 
-      **Security settings:**  
+        - Select **New database** to create a new database for the database replica. On the **New Database** page, specify a database name, and then select **OK**.
 
-      - Configure the account that runs the Distribution Agent process (the process account):  
+    1. Select **Next** to continue.
 
-        -   If the SQL Server Agent runs as local system, select **Run under the SQL Server Agent service account (This is not a recommended security best practice.)**  
+    1. On the **Distribution Agent Security** page, select the properties button **(...)** in the Subscriber Connection row of the dialog box. Then configure the security settings for the connection.
 
-        -   If the SQL Server Agent runs by using a different account, select **Run under the following Windows account**, and then configure that account. You can specify a Windows account or a SQL Server account.  
+        > [!TIP]
+        > The properties button, **(...)**, is in the fourth column of the display box.
 
-        > [!IMPORTANT]  
-        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](/sql/relational-databases/replication/distribution-agent-security).  
+      - Configure the account that runs the Distribution Agent process (*process account*):
 
-      - For **Connect to the Distributor**, select **By impersonating the process account**.  
+        - If the SQL Server Agent runs as local system, select **Run under the SQL Server Agent service account (This is not a recommended security best practice.)**
 
-      - For **Connect to the Subscriber**, select **By impersonating the process account**.  
+        - If the SQL Server Agent runs by using a different account, select **Run under the following Windows account**, and then configure that account. You can specify a Windows account or a SQL Server account.
 
-        After you configure the connection security settings, click **OK** to save them, and then click **Next**.  
+        > [!IMPORTANT]
+        > Grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For more information about configuring these permissions, see [Distribution agent security](/sql/relational-databases/replication/distribution-agent-security).
 
-   7. On the **Synchronization Schedule** page, in the **Agent Schedule** list box, select **Define schedule**, and then configure the **New Job Schedule**. Set the frequency to occur **Daily**, recur every **5 minute(s)**, and the duration to have **No end date**. Click **Next** to save the schedule, and then click **Next** again.  
+      - For **Connect to the Distributor**, select **By impersonating the process account**.
 
-   8. On the **Wizard Actions** page, select the check box for **Create the subscriptions(s)**, and then click **Next**.  
+      - For **Connect to the Subscriber**, select **By impersonating the process account**.
 
-   9. On the **Complete the Wizard** page, click **Finish**, and then click **Close** to complete the Wizard.  
+        After you configure the connection security settings, select **OK** to save them, and then select **Next**.
 
-3. Immediately after completing the New Subscription Wizard, use **SQL Server Management Studio** to connect to the database replica server database and run the following query to enable the TRUSTWORTHY database property:  `ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
+    1. On the **Synchronization Schedule** page, select **Define schedule**, and then configure the **New Job Schedule**. Set the frequency to occur **Daily**, recur every **5 minute(s)**, and the duration to have **No end date**. Select **Next** to save the schedule, and then select **Next** again.
 
-4. Review the synchronization status to validate that the subscription is successful:  
+    1. On the **Wizard Actions** page, enable the option to **Create the subscriptions(s)**, and then select **Next**.
 
-   -   On the subscriber computer:  
+    1. Complete the wizard.
 
-       -   In **SQL Server Management Studio**, connect to the database replica server and expand **Replication**.  
+1. Immediately after completing the New Subscription Wizard, use **SQL Server Management Studio** to connect to the database replica server database. Run the following query to enable the TRUSTWORTHY database property: `ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`
 
-       -   Expand **Local Subscriptions**, right-click the subscription to the site database publication, and then select **View Synchronization Status**.  
+1. Review the synchronization status to validate that the subscription is successful:
 
-   -   On the publisher computer:  
+    - On the subscriber computer:
 
-       -   In **SQL Server Management Studio**, connect to the site database computer, right-click the **Replication** folder, and then select **Launch Replication Monitor**.  
+      - In **SQL Server Management Studio**, connect to the database replica server, and expand **Replication**.
 
-5. To enable common language runtime (CLR) integration for the database replica, use **SQL Server Management Studio** to connect to the database replica on the database replica server, and run the following stored procedure as a query: **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**  
+      - Expand **Local Subscriptions**, right-click the subscription to the site database publication, and then select **View Synchronization Status**.
 
-6. For each management point that uses a database replica server, add that management points computer account to the local **Administrators** group on that database replica server.  
+    - On the publisher computer:
 
-   > [!TIP]  
-   >  This step is not necessary for a management point that runs on the database replica server.  
+      - In **SQL Server Management Studio**, connect to the site database computer, right-click the **Replication** folder, and then select **Launch Replication Monitor**.
 
-   The database replica is now ready for a management point to use.  
+1. To enable common language runtime (CLR) integration for the database replica, use **SQL Server Management Studio** to connect to the database replica on the database replica server. Run the following stored procedure as a query: `exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE`
 
-###  <a name="BKMK_DBReplica_ConfigMP"></a> Step 3 - Configure management points to use the database replica  
- You can configure a management point at a primary site to use a database replica when you install the management point role, or you can reconfigure an existing management point to use a database replica.  
+1. For each management point that uses a database replica server, add that management points computer account to the local **Administrators** group on that database replica server.
 
- Use the following information to configure a management point to use a database replica:  
+    > [!TIP]
+    > This step isn't necessary for a management point that runs on the database replica server.
 
--   **To configure a new management point:** On the **Management Point Database** page of the wizard that you use to install the management point, select **Use a database replica**, and specify the FQDN of the computer that hosts the database replica. Next, for **ConfigMgr site database name**, specify the database name of the database replica on that computer.  
+The database replica is now ready for a management point to use.
 
--   **To configure a previously installed management point**: Open the properties page of the management point, select the **Management Point Database** tab, select **Use a database replica**, and then specify the FQDN of the computer that hosts the database replica. Next, for **ConfigMgr site database name**, specify the database name of the database replica on that computer.  
+### <a name="BKMK_DBReplica_ConfigMP"></a> Step 3 - Configure management points to use the database replica
 
--   **For each management point that uses a database replica**, you must manually add the computer account of the management point server to the **db_datareader** role for the database replica.  
+You can configure a management point at a primary site to use a database replica when you install the management point role, or you can reconfigure an existing management point to use a database replica.
 
-In addition to configuring the management point to use the database replica server, you must enable **Windows Authentication** in **IIS** on the management point:  
+Use the following information to configure a management point to use a database replica:
 
-1.  Open **Internet Information Services (IIS) Manager**.  
+- To configure a new management point:
 
-2.  Select the website used by the management point, and open **Authentication**.  
+    1. On the **Management Point Database** page of the wizard to install the management point, select **Use a database replica**.
+    1. Specify the FQDN of the computer that hosts the database replica.
+    1. For the **ConfigMgr site database name**, specify the database name of the database replica on that computer.
 
-3.  Set **Windows Authentication** to **Enabled**, and then close **Internet Information Services (IIS) Manager**.  
+- To configure a previously installed management point:
 
-###  <a name="BKMK_DBReplica_Cert"></a> Step 4 -Configure a self-signed certificate for the database replica server  
- You must create a self-signed certificate on the database replica server and make this certificate available to each management point that will use that database replica server.  
+    1. Open the properties page of the management point, and switch to the **Management Point Database** tab.
+    1. Select **Use a database replica**, and then specify the FQDN of the computer that hosts the database replica.
+    1. Next, for **ConfigMgr site database name**, specify the database name of the database replica on that computer.
 
- The certificate is automatically available to a management point that is installed on the database replica server. However, to make this certificate available to remote management points, you must export the certificate and then add it to the Trusted People certificate store on the remote management point.  
+For each management point that uses a database replica, manually add the computer account of the management point server to the **db_datareader** role for the database replica.
 
- Use the following procedures as an example of how to configure the self-signed certificate on the database replica server for a Windows Server 2008 R2 computer. If you have a different operating system version, refer to your operating system documentation and adjust the steps in these procedures as necessary.  
+In addition to configuring the management point to use the database replica server, enable **Windows Authentication** in **IIS** on the management point:
 
-##### To configure a self-signed certificate for the database replica server  
+1. Open **Internet Information Services (IIS) Manager**.
 
-1.  On the database replica server, open a PowerShell command prompt with administrative privileges, and then run the following command: **set-executionpolicy UnRestricted**  
+1. Select the website used by the management point, and open **Authentication**.
 
-2.  Copy the following PowerShell script and save it as a file with the name **CreateMPReplicaCert.ps1**. Place a copy of this file in the root folder of the system partition of the database replica server.  
+1. Set **Windows Authentication** to **Enabled**, and then close **Internet Information Services (IIS) Manager**.
 
-    > [!IMPORTANT]  
-    >  If you are configuring more than one  database replica on a single SQL Server, for each subsequent replica you configure you must use a modified version of this script for this procedure. See  [Supplemental script for additional database replicas on a single SQL Server](#bkmk_supscript)  
+###  <a name="BKMK_DBReplica_Cert"></a> Step 4 -Configure a self-signed certificate for the database replica server
+
+Use the following procedures as an example of how to configure the self-signed certificate on the database replica server. The specific steps might vary depending upon the version of Windows Server.
+
+#### Configure a self-signed certificate for the database replica server
+
+1. On the database replica server, open a PowerShell command prompt with administrative privileges, and then run the following command: `Set-ExecutionPolicy Unrestricted`
+
+1. Copy the following PowerShell script and save it as a file with the name **CreateMPReplicaCert.ps1**. Place a copy of this file in the root folder of the system partition of the database replica server.
+
+    > [!IMPORTANT]
+    > If you're configuring more than one database replica on a single SQL Server, for each subsequent replica you configure, use a modified version of this script for this procedure. For more information, see [Supplemental script for additional database replicas on a single SQL Server](#bkmk_supscript).
 
     ``` PowerShell
     # Script for creating a self-signed certificate for the local machine and configuring SQL Server to use it.  
@@ -367,140 +374,145 @@ In addition to configuring the management point to use the database replica serv
     Restart-Service $SQLServiceName -Force  
     ```  
 
-3.  On the database replica server, run the following command that applies to the configuration of your SQL Server:  
+1. On the database replica server, run the following command that applies to the configuration of your SQL Server:
 
-    -   For a default instance of SQL Server: Right-click the file **CreateMPReplicaCert.ps1** and select **Run with PowerShell**. When the script runs, it creates the self-signed certificate and configures SQL Server to use the certificate.  
+    - For a default instance of SQL Server: Enter the following command in the PowerShell session: `.\CreateMPReplicaCert.ps1`. When the script runs, it creates the self-signed certificate and configures SQL Server to use the certificate.
 
-    -   For a named instance of SQL Server: Use PowerShell to run the command **%path%\CreateMPReplicaCert.ps1 xxxxxx** where **xxxxxx** is the name of the SQL Server instance.  
+    - For a named instance of SQL Server: Use PowerShell to run the following command: `.\CreateMPReplicaCert.ps1 <SQL Server instance name>`
 
-    -   After the script completes, verify that the SQL Server Agent is running. If not, restart the SQL Server Agent.  
+    After the script completes, verify that the SQL Server Agent is running. If not, restart the SQL Server Agent.
 
-##### To configure remote management points to use the self-signed certificate of the database replica server  
+#### Configure remote management points to use the self-signed certificate of the database replica server
 
-1.  Perform the following steps on the database replica server to export the server's self-signed certificate:  
+Do the following steps on the *database replica server* to export the server's self-signed certificate:
 
-    1.  Click **Start**, click **Run**, and type **mmc.exe**. In the empty console, click **File**, and then click **Add/Remove Snap-in**.  
+1. Go to the **Start** menu, select **Run**, and type `mmc.exe`. In the empty console, select **File**, and then select **Add/Remove Snap-in**.
 
-    2.  In the **Add or Remove Snap-ins** dialog box, select **Certificates** from the list of **Available snap-ins**, and then click **Add**.  
+1. In the **Add or Remove Snap-ins** dialog box, select **Certificates** from the list of **Available snap-ins**, and then select **Add**.
 
-    3.  In the **Certificate snap-in** dialog box, select **Computer account**, and then click **Next**.  
+1. In the **Certificate snap-in** dialog box, select **Computer account**, and then select **Next**.
 
-    4.  In the **Select Computer** dialog box, ensure that **Local computer: (the computer this console is running on)** is selected, and then click **Finish**.  
+1. In the **Select Computer** dialog box, make sure that **Local computer: (the computer this console is running on)** is selected, and then select **Finish**.
 
-    5.  In the **Add or Remove Snap-ins** dialog box, click **OK**.  
+1. In the **Add or Remove Snap-ins** dialog box, select **OK**.
 
-    6.  In the console, expand **Certificates (Local Computer)**, expand **Personal**, and select **Certificates**.  
+1. In the console, expand **Certificates (Local Computer)**, expand **Personal**, and select **Certificates**.
 
-    7.  Right-click the certificate with the friendly name of **ConfigMgr SQL Server Identification Certificate**, click **All Tasks**, and then select **Export**.  
+1. Right-click the certificate with the friendly name of **ConfigMgr SQL Server Identification Certificate**, select **All Tasks**, and then select **Export**.
 
-    8.  Complete the **Certificate Export Wizard** by using the default options and save the certificate with the **.cer** file name extension.  
+1. Complete the **Certificate Export Wizard** with the default options. Save the certificate with the **.cer** file name extension.
 
-2.  Perform the following steps on the management point computer to add the self-signed certificate for the database replica server to the Trusted People certificate store on the management point:  
 
-    1.  Repeat the preceding steps 1.a through 1.e to configure the **Certificate** snap-in MMC on the management point computer.  
+Do the following steps on the *management point* server to add the self-signed certificate for the database replica server to the Trusted People certificate store:
 
-    2.  In the console, expand **Certificates (Local Computer)**, expand **Trusted People**, right-click **Certificates**, select **All Tasks**, and then select **Import** to start the **Certificate Import Wizard**.  
+1. Repeat the preceding steps to open the **Certificate** snap-in MMC on the management point computer.
 
-    3.  On the **File to Import** page, select the certificate saved in step 1.h, and then click **Next**.  
+1. In the Certificates console, expand **Certificates (Local Computer)**, expand **Trusted People**, right-click **Certificates**, select **All Tasks**, and then select **Import**. This action starts the **Certificate Import Wizard**.
 
-    4.  On the **Certificate Store** page, select **Place all certificates in the following store**, with the **Certificate store** set to **Trusted People**, and then click **Next**.  
+1. On the **File to Import** page, select the saved certificate, and then select **Next**.
 
-    5.  Click **Finish** to close the wizard and complete the certificate configuration on the management point.  
+1. On the **Certificate Store** page, select **Place all certificates in the following store**, with the **Certificate store** set to **Trusted People**, and then select **Next**.
 
-###  <a name="BKMK_DBreplica_SSB"></a> Step 5 - Configure the SQL Server Service Broker for the database replica server  
-To support client notification with a database replica for a management point, you must configure communication between the site database server and the database replica server for the SQL Server Service Broker. This requires you to configure each database with information about the other database, and to exchange certificates between the two databases for secure communication.  
+1. Select **Finish** to close the wizard and complete the certificate configuration on the management point.
 
-> [!NOTE]  
->  Before you can use the following procedure, the database replica server must successfully complete the initial synchronization with the site database server.  
+### <a name="BKMK_DBreplica_SSB"></a> Step 5 - Configure the SQL Server Service Broker for the database replica server
 
- The following procedure does not modify the Service Broker port that is configured in SQL Server for the site database server or the database replica server. Instead, this procedure configures each database to communicate with the other database by using the correct Service Broker port.  
+To support client notification with a database replica for a management point, configure communication between the site database server and the database replica server for the SQL Server Service Broker. Configure each database with information about the other database, and to exchange certificates between the two databases for secure communication.
 
- Use the following procedure to configure the Service Broker for the site database server and the database replica server.  
+> [!NOTE]
+> Before you can use the following procedure, the database replica server must successfully complete the initial synchronization with the site database server.
 
-##### To configure the service broker for a database replica  
+The following procedure doesn't modify the Service Broker port that's configured in SQL Server for the site database server or the database replica server. This procedure configures each database to communicate with the other database by using the correct Service Broker port.
 
-1. Use **SQL Server Management Studio** to connect to database replica server database, and then run the following query to enable the Service Broker on the database replica server: **ALTER DATABASE &lt;Replica Database Name\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
+Use the following procedure to configure the Service Broker for the site database server and the database replica server:
 
-2. Next, on the database replica server, configure the Service Broker for client notification and export the Service Broker certificate. To do this, run a SQL Server stored procedure that configures the Service Broker and exports the certificate as a single action. When you run the stored procedure, you must specify the FQDN of the database replica server, the name of the database replicas database, and specify a location for the export of the certificate file.  
+1. Use **SQL Server Management Studio** to connect to the *replica server database*. Then run the following query to enable the Service Broker on the database replica server: `ALTER DATABASE <Replica Database Name> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE`
 
-    Run the following query to configure the required details on the database replica server, and to export the certificate for the database replica server: **EXEC sp_BgbConfigSSBForReplicaDB '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>', '&lt;Certificate Backup File Path\>'**  
+1. On the *database replica server*, configure the Service Broker for client notification and export the Service Broker certificate. Run a SQL Server stored procedure that configures the Service Broker and exports the certificate as a single action. When you run the stored procedure, specify the FQDN of the database replica server, the name of the database replicas database, and specify a location for the export of the certificate file.
 
-   > [!NOTE]  
-   >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **&lt;Instance name\\Replica Database Name\>**.  
+    Run the following query to configure the required details on the database replica server, and to export the certificate for the database replica server: `EXEC sp_BgbConfigSSBForReplicaDB '<Replica SQL Server FQDN>', '<Replica Database Name>', '<Certificate Backup File Path>'`
 
-    After you export the certificate from the database replica server, place a copy of the certificate on the primary sites database server.  
+    > [!NOTE]
+    > When the database replica server isn't on the default instance of SQL Server, also specify the instance name with the replica database name. In the example command, replace `<Replica Database Name>` with `<Instance name>\<Replica Database Name>`.
 
-3. Use **SQL Server Management Studio** to connect to the primary site database. After you connect to the primary sites database, run a query to import the certificate and specify the Service Broker port that is in use on the database replica server, the FQDN of the database replica server, and name of the database replicas database. This configures the primary sites database to use the Service Broker to communicate to the database of the database replica server.  
+    After you export the certificate from the database replica server, place a copy of the certificate on the primary site database server.
 
-    Run the following query to import the certificate from the database replica server and specify the required details: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>', '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>'**  
+1. Use **SQL Server Management Studio** to connect to the *primary site database*. After you connect to the primary sites database, run a query to import the certificate and specify the Service Broker port that's in use on the database replica server, the FQDN of the database replica server, and name of the database replicas database. This action configures the primary sites database to use the Service Broker to communicate to the database of the database replica server.
 
-   > [!NOTE]  
-   >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **\Instance name\\Replica Database Name\>**.  
+    Run the following query to import the certificate from the database replica server and specify the required details: `EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '<SQL Service Broker Port>', '<Certificate File Path>', '<Replica SQL Server FQDN>', '<Replica Database Name>'`
 
-4. Next, on the site database server, run the following command to export the certificate for the site database server: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;Certificate Backup File Path\>'**  
+    > [!NOTE]
+    > When the database replica server isn't on the default instance of SQL Server, also specify the instance name with the replica database name. In the example command, replace `<Replica Database Name>` with `<Instance name>\<Replica Database Name>`.
 
-    After you export the certificate from the site database server, place a copy of the certificate on the database replica server.  
+1. On the *site database server*, run the following command to export the certificate for the site database server: `EXEC sp_BgbCreateAndBackupSQLCert '<Certificate Backup File Path>'`
 
-5. Use **SQL Server Management Studio** to connect to the database replica server database. After you connect to the database replica server database, run a query to import the certificate and specify the site code of the primary site and the Service Broker port that is in use on the site database server. This configures the database replica server to use the Service Broker to communicate to the database of the primary site.  
+    After you export the certificate from the site database server, place a copy of the certificate on the database replica server.
 
-    Run the following query to import the certificate from the site database server: **EXEC sp_BgbConfigSSBForRemoteService '&lt;Site Code\>', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>'**  
+1. Use **SQL Server Management Studio** to connect to the *replica server database*. After you connect to the replica server database, run a query to import the certificate and specify the site code of the primary site and the Service Broker port that's in use on the site database server. This action configures the database replica server to use the Service Broker to communicate to the database of the primary site.
 
-   A few minutes after you complete the configuration of the site database and the database replica database, the notification manager at the primary site sets up the Service Broker conversation for client notification from the primary site database to the database replica.  
+    Run the following query to import the certificate from the site database server: `EXEC sp_BgbConfigSSBForRemoteService '<Site Code>', '<SQL Service Broker Port>', '<Certificate File Path>'`
 
-###  <a name="bkmk_supscript"></a> Supplemental script for additional database replicas on a single SQL Server  
- When you use the script from step 4 to  configure a self-signed certificate for the database replica server on a SQL Server that already has a database replica you plan to continue using, you must use a modified version of the  original script. The following modifications prevent the script from deleting an existing certificate on the server, and create subsequent certificates with unique Friendly names.  Edit the original script as follows:  
+A few minutes after you complete the configuration of the site database and the database replica database, the notification manager at the primary site sets up the Service Broker conversation for client notification from the primary site database to the database replica.
 
--   Comment out (prevent from running) each line between the script entries **# Delete existing cert if one exists** and **# Create the new cert**. To do so, add a  **#**  as the first character of  each  applicable line.  
+### <a name="bkmk_supscript"></a> Supplemental script for other database replicas on a single SQL Server
 
--   For each subsequent  database replica you use this script to configure, update the Friendly name for the certificate.  To do so, edit the line **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** and replace **ConfigMgr SQL Server Identification Certificate** with a new name, like  **ConfigMgr SQL Server Identification Certificate1**.  
+When you use the script from step 4 to configure a self-signed certificate for the database replica server on a SQL Server that already has a database replica you plan to continue using, use a modified version of the original script. The following modifications prevent the script from deleting an existing certificate on the server, and create subsequent certificates with unique friendly names. Edit the original script as follows:
 
-##  <a name="BKMK_DBReplicaOps"></a> Manage database replica configurations  
- When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When you use information in the following sections to delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For more information, see [Delete a Publication](/sql/relational-databases/replication/publish/delete-a-publication).  
+- Comment out each line between the script entries `# Delete existing cert if one exists` and `# Create the new cert`. Add a pound sign (`#`) as the first character of each applicable line.
 
-> [!NOTE]  
->  After you restore a site database that was configured for database replicas, before you can use the database replicas you must reconfigure each database replica, recreating both the publications and subscriptions.  
+- For each subsequent database replica you use this script to configure, update the friendly name for the certificate. Edit the line `$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"` and replace `ConfigMgr SQL Server Identification Certificate` with a new name. For example, `ConfigMgr SQL Server Identification Certificate1`.
 
-###  <a name="BKMK_UninstallDbReplica"></a> Uninstall a database replica  
- When you use a database replica for a management point, you might need to uninstall the database replica for a period of time, and then reconfigure it for use. For example, you must remove database replicas before you upgrade a Configuration Manager site to a new service pack. After the site upgrade completes, you can restore the database replica for use.  
+## <a name="BKMK_DBReplicaOps"></a> Manage database replica configurations
 
- Use the following steps to uninstall a database replica.  
+When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For more information, see [Delete a Publication](/sql/relational-databases/replication/publish/delete-a-publication).
 
-1.  In the **Administration** workspace of the Configuration Manager console, expand **Site Configuration**, then select **Servers and Site System Roles**, and then in the details pane select the site system server that hosts the management point that uses the database replica you will uninstall.  
+> [!NOTE]
+> After you restore a site database that was configured for database replicas, before you can use the database replicas, reconfigure each database replica and recreate both the publications and subscriptions.
 
-2.  In the **Site System Roles** pane, right click **Management point** and select **Properties**.  
+### <a name="BKMK_UninstallDbReplica"></a> Uninstall a database replica
 
-3.  On the **Management Point Database** tab, select **Use the site database** to configure the management point to use the site database instead of the database replica. Then, click **OK** to save the configuration.  
+When you use a database replica for a management point, you might need to uninstall it and then reconfigure it for use. For example, remove database replicas before you update Configuration Manager to the latest version. After the site update completes, restore the database replica for use.
 
-4.  Next, Use **SQL Server Management Studio** to perform the following tasks:  
+Use the following steps to uninstall a database replica.
 
-    -   Delete the publication for the database replica from the site server database.  
+1. In the **Administration** workspace of the Configuration Manager console, expand **Site Configuration**, then select **Servers and Site System Roles**. In the details pane, select the site system server that hosts the management point that uses the database replica you will uninstall.
 
-    -   Delete the subscription for the database replica from the database replica server.  
+1. In the **Site System Roles** pane, select the **Management point** role. In the ribbon, on the **Site Role** tab, select **Properties**.
 
-    -   Delete the replica database from the database replica server.  
+1. Switch to the **Management Point Database** tab. Select **Use the site database** to configure the management point to use the site database instead of the database replica. Select **OK** to save the configuration.
 
-    -   Disable publishing and distribution on the site database server. To disable publishing and distribution, right-click the Replication folder and then click **Disable Publishing and Distribution**.  
+1. Use **SQL Server Management Studio** to do the following tasks:
 
-5.  After you delete the publication, subscription, the replica database, and disable publishing on the site database server, the database replica is uninstalled.  
+    - Delete the publication for the database replica from the site server database.
 
-###  <a name="BKMK_DBReplicaOps_Uninstall"></a> Uninstall a site server that publishes a database replica  
- Before you uninstall a site that publishes a database replica, use the following steps to clean up the publication and any subscriptions.  
+    - Delete the subscription for the database replica from the database replica server.
 
-1.  Use **SQL Server Management Studio** to delete the database replica publication from the site server database.  
+    - Delete the replica database from the database replica server.
 
-2.  Use **SQL Server Management Studio** to delete the database replica subscription from each remote SQL Server that hosts a database replica for this site.  
+    - Disable publishing and distribution on the site database server. To disable publishing and distribution, right-click the **Replication** folder and select **Disable Publishing and Distribution**.
 
-3.  Uninstall the site.  
+After you delete the publication, subscription, the replica database, and disable publishing on the site database server, the database replica is uninstalled.
 
-###  <a name="BKMK_DBReplicaOps_Move"></a> Move a site server database that publishes a database replica  
- When you move the site database to a new computer, use the following steps:  
+### <a name="BKMK_DBReplicaOps_Uninstall"></a> Uninstall a site server that publishes a database replica
 
-1.  Use **SQL Server Management Studio** to delete the publication for the database replica from the site server database.  
+Before you uninstall a site that publishes a database replica, use the following steps to clean up the publication and any subscriptions.
 
-2.  Use **SQL Server Management Studio** to delete the subscription for the database replica from each database replica server for this site.  
+1. Use **SQL Server Management Studio** to delete the database replica publication from the site server database.
 
-3.  Move the database to the new SQL Server computer. For more information, see the [Modify the site database configuration](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) section in the [Modify your Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md) topic.  
+1. Use **SQL Server Management Studio** to delete the database replica subscription from each remote SQL Server that hosts a database replica for this site.
 
-4.  Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB) in this topic.  
+1. Uninstall the site.
 
-5.  Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv) in this topic.
+### <a name="BKMK_DBReplicaOps_Move"></a> Move a site server database that publishes a database replica
+
+When you move the site database to a new computer, use the following steps:
+
+1. Use **SQL Server Management Studio** to delete the publication for the database replica from the site server database.
+
+1. Use **SQL Server Management Studio** to delete the subscription for the database replica from each database replica server for this site.
+
+1. Move the database to the new SQL Server computer. For more information, see [Modify the site database configuration](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_dbconfig).
+
+1. Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB).
+
+1. Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv).
