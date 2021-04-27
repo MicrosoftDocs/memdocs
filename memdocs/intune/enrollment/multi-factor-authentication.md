@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 04/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -41,7 +41,7 @@ MFA works by requiring any two or more of the following verification methods:
 - Something you have (a trusted device that isn't easily duplicated, like a phone).
 - Something you are (biometrics, like a fingerprint).
 
-MFA is supported for iOS/iPadOS, Android, and Windows 8.1 or later devices.
+MFA is supported for iOS/iPadOS, macOS, Android, and Windows 8.1 or later devices.
 
 When you enable MFA, end users needs a second device and must supply two forms of credentials to enroll a device.
 
@@ -77,6 +77,7 @@ To require MFA when a device is enrolled, follow these steps:
 > - Android Enterprise Fully Managed.
 > - Android Enterprise Corporate Owned Work Profile.
 > - iOS/iPadOS Automated Device Enrollment.
+> - macOS Automated Device Enrollment.
 >
 > The second device is required because the primary device can't receive calls or text messages during the provisioning process.
 

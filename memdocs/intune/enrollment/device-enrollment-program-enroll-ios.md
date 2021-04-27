@@ -203,7 +203,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.
 
-        If you also use the **Install Company Portal with VPP** option below, the Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option).
+        If you also use the **Install Company Portal with VPP** option below (recommended), the Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option). If the option isn't used, the user must supply an Apple ID to install the Company Portal (either during Setup Assistant or when Intune tries to install the Company Portal).
 
         If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or during Company Portal sign in, then MFA is required. However, MFA is optional based on the AAD settings in the targeted Conditional Access policy.
 
@@ -224,7 +224,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png" alt-text="Screenshot that shows the options for installing the Company Portal app with VPP.":::
 
-   For more information about connecting Intune to Apple Volume Purchase Program (VPP), see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
+   For more information about connecting Intune to Apple Volume Purchase Program (VPP), see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md). After you've connected to VPP, you can add the Company Portal app to your Apple Business Manager/Apple School Manager inventory so it can be assigned through Intune.
 8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
 9. If you select a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Select **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in with Company Portal.
