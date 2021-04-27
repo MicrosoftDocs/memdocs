@@ -2,7 +2,7 @@
 title: "Console extension registration through community hub"
 description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
-ms.date: "03/19/2021"
+ms.date: "04/27/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Console extension registration though community hub
@@ -101,6 +102,13 @@ Manifest.xml format:
 				</File>
 			</FileList>
 		</ViewExtensionDeployment>
+        <CabExtensionDeployment>
+            <FileList>
+                <File Name="{The name of the cab file to deploy. For example: MyCab.cab}">
+                    <Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+                </File>
+            </FileList>
+        </CabExtensionDeployment>
 	</Deployments>
 </CustomExtensionManifest>
 ```
