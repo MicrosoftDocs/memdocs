@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2021
+ms.date: 04/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,6 +57,7 @@ For iOS/iPadOS, you will be able to configure actions for the following settings
 - Max PIN attempts
 - Offline grace period
 - Jailbroken/rooted devices
+- Max OS version
 - Min OS version
 - Min app version
 - Min SDK version
