@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manually sync your iOS device with Intune Company Portal
-description: Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations.
+title: Check compliance status in Intune Company Portal
+description: Initiate a manual device check-in in Company Portal to update your device settings status and regain access to your work or school resources.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 04/27/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,30 +30,24 @@ ms.collection:
 ---
 
 
-# Sync your iOS device manually
+# Check compliance on your iOS device  
+Manually start a device check-in from the Company Portal to:
 
-Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations. During a sync, Company Portal checks in with your device to make sure it's meeting your organization's requirements. It syncs your device with policies or updates that you may not have yet and can help resolve downloads or other processes that are in progress. 
+* Update your device settings status 
+* Regain access to your work or school resources 
 
-Company Portal regularly checks in with your device, but you can use the following steps to start a sync anytime from the app. 
+Company Portal regularly checks in with your device, but you can start a check-in anytime from the app.  During a check-in, Company Portal confirms that the settings on your device meet your organization's policy requirements. Your organization can limit or restrict access to work or school resources until you check in.  
 
-1. Open the Company Portal app.
+If you recently made changes to your device settings, you may need to manually check in to register these changes with Company Portal. 
 
-2. Tap **Devices**. 
-3. If you only have one device, you'll go directly to the device details screen and can skip to step 4. If you have multiple devices, you'll see all devices in a list. Tap the device that you're currently using. 
+1. Open the Company Portal app for iOS on your device.  
 
-    ![Screenshot of the Devices screen, showing three devices and highlighting the one that the user is currently using. The top device has text that says "This is the iPhone that you're currently using."](./media/ios-sync-1-company-portal-2006.png)
+2. Tap **Device** and then select your device.  
 
-4. Tap **Check Status** to sync your device. 
-
-    ![Screenshot of the device details highlighting Check status link.](./media/ios-sync-2-company-portal-2006.png)  
-
- 5. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
-
-       ![Screenshot of the Device details highlighting the loading bar.](./media/ios-sync-3-company-portal-2006.png)
+3. Tap **Check status**. Company Portal will check your device to confirm that it's meeting your organization's policy requirements. Once the check is complete, the device settings status will tell you if you have access to company resources. 
 
 
-## Next steps  
-Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task. Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Still need help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 
 
