@@ -7,7 +7,7 @@ keywords:
 author: Brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 04/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: ayesham
+ms.reviewer: janisjones
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,6 +31,9 @@ ms.collection: M365-identity-device-management
 # Use Locations (network fence) in Intune
 
 You may want to block access to a corporate network if a device leaves a location. The **Locations** feature in Intune provides this functionality. 
+
+> [!TIP]
+> This feature is available only for the *Android device administrator* platform.
 
 You can create a network location-based compliance policy, also known as network fencing. The policy ensures devices must be connected to a work network to be compliant. This policy can be used with Conditional Access policies so devices have access to work resources *only* when the device is connected to the work network. When the device isn't connected to the work network, the device becomes not compliant, and loses access to work resources.
 
