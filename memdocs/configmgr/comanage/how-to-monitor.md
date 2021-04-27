@@ -128,7 +128,7 @@ Two policies are created in the **Deployments** node of the **Monitoring** works
 
 The production policy (CoMgmtSettingsProd) is targeted to the **All Systems** collection. It has an applicability condition that checks the OS type and version. If the client is a server OS or not Windows 10, the policy doesn't apply, and no action is taken.
 
-> [TIP]
+> [!TIP]
 > For an example collection query for co-managed devices see, [Create queries in Configuration Manager](../core/servers/manage/create-queries.md#bkmk_comgmt).
  
 ## WMI device data
