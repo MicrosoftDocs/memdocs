@@ -203,7 +203,16 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.
 
-        If you also use the **Install Company Portal with VPP** option below (recommended), the Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option). If the option isn't used, the user must supply an Apple ID to install the Company Portal (either during Setup Assistant or when Intune tries to install the Company Portal).
+        The Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option) in both of the following situations:
+
+        - If you use the **Install Company Portal with VPP** option below (recommended).
+        - If the end user sets up their Apple ID account during Setup Assistant.
+
+        In both of these situations, the Company Portal will be a required app on the device. Also, when the end user gets to the home screen, the correct app configuration policy will automatically be applied to the device.
+
+        Don't send a separate app configuration policy to the Company Portal for iOS/iPadOS devices after enrolling with Setup Assistant with modern authentication. Doing so will result in an error.
+
+        If you don't use the VPP option, the user must supply an Apple ID to install the Company Portal (either during Setup Assistant or when Intune tries to install the Company Portal).
 
         If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or during Company Portal sign in, then MFA is required. However, MFA is optional based on the AAD settings in the targeted Conditional Access policy.
 
