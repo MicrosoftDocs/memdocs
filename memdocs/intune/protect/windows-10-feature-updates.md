@@ -101,14 +101,14 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 - Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives. The service is utilized by Microsoft Endpoint Manager and works with your Intune policies for Windows 10 updates to deploy feature updates to devices.
 
-When a device is no longer assigned to any feature update policies, Intune waits 90 days to unenroll that device from feature update management and to unenroll that device from the deployment service. This delay allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that was not intended.
+  When a device is no longer assigned to any feature update policies, Intune waits 90 days to unenroll that device from feature update management and to unenroll that device from the deployment service. This delay allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that was not intended.
 
-This means that when a feature updates policy no longer applies to a device, that device won’t be offered any feature updates until one of the following happens:
+  This means that when a feature updates policy no longer applies to a device, that device won’t be offered any feature updates until one of the following happens:
 
-- 90 days elapse.
-- The device is assigned to a new feature update profile.
-- The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
-- You use the Windows Update for [Business deployment service graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
+  - 90 days elapse.
+  - The device is assigned to a new feature update profile.
+  - The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
+  - You use the Windows Update for [Business deployment service graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
 
 ## Create and assign Windows 10 feature updates policy
 
