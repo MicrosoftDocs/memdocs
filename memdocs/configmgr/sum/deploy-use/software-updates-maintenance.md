@@ -131,7 +131,7 @@ When the WSUS database is on a remote SQL Server, you might need to add permissi
 
 > [!NOTE]  
 > - If the WSUS database is on a remote SQL Server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
-> - If the Software Update Point is remote to the site server and is using a Windows Internal Database then the indexes will not be added.
+> - If the Software Update Point is remote to the site server and is using a Windows Internal Database, then the indexes will not be added.
 
 ### Remove obsolete updates from the WSUS database
 
@@ -151,7 +151,7 @@ When the WSUS database is on a remote SQL Server, the site server's computer acc
 - The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 > [!NOTE]  
-> If the Software Update Point is remote to the site server and is using a Windows Internal Database then obsolete updates will not be removed.
+> If the Software Update Point is remote to the site server and is using a Windows Internal Database, then obsolete updates will not be removed.
 
 #### WSUS cleanup wizard
 
