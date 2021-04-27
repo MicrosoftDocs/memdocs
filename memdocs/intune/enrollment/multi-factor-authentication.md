@@ -63,7 +63,7 @@ To require MFA when a device is enrolled, follow these steps:
 6. In the **Assignments** section, choose **Cloud apps**.
 7. On the **Include** tab of **Cloud apps**, choose **Select apps**, then choose **Select** > **Microsoft Intune Enrollment**, and then choose **Done**. By choosing Microsoft Intune Enrollment, conditional access MFA is applied only to the enrollment of the device (one-time MFA prompt).
 
-    For Apple Automated Device Enrollments, you have two options:
+    For Apple Automated Device Enrollments using **Setup assistant with modern authentication**, you have two options:
 
     | Cloud app | MFA prompt location | Automated Device Enrollment notes |
     | --- | --- | --- |
