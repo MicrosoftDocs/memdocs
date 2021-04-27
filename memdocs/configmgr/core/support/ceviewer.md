@@ -2,7 +2,7 @@
 title: Collection Evaluation Viewer
 titleSuffix: Configuration Manager
 description: Use the Collection Evaluation Viewer to view and troubleshoot the collection evaluation process in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -59,7 +59,7 @@ There are four threads that run to evaluate the collections in the above queues.
 
 - The user also requires **Read** permission to the site database in SQL
 
-
+- SQL must be on the default port
 
 ## Usage
 
