@@ -63,8 +63,10 @@ To require MFA when a device is enrolled, follow these steps:
 6. In the **Assignments** section, choose **Cloud apps**.
 7. On the **Include** tab of **Cloud apps**, choose **Select apps**, then choose **Select** > choose one of the following options:
 
-    - **Microsoft Intune**: With this option, MFA is required during enrollment and for each login to the Company Portal app/Company Portal website. Conditional access MFA is applied only to the login of the Company Portal on the device.
-    - **Microsoft Intune Enrollment**: With this option, MFA is applied only to the enrollment of the device (one-time MFA prompt). Conditional access MFA is applied only to the login of the Company Portal on the device.
+    | Cloud app | MFA prompt location | Notes |
+    | --- | --- | --- |
+    | **Microsoft Intune** | Setup Assistant,<br>Company Portal app | With this option, MFA is required during enrollment and for each login to the Company Portal app/Company Portal website. Conditional access MFA is applied only to the login of the Company Portal on the device. |
+    | **Microsoft Intune Enrollment** | Setup Assistant | With this option, MFA is applied only to the enrollment of the device (one-time MFA prompt). Conditional access MFA is applied only to the login of the Company Portal on the device. |
 
 8. Choose **Done**.
 9. In the **Assignments** section, for **Conditions** you don't need to configure any settings for MFA.
