@@ -2,7 +2,7 @@
 title: Monitor co-management
 titleSuffix: Configuration Manager
 description: Use the co-management dashboard to review information about co-managed devices.
-ms.date: 06/12/2020
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -128,6 +128,9 @@ Two policies are created in the **Deployments** node of the **Monitoring** works
 
 The production policy (CoMgmtSettingsProd) is targeted to the **All Systems** collection. It has an applicability condition that checks the OS type and version. If the client is a server OS or not Windows 10, the policy doesn't apply, and no action is taken.
 
+> [TIP]
+> For an example collection query for co-managed devices see, [Create queries in Configuration Manager](../core/servers/manage/create-queries.md#bkmk_comgmt).
+ 
 ## WMI device data
 
 Query the **SMS_Client_ComanagementState** WMI class in the **ROOT\SMS\site_&lt;SITECODE>** namespace on the site server. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](../core/clients/manage/collections/create-collections.md).
