@@ -2137,7 +2137,7 @@ In order to have style changes apply to the Intune MAM views, you must first cre
 </styleOverrides>
 ```
 
-You must reuse resources that already exist within your app. For example, you must define the color green in the colors.xml file and reference it here. You cannot use the Hex color code "#0000ff." The maximum size for the app logo is 110 dip (dp). You may use a smaller logo image, but adhering to the maximum size will yield the best looking results. If you exceed the 110 dip limit, the image will scale down and possibly cause blurring.
+You must reuse resources that already exist within your app. For example, you must define the color green in the colors.xml file and reference it here. You cannot use the Hex color code "#0000ff". The maximum size for the app logo is 110 dip (dp). You may use a smaller logo image, but adhering to the maximum size will yield the best looking results. If you exceed the 110 dip limit, the image will scale down and possibly cause blurring.
 
 Below is the complete list of allowed style attributes, the UI elements they control, their XML attribute item names, and the type of resource expected for each.
 
