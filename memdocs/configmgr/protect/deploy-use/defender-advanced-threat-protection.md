@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender for Endpoint
 titleSuffix: Configuration Manager
-description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
-ms.date: 10/28/2020
+description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 # Microsoft Defender for Endpoint
 
@@ -26,6 +24,7 @@ Microsoft Defender for Endpoint is a service in the [Microsoft Defender Security
 - Subscription to the Microsoft Defender for Endpoint online service  
 - Clients computers running the Configuration Manager client
 - Clients using an OS listed in the [Supported client operating systems](#bkmk_os) section below.
+- Your administrative user account needs the **Endpoint Protection Manager** security role.<!-- MEMDocs#698 -->
 
 ### <a name="bkmk_os"></a> Supported client operating systems
 

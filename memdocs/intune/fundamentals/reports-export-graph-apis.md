@@ -4,8 +4,8 @@
 title: Use Graph APIs to export Intune Reports | Microsoft Docs
 description: Learn about exporting Intune reports using Graph APIs.
 keywords: 
-ms.author: erikre
 author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 03/10/2021
 ms.topic: conceptual

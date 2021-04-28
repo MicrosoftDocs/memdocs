@@ -1,167 +1,186 @@
 ---
 title: Configure role-based administration
 titleSuffix: Configuration Manager
-ms.date: 11/08/2019
+description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user.
+ms.date: 04/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user
 ---
 
 # Configure role-based administration for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-In Configuration Manager, role-based administration combines security roles, security scopes, and assigned collections to define the administrative scope for each administrative user. An administrative scope includes the objects that an administrative user can view in the Configuration Manager console and the tasks related to those objects that the administrative user has permission to perform. Role-based administration configurations are applied at each site in a hierarchy.  
+In Configuration Manager, role-based administration combines security roles, security scopes, and assigned collections to define the administrative scope for each administrative user. An administrative scope includes the objects that an administrative user can view in the Configuration Manager console and the tasks related to those objects that they have permission to do.
 
- If you're not yet familiar with concepts for role-based administration, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).  
+If you're not yet familiar with these concepts, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
- The information in the following procedures can help you create and configure role-based administration and related security settings:  
+Use the information in this article to create and configure role-based administration and related security settings.
 
-- [Create custom security roles](#BKMK_CreateSecRole)  
-- [Configure security roles](#BKMK_ConfigSecRole)  
-- [Configure security scopes for an object](#BKMK_ConfigSecScope)  
-- [Configure collections to manage security](#BKMK_ConfigColl)  
-- [Create a new administrative user](#BKMK_Create_AdminUser)  
-- [Modify the administrative scope of an administrative user](#BKMK_ModAdminUser)  
+> [!NOTE]
+> The procedures in this article assume that your administrative user is in a security role with the required permissions. For example, the **Full Administrator** or **Security administrator** roles.
 
-## <a name="BKMK_CreateSecRole"></a> Create custom security roles
+> [!TIP]
+> Use the [Role-based administration and auditing tool](../../../support/rbaviewer.md) to help with the following actions:
+>
+> - Model permissions for a new role that you want to create.
+> - Audit all existing administrative users, collections, and security scopes.
+> - Audit a specific user
 
- Configuration Manager provides several built-in security roles. If you require additional security roles, you can create a custom security role by creating a copy of an existing security role, and then modifying the copy. You might create a custom security role to grant administrative users the additional security permissions they require that aren't included in a currently assigned security role. By using a custom security role, you can grant them only the permissions they require, and avoid assigning a security role that grants more permissions than they require.  
+## Create custom security roles
 
- Use the following procedure to create a new security role by using an existing security role as a template.  
+Configuration Manager provides several [built-in security roles](../../../understand/fundamentals-of-role-based-administration.md#security-roles). You can't change the permissions of the built-in roles. If you require other roles, create a custom one. You might create a custom role to grant administrative users other permissions that they require and aren't included in a built-in role. By using a custom security role, you can assign them the least required permissions. A custom role can help you avoid assigning a security role that grants more permissions than they require.
 
-### To create custom security roles
+### How to create custom security roles
 
-1. In the Configuration Manager console, go to **Administration**.  
+In the Configuration Manager console, go to the **Administration** workspace. Expand **Security**, and then select the **Security Roles** node. Then use one of the following processes to create a new security role:
 
-2. In the **Administration** workspace, expand **Security**, and then choose **Security Roles**.  
+#### Create a new custom security role by copying a built-in role
 
-   Use one of the following processes to create the new security role:  
+1. Select an existing security role to use as the source for the new role.
 
-    - To create a new custom security role, perform the following actions:  
+1. On the **Home** tab of the ribbon, in the **Security Role** group, select **Copy**. This action creates a copy of the source security role.
 
-      1. Select an existing security role to use as the source for the new security role.
-      2. On the **Home** tab, in the **Security Role** group, choose **Copy**. This action creates a copy of the source security role.  
-      3. In the Copy Security Role wizard, specify a **Name** for the new custom security role.  
-      4. In **Security operation assignments**, expand each **Security Operations** node to display the available actions.  
-      5. To change the setting for a security operation, choose the down arrow in the **Value** column, and choose either **Yes** or **No**.
+1. In the Copy Security Role wizard, specify a **Name** for the new custom security role. The maximum length is 256 characters.
 
-            > [!CAUTION]  
-            > When you configure a custom security role, ensure that you don't grant permissions that aren't required by administrative users that are associated with the new security role. For example, the **Modify** value for the **Security Roles** security operation grants administrative users permission to edit any accessible security role – even if they aren't associated with that security role.  
+1. Optional but recommended, specify a **Description** to summarize the purpose of this custom security role. The maximum length is 512 characters.
 
-      6. After you configure the permissions, choose **OK** to save the new security role.  
+1. Under **Permissions**, expand each object type to display the available permissions.
 
-    - To import a security role that was exported from another Configuration Manager hierarchy, perform the following actions:  
+1. To change a permission, select the drop-down list, and choose either **Yes** or **No**.
 
-        1. On the **Home** tab, in the **Create** group, choose **Import Security Role**.  
-        2. Specify the .xml file that contains the security role configuration that you want to import. Choose **Open** to complete the procedure and save the security role.  
+    > [!CAUTION]
+    > When you configure a custom security role, only grant permissions that are required by the users assigned to this role. For example, the **Modify** permission for the **Security Roles** object allows assigned users to edit any accessible security role, even if they aren't assigned to that security role.
 
-            > [!NOTE]  
-            > After you import a security role, you can edit the security role properties to change the object permissions that are associated with the security role.  
+1. After you configure the permissions, select **OK** to save the new security role.
 
-## <a name="BKMK_ConfigSecRole"></a> Configure security roles
+#### Import a security role that was exported from another Configuration Manager hierarchy
 
- The groups of security permissions that are defined for a security role are called security operation assignments. Security operation assignments represent a combination of object types and actions that are available for each object type. You can modify which security operations are available for any custom security role, but you can't modify the built-in security roles that Configuration Manager provides.  
+> [!IMPORTANT]
+> Only import custom security role configuration files from a trusted source. When you export a custom security role, save it in a secure location. The XML files aren't digitally signed.
 
- Use the following procedure to modify the security operations for a security role.  
+1. On the **Home** tab of the ribbon, in the **Create** group, choose **Import Security Role**.
 
-### To modify security roles
+1. Specify the XML file that contains the exported security role configuration. Select **Open** to complete the procedure and create the security role.
 
-1. In the Configuration Manager console, choose **Administration**.  
-2. In the **Administration** workspace, expand **Security**, and then choose **Security Roles**.  
-3. Select the custom security role that you want to modify.  
-4. On the **Home** tab, in the **Properties** group, choose **Properties**.  
-5. Choose the **Permissions** tab.  
-6. In **Security operation assignments**, expand each **Security Operations** node to display the available actions.  
-7. To change the setting for a security operation, choose the down arrow in the **Value** column, and then choose either **Yes** or **No**.  
+1. After you import a custom security role, open its **Properties**. View the permissions to confirm they include the least required permissions for this role. Change any permissions that aren't required in this environment.
 
-    > [!CAUTION]  
-    > When you configure a custom security role, ensure that you don't grant permissions that aren't required by administrative users that are associated with the new security role. For example, the **Modify** value for the **Security Roles** security operation grants administrative users permission to edit any accessible security role – even if they aren't associated with that security role.  
+> [!NOTE]
+> You can't export built-in security roles.
 
-8. When you've finished configuring security operation assignments, choose **OK** to save the new security role.  
+## Configure security roles
 
-##  <a name="BKMK_ConfigSecScope"></a> Configure security scopes for an object
- You manage the association of a security scope for an object from the object–not from the security scope. The only direct configurations that security scopes support are changes to its name and description. To change the name and description of a security scope when you view the security scope properties, you must have the **Modify** permission for the **Security Scopes** securable object.  
+You can modify the permissions for a custom security role, but you can't modify the built-in security roles.
 
- When you create a new object in Configuration Manager, it's associated with each security scope that's associated with the security roles of the account used to create the object. This behavior occurs when those security roles provide the **Create** permission or **Set Security Scope** permission. You can change the security scopes for the object after you create it.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and then select the **Security Roles** node.
 
- As an example, you're assigned a security role that grants you permission to create a new boundary group. When you create a new boundary group, you have no option that you can assign specific security scopes to. Instead, the security scopes that are available from the security roles you're associated with are automatically assigned to the new boundary group. After you save the new boundary group, you can edit the security scopes that are associated with the new boundary group.  
+1. Select the custom security role that you want to modify or view.
 
- Use the following procedure to configure the security scopes that are assigned to an object.  
+1. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
 
-### <a name="bkmk_config-sec-scope"></a> To configure security scopes for an object  
+1. On the **General** tab of the properties window, change the **Name** or **Description** if necessary.
 
-1. In the Configuration Manager console, select an object that supports being assigned to a security scope.  
-2. On the **Home** tab, in the **Classify** group, choose **Set Security Scopes**.
-3. In the **Set Security Scopes** dialog box, select or clear the security scopes that this object is associated with. Each object that supports security scopes must be assigned to at least one security scope.  
-4. Choose **OK** to save the assigned security scopes.  
+1. On the **Administrative Users** tab, view the users that are associated with this role. To change the assignment, go to the properties of the administrative user.
 
-    > [!NOTE]  
-    > When you create a new object, you can assign the object to multiple security scopes. To modify the number of security scopes that are associated with the object, you must change this assignment after the object is created.
+1. On the **Permissions** tab, expand each object type to display the available permissions.
 
-### <a name="bkmk_config-folder"></a> To configure security scopes for a folder (starting in version 1906)
-<!--3600867-->
+1. To change a permission, select the drop-down list, and then choose either **Yes** or **No**.
 
-1. In the Configuration Manager console, select a folder.  
-1. On the **Folder** tab in the ribbon, choose **Set Security Scopes**.
-   - You can also right-click the folder and choose **Folder** > **Set Security Scopes**.
-1. In the **Set Security Scopes** dialog box, select or clear security scopes for the folder. Each folder must be assigned to at least one security scope. All folders are assigned the **Default** security scope until you change it.
-1. Choose **OK** to save the assigned security scopes.  
+    > [!CAUTION]
+    > When you configure a custom security role, only grant permissions that are required by the users assigned to this role. For example, the **Modify** permission for the **Security Roles** object allows assigned users to edit any accessible security role, even if they aren't assigned to that security role.
 
-    > [!IMPORTANT]  
-    > - Existing security roles will automatically get **Folder Class** permissions added when you install Configuration Manager version 1906. You'll need to add **Folder Class** permissions for any new security roles and verify existing roles have the appropriate permissions for your environment.
-    > 
-    > - An item is searchable in folder outside of a user's security scope if that user shares a security scope with the person who created the object. <!--5602690-->
+1. When you're done, select **OK** to save the custom security role.
 
-## <a name="BKMK_ConfigColl"></a> Configure collections to manage security
+## Configure security scopes for an object
 
- There are no procedures to configure collections for role-based administration. Collections don't have a role-based administration configuration. Instead, you assign collections to an administrative user when you configure the administrative user. The collection security operations that are enabled in the user-assigned security roles determine the permissions that an administrative user has for collections and collection resources (collection members).  
+Manage security scopes from the securable object, not from the security scope. The only properties you can change on a custom security scope is the name and description. You can't modify the two built-in scopes. To change the name and description of a custom scope, you need the **Modify** permission for the **Security Scopes** object.
 
- When an administrative user has permissions to a collection, they also have permissions to collections that are limited to that collection. As an example, your organization uses a collection named All Desktops. There's also a collection named All North America Desktops that's limited to the All Desktops collection. If an administrative user has permissions to All Desktops, they also have those same permissions to the All North America Desktops collection.
+When you create a new object in Configuration Manager, it's associated with each security scope that's associated with the security roles of the account used to create the object. This behavior occurs when those security roles provide the **Create** permission or **Set Security Scope** permission. After you create an object, you can change the security scopes and assign it to multiple scopes.
 
- Additionally, an administrative user can't use the **Delete** or **Modify** permission on a collection that's directly assigned to them. But, they can use these permissions on the collections that are limited to that collection. In the previous example, the administrative user can delete or modify the All North America Desktops collection, but they can't delete or modify the All Desktops collection.  
+For example, you're assigned a security role that grants you permission to create a new boundary group. That role is associated with the **Admins** security scope. When you create a new boundary group, you've no option to assign specific security scopes. The **Admins** security scope is automatically assigned to the new boundary group. After you save the new boundary group, you can edit the security scopes for the boundary group.
 
-## <a name="BKMK_Create_AdminUser"></a> Create a new administrative user
+For more information on how to add a scope for a user, see [Modify the administrative scope of an administrative user](#modify-the-administrative-scope-of-an-administrative-user).
 
- To grant individuals or members of a security group access to manage Configuration Manager, create an administrative user in Configuration Manager and specify the Windows account of the User or User Group. Each administrative user in Configuration Manager must be assigned at least one security role and one security scope. You can also assign collections to limit the administrative scope of the administrative user.  
+### How to create a custom security scope
 
- Use the following procedures to create new administrative users.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and then select the **Security Scopes** node.
 
-### To create a new administrative user  
+1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Security Scope**.
 
-1. In the Configuration Manager console, choose **Administration**.  
-2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.  
-3. On the **Home** tab, in the **Create** group, choose **Add User or Group**.  
-4. Choose **Browse**, and then select the user account or group to use for this new administrative user.  
+1. In the Create Security Scope window, specify a **Security scope name**. The maximum length is 256 characters.
 
-    > [!NOTE]  
-    > For console-based administration, only domain users or security groups can be specified as an administrative user.
+1. Optional but recommended, specify a **Description** to summarize the purpose of this custom security scope. The maximum length is 512 characters.
 
-5. For **Associated security roles**, choose **Add** to open a list of the available security roles, check the box for one or more security roles, and then choose **OK**.  
+1. Select or remove administrative user assignments. You can change these after you create the security scope.
 
-6. Choose one of the following two options to define the securable object behavior for the new user:  
+1. To save the custom security scope, select **OK**.
 
-    - **All instances of the objects that are related to the assigned security roles**: This option associates the administrative user with the **All** security scope, and the **All Systems** and **All Users and User Groups** collections. The security roles that are assigned to the user define access to objects. New objects that this administrative user creates are assigned to the **Default** security scope.  
+### How to configure security scopes for an object
 
-    - **Only the instances of objects that are assigned to the specified security scopes and collections**: By default, this option associates the administrative user with the **Default** security scope, and the **All Systems** and **All Users and User Groups** collections. However, the actual security scopes and collections are limited to those that are associated with the account that you used to create the new administrative user. This option supports the addition or removal of security scopes and collections to customize the administrative scope of the administrative user.  
+1. In the Configuration Manager console, select an object that supports being assigned to a security scope. For the list of supported objects, see [Fundamentals of role-based administration - Security scopes](../../../understand/fundamentals-of-role-based-administration.md#security-scopes).
 
-    > [!IMPORTANT]  
-    > The preceding options associate each assigned security scope and collection to each security role that is assigned to the administrative user. You can use a third option, **Associate assigned security roles with specific security scopes and collections**, to associate individual security roles to specific security scopes and collections. This third option is available after you create the new administrative user, when you modify the administrative user.  
+1. On the **Home** tab of the ribbon, in the **Classify** group, select **Set Security Scopes**.
 
-7. Depending on your selection in step 6, take the following action:  
+    For a folder, go to the **Folder** tab of the ribbon. In the **Actions** group, select **Set Security Scopes**.<!--3600867-->
 
-    - If you selected **All instances of the objects that are related to the assigned security roles**, choose **OK** to complete this procedure.  
+    > [!NOTE]
+    > An item is searchable in folders outside of a user's security scope if that user shares a security scope with the person who created the object.<!--5602690-->
 
-    - If you selected **Only the instances of objects that are assigned to the specified security scopes and collections**, you can choose **Add** to select additional collections and security scopes. Or select one or more objects in the list, and then choose **Remove** to remove them. Choose **OK** to complete this procedure.  
+1. In the **Set Security Scopes** window, select or clear the security scopes for this object. Select at least one security scope.
 
-## <a name="BKMK_ModAdminUser"></a> Modify the administrative scope of an administrative user
+1. Select **OK** to save the assigned security scopes.
 
- You can modify the administrative scope of an administrative user by adding or removing security roles, security scopes, and collections that are associated with the user. Each administrative user must be associated with at least one security role and one security scope. You might have to assign one or more collections to the administrative scope of the user. Most security roles interact with collections and don't function correctly without an assigned collection.  
+## Configure collections to manage security
+
+There are no procedures to configure collections for role-based administration. Collections don't have a role-based administration configuration. Instead, you assign collections to an administrative user. To determine the actions that an administrative user can do to a collection and its members, view the permissions for the **Collection** object type on the security role.
+
+When an administrative user has permissions to a collection, they also have permissions to collections that are limited to that collection. For example, your organization uses a collection named **All Desktops**. There's also a collection named **All North America Desktops** that's limited to the **All Desktops** collection. If an administrative user has permissions to **All Desktops**, they have the same permissions to the **All North America Desktops** collection.
+
+An administrative user can't use the **Delete** or **Modify** permissions on a collection that's directly assigned to them. They can use these permissions on the collections that are limited to that collection. In the previous example, the administrative user can delete or modify the **All North America Desktops** collection, but they can't delete or modify the **All Desktops** collection.
+
+## Create a new administrative user
+
+To grant individuals or members of a security group access to manage Configuration Manager, create an administrative user. Specify a Windows account of the user or user group. Assign each administrative user to at least one security role and one security scope. You can also assign collections to limit the administrative scope of the user or group.
+
+### How to create a new administrative user
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and then select the **Administrative Users** node.
+
+1. On the **Home** tab of the ribbon, in the **Create** group, select **Add User or Group**.
+
+1. Select **Browse**, and then select the user account or group to use for this new administrative user in Configuration Manager.
+
+    > [!NOTE]
+    > For console-based administration, you can only specify domain users or domain security groups as an administrative user.
+
+1. For the **Associated security roles**, select **Add** to open a list of the available security roles. Select one or more security roles, and then select **OK**.
+
+1. Choose one of the following options to define the securable object behavior for the new user:
+
+    - **All instances of the objects that are related to the assigned security roles**: This option has the following behaviors:
+        - Security scope: **All**
+        - Collections: **All Systems** and **All Users and User Groups**
+        - The security roles that you assign to the user define their access to objects.
+        - New objects that this user creates are assigned to the **Default** security scope.
+
+    - **Only the instances of objects that are assigned to the specified security scopes and collections**: This option has the following behaviors:
+        - Security scope: **Default**
+        - Collections: **All Systems** and **All Users and User Groups**
+        - These defaults maybe different, as the actual security scopes and collections are limited to those that are associated with the account that you use to create the administrative user.
+        - **Add** or **Remove** security scopes and collections to customize the administrative scope of this user.
+
+    > [!IMPORTANT]
+    > After you create the user, view its properties to select a third option, **Associate assigned security roles with specific security scopes and collections**. For more information, see [Modify the administrative scope of an administrative user](#modify-the-administrative-scope-of-an-administrative-user).
+
+1. Select **OK** to close the window and create the administrative user.
+
+## Modify the administrative scope of an administrative user
+You can modify the administrative scope of an administrative user by adding or removing security roles, security scopes, and collections that are associated with the user. Each administrative user must be associated with at least one security role and one security scope. You might have to assign one or more collections to the administrative scope of the user. Most security roles interact with collections and don't function correctly without an assigned collection.  
 
  When you modify an administrative user, you can change the behavior for how securable objects are associated with the assigned security roles. The three behaviors that you can select are as follows:  
 
@@ -264,5 +283,7 @@ Use the following procedure to modify an administrative user that has the secura
     > When a security role grants administrative users the collection deployment permission, those administrative users can distribute objects from any security scope for which they have object **read** permissions, even if that security scope is associated with a different security role.  
 
 ## Next steps
+
+[Role-based administration and auditing tool](../../../support/rbaviewer.md)
 
 [Accounts used in Configuration Manager](../../../plan-design/hierarchy/accounts.md)

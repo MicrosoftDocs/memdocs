@@ -411,7 +411,7 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 > [!NOTE]
 > Select **Yes** in the **Review Required Ports for PXE** dialog box to confirm that you want to enable PXE. Configuration Manager automatically configures the default ports on Windows firewall. If you use a different firewall, manually configure the ports.
 >
-> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP).
+> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#considerations-when-you-have-wds-and-dhcp-on-the-same-server).
 
 - **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable WDS to respond to PXE service requests. Use this setting to enable and disable the service without removing the PXE functionality from the distribution point.
 

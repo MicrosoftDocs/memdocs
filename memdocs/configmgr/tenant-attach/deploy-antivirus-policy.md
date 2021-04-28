@@ -2,7 +2,7 @@
 title: Tenant attach - Deploy endpoint security policies from the Microsoft Endpoint Manager admin center  (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy endpoint security policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 04/05/2021
+ms.date: 04/22/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -79,9 +79,11 @@ To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://supp
 <!--9089764 -->
 *(Introduced in 2103)*
 
-Starting in Configuration Manager 2103, When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions.
+Starting in Configuration Manager 2103, When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions. For earlier versions of Configuration Manager, all antivirus exclusions should be done in a single policy since only the exclusions from the last policy the client received are applied. <!--9397015-->
 
 For example, an antivirus policy is created from the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) that includes some [antivirus exclusions](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#microsoft-defender-antivirus-exclusions). A second antivirus policy is created including only antivirus exclusions that are different from the first policy. Both antivirus policies are then assigned to the same collection. Antivirus exclusions from both policies are applied on clients in the targeted collection.
+
+If you're using Configuration Manager 2010
 
 ## Next steps
 

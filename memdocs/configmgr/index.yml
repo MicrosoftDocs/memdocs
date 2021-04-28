@@ -89,7 +89,7 @@ conceptualContent:
           url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
           itemType: how-to-guide
         - text: Configuration Manager on Azure
-          url: ./core/understand/configuration-manager-on-azure.md
+          url: ./core/understand/configuration-manager-on-azure.yml
           itemType: learn
     - title: Core infrastructure
       links:

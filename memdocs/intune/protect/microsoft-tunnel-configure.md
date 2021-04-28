@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/29/2021
+ms.date: 04/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,9 +73,26 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 2. On the **Create a site** pane, specify the following properties:
 
    - **Name**: Enter a name for this Site.
+
    - **Description** *(optional)*
+
    - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address can be an individual server or the IP or FQDN of a load-balancing server. The IP address must be publicly routable and the FQDN must be resolvable in public DNS.
+
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
+
+   - **Automatically upgrade servers at this site**: If *Yes*, servers upgrade automatically when an upgrade is available. If *No*, upgrade is manual and an administrator must approve an upgrade before it can start.
+
+     For more information, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
+
+   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there is no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
+
+     When set to *Yes*, configure the following options:
+
+     - **Time zone** – The time zone you select determines when the maintenance window starts and ends on all servers in the site, regardless of the time zone of individual servers.
+     - **Start time** – Specify the earliest time that the upgrade cycle can start, based on the time zone you selected.
+     - **End time** - Specify the latest time that upgrade cycle can start, based on the time zone you selected. Upgrade cycles that start before this time will continue to run and can complete after this time.
+
+     For more information, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
 3. Select **Create** to save the Site.
 
@@ -97,10 +114,13 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
-2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](#microsoft-tunnel-updates) of Microsoft Tunnel.
+2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
 
    > [!IMPORTANT]
-   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so add *intune_env=FXP* to the command line. For example: `sudo chmod +x intune_env=FXP ./mstunnel-setup`
+   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following comands to add *intune_env=FXP* to the command line:
+   >
+   > 1. Run `sudo chmod +x ./mstunnel-setup`
+   > 2. Run `sudo intune_env=FXP ./mstunnel-setup`
 
    > [!TIP]  
    > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.
@@ -233,17 +253,14 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app
 
 ## Upgrade Microsoft Tunnel
 
-When there are [updates for Microsoft Tunnel](#microsoft-tunnel-updates), upgrade of your installed Microsoft Tunnel is managed automatically by Intune in a rolling upgrade:
+Intune periodically releases updates to the Microsoft Tunnel server. To stay in support, tunnel servers must run the most recent release, or at most be one version behind.
 
-- Intune upgrades the Microsoft Tunnel servers in a Site one server at a time. During upgrade, the Microsoft Tunnel on the server isn't available for use.
+By default, after a new upgrade is available Intune automatically starts the upgrade of tunnel servers as soon as possible, at each of your tunnel sites. To help you manage upgrades, you can configure options that manage the upgrade process:
 
-- Intune begins to update the first server in a Site as soon as 10 minutes after the release becomes available. If the server was off, it begins after the server turns on.
+- You can allow automatic upgrade of servers at a site, or require admin approval before upgrades being.
+- You can configure a maintenance window which limits when upgrades at a site can start. 
 
-- After a successful upgrade of a server, Intune waits a short period of time before starting the upgrade of the next server.
-
-- This process continues until all servers in a Site have updated to the new version.
-
-The tunnel update is automatic, but updates only a single server per Site at a time. To avoid down-time while a server updates, consider assigning two or more servers to each Microsoft Tunnel Site.
+For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade opotons, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
 ## Update the TLS certificate on the Linux server
 
@@ -258,71 +275,6 @@ For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../pr
 
 To uninstall the product, run **./mst-cli uninstall** from the Linux server as root.
 
-## Microsoft Tunnel updates
-
-Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version releases, you'll automatically benefit from each new version.
-
-After an update releases, it rolls out to tenants over the following days. This means your tunnel servers might not start the process to update for a few days.
-
-The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
-
-### March 29, 2021
-
-Image hash values:
-
-- **agentImageDigest**: sha256:7ff81ebec9d129558cf07ba1d044d4051dbfaf9eb75cc91500a11f4ef0cb447e
-
-- **serverImageDigest**: sha256:56dc303c67735bad243b2dc8644cc3d1e5318aa963be05a9a685ec6bcbb41c4e
-
-Changes in this release:
-
-- Minor bug fixes and enhancements
-
-- ### January 19, 2021
-
-Image hash values:
-
-- **agentImageDigest**: sha256:227557e71b197c5c26baeed7633e5f89b476bbb8eb23fc82dec260890d5145f1
-
-- **serverImageDigest**: sha256:70026dc3585db871f419d25066e655902af732286b0537512d53e1f0897cc423
-
-Changes in this release:
-
-- Support for Red Hat Enterprise Linux 8.
-- Extraneous logging suppressed.
-
-### October 29, 2020
-
-Image hash values:
-
-- **agentImageDigest**: sha256:ba48de2c746a68286d15985f807702c60004131368a4a6a50ceab0f04653031a
-
-- **serverImageDigest**: sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
-
-Changes in this release:
-
-- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs).
-- Additional bug fixes.
-
-### October 12, 2020
-
-Image hash values:
-
-- **agentImageDigest**: sha256:d168e416591d94d6a02b64e5dde8709e2d5a44261d67036caafcb55b12912ca5
-
-- **serverImageDigest**: sha256:8b50257a94b9825915cb6a77ed49cfb3e5c6f68da9ae0272cdf8e49cff3d342e
-
-Changes in this release:
-
-- Microsoft Tunnel now [logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the *syslog* format.
-- Various bug fixes.
-
-### September 23, 2020
-
-The initial public preview release of Microsoft Tunnel.
-
-<!-- Archive of past releases
--->
 ## Next steps
 
 [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)  
