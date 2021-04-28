@@ -246,7 +246,7 @@ In addition to the deploying the app with Intune, configure an Intune per-app VP
    - See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
    - See [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md)
 
-   Additional settings for the Purebred  app might be required. Review the [Purebred documentation](https://cyber.mil/pki-pke/purebred) or speak to your Purebred agent to understand which values should be included in your policies.
+   Additional settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 
 3. [Create a per-app VPN](../configuration/vpn-settings-configure.md) for the DISA Purebred application.
 
