@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 04/28/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,12 +85,12 @@ For important details about using the different issuers, review guidance for tha
 >
 > See [Change the derived credential issuer](#change-the-derived-credential-issuer) later in this article.
 
-### Company Portal app
+### Required apps
 
-Plan to deploy the Intune Company Portal app to devices that will enroll for a derived credential. Device users use the Company Portal app to start the credential enrollment process.
+Plan to deploy the relevant user facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
 
-- For iOS devices, see [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
-- For Android devices, see [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
+- iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+- Android devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 ## Plan for derived credentials
 
