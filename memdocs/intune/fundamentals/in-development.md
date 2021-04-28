@@ -125,7 +125,7 @@ Applies to:
 
 - iOS/iPadOS 14.5 and newer
 
-- ### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236  -->
+### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236  -->
 
 There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
 
@@ -235,7 +235,7 @@ Options include:
 
 We're also adding a new health check setting that helps you identify when a server is running the latest version of Tunnel Gateway.
 
-### Update Windows Security experience profiles to support tri-state settings<-- 9741752   -->
+### Update Windows Security experience profiles to support tri-state settings<!-- 9741752   -->
 
 For Windows 10 devices, we’re updating the bi-state settings in the **Windows Security experience** profile to be tri-state. Settings in the profile that currently support only two options of **Yes** and **Not configure** will soon support three options: **Yes**, **No**, and **Not configured**. This profile is available under *Endpoint security* > *Antivirus* > *Windows 10 and later*.
 
