@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 3/26/2021
+ms.date: 4/30/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,6 +71,10 @@ In addition to exporting the summarized discovered apps list data, you will also
 
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
+### New app categories to target app protection policies more easily<!-- 4802581  -->
+
+We will improve the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically apply to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
+
 <!-- ***********************************************-->
 ## Device configuration
 
@@ -79,6 +83,65 @@ Using iOS app protection policies in Microsoft Intune app protection policies, y
 To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you'll be able to see the overall compliance status for the policy. With device level reporting, you'll be able to see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
 
 For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
+
+### Machine Risk Score compliance policy for Mac devices<!--  7373781   -->
+
+We’re adding support to device compliance policy to use the risk assessment score from your defense threat service for macOS devices that run 10.14 or later. (**Devices** > **Compliance policies** > **Policies** > **Create Policy** > for *Platform* select **macOS**).
+
+This implementation will be similar to the support Intune has for [Windows devices](../protect/compliance-policy-create-windows.md#microsoft-defender-for-endpoint-rules).
+
+### Use a Settings Catalog policy in a policy set for Windows and macOS devices<!-- 8851701  -->
+
+In Intune, you can create a policy using [Settings catalog](../configuration/settings-catalog.md), which lists all the settings you can configure. Now, you can use the Settings Catalog policy within a policy set.
+
+For more information, see [Use policy sets to group collections of management objects](policy-sets.md).
+
+Applies to:
+
+- macOS
+- Windows 10 and newer
+
+### Per setting status report in Settings Catalog<!-- 9061277  -->
+
+When using **Settings Catalog**, you can see how many devices are in each state, including success, conflict, and error. This report will include a **Per setting status** that will:
+
+- Show the total number of devices impacted by a specific setting.
+- Have controls to search, sort, filter, export, and go to the next/previous pages.
+
+For more information on the settings catalog, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
+
+### New settings for iOS/iPadOS 14.5 devices and newer <!-- 9428309 -->
+
+When creating a device restrictions policy for iOS/iPadOS devices, there are new settings available (Devices > Configuration profiles > Create profile > iOS/iPadOS > Device restrictions > Connected devices):
+
+- **Block Apple Watch auto unlock**: Set to **Yes** to block users from unlocking their device with Apple Watch.
+- **Allow users to boot devices into recovery mode with unpaired devices**: Set to **Yes** to allow users to boot their device into recovery with an unpaired device.
+- **Block Siri for dictation**: Set to **Yes** to disable connections to Siri servers so that users can't use Siri to dictate text.
+- **Require devices to use Wi-Fi networks set up via configuration profiles**: Set to **Yes**to require devices to only use Wi-Fi networks set up through configuration profiles.
+
+To see the settings you can currently configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
+
+Applies to:
+
+- iOS/iPadOS 14.5 and newer
+
+- ### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236  -->
+
+There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
+
+- **Devices** > **Filters (preview)** > **Create**
+- **Apps** > **Filters (preview)*> **Create**
+- **Tenant administration** > **Filters (preview)*> **Create**
+
+You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile.
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10 and later
 
 <!-- ***********************************************-->
 <!--
@@ -101,6 +164,14 @@ This support will give users a familiar Windows 10 experience while you get the 
 As part of a public preview, you’ll soon be able to use Intune’s *Windows 10 quality updates* policy to expedite installation of the most recent Windows 10 updates to devices you manage with Intune. (**Devices** > **Windows 10 quality updates (preview)** > **Create profile**).
 
 When you expedite an update, devices can start the download and install of the update as soon as possible, without having to wait for the device to check in for updates. Other than expediting the install of the update, use of this policy leaves your existing update deployment policies and processes untouched.
+
+### Support ending for Restart remote action on Android Enterprise corporate-owned devices with a work profile<!--9584646 -->
+
+Support will end for the **Restart** remote action on corporate-owned devices with a work profile. The **Restart** button will be removed from the **Device** page for corporate-owned devices with a work profile. If you try to restart devices using bulk device actions, the corporate-owned work profile devices won't restart and those device actions will be marked report as **Not supported**. Other device types that are included in the bulk device action will restart as normal for that action.
+
+### Tenant attach: Offboarding <!--9412904 -->
+
+While we know customers get enormous value by enabling tenant attach with Configuration Manager, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard from the cloud following a disaster recovery scenario where the on-premises environment was removed. You'll soon be able to offboard a Configuration Manager environment from the admin center.
 
 <!-- ***********************************************-->
 ## Intune apps
@@ -146,6 +217,10 @@ When you use the Graph API to export Intune reports without selecting any column
 
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 service update of Intune. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
+### New property value will be supported in the managementAgentType enum<!-- 9749555  -->
+
+The `IntuneAosp` property value will be supported in the `managementAgentType` enum. The `ManagementAgentTypeID` value for this property will be `2048`.  It represents the device type that is managed by Intune's MDM for AOSP (Android Open Source Project) devices. For related information, see [managementAgentType](../developer/reports-ref-devices.md#managementagenttypes) in the beta section of the Intune Data Warehouse API.
+
 <!-- ***********************************************-->
 ## Security
 
@@ -159,6 +234,17 @@ Options include:
 - Configure servers at a site to upgrade manually, or require the admin to approve an upgrade before it can start.
 
 We're also adding a new health check setting that helps you identify when a server is running the latest version of Tunnel Gateway.
+
+### Update Windows Security experience profiles to support tri-state settings<-- 9741752   -->
+
+For Windows 10 devices, we’re updating the bi-state settings in the **Windows Security experience** profile to be tri-state. Settings in the profile that currently support only two options of **Yes** and **Not configure** will soon support three options: **Yes**, **No**, and **Not configured**. This profile is available under *Endpoint security* > *Antivirus* > *Windows 10 and later*.
+
+When this change is made:
+
+- This update won’t change the behavior on devices. The Intune value of *Not configured* is already applied by the Windows CSPs as a value of No.
+- Each bi-state setting in an existing *Windows Security experience* profile that is set to *Not configured* will update to *No*, and the change will then apply to all devices that receives the profile. The value of *Not configured* will be a third state you can configure through the profile.  
+
+After this change is made, you can edit your profiles to change any of the settings to a value of *Not configured*, which will have the effect of no longer managing that setting through the Intune profile.
 
 <!-- ***********************************************-->
 ## Notices
