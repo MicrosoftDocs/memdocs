@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/01/2021
+ms.date: 04/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -101,7 +101,6 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Azure Information Protection Viewer|[iOS](https://apps.apple.com/us/app/rms-sharing/id689516635)|✔|No settings|
 |Microsoft Bookings|[Android](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings)|✔|No settings|
 |Microsoft Bookings|[iOS](https://apps.apple.com/us/app/microsoft-bookings/id1065657468)|✔|No settings|
-|Microsoft Cortana|[iOS](https://apps.apple.com/app/cortana/id1054501703)|✔|No settings|
 |Microsoft Dynamics CRM|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone)|✔|No settings|
 |Microsoft Dynamics CRM|[iOS](https://apps.apple.com/app/microsoft-dynamics-crm/id678800460)|✔|No settings|
 |Microsoft Kaizala|[Android](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer)|✔|No settings|
