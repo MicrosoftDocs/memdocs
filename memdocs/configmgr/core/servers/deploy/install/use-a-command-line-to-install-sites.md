@@ -1,8 +1,8 @@
 ---
-title: "Command-line install"
-titleSuffix: "Configuration Manager"
-description: "Learn how to run Configuration Manager Setup at a command prompt for a variety of site installations."
-ms.date: 03/27/2017
+title: Command-line overview
+titleSuffix: Configuration Manager
+description: Learn how to run Configuration Manager setup at a command prompt for different kinds of site installations.
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,110 +10,105 @@ ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
-# Use a command-line to install Configuration Manager sites
+
+# Use a command line to install Configuration Manager sites
 
 *Applies to: Configuration Manager (current branch)*
 
- You can run Configuration Manager Setup at a command prompt to install a variety of site types.
+You can run Configuration Manager setup at a command prompt to automate the installation of different kinds of site types. This article provides an overview of the command-line methods.
 
 ## Supported tasks for command-line installations
- This method of running Setup supports the following site installation and site maintenance tasks:
 
-- **Install a central administration site or primary site from a command prompt**  
-  View [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md)
+- Install a central administration site (CAS) or primary site
 
-- **Modify the languages in use at a central administration site or primary site**  
-   To modify the languages that are installed at a site from a command prompt (including languages for mobile devices), you must:  
+- Modify the languages in use at a CAS or primary site
 
-  - Run Setup from **&lt;ConfigMgrInstallationPath\>\Bin\X64** on the site server,
-  - Use the **/MANAGELANGS** command-line option,
-  - Specify a language script file that specifies the languages you want to add or remove,  
+- Recovery a site
 
-    For example, use the following command syntax: **setupwpf.exe /MANAGELANGS &lt;language script file\>**  
+> [!TIP]
+> You can also install the Configuration Manager client and console from the command prompt. For more information, see the following articles:
+>
+> - [Install consoles](install-consoles.md#install-from-a-command-prompt)
+> - [Deploy clients to Windows computers](../../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)
 
-    To create the language script file, use the information in [Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)  
+## About the command-line script file
 
-- **Use an installation script file for unattended site installations or site recovery**  
-   You can run Setup from a command prompt by using an installation script, and you run an unattended site installation. You can also use this option to recover a site.    
+For unattended installations of Configuration Manager, you can specify a script file that contains installation options.
 
-   To use a script with Setup:  
+> [!NOTE]
+> You can't use the unattended script file to upgrade an evaluation site to a licensed installation of Configuration Manager.
 
-  - Run Setup with the command line-option **/SCRIPT** and specify a script file.  
+To use an answer file with setup, first configure the script file with required keys and values. For an unattended installation of a CAS or primary site, the script file requires the following sections:
 
-  - The script file must be configured with required keys and values.  
+- Identification
+- Options
+- SQLConfigOptions
+- HierarchyOptions
+- CloudConnectorOptions
 
-    For an unattended installation of a central administration site or primary site, the script file must have the following sections:  
+Then run setup with the command line-option **/SCRIPT** and specify a script file.
 
-  - Identification    
-  - Options    
-  - SQLConfigOptions    
-    -   HierarchyOptions    
-  - CloudConnectorOptions   
+To recover a site, also include the following sections of the script file:
 
-    To recover a site, you must also include the following sections of the script file:  
-
-  - Identification  
-  - Recovery
+- Identification
+- Recovery
 
 For more information, see [Unattended site recovery for Configuration Manager](../../manage/unattended-recovery.md).  
 
-For a list of keys and values to use in an unattended installation script file, see [Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
+For a list of keys and values to use in an unattended installation script file, see [Unattended setup script file keys](command-line-options-for-setup.md#bkmk_Unattended).
 
-## About the command-line script file  
- For unattended installations of Configuration Manager, you can run Setup with the command-line option **/SCRIPT**, and specify a script file that contains  installation options. The following tasks are supported by using this method:  
-
--   Install a central administration site  
--   Install a primary site  
--   Install a configuration Manager console  
--   Recover a site  
-
-> [!NOTE]  
->  You cannot use the unattended script file to upgrade an evaluation site to a licensed installation of Configuration Manager.  
-
-### The CDLatest key name
-When you use media from the CD.Latest folder to run a scripted install of the following four installation options, your script  must include the **CDLatest** key with a value of  **1**:
-- Install a new central administration site
-- Install a new primary site
-- Recover a central administration site
-- Recover a primary site
-
-This value is not supported for use with installation media that you get from the Microsoft Volume License site.
-See [command-line options](command-line-options-for-setup.md) for information on how to use this key name in the script file.
-
-
+> [!NOTE]
+> When you run setup from the [CD.Latest folder](../../manage/the-cd.latest-folder.md) for a scripted install or recovery, include the **CDLatest** key with a value of  `1`. This value isn't supported with installation media from the Microsoft Volume License site. For more information on how to use this key name in the script file, see [Command-line options](command-line-options-for-setup.md).
 
 ### Create the script
-The installation script is automatically created when you [run Setup to install a site using the user interface](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md).  When you confirm the settings on the **Summary** page of the wizard, the following happens:  
 
--   Setup creates the script **%TEMP%\ConfigMgrAutoSave.ini**.  You can rename this file before you use it, but it must retain the .ini file extension.  
--   The unattended installation script contains the settings that you selected in the wizard.  
--   After the script is created, you can modify the script to install other sites in your hierarchy.  
--   You can then use this script to perform an unattended setup of Configuration Manager.  
+When you [run setup to install a site using the user interface](use-the-setup-wizard-to-install-sites.md), setup automatically creates the installation script. When you confirm the settings on the **Summary** page of the wizard, the following actions happen:
 
-This script file provides the same information that the Setup Wizard prompts for, except that there are no default settings.   
-You must specify all values for the Setup keys that apply to the type of installation that you are using.   
+- Setup creates the script `%TEMP%\ConfigMgrAutoSave.ini`. You can rename this file before you use it, but it needs the `.ini` file extension.
+- The unattended installation script contains the settings that you selected in the wizard.
+- You can modify the script to install other sites in your hierarchy.
+- You can use this script to do an unattended setup of Configuration Manager.
 
-When Setup creates the unattended installation script, it's populated with the product key value that you enter during Setup. This can be a valid product key, or **EVAL** when you install an evaluation version of Configuration Manager. The product key value in the script is populated so that the prerequisite check can finish.   
+This script file provides the same information as the Setup Wizard, except that there are no default settings. Specify all values for the setup keys that are required and necessary for your requirements.
 
-When Setup starts the actual site installation, the automatically created script is written to again to clear the product key value in the script that it creates. Before using the script for an unattended installation of a new site, you can edit the script to provide a valid product key or to specify an evaluation installation of Configuration Manager.  
+When setup creates the unattended installation script, it includes the product key that you entered in the Setup Wizard. This key can be a valid product key, or `EVAL` to install an evaluation version of Configuration Manager. The product key value in the script is required by the prerequisite checker. When setup starts the actual site installation, it clears the product key value in the script. Before using the script for an unattended installation of a new site, edit the script to provide a valid product key or to specify an evaluation installation of Configuration Manager.
 
 ### Section names, key names, and values
-The script contains section names, key names, and values. Note the following information:
--   Required section key names vary depending on the installation type that you are scripting.
--   The order of the keys within sections and the order of sections within the file is not important.     
--   The keys are not case-sensitive.  
--   When you provide values for keys, the name of the key must be followed by an equal sign (=) and the value for the key.    
 
-> [!TIP]  
->  To view the full set of options, see  [Command-line options for Setup and scripts](../../../../core/servers/deploy/install/command-line-options-for-setup.md).  
+The script contains section names, key names, and values.
 
-## Use the /SCRIPT Setup command-line option
+- Required section key names vary depending on the installation type.
+- The order of the sections and the order of the keys within sections aren't important.
+- The keys aren't case-sensitive.
+- When you provide values for keys, the name of the key must be followed by an equal sign (`=`) and the value for the key. For example, `CDLatest=1`
 
--   You must use a Setup script file and specify the file name after the **/SCRIPT** Setup command-line option. Note the following information:   
-    -   The name of the file must have the **.ini** file name extension.  
-    -   When you reference the Setup script file at the command prompt, you must provide the full path to the file. For example, if your Setup initialization file is named Setup.ini, and it is stored in the C:\Setup folder, at the command prompt, type:  **setup /script c:\setup\setup.ini**.  
+To view the full set of options, see [Command-line options for setup and scripts](command-line-options-for-setup.md).
 
--   The account that runs Setup must have **Administrator** rights on the computer. When you run Setup with the unattended script, open the Command Prompt window by using the **Run as administrator** option.   
+## Use a setup script file
+
+To use a setup script file, specify the file name after the **/SCRIPT** command-line option.
+
+- The script file name requires the `.ini` extension.
+
+- Provide the full path to the file. For example, if you name the file `setup.ini`, and store it in the `C:\Setup` folder, then use the following command line: `setup.exe /script C:\Setup\setup.ini`
+
+- The account that runs setup must have **Administrator** rights on the computer. When you run setup with the unattended script, open the command prompt window with the **Run as administrator** option.
+
+## Modify languages
+
+To modify the languages that are installed at a site from a command prompt:
+
+- Run setup from `<ConfigMgrInstallationPath>\Bin\X64` on the site server
+- Use the **/MANAGELANGS** command-line option
+- Specify a language script file with the languages to add or remove
+
+For example, use the following command syntax: `setupwpf.exe /MANAGELANGS <language script file>`
+
+For more information about how to create the language script file, see [Command line options to manage languages](command-line-options-for-setup.md#bkmk_Lang).
+
+## Next steps
+
+[Command-line options for Setup](command-line-options-for-setup.md)
+
+[Install the Configuration Manager console](install-consoles.md)
