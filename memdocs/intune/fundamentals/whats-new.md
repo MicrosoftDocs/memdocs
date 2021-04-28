@@ -227,17 +227,6 @@ Based on a selected app, the new **User Install Status** report provides a list 
 
 Endpoint analytics [startup performance](../../analytics/startup-performance.md) currently provides IT with insights to measure and optimize PC boot times. However, restart frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We have now included a report on restart frequencies within your organization to help you identify problematic devices. For more information, see [Restart frequency in endpoint analytics](../../analytics/restart-frequency.md).
 
-<!-- ########################## -->
-
-## Week of April 26, 2021
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
-### App management
-
-#### Maximum OS version setting for app conditional launch on iOS devices<!-- 9493137 -->
-Using Intune app protection policies, you can add a new conditional launch setting to ensure end users are not using any pre-release or beta OS build to access work or school account data on iOS devices. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality on iOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
-
 ## Week of April 12, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
