@@ -85,7 +85,7 @@ For important details about using the different issuers, review guidance for tha
 >
 > See [Change the derived credential issuer](#change-the-derived-credential-issuer) later in this article.
 
-### Company Portal app
+### Required apps
 
 Plan to deploy the relevant user facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
 
