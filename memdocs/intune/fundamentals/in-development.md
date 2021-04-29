@@ -125,24 +125,6 @@ Applies to:
 
 - iOS/iPadOS 14.5 and newer
 
-### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236  -->
-
-There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
-
-- **Devices** > **Filters (preview)** > **Create**
-- **Apps** > **Filters (preview)**> **Create**
-- **Tenant administration** > **Filters (preview)**> **Create**
-
-You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile.
-
-Applies to:
-
-- Android device administrator
-- Android Enterprise
-- iOS/iPadOS
-- macOS
-- Windows 10 and later
-
 <!-- ***********************************************-->
 <!--
 ## Device enrollment
