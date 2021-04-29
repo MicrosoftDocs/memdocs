@@ -232,7 +232,7 @@ For Configuration Manager version 1806, this level includes the following data:
 - ***[New]*** Count of Microsoft Surface devices by model  
 
 
-### Cloud Services  
+### Cloud services  
 
 - Azure Active Directory discovery statistics
 
@@ -391,7 +391,7 @@ For Configuration Manager version 1806, this level includes the following data:
 - Versions of installed Configuration Manager hotfixes
 
 
-### Software Updates  
+### Software updates  
 
 - Available and deadline deltas that are used in automatic deployment rules  
 
