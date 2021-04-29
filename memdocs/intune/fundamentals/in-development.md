@@ -65,7 +65,7 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 ### Export underlying discovered apps list data<!-- 9370255  -->
 
-In addition to exporting the summarized discovered apps list data, you will also be able export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the additional new experience will also provide the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data will be a list of every device and each app discovered for that device. This functionality is being added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset, which will be deprecated in 2107 release. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+In addition to exporting the summarized discovered apps list data, you will also be able export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the additional new experience will also provide the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data will be a list of every device and each app discovered for that device. This functionality is being added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset, which will be removed in the 2108 release. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 ### Maximum OS version setting for app conditional launch<!-- 9493137  -->
 
@@ -92,7 +92,7 @@ This implementation will be similar to the support Intune has for [Windows devic
 
 ### Use a Settings Catalog policy in a policy set for Windows and macOS devices<!-- 8851701  -->
 
-In Intune, you can create a policy using [Settings catalog](../configuration/settings-catalog.md), which lists all the settings you can configure. Now, you can use the Settings Catalog policy within a policy set.
+In Intune, you can create a policy using [Settings Catalog](../configuration/settings-catalog.md), which lists all the settings you can configure. Now, you can use the Settings Catalog policy within a policy set.
 
 For more information, see [Use policy sets to group collections of management objects](policy-sets.md).
 
@@ -108,7 +108,7 @@ When using **Settings Catalog**, you can see how many devices are in each state,
 - Show the total number of devices impacted by a specific setting.
 - Have controls to search, sort, filter, export, and go to the next/previous pages.
 
-For more information on the settings catalog, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
+For more information on the Settings Catalog, see [Use the Settings Catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
 
 ### New settings for iOS/iPadOS 14.5 devices and newer <!-- 9428309 -->
 
@@ -130,8 +130,8 @@ Applies to:
 There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
 
 - **Devices** > **Filters (preview)** > **Create**
-- **Apps** > **Filters (preview)*> **Create**
-- **Tenant administration** > **Filters (preview)*> **Create**
+- **Apps** > **Filters (preview)**> **Create**
+- **Tenant administration** > **Filters (preview)**> **Create**
 
 You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile.
 
@@ -167,7 +167,7 @@ When you expedite an update, devices can start the download and install of the u
 
 ### Support ending for Restart remote action on Android Enterprise corporate-owned devices with a work profile<!--9584646 -->
 
-Support will end for the **Restart** remote action on corporate-owned devices with a work profile. The **Restart** button will be removed from the **Device** page for corporate-owned devices with a work profile. If you try to restart devices using bulk device actions, the corporate-owned work profile devices won't restart and those device actions will be marked report as **Not supported**. Other device types that are included in the bulk device action will restart as normal for that action.
+Support will end for the **Restart** remote action on corporate-owned devices with a work profile. The **Restart** button will be removed from the **Device** page for corporate-owned devices with a work profile. If you try to restart devices using bulk device actions, the corporate-owned work profile devices won't restart and those device actions will report as **Not supported**. Other device types that are included in the bulk device action will restart as normal for that action.
 
 ### Tenant attach: Offboarding <!--9412904 -->
 
@@ -195,7 +195,7 @@ After the change, only new policies you then create will use the new API. Your e
 
 ### Organizational report focused on device configuration<!-- 8455708  -->
 
-We'll be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or not applicable. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
+We'll be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or not applicable. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new Settings Catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
 
 ### Export Intune reports using Graph API v1.0 or beta<!-- 8090911  -->
 
@@ -215,11 +215,11 @@ When you use the Graph API to export Intune reports without selecting any column
 
 ### Intune Data Warehouse updates<!-- 9370034 -->
 
-The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 service update of Intune. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2108 service update of Intune. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 ### New property value will be supported in the managementAgentType enum<!-- 9749555  -->
 
-The `IntuneAosp` property value will be supported in the `managementAgentType` enum. The `ManagementAgentTypeID` value for this property will be `2048`.  It represents the device type that is managed by Intune's MDM for AOSP (Android Open Source Project) devices. For related information, see [managementAgentType](../developer/reports-ref-devices.md#managementagenttypes) in the beta section of the Intune Data Warehouse API.
+The `IntuneAosp` property value will be supported in the `managementAgentType` enum. The `ManagementAgentTypeID` value for this property will be `2048`.  It represents the device type that is managed by Intune's Mobile Device Management (MDM) for AOSP (Android Open Source Project) devices. For related information, see [managementAgentType](../developer/reports-ref-devices.md#managementagenttypes) in the beta section of the Intune Data Warehouse API.
 
 <!-- ***********************************************-->
 ## Security
@@ -237,7 +237,7 @@ We're also adding a new health check setting that helps you identify when a serv
 
 ### Update Windows Security experience profiles to support tri-state settings<!-- 9741752   -->
 
-For Windows 10 devices, we’re updating the bi-state settings in the **Windows Security experience** profile to be tri-state. Settings in the profile that currently support only two options of **Yes** and **Not configure** will soon support three options: **Yes**, **No**, and **Not configured**. This profile is available under *Endpoint security* > *Antivirus* > *Windows 10 and later*.
+For Windows 10 devices, we’re updating the bi-state settings in the **Windows Security experience** profile to be tri-state. Settings in the profile that currently support only two options of **Yes** and **Not configured** will soon support three options: **Yes**, **No**, and **Not configured**. This profile is available under *Endpoint security* > *Antivirus* > *Windows 10 and later*.
 
 When this change is made:
 
