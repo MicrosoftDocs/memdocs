@@ -2,7 +2,7 @@
 title: Security and privacy for apps
 titleSuffix: Configuration Manager
 description: Guidance and recommendations for security and privacy when managing applications in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Security and privacy for application management in Configuration Manager
@@ -19,44 +17,6 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 ## Security guidance for application management  
-
-### Use the Software Center without the application catalog
-
-<!--1358309-->
-
-The application catalog's Silverlight user experience isn't supported as of current branch version 1806. This configuration helps you reduce the server infrastructure required to deliver applications to users.
-
-Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910. Reducing the server infrastructure also reduces the attack surface.
-
-To deliver a consistent and secure application experience for internet-based clients, use Azure Active Directory and the cloud management gateway.
-
-For more information, see [Configure Software Center](plan-for-software-center.md#bkmk_userex).
-
-### Use HTTPS with the application catalog
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
-
-Configure the application catalog website point and the application catalog web service point to accept HTTPS connections. With this configuration, the server is authenticated to users. The transmitted data is protected from tampering and viewing.
-
-Help prevent social engineering attacks by educating users to only connect to trusted websites. Educate users about the dangers of malicious websites.
-
-When you don't use HTTPS, don't use the branding configuration options. These settings show the name of your organization in the application catalog as proof of identity.  
-
-
-### Use role separation
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
-
-Install the application catalog website point and the application catalog web service point on separate servers. If the website point is compromised, it's separate from the web service point. This design helps to protect the Configuration Manager clients and infrastructure. This configuration is especially important if the website point accepts client connections from the internet. It makes the server more vulnerable to attack.  
-
-### Close browser windows
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
-
-Educate users to close the browser window when they finish using the application catalog. If users browse to an external website in the same browser window that they used for the application catalog, the browser continues to use the security settings that are suitable for trusted sites in the intranet.  
 
 ### Centrally specify user device affinity
 
@@ -74,7 +34,7 @@ If you must run deployments directly from distribution points, use NTFS least pe
 
 ### <a name="bkmk_interact"></a> Don't let users interact with elevated processes
   
-If you enable the options to **Run with administrative rights** or **Install for system**, don't let users interact with those applications. When you configure an application, you can set the option to **Allow users to view and interact with the program installation**. This setting allows users to respond to any required prompts in the user interface. If you also configure the application to **Run with administrative rights**, or starting in version 1802 **Install for system**, an attacker at the computer that runs the program could use the user interface to escalate privileges on the client computer.
+If you enable the options to **Run with administrative rights** or **Install for system**, don't let users interact with those applications. When you configure an application, you can set the option to **Allow users to view and interact with the program installation**. This setting allows users to respond to any required prompts in the user interface. If you also configure the application to **Run with administrative rights** or **Install for system**, an attacker at the computer that runs the program could use the user interface to escalate privileges on the client computer.
 
 Use programs that use Windows Installer for setup and per-user elevated privileges for software deployments that require administrative credentials. Setup must be run in the context of a user who doesn't have administrative credentials. Windows Installer per-user elevated privileges provide the most secure way to deploy applications that have this requirement.
 
@@ -164,24 +124,6 @@ If you configure a web application deployment type, use HTTPS to secure the conn
 
      When an App-V application is published on a computer, all users who sign in to that computer can install the application. You can't restrict the users who can install the application after it's published.  
 
-
-## <a name="BKMK_CertificatesSilverlight5"></a> Certificates for Microsoft Silverlight 5 and elevated trust mode required for the application catalog  
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
-
-Configuration Manager clients version 1710 and earlier require Microsoft Silverlight 5, which must run in elevated trust mode for users to install software from the application catalog. By default, Silverlight applications run in partial trust mode to prevent applications from accessing user data. If it isn't already installed, Configuration Manager automatically installs Microsoft Silverlight 5 on clients. By default, Configuration Manager sets the Computer Agent **Allow Silverlight applications to run in elevated trust mode** client setting to **Yes**. This setting lets signed and trusted Silverlight applications request elevated trust mode.  
-
-When you install the application catalog website point site system role, the client also installs a Microsoft signing certificate in the Trusted Publishers computer certificate store on each Configuration Manager client computer. Silverlight applications signed by this certificate run in the elevated trust mode, which computers require to install software from the application catalog. Configuration Manager automatically manages this signing certificate. To increase service continuity, don't manually delete or move this Microsoft signing certificate.  
-
-> [!WARNING]  
-> When enabled, the **Allow Silverlight applications to run in elevated trust mode** client setting lets all Silverlight applications, which are signed by certificates in the Trusted Publishers certificate store in either the computer store or the user store, run in elevated trust mode. The client setting can't enable elevated trust mode specifically for the Configuration Manager application catalog or for the Trusted Publishers certificate store in the computer store. If malware adds a rogue certificate in the Trusted Publishers store, malware that uses its own Silverlight application can now also run in elevated trust mode.  
-
-If you set the **Allow Silverlight applications to run in elevated trust mode** setting to **No**, clients don't remove the Microsoft signing certificate.  
-
-For more about trusted applications in Silverlight, see [Trusted Applications](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
-
-
 ## Privacy information for application management  
 
 Application management lets you run any application, program, or script on any client in the hierarchy. Configuration Manager has no control over the types of applications, programs, or scripts that you run or the type of information that they transmit. During the application deployment process, Configuration Manager might transmit information that identifies the device and sign-in accounts between clients and servers.  
@@ -198,12 +140,7 @@ The following features help efficient software deployment:
 
 - **User device affinity** maps a user to devices. A Configuration Manager administrator deploys software to a user. The client automatically installs the software on one or more computers that the user uses most often.  
 
-- **Software Center** is installed automatically on a device when you install the Configuration Manager client. Users change settings, browse for and install software from Software Center.  
-
-- The **application catalog** is a website that lets users request software to install.  
-
-    > [!Important]  
-    > Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
+- **Software Center** is installed automatically on a device when you install the Configuration Manager client. Users change settings, browse for software, and install software from Software Center.
 
 ### <a name="bkmk_privacy-uda"></a> User device affinity privacy information
 
@@ -219,21 +156,10 @@ The following features help efficient software deployment:
 
 ### <a name="bkmk_privacy-userex"></a> Software Center privacy information
 
-- Software Center lets the Configuration Manager admin publish any application or program or script for users to run. Configuration Manager has no control over the types of programs or scripts that are published in the catalog or the type of information that they transmit.  
+- Software Center lets the Configuration Manager admin publish any application or program or script for users to run. Configuration Manager has no control over the types of programs or scripts that are published in Software Center or the type of information that they transmit.
 
-- Configuration Manager might transmit information between clients and the management point. The information might identify the computer and sign-in accounts. The information that's transmitted between the client and servers isn't encrypted, unless you configure the management point to require clients connect by using HTTPS.  
+- Configuration Manager might transmit information between clients and the management point. The information might identify the computer and sign-in accounts. The information that's transmitted between the client and servers isn't encrypted, unless you configure the management point to require clients connect by using HTTPS.
 
-- The information about the application approval request is stored in the Configuration Manager database. Requests that are canceled or denied and the corresponding request history entries are deleted by default after 30 days. The deletion behavior is configurable by setting the **Delete Aged Application Request Data** site maintenance task. Application approval requests that are in approved and pending states are never deleted.  
+- The information about the application approval request is stored in the Configuration Manager database. Requests that are canceled or denied and the corresponding request history entries are deleted by default after 30 days. The deletion behavior is configurable by setting the **Delete Aged Application Request Data** site maintenance task. Application approval requests that are in approved and pending states are never deleted.
 
-- Software Center is installed automatically when you install the Configuration Manager client on a device.  
-
-### Application catalog privacy information
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
-
-- The application catalog isn't installed by default. This installation requires several configuration steps.  
-
-- The application catalog lets the Configuration Manager admin publish any application or program or script for users to run. Configuration Manager has no control over the types of programs or scripts that are published in the catalog or the type of information that they transmit.  
-
-- Configuration Manager might transmit information between clients and the application catalog site system roles. The information might identify the computer and sign-in accounts. The information that's transmitted between the client and servers isn't encrypted, unless these site system roles are configured to require clients connect by using HTTPS.
+- Software Center is installed automatically when you install the Configuration Manager client on a device.

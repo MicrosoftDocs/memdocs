@@ -2,7 +2,7 @@
 title: Data flow for cloud management gateway
 titleSuffix: Configuration Manager
 description: Understand how data flows between components of the cloud management gateway (CMG), including network ports and internet endpoints.
-ms.date: 11/30/2020
+ms.date: 04/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -80,6 +80,26 @@ If there are two or more VM instances, the CMG connection point uses HTTPS 10124
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the CMG connection point and service connection point to access internet endpoints.
 
-For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_cloud).
+For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#cloud-services).
 
 [!INCLUDE [Internet endpoints for cloud services](../../../plan-design/network/includes/internet-endpoints-cloud-services.md)]
+
+## HTTP headers and verbs
+
+Any networking device that manages communication between the client, the CMG, and the on-premises site systems has to allow the following HTTP headers and verbs. If these items are blocked, it will affect client communication through the CMG.<!-- MEMDocs#1309 -->
+
+### HTTP headers
+
+- Range:
+- CCMClientID:
+- CCMClientIDSignature:
+- CCMClientTimestamp:
+- CCMClientTimestampsSignature:
+
+### HTTP verbs
+
+- HEAD
+- CCM_POST
+- BITS_POST
+- GET
+- PROPFIND

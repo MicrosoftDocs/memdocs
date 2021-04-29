@@ -345,7 +345,7 @@ For more information, see [Phase settings](../../../osd/deploy-use/create-phased
 <!--1358500-->
 The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
 
-For more information, see [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
+For more information, see [In-place upgrade recommendations](../../../osd/understand/in-place-upgrade-recommendations.md#run-actions-on-failure).
 
 
 ### Improvements to PXE-enabled distribution points

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 02/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -28,13 +28,13 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Send log data to storage, event hubs, or log analytics in Intune (preview)
+# Send log data to storage, event hubs, or log analytics in Intune
 
 Microsoft Intune includes built-in logs that provide information about your environment:
 
 - **Audit Logs** shows a record of activities that generate a change in Intune, including create, update (edit), delete, assign, and remote actions.
-- **Operational Logs (preview)** show details on users and devices that successfully (or failed) to enroll, and details on non-compliant devices.
-- **Device Compliance Organizational Logs (preview)** show an organizational report for device compliance in Intune, and details on non-compliant devices.
+- **Operational Logs** show details on users and devices that successfully (or failed) to enroll, and details on non-compliant devices.
+- **Device Compliance Organizational Logs** show an organizational report for device compliance in Intune, and details on non-compliant devices.
 
 These logs can also be sent to Azure Monitor services, including storage accounts, event hubs, and log analytics. Specifically, you can:
 
@@ -46,6 +46,9 @@ These logs can also be sent to Azure Monitor services, including storage account
 These features are part of the **Diagnostics Settings** in Intune.
 
 This article shows you how to use **Diagnostics Settings** to send log data to different services, gives examples and estimates of costs, and answers some common questions. Once you enable this feature, your logs are routed to the Azure Monitor service you choose.
+
+> [!NOTE]
+> These logs use schemas that can change. To provide feedback, including information in the logs, go to [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
 ## Prerequisites
 
@@ -66,8 +69,7 @@ Depending on where you want to route the audit log data, you need one of the fol
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Diagnostics settings**. The first time you open it, turn it on. Otherwise, add a setting.
 
-    > [!div class="mx-imgBorder"]
-    > ![Turn on Diagnostics settings in Intune to send logs to Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
+    :::image type="content" source="./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png" alt-text="Turn on Diagnostics settings in Endpoint Manager and Microsoft Intune to send logs to Azure Monitor":::
 
 3. Enter the following properties:
 
@@ -93,24 +95,17 @@ Depending on where you want to route the audit log data, you need one of the fol
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
 
-    - **LOG** > **OperationalLogs**: Operational logs (preview) show the success or failure of users and devices that enroll in Intune, as well as details on non-compliant devices. Choose this option to send the enrollment logs to your storage account, event hub, or log analytics.
+    - **LOG** > **OperationalLogs**: Operational logs show the success or failure of users and devices that enroll in Intune, as well as details on non-compliant devices. Choose this option to send the enrollment logs to your storage account, event hub, or log analytics.
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
 
-      > [!NOTE]
-      > Operational logs are in preview. To provide feedback, including information in the operational logs, go to [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
-
-    - **LOG** > **DeviceComplianceOrg**: Device compliance organizational logs (preview) show the organizational report for Device Compliance in Intune, and details of non-compliant devices. Choose this option to send the compliance logs to your storage account, event hub, or log analytics.
+    - **LOG** > **DeviceComplianceOrg**: Device compliance organizational logs show the organizational report for Device Compliance in Intune, and details of non-compliant devices. Choose this option to send the compliance logs to your storage account, event hub, or log analytics.
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
- 
-      > [!NOTE]
-      > Device compliance organizational logs are in preview. To provide feedback, including information in the report, go to [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
-    When finished, your settings look similar to the following settings: 
-
-    > [!div class="mx-imgBorder"]
-    > ![Sample image that sends Intune audit logs to an Azure storage account](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
+    When finished, your settings look similar to the following settings:
+    
+    :::image type="content" source="./media/review-logs-using-azure-monitor/diagnostics-settings-example.png" alt-text="Sample image that sends Endpoint Manager and Microsoft Intune audit logs to an Azure storage account.":::
 
 4. **Save** your changes. Your setting is shown in the list. Once it's created, you can change the settings by selecting **Edit setting** > **Save**.
 
@@ -125,7 +120,7 @@ For more information, see [Use audit logs to track and monitor events](monitor-a
 In the audit log, you can find properties that have specific values. The following table provides these details.
 
 | Property | Property description | Values |
-|----------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---|---|---|
 | ActivityType  | The action that the admin takes. | Create, Delete, Patch, Action, SetReference, RemoveReference, Get, Search |
 | ActorType  | Person taking the action. | Unknown = 0, ItPro, IW, System, Partner, Application, GuestUser |
 | Category  | The pane in which the action took place. | Other = 0, Enrollment = 1, Compliance = 2, DeviceConfiguration = 3,   Device = 4, Application = 5, EBookManagement = 6, ConditionalAccess= 7,   OnPremiseAccess= 8, Role = 9, SoftwareUpdates =10, DeviceSetupConfiguration =   11, DeviceIntent = 12, DeviceIntentSetting = 13, DeviceSecurity = 14,   GroupPolicyAnalytics = 15 |
@@ -199,7 +194,7 @@ Get answers to frequently asked questions, and read about any known issues with 
 
 ### Which logs are included?
 
-Audit logs and operational (preview) logs are both available for routing using this feature.
+Audit logs and operational logs are both available for routing using this feature.
 
 ### After an action, when do the corresponding logs show up in the event hub?
 

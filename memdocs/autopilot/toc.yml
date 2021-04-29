@@ -78,6 +78,8 @@
         href: policy-conflicts.md
       - name: Known issues
         href: known-issues.md
+      - name: Resolved issues
+        href: resolved-issues.md
 
 - name: Reference
   items:
@@ -86,7 +88,7 @@
     - name: Support information  
       items: 
         - name: FAQ
-          href: autopilot-faq.md
+          href: autopilot-faq.yml
         - name: Contacts
           href: autopilot-support.md
         - name: Registration authorization

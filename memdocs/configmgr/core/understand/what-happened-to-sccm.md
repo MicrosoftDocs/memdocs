@@ -24,4 +24,4 @@ Prior product versions, such as System Center 2012 Configuration Manager, aren't
 For more information, see the following articles:
 
 - [What is Configuration Manager?](introduction.md)
-- [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.md)
+- [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml)

@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 04/15/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -127,7 +127,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
              - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.  
 
-             - To disable the installation randomization delay for required software updates, configure the client setting to **Disable deadline randomization** in the **Computer Agent** group. For more information, see [Computer Agent client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+             - The **Disable deadline randomization** in the **Computer Agent** group doesn't override the randomization behavior. For more information, see [Computer Agent client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  <!--9388804-->
 
     -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
 
@@ -244,6 +244,16 @@ After you create an ADR, add additional deployments to the rule. This action hel
 Deployments can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
 
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+
+## Known issues
+<!--9354590, 9391270-->
+### Error code 0x87D20417
+
+**Scenario:** When running Configuration Manager version 2010, you may notice that an automatic deployment rule fails and returns **Last Error Code** of 0x87D20417. In the **PatchDownloader.log**, you see `Failed to create temp file with GetTempFileName() at temp location C:\Windows\TEMP\, error 80 ` and 0-byte files in the %temp% directory. 
+
+**Workaround:** Remove all the files from the temp directory specified in the **PatchDownloader.log** and rerun the ADR. 
+
+**Resolution:** Install [KB 4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95), Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010.
 
 
 ## Next steps

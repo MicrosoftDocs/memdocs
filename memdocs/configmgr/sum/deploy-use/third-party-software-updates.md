@@ -23,9 +23,9 @@ The **Third-Party Software Update Catalogs** node in the Configuration Manager c
 
 
 ## Prerequisites 
-- Sufficient disk space on the top-level software update point's WSUSContent folder to store the source binary content for third-party software updates.
+- Sufficient disk space on the top-level software update point's `WSUSContent` directory to store the source binary content for third-party software updates.
     - The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment.
-    - If you need to move the WSUSContent folder to another drive with more free space, see the [How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog post.
+    - If you need to move the `WSUSContent` directory to another drive with more free space, see the [How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog post.
 - The third-party software update synchronization service requires internet access.
     - For the partner catalogs list, download.microsoft.com over HTTPS port 443 is needed. 
     -  Internet access to any third-party catalogs and update content files. Additional ports other than 443 may be needed.
@@ -136,12 +136,12 @@ When you subscribe to a third-party catalog in the Configuration Manager console
 
 
 ## Publish and deploy third-party software updates 
-Once the third-party updates are in the **All Updates** node, you can choose which updates should be published for deployment. When you publish an update, the binary files are downloaded from the vendor and placed into the WSUSContent directory on the top-level SUP. 
+Once the third-party updates are in the **All Updates** node, you can choose which updates should be published for deployment. When you publish an update, the binary files are downloaded from the vendor and placed into the `WSUSContent` directory on the top-level SUP. 
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **All Software Updates** node.
 2. Click **Add Criteria** to filter the list of updates. For example, add **Vendor** for **HP**. to view all updates from HP.  
 3. Select the updates that are required by your organization. Click **Publish Third-Party Software Update Content**.
-    - This action downloads the update binaries from the vendor then stores them in the WSUSContent folder on the top-level software update point. 
+    - This action downloads the update binaries from the vendor then stores them in the `WSUSContent` directory on the top-level software update point. 
 4. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to change the state of the published updates from metadata-only to deployable updates with content. 
     >[!NOTE]
     >When you publish third-party software update content, any certificates used to sign the content are added to the site. These certificates are of type **Third-party Software Updates Content**. You can manage them from the **Certificates** node under **Security** in the **Administration** workspace.  
@@ -248,6 +248,18 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
 ## Working with third-party updates video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
 
+
+## PowerShell
+
+You can use the following PowerShell cmdlets to automate the management of third-party updates in Configuration Manager:
+
+- [Get-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/get-cmthirdpartyupdatecatalog)
+- [New-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/new-cmthirdpartyupdatecatalog)
+- [Remove-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/remove-cmthirdpartyupdatecatalog)
+- [Set-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/set-cmthirdpartyupdatecatalog)
+- [Publish-CMThirdPartySoftwareUpdateContent](/powershell/module/configurationmanager/publish-cmthirdpartysoftwareupdatecontent)
+- [Get-CMThirdPartyUpdateCategory](/powershell/module/configurationmanager/get-cmthirdpartyupdatecategory)
+- [Set-CMThirdPartyUpdateCategory](/powershell/module/configurationmanager/set-cmthirdpartyupdatecategory)
 
 
 ## Next step

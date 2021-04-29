@@ -2,7 +2,7 @@
 title: Deploy a task sequence over the internet
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to remote computers.
-ms.date: 12/11/2020
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -76,7 +76,7 @@ When you deploy an upgrade task sequence, use the following settings:
 
 <!--6209223-->
 
-Starting in version 2006, [bootable media](create-task-sequence-media.md#BKMK_PlanBootableMedia) can download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
+Starting in version 2010, [bootable media](create-task-sequence-media.md#BKMK_PlanBootableMedia) can download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
 
 > [!NOTE]
 > The device still needs an intranet connection to the management point.
@@ -91,7 +91,7 @@ When the task sequence runs, it downloads content from the cloud-based sources. 
 
   - Associate the content-enabled CMG or cloud distribution point site systems. For more information, see [Configure a boundary group](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_config).
 
-  - Enable the following option: **Prefer cloud based sources over on-premise sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+  - Enable the following option: **Prefer cloud based sources over on-premises sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
 - Distribute the content referenced by the task sequence to the content-enabled CMG or cloud distribution point.
 
@@ -125,7 +125,9 @@ Starting in version 2010, you can use boot media to reimage internet-based devic
 
 - Make sure the device has a constant internet connection while the task sequence runs. Windows PE doesn't support wireless networks, so the device needs a wired network connection.
 
-- For version 2010 early update ring, if you use a PKI-based certificate for the boot media, configure it for SHA256 with the Microsoft Enhanced RSA and AES provider.<!-- 8837546 --> For later releases, including globally available version 2010, this certificate configuration is recommended but not required. The certificate can be a v3 (CNG) certificate.<!-- MEMDocs#1095 -->
+- If you use a PKI-based certificate for the boot media, configure it for SHA256 with the Microsoft Enhanced RSA and AES provider.<!-- 8837546 --> This certificate configuration is recommended but not required. The certificate can be a v3 (CNG) certificate.<!-- MEMDocs#1095 -->
+
+- In versions 2010 and 2103, if you configure the management point to **Allow internet-only connections**, then you can't use boot media over a CMG.<!-- 9760052 --> To work around this issue, configure the management point to **Allow intranet and internet connections**.
 
 ### Create boot media to use a CMG
 
@@ -135,7 +137,7 @@ Start the create task sequence media wizard for bootable media. For more informa
 
 - On the **Security** page, set a strong password to protect this media.
 
-- On the **Boot Image** page, select the **Cloud management gateway** for this boot media to use.
+- On the **Boot Image** page, under **Management point** select the **Cloud management gateway** from the **Add Management Points** dialog.
 
 When you boot an internet-connected device using this media, it communicates with the specified CMG. The boot media downloads the policy for the task sequence deployment via the CMG. As the task sequence runs, it downloads any additional content and policies over the internet.
 

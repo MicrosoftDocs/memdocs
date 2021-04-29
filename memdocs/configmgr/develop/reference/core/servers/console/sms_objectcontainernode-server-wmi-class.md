@@ -1,7 +1,7 @@
 ---
 title: "SMS_ObjectContainerNode Class"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "02/12/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
@@ -114,7 +114,11 @@ Class SMS_ObjectContainerNode : SMS_BaseClass
 |23|`SMS_DriverPackage`|  
 |25|`SMS_Driver`|  
 |1011|`SMS_SoftwareUpdate`|  
-|2011|`SMS_ConfigurationItem` (Configuration baseline).|  
+|2011|`SMS_ConfigurationItem` (Configuration baseline)|  
+|5000|`SMS_Collection_Device`|  
+|5001|`SMS_Collection_User`|  
+|6000|`SMS_ApplicationLatest`|  
+|6001|`SMS_ConfigurationItemLatest`|  
 
  `ParentContainerNodeID`  
  Data type: `UInt32`  

@@ -38,7 +38,7 @@ Before you start creating a certificate profile, make sure the necessary prerequ
 
     - **Description**: Provide a description that gives an overview of the certificate profile that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.  
 
-1. Select **Personal Information Exchange - PKCS #12 (PFX) settings - Create**. This option requests a certificate on behalf of a user from a connected on-premises certificate authority (CA). Choose your certificate authority: **Microsoft** or **Entrust Datacard**.
+1. Select **Personal Information Exchange - PKCS #12 (PFX) settings - Create**. This option requests a certificate on behalf of a user from a connected on-premises certificate authority (CA). Choose your certificate authority: **Microsoft** or **Entrust**.
 
     > [!NOTE]
     > The **Import** option gets information from an existing certificate to create a certificate profile. For more information, see [Import PFX certificate profiles](import-pfx-certificate-profiles.md).
@@ -55,7 +55,7 @@ Before you start creating a certificate profile, make sure the necessary prerequ
 The settings on the **PFX Certificate** page vary depending on the selected CA on the **General** page:
 
 - [Microsoft CA](#bkmk_microsoft)
-- [Entrust Datacard CA](#bkmk_entrust)
+- [Entrust CA](#bkmk_entrust)
 
 ### <a name="bkmk_microsoft"></a> Configure **PFX Certificate** settings for Microsoft CA
 
@@ -88,7 +88,7 @@ The settings on the **PFX Certificate** page vary depending on the selected CA o
 
 1. Complete the wizard.
 
-### <a name="bkmk_entrust"></a> Configure **PFX Certificate** settings for Entrust Datacard CA
+### <a name="bkmk_entrust"></a> Configure **PFX Certificate** settings for Entrust CA
 
 1. For the **Digital ID Configuration**, choose the configuration profile. The Entrust administrator creates the digital ID configuration options.
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 03/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,7 +59,7 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
 - **PFX Certificate Connector for Microsoft Intune**:
 
-  Each Intune tenant supports multiple instance of this connector. Ensure each connector has access to the private key used to encrypt the passwords of the uploaded PFX files.
+  Each Intune tenant supports multiple instances of this connector. Ensure each connector has access to the private key used to encrypt the passwords of the uploaded PFX files.
   You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector.
 
   This connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
@@ -88,7 +88,7 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 - **Intune Service**: Stores the PFX certificates in an encrypted state and handles the deployment of the certificate to the user device.  The passwords protecting the private keys of the certificates are encrypted before they're uploaded using either a hardware security module (HSM) or Windows Cryptography, ensuring that Intune can't access the private key at any time.
 
-- **PFX Certificate Connector for Microsoft Intune**: When a device requests a PFX certificate that was imported to Intune, the encrypted password, the certificate, and the device's public key are sent to the connector.  The connector decrypts the password using the on-premises private key, and then re-encrypts the password (and any plist profiles if using iOS) with the device key before sending the certificate back to Intune.  Intune then delivers the certificate to the device and the device is able to decrypt it with the device's private key and install the certificate.
+- **PFX Certificate Connector for Microsoft Intune**: When a device requests a PFX certificate that was imported to Intune, the encrypted password, the certificate, and the device's public key are sent to the connector.  The connector decrypts the password using the on-premises private key, and then re-encrypts the password (and any plist profiles if using iOS) with the device key before sending the certificate back to Intune.  Intune then delivers the certificate to the device and the device decrypts it with the device's private key and install the certificate.
 
 ## Download, install, and configure the PFX Certificate Connector for Microsoft Intune
 
@@ -114,6 +114,38 @@ Before you begin, [review requirements for the connector](certificate-connectors
 6. Close the window.
 
 7. In the Microsoft Endpoint Manager admin center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
+
+> [!NOTE]
+> The following changes must be made for GCC High and DoD tenants prior to using the PFX Certificate Connector.
+>
+> 1. Use a text editor to edit the two following *.config* files, which updates the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of three URI updates, two updates within the **PFXCertificateConnectorUI.exe.config** file, and one update in the **Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config** file.  
+>    - File Name: <install_Path>\Microsoft Intune\PFXCertificateConnector\ConnectorUI\ PFXCertificateConnectorUI.exe.config
+>
+>      Example: (%programfiles%\Microsoft Intune\PFXCertificateConnector\ConnectorUI\ PFXCertificateConnectorUI.exe.config)
+>      ```
+>      <appSettings>
+>        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon" />
+>        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses" />
+>        <add key="AccountPortalURL" value="https://manage.microsoft.us" />
+>      </appSettings> 
+>      ```
+>
+>    - </appSettings>File Name: <install_Path>\Microsoft Intune\PFXCertificateConnector\ConnectorSvc\Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config
+>
+>      Example: (%programfiles%\ Microsoft Intune\PFXCertificateConnector\ConnectorSvc\Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config)
+>      ```
+>      <appSettings>
+>        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
+>        <add key="TimerFrequency" value="30000" />
+>        <add key="PfxTimerFrequency" value="30000" />
+>        <add key="PfxImportRecryptionFrequency" value="30000" />
+>        <add key="CloudCAConnTimeoutInMilliseconds" value="30000" />
+>      ```
+>
+> 2. On the server that hosts the connector, add or edit the following registry key to match teh following:
+>    `HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector\MbaseManagementAddress`
+>    - If *MbaseManagementAddress* isn't present, add it as a child key below *PFXCertificateConnector*.
+>    - Set the *String Value* for *MbaseManagementAddress* to `https://manage.microsoft.us`
 
 ## Import PFX Certificates to Intune
 
@@ -189,9 +221,23 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 #### To import the PFX certificate  
 
-1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
+1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](http://web.archive.org/web/20200319074455/https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
 
-2. On the server, open *PowerShell* as an Administrator and then navigate to the *Release* folder that contains the PowerShell module.
+2. On the server, open *PowerShell* as an Administrator and then navigate to the *Release* folder that contains the PowerShell module *IntunePfxImport.psd1*.
+
+   > [!NOTE]
+   > The following changes must be made for GCC High and DoD tenants prior to running *IntunePfxImport.psd1*.
+   >
+   > Use a text editor or PowerShell ISE to edit the file, which updates the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of two updates within *IntunePfxImport.psd1*. One for **AuthURI** and the second for **GraphURI**:  
+   > ```
+   > PrivateData = @{
+   >     AuthURI = "login.microsoftonline.us"
+   >     GraphURI = "https://graph.microsoft.us"
+   >     SchemaVersion = "beta"
+   >     }
+   > ```
+   >
+   > After saving the changes, restart PowerShell.  
 
 3. To import the module, run `Import-Module .\IntunePfxImport.psd1`
 

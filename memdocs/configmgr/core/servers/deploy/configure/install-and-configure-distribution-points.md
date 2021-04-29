@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 12/22/2020
+ms.date: 03/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -181,7 +181,7 @@ This process automatically populates the **Members** tab of the Create New Distr
 
 Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to keep distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly for time and network bandwidth to distribute to these remote servers.
 
-This feature lets you reassign a distribution point to another primary site without redistributing the content. This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
+This feature lets you reassign a distribution point to another primary site without redistributing the content. The target and destination sites can be either a primary or secondary site.<!-- SCCMDocs #1677, MEMDocs #1356--> This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
 
 > [!IMPORTANT]
 > The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you cannot reassign the distribution point. You cannot reassign a cloud distribution point.
@@ -411,7 +411,7 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 > [!NOTE]
 > Select **Yes** in the **Review Required Ports for PXE** dialog box to confirm that you want to enable PXE. Configuration Manager automatically configures the default ports on Windows firewall. If you use a different firewall, manually configure the ports.
 >
-> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP).
+> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#considerations-when-you-have-wds-and-dhcp-on-the-same-server).
 
 - **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable WDS to respond to PXE service requests. Use this setting to enable and disable the service without removing the PXE functionality from the distribution point.
 

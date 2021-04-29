@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -51,17 +51,20 @@ Some updates for Configuration Manager are available as both an in-console updat
 
 #### Supported versions
 
+> [!NOTE]
+> To better align with other releases within Microsoft Endpoint Manager, starting this year the current branch version names will be 2103, 2107, and 2111. They will still release every four months, and release at the same time of the year.
+
 The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:  
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [**2103**](../../plan-design/changes/whats-new-in-version-2103.md)<br /> (5.00.9049) | April 5, 2021 | October 5, 2022 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2010**](../../plan-design/changes/whats-new-in-version-2010.md)<br /> (5.00.9040) | November 30, 2020 | May 30, 2022 | No | Yes |
 | [**2006**](../../plan-design/changes/whats-new-in-version-2006.md)<br /> (5.00.9012) | August 11, 2020 | February 11, 2022 | No | Yes |
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | April 1, 2020 | October 1, 2021 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
-| [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | July 26, 2019 | January 26, 2021 | No | Yes |
 
-The **Availability date** is when the [early update ring](checklist-for-installing-update-2010.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after the update is globally available.
+The **Availability date** is when the [early update ring](checklist-for-installing-update-2103.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after the update is globally available.
 
 <a name="bkmk_note1"></a>
 
@@ -80,6 +83,7 @@ The following table lists historical versions of Configuration Manager current b
 
 | Version | Availability date | Support end date | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
+| **1906** <br /> (5.00.8853) | July 26, 2019 | January 26, 2021 | No | Yes |
 | **1902** <br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes | Yes |
 | **1810** <br /> (5.00.8740) | November 27, 2018 | December 1, 2020 | No | Yes |
 | **1806** <br /> (5.00.8692) | July 31, 2018 | January 31, 2020 | No | Yes |
@@ -106,7 +110,7 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:  
 
-- New versions, like version 2002, 2006, or 2010.
+- New versions, like version 2006, 2010 or 2103.
 
 - Updates that include new features for your current version.
 
@@ -131,7 +135,7 @@ The in-console updates can apply to one or more of the following systems:
 
 Configuration Manager discovers new updates for you. Synchronize your Configuration Manager service connection point with the Microsoft cloud service, noting the following behaviors:  
 
-- When your service connection point is in online mode, your site synchronizes with Microsoft every day. It automatically identifies new updates that apply to your infrastructure. To download updates and redistributable files, the computer that hosts the service connection point site system role uses the **System** context to access the following internet locations: go.microsoft.com and download.microsoft.com. For more information about additional locations used by the service connection point, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#bkmk_scp).  
+- When your service connection point is in online mode, your site synchronizes with Microsoft every day. It automatically identifies new updates that apply to your infrastructure. To download updates and redistributable files, the computer that hosts the service connection point site system role uses the **System** context to access the following internet locations: go`.microsoft.com` and `download.microsoft.com`. For more information about additional locations used by the service connection point, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#service-connection-point).  
 
 - When your service connection point is in offline mode, use the service connection tool to manually sync with the Microsoft cloud. For more information, see [Use the service connection tool](use-the-service-connection-tool.md).  
 

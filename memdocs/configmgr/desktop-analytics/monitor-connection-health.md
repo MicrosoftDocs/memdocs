@@ -464,6 +464,10 @@ Check the permissions on these registry keys. Make sure that the local System ac
 
 For more information, review M365AHandler.log on the client.  
 
+## Connected Services
+
+On the Desktop Analytics portal, under **Connected services** in the Global Settings group, the number of Enrolled devices sending data is the sum of [Properly enrolled](#properly-enrolled) devices and devices [Missing data](#missing-data).
+
 ## See also
 
 [Troubleshoot Desktop Analytics](troubleshooting.md)

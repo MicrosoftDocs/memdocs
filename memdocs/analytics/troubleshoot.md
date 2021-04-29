@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Endpoint analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Instructions for troubleshooting Endpoint analytics.
 ms.date: 01/08/2021
 ms.prod: configuration-manager
@@ -39,16 +39,6 @@ This issue impacts co-managed devices. Devices enrolled only via Intune or only 
 
 **Workaround:**
 The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Navigate to **Startup performance** > **Device performance**, then click to drill down into a device.
-
-### Some Servers are appearing in Endpoint analytics reports
-
-Some devices running Windows Server are unexpectedly appearing in Endpoint analytics reports, such as **Startup performance** and **Recommended software**.
-
-**Impacted devices:**
-This issue impacts some Windows Server devices that are managed by Configuration Manager with tenant attach enabled.
-
-**Mitigation:**
-This issue is being fixed on the back end, and no action is required. We do not recommend removing Windows Server devices from your target collection for tenant attach, as this will affect all Microsoft Endpoint Manager services.
 
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
@@ -96,7 +86,7 @@ For Configuration Manager-managed devices:
 1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.  
 1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
 1. Check and resolve any errors occurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
-
+1. Client devices require a restart to fully enable all analytics. <!--7698085-->
 
 ## <a name="bkmk_endpoints"></a> Proxy configuration
 

@@ -40,7 +40,7 @@ Complete the following steps to integrate the Symantec Endpoint Protection Mobil
 
 ### Azure AD account used to integrate Intune and SEP Mobile
 
-- Make sure you have the Azure AD account properly configured in the [Symantec Endpoint Protection Mobile Management console](https://aad.skycure.com) before starting the SEP Mobile Basic setup process.
+- Make sure you have the Azure AD account properly configured in the [Symantec Endpoint Protection Mobile Management console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html) before starting the SEP Mobile Basic setup process.
 - The Azure AD account must be a global administrator account to perform the integration.
 ### Network Setup
 
@@ -69,7 +69,7 @@ SEP Mobile supports two modes of integration with Intune:
 > [!IMPORTANT]
 > The SEP Mobile admin credentials must consist of an e-mail account that belongs to a valid user in the Azure Active Directory, otherwise the login will fail. SEP Mobile uses Azure Active Directory to authenticate its admin using Single Sign On (SSO).
 
-1. Go to [Symantec Endpoint Protection Mobile Management Console](https://aad.skycure.com).
+1. Go to [Symantec Endpoint Protection Mobile Management Console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html).
 
 2. Enter your **SEP Mobile admin credentials**, and then choose **Continue**.
 
@@ -126,7 +126,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 ### Set up the integration between Symantec Endpoint Protection Mobile and Intune
 
-1. Go to [Symantec Endpoint Protection Mobile Management Console](https://aad.skycure.com).
+1. Go to [Symantec Endpoint Protection Mobile Management Console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html).
 
 2. Enter your **SEP Mobile admin credentials**, then choose **Continue**.
 

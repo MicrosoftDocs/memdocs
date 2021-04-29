@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Add Wi-Fi settings for devices running Android device administrator in Microsoft Intune
 
-You can create a profile with specific WiFi settings, and then deploy this profile to your Android devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKS or SCEP certificate, and more.
+You can create a profile with specific WiFi settings, and then deploy this profile to your Android devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
 
 This feature applies to:
 

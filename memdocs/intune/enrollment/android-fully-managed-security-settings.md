@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 3/24/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -41,6 +41,8 @@ For corporate owned fully-managed devices, there are three recommended security 
 - [Fully managed enhanced security (level 2)](#fully-managed-enhanced-security)
 - [Fully managed high security (level 3)](#fully-managed-high-security) 
 
+Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+
 ## Fully managed basic security
 
 Level 1 is the recommended minimum security configuration for mobile devices owned by the organization.
@@ -54,7 +56,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Not configured ||
 | Device Health | Require the device to be at or under the Device Threat Level | Not configured||
 | Device Health | SafetyNet device attestation | Check basic integrity & certified devices | This setting configures Google's SafetyNet Attestation on end-user devices. Basic integrity validates the integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity.<br>Basic integrity and certified devices validates the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. |
-| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 8.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 8.0 and later for knowledge workers. For Android's latest recommendations, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). |
+| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 9.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. For Android's latest recommendations, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). |
 | Device Properties | Maximum OS version | Not configured ||
 | Device Properties | Minimum security patch level | Not configured | Android devices can receive monthly security patches, but the release is dependent on OEMs and/or carriers. Organizations should ensure that deployed Android devices do receive security updates before implementing this setting. For the latest patch releases, see [Android Security Bulletins](https://source.android.com/security/bulletin/). |
 | System Security | Require a password to unlock mobile devices | Require ||
@@ -148,7 +150,6 @@ Level 3 is the recommended configuration for both:
 Such organizations are typically targeted by well-funded and sophisticated adversaries. Therefore, they merit the additional constraints and controls listed below.
 
 This configuration expands upon Level 2 by:
-- increasing the minimum operating system version.
 - ensuring that the device is compliant by enforcing the most secure Microsoft Defender for Endpoint or mobile threat defense level.
 - increasing the minimum operating system version.
 - enforcing additional device restrictions (like disabling unredacted notifications on lock screen).
@@ -163,7 +164,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | ----- | ----- | ----- | ----- |
 | Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p> Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both. |
 | Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both.|
-| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 10.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 8.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
+| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 10.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
 
 ### Device restrictions
 

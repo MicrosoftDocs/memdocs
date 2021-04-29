@@ -2,7 +2,7 @@
 title: Content management security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for content management in Configuration Manager.
-ms.date: 10/26/2018
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,12 +18,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-This article contains security and privacy information for content management in Configuration Manager. 
-
-
+This article contains security and privacy information for content management in Configuration Manager.
 
 ##  <a name="BKMK_Security_ContentManagement"></a> Security best practices for content management  
-
 
 #### Advantages and disadvantages of HTTPS or HTTP for intranet distribution points
 For distribution points on the intranet, consider the advantages and disadvantages of using HTTPS and HTTP. In most scenarios, using HTTP and package access accounts for authorization provides more security than using HTTPS with encryption but without authorization. However, if you have sensitive data in your content that you want to encrypt during transfer, use HTTPS.  
@@ -32,7 +29,10 @@ For distribution points on the intranet, consider the advantages and disadvantag
 
 -   **When you use HTTP for a distribution point**, you can use package access accounts for authorization, but the content isn't encrypted when it's transferred over the network.  
 
-Starting in version 1806, consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Azure Active Directory authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](enhanced-http.md).
+Consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Azure Active Directory authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](enhanced-http.md).
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 #### Protect the client authentication certificate file
 If you use a PKI client authentication certificate rather than a self-signed certificate for the distribution point, protect the certificate file (.pfx) with a strong password. If you store the file on the network, secure the network channel when you import the file into Configuration Manager.

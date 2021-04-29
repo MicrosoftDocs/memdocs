@@ -5,7 +5,7 @@ description: "Review Microsoft 365 Apps client information from the Office 365 C
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 01/26/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -43,12 +43,14 @@ The Office 365 Client Management dashboard starts displaying data as hardware in
 
 *(Introduced in version 1906 as a prerequisite)*
 
-Your top-level site server needs access to the following endpoint to download the readiness file:
+Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
 
-`https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
+- Starting March 2, 2021: `https://omex.cdn.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
+   - Location prior to March 2, 2021: `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
 
 > [!NOTE]
-> Internet connectivity isn't required for the client devices for any of these scenarios.
+> - The location of this file is changing *March 2, 2021* <!--edit this, placeholder line-->. For more information, see [Download location change for Microsoft 365 Apps readiness file](https://techcommunity.microsoft.com/t5/configuration-manager-blog/download-location-change-for-microsoft-365-apps-readiness-file/ba-p/2110282).
+> - Internet connectivity isn't required for the client devices for any of these scenarios.
 
 ### Enable data collection for Microsoft 365 Apps
 
@@ -182,6 +184,9 @@ Configuration Manager looks at the most recently used files on each device. It c
 This report can be used to identify which devices have recently used files which may contain macros. The **Readiness Toolkit for Office** can then be deployed using Configuration Manager to scan any devices where more detailed information is needed, and check if there are any potential compatibility concerns. For example, if the file uses a function that changed in a more recent version of Microsoft 365 Apps.
 
 For more information about how to carry out the scan, see [Detailed macro readiness](#bkmk_ort).
+
+> [!TIP]
+> Macro inventory is populated by default based on the document extensions in the MRU. Macro compatibility and macro status are populated once the **Readiness Toolkit for Office** scan runs on the device.
 
 ## <a name="bkmk_pilot"></a> Office 365 Pilot and Health dashboard
 <!--4488272, 4488301-->

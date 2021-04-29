@@ -13,7 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 01/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -239,6 +239,10 @@ See the following examples.
     cmd.exe /c xcopy AutopilotConfigurationFile.json %OSDTargetSystemDrive%\windows\provisioning\Autopilot\ /c
     ```
     - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package that was created earlier.
+
+     > [!IMPORTANT]
+     > TThe AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
+
 
 17. In the **Apply Autopilot for existing devices config file** step, select the **Package** > **Browse**.
 18. Select the **Autopilot for existing devices config** package created earlier and click **OK**. An example is displayed at the end of this section.

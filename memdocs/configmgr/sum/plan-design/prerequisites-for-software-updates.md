@@ -126,7 +126,7 @@ KB 3148812 was initially released in April 2016 to enable WSUS to natively decry
 1. From an elevated command prompt run `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
 1. Restart the WSUS service on all of the WSUS servers.
 
-If you don't realize that KB 3159706 had manual steps after installation, or you synchronized in the upgrade for Windows 10 1607 before installing KB 3159706, you would run into issues connecting to the WSUS console and deploying the upgrade respectively. When a client downloaded the upgrade file, it would get a [**0xC1800118** error code](https://support.microsoft.com/help/3194588/0xc1800118-error-when-you-push-windows-10-version-1607-by-using-wsus).
+If you don't realize that KB 3159706 had manual steps after installation, or you synchronized in the upgrade for Windows 10 1607 before installing KB 3159706, you would run into issues connecting to the WSUS console and deploying the upgrade respectively. When a client downloaded the upgrade file, it would get a **0xC1800118** error code.
 
 Because the resolution steps are similar to the resolution for synchronizing upgrades before KB 3095113 installation, we've combined both sets of steps into a single resolution in the next section.
  
