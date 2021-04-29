@@ -2,7 +2,7 @@
 title: "Console extension registration through community hub"
 description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
-ms.date: "04/27/2021"
+ms.date: "04/29/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -112,7 +112,7 @@ Manifest.xml format:
 	</Deployments>
 </CustomExtensionManifest>
 ```
-
+ 
 Example manifest.xml file:
 
 ```xml
