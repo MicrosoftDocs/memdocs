@@ -43,7 +43,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender 
  [Example scenario: Using System Center Endpoint Protection to protect computers from malware](scenarios-endpoint-protection.md) Endpoint Protection and the Windows Defender Firewall.  
 
 
-## Managing Malware with Endpoint Protection  
+## Managing malware with Endpoint Protection  
  Endpoint Protection in Configuration Manager allows you to create antimalware policies that contain settings for Endpoint Protection client configurations. Deploy these antimalware policies to client computers. Then monitor compliance in the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace. Also use Endpoint Protection reports in the **Reporting** node.  
 
  Additional information:  
@@ -77,7 +77,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender 
 
 Microsoft Defender for Endpoint manages and monitors Microsoft Defender for Endpoint, formerly known as Windows Defender for Endpoint. The Microsoft Defender for Endpoint service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender for Endpoints](defender-advanced-threat-protection.md).
 
-## Endpoint Protection Workflow  
+## Endpoint Protection workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
 
  ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)  

@@ -501,11 +501,11 @@ Class SMS_AdvancedThreatProtectionSettings : SMS_SettingsDefinitionBase
 
 ## Requirements  
 
-## Runtime Requirements  
+## Runtime requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+## Development requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
+## See also  
  [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)

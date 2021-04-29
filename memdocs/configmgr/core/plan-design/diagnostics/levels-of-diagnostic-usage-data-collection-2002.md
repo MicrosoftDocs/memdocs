@@ -277,7 +277,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of client health check failures by issue type
 
-### Cloud Services  
+### Cloud services  
 
 - Azure Active Directory discovery statistics  
 
@@ -459,7 +459,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Versions of installed Configuration Manager hotfixes  
 
-### Software Updates  
+### Software updates  
 
 - Available and deadline deltas that are used in automatic deployment rules  
 

@@ -73,7 +73,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 ## <a name="bkmk_any_os"></a> Onboard devices with any supported operating system to ATP (recommended)
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to ATP by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
 
-### Get the configuration file, Workspace ID, and Workspace key
+### Get the configuration file, workspace ID, and workspace key
 
 1. Go to the [Microsoft Defender for Endpoint online service](https://securitycenter.windows.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.

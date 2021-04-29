@@ -48,7 +48,7 @@ Windows 10 computers don't require any additional client for endpoint protection
 
  [Example scenario: Using System Center Endpoint Protection to protect computers from malware](../deploy-use/scenarios-endpoint-protection.md) shows how you might configure and manage Endpoint Protection and the Windows Firewall.  
 
-## Managing Malware with Endpoint Protection  
+## Managing malware with Endpoint Protection  
 
 Endpoint Protection in Configuration Manager allows you to create antimalware policies that contain settings for Endpoint Protection client configurations. You can then deploy these antimalware policies to client computers and monitor them in the **Endpoint Protection Status** node in the **Monitoring** workspace, or by using Configuration Manager reports.  
 
@@ -78,12 +78,12 @@ Endpoint Protection in Configuration Manager allows you to create antimalware po
 
 Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Microsoft Defender for Endpoint, formerly known as Windows Defender for Endpoint. Microsoft Defender for Endpoint is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. See [Microsoft Defender for Endpoint](../deploy-use/defender-advanced-threat-protection.md).
 
-## Endpoint Protection Workflow  
+## Endpoint Protection workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
 
  ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)
 
-## Best Practices for Endpoint Protection in Configuration Manager  
+## Best practices for Endpoint Protection in Configuration Manager  
  Use the following best practices for Endpoint Protection in System Center 2012 Configuration Manager.  
 
 ### Configure custom client settings for Endpoint Protection  

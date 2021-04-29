@@ -38,7 +38,7 @@ To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://supp
 
 [!INCLUDE [Profiles for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-profiles.md)]
 
-## <a name="bkmk_av"></a> Assign Microsoft Defender Antivirus Policy to a collection
+## <a name="bkmk_av"></a> Assign Microsoft Defender Antivirus policy to a collection
 
 1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** then **Antivirus**.

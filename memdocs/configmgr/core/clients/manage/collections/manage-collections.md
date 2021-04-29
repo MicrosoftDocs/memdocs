@@ -52,31 +52,31 @@ Opens the **Run Script** wizard to run a PowerShell script on all of the clients
 
 Opens CMPivot for this collection. Use CMPivot to query device information and take action in real time. For more information, see [CMPivot for real-time data](../../../servers/manage/cmpivot.md).
 
-#### Manage Affinity Requests
+#### Manage Affinity requests
 
 Opens the **Manage User Device Affinity Requests** dialog box. Approve or reject pending requests to establish user device affinities for devices in the selected collection. For more information, see [Link users and devices with user device affinity](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-#### Clear Required PXE Deployments
+#### Clear Required PXE deployments
 
 Clears any required PXE boot deployments from all members of the selected collection. For more information, see [Use PXE to deploy Windows over the network](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
-#### Update Membership
+#### Update membership
 
 Evaluates the membership for the selected collection. For collections with many members, this update might take some time to finish. Use the **Refresh** action to update the display with the new collections members after the update is completed.
 
-#### Synchronize Membership
+#### Synchronize membership
 
 If you configured this collection for cloud sync, synchronize the current membership with an Azure Active Directory group. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
-#### Add Resources
+#### Add resources
 
 Opens the **Add Resources to Collection** window. Search for new resources to add to the selected collection. The icon for the selected collection displays an hourglass symbol while the update is in progress.
 
-#### Client Notification
+#### Client notification
 
 For more information, see [Client notifications](../client-notification.md).
 
-#### Client Diagnostics
+#### Client diagnostics
 
 Displays the following options:
 
@@ -108,7 +108,7 @@ Deletes the selected collection. You can also delete all of the resources in the
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
 
-#### Simulate Deployment
+#### Simulate deployment
 
 Opens the **Simulate Application Deployment Wizard**. This wizard lets you test the results of an application deployment without installing or uninstalling the application. For more information, see [How to simulate application deployments](../../../../apps/deploy-use/simulate-application-deployments.md).
 
@@ -126,7 +126,7 @@ Displays the following options:
 
 - **Software Updates**: Opens the **Deploy Software Updates Wizard**. Configure the deployment of software updates to resources in the selected collection. For more information, see [Deploy software updates](../../../../sum/deploy-use/deploy-software-updates.md).
 
-#### View Relationships
+#### View relationships
 
 For more information, see [View collection relationships](#view-collection-relationships).
 
