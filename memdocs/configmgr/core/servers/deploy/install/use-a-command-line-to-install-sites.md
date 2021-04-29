@@ -56,7 +56,7 @@ To recover a site, also include the following sections of the script file:
 
 For more information, see [Unattended site recovery for Configuration Manager](../../manage/unattended-recovery.md).  
 
-For a list of keys and values to use in an unattended installation script file, see [Unattended setup script file keys](command-line-options-for-setup.md#bkmk_Unattended).
+For a list of keys and values to use in an unattended installation script file, see [Unattended setup script file keys](command-line-script-file.md).
 
 > [!NOTE]
 > When you run setup from the [CD.Latest folder](../../manage/the-cd.latest-folder.md) for a scripted install or recovery, include the **CDLatest** key with a value of  `1`. This value isn't supported with installation media from the Microsoft Volume License site. For more information on how to use this key name in the script file, see [Command-line options](command-line-options-for-setup.md).
@@ -105,7 +105,9 @@ To modify the languages that are installed at a site from a command prompt:
 
 For example, use the following command syntax: `setupwpf.exe /MANAGELANGS <language script file>`
 
-For more information about how to create the language script file, see [Command line options to manage languages](command-line-options-for-setup.md#bkmk_Lang).
+For more information values to use in the language script file, see [Keys to manage languages](command-line-script-file.md#keys-to-manage-languages).
+
+For more information on languages in Configuration Manager, see [Language packs](language-packs.md).
 
 ## Next steps
 
