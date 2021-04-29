@@ -1,5 +1,5 @@
 ---
-title: Restart frequency (preview) in endpoint analytics
+title: Restart frequency in endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device restart frequency in endpoint analytics
 ms.date: 03/01/2021
@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Restart frequency (preview) in endpoint analytics
+# Restart frequency in endpoint analytics
 <!--IN6225459-->
 In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
 
@@ -83,8 +83,6 @@ The **OS restart history** table has the following information:
 The **OS restart history** table is truncated to the 10 most recent restarts that occurred in the last 2 months. The table is low latency, so new restarts typically show up here before they appear in the daily aggregates shown in the **Device performance** tab.
 
 ## Known issues
-
-- Currently, only snapshot baselines are supported. You can compare the current metrics within your tenant to a set of metrics you took a snapshot of previously. An **All organizations (median)** baseline isn't available.
 
 - The count of restarts in a device's restart history in the [**Devices page**](#devices-page) may not match the count shown in the **Device performance** tab. This is by design. The differences are: 
    - The aggregates in the [**Device performance** tab](#device-performance-tab) are computed daily to show counts for the last 14 days
