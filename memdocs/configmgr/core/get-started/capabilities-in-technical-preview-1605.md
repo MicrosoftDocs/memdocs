@@ -20,7 +20,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1605. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
- **Known Issues in this Technical Preview:**  
+ **Known issues in this Technical Preview:**  
 
 - With Technical Preview 1605, if you update the properties of a management point after it is installed, you might see a console error which forces the console to close.  If this happens, you can uninstall the management point and then reinstall the management point using the desired settings. Alternately, you  can modify the management point prior to installing  Technical Preview 1605.  
 
@@ -259,10 +259,10 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
      After you open Company Portal, you will see an authentication dialog box named **Configuration Manager** Specify the user's Active Directory credentials (either in the form of user@domain or domain\user) to log in.  
 
-##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating Systems in Software Center  
+##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating systems in Software Center  
  In this release, the following changes have been made to improve the layout of the Software Center application:  
 
--   The **Applications** tab has been split into three separate tabs for **Updates**, **Operating systems** (which were both previously found in the **Filters** list), and **Applications**.  
+-   The **Applications** tab has been split into three separate tabs for **Updates**, **Operating ystems** (which were both previously found in the **Filters** list), and **Applications**.  
 
 ##  <a name="BKMK_ServerGroups"></a> Service a server group  
  Technical Preview for Configuration Manager, version 1511, included the ability to create a collection where all devices in the collection make up a server group. Then, you could configure the server group settings to use when you deploy software updates to the server group, control the percentage of computers that are updated at any given time, and configure pre-deployment and post-deployment PowerShell scripts to run custom actions.  
