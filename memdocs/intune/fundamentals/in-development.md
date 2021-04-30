@@ -71,10 +71,6 @@ In addition to exporting the summarized discovered apps list data, you will also
 
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
-### New app categories to target app protection policies more easily<!-- 4802581  -->
-
-We will improve the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically apply to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
-
 <!-- ***********************************************-->
 ## Device configuration
 
@@ -126,6 +122,7 @@ Applies to:
 - iOS/iPadOS 14.5 and newer
 
 ### Settings catalog policies for policy sets<!-- 8683467  -->
+
 In addition to profiles based on templates, you will be able to add a profiles based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
 
 <!-- ***********************************************-->
@@ -219,17 +216,6 @@ Options include:
 - Configure servers at a site to upgrade manually, or require the admin to approve an upgrade before it can start.
 
 We're also adding a new health check setting that helps you identify when a server is running the latest version of Tunnel Gateway.
-
-### Update Windows Security experience profiles to support tri-state settings<!-- 9741752   -->
-
-For Windows 10 devices, we’re updating the bi-state settings in the **Windows Security experience** profile to be tri-state. Settings in the profile that currently support only two options of **Yes** and **Not configured** will soon support three options: **Yes**, **No**, and **Not configured**. This profile is available under *Endpoint security* > *Antivirus* > *Windows 10 and later*.
-
-When this change is made:
-
-- This update won’t change the behavior on devices. The Intune value of *Not configured* is already applied by the Windows CSPs as a value of No.
-- Each bi-state setting in an existing *Windows Security experience* profile that is set to *Not configured* will update to *No*, and the change will then apply to all devices that receives the profile. The value of *Not configured* will be a third state you can configure through the profile.  
-
-After this change is made, you can edit your profiles to change any of the settings to a value of *Not configured*, which will have the effect of no longer managing that setting through the Intune profile.
 
 <!-- ***********************************************-->
 ## Notices
