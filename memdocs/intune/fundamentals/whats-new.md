@@ -135,7 +135,7 @@ The eSIM identifier (EID) is a unique identifier for the embedded SIM (eSIM). Th
 
 ### Intune support for provisioning Azure Active Directory shared devices<!--9585326 -->
 
-The ability to provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Azure AD shared device mode is now Generally Available. For more info on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll).
+The ability to provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Azure AD shared device mode is now Generally Available. For more info on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
 
 #### View end of support details for your feature update profiles<!-- 9699729   -->
 
