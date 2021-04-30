@@ -2,7 +2,7 @@
 title: Deploy a task sequence over the internet
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to remote computers.
-ms.date: 04/19/2021
+ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -129,6 +129,8 @@ Starting in version 2010, you can use boot media to reimage internet-based devic
 
 - In versions 2010 and 2103, if you configure the management point to **Allow internet-only connections**, then you can't use boot media over a CMG.<!-- 9760052 --> To work around this issue, configure the management point to **Allow intranet and internet connections**.
 
+- If your CMG uses a PKI-based certificate, you need to add the trusted root certificate to the boot image. Otherwise, Windows PE can't communicate with the CMG because it doesn't trust the CMG's certificate. For more information, see [Add a trusted root certificate to a boot image](#add-a-trusted-root-certificate-to-a-boot-image).
+
 ### Create boot media to use a CMG
 
 Start the create task sequence media wizard for bootable media. For more information, see [Create bootable media](create-bootable-media.md). Modify the standard process using the following steps:
@@ -142,6 +144,78 @@ Start the create task sequence media wizard for bootable media. For more informa
 When you boot an internet-connected device using this media, it communicates with the specified CMG. The boot media downloads the policy for the task sequence deployment via the CMG. As the task sequence runs, it downloads any additional content and policies over the internet.
 
 After the task sequence runs, the client uses token-based authentication.
+
+### Add a trusted root certificate to a boot image
+
+<!-- MEMDocs #1097-->
+If your CMG uses a PKI-based certificate, you need to add the trusted root certificate to the boot image. Otherwise, Windows PE can't communicate with the CMG because it doesn't trust the CMG's certificate.
+
+#### Step 1: Export the certificate registry blob
+
+On a system that has the trusted root certificate installed:
+
+1. Open the Start menu. Type `run` to open the Run window. Open `mmc`.
+
+1. From the File menu, choose **Add/Remove Snap-in...**.
+
+1. In the Add or Remove Snap-ins dialog box, select **Certificates**, then select **Add**.
+
+    1. In the Certificates snap-in dialog box, select **Computer account**, then select **Next**.
+
+    1. In the Select Computer dialog box, select **Local computer**, then select **Finish**.
+
+    1. In the Add or Remove Snap-ins dialog box, select **OK**.
+
+1. Expand **Certificates**, expand **Trusted Root Certification Authorities**, and select **Certificates**.
+
+1. Select the root certificate. On the **Action** menu, select **Open**.
+
+1. Switch to the **Details** tab.
+
+1. Copy the value for the certificate's thumbprint. For example, `eb971f84c0c44b9eb22a378fecb45747eb971f84` <!-- this isn't a real certificate thumbprint -->
+
+1. From the Start menu, run `regedit`.
+
+1. Browse to the following registry key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. For more information about this registry key, see [System Store Locations](/windows/win32/seccrypto/system-store-locations).
+
+1. Select the registry key that matches the root certificate's thumbprint.
+
+1. On the **File** menu, select **Export**. Specify a file name, and save the `.reg` file.
+
+1. Edit the file in Notepad. In the key path, change `SOFTWARE` to `winpe-offline`, and save the file. For example:
+
+    `[HKEY_LOCAL_MACHINE\winpe-offline\Microsoft\SystemCertificates\AuthRoot\Certificates\eb971f84c0c44b9eb22a378fecb45747eb971f84]`
+
+1. Copy this file to a location that you can access for the next step.
+
+#### Step 2: Import the certificate registry blob to the offline boot image
+
+On a system that has the boot image file:
+
+1. [Mount the WIM file](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism#mount-an-image). For example, `DISM /Mount-image /imagefile:"C:\Sources\boot.wim" /Index:1 /MountDir:C:\Mount`.
+
+1. From the Start menu, run `regedit`.
+
+1. Select **HKEY_LOCAL_MACHINE**. On the **File** menu, select **Load Hive**.
+
+1. Browse to `C:\Mount\Windows\System32\config` and select **SOFTWARE**. This file is the offline registry hive for the Windows PE image mounted to `C:\Mount`.
+
+    > [!IMPORTANT]
+    > Make sure this path is to the mounted Windows PE image, not the default Windows OS path.
+
+1. Name the key for the loaded hive `winpe-offline`.
+
+1. On the **File** menu, select **Import**. Browse to the modified `.reg` file that you previously exported and modified. Select **Open**.
+
+1. Browse to the following registry key: `Computer\HKEY_LOCAL_MACHINE\winpe-offline\Microsoft\SystemCertificates\AuthRoot\Certificates` and confirm that the new key is added.
+
+1. Select the following registry key: `Computer\HKEY_LOCAL_MACHINE\winpe-offline`. On the **File** menu, select **Unload Hive**, and select **Yes**.
+
+1. Close the registry editor and any other windows that reference files in `C:\Mount`.
+
+1. [Unmount the boot image](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism#unmounting-an-image) and commit the changes. For example, `DISM /Unmount-image /Commit /MountDir:C:\Mount`
+
+The boot image now includes the trusted root certificate.
 
 ## Next steps
 
