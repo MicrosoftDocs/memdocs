@@ -40,7 +40,7 @@ To help protect company data, restrict file transfers to only the apps that you 
 
 The **Open-in management** feature for enrolled iOS devices can limit file transfers between iOS managed apps. Set *Open-in management* restrictions using an app protection policy that sets **Send org data to other apps** to the **Policy managed apps with Open-In/Share filtering** value and then deploy the policy using Intune.  When a user installs the deployed app, the restrictions you set are applied based on the assigned policy.
 
-## Use Open-in management with iOS apps to protect apps and data
+## Use Open-in management to protect iOS apps and data
 Use App protection policies with the iOS **Open-in management** feature to protect company data in the following ways:
 
 - **Devices not managed by any MDM solution:** You can set the app protection policy settings to control sharing of data with other applications via *Open-in* or *Share extensions*.  To do so, configure the **Send org data to other apps** setting to **Policy managed apps with Open-In/Share filtering** value.  The *Open-in/Share* behavior in the *policy managed app* presents only other *policy managed apps* as options for sharing. For related information, see [App protection policies for iOS/iPadOS and Android apps](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), [Data Transfer](../apps/app-protection-policy-settings-ios.md#data-transfer), and [iOS share extension](../apps/app-protection-policy.md#ios-share-extension).
