@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2103 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1910 or later. <!-- baseline only statement:--> When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2103.
+Update 2103 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1910 or later. <!-- baseline only statement:--> When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2103.
 
 > [!NOTE]
 > To better align with other releases within Microsoft Endpoint Manager, starting this year the current branch version names will be 2103, 2107, and 2111. They will still release every four months, and release at the same time of the year.

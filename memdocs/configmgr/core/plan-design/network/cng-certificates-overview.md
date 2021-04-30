@@ -2,7 +2,7 @@
 title: CNG v3 certificates overview
 titleSuffix: Configuration Manager
 description: Learn about support for Cryptography Next Generation (CNG) v3 certificates for Configuration Manager clients and servers.
-ms.date: 04/05/2021
+ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -15,10 +15,10 @@ manager: dougeby
 # CNG v3 certificates overview
 <!-- 1356191 -->
 
-Configuration Manager has limited support for Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use a PKI client authentication certificate with the private key generated and stored in a CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private keys, such as TPM KSP for PKI client authentication certificates.
+Configuration Manager supports Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use a PKI client authentication certificate with the private key generated and stored in a CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private keys, such as TPM KSP for PKI client authentication certificates.
 
 > [!NOTE]
-> When using CNG certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. <!-- 7836017 -->
+> When using CNG certificates, Configuration Manager clients only support certificates that use the **RSA** cryptographic algorithm. <!-- 7836017 -->
 
 ## Supported scenarios
 
@@ -29,6 +29,7 @@ You can use [Cryptography API: Next Generation (CNG)](/windows/win32/seccng/cng-
 - OS deployment
 - Client messaging SDK (with latest update) and ISV Proxy
 - Cloud management gateway (CMG) configuration
+- User-targeted available applications in Software Center<!-- MEMDocs#1576 -->
 
 Also use CNG v3 certificates for the following HTTPS-enabled server roles: <!-- 1357314 -->
 
@@ -50,8 +51,6 @@ The following scenarios currently aren't supported:
   - Enrollment point  
   - Enrollment proxy point  
 
-- Software Center doesn't display applications and packages as available that are deployed to user or user group collections.
-
 ## To use CNG certificates
 
 To use CNG v3 certificates, your certification authority (CA) needs to provide CNG certificate templates for target machines. Template details vary according to the scenario; however, the following properties are required:
@@ -65,7 +64,7 @@ To use CNG v3 certificates, your certification authority (CA) needs to provide C
 - **Cryptography** tab
 
   - **Provider Category** must be **Key Storage Provider**. (required)
- 
+
   - **Algorithm name** must be **RSA**. (required) <!-- 7836017 -->
 
   - **Request must use one of the following providers:** must be **Microsoft Software Key Storage Provider**.
