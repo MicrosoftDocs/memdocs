@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Endpoint
 titleSuffix: Configuration Manager
-description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
+description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
 ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
