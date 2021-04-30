@@ -24,7 +24,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 ## Prerequisites
 
 - Access to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
-- An E5 license for [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- An E5 license for [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - An environment that's [tenant attached with uploaded devices](device-sync-actions.md).
 - A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
    - Upgrade the target devices to the latest version of the Configuration Manager client.
@@ -38,7 +38,7 @@ To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://supp
 
 [!INCLUDE [Profiles for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-profiles.md)]
 
-## <a name="bkmk_av"></a> Assign Microsoft Defender Antivirus Policy to a collection
+## <a name="bkmk_av"></a> Assign Microsoft Defender Antivirus policy to a collection
 
 1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** then **Antivirus**.

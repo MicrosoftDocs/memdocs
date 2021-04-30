@@ -219,7 +219,7 @@ Beginning with Configuration Manager version 1606, this level includes the follo
 
     -   Count of alerts that are configured for the Endpoint Protection feature  
 
-    - ***[New]*** Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
+    - ***[New]*** Endpoint Policies (count of policies and whether policies are deployed)
 
 
 -   ***[Removed]*** **Mobile application management (MAM):**  

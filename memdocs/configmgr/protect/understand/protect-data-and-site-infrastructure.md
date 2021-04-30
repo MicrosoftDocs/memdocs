@@ -22,7 +22,7 @@ You want your users to securely access your organization's resources. Protect bo
 
   - Microsoft Defender Antimalware
   - Microsoft Defender Firewall
-  - Microsoft Defender Advanced Threat Protection
+  - Microsoft Defender for Endpoint
   - Microsoft Defender Exploit Guard
   - Microsoft Defender Application Guard
   - Microsoft Defender Application Control

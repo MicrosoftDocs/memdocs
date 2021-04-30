@@ -116,7 +116,7 @@ In addition to device configuration policy, you can onboard devices using:
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
 6. On the **Configuration settings** page, configure the following options for **Endpoint Detection and Response**:
 
-   - **Sample sharing for all files**: Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
+   - **Sample sharing for all files**: Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
    - **Expedite telemetry reporting frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender for Endpoint service more frequently.
 
    [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on the Microsoft Defender for Endpoint settings.  
@@ -228,7 +228,7 @@ If you're not familiar with creating compliance policy, reference the [Create a 
 
 ## Create and assign app protection policy to set device risk level
 
-Use the procedure to [create an Application protection policy for either iOS/iPadOS or Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
+Use the procedure to [create an application protection policy for either iOS/iPadOS or Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
 
 - **Apps**: Select the apps you wish to be targeted by app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Conditional launch**:  Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.

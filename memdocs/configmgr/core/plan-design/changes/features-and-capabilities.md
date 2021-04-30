@@ -69,7 +69,7 @@ Helps you to assess, track, and remediate the configuration compliance of client
 Provides security, antimalware, and Windows Firewall management for computers in your organization. This area includes management and integration with the following Windows Defender suite features:
 
 - Windows Defender Antivirus
-- Microsoft Defender Advanced Threat Protection
+- Microsoft Defender for Endpoint
 - Windows Defender Exploit Guard
 - Windows Defender Application Guard
 - Windows Defender Application Control
