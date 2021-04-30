@@ -253,7 +253,7 @@ For Configuration Manager version 1702, this level includes the following:
 
 - **Endpoint Protection:**  
 
-   - Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
+   - Endpoint Policies (count of policies and whether policies are deployed)
 
    - Count of alerts that are configured for Endpoint Protection feature  
 

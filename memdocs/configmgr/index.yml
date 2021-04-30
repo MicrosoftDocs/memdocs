@@ -172,7 +172,7 @@ conceptualContent:
         - text: Endpoint protection
           url: ./protect/deploy-use/endpoint-protection.md
           itemType: overview
-        - text: Microsoft Defender Advanced Threat Protection
+        - text: Microsoft Defender for Endpoint
           url: ./protect/deploy-use/defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management
