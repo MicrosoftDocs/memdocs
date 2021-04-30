@@ -35,6 +35,9 @@ This article provides the specific details for the second method. Pair these ins
 
 ## Get tenant details
 
+> [!TIP]
+> During this process, you'll need to note several values to use later. Open an app like Windows Notepad to paste in the values that you'll copy from the Azure Portal.
+
 First, you need to make note of the **Azure AD tenant name** and **tenant ID**. These values are the first two pieces of information that you need to import the app registrations in Configuration Manager.
 
 1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory**.
@@ -48,9 +51,6 @@ First, you need to make note of the **Azure AD tenant name** and **tenant ID**. 
 1. Copy the **Directory ID**. This GUID value is the tenant ID.
 
 ## Register the web (server) app
-
-> [!TIP]
-> During this process, you'll need to note several values to use later. Open an app like Windows Notepad to paste in the values that you'll copy from the Azure Portal.
 
 1. In the Azure AD menu, select **App registrations**. Select **New registration** to create a new app.
 
