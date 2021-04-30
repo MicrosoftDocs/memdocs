@@ -90,6 +90,7 @@
       }, 
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
+        "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
         "analytics/**/*.md": ["Analytics"],
         "autopilot/**/*.md": ["Autopilot"]
