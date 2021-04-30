@@ -122,6 +122,9 @@ You can use an MDM service such a Microsoft Intune to start the remote Windows A
 
 To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Azure AD.
 
+>[!NOTE]
+>When a hybrid device is reset it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device.
+
 ### Triggering a remote Windows Autopilot Reset
 
 To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
