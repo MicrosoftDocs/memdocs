@@ -203,7 +203,7 @@ For more information, see [Backup and recovery](backup-and-recovery.md).
 
 If you or a third-party product customizes any Configuration Manager configuration files, save a copy of your customizations.
 
-For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. You need to reapply your customizations.
+For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. Reapply your customizations.
 
 ### Plan for client piloting
 
@@ -230,7 +230,7 @@ Before you start the update, review the current release notes. With Configuratio
 
 Feature-specific documentation may include information about known issues that affect core scenarios.
 
-For more inforrmation, see the [Release notes](../deploy/install/release-notes.md).
+For more information, see the [Release notes](../deploy/install/release-notes.md).
 
 ### Run the setup prerequisite checker
 
@@ -241,7 +241,7 @@ To run a prerequisite check from the console, go to the **Administration** works
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
+> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. After running the prerequisite checker, but before installing the update, if you need to do a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
 
