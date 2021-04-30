@@ -262,7 +262,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 ##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating systems in Software Center  
  In this release, the following changes have been made to improve the layout of the Software Center application:  
 
--   The **Applications** tab has been split into three separate tabs for **Updates**, **Operating ystems** (which were both previously found in the **Filters** list), and **Applications**.  
+-   The **Applications** tab has been split into three separate tabs for **Updates**, **Operating systems** (which were both previously found in the **Filters** list), and **Applications**.  
 
 ##  <a name="BKMK_ServerGroups"></a> Service a server group  
  Technical Preview for Configuration Manager, version 1511, included the ability to create a collection where all devices in the collection make up a server group. Then, you could configure the server group settings to use when you deploy software updates to the server group, control the percentage of computers that are updated at any given time, and configure pre-deployment and post-deployment PowerShell scripts to run custom actions.  
