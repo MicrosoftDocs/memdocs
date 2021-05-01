@@ -2,7 +2,7 @@
 title: Unattended setup script file keys
 titleSuffix: Configuration Manager
 description: Specify the keys and values in the INI installation script file for an unattended setup of Configuration Manager.
-ms.date: 04/27/2021
+ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -26,6 +26,31 @@ For more information, see the following articles:
 
 - [Command-line overview](use-a-command-line-to-install-sites.md)
 - [Setup command-line options](command-line-options-for-setup.md)
+
+Specify the section names in square brackets (`[]`): `[<Section name>]`. For example, `[Identification]`.
+
+When you provide values for keys, the name of the key must be followed by an equal sign (`=`) and the value for the key: `<Key name>=<Value>`. For example, `CDLatest=1`. Make sure the keys are under the appropriate section.
+
+Each section and each value needs to be unique in a single script. For example, there can only be one `[Identification]` section and only one `Action` key.
+
+## Supported actions
+
+A script is primarily defined by the action key in the identification section. The following list includes all of the currently supported actions for running setup unattended:
+
+- InstallPrimarySite: Install a primary site
+- InstallAdminUI: Install the Configuration Manager console
+- InstallSecondarySite: Install a secondary site
+- InstallCAS: Install a central administration site (CAS)
+- DeinstallSecondarySite: Uninstall a secondary site
+- RecoverSecondarySite: Recover a secondary site
+- RecoverPrimarySite: Recovery a primary site
+- RecoverCCAR: Recover a CAS
+- InstallLanguagePack: Install a language pack
+- DeinsatllLanguagePack: Uninstall a language pack
+- ManageLanguages: Add or remove client and server languages
+- InstallSiteServer: Install a site server
+- UpgradeSiteServer: Upgrade a site server
+- UninstallSiteServer: Uninstall a site server
 
 ## Keys to manage languages
 
@@ -1274,3 +1299,47 @@ Use the following details to recover a primary site by using an unattended setup
     - **Values:** <*Port number*>  
 
     - **Details:** Specifies the port number to use for the proxy port.  
+
+## Examples
+
+### Example script to install a primary site
+
+```ini
+[Identification]
+Action=InstallPrimarySite
+CDLatest=1
+
+[Options]
+ProductID=Eval
+SiteCode=XYZ
+SiteName=Contoso eval site
+SMSInstallDir=D:\Program Files\Microsoft Configuration Manager
+SDKServer=cmsite.contoso.com
+PrerequisiteComp=0
+PrerequisitePath=C:\Sources\Redist
+AdminConsole=1
+JoinCEIP=0
+ManagementPoint=cmsite.contoso.com
+ManagementPointProtocol=HTTP
+DistributionPoint=cmsite.contoso.com
+DistributionPointProtocol=HTTP
+DistributionPointInstallIIS=1
+RoleCommunicationProtocol=HTTPorHTTPS
+ClientsUsePKICertificate=0
+MobileDeviceLanguage=0
+
+[SQLConfigOptions]
+SQLServerName=cmsql.contoso.com
+DatabaseName=CM_XYZ
+SQLDataFilePath=E:\Microsoft Sql\Data
+SQLLogFilePath=E:\Microsoft Sql\Data
+
+[CloudConnectorOptions]
+CloudConnector=1
+CloudConnectorServer=cmsite.contoso.com
+UseProxy=0
+
+[SABranchOptions]
+SAActive=1
+CurrentBranch=1
+```
