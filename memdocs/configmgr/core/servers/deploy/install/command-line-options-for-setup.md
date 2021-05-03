@@ -2,7 +2,7 @@
 title: Setup command-line options
 titleSuffix: Configuration Manager
 description: Create automation scripts to install Configuration Manager from a command line.
-ms.date: 04/27/2021
+ms.date: 05/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -18,7 +18,10 @@ manager: dougeby
 
 Use this information to configure scripts or to install Configuration Manager from a command line. For more information on how to use these command-line options, see [Command-line overview](use-a-command-line-to-install-sites.md).
 
-Run setup from the `\BIN\X64` directory of the Configuration Manager installation path on the site server.<!-- setup.exe vs setupwpf.exe? -->
+Run `setup.exe` from the `\BIN\X64` directory of the Configuration Manager installation path on the site server.
+
+> [!TIP]
+> You can also use `setupwpf.exe` from the same folder, but it doesn't include basic prerequisite checks.
 
 ## /DEINSTALL
 
@@ -65,7 +68,7 @@ For more information, see [Test the database upgrade when installing an update](
 
 Run an unattended upgrade of a site. Specify the product key including the dash (`-`) delimiters. Also specify the path to the previously downloaded setup prerequisite files.
 
-For example: `setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx C:\Setup\prereqs`
+For example: `/UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx C:\Setup\prereqs`
 
 For more information about setup prerequisite files, see [Setup Downloader](setup-downloader.md).
 
@@ -89,7 +92,7 @@ For example: `/SDKDEINST cm01.contoso.com`
 
 ## /MANAGELANGS
 
-Manage the languages that are installed at a previously installed site. Provide the location for the language script file that contains the language settings. For more information, see the [Keys to manage languages](command-line-script-file.md#keys-to-manage-languages).
+Manage the languages that are installed at a previously installed site. Provide the location for the language script file that contains the language settings. For more information, see the [Keys to manage languages](command-line-script-file.md#manage-languages).
 
 For example: `/MANAGELANGS C:\Setup\langsetup.ini`
 
