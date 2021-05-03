@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/28/2021
+ms.date: 05/03/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,10 +63,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
-
-#### New tiles provided for app install failures<!-- 6381269  -->
-
-The **Home**, **Dashboard**, and **Apps Overview** panes now provide updated tiles to show the number of app installation failures for the tenant. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home** to view the Home pane, or **Dashboard** to view the Dashboard pane. Select **Apps** > **Overview** to view the **Apps Overview** pane. For related information, see [Intune reports](../fundamentals/reports.md).
 
 #### Installation status for device-assigned required apps<!-- 7283852  -->
 
@@ -210,18 +206,6 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### New UI to filter data for new operational reports<!-- 9600112  -->
 
 New operational reports will now support a new UI to add data filters. The new filter pill offers an improved experience to help slice, refine, and view report data. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
-
-#### New organizational report providing app install status<!-- 6381268  -->
-
-The new **App Install Status** report provides a list of apps with versions and installation details. App installation details are included as separate columns in the list. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Install Status** > **App Install Status**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
-
-#### New organizational report providing app install status based on device <!-- 6381269  -->
-
-Based on a selected app, the new **Device Install Status** report provides a list of devices and status information related to the specific app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Install Status** > **Device Install Status** > **Select an app**. After selecting an app, click **Generate report**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
-
-#### New organizational report providing app install status based on user<!-- 6381269  -->
-
-Based on a selected app, the new **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Installations**, **Failures**, **Install Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Install Status** > **User Install Status** > **Select an app**. After selecting an app, click **Generate report**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 #### Windows restart frequency report in Endpoint analytics is generally available<!-- 9606273 -->
 
