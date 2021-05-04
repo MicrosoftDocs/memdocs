@@ -122,7 +122,13 @@ If you're using [client authentication certificates](configure-authentication.md
 
 ## Add the CMG connection point
 
-The CMG connection point is the site system role for communicating with the CMG. To add the CMG connection point, follow the general instructions to [install site system roles](../../../servers/deploy/configure/install-site-system-roles.md). On the System Role Selection page of the Add Site System Role Wizard, select **Cloud management gateway connection point**. Then select the **Cloud management gateway name** to which this server connects. The wizard shows the region for the selected CMG.
+The Cloud Management Gateway connection point is a site system role required for the communication of your on-premises Microsoft Endpoint Configuration Manager deployment to  the CMG. To add the CMG connection point, follow the instructions to [install site system roles](../../../servers/deploy/configure/install-site-system-roles.md).
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node.
+
+2. Locate your primary site, right-click it and choose **Add Site System Roles**.
+
+3. On the System Role Selection screen, choose **Cloud management gateway connection point** and click next. Choose the **Cloud management gateway name** to which this server connects. The wizard will show the region for the selected CMG. 
 
 > [!IMPORTANT]
 > If you're using client authentication certificates, the CMG connection point needs this certificate. For more information, see [client authentication certificate](configure-authentication.md#pki-certificate).
@@ -130,7 +136,9 @@ The CMG connection point is the site system role for communicating with the CMG.
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 > [!TIP]
-> You can also use the PowerShell cmdlet **Add-CMCloudManagementGatewayConnectionPoint** for this process. Optionally use this cmdlet to add the CMG connection point role to a site system server. For more information, see [Add-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Add-CMCloudManagementGatewayConnectionPoint).
+> Optionally, you can also use the PowerShell cmdlet **Add-CMCloudManagementGatewayConnectionPoint** to add the CMG connection point role to a site system server. 
+>
+>For more information, see [Add-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Add-CMCloudManagementGatewayConnectionPoint).
 
 ## <a name="bkmk_role"></a> Configure client-facing roles for CMG traffic
 
