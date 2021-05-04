@@ -5,10 +5,10 @@ title: Protect devices with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn about the Intune capabilities that can help you protect your devices and data against unauthorized access and other threats.
 keywords:
-author: brenduns   
+author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/03/2021
+ms.date: 05/04/2021
 ms.topic: overview
 ms.subservice: protect
 ms.service: microsoft-intune
@@ -129,7 +129,7 @@ Intune can use data from integrated compliance partners and mobile threat defens
 
 ### Configuration Manager
 
-You can use many Intune policies and device actions to [protect the devices you manage with Configuration Manager](../protect/endpoint-security-manage-devices.md). To support those devices, configure [co-management](../../configmgr/comanage/overview.md) or [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md). You can even use both together. See *Should I use co-management or tenant attach?* in [Frequently asked questions about co-management](/configmgr/comanage/faq).
+You can use many Intune policies and device actions to [protect the devices you manage with Configuration Manager](../protect/endpoint-security-manage-devices.md). To support those devices, configure [co-management](../../configmgr/comanage/overview.md) or [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md). You can even use both together.
 
 - *Co-management* enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services.
 
