@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 10/12/2020
+ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -41,7 +41,7 @@ The following components are required to use CMPivot:
   - IPConfig
   - SMBConfig
 
-- CMPivot and the [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) installer are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, CMPivot and the Microsoft Edge installer won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
+- CMPivot and the [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) installer are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
 
 ## Permissions
 

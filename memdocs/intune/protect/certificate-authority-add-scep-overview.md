@@ -32,7 +32,7 @@ Use third-party certification authorities (CA) with Intune. Third-party CAs can 
 There are two parts to using this feature: open-source API, and the Intune administrator tasks.
 
 **Part 1 - Use an open-source API**  
-Microsoft created an API to integrate with Intune. Though the API you can validate certificates, send success or failure notifications, and use SSL, specifically SSL socket factory, to communicate with Intune.
+Microsoft created an API to integrate with Intune. Through the API you can validate certificates, send success or failure notifications, and use SSL, specifically SSL socket factory, to communicate with Intune.
 
 The API is available on the [Intune SCEP API public GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) for you to download, and use in your solutions. Use this API with third-party SCEP servers to run custom challenge validation against Intune before SCEP provisions a certificate to a device.
 
