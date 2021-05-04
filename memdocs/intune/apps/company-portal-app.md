@@ -228,6 +228,8 @@ The following keyboard shortcuts are available in the Windows Company Portal app
 |  | Remove | Ctrl+D or Delete |
 |  | Check access | Ctrl+M or F9 |
 | App details | Install | Ctrl+I |
+| App list tile | Install | Ctrl+I |
+| App list item | Install | Ctrl+I |
 | Devices | Available | Ctrl+D |
 
 End users will also be able to see the available shortcuts in the Windows Company Portal app.
