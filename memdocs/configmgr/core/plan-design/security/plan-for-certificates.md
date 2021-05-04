@@ -192,7 +192,7 @@ The client behavior then depends on whether the failed connection was over HTTPS
 
 To help identify a unique PKI client certificate, you can also specify a custom store other than the default of **Personal** in the **Computer** store. Create a custom certificate store outside of Configuration Manager. You need to be able to deploy certificates to this custom store and renew them before the validity period expires.
 
-For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).
+For more information, see [Configure settings for client PKI certificates](configure-security.md#client-pki-certificates).
 
 ## Transition strategy for PKI certificates
 
@@ -204,7 +204,7 @@ Because of the number of configuration options and choices in Configuration Mana
 
 1. Install the Configuration Manager site and configure it so that site systems accept client connections over HTTPS and HTTP.
 
-1. Configure the **Communication Security** tab in the site properties. Set **Site System Settings** to **HTTP or HTTPS** and select **Use PKI client certificate (client authentication capability) when available**. For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).
+1. Configure the **Communication Security** tab in the site properties. Set **Site System Settings** to **HTTP or HTTPS** and select **Use PKI client certificate (client authentication capability) when available**. For more information, see [Configure settings for client PKI certificates](configure-security.md#client-pki-certificates).
 
 1. Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](../network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).
 

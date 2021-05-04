@@ -66,7 +66,7 @@ To help protect the data that clients send to management points, you can require
 
 While signing helps protect the data from tampering, encryption helps protect the data from information disclosure. You can enable encryption for the inventory data and state messages that clients send to management points in the site. You don't have to install any updates on clients to support this option. Clients and management points require more CPU usage for encryption and decryption.
 
-For more information about how to configure the settings for signing and encryption, see [Configure signing and encryption](configure-security.md#BKMK_ConfigureSigningEncryption).
+For more information about how to configure the settings for signing and encryption, see [Configure signing and encryption](configure-security.md#signing-and-encryption).
 
 For more information on the cryptographic algorithms used for signing and encryption, see [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md).
 
