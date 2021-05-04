@@ -230,7 +230,6 @@ The following keyboard shortcuts are available in the Windows Company Portal app
 | App details | Install | Ctrl+I |
 | Apps list tile | Install | Ctrl+I |
 | Apps list item | Install | Ctrl+I |
-| Devices | Available | Ctrl+D |
 
 End users will also be able to see the available shortcuts in the Windows Company Portal app.
 
