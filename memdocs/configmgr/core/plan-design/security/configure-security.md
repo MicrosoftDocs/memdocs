@@ -65,6 +65,67 @@ If you want to use public key infrastructure (PKI) certificates for client conne
 
 Repeat this procedure for all primary sites in the hierarchy.  
 
+## Manage the trusted root key
+
+Use these procedures to pre-provision and verify the trusted root key for a Configuration Manager client.
+
+> [!NOTE]
+> If clients can get the trusted root key from Active Directory Domain Services or client push, you don't have to pre-provision it.
+>
+> When clients use HTTPS communication to management points, you don't have to pre-provision the trusted root key. They establish trust by the PKI certificates.
+
+For more information on the trusted root key, see [Plan for security](plan-for-security.md#the-trusted-root-key).
+
+### <a name="bkmk_trk-provision-file"></a> Pre-provision a client with the trusted root key by using a file  
+
+1.  On the site server, open the following file in a text editor: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
+
+2.  Locate the entry, **SMSPublicRootKey=**. Copy the key from that line, and close the file without any changes.  
+
+3.  Create a new text file, and paste the key information that you copied from the mobileclient.tcf file.  
+
+4.  Save the file in a location where all computers can access it, but where the file is safe from tampering.  
+
+5.  Install the client by using any installation method that accepts client.msi properties. Specify the following property: `SMSROOTKEYPATH=<full path and file name>`  
+
+    > [!IMPORTANT]  
+    > When you specify the trusted root key during client installation, also specify the site code. Use the following client.msi property: `SMSSITECODE=<site code>`   
+
+
+### <a name="bkmk_trk-provision-nofile"></a> Pre-provision a client with the trusted root key without using a file  
+
+1.  On the site server, open the following file in a text editor: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
+
+2.  Locate the entry, **SMSPublicRootKey=**. Copy the key from that line, and close the file without any changes.  
+
+3.  Install the client by using any installation method that accepts client.msi properties. Specify the following client.msi property: `SMSPublicRootKey=<key>` where `<key>` is the string that you copied from mobileclient.tcf.  
+
+    > [!IMPORTANT]  
+    >  When you specify the trusted root key during client installation, also specify the site code. Use the following client.msi property: `SMSSITECODE=<site code>`   
+
+
+### <a name="bkmk_trk-verify"></a> Verify the trusted root key on a client  
+
+1. Open a Windows PowerShell console as an administrator.  
+
+2. Run the following command:  
+
+    ``` PowerShell
+    (Get-WmiObject -Namespace root\ccm\locationservices -Class TrustedRootKey).TrustedRootKey
+    ```
+
+The returned string is the trusted root key. Verify that it matches the **SMSPublicRootKey** value in the mobileclient.tcf file on the site server.  
+
+
+### <a name="bkmk_trk-reset"></a> Remove or replace the trusted root key  
+
+Remove the trusted root key from a client by using the client.msi property, **RESETKEYINFORMATION = TRUE**. 
+
+To replace the trusted root key, reinstall the client together with the new trusted root key. For example, use client push, or specify the client.msi property **SMSPublicRootKey**.  
+
+For more information on these installation properties, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md).
+
+
 
 
 ##  <a name="BKMK_ConfigureSigningEncryption"></a> Configure signing and encryption  

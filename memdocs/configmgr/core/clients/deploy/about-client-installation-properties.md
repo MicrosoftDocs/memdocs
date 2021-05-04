@@ -640,7 +640,7 @@ After the client installs and properly registers with the site, it starts the re
 
 ### RESETKEYINFORMATION
 
-If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
+If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
 
 Example: `CCMSetup.exe RESETKEYINFORMATION=TRUE`  
 
@@ -746,7 +746,7 @@ Examples:
 
 ### SMSPUBLICROOTKEY
 
-If the client can't get the Configuration Manager trusted root key from Active Directory Domain Services, use this property to specify the key. This property applies to clients that use HTTP and HTTPS communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
+If the client can't get the Configuration Manager trusted root key from Active Directory Domain Services, use this property to specify the key. This property applies to clients that use HTTP and HTTPS communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
 
 Example: `CCMSetup.exe SMSPUBLICROOTKEY=<keyvalue>`
 
@@ -755,7 +755,7 @@ Example: `CCMSetup.exe SMSPUBLICROOTKEY=<keyvalue>`
 
 ### SMSROOTKEYPATH
 
-Use this property to reinstall the Configuration Manager trusted root key. It specifies the full path and name of a file that contains the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
+Use this property to reinstall the Configuration Manager trusted root key. It specifies the full path and name of a file that contains the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
 
 Example: `CCMSetup.exe SMSROOTKEYPATH=C:\folder\trk`
 

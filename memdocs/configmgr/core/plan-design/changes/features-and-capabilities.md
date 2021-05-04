@@ -37,7 +37,7 @@ Use features like the cloud management gateway, cloud-based distribution points,
 For more information, see the following articles:
 
 - [Manage clients on the internet](../../clients/manage/manage-clients-internet.md)
-- [Plan for Azure AD](../security/plan-for-security.md#bkmk_planazuread)
+- [Plan for Azure AD](../security/plan-for-security.md#azure-active-directory)
 - [Azure services](../../servers/deploy/configure/azure-services-wizard.md)
 
 ## Real-time management
