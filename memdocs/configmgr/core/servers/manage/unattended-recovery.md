@@ -29,6 +29,6 @@ The script contains section names, key names, and values. Required section key n
 
 ## Next steps
 
-[Command-line options for setup](command-line-options-for-setup.md)
+[Command-line options for setup](../deploy/install/command-line-options-for-setup.md)
 
-[Unattended setup script file keys](command-line-script-file.md)
+[Unattended setup script file keys](../deploy/install/command-line-script-file.md)
