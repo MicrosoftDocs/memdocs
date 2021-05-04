@@ -27,7 +27,7 @@ To use the **/script** setup command-line option, first create an answer file. T
 
 The script contains section names, key names, and values. Required section key names vary depending on the recovery type that you need. The order of the keys within sections and the order of sections within the file aren't important. The keys aren't case-sensitive. When you provide values for keys, the name of the key is followed by an equal sign (`=`) and the value for the key. For example, `Action=RecoverCCAR`.
 
-## Next steps
+For more information, see the following articles:
 
 [Command-line options for setup](../deploy/install/command-line-options-for-setup.md)
 
