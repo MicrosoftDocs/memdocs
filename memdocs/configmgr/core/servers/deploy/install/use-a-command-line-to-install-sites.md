@@ -2,7 +2,7 @@
 title: Command-line overview
 titleSuffix: Configuration Manager
 description: Learn how to run Configuration Manager setup at a command prompt for different kinds of site installations.
-ms.date: 04/27/2021
+ms.date: 05/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -105,7 +105,7 @@ To modify the languages that are installed at a site from a command prompt:
 
 For example, use the following command syntax: `setupwpf.exe /MANAGELANGS <language script file>`
 
-For more information values to use in the language script file, see [Keys to manage languages](command-line-script-file.md#keys-to-manage-languages).
+For more information values to use in the language script file, see [Manage languages](command-line-script-file.md#manage-languages).
 
 For more information on languages in Configuration Manager, see [Language packs](language-packs.md).
 

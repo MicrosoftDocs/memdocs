@@ -240,7 +240,7 @@ Include the following keys in the **RecoveryOptions** section to recover a site:
 
 ### Options section for site recovery
 
-Many of the keys in the **Options** section are also required for site recovery. For more information, see [Options section for site install](options-section-for-site-install). The following table summarizes the keys in the **Options** section for site recovery:
+Many of the keys in the **Options** section are also required for site recovery. For more information, see [Options section for site install](#options-section-for-site-install). The following table summarizes the keys in the **Options** section for site recovery:
 
 | Key name | Required | Comment |
 |----------|----------|---------|
@@ -256,7 +256,7 @@ Many of the keys in the **Options** section are also required for site recovery.
 
 ### SQLConfigOptions section for site recovery
 
-Many of the keys in the **SQLConfigOptions** section are also required for site recovery. For more information, see [SQLConfigOptions section for site install](sqlconfigoptions-section-for-site-install). The following table summarizes the keys in the **SQLConfigOptions** section for site recovery:
+Many of the keys in the **SQLConfigOptions** section are also required for site recovery. For more information, see [SQLConfigOptions section for site install](#sqlconfigoptions-section-for-site-install). The following table summarizes the keys in the **SQLConfigOptions** section for site recovery:
 
 | Key name | Required | Comment |
 |----------|----------|---------|
@@ -268,7 +268,7 @@ Many of the keys in the **SQLConfigOptions** section are also required for site 
 
 ### CloudConnectorOptions section for site recovery
 
-Many of the keys in the **CloudConnectorOptions** section are also required for site recovery. For more information, see [CloudConnectorOptions section for site install](cloudconnectoroptions-section-for-site-install). The following table summarizes the keys in the **CloudConnectorOptions** section for site recovery:
+Many of the keys in the **CloudConnectorOptions** section are also required for site recovery. For more information, see [CloudConnectorOptions section for site install](#cloudconnectoroptions-section-for-site-install). The following table summarizes the keys in the **CloudConnectorOptions** section for site recovery:
 
 | Key name | Required | Comment |
 |----------|----------|---------|
@@ -280,7 +280,7 @@ Many of the keys in the **CloudConnectorOptions** section are also required for 
 
 ### HierarchyExpansionOption section for site recovery
 
-Many of the keys in the **HierarchyExpansionOption** section are also required for site recovery. For more information, see [HierarchyExpansionOption section for site install](hierarchyexpansionoption-section-for-site-install). The following table summarizes the keys in the **HierarchyExpansionOption** section for site recovery:
+Many of the keys in the **HierarchyExpansionOption** section are also required for site recovery. For more information, see [HierarchyExpansionOption section for site install](#hierarchyexpansionoption-section-for-site-expansion). The following table summarizes the keys in the **HierarchyExpansionOption** section for site recovery:
 
 | Key name | Required | Comment |
 |----------|----------|---------|
