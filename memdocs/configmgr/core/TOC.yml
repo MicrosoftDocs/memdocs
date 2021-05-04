@@ -346,6 +346,8 @@
           href: servers/deploy/install/use-a-command-line-to-install-sites.md
         - name: Command-line options
           href: servers/deploy/install/command-line-options-for-setup.md
+        - name: Unattended setup script file keys
+          href: servers/deploy/install/command-line-script-file.md
       - name: Install consoles
         href: servers/deploy/install/install-consoles.md
       - name: Upgrade an evaluation install

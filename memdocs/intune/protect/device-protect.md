@@ -47,7 +47,7 @@ Deploy Intune’s *device configuration and device compliance* policies to confi
 
 - With [device configuration policies](../configuration/device-profiles.md), manage profiles that define the settings and features that devices use in your organization. Configure devices for endpoint protection, provision certificates for authentication, set software update behaviors, and more.
 
-- With [device compliance policies](../protect/device-compliance-get-started.md), profiles you deploy can set requirements for different device platforms. Requirements can include operating system versions, the use of disk encryption, or being at or under specific *threat levels* as defined by threat management software.
+- With [device compliance policies](../protect/device-compliance-get-started.md), you create profiles for different device platforms that establish device requirements. Requirements can include operating system versions, the use of disk encryption, or being at or under specific *threat levels* as defined by threat management software.
 
   Intune can safeguard devices that aren't compliant with your policies and alert the device user so they can bring the device into compliance.
 
