@@ -50,9 +50,7 @@ To use an answer file with setup, first configure the script file with required 
 
 Then run setup with the command line-option **/SCRIPT** and specify a script file.
 
-To recover a site, the script file also uses the RecoveryOptions section.
-
-For more information, see [Unattended site recovery for Configuration Manager](../../manage/unattended-recovery.md).  
+To [recover a site](../../manage/recover-sites.md#site-recovery-procedures), the script file also uses the RecoveryOptions section.
 
 For a list of keys and values to use in an unattended installation script file, see [Unattended setup script file keys](command-line-script-file.md).
 
@@ -112,6 +110,8 @@ For more information on languages in Configuration Manager, see [Language packs]
 
 ## Next steps
 
-[Command-line options for Setup](command-line-options-for-setup.md)
+[Command-line options for setup](command-line-options-for-setup.md)
+
+[Unattended setup script file keys](command-line-script-file.md)
 
 [Install the Configuration Manager console](install-consoles.md)
