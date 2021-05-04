@@ -44,22 +44,20 @@ To use an answer file with setup, first configure the script file with required 
 - Identification
 - Options
 - SQLConfigOptions
-- HierarchyOptions
+- HierarchyExpansionOption
 - CloudConnectorOptions
+- SABranchOptions
 
 Then run setup with the command line-option **/SCRIPT** and specify a script file.
 
-To recover a site, also include the following sections of the script file:
-
-- Identification
-- Recovery
+To recover a site, the script file also uses the RecoveryOptions section.
 
 For more information, see [Unattended site recovery for Configuration Manager](../../manage/unattended-recovery.md).  
 
 For a list of keys and values to use in an unattended installation script file, see [Unattended setup script file keys](command-line-script-file.md).
 
 > [!NOTE]
-> When you run setup from the [CD.Latest folder](../../manage/the-cd.latest-folder.md) for a scripted install or recovery, include the **CDLatest** key with a value of  `1`. This value isn't supported with installation media from the Microsoft Volume License site. For more information on how to use this key name in the script file, see [Command-line options](command-line-options-for-setup.md).
+> When you run setup from the [`CD.Latest` folder](../../manage/the-cd.latest-folder.md) for a scripted install or recovery, include the `CDLatest` key with a value of  `1`. This value isn't supported with installation media from the Microsoft Volume License site. For more information on how to use this key name in the script file, see [Command-line options](command-line-options-for-setup.md).
 
 ### Create the script
 
@@ -73,6 +71,9 @@ When you [run setup to install a site using the user interface](use-the-setup-wi
 This script file provides the same information as the Setup Wizard, except that there are no default settings. Specify all values for the setup keys that are required and necessary for your requirements.
 
 When setup creates the unattended installation script, it includes the product key that you entered in the Setup Wizard. This key can be a valid product key, or `EVAL` to install an evaluation version of Configuration Manager. The product key value in the script is required by the prerequisite checker. When setup starts the actual site installation, it clears the product key value in the script. Before using the script for an unattended installation of a new site, edit the script to provide a valid product key or to specify an evaluation installation of Configuration Manager.
+
+> [!TIP]
+> You can also manually create the script file from a plain-text editor like Notepad.
 
 ### Section names, key names, and values
 

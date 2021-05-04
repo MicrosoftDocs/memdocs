@@ -37,36 +37,11 @@ Each section and each value needs to be unique in a single script. For example, 
 
 A script is primarily defined by the **Action** key in the **Identification** section. The following list includes all of the currently supported actions for running setup unattended:
 
-- `InstallAdminUI`: Install the Configuration Manager console
 - `InstallCAS`: Install a central administration site (CAS)
 - `InstallPrimarySite`: Install a primary site
 - `ManageLanguages`: Add or remove client and server languages
 - `RecoverPrimarySite`: Recovery a primary site
 - `RecoverCCAR`: Recover a CAS
-
-## Install a console
-
-> [!TIP]
-> You can also install the console using ConsoleSetup.exe. That method always installs the English version. For more information, see [Install the Configuration Manager console](install-consoles.md#install-from-a-command-prompt).
->
-> To install the console in a language other than English, use setup.exe.
-
-### Identification section for console install
-
-Include the following key in the **Identification** section to install the console:
-
-| Key name | Required | Values | Details |
-|----------|----------|--------|---------|
-| `Action` | Yes | `InstallAdminUI` | Install the Configuration Manager console. |
-
-### Options section for console install
-
-Include the following keys in the **Options** section to install the console:
-
-| Key name | Required | Values | Details |
-|----------|----------|--------|---------|
-| `SDKServer` | Yes | SMS Provider FQDN | The FQDN of the SMS Provider to which the console connects. |
-| `SMSInstallDir` | No | Local directory path | The installation folder for the Configuration Manager program files. |
 
 ## Install a site
 
@@ -89,7 +64,7 @@ Include the following keys in the **Options** section to install a site:
 
 | Key name | Required | Values | Details |
 |----------|----------|--------|---------|
-| `ProductID` | Yes | -&nbsp;`xxxxx-xxxxx-xxxxx-xxxxx-xxxxx`: A valid product key with dashes<br>-&nbsp;- `Eval`: Install the evaluation version | The type of license to install. |
+| `ProductID` | Yes | -&nbsp;`xxxxx-xxxxx-xxxxx-xxxxx-xxxxx`: A valid product key with dashes<br>-&nbsp;`Eval`: Install the evaluation version | The type of license to install. |
 | `SiteCode` | Yes | Three character code, for example `XYZ` | The three-character site code that uniquely identifies the site in the hierarchy. |
 | `SiteName` | Yes | A site name | The friendly name for this site to help identify it. |
 | `SMSInstallDir` | Yes | Local directory path | The installation folder for the Configuration Manager program files. |
@@ -117,8 +92,6 @@ The following keys in the **Options** section are specific to a _primary site_:
 | `ParentSiteCode` | No | Site code | When you're adding a child primary site to an existing hierarchy, specify the site code of the CAS. |
 | `ParentSiteServer` | No | FQDN | When you're adding a child primary site to an existing hierarchy, specify the FQDN of the CAS server. |
 
-Then also see the keys in the [HierarchyExpansionOption section for site expansion](#hierarchyexpansionoption-section-for-site-expansion).
-
 ### SQLConfigOptions section for site install
 
 Include the following keys in the **SQLConfigOptions** section to install a site:
@@ -138,9 +111,9 @@ Include the following keys in the **CloudConnectorOptions** section to install a
 
 | Key name | Required | Values | Details |
 |----------|----------|--------|---------|
-| `CloudConnector` | Yes | - `0`: Don't install<br>- `1`: Install | Specify whether to install a service connection point (SCP) at this site. Because you can only install the SCP at the top-tier site of a hierarchy, set this value to `0` for a child primary site. |
+| `CloudConnector` | Yes | - `0`:&nbsp;Don't install<br>- `1`:&nbsp;Install | Specify whether to install a service connection point (SCP) at this site. Because you can only install the SCP at the top-tier site of a hierarchy, set this value to `0` for a child primary site. |
 | `CloudConnectorServer` | Yes\* | SCP FQDN | The FQDN of the server that will host the SCP role. \* Only required when **CloudConnector** equals `1`. |
-| `UseProxy` | Yes\* |  - `0`: No proxy<br>- `1`: Use proxy | Specify whether the SCP uses a proxy server. \* Only required when **CloudConnector** equals `1`. |
+| `UseProxy` | Yes\* |  - `0`: No proxy<br>- `1`:&nbsp;Use proxy | Specify whether the SCP uses a proxy server. \* Only required when **CloudConnector** equals `1`. |
 | `ProxyName` | Yes\* | Proxy FQDN | The FQDN of the proxy server that the SCP uses. \* Only required when **UseProxy** equals `1`. |
 | `ProxyPort` | Yes\* | Port number | The port number of the proxy server that the SCP uses. \* Only required when **UseProxy** equals `1`. |
 
@@ -163,8 +136,8 @@ When you're installing a CAS to expand a standalone primary site into a hierarch
 | `CCARSiteServer` | No | CAS FQDN | The FQDN of the CAS that a primary site attaches to when it joins the Configuration Manager hierarchy. Specify the CAS during setup. |
 | `CASRetryInterval` | No | Minutes | If the connection to the CAS fails, the primary site waits this number of minutes, and then reattempts the connection. |
 | `WaitForCASTimeout` | No | `0` to `100` | The maximum timeout value in minutes for a primary site to connect to the CAS. |
-| `UseDistributionView` | No | - `0`: Don't enable<br>- `1`: Enable | Specify whether to use [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) to optimize database replication. |
-| `JoinPrimarySiteName` | No | &nbsp; | Only for CAS installation. |
+| `UseDistributionView` | No | - `0`: Don't enable<br>- `1`:&nbsp;Enable | Specify whether to use [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) to optimize database replication. |
+| `JoinPrimarySiteName` | No | Site server FQDN | The FQDN of the primary site server to expand. |
 
 ## Manage languages
 
@@ -205,7 +178,7 @@ Depending upon the type of site you're recovering, include the following keys wi
 
 | Key name | Required | Values | Details |
 |----------|----------|--------|---------|
-| `Action` | Yes | -&nbsp;`RecoverPrimarySite`<br>-&nbsp;`RecoverCCAR` | - Recovery a primary site.<br>- Recover a CAS |
+| `Action` | Yes | -&nbsp;`RecoverPrimarySite`<br>-&nbsp;`RecoverCCAR` | - Recover a primary site<br>- Recover a CAS |
 | `CDLatest` | Yes <sup>[3](#bkmk_note3)</sup> | `1`: Setup runs from CD.Latest | When you run setup from the [CD.Latest folder](../../manage/the-cd.latest-folder.md), include this key and value. This value tells setup that you're using media from CD.Latest. |
 
 #### <a name="bkmk_note3"></a> Note 3: `CDLatest` required
@@ -332,15 +305,4 @@ UseProxy=0
 [SABranchOptions]
 SAActive=1
 CurrentBranch=1
-```
-
-### Example script to install a console
-
-```ini
-[Identification]
-Action=InstallAdminUI
-
-[Options]
-SMSInstallDir=C:\Program Files (x86)\Microsoft Endpoint Manager
-SDKServer=cmsite.contoso.com
 ```
