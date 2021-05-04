@@ -83,7 +83,7 @@ Decide which command-line properties you require for your environment:
 - If using your own PKI certificate, and your CRL isn't published to the internet, the following parameter is required:
   - /noCRLCheck
 
-    For more information, see [Planning for CRLs](../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+    For more information, see [Planning for CRLs](../core/plan-design/security/plan-for-certificates.md#pki-certificate-revocation).
 
 - Starting in version 2002, use the following property to bootstrap a task sequence immediately after client registration:
   - PROVISIONTS

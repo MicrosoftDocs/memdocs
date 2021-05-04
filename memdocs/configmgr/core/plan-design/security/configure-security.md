@@ -52,15 +52,15 @@ If you want to use public key infrastructure (PKI) certificates for client conne
 
     When more than one valid PKI client certificate is available on a client, choose **Modify** to configure the client certificate selection methods.  
 
-    For more information about the client certificate selection method, see [Planning for PKI client certificate selection](plan-for-security.md#BKMK_PlanningForClientCertificateSelection).  
+    For more information about the client certificate selection method, see [Planning for PKI client certificate selection](plan-for-certificates.md#pki-client-certificate-selection).  
 
     - **Clients check the certificate revocation list (CRL) for site systems**: Enable this setting for clients to check your organization's CRL for revoked certificates.  
 
-    For more information about CRL checking for clients, see [Planning for PKI certificate revocation](plan-for-security.md#BKMK_PlanningForCRLs).  
+    For more information about CRL checking for clients, see [Planning for PKI certificate revocation](plan-for-certificates.md#pki-certificate-revocation).
 
 5.  To import, view, and delete the certificates for trusted root certification authorities, choose **Set**.  
 
-    For more information, see [Planning for the PKI trusted root certificates and the certificate issuers List](plan-for-security.md#BKMK_PlanningForRootCAs).  
+    For more information, see [Planning for the PKI trusted root certificates and the certificate issuers List](plan-for-certificates.md#pki-trusted-root-certificates).  
 
 
 Repeat this procedure for all primary sites in the hierarchy.  
