@@ -352,7 +352,7 @@ Aside from new features, this release also includes additional changes such as b
 
 <!--
 As of this version, the following features are no longer pre-release:
-- [SMS Provider administration service](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service)
+- [SMS Provider administration service](../hierarchy/plan-for-the-sms-provider.md#administration-service)
 - [Device Guard management](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)
 -->
 The following update rollup (4537079) is available in the console starting on February 18, 2020: [Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4537079).

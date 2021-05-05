@@ -74,7 +74,7 @@ The site automatically uploads all published external URLs to the CMG. This beha
 
 ### Publish the certificate revocation list
 
-Publish your PKI's certificate revocation list (CRL) for internet-based clients to access. When deploying a CMG using PKI, configure the service to **Verify client certificate revocation** on the Settings tab. This setting configures the service to use a published certificate revocation list (CRL). For more information, see [Plan for PKI certificate revocation](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+Publish your PKI's certificate revocation list (CRL) for internet-based clients to access. When deploying a CMG using PKI, configure the service to **Verify client certificate revocation** on the Settings tab. This setting configures the service to use a published certificate revocation list (CRL). For more information, see [Plan for PKI certificate revocation](../../../plan-design/security/plan-for-certificates.md#pki-certificate-revocation).
 
 This CMG option verifies the client authentication certificate.
 

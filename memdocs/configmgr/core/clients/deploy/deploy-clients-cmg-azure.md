@@ -18,7 +18,7 @@ To install the Configuration Manager client on Windows 10 devices using Azure AD
 
 Setting up Azure AD may be easier for some customers than setting up a public key infrastructure for certificate-based authentication. There are features that require you onboard the site to Azure AD, but don't necessarily require the clients to be Azure AD-joined.<!-- SCCMDocs issue 1259 --> For more information, see the following articles:
 
-- [Plan for Azure Active Directory](../../plan-design/security/plan-for-security.md#bkmk_planazuread)
+- [Plan for Azure Active Directory](../../plan-design/security/plan-for-security.md#azure-active-directory)
 - [Use Azure AD for co-management](../../../comanage/quickstart-hybrid-aad.md)
 
 ## Before you begin

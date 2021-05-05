@@ -648,7 +648,7 @@ This check looks at the following settings:
 
     Configure one of the following options:
 
-    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForPKITransition).
+    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-certificates.md#transition-strategy-for-pki-certificates).
 
     - **HTTPS or HTTP** _and_ **Use Configuration Manager-generated certificates for HTTP site systems**: This combination of settings enables [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 

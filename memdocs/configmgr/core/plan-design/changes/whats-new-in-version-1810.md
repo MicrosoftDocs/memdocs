@@ -337,7 +337,7 @@ For more information, see [Data warehouse](../../servers/manage/data-warehouse.m
 <!--1357013-->
 You can now specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. To configure this setting, find the **Authentication** tab in **Hierarchy Settings**.
 
-For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#authentication).
 
 
 ### Support Center
@@ -405,7 +405,7 @@ The SMS Provider now provides read-only API interoperability access to WMI over 
 
 The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device.
 
-For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service).
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#administration-service).
 
 
 

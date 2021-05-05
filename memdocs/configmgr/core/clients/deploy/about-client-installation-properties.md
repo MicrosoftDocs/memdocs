@@ -204,7 +204,7 @@ Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp:htt
 
 ### /NoCRLCheck
 
-Specifies that a client shouldn't check the certificate revocation list (CRL) when it communicates over HTTPS with a PKI certificate. When you don't specify this parameter, the client checks the CRL before it establishes an HTTPS connection. For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+Specifies that a client shouldn't check the certificate revocation list (CRL) when it communicates over HTTPS with a PKI certificate. When you don't specify this parameter, the client checks the CRL before it establishes an HTTPS connection. For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-certificates.md#pki-certificate-revocation).
 
 Example: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
@@ -395,7 +395,7 @@ Example: `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US |
 > [!TIP]
 > Use the value of the **CertificateIssuers** attribute in the **mobileclient.tcf** file for the site. This file is in the `\bin\<platform>` subfolder of the Configuration Manager installation directory on the site server.
 
-For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](../../plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection).
+For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](../../plan-design/security/plan-for-certificates.md#pki-client-certificate-selection).
 
 ### CCMCERTSEL
 
@@ -640,7 +640,7 @@ After the client installs and properly registers with the site, it starts the re
 
 ### RESETKEYINFORMATION
 
-If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
+If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
 
 Example: `CCMSetup.exe RESETKEYINFORMATION=TRUE`  
 
@@ -746,22 +746,24 @@ Examples:
 
 ### SMSPUBLICROOTKEY
 
-If the client can't get the Configuration Manager trusted root key from Active Directory Domain Services, use this property to specify the key. This property applies to clients that use HTTP and HTTPS communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
+If the client can't get the Configuration Manager trusted root key from Active Directory Domain Services, use this property to specify the key. This property applies to clients that use HTTP and HTTPS communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
 
 Example: `CCMSetup.exe SMSPUBLICROOTKEY=<keyvalue>`
 
 > [!TIP]
-> Get the value for the site's trusted root key from the mobileclient.tcf file on the site server. For more information, see [Pre-provision a client with the trusted root key by using a file](../../plan-design/security/plan-for-security.md#bkmk_trk-provision-file).
+> Get the value for the site's trusted root key from the mobileclient.tcf file on the site server. For more information, see [Pre-provision a client with the trusted root key by using a file](../../plan-design/security/configure-security.md#pre-provision-a-client-with-the-trusted-root-key-by-using-a-file).
 
 ### SMSROOTKEYPATH
 
-Use this property to reinstall the Configuration Manager trusted root key. It specifies the full path and name of a file that contains the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
+Use this property to reinstall the Configuration Manager trusted root key. It specifies the full path and name of a file that contains the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
 
 Example: `CCMSetup.exe SMSROOTKEYPATH=C:\folder\trk`
 
 ### SMSSIGNCERT
 
 Specifies the full path and name of the exported self-signed certificate on the site server. The site server stores this certificate in the **SMS** certificate store. It has the Subject name **Site Server** and the friendly name **Site Server Signing Certificate**.
+
+Export the certificate without the private key, store the file securely, and access it only from a secured channel.
 
 Example: `CCMSetup.exe /UsePKICert SMSSIGNCERT=C:\folder\smssign.cer`
 
