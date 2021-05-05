@@ -751,7 +751,7 @@ If the client can't get the Configuration Manager trusted root key from Active D
 Example: `CCMSetup.exe SMSPUBLICROOTKEY=<keyvalue>`
 
 > [!TIP]
-> Get the value for the site's trusted root key from the mobileclient.tcf file on the site server. For more information, see [Pre-provision a client with the trusted root key by using a file](../../plan-design/security/plan-for-security.md#pre-provision-a-client-with-the-trusted-root-key-by-using-a-file).
+> Get the value for the site's trusted root key from the mobileclient.tcf file on the site server. For more information, see [Pre-provision a client with the trusted root key by using a file](../../plan-design/security/configure-security.md#pre-provision-a-client-with-the-trusted-root-key-by-using-a-file).
 
 ### SMSROOTKEYPATH
 
