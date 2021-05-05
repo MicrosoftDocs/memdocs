@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/23/2021
+ms.date: 05/07/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,29 +44,25 @@ Before you begin, complete these prerequisites to enable iOS device management i
 
 The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios and requirements, create rollout and communication plans, support, testing, and validation plans.  
 
-## Leverage the Android Enterprise security configuration framework 
-
-**Lanewsad: Adapted from iOS version. Can you please check to make sure it's accurate? Especially the part that explains basic, enhanced, and high levels b/c I couldn't find that information for Android in our docs.**  
+## Leverage the Android Enterprise security configuration framework  
 
 The Android Enterprise security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations help you tailor your organization's mobile device security protection to your specific needs.
 
-Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in Windows 10. It applies to devices that are fully managed and ones that are personally-owned with work profile. The framework includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one to offer more protection than the last. 
+Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in iOS. It applies to devices that are fully managed and ones that are personally-owned with work profile. The framework includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one to offer more protection than the last. 
 
 The security levels for personally-owned devices with work profile are:  
 
-* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for personal devices from which users access work or school data. This configuration enforces password policies, defines device lock characteristics, and disables certain device functions (such as untrusted certificates). 
+* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for personal devices where users access work or school data. This configuration introduces password requirements, separates work and personal data, and validates Android device attestation. 
 
-* Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. This configuration enacts data sharing controls. It's applicable to most mobile users accessing work or school data on a device.  
-
-* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enacts stronger password policies than the previous levels, disables more device functions, and enforces additional data transfer restrictions. 
+* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration introduces mobile threat defense or Microsoft Defender Advanced Threat Protection (ATP), enforces stricter Android version requirements, enforces stronger password policies, and further restricts work and personal separation. 
 
 The security levels for fully managed devices are:  
 
-* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for supervised devices where users access work or school data. This level is achieved by enforcing password policies, defining device lock characteristics, and disabling certain device functions (such as untrusted certificates). 
+* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for supervised devices where users access work or school data. It enforces password requirements, minimum Android version, and certain device restrictions.
 
-* Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. This configuration enacts data sharing controls and blocks access to USB devices. It's applicable to most mobile users accessing work or school data on a device. 
+* Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. It enforces stronger password policies and disables user and account capabilities. It's applicable to most mobile users accessing work or school data on a device. 
 
-* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk.  For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enacts stronger password policies, disables more device functions, enforces additional data transfer restrictions, and requires apps to be installed through the Apple volume purchase program (VPP). 
+* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk.  For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enforces stricter Android version requirements and additional device restrictions, and introduces mobile threat defense or Microsoft Defender ATP.  
 
 For more information about the security framework, see the articles listed in the following table. 
 
@@ -176,11 +172,11 @@ For information about each enrollment method and how to choose one that's right 
 | Task | Detail | Platform|
 | ---- | ------ | ------ | 
 |[Connect Intune account to managed Google Play account](../enrollment/connect-intune-android-enterprise.md)| To enable Android Enterprise management in Intune, connect your Intune tenant account to your managed Google Play account. |  Android Enterprise|
-|[Set up enrollment of Android Enterprise personally-owned devices ](../enrollment/android-work-profile-enroll.md)|Set up work profile management for personally-owned devices. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected.| Android Enterprise| 
-|[Set up enrollment of Android Enterprise corporate-owned devices](../enrollment/android-work-profile-enroll.md)|Set up work profile management for corporate-owned devices intended for work and personal use. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected. | Android Enterprise|
-|[Set up enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md)| Set up enrollment for corporate-owned, single-use, kiosk-style devices.    |   Android Enterprise|
-|[Set up enrollment of Android Enterprise fully managed devices](../enrollment/apple-school-manager-set-up-ios.md)|Set up enrollment for corporate-owned devices that are associated with a single user and used exclusively for work.|  Android Enterprise |
-|[Enroll your Android Enterprise dedicated, fully managed, or corporate-owned-with-work-profile devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md)|After you've set up Intune for Android Enterprise enrollment, enroll devices using one of the five supported enrollment methods. |Android Enterprise|  
+|[Set up work profile enrollment for personally-owned devices ](../enrollment/android-work-profile-enroll.md)|Set up work profile management for personally-owned devices. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected.| Android Enterprise| 
+|[Set up work profile enrollment for corporate-owned devices](../enrollment/android-work-profile-enroll.md)|Set up work profile management for corporate-owned devices intended for work and personal use. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected. | Android Enterprise|
+|[Set up enrollment for dedicated devices](../enrollment/android-kiosk-enroll.md)| Set up enrollment for corporate-owned, single-use, kiosk-style devices.    |   Android Enterprise|
+|[Set up enrollment for fully managed devices](../enrollment/apple-school-manager-set-up-ios.md)|Set up enrollment for corporate-owned devices that are associated with a single user and used exclusively for work.|  Android Enterprise |
+|[Enroll your dedicated, fully managed, or corporate-owned-with-work-profile devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md)|After you've set up Intune for Android Enterprise enrollment, enroll devices using one of the five supported enrollment methods. |Android Enterprise|  
 |[Set up device administrator enrollment](../enrollment/android-enroll-device-administrator.md)|Set up Android device administrator enrollment. This method of managing devices has been superseded by Android Enterprise, so we don't recommend enrolling new devices this way.| Android device administrator|  
 |[Use Samsung Knox Mobile Enrollment to automatically enroll Android devices](../enrollment/android-samsung-knox-mobile-enroll.md)|Set up Intune for Samsung Knox Mobile Enrollment (KME), which enables you to automatically enroll large numbers of corporate-owned Android devices.  | Android Enterprise, Android device administrator|
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | Android Enterprise, Android device administrator |
