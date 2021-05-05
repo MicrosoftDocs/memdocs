@@ -10,6 +10,8 @@
   items:
   - name: Plan for security
     href: ../core/plan-design/security/plan-for-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+  - name: Plan for certificates
+    href: ../core/plan-design/security/plan-for-certificates.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
 - name: How-to guides
   items:
   - name: Configure security
