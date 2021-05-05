@@ -246,6 +246,8 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 
 ### Microsoft Defender for Endpoint rules
 
+For additional information on Microsoft Defender for Endpoint integration in conditional access scenarios, see [Configure Conditional Access in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-conditional-access).
+
 - **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:
   - **Not configured** (*default*)  
