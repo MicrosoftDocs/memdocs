@@ -307,6 +307,9 @@ If you have a branch office with a faster internet link, you can prioritize clou
 - Cloud distribution points
 - Microsoft Update
 
+> [!NOTE]
+> **Microsoft Update** as source can only be used, if you enable the option **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates** in your Software Update Deployment Download Settings
+
 ## <a name="bkmk_sup"></a> Software update points
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
