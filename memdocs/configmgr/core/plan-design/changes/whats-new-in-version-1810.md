@@ -405,7 +405,7 @@ The SMS Provider now provides read-only API interoperability access to WMI over 
 
 The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device.
 
-For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service).
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#administration-service).
 
 
 

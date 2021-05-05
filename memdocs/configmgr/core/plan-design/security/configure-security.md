@@ -175,9 +175,27 @@ For more information, see the **Cloud Management** service in [Configure Azure s
 
 ## SMS Provider authentication
 
-You can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level before they can access Configuration Manager.
+<!--1357013-->
+You can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level before they can access Configuration Manager. For more information, see [Plan for SMS Provider authentication](plan-for-security.md#sms-provider-authentication).
 
-For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth).<!--1357013-->
+> [!IMPORTANT]
+> This configuration is a hierarchy-wide setting. Before you change this setting, make sure that all Configuration Manager administrators can sign in to Windows with the required authentication level.
+
+To configure this setting, use the following steps:
+
+1. First sign in to Windows with the intended authentication level.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
+1. Select **Hierarchy Settings** in the ribbon.
+
+1. Switch to the **Authentication** tab. Select the desired [authentication level](plan-for-security.md#sms-provider-authentication), and then select **OK**.
+
+    - Only when necessary, select **Add** to exclude specific users or groups. For more information, see [Exclusions](#exclusions).
+
+### Exclusions
+
+From the **Authentication** tab of Hierarchy Settings, you can also exclude certain users or groups. Use this option sparingly. For example, when specific users require access to the Configuration Manager console, but can't authenticate to Windows at the required level. It may also be necessary for automation or services that run under the context of a system account.
 
 ## Next steps
 

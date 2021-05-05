@@ -117,21 +117,8 @@ Onboarding your site with Azure AD supports the following Configuration Manager 
 - [User discovery](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)
 
 ## SMS Provider authentication
-<!--1357013-->
 
-You can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. It applies to all components that access the SMS Provider. For example, the Configuration Manager console, SDK methods, and Windows PowerShell cmdlets.
-
-This configuration is a hierarchy-wide setting. Before you change this setting, make sure that all Configuration Manager administrators can sign in to Windows with the required authentication level.
-
-The following levels are available:
-
-- **Windows authentication**: Require authentication with Active Directory domain credentials.
-
-- **Certificate authentication**: Require authentication with a valid certificate that's issued by a trusted PKI certificate authority.
-
-- **Windows Hello for Business authentication**: Require authentication with strong two-factor authentication that's tied to a device and uses biometrics or a PIN.
-
-For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
+[!INCLUDE [SMS Provider authentication](../hierarchy/includes/sms-provider-authentication.md)]
 
 ## Next steps
 
