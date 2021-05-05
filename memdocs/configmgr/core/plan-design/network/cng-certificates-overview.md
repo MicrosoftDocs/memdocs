@@ -2,7 +2,7 @@
 title: CNG v3 certificates overview
 titleSuffix: Configuration Manager
 description: Learn about support for Cryptography Next Generation (CNG) v3 certificates for Configuration Manager clients and servers.
-ms.date: 04/30/2021
+ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -15,7 +15,7 @@ manager: dougeby
 # CNG v3 certificates overview
 <!-- 1356191 -->
 
-Configuration Manager supports Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use a PKI client authentication certificate with the private key generated and stored in a CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private keys, such as TPM KSP for PKI client authentication certificates.
+Configuration Manager supports Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use a PKI client authentication certificate with the private key generated and stored in a CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private keys, such as a TPM KSP for PKI client authentication certificates.
 
 > [!NOTE]
 > When using CNG certificates, Configuration Manager clients only support certificates that use the **RSA** cryptographic algorithm. <!-- 7836017 -->
