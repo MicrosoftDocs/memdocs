@@ -307,8 +307,8 @@ If you have a branch office with a faster internet link, you can prioritize clou
 - Cloud distribution points
 - Microsoft Update
 
-> [!NOTE]
-> **Microsoft Update** as source can only be used, if you enable the option **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates** in your Software Update Deployment Download Settings
+  > [!NOTE]
+  > You can only use **Microsoft Update** as a source when you enable the following option in the software update deployment download settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
 ## <a name="bkmk_sup"></a> Software update points
 
