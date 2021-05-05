@@ -106,7 +106,7 @@ When both of the following statements are true, clients rely on the Configuratio
 
 In this scenario, clients have no way to verify that the management point is trusted for the hierarchy unless they use the trusted root key. Without the trusted root key, a skilled attacker could direct clients to a rogue management point.  
 
-When clients can't download the Configuration Manager trusted root key from the Global Catalog or by using PKI certificates, pre-provision the clients with the trusted root key. This action makes sure that they can't be directed to a rogue management point. For more information, see [Planning for the trusted root key](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+When clients can't download the Configuration Manager trusted root key from the Global Catalog or by using PKI certificates, pre-provision the clients with the trusted root key. This action makes sure that they can't be directed to a rogue management point. For more information, see [Planning for the trusted root key](../../../plan-design/security/plan-for-security.md#the-trusted-root-key).  
 
 #### The site server signing certificate  
 
@@ -126,7 +126,7 @@ To avoid the risk of a new client downloading the trusted root key from a rogue 
 
 - You use PKI certificates from an enterprise certification authority to establish trust between the client and the management point.  
 
-For more information about the trusted root key, see [Planning for the trusted root key](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+For more information about the trusted root key, see [Planning for the trusted root key](../../../plan-design/security/plan-for-security.md#the-trusted-root-key).  
 
 <!-- 9460840
 ### Install client computers with the CCMSetup Client.msi option SMSDIRECTORYLOOKUP=NoWINS  

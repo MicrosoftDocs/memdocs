@@ -27,7 +27,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 
 For Configuration Manager version 2103, this level includes the following data:
 
-### Application management (level 1)
+### Application management (Level 1)
 
 - Basic application and deployment type counts: total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use
 
@@ -35,7 +35,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Count of clients by default and preferred browser
 
-### Client (level 1)
+### Client (Level 1)
 
 - Count of client languages and locales
 
@@ -55,7 +55,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Count of clients by identity source and registration method. For example, Active Directory, Azure Active Directory, or PKI client authentication certificate.
 
-### Cloud services (level 1)
+### Cloud services (Level 1)
 
 - Count of clients by co-management enrollment method
 
@@ -75,7 +75,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Aggregated statistics on Desktop Analytics enrollment errors and usage
 
-### Configuration Manager console (level 1)
+### Configuration Manager console (Level 1)
 
 - Statistics about Configuration Manager console connections: OS version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, console language packs, and capable authentication level
 
@@ -87,7 +87,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Configuration Manager console notification configuration and status
 
-### Protection (level 1)
+### Protection (Level 1)
 
 - Basic Endpoint Protection information about antimalware client versions
 
@@ -95,7 +95,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - ***[Updated]*** BitLocker management client counts summarized by enrollment and TPM state
 
-### Setup (level 1)
+### Setup (Level 1)
 
 - Build, install type, language packs, features that you enabled
 
@@ -111,7 +111,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - ***[New]*** Central administration site removal status
 
-### Site database (level 1)
+### Site database (Level 1)
 
 - Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, configuration of distributed views, and change tracking version
 
@@ -123,7 +123,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - SQL Server Always On availability group replica information, usage, and health status
 
-### Site infrastructure (level 1)
+### Site infrastructure (Level 1)
 
 - Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, time zone, and health status
 
@@ -161,7 +161,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Summarized hierarchy health and activity status
 
-### Miscellaneous (level 1)
+### Miscellaneous (Level 1)
 
 - Basic OS deployment counts of images
 
@@ -181,7 +181,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 For Configuration Manager version 2103, this level includes the following data:
 
-### Application management (level 2)
+### Application management (Level 2)
 
 - App requirements: count of built-in conditions referenced by deployment technology
 
@@ -265,7 +265,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Number of Office Pro Plus devices sending Office health data
 
-### Client (level 2)
+### Client (Level 2)
 
 - Active Management Technology (AMT) client version
 
@@ -317,7 +317,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Count of clients in VPN boundaries
 
-### Cloud services (level 2)
+### Cloud services (Level 2)
 
 - Azure Active Directory discovery statistics
 
@@ -335,7 +335,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - ***[New]*** Cloud services endpoint connectivity and component health
 
-### CMPivot (level 2)
+### CMPivot (Level 2)
 
 - CMPivot usage statistics
 
@@ -343,7 +343,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Count of queries by entity type
 
-### Co-management (level 2)
+### Co-management (Level 2)
 
 - Enrollment schedule and historical statistics
 
@@ -351,7 +351,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Associated Microsoft Intune tenant
 
-### Collections (level 2)
+### Collections (Level 2)
 
 - Collection ID usage (not running out of IDs)
 
@@ -361,7 +361,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Count of collections synchronized to Azure Active Directory
 
-### Compliance settings (level 2)
+### Compliance settings (Level 2)
 
 - Basic configuration baseline information: count, number of deployments, and number of references
 
@@ -385,7 +385,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Count of compliance settings deployed by category, OS, and source (cloud vs on-premises)
 
-### Configuration Manager console (level 2)
+### Configuration Manager console (Level 2)
 
 - Counts of active and viewed console notification messages by type
 
@@ -401,7 +401,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Selected console usage information
 
-### Content (level 2)
+### Content (Level 2)
 
 - Boundary group statistics: how many fast, how many slow, count per group, and fallback relationships
 
@@ -427,9 +427,9 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Count of subnets excluded from peer cache
 
-### Protection (level 2)
+### Protection (Level 2)
 
-- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
+- Microsoft Defender for Endpoint policies (formerly known as Windows Defender for Endpoint): count of policies, and whether policies are deployed.
 
 - Count of alerts that are configured for Endpoint Protection feature
 
@@ -441,13 +441,13 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group). This data doesn't include any information about the settings included in the policy.
 
-- Aggregated statistics for Microsoft Defender Advanced Threat Protection policies
+- Aggregated statistics for Microsoft Defender for Endpoint policies
 
-### Migration (level 2)
+### Migration (Level 2)
 
 - Count of migrated objects (use of migration wizard)
 
-### Mobile device management (MDM) (level 2)
+### Mobile device management (MDM) (Level 2)
 
 - Count of issued mobile device actions: lock, pin rest, wipe, retire, and sync now commands
 
@@ -459,13 +459,13 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Mobile device polling schedule and statistics for mobile device check-in duration
 
-### On-premises mobile device management (MDM) (level 2)
+### On-premises mobile device management (MDM) (Level 2)
 
 - Count of Windows 10 bulk enrollment packages and profiles
 
 - Deployment success/failure statistics for on-premises MDM application deployments
 
-### OS deployment (level 2)
+### OS deployment (Level 2)
 
 - Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences
 
@@ -501,11 +501,11 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - ***[New]*** Count of error codes from feature upgrades for Windows 10 clients
 
-### Site updates (level 2)
+### Site updates (Level 2)
 
 - Versions of installed Configuration Manager hotfixes
 
-### Software updates (level 2)
+### Software updates (Level 2)
 
 - Available and deadline deltas that are used in automatic deployment rules
 
@@ -575,7 +575,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Windows Update fallback configuration settings
 
-### SQL/performance data (level 2)
+### SQL/performance data (Level 2)
 
 - Configuration and duration of site summarization
 
@@ -601,7 +601,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Status of recent re-initialization requests
 
-### Miscellaneous (level 2)
+### Miscellaneous (Level 2)
 
 - Configuration of data warehouse service point including synchronization schedule, average time, and use of customized tables feature
 

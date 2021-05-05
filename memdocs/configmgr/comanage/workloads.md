@@ -72,7 +72,7 @@ The Endpoint Protection workload includes the Windows Defender suite of antimalw
 - Windows Defender Exploit Guard
 - Windows Defender Application Control
 - Windows Defender Security Center
-- Windows Defender Advanced Threat Protection (now known as Microsoft Defender Threat Protection)
+- Windows Defender for Endpoint (now known as Microsoft Defender for Endpoint)
 
 For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../intune/protect/endpoint-protection-windows-10.md).
 

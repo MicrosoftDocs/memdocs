@@ -190,11 +190,11 @@ Configuration Manager can help you manage Activation Lock in two ways:
 - Bypass Activation Lock on supervised devices.
 
 
-### Microsoft Defender Advanced Threat Protection
+### Microsoft Defender for Endpoint
 
-Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
+Endpoint Protection can help manage and monitor Microsoft Defender for Endpoint. Microsoft Defender for Endpoint is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
 
-For details, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md).
+For details, see [Microsoft Defender for Endpoint](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### Device categories
 You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.
@@ -209,5 +209,5 @@ You can now enable Health Attestation services monitoring for Windows 10 PCs by 
 
 For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
-## Remote Control
+## Remote control
 Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.

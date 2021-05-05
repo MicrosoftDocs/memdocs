@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 04/28/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,12 +85,12 @@ For important details about using the different issuers, review guidance for tha
 >
 > See [Change the derived credential issuer](#change-the-derived-credential-issuer) later in this article.
 
-### Company Portal app
+### Required apps
 
-Plan to deploy the Intune Company Portal app to devices that will enroll for a derived credential. Device users use the Company Portal app to start the credential enrollment process.
+Plan to deploy the relevant user facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
 
-- For iOS devices, see [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
-- For Android devices, see [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
+- iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+- Android devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 ## Plan for derived credentials
 
@@ -245,6 +245,8 @@ In addition to the deploying the app with Intune, configure an Intune per-app VP
 
    - See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
    - See [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md)
+
+   Additional settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 
 3. [Create a per-app VPN](../configuration/vpn-settings-configure.md) for the DISA Purebred application.
 

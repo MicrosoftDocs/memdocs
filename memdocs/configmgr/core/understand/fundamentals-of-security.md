@@ -66,7 +66,7 @@ The next layer of security is based on access to the SMS Provider. The SMS Provi
 
 By default, access to the provider is restricted to members of the local **SMS Admins** group. This group at first contains only the user who installed Configuration Manager. To grant other accounts permission to the Common Information Model (CIM) repository and the SMS Provider, add the other accounts to the SMS Admins group.
 
-You can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. <!--1357013--> For more information, see [Plan for the SMS Provider](../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
+You can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. <!--1357013--> For more information, see [Plan for the SMS Provider](../plan-design/hierarchy/plan-for-the-sms-provider.md#authentication).
 
 ### Site database permissions
 

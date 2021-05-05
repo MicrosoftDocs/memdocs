@@ -64,18 +64,18 @@ The following supported versions of Configuration Manager are currently availabl
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | April 1, 2020 | October 1, 2021 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
 
-The **Availability date** is when the [early update ring](checklist-for-installing-update-2103.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after the update is globally available.
-
 <a name="bkmk_note1"></a>
 
-> [!Note]  
+> [!NOTE]
 > <sup>**Note 1:**</sup> The baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 >
 > - Microsoft Endpoint Configmgr (current branch)
 > - System Center Datacenter
 > - System Center Standard  
 >
-> For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.  
+> For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.
+>
+> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2103.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
 
 #### Historical versions
 

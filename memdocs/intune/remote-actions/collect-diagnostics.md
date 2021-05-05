@@ -61,13 +61,13 @@ Registry Keys:
 
 - HKLM\Software\Microsoft\IntuneManagementExtension
 - HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
-- HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
+- HKLM\SOFTWARE\Microsoft\Windows Endpoint
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
 - HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
 - HKLM\Software\Policies
 - HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
-- HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
+- HKLM\SOFTWARE\Policies\Microsoft\Windows Endpoint
 - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 - HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 

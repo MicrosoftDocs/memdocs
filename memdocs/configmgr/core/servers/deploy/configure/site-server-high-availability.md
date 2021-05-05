@@ -205,7 +205,7 @@ Similarly as with backup and recovery, plan and practice your process to change 
 
 ### Process to promote the site server in passive mode to active mode
 
-This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](../../../plan-design/hierarchy/plan-for-the-sms-provider.md#BKMK_MultiSMSProv).  
+This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](../../../plan-design/hierarchy/plan-for-the-sms-provider.md#use-multiple-sms-providers).
 
 > [!IMPORTANT]  
 > If all instances of the SMS Provider are offline, you can't connect to the site as no provider is available. When you add the site server in passive mode, setup installs an instance of the SMS Provider on this server.<!-- SCCMDocs#1613 -->

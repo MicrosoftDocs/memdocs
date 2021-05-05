@@ -2,7 +2,7 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 04/05/2021
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -323,7 +323,7 @@ Before you configure Network Discovery, understand the following topics:
 - Available Network Discovery options  
 
 - Limiting Network Discovery on the network  
-
+ 
 For more information, see [About Network Discovery](about-discovery-methods.md#bkmk_aboutNetwork).  
 
 The following sections provide information about common configurations for Network Discovery. You can configure one or more of these configurations for use during the same discovery run. If you use multiple configurations, plan for the interactions that can affect the discovery results.  
@@ -426,12 +426,13 @@ Use the following procedures to first discover only your network topology, and t
       > [!TIP]  
       > When you first map your network topology, configure just a few router hops to minimize the use of network bandwidth.  
 
-4. On the **Schedule** tab, select the **New** icon ![New icon](media/Disc_new_Icon.gif), and set a schedule for running discovery.  
+4. On the **Schedule** tab, select the **New** icon ![New icon](media/Disc_new_Icon.gif), and set a schedule for running discovery. The **Duration** is the period of time that Network Discovery has to complete the search for resources. On smaller subnets, an hour may be enough, but searching across an enterprise network with multiple router hops will take longer. If Network Discovery runs out of time, a message is logged in **Netdisc.log**.
 
     > [!NOTE]  
     > You can't assign a different discovery configuration to separate Network Discovery schedules. Each time Network Discovery runs, it uses the current discovery configuration.  
 
 5. Select **OK** to accept the configurations. Network Discovery runs at the scheduled time.  
+
 
 #### <a name="bkmk_proc-config"></a> How to configure Network Discovery  
 

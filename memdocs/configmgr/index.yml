@@ -39,7 +39,7 @@ conceptualContent:
           url: ./core/clients/manage/cmg/overview.md
           itemType: overview
         - text: Plan for Azure AD
-          url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+          url: ./core/plan-design/security/plan-for-security.md#azure-active-directory
           itemType: architecture
     - title: Co-management
       links:
@@ -172,7 +172,7 @@ conceptualContent:
         - text: Endpoint protection
           url: ./protect/deploy-use/endpoint-protection.md
           itemType: overview
-        - text: Microsoft Defender Advanced Threat Protection
+        - text: Microsoft Defender for Endpoint
           url: ./protect/deploy-use/defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management

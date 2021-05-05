@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 2103 to update your hierarchy from a previous version. <!-- baseline only statement:--> Version 2103 is also available as [baseline media](updates.md#bkmk_Baselines), so you can use the installation media to install the first site of a new hierarchy.
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2103 to update your hierarchy from a previous version. <!-- baseline only statement:--> Version 2103 will also be available as [baseline media](updates.md#bkmk_note1) soon after global availability, so you can use the installation media to install the first site of a new hierarchy.
 
 To get the update for version 2103, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).<!-- SCCMDocs#1946 -->
 
@@ -203,7 +203,7 @@ For more information, see [Backup and recovery](backup-and-recovery.md).
 
 If you or a third-party product customizes any Configuration Manager configuration files, save a copy of your customizations.
 
-For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. You need to reapply your customizations.
+For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. Reapply your customizations.
 
 ### Plan for client piloting
 
@@ -230,7 +230,7 @@ Before you start the update, review the current release notes. With Configuratio
 
 Feature-specific documentation may include information about known issues that affect core scenarios.
 
-For more inforrmation, see the [Release notes](../deploy/install/release-notes.md).
+For more information, see the [Release notes](../deploy/install/release-notes.md).
 
 ### Run the setup prerequisite checker
 
@@ -241,7 +241,7 @@ To run a prerequisite check from the console, go to the **Administration** works
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
+> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. After running the prerequisite checker, but before installing the update, if you need to do a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
 
