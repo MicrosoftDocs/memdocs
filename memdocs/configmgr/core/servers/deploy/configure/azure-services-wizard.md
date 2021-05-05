@@ -228,7 +228,7 @@ After specifying the web and native apps on the **Apps** page, the Azure Service
 
 - **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
-- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
+- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#supplemental-information-and-configuration)  
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 

@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 04/05/2021
+ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -776,7 +776,7 @@ Application and package installations on distribution points require the followi
 
 - Site server `-->` Distribution point: RPC dynamic TCP ports
 
-Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe). Use the tool to configure a limited range of ports for these RPC packets. For more information, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).
+Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe). Use the tool to configure a limited range of ports for these RPC packets. For more information, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/topic/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those-ports-by-using-ipsec-2a94b798-063a-479a-8452-9cf07ac613d9).
 
 > [!IMPORTANT]
 > Before you install these site systems, make sure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship. For example, the remote registry service is used on servers running site systems such as distribution points (both pull and standard) and remote SQL Servers.

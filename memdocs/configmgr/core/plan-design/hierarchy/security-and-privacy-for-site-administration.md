@@ -70,7 +70,7 @@ To make sure service continuity and least privileges, don't manually edit these 
 
 If clients can't query the global catalog for Configuration Manager information, they must rely on the trusted root key to authenticate valid management points. The trusted root key is stored in the client registry. It can be set by using group policy or manual configuration.  
 
-If the client doesn't have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the trusted root key](../security/plan-for-security.md#BKMK_PlanningForRTK).  
+If the client doesn't have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the trusted root key](../security/plan-for-security.md#the-trusted-root-key).  
 
 ### Use non-default port numbers
 

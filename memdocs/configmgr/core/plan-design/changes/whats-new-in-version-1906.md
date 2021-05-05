@@ -548,7 +548,7 @@ In both the **Devices** and **Device Collections** nodes, you can now add a new 
 <!--4223683-->
 You can now enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
 
-For more information, see [Administration service](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service).
+For more information, see [Administration service](../hierarchy/plan-for-the-sms-provider.md#administration-service).
 
 > [!Note]
 > Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->  
@@ -615,7 +615,7 @@ Version 1906 deprecates support for the following products:
 
 As of this version, the following features are no longer pre-release:
 
-- [SMS Provider administration service](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service)
+- [SMS Provider administration service](../hierarchy/plan-for-the-sms-provider.md#administration-service)
 - [Windows Defender Application Control management](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
