@@ -122,8 +122,8 @@ Onboarding your site with Azure AD supports the following Configuration Manager 
 
 ## Next steps
 
+- [Plan for certificates](plan-for-certificates.md)
+
 - [Configure security](configure-security.md)
 
 - [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
-
-- [PKI certificate requirements](../network/pki-certificate-requirements.md)

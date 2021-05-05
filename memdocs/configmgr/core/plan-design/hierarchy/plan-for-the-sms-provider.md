@@ -134,7 +134,7 @@ The following sections describe the advantages and disadvantages of installing a
 
 [!INCLUDE [SMS Provider authentication](includes/sms-provider-authentication.md)]
 
-## About SMS Provider languages
+## SMS Provider languages
 
 The SMS Provider operates independently of the display language of the server where you install it.
 
@@ -167,7 +167,7 @@ When you install multiple SMS Providers at a site, and a connection request is m
 
 When you first connect a Configuration Manager console to a site, the connection queries WMI on the site server. This query identifies an instance of the SMS Provider that the console uses. This specific instance of the SMS Provider remains in use by the console until the session ends. If the session ends because the SMS Provider server is unavailable on the network, when you reconnect the console to the site, it repeats the initial query. It's possible the site assigns the same SMS Provider instance that's not available. If this behavior occurs, attempt to reconnect the console until the site returns an available SMS Provider.
 
-## About the SMS Provider namespace
+## SMS Provider namespace
 
 The Configuration Manager WMI schema defines the structure of the SMS Provider. Schema namespaces describe the location of Configuration Manager data within the SMS Provider schema. The following table contains some of the common namespaces that the SMS Provider uses:
 

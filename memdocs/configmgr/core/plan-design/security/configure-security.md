@@ -122,10 +122,10 @@ Configure the most secure signing and encryption settings for site systems that 
 
     - **Require SHA-256**: Clients use the SHA-256 algorithm when signing data.
 
-    > [!WARNING]
-    > Don't **Require SHA-256** without first confirming that all clients support this hash algorithm. These clients include ones that might be assigned to the site in the future.
-    >
-    > If you choose this option, and clients with self-signed certificates can't support SHA-256, Configuration Manager rejects them. The SMS_MP_CONTROL_MANAGER component logs the message ID 5443.
+        > [!WARNING]
+        > Don't **Require SHA-256** without first confirming that all clients support this hash algorithm. These clients include ones that might be assigned to the site in the future.
+        >
+        > If you choose this option, and clients with self-signed certificates can't support SHA-256, Configuration Manager rejects them. The SMS_MP_CONTROL_MANAGER component logs the message ID 5443.
 
     - **Use encryption**: Clients encrypt client inventory data and status messages before sending to the management point.
 
