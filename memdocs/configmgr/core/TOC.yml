@@ -238,6 +238,8 @@
     items:
     - name: Plan for security
       href: plan-design/security/plan-for-security.md
+    - name: Plan for certificates
+      href: plan-design/security/plan-for-certificates.md
     - name: Additional privacy information
       href: plan-design/security/additional-privacy.md
     - name: Configure security
