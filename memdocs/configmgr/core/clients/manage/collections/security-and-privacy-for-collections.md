@@ -2,7 +2,7 @@
 title: Collections security and privacy
 titleSuffix: Configuration Manager
 description: Recommendations for security and privacy with collections in Configuration Manager.
-ms.date: 02/17/2021
+ms.date: 05/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -22,7 +22,7 @@ This article contains security recommendations and privacy information for colle
 
 When you export or import a collection by using a managed object format (MOF) file that's saved to a network location, secure the location and the network channel. Restrict who can access the network folder. Use Server Message Block (SMB) signing or Internet Protocol security (IPsec) between the network location and the site server. These mechanisms help prevent an attacker from tampering with the exported collection data. Use IPsec to encrypt the data on the network to prevent information disclosure.
 
-### Security issues for collections
+## Security issues
 
 Collections have the following security issues:
 
