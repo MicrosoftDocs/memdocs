@@ -329,7 +329,7 @@ The following settings are on the **Distribution point** page of the Create Site
 
 The following settings are on the **Communication** page of the Create Site System Server wizard and the distribution point properties window:
 
-- **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using **HTTP** or **HTTPS**. For more information, see [Security best practices for content management](../../../plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).
+- **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using **HTTP** or **HTTPS**. For more information, see [Security guidance for content management](../../../plan-design/hierarchy/security-and-privacy-for-content-management.md#security-guidance).
 
 - **Allow clients to connect anonymously**: This setting specifies whether the distribution point allows anonymous connections from Configuration Manager clients to the content library.
 

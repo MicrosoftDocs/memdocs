@@ -1,8 +1,8 @@
 ---
-title: "Asset Intelligence security privacy"
-titleSuffix: "Configuration Manager"
-description: "Get security and privacy information for Asset Intelligence in Configuration Manager."
-ms.date: 02/22/2017
+title: Asset Intelligence security & privacy
+titleSuffix: Configuration Manager
+description: Security guidance and privacy information for Asset Intelligence in Configuration Manager.
+ms.date: 05/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,42 +10,44 @@ ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Security and privacy for Asset Intelligence in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This topic contains security and privacy information for Asset Intelligence in Configuration Manager.  
+This article contains security guidance and privacy information for Asset Intelligence in Configuration Manager.
 
-##  <a name="BKMK_Security_AI"></a> Security best practices for Asset Intelligence  
- Use the following security best practices for when you use Asset Intelligence.  
+## Security guidance
 
-|Security best practice|More information|  
-|----------------------------|----------------------|  
-|When you import a license file (Microsoft Volume Licensing file or a General License Statement file), secure the file and communication channel.|Use NTFS file system permissions to ensure that only authorized users can access the license files and use Server Message Block (SMB) signing to ensure the integrity of the data when it is transferred to the site server during the import process.|  
-|Use the principle of least permissions to import the license files.|Use role-based administration to grant the Manage Asset Intelligence permission to the administrative user who imports license files. The built-in role of Asset Manager includes this permission.|  
+### Secure license files
 
-##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for Asset Intelligence  
- Asset Intelligence extends the inventory capabilities of Configuration Manager to provide a higher level of asset visibility in the enterprise. Asset Intelligence information collection is not automatically enabled. You can modify the type of information collected by enabling hardware inventory reporting classes. For more information, see [Configuring Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
+When you import a Microsoft Volume Licensing file or a General License Statement file, secure the file and communication channel. Configure NTFS permissions to make sure that only authorized users can access the license files. Use Server Message Block (SMB) signing to keep the integrity of the data when it's transferred to the site server during the import process.
 
- Asset Intelligence information is stored in the Configuration Manager database in the same manner as inventory information. When clients connect to management points by using HTTPS, the data is always encrypted during transfer to the management point. When clients connect by using HTTP, you can configure the inventory data transfer to be signed and encrypted. Inventory data is not stored in encrypted format in the database. Information is retained in the database, until the site maintenance task **Delete Aged Inventory History** deletes it in intervals of every 90 days. You can configure the deletion interval.  
+### Limit permissions for users who import license files
 
- Asset Intelligence does not send information about users and computers or license usage to Microsoft. You can choose to send System Center Online requests for categorization, which means that you can tag one or more software titles that are uncategorized and send them to System Center Online for research and categorization. After a software title is uploaded, Microsoft researchers identify, categorize, and then make that knowledge available to all customers who use the on-line service. You should be aware of the following privacy implications of submitting information to System Center Online:  
+Use the principle of least permissions to import the license files. Use [role-based administration](../../../understand/fundamentals-of-role-based-administration.md) to grant the **Manage Asset Intelligence** permission to the administrative user who imports license files. The built-in role of **Asset Manager** includes this permission.
 
-- Upload applies only to generic software title information (name, publisher, and so on) that you choose to send to System Center Online. Inventory information is not sent with an upload.  
+## Privacy information
 
-- Upload never occurs automatically, and the system is not designed for this task to be automated. You must manually select and approve the upload of each software title.  
+Asset Intelligence extends the inventory capabilities of Configuration Manager to provide a higher level of asset visibility. Asset Intelligence information collection isn't automatically enabled. You can modify the type of information collected by enabling hardware inventory reporting classes. For more information, see [Configure Asset Intelligence](configuring-asset-intelligence.md).
 
-- A dialog box shows you exactly what data is going to be uploaded, before the upload process starts.  
+Configuration Manager stores Asset Intelligence information in the site database the same as inventory information. When clients connect to management points by using HTTPS, the data is always encrypted during transfer to the management point. When clients connect by using HTTP, configure the inventory data transfer to be [signed and encrypted](../../../plan-design/security/configure-security.md#signing-and-encryption). Inventory data isn't stored in an encrypted format in the database. Information is kept in the database until the site maintenance task [Delete Aged Inventory History](../../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-inventory-history) deletes it every 90 days by default. You can configure the deletion interval.
 
-- License information is not sent to Microsoft. The license information is stored in a separate area of the Configuration Manager database, and it cannot be sent to Microsoft.  
+Asset Intelligence doesn't send information about users, computers, or license usage to Microsoft. You can choose to send System Center Online requests for categorization. For these requests, you tag one or more uncategorized software titles and send them to Microsoft for research and categorization. After you upload a software title, Microsoft researchers identify and categorize the software. They then make that information available to all customers who use the online service.
 
-- Any software title that is uploaded becomes public, in the sense that the knowledge of that given application and its categorization become part of the System Center Online Asset Intelligence catalog, and then is downloaded to other consumers of the catalog.  
+When you submit information to System Center Online, understand the following privacy implications:
 
-- The source of the software title is not recorded in the Asset Intelligence catalog, and it is not made available to other customers. However, you must still verify that you do not load any application titles that contain any private information.  
+- Upload applies only to generic software title information that you choose to send to Microsoft. For example, software name and publisher. Inventory information isn't sent to Microsoft.
 
-- Uploaded data cannot be recalled.  
+- Upload never occurs automatically, and the system isn't designed for this task to be automated. Manually select and approve the upload of each software title.
 
-  Before you configure Asset Intelligence data collection and decide whether to submit information to System Center Online, consider the privacy requirements of your organization.  
+- Before the upload process starts, the Configuration Manager console shows you exactly what data it will upload.
+
+- License information isn't sent to Microsoft. Configuration Manager stores the license information in a separate area of the site database, and it can't be sent to Microsoft.
+
+- Any software title that you upload becomes public. The knowledge of that software and its categorization become part of the online Asset Intelligence catalog. Other customers can then download the catalog updates.
+
+- The source of the software title isn't recorded in the Asset Intelligence catalog, and it isn't made available to other customers. Still verify that you don't include any application titles that contain any private information.
+
+- You can't recall uploaded data.
