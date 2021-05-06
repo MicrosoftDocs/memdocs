@@ -99,7 +99,7 @@ The following languages are supported for software update titles and description
 -   Spanish
 
 ## Install Updates Publisher
-Get the **UpdatesPubliser.msi** for installing System Center Updates Publisher from the [Microsoft Download Center](https://aka.ms/SCUPDownload).
+Get the **UpdatesPubliser.msi** for installing System Center Updates Publisher from [https://aka.ms/SCUPDownload](https://aka.ms/SCUPDownload).
 
 To install Updates Publisher, run **UpdatesPublisher.msi** on a computer that meets the *prerequisites*. The installer creates the following folder to contain the files necessary to run Updates Publisher: %PROGRAMFILES%\Microsoft\UpdatesPublisher*.
 
