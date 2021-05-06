@@ -39,7 +39,7 @@ conceptualContent:
           url: ./core/clients/manage/cmg/overview.md
           itemType: overview
         - text: Plan for Azure AD
-          url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+          url: ./core/plan-design/security/plan-for-security.md#azure-active-directory
           itemType: architecture
     - title: Co-management
       links:

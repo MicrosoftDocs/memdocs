@@ -76,10 +76,10 @@ In this tutorial, we'll set up an Intune [app protection policy](../apps/app-pro
 
    Below *Data Transfer*, configure the following settings, leaving all other settings at their default values:
 
-   - For **Send org data to other apps**, select **None**.  
-   - For **Receive data from other apps**, select **None**.  
-   - For **Save copies of org data**, select **Block**.  
-   - For **Restrict cut, copy and paste between other apps**, select **Blocked**. 
+   - For **Send org data to other apps**, select **None**.
+   - For **Receive data from other apps**, select **None**.
+   - For **Save copies of org data**, select **Block**.
+   - For **Restrict cut, copy and paste between other apps**, select **Blocked**.
 
    ![Select the Outlook app protection policy data relocation settings](./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
 
@@ -110,11 +110,11 @@ The app protection policy for Outlook is created. Next, you'll set up Conditiona
 
 Now we'll use the Microsoft Endpoint Manager admin center to create two Conditional Access policies to cover all device platforms. You integrate [Conditional Access with Intune](../protect/conditional-access-exchange-create.md) to help control the devices and apps that can connect to your email and company resources.
 
-- The first policy will require that Modern Authentication clients use the approved Outlook app and multi-factor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.  
+- The first policy will require that Modern Authentication clients use the approved Outlook app and multi-factor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.
 
-- The second policy will require that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in either the Azure AD portal or the Microsoft Endpoint Manager admin center. Since we're already in the admin center, we'll create the policy here.  
+- The second policy will require that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in either the Azure AD portal or the Microsoft Endpoint Manager admin center. Since we're already in the admin center, we'll create the policy here.
 
-When configuring Conditional Access in the Microsoft Endpoint Manager admin center, your configuring it in the Conditional Access blades from the Azure portal, which means that user interface is a bit different than when you create other types of policy for Intune.
+When you configure Conditional Access policies in the Microsoft Endpoint Manager admin center, you're really configuring those policies in the Conditional Access blades from the Azure portal. Therefore, the user interface is a bit different than when you configure other policies for Intune.
 
 ### Create an MFA policy for Modern Authentication clients  
 

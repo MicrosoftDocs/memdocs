@@ -3,16 +3,14 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 12/13/2019
-
-
+ms.date: 05/04/2021
 ---
 
 <!-- ## Update and configure the .NET Framework to support TLS 1.2 Note: the heading in in the 2 articles (enable-tls-1-2-client & enable-tls-1-2-server) to better facilitate linking. -->
 
 ### Determine .NET version
 
-First, determine the installed .NET versions. For more information, see [How to determine which versions and service pack levels of the Microsoft .NET Framework are installed](https://support.microsoft.com/help/318785/how-to-determine-which-versions-and-service-pack-levels-of-the-microso).
+First, determine the installed .NET versions. For more information, see [Determine which versions and service pack levels of .NET Framework are installed](/troubleshoot/dotnet/framework/determine-dotnet-versions-service-pack-levels).
 
 ### Install .NET updates
 
@@ -53,5 +51,5 @@ For 32-bit applications that are running on 64-bit OSs, update the following sub
       "SchUseStrongCrypto" = dword:00000001
 ```
 
-> [!Note]  
+> [!NOTE]
 > The `SchUseStrongCrypto` setting allows .NET to use TLS 1.1 and TLS 1.2. The `SystemDefaultTlsVersions` setting allows .NET to use the OS configuration. For more information, see [TLS best practices with the .NET Framework](/dotnet/framework/network-programming/tls).

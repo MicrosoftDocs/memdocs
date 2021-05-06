@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/27/2021
+ms.date: 05/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -110,7 +110,7 @@ In addition to device configuration policy, you can onboard devices using:
 ### Create the device configuration profile to onboard Windows devices
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Endpoint detection and response** > **Create profile**.
+2. Select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
 3. For **Platform**, select **Windows 10 and Later**.
 4. For **Profile type**, select **Endpoint detection and response**, and then select **Create**.
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.

@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/16/2021
+ms.date: 05/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,7 +42,7 @@ After you connect Intune to Microsoft Defender for Endpoint, Defender for Endpoi
 
 In the Microsoft Defender Security Center console, Defender for Endpoint security admins review data about endpoint vulnerabilities. The admins then use a single-click to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Intune console where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
 
-When a task is accepted, the Intune admin then acts to remediate the vulnerability though Intune, using the guidance provided as part of the security task.
+When a task is accepted, the Intune admin then acts to remediate the vulnerability through Intune, using the guidance provided as part of the security task.
 
 Each task is identified by a *Remediation Type*:
 
@@ -76,7 +76,7 @@ Following is an example workflow for an application. This same general workflow 
 
   Because the media player in this example isn't a managed app, Intune can only provide text instructions. If the app was managed, Intune could provide instructions to download an updated version, and provide a link to open the deployment for the app so that the updated files can be added to the deployment.
 
-- After the completing the remediation, the Intune admin opens the security task and selects **Complete Task**.  The remediation status is updated for Intune and in Defender for Endpoint, where security admins confirm the revised status for the vulnerability.
+- After completing the remediation, the Intune admin opens the security task and selects **Complete Task**.  The remediation status is updated for Intune and in Defender for Endpoint, where security admins confirm the revised status for the vulnerability.
 
 ## Prerequisites  
 
