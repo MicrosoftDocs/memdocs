@@ -144,7 +144,9 @@ This article describes the different [device properties](#device-properties) and
   - macOS
   - Windows 10 and newer
 
-- **Enrollment Profile Name**: Create a filter rule based on the name of the enrollment profile applied to a device during enrollment. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **Enrollment Profile Name**: Create a filter rule based on the name of the enrollment profile applied to a device during enrollment. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
+
+  Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -156,7 +158,7 @@ This article describes the different [device properties](#device-properties) and
   - iOS/iPadOS
   - Windows 10 and newer
 
-- **Operating System SKU**: Create a filter rule based on the device's Windows 10 OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators). To see a list of supported SKU values, see [Get the correct property value](#get-the-correct-property-value) (in this article).
+- **Operating System SKU**: Create a filter rule based on the device's Windows 10 OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -164,19 +166,7 @@ This article describes the different [device properties](#device-properties) and
   - `(device.operatingSystemSKU -in ["Enterprise", "EnterpriseS", "EnterpriseN", "EnterpriseEval"])`
   - `(device.operatingSystemSKU -startsWith "Enterprise")`
 
-  This property applies to:
-
-  - Windows 10 and newer
-
-## Get the correct property value
-
-In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices**, most filter properties are shown. You can also select a specific device to get more property details. Use these properties to create your filter expressions.
-
-The **Enrollment profile name** and **Operating System SKU** properties are in a different area:
-
-- **Enrollment profile name**: This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
-
-- **Operating System SKU** (Windows 10 only): For Windows 10 devices, you can use the following supported values for the **Operating System SKU** property. The [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) doesn't show the SKU names. So, be sure to use the supported values in the following table:
+  You can use the following supported values for the **Operating System SKU** property. The [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) doesn't show the SKU names. So, be sure to use the supported values in the following table:
 
   | Supported value | OS SKU definition |
   | ---- | --- |
@@ -208,6 +198,10 @@ The **Enrollment profile name** and **Operating System SKU** properties are in a
   | **BusinessN** | Windows 10 Professional N  (SKU 49) |
   | **ProfessionalSingleLanguage** | Windows 10 Professional Single Language (SKU 138) |
   | **PPIPro** | Windows 10 TeamOS (SKU 119) |
+
+  This property applies to:
+
+  - Windows 10 and newer
 
 ## Advanced rule editing
 
