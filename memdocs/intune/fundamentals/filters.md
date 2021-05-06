@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create assignment filters in Microsoft Intune - Azure | Microsoft Docs
+title: Create filters in Microsoft Intune - Azure | Microsoft Docs
 description: Learn more about policy assignment filters, and see the steps to create, update, or delete a filter in Microsoft Endpoint Manager and Microsoft Intune.
 keywords:
 author: MandiOhlinger
@@ -67,11 +67,11 @@ Filters work by dynamically evaluating applicability before delivering an app or
 
 1. Admin can see evaluation results (Apply or Don’t apply) based on the evaluation results in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-:::image type="content" source="./media/assignment-filters/admin-creates-filter.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 When troubleshooting filters, it helps to understand what happens when you create, update, or delete an association with a policy assignment:
 
-:::image type="content" source="./media/assignment-filters/filter-steps-engine.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters/filter-steps-engine.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 ## Before you begin
 
@@ -87,7 +87,7 @@ To use filters, you must enable it in your organization tenant.
 2. Select **Tenant administration** > **Filters (preview)** > **Try out the filters (preview) feature!**.
 3. Set **Filters (preview)** to **On**:
 
-    :::image type="content" source="./media/assignment-filters/turn-on-filters.png" alt-text="Turn on or enable the filters features in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/turn-on-filters.png" alt-text="Turn on or enable the filters features in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 ### Create a filter
 
@@ -126,17 +126,17 @@ To use filters, you must enable it in your organization tenant.
     - **Value**: Enter the value in your expression. For example, enter `10.0.18362` for the OS version, or `Microsoft` for the manufacturer.
     - **Add expression**: After you add the property, operator, and value, select **Add expression**:
 
-      :::image type="content" source="./media/assignment-filters/rule-builder-example.png" alt-text="Use the rule builder in Microsoft Endpoint Manager and Microsoft Intune to create an expression filter, and assign to your policies.":::
+      :::image type="content" source="./media/filters/rule-builder-example.png" alt-text="Use the rule builder in Microsoft Endpoint Manager and Microsoft Intune to create an expression filter, and assign to your policies.":::
 
     **Rule syntax**:
 
     You can also manually enter your rule expression. In **Rule syntax**, select **Edit**:
 
-    :::image type="content" source="./media/assignment-filters/rule-syntax-edit.png" alt-text="Select rule syntax edit to use the rule builder in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/rule-syntax-edit.png" alt-text="Select rule syntax edit to use the rule builder in Microsoft Endpoint Manager and Microsoft Intune.":::
 
     The expression builder opens. You can manually enter expressions, such as `(device.osVersion -eq "10.0.18362") and (device.manufacturer -eq "Microsoft")`:
 
-    :::image type="content" source="./media/assignment-filters/rule-syntax-example.png" alt-text="Use the expression builder to enter your rule syntax in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/rule-syntax-example.png" alt-text="Use the expression builder to enter your rule syntax in Microsoft Endpoint Manager and Microsoft Intune.":::
 
     Select **OK** to save your expression.
 
@@ -159,7 +159,7 @@ After the filter is created, it's ready to be used when assigning your app polic
 
     For example, select **Devices** > **Compliance policies**, and select an existing policy. Select **Properties** > **Assignments** > **Edit**:
 
-    :::image type="content" source="./media/assignment-filters/edit-compliance-policy-assignment.png" alt-text="Select a compliance policy, and edit the assignment in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/edit-compliance-policy-assignment.png" alt-text="Select a compliance policy, and edit the assignment in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 3. Select **Edit filter**. You can choose to **include filtered devices** or **exclude filtered devices** when you assign the policy. A list of filters that match the policy platform is shown.
 
@@ -167,7 +167,7 @@ After the filter is created, it's ready to be used when assigning your app polic
 
     For example, select **Include filtered devices in assignment**, and select the filter:
 
-    :::image type="content" source="./media/assignment-filters/add-filter-compliance-policy.png" alt-text="Select a compliance policy, and edit the assignment in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/add-filter-compliance-policy.png" alt-text="Select a compliance policy, and edit the assignment in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 5. To save your changes, select **Review + save** > **Save**.
 
@@ -182,7 +182,7 @@ After a filter is created, it can be changed or updated.
 
 3. Select the filter you want to change. Select **Rules** > **Edit**:
 
-    :::image type="content" source="./media/assignment-filters/update-existing-filter.png" alt-text="Delete an assignment filter in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/update-existing-filter.png" alt-text="Delete a filter in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 4. To save your changes, select **Review + save** > **Save**.
 
@@ -195,7 +195,7 @@ After a filter is created, it can be changed or updated.
 
 3. Next to the filter, select the ellipses (**...**), and select **Delete**:
 
-    :::image type="content" source="./media/assignment-filters/delete-filter.png" alt-text="Delete an assignment filter in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/delete-filter.png" alt-text="Delete a filter in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 To delete a filter, you must remove the filter from any policies. Otherwise, when trying to delete the filter, you'll get the following error:
 

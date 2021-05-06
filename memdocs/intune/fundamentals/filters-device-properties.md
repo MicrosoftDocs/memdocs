@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Assignment filter reports and troubleshooting in Microsoft Intune - Azure | Microsoft Docs
-description: 
+title: Supported filter device properties and operators in Microsoft Intune - Azure | Microsoft Docs
+description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -27,11 +27,19 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Supported device properties when creating assignment filters in Microsoft Endpoint Manager
+# Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager
+
+When you create an app policy, compliance policy, or configuration profile, you assign the policy to users or devices. When you assign the policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+
+When you create a filter, you enter the device properties to use in your filter. For example, in your filter, enter the device manufacturer so the policy only applies to Microsoft devices. For iOS/iPadOS devices, in your filter, you can apply your policies to only rooted devices.
+
+Advanced rule editing is also available. You can use common operators, such as `and`, `contains`, and `startsWith` to create expressions. These expressions are saved and used in your filter.
+
+This article describes the different [device properties](#device-properties) and [operators](#supported-operators) you can use in your filters, and gives examples.
 
 ## Device properties
 
-- **Device Name**: Create a filter rule based on the Intune device name property. Enter a string value that's a device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **Device Name**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -47,7 +55,7 @@ ms.collection: M365-identity-device-management
   - macOS
   - Windows 10 and newer
 
-- **Manufacturer**: Create a filter rule based on the Intune device manufacturer property. Enter a string value that's a manufacturer's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **Manufacturer**: Create a filter rule based on the Intune device manufacturer property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -62,7 +70,7 @@ ms.collection: M365-identity-device-management
   - macOS
   - Windows 10 and newer
 
-- **Model**: Create a filter rule based on the Intune device model property. Enter a string value that's a device model's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **Model**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -78,7 +86,7 @@ ms.collection: M365-identity-device-management
   - macOS
   - Windows 10 and newer
 
-- **Device Category**: Create a filter rule based on the Intune device category property. Enter a string value that's a category name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **Device Category**: Create a filter rule based on the Intune device category property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -94,7 +102,7 @@ ms.collection: M365-identity-device-management
   - macOS
   - Windows 10 and newer
 
-- **OS Version**: Create a filter rule based on the Intune device Operating System version. Specify a string value for the OSversion (using -eq, -ne, -in, -notIn operators) or partial value (using -startswith, -contains, -notcontains operators).
+- **OS Version**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -110,7 +118,7 @@ ms.collection: M365-identity-device-management
   - macOS
   - Windows 10 and newer
 
-- **IsRooted**: Create a filter rule based on the device's Rooted (Android) or Jailbroken (iOS/iPadOS) device property. Choose between `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
+- **IsRooted**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
 
   Example:
 
@@ -122,7 +130,7 @@ ms.collection: M365-identity-device-management
   - Android Enterprise
   - iOS/iPadOS
 
-- **Device Ownership**: Create a filter rule based on the device's ownership property in Intune. Choose between `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators.
+- **Device Ownership**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators.
 
   Example:
 
@@ -136,7 +144,7 @@ ms.collection: M365-identity-device-management
   - macOS
   - Windows 10 and newer
 
-- **Enrollment Profile Name**: Create a filter rule based on the name of the Enrollment Profile applied to a device during enrollment. Specify the full string value (using -eq, -ne, -in, -notIn operators) or partial value (using -startswith, -contains, -notcontains operators).
+- **Enrollment Profile Name**: Create a filter rule based on the name of the enrollment profile applied to a device during enrollment. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -148,7 +156,7 @@ ms.collection: M365-identity-device-management
   - iOS/iPadOS
   - Windows 10 and newer
 
-- **Operating System SKU**: Create a filter rule based on the device's Windows 10 Operating System SKU. Enter the full OS SKU name string value (using -eq, -ne, -in, -notIn operators) or partial value (using -startswith, -contains, -notcontains operators).
+- **Operating System SKU**: Create a filter rule based on the device's Windows 10 OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators). To see a list of supported SKU values, see [Get the correct property value](#get-the-correct-property-value) (in this article).
 
   Examples:
 
@@ -160,13 +168,17 @@ ms.collection: M365-identity-device-management
 
   - Windows 10 and newer
 
-## Finding the right property values to create a filter
-Most filter properties are viewable in the Devices section of the MEM admin center, either in all devices list or by viewing the detailed device page – this makes it easy to craft the right filter expressions for including or excluding those devices.  There are some properties, however that are not currently shown including:
+## Get the correct property value
 
-- **Enrollment profile name**: This property is applied to a device during the enrollment process and is an admin-defined string matching the Windows autopilot, Apple ADE or Google enrollment profile applied to the device. You can view the enrollment profile names under the Devices > Enroll devices section of the MEM admin center.
-- **Operating System SKU** (Windows 10 only): The Endpoint Manager admin center currently lists a “SKU Family” for Windows 10 devices in the device details section. It doesn't show the specific SKU. The following table shows the values that can be used in a filter (column 1).
+In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices**, most filter properties are shown. You can also select a specific device to get more property details. Use these properties to create your filter expressions.
 
-  | Value | SKU name |
+The **Enrollment profile name** and **Operating System SKU** properties are in a different area:
+
+- **Enrollment profile name**: This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
+
+- **Operating System SKU** (Windows 10 only): For Windows 10 devices, you can use the following supported values for the **Operating System SKU** property. The [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) doesn't show the SKU names. So, be sure to use the supported values in the following table:
+
+  | Supported value | OS SKU definition |
   | ---- | --- |
   | **Education** | Windows 10 Education (SKU 121) |
   | **EducationN**  | Windows 10 Education (SKU 122) |
@@ -199,14 +211,17 @@ Most filter properties are viewable in the Devices section of the MEM admin cent
 
 ## Advanced rule editing
 
-The assignment filter rule creation experience uses a similar syntax to Azure AD dynamic groups where a format of `([entity].[property name] [operation] [value])` is used.
+When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar Azure AD dynamic groups: `([entity].[property name] [operation] [value])`.
 
-- Properties, operations and values in rules are case insensitive.
+### What you need to know
+
+- The properties, operations, and values are case insensitive.
 - Parentheses and nested parentheses are supported.
+- Some advanced syntax options, such as nested parentheses, are only available in the rule syntax editor. If you use advanced expressions in the rule syntax editor, then the rule builder is disabled.
 
 ### Supported operators
 
-Some advanced syntax options, such as nested parentheses, are only available in the advanced editing experience. If you use advanced syntax in the advanced editor, then the basic editing experience is disabled.
+You can use the following operators in the rule syntax editor:
 
 - **Or**: Use for all value types, especially when grouping simple rules.
 
@@ -254,3 +269,6 @@ Some advanced syntax options, such as nested parentheses, are only available in 
   - **Example**: `(device.manufacturer -notContains "Samsung")`
 
 ## Next steps
+
+- [Use filters when assigning your apps, policies, and profiles](filters.md)
+- [Filter reports and troubleshooting](filters-reports-troubleshoot.md)

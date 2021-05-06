@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Supported workloads for assignment filters in Microsoft Intune - Azure | Microsoft Docs
+title: Supported workloads for filters in Microsoft Intune - Azure | Microsoft Docs
 description: 
 keywords:
 author: MandiOhlinger
@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 
 ## Apps
 
-You can use assignment filters for some common app configuration policies on the following platforms.
+You can use filters for some common app configuration policies on the following platforms.
 
 ### Android device administrator
 
@@ -102,7 +102,7 @@ You can use assignment filters for some common app configuration policies on the
 
 ## Compliance policies
 
-You can use assignment filters for all compliance policies on the following platforms:
+You can use filters for all compliance policies on the following platforms:
 
 - Android device administrator
 - Android Enterprise
@@ -112,7 +112,7 @@ You can use assignment filters for all compliance policies on the following plat
 
 ## Device configuration profiles and Endpoint security
 
-You can use assignment filters for some common app configuration policies on the following platforms. Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices. The **OEMConfig** profile type includes settings that are only available for Android Enterprise devices.
+You can use filters for some common app configuration policies on the following platforms. Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices. The **OEMConfig** profile type includes settings that are only available for Android Enterprise devices.
 
 ### Android device administrator
 

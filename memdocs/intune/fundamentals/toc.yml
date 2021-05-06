@@ -193,16 +193,16 @@
     href: ../protect/index.yml   
   - name: Manage and protect apps
     href: ../apps/index.yml
-  - name: Assignment filters
+  - name: Use filters when assigning policies
     items:
     - name: Create a filter
-      href: assignment-filters.md
+      href: filters.md
     - name: Filter properties
-      href: assignment-filters-device-properties.md
+      href: filters-device-properties.md
     - name: Supported workloads
-      href: assignment-filters-supported-workloads.md
+      href: filters-supported-workloads.md
     - name: Reporting and troubleshooting
-      href: assignment-filters-reports-troubleshoot.md
+      href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
   - name: Developer guidance
