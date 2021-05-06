@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2021
+ms.date: 05/06/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Supported device properties when creating assignment filters in in Microsoft Endpoint Manager
+# Supported device properties when creating assignment filters in Microsoft Endpoint Manager
 
 ## Device properties
 
@@ -159,5 +159,98 @@ ms.collection: M365-identity-device-management
   This property applies to:
 
   - Windows 10 and newer
+
+## Finding the right property values to create a filter
+Most filter properties are viewable in the Devices section of the MEM admin center, either in all devices list or by viewing the detailed device page – this makes it easy to craft the right filter expressions for including or excluding those devices.  There are some properties, however that are not currently shown including:
+
+- **Enrollment profile name**: This property is applied to a device during the enrollment process and is an admin-defined string matching the Windows autopilot, Apple ADE or Google enrollment profile applied to the device. You can view the enrollment profile names under the Devices > Enroll devices section of the MEM admin center.
+- **Operating System SKU** (Windows 10 only): The Endpoint Manager admin center currently lists a “SKU Family” for Windows 10 devices in the device details section. It doesn't show the specific SKU. The following table shows the values that can be used in a filter (column 1).
+
+  | Value | SKU name |
+  | ---- | --- |
+  | **Education** | Windows 10 Education (SKU 121) |
+  | **EducationN**  | Windows 10 Education (SKU 122) |
+  | **Enterprise** | Windows 10 Enterprise  (SKU 4) |
+  | **EnterpriseEval** | Windows 10 Enterprise Evaluation (SKU 72) |
+  | **EnterpriseG** | Windows 10 Enterprise G  (SKU 171) |
+  | **EnterpriseGN** | Windows 10 Enterprise G N (SKU 172) |
+  | **EnterpriseS** | Windows 10 Enterprise LTSB (SKU 125) |
+  | **EnterpriseSEval** | Windows 10 Enterprise LTSB Evaluation (SKU 129) |
+  | **EnterpriseSN** | Windows 10 Enterprise LTSB N  (SKU 162) |
+  | **ServerRdsh** | Windows 10 Enterprise Multi-session (SKU 175) |
+  | **EnterpriseN** | Windows 10 Enterprise N (SKU 27) |
+  | **EnterpriseNEval** | Windows 10 Enterprise N Evaluation (SKU 84) |
+  | **Holographic** | Windows 10 Holographic (SKU 136) |
+  | **Core** | Windows 10 Home (SKU 101) |
+  | **CoreCountrySpecific** | Windows 10 Home China (SKU 99) |
+  | **CoreN** | Windows 10 Home N (SKU 98) |
+  | **CoreSingleLanguage** | Windows 10 Home single language (SKU 100) |
+  | **IoTUAP** | Windows 10 IoT Core  (SKU 123) |
+  | **IoTUAPCommercial** | Windows 10 IoT Core Commercial (SKU 131) |
+  | **IoTEnterprise** | Windows 10 IoT Enterprise (SKU 188) |
+  | **Professional** | Windows 10 Professional  (SKU 48) |
+  | **ProfessionalEducation** | Windows 10 Professional Education (SKU 164) |
+  | **ProfessionalEducationN** | Windows 10 Professional Education N (SKU 165) |
+  | **ProfessionalWorkstation** | Windows 10 Professional for workstation  (SKU 161) |
+  | **ProfessionalN** | Windows 10 Professional for workstation N (SKU 162) |
+  | **BusinessN** | Windows 10 Professional N  (SKU 49) |
+  | **ProfessionalSingleLanguage** | Windows 10 Professional Single Language (SKU 138) |
+  | **PPIPro** | Windows 10 TeamOS (SKU 119) |
+
+## Advanced rule editing
+
+The assignment filter rule creation experience uses a similar syntax to Azure AD dynamic groups where a format of `([entity].[property name] [operation] [value])` is used.
+
+- Properties, operations and values in rules are case insensitive.
+- Parentheses and nested parentheses are supported.
+
+### Supported operators
+
+Some advanced syntax options, such as nested parentheses, are only available in the advanced editing experience. If you use advanced syntax in the advanced editor, then the basic editing experience is disabled.
+
+- **Or**: Use for all value types, especially when grouping simple rules.
+
+  - **Allowed values**: `-or` | `or`
+  - **Example**: `(device.manufacturer -eq "Samsung") or (device.model -contains "Galaxy Note")`
+
+- **And**: Use for all value types, especially when grouping simple rules.
+
+  - **Allowed values**: `-and` | `and`
+  - **Example**: `(device.manufacturer -eq "Samsung") and (device.model -contains "Galaxy Note")`
+
+- **Equals**: Use for all value types, including simple rules, strings, arrays, and more.
+
+  - **Allowed values**: `-eq` | `eq`
+  - **Example**: `(device.manufacturer -eq "Samsung") and (device.model -contains "Galaxy Note")`
+
+- **NotEquals**: Use for all value types, including simple rules, strings, arrays, and more.
+
+  - **Allowed values**: `-ne` | `ne`
+  - **Example**: `(device.manufacturer -ne "Samsung") or (device.model -ne "Galaxy Note")`
+
+- **StartsWith**: Use for string value types.
+
+  - **Allowed values**: `-startsWith` | `startsWith`
+  - **Example**: `(device.manufacturer -startsWith "Sams")`
+
+- **In**: Use for array value types, such as `["1", "2"]`.
+
+  - **Allowed values**: `-in` | `in`
+  - **Example**: `(device.manufacturer -in ["Samsung","Lenovo","Microsoft"])`
+
+- **NotIn**: Use for array value types, such as `["1", "2"]`.
+
+  - **Allowed values**: `-notIn` | `notIn`
+  - **Example**: `(device.manufacturer -notIn ["Samsung","Lenovo","Microsoft"])`
+
+- **Contains**: Use for string value types.
+
+  - **Allowed values**: `-contains` | `contains`
+  - **Example**: `(device.manufacturer -contains "Samsung")`
+
+- **NotContains**: Use for string value types.
+
+  - **Allowed values**: `-notContains` | `notContains`
+  - **Example**: `(device.manufacturer -notContains "Samsung")`
 
 ## Next steps

@@ -69,6 +69,8 @@ Filters work by dynamically evaluating applicability before delivering an app or
 
 :::image type="content" source="./media/assignment-filters/admin-creates-filter.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
 
+When troubleshooting filters, it helps to understand what happens when you create, update, or delete an association with a policy assignment:
+
 :::image type="content" source="./media/assignment-filters/filter-steps-engine.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 ## Before you begin
