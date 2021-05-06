@@ -97,6 +97,8 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
   - Must have its computer account in the local Administrators group on the site server in active mode.<!--516036-->
 
+  - Must have local administrator rights on all site system servers.  
+
   - Must install using source files that match the version of the site server in active mode.  
 
   - Can't have a site system role from any site installed on it before you install the site server in passive mode role.  
