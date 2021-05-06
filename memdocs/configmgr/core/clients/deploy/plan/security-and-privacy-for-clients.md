@@ -86,7 +86,7 @@ For more information about the dependencies and security permissions required fo
 
 ### If you must use client push installation, secure the client push installation account
 
-The [client push installation account]((../../../plan-design/hierarchy/accounts.md#client-push-installation-account)) must be a member of the local **Administrators** group on each computer that installs the Configuration Manager client. Never add the client push installation account to the **Domain Admins** group. Instead, create a global group, and then add that global group to the local **Administrators** group on your clients. Create a group policy object to add a **Restricted Group** setting to add the client push installation account to the local **Administrators** group.
+The [client push installation account](../../../plan-design/hierarchy/accounts.md#client-push-installation-account) must be a member of the local **Administrators** group on each computer that installs the Configuration Manager client. Never add the client push installation account to the **Domain Admins** group. Instead, create a global group, and then add that global group to the local **Administrators** group on your clients. Create a group policy object to add a **Restricted Group** setting to add the client push installation account to the local **Administrators** group.
 
 For greater security, create multiple client push installation accounts, each with administrative access to a limited number of computers. If one account is compromised, only the client computers to which that account has access are compromised.
 
