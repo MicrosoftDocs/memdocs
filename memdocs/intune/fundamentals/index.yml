@@ -35,8 +35,6 @@ landingContent:
       links: 
       - text: Walkthrough Intune in Microsoft Endpoint Manager
         url: tutorial-walkthrough-endpoint-manager.md 
-      - text: Walkthrough Intune in the Azure portal
-        url: ./tutorial-walkthrough-endpoint-manager.md
     - linkListType: concept
       links:
         - text: What is device management?

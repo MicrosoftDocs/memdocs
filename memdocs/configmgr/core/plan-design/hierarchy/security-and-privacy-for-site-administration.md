@@ -242,7 +242,7 @@ Install only the minimum IIS features for the site system role that you install.
 
 When clients connect to a site system by using HTTP rather than by using HTTPS, they use Windows authentication. This behavior might fall back to using NTLM authentication rather than Kerberos authentication. When NTLM authentication is used, clients might connect to a rogue server.  
 
-The exception to this guidance might be distribution points. Package access accounts don't work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security best practices for content management](security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
+The exception to this guidance might be distribution points. Package access accounts don't work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security guidance for content management](security-and-privacy-for-content-management.md#security-guidance).
 
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
