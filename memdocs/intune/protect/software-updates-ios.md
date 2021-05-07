@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Add iOS/iPadOS software update policies in Intune
 
-Software update policies let you force supervised iOS/iPadOS devices to automatically install OS updates. [Supervised devices](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) are devices that enrolled using either Apple Business Manager or Apple School Manager.
+Software update policies apply to supervised iOS/iPadOS devices to install OS updates. [Supervised devices](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) are devices that enrolled using either Apple Business Manager or Apple School Manager.
 
 When configuring a policy to deploy updates, you can:
 
