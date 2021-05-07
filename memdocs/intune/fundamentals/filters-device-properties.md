@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager
 
-When you create an app policy, compliance policy, or configuration profile, you assign the policy to users or devices. When you assign the policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app policy, compliance policy, or configuration profile, you assign the policy to users or devices. When you assign the policy, you can also use filters. For more information on this feature, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 When you create a filter, you enter the device properties to use in your filter. For example, in your filter, enter the device manufacturer so the policy only applies to Microsoft devices. For iOS/iPadOS devices, in your filter, you can apply your policies to only rooted devices.
 
@@ -144,7 +144,7 @@ This article describes the different [device properties](#device-properties) and
   - macOS
   - Windows 10 and newer
 
-- **Enrollment Profile Name**: Create a filter rule based on the name of the enrollment profile applied to a device during enrollment. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
+- **Enrollment Profile Name**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
 
   Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -212,6 +212,8 @@ When you create a filter, you can manually create simple or complex rules in the
 - The properties, operations, and values are case insensitive.
 - Parentheses and nested parentheses are supported.
 - Some advanced syntax options, such as nested parentheses, are only available in the rule syntax editor. If you use advanced expressions in the rule syntax editor, then the rule builder is disabled.
+
+  For more information on the rule syntax editor and the rule builder, see [Use filters when assigning your apps, policies, and profiles](filters.md)
 
 ### Supported operators
 

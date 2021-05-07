@@ -2,7 +2,7 @@
 # required metadata
 
 title: Filter reports and troubleshooting in Microsoft Intune - Azure | Microsoft Docs
-description: 
+description: Use the device and app filter reports to get more information on successfully applied filters. Learn the impact of include and exclude filters in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -38,9 +38,7 @@ Use this article to learn more about the reporting features, and to help trouble
 > [!IMPORTANT]
 > 
 > - From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
-> - This feature is in [public preview](public-preview.md). The filter evaluation results will change, and become more integrated into policy and app reports. For example, you'll see information on device compliance, device configuration, Endpoint Security configuration, and managed apps.
->
->   To help improve this feature, provide feedback at **memFiltersFeedback@microsoft.com**.
+> - This feature is in [public preview](public-preview.md). The filter evaluation results will change, and become more integrated into policy and app reports. To help improve this feature, provide feedback at **memFiltersFeedback@microsoft.com**.
 
 ## Reports
 
@@ -105,10 +103,10 @@ Use the following table to help understand when you include or exclude devices:
 
 ### What you need to know
 
-- A **Not evaluated** filter result may be shown when a policy has a conflicting assignment on the device. For more information, see [Filters and assignment conflict resolution](#filters-and-assignment-conflict-resolution) (in this article).
+- A **Not evaluated** filter result may show when a policy has a conflicting assignment on the device. For more information, see [Filters and assignment conflict resolution](#filters-and-assignment-conflict-resolution) (in this article).
 - Filters are evaluated at enrollment and device check-in. The evaluation can also run at other times, such as a compliance check.
 
-  For example, a device’s compliance state is based on data from a mobile threat defense provider. The filter evaluation may run when the device is being evaluated for compliance.
+  For example, a device’s compliance state is based on data from a mobile threat defense provider. The filter evaluation may run when the device is being evaluated for threat compliance.
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you may see a **We were not able to retrieve any filter evaluation results** message.
 
 ## Filters and assignment conflict resolution
@@ -189,11 +187,11 @@ Apps use special behavior when resolving conflicts between **Required** and **Av
 
 In the following example, there's a conflict between assignments because the same user/device is in both assignments:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Required and available app intent uses filter mode or logic when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Example assignment conflict when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 The following matrix explains the impact, depending on the configuration settings:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Required and available app intent uses filter mode or logic when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Conflict impact depend on the setting configured when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 ## Next steps
 
