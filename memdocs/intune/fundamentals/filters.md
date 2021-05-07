@@ -57,7 +57,7 @@ This article describes the filter architecture, and shows you how to create, upd
 
 ## How filters work
 
-:::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::
 
 Before a policy is applied to a device, filters dynamically evaluate applicability. Looking at the image, here's an overview:
 
