@@ -136,7 +136,8 @@ You can use filters for some common device configuration policies on the followi
 | Device features | N/A |
 | Email | N/A |
 | Email (Samsung KNOX only) | ✔️ |
-| Endpoint Protection | N/A  | ✔️ |
+| Endpoint Protection | N/A |
+| MX profile (Zebra only) | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
