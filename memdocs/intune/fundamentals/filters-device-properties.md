@@ -265,4 +265,5 @@ You can use the following operators in the rule syntax editor:
 ## Next steps
 
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
+- [Supported workloads when creating filters](filters-supported-workloads.md)
 - [Filter reports and troubleshooting](filters-reports-troubleshoot.md)

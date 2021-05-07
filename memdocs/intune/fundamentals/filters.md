@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2021
+ms.date: 05/06/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,13 +29,21 @@ ms.collection: M365-identity-device-management
 
 # Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager
 
-Filters provide improved flexibility for assigning Intune workloads. You can use filters in policy and app assignments to dynamically refine targeting based on device properties.
+When you create a policy, you can use filters to assign a policy based on rules you create. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
 
-Filters allow admins to include or exclude devices in a specific group based on a set of admin-defined criteria. 
+For example, you can use filters in the following scenarios:
 
-Allows admins to define a query of device properties based on platform. 
+- Deploy a Windows 10 device restriction policy to only the corporate devices in the Marketing department, while excluding personal devices.
+- Deploy an iOS/iPadOS app to only the iPad devices in the Finance users group.
+- Deploy an Android mobile phone compliance policy to all users in the company, and exclude Android meeting room devices that don't support the mobile phone compliance policy settings.
 
-Once created, a filter can be used in multiple scenarios as a re-usable entity in either an “Include” or “Exclude” mode. 
+Filters include the following features and benefits:
+
+- Improve flexibility and granularity when assigning Intune policies.
+- Are used when assigning app policies, compliance policies, and configuration profiles. They dynamically target devices based on device properties you enter.
+- Can include or exclude devices in a specific group based on criteria you enter.
+- Create a query of device properties based on the device platform, including Android, iOS/iPadOS, macOS, and Windows 10.
+- Can be used and reused in multiple scenarios in “Include” or “Exclude” mode.
 
 This feature applies to:
 
@@ -45,37 +53,26 @@ This feature applies to:
 - macOS
 - Windows 10 and newer
 
-## Example scenarios 
+This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
-Filters can be used by IT admins for several scenarios. Here are a few examples: 
-
-- Deploy a Windows 10 device restriction policy to just the corporate devices of users in the Marketing department while excluding personal devices.
-
-- Deploy an iOS app to only the iPad devices for users in the Finance group.
-
-- Deploy an Android compliance policy for mobile phones to all users in the company but exclude android-based meeting room devices that do not support the settings in that mobile phone policy.
-
-## How filters work 
-
-Filters work by dynamically evaluating applicability before delivering an app or policy to a device. Here is the high level overview: 
-
-1. Admin creates a re-usable filter for a platform based on device properties.  
-
-1. Admin assigns a Policy or App to a group and adds the Filter in either include or exclude mode. 
-
-1. Filter evaluation is performed at device enrollment, check-in and any other policy evaluation time in the device’s lifecycle. 
-
-1. Admin can see evaluation results (Apply or Don’t apply) based on the evaluation results in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+## How filters work
 
 :::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-When troubleshooting filters, it helps to understand what happens when you create, update, or delete an association with a policy assignment:
+Before a policy is applied to a device, filters dynamically evaluate applicability. Looking at the image, here's an overview:
 
-:::image type="content" source="./media/filters/filter-steps-engine.png" alt-text="Admin creates a filter, and uses the filter in a policy in Microsoft Endpoint Manager and Microsoft Intune.":::
+1. You create a reusable filter for any platform based on some device properties. In the example, the filter is for personal devices.
 
-## Before you begin
+1. You assign a policy or app to the group. In the assignment, you add the filter in either include or exclude mode.
 
-- You must be an Intune administrator. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+1. The filter is evaluated when the device enrolls, checks in with the Intune service, or at any other time a policy evaluates.
+
+1. You can see the filter results (apply or don’t apply) based on the evaluation.
+
+## Prerequisites
+
+- Intune is set up, and is configured as the MDM authority for your organization. For more specific information, see [Set up Intune](setup-steps.md).
+- Sign in as the Intune administrator. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Enable filters, and add a filter
 
@@ -84,10 +81,10 @@ When troubleshooting filters, it helps to understand what happens when you creat
 To use filters, you must enable it in your organization tenant.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters (preview)** > **Try out the filters (preview) feature!**.
+2. Select **Tenant administration** > **Filters (preview)** > **Try out the filters (preview) feature**.
 3. Set **Filters (preview)** to **On**:
 
-    :::image type="content" source="./media/filters/turn-on-filters.png" alt-text="Turn on or enable the filters features in Microsoft Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/filters/turn-on-filters.png" alt-text="Turn on or enable the filters feature in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 ### Create a filter
 
@@ -112,7 +109,7 @@ To use filters, you must enable it in your organization tenant.
 
     **Rule builder**:
 
-    - **And/Or**: After you add an expression, you can add to the expression using the **and** or **or** options.
+    - **And/Or**: After you add an expression, you can add to the expression using the `and` or `or` options.
     - **Property**: Select a property for your rule. Your options:
       - Device name
       - Manufacturer
@@ -128,15 +125,19 @@ To use filters, you must enable it in your organization tenant.
 
       :::image type="content" source="./media/filters/rule-builder-example.png" alt-text="Use the rule builder in Microsoft Endpoint Manager and Microsoft Intune to create an expression filter, and assign to your policies.":::
 
+      The expression you created is automatically added to the rule syntax editor.
+
     **Rule syntax**:
 
-    You can also manually enter your rule expression. In **Rule syntax**, select **Edit**:
+    You can also manually enter your rule expression, and write your own rules. In **Rule syntax**, select **Edit**:
 
     :::image type="content" source="./media/filters/rule-syntax-edit.png" alt-text="Select rule syntax edit to use the rule builder in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-    The expression builder opens. You can manually enter expressions, such as `(device.osVersion -eq "10.0.18362") and (device.manufacturer -eq "Microsoft")`:
+    The expression builder opens. Manually enter expressions, such as `(device.osVersion -eq "10.0.18362") and (device.manufacturer -eq "Microsoft")`:
 
     :::image type="content" source="./media/filters/rule-syntax-example.png" alt-text="Use the expression builder to enter your rule syntax in Microsoft Endpoint Manager and Microsoft Intune.":::
+
+    For more information on writing your own expressions, see [Device properties, operators, and rule editing when creating filters](filters-device-properties.md).
 
     Select **OK** to save your expression.
 
@@ -152,24 +153,27 @@ To use filters, you must enable it in your organization tenant.
 
 ## Use a filter
 
-After the filter is created, it's ready to be used when assigning your app policies, compliance policies, and configuration profiles.
+After the filter is created, it's ready to use when assigning your app policies, compliance policies, and configuration profiles.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to your app policies, compliance policies, or configuration profiles. Select an existing policy.
+2. Go to your app policies, compliance policies, or configuration profiles. For a list of what's supported, see [Supported workloads when creating filters](filters-supported-workloads.md). Select an existing policy, or create a new policy.
 
     For example, select **Devices** > **Compliance policies**, and select an existing policy. Select **Properties** > **Assignments** > **Edit**:
 
     :::image type="content" source="./media/filters/edit-compliance-policy-assignment.png" alt-text="Select a compliance policy, and edit the assignment in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-3. Select **Edit filter**. You can choose to **include filtered devices** or **exclude filtered devices** when you assign the policy. A list of filters that match the policy platform is shown.
+3. Assign your policy to a users group or a devices group.
+4. Select **Edit filter**. You can choose to **include filtered devices** or **exclude filtered devices**. A list of filters that match the policy platform is shown.
 
-4. Select your filter > **Select**.
+5. Select your filter > **Select**.
 
     For example, select **Include filtered devices in assignment**, and select the filter:
 
     :::image type="content" source="./media/filters/add-filter-compliance-policy.png" alt-text="Select a compliance policy, and edit the assignment in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-5. To save your changes, select **Review + save** > **Save**.
+6. To save your changes, select **Review + save** > **Save**.
+
+When the device checks in with the Intune service, the changes are applied to any policies using the filter.
 
 ## Change an existing filter
 
@@ -180,11 +184,13 @@ After a filter is created, it can be changed or updated.
 
     You can also update filters in **Devices** > **Filters (preview)**, or **Apps** > **Filters (preview)**.
 
-3. Select the filter you want to change. Select **Rules** > **Edit**:
+3. Select the filter you want to change. Select **Rules** > **Edit**, and make your changes:
 
     :::image type="content" source="./media/filters/update-existing-filter.png" alt-text="Delete a filter in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 4. To save your changes, select **Review + save** > **Save**.
+
+When the device checks in with the Intune service, the changes are applied to any policies using the filter.
 
 ## Delete a filter
 
@@ -202,3 +208,7 @@ To delete a filter, you must remove the filter from any policies. Otherwise, whe
 `Unable to delete assignment filter – An assignment filter is associated with existing assignments. Delete all the assignments for the filter and try again.`
 
 ## Next steps
+
+- [Device properties, operators, and rule editing when creating filters](filters-device-properties.md)
+- [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Filter reports and troubleshooting](filters-reports-troubleshoot.md)

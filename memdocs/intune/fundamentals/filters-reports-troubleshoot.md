@@ -199,3 +199,4 @@ The following matrix explains the impact, depending on the configuration setting
 
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported device properties when creating filters](filters-device-properties.md)
+- [Supported workloads when creating filters](filters-supported-workloads.md)
