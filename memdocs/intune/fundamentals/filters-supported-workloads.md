@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2021
-ms.topic: conceptual
+ms.date: 05/07/2021
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -27,9 +27,9 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# List of platforms and policies supported by filters in Microsoft Endpoint Manager
+# List of platforms, policies, and app types supported by filters in Microsoft Endpoint Manager
 
-When you create an app policy, compliance policy, or configuration profile, you assign the policy to users or devices. When you assign the policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, and device configuration profiles that support filters. It also lists the workloads that aren't supported.
 
@@ -37,9 +37,10 @@ Filters support some of the different workloads available in Microsoft Intune. T
 
 - This article assume you're familiar with filters. If not, you can learn more at [Use filters when assigning your apps, policies, and profiles](filters.md).
 - ✔️: Supports filters.
-- ❌: Doesn't support filters.
+- ❌: Doesn't support filters
+- N/A: Doesn't apply to the platform.
 
-## Apps
+## App types
 
 You can use filters for some common app policies on the following platforms. For a list of what's not supported, see [not supported](#not-supported) (in this article).
 
@@ -48,9 +49,9 @@ You can use filters for some common app policies on the following platforms. For
 | App type | Supported |
 | --- | --- |
 | Store app | ✔️ |
-| Microsoft 365 apps | ❌ |
-| Microsoft Edge version 77 and newer | ❌ |
-| Microsoft Defender for Endpoint | ❌ |
+| Microsoft 365 apps | N/A |
+| Microsoft Edge version 77 and newer | N/A |
+| Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
 | Line-of-business apps | ✔️ |
 
@@ -58,12 +59,12 @@ You can use filters for some common app policies on the following platforms. For
 
 | App type | Supported |
 | --- | --- |
-| Store app | ❌ |
-| Microsoft 365 apps | ❌ |
-| Microsoft Edge version 77 and newer | ❌ |
-| Microsoft Defender for Endpoint | ❌ |
-| Web link | ❌ |
-| Line-of-business apps | ❌ |
+| Store app | N/A |
+| Microsoft 365 apps | N/A |
+| Microsoft Edge version 77 and newer | N/A |
+| Microsoft Defender for Endpoint | N/A |
+| Web link | N/A |
+| Line-of-business apps | N/A |
 | Android Enterprise system app  | ✔️ |
 | Managed Google Play store app | ✔️ |
 | Managed Google Play web link | ✔️ |
@@ -74,9 +75,9 @@ You can use filters for some common app policies on the following platforms. For
 | App type | Supported |
 | --- | --- |
 | Store app | ✔️ |
-| Microsoft 365 apps | ❌ |
-| Microsoft Edge version 77 and newer | ❌ |
-| Microsoft Defender for Endpoint | ❌ |
+| Microsoft 365 apps | N/A |
+| Microsoft Edge version 77 and newer | N/A |
+| Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
 | Line-of-business apps | ✔️ |
 | iOS/iPadOS volume purchase program (VPP) app | ✔️ |
@@ -85,7 +86,7 @@ You can use filters for some common app policies on the following platforms. For
 
 | App type | Supported |
 | --- | --- |
-| Store app | ❌ |
+| Store app | N/A |
 | Microsoft 365 apps | ✔️ |
 | Microsoft Edge version 77 and newer | ✔️ |
 | Microsoft Defender for Endpoint | ✔️ |
@@ -99,7 +100,7 @@ You can use filters for some common app policies on the following platforms. For
 | Store app | ✔️ |
 | Microsoft 365 apps | ✔️ |
 | Microsoft Edge version 77 and newer | ✔️ |
-| Microsoft Defender for Endpoint | ❌ |
+| Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
 | Line-of-business apps | ✔️ |
 | Windows app (Win32) | ✔️ |
@@ -129,29 +130,28 @@ You can use filters for some common device configuration policies on the followi
 | Profile type | Supported |
 | --- | --- |
 | Custom | ✔️ |
-| Derived credential | ❌ |
+| Derived credential | N/A |
 | Device restrictions | ✔️ |
-| Device restrictions (Windows 10 Team) | ❌ |
-| Device features | ❌ |
-| Email | ❌ |
+| Device restrictions (Windows 10 Team) | N/A |
+| Device features | N/A |
+| Email | N/A |
 | Email (Samsung KNOX only) | ✔️ |
-| Endpoint Protection | ❌ |
-| MX profile (Zebra only) | ✔️ |
+| Endpoint Protection | N/A  | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
-| Settings catalog | ❌ |
+| Settings catalog | N/A |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
-| **Endpoint Security** | &nbsp; |
-| Account protection | ❌ |
-| Antivirus | ❌ |
-| Attack surface reduction | ❌ |
-| Disk encryption | ❌ |
-| Endpoint detection and response | ❌ |
-| Firewall | ❌ |
-| Security Baselines | ❌ |
+| **Endpoint Security profile** | &nbsp; |
+| Account protection | N/A |
+| Antivirus | N/A |
+| Attack surface reduction | N/A |
+| Disk encryption | N/A |
+| Endpoint detection and response | N/A |
+| Firewall | N/A |
+| Security Baselines | N/A |
 
 ### Android Enterprise
 
@@ -160,26 +160,26 @@ You can use filters for some common device configuration policies on the followi
 | Custom | ✔️ |
 | Derived credential | ✔️ |
 | Device restrictions | ✔️ |
-| Device Restrictions (Windows 10 Team) | ❌ |
-| Device Features | ❌ |
+| Device Restrictions (Windows 10 Team) | N/A |
+| Device Features | N/A |
 | Email | ✔️ |
-| Endpoint Protection | ❌ |
+| Endpoint Protection | N/A |
 | OEMConfig | ❌ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
-| Settings catalog | ❌ |
+| Settings catalog | N/A |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
-| **Endpoint Security** | &nbsp; |
-| Account protection | ❌ |
-| Antivirus | ❌ |
-| Attack surface reduction | ❌ |
-| Disk encryption | ❌ |
-| Endpoint detection and response | ❌ |
-| Firewall | ❌ |
-| Security Baselines | ❌ |
+| **Endpoint Security profile** | &nbsp; |
+| Account protection | N/A |
+| Antivirus | N/A |
+| Attack surface reduction | N/A |
+| Disk encryption | N/A |
+| Endpoint detection and response | N/A |
+| Firewall | N/A |
+| Security Baselines | N/A |
 
 ### iOS/iPadOS
 
@@ -188,36 +188,36 @@ You can use filters for some common device configuration policies on the followi
 | Custom | ✔️ |
 | Derived credential | ✔️ |
 | Device restrictions | ✔️ |
-| Device Restrictions (Windows 10 Team) | ❌ |
+| Device Restrictions (Windows 10 Team) | N/A |
 | Device Features | ✔️ |
 | Email | ✔️ |
-| Endpoint Protection | ❌ |
+| Endpoint Protection | N/A |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
-| Settings catalog | ❌ |
+| Settings catalog | N/A |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
-| **Endpoint Security** | &nbsp; |
-| Account protection | ❌ |
-| Antivirus | ❌ |
-| Attack surface reduction | ❌ |
-| Disk encryption | ❌ |
-| Endpoint detection and response | ❌ |
-| Firewall | ❌ |
-| Security Baselines | ❌ |
+| **Endpoint Security profile** | &nbsp; |
+| Account protection | N/A |
+| Antivirus | N/A |
+| Attack surface reduction | N/A |
+| Disk encryption | N/A |
+| Endpoint detection and response | N/A |
+| Firewall | N/A  |
+| Security Baselines | N/A |
 
 ### macOS
 
 | Profile type | Supported |
 | --- | --- |
 | Custom | ✔️ |
-| Derived credential | ❌ |
+| Derived credential | N/A |
 | Device restrictions | ✔️ |
-| Device restrictions (Windows 10 Team) | ❌ |
+| Device restrictions (Windows 10 Team) | N/A |
 | Device features | ✔️ |
-| Email | ❌ |
+| Email | N/A |
 | Endpoint Protection | ✔️ |
 | Extensions | ✔️ |
 | PKCS certificate | ✔️ |
@@ -229,14 +229,14 @@ You can use filters for some common device configuration policies on the followi
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
 | Wired network | ✔️ |
-| **Endpoint Security** | &nbsp; |
-| Account protection | ❌ |
+| **Endpoint Security profile** | &nbsp; |
+| Account protection | N/A |
 | Antivirus | ❌ |
-| Attack surface reduction | ❌ |
+| Attack surface reduction | N/A |
 | Disk encryption | ❌ |
-| Endpoint detection and response | ❌ |
+| Endpoint detection and response | N/A |
 | Firewall | ❌ |
-| Security Baselines | ❌ |
+| Security Baselines | N/A |
 
 ### Windows 10 and newer
 
@@ -244,11 +244,11 @@ You can use filters for some common device configuration policies on the followi
 | --- | --- |
 | Administrative Templates | ✔️ |
 | Custom | ✔️ |
-| Derived credential | ❌ |
+| Derived credential | N/A |
 | Delivery optimization | ✔️ |
 | Device restrictions | ✔️ |
 | Device Restrictions (Windows 10 Team) | ✔️ |
-| Device Features | ❌ |
+| Device Features | N/A |
 | Device Firmware Configuration Interface | ❌ |
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
@@ -268,7 +268,7 @@ You can use filters for some common device configuration policies on the followi
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
-| **Endpoint Security** | &nbsp; |
+| **Endpoint Security profile** | &nbsp; |
 | Account protection | ❌ |
 | Antivirus | ❌ |
 | Attack surface reduction | ❌ |

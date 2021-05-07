@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2021
+ms.date: 05/07/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,9 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager
 
-When you create an app policy, compliance policy, or configuration profile, you assign the policy to users or devices. When you assign the policy, you can also use filters. For more information on this feature, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). When you assign the app or policy, you can also use filters. For more information on this feature, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-When you create a filter, you enter the device properties to use in your filter. For example, in your filter, enter the device manufacturer so the policy only applies to Microsoft devices. For iOS/iPadOS devices, in your filter, you can apply your policies to only rooted devices.
+When you create a filter, you enter the device properties to use in your filter. For example, in your filter, enter the device manufacturer so the policy only applies to Microsoft devices.
 
 Advanced rule editing is also available. You can use common operators, such as `and`, `contains`, and `startsWith` to create expressions. These expressions are saved and used in your filter.
 
@@ -232,7 +232,7 @@ You can use the following operators in the rule syntax editor:
 - **Equals**: Use for all value types, including simple rules, strings, arrays, and more.
 
   - **Allowed values**: `-eq` | `eq`
-  - **Example**: `(device.manufacturer -eq "Samsung") and (device.model -contains "Galaxy Note")`
+  - **Example**: `(device.manufacturer -eq "Samsung") and (device.model -eq "Galaxy Note")`
 
 - **NotEquals**: Use for all value types, including simple rules, strings, arrays, and more.
 

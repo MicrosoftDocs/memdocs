@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2021
+ms.date: 05/07/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Filter reports and troubleshooting in Microsoft Endpoint Manager
 
-When you create an app policy, compliance policy, or configuration profile, you assign the policy to users or devices. When you assign the policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 Devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Endpoint Manager admin center.
 
@@ -46,12 +46,12 @@ The Endpoint Manager admin center has per-device and per-app reporting informati
 
 You can use the following reports to get more information on your filters:
 
-- [Device filter evaluation report](#device-filter-evaluation-report) (in this article)
+- [Filter evaluation report for devices](#filter-evaluation-report-for-devices) (in this article)
 - [App filter evaluation report](#app-filter-evaluation-report) (in this article)
 
-### Device filter evaluation report
+### Filter evaluation report for devices
 
-This report shows every policy with a filter that's been applied. For each evaluated policy, you can see the applied filters, and get more detailed information.
+This report shows every app or policy with a filter that's been applied. For each evaluated app or policy, you can see the applied filters, and get more detailed information.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All Devices** > select a device > **Filter evaluation (preview)**. The following information is shown:
@@ -63,7 +63,7 @@ This report shows every policy with a filter that's been applied. For each evalu
     - The filter name, description, and rules
     - The properties that were evaluated, such as `deviceName`.
 
-    This filter information is populated with the currently configured filter name, description, and rules. The information isn't populated from log data. The filter name, syntax, and any other metadata may have changed since the last evaluation time. When troubleshooting, be sure to look at the **Evaluation time** and **Last modified** timestamps.
+    The **Filter information** section is populated with the currently configured filter name, description, and rules. The information isn't populated from log data. The filter name, syntax, and any other metadata may have changed since the last evaluation time. When troubleshooting, be sure to look at the **Evaluation time** and **Last modified** timestamps.
 
 In the following example, you can see this information for the **TestDevice**:
 
@@ -71,7 +71,7 @@ In the following example, you can see this information for the **TestDevice**:
 
 ### App filter evaluation report
 
-This report shows every app with a filter that's been applied. For each evaluated app, you can see the applied filters, and get more detailed information.
+This report shows filter information for each device that was evaluated in an app assignment. For each device, you can see the device's overall applicability for an app, and get more detailed information about the filter evaluation.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > select an app > **Device install status**.
@@ -113,7 +113,7 @@ Use the following table to help understand when you include or exclude devices:
 
 When you assign a policy to a group (users or devices), it's possible to overlap assignments. It's not recommended, as the overlapping can cause conflicts.
 
-Intune helps avoid conflicts. It prevents you from assigning multiple app policies to the same Azure AD group. It's not recommended to assign apps to the same target user or device with more than one intent. For example, when you deploy an app, you can't select a group for an **Available** assignment, and then the same group for a **Required** assignment.
+Intune helps avoid conflicts. It prevents you from creating multiple assignments to the same Azure AD group. It's not recommended to assign apps or policies to the same target user or device with more than one intent. For example, when you deploy an app, you can't select a group for an **Available** assignment, and then the same group for a **Required** assignment.
 
 An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, see [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
 
