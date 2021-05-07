@@ -130,8 +130,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 <password> = Plain text of the password to connect to the network
 -->
 
-<WLANProfile
-xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
   <name><Name of wifi profile></name>
   <SSIDConfig>
     <SSID>
