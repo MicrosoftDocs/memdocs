@@ -93,6 +93,7 @@ Access is granted when the device is remediated:<br>
 > We recommend using one Mobile Threat Defense vendor per tenant per platform. 
 > 
 > For Device Compliance, you can use multiple Mobile Defense vendors with a single Intune tenant. However, when two or more vendors are configured for use for the same platform, all devices that run that platform must install each MTD app and scan for threats. Failure to submit a scan from any configured app results in the device being marked as non-compliant. 
+> This recommendation does not apply to Defender MTD. You could have both Defender and a third party MTD and check compliance separately targetting different compliance policies to different groups.
 
 ## Mobile Threat Defense partners
 
