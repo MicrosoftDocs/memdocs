@@ -38,7 +38,7 @@ Use this article to learn more about the reporting features, and to help trouble
 > [!IMPORTANT]
 > 
 > - From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
-> - This feature is in [public preview](public-preview.md). The filter evaluation results will change, and become more integrated into policy and app reports. To help improve this feature, provide feedback at **memFiltersFeedback@microsoft.com**.
+> - This feature is in [public preview](public-preview.md). The filter evaluation results will change, and become more integrated into policy and app reports.
 
 ## Reports
 
@@ -147,8 +147,6 @@ For example:
 
 In this scenario, the exclude assignment wins because of filter mode precedence. DeviceA evaluates FilterB. If DeviceA matches the rules, then DeviceA is excluded from PolicyA. If DeviceA doesn't match FilterB, then PolicyA applies. DeviceA doesn't do any more evaluations against GroupB and GroupC assignments and filters.
 
-:::image type="content" source="./media/filters-reports-troubleshoot/example-group-filter-assignment-different-mode.png" alt-text="Exclude filter assignment applies has precedence in policy assignment when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
-
 ### Use "OR" logic when filter modes are the same
 
 If multiple filters using the same mode are applied, such as Include, then **OR** logic is used. The device only needs to match the rules in one of the filters to be included (or excluded) from the policy assignment.
@@ -161,8 +159,6 @@ For example:
 - DeviceA is a member of both groups: GroupA and GroupB.
 
 In this scenario, both filters use the same mode. So, the filters resolve the conflict with **OR** logic. DeviceA evaluates FilterA and FilterB. If DeviceA matches the rules in either filter, then DeviceA receives PolicyA. If DeviceA doesn't match either filter, then PolicyA isn't applied.
-
-:::image type="content" source="./media/filters-reports-troubleshoot/example-group-filter-assignment-same mode.png" alt-text="Exclude or include applies with the same mode when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 ### App intent
 
@@ -177,11 +173,7 @@ For example:
 
 In this scenario, the winning app intent is **Required**. For more information, see [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved). So, DeviceA must only evaluate FilterA. If DeviceA matches the rules in FilterA, DeviceA receives AppA as a required app.
 
-:::image type="content" source="./media/filters-reports-troubleshoot/example-group-filter-assignment-app-intent.png" alt-text="Available, required, or uninstall intent for apps when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
-
 Apps use special behavior when resolving conflicts between **Required** and **Available** assignments. If a user or device is targeted with both **Available** and **Required** assignments, then it receives a merged intent called **Required and Available**. The device must evaluate filters used in both assignments. When evaluating both filters, the device implements the same conflict resolution: [Filter mode](#filter-mode) and ["OR" logic when filter modes are the same](#use-or-logic-when-filter-modes-are-the-same).
-
-:::image type="content" source="./media/filters-reports-troubleshoot/example-group-filter-assignment-app-intent-available-required.png" alt-text="Required and available app intent uses filter mode or logic when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 ## Conflict resolution matrix
 
