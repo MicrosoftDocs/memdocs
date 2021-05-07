@@ -42,15 +42,19 @@ Before you begin, complete these prerequisites to enable Android device manageme
 
 ## Plan for your deployment  
 
-The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios and requirements, create rollout and communication plans, support, testing, and validation plans.  
+Use the [Microsoft Intune planning guide](intune-planning-guide.md) for help with planning, designing, and implementing Microsoft Intune in your organization. The guide provides information to help you:
+
+* Determine goals, use-case scenarios, and requirements.
+* Create rollout and communication plans.
+* Create support, testing, and validation plans.  
 
 ## Leverage the Android Enterprise security configuration framework  
 
-The Android Enterprise security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations help you tailor your organization's mobile device security protection to your specific needs.
+The Android Enterprise security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations can help you tailor your organization's mobile device security protection to your specific needs. You can apply them to devices that are fully managed or personally owned with work profiles. 
 
-Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in iOS. It applies to devices that are fully managed and ones that are personally-owned with work profile. The framework includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one to offer more protection than the last. 
+The taxonomy for this framework is similar to the one used for security configurations in iOS. It includes recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one to offer more protection than the last. 
 
-The security levels for personally-owned devices with work profile are:  
+The security levels for personally owned devices with work profile are:  
 
 * Basic security (Level 1) – This configuration is recommended as the minimum security configuration for personal devices where users access work or school data. This configuration introduces password requirements, separates work and personal data, and validates Android device attestation. 
 
@@ -62,39 +66,43 @@ The security levels for fully managed devices are:
 
 * Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. It enforces stronger password policies and disables user and account capabilities. It's applicable to most mobile users accessing work or school data on a device. 
 
-* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk.  For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enforces stricter Android version requirements and additional device restrictions, and introduces mobile threat defense or Microsoft Defender ATP.  
+* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk.  For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enforces stricter Android version requirements and other device restrictions, and introduces mobile threat defense or Microsoft Defender ATP.  
 
 For more information about the security framework, see the articles listed in the following table. 
 
 | Task | Detail | 
 | ---- | ------ | 
 | [Learn about the Android Enterprise framework deployment methodology](../enrollment/framework-deployment-methodology.md)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |      
-| [Configure device enrollment restrictions for personally-owned devices](../enrollment/android-work-profile-security-settings.md)|Apply these restrictions to configure a basic or high security level for devices that are personally-owned with work profile. | 
-| [Disallow personal accounts on Android Enterprise devices](../enrollment/android-app-configuration-policies.md) |Configure an app policy that prevents users on work or school devices from signing into Microsoft apps with a personal account. |  
-|[Configure security settings for personally owned devices ](../enrollment/android-work-profile-security-settings.md)  | Apply these settings to configure a basic or high security level on devices that are personally-owned with work profile. | 
+| [Configure device enrollment restrictions for personally owned devices](../enrollment/android-work-profile-security-settings.md)|Apply these restrictions to configure a basic or high security level for devices that are personally owned with work profile. | 
+| [Disallow personal accounts on Android Enterprise devices](../enrollment/android-app-configuration-policies.md) |Prevent people on work or school devices from signing into Microsoft apps with a personal account. |  
+|[Configure security settings for personally owned devices ](../enrollment/android-work-profile-security-settings.md)  | Apply these settings to configure a basic or high security level on devices that are personally owned with work profile. | 
 |[Configure security settings for fully managed devices ](../enrollment/android-fully-managed-security-settings.md)  | Apply these settings to configure a basic, enhanced, or high security level on corporate-owned, fully managed devices. | 
 
 ## Create compliance rules  
 
-Use compliance policies to define the rules and conditions that users and devices should meet to access your organization's protected resources. If you use Conditional Access, your Conditional Access policies can use your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).  **Lanewsad: Do all of these tasks work for both Android Enterprise and Android device admin?**
+Use compliance policies to define the rules and conditions that users and devices should meet to access your organization's protected resources. You can also create Conditional Access policies, which work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md). 
+
+The following tasks apply to both Android Enterprise and Android device administrator platforms.
 
 | Task | Detail | 
 | ---- | ------ | 
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |       
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy.|Specify the app or services you want to protect and define the conditions for access.
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, you can block apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things (like meeting room calendar kiosks) you forgot about or are unaware of. |  
+|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2.  For example, you can block apps that use basic and form-based authentication. Before you block any access, sign in to Azure AD and review the [authentication methods activity report](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things (like meeting room calendar kiosks) you forgot about or are unaware of. |  
 
  
 ## Configure endpoint security  
-Use the Intune endpoint security features to configure device security and to manage security tasks for devices at risk.  **Lanewsad: Do all of these work for both Android device admin and Android Enterprise devices?**
+Use the Intune endpoint security features to configure device security and to manage security tasks for devices at risk.  
+
+The following tasks apply to both Android Enterprise and Android device administrator platforms. 
 
 | Task | Detail | Platform|
 | ---- | ------ | ------ |
 |[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the **Endpoint security** settings in Intune to effectively manage device security and remediate issues for devices.|Android Enterprise, Android device administrator |
 |[Enable the mobile threat defense (MTD) connector for enrolled devices](../protect/mtd-connector-enable.md)|Enable the MTD connection in Intune so that MTD partner apps can work with Intune and your MTD device compliance policies. If you're not using Microsoft Defender for Endpoint, consider enabling the connector so that you can use another mobile threat defense solution. You can also [enable the MTD connector for devices not enrolled in Intune](../protect/mtd-enable-unenrolled-devices.md).| Android Enterprise, Android device administrator |
 |[Create MTD app protection policy](../protect/mtd-app-protection-policy.md)|Create an Intune app protection policy that assesses risks and limits a device's access to work apps.| Android Enterprise, Android device administrator |
-|[Add MTD apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)|Make MTD apps available to people in your organization who haven't enrolled their devices in Intune. |  Android Enterprise, Android device administrator |
+|[Add MTD apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)|Make MTD apps available to people in your organization who haven't enrolled their devices in Intune. |  Not platform-dependent; applies to devices with mobile application management capabilities.  |
 |[Create MTD device compliance policy](../protect/mtd-app-protection-policy.md)|Create an Intune app protection policy that assesses risk and limits a device's corporate access based on the threat level.|Android Enterprise, Android device administrator |
 |[Add and assign MTD apps](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)|Add and deploy MTD apps in Intune. These apps work with your device compliance and app protection policies to identify and help remediate device threats. |  Android Enterprise, Android device administrator |  
 
@@ -109,12 +117,12 @@ Use Microsoft Intune to enable or disable settings and features on devices. To c
 |[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network. For a description of the settings in this area, see the VPN settings reference for [Android Enterprise VPN settings](../configuration/vpn-settings-android-enterprise.md) or [Android device administrator VPN settings](../configuration/vpn-settings-android.md). | Android Enterprise, Android device administrator  |
 |[Configure email profile](../configuration/email-settings-configure.md)|Configure email settings so that people can connect to a mail server and access their work or school email. For a description of the settings in this area, see [Android Enterprise email settings](../configuration/email-settings-android-enterprise.md) or [Android device administrator email settings](../configuration/email-settings-android.md).| Android Enterprise, Android device administrator  |
 |[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see [Android Enterprise device settings](../configuration/device-restrictions-android-for-work.md) or [Android device administrator device settings](../configuration/device-restrictions-android.md).|Android Enterprise, Android device administrator |
-|[Configure custom settings for Android device administrator](../configuration/custom-settings-android.md)|Add or create custom settings that aren't built in to Intune, such as a a per-app VPN profile and web protection with Microsoft Defender for Endpoint.|Android device administrator |
+|[Configure custom settings for Android device administrator](../configuration/custom-settings-android.md)|Add or create custom settings that aren't built in to Intune, such as a per-app VPN profile and web protection with Microsoft Defender for Endpoint.|Android device administrator |
 |[Configure Samsung Knox apps](../configuration/samsung-knox-apps-allow-block.md)|Create a custom profile to allow and block apps for Samsung Knox Standard devices.| Android device administrator|
 |[Create custom profile for Android Enterprise](../configuration/custom-settings-android-for-work.md)|Add or create custom settings that aren't built in to Intune for personally owned devices.|Android Enterprise|
 |[Configure Zebra Mobility Extensions (MX) profile](../configuration/android-zebra-mx-overview.md)|Use Zebra's Mobility Extensions (MX) profiles to customize or add more Zebra-specific settings in Intune.| Android device administrator|
 |[Create OEMConfig configuration profile](../configuration/android-oem-configuration-overview.md)|Use OEMConfig to add, create, and customize OEM-specific settings for Android Enterprise devices.| Android Enterprise|
-|[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune apps with your organization's branding, screen preferences, and contact information to create a familiar experience for people enrolling their devices.|Android Enterprise, Android device administrator |  
+|[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune apps with your organization's branding to create a familiar experience for people enrolling their devices.|Android Enterprise, Android device administrator |  
 
 
 ## Set up secure authentication methods   
@@ -131,7 +139,7 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 
 ## Deploy apps  
 
-As you set up apps and app policies, think about your organization's requirements, such as the platforms you'll support, the tasks people need to do, the type of apps they need to complete those tasks, and finally, the groups who need those apps. You can use Intune to manage the whole device (including apps) or use Intune to manage the apps only.  
+As you set up apps and app policies, think about your organization's requirements, such as the platforms you'll support, the tasks people need to do, the type of apps they need to complete those tasks, and the groups who need those apps. You can use Intune to manage the whole device (including apps) or use Intune to manage apps only.  
 
 | Task | Detail |Platform| 
 | ---- | ------ | ------ | 
@@ -146,9 +154,9 @@ As you set up apps and app policies, think about your organization's requirement
 | [Create an Android app protection policy](../apps/app-protection-policies.md) | Keep your organization's data contained within managed apps like Outlook and Word. For details about each setting, see [Android app protection policy settings](../apps/app-protection-policy-settings-android.md). | Android Enterprise, Android device administrator| 
 | [Validate your app protection policy](../apps/app-protection-policies.md) | Validate that your app protection policy is correctly set up and working before deploying it org-wide. |   Android Enterprise, Android device administrator|
 |[Create an app configuration policy](../apps/app-configuration-policies-use-android.md)  | Apply custom configuration settings to Android apps on enrolled devices. You can also apply these types of policies [to managed apps, without device enrollment](../apps/app-configuration-policies-managed-app.md). |  Android Enterprise, Android device administrator|
-|[Configure Microsoft Edge](../apps/manage-microsoft-edge.md) | Use Intune app protection and configuration policies with Edge for Android to ensure that corporate websites are accessed with safeguards in place. | Android Enterprise, Android device administrator |
+|[Configure Microsoft Edge](../apps/manage-microsoft-edge.md) | Use Intune app protection and configuration policies with Microsoft Edge for Android to ensure that corporate websites are accessed with safeguards in place. | Android Enterprise, Android device administrator |
 |[Configure Google Chrome](../apps/apps-configure-chrome-android.md) | Use an Intune app configuration policy to configure Google Chrome on Android devices enrolled in Intune. | Android Enterprise |
-| [Configure Microsoft Managed Home Screen app ](../apps/app-configuration-managed-home-screen-app.md)|Configure Managed Home Screen on corporate-owned Android Enterprise dedicated devices enrolled via Intune and running in multi-app kiosk mode. |Android Enterprise|
+| [Configure Microsoft Managed Home Screen app ](../apps/app-configuration-managed-home-screen-app.md)|Set up Managed Home Screen on corporate-owned Android Enterprise dedicated devices enrolled via Intune and running in multi-app kiosk mode. |Android Enterprise|
 | [Configure Microsoft Launcher app ](../apps/configure-microsoft-launcher.md)|Configure Microsoft Launcher to customize the home screen experience on your organization's fully managed devices. |Android Enterprise| 
 | [Configure Microsoft Office apps](../apps/manage-microsoft-office.md)| Use Intune app protection and configuration policies with Office apps to ensure that corporate files are accessed with safeguards in place. |Android Enterprise| 
 |[Configure Microsoft Teams](../apps/manage-microsoft-teams.md) |Use Intune app protection and configuration policies with Teams to ensure that collaborative team experiences are accessed with safeguards in place. | Android Enterprise|
@@ -172,7 +180,7 @@ For information about each enrollment method and how to choose one that's right 
 | Task | Detail | Platform|
 | ---- | ------ | ------ | 
 |[Connect Intune account to managed Google Play account](../enrollment/connect-intune-android-enterprise.md)| To enable Android Enterprise management in Intune, connect your Intune tenant account to your managed Google Play account. |  Android Enterprise|
-|[Set up work profile enrollment for personally-owned devices ](../enrollment/android-work-profile-enroll.md)|Set up work profile management for personally-owned devices. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected.| Android Enterprise| 
+|[Set up work profile enrollment for personally owned devices ](../enrollment/android-work-profile-enroll.md)|Set up work profile management for personally owned devices. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected.| Android Enterprise| 
 |[Set up work profile enrollment for corporate-owned devices](../enrollment/android-work-profile-enroll.md)|Set up work profile management for corporate-owned devices intended for work and personal use. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected. | Android Enterprise|
 |[Set up enrollment for dedicated devices](../enrollment/android-kiosk-enroll.md)| Set up enrollment for corporate-owned, single-use, kiosk-style devices.    |   Android Enterprise|
 |[Set up enrollment for fully managed devices](../enrollment/android-fully-managed-enroll.md)|Set up enrollment for corporate-owned devices that are associated with a single user and used exclusively for work.|  Android Enterprise |
@@ -193,7 +201,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | Task | Detail | 
 | ---- | ------ | 
 |[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.|
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|   
+|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|   
 | [Wipe corporate data from Intune-managed apps](../apps/apps-selective-wipe.md) | Selectively remove work-related data from a device. |     
 
 ## Next steps
