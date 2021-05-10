@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager
+# Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager
 
 When you create a policy, you can use filters to assign a policy based on rules you create. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
 
