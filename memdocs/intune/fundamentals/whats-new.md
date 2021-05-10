@@ -58,7 +58,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
-
 <!-- ########################## -->
 ## Week of May 10, 2021
 
