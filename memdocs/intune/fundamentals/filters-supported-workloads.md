@@ -225,7 +225,7 @@ You can use filters for some common device configuration policies on the followi
 | PKCS imported certificate | ✔️ |
 | Preference file | ✔️ |
 | SCEP certificate | ✔️ |
-| Settings catalog | ✔️ |
+| Settings catalog | ❌ |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
@@ -263,7 +263,7 @@ You can use filters for some common device configuration policies on the followi
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
 | Secure assessment (Education) | ✔️ |
-| Settings catalog | ✔️ |
+| Settings catalog | ❌ |
 | Shared multi-user device | ✔️ |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
@@ -282,6 +282,7 @@ You can use filters for some common device configuration policies on the followi
 
 The following features don't support using filters:
 
+- Configuration Profile Settings catalog
 - App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows 10
 - End user experiences customization policies
