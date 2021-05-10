@@ -17,7 +17,7 @@ The Defender for Endpoint app on Android now supports Microsoft Tunnel functiona
 
 #### How this change will affect your organization
 
-If you use the Microsoft Tunnel app for Android, you'll need to move to the Defender for Endpoint app before the June Intune (2106) service release to ensure users can still access the Tunnel Gateway configuration.
+If you use the Microsoft Tunnel app for Android, you'll need to move to the Defender for Endpoint app before the July Intune (2107) service release to ensure users can still access the Tunnel Gateway configuration.
 
 #### What you need to do to prepare
 
