@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/03/2021
+ms.date: 05/10/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,25 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 -->
+
+
+<!-- ########################## -->
+## Week of May 10, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Device management
+
+#### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682  WNReady -->
+
+In public preview, you can use Intune’s **Windows 10 quality updates** policy to [expedite the install of the most recent Windows 10 security updates](../protect/windows-10-expedite-updates.md) to devices you manage with Intune.
+
+When you expedite an update, devices can start the download and install of the update as soon as possible, without having to wait for the device to check in for updates. Other than expediting the install of the update, use of this policy leaves your existing update deployment policies and processes untouched.
+
+To help monitor expedited updates, you can use the following options:
+
+- The [Windows Expedited Updates report](../protect/windows-10-expedite-updates.md#summary-report)
+- [Expedited update failures](../protect/windows-10-expedite-updates.md#device-report) device report
 
 <!-- ########################## -->
 ## Week of April 26, 2021 (Service release 2104)
