@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 05/10/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -85,12 +85,12 @@ To use filters, you must enable it in your organization tenant.
 
     :::image type="content" source="./media/filters/turn-on-filters.png" alt-text="Turn on or enable the filters feature in Microsoft Endpoint Manager and Microsoft Intune.":::
  
-   > [!TIP]
-    > 
-    > - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsot Intune.](public-preview.md)
-    > - Your account must have have the Intune Service Administrator (also known as Intune Administrator) permission to enable or disable filters for your tenant.
-    > - You can disable filters, but you must delete all created filters and their associated assignments first.
-    > - [Provide feedback on the filters Public preview.](mailto:MEMfiltersfeedback@microsoft.com)
+> [!TIP]
+> 
+> - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsot Intune.](public-preview.md)
+> - To enable or disable filters for your tenant, your account must have have the Intune Service Administrator (also known as Intune Administrator) permission .
+> - You can disable the **Filters (preview)** feature by setting it back to **Off**. To turn off this feature, you must remove any filter assignments, and then delete all the filters you created.
+> - [Provide feedback on the filters public preview](mailto:MEMfiltersfeedback@microsoft.com).
 
 ### Create a filter
 
@@ -201,7 +201,7 @@ After a filter is created, it can be changed or updated.
 
     :::image type="content" source="./media/filters/delete-filter.png" alt-text="Delete a filter in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-To delete a filter, you must remove the filter from any policies. Otherwise, when trying to delete the filter, you'll get the following error:
+To delete a filter, you must remove the filter from any policy assignments. Otherwise, when trying to delete the filter, you'll get the following error:
 
 `Unable to delete assignment filter – An assignment filter is associated with existing assignments. Delete all the assignments for the filter and try again.`
 
