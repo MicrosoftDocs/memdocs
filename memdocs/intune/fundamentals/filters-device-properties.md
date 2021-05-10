@@ -127,9 +127,10 @@ This article describes the different [device properties](#device-properties) and
   This property applies to:
 
   - Android device administrator
+  - Android Enterprise (Work profile only)
   - iOS/iPadOS
 
-- **Device Ownership**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators.
+- **Device Ownership**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
 
   Example:
 
