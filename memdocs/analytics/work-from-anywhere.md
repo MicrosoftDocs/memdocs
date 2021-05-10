@@ -1,7 +1,7 @@
 ---
-title: Work from anywhere (preview) report in Endpoint Analytics
+title: Work from anywhere (preview) report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
-description: The Work from anywhere (preview) report in Endpoint Analytics provides insights to help your end-users be productive from anywhere.
+description: The Work from anywhere (preview) report in Endpoint analytics provides insights to help your end users be productive from anywhere.
 ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -19,7 +19,7 @@ The ability for employees to work from anywhere productively is essential in tod
 
 ## Work from anywhere score
 
-The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights which help your end-users be productive from anywhere. For instance, the current weighting of Windows Autopilot is lower than the weight of other metrics.
+The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights that help your end users be productive from anywhere. For instance, the current weighting of Windows Autopilot is lower than the weight of other metrics.
 
 
 The following metrics are available in the **Work from anywhere** report:
@@ -29,17 +29,17 @@ The following metrics are available in the **Work from anywhere** report:
 - [Cloud identity](#cloud-identity)
 - [Windows Autopilot](#windows-autopilot)
 
-Endpoint Analytics computes the **Work from anywhere score** for all your Intune and Configuration Manager devices that have specifically opted into Endpoint Analytics. The **Work from anywhere score** is computed for all your Intune and co-managed devices, regardless of whether they've been configured with the Intune [data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr./md#bkmk_cm_enroll).
+Endpoint analytics computes the **Work from anywhere score** for all your Intune and Configuration Manager devices that have opted into Endpoint Analytics. The **Work from anywhere score** is computed for all your Intune and co-managed devices, regardless of whether they've been configured with the Intune [data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr./md#bkmk_cm_enroll).
 
 ### Windows 10
 
-Windows 10 provides a better user experience than older versions of Windows. For more information about the cost savings and business benefits enabled by Windows 10, download the Total Economic Impact (TEI) [whitepaper](https://vc2prod.blob.core.windows.net/vc-resources/TEIStudies/TEI%20of%20Windows%2010.pdf).
+Windows 10 provides a better user experience than older versions of Windows. For more information about the cost savings and business benefits enabled by Windows 10, download the [Total Economic Impact (TEI) whitepaper](https://vc2prod.blob.core.windows.net/vc-resources/TEIStudies/TEI%20of%20Windows%2010.pdf).
 
-The **Windows 10** metric measures the percent of devices on supported versions of Windows 10 versus an unsupported version of Windows. The recommended remediation action for moving devices from older versions of Windows is to create a deployment plan using [Desktop Analytics](../configmgr/desktop-analytics/overview.md) for co-managed and Intune devices and _____ for Configuration Manager-managed devices. Your score will be based on if these remediation actions have been completed or not.  
+The **Windows 10** metric measures the percent of devices on supported versions of Windows 10 versus unsupported versions. The recommended remediation action for moving devices from older versions of Windows is to create a deployment plan using [Desktop Analytics](../configmgr/desktop-analytics/overview.md) for co-managed and Intune devices and _____ for Configuration Manager-managed devices. Your score will be based on if these remediation actions have been completed or not.  
 
 ### Cloud management 
 
-Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With cloud management, you can achieve several productivity benefits, including enabling access to corporate resources even when they're away from the corporate network, and eliminating the need for and performance overhead of Group Policy, resulting in a better end-user experience. 
+Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options that allow your organization to provision, deploy, manage, and secure endpoints and applications. With cloud management, you can achieve several productivity benefits, including enabling access to corporate resources even when they're away from the corporate network, and eliminating the need for and performance overhead of Group Policy, resulting in a better end-user experience. 
 
 ### Cloud identity
 
