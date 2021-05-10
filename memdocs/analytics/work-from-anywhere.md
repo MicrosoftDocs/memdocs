@@ -29,7 +29,7 @@ The following metrics are available in the **Work from anywhere** report:
 - [Cloud identity](#cloud-identity)
 - [Windows Autopilot](#windows-autopilot)
 
-Endpoint analytics computes the **Work from anywhere score** for all your Intune and Configuration Manager devices that have opted into Endpoint Analytics. The **Work from anywhere score** is computed for all your Intune and co-managed devices, regardless of whether they've been configured with the Intune [data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr./md#bkmk_cm_enroll).
+Endpoint analytics computes the **Work from anywhere score** for all your Intune and Configuration Manager devices that have opted into Endpoint Analytics. The **Work from anywhere score** is computed for all your Intune and co-managed devices, regardless of whether they've been configured with the Intune [data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr.md#bkmk_cm_enroll).
 
 ### Windows 10
 
