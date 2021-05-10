@@ -2,7 +2,7 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 05/03/2021
+ms.date: 05/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -74,7 +74,7 @@ If you create a package for installing the console on other computers, make sure
 
 #### /q
 
-Installs the Configuration Manager console unattended. The **EnableSQM**, **TargetDir**, and **DefaultSiteServerName** options are required when you use this option.
+Installs the Configuration Manager console unattended. The **TargetDir** and **DefaultSiteServerName** options are required when you use this option.
 
 #### /uninstall
 
