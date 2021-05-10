@@ -71,11 +71,11 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
 
 ## Prerequisites
 
-- Sign in as the Intune administrator. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+- Sign in as an Intune administrator. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Enable filters, and add a filter
 
-### Enable filters
+### Enable filters public preview
 
 To use filters, you must enable it in your organization tenant.
 
@@ -84,6 +84,13 @@ To use filters, you must enable it in your organization tenant.
 3. Set **Filters (preview)** to **On**:
 
     :::image type="content" source="./media/filters/turn-on-filters.png" alt-text="Turn on or enable the filters feature in Microsoft Endpoint Manager and Microsoft Intune.":::
+ 
+   > [!TIP]
+    > 
+    > - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsot Intune.](public-preview.md)
+    > - Your account must have have the Intune Service Administrator (also known as Intune Administrator) permission to enable or disable filters for your tenant.
+    > - You can disable filters, but you must delete all created filters and their associated assignments first.
+    > - [Provide feedback on the filters Public preview.](mailto:MEMfiltersfeedback@microsoft.com)
 
 ### Create a filter
 
