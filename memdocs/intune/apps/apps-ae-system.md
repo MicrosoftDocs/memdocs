@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add Android Enterprise system apps to Microsoft Intune
+title: Managing Android Enterprise system apps in Microsoft Intune
 titleSuffix: 
-description: Learn how to add Enterprise system apps to Microsoft Intune.
+description: Learn how to manage Android Enterprise system apps in Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2021
+ms.date: 05/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,13 +29,13 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add Android Enterprise system apps to Microsoft Intune
+# Managing Android Enterprise system apps in Microsoft Intune
 
 Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md), [fully managed devices](../enrollment/android-fully-managed-enroll.md), [Android Enterprise corporate-owned with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md), or [Android Enterprise personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md).
 
-## Add the app
+## Add a system app to Intune
 
-You can add an Android Enterprise system app to Intune from the portal by doing the following:
+You can add an Android Enterprise system app to Intune using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
@@ -61,6 +61,14 @@ The app you've created is displayed in the apps list, where you can assign it to
 
 Android Enterprise system apps will enable or disable apps that are already part of the platform. To enable an app, assign the system app as **Required**. To disable an app, assign the system app as **Uninstall**. System apps cannot be assigned as available for a user.
 
+## Remove a system app in Intune
+
+You can delete an Android Enterprise system app from Intune using the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps**.
+3. Select the system app from the app list.
+4. Click **Delete** > **Yes** to remove the system app.
 
 ## Next steps
 
