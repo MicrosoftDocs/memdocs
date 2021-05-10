@@ -90,7 +90,7 @@ To use filters, you must enable it in your organization tenant.
 > - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsot Intune.](public-preview.md)
 > - To enable or disable filters for your tenant, your account must have have the Intune Service Administrator (also known as Intune Administrator) permission .
 > - You can disable the **Filters (preview)** feature by setting it back to **Off**. To turn off this feature, you must remove any filter assignments, and then delete all the filters you created.
-> - [Provide feedback on the filters public preview](mailto:MEMfiltersfeedback@microsoft.com).
+> - Microsoft wants your feedback about this feature. To provide feedback, go to [Tell us what you think about the Filters (preview) feature](https://forms.office.com/r/ibB4tf6CAz).
 
 ### Create a filter
 
