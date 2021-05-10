@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 05/10/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -117,7 +117,9 @@ You can use filters for all compliance policies on the following platforms:
 - Windows 10 and newer
 
 > [!NOTE]
-> It is currently not supported to use filters with compliance policies that require signal from Mobile Threat Detection (MTD) or Microsoft Defender for Endpoint (MDE). These are policies where setting "Require the device to be at or under the machine risk score" or "Require the device to be at or under the Device Threat Level" are defined.
+> It's currently not supported to use filters with compliance policies that require a signal from Mobile Threat Detection (MTD) or Microsoft Defender for Endpoint (MDE). For example, the following compliance policies require a signal:
+> - [Require the device to be at or under the machine risk score](../protect/compliance-policy-create-windows.md#microsoft-defender-for-endpoint)
+> - [Require the device to be at or under the Device Threat Level](../protect/mtd-device-compliance-policy-create.md)
 
 ## Device configuration profiles and Endpoint security
 
