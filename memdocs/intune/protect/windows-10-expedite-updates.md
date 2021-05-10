@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 05/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -140,16 +140,6 @@ Group Policy settings override mobile device management policies, and the follow
 - **AutoUpdateCfg** - Configure Automatic Updates.
 - **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
 - **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
-
-<!-- 
-| MDM Setting Name  |  Equivalent Group Policy Name       |
-|-------------------|-------------------------------------|
-| **AllowUpdateService** - This policy enables the admin to specify whether they want devices to get updates from the Windows Update endpoint directly, or if they want to get updates only from their specified intranet Microsoft update service location. </br></br> Expedite is only applicable to devices scanning Windows Update directly. </br></br> Use one of the following options: </br> - **Not configured** </br> - **1 Update Service is Allowed** (default)  |  **CorpWuURL** - Specify intranet Microsoft update service location. </br></br> Use one of the following options: </br> - The intranet update location as blank string, or **Not configured** </br> - **1 - Update Service is Allowed** (default)      |
-|**AllowAutoUpdate** - This policy controls how the device downloads and installs updates. For a best experience, Microsoft recommends not configuring this value or configuring it to the default. Use of either configuration ensures that updates automatically download and install at a good time for the end user while having few negative impacts on compliance. </br></br> Expedite can only be effective when the device is automatically downloading and installing updates. If you require end-user interaction, such as notify to download or notify to install, you might be hurting your compliance goals. </br></br> Use one of the following options: </br> - **Not configured** </br> -**2 Auto install and restart** (default)  |  **AutoUpdateCfg** - Configure Automatic Updates. </br></br> Use one of the following options: </br> - **Not configured** </br> - **4 - Schedule an install time with *Scheduled install day* = 0** (every day), and ***Scheduled Install time*** **= Automatic**                                  |
-| **BranchReadinessLevel** - This policy specifies which branch a device receives their updates from. </br></br> Use one of the following options: </br> - **Not configured** </br> - **16 - Semi-Annual Channel** (default)  |  **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received. </br></br> Use one of the following options: </br> - **Not configured** </br> - **Semi-Annual Channel**      |
-| **DisableDualScan** -This policy specifies whether the device gets its Windows Updates from Windows Update and all other updates from the specified server, or to get all updates from the specified server including Windows Updates. </br></br> For expedite to work, devices must scan against Windows Update directly for their Windows updates. </br></br> Use one of the following options: </br> - **Not configured** </br> -**0 – Allow scans against Windows Update**  |  **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update. </br></br> Use one of the following options: </br> - **Not configured** </br>  - **0 - Allow scan against Windows Update**       |
-| **RequireUpdateApproval** - This policy isn't supported for desktop devices. Instead of this policy, use the policy *Update CSP deferrals* or target versions to manage when and which updates are offered. </br></br> Set to: </br> - **Not configured**  |  *Not applicable*     |
--->
 
 ## Create and assign an expedited quality update
 

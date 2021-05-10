@@ -2,7 +2,7 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 03/26/2020
+ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -48,7 +48,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 - Members of an orchestration group should be assigned to the same site.
 - Devices can't be in more than one orchestration group.
-   - Devices already in an orchestration group won't' be available to select when adding new members.
+   - Devices already in an orchestration group won't be available to select when adding new members.
 
 
 ## Limitations
@@ -96,6 +96,9 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
    1. For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages.
       1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs.
       1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
+
+   > [!NOTE]
+   > In version 2103 and later, the maximum script length is 50,000 characters. In version 2010 and earlier, the maximum script length is 5,000 characters.<!-- MEMDocs#1575 -->
 
 1. Complete the wizard.
 

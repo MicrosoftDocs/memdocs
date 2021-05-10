@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 04/28/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -98,19 +98,28 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   - The TLS certificate can be in **PEM** or **pfx** format.
 
-- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fallback to use TLS 1.2.
+- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fall back to use TLS 1.2.
 
 ## Network
 
-We recommend using two Network Interface controllers (NICs) per Linux server to improve performance, though use of two is optional.
+- **Enable packet forwarding for IPv4**: On  each Linux server that hosts the Tunnel server software, edit the **/etc/sysctl.conf** file and remove the leading hashtag (#) from *#net.ipv4.ip_forward=1* to enable packet forwarding. After your edit, the entry should appear as follows:
 
-- **NIC 1** - This NIC handles traffic from your managed devices and should be on a public network with public IP address.  This IP address is the address that you configure in the *Site configuration*. This address can represent a single server or a load balancer.
+  ```
+  # Uncomment the next line to enable packet forwarding for IPv4
+  net.ipv4.ip_forward=1
+  ```
 
-- **NIC 2** - This NIC handles traffic to your on-premises resources and should be on your private internal network without network segmentation.
+  For this change to take effect, you must either reboot the server or run `sysctl -p`.
 
-If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
+- **Configure multiple NICs per server** *(Optional)*: We recommend using two Network Interface controllers (NICs) per Linux server to improve performance, though use of two is optional.
 
-If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
+  - **NIC 1** - This NIC handles traffic from your managed devices and should be on a public network with public IP address.  This IP address is the address that you configure in the *Site configuration*. This address can represent a single server or a load balancer.
+
+  - **NIC 2** - This NIC handles traffic to your on-premises resources and should be on your private internal network without network segmentation.
+
+- **Ensure cloud-based Linux VMs can access your on-premises network**: If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
+
+- **Load balancers** *(Optional)*:  If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
 ## Firewall
 
@@ -129,7 +138,7 @@ By default, the Microsoft Tunnel and server use the following ports:
 
 When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
 
-**Additional requirements**:
+**More requirements**:
 
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 
@@ -153,8 +162,8 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
   ```
   [Service]
   Environment="HTTP_PROXY=http://your.proxy:8080/"
-  Environment="HTTPS_PROXY=http://your.proxy:8080/"
-  Environment="NO_PROXY=127.0.0.1,localhost
+  Environment="HTTPS_PROXY=https://your.proxy:8080/"
+  Environment="NO_PROXY=127.0.0.1,localhost"
   ```
 
   > [!NOTE]  

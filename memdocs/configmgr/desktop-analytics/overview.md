@@ -42,7 +42,7 @@ Skip to 10:00 for an in-depth demo.
 > [!NOTE]
 > Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
 >
-> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](faq.md#existing-windows-analytics-customers).
+> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](/mem/configmgr/desktop-analytics/faq#existing-windows-analytics-customers).
 
 ## Benefits
 
@@ -81,7 +81,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - A supported version of Configuration Manager.
 
-  - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#bkmk_Planroles) role in Configuration Manager
+  - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#security-roles) role in Configuration Manager
 
   > [!NOTE]
   > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
@@ -126,7 +126,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
-- Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.md).
+- Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.yml).
 
 - Users of the device need one of the following licenses:
 

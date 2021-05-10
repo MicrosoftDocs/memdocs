@@ -2,7 +2,7 @@
 title: Procedures for boundary groups
 titleSuffix: Configuration Manager
 description: Configure boundary groups to logically organize related network locations called boundaries.
-ms.date: 11/27/2018
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -105,6 +105,9 @@ Starting in version 1806, to configure additional options for clients in this bo
 
     - **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.  
 
+    - **Prefer distribution points over peers within the same subnet**: By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients in the same subnet as a peer cache source.  
+
+- **Prefer cloud based sources over on-premises sources**: A common scenario is if you have a branch office with a faster internet link, you can prioritize cloud content. This includes cloud distribution points or Microsoft Update. 
 
 ## <a name="bkmk_site-fallback"></a> Configure a fallback site for automatic site assignment  
 

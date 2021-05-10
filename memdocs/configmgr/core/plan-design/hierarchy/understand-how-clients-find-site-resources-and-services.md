@@ -62,7 +62,7 @@ When a client attempts to find servers that host roles, it uses service location
 
 - To use HTTPS, you need a public key infrastructure (PKI) and install PKI certificates on clients and servers. For more information, see [PKI certificate requirements for Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).
 
-- For roles that use IIS and support client communication, you configure them for HTTP or HTTPS. If you use HTTP, also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption).
+- For roles that use IIS and support client communication, you configure them for HTTP or HTTPS. If you use HTTP, also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../../../core/plan-design/security/plan-for-security.md#signing-and-encryption).
 
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->

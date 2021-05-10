@@ -289,7 +289,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Count of client health check failures by issue type
 
-### Cloud Services  
+### Cloud services  
 
 - Azure Active Directory discovery statistics  
 
@@ -391,7 +391,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 ### Endpoint Protection  
 
-- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
+- Microsoft Defender for Endpoint policies (formerly known as Windows Defender for Endpoint): count of policies, and whether policies are deployed.
 
 - Count of alerts that are configured for Endpoint Protection feature  
 
@@ -403,7 +403,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group). This data doesn't include any information about the settings included in the policy.
 
-- Aggregated statistics for Microsoft Defender Advanced Threat Protection policies
+- Aggregated statistics for Microsoft Defender for Endpoint policies
 
 ### Migration  
 
@@ -471,7 +471,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Versions of installed Configuration Manager hotfixes  
 
-### Software Updates  
+### Software updates  
 
 - Available and deadline deltas that are used in automatic deployment rules  
 

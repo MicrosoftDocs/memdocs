@@ -2,7 +2,7 @@
 title: What's new in version 2103
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2103 of Configuration Manager current branch.
-ms.date: 04/05/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2103 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1910 or later. <!-- baseline only statement:--> When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2103.
+Update 2103 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1910 or later. <!-- baseline only statement:--> When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2103.
 
 > [!NOTE]
 > To better align with other releases within Microsoft Endpoint Manager, starting this year the current branch version names will be 2103, 2107, and 2111. They will still release every four months, and release at the same time of the year.
@@ -439,8 +439,8 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 <!-- For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md). -->
 
-<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2103](https://support.microsoft.com/help/4599442).
- -->
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2103](../../../hotfix/2103/kb9210721.md).
+
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 -->
@@ -456,9 +456,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2103 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2103.md#early-update-ring).
+<!-- At this time, version 2103 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2103.md#early-update-ring). -->
 
-<!-- As of December 11, 2020, version 2103 is globally available for all customers to install. -->
+As of April 19, 2021, version 2103 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2103](../../servers/manage/checklist-for-installing-update-2103.md).
 

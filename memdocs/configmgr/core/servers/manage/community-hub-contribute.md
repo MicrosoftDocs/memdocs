@@ -107,7 +107,7 @@ To use branding:
 
 ### Configuration baselines
 <!--7983121-->
-When you contribute a [configuration baseline](../../../compliance/deploy-use/create-configuration-baselines.md), each of the child configuration items is verified. The verification starts at the lowest nested level. This means that configuration items that are grandchildren are verified before direct child configuration items are. The following process occurs to ensure the configuration baseline is usable and complete:
+When you contribute a [configuration baseline](../../../compliance/deploy-use/create-configuration-baselines.md), each of the child configuration items is verified. The verification starts at the lowest nested level. This means that configuration items that are grandchildren are verified before direct child configuration items are. You can have up to 50 child configuration items and up to 4 nested levels. The following process occurs to ensure the configuration baseline is usable and complete:
 
 1. Check if the child configuration item is already in the Community hub. If the configuration item doesn't exist, it's created.
    - A configuration item with software updates or version-specific references will cause an error and the contribution will fail.

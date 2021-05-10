@@ -17,7 +17,7 @@ manager: dougeby
 
 **Applies to:**
 
-- [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 - System Center Endpoint Protection on the following down-level devices:
     - Windows Server 2012 R2
     - Windows 8.1
@@ -55,7 +55,7 @@ On a down-level Windows device that is managed by Endpoint Protection, copy the 
 > [!NOTE]
 > The registry keys to configure Endpoint Protection policy settings are located in **Hkey_Local_Machine\Software\Policies\Microsoft\Microsoft Antimalware**.
 
-## Load Endpoint Protection Group Policy settings into a Central Store on a Domain Controller
+## Load Endpoint Protection Group Policy settings into a Central Store on a domain controller
 
 If you are using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), perform the following steps to load and configure Endpoint Protection Group policy settings. This is the recommended method.
 

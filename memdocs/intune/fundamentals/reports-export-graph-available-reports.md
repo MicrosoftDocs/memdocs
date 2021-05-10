@@ -4,8 +4,8 @@
 title: Intune Graph API - Reports and properties | Microsoft Docs
 description: Learn about Intune reports and properties provided via Graph API.
 keywords: 
-ms.author: erikre
 author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 03/16/2021
 ms.topic: conceptual
@@ -57,8 +57,108 @@ The following table contains the possible values for the `reportName` parameter.
 |         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |
 |         ActiveMalware  |            Under   **Endpoint Security** > **Antivirus** > **Win10 detected   malware**        |
 |         Malware  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Detected   malware**        |
+|         AllAppsList  |            Under   **Apps** > **All Apps**        |
+|         AppInstallStatusAggregate  |             Under **Apps** > **Monitor** > **App install status**         |
+|         DeviceInstallStatusByApp  |            Under **Apps** > **All Apps** > *Select an individual app*       |
+|         UserInstallStatusAggregateByApp  |            Under **Apps** > **All Apps** > *Select an individual app*         |
 
 Each of the listed reports is described below.
+
+## AllAppsList
+
+The following table contains the possible output when calling the `AllAppsList` report:
+
+| Available   properties |
+|-|
+|     AppIdentifier |
+| Name |
+| Publisher |
+| Platform |
+| Status |
+| Type |
+| Version |
+| Description |
+| Developer |
+| FeaturedApp |
+| Notes |
+| Owner |
+| DateCreated |
+| LastModified |
+| ExpirationDate |
+| MoreInformationURL |
+| PrivacyInformationURL |
+| StoreURL |
+| Assigned    |
+
+There are no filters for this report.
+
+## AppInstallStatusAggregate
+
+The following table contains the possible output when calling the `AppInstallStatusAggregate` report:
+
+| Available   properties |
+|-|
+|     ApplicationId |
+| DisplayName |
+| Publisher |
+| Platform |
+| Platform_loc |
+| AppVersion |
+| InstalledDeviceCount |
+| InstalledUserCount |
+| FailedDeviceCount |
+| FailedUserCount |
+| PendingInstallDeviceCount |
+| PendingInstallUserCount |
+| NotApplicableDeviceCount |
+| NotApplicableUserCount |
+| NotInstalledDeviceCount |
+| NotInstalledUserCount |
+| FailedDevicePercentage    |
+
+You can choose to filter the `AppInstallStatusAggregate` report's output based on the following columns:
+- `Platform`
+- `FailedDevicePercentage`
+
+## DeviceInstallStatusByApp
+
+The following table contains the possible output when calling the `DeviceInstallStatusByApp` report:
+
+| Available   properties |
+|-|
+|     DeviceName |
+| UserPrincipalName |
+| Platform |
+| AppVersion |
+| DeviceId |
+| AssignmentFilterIdsExist |
+| LastModifiedDateTime |
+| AppInstallState |
+| AppInstallState_loc |
+| AppInstallStateDetails |
+| AppInstallStateDetails_loc |
+| HexErrorCode    |
+
+You can choose to filter the `AppInstallStatusAggregate` report's output based on the following columns:
+- `ApplicationId`
+- `AppInstallState`
+- `HexErrorCode` (Used as ErrorCode)
+
+## UserInstallStatusAggregateByApp
+
+The following table contains the possible output when calling the `UserInstallStatusAggregateByApp` report:
+
+| Available   properties |
+|-|
+|     UserName |
+| UserPrincipalName |
+| FailedCount |
+| InstalledCount |
+| PendingInstallCount |
+| NotInstalledCount |
+| NotApplicableCount    |
+
+There are no filters for this report.
 
 ## DeviceCompliance report
 

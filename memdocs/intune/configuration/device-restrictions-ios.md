@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2021
+ms.date: 04/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -275,6 +275,12 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer
 
+- **Disable near-field communication (NFC)**: **Yes** disables NFC, and prevents devices from pairing with other NFC-enabled devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users might be allowed to use NFC, and connect to other NFC-enabled devices. 
+
+  This feature applies to:  
+  - iOS 14.2 and newer
+  - iPadOS 14.2 and newer
+
 ## Domains
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
@@ -477,7 +483,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 ### Settings apply to: All enrollment types
 
 - **Block Control Center access in lock screen**: **Yes** prevents access to the Control Center app while device is locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the Control Center app when devices are locked.
-- **Block Notifications access in lock screen**: **Yes** prevents access to notifications when devices are locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to notifications without unlocking devices.
+- **Block Notifications Center access in lock screen**: **Yes** prevents access to notifications when devices are locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to notifications without unlocking devices.
 - **Block Today view in lock screen**: **Yes** prevents access to the Today view when devices are locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to see the Today view when devices are locked.
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
@@ -501,7 +507,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 > - Simple passwords, such as `1111` or `1234`, aren't allowed.
 > - A 6 digit pin is enforced.
 
-- **Simple passwords**: **Yes** blocks simple passwords, and requires more complex passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow simple passwords, such as `0000` and `1234`.
+- **Block simple passwords**: **Yes** blocks simple passwords, and requires more complex passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow simple passwords, such as `0000` and `1234`.
 
 - **Required password type**: Enter the required password complexity level your organization requires. Your options:
   - **Device default**
@@ -556,7 +562,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Password expiration (days)**: Enter the number of days before the device password must be changed, from 1-65535.
 - **Prevent reuse of previous passwords**: Restrict users from creating previous passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-- **Touch ID and Face ID unlock**: **Yes** prevents using a fingerprint or face to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock devices using biometrics.
+- **Block Touch ID and Face ID unlock**: **Yes** prevents using a fingerprint or face to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock devices using biometrics.
 
   Setting to **Yes** also prevents using FaceID authentication to unlock devices.
 
@@ -625,7 +631,7 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Block Shared iPad temporary sessions​**: Temporary sessions allow users to sign in as Guest, and users aren't required to enter a Managed Apple ID or password.
+- **Block Shared iPad temporary sessions**: Temporary sessions allow users to sign in as Guest, and users aren't required to enter a Managed Apple ID or password.
 
   When set to **Yes**:
 

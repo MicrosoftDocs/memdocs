@@ -39,7 +39,7 @@ conceptualContent:
           url: ./core/clients/manage/cmg/overview.md
           itemType: overview
         - text: Plan for Azure AD
-          url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+          url: ./core/plan-design/security/plan-for-security.md#azure-active-directory
           itemType: architecture
     - title: Co-management
       links:
@@ -89,7 +89,7 @@ conceptualContent:
           url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
           itemType: how-to-guide
         - text: Configuration Manager on Azure
-          url: ./core/understand/configuration-manager-on-azure.md
+          url: ./core/understand/configuration-manager-on-azure.yml
           itemType: learn
     - title: Core infrastructure
       links:
@@ -172,7 +172,7 @@ conceptualContent:
         - text: Endpoint protection
           url: ./protect/deploy-use/endpoint-protection.md
           itemType: overview
-        - text: Microsoft Defender Advanced Threat Protection
+        - text: Microsoft Defender for Endpoint
           url: ./protect/deploy-use/defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management

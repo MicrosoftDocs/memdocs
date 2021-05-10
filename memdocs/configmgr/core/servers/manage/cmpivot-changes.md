@@ -248,7 +248,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
     > [!TIP]
     > For this link to work, [install CMPivot standalone](#bkmk_standalone).
 
-- In query results, if the device is enrolled in Microsoft Defender Advanced Threat Protection (ATP), right-click the device to launch the **Microsoft Defender Security Center** online portal.
+- In query results, if the device is enrolled in Microsoft Defender for Endpoint, right-click the device to launch the **Microsoft Defender Security Center** online portal.
 
 ### Known issues for CMPivot in version 1910
 

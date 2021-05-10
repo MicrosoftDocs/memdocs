@@ -52,7 +52,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
     >
     > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
-    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
+    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.yml)  
 
 - Both site servers must be joined to the same Active Directory domain.
 
@@ -205,7 +205,7 @@ Similarly as with backup and recovery, plan and practice your process to change 
 
 ### Process to promote the site server in passive mode to active mode
 
-This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](../../../plan-design/hierarchy/plan-for-the-sms-provider.md#BKMK_MultiSMSProv).  
+This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](../../../plan-design/hierarchy/plan-for-the-sms-provider.md#use-multiple-sms-providers).
 
 > [!IMPORTANT]  
 > If all instances of the SMS Provider are offline, you can't connect to the site as no provider is available. When you add the site server in passive mode, setup installs an instance of the SMS Provider on this server.<!-- SCCMDocs#1613 -->

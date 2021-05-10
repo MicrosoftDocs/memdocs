@@ -48,7 +48,7 @@ If not already present in your environment, during this tutorial you'll:
 - Configure [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
 
 > [!TIP]
-> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
 
 ### On-premises infrastructure
 
@@ -59,10 +59,10 @@ If not already present in your environment, during this tutorial you'll:
 
 Throughout this tutorial, use the following permissions to complete tasks:
 
-- An account that is a *domain admin* on your on-premises infrastructure  
-- An account that is a *full administrator* for *all* scopes in Configuration Manager
-- An account that is a *global administrator* in Azure Active Directory (Azure AD)
-   - Make sure you've assigned an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized". <!--mem issue 169-->
+- An account that's a *domain admin* on your on-premises infrastructure  
+- An account that's a *full administrator* for *all* scopes in Configuration Manager
+- An account that's a *global administrator* in Azure Active Directory (Azure AD)
+  - Make sure you've assigned an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message *An unanticipated error occurred*. <!--mem issue 169, MEMDocs#691-->
 
 ## Set up hybrid Azure AD
 
@@ -142,6 +142,8 @@ Automatic enrollment also lets users enroll their Windows 10 devices to Intune. 
 
    > [!IMPORTANT]  
    > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only MAM is enabled. Only Mobile Application Management (MAM) is added for users in that group when they workplace join personal device. Devices aren't automatically MDM-enrolled.  
+   >
+   > When Configuration Manager is set to enroll devices to Intune, you don't need to change the MDM user scope for device token enrollment. Configuration Manager uses the MDM URLs that it stores in the site database.
 
 3. Select **Save** to complete configuration of automatic enrollment.  
 

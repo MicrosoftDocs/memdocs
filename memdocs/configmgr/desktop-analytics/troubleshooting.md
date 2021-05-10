@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/02/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -78,47 +78,46 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
 #### Create app in Azure AD
 
-1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
+> [!TIP]
+> During this process, you'll need to note several values to use later. Open an app like Windows Notepad to paste in the values that you'll copy from the Azure Portal.
 
-2. In the **Create** panel, configure the following settings:  
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.
 
-    - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
+1. In the _Register an application_ pane, configure the following settings:
 
-    - **Supported account types**: **Accounts in this organizational directory only (Contoso only - Single tenant)**
+    - **Name**: A unique name that identifies the app, for example: `Desktop-Analytics-Connection`
 
-    - **Redirect URI (optional)**: **Web**  
+    - **Supported account types**: Leave this setting as the default option, **Accounts in this organizational directory only**
 
-    <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
+    - **Redirect URI (optional)**: Leave this optional value blank.
   
-    Select **Register**.  
+    Select **Register** to create the app.
 
-3. Select the app, note the **Application (client) ID** and **Directory (tenant) ID**. The values are GUIDs that are used to configure the Configuration Manager connection.  
+1. In the properties of the new app, copy the **Application (client) ID** and **Directory (tenant) ID**. The values are GUIDs that are used to configure the Configuration Manager connection.
 
-4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. 
+1. In the menu of the app properties, select **Certificates & secrets**, then select **New client secret**.
+
+    - **Description**: You can use any name for the secret or leave it blank.
+    - **Expires**: Specify an expiration duration that meets your business requirements.
+
+    Select **Add**. Immediately copy the client secret string **Value** and **Expires**. If you leave this pane, you can't retrieve the same secret again. You'll use these values later to configure the Configuration Manager connection.
 
     > [!TIP]
-    > If you select an expiration date other than **Never**, take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service. 
+    > Take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration. Secret key expiration can cause an interruption in access to the service.
 
-5. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
+1. In the menu of the app properties, select **API permissions**.
 
-    > [!Important]  
-    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.   
-    >
-    > Save the key value in a secure location.  
+    1. On the **API permissions** panel, select **Add a permission**.
 
-6. In the **Manage** menu, select **API permissions**.  
+    1. In the **Request API permissions** panel, switch to **APIs my organization uses**.
 
-    1. On the **API permissions** panel, select **Add a permission**.  
+    1. Search for and select the **Configuration Manager Microservice** API.
 
-    2. In the **Request API permissions** panel, switch to **APIs my organization uses**.  
+    1. Select the **Application permissions** type. Expand **CmCollectionData**, and select both of the following permissions: **CMCollectionData.read** and **CMCollectionData.write**.  
 
-    3. Search for and select the **Configuration Manager Microservice** API.  
+    1. Select **Add permissions**.
 
-    4. Select the **Application permissions** group. Expand **CmCollectionData**, and select both of the following permissions: **Write CM Collection Data** and **Read CM Collection Data**.  
-
-    5. Select **Add permissions**.  
-
-7. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
+1. On the **API permissions** panel, select **Grant admin consent for...**, and then select **Yes**.
 
 #### Import app in Configuration Manager
 
@@ -172,19 +171,19 @@ When you set up Desktop Analytics, you consent on behalf of your organization. T
 
 If there's a problem with this process during setup, use the following process to manually add this permission:
 
-1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.
 
-2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
+1. In the workspace menu, select **Access control (IAM)**, select **Add**, and then select **Add role assignment**.
 
-3. In the **Add permissions** panel, configure the following settings:  
+1. In the **Add role assignment** panel, configure the following settings:
 
-    - **Role**: **Reader**  
+    - **Role**: **Reader**
 
-    - **Assign access to**: **Azure AD user, group, or application**  
+    - **Assign access to**: **User, group, or service principal**
 
-    - **Select**: **MALogAnalyticsReader**  
+    - **Select**: **MALogAnalyticsReader**
 
-4. Select **Save**.
+1. Select **Save**.
 
 The portal shows a notification that it added the role assignment.
 
@@ -218,7 +217,7 @@ Then select **Apply changes**:
 
 ![Screenshot of expanded data currency flyout in Desktop Analytics portal](media/data-currency-flyout-expand.png)
 
-This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data.  For more information, see the [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
+This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data. This option isn't available during service deployments. For more information, see the [Desktop Analytics FAQ](faq.yml#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal-).
 
 If you aren't seeing changes updated within the time frames indicated above, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.<!-- 3896921 -->
 

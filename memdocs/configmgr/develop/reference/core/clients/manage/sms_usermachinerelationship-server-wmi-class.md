@@ -122,6 +122,7 @@ An array of sources for this relationship, with one of the following values:
 |`6`|OSD|The user and device were tied together as part of an OS deployment task sequence.|  
 |`7`|Fast install|The user/device were tied together temporarily to enable an on-demand install from the catalog if no UDA relationship installed before the Install was triggered.|  
 |`8`|Exchange Server connector|The device was provisioned through Exchange ActiveSync.|  
+|`9`|Secure usage agent||
 
  `Types`  
  Data type: `UInt32` Array  

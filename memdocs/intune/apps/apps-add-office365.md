@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 04/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,7 +38,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 > 
 > You must use Microsoft 365 Apps licenses to activate Microsoft 365 Apps apps deployed through Microsoft Intune. Microsoft 365 Apps for business edition is supported by Intune, however you must configure the app suite of the Microsoft 365 Apps for business edition using XML data. For more information, see [Configure app suite using XML data](apps-add-office365.md#step-2---option-2-configure-app-suite-using-xml-data).
 >
-> Deploying OneDrive through Intune after removal of the native OneDrive client is not supported. If the native OneDrive client is removed, Intune is not able to redeploy OneDrive. Deployment of OneDrive through Intune is not supported.
+> Using the Office Deployment Tool (ODT) to install OneDrive through Intune is not supported. However, OneDrive will install as a component of some Microsoft 365 App installations. For related information, see [Configuration options for the Office Deployment Tool](/deployoffice/office-deployment-tool-configuration-options). 
 
 ## Before you start
 

@@ -101,6 +101,10 @@
           href: deployment-guide-enrollment-macos.md
         - name: Windows
           href: deployment-guide-enrollment-windows.md
+      - name: Device platform deployment
+        items:
+        - name: iOS/iPadOS devices 
+          href: deployment-guide-platform-ios-ipados.md    
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection
@@ -188,7 +192,17 @@
   - name: Protect devices and data
     href: ../protect/index.yml   
   - name: Manage and protect apps
-    href: ../apps/index.yml  
+    href: ../apps/index.yml
+  - name: Use filters when assigning policies
+    items:
+    - name: Create a filter
+      href: filters.md
+    - name: Filter properties
+      href: filters-device-properties.md
+    - name: Supported workloads
+      href: filters-supported-workloads.md
+    - name: Reporting and troubleshooting
+      href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
   - name: Developer guidance

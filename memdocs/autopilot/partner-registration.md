@@ -41,6 +41,10 @@ Windows Autopilot doesn't require delegated administrator permissions when estab
 > [!Note]
 > While resellers, distributors, or partners could boot each new Windows device to obtain the hardware hash (for purposes of providing them to customers or direct registration by the partner), this isn't recommended. Instead, these partners should register devices using the PKID information obtained from the device packaging (barcode) or obtained electronically from the OEM or upstream partner (e.g. distributor).
 
+> [!Note]
+> Partner Center does not have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Autopilot profiles created through Partner Center.
+
+
 ## Also see
 
 [Registration overview](registration-overview.md)

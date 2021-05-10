@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 4/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -41,22 +41,21 @@ For advice and suggestions about Intune RBAC, you can check out this series of f
 ## Roles
 A role defines the set of permissions granted to users assigned to that role.
 You can use both the built-in and custom roles. Built-in roles cover some common Intune scenarios. You can [create your own custom roles](create-custom-role.md) with the exact set of permissions you need. Several Azure Active Directory roles have permissions to Intune.
-To see a role, choose **Intune** > **Roles** > **All roles** > choose a role. You'll see the following pages:
+To see a role, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role. You'll can manage the role on the following pages:
 
-- **Properties**: The name, description, type, assignments, and scope tags for the role. 
-- **Permissions**: Lists a long set of toggles defining what permissions the role has.
-- **Assignments**: A list of [role assignments]( assign-role.md) defining which users have access to which users/devices. A role can have multiple assignments, and a user can be in multiple assignments.
+- **Properties**: The name, description, permissions, and scope tags for the role. 
+- **Assignments**: A list of [role assignments](assign-role.md) defining which users have access to which users/devices. A role can have multiple assignments, and a user can be in multiple assignments.
 
 ### Built-in roles
 You can assign built-in roles to groups without further configuration. You can't delete or edit the name, description, type, or permissions of a built-in role.
 
+- **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
+- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
 - **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
+- **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
-- **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
-- **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
-- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
 
 ### Custom roles
 You can create your own roles with custom permissions. For more information about custom roles, see [Create a custom role](create-custom-role.md).
@@ -86,9 +85,9 @@ A role assignment defines:
 - what resources they can change.
 
 You can assign both custom and built-in roles to your users. To be assigned an Intune role, the user must have an Intune license.
-To see a role assignment, choose **Intune** > **Roles** > **All roles** > choose a role > choose an assignment. You'll see the following pages:
+To see a role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the **Properties** page you can edit:
 
-- **Properties**: The name, description, role, members, scopes, and tags of the assignment.
+- **Basics**: The assignments name and description.
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
 - **Scope (Groups)**: All users/devices in these Azure security groups can be managed by the users in Members.
 - **[Scope (Tags)](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.

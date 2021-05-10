@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 02/05/2021
+ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -248,7 +248,7 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 
 For more information on the Microsoft IP address ranges, see [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). These addresses update regularly. There's no granularity by service, any IP address in these ranges could be used.
 
-## See also
+## Next steps
 
 - [Ports used in Configuration Manager](../hierarchy/ports.md)
 

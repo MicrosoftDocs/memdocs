@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -148,8 +148,6 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
   The security setting is configurable in the Microsoft Endpoint Manager admin center. Go to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**.
 
-  Read more about this [security enhancement in the Intune service](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
-
 - Users who are assigned a compliance policy of any type aren't shown in the report, regardless of device platform. For example, if you've assigned a Windows compliance policy to a user with an Android device, the device doesn't show up in the report. However, Intune considers that Android device not compliant. To avoid issues, we recommend that you create policies for each device platform and deploy them to all users.
 
 ### Per-policy device compliance
@@ -211,3 +209,6 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 ## Next steps
 
 [Compliance policies overview](device-compliance-get-started.md)
+
+
+

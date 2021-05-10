@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/28/2021
+ms.date: 04/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -95,7 +95,7 @@ If you sign and assign the Windows 10 Company Portal app in this way, you will n
 Here's how you sign and assign the app in this way:
 
 1. Download the [Microsoft Intune Windows 10 Company Portal App Signing Script](/samples/browse/?redirectedfrom=TechNet-Gallery).  
-    This script requires the Windows SDK for Windows 10 to be installed on the host computer. [Download the Windows SDK for Windows 10](https://go.microsoft.com/fwlink/?LinkId=619296).
+    This script requires the Windows SDK for Windows 10 to be installed on the host computer. [Download the Windows SDK for Windows 10](https://go.microsoft.com/fwlink/?linkid=162443).
 2. Download the Windows 10 Company Portal app from the Microsoft Store for Business, as discussed previously.  
 3. To sign the Windows 10 Company Portal app, run the script with the input parameters detailed in the script header, as shown in the following table.  
     Dependencies do not need to be passed into the script. They are required only when the app is being uploaded to the Intune Admin Console.

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 04/14/2021
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Tutorial: Protect Exchange Online email on unmanaged devices
 
-Learn about using app protection policies with Conditional Access to protect Exchange Online, even when devices aren't enrolled in a device management solution like Intune. In this tutorial, you'll learn how to:
+In this tutorial, you'll learn how to use app protection policies with Conditional Access to protect Exchange Online, even when devices aren't enrolled in a device management solution like Intune. In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
 > * Create an Intune app protection policy for the Outlook app. You'll limit what the user can do with app data by preventing "Save As" and restrict cut, copy, and paste actions.
@@ -50,7 +50,7 @@ For this tutorial, when you sign in to the [Microsoft Endpoint Manager admin cen
 
 ## Create the app protection policy
 
-In this tutorial, we'll set up an Intune app protection policy for iOS for the Outlook app to put protections in place at the app level. We'll require a PIN to open the app in a work context. We'll also limit data sharing between apps and prevent company data from being saved to a personal location.
+In this tutorial, we'll set up an Intune [app protection policy](../apps/app-protection-policy.md) for iOS for the Outlook app to put protections in place at the app level. We'll require a PIN to open the app in a work context. We'll also limit data sharing between apps and prevent company data from being saved to a personal location.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -68,7 +68,7 @@ In this tutorial, we'll set up an Intune app protection policy for iOS for the O
 4. The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. Configure the following options:
 
    - For **Target to all app types**: Select **No**, and then for **App types**, select the checkbox for **Apps on unmanaged devices**.
-   - Click **Select public apps**. In the Apps list, select **Outlook**, and then choose **Select**.  Outlook now appears under *Public apps*.
+   - Click **Select public apps**. In the Apps list, select **Microsoft Outlook**, and then choose **Select**. Microsoft Outlook now appears under *Public apps*.
 
    Click **Next** to continue.
 
@@ -76,10 +76,10 @@ In this tutorial, we'll set up an Intune app protection policy for iOS for the O
 
    Below *Data Transfer*, configure the following settings, leaving all other settings at their default values:
 
-   - For **Send org data to other apps**, select **None**.  
-   - For **Receive data from other apps**, select **None**.  
-   - For **Save copies of org data**, select **Block**.  
-   - For **Restrict cut, copy and paste between other apps**, select **Blocked**. 
+   - For **Send org data to other apps**, select **None**.
+   - For **Receive data from other apps**, select **None**.
+   - For **Save copies of org data**, select **Block**.
+   - For **Restrict cut, copy and paste between other apps**, select **Blocked**.
 
    ![Select the Outlook app protection policy data relocation settings](./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
 
@@ -108,11 +108,13 @@ The app protection policy for Outlook is created. Next, you'll set up Conditiona
 
 ## Create Conditional Access policies
 
-Now we'll create two Conditional Access policies to cover all device platforms.  
+Now we'll use the Microsoft Endpoint Manager admin center to create two Conditional Access policies to cover all device platforms. You integrate [Conditional Access with Intune](../protect/conditional-access-exchange-create.md) to help control the devices and apps that can connect to your email and company resources.
 
-- The first policy will require that Modern Authentication clients use the approved Outlook app and multi-factor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.  
+- The first policy will require that Modern Authentication clients use the approved Outlook app and multi-factor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.
 
-- The second policy will require that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in either the Azure AD portal or the Microsoft Endpoint Manager admin center. Since we're already in the admin center, we'll create the policy here.  
+- The second policy will require that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in either the Azure AD portal or the Microsoft Endpoint Manager admin center. Since we're already in the admin center, we'll create the policy here.
+
+When you configure Conditional Access policies in the Microsoft Endpoint Manager admin center, you're really configuring those policies in the Conditional Access blades from the Azure portal. Therefore, the user interface is a bit different than when you configure other policies for Intune.
 
 ### Create an MFA policy for Modern Authentication clients  
 
@@ -243,4 +245,5 @@ When the test policies are no longer needed, you can remove them.
 5. In the **Policy Name** list, select the context menu (**...**) for each of your test policies, and then select **Delete**. Select **Yes** to confirm.
 
 ## Next steps
-In this tutorial, you created app protection policies to limit what the user can do with the Outlook app, and you created Conditional Access policies to require the Outlook app and require MFA for Modern Authentication clients. To learn about using Intune with Conditional Access to protect other apps and services, see [Set up Conditional Access](conditional-access.md).
+
+In this tutorial, you created app protection policies to limit what the user can do with the Outlook app, and you created Conditional Access policies to require the Outlook app and require MFA for Modern Authentication clients. To learn more about using Intune with Conditional Access to protect other apps and services, see [Learn about Conditional Access and Intune](conditional-access.md).

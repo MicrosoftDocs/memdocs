@@ -64,9 +64,12 @@ You can now disable Azure Active Directory (Azure AD) authentication for tenants
 
 For more information, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).
 
-### Additional options when creating app registrations in Azure Active Directory
-<!--7153654-->
+<!-- ### Additional options when creating app registrations in Azure Active Directory
+<!--7153654--
 You can now specify **Never** for the expiration of a secret key when creating Azure Active Directory app registrations. For more information about creating app registrations, see [Configure Azure Services](../../servers/deploy/configure/azure-services-wizard.md#create-server-application-dialog).
+
+remove per MEMDocs#1530
+ -->
 
 ### Validate internet access for the service connection point
 

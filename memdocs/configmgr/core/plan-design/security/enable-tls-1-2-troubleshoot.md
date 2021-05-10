@@ -2,7 +2,7 @@
 title: Common issues when enabling TLS 1.2
 titleSuffix: Configuration Manager
 description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
-ms.date: 04/05/2021
+ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -32,7 +32,7 @@ If reports don't show in the Configuration Manager console, make sure to update 
 
 If you enable the FIPS security policy setting for either the client or a server, Secure Channel (Schannel) negotiation can cause them to use TLS 1.0. This behavior happens even if you disable the protocol in the registry.
 
-To investigate, enable Secure Channel event logging, and then review Schannel events in the system log. For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
+To investigate, enable Secure Channel event logging, and then review Schannel events in the system log. For more information, see [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel).
 
 ## SQL Server communication failure
 
@@ -97,7 +97,7 @@ In the System EventLog, SChannel EventID 36874 may be logged with the following 
 ## Additional resources
 
 - [Transport layer security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
-- [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
+- [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe)
 - [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
 
 ## Next steps

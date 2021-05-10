@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2021
+ms.date: 05/03/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,22 +56,197 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+-->
 
+<!-- ########################## -->
+## Week of April 26, 2021 (Service release 2104)
 
-!-- ########################## -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Installation status for device-assigned required apps<!-- 7283852  -->
+
+From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps. For more information about the Company Portal, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+#### Win32 app version displayed in console<!-- 2617349  -->
+
+The version of your Win32 app is now displayed in the Microsoft Endpoint Manager admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list. For related information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+#### Maximum OS version setting for app conditional launch on iOS devices<!-- 9493137 -->
+Using Intune app protection policies, you can add a new conditional launch setting to ensure end users are not using any pre-release or beta OS build to access work or school account data on iOS devices. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality on iOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Device configuration
+
+#### Updated OEMConfig policy reporting for Android Enterprise devices<!-- 5255334   -->
+
+On Android Enterprise devices, you can create an OEMConfig policy to add, create, and customize OEM-specific settings. Now, the policy reporting is updated to also show success on a user, a device, and for each setting in the policy.
+
+For more information, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+Applies to:
+
+- Android Enterprise
+
+#### Disable NFC pairing on iOS/iPadOS devices running 14.2 and newer<!-- 9112701   -->
+
+On supervised iOS/iPadOS devices, you can create a device restrictions profile that disables NFC (**Devices** > **Configuration  profiles**> **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Connected devices** > **Disable near field communication (NFC)**). When you disable this feature, it prevents devices from pairing with other NFC-enabled devices, and disables NFC.
+
+To see this setting, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
+
+Applies to:
+
+- iOS/iPadOS 14.2 and newer
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Locate device remote action for Windows 10 devices<!--710717  -->
+
+You can now use a new locate device remote action to get the geographical location of a device. Supported devices include:
+
+- Windows 10 version 20H2 (10.0.19042.789) or later
+- Windows 10 version 2004 (10.0.19041.789) or later
+- Windows 10 version 1909 (10.0.18363.1350) or later
+- Windows 10 version 1809 (10.0.17763.1728) or later
+
+To see the new action, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > choose a Windows 10 > **Locate device**.
+
+This action will work in a similar manner as the current [Locate device action for Apple devices](..\remote-actions\device-locate.md) (but will not include any lost mode functionality).
+
+Location services must be enabled on devices for this remote action to work. If Intune is unable to fetch the device's location and the user has set a default location in device settings, it will display the default location.
+
+#### Microsoft Endpoint Manager ending support for Android 5.x<!--9058248  -->
+
+Microsoft Endpoint Manager no longer supports Android 5.x devices.
+
+#### Support to display phone numbers for corporate Android Enterprise devices<!--9086174  -->
+
+For corporate Android Enterprise devices (Dedicated, Fully Managed, and Fully managed with work profile), the associated device phone numbers are now displayed in the Microsoft Endpoint Manager admin center. If multiple numbers are associated with the device, only one number will be displayed.
+
+#### EID property support for iOS/iPadOS devices<!--9255367 -->
+
+The eSIM identifier (EID) is a unique identifier for the embedded SIM (eSIM). The EID property now appears on the hardware details page for iOS/iPadOS devices.
+
+### Intune support for provisioning Azure Active Directory shared devices<!--9585326 -->
+
+The ability to provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Azure AD shared device mode is now Generally Available. For more info on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
+
+#### View end of support details for your feature update profiles<!-- 9699729   -->
+
+To help you plan for end-of-service for Windows 10 feature updates you deploy with Intune, we’ve added two new columns of information to [Feature Updates profiles](../protect/windows-10-feature-updates.md#manage-windows-10-feature-updates-policy) in the Microsoft Endpoint Manager admin center.
+
+The first new column displays a status that identifies when the update in the profile is near or has reached its end of service, and the second column displays that end of service date. When an update reaches its end of service, it is no longer deployed to devices, and the policy can be removed from Intune.
+
+The new columns and details include:
+
+- **Support** – This column displays the status of the feature update:
+  - **Supported** – The update is supported for distribution.
+  - **Support ending** – The update is within two months of its end of service date.
+  - **Not supported** – The update is no longer supported, having reached its end of service date.
+
+- **Support End Date** – This column displays the end-of-service date for the feature update in the profile.
+
+For information about end of service dates for Windows 10 releases, see [Windows 10 release information](/windows/release-health/release-information) in the Windows release health documentation.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Use Antivirus profiles to prevent or allow merger of Antivirus exclusion lists on devices<!-- 9070651  -->
+
+You can now configure **Defender local admin merge** as a setting in a *Microsoft Defender Antivirus* profile to block merger of local exclusion lists for Microsoft Defender Antivirus on Windows 10 devices.
+
+Exclusion lists for Microsoft Defender Antivirus can be configured locally on a device, and specified by Intune Antivirus policy:  
+
+- When exclusion lists are merged, locally defined exclusions are merged with those from Intune.
+- When merge is blocked, only exclusions from policy will be effective on the device.
+
+For more information about this and related settings, see [Microsoft Defender Antivirus Exclusions](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions).
+
+#### Improved flow for conditional access on Surface Duo devices<!-- 7552043    -->
+
+We’ve streamlined the conditional access flow on Surface Duo devices. These changes happen automatically and don't require any configuration updates by administrators. (**Endpoint security** > **Conditional access**)
+
+On a Duo device:
+
+- When access to a resource is blocked by conditional access, users are now redirected to the Company Portal app that was preinstalled on the device. Previously, they were sent to the Google Play store listing of the Company Portal app. 
+- For devices that are enrolled as a personally-owned work profile, when a user tries to sign in to a personal version of an app using their work credentials they are now sent to the work version of the Company Portal where guidance messaging is shown. Previously, the user was sent to the Google Play store listing of the personal version of the Company Portal app, where they would have had to reenable the personal Company Portal to see the guidance messaging.
+
+#### Configure options that apply to Tunnel Gateway server upgrades<!-- 8664465   -->
+
+We've added options to help you manage the [upgrade of your Microsoft Tunnel Gateway servers](../protect/microsoft-tunnel-configure.md#upgrade-microsoft-tunnel). The new options apply to the Sites configuration and include:
+
+- Set a [maintenance window](../protect/microsoft-tunnel-configure.md) for each tunnel site. The window defines when the tunnel servers that assigned to that site can start to upgrade.  
+- Configure the [server upgrade type](../protect/microsoft-tunnel-configure.md), which determines how all servers at the site proceed with upgrades. You can choose between:  
+  - **Automatic** - All servers at the site will upgrade as soon as possible after a new server version becomes available.
+  - **Manual** - Servers at the site will upgrade only after an admin explicitly chooses to allow the upgrade.  
+
+- The [Health check tab](../protect/microsoft-tunnel-monitor.md#use-the-admin-center-ui) now displays status for the server's software version to help you understand when your tunnel server software is out of date. Status includes:
+  - **Healthy** - up to date with the most recent software version.
+  - **Warning** - one version behind
+  - **Unhealthy** - two or more versions behind
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 9350479, 9449308, 9526437   -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Omnipresence Go by Omnipresence Technologies, Inc.
+- Comfy by Building Robotics, Inc.
+- M-Files for Intune by M-Files Corporation
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New UI to filter data for new operational reports<!-- 9600112  -->
+
+New operational reports will now support a new UI to add data filters. The new filter pill offers an improved experience to help slice, refine, and view report data. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+
+#### Windows restart frequency report in Endpoint analytics is generally available<!-- 9606273 -->
+
+Endpoint analytics [startup performance](../../analytics/startup-performance.md) currently provides IT with insights to measure and optimize PC boot times. However, restart frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We have now included a report on restart frequencies within your organization to help you identify problematic devices. For more information, see [Restart frequency in endpoint analytics](../../analytics/restart-frequency.md).
+
+## Week of April 12, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Device configuration
+
+### New modern authentication method with Apple Setup Assistant (public preview)<!--4843770 -->
+
+When creating an Automated Device Enrollment profile, can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD multi-factor authentication (MFA) during the setup assistant screens. This will require an additional Azure AD login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
+
+Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when the user lands on the home screen after the setup screens, however the device will not be fully registered with AAD until the Company Portal login. The device will not show up in a given user's device list in the AAD portal until the Company Portal login. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
+
+This method has the following options for installing the Company Portal:
+
+- For iOS/iPadOS: The **Install Company Portal** setting will not be there when choosing this flow for iOS/iPadOS. The CP will be a required app on the device with the correct app configuration policy on it once the end user lands on the home screen. User must sign in with Azure AD credentials into the CP after enrollment to gain access to resources protected by Conditional Access and be fully AAD registered.
+- For macOS: Users must sign into the Company Portal to complete Azure AD registration and gain access to resources protected by Conditional Access. The end user will not be locked to the CP after landing on the home page, but an additional login into the CP will be required to access corporate resources and be compliant.  For more information, see [Add the macOS Company Portal app](../apps/apps-company-portal-macos.md).
+
+For information on how to use this authentication method on iOS/iPadOS devices, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+For information on how to use this authentication method on macOS devices, see [Automatically enroll macOS devices with the Apple Business Manager or Apple School Manager](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
+
+<!-- ########################## -->
 ## Week of March 29, 2021 (Service release 2103)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
 #### Intune management agent for macOS devices is now a universal app<!-- 9294405 -->
+
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. For more information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 
 ### Device security
 
 #### Update for Microsoft Tunnel<!-- 9574820 -->
 
-We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway, which includes the following changes:
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway, which includes the following changes:
 
 - Various bug fixes and enhancements.
 
@@ -83,16 +258,20 @@ The Tunnel Gateway server will automatically update to the new release.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
+
 #### Microsoft 365 Apps for macOS devices are now universal apps<!-- 9076318  -->
+
 When you deploy Microsoft 365 Apps for macOS devices from Microsoft Endpoint Manager, it now deploys the new universal versions of the app that runs natively on Apple Silicon Macs. The same deployment will install the x64 versions of the app on Intel Macs running macOS 10.14 and higher. To add Microsoft 365 Apps for macOS, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All apps** > **Add**. Select **macOS** in the **App type** list under **Microsoft 365 Apps**. For related information, see [Assign Microsoft 365 to macOS devices with Microsoft Intune](../apps/apps-add-office365-macos.md).
 
 #### Additional configuration keys for the Microsoft Launcher app<!-- 9364310  -->
+
 You can now set folder configuration settings for Microsoft Launcher on Android Enterprise corporate owned fully managed devices. By using an app configuration policy and configuration key values, you can set values for folder shape, folder opened to full screen, and folder scroll direction. Also, you can position the folder on the home screen in addition to positioning apps and weblinks. Additionally, you can choose to allow end users to modify the folder style values within the app. For more information about Microsoft Launcher, see [Configure Microsoft Launcher for Android Enterprise with Intune](..\apps\configure-microsoft-launcher.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
 #### More Microsoft Edge settings, and setting categories are removed in Settings Catalog for macOS<!-- 9220407   -->
+
 On macOS devices, you can use the Settings Catalog to configure Microsoft Edge version 77 and newer (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings Catalog**).
 
 In this release:
@@ -103,10 +282,12 @@ In this release:
 For more information on the Settings Catalog, see [Use the settings catalog to configure settings](../configuration/settings-catalog.md).
 
 Applies to:
+
 - macOS
 - Microsoft Edge
 
 #### Windows 10 in cloud configuration is available as a Guided Scenario<!-- 9272086  -->
+
 Windows 10 in cloud configuration is a Microsoft-recommended device configuration for Windows 10. Windows 10 in cloud configuration is optimized for the cloud and designed for users with focused workflow needs.
 
 There's a guided scenario that automatically adds the apps, and creates the policies that configures your Windows 10 devices in a cloud configuration.
@@ -114,24 +295,29 @@ There's a guided scenario that automatically adds the apps, and creates the poli
 For more information, see [Guided scenario for Windows 10 in cloud configuration](../fundamentals/cloud-configuration.md).
 
 Applies to:
+
 - Windows 10 and newer
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Increasing recommended maximum number of iOS/iPadOS and macOS devices per enrollment token<!--8568668  -->
+
 Previously, we recommended that you don't exceed 60,000 iOS/iPadOS or macOS devices per Automated Device Enrollment (ADE) token. This recommended limit is now increased to 200,000 devices per token. For more information about ADE tokens, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
 
 #### Update of column names in All devices view and Export report<!-- 8854380  -->
+
 To accurately reflect the data in the columns, we've updated the column names in the All devices view and the Export report to be "Primary User UPN", "Primary User email address", and "Primary User display name".
 
 ### End of support for Internet Explorer 11<!--9218996 -->
+
 Intune will end support for Internet Explorer 11 admin access to the Admin Portal web app UI on March 31, 2021. Move to Edge or another [supported browser](supported-devices-browsers.md) before that time to administer any of your Microsoft services built on Azure.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
 #### Health status details for Microsoft Tunnel Gateway servers<!-- 8460911    -->
+
 We've added the ability to see detailed heath status information for Tunnel Gateway servers within the Microsoft Endpoint Manager admin center.
 
 On the new [*Health check* tab](../protect/microsoft-tunnel-monitor.md#use-the-admin-center-ui), you'll see the following information:
@@ -149,6 +335,7 @@ On the new [*Health check* tab](../protect/microsoft-tunnel-monitor.md#use-the-a
 As announced at Ignite, Microsoft Tunnel client functionality is migrating into the Microsoft Defender for Endpoint app. With this preview, you can start to use a preview version of Microsoft Defender for Endpoint as the Tunnel app for supported devices. The existing Tunnel client remains available, but will eventually be phased out in favor of the Defender for Endpoint app.
 
 This public preview applies to:  
+
 - Android Enterprise
   - Fully managed
   - Corporate-owned work profile
@@ -160,13 +347,17 @@ For this preview, you must opt in to gain access to the preview version of Micro
 ### Intune apps
 
 #### Microsoft Launcher configuration keys<!-- 8980621  -->
+
 For Android Enterprise fully managed devices, the Microsoft Launcher for Intune app now provides additional customization. In Launcher, you can configure the set of displayed apps and weblinks, as well as the order of these apps and weblinks. The displayed app list and position (order) of app configurations have been merged together to simplify home screen customization. For more information, see [Configure Microsoft Launcher](../apps/configure-microsoft-launcher.md).
 
 #### Microsoft Edge for macOS devices will be a universal app<!-- 9175989 9176098 9176466 9275782  -->
+
 When you deploy the Microsoft Edge app for macOS devices from Microsoft Endpoint Manager, it now deploys the new universal version of the app that runs natively on Apple Silicon Macs. The same deployment will install the x64 version of the app on Intel Macs. To add Microsoft Edge for macOS, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All apps** > **Add**. Select **macOS** in the **App type** list under **Microsoft Edge, version 77 and later**. For related information, see [Add Microsoft Edge to macOS devices using Microsoft Intune](../apps/apps-edge-macos.md).
 
 #### Newly available protected apps for Intune<!-- 9099719  -->
+
 The following protected apps are now available for Microsoft Intune:
+
 - FleetSafer by Cogosense Technology Inc.
 - Senses by Mazrica Inc.
 - Fuze Mobile for Intune by Fuze, Inc.
@@ -175,6 +366,7 @@ The following protected apps are now available for Microsoft Intune:
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 #### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429  -->
+
 The Company Portal app can now store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager admin center. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

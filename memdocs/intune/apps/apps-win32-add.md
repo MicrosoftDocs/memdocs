@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2021
+ms.date: 04/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -168,12 +168,12 @@ Select **Next** to display the **Detection rules** page.
 
 ## Step 4: Detection rules
 
-On the **Detection rules** page, configure the rules to detect the presence of the app:
+On the **Detection rules** pane, configure the rules to detect the presence of the app. You can choose to add multiple rules:
     
 - **Rules format**: Select how the presence of the app will be detected. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app. You must choose at least one detection rule. 
 
   > [!NOTE]
-  > On the **Detection rules** pane, you can choose to add multiple rules. The conditions for *all* rules must be met to detect the app.
+  > The conditions for *all* rules must be met to detect the app.
   >
   > If Intune detects that the app is not present on the device, Intune will offer the app again within approximately 24 hours. This will occur only for apps targeted with the required intent.
 
@@ -229,6 +229,8 @@ On the **Detection rules** page, configure the rules to detect the presence of t
 
    > [!NOTE]
    > We recommend encoding your script as UTF-8. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
+
+The version of your Win32 app is displayed in the Microsoft Endpoint Manager admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Dependencies** page.
 

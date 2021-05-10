@@ -2,7 +2,7 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 04/05/2021
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -103,7 +103,7 @@ Use this task to delete from the site database all aged data for client operatio
 |Secondary site|Not available|
 
 ### Delete Aged Client Presence History
-<!-- not listed in dogfood for either primary or CAS, was it renamed? -->
+
 Use this task to delete history information about the online status of clients recorded by client notification. It deletes information for clients with status that's older than the specified time. For more information, see [How to monitor clients](../../clients/manage/monitor-clients.md).
 
 | Site type | Status |
@@ -138,9 +138,9 @@ Use this task to delete from the site database aged information from clients in 
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Delete Aged Collected Files
-
-Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).  
+### Delete Aged Collected Diagnostic Files
+<!--6503308-->
+Use this task to delete [collected diagnostic files](../../clients/manage/client-notification.md#client-diagnostics). Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect other collected files. This maintenance task is enabled by default and was introduced in Configuration Manager version 2010. Earlier Configuration Manager versions use the [Delete Aged Collected Files](#delete-aged-collected-files) task for deleting client diagnostic files.
 
 | Site type | Status |
 | --------- | ------ |
@@ -148,9 +148,9 @@ Use this task to delete from the database aged information about collected files
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Delete Aged Collected Diagnostic Files
-<!--6503308-->
-Use this task to delete [collected diagnostic files](../../clients/manage/client-notification.md#client-diagnostics). Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect other collected files. This maintenance task is enabled by default and was introduced in Configuration Manager version 2010. Earlier Configuration Manager versions use the [Delete Aged Collected Files](#delete-aged-collected-files) task for deleting client diagnostic files.
+### Delete Aged Collected Files
+
+Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
 | Site type | Status |
 | --------- | ------ |
@@ -224,6 +224,16 @@ Use this task to delete from the database aged data for distribution points that
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
+### Delete Aged Endpoint Protection Health Status History Data
+
+Use this task to delete from the database aged status information for Endpoint Protection (EP). For more information, see [How to monitor Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md).
+
+| Site type | Status |
+| --------- | ------ |
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
 ### Delete Aged Enrolled Devices
 
 Use this task to delete from the site database the aged data about mobile devices that haven't reported any information to the site for a specified time.
@@ -234,16 +244,6 @@ This task applies to devices that are enrolled with Configuration Manager [on-pr
 | --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Not enabled|
-|Secondary site|Not available|
-
-### Delete Aged EP Health Status History Data
-
-Use this task to delete from the database aged status information for Endpoint Protection (EP). For more information, see [How to monitor Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md).
-
-| Site type | Status |
-| --------- | ------ |
-|Central administration site|Not available|
-|**Primary site**|Enabled|
 |Secondary site|Not available|
 
 ### Delete Aged Exchange Partnership
@@ -281,26 +281,6 @@ Use this task to delete from the database aged log data used for troubleshooting
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |**Secondary site**|Enabled|
-
-### Delete Aged Metering Data
-
-Use this task to delete from the database aged data for software metering that has been stored longer than a specified time. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
-
-| Site type | Status |
-| --------- | ------ |
-|Central administration site|Not available|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
-
-### Delete Aged Metering Summary Data
-
-Use this task to delete from the database aged summary data for software metering that's been stored longer than a specified time. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
-
-| Site type | Status |
-| --------- | ------ |
-|Central administration site|Not available|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
 
 ### Delete Aged Notification Server History
 
@@ -351,6 +331,36 @@ Use this task to delete from the site database aged replication summary data whe
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |**Secondary site**|Enabled|
+
+### Delete Aged Scenario Health History
+
+Use this task to delete from the database aged data for scenario health activity. For more information, see [Monitor scenario health](scenario-health.md).
+
+| Site type | Status |
+| --------- | ------ |
+|**Central administration site**|Enabled|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Software Metering Data
+
+Use this task to delete from the database aged data for software metering that has been stored longer than a specified time. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
+
+| Site type | Status |
+| --------- | ------ |
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Software Metering Summary Data
+
+Use this task to delete from the database aged summary data for software metering that's been stored longer than a specified time. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
+
+| Site type | Status |
+| --------- | ------ |
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
 
 ### Delete Aged Status Messages
 
@@ -496,27 +506,15 @@ Use this task to rebuild the Configuration Manager database indexes. An index is
 
 To improve performance, the Configuration Manager database indexes are frequently updated to remain synchronized with the constantly changing data that's stored in the database. This task:
 
-- Creates indexes on database columns that are at least 50 percent unique
-- Drops indexes on columns that are less than 50 percent unique
-- Rebuilds all existing indexes that meet the data uniqueness criteria
+- Rebuilds indexes when they are more than 10% fragmented
+   - For indexes that are less than 30% fragmented, the index is reorganized
+   - For indexes that are greater than 30% fragmented, the index is rebuilt
 
 | Site type | Status |
 | --------- | ------ |
 |**Central administration site**|Not enabled|
 |**Primary site**|Not enabled|
 |**Secondary site**|Not enabled|
-
-### Summarize File Usage Metering Data
-
-Use this task to summarize the data from multiple records for software metering file usage into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database.
-
-To summarize software metering data and to conserve disk space in the database, use this task with the **Summarize Software Metering Monthly Usage Data** task. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
-
-| Site type | Status |
-| --------- | ------ |
-|Central administration site|Not available|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
 
 ### Summarize Installed Software Data
 
@@ -528,7 +526,19 @@ Use this task to summarize the data from collected asset intelligence software i
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Summarize Monthly Usage Metering Data
+### Summarize Software Metering File Usage Metering Data
+
+Use this task to summarize the data from multiple records for software metering file usage into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database.
+
+To summarize software metering data and to conserve disk space in the database, use this task with the **Summarize Software Metering Monthly Usage Data** task. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
+
+| Site type | Status |
+| --------- | ------ |
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Summarize Software Metering Monthly Usage Data
 
 Use this task to summarize the data from multiple records for software metering monthly usage into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database.
 

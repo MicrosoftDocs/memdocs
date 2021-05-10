@@ -93,7 +93,7 @@ To allow devices on the internet to get certificates, you must publish your NDES
 
 ### Network requirements
 
-We recommend publishing the NDES service through a reverse proxy, such as the [Azure AD application proxy, Web Access Proxy](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application), or a third-party proxy. If you don't use a reverse proxy, then allow TCP traffic on port 443 from all hosts and IP addresses on the internet to the NDES service.
+We recommend publishing the NDES service through a reverse proxy, such as the [Azure AD application proxy, Web Access Proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application), or a third-party proxy. If you don't use a reverse proxy, then allow TCP traffic on port 443 from all hosts and IP addresses on the internet to the NDES service.
 
 Allow all ports and protocols necessary for communication between the NDES service and any supporting infrastructure in your environment. For example, the computer that hosts the NDES service needs to communicate with the CA, DNS servers, domain controllers, and possibly other services or servers within your environment, like Configuration Manager.
 
