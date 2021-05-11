@@ -213,23 +213,23 @@ There are some policy types that can't be exported. There are some policy types 
 | Policy or profile type | Information |
 | --- | --- |
 | **Applications** | &nbsp; |
-| Android line-of-business apps | Export: ❌ <br/>Import: ❌ |
-| Apple – Volume Purchase Program (VPP) | Export: ❌ <br/>Import: ❌<br/><br/>These apps are synced with the Apple VPP. In the new tenant, you add your VPP token, which shows your available apps. |
-| iOS/iPadOS line-of-business apps | Export: ❌ <br/>Import: ❌ |
-| Managed Google Play | Export: ❌ <br/>Import: ❌<br/><br/>These apps and weblinks are synced with Managed Google Play. In the new tenant, you add your Managed Google Play account, which shows your available apps. |
-| Microsoft Store for Business | Export: ❌ <br/>Import: ❌<br/><br/>These apps are synced with the Microsoft Store for Business. In the new tenant, you add your Microsoft Store for Business account, which shows your available apps.|
-| Windows app (Win32) | Export: ❌ <br/>Import: ❌ |
+| Android line-of-business apps | ❌ Export <br/>❌ Import |
+| Apple – Volume Purchase Program (VPP) | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Apple VPP. In the new tenant, you add your VPP token, which shows your available apps. |
+| iOS/iPadOS line-of-business apps | ❌ Export <br/>❌ Import |
+| Managed Google Play | ❌ Export <br/>❌ Import<br/><br/>These apps and weblinks are synced with Managed Google Play. In the new tenant, you add your Managed Google Play account, which shows your available apps. |
+| Microsoft Store for Business | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Microsoft Store for Business. In the new tenant, you add your Microsoft Store for Business account, which shows your available apps.|
+| Windows app (Win32) | ❌ Export <br/>❌ Import |
 | **Compliance policies** | &nbsp; |
-| Actions for Non-Compliance | Export: ❌ <br/>Import: ❌<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
-| Assignments | Export: ✔️<br/>Import: ❌<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| Actions for Non-Compliance | ❌ Export <br/>❌ Import<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
+| Assignments | ✔️ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
 | **Configuration profiles** | &nbsp; |
-| Email |  Export: ✔️<br/>Import: ❌<br/><br/>If an Email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If an Email profile doesn't use a root certificate, then the import might work. |
-| SCEP certificate | Export: ✔️<br/>Import: ❌<br/><br/>If a SCEP certificate profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If a SCEP certificate profile doesn't use a root certificate, then the import might work. |
-| VPN |  Export: ✔️<br/>Import: ❌<br/><br/>If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If a VPN profile doesn't use a root certificate, then the import might work. |
-| Wi-Fi |  Export: ✔️<br/>Import: ❌<br/><br/>If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If a Wi-Fi profile doesn't use a root certificate, then the import might work. |
-| Assignments | Export: ✔️<br/>Import: ❌<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| Email |  ✔️ Export <br/> <br/>❌ If an Email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> ✔️ If an Email profile doesn't use a root certificate, then the import might work. |
+| SCEP certificate | ✔️ Export<br/><br/>❌ If a SCEP certificate profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> ✔️ If a SCEP certificate profile doesn't use a root certificate, then the import might work. |
+| VPN |  ✔️ Export<br/><br/> ❌ If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> ✔️ If a VPN profile doesn't use a root certificate, then the import might work. |
+| Wi-Fi |  ✔️ Export<br/><br/> ❌ If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> ✔️ If a Wi-Fi profile doesn't use a root certificate, then the import might work. |
+| Assignments | ✔️ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
 | **Endpoint Security** | &nbsp; |
-| Endpoint detection and response | Export: ❌ <br/>Import: ❌ <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
+| Endpoint detection and response | ❌ Export <br/>❌ Import <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
 
 ### Download the samples, and run the script
 
