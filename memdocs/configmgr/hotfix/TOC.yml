@@ -6,3 +6,21 @@
     href: 2103/KB9210721.md
   - name: KB 9603111 Early update ring
     href: 2103/KB9603111.md
+  - name: KB 9833643 Console update
+    href: 2103/9833643.md
+- name: Version 2010
+  items:
+  - name: KB 4599442 Summary of changes in 2010
+    href: 2010/4599442.md
+  - name: KB 4594176 Early update ring
+    href: 2010/4594176.md
+  - name: KB 4599924 Console termination
+    href: 2010/4599924.md
+  - name: KB 4594177 Client notifications
+    href: 2010/4594177.md
+  - name: KB 4600089 Update rollup for 2010
+    href: 2010/4600089.md
+  - name: KB 5001600 Connected cache update
+    href: 2010/5001600.md
+  - name: KB 5001670 App usage data update
+    href: 2010/5001670.md
