@@ -64,21 +64,20 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Windows Security experience profiles support tri-state settings<!-- 9741752   -->
+#### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 
-For Windows 10 devices, we’ve updated the bi-state settings to be tri-state settings in the [Windows Security experience profile](../protect/antivirus-security-experience-windows-settings.md) for [Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md). 
+We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is change only in what you’ll see in the UI.
 
-Settings in the profile that previously supported only two options of **Yes** and **Not configure** now support three options: **Yes**, **No**, and **Not configured**.
+**How does this affect me:**  
+Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy, you had two options for most settings: *Yes* and *Not configured*. Moving forward, those same settings now include *Yes*, *Not configured*, and a new option of *No*. Previously configured settings that were set to *Not configured* remain as *Not configured*.  When you create new profiles or edit an existing profile, you now have the option to explicitly specify *No*. 
 
-With this change:
+In addition, the setting *Hide the Virus and threat protection area in the Windows Security app* has a child setting, *Hide the Ransomware data recovery option in the Windows Security app*. If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*, which will take effect when you edit the profile.
 
-- There is no automatic change of behavior on devices that already receive a *Windows Security experience* profile. This is because the Intune value of *Not configured* is already applied by the Windows CSPs as a value of *No*.
-
-- Each bi-state setting in an existing *Windows Security experience* profile that was set to *Not configured* will automatically update to *No*, with that change being applied to all devices that receive the profile. The value of *Not configured* is now a third state you can configure through the profile.  
-
-With this change in effect, you can create new profiles or edit your existing profiles to set any of the applicable settings to a value of *Not configured*. *Not configured* has the effect of no longer managing that setting through the Intune profile.
+**What action do I need to take?**  
+No action is needed. However, you might want to notify your helpdesk about this change.
 
 ### Device management
+
 #### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682    -->
 
 In public preview, you can use Intune’s **Windows 10 quality updates** policy to [expedite the install of the most recent Windows 10 security updates](../protect/windows-10-expedite-updates.md) to devices you manage with Intune.
