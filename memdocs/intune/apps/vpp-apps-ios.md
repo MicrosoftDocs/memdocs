@@ -205,8 +205,21 @@ To renew an Apple Business Manager location token (Apple VPP token), use the fol
 >You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
 
 ## Deleting a VPP app
+You can delete purchased apps using the admin console that have no available or used licenses associated with them. This may be necessary to clean up apps that are no longer assigned.
 
-Currently, you cannot delete an iOS/iPadOS VPP app from Microsoft Intune.
+Let's demonstrate deletion of VPP apps through an example: you want to delete the Woodgrove VPP app that is associated with location token A in Microsoft Endpoint Manager. Woodgrove currently has 100 licenses (used or available) on token A. To delete the VPP app, follow these steps:
+1. Create a new location in [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). Say it's called location Z.
+2. Revoke all licenses for the Woodgrove app on token A in **Microsoft Endpoint Manager admin center** > **Apps** > **All apps** > select the app to delete > **App licenses** > **Revoke licenses**.
+3. In Apple Business Manager or Apple School Manager, transfer all licenses for Woodgrove app from location A to location Z. 
+4. Sync location token A in Microsoft Endpoint Manager. 
+5. Delete the Woodgrove app in **Microsoft Endpoint Manager admin center** > **Apps** > **All apps** > right-click on the app to delete > **Delete**.
+
+>[!NOTE]
+> - Deleting an app removes the associated app assignments. 
+> - Deleting an app with assigned licenses will show an error to the admin. 
+> - Purchased books cannot be deleted.
+
+
 
 ## Assigning custom role permissions for VPP
 
