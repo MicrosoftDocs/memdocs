@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 05/10/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -116,12 +116,17 @@ You can use filters for all compliance policies on the following platforms:
 - macOS
 - Windows 10 and newer
 
+> [!NOTE]
+> It's currently not supported to use filters with compliance policies that require a signal from Mobile Threat Detection (MTD) or Microsoft Defender for Endpoint (MDE). For example, the following compliance policies require a signal:
+> - [Require the device to be at or under the machine risk score](../protect/compliance-policy-create-windows.md#microsoft-defender-for-endpoint)
+> - [Require the device to be at or under the Device Threat Level](../protect/mtd-device-compliance-policy-create.md)
+
 ## Device configuration profiles and Endpoint security
 
 You can use filters for some common device configuration policies on the following platforms. For a list of what's not supported, see [not supported](#not-supported) (in this article).
 
 > [!NOTE]
-> Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices. The **OEMConfig** profile type includes settings that are only available for Android Enterprise devices.
+> Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices. 
 >
 > For a list of all device configuration profiles, and the platforms they apply to, see [Apply features and settings on your devices](../configuration/device-profiles.md).
 
