@@ -270,6 +270,16 @@ To see a generated report of device state, you can use the following steps:
 
 For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
 
+## User Install Status for apps report (Organizational)
+
+Based on a selected app, the **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Installations**, **Failures**, **Install Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well.
+
+To see a generated report, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **User Install Status** > **Select an app**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
+
 ## Device compliance trend report (Historical)
 
 Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time, and is useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
