@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 05/11/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,19 +41,23 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   - **Enable** - Enable the Tamper Protection restriction. To change the state from either enabled or disabled, deploy the opposite setting to have effect.
   - **Disable** - Disable the Tamper Protection restrictions. To change the state from either enabled or disabled, deploy the opposite setting to have effect.
 
-- **Hide the Virus and threat protection area in the Windows Security app**  
+  **Hide the Virus and threat protection area in the Windows Security app**  
   CSP: [DisableVirusUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablevirusui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The virus and threat protection area in the Windows Security app is hidden from end-users. Virus and threat protection-related notifications are suppressed.
   - **No** - Behavior is the same as *Not configured*.
 
+  When this setting is configured as *No* or *Not configured*, the following setting is available:
+
   - **Hide the Ransomware data recovery option in the Windows Security app**  
     CSP: [HideRansomwareDataRecovery](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
 
-  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
-  - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
-  - **No** - Behavior is the same as *Not configured*.
+    This setting is only available when *Hide the Virus and threat protection area in the Windows Security app* is set to *No* or *Not configured*.
+  
+    - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+    - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
+    - **No** - Behavior is the same as *Not configured*.
 
 - **Hide the Account protection area in the Windows Security app**  
   CSP: [DisableAccountProtectionUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableaccountprotectionui)
@@ -125,7 +129,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   CSP: [DisableTpmFirmwareUpdateWarning](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to not prompt users.
-  - **Yes** - Allow Windows to prompt end-users when a potential vulnerability is found in their TPM firmware. They are then encouraged to run firmware updates to resolve the vulnerability.
+  - **Yes** - Allow Windows to prompt end-users when a potential vulnerability is found in their TPM firmware. Users are then encouraged to run firmware updates to resolve the vulnerability.
   - **No** - Behavior is the same as *Not configured*.
 
 - **Organization's support contact information**  
