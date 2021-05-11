@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/20/2021
+ms.date: 05/11/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -183,7 +183,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | ---- | ------ | 
 |[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |  
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|  
+|[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|  
 
 ## Next steps  
 Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.    
@@ -193,6 +193,8 @@ Check out these enrollment tutorials to learn how to do some of the top tasks in
 * [Protect Exchange Online email on managed devices](../protect/tutorial-protect-email-on-enrolled-devices.md)
 * [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md)
 * [Configure Slack to use Intune for EMM and app configuration](../apps/tutorial-configure-slack-enterprise-grid.md) 
+
+For the Android version of this guide, see [Deployment guide: Manage Android devices in Microsoft Intune](deployment-guide-platform-android.md).   
 
 
 
