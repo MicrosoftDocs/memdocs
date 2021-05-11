@@ -44,12 +44,12 @@ Benefits of each cloud management types:
 
 |**Cloud management gateway (CMG)**|**Tenant attach**|**Co-management**|**Intune**|
 |---|---|---|---|
-|No additional on-premises infrastructure investment required| View and take action on all PCs and mobile devices from a single console| Enhance Zero Trust with conditional access| All the benefits of **cloud management gateway**, **tenant attach**, and **co-management**.|
+|No additional on-premises infrastructure investment required| View and take action on all PCs and mobile devices from a single console| Enhance Zero Trust with conditional access </br></br> Simplified PC and driver updating| All the benefits of **cloud management gateway**, **tenant attach**, and **co-management**.|
 |Doesn't expose on-premises infrastructure to the internet| Gain insights into PC performance with [Endpoint analytics](overview.md)|Makes device provisioning easier with [Windows Autopilot](../configmgr/comanage/quickstart-autopilot.md)| Reduce in infrastructure with always up-to-date cloud-only infrastructure|
-|Cloud virtual machines running the service are fully managed by Azure and require no maintenance| Protect PCs and servers with Microsoft Defender ATP| Gain additional remote actions with Intune| |
-| Easily set up and configured from the Configuration Manager console | Modernize your directory approach with Azure Active Directory| Split PC management workloads between cloud and on-premises| |
-| | | Simplified PC and driver | |
-| | | Consistent end-user experience for managing enrolled devices and installed apps| |
+|Cloud virtual machines running the service are fully managed by Azure and require no maintenance| Protect PCs and servers with Microsoft Defender ATP| Gain additional remote actions with Intune </br> </br> Split PC management workloads between cloud and on-premises| |
+| Easily set up and configured from the Configuration Manager console | Modernize your directory approach with Azure Active Directory| Consistent end-user experience for managing enrolled devices and installed apps| |
+
+
 
 ## <a name="bkmk_identity"></a> Cloud identity metric
 
