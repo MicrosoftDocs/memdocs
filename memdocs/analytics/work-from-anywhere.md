@@ -53,6 +53,18 @@ Benefits of each cloud management types:
 
 ## <a name="bkmk_identity"></a> Cloud identity metric
 
-
+Cloud identity provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming. The **Cloud identity** metric measures the percent of devices enrolled in Azure Active Directory (AD) or hybrid AD. Your Intune and co-managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to [enroll them in hybrid Azure AD](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
 ## <a name="bkmk_mprovisioning"></a> Cloud provisioning metric
+
+Cloud provisioning 
+
+## <a name="bkmk_np"></a> No commercial median
+
+The built-in baseline of **Commercial median** doesn't currently have metrics for the subscore metrics listed in the sections above.
+
+## Next steps
+
+- View [Startup performance](startup-performance.md)
+- Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
+- 
