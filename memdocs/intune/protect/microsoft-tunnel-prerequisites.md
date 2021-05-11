@@ -162,8 +162,8 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
   ```
   [Service]
   Environment="HTTP_PROXY=http://your.proxy:8080/"
-  Environment="HTTPS_PROXY=http://your.proxy:8080/"
-  Environment="NO_PROXY=127.0.0.1,localhost
+  Environment="HTTPS_PROXY=https://your.proxy:8080/"
+  Environment="NO_PROXY=127.0.0.1,localhost"
   ```
 
   > [!NOTE]  

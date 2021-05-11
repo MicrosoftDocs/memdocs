@@ -85,7 +85,7 @@ When data is stored on mobile devices, it should be protected from malicious act
 
 - Determine how users will authenticate with organization resources from their many devices. For example, you can:
 
-  - Use [certificates](../protect/certificates-configure.md) on devices to authenticate features and apps, such as connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Passowrd-less is considered more secure than requiring users to enter their organization username and password.
+  - Use [certificates](../protect/certificates-configure.md) on devices to authenticate features and apps, such as connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
 
     If you're planning to use certificates, be sure you have a supported [public key infrastructure (PKI) infrastructure](../protect/certificates-configure.md) ready to create and deploy certificate profiles.
 
@@ -93,7 +93,7 @@ When data is stored on mobile devices, it should be protected from malicious act
 
     If you'll use biometrics for authentication, be sure your devices support biometrics. Most modern devices do.
 
-  - Implement a Zero Trust deployment. With Zero Trust, you use the features in Azure AD and Microsoft Intune to secure all endpoints, uses passwordless authentication, and more. For more information, see the [Zero Trust Deployment Center](/security/zero-trust/).
+  - Implement a Zero Trust deployment. With Zero Trust, you use the features in Azure AD and Microsoft Intune to secure all endpoints, uses password-less authentication, and more. For more information, see the [Zero Trust Deployment Center](/security/zero-trust/).
 
 ### Objective: Distribute IT
 

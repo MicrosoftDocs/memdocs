@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 04/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,14 +38,14 @@ To help protect company data, restrict file transfers to only the apps that you 
 
 - Deploy and manage the apps through iOS device management, which requires devices to enroll in a Mobile Device Management (MDM) solution. The apps you deploy can be *policy managed apps* or other iOS managed apps.
 
-The **Open-in management** feature for enrolled iOS devices can limit file transfers between iOS managed apps. Set *Open-in management* restrictions in configuration settings and then deploy them using your MDM solution.  When a user installs the deployed app, the restrictions you set are applied.
+The **Open-in management** feature for enrolled iOS devices can limit file transfers between iOS managed apps. Set *Open-in management* restrictions using an app protection policy that sets **Send org data to other apps** to the **Policy managed apps with Open-In/Share filtering** value and then deploy the policy using Intune.  When a user installs the deployed app, the restrictions you set are applied based on the assigned policy.
 
-## Use app protection with iOS apps
+## Use Open-in management to protect iOS apps and data
 Use App protection policies with the iOS **Open-in management** feature to protect company data in the following ways:
 
-- **Devices not managed by any MDM solution:** You can set the app protection policy settings to control sharing of data with other applications via *Open-in* or *Share extensions*.  To do so, configure the **Send Org data to other app** setting to **Policy managed apps with Open-In/Share filtering** value.  The *Open-in/Share* behavior in the *policy managed app* presents only other *policy managed apps* as options for sharing. 
+- **Devices not managed by any MDM solution:** You can set the app protection policy settings to control sharing of data with other applications via *Open-in* or *Share extensions*.  To do so, configure the **Send org data to other apps** setting to **Policy managed apps with Open-In/Share filtering** value.  The *Open-in/Share* behavior in the *policy managed app* presents only other *policy managed apps* as options for sharing. For related information, see [App protection policies for iOS/iPadOS and Android apps](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), [Data Transfer](../apps/app-protection-policy-settings-ios.md#data-transfer), and [iOS share extension](../apps/app-protection-policy.md#ios-share-extension).
 
-- **Devices managed by MDM solutions**: For devices enrolled in Intune or third-party MDM solutions, data sharing between apps with app protection policies and other managed iOS apps deployed through MDM is controlled by Intune APP policies and the iOS **Open in management** feature. To make sure that apps you deploy using a MDM solution are also associated with your Intune app protection policies, configure the user UPN setting as described in the following section, [Configure user UPN setting](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). To specify how you want to allow data transfer to other *policy managed apps* and iOS managed apps, configure **Send Org data to other apps** setting to **Policy managed apps with OS sharing**. To specify how you want to allow an app to receive data from other apps, enable **Receive data from other apps** and then choose your preferred level of receiving data. For more information about receiving and sharing app data, see [Data relocation settings](app-protection-policy-settings-ios.md#data-protection).
+- **Devices managed by MDM solutions**: For devices enrolled in Intune or third-party MDM solutions, data sharing between apps with app protection policies and other managed iOS apps deployed through MDM is controlled by Intune APP policies and the iOS **Open-in management** feature. To make sure that apps you deploy using a MDM solution are also associated with your Intune app protection policies, configure the user UPN setting as described in the following section, [Configure user UPN setting](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). To specify how you want to allow data transfer to other *policy managed apps* and iOS managed apps, configure **Send org data to other apps** setting to **Policy managed apps with OS sharing**. To specify how you want to allow an app to receive data from other apps, enable **Receive data from other apps** and then choose your preferred level of receiving data. For more information about receiving and sharing app data, see [Data relocation settings](app-protection-policy-settings-ios.md#data-protection).
 
 ## Configure user UPN setting for Microsoft Intune or third-party EMM
 Configuring the user UPN setting is **required** for devices that are managed by Intune or a third-party EMM solution to identify the enrolled user account for the sending *policy managed app* when transferring data to an iOS managed app. The UPN configuration works with the app protection policies you deploy from Intune. The following procedure is a general flow on how to configure the UPN setting and the resulting user experience:
@@ -70,7 +70,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
      > [!NOTE]
      > Currently, there is no support for enrolling with a different user on an app if there is a MDM enrolled account on the same device. 
 
-4. Deploy the **Open in management** policy using Intune or your third-party MDM provider to enrolled devices.
+4. Deploy the **Open-in management** policy using Intune or your third-party MDM provider to enrolled devices.
 
 
 ### Example 1: Admin experience in Intune or third-party MDM console

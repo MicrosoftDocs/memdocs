@@ -202,7 +202,7 @@ For Configuration Manager version 1710, this level includes the following:
 
 
 
-- **Cloud Services:**
+- **Cloud services:**
 
   - Azure Active Directory discovery statistics
 
@@ -281,7 +281,7 @@ For Configuration Manager version 1710, this level includes the following:
 
 - **Endpoint Protection:**  
 
-   - Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
+   - Endpoint Policies (count of policies and whether policies are deployed)
 
    - Count of alerts that are configured for Endpoint Protection feature  
 
@@ -364,7 +364,7 @@ For Configuration Manager version 1710, this level includes the following:
 
 
 
-- **Software Updates:**  
+- **Software updates:**  
 
     - Available and deadline deltas that are used in automatic deployment rules  
 

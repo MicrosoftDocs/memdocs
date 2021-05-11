@@ -37,7 +37,7 @@ For more information, see the following articles:
 
 For the latest product changes, see the following articles:<!-- 8625956 -->
 
-- [What's new in current branch](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions?WT.mc_id=configmgr-console)
+- [What's new in current branch](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions#whats-new-in-configuration-manager-incremental-versions?WT.mc_id=configmgr-console)
 - [Technical preview releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview?WT.mc_id=configmgr-console)
 
 ## Recommended
@@ -67,7 +67,7 @@ The most popular articles between March 1 and March 31, 2021.
 | 19368 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
 | 18631 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
 | 16911 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
-| 14883 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection?WT.mc_id=configmgr-console) |
+| 14883 | [Microsoft Defender for Endpoint](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection?WT.mc_id=configmgr-console) |
 | 14002 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
 | 11950 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates?WT.mc_id=configmgr-console) |
 | 11510 | [Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-server?WT.mc_id=configmgr-console) |
@@ -104,7 +104,7 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 - [Troubleshoot Microsoft Connected Cache](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache?WT.mc_id=configmgr-console)
 - [Troubleshoot BitLocker](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot?WT.mc_id=configmgr-console)
 
-For more information, see [Microsoft Endpoint Configuration Manager troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager?WT.mc_id=configmgr-console).
+For more information, see [Microsoft Endpoint Configuration Manager troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager).
 
 ## New and updated support articles
 
@@ -118,7 +118,7 @@ Support articles that are new or updated between January 13 and April 13, 2021.
 
 Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com are published to the new site below and still accessible using their original URLs. Troubleshooting articles created after October 2020 don't have a KB article ID. This doesn't apply to Configuration Manager hotfix or update-related content.
 
-[Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager?WT.mc_id=configmgr-console)
+[Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager)
 
 For more information, see [What's next for Windows release notes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-release-notes/ba-p/1754399).
 

@@ -52,31 +52,31 @@ Opens the **Run Script** wizard to run a PowerShell script on all of the clients
 
 Opens CMPivot for this collection. Use CMPivot to query device information and take action in real time. For more information, see [CMPivot for real-time data](../../../servers/manage/cmpivot.md).
 
-#### Manage Affinity Requests
+#### Manage Affinity requests
 
 Opens the **Manage User Device Affinity Requests** dialog box. Approve or reject pending requests to establish user device affinities for devices in the selected collection. For more information, see [Link users and devices with user device affinity](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-#### Clear Required PXE Deployments
+#### Clear Required PXE deployments
 
 Clears any required PXE boot deployments from all members of the selected collection. For more information, see [Use PXE to deploy Windows over the network](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
-#### Update Membership
+#### Update membership
 
 Evaluates the membership for the selected collection. For collections with many members, this update might take some time to finish. Use the **Refresh** action to update the display with the new collections members after the update is completed.
 
-#### Synchronize Membership
+#### Synchronize membership
 
 If you configured this collection for cloud sync, synchronize the current membership with an Azure Active Directory group. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
-#### Add Resources
+#### Add resources
 
 Opens the **Add Resources to Collection** window. Search for new resources to add to the selected collection. The icon for the selected collection displays an hourglass symbol while the update is in progress.
 
-#### Client Notification
+#### Client notification
 
 For more information, see [Client notifications](../client-notification.md).
 
-#### Client Diagnostics
+#### Client diagnostics
 
 Displays the following options:
 
@@ -108,7 +108,7 @@ Deletes the selected collection. You can also delete all of the resources in the
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
 
-#### Simulate Deployment
+#### Simulate deployment
 
 Opens the **Simulate Application Deployment Wizard**. This wizard lets you test the results of an application deployment without installing or uninstalling the application. For more information, see [How to simulate application deployments](../../../../apps/deploy-use/simulate-application-deployments.md).
 
@@ -126,7 +126,7 @@ Displays the following options:
 
 - **Software Updates**: Opens the **Deploy Software Updates Wizard**. Configure the deployment of software updates to resources in the selected collection. For more information, see [Deploy software updates](../../../../sum/deploy-use/deploy-software-updates.md).
 
-#### View Relationships
+#### View relationships
 
 For more information, see [View collection relationships](#view-collection-relationships).
 
@@ -183,7 +183,7 @@ When you view properties for a collection, you can view and configure the follow
 
 - **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md). For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
-    Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center](../../../../tenant-attach/atp-onboard.md).
+    Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center](../../../../tenant-attach/atp-onboard.md).
 
 - **Security**: Displays the administrative users who have permissions for the selected collection from associated roles and security scopes. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
@@ -197,7 +197,7 @@ Starting in version 2010, you can view dependency relationships between collecti
 
 :::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
 
-If you want to change or delete collections, view the relationships to understand the affect of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
+If you want to change or delete collections, view the relationships to understand the effect of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
 
 When you select the **View Relationships** action on a device or user collection:
 
