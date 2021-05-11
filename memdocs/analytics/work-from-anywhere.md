@@ -23,10 +23,10 @@ The **Work from anywhere score** is a number between 0 and 100. The score re
 
 The following metrics are weighted and used to compute the **Work from anywhere score**:
 
-- [Windows 10](#windows-10)
-- [Cloud management](#cloud-management)
-- [Cloud identity](#cloud-identity)
-- [Cloud provisioning](#cloud-provisioning)
+- [Windows 10](#bkmk_win10)
+- [Cloud management](#bkmk_management)
+- [Cloud identity](#bkmk_identity)
+- [Cloud provisioning](#bkmk_provisioning)
 
 ## <a name="bkmk_win10"></a> Windows 10 metric
 
@@ -55,9 +55,14 @@ Benefits of each cloud management types:
 
 Cloud identity provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming. The **Cloud identity** metric measures the percent of devices enrolled in Azure Active Directory (AD) or hybrid AD. Your Intune and co-managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to [enroll them in hybrid Azure AD](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
-## <a name="bkmk_mprovisioning"></a> Cloud provisioning metric
+## <a name="bkmk_provisioning"></a> Cloud provisioning metric
 
-Cloud provisioning 
+Cloud provisioning provides a simpler initial provisioning experience for Windows 10 PCs than the native experience by reducing the number of screens in the Out Of Box Experience (OOBE) and providing defaults, to ensure the employees device is correctly provisioning from the factory or on reset.
+The **Cloud provisioning** metric measures the percentage of Windows 10 Intune devices that are both registered and created a deployment profile for Autopilot.
+
+The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](../autopilot/enrollment-autopilot.md).
+ 
+
 
 ## <a name="bkmk_np"></a> No commercial median
 
@@ -67,4 +72,3 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 
 - View [Startup performance](startup-performance.md)
 - Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
-- 
