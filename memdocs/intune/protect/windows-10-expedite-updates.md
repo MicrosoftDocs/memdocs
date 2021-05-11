@@ -87,7 +87,7 @@ In addition to a license for Intune, your organization must have one of the foll
 
 **Devices must**:
 
-- Be [enrolled in Intune](../enrollment/device-enrollment.md) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune.
+- Be [enrolled in Intune](../enrollment/device-enrollment.md) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
