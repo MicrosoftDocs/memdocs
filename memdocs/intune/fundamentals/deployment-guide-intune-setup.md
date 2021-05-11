@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 05/11/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,7 +39,7 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 ## Prerequisites
 
-- **Intune subscription**: Intune is available as a stand-alone Azure service, a part of [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and included with [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise). For more information on how to get Intune, see [Intune licensing](licenses.md).
+- **Intune subscription**: Intune is licensed as a stand-alone Azure service, a part of [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and included with [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise). For more information on how to get Intune, see [Intune licensing](licenses.md).
 
   In most scenarios, [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) may be the best option, as it gives you EMS, [Microsoft Endpoint Manager](../../endpoint-manager-overview.md), and Office 365.
 
@@ -66,7 +66,7 @@ To help you decide, see [choose a device management solution](../../configmgr/co
 
 ## Currently use a third party MDM provider
 
-Devices should only have one MDM provider. If you use another MDM provider, such as AirWatch, MobileIron, or MaaS360, then you can move to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune.
+Devices should only have one MDM provider. If you use another MDM provider, such as Workspace ONE (previously called AirWatch), MobileIron, or MaaS360, then you can move to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune.
 
 > [!IMPORTANT]
 > Don't configure Intune and your existing third party MDM solution to apply access controls to resources, including Exchange or SharePoint Online.
@@ -194,17 +194,44 @@ Next, [deploy Intune](#deploy-intune) (in this article).
 
 ## Tenant to tenant migration
 
-A tenant is your organization in Azure Active Directory (AD), such as Contoso. It includes a dedicated Azure AD service instance that Contoso receives when it signs up for a Microsoft cloud service, such as Microsoft Intune or Microsoft 365. Azure AD is used by Intune and Microsoft 365 to identify users and devices, control access to the Intune policies you create, and more.
+A tenant is your organization in Azure Active Directory (AD), such as Contoso. It includes a dedicated Azure AD service instance that Contoso receives when it gets a Microsoft cloud service, such as Microsoft Intune or Microsoft 365. Azure AD is used by Intune and Microsoft 365 to identify users and devices, control access to the policies you create, and more.
 
-In Intune, you can export and import some of your policies using [Microsoft Graph](/graph/api/resources/intune-graph-overview) and Windows PowerShell. Users must unenroll from Intune, and then re-enroll in Intune.
+In Intune, you can export and import some of your policies using [Microsoft Graph](/graph/api/resources/intune-graph-overview) and Windows PowerShell.
 
-For example, you create a Microsoft Intune trial subscription. In this subscription trial tenant, you have policies that configure apps and features, check compliance, and more. You're ready to move these policies to another tenant.
+For example, you create a Microsoft Intune trial subscription. In this subscription trial tenant, you have policies that configure apps and features, check compliance, and more. You'd like to move these policies to another tenant.
 
 > [!WARNING]
 >
 > - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be run using a non-production or "test" tenant account. They're not intended for production use. Use at your own risk.
 > - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
 > - Users **must** unenroll from Intune, and then re-enroll in Intune.
+
+### What you can't do
+
+There are some policy types that can't be exported. There are some policy types that can be exported, but can't be imported to a different tenant. Use the following list as a guide. Know there are other policy types that aren't listed.
+
+| Policy or profile type | Information |
+| --- | --- |
+| **Applications** | &nbsp; |
+| Android line-of-business apps | Export: ❌ <br/>Import: ❌ |
+| Apple – Volume Purchase Program (VPP) | Export: ❌ <br/>Import: ❌<br/><br/>These apps are synced with the Apple VPP. In the new tenant, you add your VPP token, which shows your available apps. |
+| iOS/iPadOS line-of-business apps | Export: ❌ <br/>Import: ❌ |
+| Managed Google Play | Export: ❌ <br/>Import: ❌<br/><br/>These apps and weblinks are synced with Managed Google Play. In the new tenant, you add your Managed Google Play account, which shows your available apps. |
+| Microsoft Store for Business | Export: ❌ <br/>Import: ❌<br/><br/>These apps are synced with the Microsoft Store for Business. In the new tenant, you add your Microsoft Store for Business account, which shows your available apps.|
+| Windows app (Win32) | Export: ❌ <br/>Import: ❌ |
+| **Compliance policies** | &nbsp; |
+| Actions for Non-Compliance | Export: ❌ <br/>Import: ❌<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
+| Assignments | Export: ✔️<br/>Import: ❌<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| **Configuration profiles** | &nbsp; |
+| Email |  Export: ✔️<br/>Import: ❌<br/><br/>If an Email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If an Email profile doesn't use a root certificate, then the import might work. |
+| SCEP certificate | Export: ✔️<br/>Import: ❌<br/><br/>If a SCEP certificate profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If a SCEP certificate profile doesn't use a root certificate, then the import might work. |
+| VPN |  Export: ✔️<br/>Import: ❌<br/><br/>If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If a VPN profile doesn't use a root certificate, then the import might work. |
+| Wi-Fi |  Export: ✔️<br/>Import: ❌<br/><br/>If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant.<br/><br/> If a Wi-Fi profile doesn't use a root certificate, then the import might work. |
+| Assignments | Export: ✔️<br/>Import: ❌<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| **Endpoint Security** | &nbsp; |
+| Endpoint detection and response | Export: ❌ <br/>Import: ❌ <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
+
+### Download the samples, and run the script
 
 This section includes an overview of the steps. Use these steps as guidance, and know that your specific steps may be different.
 
