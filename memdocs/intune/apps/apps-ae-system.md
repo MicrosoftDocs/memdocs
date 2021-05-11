@@ -33,9 +33,9 @@ ms.collection: M365-identity-device-management
 
 Before you assign an Android Enterprise system app to a device, you must first enable the app in Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md), [fully managed devices](../enrollment/android-fully-managed-enroll.md), [Android Enterprise corporate-owned with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md), or [Android Enterprise personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md). When you no longer need the system app, you can disable it.
 
-## Enable a system app to Intune
+## Enable a system app in Intune
 
-You can enable an Android Enterprise system app to Intune using the following steps:
+You can enable an Android Enterprise system app in Intune using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
@@ -50,7 +50,7 @@ In the **App information** page, add the app details:
 9. Click **Next** to display the **Assignments** page.
 10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
 11. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
-12. When you are done, click **Create** to enable the app to Intune.
+12. When you are done, click **Create** to enable the app in Intune.
 
 The **Overview** blade of the app you've created is displayed.
 
