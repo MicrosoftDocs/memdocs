@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/10/2021
+ms.date: 05/11/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,10 +62,24 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ## Week of May 10, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows Security experience profiles support tri-state settings<!-- 9741752   -->
+
+For Windows 10 devices, we’ve updated the bi-state settings to be tri-state settings in the [Windows Security experience profile](../protect/antivirus-security-experience-windows-settings.md) for [Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md). 
+
+Settings in the profile that previously supported only two options of **Yes** and **Not configure** now support three options: **Yes**, **No**, and **Not configured**.
+
+With this change:
+
+- There is no automatic change of behavior on devices that already receive a *Windows Security experience* profile. This is because the Intune value of *Not configured* is already applied by the Windows CSPs as a value of *No*.
+
+- Each bi-state setting in an existing *Windows Security experience* profile that was set to *Not configured* will automatically update to *No*, with that change being applied to all devices that receive the profile. The value of *Not configured* is now a third state you can configure through the profile.  
+
+With this change in effect, you can create new profiles or edit your existing profiles to set any of the applicable settings to a value of *Not configured*. *Not configured* has the effect of no longer managing that setting through the Intune profile.
 
 ### Device management
-
-#### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682  WNReady -->
+#### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682    -->
 
 In public preview, you can use Intune’s **Windows 10 quality updates** policy to [expedite the install of the most recent Windows 10 security updates](../protect/windows-10-expedite-updates.md) to devices you manage with Intune.
 
