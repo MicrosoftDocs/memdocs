@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/11/2021
+ms.date: 05/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,6 +77,26 @@ In addition, the setting *Hide the Virus and threat protection area in the Windo
 No action is needed. However, you might want to notify your helpdesk about this change.
 
 ### Device management
+
+#### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236 -->
+
+There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
+
+- **Devices** > **Filters (preview)** > **Create**
+- **Apps** > **Filters (preview)*> **Create**
+- **Tenant administration** > **Filters (preview)*> **Create**
+
+You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile. 
+
+For more information, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
 
 #### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682    -->
 
