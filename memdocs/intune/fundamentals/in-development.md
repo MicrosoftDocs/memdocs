@@ -135,12 +135,6 @@ This support will give users a familiar Windows 10 experience while you get the 
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
 - Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with OS scope policies and apps.
 
-### Use Intune policy to expedite installation of Windows 10 quality updates<!-- 5584682  -->
-
-As part of a public preview, you’ll soon be able to use Intune’s *Windows 10 quality updates* policy to expedite installation of the most recent Windows 10 updates to devices you manage with Intune. (**Devices** > **Windows 10 quality updates (preview)** > **Create profile**).
-
-When you expedite an update, devices can start the download and install of the update as soon as possible, without having to wait for the device to check in for updates. Other than expediting the install of the update, use of this policy leaves your existing update deployment policies and processes untouched.
-
 ### Support ending for Restart remote action on Android Enterprise corporate-owned devices with a work profile<!--9584646 -->
 
 Support will end for the **Restart** remote action on corporate-owned devices with a work profile. The **Restart** button will be removed from the **Device** page for corporate-owned devices with a work profile. If you try to restart devices using bulk device actions, the corporate-owned work profile devices won't restart and those device actions will report as **Not supported**. Other device types that are included in the bulk device action will restart as normal for that action.

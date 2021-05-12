@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 05/10/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,11 +71,11 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
 
 ## Prerequisites
 
-- Sign in as the Intune administrator. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+- Sign in as an Intune administrator. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Enable filters, and add a filter
 
-### Enable filters
+### Enable filters public preview
 
 To use filters, you must enable it in your organization tenant.
 
@@ -84,6 +84,13 @@ To use filters, you must enable it in your organization tenant.
 3. Set **Filters (preview)** to **On**:
 
     :::image type="content" source="./media/filters/turn-on-filters.png" alt-text="Turn on or enable the filters feature in Microsoft Endpoint Manager and Microsoft Intune.":::
+ 
+> [!TIP]
+> 
+> - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsot Intune.](public-preview.md)
+> - To enable or disable filters for your tenant, your account must have have the Intune Service Administrator (also known as Intune Administrator) permission .
+> - You can disable the **Filters (preview)** feature by setting it back to **Off**. To turn off this feature, you must remove any filter assignments, and then delete all the filters you created.
+> - Microsoft wants your feedback about this feature. To provide feedback, go to [Tell us what you think about the Filters (preview) feature](https://forms.office.com/r/ibB4tf6CAz).
 
 ### Create a filter
 
@@ -194,7 +201,7 @@ After a filter is created, it can be changed or updated.
 
     :::image type="content" source="./media/filters/delete-filter.png" alt-text="Delete a filter in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-To delete a filter, you must remove the filter from any policies. Otherwise, when trying to delete the filter, you'll get the following error:
+To delete a filter, you must remove the filter from any policy assignments. Otherwise, when trying to delete the filter, you'll get the following error:
 
 `Unable to delete assignment filter – An assignment filter is associated with existing assignments. Delete all the assignments for the filter and try again.`
 

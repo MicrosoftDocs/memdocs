@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2021
+ms.date: 05/11/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -118,6 +118,8 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Stream|[iOS](https://apps.apple.com/us/app/microsoft-stream/id1401013624)|✔|No settings|
 |Microsoft Visio Viewer|[iOS](https://apps.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983)|✔|No settings|
 |Microsoft Whiteboard|[iOS](https://apps.apple.com/app/microsoft-whiteboard/id1352499399)|✔|No settings|
+|Microsoft Whiteboard (preview)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.whiteboard.publicpreview)|✔|No settings|
+
 
 ## Partner productivity apps
 
