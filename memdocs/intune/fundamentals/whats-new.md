@@ -113,7 +113,10 @@ To help monitor expedited updates, you can use the following options:
 ## Week of April 26, 2021 (Service release 2104)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
+### App management  
+
+#### Updated privacy screen in Company Portal for iOS <!-- 9746018  -->  
+We added additional text to the Company Portal privacy screen to clarify how Company Portal uses collected data. It assures users that the collected data is only used to verify that devices are compliant with their organization's policies.  
 
 #### Installation status for device-assigned required apps<!-- 7283852  -->
 
