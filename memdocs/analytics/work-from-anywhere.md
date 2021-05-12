@@ -57,13 +57,8 @@ Cloud identity provides users with many productivity benefits including device-w
 
 ## <a name="bkmk_provisioning"></a> Cloud provisioning metric
 
-Cloud provisioning provides a simpler initial provisioning experience for Windows 10 PCs than the native experience by reducing the number of screens in the Out Of Box Experience (OOBE) and providing defaults, to ensure the employees device is correctly provisioning from the factory or on reset.
-The **Cloud provisioning** metric measures the percentage of Windows 10 Intune devices that are both registered and created a deployment profile for Autopilot.
-
-The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](../autopilot/enrollment-autopilot.md).
+Cloud provisioning provides a simpler initial provisioning experience for Windows 10 PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of Windows 10 Intune devices that are both registered and have a deployment profile created for Autopilot. The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](../autopilot/enrollment-autopilot.md).
  
-
-
 ## <a name="bkmk_np"></a> No commercial median
 
 The built-in baseline of **Commercial median** doesn't currently have metrics for the subscore metrics listed in the sections above.
