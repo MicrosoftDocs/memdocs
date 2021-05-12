@@ -39,7 +39,7 @@ You can use bulk device actions for the following remote actions:
 - [Restart](device-restart.md)
 - [Sync](device-sync.md)
 - [Wipe](devices-wipe.md#wipe)
-- [Retire](devices-wipe.md)
+- [Retire](devices-wipe.md#retire)
 
 ## Use a bulk device action
 
