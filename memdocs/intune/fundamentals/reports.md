@@ -43,13 +43,22 @@ The reporting framework provides a consistent and more comprehensive reporting e
 - **Performance** - You can quickly generate and view reports created from large tenants.
 - **Export** – You can quickly export reporting data generated from large tenants.
 
-### Who can access the data?
+## Who can access the data?
 
 Users with the following permissions can review logs:
 
 - Global Administrator
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Read** permissions
+
+## Reporting tiles
+
+The **Home**, **Dashboard**, and **Apps Overview** panes provide updated tiles to show the number of app installation failures for the tenant. You can use the following export **ReportName** parameters to retrieve the related data:
+
+**Export ReportName Parameters:**
+- `AppStatusOverview` - App overview count as provided for the pie chart on the **Apps Overview** pane.
+- `FailedAppCounts` - Failed app counts as provided on the **Apps Overview** pane, **Home** pane, and **Dashboard** pane.
+- `TopFailedMobileApps` - Top three failed apps as provided on the **Apps Overview** pane.
 
 ## Noncompliant devices report (Operational)
 The **Noncompliant devices** report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
