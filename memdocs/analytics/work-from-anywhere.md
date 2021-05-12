@@ -28,13 +28,13 @@ The following metrics are weighted and used to compute the **Work from anywhere�
 - [Cloud identity](#bkmk_identity)
 - [Cloud provisioning](#bkmk_provisioning)
 
-## <a name="bkmk_win10"></a> Windows 10 metric
+## <a name="bkmk_win10"></a> Windows 10
 
 Windows 10 provides a better user experience than older versions of Windows. The **Windows 10** metric measures the percent of devices on Windows 10. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to move devices to an updated version of Windows. For Configuration Manager devices, create a deployment plan using [Desktop Analytics](../configmgr/desktop-analytics/overview.md). Your score is based on if these remediation actions have been completed or not.
 
 For information about the cost savings and benefits enabled by Windows 10, download the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
 
-## <a name="bkmk_management"></a> Cloud management metric
+## <a name="bkmk_management"></a> Cloud management
 
 Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With the power of cloud management, you can achieve several productivity benefits. Your end-users benefit when they can access corporate resources away from the corporate network. Eliminating the need for and performance overhead of Group Policy also results in a better end-user experience.
 
@@ -49,16 +49,14 @@ Benefits of each cloud management types:
 |Cloud virtual machines running the service are fully managed by Azure and require no maintenance| Protect PCs and servers with Microsoft Defender ATP| Gain additional remote actions with Intune </br> </br> Split PC management workloads between cloud and on-premises| |
 | Easily set up and configured from the Configuration Manager console | Modernize your directory approach with Azure Active Directory| Consistent end-user experience for managing enrolled devices and installed apps| |
 
-
-
-## <a name="bkmk_identity"></a> Cloud identity metric
+## <a name="bkmk_identity"></a> Cloud identity
 
 Cloud identity provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming. The **Cloud identity** metric measures the percent of devices enrolled in Azure Active Directory (AD) or hybrid AD. Your Intune and co-managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to [enroll them in hybrid Azure AD](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
-## <a name="bkmk_provisioning"></a> Cloud provisioning metric
+## <a name="bkmk_provisioning"></a> Cloud provisioning
 
 Cloud provisioning provides a simpler initial provisioning experience for Windows 10 PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of Windows 10 Intune devices that are both registered and have a deployment profile created for Autopilot. The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](../autopilot/enrollment-autopilot.md).
- 
+
 ## <a name="bkmk_np"></a> No commercial median
 
 The built-in baseline of **Commercial median** doesn't currently have metrics for the subscore metrics listed in the sections above.
