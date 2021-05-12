@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 05/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: laarrizz
 
 ---
 
@@ -298,7 +298,7 @@ Learn more
 - **Run daily quick scan at**  
   CSP: [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
-  Select the time of day that Defender quick scans run.
+  Select the time of day that Defender runs a quick scans run. This setting is independent from the following three settings for *Scan type*, *Day of the week to run a scheduled scan*, and *Time of day to run a scheduled scan*. 
   By default, this setting is **Not configured**
 
 - **Scan type**  
