@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 05/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -201,25 +201,25 @@ To renew an Apple Business Manager location token (Apple VPP token), use the fol
 3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 4. Select the VPP token you are renewing, click **Edit** on the Basics category, upload the new token on this page, and then save your changes.
 
->[!NOTE]
->You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
+> [!NOTE]
+> You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
 
 ## Deleting a VPP app
-You can delete purchased apps using the admin console that have no available or used licenses associated with them. This may be necessary to clean up apps that are no longer assigned.
+You can delete purchased apps that have no available or used licenses associated with them by using the admin console. This may be necessary to clean up apps that are no longer assigned.
 
-Let's demonstrate deletion of VPP apps through an example: you want to delete the Woodgrove VPP app that is associated with location token A in Microsoft Endpoint Manager. Woodgrove currently has 100 licenses (used or available) on token A. To delete the VPP app, follow these steps:
-1. Create a new location in [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). Say it's called location Z.
-2. Revoke all licenses for the Woodgrove app on token A in **Microsoft Endpoint Manager admin center** > **Apps** > **All apps** > select the app to delete > **App licenses** > **Revoke licenses**.
-3. In Apple Business Manager or Apple School Manager, transfer all licenses for Woodgrove app from location A to location Z. 
-4. Sync location token A in Microsoft Endpoint Manager. 
-5. Delete the Woodgrove app in **Microsoft Endpoint Manager admin center** > **Apps** > **All apps** > right-click on the app to delete > **Delete**.
+To delete the VPP app, use the following steps:
+1. Create a new location in [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). 
+2. Revoke all licenses for the app that use the associated location token. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the app to delete* > **App licenses** > **Revoke licenses**.
+3. In Apple Business Manager or Apple School Manager, transfer all licenses for the app from the original location to the new location. 
+4. Sync the location token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+5. Delete the app in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
 
->[!NOTE]
-> - Deleting an app removes the associated app assignments. 
-> - Deleting an app with assigned licenses will show an error to the admin. 
-> - Purchased books cannot be deleted.
+Deleting the VPP app resultings in the following changes:
+- Deleting an app removes the associated app assignments. 
+- Deleting an app with assigned licenses will show an error to the admin. 
 
-
+> [!NOTE]
+> Purchased books associated with a VPP app won't be deleted.
 
 ## Assigning custom role permissions for VPP
 
