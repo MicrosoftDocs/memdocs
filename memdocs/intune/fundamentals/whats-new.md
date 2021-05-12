@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/11/2021
+ms.date: 05/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,7 +66,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 
-We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is change only in what you’ll see in the UI.
+We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is a change only in what you’ll see in the UI.
 
 **How does this affect me:**  
 Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy, you had two options for most settings: *Yes* and *Not configured*. Moving forward, those same settings now include *Yes*, *Not configured*, and a new option of *No*. Previously configured settings that were set to *Not configured* remain as *Not configured*.  When you create new profiles or edit an existing profile, you now have the option to explicitly specify *No*. 
@@ -77,6 +77,26 @@ In addition, the setting *Hide the Virus and threat protection area in the Windo
 No action is needed. However, you might want to notify your helpdesk about this change.
 
 ### Device management
+
+#### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236 -->
+
+There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
+
+- **Devices** > **Filters (preview)** > **Create**
+- **Apps** > **Filters (preview)*> **Create**
+- **Tenant administration** > **Filters (preview)*> **Create**
+
+You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile. 
+
+For more information, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
 
 #### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682    -->
 
@@ -93,7 +113,10 @@ To help monitor expedited updates, you can use the following options:
 ## Week of April 26, 2021 (Service release 2104)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
+### App management  
+
+#### Updated privacy screen in Company Portal for iOS <!-- 9746018  -->  
+We added additional text to the Company Portal privacy screen to clarify how Company Portal uses collected data. It assures users that the collected data is only used to verify that devices are compliant with their organization's policies.  
 
 #### Installation status for device-assigned required apps<!-- 7283852  -->
 
