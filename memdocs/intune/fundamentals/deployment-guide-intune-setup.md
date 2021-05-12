@@ -51,14 +51,14 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 If you currently don't use any MDM or MAM provider, then you have some options:
 
-- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, and app features in Intune. You also get the benefits of the Endpoint Manager admin center.
+- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Endpoint Manager admin center, which is a web-based console.
 
   Next, [deploy Intune](#deploy-intune) (in this article).
   
 - **Configuration Manager + Endpoint Manager**: If you want the features of Configuration Manager (on-premises) combined with the cloud, then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management). With Configuration Manager, you can:
 
   - [Manage on-premises devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md), including Windows Server or Windows 8.1 devices.
-  - [Manage software updates](../../configmgr/sum/understand/software-updates-introduction.md).
+  - [Manage partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
   - [Create custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying operating systems.
   - [Deploy and manage many app](../../configmgr/apps/understand/introduction-to-application-management.md) types. 
 
@@ -200,9 +200,9 @@ In Intune, you can export and import some of your policies using [Microsoft Grap
 
 For example, you create a Microsoft Intune trial subscription. In this subscription trial tenant, you have policies that configure apps and features, check compliance, and more. You'd like to move these policies to another tenant.
 
-> [!WARNING]
+> [!IMPORTANT]
 >
-> - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be run using a non-production or "test" tenant account. They're not intended for production use. Use at your own risk.
+> - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be validated using a non-production or "test" tenant account. Be sure the scripts meet your organization security guidelines.
 > - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
 > - Users **must** unenroll from Intune, and then re-enroll in Intune.
 
