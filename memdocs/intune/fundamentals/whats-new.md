@@ -62,20 +62,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ## Week of May 10, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device security
-
-#### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
-
-We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is a change only in what you’ll see in the UI.
-
-**How does this affect me:**  
-Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy, you had two options for most settings: *Yes* and *Not configured*. Moving forward, those same settings now include *Yes*, *Not configured*, and a new option of *No*. Previously configured settings that were set to *Not configured* remain as *Not configured*.  When you create new profiles or edit an existing profile, you now have the option to explicitly specify *No*. 
-
-In addition, the setting *Hide the Virus and threat protection area in the Windows Security app* has a child setting, *Hide the Ransomware data recovery option in the Windows Security app*. If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*, which will take effect when you edit the profile.
-
-**What action do I need to take?**  
-No action is needed. However, you might want to notify your helpdesk about this change.
-
 ### Device management
 
 #### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236 -->
@@ -83,8 +69,8 @@ No action is needed. However, you might want to notify your helpdesk about this 
 There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
 
 - **Devices** > **Filters (preview)** > **Create**
-- **Apps** > **Filters (preview)*> **Create**
-- **Tenant administration** > **Filters (preview)*> **Create**
+- **Apps** > **Filters (preview)**> **Create**
+- **Tenant administration** > **Filters (preview)**> **Create**
 
 You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile. 
 
