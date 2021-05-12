@@ -205,18 +205,18 @@ To renew an Apple Business Manager location token (Apple VPP token), use the fol
 > You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
 
 ## Deleting a VPP app
-You can delete purchased apps that have no available or used licenses associated with them by using the admin console. This may be necessary to clean up apps that are no longer assigned.
+You can delete purchased apps that don't have any available or used licenses associated with them. This may be necessary to clean up apps that are no longer assigned.
 
-To delete the VPP app, use the following steps:
+To delete a VPP app, use the following steps:
 1. Create a new location in [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). 
 2. Revoke all licenses for the app that use the associated location token. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the app to delete* > **App licenses** > **Revoke licenses**.
 3. In Apple Business Manager or Apple School Manager, transfer all licenses for the app from the original location to the new location. 
 4. Sync the location token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 5. Delete the app in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
 
-Deleting the VPP app resultings in the following changes:
-- Deleting an app removes the associated app assignments. 
-- Deleting an app with assigned licenses will show an error to the admin. 
+Deleting a VPP app will cause the following results:
+- The associated app assignments will be removed. 
+- If the VPP app has assigned licenses when attempting to delete, an error will be displayed to you.
 
 > [!NOTE]
 > Purchased books associated with a VPP app won't be deleted.
