@@ -137,6 +137,14 @@ You can view the **Assignment failures** report using the following steps:
 > [!NOTE]
 > *This report is in preview.*
 
+## App Install Status report (Operational)
+
+The **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
+
+To see a generated report, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
 
 ## Device compliance report (Organizational)
 
@@ -269,15 +277,6 @@ To see a generated report of device state, you can use the following steps:
 3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
-
-## App Install Status report (Organizational)
-
-The **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
-
-To see a generated report, you can use the following steps:
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
 
 ## Device compliance trend report (Historical)
 
