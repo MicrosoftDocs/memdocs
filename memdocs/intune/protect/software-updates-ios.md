@@ -44,7 +44,7 @@ This feature applies to:
 By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration. Although the update process doesn't typically involve any user interaction, if the device has a passcode the user must enter it to start a software update. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
 
 > [!NOTE]
-> If you are sending an iOS/iPadOS softare update to a Shared iPad (https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ipad), please note that the OS update will only install when there is no user signed in to a Shared iPad session. The iPad must be signed out of any user account in order for the device to update successfully. 
+> iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md), can install only when there is no user signed in to a Shared iPad session. The iPad must be signed out of all user accounts for the device to update successfully. 
 
 > [!NOTE]
 > If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behaviour may be undesirable.
