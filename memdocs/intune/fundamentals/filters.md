@@ -141,7 +141,7 @@ To use filters, you must enable it in your organization tenant.
 
     > [!TIP]
     > 
-    > - When you create a rule, it's validated for the correct syntax, and any errors are shown. You can't save the rule
+    > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
 6. Select **Next**.
