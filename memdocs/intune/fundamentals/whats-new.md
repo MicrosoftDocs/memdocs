@@ -66,7 +66,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 
-We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is change only in what you’ll see in the UI.
+We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is a change only in what you’ll see in the UI.
 
 **How does this affect me:**  
 Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy, you had two options for most settings: *Yes* and *Not configured*. Moving forward, those same settings now include *Yes*, *Not configured*, and a new option of *No*. Previously configured settings that were set to *Not configured* remain as *Not configured*.  When you create new profiles or edit an existing profile, you now have the option to explicitly specify *No*. 
