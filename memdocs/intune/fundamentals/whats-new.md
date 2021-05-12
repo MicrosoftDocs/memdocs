@@ -62,6 +62,22 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ## Week of May 10, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows Security experience profiles support tri-state settings<!-- 9741752  -->
+
+For Windows 10 devices, we’ve updated the bi-state settings to be tri-state settings in the [Windows Security experience profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy.
+
+Most settings in the profile previously supported only two options of **Yes** and **Not configured**.  Moving forward, those same settings now include **Yes**, **Not configured**, and a new option of **No**.
+
+- For existing profiles, settings that are set to *Not configured* remain as *Not configured*. When you create new profiles or edit an existing profile, you can now choose to explicitly specify *No*.
+
+In addition, the following applies to configuration of the setting *Hide the Virus and threat protection area in the Windows Security app* and its child setting *Hide the Ransomware data recovery option in the Windows Security app*:
+
+- If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236 -->
