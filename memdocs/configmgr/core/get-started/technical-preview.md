@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/23/2021
+ms.date: 05/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,16 +119,16 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2104
+### Technical preview version 2105
 
-- [Tenant attach: BitLocker recovery keys](2021/technical-preview-2104.md#bkmk_bitlocker) <!--6979225-->
-- [Tenant attach: Historical inventory data in resource explorer](2021/technical-preview-2104.md#bkmk_dex) <!--9546584-->
-- [Tenant attach: Offboarding](2021/technical-preview-2104.md#bkmk_offboard) <!--7043245-->
-- [Support layered keyboard driver during OS deployment](2021/technical-preview-2104.md#bkmk_keyboard) <!--9735002-->
-- [Improvements to Support Center](2021/technical-preview-2104.md#bkmk_supctr) <!--8272488-->
-- [Run software updates evaluation from deployment status](2021/technical-preview-2104.md#bkmk_evaluate) <!--9012080-->
-- [Improvements to CMTrace](2021/technical-preview-2104.md#bkmk_cmtrace) <!--9607363-->
-- [PowerShell release notes preview](2021/technical-preview-2104.md#bkmk_powershell) <!--9363902-->
+- [Enhanced code editor](2021/technical-preview-2105.md#bkmk_code) <!--8495588-->
+- [Select VM size for CMG](2021/technical-preview-2105.md#bkmk_cmgsize) <!--3555749-->
+- [Support Center dark and light themes](2021/technical-preview-2105.md#bkmk_dark) <!--8218853-->
+- [RBAViewer location change](2021/technical-preview-2105.md#bkmk_rbaviewer) <!--9573789-->
+- [Updated client deployment prerequisite](2021/technical-preview-2105.md#bkmk_vcredist) <!--5170229-->
+- [Change to internet access requirements](2021/technical-preview-2105.md#bkmk_pkgurl) <!--9791281-->
+- [PowerShell release notes preview](2021/technical-preview-2105.md#bkmk_powershell) <!--9752792-->
+<!--don't forget to pickup for CB: Console settings not saved 5452246-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -145,6 +145,17 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2104
+
+- [Tenant attach: BitLocker recovery keys](2021/technical-preview-2104.md#bkmk_bitlocker) <!--6979225-->
+- [Tenant attach: Historical inventory data in resource explorer](2021/technical-preview-2104.md#bkmk_dex) <!--9546584-->
+- [Tenant attach: Offboarding](2021/technical-preview-2104.md#bkmk_offboard) <!--7043245-->
+- [Support layered keyboard driver during OS deployment](2021/technical-preview-2104.md#bkmk_keyboard) <!--9735002-->
+- [Improvements to Support Center](2021/technical-preview-2104.md#bkmk_supctr) <!--8272488-->
+- [Run software updates evaluation from deployment status](2021/technical-preview-2104.md#bkmk_evaluate) <!--9012080-->
+- [Improvements to CMTrace](2021/technical-preview-2104.md#bkmk_cmtrace) <!--9607363-->
+- [PowerShell release notes preview](2021/technical-preview-2104.md#bkmk_powershell) <!--9363902-->
 
 ### Technical preview version 2103
 
