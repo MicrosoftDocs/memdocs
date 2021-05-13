@@ -31,18 +31,14 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [9199146](includes/2105/9199146.md)]
 [!INCLUDE [9791281](includes/2105/9791281.md)]
 [!INCLUDE [9573789](includes/2105/9573789.md)]
-[!INCLUDE [9752792](includes/2105/9752792.md)]
-
 
 ## General known issues
 
+[!INCLUDE [Known issue with a CMG deployed using classic cloud services](includes/2105/ki9888296.md)]
 [!INCLUDE [Console settings not saved](includes/2105/known-issue-5452256.md)]
 
-<!--
-## General known issues
-
-[!INCLUDE [Azure AD authentication doesn't work](includes/2102/known-issue-7569264.md)]
--->
+<!-- powershell release notes -->
+[!INCLUDE [9752792](includes/2105/9752792.md)]
 
 ## Next steps
 
