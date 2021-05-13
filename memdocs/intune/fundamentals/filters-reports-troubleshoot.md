@@ -96,10 +96,10 @@ Use the following table to help understand when you include or exclude devices:
 
 | Filter mode | Filter result | Overall result |
 | --- | --- | --- |
-| Include | Match | Apply filter |
-| Include | Not Match | Don’t apply filter |
-| Exclude | Match | Don’t apply filter |
-| Exclude | Not Match | Apply filter |
+| Include | Match | Apply policy or app assignment |
+| Include | Not Match | Don’t apply policy or app assignment |
+| Exclude | Match | Don’t apply policy or app assignment |
+| Exclude | Not Match | Apply policy or app assignment |
 
 ### What you need to know
 
