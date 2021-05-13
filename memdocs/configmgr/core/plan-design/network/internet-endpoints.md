@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 05/04/2021
+ms.date: 05/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -70,7 +70,7 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `*-umwatsonc.events.data.microsoft.com`
 
-- `cmupdatepackppe.blob.core.windows.net` (technical preview branch only)<!-- 9287396 -->
+- `cmupdatepackppe.blob.core.windows.net` (technical preview branch version 2104 and earlier)<!-- 9287396 -->
 
 ## Windows 10 servicing
 
