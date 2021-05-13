@@ -121,15 +121,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2105
 
-- [5170229](2021/technical-preview-2105.md) <!--5170229-->
-- [8218853](2021/technical-preview-2105.md) <!--8218853-->
-- [8495588](2021/technical-preview-2105.md) <!--8495588-->
-- [3555749](2021/technical-preview-2105.md) <!--3555749-->
-- [9275891](2021/technical-preview-2105.md) <!--9275891-->
-- [9199146](2021/technical-preview-2105.md) <!--9199146-->
-- [9791281](2021/technical-preview-2105.md) <!--9791281-->
-- [9573789](2021/technical-preview-2105.md) <!--9573789-->
-- [9752792](2021/technical-preview-2105.md) <!--9752792-->
+- [Enhanced code editor](2021/technical-preview-2105.md#bkmk_code) <!--8495588-->
+- [Select VM size for CMG](2021/technical-preview-2105.md#bkmk_cmgsize) <!--3555749-->
+- [Support Center dark and light themes](2021/technical-preview-2105.md#bkmk_dark) <!--8218853-->
+- [RBAViewer location change](2021/technical-preview-2105.md#bkmk_rbaviewer) <!--9573789-->
+- [Updated client deployment prerequisite](2021/technical-preview-2105.md#bkmk_vcredist) <!--5170229-->
+- [Change to internet access requirements](2021/technical-preview-2105.md#bkmk_pkgurl) <!--9791281-->
+- [PowerShell release notes preview](2021/technical-preview-2105.md#bkmk_powershell) <!--9752792-->
+<!--don't forget to pickup for CB: Console settings not saved 5452246-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.

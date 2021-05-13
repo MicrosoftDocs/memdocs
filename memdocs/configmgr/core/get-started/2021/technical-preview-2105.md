@@ -23,14 +23,12 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2105/1234567.md)] -->
 
-[!INCLUDE [5170229](includes/2105/5170229.md)]
-[!INCLUDE [8218853](includes/2105/8218853.md)]
-[!INCLUDE [8495588](includes/2105/8495588.md)]
-[!INCLUDE [3555749](includes/2105/3555749.md)]
-[!INCLUDE [9275891](includes/2105/9275891.md)]
-[!INCLUDE [9199146](includes/2105/9199146.md)]
-[!INCLUDE [9791281](includes/2105/9791281.md)]
-[!INCLUDE [9573789](includes/2105/9573789.md)]
+[!INCLUDE [Enhanced code editor](includes/2105/8495588.md)]
+[!INCLUDE [Select VM size for CMG](includes/2105/3555749.md)]
+[!INCLUDE [Support Center dark and light themes](includes/2105/8218853.md)]
+[!INCLUDE [RBAViewer location change](includes/2105/9573789.md)]
+[!INCLUDE [Updated client deployment prerequisite](includes/2105/5170229.md)]
+[!INCLUDE [Change to internet access requirements](includes/2105/9791281.md)]
 
 ## General known issues
 
@@ -38,7 +36,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Console settings not saved](includes/2105/known-issue-5452256.md)]
 
 <!-- powershell release notes -->
-[!INCLUDE [9752792](includes/2105/9752792.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2105/9752792.md)]
 
 ## Next steps
 
