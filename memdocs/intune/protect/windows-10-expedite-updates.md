@@ -262,11 +262,11 @@ This report shows the current state of all devices in the profile and provides a
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
+2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Quality updates** table.
 
-3. To drill in for more information, select the **Reports** tab, and then **Windows Expedited Updates Report**.
+3. To drill in for more information, select the **Reports** tab, and then **Windows Quality Update Report**.
 
-4. Click the link **Select an expedited update profile**.
+4. Click the link **Select an quality update profile**.
 
 5. From the list of profiles that is shown on the right side of the page, select a profile to see results.
 
@@ -280,7 +280,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 2. Select **Devices** > **Monitor**.
 
-3. In the list of monitoring reports, scroll to the Software updates section and select **Quality update failures**.
+3. In the list of monitoring reports, scroll to the Software updates section and select **Windows Expedited update failures**.
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
  
