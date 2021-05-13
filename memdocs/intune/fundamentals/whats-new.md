@@ -66,7 +66,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### Improved Conditional Access messaging for Android and iOS/iPadOS users<!-- 9908622 -->
 
-Azure Active Directory has updated the wording on the Conditional Access screen to improve the enrollment experience for users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. 
+Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
