@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 05/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -309,19 +309,18 @@ When you use this solution, you deploy a commercial ID to any of your Intune man
 
 In Intune, you use the OMA-URI settings of a custom policy to configure the commercial ID. See [Use custom settings for Windows 10 devices in Intune](../configuration/custom-settings-windows-10.md).
 
-The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
+The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
 
 For example, you can use the following values in **Add or edit OMA-URI Setting**:
 
 - **Setting Name**: Update Compliance Commercial ID
 - **Setting Description**: Configure devices with the Commercial ID for Update Compliance solutions
-- **OMA-URI**: Enter the following path, which is case sensitive, and avoid trailing spaces: `./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID`
+- **OMA-URI**: Enter the following path, which is case sensitive, and avoid trailing spaces: `./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID`
 
-  For more information about this configuration service provider (CSP) and the Provider ID *MS DM Server*, see [DMClient CSP](/windows/client-management/mdm/dmclient-csp)
+  For more information about this configuration service provider (CSP) and the Provider ID *ProviderID*, see [DMClient CSP](/windows/client-management/mdm/dmclient-csp)
 - **Data Type**: Select *String*. When you String, you can then specify a Value.
 - **Value**: Specify the GUID for your *CommercialID*, which you get from your Update Compliance Settings in Microsoft Azure.
 
- 
 ## Next steps
 
 [Manage software updates in Intune](windows-update-for-business-configure.md)
