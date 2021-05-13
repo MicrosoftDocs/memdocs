@@ -98,7 +98,6 @@ PKCS certificates *stay* on the device (certificates aren't revoked or removed) 
 - An administrator withdraws the Intune license.
 - An administrator removes the user or group from Azure AD.
 - An administrator changes or updates the PKCS profile.
-- A certificate profile is removed from the group assignment.
 
 ## iOS devices
 
