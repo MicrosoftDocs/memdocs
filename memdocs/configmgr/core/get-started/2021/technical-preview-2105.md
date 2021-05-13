@@ -28,8 +28,15 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [8495588](includes/2105/8495588.md)]
 [!INCLUDE [3555749](includes/2105/3555749.md)]
 [!INCLUDE [9275891](includes/2105/9275891.md)]
+[!INCLUDE [9199146](includes/2105/9199146.md)]
+[!INCLUDE [9791281](includes/2105/9791281.md)]
 [!INCLUDE [9573789](includes/2105/9573789.md)]
 [!INCLUDE [9752792](includes/2105/9752792.md)]
+
+
+## General known issues
+
+[!INCLUDE [Console settings not saved](includes/2105/known-issue-5452256.md)]
 
 <!--
 ## General known issues
