@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 04/05/2021
+ms.date: 05/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -47,28 +47,9 @@ The following requirements apply to all site system servers:
 
 - It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.  
 
-### <a name="bkmk_2012Prereq"></a> Prerequisites for Windows Server 2012 and later operating systems  
-
-See the main sections of this article for the specific prerequisites for site system servers and roles on Windows Server 2012 and later:
-
-- [Central administration site and primary site servers](#bkmk_2012sspreq)
-- [Secondary site server](#bkmk_2012secpreq)
-- [Database server](#bkmk_2012dbpreq)
-- [SMS Provider server](#bkmk_2012smsprovpreq)
-- [Asset Intelligence synchronization point](#bkmk_2012AIpreq)
-- [Certificate registration point](#bkmk_2012crppreq)
-- [Distribution point](#bkmk_2012dppreq)
-- [Endpoint Protection point](#bkmk_2012EPPpreq)
-- [Enrollment point](#bkmk_2012Enrollpreq)
-- [Enrollment proxy point](#bkmk_2012EnrollProxpreq)
-- [Fallback status point](#bkmk_2012FSPpreq)
-- [Management point](#bkmk_2012MPpreq)
-- [Reporting services point](#bkmk_2012RSpoint)
-- [Service connection point](#bkmk_SCPpreq)
-- [Software update point](#bkmk_2012SUPpreq)
-- [State migration point](#bkmk_2012SMPpreq)
-
 ## <a name="bkmk_2012sspreq"></a> Central administration site and primary site servers
+
+For more information on all prerequisites including permissions, see [Prerequisites for installing a primary site or a CAS](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following sections detail the prerequisite components that you need to install or enable.
 
 ### Windows Server roles and features
 
@@ -256,7 +237,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### PowerShell  
 
-- On Windows Server 2012 or later, PowerShell 3.0 or 4.0 is required before you install the distribution point.  
+- PowerShell 3.0 or 4.0 is required before you install the distribution point.  
 
 ### Visual C++ Redistributable
 
@@ -275,7 +256,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 - Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
-    > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
+    > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast.
 
 - For a multicast-enabled distribution point, make sure the SQL Server Native Client is installed and up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 

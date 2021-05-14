@@ -2,7 +2,7 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 12/23/2020
+ms.date: 05/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,7 +18,7 @@ manager: dougeby
 
 <!--1128774-->
 
-Historically, you could add redundancy to most of the roles in Configuration Manager by having multiple instances of these roles in your environment. Except for the site server itself. High availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. The central administration site and child primary sites can have an additional site server in passive mode. The site server in passive mode can be on-premises or cloud-based in Azure.
+Historically, you could add redundancy to most of the roles in Configuration Manager by having multiple instances of these roles in your environment. Except for the site server itself. High availability for the site server role is a Configuration Manager-based solution to install another site server in *passive* mode. The central administration site (CAS) and child primary sites can have another site server in passive mode. The site server in passive mode can be on-premises or cloud-based in Azure.
 
 This feature brings the following benefits
 
@@ -26,7 +26,7 @@ This feature brings the following benefits
 - More easily change the hardware or OS of the site server  
 - More easily move your site server to Azure IaaS  
 
-The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this additional site server as part of your overall design for making the Configuration Manager service [highly available](high-availability-options.md).  
+The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this other site server as part of your overall design for making the Configuration Manager service [highly available](high-availability-options.md).  
 
 A site server in passive mode:
 
@@ -36,17 +36,13 @@ A site server in passive mode:
 
 To make the site server in passive mode become active, you manually *promote* it. This action switches the site server in active mode to be the site server in passive mode. The site system roles that are available on the original active mode server remain available so long as that computer is accessible. Only the site server role is switched between active and passive modes.
 
-Microsoft Core Services Engineering and Operations used this feature to migrate their central administration site to Microsoft Azure. For more information, see the [Microsoft IT Showcase article](https://www.microsoft.com/itshowcase/Article/Content/1065/Migrating-System-Center-Configuration-Manager-onpremises-infrastructure-to-Microsoft-Azure).
+Microsoft Core Services Engineering and Operations used this feature to migrate their CAS to Microsoft Azure. For more information, see the [Microsoft IT Showcase article](https://www.microsoft.com/itshowcase/Article/Content/1065/Migrating-System-Center-Configuration-Manager-onpremises-infrastructure-to-Microsoft-Azure).
 
-## Prerequisites
+## Supported configurations
 
-- The site content library must be on a remote network share. Both site servers need Full Control permissions to the share and its contents. For more information, see [Manage content library](../../../plan-design/hierarchy/the-content-library.md#bkmk_remote).<!--1357525-->  
+- Configuration Manager supports site servers in passive mode in a hierarchy. The CAS and child primary sites can have another site server in passive mode.<!-- 3607755 -->  
 
-  - The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
-
-  - The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.  
-
-- The site server in passive mode can be on-premises or cloud-based in Azure.  
+- The site server in passive mode can be on-premises or cloud-based in Azure.
 
     > [!NOTE]
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
@@ -54,19 +50,60 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
     > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.yml)  
 
+## Prerequisites
+
+### Active Directory
+
 - Both site servers must be joined to the same Active Directory domain.
 
-- Both site servers must be have **Full Control** permissions to Active Directory's **System - System Management** container and all descendant objects. 
+- If you've [extended the Active Directory schema](../../../plan-design/network/schema-extensions.md) for Configuration Manager, both site servers need **Full Control** permissions to Active Directory's **System - System Management** container and all descendant objects.
 
-- Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
+### General configurations for both site servers
 
-- Both site servers must use the same site database.  
+- Both site servers can run different OS or service pack versions, as long as both are [supported by Configuration Manager](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
-  - The database can be remote from each site server. The Configuration Manager setup process doesn't blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
+- Don't host the service connection point role on either site server configured for high availability. If it's currently on the original site server, remove it, and install it on another site system server. For more information, see [About the service connection point](about-the-service-connection-point.md).
 
-  - The SQL Server that hosts the site database can use a default instance, named instance, [failover cluster instance](use-a-sql-server-cluster-for-the-site-database.md), or an [availability group](sql-server-alwayson-for-a-highly-available-site-database.md).
+### Configurations for the site server in passive mode
 
-  - Both site servers need the **sysadmin** security role on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
+- Must meet the [prerequisites for installing a primary site](../install/prerequisites-for-installing-sites.md#bkmk_PrereqPri).
+
+  - This requirement includes components like .NET Framework, Remote Differential Compression, and the Windows ADK. For the complete list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).<!-- SCCMDocs issue 765 -->
+
+  > [!NOTE]
+  > Make sure to install the SQL Server Native Client. If you don't install it, the prerequisite checker during Configuration Manager setup will report an error about missing SQL Server permissions.<!-- SCCMDocs#2290 -->
+
+- Must have its computer account in the local **Administrators** group on the site server in active mode.<!--516036-->
+
+- Must install using source files that match the version of the site server in active mode.
+
+- Can't have a site system role from any site installed on it before you install the site server in passive mode role.
+
+### Permissions for the site system installation account
+
+By default, many customers use the site server's computer account to install new site systems. The requirement is then to add the site server's computer account to the local **Administrators** group on the remote site system. If your environment uses this configuration, make sure to add the computer account of the new site server to this local group on all remote site systems. For example, all remote distribution points.
+
+The more secure and recommended configuration is to use a service account for installing the site system. The most secure configuration is to use a local service account. If your environment uses this configuration, no change is needed.
+
+For more information, see [Site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account) and [Elevated permissions](../../../plan-design/hierarchy/accounts.md#elevated-permissions).
+
+### Content library
+
+The site content library must be on a remote network share. Both site servers need **Full Control** permissions to the share and its contents. For more information, see [Manage content library](../../../plan-design/hierarchy/the-content-library.md#bkmk_remote).<!--1357525-->
+
+- The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
+
+- The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.
+
+### Site database
+
+Both site servers must use the same site database.
+
+- The database can be remote from each site server. The Configuration Manager setup process doesn't block installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups require this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode.<!-- SCCMDocs issue 1074 -->
+
+- The SQL Server that hosts the site database can use a default instance, named instance, [failover cluster instance](use-a-sql-server-cluster-for-the-site-database.md), or an [availability group](sql-server-alwayson-for-a-highly-available-site-database.md).
+
+- Both site servers need the **sysadmin** security role on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:
 
     ```SQL
     USE [master]
@@ -77,7 +114,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     GO
     ```
 
-  - Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds a login to the **CM_ABC** database for the new site server **VM2** in the Contoso domain:  
+- Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds a login to the **CM_ABC** database for the new site server **VM2** in the Contoso domain:  
 
     ```SQL
     USE [CM_ABC]
@@ -86,56 +123,33 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     GO
     ```
 
-  - The site server in passive mode is configured to use the same site database as the site server in active mode. The site server in passive mode only reads from the database. It doesn't write to the database until after it's promoted to active mode.  
-
-- The site server in passive mode:  
-
-  - Must meet the prerequisites for installing a primary site. For example, .NET Framework, Remote Differential Compression, and the Windows ADK. For the complete list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).<!-- SCCMDocs issue 765 -->  
-
-    > [!NOTE]
-    > Make sure to install the SQL Server Native Client. If you don't install it, the prerequisite checker during Configuration Manager setup will report an error about missing SQL Server permissions.<!-- SCCMDocs#2290 -->
-
-  - Must have its computer account in the local Administrators group on the site server in active mode.<!--516036-->
-
-  - Must install using source files that match the version of the site server in active mode.  
-
-  - Can't have a site system role from any site installed on it before you install the site server in passive mode role.  
-
-- Both site servers can run different OS or service pack versions, as long as both are [supported by Configuration Manager](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).  
-
-- Don't host the service connection point role on either site server configured for high availability. If it's currently on the original site server, remove it, and install it on another site system server. For more information, see [About the service connection point](about-the-service-connection-point.md).  
-
-- Permissions for the [site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account)  
-
-  - By default, many customers use the site server's computer account to install new site systems. The requirement is then to add the site server's computer account to the local **Administrators** group on the remote site system. If your environment uses this configuration, make sure to add the computer account of the new site server to this local group on all remote site systems. For example, all remote distribution points.  
-
-  - The more secure and recommended configuration is to use a service account for installing the site system. The most secure configuration is to use a local service account. If your environment uses this configuration, no change is needed.  
+- The site server in passive mode is configured to use the same site database as the site server in active mode. The site server in passive mode only reads from the database. It doesn't write to the database until after it's promoted to active mode.
 
 ## Limitations
 
-- Only a single site server in passive mode is supported at each site.  
+- Only a single site server in passive mode is supported at each site.
 
-- A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->  
+- A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->
 
-    > [!NOTE]  
+    > [!NOTE]
     > Secondary sites are still supported under a primary site with highly available site servers.
 
-- Promotion of the site server in passive mode to active mode is manual. There's no automatic failover.  
+- Promotion of the site server in passive mode to active mode is manual. There's no automatic failover.
 
-- Site system roles can't be installed on the new server before you add the site server in passive mode.  
+- Site system roles can't be installed on the new server before you add the site server in passive mode.
 
     > [!NOTE]
     > After it installs the site server in passive mode, you can add additional roles as necessary. For example, a management point at a primary site.
 
-- For roles like the reporting point that use a database, host the database on a server that's remote from both site servers.  
+- For roles like the reporting point that use a database, host the database on a server that's remote from both site servers.
 
-- The Configuration Manager console doesn't automatically install on the site server in passive mode.  
+- The Configuration Manager console doesn't automatically install on the site server in passive mode.
 
 ## Add a site server in passive mode
 
 For more information on the general process of adding roles, see [Install site system roles](install-site-system-roles.md).
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, select the **Sites** node, and click **Create Site System Server** in the ribbon.
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, select the **Sites** node, and select **Create Site System Server** in the ribbon.
 
 2. On the **General** page of the Create Site System Server Wizard, specify the server to host the site server in passive mode. The server you specify can't host any site system roles before installing a site server in passive mode.  
 
@@ -158,13 +172,13 @@ For more information on the general process of adding roles, see [Install site s
 
          - **Use the source files at the following location on the site server in passive mode**: For example, a local path to which you already copied the source files. Make sure this content is the same version as the site server in active mode.  
 
-         - (*Recommended*) **Use the source files at the following network location**: Specify the path directly to the contents of the **CD.Latest** folder from the site server in active mode. For example, `\\Server\SMS_ABC\CD.Latest` where "*Server*" is the name of the site server in active mode, and "*ABC*" is the site code.  
+         - (*Recommended*) **Use the source files at the following network location**: Specify the path directly to the contents of the `CD.Latest` folder from the site server in active mode. For example, `\\Server\SMS_ABC\CD.Latest` where "*Server*" is the name of the site server in active mode, and "*ABC*" is the site code.
 
      - Specify the local path at which to install Configuration Manager on the new site server. For example: `C:\Program Files\Configuration Manager`  
 
 5. Complete the wizard. Configuration Manager then installs the site server in passive mode on the specified server.
 
-For detailed installation status, in the console go to the **Monitoring** workspace, and select the **Site Server Status** node. The state for the site server in passive mode displays as **Installing**. For more detailed information, select the server and click **Show Status**. This action opens the Site Server Installation Status window. When the process is complete, the state shows **OK** for both servers.
+For detailed installation status, in the console go to the **Monitoring** workspace, and select the **Site Server Status** node. The state for the site server in passive mode displays as **Installing**. For more detailed information, select the server and select **Show Status**. This action opens the Site Server Installation Status window. When the process is complete, the state shows **OK** for both servers.
 
 For more information on the setup process, see [Flowchart - Set up a site server in passive mode](passive-site-server-flowchart.md).
 
@@ -212,13 +226,13 @@ This section describes how to change the site server in passive mode to active m
 >
 > The Configuration Manager console requests the list of available SMS Providers from WMI on the site server. When you install multiple SMS Providers at a site, the site randomly assigns each new connection request to use an installed SMS Provider. You can't specify the SMS Provider location to use with a specific connection session. If your console is unable to connect to the site because the current site server is offline, specify the other site server in the Site Connection window.  
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select the site, and then switch to the **Nodes** tab. Select the site server in passive mode, and then click **Promote to active** in the ribbon. Click **Yes** to confirm and continue.
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select the site, and then switch to the **Nodes** tab. Select the site server in passive mode, and then select **Promote to active** in the ribbon. Select **Yes** to confirm and continue.
   
 2. Refresh the console node. The **Status** column for the server you're promoting displays in the **Nodes** tab as **Promoting**.  
 
 3. After the promotion is complete, the **Status** column shows **OK** for both the new site server in active mode, and for the new site server in passive mode. The **Server Name** column for the site now displays the name of the new site server in active mode.
 
-For detailed status, go to the **Monitoring** workspace, and select the **Site Server Status** node. The **Mode** column identifies which server is *Active* or *Passive*. When you promote a server from passive mode to active mode, select the site server that you're promoting to active, and then choose **Show Status** from the ribbon. This action opens the Site Server Promotion Status window that displays additional details about the process.
+For detailed status, go to the **Monitoring** workspace, and select the **Site Server Status** node. The **Mode** column identifies which server is *Active* or *Passive*. When you promote a server from passive mode to active mode, select the site server that you're promoting to active, and then choose **Show Status** from the ribbon. This action opens the Site Server Promotion Status window that displays more details about the process.
 
 When a site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
 
@@ -234,7 +248,7 @@ If the offline server is damaged such that it can't return, delete this site ser
 
 For more information on the *unplanned* failover process, see [Flowchart - Promote site server (unplanned)](promote-site-server-unplanned-flowchart.md).
 
-### Additional tasks after site server promotion  
+### Other tasks after site server promotion  
 
 After switching site servers, you don't have to do most of the other tasks as are necessary when [recovering a site](../../manage/recover-sites.md#post-recovery-tasks). For example, you don't need to reset passwords or reconnect your Microsoft Intune subscription.
 
@@ -257,7 +271,7 @@ When you have a site server in passive mode, monitor it daily. Make sure its Sta
 
 The process to remote a site server in passive mode is the same as any site system role. Remove the **Site server** role from the server in passive mode. For more information, see [Procedure to remove a site system role](../install/uninstall-sites-and-hierarchies.md#procedure-to-remove-a-site-system-role).
 
-When you remove any other site system role, the site component manager (sitecomp) processes the request. When you remove a site server in passive mode, the failover manager processes the request. For status, monitor the **SMS_FAILOVER_MANAGER** component.
+When you remove any other site system role, the site component manager (`sitecomp`) processes the request. When you remove a site server in passive mode, the failover manager processes the request. For status, monitor the **SMS_FAILOVER_MANAGER** component.
 
 ## Next steps
 
