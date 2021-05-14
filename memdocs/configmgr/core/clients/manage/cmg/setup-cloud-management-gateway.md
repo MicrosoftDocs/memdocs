@@ -122,7 +122,9 @@ If you're using [client authentication certificates](configure-authentication.md
 
 ## Add the CMG connection point
 
-The CMG connection point is the site system role that's required for communication from your on-premises Configuration Manager deployment to the cloud-based CMG. To add the CMG connection point, the following steps summarize the instructions to [install site system roles](../../../servers/deploy/configure/install-site-system-roles.md):
+The CMG connection point is the site system role that's required for communication from your on-premises Configuration Manager deployment to the cloud-based CMG. Before you start this process, you should have already developed a plan for the role, and identified at least one existing site system server. For more information, see [Plan for the CMG](plan-cloud-management-gateway.md).
+
+To add the CMG connection point, the following steps summarize the instructions to [install site system roles](../../../servers/deploy/configure/install-site-system-roles.md):
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node.
 
