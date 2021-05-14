@@ -26,11 +26,11 @@
   items:
   - name: Getting Started
     href: endpointsecurity-gettingstarted.md
-  - name: Enable endpoint detection and response
+  - name: Create and deploy endpoint detection and response policy
     href: atp-onboard.md
-  - name: Create and deploy Antivirus policy
+  - name: Create and deploy antivirus policy
     href: deploy-antivirus-policy.md  
-  - name: Create and deploy Firewall policy
+  - name: Create and deploy firewall policy
     href: deploy-firewall-policy.md  
 - name: Reference
   items:
