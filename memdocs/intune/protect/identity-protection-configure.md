@@ -39,7 +39,7 @@ This feature applies to device running:
 - Windows 10 and later
 
 > [!NOTE]
-> For customers looking to configure Windows Holographic for Business, please use ]DeviceLock CSP](windows/client-management/mdm/policy-csp-devicelock)
+> For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](windows/client-management/mdm/policy-csp-devicelock)
 
 Intune uses *configuration profiles* to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to user and device groups in your organization.
 
