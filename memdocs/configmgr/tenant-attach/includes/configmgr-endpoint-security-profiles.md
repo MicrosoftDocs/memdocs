@@ -49,4 +49,4 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows 10 and later (x86, x64, ARM64)
   
   >[!Important] 
-  >To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
+  >To support firewall policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
