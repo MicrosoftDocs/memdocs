@@ -1,5 +1,5 @@
 ---
-title: Tenant attach - Deploy endpoint security policies from the Microsoft Endpoint Manager admin center  (preview)
+title: Tenant attach - Deploy endpoint firewall from the Microsoft Endpoint Manager admin center  (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy firewall policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
 ms.date: 05/14/2021
@@ -11,7 +11,7 @@ author: mestew
 ms.author: mstewart
 ---
 
-# <a name="bkmk_atp"></a> Tenant attach: Create and deploy endpoint security policies from the admin center (preview)
+# <a name="bkmk_atp"></a> Tenant attach: Create and deploy firewall policies from the admin center (preview)
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
