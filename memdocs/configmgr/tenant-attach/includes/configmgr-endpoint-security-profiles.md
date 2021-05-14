@@ -38,7 +38,8 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows 10 and later (x86, x64, ARM64)
     - Windows Server 2019 and later (x64)
   
-  >[!Important] To support managing tamper protection your environment must additionally meet the [prerequisites for managing tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
+  >[!Important] 
+  >To support managing tamper protection your environment must additionally meet the [prerequisites for managing tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
 
 - Platform: **Windows 10 and later**
 
@@ -47,4 +48,5 @@ The following profiles are supported for devices you manage with Configuration M
     This profile is supported with devices that are tenant attached and run the following platforms:
     - Windows 10 and later (x86, x64, ARM64)
   
-  >[!Important] To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
+  >[!Important] 
+  >To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
