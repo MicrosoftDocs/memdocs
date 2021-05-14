@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 04/13/2021
+ms.date: 05/14/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -23,7 +23,7 @@ All docs.ms links should include `?WT.mc_id=configmgr-console` campaign ID at th
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: April 13, 2021*
+*Last update: May 14, 2021*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -57,22 +57,22 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between March 1 and March 31, 2021.
+The most popular articles between April 1 and April 30, 2021.
 
 | Page views | Title |
 |------------|-------|
-| 30692 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client?WT.mc_id=configmgr-console) |
-| 20599 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files?WT.mc_id=configmgr-console) |
-| 19853 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center?WT.mc_id=configmgr-console) |
-| 19368 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
-| 18631 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
-| 16911 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
-| 14883 | [Microsoft Defender for Endpoint](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection?WT.mc_id=configmgr-console) |
-| 14002 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
-| 11950 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates?WT.mc_id=configmgr-console) |
-| 11510 | [Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-server?WT.mc_id=configmgr-console) |
+| 29753 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client?WT.mc_id=configmgr-console) |
+| 18451 | [What's new in version 2103](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2103?WT.mc_id=configmgr-console) |
+| 18157 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center?WT.mc_id=configmgr-console) |
+| 17378 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files?WT.mc_id=configmgr-console) |
+| 16799 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection?WT.mc_id=configmgr-console) |
+| 15854 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
+| 14652 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
+| 14104 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
+| 12299 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
+| 11458 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates?WT.mc_id=configmgr-console) |
 
-In this time period, the [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console) received 37,188 page views. The [Configuration Manager PowerShell cmdlets overview page](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console) received 4,570 page views.
+In this time period, the [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console) received 32,678 page views. The [Configuration Manager PowerShell cmdlets overview page](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console) received 4,162 page views.
 
 ## Recently updated
 
@@ -80,12 +80,16 @@ Articles with a recent update:
 
 | Last reviewed | Title |
 |---------------|-------|
-| 3/5/2021 | [Install and configure a software update point](https://docs.microsoft.com/mem/configmgr/sum/get-started/install-a-software-update-point?WT.mc_id=configmgr-console) |
-| 3/5/2021 | [Content management fundamentals](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management?WT.mc_id=configmgr-console) |
-| 3/5/2021 | [Office 365 Client Management dashboard](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/office-365-dashboard?WT.mc_id=configmgr-console) |
-| 3/3/2021 | [Technical preview 2103](https://docs.microsoft.com/mem/configmgr/core/get-started/2021/technical-preview-2103?WT.mc_id=configmgr-console) |
-| 3/3/2021 | [Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview)](https://docs.microsoft.com/mem/configmgr/tenant-attach/atp-onboard?WT.mc_id=configmgr-console) |
-| 3/2/2021 | [Configure Microsoft Edge settings](https://docs.microsoft.com/mem/configmgr/compliance/deploy-use/browser-profiles?WT.mc_id=configmgr-console) |
+| 4/30/2021 | [Deploy and update Microsoft Edge, version 77 and later](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?WT.mc_id=configmgr-console) |
+| 4/30/2021 | [Manually register Azure AD apps](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/manually-register-azure-ad-apps?WT.mc_id=configmgr-console) |
+| 4/26/2021 | [Configuration Manager on Azure FAQ](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-on-azure?WT.mc_id=configmgr-console) |
+| 4/26/2021 | [Update for Microsoft Endpoint Configuration Manager version 2103, early update ring](https://docs.microsoft.com/mem/configmgr/hotfix/2103/kb9603111?WT.mc_id=configmgr-console) |
+| 4/23/2021 | [Technical preview 2104](https://docs.microsoft.com/mem/configmgr/core/get-started/2021/technical-preview-2104?WT.mc_id=configmgr-console) |
+| 4/23/2021 | [Cryptographic controls technical reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/cryptographic-controls-technical-reference?WT.mc_id=configmgr-console) |
+| 4/19/2021 | [Summary of changes in Configuration Manager current branch, version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/kb9210721?WT.mc_id=configmgr-console) |
+| 4/19/2021 | [What's new in version 2103](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2103?WT.mc_id=configmgr-console) |
+| 4/15/2021 | [Role-based administration fundamentals](https://docs.microsoft.com/mem/configmgr/core/understand/fundamentals-of-role-based-administration?WT.mc_id=configmgr-console) |
+| 4/15/2021 | [FAQ for co-management](https://docs.microsoft.com/mem/configmgr/comanage/faq?WT.mc_id=configmgr-console) |
 
 ## Troubleshooting articles
 
