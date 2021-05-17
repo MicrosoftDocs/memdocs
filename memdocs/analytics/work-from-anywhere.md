@@ -42,7 +42,7 @@ The **Cloud management** metric measures the percent of PCs that have attached t
 
 Benefits of each cloud management types:
 
-|**Cloud management gateway (CMG)**|**Tenant attach**|**Co-management**|**Intune**|
+|[**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md)|[**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md)|[**Co-management**](../configmgr/comanage/overview.md)|[**Intune**](../intune/fundamentals/what-is-intune.md)|
 |---|---|---|---|
 |No additional on-premises infrastructure investment required| View and take action on all PCs and mobile devices from a single console| Enhance Zero Trust with conditional access </br></br> Simplified PC and driver updating| All the benefits of **cloud management gateway**, **tenant attach**, and **co-management**.|
 |Doesn't expose on-premises infrastructure to the internet| Gain insights into PC performance with [Endpoint analytics](overview.md)|Makes device provisioning easier with [Windows Autopilot](../configmgr/comanage/quickstart-autopilot.md)| Reduce in infrastructure with always up-to-date cloud-only infrastructure|
