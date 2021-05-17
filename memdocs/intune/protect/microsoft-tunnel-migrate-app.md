@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/30/2021
+ms.date: 06/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,10 +43,9 @@ The public preview supports the following device platforms:
 - Android Enterprise:
   - Fully Managed
   - Corporate-Owned Work Profile
-  - Personally-Owned Work profile
+  - Personally-Owned Work Profile - *For devices enrolled as Personally-Owned Work Profile where you use Microsoft Defender for Endpoint for more than the Microsoft Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile.*
 
-> [!IMPORTANT]  
-> The preview version of Microsoft Defender for Endpoint as the Tunnel application isn’t supported for Android Enterprise personally-owned work profile devices when you use [*App configuration policies*](../apps/app-configuration-policies-overview.md) to configure Microsoft Defender for Endpoint. In this scenario, do not migrate to the Tunnel app.
+
 
 Unlike most public previews for Intune, you must opt in before you can use  this preview. When you opt in, Microsoft grants your tenant access to the preview build of Microsoft Defender for Endpoint that supports the tunnel app functionality. After you opt in:
 

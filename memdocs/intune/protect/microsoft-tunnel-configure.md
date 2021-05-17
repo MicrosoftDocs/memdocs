@@ -174,7 +174,7 @@ To use the Microsoft Tunnel, devices need access to the Microsoft Tunnel app. Yo
 - For Android, download the **Microsoft Tunnel** app from the **Google Play** store. See Add  Android store apps to Microsoft Intune.
 - For iOS/iPadOS, download the **Microsoft Tunnel** app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
 
-For more information on deploying apps with Intune, see  Add apps to Microsoft Intune.
+For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ## Create a VPN profile  
 
@@ -182,7 +182,6 @@ For more information on deploying apps with Intune, see  Add apps to Microsoft I
 > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with the **Microsoft Tunnel (standalone client)** connection type.  
-
 
 - The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
 - The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you enable a per-app VPN for iOS, your split tunneling rules are ignored.
@@ -217,6 +216,9 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app
 
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
+   > [!IMPORTANT]  
+   > For *Android Enterprise Personally-Owned Work Profile* devices that use Microsoft Defender for Endpoint as a tunnel app and as a Mobile Threat Defense (MTD) app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. Use of custom settings is optional for all other platforms.
+
 5. On the **Assignments** tab, configure groups that will receive this profile.
 
 6. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
@@ -245,6 +247,38 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
+
+## Use custom settings for Microsoft Defender for Endpoint
+
+Intune supports a preview of Microsoft Defender for Endpoint as both a mobile threat defense (MTD) app and as the Microsoft Tunnel app on Android devices. When you use Defender for Endpoint for both the Tunnel app and as a MTD app, you can use custom settings in your VPN profile for Microsoft Tunnel to simplify your configurations. Use of custom settings in the VPN profile replaces the need to use a separate app configuration profile.
+
+When you use Defender for Endpoint for both purposes, you must use custom settings for devices [enrolled](../enrollment/android-enroll.md) as *Android Enterprise personally-owned work profile* instead of an app configuration profile. For these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel. For other devices, the use of custom settings in place of an app configuration profile is optional.
+
+**Android Enterprise personally-owned work profile**:
+
+- When you use Microsoft Defender for Endpoint as the Tunnel App and as a MTD app on devices enrolled as *Android Enterprise personally-owned work profile*:
+  - You must use the VPN profile for Microsoft Tunnel to also deploy your app configuration settings for Microsoft Defender for Endpoint.
+  - Don’t deploy a separate app configuration profile for Microsoft Defender for Endpoint. The settings from the app configuration profile can conflict with the VPN profile and prevent the device from connecting to the Microsoft Tunnel.
+
+- If you use Microsoft Defender for Endpoint for MTD but not for Microsoft Tunnel, then you continue to use the app configuration profile to configure Microsoft Defender for Endpoint.
+
+**Android Enterprise fully managed or company-owned work profile**:
+
+- When you use Microsoft Defender for Endpoint as the Tunnel App and as a MTD app on devices enrolled as *Android Enterprise fully managed or company-owned work profile*:
+  - You can choose to use VPN profile for Microsoft Tunnel to deploy app configuration settings for Microsoft Defender for Endpoint, or you can use a separate app configuration profile.
+  - These enrollment types don’t encounter the conflict seen for personally-owned work profile devices.
+
+### Add app configuration support for Microsoft Defender for Endpoint to a VPN profile for Microsoft Tunnel
+
+Use the following information to configure the custom settings in a VPN profile to configure Microsoft Defender for Endpoint [in place of a separate app configuration profile](../protect/advanced-threat-protection-manage-android.md):
+
+| Configuration key | Value type | Configuration value            | Information about the setting                |
+|-----------------------|------------------|------------|--------------|
+| vpn               | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set a to enable to allow the Microsoft Defender for Endpoint anti-phishing capability to use Microsoft Tunnel VPN.   |
+| antiphishing      | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to enable to turn on Microsoft Defender for Endpoint anti-phishing. When disabled, the anti-phishing capability is turned off.   |
+|    | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to enable to use Microsoft Defender for Endpoint. When disabled, no Microsoft Defender for Endpoint functionality is available.   |
+
+:::image type="content" source="./media/microsoft-tunnel-configure/custom-settings.png" alt-text="Configure custom settings in the VPN profile for Microsoft Defender for Endpoint":::
 
 ## Upgrade Microsoft Tunnel
 
