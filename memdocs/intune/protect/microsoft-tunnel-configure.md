@@ -171,7 +171,15 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 To use the Microsoft Tunnel, devices need access to the Microsoft Tunnel app. You can deploy the app to devices by assigning it to users. The following apps are available:
 
-- For Android, download the **Microsoft Tunnel** app from the **Google Play** store. See Add  Android store apps to Microsoft Intune.
+**Android**:
+
+- **Microsoft Tunnel** - Download the Microsoft Tunnel app from the **Google Play** store. See Add  Android store apps to Microsoft Intune.
+- **Microsoft Defender for Endpoint** - As part of a public preview, you can opt-in to use Microsoft Defender for Endpoint with support for Microsoft Tunnel. For guidance on joining the public preview and configuring Microsoft Defender for Endpoint as your tunnel app, see [Migrate to the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). 
+
+  If you use Microsoft Defender for Endpoint as your tunnel application and as a mobile threat defense application, see [Use Microsoft Defender for Endpoint for MTD and as the Microsoft Tunnel app](#use-custom-settings-for-microsoft-defender-for-endpoint) for important configuration guidance.
+
+**iOS/iPadOS**:
+
 - For iOS/iPadOS, download the **Microsoft Tunnel** app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
 
 For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
