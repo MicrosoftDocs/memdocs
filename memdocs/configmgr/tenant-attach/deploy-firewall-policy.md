@@ -2,7 +2,7 @@
 title: Tenant attach - Deploy endpoint firewall from the Microsoft Endpoint Manager admin center  (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy firewall policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 05/14/2021
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core

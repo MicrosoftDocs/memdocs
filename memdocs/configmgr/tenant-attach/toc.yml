@@ -25,7 +25,7 @@
 - name: Endpoint security for tenant attached devices (preview)
   items:
   - name: Getting Started
-    href: endpointsecurity-gettingstarted.md
+    href: endpoint-security-getting-started.md
   - name: Create and deploy endpoint detection and response policy
     href: atp-onboard.md
   - name: Create and deploy antivirus policy
