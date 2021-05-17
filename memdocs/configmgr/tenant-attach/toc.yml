@@ -24,8 +24,8 @@
     href: cmpivot-samples-attached.md
 - name: Endpoint security for tenant attached devices (preview)
   items:
-  - name: Getting Started
-    href: endpoint-security-getting-started.md
+  - name: Get started with endpoint security policies
+    href: endpoint-security-get-started.md
   - name: Create and deploy endpoint detection and response policy
     href: atp-onboard.md
   - name: Create and deploy antivirus policy

@@ -6,7 +6,7 @@ ms.technology: configmgr-core
 ms.topic: include
 ms.date: 05/18/2021
 ---
-<!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-getting-started.md and deploy-antivirus-policy.md. -->
+<!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
 The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
 <!--The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:-->
 

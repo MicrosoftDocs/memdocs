@@ -1,5 +1,5 @@
 ---
-title: Getting Started - Create and deploy endpoint security policies from the admin center (preview)
+title: Get started - Create and deploy endpoint security policies from the admin center (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy endpoint security policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
 ms.date: 05/18/2021
@@ -11,7 +11,7 @@ author: mestew
 ms.author: mstewart
 ---
 
-# <a name="bkmk_atp"></a> Getting Started: Create and deploy endpoint security policies from the admin center (preview)
+# <a name="bkmk_atp"></a> Get started: Create and deploy endpoint security policies from the admin center (preview)
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
