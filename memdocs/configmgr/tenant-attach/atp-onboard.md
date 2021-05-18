@@ -2,7 +2,7 @@
 title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview) 
 titleSuffix: Configuration Manager
 description: "Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
-ms.date: 03/03/2021
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -21,31 +21,10 @@ ms.author: mstewart
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can deploy Microsoft Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
-## Prerequisites
+<!--Adding Include for Prerequisites-->
 
-- Access to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
-- A license for [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
-- An environment that's [tenant attached with uploaded devices](device-sync-actions.md).
-- A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
-   - Upgrade the target devices to the latest version of the Configuration Manager client.
-
-### Supported operating systems
-
-The following operating systems are supported for deployment of Microsoft Defender for Endpoint onboarding policies:
-
-- Windows 10 and later (x86, x64, ARM64)
-- Windows 8.1 (x84, x64)
-- Windows Server 2019 and later (x64)
-- Windows Server 2016 (x64)
-- Windows Server 2012 R2 (x64)
-
-Security policies, such as [Antivirus policies](deploy-antivirus-policy.md), have additional operating system version requirements.
-
-## <a name="bkmk_collections"></a> Make Configuration Manager collections available to assign Endpoint security policies
-
-When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender for Endpoint.
-
-[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune/protect/includes/make-configmgr-collection-available-edr.md)]
+[!INCLUDE [Prerequisites for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-prerequisties.md)]
+- A license for [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement-->
 
 ## <a name="bkmk_onboard"></a> Create Microsoft Defender for Endpoint policies
 
@@ -78,4 +57,5 @@ When you enable collections of devices to work with endpoint security policies f
 
 ## Next steps
 
-[Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
+- [Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
+- [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)
