@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2021
+ms.date: 05/8/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -204,7 +204,7 @@ For example, you create a Microsoft Intune trial subscription. In this subscript
 >
 > - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be validated using a non-production or "test" tenant account. Be sure the scripts meet your organization security guidelines.
 > - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
-> - Users **must** unenroll from Intune, and then re-enroll in Intune.
+> - To migrate a user’s device, the user must unenroll the device from the old tenant, and then re-enroll in the new tenant.
 
 ### What you can't do
 
@@ -213,12 +213,12 @@ There are some policy types that can't be exported. There are some policy types 
 | Policy or profile type | Information |
 | --- | --- |
 | **Applications** | &nbsp; |
-| Android line-of-business apps | ❌ Export <br/>❌ Import |
+| Android line-of-business apps | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.apk` application source files.|
 | Apple – Volume Purchase Program (VPP) | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Apple VPP. In the new tenant, you add your VPP token, which shows your available apps. |
-| iOS/iPadOS line-of-business apps | ❌ Export <br/>❌ Import |
+| iOS/iPadOS line-of-business apps | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.ipa` application source files.|
 | Managed Google Play | ❌ Export <br/>❌ Import<br/><br/>These apps and weblinks are synced with Managed Google Play. In the new tenant, you add your Managed Google Play account, which shows your available apps. |
 | Microsoft Store for Business | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Microsoft Store for Business. In the new tenant, you add your Microsoft Store for Business account, which shows your available apps.|
-| Windows app (Win32) | ❌ Export <br/>❌ Import |
+| Windows app (Win32) | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.intunewin` application source files.|
 | **Compliance policies** | &nbsp; |
 | Actions for Non-Compliance | ❌ Export <br/>❌ Import<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
 | Assignments | ✔️ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
