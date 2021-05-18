@@ -41,7 +41,9 @@ This feature applies to:
 
 - Windows 10 and newer
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results.
+In terms of [role-based access control](https://docs.microsoft.com/en-us/mem/intune/fundamentals/role-based-access-control), an admin needs the **Security Baselines** permission assigned to their Role in order to use the Group Policy analytics (preview) functionality.
+
+This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. 
 
 ## Export GPOs as an XML file
 
@@ -155,6 +157,8 @@ At any time, you can delete imported GPOs:
 2. Select the context menu > **Delete**:
 
     :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Endpoint Manager admin center.":::
+
+
 
 ## Next steps
 
