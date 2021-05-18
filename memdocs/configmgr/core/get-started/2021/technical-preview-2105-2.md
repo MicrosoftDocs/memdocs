@@ -11,7 +11,7 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Features in Configuration Manager technical preview version 2105
+# Features in Configuration Manager technical preview version 2105.2
 
 *Applies to: Configuration Manager (technical preview branch)*
 
