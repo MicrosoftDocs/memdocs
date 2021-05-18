@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/10/2021
+ms.date: 05/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,7 +87,7 @@ In addition to a license for Intune, your organization must have one of the foll
 
 **Devices must**:
 
-- Be [enrolled in Intune](../enrollment/device-enrollment.md) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune.
+- Be [enrolled in Intune](../enrollment/device-enrollment.md) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
@@ -264,7 +264,7 @@ This report shows the current state of all devices in the profile and provides a
 
 2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
 
-3. To drill in for more information, select the **Reports** tab, and then **Windows Expedited Updates Report**.
+3. To drill in for more information, select the **Reports** tab, and then **Windows Expedited Update Report**.
 
 4. Click the link **Select an expedited update profile**.
 
@@ -280,7 +280,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 2. Select **Devices** > **Monitor**.
 
-3. In the list of monitoring reports, scroll to the Software updates section and select **Quality update failures**.
+3. In the list of monitoring reports, scroll to the Software updates section and select **Windows Expedited update failures**.
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
  

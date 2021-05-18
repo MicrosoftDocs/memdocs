@@ -709,6 +709,16 @@
             "source_path": "memdocs/autopilot/enrollment-autopilot.md#add-devices",
             "redirect_url": "/mem/autopilot/add-devices#add-devices",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/hotfix/2103/KB9603111.md",
+            "redirect_url": "/mem/configmgr/hotfix/2103/9603111",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/hotfix/2103/KB9210721.md",
+            "redirect_url": "/mem/configmgr/hotfix/2103/9210721",
+            "redirect_document_id": false
         }
     ]
 }
