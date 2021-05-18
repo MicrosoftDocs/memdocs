@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/10/2021
+ms.date: 05/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,7 +71,7 @@ You can use filters for some common app policies on the following platforms. For
 | Managed Android line-of-business app | ✔️ |
 
 > [!NOTE]
-> Android Enterprise (Work profile) devices do not support filters when used in "Available" app assignments. If users are targeted with an Available app assignment intent, the app will be displayed as available to install from the Google managed play store on work profile enrolled devices, ignoring any include or exclude filtering that was applied.
+> Filters aren't supported on Android Enterprise corporate owned work profile devices when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
 
 ### iOS/iPadOS
 
