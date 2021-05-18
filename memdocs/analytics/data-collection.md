@@ -15,11 +15,11 @@ manager: dougeby
 
 # Endpoint analytics data collection
 
-This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
+This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Check Intune's [Data storage and processing](../intune/protect/privacy-data-store-process) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location) for more on our data handling policies 
 
 ## <a name="bkmk_flow"></a>Data flow
 
-Endpoint analytics is available in all Intune locations in global Azure. The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. 
+Endpoint analytics is available in all Intune locations in global Azure. Endpoint analytics respects the storage location elections made by the administrator for Customer Data. The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. 
 
 [![User experience data flow diagram](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
@@ -103,3 +103,4 @@ For more information about related privacy aspects, see the following articles:
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 - [Trust Center](https://www.microsoft.com/trustcenter)
+- [Intune Data storage and processing](../intune/protect/privacy-data-store-process)
