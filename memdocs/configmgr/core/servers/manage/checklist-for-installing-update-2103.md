@@ -315,7 +315,7 @@ Use the **Update Distribution Points** action for any boot image that you use, w
 When you update the site, Configuration Manager automatically updates the *default* boot images. It doesn't automatically distribute the updated content to distribution points. Use the **Update Distribution Points** action on specific boot images when you're ready to distribute this content across your network.
 
 > [!NOTE]
-> The site always uses the production version of the Configuration Manager client in default boot images. Even ff you configure automatic client upgrades to use a [pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
+> The site always uses the production version of the Configuration Manager client in default boot images. Even if you configure automatic client upgrades to use a [pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
 
 After updating the site, manually update any *custom* boot images. This action updates the boot image with the latest client components if necessary, optionally reloads it with the current Windows PE version, and redistributes the content to the distribution points.
 

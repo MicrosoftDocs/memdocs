@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/10/2021
+ms.date: 05/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -262,11 +262,11 @@ This report shows the current state of all devices in the profile and provides a
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Quality updates** table.
+2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
 
-3. To drill in for more information, select the **Reports** tab, and then **Windows Quality Update Report**.
+3. To drill in for more information, select the **Reports** tab, and then **Windows Expedited Update Report**.
 
-4. Click the link **Select an quality update profile**.
+4. Click the link **Select an expedited update profile**.
 
 5. From the list of profiles that is shown on the right side of the page, select a profile to see results.
 
