@@ -71,7 +71,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - **Workspace owner** permissions to **Set up your workspace**, and the following Azure Active Directory (Azure AD) roles:
 
-    - [**Desktop Analytics Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)
+    - [**Desktop Analytics Administrator**](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator)
 
     - To use an existing workspace or create a new workspace in an existing resource group: [**Log Analytics Contributor**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) and [**User Access Administrator**](/azure/role-based-access-control/built-in-roles#user-access-administrator) on the resource group.
 
