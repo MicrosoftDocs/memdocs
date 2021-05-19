@@ -254,6 +254,16 @@ You can view the **Windows 10 feature updates** report using the following steps
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
 
+## User Install Status for apps report (Operational)
+
+Based on a selected app, the **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Failures**, **Installs**, **Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well.
+
+To see a generated report, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **User Install Status** > **Select an app**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
+
 ## Windows 10 MDM Firewall status (Organizational)
 
 *In public preview.*  *This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#windows-10-mdm-devices-with-firewall-off) along with the Windows 10 MDM devices with firewall off report, which is only available from within the endpoint security node.*
