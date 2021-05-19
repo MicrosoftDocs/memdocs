@@ -41,6 +41,8 @@ You can use bulk device actions for the following remote actions:
 - [Wipe](devices-wipe.md#wipe)
 - [Retire](devices-wipe.md#retire)
 
+For specific details of each remote action, like options or platform support, see the help page for each.
+
 ## Use a bulk device action
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
