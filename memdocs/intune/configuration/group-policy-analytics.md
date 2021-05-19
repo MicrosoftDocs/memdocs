@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 05/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,7 +41,11 @@ This feature applies to:
 
 - Windows 10 and newer
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results.
+This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. 
+
+## Prerequisites
+
+Sign in as the Intune administrator with a role that has the **Security Baselines** permission. For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 
 ## Export GPOs as an XML file
 
@@ -53,14 +57,14 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
-Be sure the file is less than 1 MB and has a proper unicode encoding. If the exported file is greater than 1 MB, then include fewer GPOs when you save your report from the GPMC.msc tool.
+Be sure the file is less than 750 kB and has a proper unicode encoding. If the exported file is greater than 750 kB, then include fewer GPOs when you save your report from the GPMC.msc tool.
 
 ## Use Group Policy analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. Select **Import**, and then select your saved XML file. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
-    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 1 MB. If a single GPO is larger than 1 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
+    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 750 kB. If a single GPO is larger than 750 kB, then the import will fail. XML files without the appropriate unicode ending will also fail.
 
 3. After the analysis runs, the GPO you imported is listed with the following information:
 

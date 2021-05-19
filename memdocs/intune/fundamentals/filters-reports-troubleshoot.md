@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 05/13/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,7 +38,7 @@ Use this article to learn more about the reporting features, and to help trouble
 > [!IMPORTANT]
 > 
 > - From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
-> - This feature is in [public preview](public-preview.md). The filter evaluation results will change, and become more integrated into policy and app reports.
+> - This feature is in [public preview](public-preview.md). The entry point to filter evaluation results will change, and become more integrated into policy and app reports.
 
 ## Reports
 
@@ -96,17 +96,15 @@ Use the following table to help understand when you include or exclude devices:
 
 | Filter mode | Filter result | Overall result |
 | --- | --- | --- |
-| Include | Match | Apply filter |
-| Include | Not Match | Don’t apply filter |
-| Exclude | Match | Don’t apply filter |
-| Exclude | Not Match | Apply filter |
+| Include | Match | Apply policy or app assignment |
+| Include | Not Match | Don’t apply policy or app assignment |
+| Exclude | Match | Don’t apply policy or app assignment |
+| Exclude | Not Match | Apply policy or app assignment |
 
 ### What you need to know
 
 - A **Not evaluated** filter result may show when a policy has a conflicting assignment on the device. For more information, see [Filters and assignment conflict resolution](#filters-and-assignment-conflict-resolution) (in this article).
 - Filters are evaluated at enrollment and device check-in. The evaluation can also run at other times, such as a compliance check.
-
-  For example, a device’s compliance state is based on data from a mobile threat defense provider. The filter evaluation may run when the device is being evaluated for threat compliance.
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you may see a **We were not able to retrieve any filter evaluation results** message.
 
 ## Filters and assignment conflict resolution
@@ -181,7 +179,7 @@ In the following example, there's a conflict between assignments because the sam
 
 :::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Example assignment conflict when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-The following matrix explains the impact, depending on the configuration settings:
+The following matrix explains the impact, depending on the conflict scenario:
 
 :::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Conflict impact depend on the setting configured when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
 

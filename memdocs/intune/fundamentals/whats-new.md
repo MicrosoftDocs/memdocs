@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/03/2021
+ms.date: 05/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,10 +59,73 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+## Week of May 10, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management  
+
+#### Improved Conditional Access messaging for Android and iOS/iPadOS users<!-- 9908622 -->
+
+Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows Security experience profiles support tri-state settings<!-- 9741752  -->
+
+For Windows 10 devices, we’ve updated the bi-state settings to be tri-state settings in the [Windows Security experience profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy.
+
+Most settings in the profile previously supported only two options of **Yes** and **Not configured**.  Moving forward, those same settings now include **Yes**, **Not configured**, and a new option of **No**.
+
+- For existing profiles, settings that are set to *Not configured* remain as *Not configured*. When you create new profiles or edit an existing profile, you can now choose to explicitly specify *No*.
+
+In addition, the following applies to configuration of the setting *Hide the Virus and threat protection area in the Windows Security app* and its child setting *Hide the Ransomware data recovery option in the Windows Security app*:
+
+- If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236 -->
+
+There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
+
+- **Devices** > **Filters (preview)** > **Create**
+- **Apps** > **Filters (preview)**> **Create**
+- **Tenant administration** > **Filters (preview)**> **Create**
+
+You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile. 
+
+For more information, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
+
+#### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682    -->
+
+In public preview, you can use Intune’s **Windows 10 quality updates** policy to [expedite the install of the most recent Windows 10 security updates](../protect/windows-10-expedite-updates.md) to devices you manage with Intune.
+
+When you expedite an update, devices can start the download and install of the update as soon as possible, without having to wait for the device to check in for updates. Other than expediting the install of the update, use of this policy leaves your existing update deployment policies and processes untouched.
+
+To help monitor expedited updates, you can use the following options:
+
+- The [Windows Expedited Updates report](../protect/windows-10-expedite-updates.md#summary-report)
+- [Expedited update failures](../protect/windows-10-expedite-updates.md#device-report) device report
+
+<!-- ########################## -->
 ## Week of April 26, 2021 (Service release 2104)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
+### App management  
+
+#### Updated privacy screen in Company Portal for iOS <!-- 9746018  -->  
+We added additional text to the Company Portal privacy screen to clarify how Company Portal uses collected data. It assures users that the collected data is only used to verify that devices are compliant with their organization's policies.  
 
 #### Installation status for device-assigned required apps<!-- 7283852  -->
 
