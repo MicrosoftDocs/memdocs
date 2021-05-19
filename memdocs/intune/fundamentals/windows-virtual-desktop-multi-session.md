@@ -25,7 +25,7 @@ ms.reviewer: madakeva
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
+ms.custom: intune-classic; get-started; references_regions
 ms.collection: M365-identity-device-management
 ---
 
@@ -46,15 +46,15 @@ Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusi
 
 This public preview feature supports Windows 10 Enterprise multi-session VMS which are:
 
-- Running Winodws 10 multi-session, version 1903 or later.
+- Running Windows 10 multi-session, version 1903 or later.
 - [Hybrid Azure AD-joined]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
 - Set up as remote desktops in pooled host pools in Azure.
 - Enrolled in Intune using one of the following methods:
   - Configured with [Active Directory group policy]( https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are hybrid Azure AD joined.
   - [Configuration Manager co-management]( https://docs.microsoft.com/configmgr/comanage/overview).
-  - [Configure Automatic enrollment] to automatically enroll devices that are Hybrid Azure AD joined.
+  - Configure Automatic enrollment to automatically enroll devices that are Hybrid Azure AD joined.
 
-For more information on Windows Virtual Desktop licensing requirements, see [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview.md#requirements).
+For more information on Windows Virtual Desktop licensing requirements, see [What is Windows Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
 Windows 10 Enterprise multi-session VMs are treated as a separate OS edition and some existing Windows 10 Enterprise configurations won’t be supported for this edition.  Intune management does not depend on or interfere with Windows Virtual Desktop management of the same VM.
 
@@ -64,7 +64,7 @@ Intune only supports managing Windows 10 Enterprise multi-session by using devic
 
 Existing device configuration profiles are not supported for Windows 10 Enterprise multi-session VMs, with the exception of Certificate profiles, which are available under Templates. Note that we only support device certificates at this point.
 
-To configure configuration policies for Windows 10 Enterprise multi-session VMs, you must configure using the [Settings catalog](../configuration/settings-catalog.md)
+To configure configuration policies for Windows 10 Enterprise multi-session VMs, you must configure using the [Settings catalog](../configuration/settings-catalog.md).
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > **Configuration profiles** > **Create Profile**.
 2. For **Platform**, select **Windows 10 and later**.
@@ -90,7 +90,7 @@ To configure configuration policies for Windows 10 Enterprise multi-session VMs,
 Windows 10 Administrative Templates are supported for Windows 10 Enterprise multi-session by using the Settings catalog. There are some limitations:
 
 - All ADMX-backed policies are supported. Some policies are not yet available in the Settings catalog.
-- ADMX-ingested policies are not currently supported. This includes Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration]( https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration.md#overview).
+- ADMX-ingested policies are not currently supported. This includes Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview).
 
 ## Compliance and Conditional access
 
@@ -118,7 +118,8 @@ You can secure your Windows 10 Enterprise multi-session VMs by configuring compl
 
 All other policies report as **Not applicable**.
 
-[!Important] You’ll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren’t supported.
+> [!Important]
+> You’ll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren’t supported.
 
 [Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 Enterprise multi-session.  
 

@@ -150,7 +150,7 @@
       - name: Using Windows Virtual Desktop with Intune
         href: windows-virtual-desktop.md
       - name: Using Windows Virtual Desktop multi-session
-        href: windows-virtual-desktop.md
+        href: windows-virtual-desktop-multi-session.md
       - name: Intune endpoints
         href: intune-endpoints.md
       - name: Intune US government endpoints
