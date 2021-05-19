@@ -272,7 +272,7 @@ Use the following information to configure the custom settings in a VPN profile 
 |-----------------------|------------------|------------|--------------|
 | vpn               | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set a to enable to allow the Microsoft Defender for Endpoint anti-phishing capability to use a local VPN.   |
 | antiphishing      | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to enable to turn on Microsoft Defender for Endpoint anti-phishing. When disabled, the anti-phishing capability is turned off.   |
-|    | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to enable to use Microsoft Defender for Endpoint. When disabled, no Microsoft Defender for Endpoint functionality is available.   |
+| defendertoggle    | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to enable to use Microsoft Defender for Endpoint. When disabled, no Microsoft Defender for Endpoint functionality is available.   |
 
 :::image type="content" source="./media/microsoft-tunnel-configure/custom-settings.png" alt-text="Configure custom settings in the VPN profile for Microsoft Defender for Endpoint":::
 
