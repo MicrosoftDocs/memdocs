@@ -157,7 +157,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation.
 
   This feature applies to:  
-  - iOS.iPadOS 14.5 and newer
+  - iOS/iPadOS 14.5 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -293,7 +293,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Allow users to boot devices into recovery mode with unpaired devices**: **Yes** lets a user boot a device into recovery mode with an unpaired device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from booting devices into recovery mode with an unpaired device.
 
   This feature applies to:  
-  - iOS.iPadOS 14.5 and newer
+  - iOS/iPadOS 14.5 and newer
 
 ## Domains
 
@@ -759,7 +759,7 @@ You can also:
   - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
 
   This feature applies to:  
-  - iOS.iPadOS 14.5 and newer
+  - iOS/iPadOS 14.5 and newer
 
 ## Settings that require supervised mode
 
