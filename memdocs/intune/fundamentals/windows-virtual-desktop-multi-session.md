@@ -15,7 +15,6 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
-ms.custom: references_regions
 
 # optional metadata
 
@@ -26,7 +25,7 @@ ms.reviewer: madakeva
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
+ms.custom: intune-classic; get-started; references_regions
 ms.collection: M365-identity-device-management
 ---
 
