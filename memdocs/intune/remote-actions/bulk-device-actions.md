@@ -41,7 +41,7 @@ You can use bulk device actions for the following remote actions:
 - [Wipe](devices-wipe.md#wipe)
 - [Retire](devices-wipe.md#retire)
 
-For specific details of each remote action, like options or platform support, see the help page for each.
+For specific details of each remote action, like options or platform support, see the help page for each. 
 
 ## Use a bulk device action
 
