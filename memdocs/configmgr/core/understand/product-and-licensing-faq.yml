@@ -3,7 +3,7 @@ metadata:
   title: Product and licensing FAQ
   titleSuffix: Configuration Manager
   description: Find answers for common product and license questions for Configuration Manager.
-  ms.date: 04/16/2021
+  ms.date: 05/13/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: conceptual
@@ -169,7 +169,7 @@ sections:
       - question: |
           I have purchased EMS or Microsoft 365 through a Cloud Solution Provider (CSP), do I have rights to use Configuration Manager?
         answer: |
-          Yes, you have rights to use Configuration Manager to manage clients covered by the EMS license. First download and install the [evaluation software](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection). Then contact Microsoft Support to obtain the license key.<!--issue472--> When you talk with Microsoft Support, ask them to reference the internal article ID 4033838.<!-- SCCMDocs issue 493 -->
+          Yes, you have rights to use Configuration Manager to manage clients covered by the EMS license. First download and install the [evaluation software](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection). Then contact your CSP partner to obtain the license key from Microsoft Support.<!--SCCMDocs#472,OSGS 33035978--> When your CSP partner talks with Microsoft Support, they should ask them to reference the internal article ID 4033838.<!--SCCMDocs#493-->
           
       - question: |
           Is my subscription end-date the same as an SA expiration date?

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/11/2021
+ms.date: 05/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,21 +62,50 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ## Week of May 10, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management  
+
+#### Improved Conditional Access messaging for Android and iOS/iPadOS users<!-- 9908622 -->
+
+Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
+#### Windows Security experience profiles support tri-state settings<!-- 9741752  -->
 
-We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is change only in what you’ll see in the UI.
+For Windows 10 devices, we’ve updated the bi-state settings to be tri-state settings in the [Windows Security experience profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy.
 
-**How does this affect me:**  
-Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy, you had two options for most settings: *Yes* and *Not configured*. Moving forward, those same settings now include *Yes*, *Not configured*, and a new option of *No*. Previously configured settings that were set to *Not configured* remain as *Not configured*.  When you create new profiles or edit an existing profile, you now have the option to explicitly specify *No*. 
+Most settings in the profile previously supported only two options of **Yes** and **Not configured**.  Moving forward, those same settings now include **Yes**, **Not configured**, and a new option of **No**.
 
-In addition, the setting *Hide the Virus and threat protection area in the Windows Security app* has a child setting, *Hide the Ransomware data recovery option in the Windows Security app*. If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*, which will take effect when you edit the profile.
+- For existing profiles, settings that are set to *Not configured* remain as *Not configured*. When you create new profiles or edit an existing profile, you can now choose to explicitly specify *No*.
 
-**What action do I need to take?**  
-No action is needed. However, you might want to notify your helpdesk about this change.
+In addition, the following applies to configuration of the setting *Hide the Virus and threat protection area in the Windows Security app* and its child setting *Hide the Ransomware data recovery option in the Windows Security app*:
 
+- If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
+
+#### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236 -->
+
+There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
+
+- **Devices** > **Filters (preview)** > **Create**
+- **Apps** > **Filters (preview)**> **Create**
+- **Tenant administration** > **Filters (preview)**> **Create**
+
+You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile. 
+
+For more information, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
 
 #### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682    -->
 
@@ -93,7 +122,10 @@ To help monitor expedited updates, you can use the following options:
 ## Week of April 26, 2021 (Service release 2104)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
+### App management  
+
+#### Updated privacy screen in Company Portal for iOS <!-- 9746018  -->  
+We added additional text to the Company Portal privacy screen to clarify how Company Portal uses collected data. It assures users that the collected data is only used to verify that devices are compliant with their organization's policies.  
 
 #### Installation status for device-assigned required apps<!-- 7283852  -->
 

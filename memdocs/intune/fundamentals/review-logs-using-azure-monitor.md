@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/17/2021
+ms.date: 05/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -54,7 +54,7 @@ This article shows you how to use **Diagnostics Settings** to send log data to d
 
 To use this feature, you need:
 
-* An Azure subscription: If you don't have an Azure subscription, you can [sign up for a free trial](https://azure.microsoft.com/free/).
+* An Azure subscription that you can sign in to. If you don't have an Azure subscription, you can [sign up for a free trial](https://azure.microsoft.com/free/).
 * A Microsoft Intune environment (tenant) in Azure
 * A user who's a **Global Administrator** or **Intune Service Administrator** for the Intune tenant.
 
@@ -70,6 +70,8 @@ Depending on where you want to route the audit log data, you need one of the fol
 2. Select **Reports** > **Diagnostics settings**. The first time you open it, turn it on. Otherwise, add a setting.
 
     :::image type="content" source="./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png" alt-text="Turn on Diagnostics settings in Endpoint Manager and Microsoft Intune to send logs to Azure Monitor":::
+
+    If your Azure subscription isn't shown, go to the top right corner, select the signed in account > **Switch directory**. You might have to enter the Azure subscription account.
 
 3. Enter the following properties:
 

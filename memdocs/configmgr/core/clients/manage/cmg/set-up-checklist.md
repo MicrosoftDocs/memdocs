@@ -62,6 +62,8 @@ Use the following checklist to make sure you have the necessary information and 
 
 - An Azure **subscription owner** role for when you create the CMG in Azure.
 
+- At least one existing site system server on which you plan to add the **CMG connection point** role.
+
 You'll set up other prerequisite components during the next steps in the process.
 
 ## Automate with PowerShell

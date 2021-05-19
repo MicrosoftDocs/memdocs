@@ -87,7 +87,7 @@ To use filters, you must enable it in your organization tenant.
  
 > [!TIP]
 > 
-> - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsot Intune.](public-preview.md)
+> - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsoft Intune.](public-preview.md)
 > - To enable or disable filters for your tenant, your account must have have the Intune Service Administrator (also known as Intune Administrator) permission .
 > - You can disable the **Filters (preview)** feature by setting it back to **Off**. To turn off this feature, you must remove any filter assignments, and then delete all the filters you created.
 > - Microsoft wants your feedback about this feature. To provide feedback, go to [Tell us what you think about the Filters (preview) feature](https://forms.office.com/r/ibB4tf6CAz).
@@ -141,7 +141,7 @@ To use filters, you must enable it in your organization tenant.
 
     > [!TIP]
     > 
-    > - When you create a rule, it's validated for the correct syntax, and any errors are shown. You can't save the rule
+    > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
 6. Select **Next**.
