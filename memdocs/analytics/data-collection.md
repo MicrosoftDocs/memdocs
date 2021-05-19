@@ -15,7 +15,7 @@ manager: dougeby
 
 # Endpoint analytics data collection
 
-This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. For more information on our data handling policies, see Intune's [Data storage and processing](../intune/protect/privacy-data-store-process) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
+This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. For more information on our data handling policies, see Intune's [Data storage and processing](../intune/protect/privacy-data-store-process.md) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
 
 ## <a name="bkmk_flow"></a>Data flow
 
