@@ -40,7 +40,11 @@ Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusi
 
 - Allows multiple concurrent user sessions.
 - Gives users a familiar Windows 10 experience.
-- Supports use existing per-user Microsoft 365 licensing.
+- Supports use of existing per-user Microsoft 365 licensing.
+
+## Overview
+
+Intune only supports managing Windows 10 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to WVD multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
 ## Prerequisites
 
@@ -50,9 +54,19 @@ This public preview feature supports Windows 10 Enterprise multi-session VMS whi
 - [Hybrid Azure AD-joined]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
 - Set up as remote desktops in pooled host pools in Azure.
 - Enrolled in Intune using one of the following methods:
-  - Configured with [Active Directory group policy]( https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are hybrid Azure AD joined.
+  - Configured with [Active Directory group policy]( https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
   - [Configuration Manager co-management]( https://docs.microsoft.com/configmgr/comanage/overview).
-  - Configure Automatic enrollment to automatically enroll devices that are Hybrid Azure AD joined.
+ 
+> [!IMPORTANT]
+> On all Vibranium builds, there is currently an issue causing remote actions in Intune such as remote sync to not work properly. As a result, any pending policies assigned to devices can take up to 8 hours to be applied. To resolve this issue, please perform the following steps on your virtual machines **prior to enrolling them in Intune**:
+> - Use automation such as a GPO to add the following registry key:
+>   - Hive: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Server
+>   - Value name: ClientExperienceEnabled 
+>   - Value type: REG_DWORD
+>   - Value data: 1 
+> - Reboot the VM
+
+
 
 For more information on Windows Virtual Desktop licensing requirements, see [What is Windows Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
@@ -85,12 +99,14 @@ To configure configuration policies for Windows 10 Enterprise multi-session VMs,
 11. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile > **Next**. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 12. On the **Review + create** page, choose **Create** to create the profile.
 
-### Administration templates
+### Administrative templates
 
-Windows 10 Administrative Templates are supported for Windows 10 Enterprise multi-session by using the Settings catalog. There are some limitations:
+Windows 10 Administrative Templates are supported for Windows 10 Enterprise multi-session via the Settings catalog with some limitations:
+- ADMX-backed policies are supported. Some policies are not yet available in the Settings catalog.
+- ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings will not be applicable to Windows 10 Enterprise multi-session.
 
-- All ADMX-backed policies are supported. Some policies are not yet available in the Settings catalog.
-- ADMX-ingested policies are not currently supported. This includes Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview).
+> [!NOTE]
+> The applicability of some ADMX based settings for applications like Microsoft Edge and Microsoft Office is not based on the Windows edition or version. To add these settings to your policy, you may have to remove any filters applied in the Settings Picker.
 
 ## Compliance and Conditional access
 
