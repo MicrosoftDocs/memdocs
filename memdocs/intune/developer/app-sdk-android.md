@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 05/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -85,8 +85,11 @@ For app protection without device enrollment, the user is _**not**_ required to 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
-### Sample app
-An example of how to integrate with the Intune App SDK properly is available on [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+### Sample apps
+Examples of how to integrate with the Intune App SDK properly include:
+
+- [Taskr - A Microsoft Intune Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+- [Taskr - A Microsoft Intune React Native + Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App/tree/master/ReactMAM)
 
 ### Referencing Intune App libraries
 
