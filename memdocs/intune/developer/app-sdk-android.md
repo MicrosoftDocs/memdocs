@@ -61,15 +61,11 @@ The Intune App SDK consists of the following files:
 * **CHANGELOG.md**: Provides a record of changes made in each SDK version.
 * **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
 
-
 ## Requirements
 
 ### Android versions
-The SDK fully supports Android API 21 (Android 5.0) through Android
-API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android
-minSDKVersion as low as 14, but on those older OS versions it will be
-impossible to install the Intune Company Portal app or use MAM
-policies.
+
+The SDK fully supports Android API 23 (Android 6.0) through Android API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android minSDKVersion as low as 14, but on those older OS versions it will be impossible to install the Intune Company Portal app or use MAM policies.
 
 ### Company Portal app
 
