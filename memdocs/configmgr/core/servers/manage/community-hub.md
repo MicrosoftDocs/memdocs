@@ -45,7 +45,7 @@ Community hub supports the following objects:
 
 - A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information, see [Contribute to Community hub](community-hub-contribute.md).
    > [!IMPORTANT]
-   > Configuration Manager versions 2006 and earlier won't be able to sign in to GitHub. Configuration Manager version 2010 or later with the [WebView2 console extension installed](#bkmk_webview2) are required for sign in. <!--9598183-->
+   > Configuration Manager versions 2006 and earlier won't be able to sign in to GitHub. Configuration Manager version 2010 or later with the [WebView2 console extension installed](#bkmk_webview2) is required for sign in. <!--9598183-->
 
 ## Permissions
 
