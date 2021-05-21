@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 05/14/2021
+ms.date: 05/21/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -112,18 +112,20 @@ For more information, see [Microsoft Endpoint Configuration Manager troubleshoot
 
 ## New and updated support articles
 
-Support articles that are new or updated between January 13 and April 13, 2021.
+Support articles that are new or updated between April 14 and May 20, 2021.
 
-- [KB 4600089 Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4600089)
-- [KB 4599924 Console terminates unexpectedly in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4599924)
-- [KB 5001600 Microsoft Connected Cache component fails to install on Configuration Manager current branch](https://support.microsoft.com/help/5001600)
-- [KB 5001670 Devices do not report app usage data in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/5001670)
 - [Updates aren't downloaded when you run an ADR](https://docs.microsoft.com/troubleshoot/mem/configmgr/adr-updates-download-failure)
+- [The Windows 10 servicing dashboard shows no data](https://docs.microsoft.com/troubleshoot/mem/configmgr/windows-10-servicing-dashboard-empty)
+- [Configure peer cache for Configuration Manager clients](https://docs.microsoft.com/troubleshoot/mem/configmgr/configure-peer-cache)
+- [Offline servicing a WIM image with the Latest Cumulative Update fails](https://docs.microsoft.com/troubleshoot/mem/configmgr/offline-servicing-lcu-may-fail)
+- [KB 9210721 Summary of changes in Configuration Manager current branch, version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9210721)
+- [KB 9603111 Update for Microsoft Endpoint Configuration Manager version 2103, early update ring](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9603111)
+- [KB 9833643 Console update for Microsoft Endpoint Configuration Manager version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9833643)
 
-Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com are published to the new site below and still accessible using their original URLs. Troubleshooting articles created after October 2020 don't have a KB article ID. This doesn't apply to Configuration Manager hotfix or update-related content.
+Note: The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
 
-[Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager)
+Hotfix and update rollup related articles starting with version 2010 are published to [Configuration Manager hotfixes and update rollups](https://docs.microsoft.com/mem/configmgr/hotfix?WT.mc_id=configmgr-console). 
 
-For more information, see [What's next for Windows release notes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-release-notes/ba-p/1754399).
+The short form URL for hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.
