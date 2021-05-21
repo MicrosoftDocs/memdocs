@@ -8,7 +8,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 12/17/2020
+ms.date: 05/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -104,7 +104,27 @@ To register an app to use Microsoft Graph API:
 
     For best results, choose the fewest roles needed to implement your application.
 
-    When finished, choose **Add permissions** to save you changes.
+### Data warehouse and reporting permissions
+
+When you add an application through the Azure Active Directory admin center, you can choose the Intune API permissions based on the requirements of your application. 
+
+  - **get_data_warehouse** - Use this API permission to grant access to the Intune data warehouse API from Microsoft Intune. For more information, see [Using the Microsoft Intune Data Warehouse](/developer/reports-nav-create-intune-reports).
+
+### Partner solution APIs  
+
+The following Intune API permissions are available when adding an application through the Azure Active Directory admin center:
+
+  - **get_device_compliance** - This API permission is used to get device state and compliance information from Microsoft Intune. This API permission is used by Network Access Control partners. For more information, see [Network Access Control integration with Intune](/protect/network-access-control-integrate).
+  - **manage_partner_compliance_policy** - This API permission is used to manage partner compliance policies with Microsoft Intune. This API permission allows the app to send partner compliance policies and its Azure AD Group assignment to Microsoft Intune without a signed-in user. It is used by device compliance partners. For more information, see [Third party device compliance partners](/protect/device-compliance-partners).
+  - **pfx_cert_provider** - This API permission is used to send PFX certificates to Intune for a specific user. Intune delivers the certificate to all devices enrolled by the user. For more information, see [PFX Import Powershell](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
+  - **scep_challenge_provider** - This API permission is used to send SCEP challenges to Intune for certificate request validation. It is used by Certification Authority partners. For more information, see [Partner Certification Authority](../protect/certificate-authority-add-scep-overview.md).
+  - **send_data_usage** - This API permission is used to trigger policy changes for devices based on telecom expense management thresholds. It is used for telecom expense management partner integrations. For more information, see [Telecom expense management in Intune](../configuration/telecom-expenses-monitor.md).
+  - **update_device_attributes** - This API permission is used to send device information to Intune from device compliance and mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md) and [Third party device compliance partners](../protect/device-compliance-partners.md).
+  - **update_device_health** - This API permission is used to send device health and threat status information to Intune from mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
+
+If you are a partner interested in integrating with Intune using these API permissions, contact the [Microsoft Intelligent Security Association](https://www.microsoft.com/security/business/intelligent-security-association)] team for information.
+
+When finished, choose **Add permissions** to save you changes.
 
 At this point, you may also:
 
