@@ -102,6 +102,8 @@ To register an app to use Microsoft Graph API:
 
     Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 
+    For best results, choose the fewest roles needed to implement your application.
+
 ### Data warehouse and reporting permissions
 
 When you add an application through the Azure Active Directory admin center, you can choose the Intune API permissions based on the requirements of your application. 
@@ -121,8 +123,6 @@ The following Intune data warehouse API permissions are available when adding an
   - **update_device_health** - This API permission is used to send device health and threat status information to Intune from mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
 If you are a partner interested in integrating with Intune using these API permissions, contact the [Microsoft Intelligent Security Association](https://www.microsoft.com/security/business/intelligent-security-association)] team for information.
-
-For best results, choose the fewest roles needed to implement your application.
 
 When finished, choose **Add permissions** to save you changes.
 
