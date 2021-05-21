@@ -112,7 +112,7 @@ When you add an application through the Azure Active Directory admin center, you
 
 ### Partner solution APIs  
 
-The following Intune data warehouse API permissions are available when adding an application through the Azure Active Directory admin center:
+The following Intune API permissions are available when adding an application through the Azure Active Directory admin center:
 
   - **get_device_compliance** - This API permission is used to get device state and compliance information from Microsoft Intune. This API permission is used by Network Access Control partners. For more information, see [Network Access Control integration with Intune](/protect/network-access-control-integrate).
   - **manage_partner_compliance_policy** - This API permission is used to manage partner compliance policies with Microsoft Intune. This API permission allows the app to send partner compliance policies and its Azure AD Group assignment to Microsoft Intune without a signed-in user. It is used by device compliance partners. For more information, see [Third party device compliance partners](/protect/device-compliance-partners).
