@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2021
+ms.date: 05/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a Docker container on Linux and allows access to on-premises resources from iOS/iPadOS and Android Enterprise devices using modern authentication and Conditional Access.
 
 This article introduces the tunnel, how it works, and its architecture.
-
-*Microsoft Tunnel is in public preview*.
 
 If your ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then Configure the Microsoft Tunnel
 
