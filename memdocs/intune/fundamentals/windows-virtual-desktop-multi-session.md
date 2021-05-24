@@ -58,7 +58,7 @@ This public preview feature supports Windows 10 Enterprise multi-session VMS whi
   - [Configuration Manager co-management]( https://docs.microsoft.com/configmgr/comanage/overview).
  
 > [!IMPORTANT]
-> On all Vibranium builds, there is currently an issue causing remote actions in Microsoft Endpoint Manager such as remote sync to not work properly. As a result, any pending policies assigned to devices can take up to 8 hours to be applied. To resolve this issue, please perform the following steps on your virtual machines **prior to enrolling them in Microsoft Endpoint Manager**:
+> On all Windows 10, versions 2004, 20H2, and 21H1 builds, there is currently an issue causing remote actions in Microsoft Endpoint Manager such as remote sync to not work properly. As a result, any pending policies assigned to devices can take up to 8 hours to be applied. To resolve this issue, please perform the following steps on your virtual machines **prior to enrolling them in Microsoft Endpoint Manager**:
 > - Use automation such as a GPO to add the following registry key:
 >   - Hive: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Server
 >   - Value name: ClientExperienceEnabled 
