@@ -69,16 +69,9 @@ If you are using an Android device, you might see a blocking message with instru
 
 ## View media files with the Azure Information Protection app
 
-To view company AV, PDF, and image files on Android devices, use the [Azure Information Protection app](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) (previously known as the Rights Management sharing app).
+To view company PDF and image files on iOS or Android devices, use the Azure Information Protection app, previously known as the Rights Management sharing app: [iTunes](https://apps.apple.com/app/microsoft-rights-management/id689516635) | [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)
 
-Download this app from the Google Play store.  
-
-The following file types are supported:
-
-* **Audio:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (enhanced AAC+), AAC ELD (enhanced low delay AAC), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Ogg Vorbis
-* **Video:** H.263, H.264 AVC, MPEG-4 SP, VP8
-* **Image:** .jpg, .pjpg, .png, .ppng, .bmp, .pbmp, .gif, .pgif, .jpeg, .pjpeg
-* **Documents:** PDF, PPDF
+For more information, see [Mobile viewer apps for Azure Information Protection on iOS and Android](/azure/information-protection/rms-client/mobile-app-faq).
 
 |**pfile**|
 |----|
