@@ -36,7 +36,7 @@ You can now use Microsoft Endpoint Manager to manage Windows 10 Enterprise multi
 > [!IMPORTANT]
 > The feature is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended for use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
 
-Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Windows Virtual Desktop]( https://docs.microsoft.com/azure/virtual-desktop/) on Azure. It provides the following benefits:
+Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Windows Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
 - Allows multiple concurrent user sessions.
 - Gives users a familiar Windows 10 experience.
@@ -44,18 +44,18 @@ Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusi
 
 ## Overview
 
-Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to WVD multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
+Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to WVD multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
 ## Prerequisites
 
 This public preview feature supports Windows 10 Enterprise multi-session VMS which are:
 
 - Running Windows 10 multi-session, version 1903 or later.
-- [Hybrid Azure AD-joined]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
 - Set up as remote desktops in pooled host pools in Azure.
 - Enrolled in Microsoft Endpoint Manager using one of the following methods:
-  - Configured with [Active Directory group policy]( https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
-  - [Configuration Manager co-management]( https://docs.microsoft.com/configmgr/comanage/overview).
+  - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
+  - [Configuration Manager co-management](/configmgr/comanage/overview).
  
 > [!IMPORTANT]
 > On all Windows 10, versions 2004, 20H2, and 21H1 builds, there is currently an issue causing remote actions in Microsoft Endpoint Manager such as remote sync to not work properly. As a result, any pending policies assigned to devices can take up to 8 hours to be applied. To resolve this issue, please perform the following steps on your virtual machines **prior to enrolling them in Microsoft Endpoint Manager**:
