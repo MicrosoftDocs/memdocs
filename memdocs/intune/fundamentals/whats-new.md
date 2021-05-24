@@ -59,6 +59,18 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+## Week of ???, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+<!-- ########################## -->
+
+
+### Device management
+### Tenant attach: Offboarding <!-- CMADO7043245 INADO9412904 -->
+
+While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard following a disaster recovery scenario where the on-premises environment was removed. To remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center, select **Tenant administration**, **Connectors and tokens** then **Microsoft Endpoint Configuration Manager**. Choose the name of the site you would like to offboard, then select **Delete**. For more information, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md#bkmk_offboard).
+
 ## Week of May 10, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
