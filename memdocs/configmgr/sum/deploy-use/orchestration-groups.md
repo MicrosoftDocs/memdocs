@@ -83,12 +83,12 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
 
    - **Specify the maintenance sequence**, then sort the selected resources in the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-1. Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart.
+1. Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart. Scripts with parameters can't be used. <!--9893550-->
 
    1. For Configuration Manager 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
       - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
         - **Open**: Open a specific `.ps1` file
-        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters can't be used and will be hidden from the list. <!--9893550-->
+        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters will be hidden from the list. <!--9893550-->
         - **Clear**: Clears the current script in the script pane
       - **Edit**: Edit the currently selected script
       - **Delete**: Removes the current script
@@ -103,7 +103,8 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
 1. Complete the wizard.
 
 > [!WARNING]
-> Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
+> - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
+> - Scripts that have parameters aren't supported. <!--9893550-->
 
 ## View orchestration groups and members
 
@@ -128,12 +129,12 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
    - **Allow a number of the machines to be updated at the same time**, then select or enter a number for this specific count. Use this setting to always limit to a specific number of devices, whatever the overall size of the orchestration group.
    - **Specify the maintenance sequence**: Sort the selected resources to the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-- Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart.
+- Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart. Scripts with parameters can't be used. <!--9893550-->
 
    - For Configuration Manager version 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
       - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
         - **Open**: Open a specific `.ps1` file
-        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters can't be used and will be hidden from the list. <!--9893550-->
+        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters will be hidden from the list. <!--9893550-->
         - **Clear**: Clears the current script in the script pane
       - **Edit**: Edit the currently selected script
       - **Delete**: Removes the current script
@@ -143,7 +144,8 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
       - On the **Pre-Script** tab, enter a PowerShell script to run on each device *before* the deployment runs.
      - On the **Post-Script** tab, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
      > [!WARNING]
-     > For Configuration Manager version 2010 and earlier, ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
+     > - For Configuration Manager version 2010 and earlier, ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
+     > - Scripts that have parameters aren't supported <!--9893550-->
  
 ## Start orchestration
 
