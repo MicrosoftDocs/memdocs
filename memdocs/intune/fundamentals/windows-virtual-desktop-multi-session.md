@@ -44,7 +44,7 @@ Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusi
 
 ## Overview
 
-Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to WVD multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
+Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Windows Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
 ## Prerequisites
 
@@ -53,6 +53,7 @@ This public preview feature supports Windows 10 Enterprise multi-session VMS whi
 - Running Windows 10 multi-session, version 1903 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
 - Set up as remote desktops in pooled host pools in Azure.
+- Running a Windows Virtual Desktop agent version of 2944.1400 or later.
 - Enrolled in Microsoft Endpoint Manager using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
@@ -74,7 +75,7 @@ Windows 10 Enterprise multi-session VMs are treated as a separate OS edition and
 
 ## Create the device configuration profile
 
-Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session by using device configurations. This means only policies defined in the OS scope and apps configured to install in the system context can be applied to WVD multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups.
+Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session by using device configurations. This means only policies defined in the OS scope and apps configured to install in the system context can be applied to Windows Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups.
 
 Existing device configuration profiles are not supported for Windows 10 Enterprise multi-session VMs, with the exception of Certificate profiles, which are available under Templates. Note that we only support device certificates at this point.
 
