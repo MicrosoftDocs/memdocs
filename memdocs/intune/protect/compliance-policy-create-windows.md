@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 5/5/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 and later settings to mark devices as compliant or not compliant using Intune
+# Device Compliance settings for Windows 10 and later in Intune
 
 This article lists and describes the different compliance settings you can configure on Windows 10 and later devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender for Endpoint, and more.
 
@@ -245,6 +245,8 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 ## Microsoft Defender for Endpoint
 
 ### Microsoft Defender for Endpoint rules
+
+For additional information on Microsoft Defender for Endpoint integration in conditional access scenarios, see [Configure Conditional Access in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-conditional-access).
 
 - **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:

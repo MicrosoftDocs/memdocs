@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2020
+ms.date: 02/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,6 +43,8 @@ You can give administrators access to Microsoft Endpoint Manager without them re
 3. From now on, users who sign in to the Microsoft Endpoint Manager admin center don’t require an Intune license. Their scope of access is defined by the roles assigned to them.
 
 Intune supports up to 350 unlicensed admins per security group, and only applies to direct members. Admins above this limit will experience unpredictable behavior.
+
+It can take up to 48 hours for access changes to take effect.
 
 ## Next steps
 

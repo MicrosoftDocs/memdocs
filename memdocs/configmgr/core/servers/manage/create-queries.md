@@ -2,7 +2,7 @@
 title: "Create queries"
 titleSuffix: "Configuration Manager"
 description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
-ms.date: 11/30/2020
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -177,6 +177,16 @@ For example, if you want to return only Mac computers, use this query:
 ``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
 ```  
+
+###  <a name="bkmk_comgmt"></a> Devices that are co-managed
+
+```WQL
+select SMS_R_SYSTEM.ResourceID, SMS_R_SYSTEM.ResourceType, SMS_R_SYSTEM.Name,
+SMS_R_SYSTEM.SMSUniqueIdentifier, SMS_R_SYSTEM.ResourceDomainORWorkgroup, SMS_R_SYSTEM.Client
+from SMS_R_System
+inner join SMS_Client_ComanagementState on SMS_Client_ComanagementState.ResourceId = SMS_R_System.ResourceId 
+where SMS_Client_ComanagementState.ComgmtPolicyPresent = 1 AND SMS_Client_ComanagementState.MDMEnrolled = 1 AND MDMProvisioned = 1
+```
 
 ## Next steps
 

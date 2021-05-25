@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 03/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -285,8 +285,6 @@ This setting applies to:
 
     > [!IMPORTANT]
     > - The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
-    >
-    > - There is a known issue with the macOS SSO app extension on already-enrolled macOS devices. We recommend that you wait to deploy the SSO app extension on already-enrolled macOS devices. If you configure these settings, and target already-enrolled devices, then users might need to unenroll, and reenroll to resolve the issue. The macOS SSO app extension works as expected on newly-enrolled devices.
     >
     > - To achieve SSO with the Microsoft Azure AD SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
     >

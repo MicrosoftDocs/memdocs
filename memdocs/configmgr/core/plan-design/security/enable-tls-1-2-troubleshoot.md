@@ -1,8 +1,8 @@
 ---
-title: Common issues when enabling Transport Layer Security (TLS) 1.2
+title: Common issues when enabling TLS 1.2
 titleSuffix: Configuration Manager
 description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
-ms.date: 12/13/2019
+ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -32,7 +32,7 @@ If reports don't show in the Configuration Manager console, make sure to update 
 
 If you enable the FIPS security policy setting for either the client or a server, Secure Channel (Schannel) negotiation can cause them to use TLS 1.0. This behavior happens even if you disable the protocol in the registry.
 
-To investigate, enable Secure Channel event logging, and then review Schannel events in the system log. For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
+To investigate, enable Secure Channel event logging, and then review Schannel events in the system log. For more information, see [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel).
 
 ## SQL Server communication failure
 
@@ -58,55 +58,6 @@ To resolve this issue, follow these steps:
 1. [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on all relevant computers.
 
 1. After you install any updates, restart the SMS_Executive service.
-
-## Application catalog doesn't initialize
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md).
-
-If the application catalog doesn't initialize, check the **ServicePortalWebSite.svclog** file for the following error entry:
-
-`SOAP security negotiation failed. The client and server can't communicate because they don't share a common algorithm.`
-
-To resolve this issue, follow these steps:
-
-1. [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on all relevant computers.
-
-1. In the `%WinDir%\System32\InetSrv` folder of the application catalog server, create a **W2SP.exe.config** file with the following contents:
-
-    ``` XML
-    <?xml version="1.0" encoding="utf-8" ?>
-    <configuration>
-      <runtime>
-      <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false" />
-      </runtime>
-    </configuration>
-    ```
-
-    > [!NOTE]
-    > This file is the default file that's created if the application was built by using .NET Framework 4.6.3.
-
-1. Use HTTPS transport security for application catalog roles.
-
-    > [!Important]
-    > When you use HTTP message security for application catalog roles, WCF is hard-coded to use SSL 3.0 and TLS 1.0 only. This prevents the use of TLS 1.2.
-
-1. If you made any changes, restart the computer.
-
-## Software Center or browser doesn't communicate with the application catalog
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md).
-
-The best method to make Software Center work with for user-available apps in a TLS 1.2-enabled site, remove the application catalog role. Then let Software Center communicate directly with a management point. For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat).
-
-If you need to resolve communication failures between the application catalog and Software Center, verify the following conditions:
-
-- [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on each computer.
-
-- After you make the changes, restart all affected computers.
-
-<!-- - Configure the browser is configured to support TLS 1. Prior to Windows 10, this option was disabled by default. removing, Silverlight experience is out of support-->
 
 ## Service connection point upload failures
 
@@ -146,7 +97,7 @@ In the System EventLog, SChannel EventID 36874 may be logged with the following 
 ## Additional resources
 
 - [Transport layer security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
-- [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
+- [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe)
 - [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
 
 ## Next steps

@@ -240,7 +240,7 @@ For Configuration Manager version 1810, this level includes the following data:
 - Count of Microsoft Surface devices by model  
 
 
-### Cloud Services  
+### Cloud services  
 
 - Azure Active Directory discovery statistics  
 
@@ -332,7 +332,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 ### Endpoint Protection  
 
-- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed. 
+- Microsoft Defender for Endpoint policies (formerly known as Windows Defender for Endpoint): count of policies, and whether policies are deployed. 
 
 - Count of alerts that are configured for Endpoint Protection feature  
 
@@ -411,7 +411,7 @@ For Configuration Manager version 1810, this level includes the following data:
 - Versions of installed Configuration Manager hotfixes  
 
 
-### Software Updates  
+### Software updates  
 
 - Available and deadline deltas that are used in automatic deployment rules  
 

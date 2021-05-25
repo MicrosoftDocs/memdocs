@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2021
+ms.date: 03/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,13 +39,13 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 ### General requirements for tenant attach
 
-- **Configure Tenant attach** - With the *tenant attach* scenario, you synchronize collections of devices from Configuration Manager to the Microsoft Endpoint Manager admin center. You can then use the admin center to deploy supported policies to those collections.
+- **Configure tenant attach** - With the *tenant attach* scenario, you synchronize devices from Configuration Manager to the Microsoft Endpoint Manager admin center. You can then use the admin center to deploy supported policies to those collections.
 
   Tenant attach is often configured with co-management, but you can configure tenant attach on its own.
 
-- **Synchronize Configuration Manager collections** – When you configure tenant attach, you can select the Configuration Manager device collections to synchronize with Microsoft Endpoint Manager admin center. You can also return later to modify the device collections you sync. Supported policies for Configuration Manager devices can only be assigned to collections you’ve synchronized.
+- **Synchronize Configuration Manager devices and collections** – After you configure tenant attach, you can select the Configuration Manager devices to synchronize with Microsoft Endpoint Manager admin center. You can also return later to modify the devices you sync.
 
-  After selecting collections to synchronize, you must enable them for use with endpoint security policies from Intune.
+  After selecting devices to synchronize, you must *enable* collections for use with endpoint security policies from Intune. Supported policies for Configuration Manager devices can only be assigned to collections you’ve *enabled*.
 
 - **Permissions to Azure AD** - To complete setup of tenant attach, you’ll need an account with Global Administrator permissions to your Azure subscription.
 
@@ -65,10 +65,10 @@ Before you deploy Intune policies to Configuration Manager devices, complete the
 
 The following tasks are completed in the Configuration Manager console. If you’re not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
 
-1. [Confirm your Configuration Manage environment](#task-1-confirm-your-configuration-manage-environment)
-2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
-3. [Select collections to synchronize](#task-3-select-collections-to-synchronize)
-4. [Enable collections to support Intune policies](#task-4-enable-collections-for-endpoint-security-policies)
+1. [Confirm your Configuration Manager environment](#task-1-confirm-your-configuration-manager-environment)
+2. [Configure tenant attach and synchronize devices](#task-2-configure-tenant-attach-and-synchronize-devices)
+4. [Select devices to synchronize](#task-3-select-devices-to-synchronize)
+5. [Enable collections for endpoint security policies](#task-4-enable-collections-for-endpoint-security-policies)
 
 > [!TIP]
 > To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
@@ -76,7 +76,7 @@ The following tasks are completed in the Configuration Manager console. If you�
 > - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
 > - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
-### Task 1: Confirm your Configuration Manage environment
+### Task 1: Confirm your Configuration Manager environment
 
 Intune policies for Configuration Manager devices require different minimum versions of Configuration Manager, depending on when the policy was first released. Review the [Configuration Manager version requirements for Intune endpoint security policies](#configuration-manager-version-requirements-for-intune-endpoint-security-policies) found earlier in this article to ensure your environment supports the policies you plan to use. A more recent version of Configuration Manager will support policies that require an earlier version.
 
@@ -84,7 +84,7 @@ When a Configuration Manager hotfix is necessary, you can find the hotfix as an 
 
 After installing necessary updates, return here to continue configuring your environment to support endpoint security policies from the Microsoft Endpoint Manager admin center.
 
-### Task 2: Configure tenant attach and synchronize collections
+### Task 2: Configure tenant attach and synchronize devices
 
 With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Endpoint Manager admin center. After collections synchronize, use the admin center to view information about those devices and to deploy endpoint security policy from Intune to them.
 
@@ -112,17 +112,17 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 
 4. Click **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync of collections to the Microsoft Endpoint Manager admin center.
 
-5. On the **Configure upload** page, configure which collections you want to sync.
-   You can limit your configuration to one or  few device collections or use the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**.
+5. On the **Configure upload** page, configure which collections of devices you want to sync.
+   You can limit your configuration to device collections or use the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**.
 
    > [!TIP]
-   > You can skip selecting collections now, and later use the information in the following task, Task 3,  to configure which collections synchronize with the Microsoft Endpoint Manager admin center.
+   > You can skip selecting collections now, and later use the information in the following task, Task 3,  to configure which collections of devices to synchronize with the Microsoft Endpoint Manager admin center.
 
 6. Click **Summary** to review your selection, then click **Next**.
 
 7. When the wizard is complete, click **Close**.
 
-   Tenant attach is now configured, and selected collections sync to Microsoft Endpoint Manager admin center.
+   Tenant attach is now configured, and selected devices sync to Microsoft Endpoint Manager admin center.
 
 #### Enable tenant attach when you already use co-management
 
@@ -136,22 +136,19 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 
    ![View the co-management properties tab](./media/tenant-attach-intune/configure-upload.png)
 
-   > [!TIP]
-   > You can skip selecting collections now, and later use the information in the following task, Task 3,  to configure which collections synchronize with the Microsoft Endpoint Manager admin center.
-
 4. Sign in with your *Global Administrator* account when prompted.
 
 5. Click **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
 
-6. Click **OK** to exit the co-management properties once you've done making changes.
+6. Click **OK** to exit the co-management properties if you're done making changes. Otherwise move to Task 3 to selectively enable device upload to the Microsoft Endpoint Manager admin center.
 
-   Tenant attach is now configured, and selected collections sync to Microsoft Endpoint Manager admin center.
+   Tenant attach is now configured, and selected devices sync to Microsoft Endpoint Manager admin center.
 
-### Task 3: Select collections to synchronize
+### Task 3: Select devices to synchronize
 
-When tenant attach is configured, you can select collections to sync. If you haven't already synchronize collections or need to reconfigure which ones you do sync, you can edit the properties of co-management in the Configuration Manager console to do so.
+When tenant attach is configured, you can select devices to sync. If you haven't already synchronized devices or need to reconfigure which ones you do sync, you can edit the properties of co-management in the Configuration Manager console to do so.
 
-#### Select collections
+#### Select devices to upload
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 
@@ -163,7 +160,7 @@ When tenant attach is configured, you can select collections to sync. If you hav
 
 ### Task 4: Enable collections for endpoint security policies
 
-After you configure collections to sync to Microsoft Endpoint Manager admin center, enable those collections to work with endpoint security policies. When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender for Endpoint.
+After you configure devices to sync to Microsoft Endpoint Manager admin center, you must enable collections to work with endpoint security policies. When you enable collections of devices to work with endpoint security policies from Intune, you're making the configured collections available to be targeted with endpoint security policies.
 
 #### Enable collections for use with endpoint security policies
 
@@ -171,6 +168,6 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
 ## Next steps
 
-- [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy) for *Antivirus* and *Endpoint detection and response*.
+- [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
 
-- Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender for Endpoint documentation.
+- Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).

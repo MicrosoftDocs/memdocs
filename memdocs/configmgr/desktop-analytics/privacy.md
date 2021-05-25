@@ -39,7 +39,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
     1. You configure the Desktop Analytics cloud service in Configuration Manager with the Azure AD app details.  
 
-    2. Within 15 minutes, and every hour after, Configuration Manager synchronizes the following data with Desktop Analytics using your tenant ID. The site sends all data over an encrypted HTTPS channel.
+    2. Within 15 minutes, and every hour after, Configuration Manager synchronizes via the Intune microservice the following data with Desktop Analytics using your tenant ID. The site sends all data over an encrypted HTTPS channel to your Endpoint Manager account in the public cloud.
 
       - Information about device collections necessary to [create deployment plans](create-deployment-plans.md). This information includes collection ID, hierarchy ID, collection name, and device count. 
       - Information required to [enroll devices](enroll-devices.md). This information includes collection ID, SMS unique identifier, OS build version, device name, and serial number.
@@ -62,7 +62,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
 ## Other resources
 
-For privacy-related frequently asked questions for Desktop Analytics, see [Privacy FAQ](faq.md#privacy).
+For privacy-related frequently asked questions for Desktop Analytics, see [Privacy FAQ](/mem/configmgr/desktop-analytics/faq#privacy).
 
 For more information about related privacy aspects, see the following articles:
 

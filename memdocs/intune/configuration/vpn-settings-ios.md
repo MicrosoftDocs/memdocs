@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 03/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -204,6 +204,10 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - AES-256 (default)
     - AES-128-GCM
     - AES-256-GCM
+
+    > [!NOTE]
+    > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
+
   - **Integrity algorithm**:  Select the algorithm you want:
     - SHA1-96
     - SHA1-160
@@ -222,7 +226,11 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - AES-256 (default)
     - AES-128-GCM
     - AES-256-GCM
-  - **Integrity algorithm**:  Select the algorithm you want:
+
+    > [!NOTE]
+    > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
+
+- **Integrity algorithm**:  Select the algorithm you want:
     - SHA1-96
     - SHA1-160
     - SHA2-256 (default)
@@ -293,11 +301,14 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Per-app VPN
 
-These settings apply when you choose **Connection type** > **Microsoft Tunnel**.
+These settings apply when you choose **Connection type** > **Microsoft Tunnel (standalone client)**.  
 
 - **Per-app VPN**: **Enable** associates a specific to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
 
-  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).  
+
+> [!Important]
+> In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 ## Proxy
 

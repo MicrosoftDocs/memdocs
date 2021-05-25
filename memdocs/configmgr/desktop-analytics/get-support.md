@@ -22,7 +22,7 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 >
 > - [Prerequisites](overview.md#prerequisites)
 > - [Troubleshoot Desktop Analytics](troubleshooting.md)
-> - [Frequently asked questions](faq.md)
+> - [Frequently asked questions](faq.yml)
 
 ## Help and support
 

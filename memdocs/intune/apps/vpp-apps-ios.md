@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -173,7 +173,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 | Action | iOS/iPadOS | macOS |
 |------- | ---------- | ----- |
 | Remove app assignment | When you remove an app that was assigned to a user,   Intune reclaims the user or device license and uninstalls the app from the   device. | When you remove an app that was assigned to a user,   Intune reclaims the user or device license. The app is not uninstalled from   the device. |
-| Revoke app license | Revoking an app license reclaims the app license from   the user or device. You must change the assignment to **Uninstall** to remove the app from the device. | Revoking an app license reclaims the app license from   the user or device. The macOS app with revoked license remains usable on the   device, but cannot be updated until a license is reassigned to the user or   device. According to Apple, such apps are removed after a 30-day grace   period. However, Apple does not provide a means for Intune to remove the app   using Uninstall assignment action. |
+| Revoke app license | Revoking an app license reclaims the app license from   the user or device. You must change the assignment to **Uninstall** to remove the app from the device. | Revoking an app license reclaims the app license from   the user or device. The macOS app with revoked license remains usable on the   device, but cannot be updated until a license is reassigned to the user or   device. According to Apple, such apps are removed after a 30-day grace   period. You can use Uninstall assignment action to remove managed apps. |
 
 >[!NOTE]
 > - Intune reclaims app licenses when an employee leaves the company and is no longer part of the AAD groups.
@@ -219,7 +219,7 @@ Access to Apple Business Manager location token and apps (Apple VPP tokens and V
 
 Apple provides direct assistance to create and renew VPP tokens. For more information, see [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) as part of Apple's documentation. 
 
-If **Assigned to external MDM** is indicated in the Intune portal, then you (the Admin) must remove the VPP token from the 3rd party MDM before using the VPP token in Intune.
+If **Assigned to external MDM** is indicated in Intune, then you (the admin) must remove the VPP token from the 3rd party MDM before using the VPP token in Intune.
 
 If status is **Duplicate** for a token, then multiple tokens with the same **Token Location** have been uploaded. Remove the duplicate token to begin syncing the token again. You can still assign and revoke licenses for tokens that are marked as duplicate. However, licenses for new apps and books purchased may not be reflected once a token is marked as duplicate.
 

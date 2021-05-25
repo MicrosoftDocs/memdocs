@@ -20,7 +20,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1605. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
- **Known Issues in this Technical Preview:**  
+ **Known issues in this Technical Preview:**  
 
 - With Technical Preview 1605, if you update the properties of a management point after it is installed, you might see a console error which forces the console to close.  If this happens, you can uninstall the management point and then reinstall the management point using the desired settings. Alternately, you  can modify the management point prior to installing  Technical Preview 1605.  
 
@@ -37,7 +37,7 @@ This article introduces the features that are available in the Technical Preview
 
 -   A Windows 10 VPN profile that has been deployed to at least one device  
 
-##  <a name="BKMK_InstallSU"></a> Improvements to the Install software updates task sequence  
+##  <a name="BKMK_InstallSU"></a> Improvements to the Install Software Updates task sequence  
  The following improvements have been made to the Install Software Updates task sequence:  
 
 -   A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, is available to give you the ability to control the timeout on the software updates scan during the Install software updates task sequence step. The default value is 30 minutes.  
@@ -93,7 +93,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 1.  In Azure Active Directory, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
 
-    1.  In the Active Directory node of [https://manage.windowsazure.com](https://manage.windowsazure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
+    1.  In the Active Directory node of [https://portal.azure.com](https://portal.azure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
 
     2.  Click **Add an application my organization is developing**.  
 
@@ -259,12 +259,12 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
      After you open Company Portal, you will see an authentication dialog box named **Configuration Manager** Specify the user's Active Directory credentials (either in the form of user@domain or domain\user) to log in.  
 
-##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating Systems in Software Center  
+##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating systems in Software Center  
  In this release, the following changes have been made to improve the layout of the Software Center application:  
 
 -   The **Applications** tab has been split into three separate tabs for **Updates**, **Operating systems** (which were both previously found in the **Filters** list), and **Applications**.  
 
-##  <a name="BKMK_ServerGroups"></a> Service a  server group  
+##  <a name="BKMK_ServerGroups"></a> Service a server group  
  Technical Preview for Configuration Manager, version 1511, included the ability to create a collection where all devices in the collection make up a server group. Then, you could configure the server group settings to use when you deploy software updates to the server group, control the percentage of computers that are updated at any given time, and configure pre-deployment and post-deployment PowerShell scripts to run custom actions.  
 
  Technical Preview for Configuration Manager, version 1605, adds the ability to update the computers in the server group in a specified order that you define, adds enhanced monitoring to view the status for the computers in the server group, and provides the ability to clear the deployment locks that is useful when clients have failed to install the software updates and are preventing other clients from installing their software updates.  
@@ -331,19 +331,19 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 2.  On the **Home** tab, in the **Deployment** group, click **Clear Server Group Deployment Locks**. When clients have failed to install the software updates and are preventing other clients from installing their software updates, the deployment locks can be manually cleared.  
 
-##  <a name="BKMK_ATP"></a> Support for Microsoft Defender Advanced Threat Protection service  
- Microsoft Defender Advanced Threat Protection (ATP) is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Microsoft Defender ATP is formerly known as Windows Defender ATP. Learn more about [Microsoft Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager can help you onboard and monitor managed Windows 10 Anniversary Edition client devices.  
+##  <a name="BKMK_ATP"></a> Support for Microsoft Defender for Endpoint service  
+ Microsoft Defender for Endpoint is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Microsoft Defender for Endpoint is formerly known as Windows Defender for Endpoint. Learn more about [Microsoft Defender for Endpoint](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager can help you onboard and monitor managed Windows 10 Anniversary Edition client devices.  
 
 ### Try it now!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
 
-- Onboard devices to the Microsoft Defender Advanced Threat Protection (ATP) online service  
+- Onboard devices to the Microsoft Defender for Endpoint online service  
 
-- Monitor Microsoft Defender ATP deployment to managed devices  
+- Monitor Microsoft Defender for Endpoint deployment to managed devices  
 
   **Prerequisites**  
 
-- Subscription to the Microsoft Defender Advanced Threat Protection online service  
+- Subscription to the Microsoft Defender for Endpoint online service  
 
 - Clients running Windows 10, Anniversary Edition (build 14328 and greater)  
 
@@ -351,7 +351,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
   ##### How to create an onboarding configuration file  
 
-  1.  Logon to the Microsoft Defender ATP online service  
+  1.  Logon to the Microsoft Defender for Endpoint online service  
 
   2.  Click on the **Client On-boarding** menu item  
 
@@ -359,14 +359,13 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
   4.  Download the compressed archive (.zip) file and extract the contents.  
 
+##### Onboard devices for Microsoft Defender for Endpoint  
 
-##### Onboard devices for Microsoft Defender ATP  
+1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Microsoft Defender for Endpoint Policy Wizard opens.  
 
-1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
+2. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**. Click Next.  
 
-2. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**. Click Next.  
-
-3. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant. Click **Next**.  
+3. **Browse** to the Configuration file provided by your organization's Microsoft Defender for Endpoint cloud service tenant. Click **Next**.  
 
 4. Specify the file samples that are collected and shared from managed devices for analysis.  
 
@@ -378,17 +377,17 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 5. Review the summary and complete the wizard.  
 
-6. You can now deploy the Microsoft Defender ATP policy to managed client computers by clicking **Deploy**.  
+6. You can now deploy the Microsoft Defender for Endpoint policy to managed client computers by clicking **Deploy**.  
 
-##### Monitor Microsoft Defender ATP  
+##### Monitor Microsoft Defender for Endpoint  
 
-1.  In the Configuration Manager console, navigate **Monitoring** > **Overview** > **Security** and then click **Windows Defender ATP**.  
+1.  In the Configuration Manager console, navigate **Monitoring** > **Overview** > **Security** and then click **Windows Defender for Endpoint**.  
 
-2.  Review the Microsoft Defender Advanced Threat Protection dashboard.  
+2.  Review the Microsoft Defender for Endpoint dashboard.  
 
-    -   **Windows Defender Agent Deployment Status** – The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
+    -   **Windows Defender Agent Deployment Status** – The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded  
 
-    -   **Windows Defender ATP Agent Health** – Percentage of computer clients reporting status for their Microsoft Defender ATP agent  
+    -   **Windows Defender ATP Agent Health** – Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent  
 
         -   **Healthy** - Working properly  
 

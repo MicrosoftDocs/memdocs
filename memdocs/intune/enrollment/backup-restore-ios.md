@@ -38,9 +38,12 @@ You might have to back up and restore an Intune Automated Device Enrollment (ADE
 To back up and restore an iOS/iPadOS device, you must follow the Apple instructions:
 - To back up your device, see [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977).
 - To restore you device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
-- To transfer data to a new device, see either of these articles:
+- To transfer data to a new device, see the following Apple support article:
     - [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad, or iPod touch](https://support.apple.com/HT210217)
-    - [Use Quick Start to transfer data to a new iPhone, iPad, or iPod touch](https://support.apple.com/HT210216).
+
+> [!NOTE] 
+> Device-to-Device migration as offered on the Quick Start screen after resetting an iOS device is not supported with Apple Business Manager (ABM). For details refer to the following [Apple support document.](https://support.apple.com/HT210216#:~:text=%C2%A0If%20your%20new%20iPhone%20is%20enrolled%20in%20Apple%20School%20Manager%20or%20Apple%20Business%20Manager%2C%20you%20can%27t%20use%20Quick%20Start%20to%20transfer%20data%20from%20your%20current%20iPhone.)
+> Since this screen appears on the device before a wi-fi connection has been established and before the ABM profile has been downloaded, this quick start screen cannot be hidden via ABM.    
 
 For more information about restoring Apple devices from backup, see [Get started using Apple Business Manager or Apple School Manager with Mobile Device Management](https://support.apple.com/HT207516).
 
@@ -74,9 +77,9 @@ There is an additional migration scenario to consider, which should not be impac
 - There are other considerations in a scenario where the device is migrated without performing a device wipe:
     - If the device was supervised under the current EMM vendor, the supervised state will be maintained
     - The new management profile (MEM/Intune) cannot be ‘locked’ – meaning the user is able to remove the management profile in Settings.
-    - These devices will enroll into MEM/Intune as ‘personal’ devices, rather than ‘corporate’ devices. This will have an impact on the app inventory gathered from the device, the displayed phone number, etc., as described [here](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune).
+    - These devices will enroll into MEM/Intune as ‘personal’ devices, rather than ‘corporate’ devices. This will have an impact on the app inventory gathered from the device, the displayed phone number, etc., as described [here](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
         - If you wish to designate these migrated devices as corporate devices, you can do either of the following:
-            - Add Corporate device identifiers as described [here](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-ios#create-an-apple-enrollment-profile:~:text=If%20you%20need%20to%20re-enroll%20your,Portal%20and%20going%20through%20device%20enrollment). Provided you can obtain a list of serial numbers from your current EMM vendor and this is imported prior to enrolling the devices in Intune, this is the simplest option and avoids scripting.
+            - Add Corporate device identifiers as described [here](./device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Provided you can obtain a list of serial numbers from your current EMM vendor and this is imported prior to enrolling the devices in Intune, this is the simplest option and avoids scripting.
             - Use a script to modify the OwnershipType from Personal to Corporate. A sample script which leverages an exported list (.csv) of device serial numbers (taken from your current EMM vendor) as input, is located [here](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).
 
 > [!NOTE] 
@@ -85,5 +88,3 @@ There is an additional migration scenario to consider, which should not be impac
 ## Next steps
 
 [Learn more about Automated Device Enrollment](device-enrollment-program-enroll-ios.md).
-
-

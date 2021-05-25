@@ -124,6 +124,9 @@ If the pre-provisioning process completed successfully and the device was reseal
 - If using Hybrid Azure AD Join, the device will reboot; after the reboot, enter the user’s Active Directory credentials.
 - Additional policies and apps will be delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user will can access the desktop.
 
+>[!NOTE]
+>If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+
 ## Related topics
 
 [Pre-provisioning video](https://youtu.be/nE5XSOBV0rI)

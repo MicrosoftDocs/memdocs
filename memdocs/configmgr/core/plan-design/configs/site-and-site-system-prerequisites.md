@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 02/19/2020
+ms.date: 05/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -47,30 +47,9 @@ The following requirements apply to all site system servers:
 
 - It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.  
 
-### <a name="bkmk_2012Prereq"></a> Prerequisites for Windows Server 2012 and later operating systems  
-
-See the main sections of this article for the specific prerequisites for site system servers and roles on Windows Server 2012 and later:
-
-- [Central administration site and primary site servers](#bkmk_2012sspreq)
-- [Secondary site server](#bkmk_2012secpreq)
-- [Database server](#bkmk_2012dbpreq)
-- [SMS Provider server](#bkmk_2012smsprovpreq)
-- [Application Catalog website point](#bkmk_2012acwspreq)
-- [Application Catalog web service point](#bkmk_2012ACwsitepreq)
-- [Asset Intelligence synchronization point](#bkmk_2012AIpreq)
-- [Certificate registration point](#bkmk_2012crppreq)
-- [Distribution point](#bkmk_2012dppreq)
-- [Endpoint Protection point](#bkmk_2012EPPpreq)
-- [Enrollment point](#bkmk_2012Enrollpreq)
-- [Enrollment proxy point](#bkmk_2012EnrollProxpreq)
-- [Fallback status point](#bkmk_2012FSPpreq)
-- [Management point](#bkmk_2012MPpreq)
-- [Reporting services point](#bkmk_2012RSpoint)
-- [Service connection point](#bkmk_SCPpreq)
-- [Software update point](#bkmk_2012SUPpreq)
-- [State migration point](#bkmk_2012SMPpreq)
-
 ## <a name="bkmk_2012sspreq"></a> Central administration site and primary site servers
+
+For more information on all prerequisites including permissions, see [Prerequisites for installing a primary site or a CAS](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following sections detail the prerequisite components that you need to install or enable.
 
 ### Windows Server roles and features
 
@@ -84,7 +63,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 Enable the Windows feature for .NET Framework 3.5.
 
-Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Also install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 For more information about .NET Framework versions, see the following articles:
 
@@ -120,7 +99,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 Enable the Windows feature for .NET Framework 3.5.
 
-Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Also install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 For more information about .NET Framework versions, see the following articles:
 
@@ -175,124 +154,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 - If you're using the [administration service](../../../develop/adminservice/overview.md), the server that hosts the SMS Provider role requires .NET 4.5 or later  <!-- SCCMDocs issue #1203 -->
 
-    > [!NOTE]
-    > Configuration Manager version 1810 requires .NET 4.5.2 or later.
-
 - Web Server (IIS): Every provider attempts to install the [administration service](../../../develop/adminservice/overview.md). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](../hierarchy/enhanced-http.md), Configuration Manager uses IIS APIs to bind the site-generated certificate. Starting in version 2002, the site automatically uses the site's self-signed certificate.
-
-### SQL Server Native Client
-
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
-
-
-## <a name="bkmk_2012acwspreq"></a> Application catalog website point  
-
-> [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-### Windows Server roles and features
-
-- .NET Framework 3.5
-
-- ASP.NET 4.5  
-
-### .NET Framework
-
-Enable the Windows feature for .NET Framework 3.5.
-
-Also install a supported version of the .NET Framework version 4.5 or later.
-
-For more information about .NET Framework versions, see the following articles:
-
-- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
-- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
-
-### IIS configuration  
-
-- Common HTTP Features:  
-
-    - Default Document  
-
-    - Static Content  
-
-- Application Development:  
-
-    - ASP.NET 3.5 (and automatically selected options)  
-
-    - ASP.NET 4.5 (and automatically selected options)  
-
-    - .NET Extensibility 3.5  
-
-    - .NET Extensibility 4.5  
-
-- Security:  
-
-    - Windows Authentication  
-
-- IIS 6 Management Compatibility:  
-
-    - IIS 6 Metabase Compatibility  
-
-
-## <a name="bkmk_2012ACwsitepreq"></a> Application catalog web service point  
-
-> [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-### Windows Server roles and features
-
-- .NET Framework 3.5
-
-- ASP.NET 4.5:  
-
-    - HTTP Activation (and automatically selected options)  
-
-### .NET Framework
-
-Enable the Windows feature for .NET Framework 3.5.
-
-Also install a supported version of the .NET Framework version 4.5 or later.
-
-For more information about .NET Framework versions, see the following articles:
-
-- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
-- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
-
-### IIS configuration
-
-- Common HTTP Features:  
-
-    - Default Document  
-
-- IIS 6 Management Compatibility:  
-
-    - IIS 6 Metabase Compatibility  
-
-- Application Development:  
-
-    - ASP.NET 3.5 (and automatically selected options)  
-
-    - .NET Extensibility 3.5  
-
-    - ASP.NET 4.5 (and automatically selected options)  
-
-    - .NET Extensibility 4.5  
-
-### Computer memory  
-
-- The computer that hosts this site system role must have a minimum of 5% of the computer's available memory free to enable the site system role to process requests.  
-
-- When this site system role is colocated with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
 
 ### SQL Server Native Client
 
@@ -303,7 +165,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### .NET Framework
 
-Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 For more information about .NET Framework versions, see the following articles:
 
@@ -325,7 +187,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### .NET Framework
 
-Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 For more information about .NET Framework versions, see the following articles:
 
@@ -375,7 +237,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### PowerShell  
 
-- On Windows Server 2012 or later, PowerShell 3.0 or 4.0 is required before you install the distribution point.  
+- PowerShell 3.0 or 4.0 is required before you install the distribution point.  
 
 ### Visual C++ Redistributable
 
@@ -394,7 +256,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 - Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
-    > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
+    > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast.
 
 - For a multicast-enabled distribution point, make sure the SQL Server Native Client is installed and up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
@@ -434,7 +296,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 Enable the Windows feature for .NET Framework 3.5.
 
-Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Also install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 > [!Note]
 > When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
@@ -485,7 +347,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 Enable the Windows feature for .NET Framework 3.5.
 
-Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Also install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 > [!Note]
 > When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
@@ -551,7 +413,7 @@ The default IIS configuration is required with the following additions:
 
 ### .NET Framework
 
-Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 For more information about .NET Framework versions, see the following articles:
 
@@ -583,7 +445,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### .NET Framework
 
-Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 For more information about .NET Framework versions, see the following articles:
 
@@ -609,7 +471,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 Enable the Windows feature for .NET Framework 3.5.
 
-Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Also install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 > [!Note]
 > When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
@@ -642,7 +504,7 @@ The default IIS configuration is required.
 
 Enable the Windows feature for .NET Framework 3.5.
 
-Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Also install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 For more information about .NET Framework versions, see the following articles:
 
@@ -678,7 +540,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 Enable the Windows feature for .NET Framework 3.5.
 
-Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+Also install a supported version of the .NET Framework version 4.5 or later. Configuration Manager also supports .NET Framework 4.8.
 
 > [!Note]
 > When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  

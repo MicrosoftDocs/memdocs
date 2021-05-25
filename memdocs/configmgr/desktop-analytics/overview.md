@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 01/21/2021
+ms.date: 04/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -29,7 +29,7 @@ Use Desktop Analytics with Configuration Manager to:
 
 - Deploy Windows 10 to pilot and production-managed devices
 
-:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Endpoint Manager admin center":::
+:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Endpoint Manager admin center" lightbox="media/portal-home.png":::
 
 The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
 
@@ -42,7 +42,7 @@ Skip to 10:00 for an in-depth demo.
 > [!NOTE]
 > Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
 >
-> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](faq.md#existing-windows-analytics-customers).
+> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](/mem/configmgr/desktop-analytics/faq#existing-windows-analytics-customers).
 
 ## Benefits
 
@@ -71,7 +71,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - **Workspace owner** permissions to **Set up your workspace**, and the following Azure Active Directory (Azure AD) roles:
 
-    - [**Desktop Analytics Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)
+    - [**Desktop Analytics Administrator**](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator)
 
     - To use an existing workspace or create a new workspace in an existing resource group: [**Log Analytics Contributor**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) and [**User Access Administrator**](/azure/role-based-access-control/built-in-roles#user-access-administrator) on the resource group.
 
@@ -79,9 +79,9 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - To access the portal after onboarding: [**Desktop Analytics Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) and [**Owner**](/azure/role-based-access-control/built-in-roles#owner) roles, or [**Contributor**](/azure/role-based-access-control/built-in-roles#contributor) permissions on the Log Analytics workspace.
 
-- Configuration Manager, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix).
+- A supported version of Configuration Manager.
 
-  - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#bkmk_Planroles) role in Configuration Manager
+  - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#security-roles) role in Configuration Manager
 
   > [!NOTE]
   > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
@@ -89,11 +89,11 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > - Use different Commercial IDs and Azure AD tenants.
   > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 days after you disconnect a hiearchy for the portal to reflect changes.
 
-- Devices running Windows 7, Windows 8.1, or Windows 10  
+- Devices running Windows 7, Windows 8.1, or Windows 10
 
-  - Install the latest updates. For more information, see [Update devices](enroll-devices.md#update-devices).  
+  - Install the latest updates. For more information, see [Update devices](enroll-devices.md#update-devices).
 
-  - Devices also need to have the Configuration Manager client, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
+  - Managed with a supported version of the Configuration Manager client.
 
   - Starting in version 2010, you can use Configuration Manager to enroll Windows 10 Enterprise long-term servicing channel (LTSC) 2019 devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans to shift from LTSC to the semi-annual servicing channel.<!--6107649-->
   
@@ -126,7 +126,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
-- Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.md).
+- Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.yml).
 
 - Users of the device need one of the following licenses:
 

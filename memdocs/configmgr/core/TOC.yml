@@ -5,7 +5,7 @@
   - name: What is Configuration Manager?
     href: understand/introduction.md
   - name: Microsoft Endpoint Configuration Manager FAQ
-    href: understand/microsoft-endpoint-manager-faq.md
+    href: understand/microsoft-endpoint-manager-faq.yml
   - name: What happened to SCCM?
     href: understand/what-happened-to-sccm.md
   - name: Introduction
@@ -26,6 +26,8 @@
       href: servers/manage/admin-console.md
     - name: Console notifications
       href: servers/manage/admin-console-notifications.md
+    - name: Console extensions
+      href: servers/manage/admin-console-extensions.md
     - name: Console changes and tips
       href: servers/manage/admin-console-tips.md
   - name: Fundamentals
@@ -50,12 +52,10 @@
     items:
     - name: Cloud services overview
       href: understand/use-cloud-services.md
-    - name: Configuration Manager on Azure
-      href: understand/configuration-manager-on-azure.md
-  - name: FAQ for site sizing and performance
-    href: understand/site-size-performance-faq.md
+    - name: Configuration Manager on Azure FAQ
+      href: understand/configuration-manager-on-azure.yml
   - name: FAQ for product and licensing
-    href: understand/product-and-licensing-faq.md
+    href: understand/product-and-licensing-faq.yml
   - name: Which branch of Configuration Manager should I use?
     href: understand/which-branch-should-i-use.md
   - name: Licensing and branches
@@ -84,6 +84,8 @@
       href: plan-design/changes/features-and-capabilities.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2103
+      href: plan-design/changes/whats-new-in-version-2103.md
     - name: What's new in version 2010
       href: plan-design/changes/whats-new-in-version-2010.md
     - name: What's new in version 2006
@@ -91,9 +93,7 @@
     - name: What's new in version 2002
       href: plan-design/changes/whats-new-in-version-2002.md
     - name: What's new in version 1910
-      href: plan-design/changes/whats-new-in-version-1910.md      
-    - name: What's new in version 1906
-      href: plan-design/changes/whats-new-in-version-1906.md
+      href: plan-design/changes/whats-new-in-version-1910.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
@@ -110,12 +110,8 @@
     items:
     - name: Supported configurations
       href: plan-design/configs/supported-configurations.md
-    - name: Size and scale numbers
-      href: plan-design/configs/size-and-scale-numbers.md
     - name: Site and site system prerequisites
       href: plan-design/configs/site-and-site-system-prerequisites.md
-    - name: Site size and performance guidelines
-      href: plan-design/configs/site-size-performance-guidelines.md
     - name: Supported operating systems for site system servers
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
     - name: Supported operating systems for clients and devices
@@ -124,8 +120,6 @@
       href: plan-design/configs/support-for-windows-10.md
     - name: Supported operating systems for consoles
       href: plan-design/configs/supported-operating-systems-consoles.md
-    - name: Recommended hardware
-      href: plan-design/configs/recommended-hardware.md
     - name: Support for SQL Server versions
       href: plan-design/configs/support-for-sql-server-versions.md
     - name: Support for Active Directory domains
@@ -134,6 +128,16 @@
       href: plan-design/configs/support-for-windows-features-and-networks.md
     - name: Support for virtualization environments
       href: plan-design/configs/support-for-virtualization-environments.md
+    - name: Size, scale, and performance
+      items:
+      - name: Size and scale numbers
+        href: plan-design/configs/size-and-scale-numbers.md
+      - name: Recommended hardware
+        href: plan-design/configs/recommended-hardware.md
+      - name: Site size and performance guidelines
+        href: plan-design/configs/site-size-performance-guidelines.md
+      - name: FAQ for site sizing and performance
+        href: understand/site-size-performance-faq.yml
   - name: Choose a device management solution
     href: plan-design/choose-a-device-management-solution.md
   - name: Design a hierarchy of sites
@@ -190,10 +194,10 @@
       href: plan-design/network/internet-endpoints.md
     - name: Active Directory schema
       items:
+      - name: About schema extensions
+        href: plan-design/network/schema-extensions.md
       - name: Prepare the Active Directory schema
         href: plan-design/network/extend-the-active-directory-schema.md
-      - name: Schema extensions
-        href: plan-design/network/schema-extensions.md
     - name: Prepare Windows Servers to support site systems
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
@@ -218,6 +222,8 @@
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2103
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2103.md
         - name: Data for version 2010
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2010.md
         - name: Data for version 2006
@@ -226,18 +232,14 @@
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
         - name: Data for version 1910
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
-        - name: Data for version 1906
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
     - name: Frequently asked questions (FAQ)
-      href: plan-design/diagnostics/frequently-asked-questions.md
+      href: plan-design/diagnostics/frequently-asked-questions.yml
   - name: Security and privacy for Configuration Manager
     items:
-    - name: Security and privacy overview
-      href: plan-design/security/security-and-privacy.md
     - name: Plan for security
       href: plan-design/security/plan-for-security.md
-    - name: Security best practices and privacy information
-      href: plan-design/security/security-best-practices-and-privacy-information.md
+    - name: Plan for certificates
+      href: plan-design/security/plan-for-certificates.md
     - name: Additional privacy information
       href: plan-design/security/additional-privacy.md
     - name: Configure security
@@ -254,6 +256,8 @@
         href: plan-design/security/enable-tls-1-2-server.md
       - name: Common issues when enabling TLS 1.2
         href: plan-design/security/enable-tls-1-2-troubleshoot.md
+    - name: Security documentation hub
+      href: ../security/index.yml
 - name: Get started
   items:
   - name: Evaluate Configuration Manager in a lab
@@ -268,16 +272,14 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
-    - name: 2101 features
-      href: get-started/2021/technical-preview-2101.md
-    - name: 2012 features
-      href: get-started/2020/technical-preview-2012.md
-    - name: 2011 features
-      href: get-started/2020/technical-preview-2011.md
-    - name: 2010.2 features
-      href: get-started/2020/technical-preview-2010-2.md
-    - name: 2010 features
-      href: get-started/2020/technical-preview-2010.md
+    - name: 2105 features
+      href: get-started/2021/technical-preview-2105.md
+    - name: 2104 features
+      href: get-started/2021/technical-preview-2104.md
+    - name: 2103 features
+      href: get-started/2021/technical-preview-2103.md
+    - name: 2102 features
+      href: get-started/2021/technical-preview-2102.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -346,6 +348,8 @@
           href: servers/deploy/install/use-a-command-line-to-install-sites.md
         - name: Command-line options
           href: servers/deploy/install/command-line-options-for-setup.md
+        - name: Unattended setup script file keys
+          href: servers/deploy/install/command-line-script-file.md
       - name: Install consoles
         href: servers/deploy/install/install-consoles.md
       - name: Upgrade an evaluation install
@@ -524,6 +528,8 @@
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2103
+      href: servers/manage/checklist-for-installing-update-2103.md
     - name: Checklist for installing update 2010
       href: servers/manage/checklist-for-installing-update-2010.md
     - name: Checklist for installing update 2006
@@ -532,8 +538,6 @@
       href: servers/manage/checklist-for-installing-update-2002.md
     - name: Checklist for installing update 1910
       href: servers/manage/checklist-for-installing-update-1910.md
-    - name: Checklist for installing update 1906
-      href: servers/manage/checklist-for-installing-update-1906.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -615,20 +619,19 @@
     - name: Data warehouse
       href: servers/manage/data-warehouse.md
   - name: Support Center
-    href: support/support-center.md
     items:
     - name: Support Center overview
       href: support/support-center.md
     - name: Quickstart guide
       href: support/support-center-quickstart.md
-    - name: Accessibility
-      href: support/support-center-accessibility.md
+    - name: Support Center OneTrace
+      href: support/support-center-onetrace.md
     - name: User interface reference
       href: support/support-center-ui-reference.md
     - name: Customizations
       href: support/support-center-customize.md
-    - name: Support Center OneTrace (Preview)
-      href: support/support-center-onetrace.md
+    - name: Accessibility
+      href: support/support-center-accessibility.md
   - name: Configuration Manager tools
     items:
     - name: Tools overview
@@ -679,7 +682,7 @@
       href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
     - name: Security and privacy for clients
       href: clients/deploy/plan/security-and-privacy-for-clients.md
-    - name: Best practices for client deployment
+    - name: Recommendations for client deployment
       href: clients/deploy/plan/best-practices-for-client-deployment.md
     - name: Determine whether to block clients
       href: clients/deploy/plan/determine-whether-to-block-clients.md
@@ -896,7 +899,7 @@
       - name: Security and privacy for CMG
         href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
       - name: FAQ for CMG
-        href: clients/manage/cmg/cloud-management-gateway-faq.md
+        href: clients/manage/cmg/cloud-management-gateway-faq.yml
       - name: Ports and data flow
         href: clients/manage/cmg/data-flow.md
   - name: Plan for internet-based client management

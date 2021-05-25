@@ -91,6 +91,9 @@ BEGIN
 END
 ```
 
+> [!NOTE]
+> The certificate expiration date is not checked or enforced by SQL Server when the certificate is used for database encryption as is the case here.
+
 ### Back up certificate
 
 This sample script backs up a certificate. When you save the certificate to a file, you can then [restore](#restore-certificate) it to other site databases in the hierarchy.

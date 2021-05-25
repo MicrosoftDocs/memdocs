@@ -128,4 +128,4 @@ To learn more about product licensing details, use the following resources.
 
 ## Next steps
 
-[Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.md)
+[Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.yml)

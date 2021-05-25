@@ -66,7 +66,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 5. Enable the toggle options according to your organization's requirements. Toggle options visible will vary depending on the MTD partner.  For example, the following image shows the options that are available for Symantec Endpoint Protection:
 
-   ![MTD setup in Intune Azure portal](./media/mtd-connector-enable/enable-mtd-connector-1.png)
+   ![MTD setup in Intune](./media/mtd-connector-enable/enable-mtd-connector-1.png)
 
 ## Mobile Threat Defense toggle options
 
@@ -81,7 +81,7 @@ You can decide which MTD toggle options you need to enable according to your org
 - **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and will provide updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). 
 
   > [!NOTE]  
-  > On devices marked as *corporate*, all apps are shared with the Mobile Threat Defense vendor, while on devices marked as *personal*, only Intune managed apps are shared.
+  > App Sync data is sent to Mobile Threat Defense partners at an interval based on device check-in, and should **not** be confused with the refresh interval for the [Discovered Apps report](../apps/app-discovered-apps.md#details-of-discovered-apps). 
 
 - **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version.
 

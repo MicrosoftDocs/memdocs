@@ -34,7 +34,7 @@ All Configuration Manager log files are plain text, so you can view them with an
 
 - [CMTrace](#cmtrace)
 - [OneTrace](#onetrace)
-- [Support Center log viewer](#support-center-log-viewer)
+- [Support Center log file viewer](#support-center-log-file-viewer)
 
 ### CMTrace
 
@@ -42,14 +42,14 @@ To view the logs, use the Configuration Manager log viewer tool **CMTrace**. It'
 
 ### OneTrace
 
-Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md).
+**OneTrace** is a log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md).
 
-### Support Center log viewer
+### Support Center Log File Viewer
 
-**Support Center** includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds. For more information, see [Support Center Log Viewer reference](../../support/support-center-ui-reference.md#bkmk_log-viewer).
+**Support Center** includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds. For more information, see [Support Center Log File Viewer](../../support/support-center-ui-reference.md#support-center-log-file-viewer).
 
-> [!Note]  
-> Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.
+> [!NOTE]
+> Support Center Log File Viewer and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.
 
 
 ## <a name="bkmk_logoptions"></a> Configure logging options
@@ -256,7 +256,6 @@ The location of the task sequence log file **smsts.log** varies depending upon t
 
 > [!Tip]  
 > The read-only task sequence variable [_SMSTSLogPath](../../../osd/understand/task-sequence-variables.md#SMSTSLogPath) always contains the path of the current log file.
-
 
 ## See also
 

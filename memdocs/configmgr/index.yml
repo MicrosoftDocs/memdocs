@@ -32,15 +32,15 @@ conceptualContent:
         - text: Microsoft Endpoint Manager tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
+        - text: Endpoint analytics
+          url: ../analytics/index.yml
+          itemType: overview
         - text: Overview of cloud management gateway (CMG)
           url: ./core/clients/manage/cmg/overview.md
           itemType: overview
         - text: Plan for Azure AD
-          url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+          url: ./core/plan-design/security/plan-for-security.md#azure-active-directory
           itemType: architecture
-        - text: Azure services
-          url: ./core/servers/deploy/configure/azure-services-wizard.md
-          itemType: how-to-guide
     - title: Co-management
       links:
         - text: Quickstarts
@@ -89,7 +89,7 @@ conceptualContent:
           url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
           itemType: how-to-guide
         - text: Configuration Manager on Azure
-          url: ./core/understand/configuration-manager-on-azure.md
+          url: ./core/understand/configuration-manager-on-azure.yml
           itemType: learn
     - title: Core infrastructure
       links:
@@ -158,8 +158,8 @@ conceptualContent:
         - text: Create configuration items
           url: ./compliance/deploy-use/create-configuration-items.md
           itemType: how-to-guide
-        - text: Microsoft Edge Legacy settings
-          url: ./compliance/deploy-use/browser-profiles.md
+        - text: OneDrive for Business Profiles
+          url: ./compliance/deploy-use/onedrive-profile.md
           itemType: how-to-guide
         - text: Windows edition upgrade
           url: ./compliance/deploy-use/upgrade-windows-version.md
@@ -172,7 +172,7 @@ conceptualContent:
         - text: Endpoint protection
           url: ./protect/deploy-use/endpoint-protection.md
           itemType: overview
-        - text: Microsoft Defender Advanced Threat Protection
+        - text: Microsoft Defender for Endpoint
           url: ./protect/deploy-use/defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management
@@ -194,7 +194,13 @@ additionalContent:
         url: https://twitter.com/hashtag/configmgr
       - title: Configuration Manager forums
         summary: Ask technical questions in the product forums
-        url: /answers/products/mem
+        url: /answers/products/enterprise-mobility-security
+      - title: Configuration Manager troubleshooting
+        summary: Support articles to help you diagnose and fix issues
+        url: /troubleshoot/mem/configmgr/welcome-configuration-manager
+      - title: In-console feedback
+        summary: Send a smile or frown to the engineering team
+        url: ./core/understand/product-feedback.md
       - title: UserVoice product feedback
         summary: Share product ideas with the engineering team
         url: https://configurationmanager.uservoice.com/forums/300492-ideas
@@ -232,4 +238,4 @@ additionalContent:
               text: ConfigMgr on Reddit
             - url: https://www.facebook.com/groups/ConfigMgr2012
               text: ConfigMgr Professionals Group on Facebook
-   footer: "Found a problem on our site? [Let us know](../use-docs.md#about-feedback)!"
+   footer: "Found a problem with Configuration Manager docs? [Let us know](../use-docs.md#about-feedback)!"

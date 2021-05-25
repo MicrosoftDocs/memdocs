@@ -16,7 +16,7 @@
     href: about-deployment-plans.md
   - name: Assets
     href: about-assets.md
-  - name: Quality and feature updates
+  - name: Feature updates
     href: about-updates.md
   - name: Compatibility assessment
     href: compat-assessment.md
@@ -55,6 +55,6 @@
   - name: Group policy settings
     href: group-policy-settings.md
   - name: Frequently asked questions
-    href: faq.md
+    href: faq.yml
   - name: Get support
     href: get-support.md

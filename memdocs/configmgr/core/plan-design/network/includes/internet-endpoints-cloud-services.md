@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: include
-ms.date: 11/30/2020
+ms.date: 04/14/2021
 ---
 
 This section covers the following features:
@@ -41,13 +41,15 @@ For Configuration Manager to deploy the CMG or CDP services in Azure, the servic
 
 The CMG connection point needs access to the following service endpoints:
 
-- Deployment name (for CMG or CDP):
+- _Service_ name (for CMG or CDP):
   - `<name>.cloudapp.net` (Azure public cloud)
   - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 
-- Storage endpoint (for content-enabled CMG or CDP): <!-- does CMGCP need to access this? -->
+- Storage endpoint (for content-enabled CMG or CDP):
   - `<name>.blob.core.windows.net` (Azure public cloud)
   - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
+  - `<name>.table.core.windows.net` (Azure public cloud)
+  - `<name>.table.core.usgovcloudapi.net` (Azure US Government cloud)
 
 The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](../proxy-server-support.md#configure-the-proxy-for-a-site-system-server).
 
@@ -55,7 +57,7 @@ The CMG connection point only needs to connect to the CMG service endpoints. It 
 
 ### Configuration Manager client
 
-- Deployment name (for CMG or CDP):
+- _Deployment_ name (for CMG or CDP):
   - `<name>.cloudapp.net` (Azure public cloud)
   - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 

@@ -2,7 +2,7 @@
 title: Changes to CMPivot
 titleSuffix: Configuration Manager
 description: Learn about changes made to CMPivot between Configuration Manager versions.
-ms.date: 08/11/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -14,7 +14,62 @@ manager: dougeby
 
 # Changes to CMPivot
 
+*Applies to: Configuration Manager (current branch)*
+
 Use the following information to learn about changes made to [CMPivot](cmpivot.md) between Configuration Manager versions:
+
+## <a name="bkmk_2103"></a> CMPivot changes for version 2103
+<!--7137169, 9442715, 9310040, 9391017-->
+Starting in version 2103, the following improvements have been made for CMPivot:
+- [Warning message and export CMPivot data option when results are too large](#bkmk_export)
+- [Access the top queries shared in the Community hub from CMPivot](#bkmk_cmpivot_hub)
+
+### <a name="bkmk_export"></a> Warning message and export CMPivot data option when results are too large
+<!-- 9306291, 7717129, 5431427-->
+
+When results are too large the following warning message is displayed:
+
+**Your query returned a large number of results. Narrow the results by modifying the query, or select this banner to export the results.**
+
+This message occurs in the following scenarios:
+
+- When results are greater than 100,000 cells.
+   - For instance, the warning threshold is reached for 10,000 devices (rows) with 10 columns of entity data.
+   - In this case, you'll be given an option to export results to a `.csv` file
+
+- When more than 128 KB of data is requested to be returned from a given device.
+   - For instance, `CcmLog('ciagent', 120d)` queries log results and is likely to be over the 128 KB limit. 
+   - When the results are over 128 KB, you'll get a warning, but you can't export them since they won't be returned from the client to the server.
+
+
+### <a name="bkmk_cmpivot_hub"></a> Access the top queries shared in the Community hub from CMPivot
+Starting in version 2103, you can access the top CMPivot queries shared in the Community hub from on-premises CMPivot. By using pre-created CMPivot queries shared by the broader community, CMPivot users gain access to a wider variety of queries. On-premises CMPivot accesses the Community hub and returns a list of the top downloaded CMPivot queries. Users can review the top queries, customize them, and then run on-demand. This improvement gives a wider selection of queries for immediate usage without having to construct them and also allows information sharing on how to build queries for future reference.
+
+   > [!NOTE]
+   > These queries are available when you run CMPivot from the Configuration Manager console. They're not yet available from [standalone CMPivot](cmpivot.md#install-cmpivot-standalone). <!--9442715, 9310040, 9391017-->
+
+#### Prerequisites:
+- Meet all of the [CMPivot prerequisites and permissions](cmpivot.md#prerequisites)
+- Enable [Community hub](community-hub.md). You don't need a GitHub account to download content.
+- Verify which [content categories are displayed](community-hub.md#bkmk_category) for community hub
+- Install the Microsoft Edge WebView2 extension from the [Configuration Manager console notification](community-hub.md#bkmk_webview2)
+
+#### Use CMPivot to access the top Community hub queries
+
+1. Go to the **Assets and Compliance** workspace then select the **Device Collections** node.
+1. Select a target collection, target device, or group of devices then select **Start CMPivot** in the ribbon to launch the tool.
+1. Use the community hub icon on the menu.
+
+    :::image type="content" source="./media/7137169-hub-icon.png" alt-text="Community hub icon":::
+
+1. Review the list of top shared CMPivot queries.
+
+    :::image type="content" source="./media/7137169-cmpivot-hub-queries.png" alt-text="Top CMPivot queries from Community hub" lightbox="./media/7137169-cmpivot-hub-queries.png":::
+
+1. Select one of the top queries to load it into the query pane.
+1. Edit the [query](cmpivot-overview.md) if needed then select **Run Query**.
+1. Optionally, select the folder icon to access your favorites list. Add the original query or your edited version to your favorites list to run later. Select the community hub icon to search for another query. 
+1. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete. If the query has been sent, then clients still send a state message response to the server.
 
 ## <a name="bkmk_2006"></a> CMPivot changes for version 2006
 <!--6518631-->
@@ -193,7 +248,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
     > [!TIP]
     > For this link to work, [install CMPivot standalone](#bkmk_standalone).
 
-- In query results, if the device is enrolled in Microsoft Defender Advanced Threat Protection (ATP), right-click the device to launch the **Microsoft Defender Security Center** online portal.
+- In query results, if the device is enrolled in Microsoft Defender for Endpoint, right-click the device to launch the **Microsoft Defender Security Center** online portal.
 
 ### Known issues for CMPivot in version 1910
 

@@ -1,3 +1,6 @@
+### 
+### STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the EMMDocs team. 
+###  
 - name: Docs
   tocHref: /
   topicHref: /
@@ -16,7 +19,7 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/core/
-          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
+          topicHref: /mem/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -36,7 +39,7 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/osd/
-          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
+          topicHref: /mem/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -56,7 +59,7 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/apps/
-          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
+          topicHref: /mem/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -76,5 +79,5 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/compliance/
-          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
+          topicHref: /mem/configmgr/security/index
 

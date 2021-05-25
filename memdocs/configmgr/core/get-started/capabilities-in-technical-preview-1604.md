@@ -37,7 +37,7 @@ This article introduces the features that are available in the Technical Preview
 
 1.  In Azure Active Directory, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
 
-    1.  In the **Active Directory** node of [https://manage.windowsazure.com](https://manage.windowsazure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
+    1.  In the **Active Directory** node of [https://portal.azure.com](https://portal.azure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
 
     2.  Click **Add an application my organization is developing**.  
 

@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 05/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,13 +43,22 @@ The reporting framework provides a consistent and more comprehensive reporting e
 - **Performance** - You can quickly generate and view reports created from large tenants.
 - **Export** – You can quickly export reporting data generated from large tenants.
 
-### Who can access the data?
+## Who can access the data?
 
 Users with the following permissions can review logs:
 
 - Global Administrator
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Read** permissions
+
+## Reporting tiles
+
+The **Home**, **Dashboard**, and **Apps Overview** panes provide updated tiles to show the number of app installation failures for the tenant. You can use the following export **ReportName** parameters to retrieve the related data:
+
+**Export ReportName Parameters:**
+- `AppStatusOverview` - App overview count as provided for the pie chart on the **Apps Overview** pane.
+- `FailedAppCounts` - Failed app counts as provided on the **Apps Overview** pane, **Home** pane, and **Dashboard** pane.
+- `TopFailedMobileApps` - Top three failed apps as provided on the **Apps Overview** pane.
 
 ## Noncompliant devices report (Operational)
 The **Noncompliant devices** report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
@@ -137,6 +146,24 @@ You can view the **Assignment failures** report using the following steps:
 > [!NOTE]
 > *This report is in preview.*
 
+## App Install Status report (Operational)
+
+The **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
+
+To see a generated report, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
+
+## Device Install Status report for apps (Operational)
+
+Based on a selected app, the **Device Install Status** report provides a list of devices and status information related to the specific app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. You have the ability to sort, filter, and search this report as well.
+
+To see a generated report of device state, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **Device Install Status** > **Select an app**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 ## Device compliance report (Organizational)
 
@@ -235,6 +262,16 @@ You can view the **Windows 10 feature updates** report using the following steps
 > - [Feature update failures report (Operational)](#feature-update-failures-report-operational)
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
+
+## User Install Status for apps report (Operational)
+
+Based on a selected app, the **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Failures**, **Installs**, **Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well.
+
+To see a generated report, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **User Install Status** > **Select an app**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 ## Windows 10 MDM Firewall status (Organizational)
 

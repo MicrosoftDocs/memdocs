@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 02/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,6 +35,9 @@ Use the Microsoft Intune App Wrapping Tool for Android to change the behavior of
 The tool is a Windows command-line application that runs in PowerShell and creates a wrapper around your Android app. After the app is wrapped, you can change the app's functionality by configuring [mobile application management policies](../apps/app-protection-policies.md) in Intune.
 
 Before running the tool, review [Security considerations for running the App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). To download the tool, go to the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) on GitHub.
+
+> [!NOTE]
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/issues) on GitHub.
 
 ## Fulfill the prerequisites for using the App Wrapping Tool
 
@@ -73,6 +76,9 @@ Note the folder to which you installed the tool. The default location is: C:\Pro
 
 ## Run the App Wrapping Tool
 
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
+
 1. On the Windows computer where you installed the App Wrapping Tool, open a PowerShell window.
 
 2. From the folder where you installed the tool, import the App Wrapping Tool PowerShell module:
@@ -94,7 +100,7 @@ Note the folder to which you installed the tool. The default location is: C:\Pro
 |-------------|--------------------|---------|
 |**-InputPath**&lt;String&gt;|Path of the source Android app (.apk).| |
  |**-OutputPath**&lt;String&gt;|Path to the output Android app. If this is the same directory path as InputPath, the packaging will fail.| |
-|**-KeyStorePath**&lt;String&gt;|Path to the keystore file that has the public/private key pair for signing.|By default, keystore files are stored in "C:\Program Files (x86)\Java\jreX.X.X_XX\bin." |
+|**-KeyStorePath**&lt;String&gt;|Path to the keystore file that has the public/private key pair for signing.|By default, keystore files are stored in "C:\Program Files (x86)\Java\jreX.X.X_XX\bin". |
 |**-KeyStorePassword**&lt;SecureString&gt;|Password used to decrypt the keystore. Android requires all application packages (.apk) to be signed. Use Java keytool to generate the KeyStorePassword. Read more about Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) here.| |
 |**-KeyAlias**&lt;String&gt;|Name of the key to be used for signing.| |
 |**-KeyPassword**&lt;SecureString&gt;|Password used to decrypt the private key that will be used for signing.| |

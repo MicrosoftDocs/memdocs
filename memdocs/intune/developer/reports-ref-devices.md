@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/25/2021
+ms.date: 05/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -215,13 +215,14 @@ The **ManagementAgentType** entity represents the agents used to manage a device
 
 | ManagementAgentTypeID  | Name | Description |
 |---------|------------|--------|
-| 1 |EAS | The device is managed through Exchange Active Sync |
-| 2 |MDM | The device is managed using an MDM agent |
-| 3 |EasMdm | The device is managed by both Exchange Active Sync and an MDM agent |
-| 4 |IntuneClient | The device is managed by the Intune PC agent |
-| 5 |EasIntuneClient | The device is managed by both Exchange Active Sync and the Intune PC agent |
-| 8 |ConfigManagerClient | The device is managed by the Configuration Manager agent |
-| 16 |Unknown | Unknown management agent type |
+| 1 |EAS | The device is managed through Exchange Active Sync. |
+| 2 |MDM | The device is managed using an MDM agent. |
+| 3 |EasMdm | The device is managed by both Exchange Active Sync and an MDM agent. |
+| 4 |IntuneClient | The device is managed by the Intune PC agent. |
+| 5 |EasIntuneClient | The device is managed by both Exchange Active Sync and the Intune PC agent. |
+| 8 |ConfigManagerClient | The device is managed by the Configuration Manager agent. |
+| 16 |Unknown | Unknown management agent type. |
+| 2048 |IntuneAosp |  The device is managed by Intune's MDM for AOSP (Android Open Source Project) devices. |
 
 ## devices
 

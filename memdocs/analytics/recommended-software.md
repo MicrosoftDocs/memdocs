@@ -1,6 +1,6 @@
 ---
 title: Recommended software in Endpoint Analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Get details about recommended software in Endpoint Analytics
 ms.date: 09/22/2020
 ms.prod: configuration-manager
@@ -24,7 +24,7 @@ Certain software is known to improve the end-user experience, independent of low
 
 ## <a name="bkmk_win10"></a> Windows 10
 
-Windows 10 provides a better user experience than older versions of Windows. For more information, see the [TEI whitepaper](https://vc2prod.blob.core.windows.net/vc-resources/TEIStudies/TEI%20of%20Windows%2010.pdf).
+Windows 10 provides a better user experience than older versions of Windows. For more information, see the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
 
 This metric measures the percent of devices on Windows 10 versus an older version of Windows.
 

@@ -161,6 +161,9 @@ Use the following procedure to set a task sequence as high-impact.
 
 ### Create a custom notification for high-risk deployments
 
+> [!NOTE]
+> The client only displays high-impact notifications for required OS deployment task sequences. It doesn't display them for non-OS deployment or stand-alone task sequences.
+
 Use the following procedure to create a custom notification for high-impact deployments.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
@@ -405,7 +408,7 @@ Moves the selected task sequence to another folder in the **Task Sequences** nod
 
 ### Set Security Scopes
 
-Select the security scopes for the selected task sequence. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
+Select the security scopes for the selected task sequence. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#security-scopes).
 
 ### Properties
 

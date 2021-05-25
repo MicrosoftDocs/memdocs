@@ -8,7 +8,7 @@
     - name: Known issues
       href: known-issues.md
     - name: Frequently asked questions (FAQ)
-      href: faq.md
+      href: faq.yml
   - name: How-to guides
     items:
     - name: MDT user guide
