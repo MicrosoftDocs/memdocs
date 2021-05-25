@@ -2,7 +2,7 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 04/30/2021
+ms.date: 05/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -88,7 +88,7 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
    1. For Configuration Manager 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
       - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
         - **Open**: Open a specific `.ps1` file
-        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list
+        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters can't be used and will be hidden from the list. <!--9893550-->
         - **Clear**: Clears the current script in the script pane
       - **Edit**: Edit the currently selected script
       - **Delete**: Removes the current script
@@ -133,7 +133,7 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
    - For Configuration Manager version 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
       - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
         - **Open**: Open a specific `.ps1` file
-        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list
+        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters can't be used and will be hidden from the list. <!--9893550-->
         - **Clear**: Clears the current script in the script pane
       - **Edit**: Edit the currently selected script
       - **Delete**: Removes the current script
