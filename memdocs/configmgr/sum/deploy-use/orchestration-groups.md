@@ -57,6 +57,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 - Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#limitations-in-a-mixed-version-hierarchy). <!--6389000-->
 - If updates are initiated by users from Software Center, orchestration will be bypassed. <!--6362887-->
 - Starting in Configuration Manager version 2103, updates in the **Definition** [classification](../get-started/configure-classifications-and-products.md) don't require orchestration and will always bypass orchestration group rules. <!--7706596-->
+- Scripts that have parameters aren't supported <!--9893550-->
 
 ## Server groups are automatically updated to orchestration groups
 
