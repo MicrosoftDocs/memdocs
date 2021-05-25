@@ -15,9 +15,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Endpoint Protection can help manage and monitor [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (formerly known as Windows Defender for Endpoint). Microsoft Defender for Endpoint helps enterprises detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor Windows 10 clients.
+Endpoint Protection can help manage and monitor [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection). Microsoft Defender for Endpoint helps enterprises detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor Windows 10 clients.
 
-Microsoft Defender for Endpoint is a service in the [Microsoft Defender Security Center](https://securitycenter.windows.com). By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Microsoft Defender for Endpoint agent health. Microsoft Defender for Endpoint is supported on PCs running the Configuration Manager client or [managed by Microsoft Intune](/intune/protect/advanced-threat-protection).
+Microsoft Defender for Endpoint's cloud based portal is [Microsoft Defender Security Center](https://securitycenter.windows.com). By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Microsoft Defender for Endpoint agent health. Microsoft Defender for Endpoint is supported on PCs running the Configuration Manager client or [managed by Microsoft Intune](/intune/protect/advanced-threat-protection).
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ Down-level operating systems include:
 - Windows Server 2012 R2
 - Windows Server 2016, version 1709 and earlier
 
-When you onboard devices to ATP with Configuration Manager, you deploy the ATP policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level or if the collection also includes down-level clients.
+When you onboard devices to Defender with Configuration Manager, you deploy the Defender policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level or if the collection also includes down-level clients.
 
 - If your target collection contains both up-level and down-level devices, then use the instructions to [onboard devices running any supported operating system](#bkmk_any_os) (recommended).
 - If your collection contains only up-level devices, then you can use the [up-level onboarding instructions](#bkmk_uplevel).
@@ -122,7 +122,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 ### Get an onboarding configuration file for up-level devices
 
-1. Go to the [Microsoft Defender for Endpoint online service](https://securitycenter.windows.com/) and sign in.
+1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
 1. For the operating system, select **Windows 10**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
@@ -165,7 +165,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 ## Create an offboarding configuration file  
 
-1. Sign in to the [Microsoft Defender for Endpoint online service](https://securitycenter.windows.com/).
+1. Sign in to the [Microsoft Defender Security Center](https://securitycenter.windows.com/).
 1. Select **Settings**, then select **Offboarding** under the **Device management** heading.
 1. Select **Windows 10** for the operating system and **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
    - Using the **Windows 10** option ensures that all devices in the collection are offboarded and the MMA is uninstalled when needed.
