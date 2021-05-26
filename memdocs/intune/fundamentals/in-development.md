@@ -71,7 +71,7 @@ In addition to exporting the summarized discovered apps list data, you will also
 
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
-### Updated default license type for Apple VPP apps<!-- 9914613 idready -->
+### Updated default license type for Apple VPP apps<!-- 9914613  -->
 
 When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is now "device". Existing assignments remain unchanged. For more information about Apple VPP apps, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md).
 
@@ -99,7 +99,7 @@ Applies to:
 
 In addition to profiles based on templates, you will be able to add a profiles based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
 
-### Use the EnrollmentProfileName property when creating a filter for Android Enterprise<!-- 10022750 idready -->
+### Use the EnrollmentProfileName property when creating a filter for Android Enterprise<!-- 10022750  -->
 
 In Endpoint Manager, you can create [filters](filters.md) to target devices based on different properties, including device name, manufacturer, and more. On iOS/iPadOS and Windows 10 and newer devices, you can create a filter using the enrollment profile name. The enrollment profile name property will be available for Android Enterprise devices.
 
@@ -109,12 +109,12 @@ Applies to:
 
 - Android Enterprise
 
-### Use filters on Settings Catalog configuration profiles, and Risk Score and Threat Level compliance policy settings<!-- 10023995 7556913 idready -->
+### Use filters on Settings Catalog configuration profiles, and Risk Score and Threat Level compliance policy settings<!-- 10023995 7556913  -->
 
 When you use [filters](filters.md) to assign your policies, you'll be able to:
 
 - Use filters on compliance policies that use the **Risk Score** and **Threat Level** settings.
-- Use filters on configuration profiles that use the **Settings Catalog**.
+- Use filters on configuration profiles that use the **Settings Catalog** profile type.
 
 For more information on what you can do, see [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md).
 
@@ -126,7 +126,7 @@ Applies to:
 - macOS
 - Windows 10 and newer
 
-### New macOS device configuration profile settings, and iOS/iPadOS setting name is changing<!-- 9772945 idready -->
+### New macOS device configuration profile settings, and iOS/iPadOS setting name is changing<!-- 9772945  -->
 
 There are new settings you can configure on macOS 10.13 devices and newer (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Templates** > **Device restrictions** for profile type):
 
@@ -146,7 +146,7 @@ Applies to:
 - iOS/iPadOS
 - macOS 10.13 and newer
 
-### More iOS/iPadOS home screen layout grid size options<!-- 9569886 idready -->
+### More iOS/iPadOS home screen layout grid size options<!-- 9569886  -->
 
 On iOS/iPadOS devices, you can configure the grid size on the home screen (**Devices** > **Device Configuration** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Home screen layout**). For example, you can set the grid size to 4 columns x 5 rows.
 
@@ -165,7 +165,7 @@ Applies to:
 <!-- ***********************************************-->
 ## Device enrollment
 
-### Browser access automatically enabled during corporate Android enrollment<!--6613616 idready-->
+### Browser access automatically enabled during corporate Android enrollment<!--6613616 -->
 
 Browser access will be automatically enabled during new enrollments of the following devices:
 
@@ -187,7 +187,7 @@ While we know customers get enormous value by enabling tenant attach with Config
 <!-- ***********************************************-->
 ## Device security
 
-### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115 IDReady  -->
+### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115   -->
 
 You'll soon be able to use the [settings catalog](../configuration/settings-catalog.md) to configure Microsoft Defender for Endpoint on macOS. (**Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog**).
 
@@ -216,7 +216,7 @@ Some of the settings we plan to make available from the settings catalog include
 
 - Show - hide status menu icon
 
-### Microsoft Intune Certificate Connector combines separate certificate connectors<!-- 9843502 idready -->
+### Microsoft Intune Certificate Connector combines separate certificate connectors<!-- 9843502  -->
 
 The separate certificate connectors are being combined into a unified connector called **Microsoft Intune Certificate Connector**. This unified connector replaces existing connectors, and includes the following new features:
 
@@ -246,7 +246,7 @@ Using the Company Portal, end users will be able to restart an app installation 
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 
-### Android Company Portal app and Intune app adds Portugal Portuguese support<!-- 9707888, 9707936 idready -->
+### Android Company Portal app and Intune app adds Portugal Portuguese support<!-- 9707888, 9707936  -->
 
 The Android Company Portal app and the Android Intune app will support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
 
@@ -259,14 +259,14 @@ We’re reworking the endpoint security Account protection policy to use the new
 
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-### Export capability for Enrollment failures report<!-- 5491082 idready -->
+### Export capability for Enrollment failures report<!-- 5491082  -->
 
 You will be able to export data from the Enrollment failures operational report. This report will allow you to quickly export reporting data generated from any size tenant. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Enrollment failures** > **Export**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 <!-- ***********************************************-->
 ## Role-based access control
 
-### Scope tags for Managed Google Play apps<!-- 6114508 idready -->
+### Scope tags for Managed Google Play apps<!-- 6114508  -->
 
 Scope tags determine which objects an admin with specific rights can view in Intune. Most newly-created items in Intune take on the scope tags of the creator. This is not the case for Managed Google Play Store apps. You will be able to optionally assign a scope tag to apply to all newly-synced Managed Google Play apps on the **Managed Google Play connector** pane. The chosen scope tag will only apply to new Managed Google Play apps, not Managed Google Play apps that have already been approved in the tenant. For related information see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
