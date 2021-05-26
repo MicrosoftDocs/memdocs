@@ -15,8 +15,10 @@ After you upgrade to technical preview branch version 2105.2, if you try to [ena
 
 This issue doesn't affect sites that already have tenant attach enabled.
 
-To work around this issue, set the following registry entry on the site server, and then enable tenant attach:
+To work around this issue, set the following registry entry on the site system that hosts the service connection point role:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_SERVICE_CONNECTOR" -Name "HeartbeatWorker_IntervalSec" -Value 60
 ```
+
+After you configure this registry entry, then enable tenant attach.
