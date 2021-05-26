@@ -18,7 +18,7 @@ ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-# Windows Autopilot for pre-provisioned deployment
+# Windows Autopilot for pre-provisioned deployment (Public Preview)
 
 **Applies to: Windows 10, version 1903** 
 

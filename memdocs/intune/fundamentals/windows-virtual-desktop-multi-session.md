@@ -48,7 +48,7 @@ Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-se
 
 ## Prerequisites
 
-This public preview feature supports Windows 10 Enterprise multi-session VMS which are:
+This public preview feature supports Windows 10 Enterprise multi-session VMs which are:
 
 - Running Windows 10 multi-session, version 1903 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
@@ -74,8 +74,6 @@ For more information on Windows Virtual Desktop licensing requirements, see [Wha
 Windows 10 Enterprise multi-session VMs are treated as a separate OS edition and some existing Windows 10 Enterprise configurations won’t be supported for this edition. Using Microsoft Endpoint Manager does not depend on or interfere with Windows Virtual Desktop management of the same VM.
 
 ## Create the device configuration profile
-
-Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session by using device configurations. This means only policies defined in the OS scope and apps configured to install in the system context can be applied to Windows Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups.
 
 Existing device configuration profiles are not supported for Windows 10 Enterprise multi-session VMs, with the exception of Certificate profiles, which are available under Templates. Note that we only support device certificates at this point.
 
@@ -110,8 +108,6 @@ Windows 10 Administrative Templates are supported for Windows 10 Enterprise mult
 > The applicability of some ADMX based settings for applications like Microsoft Edge and Microsoft Office is not based on the Windows edition or version. To add these settings to your policy, you may have to remove any filters applied in the Settings Picker.
 
 ## Compliance and Conditional access
-
-Device compliance settings for Windows 10 Enterprise multi-session are limited in the preview. Changes can’t be made to a multi-session VM that would cause non-compliance. As a result, all VMs are marked as Compliant by default.
 
 You can secure your Windows 10 Enterprise multi-session VMs by configuring compliance policies and Conditional Access policies in the Endpoint Manager admin center. The following compliance policies are supported on Windows 10 Enterprise multi-session VMs:
 
