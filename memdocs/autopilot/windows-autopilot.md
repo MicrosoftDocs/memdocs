@@ -70,7 +70,7 @@ Traditionally, IT pros spend significant time building and customizing images th
 
 Windows Autopilot enables you to:
 * Automatically join devices to Azure Active Directory (Azure AD) or Active Directory (via Hybrid Azure AD Join). For more information about the differences between these two join options, see [Introduction to device management in Azure Active Directory](/azure/active-directory/device-management-introduction).
-* Auto-enroll devices into MDM services, such as Microsoft Intune ([*Requires an Azure AD Premium subscription for configuration*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067)).
+* Auto-enroll devices into MDM services, such as Microsoft Intune ([*Requires an Azure AD Premium subscription for configuration*](https://docs.microsoft.com/en-us/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)).
 * Restrict the Administrator account creation.
 * Create and auto-assign devices to configuration groups based on a device's profile.
 * Customize OOBE content specific to the organization.
