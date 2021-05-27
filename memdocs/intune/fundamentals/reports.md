@@ -153,7 +153,7 @@ The **App Install Status** report provides a list of apps with versions and inst
 To see a generated report, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
+2. Select **Apps** > **Monitor** > **App Install Status** to view the current data.
 
 ## Device Install Status report for apps (Operational)
 
@@ -162,8 +162,7 @@ Based on a selected app, the **Device Install Status** report provides a list of
 To see a generated report of device state, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Install Status** > **Device Install Status** > **Select an app**.
-3. Click **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Apps** > **All Apps** > *Select an app* > **Device Install status**.
 
 ## Device compliance report (Organizational)
 
@@ -270,8 +269,7 @@ Based on a selected app, the **User Install Status** report provides a list of u
 To see a generated report, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Install Status** > **User Install Status** > **Select an app**.
-3. Click **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Apps** > **All Apps** > *Select an app* > **User Install status**.
 
 ## Windows 10 MDM Firewall status (Organizational)
 

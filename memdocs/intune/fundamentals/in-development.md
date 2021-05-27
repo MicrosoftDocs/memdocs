@@ -216,9 +216,9 @@ Some of the settings we plan to make available from the settings catalog include
 
 - Show - hide status menu icon
 
-### Microsoft Intune Certificate Connector combines separate certificate connectors<!-- 9843502  -->
+### Certificate Connector for Microsoft Intune combines separate certificate connectors<!-- 9843502  -->
 
-The separate certificate connectors are being combined into a unified connector called **Microsoft Intune Certificate Connector**. This unified connector replaces existing connectors, and includes the following new features:
+The separate certificate connectors are being combined into a unified connector called **Certificate Connector for Microsoft Intune**. This unified connector replaces existing connectors, and includes the following new features:
 
 - Configure SCEP, PKCS, PFX imported certs, and revocation in the same connector.
 - Use normal Active Directory accounts, service accounts, or managed service accounts for the connector service.
@@ -228,10 +228,10 @@ The separate certificate connectors are being combined into a unified connector 
 - Simplifies NDES setup in Internet Information Services (IIS).
 - Auto-updates to the latest version of the connector.
 
-To use the **Microsoft Intune Certificate Connector**:
+To use the **Certificate Connector for Microsoft Intune**:
 
 1. Uninstall any existing certificate connectors.
-2. Install the Microsoft Intune Certificate Connector.
+2. Install the Certificate Connector for Microsoft Intune.
 
 For more information on certificate connectors, see [Certificate connectors for Microsoft Intune](../protect/certificate-connectors.md).
 
