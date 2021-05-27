@@ -394,7 +394,7 @@ Your users must do the following steps. For the specific user experience, see [e
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 > [!TIP]
-> There is a short, step-by-step video to help your users in enroll their devices in Intune:
+> There is a short, step-by-step video to help your users enroll their devices in Intune:
 >
 > [Enroll your iOS/iPadOS device](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 
