@@ -2,7 +2,7 @@
 title: Technical preview 2105.2
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2105.2.
-ms.date: 05/27/2021
+ms.date: 05/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -23,17 +23,15 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2105/1234567.md)] -->
 
-[!INCLUDE [3607457](includes/2105-2/3607457.md)]
-[!INCLUDE [4262917](includes/2105-2/4262917.md)]
-[!INCLUDE [4316341](includes/2105-2/4316341.md)]
-[!INCLUDE [5602449](includes/2105-2/5602449.md)]
-[!INCLUDE [7470529](includes/2105-2/7470529.md)]
-[!INCLUDE [7898885](includes/2105-2/7898885.md)]
-[!INCLUDE [8126836](includes/2105-2/8126836.md)]
-[!INCLUDE [8939867](includes/2105-2/8939867.md)]
-[!INCLUDE [9213100](includes/2105-2/9213100.md)]
-[!INCLUDE [9761129](includes/2105-2/9761129.md)]
-[!INCLUDE [9881875](includes/2105-2/9881875.md)]
+[!INCLUDE [Windows Update native experience for software updates](includes/2105-2/4316341.md)]
+[!INCLUDE [Send product feedback from error windows](includes/2105-2/4262917.md)]
+[!INCLUDE [Custom properties for devices](includes/2105-2/8939867.md)]
+[!INCLUDE [Hardware inventory for client log settings](includes/2105-2/5602449.md)]
+[!INCLUDE [Management insights rule for TLS/SSL software update points](includes/2105-2/7470529.md)]
+[!INCLUDE [Simplified CMPivot permissions requirements](includes/2105-2/7898885.md)]
+[!INCLUDE [Hierarchy approved console extensions don't require signing](includes/2105-2/9761129.md)]
+[!INCLUDE [Improvements to CMPivot](includes/2105-2/9966861.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2105-2/9881875.md)]
 
 ## General known issues
 
