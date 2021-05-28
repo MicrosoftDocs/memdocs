@@ -44,7 +44,7 @@ This feature applies to:
 
 This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for Apple Devices with Intune.
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > The Microsoft Enterprise SSO plug-in for Apple Devices is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
 ## Prerequisites
@@ -65,7 +65,7 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
   The Company Portal app can be installed manually by users, or by deploying an app policy in Intune. For a list of options on how to install the Company Portal app, see [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
 
 > [!NOTE]
-> On Apple devices, Apple requires that the SSO app extension and the app (Authenticator or Company Portal) be installed. Users don't need to use the Authenticator or Company Portal apps; they just to be installed on the device.
+> On Apple devices, Apple requires that the SSO app extension and the app (Authenticator or Company Portal) be installed. Users don't need to use the Authenticator or Company Portal apps; they just need to be installed on the device.
 
 ## Microsoft Enterprise SSO plug-in vs. Kerberos SSO extension
 
@@ -75,10 +75,12 @@ The Microsoft Enterprise SSO plug-in uses the SSO app extension with **Microsoft
 
 To determine the correct SSO extension type for your scenario, use the following table:
 
-| &nbsp; | Microsoft Enterprise SSO plug-in for Apple Devices | Single sign-on app extension with Kerberos |
-| --- | --- | --- |
-| **SSO app extension type** | - Uses the **Microsoft Azure AD** SSO app extension type | - Uses the **Kerberos** SSO app extension type|
-| **Supported apps** | - Microsoft 365 <br/>- Apps, websites or services integrated with Azure AD | - Apps, websites or services integrated with AD |
+---
+| Microsoft Enterprise SSO plug-in for Apple Devices | Single sign-on app extension with Kerberos |
+| --- | --- |
+| Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type|
+| Supports the following apps:<br/><br/>- Microsoft 365 <br/>- Apps, websites or services integrated with Azure AD | Supports the following apps:<br/><br/>- Apps, websites or services integrated with AD |
+---
 
 For more information on the single sign-on extension, see [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
 
@@ -109,7 +111,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
     - **SSO app extension type**: Select **Microsoft Azure AD**.
     - **Enable shared device mode**:  
 
-      - **Not configured**: Intune doesn't change or update this setting. For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity), select this option.
+      - **Not configured**: Intune doesn't change or update this setting. For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option.
       - **Yes**: Select this option if the targeted devices are using Azure AD Shared device mode. For more information, see [Shared device mode overview](/azure/active-directory/develop/msal-shared-devices).  
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, see [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
@@ -132,21 +134,24 @@ For guidance on assigning profiles, see [Assign user and device profiles](device
 
 When the device checks in with the Intune service, it will receive this profile. For more information, see [How long does it take for devices to get a policy](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-## Microsoft Enterprise SSO plug-in end user experience
+## End user experience
 
-To deploy the Microsoft Enterprise SSO plug-in to devices, through an installed application and MDM device configuration.  
+:::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/flow-chart-end-user.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
 
 - If you're not deploying the Microsoft Authenticator or Company Portal app using an app policy, then users must install these apps manually. Remember:
   - On iOS/iPadOS devices, users install the Microsoft Authenticator app.
   - On macOS devices, users install the Company Portal app.
 
-  On Apple devices, Apple requires the SSO app extension and the app (Authenticator or Company Portal) be installed. Users don't need to use the Authenticator or Company Portal apps; they just to be installed on the device.
+  On Apple devices, Apple requires the SSO app extension and the app (Authenticator or Company Portal) be installed. Users don't need to use the Authenticator or Company Portal apps; they just need to be installed on the device.
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
+
+  :::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
+
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
 ## Next steps
 
-For information about the Microsoft Enterprise SSO plug-in, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
+- For information about the Microsoft Enterprise SSO plug-in, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
 
-For information from Apple on the single sign-on extension payload, see [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).
+- For information from Apple on the single sign-on extension payload, see [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).
