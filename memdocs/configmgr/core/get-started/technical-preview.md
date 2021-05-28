@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/27/2021
+ms.date: 05/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,17 +121,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2105.2
 
-- [3607457](2021/technical-preview-2105-2.md) <!--3607457-->
-- [4262917](2021/technical-preview-2105-2.md) <!--4262917-->
-- [4316341](2021/technical-preview-2105-2.md) <!--4316341-->
-- [5602449](2021/technical-preview-2105-2.md) <!--5602449-->
-- [7470529](2021/technical-preview-2105-2.md) <!--7470529-->
-- [7898885](2021/technical-preview-2105-2.md) <!--7898885-->
-- [8126836](2021/technical-preview-2105-2.md) <!--8126836-->
-- [8939867](2021/technical-preview-2105-2.md) <!--8939867-->
-- [9213100](2021/technical-preview-2105-2.md) <!--9213100-->
-- [9761129](2021/technical-preview-2105-2.md) <!--9761129-->
-- [9966861](2021/technical-preview-2105-2.md) <!--9966861-->
+- [Windows Update native experience for software updates](2021/technical-preview-2105-2.md#bkmk_wu) <!--4316341-->
+- [Send product feedback from error windows](2021/technical-preview-2105-2.md#bkmk_errorfeedback) <!--4262917-->
+- [Custom properties for devices](2021/technical-preview-2105-2.md#bkmk_invext) <!--8939867-->
+- [Hardware inventory for client log settings](2021/technical-preview-2105-2.md#bkmk_diaginv) <!--5602449-->
+- [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
+- [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
+- [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
+- [PowerShell release notes preview](2021/technical-preview-2105-2.md#bkmk_powershell) <!--9881875-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -198,7 +195,6 @@ The following features were released with previous versions of the Configuration
 | Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Phased deployment templates <!--4961086--> | [Tech preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | Remote control anywhere using cloud management gateway <!--4575930--> | [Tech preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) and [Tech preview 2009](2020/technical-preview-2009.md#bkmk_remctrl) |
-| Cloud services cost estimator <!--3555774--> | [Tech preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
 | Client-based PXE responder service <!--3556018, fka 1357148--> | [Tech preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE network boot support for IPv6 <!--3601254, fka 1269793--> |[Tech preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Use Azure Active Directory <!--3607315, fka 1322145--> | [Tech preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
