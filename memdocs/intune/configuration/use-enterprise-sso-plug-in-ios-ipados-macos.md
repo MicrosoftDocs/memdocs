@@ -80,6 +80,7 @@ To determine the correct SSO extension type for your scenario, use the following
 | --- | --- |
 | Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type|
 | Supports the following apps:<br/><br/>- Microsoft 365 <br/>- Apps, websites or services integrated with Azure AD | Supports the following apps:<br/><br/>- Apps, websites or services integrated with AD |
+
 ---
 
 For more information on the single sign-on extension, see [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
@@ -136,7 +137,7 @@ When the device checks in with the Intune service, it will receive this profile.
 
 ## End user experience
 
-:::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/flow-chart-end-user.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
+:::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/flow-chart-end-user.png" alt-text="End user flow chart when installing SSO app app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
 
 - If you're not deploying the Microsoft Authenticator or Company Portal app using an app policy, then users must install these apps manually. Remember:
   - On iOS/iPadOS devices, users install the Microsoft Authenticator app.
