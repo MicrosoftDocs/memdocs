@@ -27,7 +27,6 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Send product feedback from error windows](includes/2105-2/4262917.md)]
 [!INCLUDE [Custom properties for devices](includes/2105-2/8939867.md)]
 [!INCLUDE [Hardware inventory for client log settings](includes/2105-2/5602449.md)]
-[!INCLUDE [Management insights rule for TLS/SSL software update points](includes/2105-2/7470529.md)]
 [!INCLUDE [Simplified CMPivot permissions requirements](includes/2105-2/7898885.md)]
 [!INCLUDE [Hierarchy approved console extensions don't require signing](includes/2105-2/9761129.md)]
 [!INCLUDE [Improvements to CMPivot](includes/2105-2/9966861.md)]

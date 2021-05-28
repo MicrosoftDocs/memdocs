@@ -125,7 +125,6 @@ The following features are available with the most recent Configuration Manager 
 - [Send product feedback from error windows](2021/technical-preview-2105-2.md#bkmk_errorfeedback) <!--4262917-->
 - [Custom properties for devices](2021/technical-preview-2105-2.md#bkmk_invext) <!--8939867-->
 - [Hardware inventory for client log settings](2021/technical-preview-2105-2.md#bkmk_diaginv) <!--5602449-->
-- [Management insights rule for TLS/SSL software update points](2021/technical-preview-2105-2.md#bkmk_sup) <!--7470529-->
 - [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
 - [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
 - [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
