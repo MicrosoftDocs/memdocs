@@ -263,6 +263,10 @@ After the change, only new policies you then create will use the new API. Your e
 
 You will be able to export data from the Enrollment failures operational report. This report will allow you to quickly export reporting data generated from any size tenant. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Enrollment failures** > **Export**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
+### The Certificates report will be updated<!-- 10034112 -->
+
+The **Certificates** report, which shows the current device certificates in use, will be updated to include better capabilities to search, page, sort, and export the report. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Certificates**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+
 <!-- ***********************************************-->
 ## Role-based access control
 
