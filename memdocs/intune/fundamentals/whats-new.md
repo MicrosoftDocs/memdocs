@@ -78,10 +78,6 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 The **Home**, **Dashboard**, and **Apps Overview** panes now provide updated tiles to show the number of app installation failures for the tenant. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home** to view the Home pane, or **Dashboard** to view the Dashboard pane. Select **Apps** > **Overview** to view the **Apps Overview** pane. For related information, see [Intune reports](../fundamentals/reports.md).
 
-#### Improved Conditional Access messaging for Android and iOS/iPadOS users<!-- 9908622 -->
-
-Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management.
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
