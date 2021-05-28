@@ -221,12 +221,11 @@ Some of the settings we plan to make available from the settings catalog include
 The separate certificate connectors are being combined into a unified connector called **Certificate Connector for Microsoft Intune**. This unified connector replaces existing connectors, and includes the following new features:
 
 - Configure SCEP, PKCS, PFX imported certs, and revocation in the same connector.
-- Use normal Active Directory accounts, service accounts, or managed service accounts for the connector service.
+- Use normal Active Directory accounts or the system account for the connector service.
 - Based on your tenant location, select government vs. commercial environments.
 - Removes the need to select a client certificate for SCEP integration with NDES.
-- Allows you to bring your own key for PKCS certificate operations.
-- Simplifies NDES setup in Internet Information Services (IIS).
 - Auto-updates to the latest version of the connector.
+- Improved logging.
 
 To use the **Certificate Connector for Microsoft Intune**:
 
