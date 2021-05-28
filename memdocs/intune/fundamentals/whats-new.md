@@ -133,6 +133,10 @@ For more information, see [Windows 10 Enterprise multi-session remote desktops](
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
+#### Conditional access on Jamf-managed macOS devices for Government Cloud now available<!--9081124 -->
+
+You can now use Intune's compliance engine to evaluate Jamf-managed macOS devices for Government Cloud. To do so, activate the compliance connector for Jamf. For more information, see [Integrate Jamf Pro with Intune for compliance](../protect/conditional-access-integrate-jamf.md).
+
 #### Changes for for the Microsoft Tunnel Gateway<!--6305140     -->
 
 We have a pair of updates to announce for the Microsoft Tunnel Gateway this month:
