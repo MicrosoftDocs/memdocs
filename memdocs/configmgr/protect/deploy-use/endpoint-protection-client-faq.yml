@@ -79,7 +79,7 @@ sections:
           
            - **Allow** - This action adds the software to the Windows Defender allowed list and allows it to run on your computer. Windows Defender will stop alerting you to risks that the software might pose to your privacy or to your computer.  
           
-            If you choose **Allow** for an item, such as software, Windows Defender will stop alerting you to risks that the software might pose to your privacy or to your computer. Therefore, add software to the allowed list only if you trust the software and the software publisher.  
+             If you choose **Allow** for an item, such as software, Windows Defender will stop alerting you to risks that the software might pose to your privacy or to your computer. Therefore, add software to the allowed list only if you trust the software and the software publisher.  
           
       - question: |
           How to remove potentially harmful software
@@ -202,7 +202,7 @@ sections:
           
            - Click the **Show details** link to display the Potential threat details window, and then choose which action to apply to the detected item.  
           
-            You can choose the software and settings that you want Windows Defender to monitor, but we recommend that you turn on real-time protection and enable all real-time protection options. The following table explains the available options.  
+             You can choose the software and settings that you want Windows Defender to monitor, but we recommend that you turn on real-time protection and enable all real-time protection options. The following table explains the available options.  
           
            |**Real-time protection option**|**Purpose**|  
            |-|-|  
