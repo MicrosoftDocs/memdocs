@@ -219,7 +219,7 @@ Deleting a VPP app will cause the following results:
 - If the VPP app has assigned licenses when attempting to delete, an error will be displayed to you.
 
 > [!NOTE]
-> Purchased books associated with a VPP app won't be deleted.
+> Purchased books associated with a VPP token won't be deleted.
 
 ## Assigning custom role permissions for VPP
 
