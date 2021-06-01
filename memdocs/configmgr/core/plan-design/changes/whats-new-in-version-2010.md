@@ -2,7 +2,7 @@
 title: What's new in version 2010
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2010 of Configuration Manager current branch.
-ms.date: 01/27/2021
+ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -64,9 +64,12 @@ You can now disable Azure Active Directory (Azure AD) authentication for tenants
 
 For more information, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).
 
-### Additional options when creating app registrations in Azure Active Directory
-<!--7153654-->
+<!-- ### Additional options when creating app registrations in Azure Active Directory
+<!--7153654--
 You can now specify **Never** for the expiration of a secret key when creating Azure Active Directory app registrations. For more information about creating app registrations, see [Configure Azure Services](../../servers/deploy/configure/azure-services-wizard.md#create-server-application-dialog).
+
+remove per MEMDocs#1530
+ -->
 
 ### Validate internet access for the service connection point
 
@@ -208,7 +211,7 @@ For more information, see [How to manage collections](../../clients/manage/colle
 <!--7033501-->
 An internet-based, domain-joined device that isn't joined to Azure Active Directory (Azure AD) and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
 
-For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ## OS deployment
 
@@ -301,7 +304,7 @@ For more information, see [Community hub](../../servers/manage/community-hub.md#
 <!--3555940, 8625943, 8717639 -->
 You can now display the Community hub on Windows Server operating systems. The Configuration Manager console will notify you to install the console extension to enable Windows Server 2012 and later to load the Community hub.
 
-For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_hub_os).
+For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_webview2).
 
 ### Product feedback
 
@@ -372,6 +375,11 @@ You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/u
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 
+> [!WARNING]
+> Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.<!-- 8617455 -->
+>
+> For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
+
 ### Support for PowerShell version 7
 
 <!--6023299-->
@@ -436,6 +444,7 @@ The following additional hotfixes are available to address specific issues:
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
 | [4594177](https://support.microsoft.com/help/4594177) | Client notifications sent to all collection members in Configuration Manager current branch, version 2010 | January 12, 2021 | Yes |
+| [4600089](https://support.microsoft.com/help/4600089)| Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010 | March 8, 2021| Yes|
 
 <!--
 > [!NOTE]  

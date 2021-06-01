@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 04/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 # Attack surface reduction policy settings for endpoint security in Intune
@@ -35,7 +35,7 @@ Supported platforms and profiles:
 
 - **Windows 10 and later**:
   - Profile: **App and browser isolation**
-  - Profile: **Web protection**
+  - Profile: **Web protection (Microsoft Edge Legacy)**
   - Profile: **Application control**
   - Profile: **Attack surface reduction rules**
   - Profile: **Device control**
@@ -164,9 +164,9 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
-## Web protection profile
+## Web protection (Microsoft Edge Legacy) profile
 
-### Web Protection
+### Web Protection (Microsoft Edge Legacy)
 
 - **Enable network protection**  
   CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
@@ -224,8 +224,22 @@ Supported platforms and profiles:
 
 ### Attack Surface Reduction Rules
 
-- **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
+- **Block persistence through WMI event subscription**  
+  [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
+  This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+
+  This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
+ 
+  - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
+  - **Block** – Persistence through WMI is blocked.
+  - **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
+  - **Disable** - Turn this rule off. Persistence is not blocked
+
+  To learn more about this setting, see [Block persistence through WMI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx#block-persistence-through-wmi-event-subscription).
+
+
+- **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2

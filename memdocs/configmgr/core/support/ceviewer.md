@@ -2,7 +2,7 @@
 title: Collection Evaluation Viewer
 titleSuffix: Configuration Manager
 description: Use the Collection Evaluation Viewer to view and troubleshoot the collection evaluation process in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -19,7 +19,7 @@ manager: dougeby
 Collection Evaluation Viewer is one of the [Configuration Manager tools](tools.md). Use it to view and troubleshoot the collection evaluation process on the primary site server.
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2010, this standalone tool is deprecated.<!-- 8509484 --> Its functionality is built-in to the console. For more information, see, [How to view collection evaluation](../clients/manage/collections/collection-evaluation-view.md).
+> Starting in Configuration Manager version 2103, this standalone tool isn't supported.<!-- 8509484 --> The tool is no longer included with the Configuration Manager installation source. Starting in version 2010, its functionality is built-in to the console. For more information, see, [How to view collection evaluation](../clients/manage/collections/collection-evaluation-view.md).
 
 The tool displays the following information:  
 
@@ -59,7 +59,7 @@ There are four threads that run to evaluate the collections in the above queues.
 
 - The user also requires **Read** permission to the site database in SQL
 
-
+- SQL must be on the default port
 
 ## Usage
 

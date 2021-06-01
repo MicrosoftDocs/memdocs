@@ -2,12 +2,12 @@
 # required metadata
 
 title: Setup guide for Microsoft Intune - Azure | Microsoft Docs
-description: Deployment to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
+description: Deployment guide to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/15/2020
+ms.date: 05/8/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Setup or move to Microsoft Intune
 
-This deployment guide includes information when moving to Intune, or adopting Intune as your MDM and MAM solution.
+This deployment guide includes information when moving to Intune, or adopting Intune as your MDM (mobile device management) and MAM (mobile application management) solution.
 
 In this guide, you sign up for Intune, add your domain name, configure Intune as the MDM authority, and more. Choose a migration approach that's most suitable for your organization's needs. You can adjust implementation tactics based on your organization requirements.
 
@@ -39,7 +39,7 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 ## Prerequisites
 
-- **Intune subscription**: Intune is available as a stand-alone Azure service, a part of [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and included with [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise). For more information on how to get Intune, see [Intune licensing](licenses.md).
+- **Intune subscription**: Intune is licensed as a stand-alone Azure service, a part of [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and included with [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise). For more information on how to get Intune, see [Intune licensing](licenses.md).
 
   In most scenarios, [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) may be the best option, as it gives you EMS, [Microsoft Endpoint Manager](../../endpoint-manager-overview.md), and Office 365.
 
@@ -51,14 +51,14 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 If you currently don't use any MDM or MAM provider, then you have some options:
 
-- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, and app features in Intune, and the benefits of the Endpoint Manager admin center.
+- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Endpoint Manager admin center, which is a web-based console.
 
   Next, [deploy Intune](#deploy-intune) (in this article).
   
 - **Configuration Manager + Endpoint Manager**: If you want the features of Configuration Manager (on-premises) combined with the cloud, then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management). With Configuration Manager, you can:
 
   - [Manage on-premises devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md), including Windows Server or Windows 8.1 devices.
-  - [Manage software updates](../../configmgr/sum/understand/software-updates-introduction.md).
+  - [Manage partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
   - [Create custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying operating systems.
   - [Deploy and manage many app](../../configmgr/apps/understand/introduction-to-application-management.md) types. 
 
@@ -66,7 +66,7 @@ To help you decide, see [choose a device management solution](../../configmgr/co
 
 ## Currently use a third party MDM provider
 
-Devices should only have one MDM provider. If you use another MDM provider, such as AirWatch, MobileIron, or MaaS360, then you can move to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune.
+Devices should only have one MDM provider. If you use another MDM provider, such as Workspace ONE (previously called AirWatch), MobileIron, or MaaS360, then you can move to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune.
 
 > [!IMPORTANT]
 > Don't configure Intune and your existing third party MDM solution to apply access controls to resources, including Exchange or SharePoint Online.
@@ -112,7 +112,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
-Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.md) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premise Configuration Manager setup.
+Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premise Configuration Manager setup.
 
 For more information, see [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
@@ -130,7 +130,7 @@ Helpful information:
 - [What is co-management?](../../configmgr/comanage/overview.md)
 - [Co-management workloads](../../configmgr/comanage/workloads.md)
 - [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md)
-- [Configuration Manager product and licensing FAQ](../../configmgr/core/understand/product-and-licensing-faq.md)
+- [Configuration Manager product and licensing FAQ](../../configmgr/core/understand/product-and-licensing-faq.yml)
 
 ### Option 3: Move from Configuration Manager to Intune
 
@@ -192,6 +192,92 @@ When moving devices from group policy, use [Group policy analytics](../configura
 
 Next, [deploy Intune](#deploy-intune) (in this article).
 
+## Tenant to tenant migration
+
+A tenant is your organization in Azure Active Directory (AD), such as Contoso. It includes a dedicated Azure AD service instance that Contoso receives when it gets a Microsoft cloud service, such as Microsoft Intune or Microsoft 365. Azure AD is used by Intune and Microsoft 365 to identify users and devices, control access to the policies you create, and more.
+
+In Intune, you can export and import some of your policies using [Microsoft Graph](/graph/api/resources/intune-graph-overview) and Windows PowerShell.
+
+For example, you create a Microsoft Intune trial subscription. In this subscription trial tenant, you have policies that configure apps and features, check compliance, and more. You'd like to move these policies to another tenant.
+
+> [!IMPORTANT]
+>
+> - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be validated using a non-production or "test" tenant account. Be sure the scripts meet your organization security guidelines.
+> - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
+> - To migrate a user’s device, the user must unenroll the device from the old tenant, and then re-enroll in the new tenant.
+
+### What you can't do
+
+There are some policy types that can't be exported. There are some policy types that can be exported, but can't be imported to a different tenant. Use the following list as a guide. Know there are other policy types that aren't listed.
+
+| Policy or profile type | Information |
+| --- | --- |
+| **Applications** | &nbsp; |
+| Android line-of-business apps | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.apk` application source files.|
+| Apple – Volume Purchase Program (VPP) | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Apple VPP. In the new tenant, you add your VPP token, which shows your available apps. |
+| iOS/iPadOS line-of-business apps | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.ipa` application source files.|
+| Managed Google Play | ❌ Export <br/>❌ Import<br/><br/>These apps and weblinks are synced with Managed Google Play. In the new tenant, you add your Managed Google Play account, which shows your available apps. |
+| Microsoft Store for Business | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Microsoft Store for Business. In the new tenant, you add your Microsoft Store for Business account, which shows your available apps.|
+| Windows app (Win32) | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.intunewin` application source files.|
+| **Compliance policies** | &nbsp; |
+| Actions for Non-Compliance | ❌ Export <br/>❌ Import<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
+| Assignments | ✔️ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| **Configuration profiles** | &nbsp; |
+| Email |  ✔️ Export <br/> <br/>✔️ If an email profile doesn't use certificates, then the import should work. <br/>❌ If an email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| SCEP certificate | ✔️ Export<br/><br/>❌ Import <br/><br/>SCEP certificate profiles use a root certificate. The root certificate ID is different in a new tenant. |
+| VPN |  ✔️ Export<br/><br/> ✔️ If a VPN profile doesn't use certificates, then the import should work.<br/> ❌ If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| Wi-Fi |  ✔️ Export<br/><br/> ✔️ If a Wi-Fi profile doesn't use certificates, then the import should work. <br/>❌ If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| Assignments | ✔️ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| **Endpoint Security** | &nbsp; |
+| Endpoint detection and response | ❌ Export <br/>❌ Import <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
+
+### Download the samples, and run the script
+
+This section includes an overview of the steps. Use these steps as guidance, and know that your specific steps may be different.
+
+1. Download the samples, and use Windows PowerShell to export your policies:
+
+    1. Go to [microsoftgraph/powershell-intune-samples](https://github.com/microsoftgraph/powershell-intune-samples), select **Code** > **Download ZIP**. Extract the contents of the `.zip` file.
+    2. Open the Windows PowerShell app as administrator, and change the directory to your folder. For example, enter the following command:
+
+        `cd C:\psscripts\powershell-intune-samples-master`
+
+    3. Install the AzureAD PowerShell module:
+
+        `Install-Module AzureAD`
+
+        Select **Y** to install the module from an untrusted repository. The install can take a few minutes.
+
+    4. Change the directory to the folder with the script you want to run. For example, change the directory to the `CompliancePolicy` folder:
+
+        `cd C:\psscripts\powershell-intune-samples-master\powershell-intune-samples-master\CompliancePolicy`
+
+    5. Run the export script. For example, enter the following command:
+
+        `.\CompliancePolicy_Export.ps1`
+
+        Sign in with your account. When prompted, enter the path to put the policies. For example, enter:
+
+        `C:\psscripts\ExportedIntunePolicies\CompliancePolicies`
+
+    In your folder, the policies are exported.
+
+2. Import your policies in your new tenant:
+
+    1. Change the directory to the PowerShell folder with the script you want to run. For example, change the directory to the `CompliancePolicy` folder:
+
+        `cd C:\psscripts\powershell-intune-samples-master\powershell-intune-samples-master\CompliancePolicy`
+
+    2. Run the import script. For example, enter the following command:
+
+        `.\CompliancePolicy_Import_FromJSON.ps1`
+
+        Sign in with your account. When prompted, enter the path to the policy `.json` file you want to import. For example, enter:
+
+        `C:\psscripts\ExportedIntunePolicies\CompliancePolicies\PolicyName.json`
+
+3. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
+
 ## Deploy Intune
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
@@ -218,7 +304,7 @@ Next, [deploy Intune](#deploy-intune) (in this article).
 
     By configuring device groups before device enrollment, you can use device categories to automatically join devices to groups when they enroll. Then, they receive their group's device policies automatically. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
 
-5. Assign Intune licenses to your users. When license are assigned, users' devices can enroll in Intune.
+5. Assign Intune licenses to your users. When license are assigned, user devices can enroll in Intune.
 
     For more information, see [assign licenses](licenses-assign.md).
 

@@ -1,0 +1,35 @@
+### YamlMime:Landing
+
+title: Configuration Manager hotfixes and update rollups
+summary: Knowledge Base articles for Microsoft Endpoint Configuration Manager hotfixes, update rollups, and change list articles for new releases. 
+
+metadata:
+  title: Configuration Manager hotfixes
+  titleSuffix: Configuration Manager
+  description: Knowledge Base articles for Microsoft Endpoint Configuration Manager hotfixes, update rollups, and change list articles for new releases.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: bhuney
+  ms.author: brianhun
+  ms.date: 05/11/2021
+
+landingContent:
+  - title: Configuration Manager 2103
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 9210721 Summary of changes in 2103
+            url: 2103/9210721.md
+          - text: KB 9603111 Early update ring
+            url: 2103/9603111.md
+  - title: Configuration Manager 2010
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 4599442 Summary of changes in 2010
+            url: 2010/4599442.md
+          - text: KB 4600089 Update rollup for 2010
+            url: 2010/4600089.md
+          - text: KB 5001600 Connected cache update
+            url: 2010/5001600.md

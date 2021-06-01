@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 06/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,8 +29,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Network access control (NAC) integration with Intune
-
-Intune integrates with network access control partners to help organizations secure corporate data when devices try to access on-premises resources.
+ 
+Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!IMPORTANT]
 > NAC is not currently supported for Android Enterprise Fully Managed or Android Enterprise Dedicated devices.
@@ -69,6 +69,14 @@ The following list is an overview on how NAC integration works when integrated w
 8. Once the device is enrolled and compliant, NAC partner solution gets the state from Intune.
 9. Connection is successfully established which allows the device access to corporate resources.
 
+> [!NOTE] 
+> NAC partner solutions will typically make two different types of query to Intune to ask about device compliance state:
+> 
+> - Queries filtering based on a known property value of a single device such as its IMEI or Wi-Fi MAC address
+> - Broad, unfiltered queries for all non-compliant devices.
+>
+> NAC Solutions are permitted to make as many of the device-specific queries as required.  However the broad unfiltered queries may be throttled. The NAC solution should be configured to only submit the *all non-compliant devices* queries, at most, once every four hours. Queries made more frequently will receive an http 503 error from the Intune service.
+
 ## Use NAC for VPN on your iOS/iPadOS devices
 
 NAC is available on the following VPNs without enabling NAC in the VPN profile:
@@ -88,7 +96,7 @@ NAC is also supported for Cisco AnyConnect, Citrix SSO, and F5 Access.
 
 - Use Citrix Gateway 12.0.59 or higher.  
 - Users must have Citrix SSO 1.1.6 or later installed.
-- [Integrate NetScaler with Intune for NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) as described in the Citrix product documentation.
+- [Integrate NetScaler with Intune for NAC](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html) as described in the Citrix product documentation.
 - In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
 
 ### To enable NAC for F5 Access
@@ -104,7 +112,7 @@ We're working with our partners to release a NAC solution for these newer client
 ## Next steps
 
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
-- [Integrate Citrix NetScaler with Intune](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Integrate Citrix NetScaler with Intune](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrate F5 BIG-IP Access Policy Manager with Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Integrate HP Aruba ClearPass with Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

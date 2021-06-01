@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 02/26/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,7 @@ The APP-WE and the Android Enterprise personally-owned work profile deployment s
 
 - **End-user privacy**: APP-WE and Android Enterprise personally-owned work profiles separate end users content on the device, and data managed by the mobile device management (MDM) administrator. In both scenarios, IT admins enforce policies, such as PIN-only authentication on organization-managed apps or identities. IT admins are unable to read, access, or erase data that's owned or controlled by end users.
 
-Whether you choose APP-WE or Android Enterprise personally-owned work profiles for your BYOD deployment depends on your requirements and business needs. The goal of this article is to provide guidance to help you decide.
+Whether you choose APP-WE or Android Enterprise personally-owned work profiles for your BYOD deployment depends on your requirements and business needs. The goal of this article is to provide guidance to help you decide. For more information related to managed Android devices, see [Manage Android personally-owned/corporate-owned work profile devices with Intune](../enrollment/android-enterprise-overview.md).
 
 ## About Intune app protection policies
 
@@ -82,10 +82,6 @@ APP-WE scenarios are for end users who want a small organizational footprint on 
 
 Android Enterprise personally-owned work profiles are the core Android Enterprise deployment scenario and the only scenario targeted at BYOD use cases. The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
 
-This feature applies to:
-
-- Android 5.0 and later devices with Google Mobile Services
-
 An Android Enterprise personally-owned work profile includes the following features:
 
 - **Traditional MDM functionality**: Key MDM capabilities, such as app lifecycle management using managed Google Play, is available in any Android Enterprise scenario. Managed Google Play provides a robust experience to install and update apps without any user intervention. IT can also push app configuration settings to organizational apps. It also doesn't require end users to allow installations from unknown sources. Other common MDM activities, such as deploying certificates, configuring WiFi/VPNs, and setting device passcodes are available with Android Enterprise personally-owned work profiles.
@@ -119,12 +115,6 @@ For more information, see [deploy Outlook for iOS/iPadOS and Android app configu
 ## When to use Intune APP
 
 There are several enterprise mobility scenarios where using Intune APP is the best recommendation.
-
-### Older devices running Android 4.4-5.1 are being used
-
-Officially, any Android device 5.0 or above with Google Mobile Services supports Android Enterprise personally-owned work profiles, and is eligible to be managed in that way. However, some Android 5.0 and 5.1 devices from some OEMs don't support Android Enterprise personally-owned work profiles.
-
-If using versions that don't support Android Enterprise personally-owned work profiles, and to ensure DLP for organization data on devices, you must use Intune APP features.
 
 ### No MDM, no enrollment, Google services are unavailable
 

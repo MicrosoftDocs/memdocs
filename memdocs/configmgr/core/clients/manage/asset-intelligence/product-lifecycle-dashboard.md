@@ -2,47 +2,41 @@
 title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
-ms.date: 01/09/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Manage Microsoft Lifecycle Policy with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Beginning with version 1806, you can use the Configuration Manager product lifecycle dashboard to view the Microsoft Lifecycle Policy. The dashboard shows the state of the Microsoft Lifecycle Policy for Microsoft products installed on devices managed with Configuration Manager. It also provides you with information about Microsoft products in your environment, supportability state, and support end dates. Use the dashboard to understand the availability of support for each product. This information helps you plan for when to update the Microsoft products you use before their current end of support is reached.  
+Use the Configuration Manager product lifecycle dashboard to view the Microsoft Lifecycle Policy. The dashboard shows the state of the Microsoft Lifecycle Policy for Microsoft products installed on devices managed with Configuration Manager. It also provides you with information about Microsoft products in your environment, supportability state, and support end dates. Use the dashboard to understand the availability of support for each product. This information helps you plan for when to update the Microsoft products you use before their current end of support is reached.  
 
-For more information, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle).
+For more information, see the [Microsoft Lifecycle Policy](/lifecycle).
 
-Starting in version 1810, the dashboard includes information for System Center 2012 Configuration Manager and later.<!--1358702-->  
+## Prerequisites
 
+To see data in the product lifecycle dashboard, the following components are required:
 
+- Install Internet Explorer 9 or later on the computer that runs the Configuration Manager console.
 
-## Prerequisites 
+- To get updates for the data on this dashboard, the service connection point must be online. If the service connection point is in offline mode, synchronize it regularly. For more information, see [About the service connection point](../../../servers/deploy/configure/about-the-service-connection-point.md).
 
- To see data in the product lifecycle dashboard, the following components are required:  
+- Configure and synchronize the asset intelligence synchronization point. The dashboard uses the asset intelligence catalog as metadata for product titles. Configuration Manager compares this metadata against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](configuring-asset-intelligence.md).
 
-- Internet Explorer 9 or later must be installed on the computer running the Configuration Manager console.  
+  - If you're configuring the asset intelligence service point for the first time, make sure to [enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence). The lifecycle dashboard depends on those asset intelligence hardware inventory classes. The dashboard won't display data until clients scan for and return hardware inventory.
 
-- A service connection point role must be installed and configured. To get updates for the data on this dashboard, the service connection point must be online, or synchronized regularly if offline. For more information, see [About the service connection point](../../../servers/deploy/configure/about-the-service-connection-point.md).
-
-- A reporting services point is required for hyperlink functionality in the dashboard. The dashboard links to SQL Server Reporting Services (SSRS) reports. For more information, see [Introduction to reporting](../../../servers/manage/introduction-to-reporting.md).  
-
-- The asset intelligence synchronization point must be configured and synchronized. The dashboard uses the asset intelligence catalog as metadata for product titles. The metadata is compared against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](configuring-asset-intelligence.md).  
-  - If you're configuring the asset intelligence service point for the first time, make sure to [enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence). The lifecycle dashboard depends on those asset intelligence hardware inventory classes. The dashboard won't display data until clients have scanned for and returned hardware inventory.  
-  - To view information about Extended Security Updates (ESU) in this dashboard, enable the hardware inventory class **Software Licensing Product - Asset Intelligence (SoftwareLicensingProduct)**. For more information, see [Enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence). <!--4962901-->
-
-
+  - In version 2006 and earlier, to view information about Extended Security Updates (ESU) in this dashboard, enable the hardware inventory class **Software Licensing Product - Asset Intelligence (SoftwareLicensingProduct)**. For more information, see [Enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence).<!--4962901--> In version 2010 and later, the dashboard uses an attribute in the client discovery data.
 
 ## Use the product lifecycle dashboard
+
+To access the lifecycle dashboard in the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Asset Intelligence**, and select the **Product Lifecycle** node.
 
 Based on inventory data the site collects from managed devices, the dashboard displays information about all current products. However, the information displayed for operating systems and SQL Server is limited to the following versions:
 
@@ -50,54 +44,57 @@ Based on inventory data the site collects from managed devices, the dashboard di
 - Windows XP and later
 - SQL Server 2008 and later
 
-To access the lifecycle dashboard in the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Asset Intelligence**, and select the **Product Lifecycle** node.
-
-> [!NOTE]  
+> [!NOTE]
 > The data in the dashboard is based on the site the Configuration Manager console connects to. If the console connects to your top-tier site, you see data for the entire hierarchy. When connected to a child primary site, only data from that site displays.
 
 ### Product lifecycle dashboard
 
-![Screenshot of the product lifecycle dashboard in the console](media/product-lifecycle-dashboard.png)
+:::image type="content" source="media/product-lifecycle-dashboard.png" alt-text="Screenshot of the product lifecycle dashboard in the console" lightbox="media/product-lifecycle-dashboard.png":::
 
-Change the view by selecting one of the following options from the **Product category** list:  
-- **All**: View all products together  
-- **Windows Client**: View Windows client OS versions  
-- **Windows Server**: View Windows server OS versions  
-- **Database**: View SQL Server versions  
-- **Configuration Manager**: Starting in version 1810, view Configuration Manager versions 
-- **Microsoft Office**: Starting in version 1902, view information for installed versions of Office 2003 through Office 2016 <!--3556026-->
+Change the view by selecting one of the following options from the **Product category** list:
 
-The dashboard has the following tiles:  
+- **All**: View all products together
+- **Windows Client**: View Windows client OS versions
+- **Windows Server**: View Windows server OS versions
+- **Database**: View SQL Server versions
+- **Configuration Manager**: View Configuration Manager versions
+- **Microsoft Office**: View information for installed versions of Office 2003 through Office 2016<!--3556026-->
 
-- **Top five products past end-of-life**: This tile is a consolidated data view of products found in your environment past their end-of-life. The graph shows installed software that's expired when compared against the support lifecycle for operating systems and SQL Server products.  
+The dashboard has the following tiles:
 
-- **Top five products nearing end-of-life**: This tile is a consolidated data view of products found in your environment that are nearing end-of-life in next 18 months. The graph shows installed software that's within 18 months of end-of-life when compared against the support lifecycle for operating systems and SQL Server products.  
+- **Top 5 products past end-of-support**: This tile is a consolidated data view of products found in your environment past their end-of-support. The graph shows installed software that's expired when compared against the support lifecycle for operating systems and SQL Server products.
+
+- **Top 5 products nearing end-of-support**: This tile is a consolidated data view of products found in your environment that are nearing end-of-support in next 18 months. The graph shows installed software that's within 18 months of end-of-support when compared against the support lifecycle for operating systems and SQL Server products.
+
+    Starting in version 2103, use the time slider to control the timeframe for this tile. The default is 18 months, but you can adjust it from 1 to 36 months.<!--8160460-->
+
+    :::image type="content" source="media/8160460-product-lifecycle-timescale.png" alt-text="Product lifecycle dashboard highlighting new timescale control at 33 months":::
 
 - **Lifecycle data for installed products**: This tile gives you a general idea of when a product transitions from supported to the expired state. The chart provides a breakdown of the number of clients where the product is installed, the support availability state, and a link to learn more about the next steps to take. The following information is included in the chart:
 
   - Support time remaining
-  - Number in environment 
+  - Number in environment
   - Mainstream support end date
   - Extended support end date
-  - Next steps  
+  - Next steps
 
-> [!IMPORTANT]  
-> The information shown in this dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm compliance. Be sure to verify the accuracy of the information provided to you, along with availability of support information by visiting the [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle).  
+Starting in version 2103, the dashboard also has a subnode, **All Product Lifecycle Data**. You can sort and filter the product lifecycle information, which gives you multiple ways to view it. When you select a product, you can **View devices** for that product. From the list of devices, you can create a direct membership collection. Use this action to deploy the latest software versions to these collections so that the devices are kept current.<!--8160460-->
 
-
+> [!IMPORTANT]
+> The information shown in this dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm compliance. Be sure to verify the accuracy of the information provided to you, along with availability of support information by visiting the [Microsoft Lifecycle Policy](/lifecycle).
 
 ## Reporting
 
-Additional reports are available as well. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and expand **Reports**. The following new reports are added under the category **Asset Intelligence**:  
+Other reports are available as well. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and expand **Reports**. The following reports are added under the category **Asset Intelligence**:
 
-- **Lifecycle 01A - Computers with a specific software product**: View a list of computers on which a specified product is detected.  
+- **Lifecycle 01A - Computers with a specific software product**: View a list of computers on which a specified product is detected.
 
 - **Lifecycle 02A - List of machines with expired products in the organization**: View computers that have expired products on them. You can filter this report by product name.
 
-- **Lifecycle 03A - List of expired products found in the organization**: View details for products in your environment that have expired lifecycle dates.  
+- **Lifecycle 03A - List of expired products found in the organization**: View details for products in your environment that have expired lifecycle dates.
 
-- **Lifecycle 04A - General Product Lifecycle overview**: View a list of product lifecycles. Filter the list by product name and days to expiration.  
+- **Lifecycle 04A - General Product Lifecycle overview**: View a list of product lifecycles. Filter the list by product name and days to expiration.
 
-- **Lifecycle 05A - Product lifecycle dashboard**: Starting in version 1810, this report includes similar information as the in-console dashboard. Select a category to view the count of products in your environment, and the days of support remaining.  
+- **Lifecycle 05A - Product lifecycle dashboard**: This report includes similar information as the in-console dashboard. Select a category to view the count of products in your environment, and the days of support remaining.
 
-For more information, see [List of reports](../../../servers/manage/list-of-reports.md#asset-intelligence).<!--SCCMDocs issue 997-->  
+For more information, see [List of reports](../../../servers/manage/list-of-reports.md#asset-intelligence).<!--SCCMDocs issue 997-->

@@ -538,7 +538,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 - **Data sharing between work and personal profiles**: Choose if apps in the personally owned work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:
   - **Device default**: The default sharing behavior of the device varies depending on the Android version:
     - On devices running Android 6.0 and newer, sharing from the personally owned work profile to the personal profile is blocked. Sharing from the personal profile to the personally owned work profile is allowed.
-    - On devices running Android 5.0 and older, sharing between the personally owned work profile and the personal profile is blocked in both directions.
+    - On devices running Android 6.0 and older, sharing between the personally owned work profile and the personal profile is blocked in both directions.
   - **Apps in work profile can handle sharing request from personal profile**: Enables the built-in Android feature that allows sharing from the personal to the personally owned work profile. When enabled, a sharing request from an app in the personal profile can share with apps in the personally owned work profile. This setting is the default behavior for Android devices running versions earlier than 6.0.
   - **No restrictions on sharing**: Enables sharing across the personally owned work profile boundary in both directions. When you select this setting, apps in the personally owned work profile can share data with unbadged apps in the personal profile. This setting allows managed apps in the personally owned work profile to share with apps on the unmanaged side of the device. So, use this setting carefully.
 
@@ -549,7 +549,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
   - **Auto grant**
   - **Auto deny**
 
-  You can also use an app configuration policy to grant permissions for individual apps (**Client Apps** > **App configuration policies**).
+  You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **App configuration policies**).
 
 - **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the personally owned work profile. For example, when you deploy the Gmail app into an Android personally owned work profile, you can prevent users from adding or removing accounts in this personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the personally owned work profile.  
 

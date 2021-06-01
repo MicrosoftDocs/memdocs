@@ -2,7 +2,7 @@
 title: Integrate with Power BI Report Server
 titleSuffix: Configuration Manager
 description: Integrate Power BI Report Server with Configuration Manager reporting for modern visualization and better performance.
-ms.date: 02/05/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -51,7 +51,7 @@ This process varies depending upon whether you already have this role in the sit
 
 Only use this process if you already have a reporting services point in the site. Do all steps of this process on the same server:
 
-1. In **Reporting Server Configuration Manager**, back up the **Encryption Keys**. For more information, see [SSRS Encryption Keys - Back Up and Restore Encryption Keys](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. In **Reporting Services Configuration Manager**, back up the **Encryption Keys**. For more information, see [SSRS Encryption Keys - Back Up and Restore Encryption Keys](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > If you skip this step, you'll lose access to any custom reports in SQL Server Reporting Services.
@@ -66,7 +66,7 @@ Only use this process if you already have a reporting services point in the site
 
     1. Use the previous report server database.
 
-    1. Use **Reporting Server Configuration Manager** to restore the **Encryption Keys**.
+    1. Use **Reporting Services Configuration Manager** to restore the **Encryption Keys**.
 
     > [!TIP]
     > Before you add the reporting services point role in Configuration Manager, use SQL Server Reporting Services Configuration Manager to test and verify the configuration. For more information, see [Verify SQL Server Reporting Services installation](configuring-reporting.md#verify-sql-server-reporting-services-installation).<!-- MEMDocs #713 -->
@@ -116,12 +116,15 @@ In the Configuration Manager console, you see the new report in the list of Powe
 There are sample reports available for download. For more information, see [Install Power BI sample reports](powerbi-sample-reports.md).
 
 ## <a name="bkmk_community_hub"></a> Power BI report templates in Community hub
+
 <!--5679831-->
+
 Using [Community hub](community-hub.md), you can share Power BI report templates you've created and download templates that others have shared.
+
 ### Contributing a Power BI report template (PBIT) files to Community hub
 
 1. Open the Configuration Manager console and go to **Community** > **Community hub**
-1. If needed, select **Sign in** to sign into GitHub. You will see the **Your hub** link after signing in.
+1. If needed, select **Sign in** to sign into GitHub. You'll see the **Your hub** link after signing in.
 1. Select **Your hub** then **Add an item** to launch the **Contribute item wizard**.
 1. For the **Type**, choose **Power BI Report Template** then select **Browse**.
 1. Choose the `.pbit` file you want to contribute, then select **Open**.
@@ -135,7 +138,7 @@ Using [Community hub](community-hub.md), you can share Power BI report templates
 1. Open the Configuration Manager console, go to **Community** > **Community hub**.
 1. From **All objects** or a search, choose a Power BI report template, then select **Download**.
 1. Select a file location to save the downloaded `.pbit` file and choose **Save**.
-1. If Power BI Desktop (Optimized for Power BI Report Server) is installed, you will be prompted to open the `.pbit` file.
+1. If Power BI Desktop (Optimized for Power BI Report Server) is installed, you'll be prompted to open the `.pbit` file.
 1. Select **Yes** and Power BI Desktop (Optimized for Power BI Report Server) will load the `.pbit` file.
 1. Specify your Configuration Manager database name and database server name when prompted, then select **Load**.
 
@@ -149,9 +152,10 @@ Using [Community hub](community-hub.md), you can share Power BI report templates
 1. When the report data is loaded, select **File** > **Save As**, then select **Power BI Report Server**.
 1. Save the report to a folder on the root Configuration Manager reporting folder on the reporting point. You may want to create a `Downloaded Reports` folder for these items.
 1. Repeat the steps for any other report templates that were downloaded. When you're done, close Microsoft Power BI Desktop (Optimized for Power BI Report Server).
+
 ## Known issues
 
-There's a known issue with Power BI Report Server and email subscriptions. After you configure the email settings in the Reporting Server Configuration Manager, when you try to create a new subscription, the option to deliver a report by **Email** isn't available. To work around this issue, restart the Power BI Report Server service.<!-- 7698019 -->
+There's a known issue with Power BI Report Server and email subscriptions. After you configure the email settings in the Reporting Services Configuration Manager, when you try to create a new subscription, the option to deliver a report by **Email** isn't available. To work around this issue, restart the Power BI Report Server service.<!-- 7698019 -->
 
 ## Next steps
 
@@ -163,5 +167,7 @@ After you create a report, use the following actions in the Configuration Manage
     > You can only view these reports in the web browser.
 
 - **Edit**: Make changes to the report in Power BI Desktop. For an existing report, use the **Save** option to save changes back to the report server.
+
+- **Add to Favorites**: Starting in version 2103, you can make a report a favorite. This action allows you to quickly access it from the **Favorites** node. For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
 
 For more information on log files to use for reporting, see [Log file reference - Reporting](../../plan-design/hierarchy/log-files.md#BKMK_ReportLog).

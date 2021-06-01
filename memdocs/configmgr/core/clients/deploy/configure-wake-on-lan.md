@@ -110,14 +110,14 @@ When you have only the new version of Wake on LAN enabled, only the **Wake Up** 
 
 - Starting in Configuration Manager version 1902, you can specify the Wake on LAN port. This setting is shared by both the new and older version of Wake on LAN.
 
-- Starting in Configuration Manager version 2020, you can use the client notification channel to wake clients when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. For more information, see [Use the client notification channel to  wake a client when a deployment deadline occurs](#bkmk_deadline).
+- Starting in Configuration Manager version 2010, you can use the client notification channel to wake clients when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. For more information, see [Use the client notification channel to  wake a client when a deployment deadline occurs](#bkmk_deadline).
 
 ## What to expect when both versions of Wake on LAN are enabled
 
 When you have both versions of Wake on LAN enabled, you can use the **Wake Up** client notification and wake up on deadline. The client notification functions a little differently than traditional Wake on LAN. For a brief explanation of how the client notification works, see the [Wake on LAN starting in version 1810](#bkmk_wol-1810) section. The new client setting **Allow network wake-up** will change the NIC properties to allow Wake on LAN. You no longer need to manually change it for new machines that are added to your environment. All other functionality of Wake on LAN hasn't been changed.
 
 - Starting in version 1902, the **Wake Up** client notification honors your existing **Wake On LAN port number (UDP)** setting.
-- Starting in Configuration Manager version 2020, you can use the client notification channel to wake clients when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. For more information, see [Use the client notification channel to  wake a client when a deployment deadline occurs](#bkmk_deadline).
+- Starting in Configuration Manager version 2010, you can use the client notification channel to wake clients when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. For more information, see [Use the client notification channel to  wake a client when a deployment deadline occurs](#bkmk_deadline).
 
 ## <a name="bkmk_wol-previous"></a>  Wake on LAN for version 1806 and earlier
 

@@ -2,10 +2,10 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 06/03/2020
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
@@ -18,10 +18,9 @@ manager: dougeby
 
 Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory (Azure AD). First enable and then configure each method that you want to use to search your environment. You can also disable a method by using the same procedure that you use to enable it. The only exceptions to this process are Heartbeat Discovery and Server Discovery:  
 
-- By default, **Heartbeat Discovery** is already enabled when you install a Configuration Manager primary site. It's configured to run on a basic schedule. Keep Heartbeat Discovery enabled. It makes sure that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](about-discovery-methods.md#bkmk_aboutHeartbeat).  
+- By default, **Heartbeat Discovery** is already enabled when you install a Configuration Manager primary site. It's configured to run on a basic schedule. Keep Heartbeat Discovery enabled. It makes sure that the discovery data records (DDRs) for devices are up to date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](about-discovery-methods.md#bkmk_aboutHeartbeat).  
 
 - **Server Discovery** is an automatic discovery method. It finds computers that you use as site systems. You can't configure or disable it.  
-
 
 ## <a name="BKMK_ConfigADForestDisc"></a> Active Directory Forest Discovery  
 
@@ -130,7 +129,7 @@ Although each of these discovery methods is independent of the others, they shar
 
     4. Select **OK** to save the discovery scope configuration.  
 
-2. Repeat the previous steps for each additional discovery scope that you want to define.  
+2. Repeat the previous steps for each other discovery scope that you want to define.  
 
 3. On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.
 
@@ -151,9 +150,9 @@ Although each of these discovery methods is independent of the others, they shar
 
         - **Discover objects within Active Directory groups**: The site also looks at the membership of groups in this path.  
 
-        - **Recursively search Active Directory child containers**: If you enable this option, the site searches any additional containers or OUs within the above path. If you disable this option, the site only searches for resources in the specific path.  
+        - **Recursively search Active Directory child containers**: If you enable this option, the site searches any other containers or OUs within the above path. If you disable this option, the site only searches for resources in the specific path.  
 
-          Starting in version 1806, select subcontainers to exclude from this recursive search. This option helps to reduce the number of discovered objects. Select **Add** to choose the containers under the above path. In the Select New Container dialog box, select a child container to exclude. Select **OK** to close the Select New Container dialog box.<!--1358143-->
+          Select subcontainers to exclude from this recursive search. This option helps to reduce the number of discovered objects. Select **Add** to choose the containers under the above path. In the Select New Container dialog box, select a child container to exclude. Select **OK** to close the Select New Container dialog box.<!--1358143-->
 
           > [!Tip]  
           > The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.  
@@ -167,7 +166,7 @@ Although each of these discovery methods is independent of the others, they shar
 
 2. On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
 
-3. On the **Active Directory Attributes** tab, configure additional Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
+3. On the **Active Directory Attributes** tab, configure other Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
 
     > [!Tip]  
     > For example, your organization uses the **Description** attribute on the computer account in Active Directory. Select **Custom**, and add `Description` as a custom attribute. After this discovery method runs, this attribute shows on the device Properties tab in the Configuration Manager console.<!--513948-->  
@@ -193,10 +192,25 @@ Although each of these discovery methods is independent of the others, they shar
 
 2. On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
 
-3. On the **Active Directory Attributes** tab, configure additional Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
+3. On the **Active Directory Attributes** tab, configure other Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
 
 4. Select **OK** to save the configuration.  
 
+#### Exclude organizational units (OU) from Active Directory User Discovery
+<!--5193509-->
+Starting in version 2103, you can exclude OUs from Active Directory User Discovery. To exclude an OU:
+
+1. From the Configuration Manager console, go to **Administration** > **Hierarchy Configuration** > **Discovery Methods**.
+
+1. Select **Active Directory User Discovery** then select **Properties** from the ribbon.
+
+1. On the **General** tab of the Active Directory User Discovery Properties window, select the **New** icon to specify a new Active Directory container or **Edit** to change an existing one.
+
+1. In the **Active Directory Container** dialog box, locate the search option named **Select sub containers to be excluded from discovery**.
+
+1. Select **Add** to add an exclusion or **Remove** to remove an existing exclusion.
+
+1. Select **OK** to save the Active Directory container configuration.
 
 ## <a name="azureaadisc"></a> Azure AD User Discovery
 
@@ -204,7 +218,7 @@ Azure AD User Discovery isn't enabled or configured the same as other discovery 
 
 For more information, see [Azure AD User Discovery](about-discovery-methods.md#azureaddisc).
 
-### Prerequisites
+### Prerequisites for Azure AD User Discovery
 
 To enable and configure this discovery method, [Configure Azure Services](azure-services-wizard.md) for **Cloud Management**.
 
@@ -223,9 +237,6 @@ If you create the app in Azure first, and then *import* it into Configuration Ma
     2. In the **Request API permissions** panel, switch to **APIs my organization uses**.  
 
     3. Search for and select the **Microsoft Graph** API.  
-
-        > [!Tip]
-        > In version 1810 and earlier, use the **Azure Active Directory Graph** API.
 
     4. Select the **Application permissions** group. Expand **Directory**, and select **Directory.Read.All**.  
 
@@ -253,14 +264,10 @@ When configuring the **Cloud Management** Azure service:
 
 You can discover user groups and members of those groups from Azure AD. When the site finds users in Azure AD groups that it hasn't previously discovered, it adds them as new user resources in Configuration Manager. A user group resource record is created when the group is a security group.
 
-### Prerequisites
+### Prerequisites for Azure AD User Group Discovery
 
 - Cloud Management [Azure service](azure-services-wizard.md)
 - Permission to read and search Azure AD groups
-
-### Limitations
-
-Delta discovery for Azure AD user group discovery is disabled in version 1906. You can enable it starting in Configuration Manager version 1910.
 
 ### Log files
 
@@ -316,7 +323,7 @@ Before you configure Network Discovery, understand the following topics:
 - Available Network Discovery options  
 
 - Limiting Network Discovery on the network  
-
+ 
 For more information, see [About Network Discovery](about-discovery-methods.md#bkmk_aboutNetwork).  
 
 The following sections provide information about common configurations for Network Discovery. You can configure one or more of these configurations for use during the same discovery run. If you use multiple configurations, plan for the interactions that can affect the discovery results.  
@@ -329,7 +336,7 @@ You can use a topology-only discovery to map your network. This kind of discover
 
 When you're mapping your network topology, configure the **Maximum hops** on the **SNMP** tab in the **Network Discovery Properties** dialog box. Just a few hops can help control the network bandwidth that's used when discovery runs. As you discover more of your network, increase the number of hops to gain a better understanding of your network topology.  
 
-After you understand your network topology, configure additional properties for Network Discovery. These properties help to discover potential clients and their operating systems. Also configure Network Discovery to limit the network segments that it can search.  
+After you understand your network topology, configure the properties for Network Discovery. These properties help to discover potential clients and their operating systems. Also configure Network Discovery to limit the network segments that it can search.  
 
 For more information, see [How to determine your network topology](#bkmk_proc-top)
 
@@ -344,7 +351,7 @@ Configuration Manager supports the following methods to search the network:
 
 #### <a name="BKMK_LimitBySubnet"></a> Limit searches by using subnets  
 
-You can configure Network Discovery to search specific subnets during a discovery run. By default, Network Discovery searches the subnet of the server that runs discovery. Any additional subnets that you configure and enable apply only to SNMP and DHCP search options. When Network Discovery searches domains, it isn't limited by configurations for subnets.  
+You can configure Network Discovery to search specific subnets during a discovery run. By default, Network Discovery searches the subnet of the server that runs discovery. Any other subnets that you configure and enable apply only to SNMP and DHCP search options. When Network Discovery searches domains, it isn't limited by configurations for subnets.  
 
 If you specify one or more subnets on the **Subnets** tab in the **Network Discovery Properties** dialog box, it only searches the subnets that you mark as **Enabled**.  
 
@@ -419,12 +426,13 @@ Use the following procedures to first discover only your network topology, and t
       > [!TIP]  
       > When you first map your network topology, configure just a few router hops to minimize the use of network bandwidth.  
 
-4. On the **Schedule** tab, select the **New** icon ![New icon](media/Disc_new_Icon.gif), and set a schedule for running discovery.  
+4. On the **Schedule** tab, select the **New** icon ![New icon](media/Disc_new_Icon.gif), and set a schedule for running discovery. The **Duration** is the period of time that Network Discovery has to complete the search for resources. On smaller subnets, an hour may be enough, but searching across an enterprise network with multiple router hops will take longer. If Network Discovery runs out of time, a message is logged in **Netdisc.log**.
 
     > [!NOTE]  
     > You can't assign a different discovery configuration to separate Network Discovery schedules. Each time Network Discovery runs, it uses the current discovery configuration.  
 
 5. Select **OK** to accept the configurations. Network Discovery runs at the scheduled time.  
+
 
 #### <a name="bkmk_proc-config"></a> How to configure Network Discovery  
 

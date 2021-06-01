@@ -1,8 +1,8 @@
 ---
 title: Application reliability (preview) in endpoint analytics
-titleSuffix: Configuration Manager
 description: Get details about application reliability in endpoint analytics
-ms.date: 02/24/2021
+titleSuffix: Microsoft Endpoint Manager
+ms.date: 03/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,7 +10,6 @@ ms.assetid: 68d07732-421e-40ca-9ee3-f5a856407259
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX
 ---
 
 # Application reliability (preview) in endpoint analytics
@@ -24,6 +23,7 @@ The application reliability report provides insight into potential issues for de
 - Devices are enrolled in endpoint analytics.
    - [Enroll Configuration Manager devices](enroll-configmgr.md)
    - [Enroll Intune devices](enroll-intune.md)
+   - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
 - Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 ## App reliability score
@@ -84,9 +84,20 @@ The **Device performance** tab displays application reliability insights for eac
 > [!IMPORTANT]
 > App crash events are limited to 10 app crash events per application, per device, per day.
 
-Selecting a device name opens the **Application reliability (preview)** tab for that device. This tab displays a timeline of app crash and app hang events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
+Selecting a device name opens the **Application reliability (preview)** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
 ## Known issues
+
+### Some devices may fail to upload application reliability data on days with abnormally high amounts of application usage
+
+**Scenario**: Application reliability data is uploaded from enrolled devices once per 24 hours. In cases where a device uses a substantial number of applications during the preceding 24 hours, the data being uploaded can be larger than expected causing the upload to be rejected. When this issue occurs, data from failed uploads never makes it to the Intune cloud and is not included in the insights shown on the Application reliability report.
+
+> [!NOTE]
+> This issue affects the data upload process rather than the device itself. This means that application reliability data from a particular device may fail to upload on one day, but data from the same device is able to upload successfully the next day.
+
+**Impacted devices**: This issue affects a small subset of daily application reliability data uploads from devices with a large amount of application usage. Only devices enrolled in Endpoint analytics via Configuration Manager version 2010 or older can be impacted. This issue primarily occurs when a device has greater than 20 distinct applications with active focus time during a 24 hour period, though this number can vary based on which applications are used and total usage duration.
+
+**Mitigation**: This issue requires a client-side mitigation which is available as part of an update rollup for Configuration Manager version 2010. For more information, see [KB4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95).
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 
@@ -143,4 +154,3 @@ For Each wmiPendingPolicy In wmiObjs
     End If
 Next
 ```
-

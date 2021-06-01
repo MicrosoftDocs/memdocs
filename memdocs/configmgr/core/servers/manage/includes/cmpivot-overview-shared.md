@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/13/2020
+ms.date: 02/25/2021
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -60,7 +60,7 @@ Entities are objects that can be queried from the client. We currently support t
 |DriverVxD|Driver - VxD|
 |EmbeddedDeviceInformation|Embedded Device Information|
 |Environment|Environment|
-|EPStatus|Status of antimalware software on the computer|
+|EPStatus|Status of antimalware software on the computer gathered by the `Get-MpComputerStatus` cmdlet. Supported on Windows 10 and Server 2016, or later with defender running. <!--7643613-->|
 |EventLog()|Events within 24 hours (by default) from an event log|
 |File()|Information about a specific file|
 |FileShare|Active file share information|

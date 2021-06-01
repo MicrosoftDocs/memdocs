@@ -37,7 +37,7 @@ Use features like the cloud management gateway, cloud-based distribution points,
 For more information, see the following articles:
 
 - [Manage clients on the internet](../../clients/manage/manage-clients-internet.md)
-- [Plan for Azure AD](../security/plan-for-security.md#bkmk_planazuread)
+- [Plan for Azure AD](../security/plan-for-security.md#azure-active-directory)
 - [Azure services](../../servers/deploy/configure/azure-services-wizard.md)
 
 ## Real-time management
@@ -69,7 +69,7 @@ Helps you to assess, track, and remediate the configuration compliance of client
 Provides security, antimalware, and Windows Firewall management for computers in your organization. This area includes management and integration with the following Windows Defender suite features:
 
 - Windows Defender Antivirus
-- Microsoft Defender Advanced Threat Protection
+- Microsoft Defender for Endpoint
 - Windows Defender Exploit Guard
 - Windows Defender Application Guard
 - Windows Defender Application Control

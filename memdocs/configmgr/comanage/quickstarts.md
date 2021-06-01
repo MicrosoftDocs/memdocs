@@ -30,7 +30,7 @@ In the following video, Microsoft corporate vice president Brad Anderson introdu
 
 ## Immediate value
 
-| | | |
+|Title |Description |Link |
 |-|-|-|
 | <a name="bkmk_ca"></a>**Conditional access with device compliance** | Control user access to corporate resources based on compliance rules from Intune | [![Thumbnail of conditional access video](media/thumbnail-conditional-access.png)](quickstart-conditional-access.md) |
 | <a name="bkmk_remote"></a>**Remote actions from Intune** | Run remote actions from Intune for co-managed devices. For example, wipe and reset a device and maintain enrollment and account | [![Thumbnail of remote actions video](media/thumbnail-remote-action.png)](quickstart-remote-actions.md) |
@@ -42,7 +42,7 @@ In the following video, Microsoft corporate vice president Brad Anderson introdu
 
 If you want to enable co-management, start here to unblock the technical concerns you may have.
 
-| | | |
+|Title |Description |Link |
 |-|-|-|
 | <a name="bkmk_paths"></a>**Paths to co-management** | There are two primary ways for you to set up co-management, and it's important to understand the prerequisites for each path.  Each path requires some combination of Azure AD, ConfigMgr, Intune, and Windows client. | [Learn more about paths to co-management](quickstart-paths.md) |
 | <a name="bkmk_setup-hybrid-aad"></a>**Set up hybrid Azure AD** | If your environment currently has domain-joined Windows 10 devices, set up hybrid Azure AD before you can enable co-management | [![Thumbnail of hybrid Azure AD set up video](media/thumbnail-setup-azure-ad.png)](quickstart-setup-hybrid-aad.md) |

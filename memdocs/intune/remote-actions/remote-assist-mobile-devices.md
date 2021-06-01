@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/06/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -38,19 +38,21 @@ There are four options available for remotely administering devices managed by  
 
 | Features, Platforms, Licensing | **Teams** | Quick Assist | TeamViewer (Intune) | Remote control (ConfigMgr) |
 |:---:|:---:|:---:|:---:|:---:|
-| Remote view and control |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Chat |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||
-| File transfer |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Elevated admin access |||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Unattended access |||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Simultaneous remote control |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|||
-| Multi-user support |||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Remote actions ||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Over-the-internet support |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||
-| Audit reporting |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Support for all platforms (Windows, iOS, Android, macOS) |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||
-| Integrated with Windows 10 – no additional app required ||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|||
-| Requires device to be co-managed by Configuration Manager and Intune ||||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
-| Requires additional licensing\* |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Remote view and control |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Chat |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)||
+| File transfer |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Elevated admin access |||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Unattended access |||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png) \**|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Simultaneous remote control |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|||
+| Multi-user support |||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Remote actions ||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Over-the-internet support |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)||
+| Audit reporting |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Support for all platforms (Windows, iOS, Android, macOS) |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)||
+| Integrated with Windows 10 – no additional app required ||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|||
+| Requires device to be co-managed by Configuration Manager and Intune ||||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
+| Requires additional licensing\* |![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark icon alt-text="Checkmark icon"](../enrollment/media/enrollment-method-capab/checkmark.png)|
 
 \* Teams requires Microsoft 365 licensing. Use of TeamViewer and Intune requires licensing from both TeamViewer and Intune. Remote Control is a feature of Configuration Manager and requires Configuration Manager licensing.
+
+\** Unattended access can be initiated from the TeamViewer Management Console, but not from the Microsoft Endpoint Management admin center.

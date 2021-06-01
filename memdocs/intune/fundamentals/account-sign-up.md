@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 02/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,7 +44,7 @@ If you already have a work or school account, **sign in** with that account and 
 
 1. Visit the [Intune Sign-up page](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
-   ![Screenshot of the Microsoft Intune Trial account signup web page](./media/account-sign-up/account-sign-up-site.png)
+:::image type="content" source="./media/account-sign-up/account-sign-up-site.png" alt-text="Screenshot of the Microsoft Intune Trial account signup web page":::
 
 2. On the Sign-up page, sign in or sign up to manage a new subscription of Intune.
 

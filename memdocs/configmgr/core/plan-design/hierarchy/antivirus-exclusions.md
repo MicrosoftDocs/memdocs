@@ -49,7 +49,7 @@ To prevent such problems, we recommend that you add the following real-time prot
 
 ### Default Installation Folders
 
-|  |  |
+|Folder|Path|
 | - | - |
 |*ConfigMgr Installation Folder*  |  %ProgramFiles%\Microsoft Configuration Manager  |  
 |*MP Installation Folder*  |%ProgramFiles%\SMS_CCM  |  

@@ -2,7 +2,7 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 08/17/2020
+ms.date: 03/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -42,6 +42,9 @@ Make sure to **Enable clients to use a cloud management gateway** in the **Cloud
 This method requires the client to first register with the management point on the internal network. Client registration typically happens right after installation. The management point gives the client a unique token that shows it's using a self-signed certificate. When the client roams onto the internet, to communicate with the CMG it pairs its self-signed certificate with the management point-issued token.
 
 The site enables this behavior by default.
+
+> [!NOTE]
+> With an HTTPS management point, the client needs to first register regardless of internet/intranet management point. The client needs to present a valid PKI-issued certificate, an Azure AD token, or a bulk registration token.
 
 ## Bulk registration token
 
@@ -84,6 +87,8 @@ On the server, review the following logs:
   - ClientAuth.log
 
 ### Known issues
+
+_Applies to version 2002_
 
 You can't create a bulk registration token on a site that has a site server in passive mode.<!-- 6399087 -->
 

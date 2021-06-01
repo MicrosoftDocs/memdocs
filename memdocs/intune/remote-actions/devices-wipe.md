@@ -46,9 +46,8 @@ The **Wipe** action restores a device to its factory default settings. The user 
 |**Wipe**| Not checked | Yes | Wipes all user accounts, data, MDM policies, and settings. Resets the operating system to its default state and settings.|
 |**Wipe**| Checked | No | Wipes all MDM Policies. Keeps user accounts and data. Resets user settings back to default. Resets the operating system to its default state and settings.|
 
-
 > [!NOTE]
-> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment.
+> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment. To create a User Enrollment profile: [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/ios-user-enrollment.md)
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
@@ -138,7 +137,7 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 ### Windows
 
 |Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows 10|
-|-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
+|-------------|----------------------------------------------------------------|--------------|-----------------------------------------|
 |Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
 |Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
 |Wi-Fi and VPN profile settings|Removed.|Removed.|Removed.|
@@ -157,6 +156,15 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 4. In the pane that shows the device name, select **Retire**. To confirm, select **Yes**.
 
 If the device is on and connected, the **Retire** action propagates across all device types in less than 15 minutes.
+
+## Manually un-enroll devices
+
+Device owners can manually un-enroll their devices as explained in the following end user help articles:
+
+- [Remove device from Company Portal for Android](../user-help/unenroll-your-device-from-intune-android.md)
+- [Remove device from Company Portal for iOS app](../user-help/unenroll-your-device-from-intune-ios.md)
+- [Remove device from Company Portal for macOS app](../user-help/unenroll-your-device-from-intune-macos.md)
+- [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
 ## Delete devices from the Intune portal
 

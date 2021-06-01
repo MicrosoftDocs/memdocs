@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 04/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,7 +78,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 - **EAS mail clients on Android device administrator** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
-- **EAS mail clients on Android Enterprise Personally-Owned Work Profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android Enterprise Personally-Owned Work Profile devices. For Conditional Access to work with Android Enterprise Personally-Owned Work Profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app you can set up device-based Conditional Access.
+- **EAS mail clients on Android Enterprise Personally-Owned Work Profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android Enterprise Personally-Owned Work Profile devices. For Conditional Access to work with Android Enterprise Personally-Owned Work Profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app, you can set up device-based Conditional Access.
 
 #### To set up Conditional Access for Android Enterprise Personally-Owned Work Profile devices
 
@@ -106,6 +106,8 @@ Before you can configure Conditional Access, verify the following configurations
 The native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune)
 
 ## Configure Exchange on-premises access
+
+Support for new installations of the Exchange connector was deprecated in July of 2020, and the connector installation package is no longer available for download. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).
 
 Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 

@@ -1,13 +1,11 @@
 ﻿---
 title: WMI namespaces and classes for reports
 titleSuffix: Configuration Manager
-description: How to create Configuration Manager report queries using Query Designer.
+description: Configuration Manager WMI namespaces and classes for Configuration Manager reports
 ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: b687399a-b750-42f7-949a-4c757d269d58
 author: aczechowski
 ms.author: aaroncz
@@ -65,7 +63,7 @@ An easy way to list the Configuration Manager–related classes that have been c
 
 1. Copy the following code into Notepad:
 
-    ```TEXT 
+    ```vbscript
         '======================================================================================= 
         ' 
         ' NAME: WMIScan.vbs 
@@ -237,11 +235,12 @@ An easy way to list the Configuration Manager–related classes that have been c
          
         End Sub
     ```
+
 1. Create a folder named C:\\WMIScan.
 1. Save the script as WMIScan.vbs in the C:\\WMIScan folder.
 1. Open a Command Prompt window.
 1. Type **C:\\WMIScan\\WMIScan.vbs /sitecode:ABC** and then press **Enter**. Make sure to replace **ABC** with the appropriate site code.
-    
+
    > [!NOTE]
    > The above command line assumes that the script is run from a Configuration Manager site server. To connect to WMI on a remote site server, use the /computer:&lt;computername&gt; argument to specify the remote computer. For example, to connect to site code ABC on Computer1, you would type C:\WMIScan\WMIScan.vbs /sitecode:ABC /computer:Computer1 in the command line.
 

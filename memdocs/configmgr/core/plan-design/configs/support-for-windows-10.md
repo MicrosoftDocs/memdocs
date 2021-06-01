@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients or for OSD with Configuration Manager
-ms.date: 01/27/2021
+ms.date: 05/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -43,13 +43,12 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 |
-|---------------------|-----|-----|-----|-----|-----|-----|
-| **1803**<br>(10.0.17134)   <!--05/11/2021-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **20H2**<br>(10.0.19042)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> |
+| Windows 10 version | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 |
+|--------------------|----------------|----------------|----------------|----------------|
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **20H2**<br>(10.0.19042)   <!--05/09/2023-->   | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> |
+| **21H1**<br>(10.0.19043)   <!--12/13/2022-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -57,7 +56,7 @@ All currently supported versions of Configuration Manager current branch support
 - **Enterprise 2016 LTSB** <!--10/13/2026-->
 - **Enterprise LTSC 2019** <!--01/09/2029-->
 
-For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows).
+For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows 10 release information](/windows/release-health/release-information).
 
 | Key |
 |--|
@@ -72,14 +71,18 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 - For Windows 10, version 20H2, OS deployment media shows the version as 10.0.19041.508.
 
+- For Windows 10, version 21H1, OS deployment media shows the version as 10.0.19041.844.<!-- 9504158 -->
+
 ### <a name="bkmk_arm64"></a> Windows 10 on ARM64
 
-Configuration Manager supports the client on Windows 10 ARM64 devices. OS deployment is not supported.<!-- 1353704 -->
+Configuration Manager supports the client on Windows 10 ARM64 devices.<!-- 1353704 -->
 
 Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
 > [!NOTE]
 > If you previously selected the top-level **Windows 10** platform, this action automatically selected both **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)**. This new platform isn't automatically selected. If you want to add **All Windows 10 (ARM64)**, manually select it in the list.
+
+OS deployment isn't supported, except for a feature update task sequence. Starting in version 2103, you can deploy a task sequence with a feature update to a Windows 10 on ARM64 device. For more information, see [Deploy a feature update with a task sequence](../changes/whats-new-in-version-2103.md#deploy-a-feature-update-with-a-task-sequence).
 
 ### <a name="bkmk_WIfB-support"></a> Support for Windows Insider
 
@@ -118,13 +121,10 @@ When you deploy operating systems with Configuration Manager, the Windows ADK is
 
 The following table lists the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
-| Windows 10 ADK version  | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 |
-|--------------------|-----|-----|-----|-----|-----|-----|
-| **1809**<br>(10.1.17763) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
-| **1903**<br>(10.1.18362) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) |
-| **2004**<br>(10.1.19041) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-
-<!-- Keep 1903 ADK until CM 1910 is out of support. Even though Win10 v1903 is end of service, it was also the official ADK for Win10 v1909 -->
+| Windows 10 ADK version | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 |
+|------------------------|----------------|----------------|----------------|----------------|
+| **1903**<br>(10.1.18362) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) |
+| **2004**<br>(10.1.19041) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
 |Key|
 |--|

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -85,13 +85,15 @@ When data is stored on mobile devices, it should be protected from malicious act
 
 - Determine how users will authenticate with organization resources from their many devices. For example, you can:
 
-  - Use [certificates](../protect/certificates-configure.md) on devices to authenticate features and apps, such as connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Passowrd-less is considered more secure than requiring users to enter their organization username and password.
+  - Use [certificates](../protect/certificates-configure.md) on devices to authenticate features and apps, such as connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
 
     If you're planning to use certificates, be sure you have a supported [public key infrastructure (PKI) infrastructure](../protect/certificates-configure.md) ready to create and deploy certificate profiles.
 
   - Use multi-factor authentication (MFA) when you need an extra layer of authentication on organization-owned devices. Or, use MFA to authenticate apps on personal devices. Biometrics, such as face recognition and fingerprints, can also be used.
 
     If you'll use biometrics for authentication, be sure your devices support biometrics. Most modern devices do.
+
+  - Implement a Zero Trust deployment. With Zero Trust, you use the features in Azure AD and Microsoft Intune to secure all endpoints, uses password-less authentication, and more. For more information, see the [Zero Trust Deployment Center](/security/zero-trust/).
 
 ### Objective: Distribute IT
 
@@ -173,7 +175,9 @@ As an organization and as an admin, you decide if you'll allow personal devices.
 
 - You want every device to be fully managed. In this scenario, give users all the devices they need, including mobile phones. Invest in a hardware refresh plan so users continue to be productive and effective. Enroll these organization-owned devices in Intune, and manage them using policies.
 
-  This option prevents personal devices. As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place.
+  This option prevents personal devices. 
+
+As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place. For more information, see the [Zero Trust Deployment Center](/security/zero-trust/).
 
 ### Manage desktop computers
 
@@ -328,7 +332,7 @@ The next task is to plan how and when your users and devices receive your polici
   | Production rollout phase 2 |  |  | Retail (1000 users) |  |
   | Production rollout phase 3 |  |  |  | HR (50 users), Finance (40 users), Executives (30 users) |
 
-  This template is also available to download at [Intune deployment planning, design, and implementation - Table templates](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2).
+  This template is also available to download at [Intune deployment planning, design, and implementation - Table templates](https://www.microsoft.com/download/details.aspx?id=103005).
 
 - Choose how users will enroll their personal and organization-owned devices. There are different enrollment approaches you can use, including:
 

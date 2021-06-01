@@ -27,7 +27,7 @@
       href: enroll-device-android-microsoft-intune-app.md
     - name: Enroll with derived credentials
       items:
-      - name: Enroll with Entrust Datacard
+      - name: Enroll with Entrust
         href: enroll-android-device-entrust-datacard.md
       - name: Enroll with Intercede
         href: enroll-android-device-intercede.md
@@ -110,8 +110,6 @@
       href: send-logs-to-your-it-admin-by-email-android.md
     - name: Share logs with Microsoft developers
       href: send-logs-to-microsoft-android.md
-    - name: Send logs via USB cable
-      href: send-logs-to-your-it-admin-using-cable-android.md
 - name: iOS/iPadOS device management
   items:
   - name: Enrollment
@@ -122,7 +120,7 @@
       href: enroll-your-device-dep-ios.md
     - name: Enroll with derived credentials
       items:
-      - name: Enroll with Entrust Datacard
+      - name: Enroll with Entrust
         href: enroll-ios-device-entrust-datacard.md
       - name: Enroll with Intercede
         href: enroll-ios-device-intercede.md
