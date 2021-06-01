@@ -2,11 +2,10 @@
 title: Incremental versions
 titleSuffix: Configuration Manager
 description: Learn about what's new in the latest update for Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -20,17 +19,17 @@ Configuration Manager uses an in-console [updates and servicing](../../servers/m
 
 To update the product to a new version of the current branch, use the Configuration Manager console to find and then [install in-console updates](../../servers/manage/install-in-console-updates.md). A few times each year, Microsoft releases new versions that include product updates. Each version also introduces new features. When you install an update with new features, you can choose to use those features.
 
-Different update versions are identified by year and month. For example, version 1511 identifies November 2015 (the month when Configuration Manager current branch was first released to manufacturing). Later updates have version names like 2002, which indicates an update that was created in February 2020. These update versions are key to understanding the incremental version of your Configuration Manager installation, and what features are available to enable in your environment.
+Different update versions are identified by year and month. For example, version 1511 identifies November 2015 (the month when Configuration Manager current branch was first released to manufacturing). Later updates have version names like 2103, which indicates an update that was created in March 2021. These update versions are key to understanding the incremental version of your Configuration Manager installation, and what features are available to enable in your environment.
 
 ## Supported versions
 
 Use the following links to discover what's new with each supported version:
 
+- [What's new in version 2107](whats-new-in-version-2107.md)
 - [What's new in version 2103](whats-new-in-version-2103.md)
 - [What's new in version 2010](whats-new-in-version-2010.md)
 - [What's new in version 2006](whats-new-in-version-2006.md)
 - [What's new in version 2002](whats-new-in-version-2002.md)
-- [What's new in version 1910](whats-new-in-version-1910.md)
 
 Each update version remains in support for 18 months from its initial availability date. Stay current with the most recent update version. For more information, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).
 
