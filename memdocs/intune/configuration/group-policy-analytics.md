@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2021
+ms.date: 05/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,7 +41,11 @@ This feature applies to:
 
 - Windows 10 and newer
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results.
+This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. 
+
+## Prerequisites
+
+Sign in as the Intune administrator with a role that has the **Security Baselines** permission. For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 
 ## Export GPOs as an XML file
 

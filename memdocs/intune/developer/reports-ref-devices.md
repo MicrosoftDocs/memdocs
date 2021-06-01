@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2021
+ms.date: 05/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -163,13 +163,13 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
 ## ownerTypes
 
-The **enrollmentType** entity indicates whether a device is corporate, personally owned, or unknown.
+The **ownerType** entity indicates whether a device is corporate, personally owned, or unknown.
 
 | Property  | Description | Example |
 |---------|------------|--------|
 | ownerTypeID |Unique identifier of the owner type. | |
 | ownerTypeKey |Unique identifier of the owner type in the data warehouse - surrogate key. | |
-| ownerTypeName |Represents the owner type of the devices:  <br>Corporate - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Corporate Personal Unknown |
+| ownerTypeName |Represents the owner type of the devices:  <br>Company - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Company Personal Unknown |
 
 > [!Note]  
 > For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
@@ -215,13 +215,14 @@ The **ManagementAgentType** entity represents the agents used to manage a device
 
 | ManagementAgentTypeID  | Name | Description |
 |---------|------------|--------|
-| 1 |EAS | The device is managed through Exchange Active Sync |
-| 2 |MDM | The device is managed using an MDM agent |
-| 3 |EasMdm | The device is managed by both Exchange Active Sync and an MDM agent |
-| 4 |IntuneClient | The device is managed by the Intune PC agent |
-| 5 |EasIntuneClient | The device is managed by both Exchange Active Sync and the Intune PC agent |
-| 8 |ConfigManagerClient | The device is managed by the Configuration Manager agent |
-| 16 |Unknown | Unknown management agent type |
+| 1 |EAS | The device is managed through Exchange Active Sync. |
+| 2 |MDM | The device is managed using an MDM agent. |
+| 3 |EasMdm | The device is managed by both Exchange Active Sync and an MDM agent. |
+| 4 |IntuneClient | The device is managed by the Intune PC agent. |
+| 5 |EasIntuneClient | The device is managed by both Exchange Active Sync and the Intune PC agent. |
+| 8 |ConfigManagerClient | The device is managed by the Configuration Manager agent. |
+| 16 |Unknown | Unknown management agent type. |
+| 2048 |IntuneAosp |  The device is managed by Intune's MDM for AOSP (Android Open Source Project) devices. |
 
 ## devices
 

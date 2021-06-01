@@ -2,7 +2,7 @@
 title: What's new in version 2103
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2103 of Configuration Manager current branch.
-ms.date: 04/19/2021
+ms.date: 05/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -439,20 +439,19 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 <!-- For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md). -->
 
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2103](../../../hotfix/2103/kb9210721.md).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2103](../../../hotfix/2103/9210721.md).
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 -->
 
-<!-- ### Hotfixes
+### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4594177](https://support.microsoft.com/help/4594177) | Client notifications sent to all collection members in Configuration Manager current branch, version 2103 | January 12, 2021 | Yes |
- -->
+| [9833643](../../../hotfix/2103/9833643.md) | Console update for Microsoft Endpoint Configuration Manager version 2103 | May 11, 2021 | No |
 
 ## Next steps
 

@@ -41,10 +41,10 @@ This feature applies to:
 - iOS 10.3 and later (supervised)
 - iPadOS 13.0 and later (supervised)
 
-By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration. Although the update process doesn't typically involve any user interaction, if the device has a passcode the user must enter it to start a software update. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
+By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
 
 > [!NOTE]
-> iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md), can install only when there is no user signed in to a Shared iPad session. The iPad must be signed out of all user accounts for the device to update successfully. 
+> iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md), can install only when there is no user signed in to a Shared iPad session and the device is charging. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully. 
 
 > [!NOTE]
 > If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behaviour may be undesirable.

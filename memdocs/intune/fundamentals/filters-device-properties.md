@@ -91,7 +91,7 @@ This article describes the different [device properties](#device-properties) and
   Examples:
 
   - `(device.deviceCategory -eq "Engineering devices")`
-  - `(device.deviceCategory -contains ["Engineering devices", "EMEA devices"])`
+  - `(device.deviceCategory -contains "Engineering")`
   - `(device.model -startsWith "E")`
 
   This property applies to:

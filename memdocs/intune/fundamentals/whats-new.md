@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/12/2021
+ms.date: 05/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,8 +58,140 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of May 24, 2021 (Service release 2105)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management  
+
+#### Newly available protected apps for Intune<!-- 9698578, 9731891  -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Leap Work for Intune by LeapXpert Limited
+- iManage Work 10 For Intune by iManage, LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+#### New tiles provided app install failure count<!-- 6381269  -->
+
+The **Home**, **Dashboard**, and **Apps Overview** panes now provide updated tiles to show the number of app installation failures for the tenant. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home** to view the Home pane, or **Dashboard** to view the Dashboard pane. Select **Apps** > **Overview** to view the **Apps Overview** pane. For related information, see [Intune reports](../fundamentals/reports.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Per setting status report in Settings Catalog<!-- 9061277  -->
+
+When you create a **Settings Catalog** profile, you can see how many devices are in each state, including success, conflict, and error (**Devices** > **Configuration profiles** > select the policy). This report includes a **Per setting status** that:
+
+- Shows the total number of devices impacted by a specific setting.
+- Has controls to search, sort, filter, export, and go to the next/previous pages.
+
+For more information on the settings catalog, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
+
+#### New settings for iOS/iPadOS 14.5 devices and newer <!-- 9428309   -->
+
+When creating a device restrictions policy for iOS/iPadOS devices, there are new settings available (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile):
+
+- **Block Apple Watch auto unlock**: Set to **Yes** to block users from unlocking their device with Apple Watch.
+- **Allow users to boot devices into recovery mode with unpaired devices**: Set to **Yes** to allow users to boot their device into recovery with an unpaired device.
+- **Block Siri for dictation**: Set to **Yes** to disable connections to Siri servers so that users can't use Siri to dictate text.
+- **Require devices to use Wi-Fi networks set up via configuration profiles**: Set to **Yes** to require devices to only use Wi-Fi networks set up through configuration profiles.
+
+To see these settings, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
+
+Applies to:
+
+- iOS/iPadOS 14.5 and newer
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support has ended for Restart remote action on Android Enterprise corporate-owned devices with a work profile<!--9584646   -->
+
+Support has ended for the **Restart** remote action on corporate-owned devices with a work profile. The **Restart** button has been removed from the **Device** page for corporate-owned devices with a work profile. If you try to restart devices using bulk device actions, the corporate-owned work profile devices won't restart and those device actions will be marked report as **Not supported**. Other device types that are included in the bulk device action will restart as normal for that action.
+
+### Windows 10 Enterprise multi-session support (public preview)<!--8666391  -->
+
+Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) on Azure which allows multiple concurrent user sessions. This gives users a familiar Windows 10 experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
+
+Microsoft Intune lets you manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 client. You can now enroll Hybrid Azure AD joined VMs in Intune automatically and target with OS scope policies and apps.
+
+You can:
+
+- Host multiple concurrent user sessions using the Windows 10 Enterprise multi-session SKU exclusive to Windows Virtual Desktop on Azure.
+- Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
+- Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with device scope policies and apps.
+
+For more information, see [Windows 10 Enterprise multi-session remote desktops](windows-virtual-desktop-multi-session.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Conditional access on Jamf-managed macOS devices for Government Cloud now available<!--9081124 -->
+
+You can now use Intune's compliance engine to evaluate Jamf-managed macOS devices for Government Cloud. To do so, activate the compliance connector for Jamf. For more information, see [Integrate Jamf Pro with Intune for compliance](../protect/conditional-access-integrate-jamf.md).
+
+#### Changes for for the Microsoft Tunnel Gateway<!--6305140     -->
+
+We have a pair of updates to announce for the Microsoft Tunnel Gateway this month:
+
+- **Microsoft Tunnel Gateway is now generally available**  
+  With this service release, [Microsoft Tunnel Gateway](../protect/microsoft-tunnel-overview.md) is now out of preview, and generally available. While the Microsoft Tunnel Gateway server component is out of preview, the following Microsoft Tunnel client apps remain in preview:
+
+  - Microsoft Tunnel standalone app for Android
+  - Microsoft Tunnel standalone app for iOS
+  - Microsoft Defender for Endpoint with support for Microsoft Tunnel for Android
+
+- **Custom setting support in VPN profiles for Microsoft Tunnel for Microsoft Defender for Endpoint for Android**
+
+  When you use the Microsoft Defender for Endpoint as your Microsoft Tunnel client app for Android and as a mobile threat defense (MTD) app, you can now use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN Profile for Microsoft Tunnel to configure Microsoft Defender for Endpoint.
+
+  In this scenario, using custom settings to configure Microsoft Defender for Endpoint in the VPN profile removes the need to deploy a separate app configuration profile for Microsoft Defender for Endpoint.
+
+  For the following platforms, you can choose to use either the custom settings in the VPN profile or to use a separate app configuration profile for Microsoft Defender for Endpoint:
+
+  - Android Enterprise Fully Managed
+  - Android Enterprise Corporate-Owned Work Profile
+
+  However, for Android Enterprise Personally-Owned Work profile, use *only* the VPN profile with custom settings. Personally-Owned Work Profile devices that receive a separate app configuration profile for Microsoft Defender for Endpoint in addition to a Microsoft Tunnel VPN profile may be unable to connect to the Microsoft Tunnel.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New operational report providing app install status<!-- 6381268  -->
+
+The new **App Install Status** report provides a list of apps with versions and installation details. App installation details are included as separate columns in the list. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **App Install Status**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+
+#### New operational report providing app install status based on device <!-- 6381269  -->
+
+Based on a selected app, the new **Device Install Status** report provides a list of devices and status information related to the specific app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. After selecting an app, click **Generate report**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+
+#### New operational report providing app install status based on user<!-- 6381273  -->
+
+Based on a selected app, the new **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Failures**, **Installs**, **Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *Select an app* > **User Install Status**. After selecting an app, click **Generate report**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+
+#### Export Intune reports using Graph API v1.0 or beta<!-- 8090911  -->
+
+Intune reporting export API now is available in Graph v1.0, and continues to be available in Graph beta. For related information, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Scripts
+
+#### New property value supported for Android Open Source Project devices<!-- 9749555  -->
+
+The `IntuneAosp` property value is now supported in the `managementAgentType` enum. The `ManagementAgentTypeID` value for this property is `2048`.  It represents the device type that is managed by Intune's MDM for AOSP (Android Open Source Project) devices. For related information, see [managementAgentType](../developer/reports-ref-devices.md#managementagenttypes) in the beta section of the Intune Data Warehouse API.
+
 <!-- ########################## -->
 ## Week of May 10, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Improved Conditional Access messaging for Android and iOS/iPadOS users<!-- 9908622 -->
+
+Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -76,7 +208,6 @@ In addition, the following applies to configuration of the setting *Hide the Vir
 
 - If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*.
 
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
@@ -88,7 +219,7 @@ There's a new **Filters** option that can be used when assigning apps or policie
 - **Apps** > **Filters (preview)**> **Create**
 - **Tenant administration** > **Filters (preview)**> **Create**
 
-You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile. 
+You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile.
 
 For more information, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 
@@ -115,9 +246,10 @@ To help monitor expedited updates, you can use the following options:
 ## Week of April 26, 2021 (Service release 2104)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management  
+### App management
 
-#### Updated privacy screen in Company Portal for iOS <!-- 9746018  -->  
+#### Updated privacy screen in Company Portal for iOS <!-- 9746018  -->
+
 We added additional text to the Company Portal privacy screen to clarify how Company Portal uses collected data. It assures users that the collected data is only used to verify that devices are compliant with their organization's policies.  
 
 #### Installation status for device-assigned required apps<!-- 7283852  -->
@@ -226,7 +358,7 @@ We’ve streamlined the conditional access flow on Surface Duo devices. These ch
 
 On a Duo device:
 
-- When access to a resource is blocked by conditional access, users are now redirected to the Company Portal app that was preinstalled on the device. Previously, they were sent to the Google Play store listing of the Company Portal app. 
+- When access to a resource is blocked by conditional access, users are now redirected to the Company Portal app that was preinstalled on the device. Previously, they were sent to the Google Play store listing of the Company Portal app.
 - For devices that are enrolled as a personally-owned work profile, when a user tries to sign in to a personal version of an app using their work credentials they are now sent to the work version of the Company Portal where guidance messaging is shown. Previously, the user was sent to the Google Play store listing of the personal version of the Company Portal app, where they would have had to reenable the personal Company Portal to see the guidance messaging.
 
 #### Configure options that apply to Tunnel Gateway server upgrades<!-- 8664465   -->
@@ -307,7 +439,6 @@ We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsof
 - Various bug fixes and enhancements.
 
 The Tunnel Gateway server will automatically update to the new release.
-
 
 <!-- ########################## -->
 ## Week of March 22, 2021 (Service release 2103)
