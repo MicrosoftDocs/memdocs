@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/26/2021
+ms.date: 06/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,23 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of June 14, 2021  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Microsoft Defender for Endpoint for Microsoft Tunnel on Android is out of preview<!-- 9370486 -->
+
+The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functionality on Android is now out of preview and generally available for use. With this change:
+
+- You no longer need to opt in to use Defender of Endpoint as the tunnel app on Android.
+- The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on August 14, 2021.
+
+Plan to download and use the updated Microsoft Defender for Endpoint app for Microsoft Tunnel app for Android. If you participated in the preview, update your devices with the new version of Defender for Endpoint from the Google Play store. If you are still using the standalone tunnel app, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
+
+The standalone tunnel app for iOS remains in preview.  
 
 <!-- ########################## -->
 ## Week of May 24, 2021 (Service release 2105)

@@ -4,16 +4,16 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 06/01/2021
+ms.date: 06/14/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Plan for Change: Intune ending support for stand-alone client apps on Microsoft Tunnel<!-- 9370486   -->
+### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
-The Defender for Endpoint app on Android now supports Microsoft Tunnel functionality and will be the official client app for Android Enterprise customers. We will be removing the Microsoft Tunnel client from the Google Play store at the end of June.
+The Defender for Endpoint app on Android now supports Microsoft Tunnel functionality and will be the official client app for Android Enterprise customers. We will be removing the Microsoft Tunnel client from the Google Play store at the end of July.
 
 #### How this change will affect your organization
 
@@ -21,7 +21,8 @@ If you use the Microsoft Tunnel app for Android, you'll need to move to the Defe
 
 #### What you need to do to prepare
 
-For your devices that run Android Enterprise and currently use the Microsoft Tunnel app, plan to [replace the stand-alone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Defender for Endpoint app.
+For your devices that run Android Enterprise and currently use the Microsoft Tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Defender for Endpoint app.
+
 ### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 
 We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is a change only in what you’ll see in the UI.
