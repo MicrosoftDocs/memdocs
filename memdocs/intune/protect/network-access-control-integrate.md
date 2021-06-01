@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2021
+ms.date: 06/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -69,13 +69,13 @@ The following list is an overview on how NAC integration works when integrated w
 8. Once the device is enrolled and compliant, NAC partner solution gets the state from Intune.
 9. Connection is successfully established which allows the device access to corporate resources.
 
->[!NOTE] NAC partner solutions will typically make two different types of query to Intune to ask about device compliance state:
-
->- Queries filtering based on a known property value of a single device such as its IMEI or Wi-Fi MAC address
-
->- Broad, unfiltered queries for all non-compliant devices.
-
->NAC Solutions are permitted to make as many of the device-specific queries as required.  However the broad unfiltered queries may be throttled. The NAC solution should be configured to only submit the "all non-compliant devices" queries, at most, once every 4 hours. Queries made more frequently will receive an http 503 error from the Intune service.
+> [!NOTE] 
+> NAC partner solutions will typically make two different types of query to Intune to ask about device compliance state:
+> 
+> - Queries filtering based on a known property value of a single device such as its IMEI or Wi-Fi MAC address
+> - Broad, unfiltered queries for all non-compliant devices.
+>
+> NAC Solutions are permitted to make as many of the device-specific queries as required.  However the broad unfiltered queries may be throttled. The NAC solution should be configured to only submit the *all non-compliant devices* queries, at most, once every four hours. Queries made more frequently will receive an http 503 error from the Intune service.
 
 ## Use NAC for VPN on your iOS/iPadOS devices
 
