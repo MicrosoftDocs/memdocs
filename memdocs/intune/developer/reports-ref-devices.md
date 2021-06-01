@@ -163,7 +163,7 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
 ## ownerTypes
 
-The **onwerType** entity indicates whether a device is corporate, personally owned, or unknown.
+The **ownerType** entity indicates whether a device is corporate, personally owned, or unknown.
 
 | Property  | Description | Example |
 |---------|------------|--------|
