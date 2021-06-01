@@ -5,7 +5,7 @@ description: Learn how to concurrently manage Windows 10 devices by using both C
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/01/2020
+ms.date: 06/01/2021
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -61,8 +61,8 @@ For more information on this immediate value from co-management, see the quickst
 
 Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads) section.
 
-> [!Note]  
-> Co-management, in and of itself, is not a solution to manage remotely connected Windows 10 systems as the Configuration Manager client agent must still be able to communicate with the Configuration Manager site that manages it. To manage remotely connected Windows 10 systems with Configuration Manager, you should enable a [Cloud management gateway](/mem/configmgr/core/clients/manage/cmg/overview) regardless of whether co-management is used or not.
+> [!NOTE]
+> Co-management by itself isn't a solution to manage remotely connected Windows 10 systems. The Configuration Manager client still needs to communicate with its assigned site. To manage remotely connected Windows 10 systems with Configuration Manager, enable a [cloud management gateway (CMG)](../core/clients/manage/cmg/overview.md). A CMG isn't required for co-management, and co-management isn't required with a CMG, but they can be used together.
 
 ## Prerequisites
 
