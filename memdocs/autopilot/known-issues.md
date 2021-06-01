@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 04/28/2021
+ms.date: 06/01/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -28,6 +28,9 @@ The following table describes known issues that can often be resolved by configu
 
 <table>
 <th>Issue<th>More information
+
+<tr><td>TPM attestation is not working on Intel Tigerlake platforms.</td>
+<td>TPM attestation support for Intel TPM Tigerlake platforms are only supported on with Windows 21H2 or higher. </tr>
 
 <tr><td>Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP.</td>
 <td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. To avoid this issue, target the ESP profile to <a href="enrollment-autopilot.md">device groups</a>.</tr>
