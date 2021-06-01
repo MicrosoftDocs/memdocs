@@ -221,14 +221,15 @@ The following keyboard shortcuts are available in the Windows Company Portal app
 |  | Send feedback | Alt+F |
 |  | My profile | Alt+U |
 |  | Settings | Alt+T |
-| Home - Device tile | Rename | F2 |
+| Device tile | Rename | F2 |
 |  | Remove | Ctrl+D or Delete |
 |  | Check access | Ctrl+M or F9 |
 | Device details | Rename | F2 |
 |  | Remove | Ctrl+D or Delete |
 |  | Check access | Ctrl+M or F9 |
 | App details | Install | Ctrl+I |
-| Devices | Available | Ctrl+D |
+| Apps list tile | Install | Ctrl+I |
+| Apps list item | Install | Ctrl+I |
 
 End users will also be able to see the available shortcuts in the Windows Company Portal app.
 
