@@ -30,7 +30,7 @@ In Configuration Manager, you apply custom client settings by creating an instan
 
 ## Example
 
-The following example applys custom client settings by creating an instance of a Client Configuration class, and then deploying the custom client settings by creating an instance of the `SMS_ClientSettingsAssignment` class and associating the instance of the Client Configuration class and a target collection.  
+The following example applies custom client settings by creating an instance of a Client Configuration class, and then deploying the custom client settings by creating an instance of the `SMS_ClientSettingsAssignment` class and associating the instance of the Client Configuration class and a target collection.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
