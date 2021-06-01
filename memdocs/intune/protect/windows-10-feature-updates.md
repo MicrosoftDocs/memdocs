@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 06/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -93,11 +93,9 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 - Windows 10 feature updates policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
-- If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
+- If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
-  To prevent this delay from impacting your co-managed devices, you can temporarily pause feature updates using the **Select when Preview Builds & feature Updates are received** setting in group policy. See [Manage feature and quality updates with group policies](/windows/deployment/update/wufb-manageupdate) for details on this settings. After the devices have successfully received the feature updates policy from Intune, you can remove the group policy setting.
-
-  If you have previously set the [Device configuration workload](../../configmgr/comanage/workloads.md#device-configuration) to Intune, see [Use the TargetReleaseVersion policy CSP to manage Windows 10 feature updates for co-managed devices](/troubleshoot/mem/intune/create-feature-update-hold-co-managed-devices) for an alternative method to configure the feature update policy.
+  To prevent this initial delay from impacting your co-managed devices, configure a [Windows 10 feature update policy](../protect/windows-10-feature-updates.md) and target this to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows 10 feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
