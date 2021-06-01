@@ -105,6 +105,8 @@ Windows 10 Administrative Templates are supported for Windows 10 Enterprise mult
 - ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings will not be applicable to Windows 10 Enterprise multi-session.
 
 > [!NOTE]
+> Some ADMX settings currently require an insider build. You can hover over the information bubble next to the setting name to see if an insider build is required for a specific setting.
+> 
 > The applicability of some ADMX based settings for applications like Microsoft Edge and Microsoft Office is not based on the Windows edition or version. To add these settings to your policy, you may have to remove any filters applied in the Settings Picker.
 
 ## Compliance and Conditional access
