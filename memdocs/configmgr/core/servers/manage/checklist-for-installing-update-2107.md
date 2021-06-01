@@ -1,46 +1,43 @@
 ---
-title: Checklist for 1910
+title: Checklist for 2107
 titleSuffix: Configuration Manager
-description: Learn about actions to take before updating to Configuration Manager version 1910.
-ms.date: 12/20/2019
+description: Learn about actions to take before updating to Configuration Manager version 2107.
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 9afb4452-9e58-40eb-bfd8-cbf9042a2790
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX
 ---
 
-# Checklist for installing update 1910 for Configuration Manager
+# Checklist for installing update 2107 for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 1910 to update your hierarchy from a previous version. <!-- baseline only statement:(Because version 1902 is also available as [baseline media](updates.md#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2107 to update your hierarchy from a previous version. <!-- baseline only statement: Version 2107 will also be available as [baseline media](updates.md#bkmk_note1) soon after global availability, so you can use the installation media to install the first site of a new hierarchy.-->
 
-To get the update for version 1910, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).<!-- SCCMDocs#1946 -->
+To get the update for version 2107, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).<!-- SCCMDocs#1946 -->
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 1910, review the following information [about installing update 1910](#about-installing-update-1910) and the [checklist](#checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2107, review the following information [about installing update 2107](#about-installing-update-2107) and the [checklist](#checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
-    - The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
+  - The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
 
-    - Another common download issue occurs when proxy server settings prevent downloads from `silverlight.dlservice.microsoft.com`, `download.microsoft.com`, and `go.microsoft.com`.
+  - Another common download issue occurs when proxy server settings prevent downloads from [required internet endpoints](../../plan-design/network/internet-endpoints.md#updates-and-servicing).
 
 For more information about installing updates, see [In-console updates and servicing](updates.md#bkmk_inconsole).
 
 For more information about current branch versions, see [Baseline and update versions](updates.md#bkmk_Baselines).
 
-
-## About installing update 1910
+## About installing update 2107
 
 ### Sites
 
-Install update 1910 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
+Install update 2107 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
 
 - Child primary sites install the update automatically after the CAS finishes the installation of the update. You can use service windows to control when a site installs the update. For more information, see [Service windows for site servers](service-windows.md).
 
@@ -65,46 +62,43 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-As of December 20, 2019, version 1910 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+<!-- As of April 19, 2021, version 2107 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
 
-<!--
+At this time, version 2107 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2107:
 
-At this time, version 1910 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1910:
+[Version 2107 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
 
-[Version 1910 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
-
-<!--
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
-> [!Note]  
-> The version 1910 update is only applicable to sites running version 1806 or later.
+> [!NOTE]
+> The version 2107 update is only applicable to sites running version 2002 or later.
 
-To opt-in to the early update ring:
+To opt in to the early update ring:
 
-1. Open Windows PowerShell and **Run as administrator**
-1. Run the **EnableEarlyUpdateRing1910.ps1** script, using the following syntax:
+1. Open a Windows PowerShell session **as administrator**.
 
-    `EnableEarlyUpdateRing1910.ps1 <SiteServer_Name> | SiteServer_IP>`
+1. Run the **EnableEarlyUpdateRing2107.ps1** script, using the following syntax:
 
-    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing1910.ps1 cmprimary01`
+    `EnableEarlyUpdateRing2107.ps1 <SiteServer_Name> | SiteServer_IP>`
+
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2107.ps1 cmprimary01`
 
 1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-The version 1910 update should now be available in the console.
+The version 2107 update should now be available in the console.
 
-> [!Important]  
-> This script only adds your site to the early update ring for version 1910. It's not a permanent change.
--->
+> [!IMPORTANT]
+> This script only adds your site to the early update ring for version 2107. It's not a permanent change.
 
 ## Checklist
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1910. To update to 1910, you must use version 1806 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 2107. To update to 2107, use version 2002 or later.
 
 ### Review the status of your product licensing
 
-You must have an active Software Assurance (SA) agreement or equivalent subscription rights to install this update. When you update the site, the **Licensing** page presents the option to confirm your **Software Assurance expiration date**.
+You need an active Software Assurance (SA) agreement or equivalent subscription rights to install this update. When you update the site, the **Licensing** page presents the option to confirm your **Software Assurance expiration date**.
 
 This value is optional. You can specify as a convenient reminder of your license expiration date. This date is visible when you install future updates. You might have previously specified this value during setup or installation of an update. You can also specify this value in the Configuration Manager console. In the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select **Hierarchy Settings** in the ribbon, and switch to the **Licensing** tab.
 
@@ -125,7 +119,7 @@ For more information, see [Site and site system prerequisites](../../plan-desig
 
 ### Review the version of the Windows ADK for Windows 10
 
-The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 1910. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-10.md#windows-10-adk). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2107. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-10.md#windows-10-adk). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
@@ -206,7 +200,7 @@ For more information, see [Backup and recovery](backup-and-recovery.md).
 
 If you or a third-party product customizes any Configuration Manager configuration files, save a copy of your customizations.
 
-For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. You need to reapply your customizations.
+For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. Reapply your customizations.
 
 ### Plan for client piloting
 
@@ -221,23 +215,30 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 1910. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](../../../mdt/release-notes.md).
+If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2107. Check with the product vendor for this information.
 
-### Remove Intune subscription (hybrid MDM)
+### Disable any custom solutions
 
-<!-- SCCMDocs-pr#4253 -->
-The hybrid MDM service offering is retired as of September 1, 2019. If your Configuration Manager site had a Microsoft Intune subscription, you need to remove it. For more information, see [Remove hybrid MDM](../../../mdm/understand/what-happened-to-hybrid.md#remove-hybrid-mdm).
+If your site has any custom solutions based on the Configuration Manager SDK or PowerShell, disable this code before you update the site. Make sure to test this custom code in a lab environment to make sure it's compatible with the new version.
+
+### Read the release notes
+
+Before you start the update, review the current release notes. With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support article.
+
+Feature-specific documentation may include information about known issues that affect core scenarios.
+
+For more information, see the [Release notes](../deploy/install/release-notes.md).
 
 ### Run the setup prerequisite checker
 
 When the console lists the update as **Available**, you can run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 1910** update package, and select **Run prerequisite check** in the ribbon.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2107** update package, and select **Run prerequisite check** in the ribbon.
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
+> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. After running the prerequisite checker, but before installing the update, if you need to do a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
 
@@ -247,14 +248,13 @@ You may plan to install the update outside of normal business hours. Determine w
 
 For more information, see [Updates for Configuration Manager](updates.md).
 
-
 ## Post-update checklist
 
 After the site updates, use the following checklist to complete common tasks and configurations.
 
 ### Confirm version and restart (if necessary)
 
-Make sure each site server and site system role is updated to version 1910. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
+Make sure each site server and site system role is updated to version 2107. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
 
 Consider restarting remote site systems that don't successfully update at first. Review your site infrastructure and make sure that applicable site servers and remote site system servers successfully restarted. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.
 
@@ -297,9 +297,13 @@ Update clients per the plan you created, especially if you configured client pil
 
 ### Third-party extensions
 
-If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 1910.
+If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2107.
 
-### Update custom boot images and media
+### Enable any custom solutions
+
+Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2107.
+
+### Update boot images and media
 
 <!--SCCMDocs issue 775-->
 
@@ -307,6 +311,19 @@ Use the **Update Distribution Points** action for any boot image that you use, w
 
 When you update the site, Configuration Manager automatically updates the *default* boot images. It doesn't automatically distribute the updated content to distribution points. Use the **Update Distribution Points** action on specific boot images when you're ready to distribute this content across your network.
 
+> [!NOTE]
+> The site always uses the production version of the Configuration Manager client in default boot images. Even if you configure automatic client upgrades to use a [pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
+
 After updating the site, manually update any *custom* boot images. This action updates the boot image with the latest client components if necessary, optionally reloads it with the current Windows PE version, and redistributes the content to the distribution points.
 
 For more information, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
+
+### Update PowerShell help content
+
+To get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. Run this cmdlet on all computers with the Configuration Manager console. This help content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+
+For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
+
+## Next steps
+
+Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. There's a tip at the top of that article about how to receive RSS notifications of changes.
