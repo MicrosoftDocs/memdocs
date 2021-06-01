@@ -107,6 +107,8 @@
           href: deployment-guide-platform-ios-ipados.md    
         - name: Android, Android Enterprise 
           href: deployment-guide-platform-android.md 
+        - name: macOS 
+          href: deployment-guide-platform-macOS.md 
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection

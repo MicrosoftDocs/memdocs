@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/06/2021
+ms.date: 06/01/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,7 +29,6 @@ ms.collection: M365-identity-device-management
 # Deployment guide: Manage macOS devices in Microsoft Intune
 
 Intune supports mobile device management (MDM) of iPads and iPhones to give users secure access to work email, data, and apps. This guide provides macOS-specific guidance to help you set up enrollment and deploy apps and policies to users and devices.      
-
 
 
 ## Prerequisites  
@@ -64,10 +63,8 @@ Use the Intune endpoint security features to configure device security and to ma
 | Task | Detail | 
 | ---- | ------ | 
 |[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
-|[Enable mobile threat defense (MTD) connector for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)|Enable the MTD connection in Intune so that MTD partner apps can work with Intune and your policies. If you're not using Microsoft Defender for Endpoint, consider enabling the connector so that you can use another mobile threat defense solution.  |  
-|[Create MTD app protection policy](../protect/mtd-app-protection-policy.md)|Create an Intune app protection policy that assesses risk and limits a device's corporate access based on the threat level.|
-|[Add MTD apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)|Make MTD apps available to people in your organization and configure Microsoft Authenticator for iOS/iPadOS. |  
 |[Use Conditional Access to limit access to Microsoft Tunnel](../protect/microsoft-tunnel-conditional-access.md)|Use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway. | 
+|[Add endpoint protection settings](../protect/microsoft-tunnel-conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../protect/endpoint-protection-macos.md).   | 
 
 ## Configure device settings     
 
@@ -76,14 +73,14 @@ Use Microsoft Intune to enable or disable settings and features on iOS/iPadOS de
 | Task | Detail | 
 | ---- | ------ | 
 |[Create a device profile in Microsoft Intune](../configuration/device-profile-create.md) |Learn about the different types of device profiles you can create for your organization.|  
-|[Configure device features](../configuration/device-features-configure.md)|Configure common iOS/iPadOS features and functionality for a work or school context. For a description of the settings in this area, see the [device features reference](../configuration/ios-device-features-settings.md).|
-|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference](../configuration/wi-fi-settings-ios.md).|
-|[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network. You can also [create a per-app VPN policy](../configuration/vpn-setting-configure-per-app.md) to require users to sign in to certain apps through a VPN connection. For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-ios.md). |  
-|[Configure email profile](../configuration/email-settings-configure.md)|Configure email settings so that people can connect to a mail server and access their work or school email. For a description of the settings in this area, see the [email settings reference](../configuration/email-settings-ios.md).|  
-|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-ios.md).|
-|[Configure custom profile](../configuration/custom-settings-ios.md)|Add and assign device settings and features that aren't built into Intune.|
+|[Configure device features](../configuration/device-features-configure.md)|Configure common macOS features and functionality. For a description of the settings in this area, see the [device features reference](../configuration/macos-device-features-settings.md).|
+|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference](../configuration/wi-fi-settings-macos.md).|
+|[Configure wired network profile](../configuration/wired-networks-configure.md)|This profile enables people on desktop computers to connect to your organization's wired network. For a description of the settings in this area, see the [wired network reference](../configuration/wi-fi-settings-macos.md).|
+|[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-macos.md). |  
+|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-macos.md).|
+|[Configure custom profile](../configuration/custom-settings-macos.md)|Add and assign device settings and features that aren't built into Intune.|
+|[Add and manage macOS extensions](../configuration/kernel-extensions-overview-macos.md)|Add kernel extensions and system extensions, which enables users to install app extentions that extend the native capabilities of the operating system. For a description of the settings in this area, see the [macOS extensions reference](../configuration/kernel-extensions-settings-macos.md).|  
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
-|[Configure software update policy](../protect/software-updates-ios.md)| Schedule automatic OS updates and installations for supervised iOS/iPadOS devices.|  
 
 
 ## Set up secure authentication methods   
@@ -96,8 +93,6 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 |[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|  
 |[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | 
 |[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). 
-|[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision iOS/iPadOS devices with certificates that are derived from user smart cards.  
-
 
 
 
@@ -107,44 +102,34 @@ As you set up apps and app policies, think about your organization's requirement
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Add store apps](../apps/store-apps-ios.md) | Add iOS/iPadOS apps from the App Store to Intune, and assign to groups.  | 
-|[Add web apps](../apps/web-app.md) | Add web apps to Intune, and assign to groups. | 
-|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune, and assign to groups. | 
-|[Add line-of-business apps ](../apps/lob-apps-ios.md)|Add iOS/iPadOS line-of-business (LOB) apps to Intune, and assign to groups.| 
-|[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.| 
+|[Add line-of-business apps ](../apps/lob-apps-macos.md)|Add macOS line-of-business (LOB) apps to Intune and assign to groups.| 
+|[Add Microsoft Edge](../apps/manage-microsoft-edge.md) | Add and assign Microsoft Edge in Intune. | 
+|[Add Intune Company Portal app ](../apps/apps-company-portal-macos.md)|Provide instructions to your users to install Company Portal for macOS or install it on devices already enrolled directly from Intune.| 
+|[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
+|[Assign Microsoft 365 ](../apps/apps-add-office365-macos.md)|Add Microsoft 365 apps to macOS devices. | 
+|[Add Microsoft Defender for Endpoint](../apps/apps-advanced-threat-protection-macos)|Add Microsoft Defender for Endpoint to Intune.|
 |[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.| 
-|[Manage iOS/iPadOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)|Synchronize, manage, and assign apps purchased through Apple Business Manager.| 
-|[Manage iOS/iPadOS eBooks purchased through Apple Business Manager ](../apps/vpp-ebooks-ios.md)| Synchronize, manage, and assign books purchased through Apple Business Manager. | 
-| [Create an iOS/iPadOS app protection policy](../apps/app-protection-policies.md) | Keep your organization's data contained within managed apps like Outlook and Word. See [iOS/iPadOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) for details about each setting.|  
-| [Create an app provisioning profile](../apps/app-provisioning-profile-ios.md) |Prevent app certificates from expiring by proactively assigning new provisioning profiles to devices that have apps nearing expiry.| 
-|[Create an app configuration policy](../apps/app-configuration-policies-use-ios.md)  | Apply custom configuration settings to iOS/iPadOS apps on enrolled devices. You can also apply these types of policies [to managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md). | 
-|[Configure Microsoft Edge](../apps/manage-microsoft-edge.md) | Use Intune app protection and configuration policies with Edge for iOS/iPadOS to ensure corporate websites are accessed with safeguards in place. | 
-| [Configure Microsoft Office apps](../apps/manage-microsoft-office.md)| Use Intune app protection and configuration policies with Office apps to ensure that corporate files are accessed with safeguards in place. | 
-|[Configure Microsoft Teams](../apps/manage-microsoft-teams.md) |Use Intune app protection and configuration policies with Teams to ensure that collaborative team experiences are  accessed with safeguards in place. | 
-|[Configure Microsoft Outlook](../apps/app-configuration-policies-outlook.md) | Use Intune app protection and configuration policies with Outlook to ensure corporate email and calendars are accessed with safeguards in place.   
+|[Use shell scripts on macOS devices](../apps/macos-shell-scripts.md)|Use shell scripts to extend device management capabilities in Intune beyond what's supported by the macOS operating system.| 
+
 
 ## Enroll devices  
 
  Enrolling devices allows them to receive the policies you create, so have your Azure AD user groups and device groups ready. 
 
-For information about each enrollment method and how to choose one that's right for your organization, see the [iOS/iPadOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-ios-ipados.md). 
+For information about each enrollment method and how to choose one that's right for your organization, see the [iOS/iPadOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Set up Apple Automated Device Enrollment (ADE) in Intune](../enrollment/device-enrollment-program-enroll-ios.md)|Set up an out-of-the-box enrollment experience for corporate-owned devices purchased through Apple School Manager or Apple Business Manager. For a detailed walkthrough of this process, see [Tutorial: Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices](..//enrollment/tutorial-use-device-enrollment-program-enroll-ios.md)|  
-|[Set up Apple School Manager in Intune](../enrollment/apple-school-manager-set-up-ios.md)|Set up Intune to enroll devices you purchased through the Apple School Manager program.|  
-|[Set up device enrollment with Apple Configurator ](../enrollment/apple-configurator-enroll-ios.md)| Create an Apple Configurator profile to enroll corporate-owned devices (with no user affinity) via direct enrollment; or to enroll wiped or new devices (with user affinity) via Setup Assistant. You'll need to export the Apple Configurator profile from Intune, which requires a USB connection to a Mac computer running Apple Configurator.|  
+|[Set up Apple Automated Device Enrollment (ADE) in Intune](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience for corporate-owned devices purchased through Apple School Manager or Apple Business Manager. |  
+|[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Create an Apple Configurator profile to enroll corporate-owned devices (with no user affinity) via direct enrollment; or to enroll wiped or new devices (with user affinity) via Setup Assistant. You'll need to export the Apple Configurator profile from Intune, which requires a USB connection to a Mac computer running Apple Configurator.|  
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
-|[Set up Apple User Enrollment (in preview)](../enrollment/ios-user-enrollment.md)|Create a user enrollment profile to deploy the Apple user enrollment experience to devices using a managed Apple ID. Support for this feature is currently in preview. |   
-|[Set up shared iPad devices](../enrollment/device-enrollment-shared-ipad.md)|Configure devices so that they can be used by more than one person (the type of setup you'd see in a library or educational environment).| 
-|[Backup and restore devices](../enrollment/backup-restore-ios.md)|Back up and restore a device to prepare it for enrollment or migration in Intune, such as during Automated Device Enrollment setup.   |
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
-|[Troubleshoot enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors)|Troubleshoot and find resolutions to problems that occur during enrollment. |
+|[Troubleshoot enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 
 ## Run remote actions  
 
-After devices are set up, you can use remote actions in Intune to manage and troubleshoot iOS/iPadOS devices from a distance. The following articles introduce you to the remote actions in Intune. If an action is absent or disabled in the portal, then it isn't supported on iOS/iPadOS.  
+After devices are set up, you can use remote actions in Intune to manage and troubleshoot macOS devices from a distance. The following articles introduce you to the remote actions in Intune. If an action is absent or disabled in the portal, then it isn't supported on macOS.  
 
 | Task | Detail | 
 | ---- | ------ | 
@@ -156,9 +141,12 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.    
 
 * [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) 
-* [Use Apple corporate device enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md)
-* [Protect Exchange Online email on managed devices](../protect/tutorial-protect-email-on-enrolled-devices.md)
-* [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md)
-* [Configure Slack to use Intune for EMM and app configuration](../apps/tutorial-configure-slack-enterprise-grid.md) 
+* [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md) **Laura: Does this bullet apply to macOS?**   
+
+For other versions of this guide, see:  
+
+*  [Deployment guide: Manage Android devices in Microsoft Intune](deployment-guide-platform-android.md)  
+*  [Deployment guide: Manage iOS devices in Microsoft Intune](deployment-guide-platform-ios.md)  
+  
 
 
