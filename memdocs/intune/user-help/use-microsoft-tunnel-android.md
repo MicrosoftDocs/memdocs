@@ -32,7 +32,7 @@ ms.collection:
 
 # Using Microsoft Tunnel for Android
 
-Microsoft Tunnel uses Microsoft Defender for Endpoint as The Microsoft Tunnel client app on Android. Microsoft Defender for Endpoint replaces Microsoft Tunnel as the client app beginning on June 14 2021. Use of Microsoft Tunnel remains in support until August 14 2021.
+Microsoft Tunnel uses Microsoft Defender for Endpoint as The Microsoft Tunnel client app on Android. Microsoft Defender for Endpoint replaces Microsoft Tunnel as the client app beginning on June 14 2021. Use of the standalone Microsoft Tunnel client app remains in support until August 14 2021.
 
 The Microsoft Tunnel client app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they already configured a VPN connection for your work account. To connect to the VPN, simply install the app and sign in with your work account.
 ## Install Microsoft Tunnel  
@@ -97,7 +97,7 @@ Send app logs to IT support to get help with an app or connection problem.
 6. Send the email.  
 
 ## About Microsoft Tunnel
-Select **About** to view the Microsoft Tunnel privacy policy, terms of use, and third-party notices.   
+Tap your profile picture, and then select **About** to view the Microsoft Tunnel privacy policy, terms of use, and third-party notices.   
 
 
 ## Next steps  

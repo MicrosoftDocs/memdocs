@@ -44,22 +44,22 @@ Through the Microsoft Endpoint Manager admin center, you’ll:
 - Deploy VPN profiles to devices to direct them to use the tunnel.
 - Deploy the Microsoft Tunnel client apps to your devices.
 
-Through the Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devices:
+Through a Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devices:
 
 - Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
 - Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
-To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on platform. The apps are available from each platforms app store:
+To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on device platform. The apps are available from each platforms app store:
 
-- Android: Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel.
-- iOS/iPadOS: Microsoft Tunnel standalone app.
+- **Android**: Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel.
+- **iOS/iPadOS**: Microsoft Tunnel standalone app.
 
 You can install multiple Linux servers to support Microsoft Tunnel, and combine servers into logical groups called *Sites*. Each server can join a single Site. When you configure a Site, you’re defining a connection point for devices to use when they access the tunnel. Sites require a *Server configuration* that you’ll define and assign to the Site. The Server configuration is applied to each server you add to that Site, simplifying the configuration of more servers.
 
 To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses Microsoft Tunnel for its connection type.
 
   > [!Important]
-  > Prior to support for Microsoft Defender for Endpoint as the Microsoft Tunnel client app for Android, a standalone Tunnel App was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. On June 14 2021, both the standalone tunnel app and connection type are deprecated for Android and aren't supported after August 14 2021.
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later on August 14 2021.
   >
   > iOS/iPadOS continues to use the standalone client app, which remains in preview, and a connection type of *Microsoft Tunnel (standalone client)*.
 
@@ -87,7 +87,7 @@ Site configuration includes:
 
 You assign a server to a Site at the time you install the tunnel software on the Linux server. The installation uses a script that you can download from within the admin center. After starting the script, you’ll be prompted to configure its operation for your environment, which includes specifying the Site the server will join.
 
-To use the Microsoft Tunnel, devices will need to install the Microsoft Tunnel client app. You get the applicable app from the iOS/iPadOS or Android app stores and deploy it to users.
+To use the Microsoft Tunnel, devices will need to install a Microsoft Tunnel client app. You get the applicable app from the iOS/iPadOS or Android app stores and deploy it to users.
 
 ## Architecture
 

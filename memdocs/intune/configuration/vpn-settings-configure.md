@@ -120,7 +120,7 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile
 
   > [!Important]
-  > Prior to support for Microsoft Defender for Endpoint as the Microsoft Tunnel app on Android, a standalone Tunnel App was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. On June 14 2021, both the standalone tunnel app and connection type for Android are deprecated and aren't supported after August 14 2021.
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later on August 14 2021.
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile

@@ -13,15 +13,15 @@ These notices provide important information that can help you prepare for future
 
 ### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
-The Defender for Endpoint app on Android now supports Microsoft Tunnel functionality and will be the official client app for Android Enterprise customers. We will be removing the Microsoft Tunnel client from the Google Play store at the end of July.
+Beginning on June 14 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, on August 14 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
 
 #### How this change will affect your organization
 
-If you use the Microsoft Tunnel app for Android, you'll need to move to the Defender for Endpoint app before the July Intune (2107) service release to ensure users can still access the Tunnel Gateway configuration.
+If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before August 14 2021 to ensure users can still access the Tunnel Gateway configuration.
 
 #### What you need to do to prepare
 
-For your devices that run Android Enterprise and currently use the Microsoft Tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Defender for Endpoint app.
+For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
 
 ### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 

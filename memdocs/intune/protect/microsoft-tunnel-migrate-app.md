@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 On June 14 2021, Microsoft Defender for Endpoint became generally available as the Microsoft Tunnel client app for Android for use with the Microsoft Tunnel Gateway in Microsoft Intune.
 
-If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app before support for the Android standalone tunnel client app ends on August 14 2021.
+If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the Android standalone tunnel client app ends on August 14 2021.
 
 The following device platforms support Microsoft Defender for Endpoint as the tunnel client app:
 
@@ -79,7 +79,7 @@ The following connection types are now available in VPN profiles:
 
 **End-user changes**:
 
-For Android, the Microsoft Defender for Endpoint app you use as the Tunnel client app includes a new tab for the Microsoft Tunnel functionality.
+For Android, the Microsoft Defender for Endpoint app you use as the tunnel client app includes a new tab for the Microsoft Tunnel functionality.
 
 ## Licensing
 
@@ -103,7 +103,7 @@ For information about license requirements for Microsoft Defender for Endpoint, 
 
 ## Migrate devices to Microsoft Defender for Endpoint
 
-When you're ready to use Microsoft Defender for Endpoint, migrate supported devices from the standalone Tunnel client app to the new app. You can also deploy the new app to other devices that haven't previously used the Microsoft Tunnel.
+When you're ready to use Microsoft Defender for Endpoint, migrate supported devices from the standalone tunnel client app to the new app. You can also deploy the new app to other devices that haven't previously used the Microsoft Tunnel.
 
 Migrating to Microsoft Defender for Endpoint requires the following broad actions, which are described in the following sections:
 
