@@ -57,7 +57,7 @@ The user account needs the following permissions:
 
 Resource explorer can display a historical view of the device inventory in the Microsoft Endpoint Manager admin center. When troubleshooting, having historical inventory data can provide valuable information about changes to the device.
 
-1. From the the Microsoft Endpoint Manager admin center, select **Resource explorer**.
+1. From the Microsoft Endpoint Manager admin center, select **Resource explorer**.
 1. Select a class.
 1. Enter a custom date in the date time picker to get historical inventory data.
 
