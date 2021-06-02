@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Prerequisites for the Microsoft Tunnel in Intune
 
-Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs Docker to host the Tunnel server software. You'll also need to configure your network,  firewalls, and proxies to support communications for the Microsoft Tunnel.
+Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs Docker to host the Tunnel server software. You'll also need to configure your network, firewalls, and proxies to support communications for the Microsoft Tunnel.
 
 At a high level, you’ll need the following to use the Microsoft Tunnel:
 
