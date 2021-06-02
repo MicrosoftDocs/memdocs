@@ -2,7 +2,7 @@
 title: Tenant attach - Resource explorer the admin center (preview)
 titleSuffix: Configuration Manager
 description: "View hardware inventory for uploaded Configuration Manager devices using resource explorer in the admin center."
-ms.date: 12/03/2020
+ms.date: 06/02/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -55,7 +55,7 @@ The user account needs the following permissions:
 
 *Applies to Configuration Manager 2103, or later*
 
-Resource explorer can display a historical view of the device inventory in the Microsoft Endpoint Manager admin center. 
+Resource explorer can display a historical view of the device inventory in the Microsoft Endpoint Manager admin center. When troubleshooting, having historical inventory data can provide valuable information about changes to the device.
 
 1. From the the Microsoft Endpoint Manager admin center, select **Resource explorer**.
 1. Select a class.
