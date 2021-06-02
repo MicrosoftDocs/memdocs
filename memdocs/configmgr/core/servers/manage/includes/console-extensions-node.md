@@ -40,6 +40,16 @@ The **Console Extensions** node is located under **Administration** > **Overview
 > [!NOTE]
 > The WebView2 console extension is approved by default to enable using Community hub. The files are automatically downloaded from `https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section` with the other redistributable files.
 
+## Enable or disable hierarchy approved console extensions
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**.
+1. Select **Hierarchy Settings** from the ribbon.
+1. On the **General** tab, enable or disable the **Only allow console extensions that are approved for the hierarchy** option.
+1. Select **Ok** when done to close the **Hierarchy Settings Properties**.
+
+> [!Important]
+> If this setting is `enabled`, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](../updates.md#bkmk_Baselines). The setting remains `disabled` by default, if you upgraded from a version prior to 2103. If the setting was enabled in error, disabling the setting allows the old style extensions to be used again.
+
 ## <a name="bkmk_local_install"></a> Install and test an extension on a local console
 
 1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#security-scopes) for the extension. Changing the security scope is recommended for initial testing of an extension.
