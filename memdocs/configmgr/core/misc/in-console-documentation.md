@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 05/21/2021
+ms.date: 06/02/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -24,6 +24,8 @@ All docs.ms links should include `?WT.mc_id=configmgr-console` campaign ID at th
 # Microsoft Endpoint Configuration Manager documentation
 
 *Last update: May 14, 2021*
+
+**This page currently displays in English only in the Configuration Manager console.**
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -126,6 +128,6 @@ Note: The Microsoft knowledge base articles previously found at support.microsof
 
 Hotfix and update rollup related articles starting with version 2010 are published to [Configuration Manager hotfixes and update rollups](https://docs.microsoft.com/mem/configmgr/hotfix?WT.mc_id=configmgr-console). 
 
-The short form URL for hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721)
+The short form URL for 2010 and newer hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.
