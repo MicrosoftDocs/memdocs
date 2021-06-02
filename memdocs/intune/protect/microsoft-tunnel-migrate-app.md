@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 06/14/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 On June 14 2021, Microsoft Defender for Endpoint became generally available as the Microsoft Tunnel client app for Android for use with the Microsoft Tunnel Gateway in Microsoft Intune.
 
-If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app before the standalone tunnel app for Android is dropped from support on August 14 2021.
+If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app before support for the Android standalone tunnel client app ends on August 14 2021.
 
 The following device platforms support Microsoft Defender for Endpoint as the tunnel client app:
 
@@ -48,6 +48,7 @@ Unlike most public previews for Intune, you must opt in before you can use  this
 
 ## Changes introduced with this preview
 -->
+
 ## Changes introduced to support Defender for Endpoint
 
 The introduction of Microsoft Defender for Endpoint as the tunnel client app brings the following changes.
@@ -59,7 +60,7 @@ To support Defender for Endpoint, all VPN profiles created before March 2, 2021 
 This change:  
 
 - Applies to all tenants.
-- Applies to both the Android and iOS/iPadOS platforms, even though there is no active preview or support by iOS/iPadOS for Defender for Endpoint as the tunnel client app.
+- Applies to both the Android and iOS/iPadOS platforms, even though there's no active preview or support by iOS/iPadOS for Defender for Endpoint as the tunnel client app.
 - Has no effect on the functionality of those existing profiles other than the change of connection type name.
 - Supports the change to use Microsoft Defender for Endpoint to support Microsoft Tunnel functionality now or at a future time.
 - Cannot be reversed. You can’t edit existing profiles to change their connection type.
@@ -82,7 +83,7 @@ For Android, the Microsoft Defender for Endpoint app you use as the Tunnel clien
 
 ## Licensing
 
-THe Microsoft Defender for Endpoint app combines functionality of Microsoft Defender for Endpoint with the functionality of the Microsoft Tunnel app. The new app doesn't require any change to your existing licenses.
+The Microsoft Defender for Endpoint app combines functionality of Microsoft Defender for Endpoint with the functionality of the Microsoft Tunnel app. The new app doesn't require any change to your existing licenses.
 
 A license for Microsoft Intune grants access to the following tab of the app:
 
@@ -102,7 +103,7 @@ For information about license requirements for Microsoft Defender for Endpoint, 
 
 ## Migrate devices to Microsoft Defender for Endpoint
 
-When you're ready to use Microsoft Defender for Endpoint, you can migrate supported devices from the standalone Tunnel client app to the new app. You can also deploy the app to other devices that haven't previously used the Microsoft Tunnel.
+When you're ready to use Microsoft Defender for Endpoint, migrate supported devices from the standalone Tunnel client app to the new app. You can also deploy the new app to other devices that haven't previously used the Microsoft Tunnel.
 
 Migrating to Microsoft Defender for Endpoint requires the following broad actions, which are described in the following sections:
 

@@ -31,7 +31,7 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a D
 
 This article introduces the tunnel, how it works, and its architecture.
 
-If your ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then Configure the Microsoft Tunnel
+If your ready to deploy Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then Configure the Microsoft Tunnel
 
 ## Overview of Microsoft Tunnel
 
@@ -49,7 +49,7 @@ Through the Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devic
 - Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
 - Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
-To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on platform. The apps are available from the each platforms app store:
+To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on platform. The apps are available from each platforms app store:
 
 - Android: Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel.
 - iOS/iPadOS: Microsoft Tunnel standalone app.
