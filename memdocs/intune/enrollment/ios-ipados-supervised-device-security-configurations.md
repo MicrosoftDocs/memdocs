@@ -154,6 +154,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Password | Prevent reuse of previous passwords | 5 | Organizations may need to update this setting to match their password policy. |
 | Password | Block password AutoFill | Yes | |
 | Wireless | Block voice dialing while device is locked | Yes |  |
+| Wireless | Require joining Wi-Fi networks only using configuration profiles | Not configured | Care should be taken when using this setting as this could affect your ability to connect to the device if the specified Wi-Fi Networks are unavailable or if the setting is configured incorrectly. This could result in a situation where you are locked out of the device and unable to remotely reset the device.   |
 
 ## Next steps
 
