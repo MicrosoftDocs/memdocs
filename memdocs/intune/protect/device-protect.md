@@ -170,7 +170,7 @@ Intune supports integration with:
 
 On its own, Microsoft Defender for Endpoint provides several security focused benefits. Microsoft Defender for Endpoint also [integrates with Intune](../protect/advanced-threat-protection.md) and is supported on several device platforms. With integration, you gain a mobile threat defense app and add capabilities to Intune for keeping data and devices safe. These capabilities include:
 
-- **Support for Microsoft Tunnel** - Microsoft Defender for Endpoint is the Tunnel application you use with [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), a VPN gateway solution for Intune. When used as the Tunnel app, you don’t need a subscription for Microsoft Defender for Endpoint.
+- **Support for Microsoft Tunnel** - On Android devices, Microsoft Defender for Endpoint is the client application you use with [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), a VPN gateway solution for Intune. When used as the Microsoft Tunnel client app, you don’t need a subscription for Microsoft Defender for Endpoint.
 
 - **Security tasks** – With [security tasks](../protect/atp-manage-vulnerabilities.md), Intune admins can take advantage of Microsoft Defender for Endpoint's [threat and vulnerability management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) capabilities. How it works:
   
