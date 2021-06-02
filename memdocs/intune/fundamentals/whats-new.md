@@ -67,7 +67,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### Microsoft Defender for Endpoint for Microsoft Tunnel on Android is out of preview<!-- 9370486 -->
 
-The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functionality on Android is now out of preview and generally available for use. With this change:
+The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functionality on Android is now out of preview and [generally available for use](../protect/microsoft-tunnel-overview.md). With this change:
 
 - You no longer need to opt in to use Defender of Endpoint as the tunnel app on Android.
 - The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on August 14, 2021.
