@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/20/2020
+ms.date: 06/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,10 +72,6 @@ If you are using an Android device, you might see a blocking message with instru
 To view company PDF and image files on iOS or Android devices, use the Azure Information Protection app, previously known as the Rights Management sharing app: [iTunes](https://apps.apple.com/app/microsoft-rights-management/id689516635) | [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)
 
 For more information, see [Mobile viewer apps for Azure Information Protection on iOS and Android](/azure/information-protection/rms-client/mobile-app-faq).
-
-|**pfile**|
-|----|
-|Pfile is a generic "wrapper" format for protected files that encapsulates the encrypted content and the Azure Information Protection licenses. It can be used to protect any file type.|
 
 ## Next steps
 [What to expect when your iOS/iPadOS app is managed by app protection policies](end-user-mam-apps-ios.md)
