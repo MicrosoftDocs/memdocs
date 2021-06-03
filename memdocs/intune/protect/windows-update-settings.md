@@ -155,7 +155,7 @@ User experience settings control the end-user experience for device restart and 
 
   - **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.  
 
-  - **Reset to default** - Restore the original auto update settings on Windows 10 machines that run the October 2018 Update or later.  
+  - **Reset to default** - Restore the original auto update settings on Windows 10 machines that run the October 2018 Update or later.  These original auto update settings allow Windows to use automatically determined active hours to schedule the best time to install updates and restart the system after it installs the updates.
 
 
 - **Restart checks**  
