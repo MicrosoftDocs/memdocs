@@ -62,7 +62,7 @@ If these scenarios can't be completed, Windows Autopilot for pre-provisioned dep
 
 Before starting the pre-provisioning process in the provisioning service facility, you must configure an additional Autopilot profile setting by using your Intune account:
 
- ![allow pre-provisioning](images/allow-white-glove-oobe.png)
+:::image type="content" source="images/allow-white-glove-oobe.png" alt-text="Screenshot of the Out-of-box experience (OOBE) portal and the highlighted setting to allow pre-provisioning":::
 
 The Windows Autopilot for pre-provisioned deployment pre-provisioning process will apply all device-targeted policies from Intune. That includes certificates, security templates, settings, apps, and more – anything targeting the device. Additionally, any Win32 or LOB apps will be installed if they meet these two conditions:
 - configured to install in the device context.
