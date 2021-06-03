@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2021
+ms.date: 06/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,6 +42,9 @@ This feature applies to:
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. You assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
 This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
+
+> [!TIP]
+> *VPN* profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../intune/fundamentals/windows-virtual-desktop-multi-session.md).
 
 > [!NOTE]
 >

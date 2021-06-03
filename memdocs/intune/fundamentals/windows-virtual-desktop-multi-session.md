@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/24/2021
+ms.date: 06/03/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,13 +75,22 @@ Windows 10 Enterprise multi-session VMs are treated as a separate OS edition and
 
 ## Create the device configuration profile
 
-Existing device configuration profiles are not supported for Windows 10 Enterprise multi-session VMs, with the exception of Certificate profiles, which are available under Templates. Note that we only support device certificates at this point.
+To configure configuration policies for Windows 10 Enterprise multi-session VMs, you'll usually use the [Settings catalog](../configuration/settings-catalog.md).
 
-To configure configuration policies for Windows 10 Enterprise multi-session VMs, you must configure using the [Settings catalog](../configuration/settings-catalog.md).
+The existing device configuration profile templates aren't supported for Windows 10 Enterprise multi-session VMs, with the exception of the following Templates:
+
+- [Trusted certificate](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) - Device (machine) only
+- [SCEP certificate](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) - Device (machine) only
+- [PKCS certificate](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) - Device (machine) only
+- [VPN](../configuration/vpn-settings-configure.md#create-the-profile) - Device Tunnel only
+
+Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
+
+### To configure policies
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > **Configuration profiles** > **Create Profile**.
 2. For **Platform**, select **Windows 10 and later**.
-3. For **Profile type**, select **Settings Catalog (Preview)**
+3. For **Profile type**, select **Settings Catalog (Preview)**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
 4. Select **Create**.
 5. On the **Basics** page, provide a **Name** and (optionally) **Description** > **Next**.
 6. On the **Configuration settings** page, select **Add settings**.
