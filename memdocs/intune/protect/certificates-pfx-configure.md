@@ -35,7 +35,7 @@ Microsoft Intune includes built-in settings to use PKCS certificates for access 
 For information about using imported PKCS certificates, see [Imported PFX Certificates](certificates-imported-pfx-configure.md).
 
 > [!TIP]
-> *PKCS certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../intune/fundamentals/windows-virtual-desktop-multi-session.md).
+> *PKCS certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/windows-virtual-desktop-multi-session.md).
 
 ## Requirements
 

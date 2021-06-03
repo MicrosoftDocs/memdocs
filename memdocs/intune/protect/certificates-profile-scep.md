@@ -40,7 +40,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../intune/fundamentals/windows-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/windows-virtual-desktop-multi-session.md).
 
 ## Create a SCEP certificate profile
 

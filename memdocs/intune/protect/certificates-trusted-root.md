@@ -35,7 +35,8 @@ When using Intune to provision devices with certificates to access your corporat
 You deploy the trusted certificate profile to the same devices and users that receive the certificate profiles for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS), and imported PKCS.
 
 > [!TIP]
-> *Trusted certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../intune/fundamentals/windows-virtual-desktop-multi-session.md).
+> *Trusted certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](..
+/fundamentals/windows-virtual-desktop-multi-session.md).
 
 ## Export the trusted root CA certificate
 
