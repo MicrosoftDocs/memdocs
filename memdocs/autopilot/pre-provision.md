@@ -13,12 +13,12 @@ manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 06/03/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-# Windows Autopilot for pre-provisioned deployment (Public Preview)
+# Windows Autopilot for pre-provisioned deployment (Public preview)
 
 **Applies to: Windows 10, version 1903** 
 
