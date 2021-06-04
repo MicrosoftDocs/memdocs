@@ -2,7 +2,7 @@
 # required metadata
 
 title: Endpoint security firewall rule migration tool for Microsoft Intune - Azure | Microsoft Docs
-description: Understand how to use the endpoint security firewall rule migration tool for Microsoft Intune.
+description: Learn about the endpoint security firewall rule migration tool for Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
