@@ -660,7 +660,7 @@ These settings use the [WirelessDisplay policy CSP](/windows/client-management/m
 
 ## Reporting and telemetry
 
-For more information about recent changes for Windows Telemetry, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection)
+For information about recent changes for Windows Telemetry, see [Changes to Windows diagnostic data collection](https://go.microsoft.com/fwlink/?linkid=2158774).
 
 - **Share usage data**: Choose the level of diagnostic data that's submitted. Your options:
   - **Not configured**: (default): Intune doesn't change or update this setting. No setting is forced. Users choose the level that's submitted. By default, the OS might not share any data.
