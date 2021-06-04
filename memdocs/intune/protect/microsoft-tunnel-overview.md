@@ -31,7 +31,7 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a D
 
 This article introduces the tunnel, how it works, and its architecture.
 
-If your ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then Configure the Microsoft Tunnel
+If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then [Configure the Microsoft Tunnel](microsoft-tunnel-configure.md).
 
 ## Overview of Microsoft Tunnel
 
