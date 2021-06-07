@@ -65,15 +65,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management  
 
-#### Newly available protected apps for Intune<!-- 9698578, 9731891  -->
-
-The following protected apps are now available for Microsoft Intune:
-
-- Leap Work for Intune by LeapXpert Limited
-- iManage Work 10 For Intune by iManage, LLC
-
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
 #### New tiles provided app install failure count<!-- 6381269  -->
 
 The **Home**, **Dashboard**, and **Apps Overview** panes now provide updated tiles to show the number of app installation failures for the tenant. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home** to view the Home pane, or **Dashboard** to view the Dashboard pane. Select **Apps** > **Overview** to view the **Apps Overview** pane. For related information, see [Intune reports](../fundamentals/reports.md).
@@ -133,7 +124,7 @@ For more information, see [Windows 10 Enterprise multi-session remote desktops](
 
 You can now use Intune's compliance engine to evaluate Jamf-managed macOS devices for Government Cloud. To do so, activate the compliance connector for Jamf. For more information, see [Integrate Jamf Pro with Intune for compliance](../protect/conditional-access-integrate-jamf.md).
 
-#### Changes for for the Microsoft Tunnel Gateway<!--6305140     -->
+#### Changes for the Microsoft Tunnel Gateway<!--6305140     -->
 
 We have a pair of updates to announce for the Microsoft Tunnel Gateway this month:
 
