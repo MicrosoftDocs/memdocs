@@ -77,7 +77,7 @@ You can filter content in the Community hub when using search. The following fil
 | **Type**|`type:report`| Yes|
 |**Curated**| `curated:false`| No|
 |**User**| `user:<GitHubUserName>`| No|
-|**Organization**| `<GitHubOrganizationName>`| No|
+|**Organization**| `org:<GitHubOrganizationName>`| No|
 |**Name**| `name:test_report`| Yes|
 |**Description**| `desc:description`| Yes|
 
