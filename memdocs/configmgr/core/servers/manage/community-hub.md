@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 04/05/2021 
+ms.date: 06/07/2021 
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -76,8 +76,8 @@ You can filter content in the Community hub when using search. The following fil
 ---|---|
 | **Type**|`type:report`| Yes|
 |**Curated**| `curated:false`| No|
-|**User**| `user:<GitHubID>`| No|
-|**Organization**| `org:microsoft`| No|
+|**User**| `user:<GitHubUserName>`| No|
+|**Organization**| `<GitHubOrganizationName>`| No|
 |**Name**| `name:test_report`| Yes|
 |**Description**| `desc:description`| Yes|
 
