@@ -181,10 +181,13 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Bluebird | com.bluebird.android.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig.common | |
 | Datalogic | com.datalogic.settings.oemconfig | |
+| Ecom - Ex-Handy 10 | com.ecom.econfig | |
+| Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
 | Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
 | HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
+| Janam | com.janam.oemconfig | |
 | Lenovo | com.lenovo.oemconfig.rel | |
 | LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
