@@ -13,6 +13,8 @@ ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 
 
 ---
+> [!NOTE]    
+> The release of Windows 10 1809 utilizes a new update delivery method that eliminated Express Updates.  To learn more, see (What’s next for Windows 10 and Windows Server quality updates)[https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-10-and-windows-server-quality-updates/bc-p/234768].
 
 # Manage express installation files for Windows 10 updates
 
