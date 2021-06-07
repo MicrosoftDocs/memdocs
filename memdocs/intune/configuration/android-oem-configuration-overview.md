@@ -182,9 +182,11 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Cipherlab | com.cipherlab.oemconfig.common | |
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
+| Honeywell - Scanpal EDA | com.honeywell.oemconfig.scanpal | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
 | HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
+| imotion | com.iwaylink.oemconfig | |
 | Lenovo | com.lenovo.oemconfig.rel | |
 | LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
