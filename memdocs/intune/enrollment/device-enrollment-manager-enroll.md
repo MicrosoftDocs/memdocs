@@ -50,7 +50,7 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.
 
 >[!NOTE]
->For additional details regarding enrollment capabilities for Windows and the use of DEM accounts, please refer [Intune enrollment method capabilities for Windows devices](https://docs.microsoft.com/mem/intune/enrollment/enrollment-method-capab).
+>For additional details regarding enrollment capabilities for Windows and the use of DEM accounts, please refer [Intune enrollment method capabilities for Windows devices](./enrollment-method-capab.md).
 
 ## Enrollment methods supported by DEM accounts
 
