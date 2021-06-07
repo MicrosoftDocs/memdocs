@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 06/07/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,15 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of June 7, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Android Company Portal app and Intune app now include Portugal Portuguese support<!-- 9707888, 9707936 -->
+The Android Company Portal app and the Android Intune app now support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
 
 <!-- ########################## -->
 ## Week of May 24, 2021 (Service release 2105)
