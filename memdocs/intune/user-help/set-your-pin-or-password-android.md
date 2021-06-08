@@ -2,7 +2,7 @@
 # required metadata
 
 title: Set your PIN or password | Microsoft Docs
-description:
+description: Create a PIN or password on your Android device so that you can securely access your work or school data.
 keywords:
 author: lenewsad
 ms.author: lanewsad
