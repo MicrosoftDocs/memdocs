@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 06/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,11 +48,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
   - **Not configured** (*default*)
   - **Yes**
 
-  When *Enable FileVault* is set to *Yes*, you can configure the following settings:
-
-  - **Recovery key type**
-
-    *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.
+  When *Enable FileVault* is set to *Yes*, a personal recovery key is generated for the device during encryption and the following settings apply to that key:
 
   - **Escrow location description of personal recovery key**
 
