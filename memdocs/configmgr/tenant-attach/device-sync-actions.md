@@ -48,6 +48,9 @@ This feature supports all OS versions that Configuration Manager currently suppo
 
 Starting in version 2010, the service connection point validates important internet endpoints for tenant attach. These checks help make sure that the cloud service is available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem. For more information, see [Validate internet access](../core/servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).<!--8565578-->
 
+> [!NOTE]
+> The CRL checks are performed via the computer running the Service Connection Point. If this device does not have access to the URLs listed above, the CRL check will fail. Consider settings a system proxy or using ['netsh winhttp set proxy'](https://support.microsoft.com/en-us/topic/how-the-windows-update-client-determines-which-proxy-server-to-use-to-connect-to-the-windows-update-web-site-08612ae5-3722-886c-f1e1-d012516c22a1#:~:text=At%20the%20command%20prompt%2C%20type%20netsh,com%20and%20replace%20portnumber%20with%2080.). Ensure that you include a bypass list for internal site communications. This configuration may be neccesary as the proxy server settings within Configuration Manager only configure the proxy for Configuration Manager applications and not the underlying operating system.
+
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
 If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Configure co-management** wizard](#bkmk_config) to enable device upload instead.
