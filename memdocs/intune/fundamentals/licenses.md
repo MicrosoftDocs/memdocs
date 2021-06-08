@@ -68,6 +68,8 @@ For existing Configuration Manager-managed devices to enroll into Intune for co-
 
 For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](unlicensed-admins.md).
 
-Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page for the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.  
+## Next steps
+
+For the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases, see the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page.  
 
 For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](licenses-assign.md).
