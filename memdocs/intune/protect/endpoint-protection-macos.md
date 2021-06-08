@@ -34,61 +34,6 @@ This article shows you the endpoint protection settings that you can configure f
 
 [Create a macOS endpoint protection profile](endpoint-protection-configure.md).
 
-## Firewall
-
-Use the firewall to control connections per-application, rather than per-port. Using per-application settings makes it easier to get the benefits of firewall protection. It also helps prevent undesirable apps from taking control of network ports that are open for legitimate apps.
-
-- **Enable Firewall**
-
-  Turn use of Firewall on macOS and then configure how incoming connections are handled in your environment.
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- **Block all incoming connections**
-
-  Block all incoming connections except the connections required for basic Internet services, such as DHCP, Bonjour, and IPSec. This feature also blocks all sharing services, such as File Sharing and Screen Sharing. If you're using sharing services, then keep this setting as *Not configured*.
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-  When you set *Block all incoming connections* to *Not configured*, you can then configure which apps can or can't receive incoming connections.
-
-  **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
-
-  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
-
-  **Apps blocked**: Configure a list of apps that have incoming connections blocked.
-
-  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
-
-- **Enable stealth mode**
-
-  To prevent the computer from responding to probing requests, enable stealth mode. The device continues to answer incoming requests for authorized apps. Unexpected requests, such as ICMP (ping), are ignored.
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-## Gatekeeper
-
-- **Allow apps downloaded from these locations**
-
-  Limit the apps a device can launch, depending on where the apps were downloaded from. The intent is to protect devices from malware, and allow apps from only the sources you trust.
-
-  - **Not configured** (*default*)
-  - **Mac App Store**
-  - **Mac App Store and identified developers**
-  - **Anywhere**
-
-- **Do not allow user to override Gatekeeper**
-
-  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.
-
-  - **Not configured** (*default*) - Users can Control-click to install apps.
-  - **Yes** - Prevents users from using Control-click to install apps.
-
 ## FileVault
 
 For more information about Apple FileVault settings, see [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) in the Apple developer content.
@@ -149,6 +94,61 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.
 
     The default for this setting depends on the configuration of *Disable prompt at sign out*. When *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Yes**, this setting defaults to **1** and a value of **Not configured** isn't an option.
+
+## Firewall
+
+Use the firewall to control connections per-application, rather than per-port. Using per-application settings makes it easier to get the benefits of firewall protection. It also helps prevent undesirable apps from taking control of network ports that are open for legitimate apps.
+
+- **Enable Firewall**
+
+  Turn use of Firewall on macOS and then configure how incoming connections are handled in your environment.
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- **Block all incoming connections**
+
+  Block all incoming connections except the connections required for basic Internet services, such as DHCP, Bonjour, and IPSec. This feature also blocks all sharing services, such as File Sharing and Screen Sharing. If you're using sharing services, then keep this setting as *Not configured*.
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+  When you set *Block all incoming connections* to *Not configured*, you can then configure which apps can or can't receive incoming connections.
+
+  **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
+
+  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+  **Apps blocked**: Configure a list of apps that have incoming connections blocked.
+
+  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+- **Enable stealth mode**
+
+  To prevent the computer from responding to probing requests, enable stealth mode. The device continues to answer incoming requests for authorized apps. Unexpected requests, such as ICMP (ping), are ignored.
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+## Gatekeeper
+
+- **Allow apps downloaded from these locations**
+
+  Limit the apps a device can launch, depending on where the apps were downloaded from. The intent is to protect devices from malware, and allow apps from only the sources you trust.
+
+  - **Not configured** (*default*)
+  - **Mac App Store**
+  - **Mac App Store and identified developers**
+  - **Anywhere**
+
+- **Do not allow user to override Gatekeeper**
+
+  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.
+
+  - **Not configured** (*default*) - Users can Control-click to install apps.
+  - **Yes** - Prevents users from using Control-click to install apps.
 
 ## Next steps
 
