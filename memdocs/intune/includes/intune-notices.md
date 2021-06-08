@@ -4,12 +4,20 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 05/12/2021
+ms.date: 06/08/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Update to the Microsoft Intune Management Extension<!-- 10102913 -->
+
+We’ve released an update to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices. For more information, see [CVE-2021-31980](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980).
+
+#### What action do I need to take?
+
+No action is required. As soon as the client connects to the service, it automatically receives a message to upgrade.
 
 ### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 
