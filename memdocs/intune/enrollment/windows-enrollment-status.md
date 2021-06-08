@@ -49,7 +49,7 @@ You can create multiple Enrollment Status Page profiles with different configura
 These profiles are specified in a priority order; the highest priority that is applicable will be used.  Each ESP profile can be targeted to groups containing devices or users.  When determining which profile to use, the following criteria will be followed:
 
 - The highest-priority profile targeted to the device will be used first.
-- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used.)
+- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used. Only profiles targeted to the device are used during the device preparation and device setup phases.)
 - If there are no profiles targeted to specific groups, then the default ESP profile will be used.
 
 ## Available settings
