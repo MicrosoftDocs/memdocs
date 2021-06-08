@@ -11,9 +11,11 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Update to the Microsoft Intune Management Extension<!-- 10102913 -->
+### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 
-We’ve released an update to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices. For more information, see [CVE-2021-31980 - Security Update Guide - Microsoft - Microsoft Intune Management Extension Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980).
+We’ve released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices. The new version is **1.41.203.0**. Intune automatically upgrades all versions of the extension that are less than **1.41.203.0** to this latest version.
+
+For more information, see **CVE-2021-31980** at [https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980).
 
 #### What action do I need to take?
 
