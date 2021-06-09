@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 06/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -541,7 +541,6 @@ The **managementAgentType** entity represents the agents used to manage a device
 | 10                    | ConfigurationManagerClientMdm     | The device is managed by   Configuration Manager and MDM.                    |
 | 11                    | ConfigurationManagerCLientMdmEas  | The device is managed by   Configuration Manager, MDM and Exchange Active Sync.               |
 | 16                    | Unknown                           | Unknown   management agent type                                              |
-| 32                    | Jamf                              | The device attributes are fetched   from Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  The device is managed by Google's CloudDPC.                                 |
 
 ## managementStates
