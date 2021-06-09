@@ -1042,7 +1042,7 @@ Configuration Manager adds a numerical suffix to the variable name. For example,
 
 #### If a package download fails, continue downloading other packages in the list
 
-If the task sequence fails to download a package, it starts to download the next package in the list.  
+If the task sequence fails to download a package, it starts to download the next package in the list. This makes also the whole step to ignore download failures.
 
 ### <a name="bkmk_note1"></a> Note 1: Use of boot images in the Download Package Content step
 
