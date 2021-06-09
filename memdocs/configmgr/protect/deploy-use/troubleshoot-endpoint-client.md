@@ -196,6 +196,6 @@ When Windows Defender or Endpoint Protection detects a potential threat, it trie
 
 ## See also
 
-[Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.md)
+[Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.yml)
 
 [Endpoint Protection client help](endpoint-protection-client-help.md)
