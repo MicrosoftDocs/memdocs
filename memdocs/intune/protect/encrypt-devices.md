@@ -184,6 +184,8 @@ Devices must meet the following prerequisites to support rotation of the BitLock
   - **Save BitLocker recovery information to Azure Active Directory** to *Enabled*
   - **Store recovery information in Azure Active Directory before enabling BitLocker** to *Required*
 
+For information on Bitlocker deployment comparison chart, see [Bitlocker Deployment Comparison Chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
+
 #### To rotate the BitLocker recovery key
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -202,3 +204,4 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 - [Monitor disk encryption](../protect/encryption-monitor.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+
