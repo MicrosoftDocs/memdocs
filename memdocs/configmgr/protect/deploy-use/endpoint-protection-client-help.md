@@ -26,7 +26,7 @@ This version of Windows Defender or Endpoint Protection includes the following f
 
 Windows Defender comes as part of the Windows 10 operating system.  On earlier versions of Windows, your administrator can provide either Windows Defender or Endpoint Protection using management software.
 
-You can also find a list of [frequently asked questions for Windows Defender and Endpoint Protection](endpoint-protection-client-faq.md). For help troubleshooting, see [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md). For a list of new features, see [What's new Windows Defender client](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender).
+You can also find a list of [frequently asked questions for Windows Defender and Endpoint Protection](endpoint-protection-client-faq.yml). For help troubleshooting, see [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md). For a list of new features, see [What's new Windows Defender client](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender).
 
 ## Windows Firewall integration  
  Windows Firewall can help prevent attackers or malicious software from gaining access to your computer through the Internet or a network. Now when you install Endpoint Protection, the installation wizard verifies that Windows Firewall is turned on. If you have intentionally turned off Windows Firewall, you can avoid turning it on by clearing a check box. You can change your Windows Firewall settings at any time via the System and Security settings in Control Panel.  
@@ -49,5 +49,5 @@ To view Windows Defender settings, search for `Windows Defender` on your PC. Ope
 - **Windows Defender Offline** - You can run Windows Defender Offline to help find and remove malicious software. This scan will restart your PC and will take about 15 minutes.
 
 ### See also  
- [Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.md)   
+ [Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.yml)   
  [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md)

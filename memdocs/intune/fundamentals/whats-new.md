@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 06/07/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,19 +60,19 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 
 <!-- ########################## -->
+## Week of June 7, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Android Company Portal app and Intune app now include Portugal Portuguese support<!-- 9707888, 9707936 -->
+The Android Company Portal app and the Android Intune app now support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
+
+<!-- ########################## -->
 ## Week of May 24, 2021 (Service release 2105)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management  
-
-#### Newly available protected apps for Intune<!-- 9698578, 9731891  -->
-
-The following protected apps are now available for Microsoft Intune:
-
-- Leap Work for Intune by LeapXpert Limited
-- iManage Work 10 For Intune by iManage, LLC
-
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 #### New tiles provided app install failure count<!-- 6381269  -->
 
@@ -114,7 +114,7 @@ Support has ended for the **Restart** remote action on corporate-owned devices w
 
 ### Windows 10 Enterprise multi-session support (public preview)<!--8666391  -->
 
-Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) on Azure which allows multiple concurrent user sessions. This gives users a familiar Windows 10 experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
+Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Windows Virtual Desktop](/azure/virtual-desktop/) on Azure which allows multiple concurrent user sessions. This gives users a familiar Windows 10 experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
 
 Microsoft Intune lets you manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 client. You can now enroll Hybrid Azure AD joined VMs in Intune automatically and target with OS scope policies and apps.
 
@@ -166,11 +166,11 @@ The new **App Install Status** report provides a list of apps with versions and 
 
 #### New operational report providing app install status based on device <!-- 6381269  -->
 
-Based on a selected app, the new **Device Install Status** report provides a list of devices and status information related to the specific app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. After selecting an app, click **Generate report**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+Based on a selected app, the new **Device Install Status** report provides a list of devices and status information related to the specific app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 #### New operational report providing app install status based on user<!-- 6381273  -->
 
-Based on a selected app, the new **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Failures**, **Installs**, **Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *Select an app* > **User Install Status**. After selecting an app, click **Generate report**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+Based on a selected app, the new **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Failures**, **Installs**, **Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *Select an app* > **User Install Status**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 #### Export Intune reports using Graph API v1.0 or beta<!-- 8090911  -->
 

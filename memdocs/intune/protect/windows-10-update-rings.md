@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/04/2021
+ms.date: 06/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 - Devices must:  
   - Run Windows 10 version 1607 or later.
-  - Have Telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
+  - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
   
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10 or later. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
 

@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 06/01/2021
+ms.date: 06/07/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -28,6 +28,9 @@ The following table describes known issues that can often be resolved by configu
 
 <table>
 <th>Issue</th><th>More information</th>
+
+<tr><td>Intune connector is inactive but still appears in the Intune Connectors blade</td>
+<td>Inactive Intune connectors will be automatically cleaned up after 30 days of inactivity without admin interaction.</td></tr>
 
 <tr><td>Autopilot sign-in page displays HTML tags from company branding settings</td>
 <td>When <a href="https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding#to-customize-your-branding">customizations are applied to the company branding settings</a> the HTML tags may be visible and not rendered correctly on the update password page. This issue should be fixed in future versions of Windows.</td></tr>

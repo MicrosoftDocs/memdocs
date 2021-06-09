@@ -79,7 +79,7 @@
     - name: Troubleshooting client
       href: deploy-use/troubleshoot-endpoint-client.md
     - name: Windows Defender FAQ
-      href: deploy-use/endpoint-protection-client-faq.md
+      href: deploy-use/endpoint-protection-client-faq.yml
   - name: BitLocker management
     items:
     - name: Encrypt recovery data over the network
