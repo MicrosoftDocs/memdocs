@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/28/2021
+ms.date: 06/17/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,16 +119,21 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2105.2
+### Technical preview version 2106
 
-- [Windows Update native experience for software updates](2021/technical-preview-2105-2.md#bkmk_wu) <!--4316341-->
-- [Send product feedback from error windows](2021/technical-preview-2105-2.md#bkmk_errorfeedback) <!--4262917-->
-- [Custom properties for devices](2021/technical-preview-2105-2.md#bkmk_invext) <!--8939867-->
-- [Hardware inventory for client log settings](2021/technical-preview-2105-2.md#bkmk_diaginv) <!--5602449-->
-- [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
-- [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
-- [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
-- [PowerShell release notes preview](2021/technical-preview-2105-2.md#bkmk_powershell) <!--9881875-->
+- [3607457](2021/technical-preview-2106.md) <!--3607457-->
+- [7470529](2021/technical-preview-2106.md) <!--7470529-->
+- [8078674](2021/technical-preview-2106.md) <!--8078674-->
+- [8126836](2021/technical-preview-2106.md) <!--8126836-->
+- [8959690](2021/technical-preview-2106.md) <!--8959690-->
+- [9247522](2021/technical-preview-2106.md) <!--9247522-->
+- [9249870](2021/technical-preview-2106.md) <!--9249870-->
+- [9504414](2021/technical-preview-2106.md) <!--9504414-->
+- [9989251](2021/technical-preview-2106.md) <!--9989251-->
+- [10033951](2021/technical-preview-2106.md) <!--10033951-->
+- [10073070](2021/technical-preview-2106.md) <!--10073070-->
+- [10092858](2021/technical-preview-2106.md) <!--10092858-->
+- [9997352](2021/technical-preview-2106.md) <!--9997352-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -145,6 +150,17 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2105.2
+
+- [Windows Update native experience for software updates](2021/technical-preview-2105-2.md#bkmk_wu) <!--4316341-->
+- [Send product feedback from error windows](2021/technical-preview-2105-2.md#bkmk_errorfeedback) <!--4262917-->
+- [Custom properties for devices](2021/technical-preview-2105-2.md#bkmk_invext) <!--8939867-->
+- [Hardware inventory for client log settings](2021/technical-preview-2105-2.md#bkmk_diaginv) <!--5602449-->
+- [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
+- [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
+- [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
+- [PowerShell release notes preview](2021/technical-preview-2105-2.md#bkmk_powershell) <!--9881875-->
 
 ### Technical preview version 2105
 
