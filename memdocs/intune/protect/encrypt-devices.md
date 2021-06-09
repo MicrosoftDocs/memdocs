@@ -184,7 +184,7 @@ Devices must meet the following prerequisites to support rotation of the BitLock
   - **Save BitLocker recovery information to Azure Active Directory** to *Enabled*
   - **Store recovery information in Azure Active Directory before enabling BitLocker** to *Required*
 
-For information on Bitlocker deployment comparison chart, see [Bitlocker Deployment Comparison Chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
+For information on BitLocker deployment comparison chart, see [BitLocker Deployment Comparison Chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 #### To rotate the BitLocker recovery key
 
