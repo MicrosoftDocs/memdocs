@@ -188,7 +188,7 @@ For information about each enrollment method and how to choose one that's right 
 |[Use Samsung Knox Mobile Enrollment to automatically enroll Android devices](../enrollment/android-samsung-knox-mobile-enroll.md)|Set up Intune for Samsung Knox Mobile Enrollment (KME), which enables you to automatically enroll large numbers of corporate-owned Android devices.  | Android Enterprise, Android device administrator|
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | Android Enterprise, Android device administrator |
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.| Android Enterprise, Android device administrator| 
-|[Troubleshoot enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-android-enrollment)|Troubleshoot and find resolutions to problems that occur during enrollment.|Android Enterprise, Android device administrator|   
+|[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-android-enrollment)|Troubleshoot and find resolutions to problems that occur during enrollment.|Android Enterprise, Android device administrator|   
 
 
 
@@ -210,4 +210,4 @@ Check out these enrollment tutorials to learn how to do some of the top tasks in
 * [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) 
 * [Configure Slack to use Intune for enterprise mobility management (EMM) and app configuration](../apps/tutorial-configure-slack-enterprise-grid.md) 
 
-For the iOS/iPadOS version of this guide, see [Deployment guide: Manage iOS/iPadOS devices in Microsoft Intune](deployment-guide-platform-ios-ipados.md).   
+For the iOS/iPadOS version of this guide, see [Deployment guide: Manage iOS/iPadOS devices in Microsoft Intune](deployment-guide-platform-ios-ipados.md).
