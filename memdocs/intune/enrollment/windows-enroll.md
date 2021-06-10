@@ -149,7 +149,8 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-|CNAME | EnterpriseEnrollment.company_domain.com | Enrollment.manage.microsoft.us | 1 hour|
+
+|CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour|
 |CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
 
 ## Next steps
