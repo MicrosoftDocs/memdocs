@@ -2,7 +2,7 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 05/07/2021
+ms.date: 06/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -22,9 +22,13 @@ The Configuration Manager console is always installed on the site server for the
 
 ## Prerequisites
 
+- [Supported OS versions for Configuration Manager consoles](../../../plan-design/configs/supported-operating-systems-consoles.md)
+
 - You have local **Administrator** rights on the target computer for the console.
 
 - You have **Read** permissions to the location of the Configuration Manager console installation files.
+
+- Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
 
 ## Source paths
 

@@ -2,7 +2,7 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 01/15/2021
+ms.date: 06/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -200,6 +200,14 @@ Starting in Configuration Manager version 1902, there's a **Documentation** node
 ### Troubleshooting connection errors
 The **Documentation** node has no explicit proxy configuration. It uses any OS-defined proxy in the **Internet Options** control panel applet. To retry after a connection error, refresh the **Documentation** node.
 
+## Connect via Windows PowerShell
+
+The Configuration Manager console includes a PowerShell module with over a thousand cmdlets to interact programmatically from the command line. Select the arrow at the top of the [ribbon](#ribbon), and choose **Connect via Windows PowerShell**.
+
+For more information, see [Get started with Configuration Manager cmdlets](/powershell/sccm/overview).
+
+> [!NOTE]
+> Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
 
 ## Command-line options
 
