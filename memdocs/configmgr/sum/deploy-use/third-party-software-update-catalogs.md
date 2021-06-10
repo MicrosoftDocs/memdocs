@@ -1,7 +1,7 @@
 ---
-title: Available third party software update catalogs
+title: Available third-party software update catalogs
 titleSuffix: Configuration Manager
-description: List of third party update catalogs available for import into Configuration Manager
+description: List of third-party update catalogs available for import into Configuration Manager
 ms.date: 06/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
@@ -20,7 +20,7 @@ The **Third-Party Software Update Catalogs** node in the Configuration Manager c
 
 ## Third-party update catalogs available for import
 <!--9989251-->
-To make it easier to find custom catalogs, we are providing a list of links to catalog providers as a convenience. Some catalogs are freely available and some catalogs have an additional cost associated with them. This list includes catalogs that may only work with [System Center Updates Publisher](../tools/updates-publisher.md) and not the **Third-Party Software Update Catalogs** node in the Configuration Manager console. Contact the catalog provider if the catalog is unavailable for the **Third-Party Software Update Catalogs** node.
+To make it easier to find custom catalogs, we're providing a list of links to catalog providers as a convenience. Some catalogs are freely available and some catalogs have an additional cost associated with them. This list includes catalogs that may only work with [System Center Updates Publisher](../tools/updates-publisher.md) and not the **Third-Party Software Update Catalogs** node in the Configuration Manager console. Contact the catalog provider if the catalog is unavailable for the **Third-Party Software Update Catalogs** node.
 
 
 |Custom catalog provider| URL|
