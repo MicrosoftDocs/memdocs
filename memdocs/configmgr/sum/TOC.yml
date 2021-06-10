@@ -78,7 +78,7 @@ items:
   - name: Third-party software updates
     href: deploy-use/third-party-software-updates.md
   - name: Third-party update catalogs
-    href: deploy-use/third-party-software-update-catalogs.md    
+    href: deploy-use/third-party-software-update-catalogs.md 
   - name: Example scenario to deploy security updates
     href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
 - name: System Center Updates Publisher
