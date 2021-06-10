@@ -22,18 +22,19 @@ The **Third-Party Software Update Catalogs** node in the Configuration Manager c
 <!--9989251-->
 To make it easier to find custom catalogs, we are providing a list of links to catalog providers as a convenience. Some catalogs are freely available and some catalogs have an additional cost associated with them. This list includes catalogs that may only work with [System Center Updates Publisher](../tools/updates-publisher.md) and not the **Third-Party Software Update Catalogs** node in the Configuration Manager console. Contact the catalog provider if the catalog is unavailable for the **Third-Party Software Update Catalogs** node.
 
+
 |Custom catalog provider| URL|
 |--|--|
 |Adobe | Multiple catalogs are available from Adobe. </br>  https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/sccm.html |
 |Centero Software Manager| https://software-manager.com/csm-for-sccm-patch-management-solution |
+|Dell| *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://downloads.dell.com/Catalog/DellSDPCatalogPC.com </br></br> Server catalog </br> ftp://ftp.dell.com/catalog/DellSDPCatalog.cab |
+|Fujitsu| https://support.ts.fujitsu.com/GFSMS/globalflash/FJSVUMCatalogForSCCM.cab |
+|HP| *Partner catalog* available in the **Third-Party Software Update Catalogs** node <br> https://hpia.hpcloud.hp.com/downloads/sccmcatalog/HpCatalogForSms.latest.cab</br></br> http://ftp.hp.com/pub/softlib/software/sms_catalog/HpCatalogForSms.latest.cab|
 |Ivanti Patch for MEM |https://www.ivanti.com.au/products/patch-management-for-mem |
-|Lenovo | Lenovo updates catalog V3 information </br>https://thinkdeploy.blogspot.com/2020/06/lenovo-updates-catalog-v3-for-sccm.html </br></br> Lenovo V3 catalog</br> https://download.lenovo.com/luc/v2/LenovoUpdatesCatalog2v2.cab </br></br> Lenovo Patch </br> https://www.lenovo.com/us/en/software/lenovo-patch-sccm |
+|Lenovo | *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://download.lenovo.com/luc/v2/LenovoUpdatesCatalog2v2.cab </br></br> Lenovo updates catalog V3 information </br>https://thinkdeploy.blogspot.com/2020/06/lenovo-updates-catalog-v3-for-sccm.html </br></br> Lenovo Patch </br> https://www.lenovo.com/us/en/software/lenovo-patch-sccm |
 |ManageEngine Patch Connect Plus|https://www.manageengine.com/sccm-third-party-patch-management|
-|Patch My PC| https://patchmypc.com |
+|Patch My PC| Full catalog </br> https://patchmypc.com/third-party-patch-management-for-sccm-and-intune </br></br> Limited catalog </br> https://patchmypc.com/frequently-asked-questions#trial-catalog|
 |SolarWinds Patch Manager| https://www.solarwinds.com/patch-manager/use-cases/third-party-patch-management-sccm |
-|
-
- 
 
 
 ## Next steps
