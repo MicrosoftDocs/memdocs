@@ -42,7 +42,7 @@ A Conditional Access policy specifies the app or services you want to protect, t
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional Access** > **Policies** > **New policy**.
-:::image type="content" source="/media/create-conditional-access-intune/create-ca.png" alt-text="Create a new Conditional Access policy":::
+:::image type="content" source="./media/create-conditional-access-intune/create-ca.png" alt-text="Create a new Conditional Access policy":::
 
 3. Under **Assignments**, select **Users and groups**.
 
@@ -107,7 +107,7 @@ A Conditional Access policy specifies the app or services you want to protect, t
       - **Require approved client app**: The device must use approved client apps. 
       - **For multiple controls**: Select **Require all the selected controls** so that all of the requirements are enforced when a device attempts to access the app.
       
-      :::image type="content" source="/media/create-conditional-access-intune/create-ca-grant-access-settings.png" alt-text="Access controls Grant settings":::
+      :::image type="content" source="./media/create-conditional-access-intune/create-ca-grant-access-settings.png" alt-text="Access controls Grant settings":::
 
 11. Under **Enable policy**, select **On**.
 
