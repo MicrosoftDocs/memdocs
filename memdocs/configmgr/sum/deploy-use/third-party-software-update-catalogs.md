@@ -20,7 +20,7 @@ The **Third-Party Software Update Catalogs** node in the Configuration Manager c
 
 ## Third-party update catalogs available for import
 <!--9989251-->
-To make it easier to find custom catalogs, we're providing a list of links as a convenience. Some catalogs are freely available and some catalogs have an additional cost associated with them. This list includes catalogs that may only work with [System Center Updates Publisher](../tools/updates-publisher.md) and not the **Third-Party Software Update Catalogs** node in the Configuration Manager console. Check with the catalog provider for details including pricing, support, and if the catalog supports in-console third party updates.
+To make it easier to find custom catalogs, we're providing a list of links as a convenience. Some catalogs are freely available and some catalogs have an additional cost associated with them. This list includes catalogs that may only work with [System Center Updates Publisher](../tools/updates-publisher.md) and not the **Third-Party Software Update Catalogs** node in the Configuration Manager console. Check with the catalog provider for details including pricing, support, and if the catalog supports in-console third-party updates.
 
 |</br></br>Custom catalog provider|</br></br> URL|
 |--|--|
