@@ -1,6 +1,6 @@
 ---
 # required metadata
-title:  Intune Date Warehouse Collections
+title:  Intune Data Warehouse Collections
 titleSuffix: Microsoft Intune 
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
 keywords: 
@@ -263,6 +263,8 @@ The **device** entity lists all enrolled devices under management and their corr
 | wiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
 | windowsOsEdition             | Windows Operating System edition.                                                                                                                                                                              |
 
+> [!NOTE]
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
 
 ## deviceTypes
 The **deviceType** entity represents the device type referenced by other data warehouse entities. The device type typically describes either the device model, manufacturer, or a combination of both.
