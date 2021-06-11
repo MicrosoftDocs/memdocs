@@ -390,6 +390,8 @@ For more information, see [Support Center OneTrace](../../support/support-center
 
 ## PowerShell
 
+Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
+
 ### Known issue with updateable PowerShell help
 
 <!-- 8617455 -->

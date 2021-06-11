@@ -293,7 +293,7 @@ If a device uses Azure Active Directory (Azure AD) for client authentication and
 
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
-The CCMSetup.exe command provides the following return codes. To troubleshoot, review `%WinDir%\ccmsetup\ccmsetup.log` on the client for context and additional detail about return codes.
+The CCMSetup.exe command provides the following return codes. To troubleshoot, review `%WinDir%\ccmsetup\Logs\ccmsetup.log` on the client for context and additional detail about return codes.
 
 |Return code|Meaning|  
 |-----------|-------|  

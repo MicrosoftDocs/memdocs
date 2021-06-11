@@ -97,7 +97,6 @@ When creating a device restrictions policy for iOS/iPadOS devices, there are new
 - **Block Apple Watch auto unlock**: Set to **Yes** to block users from unlocking their device with Apple Watch.
 - **Allow users to boot devices into recovery mode with unpaired devices**: Set to **Yes** to allow users to boot their device into recovery with an unpaired device.
 - **Block Siri for dictation**: Set to **Yes** to disable connections to Siri servers so that users can't use Siri to dictate text.
-- **Require devices to use Wi-Fi networks set up via configuration profiles**: Set to **Yes** to require devices to only use Wi-Fi networks set up through configuration profiles.
 
 To see these settings, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
