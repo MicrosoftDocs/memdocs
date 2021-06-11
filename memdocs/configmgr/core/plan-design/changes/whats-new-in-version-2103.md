@@ -443,7 +443,7 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2103](../../../hotfix/2103/9210721.md).
 
-The following update rollup (10036164) is available in the console starting on June 10, 2021: [Update rollup for Configuration Manager current branch, version 2103](../../../hotfix/2103/10036164.md).
+The following update rollup (10036164) is available in the console starting on June 11, 2021: [Update rollup for Configuration Manager current branch, version 2103](../../../hotfix/2103/10036164.md).
 
 ### Hotfixes
 
