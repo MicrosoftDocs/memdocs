@@ -60,6 +60,8 @@ Use the following steps to create a new group.
 
     - **Microsoft 365**: Provides collaboration opportunities by giving members access to a shared mailbox, calendar, files, SharePoint site, and more. This option also lets you give people outside of your organization access to the group. For more information, see [Learn about Microsoft 365 Groups](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
+Please note: Only security-enabled Microsoft 365 Groups are supported
+
 4. Enter a **Group name** and **Group description** for the new group. Be specific and include information so others know what the group is for.
 
     For example, enter **All Windows 10 student devices** for group name, and **All Windows 10 devices used by students in Contoso high school grades 9-12** for group description.
