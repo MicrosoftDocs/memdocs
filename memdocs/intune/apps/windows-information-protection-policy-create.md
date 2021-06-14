@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 04/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -47,7 +47,7 @@ You must understand a few concepts when adding a WIP policy:
 
 ### Types of apps
 
-- **Recommended apps:** A pre-populated list of (mostly Microsoft Office) apps that allow you easily import into policy.
+- **Recommended apps:** A pre-populated list of (mostly Microsoft Office) apps that allow you to easily import into the policy.
 - **Store apps:** You can add any app from the Windows store to the policy.
 - **Windows desktop apps:** You can add any traditional Windows desktop apps to the policy (for example, .exe, .dll)
 

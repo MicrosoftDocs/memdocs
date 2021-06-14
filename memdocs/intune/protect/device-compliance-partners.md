@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 06/02/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -117,6 +117,8 @@ Your configuration now appears on the Partner compliance management page.
 
 To enable a device compliance partner to work with Intune, you must complete configurations specific to that partner. For information on this task, see the documentation for the applicable partner:
 
+- [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
+
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)  
 
 ## Enroll your iOS or Android devices to that device compliance partner
@@ -131,6 +133,8 @@ Sign in to the Azure portal and go to **Azure AD** > **Devices** > [**All device
 
 ## Next steps
 
-Use the documentation from your third-party partner to create compliance policies for devices.
+Use additional documentation from your third-party partner to create compliance policies for devices.
+
+- [Citrix Endpoint Management - Integrate with Azure AD Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
 
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
