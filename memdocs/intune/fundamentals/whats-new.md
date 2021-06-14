@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 06/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,20 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+<!-- ########################## -->
+## Week of June 14, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Microsoft Tunnel Gateway version<!--10145583-->
+
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway. It includes the following changes:
+
+- Minor bug fixes.
+- Image updates with security updates for all dependencies.
+
+For sites that are configured to update automatically, the Tunnel Gateway server will automatically update to the new version. For sites that are configured to update manually, you'll need to approve the update.
 
 <!-- ########################## -->
 ## Week of June 7, 2021
