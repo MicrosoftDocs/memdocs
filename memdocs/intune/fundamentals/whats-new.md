@@ -66,7 +66,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### New Microsoft Tunnel Gateway version<!--10145583-->
 
-We’ve released a [new version](../protect/microsoft-tunnel-upgrade#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway. It includes the following changes:
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway. It includes the following changes:
 
 - Minor bug fixes.
 - Image updates with security updates for all dependencies.
