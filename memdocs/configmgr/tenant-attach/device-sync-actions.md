@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 04/13/2021
+ms.date: 06/15/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -13,12 +13,10 @@ ms.author: mstewart
 ---
 
 # <a name="bkmk_attach"></a> Microsoft Endpoint Manager tenant attach: Device sync and device actions
-<!--3555758 live 3/4/2020-->
+<!--3555758 live 3/4/2020  Configuration Manager version 2002 min-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**.
-
-Starting in Configuration Manager version 2002, you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
 ## Prerequisites
 
@@ -148,6 +146,30 @@ From the Microsoft Endpoint Manager admin center, you can review the status of y
 
 > [!NOTE]
 > Some information isn't available if the hierarchy is running Configuration Manager version 2006.
+
+## <a name="bkmk_offboard"></a> Offboard from tenant attach
+
+While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. You can offboard from either the Configuration Manager console (recommend method) or from the Microsoft Endpoint Manager admin center.
+### Offboard from the Configuration Manager console
+
+When tenant attach is already enabled, edit the co-management properties to disable device upload and offboard.
+
+1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
+1. In the ribbon, select **Properties** for your co-management production policy.
+1. In the **Configure upload** tab, remove the **Upload to Microsoft Endpoint Manager admin center** selection.
+1. Select **Apply**.
+
+### Offboard from the Microsoft Endpoint Manager admin center
+<!-- CMADO7043245 INADO9412904 -->
+If needed, you can offboard a Configuration Manager version 2006 or later hierarchy from the Microsoft Endpoint Manager admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Select **Tenant administration** then **Connectors and tokens**.
+1. Select **Microsoft Endpoint Configuration Manager**.
+1. Choose the name of the site you would like to offboard, then select **Delete**.
+   - This option is only visible for sites running Configuration Manager version 2006 or later.
+
+When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Endpoint Manager admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
 
 ## Next steps
 

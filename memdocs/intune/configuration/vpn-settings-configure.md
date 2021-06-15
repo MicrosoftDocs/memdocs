@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 06/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -116,12 +116,14 @@ You can create VPN profiles using the following connection types:
   - Windows 10
 
 - Microsoft Tunnel (standalone client)
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS  
 
+- Microsoft Tunnel  
+  - Android Enterprise personally owned devices with a work profile
+  - Android Enterprise fully managed and corporate-owned work profile
+
   > [!Important]
-  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later after August 14, 2021.
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile
