@@ -134,7 +134,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
-  - Windows Virtual Desktop Access E3 or E5
+  - Windows 10 Virtual Desktop Access (VDA) per user
 
 > [!NOTE]
 > Beyond the cost of these license subscriptions, there's no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. For more information, see [Log Analytics usage and costs](/azure/azure-monitor/platform/manage-cost-storage).

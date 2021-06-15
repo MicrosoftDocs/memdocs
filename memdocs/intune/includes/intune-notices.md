@@ -5,6 +5,7 @@ author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
 ms.date: 06/14/2021
+ms.date: 06/09/2021
 ms.author: erikje
 ms.custom: include file
 ---
@@ -13,7 +14,7 @@ These notices provide important information that can help you prepare for future
 
 ### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
-Beginning on June 14 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, on August 14 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
+Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, after August 14, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
 
 #### How this change will affect your organization
 
@@ -22,6 +23,17 @@ If you use the standalone tunnel app for Android, you'll need to move to the Mic
 #### What you need to do to prepare
 
 For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
+### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
+
+We’ve released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices. 
+
+The new version for the Microsoft Intune Management Extension is **1.43.203.0**. Intune automatically upgrades all versions of the extension that are less than **1.43.203.0** to this latest version. To check the version of the extension on a device, review the version for *Microsoft Intune Management Extension* in the program list under **Apps & features**.
+
+For more information, see **CVE-2021-31980** at [https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980).
+
+#### What action do I need to take?
+
+No action is required. As soon as the client connects to the service, it automatically receives a message to upgrade.
 
 ### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 

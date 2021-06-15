@@ -2,7 +2,7 @@
 # required metadata
 
 title: Endpoint security firewall rule migration tool for Microsoft Intune - Azure | Microsoft Docs
-description: Understand how to use the endpoint security firewall rule migration tool for Microsoft Intune.
+description: Learn about the endpoint security firewall rule migration tool for Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -24,58 +24,59 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-mr.reviewer: aanavath
+ms.reviewer: aanavath
 ---
 
 # Endpoint security firewall rule migration tool overview
 
-Many organizations are looking to move their security configuration to Microsoft Endpoint Manager to make use of modern, cloud-based management.
+Many organizations are moving their security configuration to Microsoft Endpoint Manager to make use of modern, cloud-based management. Endpoint security in Endpoint Manager offers rich management experiences of Windows Firewall configuration and granular firewall rule management.
 
-Endpoint security in Endpoint Manager offers rich management experiences of Windows Firewall configuration and granular firewall rule management.
+Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**.
 
-In many organizations, they already have Group Policies in place to manage their Windows Firewall rules. Moving to modern management can be tricky as manually creating hundreds of firewall rules can be tiresome.
+When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Azure AD groups to configure MDM and co-managed clients.
 
-To help customers move their firewall rule configuration to Endpoint security policies in Endpoint Manager, the **Endpoint security firewall rule migration tool** has been developed.
+Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):
 
-Customers can run the **Endpoint security firewall rule migration tool** on a reference/pre-configured Windows 10 client, and automatically create Endpoint security firewall rule policies in Endpoint Manager. Once created, administrators can target these rules to Azure AD groups to configure MDM and co-managed clients.
-
-Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):<br>
 <a href="https://aka.ms/EndpointSecurityFWRuleMigrationTool"><img alt="Download the tool" src="./media/endpoint-security-firewall-rule-tool/downloadtool.png" width="170"></a>
 
 ## Tool usage
 
-The tool is run on a reference machine and migrates the current Windows Firewall rule configuration. Running the tool will export all enabled firewall rules present on the device, and automatically create new Intune policies with the collected rules.
+Run the tool on a reference machine to migrate that machines current Windows Firewall rule configuration. When run, the tool exports all enabled firewall rules that are present on the device, and automatically creates new Intune policies with the collected rules.
 
-1. Log on to the reference machine with local administrator privileges.
-2. Download and unzip the file `Export-FirewallRules.zip`. <br>
-   The zip file contains the script file `Export-FirewallRules.ps1`. 
-3. Run the `Export-FirewallRules.ps1` script on the machine. <br>
-   The script will download all the prerequisites required to run. When prompted, provide appropriate Intune administrator credentials. For more information about required permissions, see [Required permissions](#required-permissions).
-4. Provide a policy name when prompted. <br>
-   This policy will be visible in the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) in the **Endpoint security** > **Firewall** pane. 
+1. Sign in to the reference machine with local administrator privileges.
 
-    > [!IMPORTANT]
-    > The policy name must be unique for the tenant.
+2. Download and unzip the file `Export-FirewallRules.zip`.
 
-    If more than 150 firewall rules are found, multiple policies will be created.
+   The zip file contains the script file `Export-FirewallRules.ps1`.
 
-    > [!NOTE]
-    > Only enabled firewall rules will be migrated by default and only firewall rules created by GPO will be migrated by default. Switches are provided to modify these default values. For more information, see [Switches](#switches).
-    >
-    > Depending on the count of firewall rules found, the tool may take some time to run.
+3. Run the `Export-FirewallRules.ps1` script on the machine.
 
-5. Once complete, the tool will output a count of firewall rules that could not be automatically migrated. For more information, see [Unsupported configuration](#unsupported-configuration).
+   The script downloads all the prerequisites it requires to run. When prompted, provide appropriate Intune administrator credentials. For more information about required permissions, see [Required permissions](#required-permissions).
+
+4. Provide a policy name when prompted. The policy name must be unique for the tenant.
+
+   When more than 150 firewall rules are found, multiple policies are created.
+
+   Policies created by the tool are visible in the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) in the **Endpoint security** > **Firewall** pane.
+
+   > [!NOTE]
+   > By default, only enabled firewall rules are migrated and only firewall rules created by GPO are migrated. The tool supports [switches](#switches) you can use to modify these defaults.  
+   >
+   > The time the tool takes to run depends on the number of firewall rules found.
+
+5. After the tool runs, it outputs a count of firewall rules that it couldn't automatically migrate. For more information, see [Unsupported configuration](#unsupported-configuration).
 
 ## Switches
 
-You can use the following switches (parameters) to modify the tool's default functionality.
+Use the following switches (parameters) to modify the tool's default behavior.
 
-- `IncludeLocalRules` - Using this switch will include all locally created/default Windows firewall rules in the export. Note that enabling this switch may result in many included rules. 
-- `IncludedDisabledRules` - Using this switch will include all enabled and disabled Windows firewall rules in the export. Note that enabling this switch may result in many included rules.
+- `IncludeLocalRules` - Use this switch to include all locally created/default Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
+
+- `IncludedDisabledRules` - e this switch to include all enabled and disabled Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
 
 ## Unsupported configuration
 
-The following registry-based settings are not supported due to lack of MDM support in Windows. These settings are uncommon, however should you require these settings please log this need via your standard support channels.
+The following registry-based settings aren't supported because of a lack of MDM support in Windows. While these settings are uncommon, should you require these settings consider logging this need through your standard support channels.
 
 |     GPO Field    |     Reason    |
 |-|-|
@@ -101,21 +102,25 @@ The following registry-based settings are not supported due to lack of MDM suppo
 |      TYPE-VALUE =/ "SecurityRealmId=" STR-VAL    |     IPSec related setting not supported by Windows MDM    |
 
 ## Unsupported setting values
-The following setting values are not supported for migration:
 
-**Ports**
-- `PlayToDiscovery` is not supported as a local or remote port range.
+The following setting values aren't supported for migration:
 
-**Address ranges**
-- `LocalSubnet6` is not supported as a local or remote address range. 
-- `LocalSubnet4` is not supported as a local or remote address range.
-- `PlatToDevice` is not supported as a local or remote address range.
+**Ports**:
 
-Once the tool has been run, a report will be generated with rules that were not successfully migrated. You can view any of these rules by viewing `RulesError.csv` found in `C:\<folder needed>`. 
+- `PlayToDiscovery` isn't supported as a local or remote port range.
+
+**Address ranges**:
+
+- `LocalSubnet6` isn't supported as a local or remote address range.
+- `LocalSubnet4` isn't supported as a local or remote address range.
+- `PlatToDevice` isn't supported as a local or remote address range.
+
+After the tool completes, it generates a report with rules that weren't successfully migrated. You can view these rules by viewing `RulesError.csv` found in `C:\<folder>`.
 
 ## Required permissions
-Endpoint Security Manager, Intune Service Admin or Global Admin users can migrate Windows Firewall rules to Endpoint security policies. Alternatively, a custom role may be used where Security baselines permissions are set with **Delete**, **Read**, **Assign**, **Create**, and **Update** grants are applied. For more information, see [Grant admin permissions to Intune](../fundamentals/users-add.md#grant-admin-permissions).
+
+Users assigned the Intune roles for Endpoint Security Manager, Intune Service Admin, or Global Admin can migrate Windows Firewall rules to Endpoint security policies. Alternatively, you can assign the user a custom role where Security baselines permissions are set with **Delete**, **Read**, **Assign**, **Create**, and **Update** grants are applied. For more information, see [Grant admin permissions to Intune](../fundamentals/users-add.md#grant-admin-permissions).
 
 ## Next steps
 
-- Assign the rules to Azure AD groups to configure MDM and co-managed clients. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+After creating Endpoint security policies for Firewall rules, assign those policies to Azure AD groups to configure both your MDM and co-managed clients. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).

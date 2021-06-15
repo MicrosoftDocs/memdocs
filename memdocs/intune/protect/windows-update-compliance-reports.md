@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/12/2021
+ms.date: 06/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,7 +77,7 @@ Before you can use the feature updates policy reports, you must configure prereq
   - Service-based data is collected for all feature update versions and doesn’t require you to configure data collection. 
   - Client-based data is collected from devices only after data collection is configured.
   
-  Service and client based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
+  Service and client-based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
 
 - **Devices**: Devices must:
 
@@ -180,7 +180,7 @@ To use the report:
      - **On hold**:
        - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
-     - **Cancelled**:
+     - **Canceled**:
        - **Admin Cancelled** - The update offer was cancelled by explicit Administrator action.
        - **Service Cancelled** - The update was cancelled because of an automatic action by Windows Update.
        - **Removed from Deployment** - The update offer was cancelled because it was removed from the Deployment by explicit Administrator action.
@@ -303,23 +303,17 @@ The following list identifies Alert Messages, and suggested remediation actions:
 
 ## Use Update Compliance
 
-You can monitor Windows 10 update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-monitor). Update Compliance is offered through the Azure portal and is available free for devices that meet its [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+You can monitor Windows 10 update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-get-started). Update Compliance is offered through the Azure portal and is included as part of Windows 10 licenses listed in the [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Update Compliance data.
 
-When you use this solution, you deploy a commercial ID to any of your Intune managed Windows 10 devices for which you want to report update compliance.  
+To use this solution, you'll:
 
-In Intune, you use the OMA-URI settings of a custom policy to configure the commercial ID. See [Use custom settings for Windows 10 devices in Intune](../configuration/custom-settings-windows-10.md).
+- Use an Intune device configuration profile to deploy your [CommercialID](/windows/deployment/update/update-compliance-get-started#get-your-commercialid) to your Windows 10 devices. The CommericalID associates the devices with your Log Analytics workspace.
 
-The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
+- Optionally deploy a configuration script as a Win32 app to those same devices to validate their configuration for Update Compliance.
 
-For example, you can use the following values in **Add or edit OMA-URI Setting**:
+- Use the Update Compliance workspace to [Monitor Windows updates](/windows/deployment/update/update-compliance-monitor).
 
-- **Setting Name**: Update Compliance Commercial ID
-- **Setting Description**: Configure devices with the Commercial ID for Update Compliance solutions
-- **OMA-URI**: Enter the following path, which is case sensitive, and avoid trailing spaces: `./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID`
-
-  For more information about this configuration service provider (CSP) and the Provider ID *ProviderID*, see [DMClient CSP](/windows/client-management/mdm/dmclient-csp)
-- **Data Type**: Select *String*. When you String, you can then specify a Value.
-- **Value**: Specify the GUID for your *CommercialID*, which you get from your Update Compliance Settings in Microsoft Azure.
+For guidance on this solution, see [Configuring devices for Update Compliance in Microsoft Endpoint Manager](/windows/deployment/update/update-compliance-configuration-mem) in the Update Compliance documentation.
 
 ## Next steps
 

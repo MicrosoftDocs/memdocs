@@ -51,7 +51,7 @@ The first step is to code sign your appx package. For details, see [Sign app pac
 
 Next, you must upload the signed appx file. For details, see [Add a Windows line-of-business app to Microsoft Intune](lob-apps-windows.md).
 
-If you deploy the app as required to users or devices then you do not need the Inutne Company Portal app. However if you deploy the app as available to users, then they can either use the Company Portal app from the Public Microsoft Store, use the Company Portal app from the Private Microsoft Store for Business, or you will need to sign and manually deploy the Intune Company Portal app.
+If you deploy the app as required to users or devices then you do not need the Intune Company Portal app. However if you deploy the app as available to users, then they can either use the Company Portal app from the Public Microsoft Store, use the Company Portal app from the Private Microsoft Store for Business, or you will need to sign and manually deploy the Intune Company Portal app.
 
 ### Upload the code-signing certificate
 
@@ -127,7 +127,7 @@ If the Windows 10 Company Portal app is signed and deployed in this way, you wil
 
 Here's how you sign and deploy the app in this way:
 
-1. Download the Microsoft Intune Windows 10 Company Portal App Signing Script from [https://aka.ms/win10cpscript](/samples/browse/?redirectedfrom=TechNet-Gallery). This script requires the Windows SDK for Windows 10 to be installed on the host computer. To download the Windows SDK, see [Windows 10 SDK for Windows 10](https://go.microsoft.com/fwlink/?linkid=162443).
+1. Download the [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/intunecpscript). This script requires the Windows SDK for Windows 10 to be installed on the host computer. To download the Windows SDK, see [Windows 10 SDK for Windows 10](https://go.microsoft.com/fwlink/?linkid=162443).
 2. Download the Windows 10 Company Portal app from the Microsoft Store for Business, as detailed above.  
 3. Run the script with the input parameters detailed in the script header to sign the Windows 10 Company Portal app (extracted below). Dependencies do not need to be passed into the script. These are only required when the app is being uploaded to the Intune Admin Console.
 

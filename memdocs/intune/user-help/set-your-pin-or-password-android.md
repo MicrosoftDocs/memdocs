@@ -2,7 +2,7 @@
 # required metadata
 
 title: Set your PIN or password | Microsoft Docs
-description:
+description: Create a PIN or password on your Android device so that you can securely access your work or school data.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -39,6 +39,6 @@ You can use the following steps to set a PIN or password.
 
 2. Choose and confirm your new password.
 
-For certain devices, you may need to set a startup PIN in addition to your screen password. You can try to fix this issue by finding a location in your settings app to enable this option. For example, on the Samsung Galaxy S7, you enable Secure Startup by going to **Settings** > **Lock Screen and Security** > **Secure Startup**. You can find out more [here](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
+On certain devices, you must create a startup PIN *and* a lock screen password. You can configure Secure Startup from the Settings app on your device. On the Samsung Galaxy S7, for example, go to **Settings** > **Lock Screen and Security** > **Secure Startup**. For more information about setting up your device securely with enryption, see [Device encrypted but apps say otherwise](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

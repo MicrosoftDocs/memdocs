@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 06/01/2021
+ms.date: 06/07/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -27,35 +27,42 @@ ms.topic: troubleshooting
 The following table describes known issues that can often be resolved by configuration changes.  For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 <table>
-<th>Issue<th>More information
+<th>Issue</th><th>More information</th>
 
+<tr><td>Intune connector is inactive but still appears in the Intune Connectors blade</td>
+<td>Inactive Intune connectors will be automatically cleaned up after 30 days of inactivity without admin interaction.</td></tr>
+
+<tr><td>Autopilot sign-in page displays HTML tags from company branding settings</td>
+<td>When <a href="https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding#to-customize-your-branding">customizations are applied to the company branding settings</a> the HTML tags may be visible and not rendered correctly on the update password page. This issue should be fixed in future versions of Windows.</td></tr>
+ 
 <tr><td>TPM attestation is not working on Intel Tiger Lake platforms.</td>
-<td>TPM attestation support for Intel TPM Tiger Lake platforms are only supported on with Windows 21H2 or higher. </tr>
+<td>TPM attestation support for Intel TPM Tiger Lake platforms are only supported on with Windows 21H2 or higher.</td> </tr>
 
 <tr><td>Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP.</td>
-<td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. To avoid this issue, target the ESP profile to <a href="enrollment-autopilot.md">device groups</a>.</tr>
+<td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. To avoid this issue, target the ESP profile to <a href="enrollment-autopilot.md">device groups</a>.</td></tr>
 
 <tr><td>That username looks like it belongs to another organization. Try signing in again or start over with a different account.</td>
  <td>Confirm that all of your information is correct at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot. For more information, see <a href="troubleshoot-oobe.md#windows-10-version-1709-and-above">Troubleshoot OOBE issues</a>.</td></tr>
 
 <tr><td>Windows Autopilot user-driven Hybrid Azure AD deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile.</td>
-<td>This issue will occur when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create another local account that is a member of the Administrators group. To ensure this works properly, don't create another account until after the Windows Autopilot process has completed.</tr>
+<td>This issue will occur when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create another local account that is a member of the Administrators group. To ensure this works properly, don't create another account until after the Windows Autopilot process has completed.</td></tr>
 
 <tr><td>Windows Autopilot device provisioning can fail with TPM attestation errors or ESP timeouts on devices where the real-time clock is off by a significant amount of time (for example, several minutes or more).</td>
 <td>To fix this issue: <ol><li>Boot the device to the start of the out-of-box experience (OOBE).
 <li>Establish a network connection (wired or wireless).
 <li>Run the command <b>w32tm /resync /force</b> to sync the time with the default time server (time.windows.com).</ol>
+ </td>
 </tr>
 
 <tr><td>Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909; you see screens that you've disabled in your Windows Autopilot profile, such as the Windows 10 License Agreement screen.
 <br>&nbsp;<br>
-This issue happens because Windows 10, version 1903 and 1909 deletes the AutopilotConfigurationFile.json file.
+This issue happens because Windows 10, version 1903 and 1909 deletes the AutopilotConfigurationFile.json file.</td>
 <td>To fix this issue: <ol><li>Edit the Configuration Manager task sequence and disable the <b>Prepare Windows for Capture</b> step.
 <li>Add a new <b>Run command-line</b> step that runs <b>c:\windows\system32\sysprep\sysprep.exe /oobe /reboot</b>.</ol>
-<a href="https://oofhours.com/2019/09/19/a-challenge-with-windows-autopilot-for-existing-devices-and-windows-10-1903/">More information</a></tr>
+<a href="https://oofhours.com/2019/09/19/a-challenge-with-windows-autopilot-for-existing-devices-and-windows-10-1903/">More information</a></td></tr>
  
 <tr><td>PushButtonReset (PBR) is taking machines to recovery mode with secure boot enabled: BSOD 0xC000000F.
-<td>The “Enable with UEFI Lock” setting causes this behavior, and is enabled in the Intune Security Baseline. Issue occurs with 1909, this issue is fixed with later versions of Windows.
+<td>The “Enable with UEFI Lock” setting causes this behavior, and is enabled in the Intune Security Baseline. Issue occurs with 1909, this issue is fixed with later versions of Windows.</td></tr>
 
 <tr><td>Windows Autopilot <a href="self-deploying.md">self-deploying mode</a> fails with an error code:
 <td><table>
