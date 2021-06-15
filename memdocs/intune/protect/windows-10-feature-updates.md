@@ -51,12 +51,12 @@ When a device receives a Windows 10 feature updates policy:
 
 ## Prerequisites
 
-Intune’s Windows 10 feature updates requires the following prerequisites:
+Intune's Windows 10 feature updates requires the following prerequisites:
 
 - In addition to a license for Intune, your organization must have one of the following subscriptions:
   - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
   - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-  - Windows Virtual Desktop Access E3 or E5
+  - Windows 10 Virtual Desktop Access (VDA) per user
   - Microsoft 365 Business Premium
 
 - Devices must:  

@@ -139,7 +139,7 @@ For more information, see [Include custom configuration baselines as part of com
 
 <!--4737447-->
 
-Configuration Manager current branch version 1906 introduced support for [Windows Virtual Desktop](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session is one of these OS versions.
+Configuration Manager current branch version 1906 introduced support for [Azure Virtual Desktop](../configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session is one of these OS versions.
 
 If you require user policy on these multi-session devices and accept any potential performance impact, you can now configure a client setting to enable user policy. In the **Client Policy** group, configure the **Enable user policy for multiple user sessions** setting.
 
