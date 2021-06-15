@@ -59,19 +59,22 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
-## Week of June 14, 2021
+
+## Week of June 14, 2021  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### New Microsoft Tunnel Gateway version<!--10145583-->
+#### Microsoft Defender for Endpoint for Microsoft Tunnel on Android is out of preview<!-- 9370486 -->
 
-We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway. It includes the following changes:
+The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functionality on Android is now out of preview and [generally available for use](../protect/microsoft-tunnel-overview.md). With this change:
 
-- Minor bug fixes.
-- Image updates with security updates for all dependencies.
+- You no longer need to opt in to use Defender of Endpoint as the tunnel app on Android.
+- The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on August 14, 2021.
 
-For sites that are configured to update automatically, the Tunnel Gateway server will automatically update to the new version. For sites that are configured to update manually, you'll need to approve the update.
+Plan to download and use the updated Microsoft Defender for Endpoint app for Microsoft Tunnel app for Android. If you participated in the preview, update your devices with the new version of Defender for Endpoint from the Google Play store. If you are still using the standalone tunnel app, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
+
+The standalone tunnel app for iOS remains in preview.  
 
 ### Device management
 ### Tenant attach: Offboarding <!-- CMADO7043245 INADO9412904 -->
@@ -89,6 +92,18 @@ The Android Company Portal app and the Android Intune app now support Portuguese
 
 <!-- ########################## -->
 ## Week of May 24, 2021 (Service release 2105)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Microsoft Tunnel Gateway version<!--10145583-->
+
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway. It includes the following changes:
+
+- Minor bug fixes.
+- Image updates with security updates for all dependencies.
+
+For sites that are configured to update automatically, the Tunnel Gateway server will automatically update to the new version. For sites that are configured to update manually, you'll need to approve the update.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management  
