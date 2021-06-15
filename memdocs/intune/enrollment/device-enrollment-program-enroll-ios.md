@@ -341,12 +341,6 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 19. To save the profile, select **Create**.
 
-> [!NOTE]
-> If you need to re-enroll your Automated Device Enrollment device, you need to first [add the serial number of the device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting a problem, like if the device isn't receiving policy. To re-enroll:
-> 1. Retire the device from the Intune console.
-> 2. [Add the device's serial number as a corporate device identifier](corporate-identifiers-add.md).
-> 3. Re-enroll the device by downloading Company Portal and completing device enrollment.
-
 ### Dynamic groups in Azure Active Directory
 
 You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory (Azure AD). For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
@@ -401,7 +395,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
   For more information on Intune licensing, see [Microsoft Intune licensing](../fundamentals/licenses.md) and the [Intune planning guide](../fundamentals/intune-planning-guide.md).
 
-- A device that's been activated needs to be wiped before it can enroll in Intune. After it's been wiped, you can apply the enrollment profile.
+- A device that's been activated needs to be wiped before it can enroll properly using ADE in Intune. After it's been wiped but before activating it again, you can apply the enrollment profile. See [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516)
 
 - If you're enrolling with ADE and user affinity, the following error can happen during setup:
 
