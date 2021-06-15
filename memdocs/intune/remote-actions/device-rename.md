@@ -41,7 +41,8 @@ You can rename the following types of devices:
 
 If a device isn't listed here, it's not supported.
 
-This feature doesn't currently support renaming hybrid Azure AD Windows devices.
+> [!NOTE]
+> This feature doesn't currently support renaming hybrid Azure AD Windows devices.
 
 ## Rename a device
 
