@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 11/30/2020
+ms.date: 06/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -226,7 +226,7 @@ When the task sequence starts, in most scenarios it records the currently enable
 > [!Warning]
 > Be cautious with this setting on low performance hardware. Running intense system operations for an extended period of time can strain low-end hardware. Check with your hardware manufacturer for specific guidance.
 
-Starting in version 2010, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby). It also supports other devices that don't have that default power plan. When you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->
+Starting in version 2010, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby).<!--7721999 & 8177793--> It also supports other devices that don't have that default power plan. When you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. This power plan modifies the timeout values to `0` for standby, monitor, disk, and hibernate when plugged in. These configurations prevent these devices from falling asleep during an OS deployment task sequence.<!--MEMDocs#1646--> After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.
 
 ### Known issue
 

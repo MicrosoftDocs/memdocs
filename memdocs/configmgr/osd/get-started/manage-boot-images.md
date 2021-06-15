@@ -44,7 +44,7 @@ Consider the following behaviors for any of the actions described for default bo
 When you upgrade the Windows Assessment and Deployment Kit (ADK) version, and then use updates and servicing to install the latest version of Configuration Manager, the site regenerates the default boot images. This update includes the new WinPE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, and customizations. The site doesn't modify custom boot images.
 
 > [!NOTE]
-> The site always uses the production version of the Configuration Manager client in default boot images. Even ff you configure automatic client upgrades to use a [pre-production collection](../../core/clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
+> The site always uses the production version of the Configuration Manager client in default boot images. Even if you configure automatic client upgrades to use a [pre-production collection](../../core/clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
 
 ### Upgrade from Configuration Manager 2012 to current branch
 

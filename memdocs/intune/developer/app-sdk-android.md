@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 05/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -61,15 +61,11 @@ The Intune App SDK consists of the following files:
 * **CHANGELOG.md**: Provides a record of changes made in each SDK version.
 * **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
 
-
 ## Requirements
 
 ### Android versions
-The SDK fully supports Android API 21 (Android 5.0) through Android
-API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android
-minSDKVersion as low as 14, but on those older OS versions it will be
-impossible to install the Intune Company Portal app or use MAM
-policies.
+
+The SDK fully supports Android API 23 (Android 6.0) through Android API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android minSDKVersion as low as 14, but on those older OS versions it will be impossible to install the Intune Company Portal app or use MAM policies.
 
 ### Company Portal app
 
@@ -85,8 +81,11 @@ For app protection without device enrollment, the user is _**not**_ required to 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
-### Sample app
-An example of how to integrate with the Intune App SDK properly is available on [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+### Sample apps
+Examples of how to integrate with the Intune App SDK properly include:
+
+- [Taskr - A Microsoft Intune Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+- [Taskr - A Microsoft Intune React Native + Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App/tree/master/ReactMAM)
 
 ### Referencing Intune App libraries
 

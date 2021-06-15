@@ -1,3 +1,4 @@
+items:
 - name: Hotfix documentation
   href: index.yml
 - name: Version 2103
@@ -8,6 +9,8 @@
     href: 2103/9603111.md
   - name: KB 9833643 Console update
     href: 2103/9833643.md
+  - name: KB 10036164 Update rollup for 2103
+    href: 2103/10036164.md
 - name: Version 2010
   items:
   - name: KB 4599442 Summary of changes in 2010

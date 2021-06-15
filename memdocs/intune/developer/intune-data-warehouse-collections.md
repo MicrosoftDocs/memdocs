@@ -1,13 +1,13 @@
 ---
 # required metadata
-title:  Intune Date Warehouse Collections
+title:  Intune Data Warehouse Collections
 titleSuffix: Microsoft Intune 
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 06/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -263,6 +263,8 @@ The **device** entity lists all enrolled devices under management and their corr
 | wiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
 | windowsOsEdition             | Windows Operating System edition.                                                                                                                                                                              |
 
+> [!NOTE]
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
 
 ## deviceTypes
 The **deviceType** entity represents the device type referenced by other data warehouse entities. The device type typically describes either the device model, manufacturer, or a combination of both.
@@ -541,7 +543,6 @@ The **managementAgentType** entity represents the agents used to manage a device
 | 10                    | ConfigurationManagerClientMdm     | The device is managed by   Configuration Manager and MDM.                    |
 | 11                    | ConfigurationManagerCLientMdmEas  | The device is managed by   Configuration Manager, MDM and Exchange Active Sync.               |
 | 16                    | Unknown                           | Unknown   management agent type                                              |
-| 32                    | Jamf                              | The device attributes are fetched   from Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  The device is managed by Google's CloudDPC.                                 |
 
 ## managementStates

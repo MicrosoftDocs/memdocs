@@ -35,7 +35,7 @@ Use the following table to help compare these management technologies:
 | **Linux Server** | Azure management | Azure management | Azure management |  |
 | **Windows 10** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
 | **Windows 7 or 8.1** | Configuration Manager | Configuration Manager | Configuration Manager | Configuration Manager |
-| **Windows Virtual Desktop** | Configuration Manager | Not applicable | Not applicable | Not applicable |
+| **Azure Virtual Desktop** | Configuration Manager | Not applicable | Not applicable | Not applicable |
 
 For more information, see the following articles:
 
@@ -43,7 +43,7 @@ For more information, see the following articles:
 - [What is Windows Admin Center?](/windows-server/manage/windows-admin-center/understand/what-is)
 - [What is Virtual Machine Manager?](/system-center/vmm/overview)
 - [Azure management products](/azure/)
-- [What is Windows Virtual Desktop?](/azure/virtual-desktop/overview)
+- [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview)
 
 For more information on the Configuration Manager and Intune solutions, continue to the next section.
 

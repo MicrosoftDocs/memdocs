@@ -2,7 +2,7 @@
 title: "Console extension registration through community hub"
 description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
-ms.date: "04/29/2021"
+ms.date: "06/07/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -104,7 +104,7 @@ Manifest.xml format:
 		</ViewExtensionDeployment>
         <CabExtensionDeployment>
             <FileList>
-                <File Name="{The name of the cab file to deploy. For example: MyCab.cab}">
+                <File Name="{The name of the cab file to deploy. CabExtensionDeployment is used when your payload cab file contains a cab within it that needs to be deployed.  For example: MyCab.cab}">
                     <Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
                 </File>
             </FileList>

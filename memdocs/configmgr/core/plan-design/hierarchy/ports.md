@@ -197,8 +197,9 @@ Configuration Manager uses these connections to build the CMG channel. For more 
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |HTTPS|--|443|
+|HTTP|--|80|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+The specific port required depends upon the management point configuration.<!--MEMDocs#1658--> For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="bkmk_cmgcp-sup"></a> CMG connection point `-->` Software update point
 

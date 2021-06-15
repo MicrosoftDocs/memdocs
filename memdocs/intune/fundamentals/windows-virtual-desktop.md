@@ -78,10 +78,7 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 
 Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
 
-### Windows 10 Enterprise multi-session
-
-Intune doesn't currently support management of Windows 10 Enterprise multi-session.
-
 ## Next steps
 
-[Learn more about Windows Virtual Desktops](/azure/virtual-desktop/).
+* [Learn more about Windows Virtual Desktops](/azure/virtual-desktop/).
+* [Use Windows Virtual Desktop multi-session with Intune](windows-virtual-desktop-multi-session.md)
