@@ -2,7 +2,7 @@
 title: Prepare to use an availability group
 titleSuffix: Configuration Manager
 description: Plan to use a SQL Server Always On availability group for the Configuration Manager site database.
-ms.date: 10/08/2020
+ms.date: 06/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -214,6 +214,9 @@ Configuration Manager doesn't validate the state of the asynchronous commit repl
 Each replica member must have the following configuration:
 
 - Use the *default instance* or a *named instance*.
+
+  > [!NOTE]
+  > Don't have a file share on the server that's the same name as the SQL Server instance name.<!--9401511-->
 
 - The **Connections in Primary Role** setting is **Allow all connections**.
 
