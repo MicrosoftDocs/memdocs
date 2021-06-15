@@ -59,7 +59,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
-<<<<<<< HEAD
+
 ## Week of June 14, 2021  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -77,10 +77,16 @@ Plan to download and use the updated Microsoft Defender for Endpoint app for Mic
 The standalone tunnel app for iOS remains in preview.  
 
 <!-- ########################## -->
+## Week of June 7, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Android Company Portal app and Intune app now include Portugal Portuguese support<!-- 9707888, 9707936 -->
+The Android Company Portal app and the Android Intune app now support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
+
+<!-- ########################## -->
 ## Week of May 24, 2021 (Service release 2105)
-=======
-## Week of June 14, 2021
->>>>>>> 7450545d459d6884d23defd58676c859c2b6841a
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -93,18 +99,6 @@ We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsof
 - Image updates with security updates for all dependencies.
 
 For sites that are configured to update automatically, the Tunnel Gateway server will automatically update to the new version. For sites that are configured to update manually, you'll need to approve the update.
-
-<!-- ########################## -->
-## Week of June 7, 2021
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
-
-#### Android Company Portal app and Intune app now include Portugal Portuguese support<!-- 9707888, 9707936 -->
-The Android Company Portal app and the Android Intune app now support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
-
-<!-- ########################## -->
-## Week of May 24, 2021 (Service release 2105)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management  
