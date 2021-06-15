@@ -7,7 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
+<<<<<<< HEAD
 ms.date: 06/10/2021
+=======
+ms.date: 06/21/2021
+>>>>>>> 980979ca37282b480bcc17a3d938471ff6788604
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -144,11 +148,11 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Block internet search results from Spotlight**: **Yes** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search connect to the Internet to provide search results.
 
-- **Safari cookies**: Select how cookies are handled on devices. Your options:
-  - Allow
-  - Block all cookies
-  - Allow cookies from visited web sites
-  - Allow cookies from current web site
+- **Safari cookies**: By default, Apple allows all cookies, and blocks cross site tracking. Use this setting to allow users to enable or disable these features. Your options:
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS allows all cookies and blocks cross site tracking, and might allow users to enable and disable these features.
+  - **Allow all cookies, and allow cross site tracking**: Cookies are allowed, and can be disabled by users. By default, cross site tracking is blocked, and can be enabled by users.
+  - **Block all cookies, and block cross site tracking**: Cookies and cross site tracking are both blocked. Users can't enable or disable either setting.
+  - **Allow all cookies, and block cross site tracking**: Cookies are allowed, and can be disabled by users. By default, cross site tracking is blocked, and can't be enabled or disabled by users.
 
 - **Block Safari JavaScript**: **Yes** prevents Java scripts in the browser from running on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Java scripts.
 
