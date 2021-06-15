@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/19/2021
+ms.date: 06/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -128,6 +128,9 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
+
+> [!NOTE]
+> Inactive Intune connectors will still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
 
 ### Configure web proxy settings
 

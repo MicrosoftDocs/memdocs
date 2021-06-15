@@ -84,7 +84,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
      > [!NOTE]
-     > Storage of certifictes provisoned by SCEP:
+     > Storage of certificates provisoned by SCEP:
      > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
      >
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
@@ -96,7 +96,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      Enter text to tell Intune how to automatically create the subject name in the certificate request. Options for the subject name format depend on the Certificate type you select, either **User** or **Device**.
 
      > [!TIP]
-     > If your subject name length exceeds 64 characters, you might need to disable name length enforcement on your internal Certification Authority. For more information, see [*Disable DN Length Enforcement*](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784789(v=ws.10)#disable-dn-length-enforcement)
+     > If your subject name length exceeds 64 characters, you might need to disable name length enforcement on your internal Certification Authority. For more information, see [*Disable DN Length Enforcement*](/previous-versions/windows/it-pro/windows-server-2003/cc784789(v=ws.10)#disable-dn-length-enforcement)
 
      > [!NOTE]
      > There is a [known issue](#avoid-certificate-signing-requests-with-escaped-special-characters) for using SCEP to get certificates when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):

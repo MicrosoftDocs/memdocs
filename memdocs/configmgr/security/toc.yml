@@ -1,3 +1,4 @@
+items:
 - name: Security documentation
   href: index.yml
 - name: Fundamentals
@@ -30,7 +31,7 @@
       href: ../core/plan-design/security/enable-tls-1-2-server.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
     - name: Common issues when enabling TLS 1.2
       href: ../core/plan-design/security/enable-tls-1-2-troubleshoot.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
-- Name: Feature guidance
+- name: Feature guidance
   items:
   - name: App management
     href: ../apps/plan-design/security-and-privacy-for-application-management.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
