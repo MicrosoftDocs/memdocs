@@ -245,10 +245,6 @@ Using the Company Portal, end users will be able to restart an app installation 
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 
-### Android Company Portal app and Intune app adds Portugal Portuguese support<!-- 9707888, 9707936  -->
-
-The Android Company Portal app and the Android Intune app will support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
