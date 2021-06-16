@@ -50,7 +50,7 @@ Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-Select this option if you're deploying to an Android Enterprise dedicated or fully managed device.
+Select this option if you're deploying to an Android Enterprise dedicated, corporate-owned work profile, or fully managed device.
 
 ### Basic
 
