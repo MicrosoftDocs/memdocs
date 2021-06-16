@@ -245,7 +245,7 @@ items:
       href: certificates-trusted-root.md
     - name: Certificate Connector
       items:
-      - name: Connector Connector
+      - name: Certificate Connector
         href: certificate-connector-overview.md
       - name: Connector prerequisites
         href: certificate-connector-prerequisites.md
