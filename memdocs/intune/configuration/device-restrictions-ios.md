@@ -7,15 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-<<<<<<< HEAD
-<<<<<<< HEAD
-ms.date: 06/10/2021
-=======
 ms.date: 06/21/2021
->>>>>>> 980979ca37282b480bcc17a3d938471ff6788604
-=======
-ms.date: 06/21/2021
->>>>>>> 3282a9ee05ff726e5345f829574abfe6fbc78d9c
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
