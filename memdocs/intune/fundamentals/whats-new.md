@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 06/15/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,28 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+<!-- ########################## -->
+
+## Week of June 14, 2021  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Microsoft Defender for Endpoint for Microsoft Tunnel on Android is out of preview<!-- 9370486 -->
+
+The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functionality on Android is now out of preview and [generally available for use](../protect/microsoft-tunnel-overview.md). With this change:
+
+- You no longer need to opt in to use Defender of Endpoint as the tunnel app on Android.
+- The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on August 14, 2021.
+
+Plan to download and use the updated Microsoft Defender for Endpoint app for Microsoft Tunnel app for Android. If you participated in the preview, update your devices with the new version of Defender for Endpoint from the Google Play store. If you are still using the standalone tunnel app, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
+
+The standalone tunnel app for iOS remains in preview.  
+
+### Device management
+### Tenant attach: Offboarding <!-- CMADO7043245 INADO9412904 -->
+
+While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard following a disaster recovery scenario where the on-premises environment was removed. To remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center, select **Tenant administration**, **Connectors and tokens** then **Microsoft Endpoint Configuration Manager**. Choose the name of the site you would like to offboard, then select **Delete**. For more information, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md#bkmk_offboard).
 
 <!-- ########################## -->
 ## Week of June 7, 2021
@@ -70,6 +92,18 @@ The Android Company Portal app and the Android Intune app now support Portuguese
 
 <!-- ########################## -->
 ## Week of May 24, 2021 (Service release 2105)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Microsoft Tunnel Gateway version<!--10145583-->
+
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway. It includes the following changes:
+
+- Minor bug fixes.
+- Image updates with security updates for all dependencies.
+
+For sites that are configured to update automatically, the Tunnel Gateway server will automatically update to the new version. For sites that are configured to update manually, you'll need to approve the update.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management  
@@ -97,7 +131,6 @@ When creating a device restrictions policy for iOS/iPadOS devices, there are new
 - **Block Apple Watch auto unlock**: Set to **Yes** to block users from unlocking their device with Apple Watch.
 - **Allow users to boot devices into recovery mode with unpaired devices**: Set to **Yes** to allow users to boot their device into recovery with an unpaired device.
 - **Block Siri for dictation**: Set to **Yes** to disable connections to Siri servers so that users can't use Siri to dictate text.
-- **Require devices to use Wi-Fi networks set up via configuration profiles**: Set to **Yes** to require devices to only use Wi-Fi networks set up through configuration profiles.
 
 To see these settings, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 

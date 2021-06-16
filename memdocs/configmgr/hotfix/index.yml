@@ -12,7 +12,7 @@ metadata:
   ms.topic: landing-page
   author: bhuney
   ms.author: brianhun
-  ms.date: 05/11/2021
+  ms.date: 06/10/2021
 
 landingContent:
   - title: Configuration Manager 2103
@@ -23,6 +23,8 @@ landingContent:
             url: 2103/9210721.md
           - text: KB 9603111 Early update ring
             url: 2103/9603111.md
+          - text: KB 10036164 Update rollup for 2103
+            url: 2103/10036164.md
   - title: Configuration Manager 2010
     linkLists:
       - linkListType: overview
