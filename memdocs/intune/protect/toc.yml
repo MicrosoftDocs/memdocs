@@ -245,11 +245,11 @@ items:
       href: certificates-trusted-root.md
     - name: Certificate Connector
       items:
-      - name: Certificate Connector overview
+      - name: Connector Connector
         href: certificate-connector-overview.md
-      - name: Certificate prerequisites
+      - name: Connector prerequisites
         href: certificate-connector-prerequisites.md
-      - name: Install the certificate connector
+      - name: Install the connector
         href: certificate-connector-install.md
       href: certificate-connector-overview.md
     - name: SCEP  
