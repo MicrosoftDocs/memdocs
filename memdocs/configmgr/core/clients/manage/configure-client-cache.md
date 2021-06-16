@@ -43,6 +43,9 @@ If you later increase the cache size, the client attempts to download the conten
 
 Cached content isn't automatically deleted and is only removed if new content requires its disk space. It remains in the cache for the configured number of minutes after the client uses that content. If you configure the content with the option to persist content in the client cache, the client doesn't automatically delete it. If the cache space is used by content that was downloaded within the configured number of minutes, and the client must download new content, either increase the cache size or choose the option to delete persisted cache content. For more information, see [About client settings](../deploy/about-client-settings.md#minimum-duration-before-cached-content-can-be-removed-minutes).
 
+> [!IMPORTANT]
+> Don't manually delete files from the client cache folder using Windows Explorer or the command line. This action can cause issues with the Configuration Manager client. The client manages the cache and tracks the content apart from the file system. Always use a supported method to delete files in the cache.<!-- 5788028 -->
+
 For applications only, if the content for a related deployment currently exists in the cache, then the client downloads only new or changed files. Related deployments include those deployments for older revisions of the same deployment type and superseded applications.
 
 ## Configure
@@ -90,6 +93,9 @@ For more information about how to use these command-line properties for CCMSetup
 1. Switch to the **Cache** tab. Set the space and location properties. The default location is `%windir%\ccmcache`.
 
 1. To delete the files in the cache folder, choose **Delete Files**.
+
+    > [!IMPORTANT]
+    > Don't manually delete files from the ccmcache folder using Windows Explorer or the command line. This action can cause issues with the Configuration Manager client. The client manages the cache and tracks the content apart from the file system. Always use a supported method to delete files in the cache. For example, the **Delete Files** option on the control panel.<!-- 5788028 -->
 
 ### Configure client cache size in Client Settings
 
