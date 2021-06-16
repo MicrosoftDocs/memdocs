@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: iOS/iPadOS device settings in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS device settings in Microsoft Intune | Microsoft Docs
 titleSuffix:
 description: Add, configure, or create settings on iOS/iPadOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
 keywords:
@@ -8,10 +8,14 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 <<<<<<< HEAD
+<<<<<<< HEAD
 ms.date: 06/10/2021
 =======
 ms.date: 06/21/2021
 >>>>>>> 980979ca37282b480bcc17a3d938471ff6788604
+=======
+ms.date: 06/21/2021
+>>>>>>> 3282a9ee05ff726e5345f829574abfe6fbc78d9c
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
