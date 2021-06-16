@@ -5,12 +5,23 @@ author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
 ms.date: 06/14/2021
-ms.date: 06/09/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
+We have recently released an updated Company Portal for iOS to the Apple Store that is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
+
+#### What action do I need to take?
+If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices. Otherwise, no action is needed, but if you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app.
+
+#### How does this affect me?
+User impact - Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+ 
+> [!NOTE]
+> If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you may need to manually push an update to the related devices.
 
 ### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
