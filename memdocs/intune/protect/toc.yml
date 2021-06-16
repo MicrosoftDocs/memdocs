@@ -243,12 +243,12 @@ items:
       href: certificates-configure.md
     - name: Trusted certificate profiles
       href: certificates-trusted-root.md
-    - name: Certificate Connector for Microsoft Intune
+    - name: Certificate Connector
       items:
-      - name: Certificate Connector for Microsoft Intune
+      - name: Certificate Connector overview
         href: certificate-connector-overview.md
       - name: Certificate prerequisites
-        href: certificate-connector-prerequisite.md
+        href: certificate-connector-prerequisites.md
       - name: Install the certificate connector
         href: certificate-connector-install.md
       href: certificate-connector-overview.md

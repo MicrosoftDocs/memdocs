@@ -62,7 +62,7 @@ Requirements for PKCS certificate templates:
 
 Requirements for the Windows Server for SCEP:
 
-- Network Device Enrollment Service (NDES) server role must be [installed and configured](<PENDING>) when you use a Microsoft CA. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user).
+- Network Device Enrollment Service (NDES) server role must be [installed and configured](../protect/certificates-scep-configure.md) when you use a Microsoft CA. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user).
 - IIS 7 or higher
 - IIS Management Console
 - The following Windows features must be installed:
@@ -102,7 +102,7 @@ The Certificate Connector requires an account to use as a service account. This 
 
 The connector service account must have the following permissions:
 
-- [**Logon as Service**](https://docs.microsoft.com/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2019)
+- [**Logon as Service**](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2019&preserve-view=true)
 - **Issue and Manage Certificates** permissions on the Certification Authority (required only for revocation scenarios).
 - **Read** and **Enroll** permissions on any certificate template that you’ll use to issue certificates.
 - Permissions to the **Key Storage Provider** (KSP) that’s used by PFX Import. See [Import PFX Certificates to Intune](../protect/certificates-imported-pfx-configure.md#import-pfx-certificates).
