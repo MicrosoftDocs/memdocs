@@ -251,7 +251,6 @@ items:
         href: certificate-connector-prerequisites.md
       - name: Install the connector
         href: certificate-connector-install.md
-      href: certificate-connector-overview.md
     - name: SCEP  
       items:
       - name: SCEP infrastructure

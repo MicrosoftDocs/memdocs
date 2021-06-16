@@ -86,13 +86,13 @@ The Certificate Connector for Microsoft Intune supports:
 
 
 
-## Connector architecture
+## Architecture
 
-***Pending details***
+***Pending***
 
 
 
-## Connector lifecycle
+## Lifecycle
 
 Periodically, updates  to the certificate connector are released. Announcements for new connector releases appear in the [What’s New](../fundamentals/whats-new.md) article for Intune and in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section near the end of this article.
 
