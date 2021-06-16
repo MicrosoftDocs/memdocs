@@ -243,8 +243,15 @@ items:
       href: certificates-configure.md
     - name: Trusted certificate profiles
       href: certificates-trusted-root.md
-    - name: Certificate connectors
-      href: certificate-connectors.md
+    - name: Certificate Connector for Microsoft Intune
+      items:
+      - name: Certificate Connector for Microsoft Intune
+        href: certificate-connector-overview.md
+      - name: Certificate prerequisites
+        href: certificate-connector-prerequisite.md
+      - name: Install the certificate connector
+        href: certificate-connector-install.md
+      href: certificate-connector-overview.md
     - name: SCEP  
       items:
       - name: SCEP infrastructure
@@ -253,7 +260,7 @@ items:
       - name: SCEP certificate profiles
         href: certificates-profile-scep.md
       - name: Use third-party certificate authority with SCEP
-        href: certificate-authority-add-scep-overview.md        
+        href: certificate-authority-add-scep-overview.md
     - name: PKCS
       items:
       - name: PKCS
@@ -384,6 +391,8 @@ items:
     items:
     - name: Software update errors
       href: software-update-agent-error-codes.md
+  - name: Deprecated certificate connectors
+    href: certificate-connectors.md 
 - name: Scenario implementation guides 
   items:
   - name: Protect Exchange Online
