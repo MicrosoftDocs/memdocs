@@ -134,7 +134,7 @@ If you set this option to **No**, or any of the previous requirements aren't met
 
 <!--4737447-->
 
-By default, this setting is disabled. Even if you enable user policies, the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Windows Virtual Desktop](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+By default, this setting is disabled. Even if you enable user policies, the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Azure Virtual Desktop](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
 The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 

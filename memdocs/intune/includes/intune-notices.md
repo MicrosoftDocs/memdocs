@@ -23,7 +23,17 @@ User impact - Most users have app updates set to automatic, so they receive the 
 > [!NOTE]
 > If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you may need to manually push an update to the related devices.
 
+### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
+Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, after August 14, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
+
+#### How this change will affect your organization
+
+If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before August 14 2021 to ensure users can still access the Tunnel Gateway configuration.
+
+#### What you need to do to prepare
+
+For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
 ### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 
 We’ve released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices. 
