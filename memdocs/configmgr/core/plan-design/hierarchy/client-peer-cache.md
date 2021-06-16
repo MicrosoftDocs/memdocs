@@ -177,7 +177,7 @@ To see them handling the download of content in parts, examine the **ContentTran
 <!--510645-->
 Peer cache relies on the Configuration Manager client cache to share content. Consider the following points for managing the client cache in your environment:  
 
-- The Configuration Manager client cache isn't like the content library on a distribution point. While you manage the content that you distribute to a distribution point, the Configuration Manager client automatically manages the content in its cache. There are settings and methods to help control what content is in the cache of a peer cache source. For more information, see [Configure the client cache for Configuration Manager clients](../../clients/manage/manage-clients.md#BKMK_ClientCache).  
+- The Configuration Manager client cache isn't like the content library on a distribution point. While you manage the content that you distribute to a distribution point, the Configuration Manager client automatically manages the content in its cache. There are settings and methods to help control what content is in the cache of a peer cache source. For more information, see [Configure the client cache](../../clients/manage/configure-client-cache.md).
 
 - Normal cache size and maintenance applies to peer cache sources. For more information, see [Configure client cache size](../../clients/deploy/about-client-settings.md#configure-client-cache-size). Consider the size of larger content such as OS upgrade packages or Windows 10 express update files. Compare your need for this content against the available disk space on peer cache sources.  
 
