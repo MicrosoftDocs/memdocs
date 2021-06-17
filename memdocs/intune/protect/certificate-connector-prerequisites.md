@@ -48,7 +48,7 @@ Requirements for the computer where you install the connector software:
 Requirements for PKCS certificate templates:
 
 - Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to auto enroll the certificate.
-- The certificate templates must be added to the CA.
+- The certificate templates must be added to the Certification Authroity (CA).
 
 > [!NOTE]
 > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue. It's not possible to define which connector handles each request. </br></br>
@@ -60,28 +60,34 @@ Requirements for PKCS certificate templates:
 
 ## SCEP
 
-Requirements for the Windows Server for SCEP:
+The connector requires the following:
 
-- Network Device Enrollment Service (NDES) server role must be [installed and configured](../protect/certificates-scep-configure.md) when you use a Microsoft CA. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user).
 - IIS 7 or higher
-- IIS Management Console
-- The following Windows features must be installed:
+- .NET Framework 4.7
+
+On the Windows Server, configure the following Server Roles and Features:
+
+- **Server Roles**:
   - Active Directory Certificate Services
-  - Network Device Enrollment Service
+    - Network Device Enrollment Service - For the connector SCEP when you use a Microsoft CA, [install and configure](../protect/certificates-scep-configure.md#set-up-ndes) the **Network Device Enrollment Service** (NDES) server role. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user). NDES also has it's own requirements.
   - Web Server (IIS)
-  - Web Server
-  - Security
-  - Request Filtering
-  - Application Development
-  - .NET Extensibility 4.7
-  - ASP.NET 4.7
+    - Security
+      - Request Filtering
+    - Application Development
+      - .NET Extensibility 4.7
+      - ASP.NET 4.7
   - Management Tools
-  - IIS 6 Management Compatibility
-  - IIS 6 Metabase Compatibility
-  - IIS 6 WMI Compatibility
+    - IIS Management Console
+    - IIS 6 Management Compatibility
+      - IIS 6 Metabase Compatibility
+      - IIS 6 WMI Compatibility
+
+- **Features**:
   - .NET Framework 4.7 Features
-  - .NET Framework 4.7
-  - HTTP Activation
+    - .NET Framework 4.7
+    - ASP.NET 4.7
+    - WCF Services
+      - HTTP Activation
 
 Requirements for SCEP certificate templates:
 
@@ -122,7 +128,7 @@ To use SCEP with a Microsoft CA, you’ll need to add NDES to the server that ho
 - **Read** and **Enroll** permissions on each SCEP certificate template you’ll use to issue certificates.
 - Member of the **IIS_IUSRS** group.
 
-For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../protect/certificates-scep-configure #set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
+For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../protect/certificates-scep-configure#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
 
 ## Next steps
 
