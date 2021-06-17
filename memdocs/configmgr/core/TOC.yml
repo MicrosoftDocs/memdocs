@@ -745,6 +745,8 @@ items:
       href: clients/manage/monitor-clients.md
     - name: How to manage clients
       href: clients/manage/manage-clients.md
+    - name: Configure the client cache
+      href: clients/manage/configure-client-cache.md
     - name: Client notification
       href: clients/manage/client-notification.md
     - name: Sync data to Azure Monitor
