@@ -136,7 +136,7 @@ To use SCEP with a Microsoft CA, you’ll need to add NDES to the server that ho
 - **Read** and **Enroll** permissions on each SCEP certificate template you’ll use to issue certificates.
 - Member of the **IIS_IUSRS** group.
 
-For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../protect/certificates-scep-configure#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
+For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../protect/certificates-scep-configure.md#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
 
 ## Next steps
 
