@@ -63,7 +63,7 @@ Requirements for PKCS certificate templates:
 The connector requires the following:
 
 - IIS 7 or higher
-- .NET Framework 4.7
+- .NET Framework 4.7.2
 
 On the Windows Server, configure select the following Server Roles and Features:
 
