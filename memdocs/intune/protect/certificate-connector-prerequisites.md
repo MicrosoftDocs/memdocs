@@ -65,22 +65,11 @@ The connector requires the following:
 - IIS 7 or higher
 - .NET Framework 4.7
 
-On the Windows Server, configure the following Server Roles and Features:
+On the Windows Server, configure select the following Server Roles and Features:
 
 - **Server Roles**:
   - Active Directory Certificate Services
-    - Network Device Enrollment Service - For the connector SCEP when you use a Microsoft CA, [install and configure](../protect/certificates-scep-configure.md#set-up-ndes) the **Network Device Enrollment Service** (NDES) server role. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user). NDES also has it's own requirements.
   - Web Server (IIS)
-    - Security
-      - Request Filtering
-    - Application Development
-      - .NET Extensibility 4.7
-      - ASP.NET 4.7
-  - Management Tools
-    - IIS Management Console
-    - IIS 6 Management Compatibility
-      - IIS 6 Metabase Compatibility
-      - IIS 6 WMI Compatibility
 
 - **Features**:
   - .NET Framework 4.7 Features
@@ -88,6 +77,24 @@ On the Windows Server, configure the following Server Roles and Features:
     - ASP.NET 4.7
     - WCF Services
       - HTTP Activation
+
+- **AD CS > Role Services**:
+  - Network Device Enrollment Service - For the connector SCEP when you use a Microsoft CA, [install and configure](../protect/certificates-scep-configure.md#set-up-ndes) the **Network Device Enrollment Service** (NDES) server role. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user). NDES also has it's own requirements.
+
+- **Web Server Role (IIS) > Role Services**:
+  - Security
+    - Request Filtering
+  - Application Development
+    - .NET Extensibility 4.7
+    - ASP.NET 4.7
+  - Management Tools
+    - IIS Management Console
+    - IIS 6 Management Compatibility
+      - IIS 6 Metabase Compatibility
+      - IIS 6 WMI Compatibility
+
+  To support NDES for SCEP, you'll also need to add:
+  - ASP.NET 3.5
 
 Requirements for SCEP certificate templates:
 
