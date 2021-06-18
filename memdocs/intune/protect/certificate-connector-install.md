@@ -41,7 +41,7 @@ ms.collection: M365-identity-device-management
 
    :::image type="content" source="./media/certificate-connector-install/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
 
-4. Sign in to the Windows Server that will host the certificate connector and confirm that the [prerequisites for the certificate connector](../protect/certificate-connector-prereqisites.md) are installed.
+4. Sign in to the Windows Server that will host the certificate connector and confirm that the [prerequisites for the certificate connector](../protect/certificate-connector-prerequisites.md) are installed.
 
    If you’ll use SCEP with a Microsoft Certification Authority (CA), confirm that the Network Device Enrollment Service (NDES) role is installed.
 
@@ -85,7 +85,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
    - **Certificate revocation**: Select this option to enable automatic certificate revocation for certificates issued from a Microsoft Active Directory Certification Authority.
 
-3. On *Service Account*, select the type of account to use for the service account of this connector. The account you select must have the permissions described in prerequisites for the [certificate connector service account](../preotect/certificate-connector-prereqisites.md#certificate-connector-service-account).
+3. On *Service Account*, select the type of account to use for the service account of this connector. The account you select must have the permissions described in prerequisites for the [certificate connector service account](../protect/certificate-connector-prerequisites.md#certificate-connector-service-account).
 
    Options include:
 
