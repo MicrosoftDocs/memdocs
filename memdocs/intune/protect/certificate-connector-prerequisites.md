@@ -93,8 +93,9 @@ On the Windows Server, configure select the following Server Roles and Features:
       - IIS 6 Metabase Compatibility
       - IIS 6 WMI Compatibility
 
-  To support NDES for SCEP, you'll also need to add:
-  - ASP.NET 3.5
+  To support NDES for SCEP, you'll also need to add the following.NET Framework 3.5 Features:
+  - .NET Framework 3.5
+  - HTTP Activation
 
 Requirements for SCEP certificate templates:
 
