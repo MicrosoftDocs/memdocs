@@ -36,7 +36,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [10073070](includes/2106/10073070.md)]
 [!INCLUDE [10092858](includes/2106/10092858.md)]
 [!INCLUDE [9997352](includes/2106/9997352.md)]
-
+[!INCLUDE [9575773](includes/2106/9575773.md)]
 <!-- ## General known issues
 
 [!INCLUDE [Console settings not saved](includes/2106/known-issue-5452256.md)]
