@@ -1,11 +1,11 @@
 ---
 title: Use private and public key certificates in Microsoft Intune - Azure | Microsoft Docs
-description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, install of the Microsoft Intune Connector (NDES), and use device configuration profiles for a PKCS Certificate.
+description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 06/21/2021
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 ---
 # Configure and use PKCS certificates with Intune
 
-Intune supports the use of private and public key pair (PKCS) certificates. This article can help you configure the required infrastructure like on-premises certificate connectors, export a PKCS certificate, and then add the certificate to an Intune device configuration profile.
+Microsoft Intune supports the use of private and public key pair (PKCS) certificates. To help you use PKCS certificates, this article reviews what's required, and can help you export of a PKCS certificate, and then add the certificate to an Intune device configuration profile.
 
 Microsoft Intune includes built-in settings to use PKCS certificates for access and authentication to your organizations resources. Certificates authenticate and secure access to your corporate resources like a VPN or a WiFi network. You deploy these settings to devices using device configuration profiles in Intune.
 
@@ -60,17 +60,17 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 - **Root certificate**:  
   An exported copy of your root certificate from your Enterprise CA.
 
-- **PFX Certificate Connector for Microsoft Intune**:
+- **Certificate Connector for Microsoft Intune**:
 
-  For information about the PFX Certificate connector, including prerequisites and release versions, see [Certificate connectors](certificate-connectors.md).
+  For information about the certificate connector, see:
 
-  > [!IMPORTANT]
-  > Beginning with the release of the PFX Certificate Connector, version 6.2008.60.607, the *Microsoft Intune Connector* is no longer required for PKCS certificate profiles. The *PFX Certificate Connector* supports issuing PKCS certificates to all device platforms. This includes the following platforms which aren’t supported by the Microsoft Intune Connector:
-  >
-  > - Android Enterprise – Fully Managed
-  > - Android Enterprise – Dedicated
-  > - Android Enterprise – Corporate Owned Work Profile
+  - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md).
+  - [Prerequisites](certificate-connector-prerequisites.md).
+  - [Installation and configuration](certificate-connector-install.md).
 
+  > [!TIP]
+  > Beginning on June 21, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the [previous connectors remain in support](../protect/certificate-connectors.md), they are no longer available for download.  If you need to install a new connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune.
+  
 ## Export the root certificate from the Enterprise CA
 
 To authenticate a device with VPN, WiFi, or other resources, a device needs a root or intermediate CA certificate. The following steps explain how to get the required certificate from your Enterprise CA.
@@ -105,10 +105,9 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 6. In **Request Handling**, select **Allow private key to be exported**.
 
     > [!NOTE]
-    > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device.
-    > It is required that the certificate template allows the private key to be exported, so that the certificate connector is able to export the PFX certificate and send it to the device.
+    > Unlike SCEP, with PKCS the certificate private key is generated on the server where the certificate connector is installed and not on the device. The certificate template must allow the private key to be exported so that the connector can export the PFX certificate and send it to the device.
     >
-    > However, please note that the certificates are installed on the device itself with the private key marked as not exportable.
+    > When the certificates install on the device itself, the private key is marked as not exportable.
 
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 8. In **Subject Name**, choose **Supply in the request**.
@@ -117,18 +116,22 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > [!IMPORTANT]
     > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
-10. In **Security**, add the Computer Account for the server where you install the Microsoft Intune Connector. Allow this account **Read** and **Enroll** permissions.
+10. In **Security**, add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
 11. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
 12. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
 13. For the server to manage certificates for enrolled devices and users, use the following steps:
 
     1. Right-click the Certification Authority, choose **Properties**.
-    2. On the security tab, add the Computer account of the server where you run the connectors (**Microsoft Intune Connector** or **PFX Certificate Connector for Microsoft Intune**).
+    2. On the security tab, add the Computer account of the server where you run the connector.
     3. Grant **Issue and Manage Certificates** and **Request Certificates** Allow permissions to the computer account.
 
 14. Sign out of the Enterprise CA.
 
 ## Download, install, and configure the PFX Certificate Connector
+
+For guidance, see [Install and configure the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
+
+<!-- Remainder is deprecated content, now covered by the install of the new certificate connector>
 
 Before you begin, [review requirements for the connector](certificate-connectors.md) and ensure your environment and your Windows server is ready to support the connector.
 
@@ -156,6 +159,8 @@ Before you begin, [review requirements for the connector](certificate-connectors
 7. Close the window.
 
 8. In the Microsoft Endpoint Manager admin center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
+
+-->
 
 ## Create a trusted certificate profile
 
@@ -290,7 +295,7 @@ Platforms:
 
   **Common Name (CN)** can be set to any of the following variables:
 
-  - **CN={{UserName}}**: The user name of the user, such as janedoe.
+  - **CN={{UserName}}**: The user name of the user, such as *Jane Doe*.
   - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
   - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
   - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
@@ -335,6 +340,6 @@ Platforms:
 
 ## Next steps
 
-[Use SCEP for certificates](certificates-scep-configure.md), or [issue PKCS certificates from a Symantec PKI manager web service](certificates-digicert-configure.md).
-
-[Troubleshoot PKCS certificate profiles](/troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles)
+- [Use SCEP for certificates](certificates-scep-configure.md)
+- [Issue PKCS certificates from a Symantec PKI manager web service](certificates-digicert-configure.md).
+- [Troubleshoot PKCS certificate profiles](/troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles)

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -98,13 +98,13 @@ When you use a Microsoft Certification Authority (CA):
 
 - To use SCEP certificate profiles:
   - [setup a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
+  - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
 
 - To use PKCS certificate profiles:
-  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-pfx-configure.md).
+  - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
   
 - To use PKCS imported certificates:
-  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
+  - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
   - Export certificates from the certification authority and then import them to Microsoft Intune. See [the PFXImport PowerShell project](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 - Deploy certificates by using the following mechanisms:
@@ -121,7 +121,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
   - Configure integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Setup includes following the instructions from the third-party CA to complete integration of their CA with Intune.
   - [Create an application in Azure AD](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
 
-- PKCS imported certificates require you to [install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
+- PKCS imported certificates require you to [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
 
 - Deploy certificates by using the following mechanisms:
   - [Trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
@@ -159,4 +159,4 @@ Create certificate profiles:
 - [Configure and manage PKCS certificates with Intune](certificates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
 
-Learn about [Certificate connectors](certificate-connectors.md)
+Learn about the [Certificate Connector for Microsoft Intune](certificate-connector-install.md)
