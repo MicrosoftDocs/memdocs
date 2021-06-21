@@ -48,7 +48,7 @@ Requirements for the computer where you install the connector software:
 Requirements for PKCS certificate templates:
 
 - Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to auto enroll the certificate.
-- The certificate templates must be added to the Certification Authroity (CA).
+- The certificate templates must be added to the Certification Authority (CA).
 
 > [!NOTE]
 > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue. It's not possible to define which connector handles each request. </br></br>
@@ -79,7 +79,7 @@ On the Windows Server, configure select the following Server Roles and Features:
       - HTTP Activation
 
 - **AD CS > Role Services**:
-  - Network Device Enrollment Service - For the connector SCEP when you use a Microsoft CA, [install and configure](../protect/certificates-scep-configure.md#set-up-ndes) the **Network Device Enrollment Service** (NDES) server role. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user). NDES also has it's own requirements.
+  - Network Device Enrollment Service - For the connector SCEP when you use a Microsoft CA, [install and configure](../protect/certificates-scep-configure.md#set-up-ndes) the **Network Device Enrollment Service** (NDES) server role. When you configure NDES, you’ll need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user). NDES also has its own requirements.
 
 - **Web Server Role (IIS) > Role Services**:
   - Security
@@ -108,11 +108,11 @@ Prepare the following accounts before you install the certificate connector soft
 
 ### Installation account
 
-You can use any user account that has local administrative permissions on the Windows Server to install the connector software. You can use this same account to configure the Windows Server with the NDES Windows server role should your use of the connector require it.
+You can use any user account that has local administrative permissions on the Windows Server to install the connector software. You can use this same account to configure the Windows Server with the NDES Windows server role should you use SCEP and a Microsoft CA.
 
 ### Certificate connector service account
 
-The Certificate Connector requires an account to use as a service account. This account is used by the connector to access the Windows Server, communicate with Intune, and access the Certification Authority to service PKI requests.
+The certificate connector requires an account to use as a service account. This account is used by the connector to access the Windows Server, communicate with Intune, and access the Certification Authority to service PKI requests.
 
 The connector service account must have the following permissions:
 

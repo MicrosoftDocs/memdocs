@@ -82,7 +82,7 @@ The Certificate Connector for Microsoft Intune supports:
 
 - Installation of multiple instances of the connector in a single Intune tenant. You can configure a proxy to allow the connector to communicate with Intune.
 
-- The same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices). For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+- The same network requirements as managed devices. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
 
 
 
@@ -94,7 +94,7 @@ The Certificate Connector for Microsoft Intune supports:
 
 ## Lifecycle
 
-Periodically, updates  to the certificate connector are released. Announcements for new connector releases appear in the [What’s New](../fundamentals/whats-new.md) article for Intune and in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section near the end of this article.
+Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What’s New](../fundamentals/whats-new.md) article for Intune, and in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
 When a new version releases, support for the previous version is deprecated with a limited grace period for its continued use. After the grace period expires, support for that deprecated version ends, and it can stop functioning at any time. The grace period is six months.
 

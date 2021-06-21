@@ -50,7 +50,8 @@ To support your use of certificates with Intune, you can install the Certificate
 
    When you install NDES for standalone Intune, the CRP service automatically installs with the Certificate Connector.
 
-6. Review and agree to the license terms and conditions, and then select **Install** to continue. Select**Options** to choose a different installation folder.
+6. Review and agree to the license terms and conditions, and then select **Install** to continue. Select **Options** to choose a different installation folder.
+
 7. The connector installation takes only a moment. After installation, the setup presents two options:
 
    - **Configure Now** – Select this option to close the connector installation and open the *Certificate Connector for Microsoft Intune* wizard, which you use to [configure the certificate connector](#configure-the-certificate-connector) on the local server.
@@ -96,11 +97,11 @@ Use the following procedure to both configure a new connector and modify a previ
 
 4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access.
 
-5. On the *Prerequisites* page, Microsoft Intune Certificate Connector runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
+5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
 6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access.
 
-   Unless you use a government cloud, use the Environment default of **Public Commercial Cloud**.
+   Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
    :::image type="content" source="./media/certificate-connector-install/authenticate-to-azure-ad.png" alt-text="Authenticate to your Azure Active Directory.":::
 
