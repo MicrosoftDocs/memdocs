@@ -193,4 +193,4 @@ The profile is created, but might not be doing anything. Be sure to [assign this
 
 You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.
 
-[Troubleshoot Wi-Fi device configuration profiles in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
+[Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
