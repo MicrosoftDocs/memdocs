@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/12/2021
+ms.date: 06/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -65,6 +65,8 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 
 > [!NOTE]  
 > Company Portal does not show device-licensed apps on User Enrollment devices because only user-licensed apps can be installed on User Enrollment devices.
+>
+> When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is now "device". Existing assignments remain unchanged. 
 
 ## What app types are supported?
 You can purchase and distribute public as well as private apps using Apple Business Manager.
@@ -133,12 +135,13 @@ You can synchronize the app names, metadata and license information for your pur
 ## Assign a volume-purchased app
 
 1. Select **Apps** > **All apps**.
-2. On the list of apps pane, choose the app you want to assign, and then choose **Assignments**.
-3. On the **App name** - **Assignments** pane, choose **Add group** then, on the **Add group** pane, choose an **Assignment type** and choose the Azure AD user or device groups to which you want to assign the app.
-5. For each group you selected, choose the following settings:
-    - **Type** - Choose whether the app will be **Available** (end users can install the app from the Company Portal), or **Required** (end user devices will automatically get the app installed).
-    - **License type** - Choose from **User licensing**, or **Device licensing**.
-6. Once you are done, choose **Save**.
+2. On the list of apps pane, choose the app you want to assign, and then choose **Properties**. Select **Edit** next to **Assignments**.
+3. On the **Assignments** tab, choose whether the app will be **Required**, **Available for enrolled devices**, or **Available with or without enrollment**. 
+4. Choose **Add group** under the assignment type you've selected, then on the **Select groups** pane choose the Azure AD user or device groups to which you want to assign the app.
+
+    > [!NOTE]
+    > When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is "device". Existing assignments remain unchanged.
+5. Once you are done, choose **Save**.
 
 
 >[!NOTE]
