@@ -86,6 +86,9 @@ This feature applies to:
 > Only add an app once to the dock, page, folder on a page, or folder in the dock. Adding the same app in any two places prevents the app from showing on devices, and may show reporting errors.
 >
 > For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
+>
+> Applying a Home screen layout to a device will overwrite any user-defined layout. For this reason, Home screen layouts are typically used with userless device scenarios.
+>
 
 ### Home screen
 
