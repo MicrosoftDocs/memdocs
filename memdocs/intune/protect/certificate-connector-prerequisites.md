@@ -37,8 +37,13 @@ Before you install and configure the Certificate Connector for Microsoft Intune,
 Requirements for the computer where you install the connector software:
 
 - Windows Server 2012 R2 or later
+
 - .NET 4.7.2
+
 - The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md)
+
+- The same network requirements as the devices you manage with Intune. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+
 - To support automatic updates of the connector software, the server must have access to the **Azure update service**:
   - Port: **443**
   - Endpoint: **autoupdate.msappproxy.net**
@@ -60,7 +65,7 @@ Requirements for PKCS certificate templates:
 
 ## SCEP
 
-The connector must install on a Windows Server that includes the following options:
+The Windows Server that hosts the connector must meet the following prerequisites that are in addition to the general prerequisites:
 
 - IIS 7 or higher
 - .NET Framework 4.7.2
@@ -94,7 +99,7 @@ On the Windows Server, configure select the following Server Roles and Features:
       - IIS 6 Metabase Compatibility
       - IIS 6 WMI Compatibility
 
-  To support NDES for SCEP, you'll also need to add the following.NET Framework 3.5 Features:
+  In addition, NDES requires the following.NET Framework 3.5 Features:
   - .NET Framework 3.5
   - HTTP Activation
 
@@ -132,7 +137,7 @@ For more information, see [Install the Certificate Connector for Microsoft Intun
 
 ### NDES application pool user
 
-To use SCEP with a Microsoft CA, you’ll need to add NDES to the server that hosts the connector before installing the connector. When you configure NDES, you’ll need to specify an account for use as the application pool user. This account can be a local or domain user account and must have the following permissions:
+To use SCEP with a Microsoft CA, you’ll need to add NDES to the server that hosts the connector before installing the connector. When you configure NDES, you’ll need to specify an account for use as the application pool user, which can also be referred to as the NDES service account. This account can be a local or domain user account and must have the following permissions:
 
 - **Read** and **Enroll** permissions on each SCEP certificate template you’ll use to issue certificates.
 - Member of the **IIS_IUSRS** group.

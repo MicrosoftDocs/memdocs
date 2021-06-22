@@ -53,6 +53,10 @@ You'll also assign a service account to run the connector. This account is used 
 
 After the connector installs, you can run configuration of the connector again at any time to update it or change the features you’ve installed. After it's installed and configured, the connector can automatically install future updates to keep your connectors current to the most recent release.
 
+Intune supports installing of multiple instances of the connector in a tenant, and each instance can support different features. If you use multiple connectors that support different features, certificate requests are always routed to a relevant connector. For example, if you install two connectors that support PKCS, and install two more that support both PKCS and SCEP, certificate tasks for PKCS can be managed by any of the four connectors, but tasks for SCEP are only directed to the two connectors that support SCEP.
+  
+Each instance of the certificate connector has the same network requirements as devices that are managed by Intune. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+
 > [!NOTE]
 > The Certificate Connector for Microsoft Intune supports TLS 1.2. If the server that hosts the connector supports TLS 1.2, then TLS 1.2 is used. If the server doesn't support TLS 1.2, then TLS 1.1 is used.
 
@@ -60,7 +64,7 @@ After the connector installs, you can run configuration of the connector again a
 
 The Certificate Connector for Microsoft Intune supports:
 
-- PCKS #12 certificate requests.
+- PKCS #12 certificate requests.
 
 - PKCS imported certificates (PFX file) for S/MIME email encryption for a specific user.
 
@@ -70,24 +74,19 @@ The Certificate Connector for Microsoft Intune supports:
 
 - Certificate revocation.
 
-- Automatic updates](#automatic-update) to new versions. When servers that host the certificate connector can access the internet, they automatically install new updates to stay current. When a connector fails to automatically update, you can manually update the connector.
+- [Automatic updates](#automatic-update) to new versions. When servers that host the certificate connector can access the internet, they automatically install new updates to stay current. When a connector fails to automatically update, you can manually update the connector.
 
 - Installation of up to 100 instances of the connector per Intune tenant, with each instance on a separate Windows Server. When you use multiple connectors:
   - Each instance of the connector must have access to the private key used to encrypt the passwords of each uploaded PFX file.
   - Each instance of the connector should be at the same version. Because the connector supports automatic updates to the newest version, updates can be managed for you by Intune.  
   - Your infrastructure supports redundancy and load balancing, as any available connector instance that supports the same connector features can process your certificate requests.
+  - You can configure a proxy to allow the connector to communicate with Intune.
 
     >[!NOTE]
     > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue. It's not possible to define which connector handles each request. </br></br>
     > Therefore, each connector that supports PKCS must have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
 
 - *Federal Information Processing Standard* (FIPS) mode. FIPS isn't required. When FIPS is enabled, you can issue and revoke certificates.
-
-- Installation of multiple instances of the connector in a single Intune tenant. You can configure a proxy to allow the connector to communicate with Intune.
-
-- The same network requirements as managed devices. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
-
-
 
 ## Architecture
 

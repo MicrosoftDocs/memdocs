@@ -45,7 +45,7 @@ There are two certificate connectors for Intune. Each has its own uses and requi
 
 ### PFX Certificate Connector for Microsoft Intune
 
-The **PFX Certificate Connector** supports certificate deployment for PCKS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
+The **PFX Certificate Connector** supports certificate deployment for PKCS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
 
 > [!TIP]
 > Prior to the August update for this connector (version 6.2008.60.607), PKCS #12 certificate requests were handled by the *Intune Certificate Connector*. With the August update, the functionality for all PKCS certificate requests was consolidated in the *PFX Certificate Connector*, which supports auto-update of the connector to new versions, and requires use of .NET Framework version 4.7.2.
@@ -310,7 +310,7 @@ Version **6.2101.13.0**. This new connector version adds [improvements for loggi
 **Version 6.2008.60.607** - Changes in this release:
 
 - Requires .NET Framework version 4.7.2
-- Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PCKS #12 or Imported PFX certificates.
+- Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PKCS #12 or Imported PFX certificates.
 - Adds support for using PKCS certificate profiles with all supported platforms except Windows 8.1.
 - Adds support for certificate revocation for Outlook S/MIME.
 
