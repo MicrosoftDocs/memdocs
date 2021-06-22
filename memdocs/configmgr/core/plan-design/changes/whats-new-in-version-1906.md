@@ -39,7 +39,7 @@ Because of weaknesses in the SHA-1 algorithm and to align to industry standards,
 - Windows Server 2008 R2 SP1
 - Windows Server 2008 SP2
 
-For more information, see [Prerequisites for Windows clients](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_sha2).
+For more information, see [Prerequisites for Windows clients](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#sha-2-code-signing-support).
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure

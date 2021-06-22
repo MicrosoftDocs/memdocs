@@ -677,8 +677,10 @@ items:
       href: clients/deploy/plan/client-installation-methods.md
     - name: Prerequisites for deploying clients to Windows computers
       items:
-      - name: Prerequisites for deploying clients
+      - name: Windows client prerequisites
         href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
+      - name: Mobile device client prerequisites
+        href: clients/deploy/prerequisites-for-deploying-clients-to-mobile-devices.md
       - name: Windows Firewall and port settings for clients
         href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
     - name: Determine the site system roles for clients

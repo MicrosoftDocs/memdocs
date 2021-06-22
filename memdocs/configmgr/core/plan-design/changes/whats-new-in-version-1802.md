@@ -147,7 +147,7 @@ For details, see the [Surface dashboard](../../clients/manage/surface-device-das
 
 ### Change in the Configuration Manager client install
 <!--1356195-->
-Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_ExternalDependencies)
+Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 
 ## Co-management
 

@@ -104,7 +104,7 @@ Starting in this release, you can use the [administration service](../../../deve
 
 The Configuration Manager client requires the Microsoft Visual C++ Redistributable component (`vcredist_x*.exe`). When you install the client, it automatically installs this component if it doesn't already exist. Starting in this release, it now uses the Microsoft Visual C++ 2015-2019 Redistributable version 14.28.29914.0. This version improves stability in Configuration Manager client operations.
 
-<!-- For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_ExternalDependencies). -->
+For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#components-automatically-downloaded-during-installation).
 
 ### Hardware inventory for client log settings
 
