@@ -2,7 +2,7 @@
 title: Available third-party software update catalogs
 titleSuffix: Configuration Manager
 description: List of third-party update catalogs available for import into Configuration Manager
-ms.date: 06/14/2021
+ms.date: 06/18/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: reference
@@ -26,7 +26,7 @@ To make it easier to find custom catalogs, we're providing a list of links as a 
 |--|--|
 |Adobe | Multiple catalogs are available from Adobe. </br>  https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/sccm.html |
 |Centero Software Manager| https://software-manager.com/csm-for-sccm-patch-management-solution |
-|Dell| *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://downloads.dell.com/Catalog/DellSDPCatalogPC.com </br></br> Server catalog </br> ftp://ftp.dell.com/catalog/DellSDPCatalog.cab |
+|Dell| *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://www.dell.com/support/article/sln311138/ </br></br> https://downloads.dell.com/Catalog/DellSDPCatalogPC.cab </br></br>ftp://ftp.dell.com/catalog/DellSDPCatalog.cab |
 |Fujitsu| https://support.ts.fujitsu.com/GFSMS/globalflash/FJSVUMCatalogForSCCM.cab |
 |HP| *Partner catalog* available in the **Third-Party Software Update Catalogs** node <br> https://hpia.hpcloud.hp.com/downloads/sccmcatalog/HpCatalogForSms.latest.cab</br></br> http://ftp.hp.com/pub/softlib/software/sms_catalog/HpCatalogForSms.latest.cab |
 |Ivanti Patch for MEM | https://www.ivanti.com.au/products/patch-management-for-mem |
