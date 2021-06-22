@@ -501,4 +501,4 @@ To validate that the service is running, open a browser, and enter the following
 ## Next steps
 
 [Create a SCEP certificate profile](certificates-profile-scep.md)  
-[Troubleshoot issues for the Microsoft Intune Connector ](/troubleshoot/mem/intune/troubleshoot-certificate-connector-events)
+
