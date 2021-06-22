@@ -38,7 +38,7 @@ Requirements for the computer where you install the connector software:
 
 - Windows Server 2012 R2 or later
 - .NET 4.7.2
-- The server must meet the same network requirements as managed devices.
+- The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md)
 - To support automatic updates of the connector software, the server must have access to the **Azure update service**:
   - Port: **443**
   - Endpoint: **autoupdate.msappproxy.net**
@@ -60,10 +60,11 @@ Requirements for PKCS certificate templates:
 
 ## SCEP
 
-The connector requires the following:
+The connector must install on a Windows Server that includes the following options:
 
 - IIS 7 or higher
 - .NET Framework 4.7.2
+- Network Device Enrollment Service (NDES) service, which is part of the Active Directory Certification Services role. The connector isn't supported on the same server as your issuing Certification Authority (CA).
 
 On the Windows Server, configure select the following Server Roles and Features:
 

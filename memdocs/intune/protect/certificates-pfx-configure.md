@@ -127,7 +127,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 14. Sign out of the Enterprise CA.
 
-## Download, install, and configure the PFX Certificate Connector
+## Download, install, and configure the Certificate Connector for Microsoft Intune
 
 For guidance, see [Install and configure the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
 

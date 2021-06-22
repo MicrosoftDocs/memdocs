@@ -53,6 +53,9 @@ You'll also assign a service account to run the connector. This account is used 
 
 After the connector installs, you can run configuration of the connector again at any time to update it or change the features you’ve installed. After it's installed and configured, the connector can automatically install future updates to keep your connectors current to the most recent release.
 
+> [!NOTE]
+> The Certificate Connector for Microsoft Intune supports TLS 1.2. If the server that hosts the connector supports TLS 1.2, then TLS 1.2 is used. If the server doesn't support TLS 1.2, then TLS 1.1 is used.
+
 ## Capabilities of the certificate connector
 
 The Certificate Connector for Microsoft Intune supports:
