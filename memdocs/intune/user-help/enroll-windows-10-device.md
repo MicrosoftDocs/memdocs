@@ -75,7 +75,9 @@ These steps describe how to enroll a device that runs on Windows 10, version 160
 
 If at any time after enrolling your device you have trouble accessing work or school things, try syncing your device. Open the Settings app and select **Accounts** > **Access work or school** > **Info** > **Sync**.     
 
-## Enroll Windows 10, version 1511 and earlier device  *For PM: This section does not use Company Portal to enroll devices--do you want to make any updates to this section, delete, or leave as-is?*  
+## Enroll Windows 10, version 1511 and earlier device  
+*For PM: This section does not use Company Portal to enroll devices--do you want to make any updates to this section, delete, or leave as-is?*  
+
 These steps describe how to enroll a device that runs on Windows 10, version 1511 and earlier.  
 
 1. Go to **Start** and open the **Settings** app. 
