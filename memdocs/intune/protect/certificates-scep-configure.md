@@ -47,9 +47,9 @@ Before you continue, ensure you've [created and deployed a *trusted certificate*
 
 ### Servers and server roles
 
-The following on-premises infrastructure must run on servers that are domain-joined to your Active Directory, with the exception of the Web Application Proxy Server.
+To support SCEP, the following on-premises infrastructure must run on servers that are domain-joined to your Active Directory, with the exception of the Web Application Proxy Server.
 
-- **Certificate Connector for Microsoft Intune** – The Certificate Connector for Microsoft Intune is required to use SCEP certificate profiles with Intune when you use a Microsoft CA. This article will guide you through [installing this connector](#install-the-microsoft-intune-connector).
+- **Certificate Connector for Microsoft Intune** – The Certificate Connector for Microsoft Intune is required to use SCEP certificate profiles with Intune when you use a Microsoft CA.
 
   For information about the certificate connector, see:
 
@@ -64,11 +64,10 @@ The following on-premises infrastructure must run on servers that are domain-joi
 
   If your CA runs Windows Server 2008 R2 SP1, you must [install the hotfix from KB2483564](https://support.microsoft.com/kb/2483564/).
 
-- **NDES server role** – To support using the Certificate Connector for Microsoft Intune with SCEP, you must configure the Windows Server that will run the connector with the Network Device Enrollment Service (NDES) server role. The connector supports installation on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
+- **NDES server role** – To support using the Certificate Connector for Microsoft Intune with SCEP, you must configure the Windows Server that will host the certificate connector with the Network Device Enrollment Service (NDES) server role. The connector supports installation on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
 
-  - The server that hosts NDES must be domain-joined and in the same forest as your Enterprise CA.
+  - The server that hosts NDES and the connector must be domain-joined and in the same forest as your Enterprise CA.
   - We recommend you don’t use NDES that's installed on the server that hosts the Enterprise CA. While use of NDES that's installed on an Enterprise CA is supported, this configuration represents a security risk when the CA services internet requests.  
-  - You'll install the certificate connector on the same server that hosts NDES.
   - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) and the Microsoft Intune Connector.
 
   To learn more about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
@@ -275,7 +274,9 @@ On the CA, run the following commands:
 
 ## Set up NDES
 
-The following procedures can help you configure the Network Device Enrollment Service (NDES) for use with Intune. For more information about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
+The following procedures can help you configure the Network Device Enrollment Service (NDES) for use with Intune. These are provided as examples as the actual configuration might vary depending on your version of Windows Server. Ensure required configurations you add like those for .NET Framework meet the [prerequisites for the Certificate Connector for Microsoft Intune](../protect/certificate-connector-prerequisites.md).
+
+For more information about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
 
 ### Install the NDES service
 
@@ -293,9 +294,9 @@ The following procedures can help you configure the Network Device Enrollment Se
 
         Installing ASP.NET 3.5 installs .NET Framework 3.5. When installing .NET Framework 3.5, install both the core **.NET Framework 3.5** feature and **HTTP Activation**.
 
-      - **Web Server** > **Application Development** > **ASP.NET 4.5**
+      - **Web Server** > **Application Development** > **ASP.NET 4.7.2**
 
-        Installing ASP.NET 4.5 installs .NET Framework 4.5. When installing .NET Framework 4.5, install the core **.NET Framework 4.5** feature, **ASP.NET 4.5**, and the **WCF Services** > **HTTP Activation** feature.
+        Installing ASP.NET 4.7.2 installs .NET Framework 4.7.2. When installing .NET Framework 4.7.2, install the core **.NET Framework 4.7.2** feature, **ASP.NET 4.7.2**, and the **WCF Services** > **HTTP Activation** feature.
 
       - **Management Tools** > **IIS 6 Management Compatibility** > **IIS 6 Metabase Compatibility**
       - **Management Tools** > **IIS 6 Management Compatibility** > **IIS 6 WMI Compatibility**
@@ -498,6 +499,7 @@ To validate that the service is running, open a browser, and enter the following
 > The Microsoft Intune Connector supports TLS 1.2. If the server that hosts the connector supports TLS 1.2, then TLS 1.2 is used. If the server doesn't support TLS 1.2, then TLS 1.1 is used.
 
 -->
+
 ## Next steps
 
 [Create a SCEP certificate profile](certificates-profile-scep.md)  
