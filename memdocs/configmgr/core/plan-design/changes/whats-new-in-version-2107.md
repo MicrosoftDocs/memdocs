@@ -137,7 +137,9 @@ If you enable Software Center customizations, then notifications on Windows 10 d
 
 <!--9735002-->
 
-This release adds support for layered keyboard drivers during OS deployment. This driver specifies other types of keyboards that are common with Japanese and Korean languages. For more information, see the [LayeredDriver](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-winpe-layereddriver) setting.
+This release adds support for layered keyboard drivers during OS deployment. This driver specifies other types of keyboards that are common with Japanese and Korean languages.
+
+For more information, see [Task sequence steps - Apply OS Image](../../../osd/understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
 
 ## Protection
 
