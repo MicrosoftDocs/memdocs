@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2021
+ms.date: 06/23/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,99 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+## Week of June 21, 2021 (Service release 2106)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Updated default license type for Apple VPP apps<!-- 9914613  -->
+
+When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is now "device". Existing assignments remain unchanged. For more information about Apple VPP apps, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md).
+
+#### Newly available protected apps for Intune<!-- 9766113, 9838907, 9916207, 9219639, 9779226, 9698578, 9731891, 9904508  -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Secrets Confidential File Viewer by Hitachi Solutions, Ltd.
+- AventX Mobile Work Orders by STR Software
+- Slack for Intune by Slack Technologies, Inc.
+- Dynamics 365 Sales by Microsoft
+- Leap Work for Intune by LeapXpert Limited
+- iManage Work 10 For Intune by iManage, LLC
+- Microsoft Whiteboard by Microsoft (Android version)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Manage cookies and cross site tracking in Safari on iOS/iPadOS devices<!-- 9771966  -->
+
+When creating a device restriction policy for iOS/iPadOS devices, you can manage cookies in the Safari app (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Built-in Apps**).
+
+The **Safari cookies** setting is updated to help manage cookies and cross site tracking. For more information on this setting, see [Built-in Apps for iOS/iPadOS devices](../configuration/device-restrictions-ios.md#built-in-apps).
+
+Applies to:
+
+- iOS/iPadOS versions 4 and newer
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device enrollment
+
+#### Browser access automatically enabled during corporate Android enrollment<!--6613616  -->
+
+Browser access is now automatically turned on during new enrollments of the following devices:
+
+- Android Enterprise dedicated devices enrolled with Azure AD Shared device mode
+- Android Enterprise fully managed devices
+- Android Enterprise corporate-owned work profile devices
+
+Compliant devices can use the browser to access resources protected by conditional access.
+
+This change has no impact on devices that are already enrolled.
+
+#### Intune support for Android Enterprise corporate-owned devices with a work profile<!--9606159 -->
+
+Intune support for Android Enterprise corporate-owned devices with a work profile is now generally available.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Use filters on Settings Catalog configuration profiles, and Risk Score and Threat Level compliance policy settings<!-- 10023995 7556913   -->
+
+When you use [filters](filters.md) to assign your policies, you can:
+
+- Use filters on compliance policies that use the **Risk Score** and **Threat Level** settings.
+- Use filters on configuration profiles that use the **Settings Catalog** profile type.
+
+For more information on what you can do, see [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md).
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
+
+#### Use the EnrollmentProfileName property when creating a filter for Android Enterprise<!-- 10022750   -->
+
+In Endpoint Manager, you can create [filters](filters.md) to target devices based on different properties, including device name, manufacturer, and more. On iOS/iPadOS and Windows 10 and newer devices, you can create a filter using the enrollment profile name. The enrollment profile name property is available for Android Enterprise devices.
+
+To see the filter properties you can configure, go to [Device properties, operators, and rule editing when creating filters](filters-device-properties.md).
+
+Applies to:
+
+- Android Enterprise
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Updated certificates report<!-- 10034112  -->
+
+The **Certificates** report, which shows the current device certificates in use, has been updated to include better capabilities to search, page, sort, and export the report. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Certificates**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+
+<!-- ########################## -->
 
 ## Week of June 14, 2021  
 
@@ -76,7 +169,9 @@ Plan to download and use the updated Microsoft Defender for Endpoint app for Mic
 
 The standalone tunnel app for iOS remains in preview.  
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
+
 ### Tenant attach: Offboarding <!-- CMADO7043245 INADO9412904 -->
 
 While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard following a disaster recovery scenario where the on-premises environment was removed. To remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center, select **Tenant administration**, **Connectors and tokens** then **Microsoft Endpoint Configuration Manager**. Choose the name of the site you would like to offboard, then select **Delete**. For more information, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md#bkmk_offboard).
@@ -88,6 +183,7 @@ While we know customers get enormous value by enabling tenant attach, there are 
 ### App management
 
 #### Android Company Portal app and Intune app now include Portugal Portuguese support<!-- 9707888, 9707936 -->
+
 The Android Company Portal app and the Android Intune app now support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
 
 <!-- ########################## -->

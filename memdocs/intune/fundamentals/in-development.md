@@ -71,10 +71,6 @@ In addition to exporting the summarized discovered apps list data, you will also
 
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
-### Updated default license type for Apple VPP apps<!-- 9914613  -->
-
-When you create a new assignment for an Apple Volume Purchase Program (VPP) app, the default license type is now "device". Existing assignments remain unchanged. For more information about Apple VPP apps, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md).
-
 <!-- ***********************************************-->
 ## Device configuration
 
@@ -98,33 +94,6 @@ Applies to:
 ### Settings catalog policies for policy sets<!-- 8683467  -->
 
 In addition to profiles based on templates, you will be able to add a profiles based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
-
-### Use the EnrollmentProfileName property when creating a filter for Android Enterprise<!-- 10022750  -->
-
-In Endpoint Manager, you can create [filters](filters.md) to target devices based on different properties, including device name, manufacturer, and more. On iOS/iPadOS and Windows 10 and newer devices, you can create a filter using the enrollment profile name. The enrollment profile name property will be available for Android Enterprise devices.
-
-To see the filter properties you can currently configure, go to [Device properties, operators, and rule editing when creating filters](filters-device-properties.md).
-
-Applies to:
-
-- Android Enterprise
-
-### Use filters on Settings Catalog configuration profiles, and Risk Score and Threat Level compliance policy settings<!-- 10023995 7556913  -->
-
-When you use [filters](filters.md) to assign your policies, you'll be able to:
-
-- Use filters on compliance policies that use the **Risk Score** and **Threat Level** settings.
-- Use filters on configuration profiles that use the **Settings Catalog** profile type.
-
-For more information on what you can do, see [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md).
-
-Applies to:
-
-- Android device administrator
-- Android Enterprise
-- iOS/iPadOS
-- macOS
-- Windows 10 and newer
 
 ### New macOS device configuration profile settings, and iOS/iPadOS setting name is changing<!-- 9772945  -->
 
@@ -163,19 +132,9 @@ Applies to:
 - iOS/iPadOS
 
 <!-- ***********************************************-->
+<!--
 ## Device enrollment
-
-### Browser access automatically enabled during corporate Android enrollment<!--6613616 -->
-
-Browser access will be automatically enabled during new enrollments of the following devices:
-
-- Android dedicated devices
-- Android fully managed devices
-- Android corporate-owned work profile devices
-
-With this upcoming change, compliant devices can use the browser to access resources protected by conditional access.
-
-This change will have no impact on devices that are already enrolled.
+-->
 
 <!-- ***********************************************-->
 ## Device management
@@ -257,10 +216,6 @@ After the change, only new policies you then create will use the new API. Your e
 ### Export capability for Enrollment failures report<!-- 5491082  -->
 
 You will be able to export data from the Enrollment failures operational report. This report will allow you to quickly export reporting data generated from any size tenant. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Enrollment failures** > **Export**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
-
-### The Certificates report will be updated<!-- 10034112 -->
-
-The **Certificates** report, which shows the current device certificates in use, will be updated to include better capabilities to search, page, sort, and export the report. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Certificates**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 <!-- ***********************************************-->
 ## Role-based access control
