@@ -221,7 +221,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2107 drops support for the following features:
 
-- Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.
+- Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.<!-- 9649296 -->
 
 
 <!--
