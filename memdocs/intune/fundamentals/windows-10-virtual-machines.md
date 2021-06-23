@@ -55,4 +55,4 @@ Deallocated virtual machines may contribute to noncompliant device reports becau
 If you only have RDP access, don't use the [Wipe action](../remote-actions/devices-wipe.md#wipe). The Wipe action will delete the virtual machine's RDP settings and prevent you from ever connecting again.
 
 ## Next steps
-[Learn about using Azure Virtual Desktop with Intune](windows-virtual-desktop.md)
+[Learn about using Azure Virtual Desktop with Intune](azure-virtual-desktop.md)
