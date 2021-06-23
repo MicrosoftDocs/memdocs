@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/04/2021
+ms.date: 06/21/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -109,6 +109,8 @@ Intune's Windows 10 feature updates requires the following prerequisites:
   - The device is assigned to a new feature update profile.
   - The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
   - You use the Windows Update for [Business deployment service graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
+
+  To keep a device at its current feature update version and prevent it from being unenrolled and updated to the most recent feature update version, ensure the device remains assigned to a feature update policy that specifies the devices current Windows version. 
 
 ## Create and assign Windows 10 feature updates policy
 

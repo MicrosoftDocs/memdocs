@@ -50,7 +50,7 @@ Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-Select this option if you're deploying to an Android Enterprise dedicated or fully managed device.
+Select this option if you're deploying to an Android Enterprise dedicated, corporate-owned work profile, or fully managed device.
 
 ### Basic
 
@@ -192,3 +192,5 @@ Select this option if you're deploying to an Android Enterprise dedicated or ful
 The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
 You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.
+
+[Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).

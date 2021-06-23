@@ -53,6 +53,4 @@ When a Configuration Manager client must download an OS image, but there isn't e
 
 The default cache size on Configuration Manager clients might not be large enough for most OS image deployments. If you plan to download the full image to the client cache, adjust the client cache size on the destination computers to accommodate the size of the image that you're deploying.  
 
-For more information, see [Configure the client cache](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
-
-
+For more information, see [Configure the client cache](../../core/clients/manage/configure-client-cache.md).

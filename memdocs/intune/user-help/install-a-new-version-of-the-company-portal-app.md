@@ -54,6 +54,9 @@ When a new version of Company Portal becomes available, you'll see an **Update**
 5. Select the device that you're currently using.
 6. Select **Check Status** to sync your changes.  
 
+> [!NOTE]
+> The minimum supported version of the iOS Company Portal app is v4.16.0. If you are running v4.14.1 or below, you will be prompted for an update at login.
+
 ## Update on macOS device  
 
 To view and install available updates on a macOS device: 
