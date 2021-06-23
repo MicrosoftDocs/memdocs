@@ -112,7 +112,7 @@ This change has no impact on devices that are already enrolled.
 
 #### Intune support for Android Enterprise corporate-owned devices with a work profile<!--9606159 -->
 
-Intune support for Android Enterprise corporate-owned devices with a work profile is now generally available. For more information, see [Announcing general availability of Android Enterprise corporate-owned devices with a work profile](https://aka.ms/COPEGA.)
+Intune support for Android Enterprise corporate-owned devices with a work profile is now generally available. For more information, see [Announcing general availability of Android Enterprise corporate-owned devices with a work profile](https://aka.ms/COPEGA)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
