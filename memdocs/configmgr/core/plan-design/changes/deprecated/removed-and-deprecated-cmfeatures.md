@@ -6,7 +6,6 @@ ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -43,7 +42,7 @@ The following features are no longer supported. In some cases, they're no longer
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|
-| [Log Analytics connector for Azure Monitor.](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855 --> This feature is called the *OMS Connector* in the Azure Services node. | November 2020 | Version 2107 |
+| [Log Analytics connector for Azure Monitor.](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855,9649296 --> This feature is called the *OMS Connector* in the Azure Services node. | November 2020 | Version 2107 |
 | Microsoft Edge legacy [browser profiles](../../../../compliance/deploy-use/browser-profiles.md).<!-- 9388900 --> For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224) | March 2021 | April 2021 |
 | The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->, which was integrated in version 2010. The standalone tool is still available with the [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012).| November 2020 | Version 2103 |
 | Desktop Analytics tile and page for **Security Updates**<!-- 8099536 --> | December 2020 | March 2021 |

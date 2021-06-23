@@ -2,11 +2,10 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -137,6 +136,9 @@ After you remove the CAS, review the following steps as they apply to your envir
   - Recreate [OS deployment media](../../../../osd/deploy-use/create-task-sequence-media.md).
 
 - If you connect Configuration Manager with [Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](../configure/azure-services-wizard.md#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
+
+    > [!IMPORTANT]
+    > The *Log Analytics Connector* was deprecated in November 2020. It's removed from Configuration Manager in version 2107. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).<!-- 9649296 -->
 
 - If you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Microsoft Surface drivers and firmware updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
