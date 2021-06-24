@@ -38,10 +38,10 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Client encryption uses AES-256](includes/2106/10129759.md)]
 [!INCLUDE [PowerShell release notes preview](includes/2106/9997352.md)]
 
-<!-- ## General known issues
+## General known issues
 
-[!INCLUDE [Console settings not saved](includes/2106/known-issue-5452256.md)]
- -->
+[!INCLUDE [10210000](includes/2106/known-issue-10210000.md)]
+[!INCLUDE [10212258](includes/2106/known-issue-10212258.md)]
 
 ## Next steps
 
