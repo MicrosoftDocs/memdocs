@@ -2,7 +2,7 @@
 title: Technical preview 2106
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2106.
-ms.date: 06/17/2021
+ms.date: 06/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
