@@ -23,21 +23,21 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2106/1234567.md)] -->
 
-[!INCLUDE [3607457](includes/2106/3607457.md)]
-[!INCLUDE [7470529](includes/2106/7470529.md)]
-[!INCLUDE [8078674](includes/2106/8078674.md)]
-[!INCLUDE [8126836](includes/2106/8126836.md)]
-[!INCLUDE [8959690](includes/2106/8959690.md)]
-[!INCLUDE [9247522](includes/2106/9247522.md)]
-[!INCLUDE [9249870](includes/2106/9249870.md)]
-[!INCLUDE [9504414](includes/2106/9504414.md)]
-[!INCLUDE [9989251](includes/2106/9989251.md)]
-[!INCLUDE [10033951](includes/2106/10033951.md)]
-[!INCLUDE [10073070](includes/2106/10073070.md)]
-[!INCLUDE [10092858](includes/2106/10092858.md)]
-[!INCLUDE [10129759](includes/2106/10129759.md)]
-[!INCLUDE [9997352](includes/2106/9997352.md)]
-[!INCLUDE [9575773](includes/2106/9575773.md)]
+[!INCLUDE [Intune role-based access control for tenant attach](includes/2106/8126836.md)]
+[!INCLUDE [Convert a CMG to virtual machine scale set](includes/2106/8959690.md)]
+[!INCLUDE [Implicit uninstall of applications](includes/2106/3607457.md)]
+[!INCLUDE [Microsoft .NET requirements](includes/2106/10033951.md)]
+[!INCLUDE [Audit mode for potentially unwanted applications](includes/2106/9249870.md)]
+[!INCLUDE [External notifications](includes/2106/9504414.md)]
+[!INCLUDE [List additional third-party updates catalogs](includes/2106/9989251.md)]
+[!INCLUDE [Management insights rule for TLS/SSL software update points](includes/2106/7470529.md)]
+[!INCLUDE [Renamed Co-management node to Cloud Attach](includes/2106/10158821.md)]
+[!INCLUDE [Improvements for managing automatic deployment rules](includes/2106/9247522.md)]
+[!INCLUDE [New prerequisite check for SQL Server 2012](includes/2106/10092858.md)]
+[!INCLUDE [Console improvements](includes/2106/9575773.md)]
+[!INCLUDE [Client encryption uses AES-256](includes/2106/10129759.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2106/9997352.md)]
+
 <!-- ## General known issues
 
 [!INCLUDE [Console settings not saved](includes/2106/known-issue-5452256.md)]

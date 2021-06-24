@@ -121,20 +121,20 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2106
 
-- [3607457](2021/technical-preview-2106.md) <!--3607457-->
-- [7470529](2021/technical-preview-2106.md) <!--7470529-->
-- [8078674](2021/technical-preview-2106.md) <!--8078674-->
-- [8126836](2021/technical-preview-2106.md) <!--8126836-->
-- [8959690](2021/technical-preview-2106.md) <!--8959690-->
-- [9247522](2021/technical-preview-2106.md) <!--9247522-->
-- [9249870](2021/technical-preview-2106.md) <!--9249870-->
-- [9504414](2021/technical-preview-2106.md) <!--9504414-->
-- [9989251](2021/technical-preview-2106.md) <!--9989251-->
-- [10033951](2021/technical-preview-2106.md) <!--10033951-->
-- [10073070](2021/technical-preview-2106.md) <!--10073070-->
-- [10092858](2021/technical-preview-2106.md) <!--10092858-->
-- [9997352](2021/technical-preview-2106.md) <!--9997352-->
-- [9575773](2021/technical-preview-2106.md) <!--9575773-->
+- [Intune role-based access control for tenant attach](2021/technical-preview-2106.md#bkmk_rbac) <!--8126836-->
+- [Convert a CMG to virtual machine scale set](2021/technical-preview-2106.md#bkmk_cmg) <!--8959690-->
+- [Implicit uninstall of applications](2021/technical-preview-2106.md#bkmk_uninstall) <!--3607457-->
+- [Microsoft .NET requirements](2021/technical-preview-2106.md#bkmk_dotnet) <!--10033951-->
+- [Audit mode for potentially unwanted applications](2021/technical-preview-2106.md#bkmk_audit) <!--9249870-->
+- [External notifications](2021/technical-preview-2106.md#bkmk_pushnotify) <!--9504414-->
+- [List additional third-party updates catalogs](2021/technical-preview-2106.md#bkmk_catalogs) <!--9989251-->
+- [Management insights rule for TLS/SSL software update points](2021/technical-preview-2106.md#bkmk_sup) <!--7470529-->
+- [Renamed Co-management node to Cloud Attach](2021/technical-preview-2106.md#bkmk_cloud) <!--10158821-->
+- [Improvements for managing automatic deployment rules](2021/technical-preview-2106.md#bkmk_adr) <!--9247522-->
+- [New prerequisite check for SQL Server 2012](2021/technical-preview-2106.md#bkmk_sql2012) <!--10092858-->
+- [Console improvements](2021/technical-preview-2106.md#bkmk_console) <!--9575773-->
+- [Client encryption uses AES-256](2021/technical-preview-2106.md#bkmk_encrypt) <!--10129759-->
+- [PowerShell release notes preview](2021/technical-preview-2106.md#bkmk_powershell) <!--9997352-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
