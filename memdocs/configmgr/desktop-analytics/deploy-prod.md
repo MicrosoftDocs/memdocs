@@ -104,13 +104,13 @@ To show an unfiltered view of all assets, select the current filter. This action
 > [!NOTE]  
 > To reduce the number of assets with insufficient data, Desktop Analytics monitors the assets on all of your devices that have upgraded to the target Windows version specified in your deployment plan. These devices include those not included in the specific deployment plan.  
 
-The default sort order is by the number of devices that have had an incident with that particular asset, so you can quickly see which ones are causing the most problems. For example, when viewing **Apps**, it sorts by **Devices with app crashes last two weeks**.
+The default sort order is by the number of devices that have had an incident with that particular asset, so you can quickly see which ones are causing the most problems. For example, when viewing **Apps**, it sorts by **Devices with app crashes last 2 weeks**.
 
 If you want to look at health for all assets, even those assets with insufficient data for Desktop Analytics to make statistical inferences, use the following process:
 
-1. Select the drop-down on the **Devices with incidents in last two weeks** column. Add a filter to only those assets that have had incidents on some minimum number of devices to be interesting. For example, show items with values **greater than** 100.  
+1. Select the drop-down on the **Devices with app crashes last 2 weeks** column. Add a filter to only those assets that have had incidents on some minimum number of devices to be interesting. For example, show items with values **greater than** 100.  
 
-2. Select the drop-down on the **% Devices with incidents in the last two weeks** column, and select to sort by **Descending**.  
+2. Select the drop-down on the **% Devices with app crashes last two weeks** column, and select to sort by **Descending**.  
 
     The resulting view shows the assets with the highest rate of incident at a minimum number of incidents.  
 

@@ -42,29 +42,21 @@ Desktop Analytics monitors the following health status factors for apps:
 
   - **Commercial avg**: The average (avg) crash rate across all commercial devices. This average is calculated across *all* versions of the app. If your version shows a crash rate above the commercial average, there may be a more stable version available.  
 
-- **% Sessions with crashes**: Similar to the preceding, but counts the percentage of sessions with crashes in the last two weeks.  
+- **Mean time to failure**: Similar to the preceding, but counts the average elapsed time between crashes in the last two weeks.  
 
-To determine the health status of an app, Desktop Analytics requires data from at least 20 devices. Otherwise it reports **Insufficient data** for the app. The service calculates the health status based on the *session crash rate* from these devices. The device crash rate is provided for information only. It isn't used in the health status calculation.
+To determine the health status of an app, Desktop Analytics requires data from at least 20 devices. Otherwise it reports **Insufficient data** for the app. The service calculates the health status based on the *mean time to failure* from these devices. The device crash rate is provided for information only. It isn't used in the health status calculation.
 
 ### Usage
 
 <!-- 5533890 -->
 
-- **Active devices**: This value is the count of devices where a user launched the selected app within the last two weeks. It's based on devices in the selected deployment plan running the targeted version of Windows 10.
+- **Active devices (last 2 weeks)**: This value is the count of devices where a user launched the selected app within the last two weeks. It's based on devices in the selected deployment plan running the targeted version of Windows 10.
 
-- **Sessions**: This value is the total number of times that a user launched the selected app on the targeted version of Windows.
+- **Total usage duration**: This value is the total usage duration for the selected app on the targeted version of Windows.
 
-### Additional tabs
+### Troubleshooting info
 
-At the bottom of the app details page, the following three tabs can help you troubleshoot:
-
-- **Other versions**: A list of alternative versions of this app. For each version, it shows the relative changes to the crash rates within your organization and the commercial average. If you find a later version of the app with a lower crash rate, updating the app may help.  
-
-    It also shows if the version has advanced insights. For more information, see [Compatibility assessment](compat-assessment.md).  
-
-- **Top issues**: A list of the most frequent failure IDs by instance count. A failure ID identifies the stack trace associated with the crash. You can use this ID when you call the app vendor for support.  
-
-- **Recent crashes**:  A list of devices on which the app recently crashed. You can filter by failure ID and other criteria. Use this information to troubleshoot the issue by gathering logs or trying fixes on specific devices before trying a broader deployment.  
+At the bottom of the app details page, use **Recent crashes** to identify devices on which the app recently crashed. Use this information to troubleshoot the issue by gathering logs or trying fixes on specific devices before trying a broader deployment.  
 
 If you find a serious health regression that you're unable to fix, change the app's **Upgrade decision** to **Unable**. This action prevents future deployment of the update to devices with this asset.
 

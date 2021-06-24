@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 06/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -76,7 +76,9 @@ By adding a user to the User-level wipe we will automatically issue wipe command
 
 ## Monitor your wipe requests
 
-You can have a summarized report that shows the overall status of the wipe request, and includes the number of pending requests and failures. To get more details, follow these steps:
+You can have a summarized report that shows the overall status of the wipe request, and includes the number of pending requests and failures. Completed wipe request entries remain in the report for 4 days after completion. In the event that a wipe request is not marked as completed, but remains in a pending state, the request remains in the report for a total number of days equal to the sum of the value of Offline grace period wipe data + 4 days for the record to be deleted which, by default, is 94 days.
+
+To get more details, follow these steps:
 
 1. On the **Apps** > **App selective wipe** pane, you can see the list of your requests grouped by users. Because the system creates a wipe request for each protected app running on the device, you might see multiple requests for a user. The status indicates whether a wipe request is **pending**, **failed**, or **successful**.
 
