@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2021
+ms.date: 06/24/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -64,6 +64,12 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
+#### Improvements for viewing managed apps status<!-- 9359228  -->
+
+We've added some improvements to how [Intune displays status information about the managed apps](/troubleshoot/mem/intune/troubleshoot-app-install) that have deployed to users or devices.
+
+Intune now displays only the apps that are specific to the platform of the device you’re viewing. We’ve also introduced performance enhancements and additional support for the Android and Windows platforms.
+
 #### Updated default license type for Apple VPP apps<!-- 9914613  -->
 
 When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is now "device". Existing assignments remain unchanged. For more information about Apple VPP apps, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md).
@@ -112,7 +118,7 @@ This change has no impact on devices that are already enrolled.
 
 #### Intune support for Android Enterprise corporate-owned devices with a work profile<!--9606159 -->
 
-Intune support for Android Enterprise corporate-owned devices with a work profile is now generally available. For more information, see [Announcing general availability of Android Enterprise corporate-owned devices with a work profile](https://aka.ms/COPEGA.)
+Intune support for Android Enterprise corporate-owned devices with a work profile is now generally available. For more information, see [Announcing general availability of Android Enterprise corporate-owned devices with a work profile](https://aka.ms/COPEGA)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -253,7 +259,7 @@ You can:
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
 - Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with device scope policies and apps.
 
-For more information, see [Windows 10 Enterprise multi-session remote desktops](windows-virtual-desktop-multi-session.md).
+For more information, see [Windows 10 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
