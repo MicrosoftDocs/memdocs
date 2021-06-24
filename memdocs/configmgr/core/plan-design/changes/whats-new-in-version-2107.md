@@ -29,14 +29,23 @@ To take full advantage of new Configuration Manager features, after you update t
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2107+-+Configuration+Manager%22&locale=en-us`
 
 
-## Staging
-
 
 ## Microsoft Endpoint Manager tenant attach
 
+### Intune role-based access control for tenant attach
+<!--8126836, 6415648, 8348644-->
+You can use Intune role-based access control (RBAC) when displaying the **Client details** page for [tenant attached devices](../../../tenant-attach/device-sync-actions.md) in the Microsoft Endpoint Manager admin center. When using Intune as the RBAC authority, a user with the [Help Desk Operator role](/intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. Currently, the Help Desk Operator role can display only the **Client details** page without additional Configuration Manager permissions.
 
 
 ## Cloud-attached management
+
+### Convert a CMG to virtual machine scale set
+
+<!--8959690-->
+
+Starting in current branch version 2010, you could deploy the cloud management gateway (CMG) with a virtual machine scale set in Azure. This support was primarily to unblock customers with a Cloud Solution Provider (CSP) subscription.
+
+In this release, any customer with a CMG that uses the classic cloud service deployment can convert to a virtual machine scale set.
 
 ### Select VM size for CMG
 
@@ -50,14 +59,53 @@ When you deploy a cloud management gateway (CMG) with a [virtual machine scale s
 
 This control gives you greater flexibility with your CMG deployment. You can adjust the size for test labs or if you support large environments. For example, the smaller **Lab** size is ideal for testing with a smaller number of clients at less cost. For production deployments, either use the default **Standard** size or add more capacity with the **Large** size. For more information on how these options differ in cost for your region, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-<!--
+### Renamed Co-management node to Cloud Attach
+<!--10158821, 10115058-->
+To better reflect the additional cloud services Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
+
+
 ## Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
- -->
+### Support for the Windows diagnostic data processor configuration
+
+<!-- 10220671 -->
+
+Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data on behalf of the controller.
+
+For more information, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
 ## Site infrastructure
 
+### Support for Windows Server 2022
+
+<!-- 10200029 -->
+Configuration Manager now supports Windows Server 2022 as site systems and clients. For more information, see the following articles:
+
+- [Supported operating systems for site system servers](../configs/supported-operating-systems-for-site-system-servers.md)
+- [Supported OS versions for clients](../configs/supported-operating-systems-for-clients-and-devices.md)
+- [Upgrade on-premises infrastructure](../../servers/manage/upgrade-on-premises-infrastructure.md)
+
+<!-- some statement about ADK? -->
+
+### Microsoft .NET requirements
+
+<!--10033951;10073070,10081488-->
+
+Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
+
+### New prerequisite check for SQL Server 2012
+
+<!--10092858-->
+
+When you install or update the site, it now warns for the presence of SQL Server 2012. The [support lifecycle](/lifecycle/products/microsoft-sql-server-2012) for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.
+
+### External notifications
+
+<!--9504414-->
+
+In a complex IT environment, you may have an automation system like [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). Customers use these systems to define and control automated workflows to integrate multiple systems. You could integrate Configuration Manager into a separate automation system through the product's SDK APIs. But this process can be complex and challenging for IT professionals without a software development background.
+
+Starting in this release, you can enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure [subscriptions](../../servers/manage/configure-alerts.md) to send these notifications. These notifications are in response to specific, defined events as they occur. For example, [status message filter rules](../../servers/manage/use-status-system.md#manage-status-filter-rules).
 
 ## Real-time management
 
@@ -69,7 +117,7 @@ We've simplified the CMPivot permissions requirements. The new permissions are a
 
   - The [SMS Provider](../hierarchy/plan-for-the-sms-provider.md) still requires this permission if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.
 
-- The **default scope** permission isn’t required.
+- The **default scope** permission isn't required.
 
 ### Improvements to CMPivot
 
@@ -96,6 +144,12 @@ Many customers have other data that's external to Configuration Manager but usef
 - Department
 
 Starting in this release, you can use the [administration service](../../../develop/adminservice/index.yml) to set this data on devices. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+
+### Client encryption uses AES-256
+
+<!--10129759-->
+
+Starting in this release, when you enable the site to **Use encryption**, the client uses the **AES-256** algorithm. This setting requires clients to encrypt inventory data and state messages before it sends to the management point. For more information, see [Plan for security - signing and encryption](../../plan-design/security/plan-for-security.md#signing-and-encryption).
 
 
 ### Updated client deployment prerequisite
@@ -130,6 +184,13 @@ If you enable Software Center customizations, then notifications on Windows 10 d
 
 ## Application management
 
+### Implicit uninstall of applications
+
+<!--3607457-->
+
+Many customers have lots of collections because for every application they need at least two collections: one for install and another for uninstall. This practice adds overhead of managing more collections, and can reduce site performance for collection evaluation.
+
+Starting in this release, you can enable an application deployment to support implicit uninstall. If a device is in a collection, the application installs. Then when you remove the device from the collection, the application uninstalls.
 
 ## OS deployment
 
@@ -143,6 +204,10 @@ For more information, see [Task sequence steps - Apply OS Image](../../../osd/un
 
 ## Protection
 
+### Audit mode for potentially unwanted applications
+<!--9249870-->
+
+An **Audit** option for [potentially unwanted applications (PUA)](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) was added in the **Antimalware policy** settings. Use PUA protection in audit mode to detect potentially unwanted applications without blocking them. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and you'd like to avoid any false positives.
 
 ## Software updates
 
@@ -154,6 +219,29 @@ When installing software updates from Configuration Manager, you can now choose 
 <!--9012080 -->
 
 You can now right-click and notify devices to run a software updates evaluation cycle from the [software update deployment status](../../../sum/deploy-use/monitor-software-updates.md#BKMK_SUDeployStatus). You can target a single device under the **Asset Details** pane or select a group of devices based on their deployment status.
+
+### Management insights rule for TLS/SSL software update points
+
+<!--7470529-->
+
+[Management insights](../../servers/manage/management-insights.md) has a new rule to detect if your software update points are [configured to use TLS/SSL](../../../sum/get-started/software-update-point-ssl.md). To review the **Configure software update points to use TLS/SSL** rule, go to **Administration** > **Management Insights** > **All Insights** > **Software Updates**.
+
+### List additional third-party updates catalogs
+<!--9989251-->
+To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
+
+### Improvements for managing automatic deployment rules
+
+The following items were added to help you better manage your automatic deployment rules:
+
+#### Updated Product parameter for New-CMSoftwareUpdateAutoDeploymentRule cmdlet
+<!--9247522-->
+The `-Product` parameter for `New-CMSoftwareUpdateAutoDeploymentRule` was updated. When there are multiple products with the same name, `-Product` now selects all of them.
+<!-- do we want this here, or just rely on PowerShell release notes? -->
+#### Script to apply deployment package settings for automatic deployment rule
+<!--3961933, 4396422-->
+If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded the following script into [Community hub](../../../../servers/manage/community-hub.md):
+<!-- I'll probably scrape the script for this over to PowerShell content as well -->
 
 ## Community hub
 
@@ -179,6 +267,19 @@ Starting in this release, you can choose to allow unsigned [hierarchy approved c
 ### Configuration Manager console settings aren't saved
 <!--5452256-->
 When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.
+
+### Console improvements
+<!--9575773-->
+In this release we've made the following improvements to the Configuration Manager console:
+
+- Status message shortcuts<!--8942963-->: Shortcuts to [status messages](../../servers/manage/use-status-system.md) were added to the **Administrative Users** node and the **Accounts** node. Select an account, then select **Show Status Messages**.
+
+- Navigate to collection<!--9502958-->: You can now navigate to a collection from the **Collections** tab in the **Devices** node. Select **View Collection** from either the ribbon or the right-click menu in the tab.
+
+- Added maintenance window column<!--9708594-->: A **Maintenance window** column was added to the **Collections** tab in the **Devices** node.
+
+- Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
+
 
 ## Support Center
 
