@@ -69,6 +69,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > [!IMPORTANT]
   > Desktop Analytics is a Windows service hosted in Azure global that utilizes Windows diagnostic data. While Desktop Analytics is an Azure global service that's available to US government customers, it doesn't meet [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes. For a list of compliance offerings for Microsoft products and services, see the [Microsoft Trust Center](/microsoft-365/compliance/offering-home). Desktop Analytics isn't available for GCC High or US Department of Defense (DOD) customers. The use of Azure Government subscriptions to host Desktop Analytics workspaces isn't supported.
 
+- [Set up Intune](../intune/fundamentals/setup-steps.md) for your organization.
+
   - **Workspace owner** permissions to **Set up your workspace**, and the following Azure Active Directory (Azure AD) roles:
 
     - [**Desktop Analytics Administrator**](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator)
@@ -125,6 +127,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
+
+- At least one Intune license for you as the administrator to access the Intune portal.
 
 - Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.yml).
 
