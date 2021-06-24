@@ -135,6 +135,7 @@ The following features are available with the most recent Configuration Manager 
 - [10092858](2021/technical-preview-2106.md) <!--10092858-->
 - [9997352](2021/technical-preview-2106.md) <!--9997352-->
 - [9575773](2021/technical-preview-2106.md) <!--9575773-->
+- [10158821](2021/technical-preview-2106.md) <!--10158821-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
