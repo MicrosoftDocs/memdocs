@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2021
+ms.date: 06/24/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,6 +63,12 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
+
+#### Improvements for viewing managed apps status<!-- 9359228  -->
+
+We've added some improvements to how [Intune displays status information about the managed apps](/troubleshoot/mem/intune/troubleshoot-app-install) that have deployed to users or devices.
+
+Intune now displays only the apps that are specific to the platform of the device you’re viewing. We’ve also introduced performance enhancements and additional support for the Android and Windows platforms.
 
 #### Updated default license type for Apple VPP apps<!-- 9914613  -->
 
