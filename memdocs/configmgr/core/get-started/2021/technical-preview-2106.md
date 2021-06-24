@@ -36,12 +36,13 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [New prerequisite check for SQL Server 2012](includes/2106/10092858.md)]
 [!INCLUDE [Console improvements](includes/2106/9575773.md)]
 [!INCLUDE [Client encryption uses AES-256](includes/2106/10129759.md)]
-[!INCLUDE [PowerShell release notes preview](includes/2106/9997352.md)]
 
 ## General known issues
 
 [!INCLUDE [10210000](includes/2106/known-issue-10210000.md)]
 [!INCLUDE [10212258](includes/2106/known-issue-10212258.md)]
+
+[!INCLUDE [PowerShell release notes preview](includes/2106/9997352.md)]
 
 ## Next steps
 
