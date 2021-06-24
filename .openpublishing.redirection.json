@@ -719,6 +719,16 @@
             "source_path": "memdocs/configmgr/hotfix/2103/KB9210721.md",
             "redirect_url": "/mem/configmgr/hotfix/2103/9210721",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/windows-virtual-desktop.md",
+            "redirect_url": "/mem/intune/fundamentals/azure-virtual-desktop",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/windows-virtual-desktop-multi-session.md",
+            "redirect_url": "/mem/intune/fundamentals/azure-virtual-desktop-multi-session",
+            "redirect_document_id": false
         }
     ]
 }
