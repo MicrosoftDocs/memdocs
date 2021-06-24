@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the technical preview for Configuration Manager, version 2106. Install this version to update and add new features to your technical preview site.<!-- baseline only statement:  When you install a new technical preview site, this release is also available as a baseline version.-->
+This article introduces the features that are available in the technical preview for Configuration Manager, version 2106. Install this version to update and add new features to your technical preview site.<!-- baseline only statement:--> When you install a new technical preview site, this release is also available as a baseline version.
 
 Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
