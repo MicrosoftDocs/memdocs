@@ -40,10 +40,10 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [9575773](includes/2106/9575773.md)]
 [!INCLUDE [10158821](includes/2106/10158821.md)]
 
-<!-- ## General known issues
+## General known issues
 
-[!INCLUDE [Console settings not saved](includes/2106/known-issue-5452256.md)]
- -->
+[!INCLUDE [10210000](includes/2106/known-issue-10210000.md)]
+[!INCLUDE [10212258](includes/2106/known-issue-10212258.md)]
 
 ## Next steps
 
