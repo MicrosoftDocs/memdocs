@@ -181,6 +181,13 @@ You can now inventory client log file settings such as log levels and size. This
 
 If you enable Software Center customizations, then notifications on Windows 10 devices display the logo that you configure in client settings. This change helps users to trust these notifications. When you deploy software to a client, the user sees notifications with your logo.
 
+### Support for enhanced HTTP
+
+<!-- 9199146 -->
+
+When you enable the site for [enhanced HTTP](../hierarchy/enhanced-http.md), Software Center now prefers secure communication over HTTPS to get user-available applications from the management point.
+
+<!-- For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md). -->
 
 ## Application management
 
