@@ -344,7 +344,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 > [!NOTE]
 > If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Intune admin console. To re-enroll:
 > 1. Wipe the device from the Intune console.
->   - Alternatively, retire the device from the Intune console and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
+>     - Alternatively, retire the device from the Intune console and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
 > 2. Activate the device again and run through Setup Assistant to receive the *Remote Management Profile*.
 
 ### Dynamic groups in Azure Active Directory
