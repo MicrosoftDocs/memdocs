@@ -183,7 +183,7 @@ If you enable Software Center customizations, then notifications on Windows 10 d
 
 :::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
 
-For more information about customizing Software Center, see [About client settings: Software Center](../../clients/deploy/about-client-settings.md#software-center).
+For more information about customizing Software Center, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).
 
 ### Support for enhanced HTTP
 
