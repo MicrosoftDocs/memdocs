@@ -55,6 +55,8 @@ You can change the configuration of the log files, such as the verbose level, si
 - [Using the Windows Registry](#configure-logging-options-by-using-the-windows-registry)
 - [In the Configuration Manager console](#configure-logging-options-in-the-configuration-manager-console)
 
+You can also use [hardware inventory to collect log settings](#hardware-inventory-for-client-log-settings) from clients.
+
 ### Configure logging options during client installation
 
 You can set the configuration of the client log files during installation. Use the following properties:
@@ -222,6 +224,22 @@ Enable or disable verbose logging on a client or collection from the console:
 1. In the ribbon, on the **Home** tab, in the **Device** group, select **Client Diagnostics**. Choose one of the available actions.
 
 For more information, see [Client diagnostics](../../clients/manage/client-notification.md#client-diagnostics).
+
+### Hardware inventory for client log settings
+
+<!--5602449-->
+Starting in version 2107, you can enable hardware inventory to collect client log file settings. Enable the hardware inventory class, **Client Diagnostics (CCM_ClientDiagnostics)**, and then select the following attributes:
+
+- Debug Logging Enabled
+- Logging Enabled
+- Log Level
+- History File Count
+- Max Log File Size
+
+> [!NOTE]
+> This inventory class isn't enabled by default.
+
+For more information, see [Enable or disable existing hardware inventory classes](inventory/extend-hardware-inventory.md#enable-or-disable-existing-classes).
 
 ## Locating log files
 

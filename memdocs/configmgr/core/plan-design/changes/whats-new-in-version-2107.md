@@ -166,9 +166,7 @@ For more information, see [Prerequisites for deploying clients to Windows comput
 
 You can now inventory client log file settings such as log levels and size. This behavior allows you to track settings that you change by the [Client Diagnostics](../../clients/manage/client-notification.md#client-diagnostics) actions. This new inventory class isn't enabled by default.
 
-For more information on client log file settings, see [About log files](../../../../plan-design/hierarchy/about-log-files.md#configure-logging-options).
-
-
+For more information, see [About log files](../../../../plan-design/hierarchy/about-log-files.md#hardware-inventory-for-client-log-settings).
 
 ## Collections
 
