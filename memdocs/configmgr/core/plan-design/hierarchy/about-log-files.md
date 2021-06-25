@@ -239,7 +239,7 @@ Starting in version 2107, you can enable hardware inventory to collect client lo
 > [!NOTE]
 > This inventory class isn't enabled by default.
 
-For more information, see [Enable or disable existing hardware inventory classes](inventory/extend-hardware-inventory.md#enable-or-disable-existing-classes).
+For more information, see [Enable or disable existing hardware inventory classes](../../clients/manage/inventory/extend-hardware-inventory.md#enable-or-disable-existing-classes).
 
 ## Locating log files
 
