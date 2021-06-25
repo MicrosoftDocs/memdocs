@@ -150,7 +150,7 @@ Use the following actions to help troubleshoot clients:
 > - These actions only change the log verbosity, not the size or history. More verbose logging can generate more log content.
 > - The management point role also uses the CCM component. If the targeted device is also a management point, this action also applies to that role.
 
-For more information about these settings, see [About log files](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
+For more information about these settings, see [About log files](../../plan-design/hierarchy/about-log-files.md#client-and-management-point-logging-options).
 
 Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
 
