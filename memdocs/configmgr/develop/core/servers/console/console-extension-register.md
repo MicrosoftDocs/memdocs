@@ -2,7 +2,7 @@
 title: "Console extension registration through community hub"
 description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
-ms.date: "06/07/2021"
+ms.date: "06/28/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
