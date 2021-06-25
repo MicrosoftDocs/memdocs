@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 06/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 *This feature is in public preview.*
 
-With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1803 or version 1809. Intune supports setting a feature level of 1803 or later.
+With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or version 2004. Intune supports setting a feature level of 1909 or later.
 
 Windows 10 feature updates policies work with your *Windows 10 update ring* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
 
@@ -60,7 +60,7 @@ Intune's Windows 10 feature updates requires the following prerequisites:
   - Microsoft 365 Business Premium
 
 - Devices must:  
-  - Run Windows 10 version 1709 or later.
+  - Run a version of Windows 10 that remains in support.
   - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
   - Have Telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
@@ -118,7 +118,7 @@ Intune's Windows 10 feature updates requires the following prerequisites:
 
 2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create profile**.
 
-3. Under **Basics**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**.
+3. Under **Deployment settings**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**. Only versions of Windows that remain in support are available to select.
 
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 

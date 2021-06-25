@@ -219,7 +219,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or during Company Portal sign in, then MFA is required. However, MFA is optional based on the AAD settings in the targeted Conditional Access policy.
 
-        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials, the device:
+        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials and taps "Begin" at the "Setup <Company> access" screen, the device:
 
         - Won’t be fully registered with Azure AD.
         - Won’t show up in the user’s device list in the Azure AD portal.
@@ -342,10 +342,10 @@ Now that you've installed your token, you can create an enrollment profile for A
 19. To save the profile, select **Create**.
 
 > [!NOTE]
-> If you need to re-enroll your Automated Device Enrollment device, you need to first [add the serial number of the device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting a problem, like if the device isn't receiving policy. To re-enroll:
-> 1. Retire the device from the Intune console.
-> 2. [Add the device's serial number as a corporate device identifier](corporate-identifiers-add.md).
-> 3. Re-enroll the device by downloading Company Portal and completing device enrollment.
+> If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Intune admin console. To re-enroll:
+> 1. Wipe the device from the Intune console.
+>     - Alternatively, retire the device from the Intune console and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
+> 2. Activate the device again and run through Setup Assistant to receive the *Remote Management Profile*.
 
 ### Dynamic groups in Azure Active Directory
 

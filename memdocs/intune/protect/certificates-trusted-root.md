@@ -36,7 +36,7 @@ You deploy the trusted certificate profile to the same devices and users that re
 
 > [!TIP]
 > *Trusted certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](..
-/fundamentals/windows-virtual-desktop-multi-session.md).
+/fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Export the trusted root CA certificate
 
