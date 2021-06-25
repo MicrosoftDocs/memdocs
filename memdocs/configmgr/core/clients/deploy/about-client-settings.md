@@ -2,11 +2,10 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -136,7 +135,7 @@ If you set this option to **No**, or any of the previous requirements aren't met
 
 By default, this setting is disabled. Even if you enable user policies, the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Azure Virtual Desktop](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
-The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
+The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to a later client version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
 If you require user policy in this scenario, and accept any potential performance impact, enable this client setting.
 
@@ -623,8 +622,7 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 - **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
 
-    > [!NOTE]
-    > The window displays a preview of the combination of these first four settings.
+    Starting in version 2107, notifications on Windows 10 devices also display this logo. This behavior helps users to trust these notifications.<!--4993167-->
 
 - **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 

@@ -602,7 +602,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 Version 1906 drops support for the following features:  
 
-- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex).
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#configure-software-center).
 
 Version 1906 deprecates support for the following products:  
 
