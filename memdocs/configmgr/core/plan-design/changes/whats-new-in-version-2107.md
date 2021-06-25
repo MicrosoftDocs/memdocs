@@ -187,7 +187,7 @@ If you enable Software Center customizations, then notifications on Windows 10 d
 
 When you enable the site for [enhanced HTTP](../hierarchy/enhanced-http.md), Software Center now prefers secure communication over HTTPS to get user-available applications from the management point.
 
-<!-- For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md). -->
+For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
 
 ## Application management
 
