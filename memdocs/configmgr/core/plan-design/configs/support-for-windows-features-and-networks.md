@@ -104,7 +104,6 @@ In addition to Internet Protocol version 4 (IPv4), Configuration Manager support
 |Network Discovery|IPv4 is required when you configure a DHCP server to search in Network Discovery.|  
 |OS deployment|In version 1802 and prior, IPv4 is required to support OS deployment.  </br> </br> Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service. This new PXE responder service supports IPv6. Other aspects of the OS deployment feature, such as capturing or setting static IP addresses during the task sequence, continue to require IPv4. |  
 |Wake-up proxy communication|IPv4 is required to support the client wake-up proxy packets.|  
-|Windows CE|IPv4 is required to support the Configuration Manager client on Windows CE devices.|  
 
 ## <a name="bkmk_NAT"></a> Network Address Translation  
 

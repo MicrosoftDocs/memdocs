@@ -75,7 +75,7 @@ The reports aren't needed to deploy clients. You can see some deployment informa
 Configuration Manager requires the enrollment point and the enrollment proxy point to enroll mobile devices and to enroll certificates for Mac computers. You don't need these site system roles in the following situations:
 
 - You plan to manage mobile devices by using the Exchange Server connector
-- You install the mobile device legacy client, for example, for Windows CE
+- You install the mobile device legacy client
 - You request and install the client certificate on Mac computers independently from Configuration Manager
 
 ## Cloud management gateway connector point
