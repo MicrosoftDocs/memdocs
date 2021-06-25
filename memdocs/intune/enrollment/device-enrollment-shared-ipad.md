@@ -66,7 +66,7 @@ You can deploy volume-purchased (VPP) apps or custom apps or web apps to Shared 
 
 ## Known limitations
 
-The following are known limitation when working with shared iPads:
+The following are known limitations when working with shared iPads:
 
 - **Disabled settings and system apps:** Shared iPads provide users access to a limited number of settings and system apps. For more information on what settings and apps are disabled on Shared iPads. For more information, see [Shared iPad and Managed Apple IDs](https://support.apple.com/guide/mdm/shared-ipad-and-managed-apple-ids-mdm9992c9a34/web).
 - **User group assignment is not supported:** Microsoft Intune currently only supports device-assigned policies and apps on Shared iPads. User-assigned apps and policies will not apply on Shared iPads.
