@@ -74,6 +74,18 @@ The following Configuration Manager features support or require enhanced HTTP:
 > [!NOTE]
 > The software update point and related scenarios have always supported secure HTTP traffic with clients as well as the cloud management gateway. It uses a mechanism with the management point that's different from certificate- or token-based authentication.<!-- SCCMDocs issue #1148 -->
 
+## Unsupported scenarios
+<!-- MEMDocs #1705 -->
+Enhanced HTTP doesn't currently secure all communication in Configuration Manager. The following list summarizes some key functionality that's still HTTP.
+
+- Client peer-to-peer communication for content
+- State migration point
+- Remote tools
+- Reporting services point
+
+> [!NOTE]
+> This list isn't exhaustive.
+
 ## Prerequisites
 
 - A management point configured for HTTP client connections. Set this option on the **General** tab of the management point role properties.
