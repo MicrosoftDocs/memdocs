@@ -1405,22 +1405,33 @@ The package must meet the following criteria:
 
 - It must not initiate a restart on its own. The software must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the software does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
-Programs that use the **Run another program first** option to install a dependent program aren't supported when deploying an OS. If you enable the package option **Run another program first**, and the dependent program already ran on the destination computer, the dependent program runs and the task sequence continues. However, if the dependent program hasn't already run on the destination computer, the task sequence step fails.  
+Programs that use the **Run another program first** option to install a dependent program aren't supported when deploying an OS. If you enable the package option **Run another program first**, and the dependent program already ran on the destination computer, the dependent program runs and the task sequence continues. However, if the dependent program hasn't already run on the destination computer, the task sequence step fails.
 
-> [!NOTE]  
-> The central administration site doesn't have the necessary client configuration policies required to enable the software distribution agent during the task sequence. When you create stand-alone media for a task sequence at the central administration site, and the task sequence includes an **Install Package** step, the following error might appear in the CreateTsMedia.log file:  
->
-> `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`  
->
-> For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled. Alternatively, add a **Run Command Line** step after the **Setup Windows and ConfigMgr** step and before the first **Install Package** step. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first **Install Package** step. Use the following command in the **Run Command Line** step:  
->
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`  
->
-> For more information about creating stand-alone media, see [Create stand-alone media](../deploy-use/create-stand-alone-media.md).  
-
-This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
+This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
+
+#### Known issue with Install Package step and standalone media created at the central administration site
+
+An error might occur if your task sequence includes the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site (CAS). The CAS doesn't have the necessary client configuration policies. These policies are required to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file: `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
+
+For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled.
+
+Alternatively, use a custom [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run PowerShell Script** step runs the following commands to enable the software distribution agent before the first Install Package step:
+
+```powershell
+$namespace = "root\ccm\policy\machine\requestedconfig"
+$class = "CCM_SoftwareDistributionClientConfig"
+$classArgs = @{
+    ComponentName = 'Enable SWDist'
+    Enabled = 'true'
+    LockSettings='TRUE'
+    PolicySource='local'
+    PolicyVersion='1.0'
+    SiteSettingsKey='1'
+}
+Set-WmiInstance -Namespace $namespace -Class $class -Arguments $classArgs -PutType CreateOnly
+```
 
 ### Variables for Install Package
 
