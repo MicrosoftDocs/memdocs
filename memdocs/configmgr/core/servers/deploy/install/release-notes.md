@@ -81,7 +81,7 @@ WARNING: Retry in the next polling cycle
 
 This failure happens because the service connection point can't communicate with the required internet endpoint, `configmgrbits.azureedge.net`. Confirm that the site system that hosts the service connection point role can communicate with this internet endpoint. It was already required, but its use is expanded in version 2107. You can't update to version 2107 unless your network allows traffic to this URL.
 
-For more information, see [internet access requirements](../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
+For more information, see [internet access requirements](../../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
 
 ## OS deployment
 
