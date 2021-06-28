@@ -11,7 +11,7 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year
+### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year<--10144130-->
 
 Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and higher shortly after iOS 15’s release.
 
