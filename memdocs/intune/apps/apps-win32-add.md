@@ -30,7 +30,7 @@ After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.
 To use Win32 app management, be sure you meet the following criteria:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
-- Devices must be joined to Azure Active Directory (Azure AD) and auto-enrolled. The Intune management extension supports devices that are Azure AD joined, hybrid domain joined, and group policy enrolled. 
+- Devices must be  registered or joined to Azure Active Directory (Azure AD) and auto-enrolled. The Intune management extension supports devices that are Azure AD registered,  Azure AD joined, hybrid domain joined, and group policy enrolled. 
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Azure AD join their Windows 10 device. The user must log on to the device by using their Azure AD user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
 - Windows application size is capped at 8 GB per app.
