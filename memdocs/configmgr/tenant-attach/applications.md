@@ -174,9 +174,9 @@ Use the following table to determine installation behavior on the device when yo
 
 ## Known issues
 
-### Superseded applications display
+### Superseded applications are displayed
 <!--7836675, 10196669 -->
-Superseded applications will display on the **Applications** page. However, the superseding application will be installed on the device. For instance, `ApplicationA` is superseded by `ApplicationB`. An administrator selects `ApplicationA` for installation on the device . `ApplicationB` is installed on the device.  
+Superseded applications will display on the **Applications** page. However, the superseding application will be installed on the device. For instance, `ApplicationA` is superseded by `ApplicationB`. An administrator selects `ApplicationA` for installation on the device. `ApplicationB` is installed on the device.  
 
 ## Next steps
 
