@@ -11,6 +11,26 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year
+
+Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and higher shortly after iOS 15’s release.
+
+#### How does this affect me?
+
+If you are managing iOS/iPadOS devices, you might have devices that will not be able to upgrade to the minimum supported version (iOS/iPadOS 13). Provided that Office 365 mobile apps are supported on iOS/iPadOS 13.0 and higher, this may not affect you; you’ve likely already upgraded your OS or devices. See the following Apple documentation for devices to check which devices support iOS 13 or iPadOS 13 (if applicable).
+
+- [Supported iPhone models](https://support.apple.com/guide/iphone/supported-iphone-models-iphe3fa5df43/13.0/ios/13.0)
+- [Supported iPad models](https://support.apple.com/guide/ipad/supported-models-ipad213a25b2/13.0/ipados/13.0)
+- [Supported iPod models](https://support.apple.com/guide/ipod-touch/your-ipod-touch-iphdd4353af4/13.0/ios/13.0)
+
+For instructions on how to check in the Microsoft Endpoint Manager admin center which devices or users may be affected, read below.
+
+#### What do I need to do to prepare for this change?
+
+Check your Intune reporting to see what devices or users may be affected. For devices with mobile device management (MDM) go to **Devices** > **All devices** and filter by OS. For devices with app protection policies  go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
+
+To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](/mem/intune/fundamentals/manage-os-versions).
+
 ### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
 We have recently released an updated Company Portal for iOS to the Apple Store that is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
 
