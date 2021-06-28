@@ -195,17 +195,17 @@ To revoke the license of all VPP apps for a given VPP token, you must first revo
 
 ## Renewing VPP tokens or Apple Business Manager location token
 
-You can renew an Apple Business Manager location token (Apple VPP token) by downloading a new token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) and updating the existing token in Intune. 
+You can renew an Apple Business Manager location token (Apple VPP token) by downloading the token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) again and updating the existing token in Intune. 
 
 To renew an Apple Business Manager location token (Apple VPP token), use the following steps:
 
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
-2. Download the new token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
+2. Download the existing token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
 3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 4. Select the VPP token you are renewing, click **Edit** on the Basics category, upload the new token on this page, and then save your changes.
 
 > [!NOTE]
-> You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
+> You must renew the existing Apple VPP token or location token when the user who set up the token in Apple Business Manager changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
 
 ## Deleting a VPP app
 You can delete purchased apps that don't have any available or used licenses associated with them. This may be necessary to clean up apps that are no longer assigned.

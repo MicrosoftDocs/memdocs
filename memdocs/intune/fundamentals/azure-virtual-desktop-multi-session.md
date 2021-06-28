@@ -33,9 +33,6 @@ ms.collection: M365-identity-device-management
 
 You can now use Microsoft Endpoint Manager to manage Windows 10 Enterprise multi-session remote desktops just as you can manage a shared Windows 10 client device. When managing such VMs, you must use device-based configurations. Such configurations require user-less enrollments.
 
-> [!IMPORTANT]
-> The feature is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended for use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
-
 Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
 - Allows multiple concurrent user sessions.
