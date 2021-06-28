@@ -31,7 +31,7 @@ Check your Intune reporting to see what devices or users may be affected. For de
 
 To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](/mem/intune/fundamentals/manage-os-versions).
 
-### Plan for change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
+### Plan for Change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
 
 With Apple's expected release of macOS 12 Monterey in the fall of 2021, Microsoft Intune, the Company Portal app and the Intune MDM agent will be moving to support macOS 10.15 (Catalina) and higher shortly after the release.
 
