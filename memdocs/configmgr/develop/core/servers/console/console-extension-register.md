@@ -18,7 +18,7 @@ Console extension authors can contribute extensions they've written to the commu
 
 > [!IMPORTANT]
 > - Currently only technical preview versions of Configuration Manager can get console extensions from the [Community hub](../../../../core/servers/manage/community-hub.md).
-> - Importing an unsigned extension can be done with [technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later.  
+> - Importing an unsigned extension can be done with [technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later. Unsigned extensions are for local import and testing purposes only.
 > - If you are using Configuration Manager version 2103, you can test your own extensions by [importing them locally](../../../../core/servers/manage/admin-console-extensions.md#bkmk_local_install), but the extension must be signed to import.
 ## Prerequisites
 
