@@ -2,7 +2,7 @@
 title: Tenant attach - Applications (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 04/05/2021
+ms.date: 06/28/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -171,6 +171,12 @@ Use the following table to determine installation behavior on the device when yo
 |User required| Yes | Yes |
 |User available |No | No </br> The installation will occur when the client next comes online|
 |User requires approval | No| No </br> The installation will occur when the client next comes online|
+
+## Known issues
+
+### Superseded applications display
+<!--7836675, 10196669 -->
+Superseded applications will display on the **Applications** page. However, the superseding application will be installed on the device. For instance, `ApplicationA` is superseded by `ApplicationB`. An administrator selects `ApplicationA` for installation on the device . `ApplicationB` is installed on the device.  
 
 ## Next steps
 
