@@ -28,7 +28,7 @@ To get notified when this page is updated, copy and paste the following URL into
 
 <!-- 10220671 -->
 
-Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data for you as the controller. You'll continue to get insights to plan your deployments, and can fulfill [data subject requests](/windows/privacy/windows-10-and-privacy-compliance#3-the-process-for-exercising-data-subject-rights). These requests are typically to access or export Windows diagnostic data for a particular user's use of a device.
+Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data for you as the controller. You'll continue to get insights to plan your deployments, and can fulfill [data subject requests](/windows/privacy/windows-10-and-privacy-compliance#3-the-process-for-exercising-data-subject-rights). These requests are typically to access or export Windows diagnostic data for a particular user.
 
 To take advantage of this change, make sure your environment is up to date:
 
@@ -40,7 +40,7 @@ To take advantage of this change, make sure your environment is up to date:
   - July 2021 cumulative update or later
 
   > [!IMPORTANT]
-  > Devices with an older OS version like Windows 7 will continue to show in Desktop Analytics until January 31, 2022. Use Desktop Analytics to update those devices to a supported version of Windows 10. After that date, only supported versions of Windows 10 will show in Desktop Analytics.
+  > Devices with an older OS version like Windows 7 will continue to show in Desktop Analytics until January 31, 2022. Use Desktop Analytics to update those devices to a supported version of Windows 10. After that date, Desktop Analytics will only display devices with supported versions of Windows 10.
 
 ## January 2021
 
