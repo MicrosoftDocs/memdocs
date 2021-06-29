@@ -85,7 +85,7 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 - **Certificate Connector for Microsoft Intune**: When a device requests a PFX certificate that was imported to Intune, the encrypted password, the certificate, and the device's public key are sent to the connector. The connector decrypts the password using the on-premises private key, and then re-encrypts the password (and any plist profiles if using iOS) with the device key before sending the certificate back to Intune. Intune then delivers the certificate to the device and the device decrypts it with the device's private key and install the certificate.
 
-## Download, install, and configure the PFX Certificate Connector for Microsoft Intune
+## Download and install the Certificate Connector for Microsoft Intune
 
 For guidance, see [Install and configure the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
 

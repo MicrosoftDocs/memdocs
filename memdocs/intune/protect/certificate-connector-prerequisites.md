@@ -61,7 +61,7 @@ Requirements for PKCS certificate templates:
 
 ## PKCS imported certificates
 
--	Key storage provider must be given access to allow the Connector Service User to retrieve keys
+To support PKCS imported certificates, the server that hosts the connector requires additional configurations, such as configuring a Key storage provider access to allow the Connector Service User to retrieve keys. For information, see [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)
 
 ## Revocation Prerequisites
 
