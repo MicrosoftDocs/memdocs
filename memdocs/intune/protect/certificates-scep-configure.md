@@ -103,10 +103,15 @@ The following certificates and templates are used when you use SCEP.
 |Object    |Details    |
 |----------|-----------|
 |**SCEP Certificate Template**         |Template you'll configure on your issuing CA used to fullfil the devices SCEP requests. |
-|**Client authentication certificate** |Requested from your issuing CA or public CA.<br /> You install this certificate on the computer that hosts the NDES service and it's used by the Certificate Connector for Microsoft Intune.<br /> If the certificate has the *client* and *server authentication* key usages set (**Enhanced Key Usages**) on the CA template that you use to issue this certificate, you can then use the same certificate for server and client authentication. |
-|**Server authentication certificate** |Web Server certificate requested from your issuing CA or public CA.<br /> You install and bind this SSL certificate in IIS on the computer that hosts NDES.<br />If the certificate has the *client* and *server authentication* key usages set (**Enhanced Key Usages**) on the CA template that you use to issue this certificate, you can then use the same certificate for server and client authentication. |
+|**Server authentication certificate** |Web Server certificate requested from your issuing CA or public CA.<br /> You install and bind this SSL certificate in IIS on the computer that hosts NDES.|
 |**Trusted Root CA certificate**       |To use a SCEP certificate profile, devices must trust your Trusted Root Certification Authority (CA). Use a *trusted certificate profile* in Intune to provision the Trusted Root CA certificate to users and devices. <br/><br/> **-**  Use a single Trusted Root CA certificate per operating system platform and associate that certificate with each trusted certificate profile you create. <br /><br /> **-**  You can use additional Trusted Root CA certificates when needed. For example, you might use additional certificates to provide a trust to a CA that signs the server authentication certificates for your Wi-Fi access points. Create additional Trusted Root CA certificates for issuing CAs.  In the SCEP certificate profile you create in Intune, be sure to specify the Trusted Root CA profile for the issuing CA.<br/><br/> For information about the trusted certificate profile, see [Export the trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. |
 
+> [!NOTE]
+The following certificate is not used with the Certificate Connector for Microsoft Intune. This information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
+> 
+> |Object    |Details    |
+> |----------|-----------|
+> |**Client authentication certificate** | Requested from your issuing CA or public CA.<br /> You install this certificate on the computer that hosts the NDES service and it's used by the Certificate Connector for Microsoft Intune.<br /> If the certificate has the *client* and *server authentication* key usages set (**Enhanced Key Usages**) on the CA template that you use to issue this certificate, you can then use the same certificate for server and client authentication. |
 ### PIN requirement for Android Enterprise
 
 For Android Enterprise, the version of encryption on a device determines whether the device must be configured with a PIN before SCEP can provision that device with a certificate. The available encryption types are:
@@ -339,7 +344,9 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
 
    For example, if the Purpose of your certificate template is **Encryption**, then edit the **EncryptionTemplate** value to be the name of your certificate template.
 
-3. Configure IIS request filtering to add support in IIS for the long URLs (queries) that the NDES service receives.
+3. *This step doesn't apply when you configure NDES to support the Certificate Connector for MicrosoftIntune. Instead, skip to the next step*.
+
+    When configuring NDES To support the *Microsoft Intune Connector* (NDESConnectorSetup.exe), you must configure IIS request filtering to add support in IIS for the long URLs (queries) that the NDES service receives.
 
    1. In IIS manager, select **Default Web Site** > **Request Filtering** > **Edit Feature Setting** to open the **Edit Request Filtering Settings** page.
 
@@ -369,23 +376,8 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
   
 ### Install and bind certificates on the server that hosts NDES
 
-In the NDES server, there are two certificates that are required by the configuration.
-These certificates are **Client authentication certificate** and **Server authentication certificate** as mentioned in [Certificates and templates](#certificates-and-templates) section.
+On the NDES server, add a **Server authentication certificate**.
 
-> [!TIP]
-> In the following procedure, you can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses.
-> Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
-
-- **Client authentication certificate**
-
-  This certificate is used during install of the Certificate Connector for Microsoft Intune to support SCEP.
-
-  Request and install a **client authentication** certificate from your internal CA, or a public certificate authority.
-
-  The certificate must meet the following requirements:
-
-  - **Enhanced Key Usage**: This value must include **Client Authentication**.
-  - **Subject Name**: Set a CN (Common Name) with a value that must be equal to the FQDN of the server where you're installing the certificate (the NDES Server).
 
 - **Server authentication certificate**
 
@@ -414,6 +406,23 @@ These certificates are **Client authentication certificate** and **Server authen
 
      3. For **SSL certificate**, specify the server authentication certificate.
 
+
+> [!NOTE]
+> When configuring NDES for the Certificate Connector for Microsoft Intune , only the Server authentication certificate is used. If your configuring NDES to support the older certificate connector (NDESConnectorSetup.exe), you must also configure a *Client authentication certificate*. You can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses. 
+> Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
+>
+> The following information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
+>
+> - **Client authentication certificate**
+>
+>   This certificate is used during install of the Certificate Connector for Microsoft Intune to support SCEP.
+>
+>   Request and install a **client authentication** certificate from your internal CA, or a public certificate authority.
+>
+>   The certificate must meet the following requirements:
+>
+>   - **Enhanced Key Usage**: This value must include **Client Authentication**.
+>   - **Subject Name**: Set a CN (Common Name) with a value that must be equal to the FQDN of the server where you're installing the certificate (the NDES Server).
 ## Download, install, and configure the Certificate Connector for Microsoft Intune
 
 For guidance, see [Install and configure the Certificate Connector for Microsoft Intune](certificate-connector-install.md).

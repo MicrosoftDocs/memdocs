@@ -83,7 +83,7 @@ The Certificate Connector for Microsoft Intune supports:
   - You can configure a proxy to allow the connector to communicate with Intune.
 
     >[!NOTE]
-    > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue. It's not possible to define which connector handles each request. </br></br>
+    > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue, process Imported certificates, and handle revocation requests. It's not possible to define which connector handles each request. </br></br>
     > Therefore, each connector that supports PKCS must have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
 
 - *Federal Information Processing Standard* (FIPS) mode. FIPS isn't required. When FIPS is enabled, you can issue and revoke certificates.
@@ -121,7 +121,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 ### Reinstall a certificate connector
 
-1. On the Windows Server that hosts the connector, use **Windows Apps and Features** to uninstall the connector.
+1. On the Windows Server that hosts the connector, run the connector installation program to uninstall the connector.
 
 2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated [prerequisites](../protect/certificate-connector-prerequisites.md) when installing a newer version of a connector.
 
@@ -151,6 +151,7 @@ The following logs are available and default to 50 MB, and have automatic archiv
 - **Admin Log** - This log contains one log event per request to the connector. Events include either a *success* with information about the request, or an *error* with information about the request and the error.
 - **Operational Log** - This log displays additional information to that found in the Admin log, and can be of use in debugging issues. This log also displays ongoing operations instead of single events.
 
+In addition to the default log level, you can enable debug logging for each log to obtain additional details.
 ### Event IDs
 
 All events have one of the following IDs:

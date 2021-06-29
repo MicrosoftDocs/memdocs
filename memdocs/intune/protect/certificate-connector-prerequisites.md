@@ -56,8 +56,12 @@ Requirements for PKCS certificate templates:
 - The certificate templates must be added to the Certification Authority (CA).
 
 > [!NOTE]
-> Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue. It's not possible to define which connector handles each request. </br></br>
+> Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue, process Imported certificates, and handle revocation requests. It's not possible to define which connector handles each request. </br></br>
 > Therefore, each connector that supports PKCS must have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
+
+## PKCS imported certificates
+
+-	Key storage provider must be given access to allow the Connector Service User to retrieve keys
 
 ## Revocation Prerequisites
 
@@ -68,7 +72,6 @@ Requirements for PKCS certificate templates:
 The Windows Server that hosts the connector must meet the following prerequisites that are in addition to the general prerequisites:
 
 - IIS 7 or higher
-- .NET Framework 4.7.2
 - Network Device Enrollment Service (NDES) service, which is part of the Active Directory Certification Services role. The connector isn't supported on the same server as your issuing Certification Authority (CA).
 
 On the Windows Server, configure select the following Server Roles and Features:

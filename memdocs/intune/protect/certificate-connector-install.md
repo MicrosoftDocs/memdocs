@@ -77,9 +77,9 @@ Use the following procedure to both configure a new connector and modify a previ
 
 2. On *Features*, select the checkbox for each connector feature you want to install on this server, and then select **Next**. Options include:
 
-   - **SCEP**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority using the SCEP protocol.
+   - **SCEP**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority using the SCEP protocol. Devices that submit a certificate request will generate a private/public key pair and submit only the public key as part of that request.
 
-   - **PKCS**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority in PKCS format. Ensure you’ve set up all the necessary prerequisites.
+   - **PKCS**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority in PKCS #12 format.  Ensure you’ve set up all the necessary prerequisites.
 
    - **PKCS imported certificates**: Select this option to enable certificate delivery to devices for pfx certificates that you've imported to Intune. Ensure you’ve set up all the necessary prerequisites.
 
