@@ -5,7 +5,7 @@ description: Primary sites require a software update point on the central admini
 author: mestew 
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/05/2021
+ms.date: 06/21/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -110,10 +110,15 @@ You can enable a software update point to accept communication from clients on t
 > [!NOTE]  
 >  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](synchronize-software-updates.md).  
 
-## Supersedence rules  
- Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site. Starting in Configuration Manager version 1810, you can specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**. <!--3098809, 2977644-->
+## Supersedence rules
 
- On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
+ Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site. You can also specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**. <!--3098809, 2977644-->
+
+ On this page, you can specify when superseded software updates are expired in Configuration Manager, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. You can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
+
+ The default setting is to wait 3 months before expiring a superseded update. The 3 month default is to give you time to verify the update is no longer needed by any of your client computers. It's recommended that you don't assume that superseded updates should be immediately expired in favor of the new, superseding update. You can display a list of the software updates that supersede the software update on the **Supersedence Information** tab in the software update properties.  
+
+
 
 > [!NOTE]  
 >  The **Supersedence Rules** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  

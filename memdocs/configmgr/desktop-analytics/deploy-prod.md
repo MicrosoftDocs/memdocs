@@ -2,11 +2,10 @@
 title: How to deploy to production
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics production group.
-ms.date: 10/16/2020
+ms.date: 06/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
-ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -34,7 +33,7 @@ There are three main parts to accomplishing the deployment of updates to product
 
 Desktop Analytics guides you through the process of reviewing your assets for production deployment. In the Azure portal, go to **Deployment plans**, select a deployment plan, and then select **Prepare production** in the left menu.
 
-:::image type="content" source="media/prepare-production.png" alt-text="Screenshot of Prepare Production view in Desktop Analytics" lightbox="media/prepare-production.png":::
+:::image type="content" source="media/prepare-production.png" alt-text="Screenshot of Prepare Production view in Desktop Analytics." lightbox="media/prepare-production.png":::
 
 Review the state of your apps. Use that information to set the upgrade decision for each of those assets.
 
@@ -56,7 +55,7 @@ To approve an asset for upgrade, select the name in the list, and then select on
 
 To set this value for multiple apps at once, use the first column to **Select this item**, and then choose **Set Upgrade Decision**.
 
-:::image type="content" source="media/prep-prod-set-upgrade-decision.png" alt-text="Set Upgrade Decision option on multiple apps":::
+:::image type="content" source="media/prep-prod-set-upgrade-decision.png" alt-text="Set Upgrade Decision option on multiple apps.":::
 
 Select **No data** to view assets that couldn't be classified. These assets generally are assets that don't have enough coverage for Desktop Analytics to perform an analysis of the risk or health status. To improve the coverage, add additional devices with these assets to the pilot, or ask pilot users to try these assets.
 
@@ -84,7 +83,7 @@ As with the pilot deployment, Desktop Analytics advises you of any issues that n
 - Needs attention - Devices (sorted by device name)
 - Needs attention - Issues (sorted by issue type)
 
-:::image type="content" source="media/prod-deployment-status.png" alt-text="Screenshot of Desktop Analytics production Deployment Status" lightbox="media/prod-deployment-status.png":::
+:::image type="content" source="media/prod-deployment-status.png" alt-text="Screenshot of Desktop Analytics production Deployment Status." lightbox="media/prod-deployment-status.png":::
 
 ## <a name="bkmk_monitor"></a> Monitor the health of updated devices
 
@@ -101,19 +100,19 @@ Filter this page by assets with the following health states:
 
 To show an unfiltered view of all assets, select the current filter. This action removes that filter.
 
-> [!NOTE]  
-> To reduce the number of assets with insufficient data, Desktop Analytics monitors the assets on all of your devices that have upgraded to the target Windows version specified in your deployment plan. These devices include those not included in the specific deployment plan.  
+> [!NOTE]
+> To reduce the number of assets with insufficient data, Desktop Analytics monitors the assets on all of your devices that have upgraded to the target Windows version specified in your deployment plan. These devices include those not included in the specific deployment plan.
 
-The default sort order is by the number of devices that have had an incident with that particular asset, so you can quickly see which ones are causing the most problems. For example, when viewing **Apps**, it sorts by **Devices with app crashes last two weeks**.
+The default sort order is by the number of devices that have had an incident with that particular asset, so you can quickly see which ones are causing the most problems. For example, when viewing **Apps**, it sorts by **Devices with app crashes last 2 weeks**.
 
 If you want to look at health for all assets, even those assets with insufficient data for Desktop Analytics to make statistical inferences, use the following process:
 
-1. Select the drop-down on the **Devices with incidents in last two weeks** column. Add a filter to only those assets that have had incidents on some minimum number of devices to be interesting. For example, show items with values **greater than** 100.  
+1. Select the drop-down on the **Devices with app crashes last 2 weeks** column. Add a filter to only those assets that have had incidents on some minimum number of devices to be interesting. For example, show items with values **greater than** 100.
 
-2. Select the drop-down on the **% Devices with incidents in the last two weeks** column, and select to sort by **Descending**.  
+2. Select the drop-down on the **% Devices with app crashes last two weeks** column, and select to sort by **Descending**.
 
-    The resulting view shows the assets with the highest rate of incident at a minimum number of incidents.  
+    The resulting view shows the assets with the highest rate of incident at a minimum number of incidents.
 
-3. Select an asset to get more details or change its upgrade decision.  
+3. Select an asset to get more details or change its upgrade decision.
 
 For more information, see [Health status monitoring](health-status-monitoring.md).

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Using Windows Virtual Desktop multi-session with Microsoft Endpoint Manager
+title: Using Azure Virtual Desktop multi-session with Microsoft Endpoint Manager
 titleSuffix: 
-description: Guidelines for using Windows Virtual Desktop multi-session with Microsoft Endpoint Manager
+description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Endpoint Manager
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/24/2021
+ms.date: 06/03/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,10 +33,7 @@ ms.collection: M365-identity-device-management
 
 You can now use Microsoft Endpoint Manager to manage Windows 10 Enterprise multi-session remote desktops just as you can manage a shared Windows 10 client device. When managing such VMs, you must use device-based configurations. Such configurations require user-less enrollments.
 
-> [!IMPORTANT]
-> The feature is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended for use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
-
-Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Windows Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
+Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
 - Allows multiple concurrent user sessions.
 - Gives users a familiar Windows 10 experience.
@@ -44,7 +41,7 @@ Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusi
 
 ## Overview
 
-Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Windows Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
+Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
 ## Prerequisites
 
@@ -53,7 +50,7 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
 - Running Windows 10 multi-session, version 1903 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
 - Set up as remote desktops in pooled host pools in Azure.
-- Running a Windows Virtual Desktop agent version of 2944.1400 or later.
+- Running a Azure Virtual Desktop agent version of 2944.1400 or later.
 - Enrolled in Microsoft Endpoint Manager using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
@@ -69,19 +66,28 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
 
 
 
-For more information on Windows Virtual Desktop licensing requirements, see [What is Windows Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
+For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
-Windows 10 Enterprise multi-session VMs are treated as a separate OS edition and some existing Windows 10 Enterprise configurations won’t be supported for this edition. Using Microsoft Endpoint Manager does not depend on or interfere with Windows Virtual Desktop management of the same VM.
+Windows 10 Enterprise multi-session VMs are treated as a separate OS edition and some existing Windows 10 Enterprise configurations won’t be supported for this edition. Using Microsoft Endpoint Manager does not depend on or interfere with Azure Virtual Desktop management of the same VM.
 
 ## Create the device configuration profile
 
-Existing device configuration profiles are not supported for Windows 10 Enterprise multi-session VMs, with the exception of Certificate profiles, which are available under Templates. Note that we only support device certificates at this point.
+To configure configuration policies for Windows 10 Enterprise multi-session VMs, you'll usually use the [Settings catalog](../configuration/settings-catalog.md).
 
-To configure configuration policies for Windows 10 Enterprise multi-session VMs, you must configure using the [Settings catalog](../configuration/settings-catalog.md).
+The existing device configuration profile templates aren't supported for Windows 10 Enterprise multi-session VMs, with the exception of the following Templates:
+
+- [Trusted certificate](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) - Device (machine) only
+- [SCEP certificate](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) - Device (machine) only
+- [PKCS certificate](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) - Device (machine) only
+- [VPN](../configuration/vpn-settings-configure.md#create-the-profile) - Device Tunnel only
+
+Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
+
+### To configure policies
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > **Configuration profiles** > **Create Profile**.
 2. For **Platform**, select **Windows 10 and later**.
-3. For **Profile type**, select **Settings Catalog (Preview)**
+3. For **Profile type**, select **Settings Catalog (Preview)**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
 4. Select **Create**.
 5. On the **Basics** page, provide a **Name** and (optionally) **Description** > **Next**.
 6. On the **Configuration settings** page, select **Add settings**.
@@ -105,6 +111,8 @@ Windows 10 Administrative Templates are supported for Windows 10 Enterprise mult
 - ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings will not be applicable to Windows 10 Enterprise multi-session.
 
 > [!NOTE]
+> Some ADMX settings currently require an insider build. You can hover over the information bubble next to the setting name to see if an insider build is required for a specific setting.
+> 
 > The applicability of some ADMX based settings for applications like Microsoft Edge and Microsoft Office is not based on the Windows edition or version. To add these settings to your policy, you may have to remove any filters applied in the Settings Picker.
 
 ## Compliance and Conditional access
@@ -143,7 +151,7 @@ All Windows 10 apps can be deployed to Windows 10 Enterprise multi-session with 
 - All apps must be configured to install in the system/device context and be targeted to devices. Web apps are always applied in the user context by default so they will not apply to multi-session VMs.
 - All apps must be configured with **Required** or **Uninstall** app assignment intent. The **Available apps** deployment intent is not supported on multi-session VMs.  
 - If a Win32 app configured to install in the system context has dependencies or supersedence relationship on any apps configured to install in the user context, the app will not be installed. To apply to a Windows 10 Enterprise multi-session VM, create a separate instance of the system context app or make sure all app dependencies are configured to install in the system context.
-- Windows Virtual Desktop RemoteApp and MSIX app attach are not currently supported in Microsoft Endpoint Manager.
+- Azure Virtual Desktop RemoteApp and MSIX app attach are not currently supported in Microsoft Endpoint Manager.
 
 ## Script deployment
 
@@ -180,4 +188,4 @@ Windows 10 Enterprise multi-session managed by Microsoft Endpoint Manager is not
 
 ## Next steps
 
-[Learn more about Windows Virtual Desktops](/azure/virtual-desktop/).
+[Learn more about Azure Virtual Desktops](/azure/virtual-desktop/).

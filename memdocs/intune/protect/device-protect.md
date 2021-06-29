@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2021
+ms.date: 06/14/2021
 ms.topic: overview
 ms.subservice: protect
 ms.service: microsoft-intune
@@ -129,7 +129,7 @@ Intune can use data from integrated compliance partners and mobile threat defens
 
 ### Configuration Manager
 
-You can use many Intune policies and device actions to [protect the devices you manage with Configuration Manager](../protect/endpoint-security-manage-devices.md). To support those devices, configure [co-management](../../configmgr/comanage/overview.md) or [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md). You can also [use both together](/mem/configmgr/comanage/faq#should-i-use-co-management-or-tenant-attach-) with Intune.
+You can use many Intune policies and device actions to [protect the devices you manage with Configuration Manager](../protect/endpoint-security-manage-devices.md). To support those devices, configure [co-management](../../configmgr/comanage/overview.md) or [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md). You can also [use both together](../../configmgr/comanage/faq.yml#should-i-use-co-management-or-tenant-attach-) with Intune.
 
 - *Co-management* enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services.
 
@@ -170,10 +170,7 @@ Intune supports integration with:
 
 On its own, Microsoft Defender for Endpoint provides several security focused benefits. Microsoft Defender for Endpoint also [integrates with Intune](../protect/advanced-threat-protection.md) and is supported on several device platforms. With integration, you gain a mobile threat defense app and add capabilities to Intune for keeping data and devices safe. These capabilities include:
 
-- **Support for Microsoft Tunnel** - Microsoft Defender for Endpoint is the Tunnel application you use with [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), a VPN gateway solution for Intune. When used as the Tunnel app, you don’t need a subscription for Microsoft Defender for Endpoint.
-
-  > [!TIP]  
-  > To gain access to the preview version of Microsoft Defender for Endpoint that supports the Microsoft Tunnel, you must [opt-in to a public preview](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/simplify-mobile-security-with-a-single-app-for-microsoft-tunnel/ba-p/2116082). The original standalone Microsoft Tunnel app remains available but will be deprecated when the Microsoft Defender for Endpoint app that supports Microsoft Tunnel releases to general availability.
+- **Support for Microsoft Tunnel** - On Android devices, Microsoft Defender for Endpoint is the client application you use with [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), a VPN gateway solution for Intune. When used as the Microsoft Tunnel client app, you don’t need a subscription for Microsoft Defender for Endpoint.
 
 - **Security tasks** – With [security tasks](../protect/atp-manage-vulnerabilities.md), Intune admins can take advantage of Microsoft Defender for Endpoint's [threat and vulnerability management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) capabilities. How it works:
   

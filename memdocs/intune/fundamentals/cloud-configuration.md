@@ -94,7 +94,7 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
 
 ## Prerequisites
 
-- At a minimum, you must have the following licenses:
+- At a minimum, the account creating the guided scenario must have the following licenses:
 
   - Azure Active Directory Premium P1
   - Microsoft Intune

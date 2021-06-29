@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2021
+ms.date: 06/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -119,11 +119,6 @@ You can use filters for all compliance policies on the following platforms:
 - macOS
 - Windows 10 and newer
 
-> [!NOTE]
-> It's currently not supported to use filters with compliance policies that require a signal from Mobile Threat Detection (MTD) or Microsoft Defender for Endpoint (MDE). For example, the following compliance policies require a signal:
-> - [Require the device to be at or under the machine risk score](../protect/compliance-policy-create-windows.md#microsoft-defender-for-endpoint)
-> - [Require the device to be at or under the Device Threat Level](../protect/mtd-device-compliance-policy-create.md)
-
 ## Device configuration profiles and Endpoint security
 
 You can use filters for some common device configuration policies on the following platforms. For a list of what's not supported, see [not supported](#not-supported) (in this article).
@@ -233,7 +228,7 @@ You can use filters for some common device configuration policies on the followi
 | PKCS imported certificate | ✔️ |
 | Preference file | ✔️ |
 | SCEP certificate | ✔️ |
-| Settings catalog | ❌ |
+| Settings catalog | ✔️ |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
@@ -271,7 +266,7 @@ You can use filters for some common device configuration policies on the followi
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
 | Secure assessment (Education) | ✔️ |
-| Settings catalog | ❌ |
+| Settings catalog | ✔️ |
 | Shared multi-user device | ✔️ |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
@@ -290,7 +285,6 @@ You can use filters for some common device configuration policies on the followi
 
 The following features don't support using filters:
 
-- Configuration Profile Settings catalog
 - App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows 10
 - End user experiences customization policies

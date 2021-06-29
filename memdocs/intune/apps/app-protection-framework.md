@@ -225,4 +225,4 @@ Administrators can incorporate the above configuration levels within their ring 
 - [How to create and deploy app protection policies with Microsoft Intune](app-protection-policies.md)
 - [Available Android app protection policy settings with Microsoft Intune](app-protection-policy-settings-android.md)
 - [Available iOS/iPadOS app protection policy settings with Microsoft Intune](app-protection-policy-settings-ios.md)
-- Third-party apps such as the Salesforce mobile app work with Intune in specific ways to protect corporate data. To learn more about how the Salesforce app in particular works with Intune (including MDM app configurations settings), see [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).
+- Third-party apps such as the Salesforce mobile app work with Intune in specific ways to protect corporate data. To learn more about how the Salesforce app in particular works with Intune (including MDM app configurations settings), see [Salesforce App and Microsoft Intune](https://aka.ms/intunesalesforce).

@@ -66,7 +66,7 @@ You can deploy volume-purchased (VPP) apps or custom apps or web apps to Shared 
 
 ## Known limitations
 
-The following are known limitation when working with shared iPads:
+The following are known limitations when working with shared iPads:
 
 - **Disabled settings and system apps:** Shared iPads provide users access to a limited number of settings and system apps. For more information on what settings and apps are disabled on Shared iPads. For more information, see [Shared iPad and Managed Apple IDs](https://support.apple.com/guide/mdm/shared-ipad-and-managed-apple-ids-mdm9992c9a34/web).
 - **User group assignment is not supported:** Microsoft Intune currently only supports device-assigned policies and apps on Shared iPads. User-assigned apps and policies will not apply on Shared iPads.
@@ -74,7 +74,7 @@ The following are known limitation when working with shared iPads:
 - **Company Portal and available apps are not supported:** Intune Company Portal app and the Intune Company Portal website are not supported on Shared iPads. Apps must be assigned as “required” to device groups containing the Shared iPad to install. Available apps are currently not supported on Shared iPad.
 - **Passcode complexity cannot be managed on Shared iPad:** The passcode complexity for Shared iPad is a complex 8 character alphanumeric and cannot be changed in Apple Business Manager. The passcode complexity and length settings available in device configuration profile do not apply to Shared iPads. The MDM administrator can set the grace period – a number of minutes during which the user can unlock the iPad without a passcode.
 - **Unsupported scenarios:** Some Intune scenarios are not supported on Shared iPads, namely, app-based and device-based Conditional Access, app protection policies and compliance policies.
-- **Wallpaper is not supported:** Setting a wallpaper image is currently not supported on Shared iPad. For more information on wallpaper, see [iOS/iPadOS Device Features](https://docs.microsoft.com/mem/intune/configuration/ios-device-features-settings#wallpaper). 
+- **Wallpaper is not supported:** Setting a wallpaper image is currently not supported on Shared iPad. For more information on wallpaper, see [iOS/iPadOS Device Features](../configuration/ios-device-features-settings.md#wallpaper). 
 
 
 ## Next steps

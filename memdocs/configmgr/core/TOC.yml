@@ -1,3 +1,4 @@
+items:
 - name: Core infrastructure documentation
   href: index.yml
 - name: Understand and explore
@@ -272,14 +273,16 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2106 features
+      href: get-started/2021/technical-preview-2106.md
+    - name: 2105.2 features
+      href: get-started/2021/technical-preview-2105-2.md
     - name: 2105 features
       href: get-started/2021/technical-preview-2105.md
     - name: 2104 features
       href: get-started/2021/technical-preview-2104.md
     - name: 2103 features
       href: get-started/2021/technical-preview-2103.md
-    - name: 2102 features
-      href: get-started/2021/technical-preview-2102.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -742,6 +745,8 @@
       href: clients/manage/monitor-clients.md
     - name: How to manage clients
       href: clients/manage/manage-clients.md
+    - name: Configure the client cache
+      href: clients/manage/configure-client-cache.md
     - name: Client notification
       href: clients/manage/client-notification.md
     - name: Sync data to Azure Monitor

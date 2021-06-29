@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/13/2021
+ms.date: 06/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -92,7 +92,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2103**
+- **Technical preview version 2106**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -119,16 +119,22 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2105
+### Technical preview version 2106
 
-- [Enhanced code editor](2021/technical-preview-2105.md#bkmk_code) <!--8495588-->
-- [Select VM size for CMG](2021/technical-preview-2105.md#bkmk_cmgsize) <!--3555749-->
-- [Support Center dark and light themes](2021/technical-preview-2105.md#bkmk_dark) <!--8218853-->
-- [RBAViewer location change](2021/technical-preview-2105.md#bkmk_rbaviewer) <!--9573789-->
-- [Updated client deployment prerequisite](2021/technical-preview-2105.md#bkmk_vcredist) <!--5170229-->
-- [Change to internet access requirements](2021/technical-preview-2105.md#bkmk_pkgurl) <!--9791281-->
-- [PowerShell release notes preview](2021/technical-preview-2105.md#bkmk_powershell) <!--9752792-->
-<!--don't forget to pickup for CB: Console settings not saved 5452246-->
+- [Intune role-based access control for tenant attach](2021/technical-preview-2106.md#bkmk_rbac) <!--8126836-->
+- [Convert a CMG to virtual machine scale set](2021/technical-preview-2106.md#bkmk_cmg) <!--8959690-->
+- [Implicit uninstall of applications](2021/technical-preview-2106.md#bkmk_uninstall) <!--3607457-->
+- [Microsoft .NET requirements](2021/technical-preview-2106.md#bkmk_dotnet) <!--10033951-->
+- [Audit mode for potentially unwanted applications](2021/technical-preview-2106.md#bkmk_audit) <!--9249870-->
+- [External notifications](2021/technical-preview-2106.md#bkmk_pushnotify) <!--9504414-->
+- [List additional third-party updates catalogs](2021/technical-preview-2106.md#bkmk_catalogs) <!--9989251-->
+- [Management insights rule for TLS/SSL software update points](2021/technical-preview-2106.md#bkmk_sup) <!--7470529-->
+- [Renamed Co-management node to Cloud Attach](2021/technical-preview-2106.md#bkmk_cloud) <!--10158821-->
+- [Improvements for managing automatic deployment rules](2021/technical-preview-2106.md#bkmk_adr) <!--9247522-->
+- [New prerequisite check for SQL Server 2012](2021/technical-preview-2106.md#bkmk_sql2012) <!--10092858-->
+- [Console improvements](2021/technical-preview-2106.md#bkmk_console) <!--9575773-->
+- [Client encryption uses AES-256](2021/technical-preview-2106.md#bkmk_encrypt) <!--10129759-->
+- [PowerShell release notes preview](2021/technical-preview-2106.md#bkmk_powershell) <!--9997352-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -146,6 +152,27 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
+### Technical preview version 2105.2
+
+- [Windows Update native experience for software updates](2021/technical-preview-2105-2.md#bkmk_wu) <!--4316341-->
+- [Send product feedback from error windows](2021/technical-preview-2105-2.md#bkmk_errorfeedback) <!--4262917-->
+- [Custom properties for devices](2021/technical-preview-2105-2.md#bkmk_invext) <!--8939867-->
+- [Hardware inventory for client log settings](2021/technical-preview-2105-2.md#bkmk_diaginv) <!--5602449-->
+- [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
+- [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
+- [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
+- [PowerShell release notes preview](2021/technical-preview-2105-2.md#bkmk_powershell) <!--9881875-->
+
+### Technical preview version 2105
+
+- [Enhanced code editor](2021/technical-preview-2105.md#bkmk_code) <!--8495588-->
+- [Select VM size for CMG](2021/technical-preview-2105.md#bkmk_cmgsize) <!--3555749-->
+- [Support Center dark and light themes](2021/technical-preview-2105.md#bkmk_dark) <!--8218853-->
+- [RBAViewer location change](2021/technical-preview-2105.md#bkmk_rbaviewer) <!--9573789-->
+- [Updated client deployment prerequisite](2021/technical-preview-2105.md#bkmk_vcredist) <!--5170229-->
+- [Change to internet access requirements](2021/technical-preview-2105.md#bkmk_pkgurl) <!--9791281-->
+- [PowerShell release notes preview](2021/technical-preview-2105.md#bkmk_powershell) <!--9752792-->
+<!--don't forget to pickup for CB: Console settings not saved 5452246-->
 ### Technical preview version 2104
 
 - [Tenant attach: BitLocker recovery keys](2021/technical-preview-2104.md#bkmk_bitlocker) <!--6979225-->
@@ -185,7 +212,6 @@ The following features were released with previous versions of the Configuration
 | Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Phased deployment templates <!--4961086--> | [Tech preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | Remote control anywhere using cloud management gateway <!--4575930--> | [Tech preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) and [Tech preview 2009](2020/technical-preview-2009.md#bkmk_remctrl) |
-| Cloud services cost estimator <!--3555774--> | [Tech preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
 | Client-based PXE responder service <!--3556018, fka 1357148--> | [Tech preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE network boot support for IPv6 <!--3601254, fka 1269793--> |[Tech preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Use Azure Active Directory <!--3607315, fka 1322145--> | [Tech preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |

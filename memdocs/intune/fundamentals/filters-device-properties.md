@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -155,6 +155,7 @@ This article describes the different [device properties](#device-properties) and
 
   This property applies to:
 
+  - Android Enterprise
   - iOS/iPadOS
   - Windows 10 and newer
 
