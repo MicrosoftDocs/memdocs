@@ -11,6 +11,41 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year<!--10144130-->
+
+Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and higher shortly after iOS 15’s release.
+
+#### How does this affect me?
+
+If you are managing iOS/iPadOS devices, you might have devices that will not be able to upgrade to the minimum supported version (iOS/iPadOS 13). Provided that Office 365 mobile apps are supported on iOS/iPadOS 13.0 and higher, this may not affect you; you’ve likely already upgraded your OS or devices. See the following Apple documentation for devices to check which devices support iOS 13 or iPadOS 13 (if applicable).
+
+- [Supported iPhone models](https://support.apple.com/guide/iphone/supported-iphone-models-iphe3fa5df43/13.0/ios/13.0)
+- [Supported iPad models](https://support.apple.com/guide/ipad/supported-models-ipad213a25b2/13.0/ipados/13.0)
+- [Supported iPod models](https://support.apple.com/guide/ipod-touch/your-ipod-touch-iphdd4353af4/13.0/ios/13.0)
+
+For instructions on how to check in the Microsoft Endpoint Manager admin center which devices or users may be affected, read below.
+
+#### What do I need to do to prepare for this change?
+
+Check your Intune reporting to see what devices or users may be affected. For devices with mobile device management (MDM) go to **Devices** > **All devices** and filter by OS. For devices with app protection policies  go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
+
+To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](/mem/intune/fundamentals/manage-os-versions).
+
+### Plan for Change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
+
+With Apple's expected release of macOS 12 Monterey in the fall of 2021, Microsoft Intune, the Company Portal app and the Intune MDM agent will be moving to support macOS 10.15 (Catalina) and higher shortly after the release.
+
+#### How does this affect me?
+
+This will only affect you if you currently manage, or plan to manage macOS devices with Intune. This may not impact you because your users have likely already upgraded their macOS devices. See [macOS Catalina is compatible with these computers](https://support.apple.com/en-us/HT210222) for a list of devices that are supported.
+
+> [!NOTE]
+> Devices that are currently enrolled on macOS 10.13.x and 10.14 will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if running macOS 10.14 or below.
+
+#### What do I need to do to prepare for this change?
+
+Check your Intune reporting to see what devices or users may be affected. Go to Devices > All devices and filter by macOS. You can add in additional columns to help identify who in your organization has devices running macOS 10.14 or below. Request that your users upgrade their devices to a supported OS version before the release of macOS 12.
+
 ### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
 We have recently released an updated Company Portal for iOS to the Apple Store that is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
 
@@ -19,7 +54,7 @@ If you have enabled the **[Block installing apps using App Store](../configurati
 
 #### How does this affect me?
 User impact - Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
- 
+
 > [!NOTE]
 > If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you may need to manually push an update to the related devices.
 
