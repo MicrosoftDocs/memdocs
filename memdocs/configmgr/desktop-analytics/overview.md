@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 04/02/2021
+ms.date: 06/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -69,8 +69,6 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > [!IMPORTANT]
   > Desktop Analytics is a Windows service hosted in Azure global that utilizes Windows diagnostic data. While Desktop Analytics is an Azure global service that's available to US government customers, it doesn't meet [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes. For a list of compliance offerings for Microsoft products and services, see the [Microsoft Trust Center](/microsoft-365/compliance/offering-home). Desktop Analytics isn't available for GCC High or US Department of Defense (DOD) customers. The use of Azure Government subscriptions to host Desktop Analytics workspaces isn't supported.
 
-- [Set up Intune](../intune/fundamentals/setup-steps.md) for your organization.
-
   - **Workspace owner** permissions to **Set up your workspace**, and the following Azure Active Directory (Azure AD) roles:
 
     - [**Desktop Analytics Administrator**](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator)
@@ -80,6 +78,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     - To create a workspace in a new resource group: [**Owner**](/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription.
 
   - To access the portal after onboarding: [**Desktop Analytics Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) and [**Owner**](/azure/role-based-access-control/built-in-roles#owner) roles, or [**Contributor**](/azure/role-based-access-control/built-in-roles#contributor) permissions on the Log Analytics workspace.
+
+- [Set up Intune](../../intune/fundamentals/setup-steps.md) for your organization.
 
 - A supported version of Configuration Manager.
 
