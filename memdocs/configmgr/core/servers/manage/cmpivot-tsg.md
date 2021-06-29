@@ -128,7 +128,7 @@ By default, the site server log files are located in `C:\Program Files\Microsoft
 
 Look in `smsprov.log` for this line:
 
-<pre><code lang="Log">Auditing: User <username> initiated client operation 135 to collection &ltCollectionId>.
+<pre><code lang="Log">Auditing: User &ltusername> initiated client operation 135 to collection &ltCollectionId>.
 </code></pre>
 
 Find the ID in the CMPivot window. This ID is the `ClientOperationID`.

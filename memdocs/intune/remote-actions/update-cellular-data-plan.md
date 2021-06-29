@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2021
+ms.date: 06/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Update cellular data plan (public preview)
 
-The **Update cellular data plan** remote action lets you remotely activate eSIM cellular plan on iOS/iPadOS devices that support it..
+The **Update cellular data plan** remote action lets you remotely activate eSIM cellular plan on iOS/iPadOS devices that support it.
 
 ## Supported platforms
 
