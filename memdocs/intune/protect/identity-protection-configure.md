@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 06/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,11 +37,16 @@ Windows Hello for Business is a method for signing in to Windows devices by repl
 This feature applies to device running:
 
 - Windows 10 and later
-- Windows Holographic for Business
 
-Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to user and device groups in your organization.
+> [!NOTE]
+> For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](/windows/client-management/mdm/policy-csp-devicelock)
+
+Intune uses *configuration profiles* to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to user and device groups in your organization.
 
 This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
+
+> [!IMPORTANT]
+> Due to how Intune determines the scope and applicability of Windows Hello for Business policy, the device may log **Event ID 454** as a result of applying policy. This can be safely ignored when policy is being successful applied (and enforced).
 
 ## Create the device profile
 

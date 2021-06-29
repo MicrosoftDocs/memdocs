@@ -2,11 +2,10 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 04/13/2021
+ms.date: 06/14/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.assetid: 955e56fa-6485-4a1a-90e6-77bc2cf8e326
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -23,11 +22,9 @@ All docs.ms links should include `?WT.mc_id=configmgr-console` campaign ID at th
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: April 13, 2021*
+*This page only displays in English in the Configuration Manager console.*
 
 This content can assist you in learning and supporting Configuration Manager.
-
-(Note: this content is updated on the second Monday of every month, using data from the prior month.)
 
 For more information, see the following articles:
 
@@ -55,38 +52,6 @@ A curated list of important articles.
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service?WT.mc_id=configmgr-console)
 - [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
 
-## Trending
-
-The most popular articles between March 1 and March 31, 2021.
-
-| Page views | Title |
-|------------|-------|
-| 30692 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client?WT.mc_id=configmgr-console) |
-| 20599 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files?WT.mc_id=configmgr-console) |
-| 19853 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center?WT.mc_id=configmgr-console) |
-| 19368 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
-| 18631 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
-| 16911 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
-| 14883 | [Microsoft Defender for Endpoint](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection?WT.mc_id=configmgr-console) |
-| 14002 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
-| 11950 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates?WT.mc_id=configmgr-console) |
-| 11510 | [Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-server?WT.mc_id=configmgr-console) |
-
-In this time period, the [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console) received 37,188 page views. The [Configuration Manager PowerShell cmdlets overview page](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console) received 4,570 page views.
-
-## Recently updated
-
-Articles with a recent update:
-
-| Last reviewed | Title |
-|---------------|-------|
-| 3/5/2021 | [Install and configure a software update point](https://docs.microsoft.com/mem/configmgr/sum/get-started/install-a-software-update-point?WT.mc_id=configmgr-console) |
-| 3/5/2021 | [Content management fundamentals](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management?WT.mc_id=configmgr-console) |
-| 3/5/2021 | [Office 365 Client Management dashboard](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/office-365-dashboard?WT.mc_id=configmgr-console) |
-| 3/3/2021 | [Technical preview 2103](https://docs.microsoft.com/mem/configmgr/core/get-started/2021/technical-preview-2103?WT.mc_id=configmgr-console) |
-| 3/3/2021 | [Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview)](https://docs.microsoft.com/mem/configmgr/tenant-attach/atp-onboard?WT.mc_id=configmgr-console) |
-| 3/2/2021 | [Configure Microsoft Edge settings](https://docs.microsoft.com/mem/configmgr/compliance/deploy-use/browser-profiles?WT.mc_id=configmgr-console) |
-
 ## Troubleshooting articles
 
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
@@ -108,18 +73,23 @@ For more information, see [Microsoft Endpoint Configuration Manager troubleshoot
 
 ## New and updated support articles
 
-Support articles that are new or updated between January 13 and April 13, 2021.
+This section is updated periodically as new articles are published.
 
-- [KB 4600089 Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4600089)
-- [KB 4599924 Console terminates unexpectedly in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4599924)
-- [KB 5001600 Microsoft Connected Cache component fails to install on Configuration Manager current branch](https://support.microsoft.com/help/5001600)
-- [KB 5001670 Devices do not report app usage data in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/5001670)
+The complete list of all hotfix and update rollup related articles, starting with version 2010, is published to [Configuration Manager hotfixes and update rollups](https://docs.microsoft.com/mem/configmgr/hotfix?WT.mc_id=configmgr-console).
+
+The short form URL for 2010 and newer hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721).
+Hotfix related articles for version 2006 and prior are still available on support.microsoft.com.
+
+Hotfix and support articles that are new or updated between April 14 and May 20, 2021:
+
 - [Updates aren't downloaded when you run an ADR](https://docs.microsoft.com/troubleshoot/mem/configmgr/adr-updates-download-failure)
+- [The Windows 10 servicing dashboard shows no data](https://docs.microsoft.com/troubleshoot/mem/configmgr/windows-10-servicing-dashboard-empty)
+- [Configure peer cache for Configuration Manager clients](https://docs.microsoft.com/troubleshoot/mem/configmgr/configure-peer-cache)
+- [Offline servicing a WIM image with the Latest Cumulative Update fails](https://docs.microsoft.com/troubleshoot/mem/configmgr/offline-servicing-lcu-may-fail)
+- [KB 9210721 Summary of changes in Configuration Manager current branch, version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9210721)
+- [KB 9603111 Update for Microsoft Endpoint Configuration Manager version 2103, early update ring](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9603111)
+- [KB 9833643 Console update for Microsoft Endpoint Configuration Manager version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9833643)
 
-Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com are published to the new site below and still accessible using their original URLs. Troubleshooting articles created after October 2020 don't have a KB article ID. This doesn't apply to Configuration Manager hotfix or update-related content.
-
-[Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager)
-
-For more information, see [What's next for Windows release notes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-release-notes/ba-p/1754399).
+Note: The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.

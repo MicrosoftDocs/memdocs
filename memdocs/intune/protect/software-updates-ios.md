@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 06/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,10 @@ This feature applies to:
 - iOS 10.3 and later (supervised)
 - iPadOS 13.0 and later (supervised)
 
-By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration. Although the update process doesn't typically involve any user interaction, if the device has a passcode the user must enter it to start a software update. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
+By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
+
+> [!NOTE]
+> iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md), can install only when there is no user signed in to a Shared iPad session and the device is charging. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully. 
 
 > [!NOTE]
 > If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behaviour may be undesirable.
@@ -53,7 +56,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 2. Select **Devices** > **Update policies for iOS/iPadOS** > **Create profile**.
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 
-   ![Basics tab](./media/software-updates-ios/basics-tab.png)
+   :::image type="content" source="./media/software-updates-ios/basics-tab.png" alt-text="Example Update policy settings.":::
 
 4. On the **Update policy settings** tab, configure the following options:
 
@@ -70,7 +73,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
-      ![Example of selecting to update during scheduled time](./media/software-updates-ios/scheduled-time.png)
+      :::image type="content" source="./media/software-updates-ios/scheduled-time.png" alt-text="Example of selecting an update during scheduled time.":::
 
       - **Time zone**: Choose a time zone.
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. By using a start day and end day, overnight blocks are supported. Options include:
@@ -114,7 +117,7 @@ You can edit an existing policy, including changing the restricted times:
 
 2. While viewing the policies **Properties**, select **Edit** for the policy page you want to modify.
 
-   ![Edit a policy](./media/software-updates-ios/edit-policy.png)
+   :::image type="content" source="./media/software-updates-ios/edit-policy.png" alt-text="Editing an existing policy.":::
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits, and return to the policies *Properties*.
 

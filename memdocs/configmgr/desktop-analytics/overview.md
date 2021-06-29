@@ -71,7 +71,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - **Workspace owner** permissions to **Set up your workspace**, and the following Azure Active Directory (Azure AD) roles:
 
-    - [**Desktop Analytics Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)
+    - [**Desktop Analytics Administrator**](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator)
 
     - To use an existing workspace or create a new workspace in an existing resource group: [**Log Analytics Contributor**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) and [**User Access Administrator**](/azure/role-based-access-control/built-in-roles#user-access-administrator) on the resource group.
 
@@ -134,7 +134,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
-  - Windows Virtual Desktop Access E3 or E5
+  - Windows 10 Virtual Desktop Access (VDA) per user
 
 > [!NOTE]
 > Beyond the cost of these license subscriptions, there's no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. For more information, see [Log Analytics usage and costs](/azure/azure-monitor/platform/manage-cost-storage).

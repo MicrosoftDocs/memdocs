@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 4/30/2021
+ms.date: 5/28/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -53,10 +53,10 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 ## Device configuration
 ## Device enrollment
 ## Device management
+## Device security
 ## Intune apps
 ## Monitor and troubleshoot
 ## Role-based access control
-## Security
 
 -->
 
@@ -78,7 +78,7 @@ Using iOS app protection policies in Microsoft Intune app protection policies, y
 
 To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you'll be able to see the overall compliance status for the policy. With device level reporting, you'll be able to see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
 
-For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md). 
+For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
 ### Use a Settings Catalog policy in a policy set for Windows and macOS devices<!-- 8851701  -->
 
@@ -91,33 +91,45 @@ Applies to:
 - macOS
 - Windows 10 and newer
 
-### Per setting status report in Settings Catalog<!-- 9061277  -->
-
-When using **Settings Catalog**, you can see how many devices are in each state, including success, conflict, and error. This report will include a **Per setting status** that will:
-
-- Show the total number of devices impacted by a specific setting.
-- Have controls to search, sort, filter, export, and go to the next/previous pages.
-
-For more information on the Settings Catalog, see [Use the Settings Catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
-
-### New settings for iOS/iPadOS 14.5 devices and newer <!-- 9428309 -->
-
-When creating a device restrictions policy for iOS/iPadOS devices, there are new settings available (Devices > Configuration profiles > Create profile > iOS/iPadOS > Device restrictions > Connected devices):
-
-- **Block Apple Watch auto unlock**: Set to **Yes** to block users from unlocking their device with Apple Watch.
-- **Allow users to boot devices into recovery mode with unpaired devices**: Set to **Yes** to allow users to boot their device into recovery with an unpaired device.
-- **Block Siri for dictation**: Set to **Yes** to disable connections to Siri servers so that users can't use Siri to dictate text.
-- **Require devices to use Wi-Fi networks set up via configuration profiles**: Set to **Yes**to require devices to only use Wi-Fi networks set up through configuration profiles.
-
-To see the settings you can currently configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
-
-Applies to:
-
-- iOS/iPadOS 14.5 and newer
-
 ### Settings catalog policies for policy sets<!-- 8683467  -->
 
 In addition to profiles based on templates, you will be able to add a profiles based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
+
+### New macOS device configuration profile settings, and iOS/iPadOS setting name is changing<!-- 9772945  -->
+
+There are new settings you can configure on macOS 10.13 devices and newer (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Templates** > **Device restrictions** for profile type):
+
+- **Block adding Game Center friends** (App Store, Doc Viewing, Gaming): Prevents users from adding friends to the Game Center.
+- **Block Game Center** (App Store, Doc Viewing, Gaming): Disables the Game Center, and the Game Center icon is removed from the Home screen.
+- **Block multiplayer gaming in the Game Center** (App Store, Doc Viewing, Gaming): Prevents multiplayer gaming when using the Game Center.
+- **Block modification of wallpaper** (General): Prevents the wallpaper from being changed.
+
+To see the settings you can currently configure, go to [macOS device settings to allow or restrict features](../configuration/device-restrictions-macos.md).
+
+Also, the iOS/iPadOS **Block Multiplayer Gaming** setting name is changing to **Block multiplayer gaming in the Game Center** (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile type).
+
+For more information about this setting, go to [iOS and iPadOS device settings to allow or restrict features](../configuration/device-restrictions-ios.md).
+
+Applies to:
+
+- iOS/iPadOS
+- macOS 10.13 and newer
+
+### More iOS/iPadOS home screen layout grid size options<!-- 9569886  -->
+
+On iOS/iPadOS devices, you can configure the grid size on the home screen (**Devices** > **Device Configuration** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Home screen layout**). For example, you can set the grid size to 4 columns x 5 rows.
+
+The grid size will have more options:
+
+- 4 columns x 5 rows
+- 4 columns x 6 rows
+- 5 columns x 6 rows
+
+To see the home screen layout settings you can currently configure, go to [device settings to use common iOS/iPadOS features in Intune](../configuration/ios-device-features-settings.md#home-screen-layout).
+
+Applies to:
+
+- iOS/iPadOS
 
 <!-- ***********************************************-->
 <!--
@@ -127,27 +139,59 @@ In addition to profiles based on templates, you will be able to add a profiles b
 <!-- ***********************************************-->
 ## Device management
 
-### Windows 10 Enterprise multi-session support (public preview)<!--8666391 -->
-
-This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user Microsoft 365 licensing. This upcoming support will let you:
-
-- Host multiple concurrent user sessions using the  new Remote Desktop Session Host exclusive to Windows Virtual Desktop on Azure.
-- Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
-- Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with OS scope policies and apps.
-
-### Use Intune policy to expedite installation of Windows 10 quality updates<!-- 5584682  -->
-
-As part of a public preview, you’ll soon be able to use Intune’s *Windows 10 quality updates* policy to expedite installation of the most recent Windows 10 updates to devices you manage with Intune. (**Devices** > **Windows 10 quality updates (preview)** > **Create profile**).
-
-When you expedite an update, devices can start the download and install of the update as soon as possible, without having to wait for the device to check in for updates. Other than expediting the install of the update, use of this policy leaves your existing update deployment policies and processes untouched.
-
-### Support ending for Restart remote action on Android Enterprise corporate-owned devices with a work profile<!--9584646 -->
-
-Support will end for the **Restart** remote action on corporate-owned devices with a work profile. The **Restart** button will be removed from the **Device** page for corporate-owned devices with a work profile. If you try to restart devices using bulk device actions, the corporate-owned work profile devices won't restart and those device actions will report as **Not supported**. Other device types that are included in the bulk device action will restart as normal for that action.
-
 ### Tenant attach: Offboarding <!--9412904 -->
 
 While we know customers get enormous value by enabling tenant attach with Configuration Manager, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard from the cloud following a disaster recovery scenario where the on-premises environment was removed. You'll soon be able to offboard a Configuration Manager environment from the Microsoft Endpoint Manager admin center.
+
+<!-- ***********************************************-->
+## Device security
+
+### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115   -->
+
+You'll soon be able to use the [settings catalog](../configuration/settings-catalog.md) to configure Microsoft Defender for Endpoint on macOS. (**Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog**).
+
+Some of the settings we plan to make available from the settings catalog include:
+
+**Microsoft Defender - Antivirus engine**:
+
+- Allowed threats
+- Enable passive mode
+- Enable real-time protection
+- Scan exclusions
+- Threat type settings
+
+**Microsoft Defender - Cloud delivered protection preferences**:
+
+- Diagnostic collection level
+- Enable - disable automatic sample submissions
+- Enable - disable cloud delivered protection
+
+**Microsoft Defender - EDR preferences**:
+
+- Device tags
+- Enable - disable early preview
+
+**Microsoft Defender - User interface preferences**:
+
+- Show - hide status menu icon
+
+### Certificate Connector for Microsoft Intune combines separate certificate connectors<!-- 9843502  -->
+
+The separate certificate connectors are being combined into a unified connector called **Certificate Connector for Microsoft Intune**. This unified connector replaces existing connectors, and includes the following new features:
+
+- Configure SCEP, PKCS, PFX imported certs, and revocation in the same connector.
+- Use normal Active Directory accounts or the system account for the connector service.
+- Based on your tenant location, select government vs. commercial environments.
+- Removes the need to select a client certificate for SCEP integration with NDES.
+- Auto-updates to the latest version of the connector.
+- Improved logging.
+
+To use the **Certificate Connector for Microsoft Intune**:
+
+1. Uninstall any existing certificate connectors.
+2. Install the Certificate Connector for Microsoft Intune.
+
+For more information on certificate connectors, see [Certificate connectors for Microsoft Intune](../protect/certificate-connectors.md).
 
 <!-- ***********************************************-->
 ## Intune apps
@@ -169,18 +213,16 @@ We’re reworking the endpoint security Account protection policy to use the new
 
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-### Organizational report focused on device configuration<!-- 8455708  -->
+### Export capability for Enrollment failures report<!-- 5491082  -->
 
-We'll be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or not applicable. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new Settings Catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
-
-### Export Intune reports using Graph API v1.0 or beta<!-- 8090911  -->
-
-Intune reporting export API will be available in Graph v1.0, and will continue to be available in Graph beta. For related information, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+You will be able to export data from the Enrollment failures operational report. This report will allow you to quickly export reporting data generated from any size tenant. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Enrollment failures** > **Export**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 <!-- ***********************************************-->
-<!--
 ## Role-based access control
--->
+
+### Scope tags for Managed Google Play apps<!-- 6114508  -->
+
+Scope tags determine which objects an admin with specific rights can view in Intune. Most newly-created items in Intune take on the scope tags of the creator. This is not the case for Managed Google Play Store apps. You will be able to optionally assign a scope tag to apply to all newly-synced Managed Google Play apps on the **Managed Google Play connector** pane. The chosen scope tag will only apply to new Managed Google Play apps, not Managed Google Play apps that have already been approved in the tenant. For related information see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 <!-- ***********************************************-->
 ## Scripting
@@ -192,10 +234,6 @@ When you use the Graph API to export Intune reports without selecting any column
 ### Intune Data Warehouse updates<!-- 9370034 -->
 
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2108 service update of Intune. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
-
-### New property value will be supported in the managementAgentType enum<!-- 9749555  -->
-
-The `IntuneAosp` property value will be supported in the `managementAgentType` enum. The `ManagementAgentTypeID` value for this property will be `2048`.  It represents the device type that is managed by Intune's mobile device management (MDM) for AOSP (Android Open Source Project) devices. For related information, see [managementAgentType](../developer/reports-ref-devices.md#managementagenttypes) in the beta section of the Intune Data Warehouse API.
 
 <!-- ***********************************************-->
 ## Security

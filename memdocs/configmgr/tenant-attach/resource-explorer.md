@@ -2,7 +2,7 @@
 title: Tenant attach - Resource explorer the admin center (preview)
 titleSuffix: Configuration Manager
 description: "View hardware inventory for uploaded Configuration Manager devices using resource explorer in the admin center."
-ms.date: 12/03/2020
+ms.date: 06/02/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -29,6 +29,7 @@ The following items are required to use resource explorer from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md).
 - A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
+   - Historical inventory data requires Configuration Manager version 2103, or later. 
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 
 ## Permissions
@@ -49,6 +50,18 @@ The user account needs the following permissions:
 
    :::image type="content" source="media/6479284-resource-explorer-details.png" alt-text="Resource explorer with the motherboard class selected" lightbox="media/6479284-resource-explorer-details.png":::
 
+## <a name="bkmk_historical"></a> Historical inventory data in resource explorer
+<!--9546584, June 2021-->
+
+*Applies to Configuration Manager 2103, or later*
+
+Resource explorer can display a historical view of the device inventory in the Microsoft Endpoint Manager admin center. When troubleshooting, having historical inventory data can provide valuable information about changes to the device.
+
+1. From the Microsoft Endpoint Manager admin center, select **Resource explorer**.
+1. Select a class.
+1. Enter a custom date in the date time picker to get historical inventory data.
+
+:::image type="content" source="./media/9546584-resource-explorer-historical-inventory.png" alt-text="Screenshot of choosing a date from Resource explorer in the Microsoft Endpoint Manager admin center " lightbox="./media/9546584-resource-explorer-historical-inventory.png":::
 ## Close resource explorer
 
 To close resource explorer and return to the device information, use the `X` icon in the top right of resource explorer.

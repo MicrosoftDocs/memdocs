@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 06/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,9 @@ You can use filters for some common app policies on the following platforms. For
 | Managed Google Play web link | ✔️ |
 | Managed Android line-of-business app | ✔️ |
 
+> [!NOTE]
+> Filters aren't supported on Android Enterprise corporate owned work profile devices when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
+
 ### iOS/iPadOS
 
 | App type | Supported |
@@ -121,7 +124,7 @@ You can use filters for all compliance policies on the following platforms:
 You can use filters for some common device configuration policies on the following platforms. For a list of what's not supported, see [not supported](#not-supported) (in this article).
 
 > [!NOTE]
-> Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices. The **OEMConfig** profile type includes settings that are only available for Android Enterprise devices.
+> Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices. 
 >
 > For a list of all device configuration profiles, and the platforms they apply to, see [Apply features and settings on your devices](../configuration/device-profiles.md).
 
@@ -225,7 +228,7 @@ You can use filters for some common device configuration policies on the followi
 | PKCS imported certificate | ✔️ |
 | Preference file | ✔️ |
 | SCEP certificate | ✔️ |
-| Settings catalog | ❌ |
+| Settings catalog | ✔️ |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
@@ -263,7 +266,7 @@ You can use filters for some common device configuration policies on the followi
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
 | Secure assessment (Education) | ✔️ |
-| Settings catalog | ❌ |
+| Settings catalog | ✔️ |
 | Shared multi-user device | ✔️ |
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
@@ -282,7 +285,6 @@ You can use filters for some common device configuration policies on the followi
 
 The following features don't support using filters:
 
-- Configuration Profile Settings catalog
 - App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows 10
 - End user experiences customization policies

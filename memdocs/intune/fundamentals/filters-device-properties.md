@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -91,7 +91,7 @@ This article describes the different [device properties](#device-properties) and
   Examples:
 
   - `(device.deviceCategory -eq "Engineering devices")`
-  - `(device.deviceCategory -contains ["Engineering devices", "EMEA devices"])`
+  - `(device.deviceCategory -contains "Engineering")`
   - `(device.model -startsWith "E")`
 
   This property applies to:
@@ -155,6 +155,7 @@ This article describes the different [device properties](#device-properties) and
 
   This property applies to:
 
+  - Android Enterprise
   - iOS/iPadOS
   - Windows 10 and newer
 

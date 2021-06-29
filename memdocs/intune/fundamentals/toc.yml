@@ -1,3 +1,4 @@
+items:
 - name: Microsoft Intune fundamentals
   href: index.yml
 - name: Overview
@@ -103,8 +104,10 @@
           href: deployment-guide-enrollment-windows.md
       - name: Device platform deployment
         items:
-        - name: iOS/iPadOS devices 
+        - name: iOS/iPadOS  
           href: deployment-guide-platform-ios-ipados.md    
+        - name: Android, Android Enterprise 
+          href: deployment-guide-platform-android.md 
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection
@@ -145,8 +148,10 @@
         href: network-bandwidth-use.md
       - name: Using Windows 10 VMs with Intune
         href: windows-10-virtual-machines.md
-      - name: Using Windows Virtual Desktop with Intune
-        href: windows-virtual-desktop.md
+      - name: Using Azure Virtual Desktop with Intune
+        href: azure-virtual-desktop.md
+      - name: Using Azure Virtual Desktop multi-session
+        href: azure-virtual-desktop-multi-session.md
       - name: Intune endpoints
         href: intune-endpoints.md
       - name: Intune US government endpoints
