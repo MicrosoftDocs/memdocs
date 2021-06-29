@@ -130,7 +130,7 @@ After you sign up, you’ll be alerted by email when your tenant has access to t
 > [!IMPORTANT]  
 > There’s a known issue with always-on VPN that prevents the following steps from working properly. If you're using always-on VPN with the standalone Tunnel client app today, you'll need to do the following:
 >
-> 1. Disable the Always-on configuration in the VPN profiles for both the standalone Tunnel app, and for Microsoft Defender for Endpoint as the Tunnel app.
+> 1. Disable the Always-on configuration in the VPN profiles for both the standalone Tunnel app, and for Microsoft Defender for Endpoint as the Tunnel app. To do so, edit the profiles and set *Always on VPN* to **Not configured**.
 > 2. Create a [Device Restrictions profile](../configuration/device-restrictions-configure.md) for Android Enterprise:
 >    1. For *Profile type* select **Device restrictions**.
 >    2. For *Configuration settings*, expand *Connectivity*, and set *Always-on VPN (work profile-level)* to **Enable**.
