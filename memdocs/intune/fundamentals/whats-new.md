@@ -58,6 +58,13 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of June 28, 2021
+
+### New iOS/iPadOS remote action lets you update the eSIM cellular plan  (public preview)<!--7119250 wnready-->
+The new **Update cellular data plan (preview)** action lets you remotely activate the eSIM cellular plan on iOS/iPadOS devices that support it. This feature is currently in public preview. For more information, see [Update cellular data plan](../remote-actions/update-cellular-data-plan.md).
+
 <!-- ########################## -->
 ## Week of June 21, 2021 (Service release 2106)
 
