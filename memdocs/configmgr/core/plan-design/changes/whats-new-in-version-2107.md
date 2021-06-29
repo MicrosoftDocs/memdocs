@@ -111,7 +111,7 @@ Starting in this release, you can enable the site to send notifications to an ex
 
 <!--9791281,10237384-->
 
-Before you update to version 2107, if you restrict internet access, confirm that the site system that hosts the service connection point role can communicate with the following internet endpoint: `configmgrbits.azureedge.net`. This endpoint was already required, but its use is expanded in this release. You can't update to version 2107 unless your network allows traffic to this URL.
+Before you update to version 2107, if you restrict internet access, confirm that the site system that hosts the service connection point role can communicate with the following internet endpoint: `configmgrbits.azureedge.net`. This endpoint was already required, but its use is expanded in this release. The site system can't download version 2107 or later unless your network allows traffic to this URL.
 
 For more information, see [internet access requirements](../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
 
