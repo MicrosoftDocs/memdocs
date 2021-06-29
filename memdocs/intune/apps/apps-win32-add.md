@@ -112,6 +112,7 @@ On the **Program** page, configure the app installation and removal commands for
 
     > [!NOTE]
     > You can configure a Win32 app to be installed in **User** or **System** context. **User** context refers to only a particular user. **System** context refers to all users of a Windows 10 device.
+    > When device is  enrolled by Azure AD registered,  you need to select **System**.
     >
     > Users are not required to be logged in on the device to install Win32 apps.
     > 
