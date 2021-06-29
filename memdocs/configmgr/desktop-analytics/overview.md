@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 04/02/2021
+ms.date: 06/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -79,6 +79,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - To access the portal after onboarding: [**Desktop Analytics Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) and [**Owner**](/azure/role-based-access-control/built-in-roles#owner) roles, or [**Contributor**](/azure/role-based-access-control/built-in-roles#contributor) permissions on the Log Analytics workspace.
 
+- [Set up Intune](../../intune/fundamentals/setup-steps.md) for your organization.
+
 - A supported version of Configuration Manager.
 
   - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#security-roles) role in Configuration Manager
@@ -125,6 +127,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
+
+- At least one Intune license for you as the administrator to access the Intune portal.
 
 - Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.yml).
 
