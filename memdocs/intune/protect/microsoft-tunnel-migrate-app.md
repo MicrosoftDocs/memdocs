@@ -142,15 +142,15 @@ After you sign up, you’ll be alerted by email when your tenant has access to t
 >
 > **To work around this issue**:
 >
-> 1. Disable the Always-on configuration in both VPN profiles (for the standalone Tunnel app, and for Microsoft Defender for Endpoint as the Tunnel app). 
-> 2. Create a [Device Restrictions profile](../configuration/device-restrictions-configure) for Android Enterprise:
+> 1. Disable the Always-on configuration in both VPN profiles (for the standalone Tunnel app, and for Microsoft Defender for Endpoint as the Tunnel app).
+> 2. Create a [Device Restrictions profile](../configuration/device-restrictions-configure.md) for Android Enterprise:
 >    1. For *Profile type* select **Device restrictions**.
 >    2. For *Configuration settings*, expand *Connectivity*, and set *Always-on VPN (work profile-level)* to **Enable**.
 >       - For *VPN client* select **Custom**
 >       - For *Package ID* enter **com.microsoft.scmx**
 >    3. Deploy the profile to the same devices that have the new and old VPN profiles for Tunnel.
-> 
->  3. After the device restriction profile deploys, you can successfully clean up the previous deployment to complete the migration. 
+>
+> 3. After the device restriction profile deploys, you can successfully clean up the previous deployment to complete the migration. 
 
 ### Review and record your current Tunnel configurations
 
