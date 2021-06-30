@@ -208,6 +208,9 @@ By default, there can only be one **Global** policy per tenant. However, you can
 
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy will override these settings.
 
+> [!NOTE]
+> [The policy settings in the OneDrive Admin Center are no longer being updated.](https://docs.microsoft.com/en-us/onedrive/control-access-to-mobile-app-features) Microsoft Enpoint Manager may be used instead.
+
 ## App protection features
 
 ### Multi-identity
