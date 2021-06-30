@@ -251,7 +251,7 @@ Using the Company Portal, end users will be able to restart an app installation 
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 
-### Improvements to SSO app extension screen for Company Portal for macOS < !-- 9674212  -->
+### Improvements to SSO app extension screen for Company Portal for macOS <!-- 9674212  -->
 
 We're improving the Intune Company Portal authentication screen that prompts macOS users to log in to their account using single sign-on (SSO). Users will be able to:
 
