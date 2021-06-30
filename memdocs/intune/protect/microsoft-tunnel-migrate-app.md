@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 06/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -126,6 +126,20 @@ Sign up at https://aka.ms/VPNpreview where you provide your Managed Google Play 
 
 After you sign up, you’ll be alerted by email when your tenant has access to the preview app. The email includes instructions for deploying the preview Microsoft Defender for Endpoint app from the Managed Google Play store.
 -->
+
+> [!IMPORTANT]  
+> There’s a known issue with always-on VPN that prevents the following steps from working properly. If you're using always-on VPN with the standalone Tunnel client app today, you'll need to do the following:
+>
+> 1. Disable the Always-on configuration in the VPN profiles for both the standalone Tunnel app, and for Microsoft Defender for Endpoint as the Tunnel app. To do so, edit the profiles and set *Always on VPN* to **Not configured**.
+> 2. Create a [Device Restrictions profile](../configuration/device-restrictions-configure.md) for Android Enterprise:
+>    1. For *Profile type* select **Device restrictions**.
+>    2. For *Configuration settings*, expand *Connectivity*, and set *Always-on VPN (work profile-level)* to **Enable**.
+>       - For *VPN client* select **Custom**
+>       - For *Package ID* enter **com.microsoft.scmx**
+>    3. Deploy the profile to the same devices that have the new and old VPN profiles for Tunnel.
+>
+> 3. After the device restriction profile deploys, you can successfully remove the VPN profile for the standalone Tunnel client app.
+
 ### Review and record your current Tunnel configurations
 
 Before you begin your migration to Defender for Endpoint, take the time to review and record the settings you currently use for the following Intune configurations:
