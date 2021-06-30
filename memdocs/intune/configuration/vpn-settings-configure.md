@@ -46,6 +46,9 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 > [!TIP]
 > *VPN* profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
+>[!TIP]
+> If you use certificate based authentication for your VPN profile, deploy the VPN profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.  For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+
 > [!NOTE]
 >
 > - User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
