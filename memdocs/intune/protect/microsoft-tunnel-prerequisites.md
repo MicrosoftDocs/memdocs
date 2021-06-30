@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/24/2021
+ms.date: 06/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -108,6 +108,16 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   ```
 
   For this change to take effect, you must either reboot the server or run `sysctl -p`.
+
+  If the expected entry isn't present in the sysctl.conf file, consult the documentation for the distribution you use for how to enable IP forwarding. Typically, you can edit **sysctrl.conf** to add the missing line at the end of the file to permanently enable IP forwarding.
+
+  To temporarily enable or disable IP forwarding, run one of the following generic commands as *root* or *sudo* on the server. These commands can change the IP forwarding configuration until the server restarts. After a restart, the server returns IP forwarding behavior to its previous state. For both commands, use a value of **0** to *disable* forwarding, and a value of **1** to *enable* forwarding. The following command examples use a value of *1* to *enable* forwarding:
+  - `sysctl -w net.ipv4.ip_forward=1`
+  - `echo 1 > /proc/sys/net/ipv4/ip_forward`
+
+  To check on the status of IP forwarding on the server, run one of the following generic commands as *root* or *sudo* on the server. Both commands return a value of **0** for *disabled* and a value of **1** for *enabled*:
+  - `sysctl net.ipv4.ip_forward`
+  - `cat /proc/sys/net/ipv4/ip_forward`
 
 - **Configure multiple NICs per server** *(Optional)*: We recommend using two Network Interface controllers (NICs) per Linux server to improve performance, though use of two is optional.
 
