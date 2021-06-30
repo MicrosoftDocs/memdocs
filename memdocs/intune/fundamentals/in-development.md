@@ -190,6 +190,20 @@ Filters are in public preview and must be enabled for your tenant before you can
 
 The **Collect diagnostics** remote action will move to general availability. For more information about this remote action, see  [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md)
 
+### Use filters to assign iOS/iPadOS software update policies in Endpoint Manager admin center - public preview<!-- 7423817 -->
+
+In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies.
+
+When assigning iOS/iPadOS software update policies to device groups, you'll be able to use filters. You can filter the devices that get the software update policy based on a device property, such as the OS version, device manufacturer, and more. After you create the filter, use the filter when you assign the software update policy.
+
+To see the assignment filters that apply to your iOS/iPadOS devices, go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS devices** > select a device > **Filter evaluation (preview)**.
+
+For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+
+Applies to:
+
+- iOS/iPadOS
+
 <!-- ***********************************************-->
 ## Device security
 
