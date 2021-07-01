@@ -141,20 +141,6 @@ We’re adding support for user-assigned device configuration policies for [Shar
 
 With this change, settings like the home screen layout and most device restrictions assigned to user groups will apply to Shared iPad devices while a user from the assigned user groups is active on the device.
 
-Device feature setting:
-
-- Home screen layout
-
-Device restrictions:
-
-- Block shared iPad temporary sessions
-- Defer software updates
-- Force automatic date and time
-- Require joining Wi-Fi networks only using configuration profiles
-- Block auto lock
-- Allow users to boot devices into recovery mode with unpaired devices
-- Block Siri for dictation
-
 ### Use filters on DFCI configuration profiles on Windows 10 RS5+ devices<!-- 8817773  -->
 
 In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
