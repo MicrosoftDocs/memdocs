@@ -87,6 +87,8 @@ The available actions depend on the device platform and the device configuration
   - [Wipe](devices-wipe.md#wipe)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronize device](device-sync.md)
+  - [Update cellular data plan](update-cellular-data-plan.md) (iOS/iPadOS)
+
 
 ## Next steps
 
