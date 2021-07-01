@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/01/2021
+ms.date: 06/30/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -28,12 +28,12 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage macOS devices in Microsoft Intune
 
-Intune supports mobile device management (MDM) of iPads and iPhones to give users secure access to work email, data, and apps. This guide provides macOS-specific guidance to help you set up enrollment and deploy apps and policies to users and devices.      
+Secure access to work email, data, and apps on macOS devices. This article lists macOS-specific tasks to help you enable Intune mobile device management for macOS, configure policies, and deploy apps.  
 
 
 ## Prerequisites  
 
-Before you begin, complete these prerequisites to enable macOS device management in Intune. For more detailed information about how to set up, onboard, or move to Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).          
+Complete the following prerequisites to enable macOS device management in Intune:      
 
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
@@ -41,9 +41,27 @@ Before you begin, complete these prerequisites to enable macOS device management
 * [Have Global Administrator or Intune administrator Azure Active Directory permissions](role-based-access-control.md)  
 * [Set up Apple MDM push (APNs) certificate](../enrollment/apple-mdm-push-certificate-get.md)  
 
+ For more detailed information about how to set up, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
+
 ## Plan for your deployment  
 
 The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios, and requirements. It also describes how to create plans for rollout, communication, support, testing, and validation. Because Company Portal for macOS isn't available in the App Store, we recommend having a communication plan so that end users know how to install Company Portal and enroll their devices.  
+
+## Enroll devices  
+
+You can enable enrollment in Intune for company-owned and personal macOS devices. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for coporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
+ 
+After devices enroll, they can receive Intune policies and configurations. 
+
+| Task | Detail | 
+| ---- | ------ | 
+|[Set up enrollment for user-owned (BYOD) devices](../enrollment/macos-enroll.md)|This enrollment method is for organizations that have *Bring Your Own Device* (BYOD) policies. Complete the prerequisites in this article to enable enrollment for user-owned devices. You'll also find enrollment resources and links to share with device users so that they're supported throughout the enrollment experience.  | 
+|[Set up Apple Automated Device Enrollment (ADE)](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience that automates enrollment on corporate-owned devices purchased through Apple School Manager or Apple Business Manager. This method is ideal for organizations that have a large number of devices to enroll, because it eliminates the need to touch and configure each device individually.  |  
+|[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Set up an enrollment experience for corporate-owned devices unaffiliated with a single user. Direct enrollment doesn't wipe the device so it's ideal to use with devices that don't need access to local user data. You'll need to transfer the enrollment profile to the Mac directly, which requires a USB connection to a Mac computer running Apple Configurator.|  
+|[Add a device enrollment manager](../enrollment/device-enrollment-manager-enroll.md)| People designated as device enrollment managers (DEM) can enroll up to 1,000 corporate-owned mobile devices at a time. DEM accounts are useful in organizations that enroll and prepare devices before handing them out to users. | 
+| [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
+|[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
+|[Troubleshoot enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 ## Create compliance rules  
 
@@ -56,19 +74,10 @@ Use compliance policies to define the rules and conditions that users and device
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Specify the app or services you want to protect and define the conditions for access. |  
 |[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of.  For example, things like meeting room calendar kiosks use basic authentication.  |  
 
-## Configure endpoint security  
-
-Use the Intune endpoint security features to configure device security and to manage security tasks for devices at risk. 
-
-| Task | Detail | 
-| ---- | ------ | 
-|[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
-|[Use Conditional Access to limit access to Microsoft Tunnel](../protect/microsoft-tunnel-conditional-access.md)|Use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway. | 
-|[Add endpoint protection settings](../protect/microsoft-tunnel-conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../protect/endpoint-protection-macos.md).   | 
 
 ## Configure device settings     
 
-Use Microsoft Intune to enable or disable settings and features on iOS/iPadOS devices. To configure and enforce these settings, create a device configuration profile and then assign the profile to groups in your organization. Devices receive the profile once they enroll.  
+Use Microsoft Intune to enable or disable settings and features on macOS devices. To configure and enforce these settings, create a device configuration profile and then assign the profile to groups in your organization. Devices receive the profile once they enroll.  
 
 | Task | Detail | 
 | ---- | ------ | 
@@ -81,6 +90,16 @@ Use Microsoft Intune to enable or disable settings and features on iOS/iPadOS de
 |[Configure custom profile](../configuration/custom-settings-macos.md)|Add and assign device settings and features that aren't built into Intune.|
 |[Add and manage macOS extensions](../configuration/kernel-extensions-overview-macos.md)|Add kernel extensions and system extensions, which enables users to install app extentions that extend the native capabilities of the operating system. For a description of the settings in this area, see the [macOS extensions reference](../configuration/kernel-extensions-settings-macos.md).|  
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
+
+## Configure endpoint security  
+
+Use the Intune endpoint security features to configure device security and to manage security tasks for devices at risk. 
+
+| Task | Detail | 
+| ---- | ------ | 
+|[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
+|[Use Conditional Access to limit access to Microsoft Tunnel](../protect/microsoft-tunnel-conditional-access.md)|Use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway. | 
+|[Add endpoint protection settings](../protect/microsoft-tunnel-conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../protect/endpoint-protection-macos.md).   | 
 
 
 ## Set up secure authentication methods   
@@ -112,21 +131,6 @@ As you set up apps and app policies, think about your organization's requirement
 |[Use shell scripts on macOS devices](../apps/macos-shell-scripts.md)|Use shell scripts to extend device management capabilities in Intune beyond what's supported by the macOS operating system.| 
 
 
-## Enroll devices  
-
- Enrolling devices allows them to receive the policies you create, so have your Azure AD user groups and device groups ready. 
-
-For information about each enrollment method and how to choose one that's right for your organization, see the [iOS/iPadOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
-
-| Task | Detail | 
-| ---- | ------ | 
-|[Set up Apple Automated Device Enrollment (ADE) in Intune](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience for corporate-owned devices purchased through Apple School Manager or Apple Business Manager. |  
-|[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Create an Apple Configurator profile to enroll corporate-owned devices (with no user affinity) via direct enrollment; or to enroll wiped or new devices (with user affinity) via Setup Assistant. You'll need to export the Apple Configurator profile from Intune, which requires a USB connection to a Mac computer running Apple Configurator.|  
-| [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
-|[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
-|[Troubleshoot enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
-
-
 ## Run remote actions  
 
 After devices are set up, you can use remote actions in Intune to manage and troubleshoot macOS devices from a distance. The following articles introduce you to the remote actions in Intune. If an action is absent or disabled in the portal, then it isn't supported on macOS.  
@@ -138,10 +142,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 |[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|  
 
 ## Next steps  
-Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.    
-
-* [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) 
-* [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md) **Laura: Does this bullet apply to macOS?**   
+Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
 For other versions of this guide, see:  
 
