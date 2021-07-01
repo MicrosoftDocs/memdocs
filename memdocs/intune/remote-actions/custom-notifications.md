@@ -127,6 +127,12 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 Intune processes the message immediately. The only confirmation that the message was sent is the Intune notification you'll receive in the console, which displays the text of the message you sent.  
 
+
+Note: Custom notifications to a single device does not work for Android Corporate owned devices. There is no notification button for this kind of devices.
+![corp_owned_device_missing_notification_button](https://user-images.githubusercontent.com/82945624/115547903-bcbd7f00-a29e-11eb-8ed7-dea37bae89e0.JPG)
+![BYOD_device_missing_notification_button](https://user-images.githubusercontent.com/82945624/115547986-d8288a00-a29e-11eb-80de-eaa113f1d446.JPG)
+
+
 ## Receive a custom notification
 
 On a device, users see custom notification messages that are sent by Intune as a standard push notification from the Company Portal app or the Microsoft Intune app. These notifications are similar to the push notifications users receive from other apps on the device.  
