@@ -42,7 +42,9 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 
 ## <a name="bkmk_insights"></a> Insights and recommendations
 
-**Insights and recommendations** is a prioritized list to improve your score. The whole list is displayed on the **Overview** page either beside or below the charts depending on the width of your browser window. **Insights and recommendations** are filtered to the subnode's context when you navigate through reports. The recommendation listed with each insight tells you how to increase the score and how many points the score will gain when the recommendation is complete. When reviewing **Insights and recommendations**, the `Learn more` link takes you to information about how the metric is scored and the recommended course of action is for the insight.  
+**Insights and recommendations** is a prioritized list to improve your score. The whole list is displayed on the **Overview** page either beside or below the charts depending on the width of your browser window. **Insights and recommendations** are filtered to the subnode's context when you navigate through reports. The recommendation listed with each insight tells you how to increase the score and how many points the score will gain when the recommendation is complete.
+- Selecting the insight link from **Insights and recommendations** provides you with more information on devices and attributes related to the insight. 
+- The `Learn more` link takes you to information about how the metric is scored and the recommended course of action is for the insight.  
 
 ## <a name="bkmk_per-device"></a> Per device scores
 
