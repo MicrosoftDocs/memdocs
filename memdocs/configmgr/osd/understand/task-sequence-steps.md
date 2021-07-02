@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -231,11 +231,11 @@ Specify network configurations for each network adapter in the computer. Select 
 
 
 
-## <a name="BKMK_ApplyOperatingSystemImage"></a> Apply Operating System Image  
+## <a name="BKMK_ApplyOperatingSystemImage"></a> Apply Operating System Image
 
 Use this step to install an OS on the destination computer.
 
-After the **Apply Operating System** action runs, it sets the **OSDTargetSystemDrive** variable to the drive letter of the partition containing the OS files.  
+After the **Apply Operating System** action runs, it sets the **OSDTargetSystemDrive** variable to the drive letter of the partition containing the OS files.
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
@@ -250,11 +250,12 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 
 ### Variables for Apply OS Image
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [OSDConfigFileName](task-sequence-variables.md#OSDConfigFileName)  
-- [OSDImageIndex](task-sequence-variables.md#OSDImageIndex)  
-- [OSDTargetSystemDrive](task-sequence-variables.md#OSDTargetSystemDrive)  
+- [OSDConfigFileName](task-sequence-variables.md#OSDConfigFileName)
+- [OSDImageIndex](task-sequence-variables.md#OSDImageIndex)
+- [OsdLayeredDriver](task-sequence-variables.md#OsdLayeredDriver)
+- [OSDTargetSystemDrive](task-sequence-variables.md#OSDTargetSystemDrive)
 
 ### Cmdlets for Apply OS Image
 
@@ -267,7 +268,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 ### Behaviors for Apply OS Image
 
-This step performs different actions depending on whether it uses an OS image or an OS upgrade package.  
+This step performs different actions depending on whether it uses an OS image or an OS upgrade package.
 
 #### OS image actions
 
@@ -301,17 +302,17 @@ The **Apply Operating System Image** step performs the following actions when us
 
 ### Properties for Apply OS Image
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Apply operating system from a captured image
 
-Installs an OS image that you captured. Select **Browse** to open the **Select a package** dialog box. Then select the existing image package you want to install. If multiple images are associated with the specified **Image package**, select from the drop-down list the associated image to use for this deployment. You can view basic information about each existing image by selecting it.  
+Installs an OS image that you captured. Select **Browse** to open the **Select a package** dialog box. Then select the existing image package you want to install. If multiple images are associated with the specified **Image package**, select from the drop-down list the associated image to use for this deployment. You can view basic information about each existing image by selecting it.
 
 #### Apply operating system image from an original installation source
 
-Installs an OS using an OS upgrade package, which is also an original installation source. Select **Browse** to open the **Select an Operating System Upgrade Package** dialog box. Then select the existing OS upgrade package you want to use. You can view basic information about each existing image source by selecting it. The results pane at the bottom of the dialog box displays the associated image source properties. If there are multiple editions associated with the specified package, use the drop-down list to select the **Edition** you want to use.  
+Installs an OS using an OS upgrade package, which is also an original installation source. Select **Browse** to open the **Select an Operating System Upgrade Package** dialog box. Then select the existing OS upgrade package you want to use. You can view basic information about each existing image source by selecting it. The results pane at the bottom of the dialog box displays the associated image source properties. If there are multiple editions associated with the specified package, use the drop-down list to select the **Edition** you want to use.
 
-> [!NOTE]  
+> [!NOTE]
 > **Operating System Upgrade Packages** are primarily meant for use with in-place upgrades and not for new installations of Windows. When deploying new installations of Windows, use the **Apply operating system from a captured image** option and **install.wim** from the installation source files.
 >
 > Deploying new installations of Windows via **Operating System Upgrade Packages** is still supported, but it's dependent on drivers being compatible with this method. When installing Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers aren't compatible with being installed while in Windows PE.
@@ -320,24 +321,41 @@ Installs an OS using an OS upgrade package, which is also an original installati
 
 #### Use an unattended or sysprep answer file for a custom installation
 
-Use this option to provide a Windows setup answer file (**unattend.xml**, **unattend.txt**, or **sysprep.inf**) depending on the OS version and installation method. The file you specify can include any of the standard configuration options supported by Windows answer files. For example, you can use it to specify the default Internet Explorer home page. Specify the package that contains the answer file and the associated path to the file in the package.  
+Use this option to provide a Windows setup answer file (**unattend.xml**, **unattend.txt**, or **sysprep.inf**) depending on the OS version and installation method. The file you specify can include any of the standard configuration options supported by Windows answer files. For example, you can use it to specify the default Internet Explorer home page. Specify the package that contains the answer file and the associated path to the file in the package.
 
-> [!NOTE]  
-> The Windows setup answer file that you supply can contain embedded task sequence variables of the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step substitutes the variable string for the actual value of the variable. You can't use these embedded task sequence variables in numeric-only fields in an unattend.xml answer file.  
+> [!NOTE]
+> The Windows setup answer file that you supply can contain embedded task sequence variables of the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step substitutes the variable string for the actual value of the variable. You can't use these embedded task sequence variables in numeric-only fields in an unattend.xml answer file.
 
-If you don't supply a Windows setup answer file, the task sequence automatically generates an answer file.  
+If you don't supply a Windows setup answer file, the task sequence automatically generates an answer file.
 
 #### Destination
 
-Configure one of the following options:  
+Configure one of the following options:
 
-- **Next available partition**: Use the next sequential partition not already targeted by an **Apply Operating System** or **Apply Data Image** step in this task sequence.  
+- **Next available partition**: Use the next sequential partition not already targeted by an **Apply Operating System** or **Apply Data Image** step in this task sequence.
 
-- **Specific disk and partition**: Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
+- **Specific disk and partition**: Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).
 
-- **Specific logical drive letter**: Specify the **Drive Letter** assigned to the partition by Windows PE. This drive letter can be different from the drive letter assigned by the newly deployed OS.  
+- **Specific logical drive letter**: Specify the **Drive Letter** assigned to the partition by Windows PE. This drive letter can be different from the drive letter assigned by the newly deployed OS.
 
-- **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence step.  
+- **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence step.
+
+#### Select layered driver if applicable
+
+<!--9735002-->
+Version 2107 and later supports layered keyboard drivers. These drivers specify other types of keyboards that are common with Japanese and Korean languages. For more information, see the [LayeredDriver](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-winpe-layereddriver) Windows setting.
+
+Choose one of the following options:
+
+- **Do not specify**: This option is the default, which doesn't configure the LayeredDriver setting in the unattend.xml. This behavior is consistent with earlier versions of Configuration Manager.
+- **PC/AT Enhanced keyboard (101/102-key)**
+- **Korean PC/AT 101-Key Compatible keyboard or the Microsoft Natural keyboard (type 1)**
+- **Korean PC/AT 101-Key Compatible keyboard or the Microsoft Natural keyboard (type 2)**
+- **Korean PC/AT 101-Key Compatible keyboard or the Microsoft Natural keyboard (type 3)**
+- **Korean keyboard (103/106-key)**
+- **Japanese keyboard (106/109-key)**
+
+You can also use the [OsdLayeredDriver](task-sequence-variables.md#OsdLayeredDriver) task sequence variable.
 
 ### Options for Apply OS Image
 
@@ -780,7 +798,7 @@ Use this step to verify that the target computer meets the specified deployment 
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Check Readiness**.
 
-Starting in version 2002, this step includes eight new checks. None of these new checks are selected by default in new or existing instances of the step.<!--6005561--> For more information on each check, see the specific sections below.
+None of the following checks are selected by default in new or existing instances of the step.<!--6005561--> For more information on each check, see the specific sections below.
 
 - **Architecture of current OS**
 - **Minimum OS version**
@@ -808,15 +826,15 @@ Use the following task sequence variables with this step:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (starting in version 2002)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (starting in version 2002)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (starting in version 2002)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (starting in version 2002)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (starting in version 2002)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (starting in version 2002)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (starting in version 2002)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
 - [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (starting in version 2006)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (starting in version 2002)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
 
 ### Cmdlets for Check Readiness
 
@@ -851,31 +869,31 @@ Verify that the OS installed on the target computer meets the specified requirem
 
 #### Architecture of current OS
 
-Starting in version 2002, verify whether the current OS is **32-bit** or **64-bit**.
+Verify whether the current OS is **32-bit** or **64-bit**.
 
 #### Minimum OS version
 
-Starting in version 2002, verify that the current OS is running a version later than specified. Specify the version with major version, minor version, and build number. For example, `10.0.16299`.
+Verify that the current OS is running a version later than specified. Specify the version with major version, minor version, and build number. For example, `10.0.16299`.
 
 #### Maximum OS version
 
-Starting in version 2002, verify that the current OS is running a version earlier than specified. Specify the version with major version, minor version, and build number. For example, `10.0.18356`.
+Verify that the current OS is running a version earlier than specified. Specify the version with major version, minor version, and build number. For example, `10.0.18356`.
 
 #### Minimum client version
 
-Starting in version 2002, verify that the Configuration Manager client version is at least the specified version. Specify the client version in the following format: `5.00.8913.1005`.
+Verify that the Configuration Manager client version is at least the specified version. Specify the client version in the following format: `5.00.8913.1005`.
 
 #### Language of current OS
 
-Starting in version 2002, verify that the current OS language matches what you specify. Select the language name, and the step compares the associated language code. This check compares the language that you select to the **OSLanguage** property of the **Win32_OperatingSystem** WMI class on the client.
+Verify that the current OS language matches what you specify. Select the language name, and the step compares the associated language code. This check compares the language that you select to the **OSLanguage** property of the **Win32_OperatingSystem** WMI class on the client.
 
 #### AC power plugged in
 
-Starting in version 2002, verify that the device is plugged in and not on battery.
+Verify that the device is plugged in and not on battery.
 
 #### Network adapter connected
 
-Starting in version 2002, verify that the device has a network adapter that's connected to the network. You can also select the dependent check to verify that the **Network adapter is not wireless**.
+Verify that the device has a network adapter that's connected to the network. You can also select the dependent check to verify that the **Network adapter is not wireless**.
 
 #### Computer is in UEFI mode
 
@@ -1387,22 +1405,33 @@ The package must meet the following criteria:
 
 - It must not initiate a restart on its own. The software must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the software does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
-Programs that use the **Run another program first** option to install a dependent program aren't supported when deploying an OS. If you enable the package option **Run another program first**, and the dependent program already ran on the destination computer, the dependent program runs and the task sequence continues. However, if the dependent program hasn't already run on the destination computer, the task sequence step fails.  
+Programs that use the **Run another program first** option to install a dependent program aren't supported when deploying an OS. If you enable the package option **Run another program first**, and the dependent program already ran on the destination computer, the dependent program runs and the task sequence continues. However, if the dependent program hasn't already run on the destination computer, the task sequence step fails.
 
-> [!NOTE]  
-> The central administration site doesn't have the necessary client configuration policies required to enable the software distribution agent during the task sequence. When you create stand-alone media for a task sequence at the central administration site, and the task sequence includes an **Install Package** step, the following error might appear in the CreateTsMedia.log file:  
->
-> `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`  
->
-> For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled. Alternatively, add a **Run Command Line** step after the **Setup Windows and ConfigMgr** step and before the first **Install Package** step. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first **Install Package** step. Use the following command in the **Run Command Line** step:  
->
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`  
->
-> For more information about creating stand-alone media, see [Create stand-alone media](../deploy-use/create-stand-alone-media.md).  
-
-This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
+This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
+
+#### Known issue with Install Package step and standalone media created at the central administration site
+
+An error might occur if your task sequence includes the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site (CAS). The CAS doesn't have the necessary client configuration policies. These policies are required to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file: `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
+
+For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled.
+
+Alternatively, use a custom [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run PowerShell Script** step runs the following commands to enable the software distribution agent before the first Install Package step:
+
+```powershell
+$namespace = "root\ccm\policy\machine\requestedconfig"
+$class = "CCM_SoftwareDistributionClientConfig"
+$classArgs = @{
+    ComponentName = 'Enable SWDist'
+    Enabled = 'true'
+    LockSettings='TRUE'
+    PolicySource='local'
+    PolicyVersion='1.0'
+    SiteSettingsKey='1'
+}
+Set-WmiInstance -Namespace $namespace -Class $class -Arguments $classArgs -PutType CreateOnly
+```
 
 ### Variables for Install Package
 
@@ -1966,12 +1995,12 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [OSDDoNotLogCommand](task-sequence-variables.md#OSDDoNotLogCommand)<!--3654172-->  
-- [SMSTSDisableWow64Redirection](task-sequence-variables.md#SMSTSDisableWow64Redirection)  
-- [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName)  
-- [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword)  
-- [SMSTSRunCommandLineAsUser](task-sequence-variables.md#SMSTSRunCommandLineAsUser) (starting in version 2002)<!-- 5573175 -->
-- [WorkingDirectory](task-sequence-variables.md#WorkingDirectory)  
+- [OSDDoNotLogCommand](task-sequence-variables.md#OSDDoNotLogCommand)<!--3654172-->
+- [SMSTSDisableWow64Redirection](task-sequence-variables.md#SMSTSDisableWow64Redirection)
+- [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName)
+- [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword)
+- [SMSTSRunCommandLineAsUser](task-sequence-variables.md#SMSTSRunCommandLineAsUser)<!-- 5573175 -->
+- [WorkingDirectory](task-sequence-variables.md#WorkingDirectory)
 
 ### Cmdlets for Run Command Line
 
@@ -2089,7 +2118,7 @@ To add this step in the task sequence editor, select **Add**, select **General**
 Use the following task sequence variables with this step:
 
 - [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters)<!--3556028-->
-- [SMSTSRunPowerShellAsUser](task-sequence-variables.md#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
+- [SMSTSRunPowerShellAsUser](task-sequence-variables.md#SMSTSRunPowerShellAsUser)<!-- 5573175 -->
 - [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName)
 - [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword)
 
@@ -2146,7 +2175,7 @@ If a parameter value includes a special character or a space, use single quotati
 
 For example: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
-Starting in version 2002, set this property to a variable.<!-- 5690481 --> For example, if you specify `%MyScriptVariable%`, when the task sequence runs the script, it adds the value of this custom variable to the PowerShell command line.
+You can also set this property to a variable.<!-- 5690481 --> For example, if you specify `%MyScriptVariable%`, when the task sequence runs the script, it adds the value of this custom variable to the PowerShell command line.
 
 #### PowerShell execution policy
 

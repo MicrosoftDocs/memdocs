@@ -2,11 +2,10 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -91,6 +90,8 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 2107](checklist-for-installing-update-2107.md)
+
 - [Checklist for installing update 2103](checklist-for-installing-update-2103.md)
 
 - [Checklist for installing update 2010](checklist-for-installing-update-2010.md)
@@ -98,8 +99,6 @@ Review the applicable update checklist for actions to take before you start the 
 - [Checklist for installing update 2006](checklist-for-installing-update-2006.md)
 
 - [Checklist for installing update 2002](checklist-for-installing-update-2002.md)
-
-- [Checklist for installing update 1910](checklist-for-installing-update-1910.md)  
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -378,6 +377,8 @@ To report upgrade failures to Microsoft:
 
 After the site updates, review the post-update checklist for the applicable version:  
 
+- [Post-update checklist for version 2107](checklist-for-installing-update-2107.md#post-update-checklist)
+
 - [Post-update checklist for version 2103](checklist-for-installing-update-2103.md#post-update-checklist)
 
 - [Post-update checklist for version 2010](checklist-for-installing-update-2010.md#post-update-checklist)
@@ -385,8 +386,6 @@ After the site updates, review the post-update checklist for the applicable vers
 - [Post-update checklist for version 2006](checklist-for-installing-update-2006.md#post-update-checklist)
 
 - [Post-update checklist for version 2002](checklist-for-installing-update-2002.md#post-update-checklist)
-
-- [Post-update checklist for version 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 

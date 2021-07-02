@@ -10,8 +10,7 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby 
-
-
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1910 of Configuration Manager current branch

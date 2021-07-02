@@ -2,7 +2,7 @@
 title: Extended interoperability client
 titleSuffix: Configuration Manager
 description: Learn about using the extended interoperability client for long-term support of a static Configuration Manager client with a current branch site.
-ms.date: 04/05/2021
+ms.date: 06/22/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -30,7 +30,6 @@ The following table lists the versions of the Configuration Manager client that 
 |---------|---------|---------|
 | 2103<br/>5.00.9049 | April 5, 2021 | No earlier than April 2023 |
 | 1902<br/>5.00.8790 | March 27, 2019 | March 27, 2022 |
-| 1802<br/>5.00.8634 | May 1, 2018 | April 30, 2021 |
 
 > [!TIP]
 > The EIC is supported for at least two years from the date of release. For more information on release dates, see [Support for Configuration Manager current branch versions](../servers/manage/current-branch-versions-supported.md).

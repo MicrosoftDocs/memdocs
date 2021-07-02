@@ -2,11 +2,10 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients or for OSD with Configuration Manager
-ms.date: 05/20/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -43,12 +42,12 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 |
-|--------------------|----------------|----------------|----------------|----------------|
-| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **20H2**<br>(10.0.19042)   <!--05/09/2023-->   | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> |
-| **21H1**<br>(10.0.19043)   <!--12/13/2022-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) |
+| Windows 10 version | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
+|--------------------|----------------|----------------|----------------|----------------|----------------|
+| **1909**<br>(10.0.18363) <!--05/10/2022--> | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **2004**<br>(10.0.19041) <!--12/14/2021--> | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **20H2** <sup>[Note](#bkmk_20h2)</sup><br>(10.0.19042) <!--05/09/2023--> | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **21H1**<br>(10.0.19043) <!--12/13/2022--> | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -121,10 +120,10 @@ When you deploy operating systems with Configuration Manager, the Windows ADK is
 
 The following table lists the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
-| Windows 10 ADK version | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 |
-|------------------------|----------------|----------------|----------------|----------------|
-| **1903**<br>(10.1.18362) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) |
-| **2004**<br>(10.1.19041) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| Windows 10 ADK version | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
+|------------------------|----------------|----------------|----------------|----------------|----------------|
+| **1903**<br>(10.1.18362) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
+| **2004**<br>(10.1.19041) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
 |Key|
 |--|

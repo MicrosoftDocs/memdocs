@@ -130,7 +130,7 @@ When creating an instance of the [cloud management gateway](../../clients/manage
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#bkmk_GreaterThan255) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#collect-strings-larger-than-255-characters) article. 
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -147,7 +147,7 @@ For details, see the [Surface dashboard](../../clients/manage/surface-device-das
 
 ### Change in the Configuration Manager client install
 <!--1356195-->
-Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_ExternalDependencies)
+Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 
 ## Co-management
 

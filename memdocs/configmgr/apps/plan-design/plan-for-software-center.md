@@ -2,11 +2,10 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -18,7 +17,7 @@ manager: dougeby
 
 Users change settings, browse for applications, and install applications from Software Center. When you install the Configuration Manager client on a Windows device, it automatically installs Software Center as well.
 
-## <a name="bkmk_userex"></a> Configure Software Center
+## Configure Software Center
 
 > [!IMPORTANT]
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
@@ -65,11 +64,15 @@ Customize the appearance of Software Center by adding your organization's brandi
 
 The following image shows a example of Software Center that's customized with all four branding settings:
 
-:::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding":::
+:::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding.":::
+
+Starting in version 2107, notifications on Windows 10 devices also display the logo. This behavior helps users to trust these notifications.<!--4993167--> When you deploy software to a client, the user sees notifications with your logo. The following example uses a star logo:
+
+:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
 
 For more information, see the following articles:
 
-- [Software Center](../../core/clients/deploy/about-client-settings.md#software-center) group of client settings
+- [About client settings for Software Center](../../core/clients/deploy/about-client-settings.md#software-center)
 - [How to configure client settings](../../core/clients/deploy/configure-client-settings.md)
 
 ### Branding priorities
