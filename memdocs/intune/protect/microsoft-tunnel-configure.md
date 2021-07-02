@@ -74,7 +74,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
    - **Description** *(optional)*
 
-   - **Public FQDN**:  Specify a public FQDN, which is the connection point for devices that use the tunnel. This FQDN can be for an individual server or the FQDN of a load-balancing server. The FQDN must be resolvable in public DNS and the resovled IP address must be publicly routable.
+   - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address or FQDN can identify an individual server or a load-balancing server. The IP address or FQDN must be resolvable in public DNS and the resolved IP address must be publicly routable.
 
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
 
@@ -135,7 +135,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 5. When prompted, copy the full chain of your Transport Layer Security (TLS) certificate file to the Linux server. The script displays the correct location to use on the Linux server.
 
-   The TLS certificate secures the connection between the devices that use the tunnel and the Tunnel Gateway endpoint. The certificate must have the FQDN of the Tunnel Gateway server in its SAN.
+   The TLS certificate secures the connection between the devices that use the tunnel and the Tunnel Gateway endpoint. The certificate must have the IPI address or FQDN of the Tunnel Gateway server in its SAN.
 
    The private key will remain available on the machine where you create the certificate signing request for the TLS certificate. This file must be exported with a name of **site.key**.
 
