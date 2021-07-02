@@ -4,17 +4,15 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 09/22/2020
+ms.date: 06/30/2020
 
 ---
-<!--Don't apply H2 in this include file since they are context driven by article. Used in enroll-configmgr.md and enroll-intune.md files -->
+<!--Don't apply H2 in this include file since they are context driven by article. Used in per-device-score.md, enroll-configmgr.md and enroll-intune.md files -->
 
-You won't see your data immediately. The data needs to be gathered and the results calculated. For startup performance, the device needs to have been restarted at least once. Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
-
-- The **User experience score** is a 50/50 weighted average of the **Recommended software** and **Startup performance scores**. We'll be expanding the set of subscores over time.
+- The **Endpoint analytics score** is a 50/50 weighted average of the [**Recommended software**](../recommended-software.md) and [**Startup performance scores**](../startup-performance.md). We'll be expanding the set of subscores over time.
 
 - You can compare your current score to other scores by setting a baseline.
-  - As described in the [baseline settings](../settings.md#bkmk_baselines), there's a built-in baseline for *Commercial median* to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
+  - There's a built-in baseline for **All organizations (median)** to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time. For more information, see [baseline settings](../settings.md#bkmk_baselines).
    - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
   - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.
 
