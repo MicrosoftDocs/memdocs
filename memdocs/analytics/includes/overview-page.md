@@ -7,7 +7,7 @@ ms.topic: include
 ms.date: 06/30/2020
 
 ---
-<!--Don't apply H2 in this include file since they are context driven by article. Used in per-device-score.md, enroll-configmgr.md and enroll-intune.md files -->
+<!--Don't apply H2 in this include file since they are context driven by article. Used in scores.md, enroll-configmgr.md and enroll-intune.md files -->
 
 - The **Endpoint analytics score** is a 50/50 weighted average of the [**Recommended software**](../recommended-software.md) and [**Startup performance scores**](../startup-performance.md). We'll be expanding the set of subscores over time.
 
