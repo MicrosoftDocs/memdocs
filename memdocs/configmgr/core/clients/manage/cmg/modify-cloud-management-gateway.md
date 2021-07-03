@@ -33,7 +33,7 @@ After you create a CMG, you can modify some of its settings. Select the CMG in t
 
 - **Certificates**: add or remove trusted root or intermediate CA certificates. This option is useful when adding new CAs, or retiring expired certificates.
 
-- **Verify Client Certificate Revocation**: If you didn't originally enable this setting when you created the CMG, you can enable it afterwards after you publish the CRL. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).
+- **Verify Client Certificate Revocation**: If you didn't originally enable this setting when you created the CMG, you can enable it afterwards after you publish the CRL. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 
 - **Enforce TLS 1.2**: Require the CMG to use the TLS 1.2 encryption protocol. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
 

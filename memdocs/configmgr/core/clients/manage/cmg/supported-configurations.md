@@ -2,7 +2,7 @@
 title: Supported configurations for CMG
 titleSuffix: Configuration Manager
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
-ms.date: 06/22/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -46,7 +46,7 @@ The following table lists CMG support for Configuration Manager features:
 | Compliance settings | ![Supported](media/green_check.png) |
 | Automatic client upgrade | ![Supported](media/green_check.png) |
 | Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | ![Supported](media/green_check.png) |
-| Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) (2002) |
+| Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) |
 | Software distribution (device-targeted) | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)<br>(with Azure AD integration) | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | ![Supported](media/green_check.png) |

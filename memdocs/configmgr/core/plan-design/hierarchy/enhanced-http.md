@@ -51,7 +51,7 @@ The following scenarios benefit from these improvements:
 [Azure Active Directory (Azure AD)-joined devices](/azure/active-directory/devices/concept-azure-ad-join) and devices with a [Configuration Manager issued token](../../clients/deploy/deploy-clients-cmg-token.md) can communicate with a management point configured for HTTP if you enable enhanced HTTP for the site. With enhanced HTTP enabled, the site server generates a certificate for the management point allowing it to communicate via a secure channel.
 
 > [!Note]  
-> This scenario does not require using an HTTPS-enabled management point but it is supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).  
+> This scenario does not require using an HTTPS-enabled management point but it is supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#enable-management-point-for-https).  
 
 ### <a name="bkmk_scenario2"></a> Scenario 2: Client to distribution point
 

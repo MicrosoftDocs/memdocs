@@ -90,7 +90,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
         > [!NOTE]
         > A trusted root certificate isn't required when using Azure Active Directory (Azure AD) or site-issued tokens for client authentication.
 
-    1. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).
+    1. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 
     1. **Enforce TLS 1.2**: Enable this option to require the Azure cloud service VM to use the TLS 1.2 encryption protocol. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
@@ -152,7 +152,7 @@ Configure the management point and software update point site systems to accept 
 
 1. In the Management point properties sheet, under Client Connections select **Allow Configuration Manager cloud management gateway traffic**.
 
-    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](configure-authentication.md#bkmk_mphttps).
+    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](configure-authentication.md#enable-management-point-for-https).
 
 1. Select **OK** to close the management point properties window.
 

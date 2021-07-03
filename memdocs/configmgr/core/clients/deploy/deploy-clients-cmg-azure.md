@@ -39,7 +39,7 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 
 - In addition to the [existing prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
 
-- Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/configure-authentication.md#bkmk_mphttps).
+- Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/configure-authentication.md#enable-management-point-for-https).
 
 - Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
 
