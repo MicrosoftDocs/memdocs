@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 4/14/2021
+ms.date: 07/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -72,8 +72,8 @@ You can use the following methods to enroll devices using DEM accounts:
 
 Global Administrator or Intune Service Administrator Azure AD roles are required to
 
-- assign DEM permission to an Azure AD user account
-- see all DEM users
+- Assign DEM permission to an Azure AD user account
+- See all DEM users
 
 If a user doesn't have the Global Administrator or Intune Service Administrator role assigned to them, but has read permissions enabled for the Device Enrollment Managers role assigned to them, they can see only the DEM users they've created.
 
