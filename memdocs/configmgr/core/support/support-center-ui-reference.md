@@ -115,7 +115,7 @@ This section describes the user interface for the **Support Center Client Tools*
 - [Window menu](#window-menu-client-tools)
 - [Client tab](#client-tab)
 - [Policy tab](#policy-tab-client-tools)
-- [Content tab](#content-tab)
+- [Content tab](#content-tab) 
 - [Inventory tab](#inventory-tab)
 - [Troubleshooting tab](#troubleshooting-tab-client-tools)
 - [Logs tab](#logs-tab)
@@ -274,7 +274,7 @@ The following items on this menu request a client action related to content:
 
 - **Windows Installer source list update**: Starts a task that updates the source location for Windows Installer (MSI) installations.
 
-#### Content view
+#### Deployment view
 
 See applications, packages, and updates that are loaded on the client. When you select an application, package, or update, you can view details on that content. For some applications, you can also do the following actions:
 
@@ -285,6 +285,9 @@ See applications, packages, and updates that are loaded on the client. When you 
 - **Install**: Install the application.
 
 - **Uninstall**: Uninstall the application.
+
+> [!Note]
+> In Configuration Manager versions 2103 and earlier **Deployment view** is named **Content view**. <!--8272488-->
 
 #### Cache view
 
