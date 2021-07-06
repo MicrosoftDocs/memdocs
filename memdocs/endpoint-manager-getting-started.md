@@ -39,13 +39,16 @@ App stores are key parts of an Intune deployment. For iOS devices, you can use e
 
 Your administrative management experience is centralized from the Microsoft Endpoint Manager admin center, which uses [Microsoft Graph](/graph/overview.md) calls to the Intune service. Every action from app configuration to mobile device management settings to security in the admin center is a Microsoft Graph call. If you’re not familiar with Graph, take some time to understand it, specifically how [Graph integrates with Microsoft Intune](/graph/intune-concept-overview.md).
 
-![Intune Service Architecture](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-01.png)
+### Intune Service Architecture
+
+[ ![Intune Service Architecture](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-01.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-01.png#lightbox)
 
 Initially, Intune began as a combination of a set of services running on physical machines in a private datacenter, and a set of distributed services running on Azure. By 2018, all Intune services were re-architected to run on Microsoft Azure. Today, Intune’s cloud services are built on Azure Service Fabric. All services are deployed to a Service Fabric cluster consisting of a group of front-end and middle-tier nodes. We refer to these clusters as an Azure Scale Unit, or ASU.
 
 Here’s what the backend architecture looks like:
 
-![Intune Azure Scale Unit architecture: Global view](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-02.png)
+[ ![Intune Azure Scale Unit architecture: Global view](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-02.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-02.png#lightbox)
+
 
 Azure Scale Unit details:
 
@@ -150,7 +153,7 @@ Check out these resources to find out how to add and manage apps with Intune:
 - [Add iOS store apps to Microsoft Intune](/mem/intune/apps/store-apps-ios.md)
 - [How to manage iOS and macOS apps purchased through Apple Business Manager](/mem/intune/apps/vpp-apps-ios.md)
 - [Windows 10 app deployment by using Microsoft Intune](/mem/intune/apps/apps-windows-10-app-deploy.md)
-- [How to protect your company app data with Microsoft Intune](/graph/api/resources/intune-app-conceptual?view=graph-rest-beta.md)
+- [How to protect your company app data with Microsoft Intune](/graph/api/resources/intune-app-conceptual.md?view=graph-rest-beta&preserve-view=true)
 - [Manage Android Enterprise system apps in Microsoft Intune](/mem/intune/apps/apps-ae-system.md)
 
 ## Privacy and personal data in Intune
@@ -178,7 +181,8 @@ Updating the Company Portal app is a different process. Microsoft is subject to 
 1. Sign in to the Microsoft Endpoint Manager admin center.
 2. Select Tenant administration > Tenant status to see your tenant’s name and location, MDM authority, account status, and service release number. In the example below, the tenant has the 2104 (April 2021) service release.
 
-![Example screenshot of the Tenant admin > Tenant status blade](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-03.png)
+[ ![Example screenshot of the Tenant admin > Tenant status blade](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-03.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-03.png#lightbox)
+
 
 ## Keeping up to date about releases
 Keeping up to date about releases and changes is an important part of your Intune deployment. Intune provides several ways to stay current about latest updates to the service:
