@@ -72,7 +72,7 @@ The following resources will help plan and deploy Intune:
 
 ## Device enrollment
 
-You can manage devices and apps, and how they access company data, in Intune. To use Intune mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
+By using Intune, you can manage devices and apps, and how they access company data. To use Intune mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
 
 Devices can be enrolled on the following platforms. For the specific versions, see [Supported operating systems](/mem/intune/fundamentals/supported-devices-browsers.md):
 
@@ -112,9 +112,9 @@ The following resources will help you understand how to configure device setting
 
 MDM solutions like Intune can help set requirements for users and devices to protect organizational data. In Intune, you manage these requirements with compliance policies. There are two parts to compliance policies in Intune:
 
-- **Compliance policy settings**  – Tenant-wide settings that are like a built-in compliance policy that every device receives. Compliance policy settings set a baseline for how compliance policy works in your Intune environment, including whether devices that haven’t received any device compliance policies are compliant or noncompliant.
+- **Compliance policy settings**  – These tenant-wide settings are much like a built-in compliance policy that every device receives. Compliance policy settings set a baseline for how compliance policy works in your Intune environment, including whether devices that haven’t received any device compliance policies are compliant or noncompliant.
 
-- **Device compliance policy** – Platform-specific rules administrators can configure and deploy to groups of users or devices. These rules define requirements for devices, like minimum operating systems or the use of disk encryption. Devices must meet these rules to be considered compliant.
+- **Device compliance policy** – These are platform-specific rules that administrators can configure and deploy to groups of users or devices. These rules define requirements for devices, like minimum operating systems or the use of disk encryption. Devices must meet these rules to be considered compliant.
 
 The following articles will help you understand how to create and monitor compliance policies in Intune, as well as how to integrate with MTD and NAC solutions, and Conditional Access:
 
