@@ -29,34 +29,33 @@ ms.collection: M365-identity-device-management
 
 # Getting started with Microsoft Endpoint Manager
 
-As part of the Microsoft 365 license, your company is likely entitled to adopt Microsoft Endpoint Manager, which brings together Microsoft Intune and Configuration Manager into a unified platform to help protect and manage your organization's devices and apps. Now what? Let's go through the basics of managing your organization's devices and mobile applications with Microsoft Intune.
+As part of your Microsoft 365 license, your company is likely to adopt Microsoft Endpoint Manager, which brings together Microsoft Intune, Configuration Manager, Desktop Analytics, co-management, and Windows Autopilot into a unified platform to help protect and manage your organization's devices and apps. 
 
 ## A global cloud service architecture
 
-Microsoft Intune was architected from the cloud and for the cloud and is closely tied with Azure Active Directory (Azure AD). Intune controls integrate with Azure AD and Conditional Access (CA) policies to help you manage access to your organization’s apps and devices and protect and isolate corporate data. Intune enhances CA with device-based compliance and can also take risk signals from [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/?view=o365-worldwide), as well as [mobile threat defense](/mem/intune/protect/mobile-threat-defense.md) (MTD) apps. Intune also integrates with [network access control](/mem/intune/protect/network-access-control-integrate.md) (NAC) solutions to ensure only compliant devices can connect to your corporate network.
+Microsoft Intune was architected from the cloud and for the cloud and is closely tied with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis.md) (Azure AD). Intune integrates with Azure AD and Conditional Access (CA) policies to help you manage access to your organization’s apps and devices and protect and isolate corporate data. Intune enhances CA with device-based compliance and can also take risk signals from [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/?view=o365-worldwide), as well as [mobile threat defense](/mem/intune/protect/mobile-threat-defense.md) (MTD) apps. Intune also integrates with [network access control](/mem/intune/protect/network-access-control-integrate.md) (NAC) solutions to ensure only compliant devices can connect to your corporate network.
 
-App stores are key parts of an Intune deployment. For iOS devices, you can use either the Apple Volume Purchase Program (VPP), which is part of Apple Business Manager, or the App Store. In the case of Android, either the Google Play app store for device administrator devices, or Managed Google Play for Android Enterprise devices can be used. For Windows, the Microsoft Store for Business provides a great experience for app deployment.
+App stores are key parts of an Intune deployment. For iOS devices, you can use either the Apple Volume Purchase Program (VPP), which is part of Apple Business Manager, or the App Store. In the case of Android, you can use either the Google Play app store for device administrator devices, or Managed Google Play for Android Enterprise devices. For Windows, the Microsoft Store for Business provides a great experience for app deployment.
 
 Your administrative management experience is centralized from the Microsoft Endpoint Manager admin center, which uses [Microsoft Graph](/graph/overview.md) calls to the Intune service. Every action from app configuration to mobile device management settings to security in the admin center is a Microsoft Graph call. If you’re not familiar with Graph, take some time to understand it, specifically how [Graph integrates with Microsoft Intune](/graph/intune-concept-overview.md).
 
-### Intune Service Architecture
+### Intune service architecture
 
 [ ![Intune Service Architecture](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-01.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-01.png#lightbox)
 
 Initially, Intune began as a combination of a set of services running on physical machines in a private datacenter, and a set of distributed services running on Azure. By 2018, all Intune services were re-architected to run on Microsoft Azure. Today, Intune’s cloud services are built on Azure Service Fabric. All services are deployed to a Service Fabric cluster consisting of a group of front-end and middle-tier nodes. We refer to these clusters as an Azure Scale Unit, or ASU.
 
-Here’s what the backend architecture looks like:
+### Intune Azure scale unit architecture: Global view
 
 [ ![Intune Azure Scale Unit architecture: Global view](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-02.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-02.png#lightbox)
-
 
 Azure Scale Unit details:
 
 - There are 18 clusters spread over three regions in North America, Europe, and Asia Pacific. Each cluster has about 5,000 services running, all partitioned to scale out.
 - The clusters are completely isolated and independent of one other. They are hosted in different subscriptions and datacenters and cannot access each other.
-- We back up data to an external persisted Azure table/blob storage. This enables fast recovery for replicas in case of catastrophic failure.
+- Data is backed up to an external persisted Azure table/blob storage. This enables fast recovery for replicas in case of catastrophic failure.
 
-Moving from physical machines in a private datacenter to a cloud-based, micro-service architecture enabled Microsoft to scale Intune to billions of devices and apps and to rapidly deliver new innovations. Customers experienced increased reliability, stability, and performance of the service.  You can find out more about the development of this architecture in the blog post [How we built (rebuilt!) Intune into a leading globally scaled cloud service](https://www.microsoft.com/microsoft-365/blog/2018/06/12/how-we-built-rebuilt-intune-into-a-leading-globally-scaled-cloud-service/).
+Moving from physical machines in a private datacenter to a cloud-based, micro-service architecture enabled Microsoft to scale Intune to billions of devices and apps and to rapidly deliver new innovations. Customers experienced increased reliability, stability, and performance of the service. You can find out more about the development of this architecture in the blog post [How we built (rebuilt!) Intune into a leading globally scaled cloud service](https://www.microsoft.com/microsoft-365/blog/2018/06/12/how-we-built-rebuilt-intune-into-a-leading-globally-scaled-cloud-service/).
 
 ## Planning and deployment
 
@@ -67,6 +66,9 @@ The following resources will help plan and deploy Intune:
 - [Deployment guide: Setup or move to Microsoft Intune](/mem/intune/fundamentals/deployment-guide-intune-setup.md) 
 - [Planning guide to move to Microsoft Intune](/mem/intune/fundamentals/intune-planning-guide.md) 
 - [Set up Microsoft Intune](/mem/intune/fundamentals/setup-steps.md)
+
+> [!TIP]
+> Get started quickly with [Microsoft Endpoint Manager fundamentals](/learn/paths/endpoint-manager-fundamentals/), [Plan your migration to Microsoft Endpoint Manager](/learn/modules/paths-to-modern-endpoint-management/), and [Determine your endpoint management implementation](/learn/modules/determine-endpoint-implementation/).
 
 ## Device enrollment
 
@@ -117,18 +119,18 @@ MDM solutions like Intune can help set requirements for users and devices to pro
 The following articles will help you understand how to create and monitor compliance policies in Intune, as well as how to integrate with MTD and NAC solutions, and Conditional Access:
 
 - [Device compliance policies in Microsoft Intune](/mem/intune/protect/device-compliance-get-started.md)
-- [Create a compliance policy in Microsoft Intune(/mem/intune/protect/create-compliance-policy.md)
-- [Enable Mobile Threat Defense connector in Microsoft Intune(/mem/intune/protect/mtd-connector-enable.md)
-- [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune(/mem/intune/protect/advanced-threat-protection.md)
-- [Network access control integration with Microsoft Intune(/mem/intune/protect/network-access-control-integrate.md)
-- [Integrate with Conditional Access(/mem/intune/protect/device-compliance-get-started#integrate-with-conditional-access.md)
-- [App-based Conditional Access with Intune(/mem/intune/protect/app-based-conditional-access-intune.md)
-- [Conditional Access scenarios(/mem/intune/protect/conditional-access-intune-common-ways-use.md)
-- [Monitor device compliance policies in Microsoft Intune(/mem/intune/protect/compliance-policy-monitor.md)
+- [Create a compliance policy in Microsoft Intune](/mem/intune/protect/create-compliance-policy.md)
+- [Enable Mobile Threat Defense connector in Microsoft Intune](/mem/intune/protect/mtd-connector-enable.md)
+- [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](/mem/intune/protect/advanced-threat-protection.md)
+- [Network access control integration with Microsoft Intune](/mem/intune/protect/network-access-control-integrate.md)
+- [Integrate with Conditional Access](/mem/intune/protect/device-compliance-get-started#integrate-with-conditional-access.md)
+- [App-based Conditional Access with Intune](/mem/intune/protect/app-based-conditional-access-intune.md)
+- [Conditional Access scenarios](/mem/intune/protect/conditional-access-intune-common-ways-use.md)
+- [Monitor device compliance policies in Microsoft Intune](/mem/intune/protect/compliance-policy-monitor.md)
 
 ## Intune app protection policies
 
-Intune app protection policies (APP) allow you to protect organizational data within an application.  Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from both managed and unmanaged devices. With MAM without enrollment (MAM-WE), you can use Intune to manage work or school-related apps, including productivity apps such as the Microsoft Office apps, on almost any [device](/mem/intune/apps/app-management.md#app-management-capabilities-by-platform), including personal devices in bring-your-own-device (BYOD) scenarios. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps.md) available for public use.
+Intune app protection policies (APP) allow you to protect organizational data within an application. Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from both managed and unmanaged devices. With MAM without enrollment (MAM-WE), you can use Intune to manage work or school-related apps, including productivity apps such as the Microsoft Office apps, on almost any [device](/mem/intune/apps/app-management.md#app-management-capabilities-by-platform), including personal devices in bring-your-own-device (BYOD) scenarios. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps.md) available for public use.
 
 To get an overview of app protection policies and how they work, check out the following articles:
 
