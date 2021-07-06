@@ -204,10 +204,10 @@ We hope you found this overview of Intune helpful. Check out [Tips and tricks fo
 
 ## Resources and feedback 
 
-For additional information on this subject, see the following documentation: 
+For additional information about Microsoft Endpoint Manager, see the following documentation: 
 
-[Microsoft Intune overview](/mem/intune/fundamentals/what-is-intune.md)
-[Device management overview](/mem/intune/fundamentals/what-is-device-management.md)
-[Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
-[High-level architecture for Microsoft Intune](/mem/intune/fundamentals/high-level-architecture.md)
+- [Microsoft Intune overview](/mem/intune/fundamentals/what-is-intune.md)
+- [Device management overview](/mem/intune/fundamentals/what-is-device-management.md)
+- [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [High-level architecture for Microsoft Intune](/mem/intune/fundamentals/high-level-architecture.md)
 
