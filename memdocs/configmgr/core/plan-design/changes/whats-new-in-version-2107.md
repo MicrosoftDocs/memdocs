@@ -261,6 +261,7 @@ If you create an ADR with the **No deployment package** option, you're' unable t
 <!--8495588-->
 Building on improvements in Configuration Manager 2010 for [syntax highlighting and code folding](../../servers/manage/admin-console-tips.md#bkmk_syntax), you now have the ability to edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited.
 
+For more information, see the [enhanced code editor](../../servers/manage/admin-console-tips.md#bkmk_code).
 ### Send product feedback from error windows
 
 <!--4262917-->
