@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/30/2021
+ms.date: 07/07/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,7 +61,7 @@ After devices enroll, they can receive Intune policies and configurations.
 |[Add a device enrollment manager](../enrollment/device-enrollment-manager-enroll.md)| People designated as device enrollment managers (DEM) can enroll up to 1,000 corporate-owned mobile devices at a time. DEM accounts are useful in organizations that enroll and prepare devices before handing them out to users. | 
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
-|[Troubleshoot enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
+|[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 ## Create compliance rules  
 
@@ -72,7 +72,7 @@ Use compliance policies to define the rules and conditions that users and device
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |       
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Specify the app or services you want to protect and define the conditions for access. |  
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of.  For example, things like meeting room calendar kiosks use basic authentication.  |  
+|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of.  For example, things like meeting room calendar kiosks use basic authentication.  |  
 
 
 ## Configure device settings     
@@ -121,12 +121,11 @@ As you set up apps and app policies, think about your organization's requirement
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Add line-of-business apps ](../apps/lob-apps-macos.md)|Add macOS line-of-business (LOB) apps to Intune and assign to groups.| 
+|[Add Intune Company Portal app ](../apps/apps-company-portal-macos.md)|Learn how to get Company Portal on devices or instruct users how to do it on their own. | 
 |[Add Microsoft Edge](../apps/manage-microsoft-edge.md) | Add and assign Microsoft Edge in Intune. | 
-|[Add Intune Company Portal app ](../apps/apps-company-portal-macos.md)|Provide instructions to your users to install Company Portal for macOS or install it on devices already enrolled directly from Intune.| 
+|[Add Microsoft 365 ](../apps/apps-add-office365-macos.md)| Add and assign Microsoft 365 apps in Intune. | 
+|[Add line-of-business apps ](../apps/lob-apps-macos.md)| Add and assign macOS line-of-business (LOB) apps in Intune.| 
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
-|[Assign Microsoft 365 ](../apps/apps-add-office365-macos.md)|Add Microsoft 365 apps to macOS devices. | 
-|[Add Microsoft Defender for Endpoint](../apps/apps-advanced-threat-protection-macos)|Add Microsoft Defender for Endpoint to Intune.|
 |[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.| 
 |[Use shell scripts on macOS devices](../apps/macos-shell-scripts.md)|Use shell scripts to extend device management capabilities in Intune beyond what's supported by the macOS operating system.| 
 
@@ -142,12 +141,20 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 |[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|  
 
 ## Next steps  
-Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
-For other versions of this guide, see:  
+* Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
-*  [Deployment guide: Manage Android devices in Microsoft Intune](deployment-guide-platform-android.md)  
-*  [Deployment guide: Manage iOS devices in Microsoft Intune](deployment-guide-platform-ios.md)  
+* For tutorials about app deployment, see the following Microsoft Tech Community blogs written by the Intune Support Team:  
+
+    *  [Deploying macOS apps with the Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-intune-scripting-agent/ba-p/2298072).  
+
+    * [Deploying Microsoft 365 Apps for Mac with Microsoft Endpoint Manager - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
+
+
+* For other versions of this guide, see:   
+
+    *  [Deployment guide: Manage Android devices in Microsoft Intune](deployment-guide-platform-android.md)  
+    *  [Deployment guide: Manage iOS devices in Microsoft Intune](deployment-guide-platform-ios-ipados.md)  
   
 
 
