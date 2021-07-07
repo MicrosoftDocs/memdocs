@@ -289,18 +289,13 @@ In this release we've made the following improvements to the Configuration Manag
 
 - Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
 
-
 ## Support Center
-
-### Support Center dark and light themes
-<!--8218853-->
-The [Support Center](../../support/support-center.md) tools now offer dark and light modes. Choose to use the system default color scheme, or override the system default by selecting either the dark or light theme.
-
-
 ### Improvements to Support Center
 <!--8272488-->
 
 Starting in this release, the **Content** view in the **Support Center Client Tools** has been renamed to **Deployments**.  From **Deployments**, you can review all of the deployments currently targeted to the device. The new view is grouped by **Category** and **Status**. The view can be sorted and filtered to help you find the deployments you're interested in. Select a deployment in the results pane to display more information in the details pane.
+
+For more information, see [Support Center Client Tools user interface reference](../../support/support-center-ui-reference.md#deployment-view).
 
 ## Tools
 
