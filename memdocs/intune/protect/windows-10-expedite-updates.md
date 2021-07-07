@@ -305,6 +305,6 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [Widows 10 update rings](../protect/windows-10-update-rings.md)
+- Configure [Windows 10 update rings](../protect/windows-10-update-rings.md)
 - Configure [Windows 10 feature updates](../protect/windows-10-feature-updates.md)
 - View [Windows 10 release information](/windows/release-information/)
