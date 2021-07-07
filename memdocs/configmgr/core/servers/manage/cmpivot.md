@@ -49,27 +49,16 @@ The following permissions are needed for CMPivot:
 
 - **Read** permission on the **SMS Scripts** object
 - **Run CMPivot** permission on the **Collection**
-   - Starting in version 1906, the **Run CMPivot** permission was split out from the general **Run Script** permission as the new permission to be used on the **Collection**. Prior to version 1906, the **Run Script** permission is required.
 - **Read** permission on **Inventory Reports**
 - The default scope.
 
-> [!TIP]
-> Starting in version 1906, [permissions for CMPivot were added](cmpivot-changes.md#bkmk_cmpivot_secadmin1906) to Configuration Manager's built-in **Security Administrator** role.
- 
+
 ## Limitations
 
-- In a hierarchy, connect the Configuration Manager console to a *primary site* to run CMPivot. The **Start CMPivot** action doesn't appear in the console when it's connected to a central administration site (CAS).
-  - Starting in Configuration Manager version 1902, you can run CMPivot from a CAS. In some environments, additional permissions are needed. For more information, see [CMPivot changes for version 1902](cmpivot-changes.md#bkmk_cmpivot1902).
-
-- CMPivot only returns data for clients connected to the current site.  
-
-- If a collection contains devices from another site, CMPivot results are only from devices in the current site.  
-
+- CMPivot only returns data for clients connected to the current site unless it's run from the central administration site (CAS).  
+  - If a collection contains devices from another site, CMPivot results are only from devices in the current site unless CMPivot is run from the CAS.  
 - You can't customize entity properties, columns for results, or actions on devices.  
-
 - Only one instance of CMPivot can run at the same time on a computer that is running the Configuration Manager console.  
-
-- In version 1806, the query for the **Administrators** entity only works if the group is named "Administrators". It doesn't work if the group name is localized. For example, "Administrateurs" in French.<!--SCCMDocs issue 759-->  
 
 
 ## Start CMPivot

@@ -119,6 +119,8 @@ We've simplified the CMPivot permissions requirements. The new permissions are a
 
 - The **default scope** permission isn't required.
 
+For more information, see [permissions for CMPivot](../../servers/manage/cmpivot.md#permissions).
+
 ### Improvements to CMPivot
 
 <!--9966861-->
