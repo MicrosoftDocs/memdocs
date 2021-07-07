@@ -2,7 +2,7 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 11/30/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -19,6 +19,46 @@ manager: dougeby
 Use the information below to find out about changes to the Configuration Manager console and tips for using the console:
 
 ## General tips
+
+### <a name="bkmk_code"></a> Enhanced code editor
+<!--8495588-->
+*(Introduced in version 2107)*
+
+Starting in Configuration Manager 2107, you can edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited. The enhanced editor improves the [syntax highlighting and code folding](#bkmk_syntax) that was first introduced in version 2010.
+
+:::image type="content" source="./media/8495588-code-editor.png" alt-text="Screenshot of the new code editor in Configuration Manager":::
+
+Open the new code editor to view or edit scripts and queries from the following locations:
+
+- Configuration item
+   - Scripts
+   - SQL and WQL queries
+   - Detection methods
+- Application detection scripts
+- Query statement properties
+- Create script wizard
+- Script properties
+- Orchestration group
+   - pre-installation scripts
+   - post-installation scripts
+- Task sequence
+   - PowerShell scripts
+   - Query WMI option
+
+The new code editor supports the following features:
+
+- Editor mode with syntax highlighting and plain text toggle
+- Toggle word wrap and line numbers
+- Code folding
+- Language selection
+- *Find*, *Find and Replace*, and *Go To* line number
+- Font type and size selection
+- Zoom using buttons or with Ctrl + mouse wheel.
+- The information bar at the bottom displays:
+   - Number of lines and characters in the script
+   - Cursor position
+   - If the script is read-only
+- Persistent settings across instances for the code window, such as code folding, word wrap, and window size.
 
 ### <a name="bkmk_syntax"></a> Syntax highlighting for scripting languages
 <!--7964912-->
