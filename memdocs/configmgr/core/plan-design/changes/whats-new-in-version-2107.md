@@ -295,7 +295,7 @@ In this release we've made the following improvements to the Configuration Manag
 
 Starting in this release, the **Content** view in the **Support Center Client Tools** has been renamed to **Deployments**.  From **Deployments**, you can review all of the deployments currently targeted to the device. The new view is grouped by **Category** and **Status**. The view can be sorted and filtered to help you find the deployments you're interested in. Select a deployment in the results pane to display more information in the details pane.
 
-For more information, see [Support Center Client Tools user interface reference](../../support/support-center-ui-reference.md#support-center-client-tools).
+For more information, see [Support Center Client Tools user interface reference](../../support/support-center-ui-reference.md#deployment-view).
 
 ## Tools
 
