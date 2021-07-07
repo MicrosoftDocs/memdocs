@@ -2,7 +2,7 @@
 title: Support Center UI reference
 titleSuffix: Configuration Manager
 description: Learn how to use the Support Center tools.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -285,6 +285,27 @@ See applications, packages, and updates that are loaded on the client. When you 
 - **Install**: Install the application.
 
 - **Uninstall**: Uninstall the application.
+
+Starting in Configuration Manager version 2107, the view is grouped by **Category** and **Status**. The view can be sorted and filtered to help you find the deployments you're interested in. Select a deployment in the results pane to display the following information in the details pane:
+
+- **Properties** tab
+   - **Name**: The name of the deployment property.
+   - **Value**: The value assigned to the deployment property.
+
+- **Policy** tab
+   - **Display name**: Display name of the items in the deployment.
+   - **Version**: Version for the item in the deployment.
+   - **Model name**: Model name for the item in the deployment.
+   - **CI XML**: XML for the configuration item.
+
+- **Reporting** tab
+   - **Time**: Timestamp of the state message.
+   - **State** The state that was reported by the client.
+   - **Topic ID**: ID of what the state message is reporting on, used to map to events in log files. In this context, it will typically be the Assignment ID of the deployment.
+   - **Topic type**: The state message type.
+   - **Topic type ID**: The subtype of the state message.
+   - **State ID**: The result of the action that you're monitoring.
+  
 
 > [!Note]
 > In Configuration Manager versions 2103 and earlier **Deployment view** is named **Content view**. <!--8272488-->
