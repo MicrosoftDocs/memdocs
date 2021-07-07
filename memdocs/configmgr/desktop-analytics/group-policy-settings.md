@@ -2,11 +2,10 @@
 title: Group policy settings
 titleSuffix: Configuration Manager
 description: Understand the local and group policy settings in Windows used by Configuration Manager and Desktop Analytics
-ms.date: 04/13/2021
+ms.date: 07/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 004ca404-e6fa-47f0-ae77-e44e18a08b33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -42,7 +41,7 @@ Configuration Manager sets Windows policies in one or both of the following regi
 > [!IMPORTANT]
 > When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, [Configure telemetry opt-in setting user interface](#group-policy-settings-to-customize-the-user-experience).
 
-Starting in version 2006, <!--8402852--> Configuration manager sets the following Windows policies in preparation to support an upcoming option for [enterprise customers to control their Windows diagnostic data](https://blogs.microsoft.com/eupolicy/2020/07/23/introducing-new-option-customers-control-windows-10-diagnostic-data):
+Starting in version 2006, <!--8402852--> Configuration Manager sets the following Windows policies for the [Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration):
 
 | Policy | Path | Applies to | Value |
 |--------|------|------------|-------|

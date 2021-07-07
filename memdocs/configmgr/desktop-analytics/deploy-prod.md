@@ -2,7 +2,7 @@
 title: How to deploy to production
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics production group.
-ms.date: 06/23/2021
+ms.date: 07/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
@@ -86,6 +86,9 @@ As with the pilot deployment, Desktop Analytics advises you of any issues that n
 :::image type="content" source="media/prod-deployment-status.png" alt-text="Screenshot of Desktop Analytics production Deployment Status." lightbox="media/prod-deployment-status.png":::
 
 ## <a name="bkmk_monitor"></a> Monitor the health of updated devices
+
+> [!NOTE]
+> Starting in July 2021, the **Monitor health** page only reports on devices that run Windows 10 version 1809 or later. For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->
 
 The **Prepare production** page focuses on helping you make upgrade decisions for your assets. That page by default shows only those assets that aren't yet in the **Ready** state. The **Monitor health** page shows health issues on any noteworthy asset, even those assets that are marked **Ready**. If it discovers issues, you can troubleshoot and fix the problem, or change the upgrade decision to **Unable**. When you change the upgrade decision, this action prevents future upgrades on devices with that asset.
 
