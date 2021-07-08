@@ -47,11 +47,22 @@ The following components are required to use CMPivot:
 
 The following permissions are needed for CMPivot:
 
-- **Read** permission on the **SMS Scripts** object
 - **Run CMPivot** permission on the **Collection**
 - **Read** permission on **Inventory Reports**
-- The default scope.
+- **Read** permission on the **SMS Scripts** object
+   - **Read** for **SMS Scripts** isn't required starting in version 2107 <!--7898885-->
+   -  The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts**  if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.
+- The **default scope**.
+   - The **default scope** isn't required starting in version 2107 <!--7898885-->
 
+### CMPivot permissions by Configuration Manager version
+
+|1902 and earlier| versions 1906 through 2103| 2107 or later <!--7898885-->|
+|---|---|---|
+|**Run Script** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|
+|**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|
+|**Read** permission on **SMS Scripts**|**Read** permission on **SMS Scripts**|N/A </br></br>  The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts** if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.|
+|**Default scope** permission|**Default scope** permission|N/A|
 
 ## Limitations
 

@@ -2,7 +2,7 @@
 title: CMPivot overview
 titleSuffix: Configuration Manager
 description: Overview of CMPivot in Configuration Manager.
-ms.date: 05/26/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

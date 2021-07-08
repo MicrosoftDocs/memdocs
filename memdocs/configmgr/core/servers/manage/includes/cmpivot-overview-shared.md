@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 02/25/2021
+ms.date: 07/16/2021
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -183,7 +183,7 @@ Table operators can be used filter, summarize, and transform data streams. Curre
 |join|Merge the rows of two tables to form a new table by matching row for the same device|
 |order by|Sort the rows of the input table into order by one or more columns|
 |project|Select the columns to include, rename or drop, and insert new computed columns|
-|summarize|Produces a table that aggregates the content of the input table|
+|summarize|Produces a table that aggregates the content of the input table <br></br> Starting in version 2107, you can use [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) and [minif](/azure/data-explorer/kusto/query/minif-aggfunction) with the summarize table operator. <!--9966861-->|
 |take|Return up to the specified number of rows|
 |top|Returns the first N records sorted by the specified columns|
 |where|Filters a table to the subset of rows that satisfy a predicate|
@@ -264,5 +264,6 @@ Scalar functions can be used in expressions. Currently the following scalar func
 |Entity|FileContent()|Content of a specific file|
 |Entity|NAPClient|NAP Client|
 |Entity|NAPSystemHealthAgent|NAP System Health Agent|
-|Entity|Registry()|All values for a specific registry key<!--7371183-->|
+|Entity|Registry()|All values for a specific registry key<!--7371183--> </br></br>Starting in version 2107, Key value was added to the Registry() entity <!--9966861-->|
+|Entity|RegistryKey()| Returns all registry keys matching the given expression (starting in version 2107)<!--9966861-->|
 |Table operator|render|Renders results as graphical output|
