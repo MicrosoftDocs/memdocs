@@ -2,14 +2,10 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-<<<<<<< HEAD
-ms.date: 07/16/2021
-=======
-ms.date: 07/07/2021
->>>>>>> 09cce976e13072d543798c0d2f15310968067b1c
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
+ms.date: 07/16/2021 
 author: mestew
 ms.author: mstewart
 manager: dougeby
