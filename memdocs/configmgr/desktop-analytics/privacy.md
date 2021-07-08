@@ -61,7 +61,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
 ## Other resources
 
-For privacy-related frequently asked questions for Desktop Analytics, see [Privacy FAQ](/mem/configmgr/desktop-analytics/faq#privacy).
+For privacy-related frequently asked questions for Desktop Analytics, see [Privacy FAQ](./faq.yml#privacy).
 
 For more information about related privacy aspects, see the following articles:
 
