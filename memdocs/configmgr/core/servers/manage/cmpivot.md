@@ -51,8 +51,8 @@ The following permissions are needed for CMPivot:
 - **Read** permission on **Inventory Reports**
 - **Read** permission on the **SMS Scripts** object
    - **Read** for **SMS Scripts** isn't required starting in version 2107 <!--7898885-->
-   -  The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts**  if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.
-- The **default scope**.
+   -  The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts**  if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log. <!--8403036-->
+   - The **default scope**.
    - The **default scope** isn't required starting in version 2107 <!--7898885-->
 
 ### CMPivot permissions by Configuration Manager version
@@ -67,10 +67,11 @@ The following permissions are needed for CMPivot:
 ## Limitations
 
 - CMPivot only returns data for clients connected to the current site unless it's run from the central administration site (CAS).  
-  - If a collection contains devices from another site, CMPivot results are only from devices in the current site unless CMPivot is run from the CAS.  
+  - If a collection contains devices from another site, CMPivot results are only from devices in the current site unless CMPivot is run from the CAS.
+  - In some environments, additional permissions are needed for CMPivot to run on the CAS. For more information, see [CMPivot changes for version 1902](cmpivot-changes.md#bkmk_cmpivot1902).  
 - You can't customize entity properties, columns for results, or actions on devices.  
 - Only one instance of CMPivot can run at the same time on a computer that is running the Configuration Manager console.  
-
+- Community hub queries aren't available in CMPivot standalone. <!--9442715, 9310040, 9391017--> 
 
 ## Start CMPivot
 
