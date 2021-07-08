@@ -35,10 +35,22 @@ We've simplified the CMPivot permissions requirements. The new permissions are a
 <!--9966861-->
 We've made the following improvements to CMPivot:
 
-- Added a Key value to the [Registry entity](cmpivot-overview.md#bkmk_onprem_only)
-- Added a new RegistryKey entity that returns all registry keys matching the given expression
 - Added [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) and [minif](/azure/data-explorer/kusto/query/minif-aggfunction) aggregators that can be used with the [summarize operator](cmpivot-overview.md#table-operators)
 - Improvements to query autocomplete suggestions in the query editor
+- - Added a Key value to the [Registry entity](cmpivot-overview.md#bkmk_onprem_only)
+- Added a new RegistryKey entity that returns all registry keys matching the given expression
+
+To review the difference between the Registry and RegistryKey entities, you can use the following samples:
+
+```kusto
+// Change the path to match your desired registry hive query
+
+Registry('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+RegistryKey('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+
+RegistryKey('hklm:\SOFTWARE\Microsoft\SMS\*')
+Registry('hklm:\SOFTWARE\Microsoft\SMS\*')
+```
 
 
 ## <a name="bkmk_2103"></a> CMPivot changes for version 2103
