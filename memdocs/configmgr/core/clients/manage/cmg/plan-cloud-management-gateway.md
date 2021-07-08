@@ -157,6 +157,9 @@ With a few exceptions, the configuration, operation, and functionality of the CM
   - **Enable clients to use a cloud management gateway**
   - **Allow access to cloud distribution point**
 
+  > [!NOTE]
+  > If you enable the client setting to [Download delta content when available](../../deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available), the content for third-party updates won't download to clients.<!--6598587-->
+
 ## Next steps
 
 Next, determine how clients will authenticate with the CMG:
