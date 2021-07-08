@@ -2,17 +2,16 @@
 title: Set up checklist for CMG
 titleSuffix: Configuration Manager
 description: Get an overview of the cloud management gateway (CMG) setup process and make sure you have all prerequisites ready to start.
-ms.date: 09/28/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: overview
-ms.assetid: 8f567343-c235-4a5e-a62b-668f503f2a92
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# Set up checklist for cloud management gateway
+# Set up checklist for CMG
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -44,9 +43,12 @@ The following terms are used in the context of setting up a CMG. They're defined
 
 - Azure _resource group_: A container that holds related resources for an Azure solution. The resource group includes those resources that you want to manage as a group. You decide which resources belong in a resource group based on what makes the most sense for your organization. For more information, see [Resource groups](/azure/azure-resource-manager/management/overview#resource-groups).
 
-- CMG _service name_: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.Contoso.Com` or `GraniteFalls.CloudApp.Net`.
+- CMG _service name_: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.Contoso.Com` or `GraniteFalls.WestUS.CloudApp.Azure.Com`.
 
-- CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.CloudApp.Net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
+- CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain. The Azure location depends upon the deployment method, for example:
+
+  - Virtual machine scale set: `GraniteFalls.WestUS.CloudApp.Azure.Com`
+  - Classic deployment: `GraniteFalls.CloudApp.Net`
 
 ## Checklist
 
