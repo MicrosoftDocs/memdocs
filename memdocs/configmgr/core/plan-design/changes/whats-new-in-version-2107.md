@@ -131,6 +131,7 @@ We've made the following improvements to CMPivot:
 - Added [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) and [minif](/azure/data-explorer/kusto/query/minif-aggfunction) aggregators that can be used with the [summarize operator](../../servers/manage/cmpivot-overview.md#table-operators)
 - Improvements to query autocomplete suggestions in the query editor
 
+For more information, see [Changes to CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2107) and [CMPivot overview](../../servers/manage/cmpivot-overview.md#bkmk_onprem_only).
 ## Client management
 
 ### Custom properties for devices

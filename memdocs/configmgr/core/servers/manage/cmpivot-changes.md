@@ -18,7 +18,7 @@ manager: dougeby
 
 Use the following information to learn about changes made to [CMPivot](cmpivot.md) between Configuration Manager versions:
 
-## <a name="bkmk_2103"></a> CMPivot changes for version 2107
+## <a name="bkmk_2107"></a> CMPivot changes for version 2107
 
 ### Simplified CMPivot permissions requirements
 <!--7898885-->
