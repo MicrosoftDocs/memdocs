@@ -62,7 +62,7 @@ Use this tutorial when:
 
 ### External certificates
 
-- CMG server authentication certificate. This certificate is an SSL certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. You'll export this certificate as .PFX file with Private Key.  
+- CMG server authentication certificate. This certificate is an SSL certificate from a public and globally trusted certificate provider.<!-- memdocs#1668 --> You'll export this certificate as .PFX file with Private Key.  
 
 - Later in this tutorial we provide guidance on how to configure the request for this certificate.
 

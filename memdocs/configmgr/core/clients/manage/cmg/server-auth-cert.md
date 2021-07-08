@@ -40,7 +40,7 @@ First, decide where you want to get the certificate. There are several factors t
 
 Clients must trust the CMG server authentication certificate to establish the HTTPS channel with the CMG service. There are two methods to accomplish this trust:
 
-1. Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign.
+1. Use a certificate from a public and globally trusted certificate provider.<!-- memdocs#1668 -->
 
     - Windows clients include trusted root certificate authorities (CAs) from these providers. By using a certificate issued by one of these providers, your clients automatically trust it.
 
