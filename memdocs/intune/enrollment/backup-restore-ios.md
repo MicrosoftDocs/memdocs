@@ -36,14 +36,15 @@ You might have to back up and restore an Intune Automated Device Enrollment (ADE
 - A user receives a new device and wants to migrate the data from the old device. 
 
 To back up and restore an iOS/iPadOS device, you must follow the Apple instructions:
+
 - To back up your device, see [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977).
 - To restore you device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
 - To transfer data to a new device, see the following Apple support article:
     - [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad, or iPod touch](https://support.apple.com/HT210217)
 
 > [!NOTE] 
-> Device-to-Device migration as offered on the Quick Start screen after resetting an iOS device is not supported with Apple Business Manager (ABM). For details refer to the following [Apple support document.](https://support.apple.com/HT210216#:~:text=%C2%A0If%20your%20new%20iPhone%20is%20enrolled%20in%20Apple%20School%20Manager%20or%20Apple%20Business%20Manager%2C%20you%20can%27t%20use%20Quick%20Start%20to%20transfer%20data%20from%20your%20current%20iPhone.)
-> Since this screen appears on the device before a wi-fi connection has been established and before the ABM profile has been downloaded, this quick start screen cannot be hidden via ABM.    
+> Device-to-Device migration as offered on the Quick Start screen after resetting an iOS device is not supported with Apple Business Manager (ABM). For details refer to the following [Apple support document.](https://support.apple.com/HT210216)
+> Since this screen appears on the device before a wi-fi connection has been established and before the ABM profile has been downloaded, this quick start screen cannot be hidden via ABM.
 
 For more information about restoring Apple devices from backup, see [Get started using Apple Business Manager or Apple School Manager with Mobile Device Management](https://support.apple.com/HT207516).
 
