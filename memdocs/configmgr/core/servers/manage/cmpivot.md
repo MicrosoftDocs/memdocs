@@ -57,7 +57,7 @@ The following permissions are needed for CMPivot:
 
 ### CMPivot permissions by Configuration Manager version
 
-|1902 and earlier| versions 1906 through 2103| 2107 or later <!--7898885-->|
+|1902 and earlier| Versions 1906 through 2103| 2107 or later <!--7898885-->|
 |---|---|---|
 |**Run Script** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|
 |**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|
