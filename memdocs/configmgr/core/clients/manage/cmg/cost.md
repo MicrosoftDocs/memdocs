@@ -41,7 +41,7 @@ To help determine potential costs, use the following Azure resources:
 
 - You select how many VM instances support the CMG. One is the default, and 16 is the maximum. This number is set when you create the CMG, but you can change it afterwards to scale the service as needed.
 
-- For more information on how many VMs you need to support your clients, see [Plan for CMG: Performance and scale](plan-cloud-management-gateway.md#performance-and-scale).
+- For more information on how many VMs you need to support your clients, see [CMG performance and scale](perf-scale.md).
 
 ## Virtual machine scale set
 

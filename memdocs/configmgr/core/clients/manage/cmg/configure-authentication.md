@@ -21,7 +21,7 @@ The next step in the setup of a cloud management gateway (CMG) is to configure h
 - PKI certificates
 - Configuration Manager site-issued tokens
 
-This article describes how to configure each of these options. For more foundational information, see [Plan for the CMG - Client authentication methods](plan-cloud-management-gateway.md#client-authentication-methods).
+This article describes how to configure each of these options. For more foundational information, see [Plan for CMG client authentication methods](plan-client-authentication.md).
 
 ## Azure AD
 

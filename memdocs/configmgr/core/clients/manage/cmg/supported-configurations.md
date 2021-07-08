@@ -100,7 +100,7 @@ Alternate content providers aren't supported to get content from a content-enabl
 
 ## Next steps
 
-Next, understand the costs associated with operating an Azure service for the CMG:
+Next, plan how the design the CMG for the best performance at the appropriate scale:
   
 > [!div class="nextstepaction"]
-> [Cost of cloud management gateway](cost.md)
+> [CMG performance and scale](perf-scale.md)

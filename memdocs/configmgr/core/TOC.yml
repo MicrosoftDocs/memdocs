@@ -875,8 +875,14 @@ items:
       items:
       - name: Plan for CMG
         href: clients/manage/cmg/plan-cloud-management-gateway.md
+      - name: CMG client authentication
+        href: clients/manage/cmg/plan-client-authentication.md
+      - name: CMG hierarchy design
+        href: clients/manage/cmg/plan-hierarchy-design.md
       - name: Supported configurations for CMG
         href: clients/manage/cmg/supported-configurations.md
+      - name: Performance and scale
+        href: clients/manage/cmg/perf-scale.md
       - name: Cost
         href: clients/manage/cmg/cost.md
     - name: Set up
