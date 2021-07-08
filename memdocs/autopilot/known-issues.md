@@ -35,7 +35,7 @@ The following table describes known issues that can often be resolved by configu
 <tr><td>Autopilot sign-in page displays HTML tags from company branding settings</td>
 <td>When <a href="https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding#to-customize-your-branding">customizations are applied to the company branding settings</a> the HTML tags may be visible and not rendered correctly on the update password page. This issue should be fixed in future versions of Windows.</td></tr>
  
-<tr><td>TPM attestation is not working on Intel Tiger Lake platforms when using Intel PTT TPM or when using firmware TPM.</td>
+<tr><td>TPM attestation is not working on Intel Tiger Lake platforms when using firmware TPM.</td>
 <td>TPM attestation support for Intel Tiger Lake firmware TPM is only supported with Windows 21H2 or higher.</td> </tr>
 
 <tr><td>Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP.</td>
