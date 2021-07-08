@@ -218,7 +218,6 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
-| Update policies for macOS | ❌ |
 | **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | N/A |
