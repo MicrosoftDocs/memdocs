@@ -33,10 +33,10 @@ The following table describes known issues that can often be resolved by configu
 <td>Inactive Intune connectors will be automatically cleaned up after 30 days of inactivity without admin interaction.</td></tr>
 
 <tr><td>Autopilot sign-in page displays HTML tags from company branding settings</td>
-<td>When <a href="https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding#to-customize-your-branding">customizations are applied to the company branding settings</a> the HTML tags may be visible and not rendered correctly on the update password page. This issue should be fixed in future versions of Windows.</td></tr>
+<td>When <a href="/azure/active-directory/fundamentals/customize-branding#to-customize-your-branding">customizations are applied to the company branding settings</a> the HTML tags may be visible and not rendered correctly on the update password page. This issue should be fixed in future versions of Windows.</td></tr>
  
-<tr><td>TPM attestation is not working on Intel Tiger Lake platforms.</td>
-<td>TPM attestation support for Intel TPM Tiger Lake platforms are only supported on with Windows 21H2 or higher.</td> </tr>
+<tr><td>TPM attestation is not working on Intel Tiger Lake platforms when using Intel PTT TPM or when using firmware TPM.</td>
+<td>TPM attestation support for Intel Tiger Lake firmware TPM is only supported with Windows 21H2 or higher.</td> </tr>
 
 <tr><td>Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP.</td>
 <td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. To avoid this issue, target the ESP profile to <a href="enrollment-autopilot.md">device groups</a>.</td></tr>
