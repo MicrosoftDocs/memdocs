@@ -75,9 +75,8 @@ The following permissions are needed for CMPivot:
 
 ## Start CMPivot
 
-1. In the Configuration Manager console, connect to the primary site. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
+1. In the Configuration Manager console, connect to the primary site or the CAS. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
    - Confirm with a site administrator that your account has the required permissions. For more information, see [Prerequisites](#prerequisites).  
-   - Connect the console to a *primary site*.  
 
 2. The interface provides further information about using the tool.  
 
