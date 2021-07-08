@@ -29,7 +29,7 @@ For instructions on how to check in the Microsoft Endpoint Manager admin center 
 
 Check your Intune reporting to see what devices or users may be affected. For devices with mobile device management (MDM) go to **Devices** > **All devices** and filter by OS. For devices with app protection policies  go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
 
-To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](/mem/intune/fundamentals/manage-os-versions).
+To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](../fundamentals/manage-os-versions.md).
 
 ### Plan for Change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
 
