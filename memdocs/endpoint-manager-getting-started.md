@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/07/2021
+ms.date: 07/08/2021
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -110,6 +110,7 @@ The following resources will help you understand how to configure device setting
 - [iOS/iPadOS Enterprise security configuration framework](/mem/intune/enrollment/ios-ipados-configuration-framework.md)
 - [Android Enterprise security configuration framework](/mem/intune/enrollment/android-configuration-framework.md)
 - [Device features and settings in Microsoft Intune](/mem/intune/configuration/device-profiles.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog.md)
 - [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign.md)
 - [App configuration policies for Microsoft Intune](/mem/intune/apps/app-configuration-policies-overview.md)
 - [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security.md)
