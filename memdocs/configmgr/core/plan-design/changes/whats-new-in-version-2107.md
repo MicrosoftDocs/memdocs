@@ -218,6 +218,8 @@ For more information, see [Task sequence steps - Apply OS Image](../../../osd/un
 
 An **Audit** option for [potentially unwanted applications (PUA)](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) was added in the **Antimalware policy** settings. Use PUA protection in audit mode to detect potentially unwanted applications without blocking them. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and you'd like to avoid any false positives.
 
+For more information, see [real-time protection settings](../../../protect/deploy-use/endpoint-antimalware-policies.md#real-time-protection-settings).
+
 ## Software updates
 
 ### Windows Update native experience for software updates
