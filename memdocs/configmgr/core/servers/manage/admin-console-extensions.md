@@ -37,6 +37,55 @@ The old style of console extensions may start being phased out in favor of the n
 <!--3555909-->
 [!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
 
+## <a name="bkmk_unsigned"></a> Import unsigned console extensions for hierarchy approval
+<!--9761129-->
+(*Applies to Configuration Manager version 2107 or later*)
+
+Starting in Configuration Manager version 2107 , you can choose to allow unsigned hierarchy approved console extensions. You may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab. To import and install an unsigned hierarchy approved console extension, the high-level steps are:
+
+   1. [Allow unsigned](#bkmk_allow-unsigned) hierarchy approved console extensions.
+   1. [Import](#bkmk_import-unsigned) the unsigned console extension.
+   1. [Test](#bkmk_local_install) the the unsigned console extension in a local console.
+   1. [Enable notifications](#bkmk_enable-notifications) to allow console users to install the unsigned console extension.
+
+### <a name="bkmk_allow-unsigned"></a> Allow unsigned hierarchy approved console extensions
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**.
+1. Select **Hierarchy Settings** from the ribbon.
+1. On the **General** tab, enable the **Hierarchy approved console extensions can be unsigned** option.
+1. Select **Ok** when done to close the **Hierarchy Settings Properties**.
+
+### <a name="bkmk_import-unsigned"></a> Import the unsigned console extension
+
+When you have the `.cab` file for an extension, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../develop/adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
+
+Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`:
+   - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
+   - `$cabFilePath` - Path to the extension's  `.cab` file
+
+```powershell
+$adminServiceProvider = "SMSProviderServer.contoso.com"
+$cabFilePath = "C:\Testing\MyExtension.cab"
+$adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
+$cabFileName = (Get-Item -Path $cabFilePath).Name
+$Data = Get-Content $cabFilePath
+$Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
+$base64Content = [Convert]::ToBase64String($Bytes)
+$Headers = @{
+    "Content-Type" = "Application/json"
+}
+$Body = @{
+            CabFile = @{
+                FileName = $cabFileName
+                FileContent = $base64Content
+            }
+            AllowUnsigned = $true
+        } | ConvertTo-Json
+$result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
+if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
+else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
+```
+
 ## Next steps
 
 - [Console tips](admin-console-tips.md)
