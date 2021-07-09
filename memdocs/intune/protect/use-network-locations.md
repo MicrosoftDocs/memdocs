@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 > [!IMPORTANT]
 > **Announcing end of support for the existing Use Locations (network fence) feature in Intune**  
-> Support for the current implementation of Locations (network fence) will end on or around October 7, 2021. For information about this change and how to prepare, see [*Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune*](../fundamentals/whats-new.md#announcing-end-of-support-for-the-existing-Use-Locations-(network-fence)-feature-in-Intune) in *What's new in Microsoft Intune*.
+> Support for the current implementation of Locations (network fence) will end on or around October 7, 2021. For information about this change and how to prepare, see *Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune* in the [Notices](../fundamentals/whats-new.md#notices) section of the *What's new in Microsoft Intune* article.
 
 
 
