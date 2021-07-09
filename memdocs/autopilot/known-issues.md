@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 06/07/2021
+ms.date: 07/08/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
