@@ -67,8 +67,8 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 #### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115 -->
  
 We’ve added the settings to manage Microsoft Defender for Endpoint on macOS to the Intune [settings catalog](../configuration/settings-catalog.md) to configure Microsoft Defender for Endpoint on macOS.
- 
-The new settings can be found as follows under the following four categories in the settings catalog. For information about these settings, see [Set preferences for Microsoft Defender for Endpoint on macOS](../microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide) in the *Microsoft Defender for Endpoint on Mac* documentation.
+
+The new settings can be found as follows under the following four categories in the settings catalog. For information about these settings, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the *Microsoft Defender for Endpoint on Mac* documentation.
 
 **Microsoft Defender - Antivirus engine**:  
 - Allowed threats
