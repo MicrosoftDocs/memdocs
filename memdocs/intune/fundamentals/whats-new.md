@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2021
+ms.date: 07/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,37 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 -->
+
+
+<!-- ########################## -->
+## Week of July 5, 2021
+
+### Device security
+
+#### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115 -->
+ 
+We’ve added the settings to manage Microsoft Defender for Endpoint on macOS to the Intune [settings catalog](../configuration/settings-catalog.md) to configure Microsoft Defender for Endpoint on macOS.
+ 
+The new settings can be found as follows under the following four categories in the settings catalog. For information about these settings, see [Set preferences for Microsoft Defender for Endpoint on macOS](../microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide) in the *Microsoft Defender for Endpoint on Mac* documentation.
+
+**Microsoft Defender - Antivirus engine**:  
+- Allowed threats
+- Enable passive mode
+- Enable real-time protection
+- Scan exclusions
+- Threat type settings
+ 
+**Microsoft Defender - Cloud delivered protection preferences**:  
+- Diagnostic collection level
+- Enable - disable automatic sample submissions
+- Enable - disable cloud delivered protection
+
+**Microsoft Defender - EDR preferences**:  
+- Device tags
+- Enable - disable early preview
+ 
+**Microsoft Defender - User interface preferences**: 
+- Show - hide status menu icon
 
 
 <!-- ########################## -->
