@@ -51,7 +51,7 @@ Selecting the **Learn more** link under the startup performance information give
 
 :::image type="content" source="media/8529842-startup-performance-metrics.png" alt-text="Endpoint analytics startup performance metrics" lightbox="media/8529842-startup-performance-metrics.png":::
 
-## Application reliability metrics
+## Application reliability (preview) metrics
 
 The overall **Application reliability score** for your tenant is shown with the peer benchmark in the chart. Selecting the **Learn more about app reliability** link under the app reliability information gives you additional details and a link to **View more in Microsoft Endpoint Manager**. The following **Application reliability** information is provided from [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score):
 
