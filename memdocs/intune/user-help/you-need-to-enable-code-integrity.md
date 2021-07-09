@@ -31,7 +31,7 @@ ms.collection:
 
 # Enable code integrity
 
-If you receive a message that you need to enable code integrity, contact your IT support person. Your support person will help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
+If you receive a message that you need to enable code integrity, contact your support person. They can help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
 
 If you're using a PC and consider yourself an advanced user, you can enable Secure Boot through the PC BIOS menu. For instructions, see [Re-enable Secure Boot](/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
 
@@ -46,4 +46,4 @@ If you're an Intune administrator and want to learn more about Intune's device h
 
 ## Next steps
 
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
