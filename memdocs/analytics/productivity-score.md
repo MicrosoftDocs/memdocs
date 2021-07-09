@@ -2,7 +2,7 @@
 title: Endpoint analytics page in Microsoft Productivity Score
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about endpoint analytics in Microsoft Productivity Score
-ms.date: 03/03/2021
+ms.date: 07/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -50,6 +50,18 @@ Selecting the **Learn more** link under the startup performance information give
    - **Time to responsive desktop**: Time where background processes are complete and CPU utilization is less than 50%
 
 :::image type="content" source="media/8529842-startup-performance-metrics.png" alt-text="Endpoint analytics startup performance metrics" lightbox="media/8529842-startup-performance-metrics.png":::
+
+## Application reliability (preview) metrics
+
+The overall **Application reliability score** for your tenant is shown with the peer benchmark in the chart. Selecting the **Learn more about app reliability** link under the app reliability information gives you additional details and a link to **View more in Microsoft Endpoint Manager**. The following **Application reliability** information is provided from [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score):
+
+- **Top apps reducing your score in the last 14 days**
+   - **App name**: The app identifier in the file manifest provided by your client devices. The app name is typically in executable (or .exe) format.
+   - **App reliability score**: A score between 0 and 100 that represents the relative reliability of the application in your tenant. This score is calculated based on Mean time to failure and Total usage duration (14 days). A score of 0 represents an unreliable app that is likely hampering end-user productivity. A score of 100 represents a reliable app that is likely contributing to end-user productivity.
+   - **Mean time to failure in hours**: The average amount of engagement time that an end user is able to use the application before a crash occurs over the past 14 days. This value is calculated by dividing Total usage duration (14 days) by Total crashes (14 days). By relating usage duration and crash counts, the frequency of crashes across different applications is normalized. Applications without crash events in your tenant over the past 14 days are given a mean time to failure value of `No crash events`.
+   - **Active devices**: The total number of your tenant's enrolled devices that have launched this app at least once in the past 14 days.
+
+:::image type="content" source="media/8529842-application-reliability.png" alt-text="Endpoint analytics application reliability metrics" lightbox="media/8529842-application-reliability.png":::
 
 ## Known issues
 
