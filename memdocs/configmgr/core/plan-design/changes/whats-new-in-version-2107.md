@@ -235,6 +235,8 @@ You can now right-click and notify devices to run a software updates evaluation 
 
 [Management insights](../../servers/manage/management-insights.md) has a new rule to detect if your software update points are [configured to use TLS/SSL](../../../sum/get-started/software-update-point-ssl.md). To review the **Configure software update points to use TLS/SSL** rule, go to **Administration** > **Management Insights** > **All Insights** > **Software Updates**.
 
+For more information, see the [Management insights software updates group](../../servers/manage/management-insights.md#software-updates).
+
 ### List additional third-party updates catalogs
 <!--9989251-->
 To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
