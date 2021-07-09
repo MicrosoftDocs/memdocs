@@ -2,7 +2,7 @@
 title: Enable third party updates
 titleSuffix: Configuration Manager
 description: Enable third party updates in Configuration Manager
-ms.date: 01/12/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: conceptual
@@ -222,6 +222,13 @@ You now have more granular controls over synchronization of third party updates 
 ## Monitoring progress of third-party software updates 
 
 Synchronization of third-party software updates is handled by the SMS_ISVUPDATES_SYNCAGENT component on the top-level default software update point. You can view status messages from this component, or see more detailed status in the SMS_ISVUPDATES_SYNCAGENT.log. This log is on the  top-level software update point in the site system Logs folder. By default this path is C:\Program Files\Microsoft Configuration Manager\Logs. For more information on monitoring the general software update management process, see [Monitor software updates](../deploy-use/monitor-software-updates.md) 
+
+## <a name="bkmk_list-catalogs"></a> List additional third-party updates catalogs
+<!--9989251-->
+
+To help you find custom catalogs that you can import for third-party software updates, there's a documentation page with links to catalog providers. Starting in Configuration Manager 2107, you can also choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a [list of additional third-party software update catalog providers](third-party-software-update-catalogs.md).  
+
+:::image type="content" source="./media/9989251-more-catalogs.png" alt-text="Screenshot of the Third-Party Software Update Catalogs node with the More Catalogs icon in the ribbon":::
 
 ## Known issues
 
