@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Using Azure Virtual Desktop multi-session with Microsoft Endpoint Manager
+title: Using Azure Virtual Desktop Multi-Session with Microsoft Endpoint Manager
 titleSuffix: 
 description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Endpoint Manager
 keywords:
