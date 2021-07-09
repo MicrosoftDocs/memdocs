@@ -273,7 +273,7 @@ Insights for managing Software Center.
 
 - **Enable the software updates product category 'Windows 10, version 1903 and later'**: There's a new software updates product category for Windows 10, version 1903 and later. If you synchronize Windows 10 updates, and have Windows 10, version 1903 or later clients, select the **Windows 10, version 1903 and later** product category in the software update point component properties. For more information, see[Configure classifications and products to synchronize](../../../sum/get-started/configure-classifications-and-products.md).<!-- 16B1152D-6511-4DC7-824E-539B2597F9B0 -->
 
-- **Configure software update points to use TLS/SSL**:<!--7470529--> Detects if your software update points are [configured to use TLS/SSL](../../../sum/get-started/software-update-point-ssl.md). Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points (SUPs) to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges.<!--F7AC423D-7BAD-4B62-9CC6-26C351960CDF-->
+- **Configure software update points to use TLS/SSL**:<!--7470529--> Detects if your software update points are [configured to use TLS/SSL](../../../sum/get-started/software-update-point-ssl.md). Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points (SUPs) to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges. This rule was added in Configuration Manager version 2107.<!--F7AC423D-7BAD-4B62-9CC6-26C351960CDF-->
 
 ### Windows 10
 
