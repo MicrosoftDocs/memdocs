@@ -193,34 +193,6 @@ Applies to:
 <!-- ***********************************************-->
 ## Device security
 
-### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115   -->
-
-You'll soon be able to use the [settings catalog](../configuration/settings-catalog.md) to configure Microsoft Defender for Endpoint on macOS. (**Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog**).
-
-Some of the settings we plan to make available from the settings catalog include:
-
-**Microsoft Defender - Antivirus engine**:
-
-- Allowed threats
-- Enable passive mode
-- Enable real-time protection
-- Scan exclusions
-- Threat type settings
-
-**Microsoft Defender - Cloud delivered protection preferences**:
-
-- Diagnostic collection level
-- Enable - disable automatic sample submissions
-- Enable - disable cloud delivered protection
-
-**Microsoft Defender - EDR preferences**:
-
-- Device tags
-- Enable - disable early preview
-
-**Microsoft Defender - User interface preferences**:
-
-- Show - hide status menu icon
 
 ### Certificate Connector for Microsoft Intune combines separate certificate connectors<!-- 9843502  -->
 
