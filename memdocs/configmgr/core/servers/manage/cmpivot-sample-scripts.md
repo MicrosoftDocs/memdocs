@@ -5,7 +5,7 @@ description: Script samples for CMPivot in Configuration Manager.
 ms.date: 07/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: sample
 ms.assetid: 9cbf0ea8-11f3-4d8e-9afa-9b2765fb3f01
 author: mestew
 ms.author: mstewart 
@@ -16,7 +16,7 @@ manager: dougeby
 <!---->
 *Applies to: Configuration Manager (current branch)*
 
-Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
+Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query).
 
 [!INCLUDE [Sample scripts for both Microsoft Endpoint Manager and Configuration Manager use](includes/cmpivot-samples-shared.md)]
 
