@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 07/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -189,6 +189,8 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| Update policies for iOS/iPadOS | ✔️ |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | ✔️ |
 | Device restrictions | ✔️ |
@@ -216,6 +218,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | N/A |
 | Device restrictions | ✔️ |
@@ -253,7 +256,7 @@ You can use filters for some common device configuration policies on the followi
 | Device restrictions | ✔️ |
 | Device Restrictions (Windows 10 Team) | ✔️ |
 | Device Features | N/A |
-| Device Firmware Configuration Interface | ❌ |
+| Device Firmware Configuration Interface (DFCI) on Windows 10 RS5 (1809) and newer on supported UEFI | ✔️ |
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
@@ -297,7 +300,6 @@ The following features don't support using filters:
 - S mode supplemental policies for Windows 10
 - Shell scripts for macOS
 - Terms and conditions
-- Update policies for iOS/iPadOS
 - Windows 10 feature updates
 - Windows 10 update rings
 
