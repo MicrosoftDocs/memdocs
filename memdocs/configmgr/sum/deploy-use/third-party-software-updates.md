@@ -211,7 +211,7 @@ You can edit and existing subscription by selecting **Properties** from the ribb
    - **Simple schedule**:  Choose the hour, day, or month interval.
    - **Custom schedule**: Set a complex schedule.
 
-## Unsubscribe and delete custom catalogs
+## Unsubscribe from catalog and delete custom catalogs
 
 In the **Third-Party Software Update Catalogs** node, right-click on the catalog and select **Unsubscribe** to stop synchronizing the catalog. 
 You can also use the **Unsubscribe** option from the ribbon. When you unsubscribe from a catalog, the approval for catalog signing and update content certificates are removed. Existing updates aren't removed, but you may not be able to deploy them. With custom catalogs, you also have the option of deleting it after you've unsubscribed. Select **Delete Custom Catalog** from either the ribbon or the right-click menu for the catalog. Deleting the custom catalog removes it from view in the **Third-Party Software Update Catalogs** node.  
