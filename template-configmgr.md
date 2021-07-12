@@ -149,13 +149,14 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
 
 ### Codeblock
 
-```
-function fancyAlert(arg) {
-  if(arg) {
-    $.docs({div:'#foo'})
-  }
+```json
+{
+   "aggregator": {
+   "batchSize": 1000,
+   flushTimeout": "00:00:30"
+   }
 }
-```
+ ```
 
 ### In-line code
 
@@ -169,15 +170,19 @@ This is an example of `in-line code`.
 
 ### Static Image
 
-![this is the alt text](./media/AzRMS_elements.png)
+:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text.":::
+
+### Image with lightbox
+
+:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text." lightbox="memdocs/media/docs-github-edit.png":::
+
+### Animated gif
+
+:::image type="content" source="memdocs/media/docs-filter-toc.gif" alt-text="This is the alt text.":::
 
 ### Linked Image
 
 [![alt text for linked image](./media/AzRMS_elements.png)](https://azure.microsoft.com)
-
-### Animated gif
-
-![animated gif](./media/hololens.gif)
 
 ## Alerts
 
@@ -195,6 +200,11 @@ This is an example of `in-line code`.
 
 > [!TIP]
 > This is TIP
+
+### Caution
+
+> [!CAUTION]
+> This is CAUTION
 
 ### Important
 

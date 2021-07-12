@@ -509,6 +509,8 @@ items:
     href: core/servers/console/console-extension-architecture.md
   - name: Console extension deployment
     href: core/servers/console/console-extension-deployment.md
+  - name: New style console managed extensions
+    href: core/servers/console/console-extension-register.md    
   - name: Console actions
     items:
     - name: About console actions

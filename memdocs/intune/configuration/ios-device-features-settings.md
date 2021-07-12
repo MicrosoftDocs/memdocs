@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2021
+ms.date: 06/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -83,9 +83,12 @@ This feature applies to:
 - Automated device enrollment (supervised)
 
 > [!NOTE]
-> Only add an app once to the dock, page, folder on a page, or folder in the dock. Adding the same app in any two places prevents the app from showing on devices, and may show reporting errors.
+> 
+> - Only add an app once to the dock, page, folder on a page, or folder in the dock. Adding the same app in any two places prevents the app from showing on devices, and may show reporting errors.
 >
-> For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
+>   For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
+>
+> - When you apply a home screen layout, it overwrites any user-defined layout. So, it's recommended to use home screen layouts on userless devices.
 
 ### Home screen
 

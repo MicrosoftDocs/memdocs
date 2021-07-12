@@ -144,7 +144,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) |
 
 - ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
-- ***Note 2*** - This profile is supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/windows-virtual-desktop-multi-session.md).
+- ***Note 2*** - This profile is supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Additional resources
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 06/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,18 +43,20 @@ For example, you want to configure all iOS/iPadOS devices with the required sett
 
 This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
 
-> [!TIP]
-> *VPN* profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/windows-virtual-desktop-multi-session.md).
+## Before you begin
 
-> [!NOTE]
->
-> - User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
-> - You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
->
->   - Android 4 and later
->   - Enrolled devices that run Windows 8.1 and later
->   - Enrolled devices that run Windows 10 desktop
->   - Windows Holographic for Business
+- VPN profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+
+- If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+
+- User enrollment for iOS/iPadOS and macOS only support [per-app VPN](vpn-setting-configure-per-app.md).
+
+- You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
+
+  - Android 4 and later
+  - Enrolled devices that run Windows 8.1 and later
+  - Enrolled devices that run Windows 10 desktop
+  - Windows Holographic for Business
 
 ## VPN connection types
 
