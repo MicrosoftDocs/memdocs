@@ -153,14 +153,12 @@ Once the third-party updates are in the **All Updates** node, you can choose whi
 1. On the **Download Locations** page of the **Deploy Software Updates Wizard**, select the default option to **Download software updates from the internet**. In this scenario, the content is already published to the software update point, which is used to download the content for the deployment package.
 1. Clients will need to run a scan and evaluate updates before you can see compliance results.  You can manually trigger this cycle from the Configuration Manager control panel on a client by running the **Software Updates Scan Cycle** action.
 
-
 ## <a name="bkmk_v3"></a> Third-party v3 catalog options
 
 V3 catalogs allow for categorized updates. When using catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to WSUS.
 
-<!--4469002-->
 > [!IMPORTANT]
-> This option is only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the v3 format.
+> This option is only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the v3 format. <!--4469002-->
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.
 1. Select the catalog to subscribe and select **Subscribe to Catalog** in the ribbon.
