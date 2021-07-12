@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,12 +87,6 @@ The Certificate Connector for Microsoft Intune supports:
     > Therefore, each connector that supports PKCS must have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
 
 - *Federal Information Processing Standard* (FIPS) mode. FIPS isn't required. When FIPS is enabled, you can issue and revoke certificates.
-
-## Architecture
-
-***Pending***
-
-
 
 ## Lifecycle
 
@@ -220,7 +214,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
 
-### June 21, 2021
+### July 19, 2021
 
 The Certificate Connector for Microsoft Intune is released. This connector is a unified connector in that it includes the capabilities of both the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*, which it replaces.  With this release, the previous connectors remain supported, but are no longer developed nor available for download. Plan to replace existing installations of the individual with installations of this new unified connector. 
 
