@@ -177,6 +177,10 @@ The following Windows 10 desktop device remote actions are not supported and wil
 
 Deleting VMs from Azure will leave orphaned device records in Microsoft Endpoint Manager. They will be automatically cleaned up according to the cleanup rules configured for the tenant.
 
+## Security baselines
+
+Security baselines are not available for Windows 10 Enterprise multi-session at this time. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
+
 ## Additional configurations which are not supported on Windows 10 Enterprise multi-session VMs
 
 Out of Box Experience (OOBE) enrollment isn't supported for Window 10 Enterprise multi-session. This restriction means that:

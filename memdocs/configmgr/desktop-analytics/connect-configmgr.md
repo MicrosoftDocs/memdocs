@@ -15,7 +15,7 @@ ms.reviewer: acabello
 
 # How to connect Configuration Manager with Desktop Analytics
 
-Desktop Analytics is tightly integrated with Configuration Manager. Any supported version of Configuration Manager supported Desktop Analytics. When connecting to a cloud service, make sure the site and clients are up to date to support the latest features. To connect the on-premises site with the Desktop Analytics cloud service, create the Desktop Analytics connection in Configuration Manager. Then monitor the health of the connection.
+Desktop Analytics is tightly integrated with Configuration Manager. Any supported version of Configuration Manager supports Desktop Analytics. When connecting to a cloud service, make sure the site and clients are up to date to support the latest features. To connect the on-premises site with the Desktop Analytics cloud service, create the Desktop Analytics connection in Configuration Manager. Then monitor the health of the connection.
 
 ## <a name="bkmk_connect"></a> Connect to the service
 
