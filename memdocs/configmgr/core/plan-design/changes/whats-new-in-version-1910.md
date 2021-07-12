@@ -267,7 +267,7 @@ For more information, see [Task sequence variables - SetupCompletePause](../../.
 <!--4469002-->
 You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When you use catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to Windows Server Update Services (WSUS).
 
-For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_1910).
+For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md).
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->
