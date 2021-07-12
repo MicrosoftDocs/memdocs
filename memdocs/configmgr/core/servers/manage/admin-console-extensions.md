@@ -41,7 +41,7 @@ The old style of console extensions may start being phased out in favor of the n
 <!--9761129-->
 (*Applies to Configuration Manager version 2107 or later*)
 
-Starting in Configuration Manager version 2107 , you can choose to allow unsigned hierarchy approved console extensions. You may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab. To import and install an unsigned hierarchy approved console extension, the high-level steps are:
+Starting in Configuration Manager version 2107 , you can choose to allow unsigned hierarchy approved console extensions. It's a best practice to always used signed extensions to minimize security risks and to confirm the authenticity of a console extension. However, in some cases you may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab. To import and install an unsigned hierarchy approved console extension, the high-level steps are:
 
    1. [Allow unsigned](#bkmk_allow-unsigned) hierarchy approved console extensions.
    1. [Import](#bkmk_import-unsigned) the unsigned console extension.
