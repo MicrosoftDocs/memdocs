@@ -61,16 +61,16 @@ When you convert a CMG, you can't change all settings:
 
 | Setting | Convert |
 |---------|---------|
-| VM size | :::image type="icon" source="../../media/green-check.png" border="false"::: |
-| VM instances | :::image type="icon" source="../../media/green-check.png" border="false"::: |
-| Verify CRL | :::image type="icon" source="../../media/green-check.png" border="false"::: |
-| Require TLS | :::image type="icon" source="../../media/green-check.png" border="false"::: |
-| Serve content | :::image type="icon" source="../../media/green-check.png" border="false"::: |
-| Azure environment | :::image type="icon" source="../../media/red-x.png" border="false"::: |
-| Subscription | :::image type="icon" source="../../media/red-x.png" border="false"::: |
-| Azure AD app | :::image type="icon" source="../../media/red-x.png" border="false"::: |
-| Region | :::image type="icon" source="../../media/red-x.png" border="false"::: |
-| Resource group | :::image type="icon" source="../../media/red-x.png" border="false"::: |
+| VM size | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| VM instances | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Verify CRL | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Require TLS | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Serve content | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Azure environment | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Subscription | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Azure AD app | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Region | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Resource group | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 
 To make changes that the conversion process doesn't support, you need to [Redeploy the service](#redeploy-the-service).
 

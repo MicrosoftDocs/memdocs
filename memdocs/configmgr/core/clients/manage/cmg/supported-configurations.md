@@ -37,43 +37,43 @@ The following table lists CMG support for Configuration Manager features:
 
 | Feature | Support |
 |---------|---------|
-| Software updates | ![Supported](media/green_check.png) |
-| Endpoint protection | ![Supported](media/green_check.png) <sup>[Note&nbsp;1](#bkmk_note1)</sup> |
-| Hardware and software inventory | ![Supported](media/green_check.png) |
-| Client status and notifications | ![Supported](media/green_check.png) |
-| Run scripts | ![Supported](media/green_check.png) |
-| CMPivot | ![Supported](media/green_check.png) |
-| Compliance settings | ![Supported](media/green_check.png) |
-| Automatic client upgrade | ![Supported](media/green_check.png) |
-| Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | ![Supported](media/green_check.png) |
-| Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) |
-| Software distribution (device-targeted) | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, required)<br>(with Azure AD integration) | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | ![Supported](media/green_check.png) |
-| BitLocker Management | ![Supported](media/green_check.png) (2010) |
-| Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
-| Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
-| Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
-| Task sequence with a boot image, started from Software Center <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (2006) |
-| Task sequence with a boot image, started from bootable media <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (2010) |
-| Any other task sequence scenario <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Not supported](media/Red_X.png) |
-| Client push | ![Not supported](media/Red_X.png) |
-| Automatic site assignment | ![Not supported](media/Red_X.png) |
-| Software approval requests | ![Not supported](media/Red_X.png) |
-| Configuration Manager console | ![Not supported](media/Red_X.png) |
-| Remote tools | ![Not supported](media/Red_X.png) |
-| Reporting website | ![Not supported](media/Red_X.png) |
-| Wake on LAN | ![Not supported](media/Red_X.png) |
-| macOS clients | ![Not supported](media/Red_X.png) |
-| Peer cache | ![Not supported](media/Red_X.png) |
-| On-premises MDM | ![Not supported](media/Red_X.png) |
-| Alternate content providers | ![Not supported](media/Red_X.png) <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
+| Software updates | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Endpoint protection | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: <sup>[Note&nbsp;1](#bkmk_note1)</sup> |
+| Hardware and software inventory | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Client status and notifications | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Run scripts | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| CMPivot | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Compliance settings | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Automatic client upgrade | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Software distribution (device-targeted) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Software distribution (user-targeted, required)<br>(with Azure AD integration) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| BitLocker Management | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (2010) |
+| Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Task sequence with a boot image, started from Software Center <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (2006) |
+| Task sequence with a boot image, started from bootable media <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (2010) |
+| Any other task sequence scenario <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Client push | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Automatic site assignment | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Software approval requests | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Configuration Manager console | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Remote tools | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Reporting website | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Wake on LAN | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| macOS clients | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Peer cache | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| On-premises MDM | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Alternate content providers | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
 
 |Key|
 |--|
-|![Supported](media/green_check.png) = This feature is supported with CMG by all supported versions of Configuration Manager  |
-|![Supported](media/green_check.png) (*YYMM*) = This feature is supported with CMG starting with version *YYMM* of Configuration Manager  |
-|![Not supported](media/Red_X.png) = This feature isn't supported with CMG |
+|:::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: = This feature is supported with CMG by all supported versions of Configuration Manager  |
+|:::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (*YYMM*) = This feature is supported with CMG starting with version *YYMM* of Configuration Manager  |
+|:::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: = This feature isn't supported with CMG |
 
 ### Support notes
 
