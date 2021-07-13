@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2021
+ms.date: 07/13/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -207,6 +207,9 @@ Once enabled, the OneDrive and SharePoint apps for iOS/iPadOS and Android are pr
 By default, there can only be one **Global** policy per tenant. However, you can use [Intune Graph APIs](../developer/intune-graph-apis.md) to create extra global policies per tenant, but doing so isn't recommended. Creating extra global policies isn't recommended because troubleshooting the implementation of such a policy can become complicated.
 
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy will override these settings.
+
+> [!NOTE]
+> The policy settings in the OneDrive Admin Center are no longer being updated. Microsoft Enpoint Manager may be used instead. For more information, see [Control access to features in the OneDrive and SharePoint mobile apps](/onedrive/control-access-to-mobile-app-features.md).
 
 ## App protection features
 
