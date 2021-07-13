@@ -184,7 +184,6 @@ Table operators can be used filter, summarize, and transform data streams. Curre
 |join|Merge the rows of two tables to form a new table by matching row for the same device|
 |order by|Sort the rows of the input table into order by one or more columns|
 |project|Select the columns to include, rename or drop, and insert new computed columns|
-|summarize|Produces a table that aggregates the content of the input table <br></br> Starting in version 2107, you can use [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) and [minif](/azure/data-explorer/kusto/query/minif-aggfunction) with the summarize table operator. <!--9966861-->|
 |take|Return up to the specified number of rows|
 |top|Returns the first N records sorted by the specified columns|
 |where|Filters a table to the subset of rows that satisfy a predicate|
@@ -228,7 +227,9 @@ Aggregation functions can be used with the summarize table operator to calculate
 |countif()|Returns a count of rows for which Predicate evaluates to true|
 |dcount()|Returns the number of distinct values in the group|
 |max()|Returns the maximum value across the group|
+|maxif()|Starting in version 2107, you can use [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) with the summarize table operator. <!--9966861--> </br></br>Returns the maximum value across the group for which *Predicate* evaluates to `true`. |
 |min()|Returns the minimum value across the group|
+|minif()|Starting in version 2107, you can use [minif](/azure/data-explorer/kusto/query/minif-aggfunction) with the summarize table operator. <!--9966861--> </br></br>Returns the minimum value across the group for which *Predicate* evaluates to `true`. |
 |percentile()|Returns an estimate for the specified nearest-rank percentile of the population defined by Expr|
 |sum()|Returns the sum of the values across the group|
 |sumif()|Returns a sum of Expr for which Predicate evaluates to true|
