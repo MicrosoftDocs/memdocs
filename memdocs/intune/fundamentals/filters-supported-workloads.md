@@ -256,7 +256,7 @@ You can use filters for some common device configuration policies on the followi
 | Device restrictions | ✔️ |
 | Device Restrictions (Windows 10 Team) | ✔️ |
 | Device Features | N/A |
-| Device Firmware Configuration Interface (DFCI) on Windows 10 RS5 (1809) and newer on supported UEFI | ✔️ |
+| Device Firmware Configuration Interface (DFCI) | ❌ |
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
