@@ -69,7 +69,7 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 
 ## <a name="bkmk_np"></a> No commercial median
 
-The built-in baseline of **Commercial median** doesn't currently have metrics for the subscore metrics listed in the sections above.
+The built-in baseline of **All organizations (median)** doesn't currently have metrics for the subscore metrics listed in the sections above.
 
 ## Next steps
 

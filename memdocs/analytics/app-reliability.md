@@ -71,13 +71,14 @@ For each application in the report, the following data is provided:
 
 ### App performance details
 
-Selecting an app name in the table from **App performance** opens the **App performance details**. **App performance details contain two tabs:
+Selecting an app name in the table from **App performance** opens **App performance details**. **App performance details** contain two tabs:
 
 - **App versions**: This tab allows you to compare the **Mean time to failure** across different versions of the application. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You may also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
 - **OS versions**: This tab compares the **Mean time to failure** for the application across different versions of Windows. This information can be helpful for identifying potential correlations between OS version and application issues.
 
 :::image type="content" source="media/5659073-app-performance-details.png" alt-text="Application performance details in endpoint analytics" lightbox="media/5659073-app-performance-details.png":::
-## Model performance and OS versions performance tabs
+
+## Device performance tab
 
 The **Device performance** tab displays application reliability insights for each eligible, enrolled device in your tenant. The **Total app crashes (14 days)** column represents the total number of app crash events from any app reported by the device over the past 14 days. These crash events can be associated with any application installed on the device and aren't necessarily all from the same application.
 
@@ -87,17 +88,6 @@ The **Device performance** tab displays application reliability insights for eac
 Selecting a device name opens the **Application reliability (preview)** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
 ## Known issues
-
-### Some devices may fail to upload application reliability data on days with abnormally high amounts of application usage
-
-**Scenario**: Application reliability data is uploaded from enrolled devices once per 24 hours. In cases where a device uses a substantial number of applications during the preceding 24 hours, the data being uploaded can be larger than expected causing the upload to be rejected. When this issue occurs, data from failed uploads never makes it to the Intune cloud and is not included in the insights shown on the Application reliability report.
-
-> [!NOTE]
-> This issue affects the data upload process rather than the device itself. This means that application reliability data from a particular device may fail to upload on one day, but data from the same device is able to upload successfully the next day.
-
-**Impacted devices**: This issue affects a small subset of daily application reliability data uploads from devices with a large amount of application usage. Only devices enrolled in Endpoint analytics via Configuration Manager version 2010 or older can be impacted. This issue primarily occurs when a device has greater than 20 distinct applications with active focus time during a 24 hour period, though this number can vary based on which applications are used and total usage duration.
-
-**Mitigation**: This issue requires a client-side mitigation which is available as part of an update rollup for Configuration Manager version 2010. For more information, see [KB4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95).
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 
