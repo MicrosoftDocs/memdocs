@@ -91,7 +91,7 @@ You can deploy volume-purchased (VPP) apps or custom apps or line-of-business ap
 3. To add a web app in Endpoint Manager and assign it to Azure AD groups. For more information, see [Add a web app to Intune](../apps/web-app.md#add-a-web-app-to-intune). 
 4. For assigning apps to Shared iPads, you should use Azure AD device groups. You can use home screen layout settings in device configuration profile assigned to Azure AD user groups to show or hide different sets of apps to different users on a Shared iPad.  
 
-App installations on Shared iPads follow the applicability rules in the table below.
+App installations on Shared iPads follow the applicability rules in the table below.<p>
 
 |     App type    |     Applicability on device group assignment    |     Applicability on user group assignment    |
 |---|---|---|
