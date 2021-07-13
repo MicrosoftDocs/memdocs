@@ -56,7 +56,7 @@ The recommended action for devices managed by Configuration Manager that aren't 
 
 ## <a name="bkmk_np"></a> No commercial median
 
-The built-in baseline of **Commercial median** doesn't currently have metrics for the subscores listed in the sections above.
+The built-in baseline of **All organizations (median)** doesn't currently have metrics for the subscores listed in the sections above.
 
 ## Next steps
 
