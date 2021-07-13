@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2021
+ms.date: 07/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -132,6 +132,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | N/A |
 | Device restrictions | ✔️ |
@@ -161,6 +162,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | ✔️ |
 | Device restrictions | ✔️ |
@@ -249,6 +251,8 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| Windows 10 update rings | ✔️ |
+| **Device configuration profile** | &nbsp; |
 | Administrative Templates | ✔️ |
 | Custom | ✔️ |
 | Derived credential | N/A |
@@ -301,7 +305,6 @@ The following features don't support using filters:
 - Shell scripts for macOS
 - Terms and conditions
 - Windows 10 feature updates
-- Windows 10 update rings
 
 ## Next steps
 
