@@ -123,6 +123,7 @@ Entities are objects that can be queried from the client. We currently support t
 |ProtectedVolumeInformation|Protected Volume Information|
 |Protocol|Protocol|
 |QuickFixEngineering|Quick Fix Engineering|
+|Registry|All values for a specific registry key<!--7371183--> </br></br>Starting in version 2107, Key value was added to the Registry() entity <!--9966861-->|
 |SCSIController|SCSI Controller|
 |SerialPortConfiguration|Serial Port Configuration|
 |SerialPorts|Serial Ports|
@@ -264,6 +265,5 @@ Scalar functions can be used in expressions. Currently the following scalar func
 |Entity|FileContent()|Content of a specific file|
 |Entity|NAPClient|NAP Client|
 |Entity|NAPSystemHealthAgent|NAP System Health Agent|
-|Entity|Registry()|All values for a specific registry key<!--7371183--> </br></br>Starting in version 2107, Key value was added to the Registry() entity <!--9966861-->|
 |Entity|RegistryKey()| Returns all registry keys matching the given expression (starting in version 2107)<!--9966861-->|
 |Table operator|render|Renders results as graphical output|
