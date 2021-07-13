@@ -54,7 +54,7 @@ To help you identify devices that could be impacting user experience, Endpoint a
 - [Startup performance score](startup-performance.md#bkmk_score)
 - [Application reliability score](app-reliability.md#app-reliability-score)
 
-**Placeholder - Insert screenshot of the Device scores tab**
+:::image type="content" source="media/8816759-per-device-scores.png" alt-text="Screenshot of Endpoint analytics device scores tab from the overview page." lightbox="media/8816759-per-device-scores.png":::
 
 Selecting a device from the **Devices scores** tab loads a device page that gives you more information. From the device's **Startup performance** tab, review **Boot history** and **Sign-in history** for experience impacting trends. The **Application reliability** tab provides insight into potential issues for desktop applications on the managed device.
 
@@ -64,7 +64,7 @@ Selecting a device from the **Devices scores** tab loads a device page that give
 
 When reviewing your organization's **Startup performance** or **Application reliability** reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
 
-**Placeholder - Insert screenshot of the device's Startup performance page**
+:::image type="content" source="media/8816759-per-device-startup-score.png" alt-text="Screenshot of Endpoint analytics startup performance page for a single device." lightbox="media/8816759-per-device-startup-score.png":::
 
 ## Next steps
 
