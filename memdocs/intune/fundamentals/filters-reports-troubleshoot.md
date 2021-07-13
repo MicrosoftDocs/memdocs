@@ -62,7 +62,6 @@ This report shows every app or policy with a filter that's been applied. For eac
     - If the filter was using Include or Exclude mode
     - The filter name, description, and rules
     - The properties that were evaluated, such as `deviceName`.
-    - The available apps that can be assigned to the device.
 
     The **Filter information** section is populated with the currently configured filter name, description, and rules. The information isn't populated from log data. The filter name, syntax, and any other metadata may have changed since the last evaluation time. When troubleshooting, be sure to look at the **Evaluation time** and **Last modified** timestamps.
 
