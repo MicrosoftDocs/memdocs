@@ -100,7 +100,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 Configuration Manager starts to set up the service. The amount of time it takes to completely provision the service in Azure is dependent upon the settings that you specified. To determine when the service is ready, view the **Status** column for the new CMG.
 
-To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
+To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Monitor CMG](monitor-clients-cloud-management-gateway.md#monitor-logs).
 
 > [!TIP]
 > Starting in version 2010, you can also use the PowerShell cmdlet **New-CMCloudManagementGateway** for this process.<!--6978300--> Optionally use this cmdlet to create the CMG service. While it was available in earlier versions, version 2010 includes significant improvements to this cmdlet. For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).

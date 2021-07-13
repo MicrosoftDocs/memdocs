@@ -1,18 +1,17 @@
 ---
-title: Modify a cloud management gateway
+title: Modify a CMG
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
-ms.date: 11/30/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: aded6f2c-b47a-4615-bf6c-1b5d8f77c6bd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# Modify a cloud management gateway
+# Modify a CMG
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -49,6 +48,60 @@ View the packages that are assigned to the cloud storage account for this CMG. S
 
 To verify that the content files for a package are available on the content-enabled CMG, go to the **Content Status** node in the **Monitoring** workspace. For more information, see [Monitor content you distribute](../../../servers/deploy/configure/monitor-content-you-have-distributed.md).
 
+## Convert
+
+<!--8959690-->
+
+Starting in version 2107, if you have a CMG that uses the classic cloud service deployment, you can convert it to use a virtual machine scale set.
+
+> [!TIP]
+> This process reuses the underlying storage account.
+
+When you convert a CMG, you can't change all settings:
+
+| Setting | Convert |
+|---------|---------|
+| VM size | :::image type="icon" source="../../media/green-check.png" border="false"::: |
+| VM instances | :::image type="icon" source="../../media/green-check.png" border="false"::: |
+| Verify CRL | :::image type="icon" source="../../media/green-check.png" border="false"::: |
+| Require TLS | :::image type="icon" source="../../media/green-check.png" border="false"::: |
+| Serve content | :::image type="icon" source="../../media/green-check.png" border="false"::: |
+| Azure environment | :::image type="icon" source="../../media/red-x.png" border="false"::: |
+| Subscription | :::image type="icon" source="../../media/red-x.png" border="false"::: |
+| Azure AD app | :::image type="icon" source="../../media/red-x.png" border="false"::: |
+| Region | :::image type="icon" source="../../media/red-x.png" border="false"::: |
+| Resource group | :::image type="icon" source="../../media/red-x.png" border="false"::: |
+
+To make changes that the conversion process doesn't support, you need to [Redeploy the service](#redeploy-the-service).
+
+### Process to convert a CMG to a virtual machine scale set
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.
+
+1. Select a CMG instance whose **Status** is _Ready_. In the ribbon, select **Convert**. This action opens the Convert CMG wizard.
+
+1. On the General page, select **Next**. You can't change any of these settings.
+
+1. On the Settings page, note the new _Deployment name_ with the suffix for the virtual machine scale set.
+
+1. Make other configuration changes as needed. Then select **Next** and complete the wizard.
+
+Monitor the conversion process the same as a new deployment. For example, view the state in the console, and review **cloudmgr.log**. For more information, see [Monitor CMG](monitor-clients-cloud-management-gateway.md#monitor-logs).
+
+### Update or create a DNS CNAME
+
+Since the deployment name changed, you need to update or create a DNS canonical name record (CNAME). This alias maps the service name to the deployment name. For more information, see [Create a DNS CNAME alias](server-auth-cert.md#create-a-dns-cname-alias).
+
+For example:
+
+- The CMG's _service name_ is either `GraniteFalls.contoso.com` or `GraniteFalls.cloudapp.net`, which typically depends upon the [certificate type](server-auth-cert.md#summary-comparison-of-certificate-types).
+
+- For the _deployment name_:
+
+  - Classic: `GraniteFalls.cloudapp.net`
+
+  - Virtual machine scale set: `GraniteFalls.EastUS.CloudApp.Azure.Com`
+
 ## Redeploy the service
 
 More significant changes, such as the following configurations, require that you redeploy the service:
@@ -62,12 +115,14 @@ Always keep at least one active CMG for internet-based clients to receive update
 
 Clients refresh policy by default every 24 hours. Before you delete the old CMG, wait at least one day after you create a new one. If clients are turned off or without an internet connection, you may need to wait longer.
 
-If you have an existing CMG from Configuration Manager version 1810 or earlier, it uses the Azure Service Manager deployment method with an Azure management certificate. Redeploy a new CMG to use the Azure Resource Manager deployment method.<!--509753-->
+If you have an existing CMG from Configuration Manager version 1810 or earlier, it uses the Azure Service Manager deployment method with an Azure management certificate. This method is deprecated, and support will be removed in a later version of Configuration Manager. Redeploy a new CMG to use the Azure Resource Manager deployment method.<!--509753-->
 
 The process to redeploy the service depends upon your service name and whether you want to reuse it.
 
 > [!NOTE]
-> If you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**, and vice versa. First [delete the existing CMG](modify-cloud-management-gateway.md#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method. For more information, see [Topology design: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+> In version 2107 and later, you can have multiple CMGs that use different deployment methods. You can also convert a **cloud service (classic)** CMG to a **virtual machine scale set**. For more information, see [Convert](#convert).
+>
+> In versions 2010 and 2103, if you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**, and vice versa. First [delete the existing CMG](modify-cloud-management-gateway.md#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method. For more information, see [Plan for CMG: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
 ### Replace a CMG and reuse the same service name
 
@@ -145,9 +200,12 @@ To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
 
 1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute.
 
-    For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
-
     Starting in version 2010, you'll see either **Cloud service (classic)** or **Virtual machine scale set**.
+
+    In version 2006 and earlier, for a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
+
+    > [!IMPORTANT]
+    > CMG deployments using Azure Service Manager are deprecated. Support will be removed in a later version of Configuration Manager. Redeploy a new CMG to use the Azure Resource Manager deployment method.
 
 You can also add the **Deployment Model** attribute as a column to the list view.  
 
