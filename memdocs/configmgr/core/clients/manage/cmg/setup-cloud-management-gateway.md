@@ -1,22 +1,21 @@
 ---
-title: Set up cloud management gateway
+title: Set up CMG
 titleSuffix: Configuration Manager
 description: Use this step-by-step process for setting up a cloud management gateway (CMG).
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/04/2021
+ms.date: 07/16/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ---
 
-# Set up cloud management gateway for Configuration Manager
+# Set up CMG for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Once you have the prerequisites in place, you can start the process to set up a cloud management gateway (CMG). Before you start this process, make sure you have the necessary information and prerequisites to create a CMG. For more information, see [Set up checklist for cloud management gateway](set-up-checklist.md).
+Once you have the prerequisites in place, you can start the process to set up a cloud management gateway (CMG). Before you start this process, make sure you have the necessary information and prerequisites to create a CMG. For more information, see [Set up checklist for CMG](set-up-checklist.md).
 
 This step of the overall process includes the following actions:
 
@@ -26,26 +25,12 @@ This step of the overall process includes the following actions:
 - Configure the management point and software update point for CMG traffic.
 - Configure boundary groups.
 
-> [!NOTE]
-> Some sections that were previously in this article have moved:
->
-> - **Before you begin**: [Set up checklist for CMG](set-up-checklist.md)
-> - **Configure clients for CMG**: [Configure clients for CMG](configure-clients.md)
-> - **Modify a CMG**: [Modify a CMG](modify-cloud-management-gateway.md)
-
 ## Set up a CMG
 
-> [!IMPORTANT]
-> Starting in version 2010,<!--3601040--> customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. In this version of Configuration Manager, it's a pre-release feature. To enable it, see [Pre-release features](../../../servers/manage/pre-release-features.md).
->
-> Also note the following limitations for a **virtual machine scale set** deployment as you set it up:
->
-> - It's only supported with a standalone primary site.
-> - It doesn't support Azure US Government Cloud environments.
->
-> If you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**. First [delete the existing CMG](modify-cloud-management-gateway.md#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method.
+> [!TIP]
+> Deploying a CMG with a **virtual machine scale set** in Azure was first introduced in version 2010 as a [pre-release feature](pre-release-features.md).<!--3601040--> Beginning with version 2107, it's no longer a pre-release feature.<!-- 8959690 -->
 
-Do this procedure on the top-level site. That site is either a standalone primary site, or the central administration site.
+Do this procedure on the top-level site. That site is either a standalone primary site, or the central administration site (CAS).
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Cloud Management Gateway**.
 
@@ -61,9 +46,17 @@ Do this procedure on the top-level site. That site is either a standalone primar
     > [!NOTE]
     > In version 2006 and earlier, you don't have this choice. All deployments use the **cloud service (classic)** method.
 
-    - **Virtual machine scale set**: Starting in version 2010, you have to enable this pre-release feature to see it. It's currently intended for customers with a Cloud Solution Provider (CSP) subscription. If you already deployed a CMG with the **cloud service (classic)** method, this option is unavailable. For more information, see [Topology design: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+    - **Virtual machine scale set**
 
-    - **Cloud service (classic)**: In version 2010, most customers should use this deployment method.
+        - Starting in version 2107, this option is the recommended deployment method.<!-- 8959690 --> Even if you have an existing CMG deployed with the cloud service (classic) method, deploy new CMG instances as a virtual machine scale set.
+
+        - In versions 2010 and 2103, you have to enable this pre-release feature to see it. In these releases, it's only intended for customers with a Cloud Solution Provider (CSP) subscription. If you already deployed a CMG with the **cloud service (classic)** method, this option is unavailable. For more information, see [Plan for CMG: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+
+    - **Cloud service (classic)**
+
+        - In versions 2010 and 2103, most customers should use this deployment method. Use this option.
+
+        - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set due to one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107).
 
 1. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
@@ -83,6 +76,11 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
         - If you choose **Create new**, then enter the new resource group name.
 
+    1. By default, the **VM Size** is **Standard (A2_V2)**. Select another option as your design specifies. For example, **Large (A4_v2)** for increased client capacity per VM, or **Lab (B2s)** in a small test environment.<!--3555749-->
+
+        > [!IMPORTANT]
+        > The **Lab (B2s)** size VM is only intended for lab testing and small proof-of-concept environments. For example, with the  Configuration Manager technical preview branch. The B2s VMs aren't intended for production use with the CMG. They are low cost and low performing.
+
     1. In the **VM Instance** field, enter the number of VMs for this service. The default is one, but you can scale up to 16 VMs per CMG.
 
     1. If you're using client authentication certificates, select **Certificates** to add trusted root certificates. Add all of the certificates in the trust chain.
@@ -94,16 +92,15 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
     1. **Enforce TLS 1.2**: Enable this option to require the Azure cloud service VM to use the TLS 1.2 encryption protocol. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
-    1. By default, the wizard enables the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. When you enable this option, you don't need to also deploy a cloud distribution point.
+    1. By default, the wizard enables the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. A CMG can also serve content to clients.
 
 1. Next is the **Alerts** page of the wizard. To monitor CMG traffic with a 14-day threshold, enable the threshold alert. Then specify the threshold, and the percentage at which to raise the different alert levels. Choose **Next** when you're done.
 
 1. Review the settings, and complete the wizard.
 
-Configuration Manager starts to set up the service. After you close the wizard, it takes 5 to 15 minutes to completely provision the service in Azure. To determine when the service is ready, view the **Status** column for the new CMG.
+Configuration Manager starts to set up the service. The amount of time it takes to completely provision the service in Azure is dependent upon the settings that you specified. To determine when the service is ready, view the **Status** column for the new CMG.
 
-> [!NOTE]
-> To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
+To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 > [!TIP]
 > Starting in version 2010, you can also use the PowerShell cmdlet **New-CMCloudManagementGateway** for this process.<!--6978300--> Optionally use this cmdlet to create the CMG service. While it was available in earlier versions, version 2010 includes significant improvements to this cmdlet. For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).
