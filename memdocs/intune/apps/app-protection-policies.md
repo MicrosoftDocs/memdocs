@@ -85,6 +85,11 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
     The app(s) you have selected will appear in the public and custom apps list.
+    
+> [!NOTE]
+>Public apps are supported partner and Microsoft apps that are commonly used with Microsoft Intune. Intune protected apps are enabled with a rich set of mobile application protection policies. Details on public apps can be found at Microsoft Intune protected apps (https://docs.microsoft.com/en-us/mem/intune/apps/apps-supported-intune-apps)
+>Custom apps are apps that have been integrated with the Intune SDK or wrapped by the Intune App Wrapping Tool. Details can be found at Microsoft Intune App SDK overview (https://docs.microsoft.com/en-us/mem/intune/developer/apps-prepare-mobile-application-management and Prepare line-of-business apps for app protection policies (https://docs.microsoft.com/en-us/mem/intune/developer/apps-prepare-mobile-application-management).
+    
 6. Click **Next** to display the **Data protection** page.<br>
     This page provides settings for data loss prevention (DLP) controls, including cut, copy, paste, and save-as restrictions. These settings determine how users interact with data in the apps that this app protection policy applies.​
 
