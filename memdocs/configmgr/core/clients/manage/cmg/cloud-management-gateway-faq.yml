@@ -124,4 +124,4 @@ sections:
 
           If your site is version 2010 or 2103, the virtual machine scale set deployment method is a pre-release feature. It's only intended for customers with a Cloud Solution Provider (CSP) subscription.
 
-          For more information about deploying a CMG as a virtual machine scale set, see [Plan for CMG](plan-cloud-management-gateway.md#virtual-machine-scale-set).
+          For more information about deploying a CMG as a virtual machine scale set, see [Plan for CMG](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
