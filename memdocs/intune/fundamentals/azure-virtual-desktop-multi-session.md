@@ -48,7 +48,7 @@ Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-se
 This public preview feature supports Windows 10 Enterprise multi-session VMs which are:
 
 - Running Windows 10 multi-session, version 1903 or later.
-- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
+- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan)
 - Set up as remote desktops in pooled host pools in Azure.
 - Running a Azure Virtual Desktop agent version of 2944.1400 or later.
 - Enrolled in Microsoft Endpoint Manager using one of the following methods:
