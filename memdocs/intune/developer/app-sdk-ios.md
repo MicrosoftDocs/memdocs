@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 07/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -665,37 +665,37 @@ Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
 ```objc
 (void) identity:(NSString*) identity hasComplianceStatus:(IntuneMAMComplianceStatus) status withErrorString:(NSString*) error;
 {
-switch(status)
-{
- case IntuneMAMComplianceCompliant:
-{
-/*
-Handle successful compliance
-*/
-break;
-}
-case IntuneMAMComplianceNotCompliant:
-case IntuneMAMComplianceNetworkFailure:
-case IntuneMAMComplianceUserCancelled:
-case IntuneMAMComplianceServiceFailure:
-{
-UIAlertController* alert = [UIAlertController alertControllerWithTitle:identity
-message:error
-preferredStyle:UIAlertControllerStyleAlert];
-UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-handler:^(UIAlertAction * action) {exit(0);}];
-[alert addAction:defaultAction];
-dispatch_async(dispatch_get_main_queue(), ^{
-[self presentViewController:alert animated:YES completion:nil];
-});
-break;
-}
-case IntuneMAMComplianceInteractionRequired:
-{
-[[IntuneMAMComplianceManager instance] remediateComplianceForIdentity:identity silent:NO];
-break;
-}
-}
+    switch(status)
+    {
+        case IntuneMAMComplianceCompliant:
+        {
+            /*
+            Handle successful compliance
+            */
+            break;
+        }
+        case IntuneMAMComplianceNotCompliant:
+        case IntuneMAMComplianceNetworkFailure:
+        case IntuneMAMComplianceUserCancelled:
+        case IntuneMAMComplianceServiceFailure:
+        {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:identity
+            message:error
+            preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+            handler:^(UIAlertAction * action) {exit(0);}];
+            [alert addAction:defaultAction];
+            dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:alert animated:YES completion:nil];
+            });
+            break;
+        }
+        case IntuneMAMComplianceInteractionRequired:
+        {
+            [[IntuneMAMComplianceManager instance] remediateComplianceForIdentity:identity silent:NO];
+            break;
+        }
+    }
 }
 ```
 
@@ -755,17 +755,17 @@ guard let authorityURL = URL(string: kAuthority) else {
 ```
 ### How to test App Protection CA
 #### Configuring a test user for App Protection CA
-1.	Log in with your administrator credentials to https://portal.azure.com 
-2.	Click through these blades: Azure Active Directory -> Security -> Conditional Access → + New policy to create a new conditional access policy.
-3.	Configure conditional access policy by:
-a. filling in the Name field,
-b. Enabling the policy and,
-c. Assigning the policy to a user or group.
-4.	Assign cloud apps: select Include → All cloud apps. As the warning notes, be careful not to misconfigure this setting. For example, if you excluded all cloud apps, you would lock yourself out of the console.
-5.	Grant access controls by selecting Access Controls->Grant Access->Require app protection policy. 
-6.	When you are finished configuring the policy, select Create to save the policy and apply it.
-7.	Enable the policy.
-8.	You also need to make sure that the users are targeted for MAM policies.
+1. Log in with your administrator credentials to https://portal.azure.com.
+2. Select **Azure Active Directory** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
+3. Configure conditional access policy by setting the following items:
+  a. Filling in the **Name** field,
+  b. Enabling the policy and,
+  c. Assigning the policy to a user or group.
+4. Assign cloud apps. Select **Include** > **All cloud apps**. As the warning notes, be careful not to misconfigure this setting. For example, if you excluded all cloud apps, you would lock yourself out of the console.
+5. Grant access controls by selecting **Access Controls** > **Grant Access** > **Require app protection policy**. 
+6. When you are finished configuring the policy, select **Create** to save the policy and apply it.
+7. Enable the policy.
+8. You also need to make sure that the users are targeted for MAM policies.
 
 #### Test cases
 Test Case	| How to test	|	Expected Outcome	|
