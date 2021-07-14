@@ -284,8 +284,8 @@ Starting in this release, you can choose to allow unsigned [hierarchy approved c
 For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
 
 ### Configuration Manager console settings aren't saved
-<!--5452256-->
-When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.
+<!--5452246-->
+When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.<!-- move to relnote, not "what's new" -->
 
 ### Console improvements
 <!--9575773-->
