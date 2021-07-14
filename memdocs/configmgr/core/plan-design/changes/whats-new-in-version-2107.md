@@ -253,9 +253,12 @@ The following items were added to help you better manage your automatic deployme
 <!--9247522-->
 The `-Product` parameter for `New-CMSoftwareUpdateAutoDeploymentRule` was updated. When there are multiple products with the same name, `-Product` now selects all of them.
 <!-- do we want this here, or just rely on PowerShell release notes? -->
+
 #### Script to apply deployment package settings for automatic deployment rule
 <!--3961933, 4396422-->
-If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded the following script into [Community hub](../../servers/manage/community-hub.md):
+If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded a script into [Community hub](../../servers/manage/community-hub.md).
+
+For more information, see [Automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_script).
 <!-- I'll probably scrape the script for this over to PowerShell content as well -->
 
 ## Community hub
