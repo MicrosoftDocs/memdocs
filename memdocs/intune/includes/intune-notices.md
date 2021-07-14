@@ -4,12 +4,24 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 06/14/2021
+ms.date: 07/09/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
+
+Intune is announcing end of support for the [network fence feature](../protect/use-network-locations.md) for use only in devices enrolled through Android device administrator. Google has reduced support for devices enrolled using device administrator and Intune customers have provided feedback leading to a re-envisioning of the location based fencing to better meet customer needs across multiple Android enrollment options.
+
+#### How does this affect me?
+
+This will only affect you if you currently use a location-based (network fence) compliance policy, either on your trial or paid account. In 90 days from the date of this feature end-of-support announcement (on or around October 7, 2021 unless otherwise updated) any network location-based compliance policies targeted to devices enrolled using Android device administrator will no longer work to provide a network fence.
+
+#### What do I need to do to prepare for this change?
+
+No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features, and we will follow up with additional information when it’s available regarding re-envisioned location-based services.
 
 ### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year<!--10144130-->
 
@@ -29,7 +41,7 @@ For instructions on how to check in the Microsoft Endpoint Manager admin center 
 
 Check your Intune reporting to see what devices or users may be affected. For devices with mobile device management (MDM) go to **Devices** > **All devices** and filter by OS. For devices with app protection policies  go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
 
-To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](/mem/intune/fundamentals/manage-os-versions).
+To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](../fundamentals/manage-os-versions.md).
 
 ### Plan for Change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
 
