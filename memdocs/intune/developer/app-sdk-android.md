@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2021
+ms.date: 07/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -1337,8 +1337,7 @@ resources when appropriate, it is necessary to follow the steps
 below. If your app does not acquire any AAD access tokens, or accesses
 only resources which cannot be CA-protected, you may skip these steps.
 
-1. [Register your application with Azure Active Directory].
-    * This will generate a Client ID for your application.
+1. Register your application with Azure Active Directory. This will generate a Client ID for your application.
 2. Follow the steps for [Using MSAL] and [Configure MSAL to use a broker].
 3. Set the manifest meta-data parameters per [Common MSAL configurations](#common-msal-configurations) for [App Integrates MSAL](#2-app-integrates-msal), see above.
 
