@@ -758,9 +758,9 @@ guard let authorityURL = URL(string: kAuthority) else {
 1. Log in with your administrator credentials to https://portal.azure.com.
 2. Select **Azure Active Directory** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
 3. Configure conditional access policy by setting the following items:
-  a. Filling in the **Name** field,
-  b. Enabling the policy and,
-  c. Assigning the policy to a user or group.
+	a. Filling in the **Name** field,
+	b. Enabling the policy and,
+	c. Assigning the policy to a user or group.
 4. Assign cloud apps. Select **Include** > **All cloud apps**. As the warning notes, be careful not to misconfigure this setting. For example, if you excluded all cloud apps, you would lock yourself out of the console.
 5. Grant access controls by selecting **Access Controls** > **Grant Access** > **Require app protection policy**. 
 6. When you are finished configuring the policy, select **Create** to save the policy and apply it.
