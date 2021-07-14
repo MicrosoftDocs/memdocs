@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2021
+ms.date: 07/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -108,9 +108,9 @@ Microsoft Intune provides configuration settings that are unique to an app. You 
 
 The \{\{ and \}\} characters are used by token types only and must not be used for other purposes.
 
-### Allow only configured organization accounts in multi-identity apps 
+### Allow only configured organization accounts in apps
 
-As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy:
+As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts within the apps (if supported) on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
 | **Key** | **Values** |
 |----|----|
@@ -125,7 +125,22 @@ As the Microsoft Intune administrator, you can control which work or school acco
    > - OneNote for iOS (2.41 and later)
    > - Outlook for iOS (2.99.0 and later)
    > - Teams for iOS (2.0.15 and later)
-   
+
+### Require configured organization accounts in apps
+
+On enrolled devices, organizations can require that the work or school account is signed into managed Microsoft apps in order to receive Org data from other managed apps. For example, consider the scenario where the user has attachments included in email messages contained within the managed email profile located in the native iOS mail client. If the user attempts to transfer the attachments to a Microsoft app, like Office, that is managed on the device and has these keys applied, then this configuration will treat the transferred attachment as Org data, requiring the work or school account to be signed in and enforcing the app protection policy settings.
+
+For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy for each Microsoft app:
+
+| **Key** | **Values** |
+|----|----|
+| IntuneMAMRequireAccounts | <ul><li>Enabled: The app requires the user to sign-in to the managed user account defined by the [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key to receive Org data.</li><li>Disabled (or any value that is not a case insensitive match to Enabled): No account sign-in is required</li></ul>  |
+| IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
+
+> [!NOTE]
+> Apps must have Intune APP SDK for iOS version 12.3.3 or later and be targeted with an [Intune app protection policy](app-protection-policy.md) when requiring sign-in to work or school account. Within the app protection policy, the “Receive data from other apps” must be set to “All apps with incoming Org data”.  
+
+At this time, app sign-in is only required when there is incoming Org data to a targeted app.
 
 ## Enter XML data
 

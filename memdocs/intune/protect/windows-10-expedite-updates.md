@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2021
+ms.date: 07/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,6 +73,7 @@ In addition to a license for Intune, your organization must have one of the foll
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10 Virtual Desktop Access (VDA) per user
+- Microsoft 365 Business Premium
 
 **Supported Windows 10 versions**:
 
@@ -305,6 +306,6 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [Widows 10 update rings](../protect/windows-10-update-rings.md)
+- Configure [Windows 10 update rings](../protect/windows-10-update-rings.md)
 - Configure [Windows 10 feature updates](../protect/windows-10-feature-updates.md)
 - View [Windows 10 release information](/windows/release-information/)

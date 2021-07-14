@@ -118,7 +118,7 @@ You can choose the following options if you choose variable as the value type:
 | User name | John Doe |
 | User Principal Name | john@contoso.com |
 
-### Allow only configured organization accounts in multi-identity apps 
+### Allow only configured organization accounts in apps 
 
 As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For Android devices, use the following key/value pairs in a Managed Devices app configuration policy:
 

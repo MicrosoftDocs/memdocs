@@ -182,6 +182,9 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 4. Select **Next**.
 
+> [!IMPORTANT]
+> Any configuration changes on existing Enrollment profile settings, will not take effect on assigned devices until they are Factory Reset and activated again (this is when the Remote Management Payload is received on ADE devices) and this is by design by Apple and not Microsoft. The only configuration change that does not require a Factory Reset is "Device Name Template".
+
 5. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
     - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
@@ -219,7 +222,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or during Company Portal sign in, then MFA is required. However, MFA is optional based on the AAD settings in the targeted Conditional Access policy.
 
-        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials, the device:
+        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials and taps "Begin" at the "Setup <Company> access" screen, the device:
 
         - Won’t be fully registered with Azure AD.
         - Won’t show up in the user’s device list in the Azure AD portal.
@@ -341,6 +344,12 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 19. To save the profile, select **Create**.
 
+> [!NOTE]
+> If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Intune admin console. To re-enroll:
+> 1. Wipe the device from the Intune console.
+>     - Alternatively, retire the device from the Intune console and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
+> 2. Activate the device again and run through Setup Assistant to receive the *Remote Management Profile*.
+
 ### Dynamic groups in Azure Active Directory
 
 You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory (Azure AD). For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
@@ -401,7 +410,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
   `The SCEP server returned an invalid response.`
 
-   To resolve this error, you need to factory reset the device. This error occurs because of a 15-minute time limit on SCEP certificates, which is enforced for security.
+   You can resolve this error by trying to download the management again within 15 minutes. If it's been more than 15 minutes, to resolve this error you'll need to factory reset the device. This error occurs because of a 15-minute time limit on SCEP certificates, which is enforced for security.
   
 For information on the end-user experience, see [Enroll your iOS/iPadOS device in Intune by using ADE](../user-help/enroll-your-device-dep-ios.md).
 

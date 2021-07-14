@@ -68,7 +68,7 @@ Use the following sections to manage Peer Cache.
         > [!TIP]  
         >  Clients will use HTTPS to download content when it is available. However, the same port number is used for either HTTP or HTTPS.  
 
--   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) on clients to ensure they have enough space to hold and store the images you deploy. Windows PE Peer Cache does not affect the configuration or behavior of the client cache.  
+-   [Configure the client cache](../../core/clients/manage/configure-client-cache.md) on clients to ensure they have enough space to hold and store the images you deploy. Windows PE Peer Cache does not affect the configuration or behavior of the client cache.  
 
 -   The deployment options for the  task sequence deployment must be configured as Download content locally when needed by task sequence.  
 

@@ -2,11 +2,10 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 04/13/2021
+ms.date: 07/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -33,28 +32,28 @@ The basic functionality of Desktop Analytics works at the **Required** [diagnost
 
 Microsoft recommends that you enable the **Optional (limited)** diagnostic data level with Desktop Analytics to maximize the benefits you get from it.
 
-> [!TIP]
-> The **Optional (Limited)** setting in Configuration Manager is the same setting as **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy available on devices running Windows 10, version 1709 and later.
->
-> Devices running Windows 10, version 1703 and earlier, Windows 8.1, or Windows 7 don't have this policy setting. When you configure the **Optional (limited)** setting in Configuration Manager, these devices fall back to the **Required** level.
->
-> Devices running Windows 10, version 1709 have this policy setting. However, when you configure the **Optional (limited)** setting in Configuration Manager, these devices also fall back to the **Required** level.
+- The **Optional (Limited)** setting in Configuration Manager is the same setting as **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy available on devices running Windows 10, version 1709 and later.
+
+- Devices running Windows 10, version 1703 and earlier, Windows 8.1, or Windows 7 don't have this policy setting. When you configure the **Optional (limited)** setting in Configuration Manager, these devices fall back to the **Required** level.
+
+- Devices running Windows 10, version 1709 have this policy setting. However, when you configure the **Optional (limited)** setting in Configuration Manager, these devices also fall back to the **Required** level.
 
 For more information about diagnostic data shared with Microsoft with **Optional (limited)**, see [Windows 10 enhanced diagnostic data events and fields](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
-> [!IMPORTANT]
-> When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, [Configure telemetry opt-in setting user interface](group-policy-settings.md#group-policy-settings-to-customize-the-user-experience).
+When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, [Configure telemetry opt-in setting user interface](group-policy-settings.md#group-policy-settings-to-customize-the-user-experience).
 
 > [!IMPORTANT]
 > Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (European Economic Area [EEA], Switzerland, and the United Kingdom).
+>
+> Starting in July 2021, Desktop Analytics supports the [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).
 
 For more information, see [Desktop Analytics privacy](privacy.md).
 
 The following articles are also good resources for better understanding Windows diagnostic data levels:
 
-- [Windows 10 and the GDPR for IT Decision Makers](/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 & privacy compliance: A guide for IT and compliance professionals](/windows/privacy/windows-10-and-privacy-compliance)
 
-- [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 > [!NOTE]
 > Clients configured to send **Optional (limited)** diagnostic data will send approximately 2 MB of data to the Microsoft cloud on the initial full scan. The daily delta varies between 250-400 KB per day.

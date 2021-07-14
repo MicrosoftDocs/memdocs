@@ -74,16 +74,16 @@ You can decide which MTD toggle options you need to enable according to your org
 
 **MDM Compliance Policy Settings**
 
-- **Connect Android devices of version _\<supported versions>_ to _\<MTD partner name>_**: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.
+- **Connect Android devices of version _\<supported versions>_ to _\<MTD partner name>_**: When you enable this option, you can have Android devices (on supported OS versions) reporting security risk back to Intune.
 
-- **Connect iOS devices version _\<supported versions>_ to _\<MTD partner name>_**: When you enable this option, you can have iOS 8.0+ devices reporting security risk back to Intune.
+- **Connect iOS devices version _\<supported versions>_ to _\<MTD partner name>_**: When you enable this option, you can have iOS devices (on supported OS versions) reporting security risk back to Intune.
 
 - **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and will provide updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). 
 
   > [!NOTE]  
   > App Sync data is sent to Mobile Threat Defense partners at an interval based on device check-in, and should **not** be confused with the refresh interval for the [Discovered Apps report](../apps/app-discovered-apps.md#details-of-discovered-apps). 
 
-- **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version.
+- **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version. Details of the minimum supported version would be shared within the docs for the Mobile Threat Defense vendor.
 
 **App Protection Policy Settings**
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2021
+ms.date: 07/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,147 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of July 5, 2021
+
+### Device security
+
+#### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115 -->
+ 
+We’ve added the settings to manage Microsoft Defender for Endpoint on macOS to the Intune [settings catalog](../configuration/settings-catalog.md) to configure Microsoft Defender for Endpoint on macOS.
+
+The new settings can be found as follows under the following four categories in the settings catalog. For information about these settings, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the *Microsoft Defender for Endpoint on Mac* documentation.
+
+**Microsoft Defender - Antivirus engine**:  
+- Allowed threats
+- Enable passive mode
+- Enable real-time protection
+- Scan exclusions
+- Threat type settings
+ 
+**Microsoft Defender - Cloud delivered protection preferences**:  
+- Diagnostic collection level
+- Enable - disable automatic sample submissions
+- Enable - disable cloud delivered protection
+
+**Microsoft Defender - EDR preferences**:  
+- Device tags
+- Enable - disable early preview
+ 
+**Microsoft Defender - User interface preferences**: 
+- Show - hide status menu icon
+
+
+<!-- ########################## -->
+## Week of June 28, 2021
+
+### New iOS/iPadOS remote action lets you update the eSIM cellular plan  (public preview)<!--7119250 wnready-->
+The new **Update cellular data plan (preview)** action lets you remotely activate the eSIM cellular plan on iOS/iPadOS devices that support it. This feature is currently in public preview. For more information, see [Update cellular data plan](../remote-actions/update-cellular-data-plan.md).
+
+<!-- ########################## -->
+## Week of June 21, 2021 (Service release 2106)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Improvements for viewing managed apps status<!-- 9359228  -->
+
+We've added some improvements to how [Intune displays status information about the managed apps](/troubleshoot/mem/intune/troubleshoot-app-install) that have deployed to users or devices.
+
+Intune now displays only the apps that are specific to the platform of the device you’re viewing. We’ve also introduced performance enhancements and additional support for the Android and Windows platforms.
+
+#### Updated default license type for Apple VPP apps<!-- 9914613  -->
+
+When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is now "device". Existing assignments remain unchanged. For more information about Apple VPP apps, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md).
+
+#### Newly available protected apps for Intune<!-- 9766113, 9838907, 9916207, 9219639, 9779226, 9698578, 9731891, 9904508  -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Secrets Confidential File Viewer by Hitachi Solutions, Ltd.
+- AventX Mobile Work Orders by STR Software
+- Slack for Intune by Slack Technologies, Inc.
+- Dynamics 365 Sales by Microsoft
+- Leap Work for Intune by LeapXpert Limited
+- iManage Work 10 For Intune by iManage, LLC
+- Microsoft Whiteboard by Microsoft (Android version)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Manage cookies and cross site tracking in Safari on iOS/iPadOS devices<!-- 9771966  -->
+
+When creating a device restriction policy for iOS/iPadOS devices, you can manage cookies in the Safari app (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Built-in Apps**).
+
+The **Safari cookies** setting is updated to help manage cookies and cross site tracking. For more information on this setting, see [Built-in Apps for iOS/iPadOS devices](../configuration/device-restrictions-ios.md#built-in-apps).
+
+Applies to:
+
+- iOS/iPadOS versions 4 and newer
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device enrollment
+
+#### Browser access automatically enabled during corporate Android enrollment<!--6613616  -->
+
+Browser access is now automatically turned on during new enrollments of the following devices:
+
+- Android Enterprise dedicated devices enrolled with Azure AD Shared device mode
+- Android Enterprise fully managed devices
+- Android Enterprise corporate-owned work profile devices
+
+Compliant devices can use the browser to access resources protected by conditional access.
+
+This change has no impact on devices that are already enrolled.
+
+#### Intune support for Android Enterprise corporate-owned devices with a work profile<!--9606159 -->
+
+Intune support for Android Enterprise corporate-owned devices with a work profile is now generally available. For more information, see [Announcing general availability of Android Enterprise corporate-owned devices with a work profile](https://aka.ms/COPEGA)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Use filters on Settings Catalog configuration profiles, and Risk Score and Threat Level compliance policy settings<!-- 10023995 7556913   -->
+
+When you use [filters](filters.md) to assign your policies, you can:
+
+- Use filters on compliance policies that use the **Risk Score** and **Threat Level** settings.
+- Use filters on configuration profiles that use the **Settings Catalog** profile type.
+
+For more information on what you can do, see [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md).
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
+
+#### Use the EnrollmentProfileName property when creating a filter for Android Enterprise<!-- 10022750   -->
+
+In Endpoint Manager, you can create [filters](filters.md) to target devices based on different properties, including device name, manufacturer, and more. On iOS/iPadOS and Windows 10 and newer devices, you can create a filter using the enrollment profile name. The enrollment profile name property is available for Android Enterprise devices.
+
+To see the filter properties you can configure, go to [Device properties, operators, and rule editing when creating filters](filters-device-properties.md).
+
+Applies to:
+
+- Android Enterprise
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Export option for Proactive remediations <!-- 10198545 -->
+
+[Proactive remediations](../../analytics/proactive-remediations.md) are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. To help you easily analyze returned outputs, an **Export** option was added that allows you to save the output as a `.csv` file. For more information, see [Proactive remediations](../../analytics/proactive-remediations.md).
+
+#### Updated certificates report<!-- 10034112  -->
+
+The **Certificates** report, which shows the current device certificates in use, has been updated to include better capabilities to search, page, sort, and export the report. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Certificates**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+
 <!-- ########################## -->
 
 ## Week of June 14, 2021  
@@ -76,7 +217,9 @@ Plan to download and use the updated Microsoft Defender for Endpoint app for Mic
 
 The standalone tunnel app for iOS remains in preview.  
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
+
 ### Tenant attach: Offboarding <!-- CMADO7043245 INADO9412904 -->
 
 While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard following a disaster recovery scenario where the on-premises environment was removed. To remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center, select **Tenant administration**, **Connectors and tokens** then **Microsoft Endpoint Configuration Manager**. Choose the name of the site you would like to offboard, then select **Delete**. For more information, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md#bkmk_offboard).
@@ -88,6 +231,7 @@ While we know customers get enormous value by enabling tenant attach, there are 
 ### App management
 
 #### Android Company Portal app and Intune app now include Portugal Portuguese support<!-- 9707888, 9707936 -->
+
 The Android Company Portal app and the Android Intune app now support Portuguese from Portugal (language code pt-PT). Intune already supports Portuguese from Brazil.
 
 <!-- ########################## -->
@@ -147,17 +291,17 @@ Support has ended for the **Restart** remote action on corporate-owned devices w
 
 ### Windows 10 Enterprise multi-session support (public preview)<!--8666391  -->
 
-Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Windows Virtual Desktop](/azure/virtual-desktop/) on Azure which allows multiple concurrent user sessions. This gives users a familiar Windows 10 experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
+Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure which allows multiple concurrent user sessions. This gives users a familiar Windows 10 experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
 
 Microsoft Intune lets you manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 client. You can now enroll Hybrid Azure AD joined VMs in Intune automatically and target with OS scope policies and apps.
 
 You can:
 
-- Host multiple concurrent user sessions using the Windows 10 Enterprise multi-session SKU exclusive to Windows Virtual Desktop on Azure.
+- Host multiple concurrent user sessions using the Windows 10 Enterprise multi-session SKU exclusive to Azure Virtual Desktop on Azure.
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
 - Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with device scope policies and apps.
 
-For more information, see [Windows 10 Enterprise multi-session remote desktops](windows-virtual-desktop-multi-session.md).
+For more information, see [Windows 10 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security

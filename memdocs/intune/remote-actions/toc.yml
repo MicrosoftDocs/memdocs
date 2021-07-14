@@ -34,6 +34,8 @@ items:
       href: device-erase.md
     - name: Disable Activation Lock
       href: device-activation-lock-disable.md
+    - name: Update cellular data plan
+      href: update-cellular-data-plan.md
   - name: User actions
     items:
     - name: Sign out current user

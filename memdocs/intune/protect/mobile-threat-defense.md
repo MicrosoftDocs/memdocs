@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 7/7/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an inform
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
 > [!NOTE]
-> Mobile Threat Defense integration with the Intune GCC High and DoD offering is currently *not* supported. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+> Intune for GCC High only supports the Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors that also have support in this environment. You will see connectors enabled for those specific vendors when you log in with a GCC-H tenant. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## Protect corporate resources
 
