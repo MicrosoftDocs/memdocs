@@ -23,7 +23,7 @@ ms.topic: troubleshooting
 
 The following table displays support information for the Windows Autopilot program.  
 
-Before contacting the resources listed below for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](autopilot-faq.md).
+Before contacting the resources listed below for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](autopilot-faq.yml).
 
 | Audience   |   Support contact     |
 |------------|---------------------------------------|

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/05/2021
+ms.date: 06/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ Use third-party certification authorities (CA) with Intune. Third-party CAs can 
 There are two parts to using this feature: open-source API, and the Intune administrator tasks.
 
 **Part 1 - Use an open-source API**  
-Microsoft created an API to integrate with Intune. Though the API you can validate certificates, send success or failure notifications, and use SSL, specifically SSL socket factory, to communicate with Intune.
+Microsoft created an API to integrate with Intune. Through the API you can validate certificates, send success or failure notifications, and use SSL, specifically SSL socket factory, to communicate with Intune.
 
 The API is available on the [Intune SCEP API public GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) for you to download, and use in your solutions. Use this API with third-party SCEP servers to run custom challenge validation against Intune before SCEP provisions a certificate to a device.
 
@@ -97,13 +97,24 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
 
 6. Record your **Tenant ID**. The Tenant ID is the domain text after the @ sign in your account. For example, if your account is *admin@name.onmicrosoft.com*, then your tenant ID is **name.onmicrosoft.com**.  
 
-7. In the navigation pane for the app, go to **API permissions** under **Manage**, and then select **Add a permission**.  
+7. In the navigation pane for the app, go to **API permissions**, which are under **Manage**. You're going to add three separate application permissions:
 
-8. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select the checkbox for **scep_challenge_provider** (SCEP challenge validation).  
+   1. Select **Add a permission**:
+      1. On the *Request API permissions* page, select **Intune** and then select **Application permissions**.
+      2. Select the checkbox for **scep_challenge_provider** (SCEP challenge validation).
+      3. Select **Add permissions** to save this configuration.
 
-   Select **Add permissions** to save this configuration.  
+   1. Select **Add a permission** again.
+      1. On the *Request API permissions* page, select **Microsoft Graph** > **Application permissions**.
+      2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications).
+      3. Select **Add permissions** to save this configuration.
 
-9. Remain on the **API permissions** page, and select **Grant admin consent for Microsoft**, and then select **Yes**.  
+   1. Select **Add a permission** again.
+      1. On the *Request API permissions* page, select **Azure Active Directory Graph** > **Application permissions**.
+      2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications). 
+      3. Select **Add permissions** to save this configuration.
+
+8. Remain on the **API permissions** page, and select **Grant admin consent for** ***\<your tenant>***, and then select **Yes**.  
 
    The app registration process in Azure AD is complete.
 

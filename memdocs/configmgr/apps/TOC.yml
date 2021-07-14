@@ -1,3 +1,4 @@
+items:
 - name: App management documentation
   href: index.yml
 - name: Understand and explore
@@ -14,8 +15,12 @@
     href: plan-design/plan-for-and-configure-application-management.md
   - name: Plan for Software Center
     href: plan-design/plan-for-software-center.md
+  - name: User notifications
+    href: plan-design/user-notifications.md
   - name: Security and privacy
     href: plan-design/security-and-privacy-for-application-management.md
+  - name: Prerequisites to deploy user-available apps
+    href: plan-design/prerequisites-deploy-user-available-apps.md
 - name: Deploy and use
   items:
   - name: Create applications
@@ -45,6 +50,8 @@
       href: deploy-use/app-approval.md
     - name: Install applications for a device
       href: deploy-use/install-app-for-device.md
+    - name: Check for running executable files
+      href: deploy-use/check-for-running-executable-files.md
     - name: Share an application
       href: deploy-use/share-applications.md
     - name: Simulate application deployments
@@ -53,6 +60,8 @@
       href: deploy-use/deploy-edge.md
     - name: Deploy App-V virtual applications
       href: get-started/deploying-app-v-virtual-applications.md
+    - name: Disable and delete app deployments
+      href: deploy-use/disable-delete-deployments.md
     - name: Troubleshooting tips for app deployment
       href: /troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Monitor applications

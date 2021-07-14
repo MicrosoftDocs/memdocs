@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/22/2021
+ms.date: 07/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,7 +39,8 @@ This feature applies to:
 
 - **macOS**
 
-  Configure Microsoft Edge version 77 and newer. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
+  - **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
+  - **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
 - **Windows 10 and newer**
 
@@ -143,9 +144,17 @@ You create the policy, and assign it to your groups. In the Endpoint Manager adm
 
     :::image type="content" source="./media/settings-catalog/settings-catalog-policy-view-report.png" alt-text="See detailed report information in Microsoft Intune and Endpoint Manager admin center, including device name, policy status, and more.":::
 
-4. In the admin center, select **Devices** > **Monitor** > **Assignment failures**. If your Settings Catalog policy failed to deploy because of an error or conflict, it will show in this list. You can also **Export** to a `.csv` file.
+4. You can also look at the states of each setting using the **per-setting status**. This status shows the total number of devices affected by each setting in the policy.
 
-5. Select the policy to see the devices. Then, select a specific device to see the setting that failed, and a possible error code.
+    You can:
+
+    - See the number of devices with the setting successfully applied, in conflict, or in error.
+    - Select the number of devices in compliance, conflict, or error. And, see a list of users or devices in that state.
+    - Search, sort, filter, export, and go to the next and previous pages.
+
+5. In the admin center, select **Devices** > **Monitor** > **Assignment failures**. If your Settings Catalog policy failed to deploy because of an error or conflict, it will show in this list. You can also **Export** to a `.csv` file.
+
+6. Select the policy to see the devices. Then, select a specific device to see the setting that failed, and a possible error code.
 
 > [!TIP]
 > [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.

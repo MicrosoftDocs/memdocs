@@ -45,7 +45,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Desktop Analytics FAQ
-            url: faq.md
+            url: faq.yml
           - text: Enable data sharing
             url: enable-data-sharing.md
           - text: Monitor connection health

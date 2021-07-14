@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 05/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -59,6 +59,11 @@ For example, you have a virus scanning program that scans your device for malici
 With this feature, administrators can allow users to override kernel extensions, add team identifiers, and add specific kernel extensions in Intune.
 
 For more information on kernel extensions, see [kernel extensions](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (opens Apple's web site).
+
+> [!IMPORTANT]
+> Kernel extensions don't work on macOS devices with the M1 chip, which are macOS devices running on Apple silicon. This behavior is a known issue, with no ETA. It's possible you can get them to work, but it's not recommended. For more information, see [Kernel extensions in macOS](https://support.apple.com/guide/deployment-reference-macos/kernel-extensions-in-macos-apd37565d329/web) (opens Apple's web site).
+> 
+> For any macOS devices running 10.15 and newer, we recommend using [system extensions](#system-extensions) (in this article). If you use the kernel extensions settings, then consider excluding macOS devices with M1 chips from receiving the kernel extensions profile.
 
 ## Prerequisites
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2021
+ms.date: 04/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 # Attack surface reduction policy settings for endpoint security in Intune
@@ -35,7 +35,7 @@ Supported platforms and profiles:
 
 - **Windows 10 and later**:
   - Profile: **App and browser isolation**
-  - Profile: **Web protection**
+  - Profile: **Web protection (Microsoft Edge Legacy)**
   - Profile: **Application control**
   - Profile: **Attack surface reduction rules**
   - Profile: **Device control**
@@ -164,9 +164,9 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
-## Web protection profile
+## Web protection (Microsoft Edge Legacy) profile
 
-### Web Protection
+### Web Protection (Microsoft Edge Legacy)
 
 - **Enable network protection**  
   CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)

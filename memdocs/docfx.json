@@ -83,6 +83,7 @@
     "fileMetadata": {
       "feedback_product_url": {
         "configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
+        "configmgr/**/*.yml": "https://configurationmanager.uservoice.com/",
         "intune/**/*.md": "https://microsoftintune.uservoice.com/"     
       },
       "ms.date": {
@@ -90,6 +91,7 @@
       }, 
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
+        "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
         "analytics/**/*.md": ["Analytics"],
         "autopilot/**/*.md": ["Autopilot"]

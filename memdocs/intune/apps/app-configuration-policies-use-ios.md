@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/17/2021
+ms.date: 07/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -108,9 +108,9 @@ Microsoft Intune provides configuration settings that are unique to an app. You 
 
 The \{\{ and \}\} characters are used by token types only and must not be used for other purposes.
 
-### Allow only configured organization accounts in multi-identity apps 
+### Allow only configured organization accounts in apps
 
-As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy:
+As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts within the apps (if supported) on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
 | **Key** | **Values** |
 |----|----|
@@ -125,7 +125,22 @@ As the Microsoft Intune administrator, you can control which work or school acco
    > - OneNote for iOS (2.41 and later)
    > - Outlook for iOS (2.99.0 and later)
    > - Teams for iOS (2.0.15 and later)
-   
+
+### Require configured organization accounts in apps
+
+On enrolled devices, organizations can require that the work or school account is signed into managed Microsoft apps in order to receive Org data from other managed apps. For example, consider the scenario where the user has attachments included in email messages contained within the managed email profile located in the native iOS mail client. If the user attempts to transfer the attachments to a Microsoft app, like Office, that is managed on the device and has these keys applied, then this configuration will treat the transferred attachment as Org data, requiring the work or school account to be signed in and enforcing the app protection policy settings.
+
+For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy for each Microsoft app:
+
+| **Key** | **Values** |
+|----|----|
+| IntuneMAMRequireAccounts | <ul><li>Enabled: The app requires the user to sign-in to the managed user account defined by the [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key to receive Org data.</li><li>Disabled (or any value that is not a case insensitive match to Enabled): No account sign-in is required</li></ul>  |
+| IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
+
+> [!NOTE]
+> Apps must have Intune APP SDK for iOS version 12.3.3 or later and be targeted with an [Intune app protection policy](app-protection-policy.md) when requiring sign-in to work or school account. Within the app protection policy, the “Receive data from other apps” must be set to “All apps with incoming Org data”.  
+
+At this time, app sign-in is only required when there is incoming Org data to a targeted app.
 
 ## Enter XML data
 
@@ -227,10 +242,13 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
             <key>IntuneUDAUserlessDevice</key>
             <string>{{SIGNEDDEVICEID}}</string>
         </dict>
-        ```     
+        ```    
 
 4. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already DEP enrolled.
 5. Tell end users to sign into the Company Portal app when it is automatically installed.
+
+> [!NOTE]
+> When you add an app configuration to allow the Company Portal app on DEP devices without user affinity, you may experience a `STATE Policy Error`. Unlike other app configurations, this situation does not apply every time the device checks in. Instead, this app configuration is meant to be a one-time operation to enable existing devices enrolled without user affinity to attain user affinity when a user signs into the Company Portal. This app configuration is removed from the policy in the background once it has been successfully applied. The policy assignment will exist, but it will not report "success" once the app configuration is removed in the background. Once the app configuration policy has applied to the device, you can unassign the policy.
 
 ## Monitor iOS/iPadOS  app configuration status per device 
 Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  

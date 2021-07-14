@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 03/29/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,16 +32,20 @@ ms.collection:
 
 # Upload and email logs  
 
-If you experience a problem in the Company Portal or Microsoft Intune app, you can email the details of the problem to your company support person. These details will provide them with additional context about the problem.  
+If you experience a problem in the Company Portal or Microsoft Intune app, you can email the details of the problem to your company support person. These details will give them more context about the problem.  
 
-The actual error details are kept on your device in a special document called a _diagnostic log_. When you upload the logs to the Company Portal or Microsoft Intune app, they're first sent to the Microsoft developers that work on the app. They use the logs to improve the app's functionality and prevent future errors. An incident ID for your specific error is then provided to you to share with your company support person, for use in Microsoft Support cases.  
+The actual error details are kept on your device in a special document called a _diagnostic log_. When you upload the logs to the Company Portal or Microsoft Intune app, they're first sent to the Microsoft developers that work on the app. They use the logs to improve the app's functionality and prevent future errors. An incident ID for your specific error is then provided to you to share with your company support person, for use in Microsoft Support cases. 
+
+This article describes how to send app logs from the Company Portal and Microsoft Intune apps, and how to access the logs in your work profile.  
+
 
 > [!Note]
 > To make it easier for your company support to find the cause of the problem, turn on _verbose logging_ in Company Portal. If you're using the Microsoft Intune app, set the **Log detail level** to **Verbose**. Verbose logging records all details about an error and includes these details in the report. Find out how to [turn on verbose logging here](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
 >
 > If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
 
-## Upload and email logs from Company Portal  
+
+## Send logs from Company Portal  
 
 1. In the Company Portal app, there are two ways to initiate email support.
     * From the home screen: Tap **Menu** > **Help** > **Email Support**.  
@@ -55,7 +59,7 @@ The actual error details are kept on your device in a special document called a 
 5. An email message will open with the incident ID pre-populated in the subject field. In the body of the email, describe the problem that you came across.    
 
 
-## Upload and email logs from Microsoft Intune app   
+## Send logs from Microsoft Intune app   
 
 1. In the Microsoft Intune app, there are two ways to initiate email support.  
     * From the home screen: Tap **Menu** > **Help** > **Get Support**.  
@@ -68,6 +72,18 @@ The actual error details are kept on your device in a special document called a 
 4. After the upload is complete, tap **EMAIL** and select your email app.  
 5. An email message will open with the incident ID pre-populated in the subject field. In the body of the email, describe the problem that you came across.  
 
+## Access logs from work profile  
+To view the Company Portal logs from your work profile, you must have access to a file viewing app in the work profile.       
+
+1. Go to your work profile and open Company Portal.
+2. Tap **Settings**.
+3. Tap **COPY LOGS**.
+4. Go back to your work profile and open a file viewing app.  
+5. Tap the menu > **Show internal storage.** 
+    * The setting name may vary between apps.  
+    * Make sure you're viewing the internal storage for your device. If you don't see any folders appear, tap the app menu and then tap your device name to switch to your device's storage.  
+6. From the list of files, tap **Android** > **data** > **com.microsoft.windowsintune.companyportal\files** > **Files**.   
+
 ## Next steps  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

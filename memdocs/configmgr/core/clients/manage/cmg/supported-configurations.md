@@ -2,11 +2,10 @@
 title: Supported configurations for CMG
 titleSuffix: Configuration Manager
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
-ms.date: 11/30/2020
+ms.date: 06/22/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: 10f4c4e8-84ac-48ae-9fdc-195f3bdfcd0f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -50,11 +49,11 @@ The following table lists CMG support for Configuration Manager features:
 | Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) (2002) |
 | Software distribution (device-targeted) | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)<br>(with Azure AD integration) | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Supported](media/green_check.png) |
+| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | ![Supported](media/green_check.png) |
 | BitLocker Management | ![Supported](media/green_check.png) (2010) |
 | Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
 | Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
-| Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (1910) |
+| Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
 | Task sequence with a boot image, started from Software Center <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (2006) |
 | Task sequence with a boot image, started from bootable media <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (2010) |
 | Any other task sequence scenario <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Not supported](media/Red_X.png) |
@@ -68,7 +67,7 @@ The following table lists CMG support for Configuration Manager features:
 | macOS clients | ![Not supported](media/Red_X.png) |
 | Peer cache | ![Not supported](media/Red_X.png) |
 | On-premises MDM | ![Not supported](media/Red_X.png) |
-| Alternate content providers | ![Not supported](media/Red_X.png) |
+| Alternate content providers | ![Not supported](media/Red_X.png) <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
 
 |Key|
 |--|
@@ -94,6 +93,10 @@ In version 2002 and earlier, for domain-joined devices to apply endpoint protect
 #### <a name="bkmk_note2"></a> Note 2: Support for task sequences
 
 For more information about support for deploying a task sequence to a client via the CMG, see [Deploy a task sequence over the internet](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md).
+
+#### <a name="bkmk_note3"></a> Note 3: Support for alternate content providers
+
+Alternate content providers aren't supported to get content from a content-enabled CMG. You can still use them on a client that communicates with a CMG and gets content from other supported content locations.<!-- CMADO-10205600 -->
 
 ## Next steps
 

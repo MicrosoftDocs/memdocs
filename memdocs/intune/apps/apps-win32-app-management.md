@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 ms.technology:
 ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: contperf-fy21q1
@@ -37,6 +37,7 @@ To use Win32 app management, be sure the following criteria are met:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
+  - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register) 
   - [Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join)
   - [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid)
 - Windows application size must not be greater than 8 GB per app.
@@ -106,11 +107,11 @@ Set the app availability based on a date and time for a required app by using th
     > - **Uninstall**: You can choose **uninstall this app for all users** and/or **uninstall this app for all devices**.
 
 6. To modify the **End user notification** options, select **Show all toast notifications**.
-7. In the **Edit assignment** pane, set **Ender user notifications** to **Show all toast notifications**. Note that you can set **End user notifications** to **Show all toast notifications**, **Show toast notifications for computer restarts**, or **Hide all toast notifications**.
+7. In the **Edit assignment** pane, set **End user notifications** to **Show all toast notifications**. Note that you can set **End user notifications** to **Show all toast notifications**, **Show toast notifications for computer restarts**, or **Hide all toast notifications**.
 8. Set **App availability** to **A specific date and time** and select your date and time. This date and time specify when the app is downloaded to the user's device. 
 9. Set **App installation deadline** to **A specific date and time** and select your date and time. This date and time specify when the app is installed on the user's device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the earliest time possible.
 
-10. Select **Enabled** next to **Restart grace period**. The restart grace period starts as soon as the app installation has finished on the device.​ When the setting is disabled, the device can restart without warning. 
+10. Select **Enabled** next to **Restart grace period**. The restart grace period starts as soon as the app installation has finished on the device. When the setting is disabled, the device can restart without warning. 
 
     You can customize the following options:
     

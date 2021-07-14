@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 4/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -49,6 +49,9 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - [Enrolling Android Enterprise fully managed devices](android-fully-managed-enroll.md) with DEM accounts isn't supported.
 - Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.
 
+>[!NOTE]
+>For additional details regarding enrollment capabilities for Windows and the use of DEM accounts, please refer [Intune enrollment method capabilities for Windows devices](./enrollment-method-capab.md).
+
 ## Enrollment methods supported by DEM accounts
 
 You can use the following methods to enroll devices using DEM accounts:
@@ -68,6 +71,7 @@ You can use the following methods to enroll devices using DEM accounts:
 ## Permissions required to create DEM accounts
 
 Global Administrator or Intune Service Administrator Azure AD roles are required to
+
 - assign DEM permission to an Azure AD user account
 - see all DEM users
 
@@ -77,7 +81,7 @@ If a user doesn't have the Global Administrator or Intune Service Administrator 
 
 Removing a device enrollment manager doesn't affect enrolled devices.
 
-**To remove a device enrollment manager**
+### To remove a device enrollment manager
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
 2. On the **Device enrollment managers** blade, select the DEM user, and select **Delete**.

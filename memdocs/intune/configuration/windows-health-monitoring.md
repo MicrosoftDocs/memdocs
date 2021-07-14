@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 04/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -66,7 +66,7 @@ This article shows you how to create the profile, and enable the monitoring.
 6. Select **Next**.
 7. In **Configuration settings**, configure the following settings:
 
-    - **Health monitoring**: This settings turns on health monitoring to track Windows updates and events. Your options:
+    - **Health monitoring**: This setting turns on health monitoring to track Windows updates and events. Your options:
       - **Not configured**: Intune doesn't change or update this setting.
       - **Enable**: Event information is collected from the devices, and sent to Microsoft for analytics and insights.
       - **Disable**: Event information isn't collected from the devices.
@@ -74,7 +74,7 @@ This article shows you how to create the profile, and enable the monitoring.
       [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
 
     - **Scope**: Choose the event information you want collected and evaluated. Your options:
-      - **Windows updates**
+      - **Windows updates**: This option configures devices to send Windows Update data to Intune. This data is then used in a [compliance policy](../protect/windows-update-compliance-reports.md) that reports on Windows updates.
       - **Endpoint analytics**
 
       [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)

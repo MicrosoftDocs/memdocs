@@ -62,6 +62,10 @@ Intune makes it easier for you to configure and use Android Enterprise managemen
 4. Choose **Launch Google to connect now** to open the Managed Google Play website. The website opens on a new tab in your browser.
   
 5. On Google's sign-in page, enter the Google account that will be associated with all Android Enterprise management tasks for this tenant. This Google account is the one that your company's IT admins share to manage and publish apps in the Google Play console. You can use an existing Google account or create a new one. The account you choose must not be associated with a G-Suite domain.
+
+   >[!Important]
+   > Be sure to use or create an Enterprise account rather than a personal GMail account. Keep in mind that the account you use should be one that is easily shared or
+   > transferred in the case that the person setting up the Managed Google Play connection leaves the company or moves teams.  
     
     > [!Note]
     > If you are using the Microsoft Edge browser, click **Sign-In** in the upper right corner to sign-in to your Google account.

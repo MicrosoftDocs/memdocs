@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2021
+ms.date: 06/03/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -141,9 +141,10 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | iOS/iPadOS                   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
 | Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
-| Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
+| Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) |
 
 - ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
+- ***Note 2*** - This profile is supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Additional resources
 
@@ -151,6 +152,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 - [Use third-party certification authority](certificate-authority-add-scep-overview.md)  
 
 ## Next steps
+
 Create certificate profiles:  
 - [Configure a trusted certificate profile](certificates-trusted-root.md)
 - [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)  

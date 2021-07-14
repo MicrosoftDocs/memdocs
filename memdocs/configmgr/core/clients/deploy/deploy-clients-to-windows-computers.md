@@ -2,7 +2,7 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 09/04/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -265,7 +265,7 @@ Configuration Manager supports using logon scripts to install the Configuration 
 
 Logon script installation uses the same methods as manual client installation. Specify the `/logon` installation parameter for CCMSsetup.exe. If any version of the client already exists on the computer, this parameter prevents the client from installing. This behavior prevents reinstallation of the client each time the logon script runs.  
 
-If you don't specify an installation source by using the `/Source` parameter and no management point from which to obtain installation is specified by the `/MP` parameter, CCMSetup.exe locates the management point by searching Active Directory Domain Services. This behavior occurs only if you've extended the schema for Configuration Manager and published the site to Active Directory Domain Services. Alternatively, the client can use DNS or WINS to locate a management point.  
+If you don't specify an installation source by using the `/Source` parameter and no management point from which to obtain installation is specified by the `/MP` parameter, CCMSetup.exe locates the management point by searching Active Directory Domain Services. This behavior occurs only if you've extended the schema for Configuration Manager and published the site to Active Directory Domain Services. Alternatively, the client can use DNS to locate a management point.  
 
 ## <a name="BKMK_ClientApp"></a> Package and program installation
 
@@ -348,7 +348,7 @@ Preinstall the Configuration Manager client on a reference computer that you use
     > [!NOTE]  
     > If clients can't query Active Directory Domain Services to locate a management point, they use the trusted root key to determine trusted management points. If you deploy all imaged clients in the same hierarchy as that of the master computer, leave the trusted root key in place.
     >
-    > If you deploy the clients in different hierarchies, remove the trusted root key. Also provision these clients with the new trusted root key. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+    > If you deploy the clients in different hierarchies, remove the trusted root key. Also provision these clients with the new trusted root key. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).  
 
 6. Use your imaging software to capture an image of the reference computer.  
 
@@ -366,7 +366,7 @@ Configuration Manager supports client installation for computers in workgroups. 
 
 ### Limitations  
 
-- Workgroup clients can't locate management points from Active Directory Domain Services. Instead, they use DNS, WINS, or another management point.  
+- Workgroup clients can't locate management points from Active Directory Domain Services. Instead, they use DNS or another management point.  
 
 - Global roaming isn't supported. Workgroup clients can't query Active Directory Domain Services for site information.  
 

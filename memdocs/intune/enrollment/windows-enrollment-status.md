@@ -49,7 +49,7 @@ You can create multiple Enrollment Status Page profiles with different configura
 These profiles are specified in a priority order; the highest priority that is applicable will be used.  Each ESP profile can be targeted to groups containing devices or users.  When determining which profile to use, the following criteria will be followed:
 
 - The highest-priority profile targeted to the device will be used first.
-- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used.)
+- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used. Only profiles targeted to the device are used during the device preparation and device setup phases.)
 - If there are no profiles targeted to specific groups, then the default ESP profile will be used.
 
 ## Available settings
@@ -185,6 +185,7 @@ The following are known issues related to the Enrollment Status Page.
   - If the device didn't reboot before exiting the ESP Device setup phase, the user may be prompted to enter their Azure AD credentials. This prompt occurs instead of a successful autologon where the user sees the Windows first login animation.
   - The autologon will fail if the device rebooted after the user entered their Azure AD credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
 - ESP doesn't apply to a Windows device that was enrolled with Group Policy (GPO).
+- Scripts that run in user context ('Run this script using the logged on credentials' on the script properties is set to 'yes') may not execute during ESP.  As a workaround, execute scripts in System context by changing this setting to 'no'.
 
 ## Next steps
 

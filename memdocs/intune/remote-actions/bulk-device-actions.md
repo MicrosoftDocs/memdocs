@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 3/12/2020
+ms.date: 05/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -39,7 +39,9 @@ You can use bulk device actions for the following remote actions:
 - [Restart](device-restart.md)
 - [Sync](device-sync.md)
 - [Wipe](devices-wipe.md#wipe)
-- Retire 
+- [Retire](devices-wipe.md#retire)
+
+For specific details of each remote action, like options or platform support, see the help page for each. 
 
 ## Use a bulk device action
 

@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/25/2021
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,7 +38,7 @@ For help installing Intune on your device, see [using managed devices to get wor
 For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 > [!NOTE]
-> Intune requires Android 6.x or higher for applications and devices to access company resources via the Company Portal app for Android and the Intune App SDK for Android. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported. 
+> Intune requires Android 6.x or higher for applications and devices to access company resources via the Company Portal app for Android and the Intune App SDK for Android. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported.
 
 ## Intune supported operating systems
 
@@ -54,7 +54,7 @@ You can manage devices running the following operating systems:
 To avoid Knox activation errors that prevent MDM enrollment, the Company Portal app only attempts Samsung Knox activation during MDM enrollment if the device appears in the [list of supported Knox devices](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Devices that don't support Samsung Knox activation enroll as standard Android devices. A Samsung device might have some model numbers that support Knox, while others don't. Verify Knox compatibility with your device reseller before you buy and deploy Samsung devices.
 
 > [!NOTE]
-> Enrolling Samsung Knox devices may require you to [enable access to Samsung servers](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers).
+> Enrolling Samsung Knox devices may require you to enable access to Samsung servers.
 
 The following list of Samsung device models do not support Knox. They are enrolled as native Android devices by the Company Portal app for Android:
 

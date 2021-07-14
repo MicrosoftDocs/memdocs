@@ -36,11 +36,15 @@ You might have to back up and restore an Intune Automated Device Enrollment (ADE
 - A user receives a new device and wants to migrate the data from the old device. 
 
 To back up and restore an iOS/iPadOS device, you must follow the Apple instructions:
+
 - To back up your device, see [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977).
 - To restore you device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
-- To transfer data to a new device, see either of these articles:
+- To transfer data to a new device, see the following Apple support article:
     - [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad, or iPod touch](https://support.apple.com/HT210217)
-    - [Use Quick Start to transfer data to a new iPhone, iPad, or iPod touch](https://support.apple.com/HT210216).
+
+> [!NOTE] 
+> Device-to-Device migration as offered on the Quick Start screen after resetting an iOS device is not supported with Apple Business Manager (ABM). For details refer to the following [Apple support document.](https://support.apple.com/HT210216)
+> Since this screen appears on the device before a wi-fi connection has been established and before the ABM profile has been downloaded, this quick start screen cannot be hidden via ABM.
 
 For more information about restoring Apple devices from backup, see [Get started using Apple Business Manager or Apple School Manager with Mobile Device Management](https://support.apple.com/HT207516).
 
@@ -76,7 +80,7 @@ There is an additional migration scenario to consider, which should not be impac
     - The new management profile (MEM/Intune) cannot be ‘locked’ – meaning the user is able to remove the management profile in Settings.
     - These devices will enroll into MEM/Intune as ‘personal’ devices, rather than ‘corporate’ devices. This will have an impact on the app inventory gathered from the device, the displayed phone number, etc., as described [here](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
         - If you wish to designate these migrated devices as corporate devices, you can do either of the following:
-            - Add Corporate device identifiers as described [here](./device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Provided you can obtain a list of serial numbers from your current EMM vendor and this is imported prior to enrolling the devices in Intune, this is the simplest option and avoids scripting.
+            - Add Corporate device identifiers as described [here](./device-enrollment-program-enroll-ios.md). Provided you can obtain a list of serial numbers from your current EMM vendor and this is imported prior to enrolling the devices in Intune, this is the simplest option and avoids scripting.
             - Use a script to modify the OwnershipType from Personal to Corporate. A sample script which leverages an exported list (.csv) of device serial numbers (taken from your current EMM vendor) as input, is located [here](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).
 
 > [!NOTE] 

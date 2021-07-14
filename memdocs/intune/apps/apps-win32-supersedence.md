@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/04/2021
+ms.date: 03/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -125,7 +125,7 @@ To better understand the behavior of a supersedence chain, the following table p
 |-|-|-|
 | ![Case supersedence scenario 1](./media/apps-win32-supersedence/apps-win32-supersedence-04a.png) | **Scenario:**   None of the apps exist on the device. The relationship between apps is one of   app update.<p>**Result:** Install C. | Since   none of the apps exist on the device, we install the superseding app: App C.   The superseding app refers to the app that supersedes all other apps in the   chain. |
 | ![Case supersedence scenario 2](./media/apps-win32-supersedence/apps-win32-supersedence-04b.png) | **Scenario:**   Only Apps A and C exist on the device. The relationship between apps is one   of app update.<p>**Result:** None. | Since App C   already exists on the device and this is an app update scenario, App A is not   uninstalled. |
-| ![Case supersedence scenario 3](./media/apps-win32-supersedence/apps-win32-supersedence-04c.png) | **Scenario:**   Only App A exists on the device. The relationship between apps is one of app   update.<p>**Result:** Install C. | Simply install   App C. App A is not uninstalled because it is an app update scenario.  C’s installer may or may not   have behavior to remove A, where “remove” means A is no longer detected via   its detection rules (usually due to version detection). |
+| ![Case supersedence scenario 3](./media/apps-win32-supersedence/apps-win32-supersedence-04c.png) | **Scenario:**   Only App A exists on the device. The relationship between apps is one of app   update.<p>**Result:** Install C. | Simply install   App C. App A is not uninstalled because it is an app update scenario.  C’s installer may or may not   have behavior to remove A, where "remove" means A is no longer detected via   its detection rules (usually due to version detection). |
 | ![Case supersedence scenario 4](./media/apps-win32-supersedence/apps-win32-supersedence-04d.png) | **Scenario:** Only App C exists   on the device. The relationship between apps is one of app   update.<p>**Result:** None. | Since App C,   the superseding app, already exists on the device, and this is an app update   scenario, no action is taken. |
 | ![Case supersedence scenario 5](./media/apps-win32-supersedence/apps-win32-supersedence-04e.png) | **Scenario:** None of the apps   exist on the device. The relationship between apps is one of app   replacement.<p>**Result:** Install C. | Since none of   the apps exist on the device, simply install the superseding app, App C. |
 | ![Case supersedence scenario 6](./media/apps-win32-supersedence/apps-win32-supersedence-04f.png) | **Scenario:** Apps A and C exist   on the device. The relationship between apps is one of app   replacement.<p>**Result:** Uninstall A. | Since App C   exists on the device and this is an app replacement scenario, simply   uninstall App A. |
@@ -140,8 +140,8 @@ In the following Supersedence diagram, there are five nodes in total. Hence, fiv
 ![Supersedence maximum node count example](./media/apps-win32-supersedence/apps-win32-supersedence-05.png)
 
 Additional supersedence limitations:
-- Windows Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
-- The Enrollment Status Page (ESP) is not supported with the Supersedence public preview. ESP displays provisioning progress after a new device is enrolled, as well as when new users sign into the device. If an app has a supersedence relationship, it will not be enforced during ESP even if it is included as a selected app in an ESP policy.
+- Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
+- The Enrollment Status Page (ESP) is not supported with the supersedence public preview. ESP displays provisioning progress after a new device is enrolled, as well as when new users sign into the device. For the supersedence public preview, if an app has a supersedence relationship, it will not be enforced during ESP even if it is included as a selected app in an ESP policy. Additionally, apps that are involved in supersedence relationships will not be sent to the client device during ESP. However, the apps will be sent to the device after ESP completes, and the supersedence relationship will be respected.
 
 ## Next steps
 

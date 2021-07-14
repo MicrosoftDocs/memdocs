@@ -4,8 +4,8 @@
 title: Use Graph APIs to export Intune Reports | Microsoft Docs
 description: Learn about exporting Intune reports using Graph APIs.
 keywords: 
-ms.author: erikre
 author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 03/10/2021
 ms.topic: conceptual
@@ -53,7 +53,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
 { 
     "reportName": "Devices", 
     "filter":"(OwnerType eq '1')", 
-    “localizationType": "LocalizedValuesAsAdditionalColumn", 
+    "localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -81,7 +81,7 @@ Based on the above POST request, Graph returns a response message. The response 
     "id": "Devices_05e62361-783b-4cec-b635-0aed0ecf14a3", 
     "reportName": "Devices", 
     "filter":"(OwnerType eq '1')", 
-    “localizationType": "LocalizedValuesAsAdditionalColumn", 
+    "localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -114,7 +114,7 @@ You will need to continue calling this URL until you get a response with a `stat
     "id": "Devices_05e62361-783b-4cec-b635-0aed0ecf14a3", 
     "reportName": "Devices", 
     "filter":"(OwnerType eq '1')", 
-    “localizationType": "LocalizedValuesAsAdditionalColumn", 
+    "localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 

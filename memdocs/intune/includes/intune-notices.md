@@ -4,136 +4,150 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 08/10/2020
+ms.date: 07/09/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Updated end-user experience for Android device administrator Wi-Fi profiles<!-- 7662680  -->
-Due to a change made by Google, the end-user experience for new Wi-Fi profiles is significantly different starting in the October release of the Company Portal app. Users will need to accept additional permissions, and explicitly accept Wi-Fi configurations when they're deployed. Wi-Fi configurations will not appear in the known Wi-Fi networks list, but will automatically connect when in range. There are no changes in behavior for existing Wi-Fi profiles. There are also no changes to the admin experience in the Endpoint Manager admin center.
+### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
 
-Applies to:
-- Android device administrator, Android 10 and later
-
-### Microsoft Intune ends support for Windows Phone 8.1 and Windows 10 Mobile<!-- 3544938, 3544909 -->
-Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1. 
-
-Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in the support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune ends support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on August 10, 2020.
-
-As of August 10, enrollments for Windows Phone 8.1 and Windows 10 Mobile devices will fail and Windows Mobile profile types are removed from the Intune UI. Devices already enrolled will no longer check into the Intune service and we will delete device and policy data.
-
-### End of support for legacy PC management
-
-Legacy PC management is going out of support on October 15, 2020. Upgrade devices to Windows 10 and reenroll them as Mobile Device Management (MDM) devices to keep them managed by Intune.
-
-[Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)
-
-### Move to the Microsoft Endpoint Manager admin center for all your Intune management
-In MC208118 posted last March, we introduced a new, simple URL for your Microsoft Endpoint Manager – Intune administration: [https://endpoint.microsoft.com](https://endpoint.microsoft.com). Microsoft Endpoint Manager is a unified platform that includes Microsoft Intune and Configuration Manager. **Starting August 1, 2020**, we will remove Intune administration at [https://portal.azure.com](https://portal.azure.com) and recommend you instead use [https://endpoint.microsoft.com](https://endpoint.microsoft.com) for all your endpoint management. 
-
-
-### Decreasing support for Android device administrator<!--7371518-->
-Android device administrator management was released in Android 2.2 as a way to manage Android devices. Then beginning with Android 5, the more modern management framework of [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) was released (for devices that can reliably connect to Google Mobile Services). Google is encouraging movement off of device administrator management by decreasing its management support in new Android releases.
+Intune is announcing end of support for the [network fence feature](../protect/use-network-locations.md) for use only in devices enrolled through Android device administrator. Google has reduced support for devices enrolled using device administrator and Intune customers have provided feedback leading to a re-envisioning of the location based fencing to better meet customer needs across multiple Android enrollment options.
 
 #### How does this affect me?
-Because of these changes by Google, in October 2020, you will no longer have as extensive management capabilities on impacted device administrator-managed devices. 
 
-> [!NOTE]
-> This date was previously communicated as fourth quarter of 2020, but it has been moved out based on the [latest information from Google](https://www.blog.google/products/android-enterprise/da-migration/).
-
-##### Device types that will be impacted
-Devices that will be impacted by the decreasing device administrator support are those for which all three conditions below apply:
-- Enrolled in device administrator management.
-- Running Android 10 or later.
-- All Android manufacturers, except Samsung.
-
-Devices will not be impacted if they are any of the below:
-- Not enrolled with device administrator management.
-- Running an Android version below Android 10.
-- Samsung devices. Samsung Knox devices won't be impacted in this timeframe because extended support is provided through Intune’s integration with the Knox platform. This gives you additional time to plan the transition off device administrator management for Samsung devices.
-
-##### Settings that will be impacted
-[Google's decreased device administrator support](https://developers.google.com/android/work/device-admin-deprecation) prevents configuration of these settings from applying on impacted devices.
-
-###### Configuration profile device restriction settings
-
-- Block **Camera**
-- Set **Minimum password length**
-- Set **Number of sign-in failures before wiping device** (will not apply on devices without a password set, but will apply on devices with a password)
-- Set **Password expiration (days)**
-- Set **Required password type**
-- Set **Prevent use of previous passwords**
-- Block **Smart Lock and other trust agents**
-
-###### Compliance policy settings
-
-- Set **Required password type**
-- Set **Minimum password length**
-- Set **Number of days until password expires**
-- Set **Number of previous passwords to prevent reuse**
-
-
-![Screencap of Android compliance policy page](../fundamentals/media/notices/android-compliance-settings.png)
-
-#### User experience of impacted settings on impacted devices
-
-Impacted configuration settings:
-- For already enrolled devices that already had the settings applied, the impacted configuration settings will continue being enforced.
-- For newly enrolled devices, newly assigned settings, and updated settings, the impacted configuration settings will not be enforced (but all other configuration settings will still be enforced).
-
-Impacted compliance settings:
-- For already enrolled devices that already had the settings applied, the impacted compliance settings will still be enforced in the Settings app and the user will still be compliant. The Microsoft Endpoint Manager console will report these impacted settings on these devices as Not Applicable. 
-- For newly enrolled devices, newly assigned settings, and updated settings, the impacted compliance will not be sent down to the device, so they will not be enforced in the Settings app and the user will still be compliant. The Microsoft Endpoint Manager console will report these impacted settings on these devices as Not Applicable.
-
-
-Additional user experience change for Wi-Fi profiles
-- Users will need to accept additional permissions, and explicitly accept Wi-Fi configurations when they're deployed. Wi-Fi configurations will not appear in the known Wi-Fi networks list, but will automatically connect when in range. There are no changes in behavior for existing Wi-Fi profiles. There are also no changes to the admin experience in the Endpoint Manager admin center.  
-
-#### Cause of impact 
-Devices will begin being impacted in October 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 ([as required by Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
-
-At that point, device administrator-managed devices that are not manufactured by Samsung will be impacted once the user completes both these actions:
-- Updates to Android 10 or later.
-- Updates the Company Portal app to the version that targets API level 29.
-
-#### Additional impacts based on Android OS version 
-**Android 10**: For all device administrator managed devices (including Samsung) running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later: 
-- Network access control for VPN will no longer work 
-- Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned 
-- The IMEI and serial number will no longer be visible to IT admins in Intune 
-
-**Android 11**: These are the changes that will impact device administrator managed device when they update to Android 11: 
-- For device administrator devices (excluding Samsung) running Android 11 and later, Google has removed the ability for management agents like Company Portal to enforce blocking Camera, even before the October update to the Company Portal app. Policies blocking camera that are applied to devices before they update to Android 11 will continue to apply.  
-- With Android 11, trusted root certificates can no longer be deployed to devices enrolled with device administrator (except on Samsung devices). Users must manually install the trusted root certificate on the device. With the trusted root certificate manually installed on a device, you can then use SCEP to provision certificates to the device. In this scenario you must still create and deploy a trusted certificate policy to the device, and link that policy to the SCEP certificate profile. 
-    - If the trusted root certificate is on the device, then the SCEP certificate profile will install successfully.  
-    - If the trusted certificate cannot be found, the SCEP certificate profile will fail. 
-
+This will only affect you if you currently use a location-based (network fence) compliance policy, either on your trial or paid account. In 90 days from the date of this feature end-of-support announcement (on or around October 7, 2021 unless otherwise updated) any network location-based compliance policies targeted to devices enrolled using Android device administrator will no longer work to provide a network fence.
 
 #### What do I need to do to prepare for this change?
-To avoid the reduction in functionality coming in October 2020, we recommend the following:
-- **New enrollments**: Onboard new devices into [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management (where available) and/or [app protection policies](../apps/app-protection-policies.md). Avoid onboarding new devices into device administrator management. 
-- **Previously enrolled devices**: If a device administrator-managed device is running Android 10 or later or may update to Android 10 or later (especially if it is not a Samsung device), move it off of device administrator management to [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management and/or [app protection policies](../apps/app-protection-policies.md). You can leverage the streamlined flow to [move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).
-- **Configure Password Complexity**: For impacted devices running Android 10 and later, a future setting called Password Complexity lets you continue enforcing password restrictions and compliance. Password Complexity is a measure of password strength that factors in password type, length, and quality.
 
-#### What if I have non-Samsung devices that cannot move to Android Enterprise? 
-Some devices can’t move from device administrator to Android Enterprise management. For example, [Google hasn’t made Android Enterprise available in some markets](https://support.google.com/work/android/answer/6270910?hl=en). You can still use Intune to manage non-Samsung devices with device administrator, but the changes to functionality mentioned in this post will apply. For guidance on managing devices when Android Enterprise isn’t available, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md). 
+No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features, and we will follow up with additional information when it’s available regarding re-envisioned location-based services.
 
+### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year<!--10144130-->
 
-#### Additional information
-- [Move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md)
-- [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md)
-- [Set up enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md)
-- [Set up enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md)
-- [How to create an assign app protection policies](../apps/app-protection-policies.md)
-- [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md)
-- [Understanding app protection policies and work profiles on Android Enterprise devices](../apps/android-deployment-scenarios-app-protection-work-profiles.md)
-- [Google’s blog about what you need to know about Device Admin deprecation](https://www.blog.google/products/android-enterprise/da-migration/)
-- [Google's guidance for migration from device administrator to Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
-- [Google's documentation of deprecated device administrator APIs](https://developers.google.com/android/work/device-admin-deprecation)
+Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and higher shortly after iOS 15’s release.
 
+#### How does this affect me?
 
-### Plan for Change: Intune Enrollment Flow Update for Apple’s Automated Device Enrollment for iOS/iPadOS
-In the July Company Portal release, we’ll be changing the iOS/iPadOS enrollment flow for Apple’s Automated Device Enrollment (formerly known as DEP). The enrollment flow change is only encountered during the “Enroll with User Affinity” flow. Previously, if you set the “Install Company Portal” to “no” as part of your configuration, users could still install the Company Portal app from the store which would then trigger enrollment where the user would add in the appropriate serial number. With this upcoming Company Portal release, we’ll be removing that serial number confirmation screen. Instead, you’ll want to create a corresponding app configuration policy to send down alongside the Company Portal to ensure that users can successfully enroll, or set the “Install Company Portal” to “Yes” as part of your configuration. 
- - See the post [here](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-enrollment-flow-update-for-apple-s-automated-device/ba-p/1431629) for more info.
+If you are managing iOS/iPadOS devices, you might have devices that will not be able to upgrade to the minimum supported version (iOS/iPadOS 13). Provided that Office 365 mobile apps are supported on iOS/iPadOS 13.0 and higher, this may not affect you; you’ve likely already upgraded your OS or devices. See the following Apple documentation for devices to check which devices support iOS 13 or iPadOS 13 (if applicable).
+
+- [Supported iPhone models](https://support.apple.com/guide/iphone/supported-iphone-models-iphe3fa5df43/13.0/ios/13.0)
+- [Supported iPad models](https://support.apple.com/guide/ipad/supported-models-ipad213a25b2/13.0/ipados/13.0)
+- [Supported iPod models](https://support.apple.com/guide/ipod-touch/your-ipod-touch-iphdd4353af4/13.0/ios/13.0)
+
+For instructions on how to check in the Microsoft Endpoint Manager admin center which devices or users may be affected, read below.
+
+#### What do I need to do to prepare for this change?
+
+Check your Intune reporting to see what devices or users may be affected. For devices with mobile device management (MDM) go to **Devices** > **All devices** and filter by OS. For devices with app protection policies  go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
+
+To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](../fundamentals/manage-os-versions.md).
+
+### Plan for Change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
+
+With Apple's expected release of macOS 12 Monterey in the fall of 2021, Microsoft Intune, the Company Portal app and the Intune MDM agent will be moving to support macOS 10.15 (Catalina) and higher shortly after the release.
+
+#### How does this affect me?
+
+This will only affect you if you currently manage, or plan to manage macOS devices with Intune. This may not impact you because your users have likely already upgraded their macOS devices. See [macOS Catalina is compatible with these computers](https://support.apple.com/en-us/HT210222) for a list of devices that are supported.
+
+> [!NOTE]
+> Devices that are currently enrolled on macOS 10.13.x and 10.14 will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if running macOS 10.14 or below.
+
+#### What do I need to do to prepare for this change?
+
+Check your Intune reporting to see what devices or users may be affected. Go to Devices > All devices and filter by macOS. You can add in additional columns to help identify who in your organization has devices running macOS 10.14 or below. Request that your users upgrade their devices to a supported OS version before the release of macOS 12.
+
+### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
+We have recently released an updated Company Portal for iOS to the Apple Store that is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
+
+#### What action do I need to take?
+If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices. Otherwise, no action is needed, but if you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app.
+
+#### How does this affect me?
+User impact - Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+
+> [!NOTE]
+> If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you may need to manually push an update to the related devices.
+
+### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
+
+Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, after August 14, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
+
+#### How this change will affect your organization
+
+If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before August 14 2021 to ensure users can still access the Tunnel Gateway configuration.
+
+#### What you need to do to prepare
+
+For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
+### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
+
+We’ve released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices. 
+
+The new version for the Microsoft Intune Management Extension is **1.43.203.0**. Intune automatically upgrades all versions of the extension that are less than **1.43.203.0** to this latest version. To check the version of the extension on a device, review the version for *Microsoft Intune Management Extension* in the program list under **Apps & features**.
+
+For more information, see **CVE-2021-31980** at [https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980).
+
+#### What action do I need to take?
+
+No action is required. As soon as the client connects to the service, it automatically receives a message to upgrade.
+
+### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
+
+We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is a change only in what you’ll see in the UI.
+
+#### How does this affect me?
+
+Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for Endpoint security Antivirus policy, you had two options for most settings: *Yes* and *Not configured*. Moving forward, those same settings now include *Yes*, *Not configured*, and a new option of *No*. Previously configured settings that were set to *Not configured* remain as *Not configured*.  When you create new profiles or edit an existing profile, you now have the option to explicitly specify *No*.
+
+In addition, the setting *Hide the Virus and threat protection area in the Windows Security app* has a child setting, *Hide the Ransomware data recovery option in the Windows Security app*. If the parent setting (Hide the Virus and threat protection area) was set to *Not configured* and the child setting was set to *Yes*, both the parent and child settings will be set to *Not configured*, which will take effect when you edit the profile.
+
+#### What action do I need to take?
+
+No action is needed. However, you might want to notify your helpdesk about this change.
+
+### Plan for Change: Intune ending company portal support for unsupported versions of Windows
+
+Intune follows Windows 10 lifecycle for supported Windows 10 versions. We’re now removing support for the associated Windows 10 Company Portals for those Windows versions that are out of the Modern Support policy.
+
+#### How does this affect me?
+
+Given that Microsoft no longer supports these OSs, this may not affect you; you have likely already upgraded your OS or devices. This will only affect you if you are still managing unsupported Windows 10 versions. Windows and Company portal versions this affects include:
+
+- Windows 10, Version 1507, Company portal version 10.1.721.0
+- Windows 10, Version 1511, Company portal version 10.1.1731.0
+- Windows 10, Version 1607, Company portal version 10.3.5601.0
+- Windows 10, Version 1703, Company portal version 10.3.5601.0
+- Windows 10, Version 1709, any Company portal version
+
+We will not uninstall these Company portal versions mentioned above, but we will remove them from the Microsoft Store and stop testing our service releases with them.
+
+**User Impact:** If you continue to use an unsupported version of Window 10, your users won't get the latest security updates, new features, bug fixes, latency improvements, accessibility improvements, and performance investments. The user will not be able to be co-managed with System Center Configuration Manager and Intune.
+
+#### What do I need to do?
+
+In the Microsoft Endpoint Manager admin center, use the [Discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user’s device, the Company Portal version is shown in the **Settings** page of the company portal. Update to a supported Windows/Company Portal version.
+
+### Plan for Change: Intune moving to support Android 6.0 and higher in April 2021
+
+As mentioned in MC234534, Intune will be moving to support Android 6.0 (Marshmallow) and higher in the April (2104) service release.
+
+#### How this change will affect your organization
+
+Given that the Office mobile apps for Android ended support for Android 5.x (Lollipop) on June 30, 2019 (MC181101) this change may not affect you; you have likely already upgraded your OS or devices. However, if you have any device that is still running Android version 5.x, or decide to enroll any device that is running Android version 5.x, please note that these devices will no longer be supported. Either update them to Android version 6.0 (Marshmallow) or higher or replace them with a device on Android version 6.0 or higher.
+
+> [!NOTE]
+> Teams Android devices are not impacted by this announcement and will continue to be supported regardless of their Android OS version.
+
+#### What you need to do to prepare
+
+Notify your helpdesk, if applicable, of this upcoming change in support. You also have two admin options to help inform your end users or block enrollment.
+
+1. Here’s how you can warn end users:
+    - Utilize a device compliance policy for Android device administrator or Android Enterprise and set the action for non-compliance to send a message to users before marking them noncompliant.
+    - Configure an app protection policy Conditional launch setting with a Min OS version requirement to warn users.
+2. Here’s how you can block devices on versions below Android 6.0:
+    - Set enrollment restrictions to prevent devices on Android 5.x from enrolling
+    - Utilize a device compliance policy for Android device administrator or Android Enterprise to make devices on Android 5.x non-compliant.
+    - Configure an app protection policy Conditional launch setting with a Min OS version requirement to block users from app access.

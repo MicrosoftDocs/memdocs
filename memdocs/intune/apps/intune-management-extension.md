@@ -19,7 +19,7 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 
 #ROBOTS:
 #audience:
-ms.reviewer:
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -132,7 +132,7 @@ The Intune management extension has the following prerequisites. Once they're me
 
         > [!NOTE]
         > PowerShell scripts in Intune can be targeted to Azure AD device security groups or Azure AD user security groups.
-        > However, when targeting workplace joined (WPJ) devices, only Azure AD device security groups can be used (user targeting will be ignored). For more information, see [Win32 app support for Workplace join (WPJ) devices](../fundamentals/whats-new.md#win32-app-support-for-workplace-join-wpj-devices-).
+        > However, when targeting workplace joined (WPJ) devices, only Azure AD device security groups can be used (user targeting will be ignored). For more information, see [Win32 app support for Workplace join (WPJ) devices](../fundamentals/whats-new-archive.md#win32-app-support-for-workplace-join-wpj-devices-).
 
     2. Select **Next**.
 
@@ -174,7 +174,7 @@ The Intune management extension has the following prerequisites. Once they're me
 
 ## Monitor run status
 
-You can monitor the run status of PowerShell scripts for users and devices in the Azure portal.
+You can monitor the run status of PowerShell scripts for users and devices in the portal.
 
 In **PowerShell scripts**, select the script to monitor, choose **Monitor**, and then choose one of the following reports:
 
@@ -233,7 +233,7 @@ To see if the device is auto-enrolled, you can:
 
 - To isolate scripting problems, you can:
 
-  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) for guidance.
+  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1) for guidance.
   - Run a sample script using the Intune management extension. For example, create the `C:\Scripts` directory, and give everyone full control. Run the following script:
 
     ```powershell

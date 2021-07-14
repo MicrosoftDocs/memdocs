@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 06/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,17 +27,15 @@ ms.collection: M365-identity-device-management
 
 # Prerequisites for the Microsoft Tunnel in Intune
 
-Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs Docker to host the Tunnel server software. You'll also need to configure your network,  firewalls, and proxies to support communications for the Microsoft Tunnel.
-
-*Microsoft Tunnel is in public preview*.
+Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs Docker to host the Tunnel server software. You'll also need to configure your network, firewalls, and proxies to support communications for the Microsoft Tunnel.
 
 At a high level, you’ll need the following to use the Microsoft Tunnel:
 
-- An Azure subscription
-- An Intune subscription
-- Linux server that runs Docker. This server can be on-premises or in the cloud
-- A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server
-- Devices that run Android or iOS/iPadOS
+- An Azure subscription.
+- An Intune subscription.
+- Linux server that runs Docker. This server can be on-premises or in the cloud. 
+- A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
+- Devices that run Android or iOS/iPadOS.
 
 Prerequisites you’ll configure include preparing your network, firewalls, and proxy to support the use of the Microsoft Tunnel.
 
@@ -98,19 +96,38 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   - The TLS certificate can be in **PEM** or **pfx** format.
 
-- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fallback to use TLS 1.2.
+- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fall back to use TLS 1.2.
 
 ## Network
 
-We recommend using two Network Interface controllers (NICs) per Linux server to improve performance, though use of two is optional.
+- **Enable packet forwarding for IPv4**: Each Linux server that hosts the Tunnel server software must have IP forwarding for IPv4 enabled. To check on the status of IP forwarding, on the server run one of the following generic commands as *root* or *sudo*. Both commands return a value of **0** for *disabled* and a value of **1** for *enabled*:
+  - `sysctl net.ipv4.ip_forward`
+  - `cat /proc/sys/net/ipv4/ip_forward`
 
-- **NIC 1** - This NIC handles traffic from your managed devices and should be on a public network with public IP address.  This IP address is the address that you configure in the *Site configuration*. This address can represent a single server or a load balancer.
+  If not enabled, you can temporarily enable IP forwarding by running one of the following generic commands as *root* or *sudo* on the server. These commands can change the IP forwarding configuration until the server restarts. After a restart, the server returns IP forwarding behavior to its previous state. For both commands, use a value of **1** to *enable* forwarding. A value of **0** will disable forwarding. The following command examples use a value of *1* to *enable* forwarding:
+  - `sysctl -w net.ipv4.ip_forward=1`
+  - `echo 1 > /proc/sys/net/ipv4/ip_forward`
 
-- **NIC 2** - This NIC handles traffic to your on-premises resources and should be on your private internal network without network segmentation.
+  To make IP forwarding permanent, on each Linux server edit the **/etc/sysctl.conf** file and remove the leading hashtag (#) from *#net.ipv4.ip_forward=1* to enable packet forwarding. After your edit, the entry should appear as follows:
 
-If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
+  ```
+  # Uncomment the next line to enable packet forwarding for IPv4
+  net.ipv4.ip_forward=1
+  ```
 
-If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
+  For this change to take effect, you must either reboot the server or run `sysctl -p`.
+
+  If the expected entry isn't present in the sysctl.conf file, consult the documentation for the distribution you use for how to enable IP forwarding. Typically, you can edit **sysctl.conf** to add the missing line at the end of the file to permanently enable IP forwarding.
+
+- **Configure multiple NICs per server** *(Optional)*: We recommend using two Network Interface controllers (NICs) per Linux server to improve performance, though use of two is optional.
+
+  - **NIC 1** - This NIC handles traffic from your managed devices and should be on a public network with public IP address.  This IP address is the address that you configure in the *Site configuration*. This address can represent a single server or a load balancer.
+
+  - **NIC 2** - This NIC handles traffic to your on-premises resources and should be on your private internal network without network segmentation.
+
+- **Ensure cloud-based Linux VMs can access your on-premises network**: If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
+
+- **Load balancers** *(Optional)*:  If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
 ## Firewall
 
@@ -129,7 +146,7 @@ By default, the Microsoft Tunnel and server use the following ports:
 
 When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
 
-**Additional requirements**:
+**More requirements**:
 
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 
@@ -153,8 +170,8 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
   ```
   [Service]
   Environment="HTTP_PROXY=http://your.proxy:8080/"
-  Environment="HTTPS_PROXY=http://your.proxy:8080/"
-  Environment="NO_PROXY=127.0.0.1,localhost
+  Environment="HTTPS_PROXY=https://your.proxy:8080/"
+  Environment="NO_PROXY=127.0.0.1,localhost"
   ```
 
   > [!NOTE]  

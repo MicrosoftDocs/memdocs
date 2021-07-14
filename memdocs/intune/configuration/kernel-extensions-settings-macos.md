@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 03/25/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -51,6 +51,11 @@ This feature applies to:
 
 - macOS 10.13.2 and newer
 - User approved device enrollment is required 
+
+> [!IMPORTANT]
+> Kernel extensions don't work on macOS devices with the M1 chip, which are macOS devices running on Apple silicon. This behavior is a known issue, with no ETA.
+> 
+> For any macOS devices running 10.15 and newer, we recommend using [system extensions](#system-extensions) (in this article). If you use the kernel extensions settings, then consider excluding macOS devices with M1 chips from receiving the kernel extensions profile.
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 

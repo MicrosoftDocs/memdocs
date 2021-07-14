@@ -20,7 +20,7 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -208,9 +208,9 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Shows detailed usage information about the available command line properties for the App Wrapping Tool. |
-|**-aa**|(Optional) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` i.e `login.windows.net/common` |
-|**-ac**|(Optional) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` This is the guid in the Client ID field is from your app's listing in the App Registration blade. |
-|**-ar**|(Optional) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
+|**-aa**|(Optional) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
+|**-ac**|(Optional) `<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the guid in the Client ID field from your app's listing in the App Registration blade. |
+|**-ar**|(Optional) `<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
 |**-v**| (Optional) Outputs verbose messages to the console. It is recommended to use this flag to debug any errors. |
 |**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |

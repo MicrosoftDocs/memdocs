@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 01/25/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -11,6 +11,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ---
+
 # Configure Azure services for use with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -31,11 +32,14 @@ Configure the following Azure services using this wizard:
 
   - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/overview.md)  
 
+    > [!TIP]
+    > For more information specific to cloud management, see [Configure Azure Active Directory for cloud management gateway](../../../clients/manage/cmg/configure-azure-ad.md).
+
   - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
 - **Log Analytics Connector**: [Connect to Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
 
-    > [!Note]  
+    > [!NOTE]
     > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](/azure/azure-monitor/terminology#log-analytics).  
 
 - **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
@@ -82,6 +86,9 @@ For more information about Azure apps, start with the following articles:
 After you decide the service to which you want to connect, refer to the table in [Service details](#service-details). This table provides information you need to complete the Azure Service Wizard. Have a discussion in advance with your Azure AD administrator. Decide which of the following actions to take:
 
 - Manually create the apps in advance in the Azure portal. Then import the app details into Configuration Manager.  
+
+    > [!TIP]
+    > For more information specific to cloud management, see [Manually register Azure Active Directory apps for the cloud management gateway](../../../clients/manage/cmg/manually-register-azure-ad-apps.md).
 
 - Use Configuration Manager to directly create the apps in Azure AD. To collect the necessary data from Azure AD, review the information in the other sections of this article.  
 
@@ -159,9 +166,9 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
-   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654-->
-   > [!IMPORTANT]
-   > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment until you manually mitigate.
+
+    > [!NOTE]
+    > You may see an option for **Never**, but Azure AD no longer supports it. If you previously selected this option, the expiration date is now set for 99 years from the date you created it.<!-- MEMDocs#1530 -->
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
@@ -221,7 +228,7 @@ After specifying the web and native apps on the **Apps** page, the Azure Service
 
 - **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
-- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
+- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#supplemental-information-and-configuration)  
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 

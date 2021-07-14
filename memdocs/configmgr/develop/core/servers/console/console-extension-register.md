@@ -2,7 +2,7 @@
 title: "Console extension registration through community hub"
 description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
-ms.date: "03/19/2021"
+ms.date: "06/28/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -14,13 +14,17 @@ manager: dougeby
 
 # Console extension registration though community hub
 <!--9526630, 3555909-->
-Starting in Configuration Manager version 2103, the [community hub](../../../../core/servers/manage/community-hub.md) supports console extensions. Console extension authors can contribute extensions they've written to the community hub. Community hub users can download the extensions and manage the installation of them across their Configuration Manager hierarchy. Contributing extensions through community hub supersedes the [previous deployment process](console-extension-deployment.md).
+Console extension authors can contribute extensions they've written to the community hub. Community hub users can download the extensions and manage the installation of them across their Configuration Manager hierarchy. Contributing extensions through Community hub supersedes the [previous deployment process](console-extension-deployment.md).
 
+> [!IMPORTANT]
+> - Currently only technical preview versions of Configuration Manager can get console extensions from the [Community hub](../../../../core/servers/manage/community-hub.md).
+> - Importing an unsigned extension can be done with [technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later. Unsigned extensions are for local import and testing purposes only.
+> - If you are using Configuration Manager version 2103, you can test your own extensions by [importing them locally](../../../../core/servers/manage/admin-console-extensions.md#bkmk_local_install), but the extension must be signed to import.
 ## Prerequisites
 
  To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following prerequisites:
 
-- Configuration Manager version 2103, or later
+
 - Meet all of the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
 - Configuration Manager **Full Administrator** with **All** scope rights.
 
@@ -101,10 +105,17 @@ Manifest.xml format:
 				</File>
 			</FileList>
 		</ViewExtensionDeployment>
+        <CabExtensionDeployment>
+            <FileList>
+                <File Name="{The name of the cab file to deploy. CabExtensionDeployment is used when your payload cab file contains a cab within it that needs to be deployed.  For example: MyCab.cab}">
+                    <Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+                </File>
+            </FileList>
+        </CabExtensionDeployment>
 	</Deployments>
 </CustomExtensionManifest>
 ```
-
+ 
 Example manifest.xml file:
 
 ```xml
@@ -168,6 +179,8 @@ When you have your extension built and packaged into an authenticode-signed `.ca
 1. Rerunning the PowerShell script with the same extension and the same version will overwrite the current existing one.
 
 ## Share your extension on community hub
+
+*Applies only to technical preview versions of Configuration Manager*
 
 Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. You contribute extensions the same way you would any other community hub object. For more information, see [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md).
 

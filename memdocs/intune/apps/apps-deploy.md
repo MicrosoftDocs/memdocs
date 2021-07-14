@@ -21,7 +21,7 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -160,7 +160,7 @@ Default values for the setting are prepopulated for new assignments as follows:
 >[!NOTE]
 >**"Available" assignment types:** If you're updating this setting for "available for enrolled devices" or "available with or without enrollment" groups, users who already have the managed app won't get the updated setting until they sync the device with Intune and re-install the app. 
 >
->**Pre-existing assignments:** Assignments that existed prior to the introduction of this setting are unmodified and all managed apps will be removed on device removal from management.
+>**Pre-existing assignments:** The App uninstall setting was introduced in May 2019. Assignments that existed prior to this date are unmodified and all managed apps will be removed on device removal from management. If your assignment was created before May 2019, you may need to explicitly set the App uninstall setting, as the default settings above may not apply. 
 
 ## Next steps
 

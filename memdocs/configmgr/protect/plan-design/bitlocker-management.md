@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 12/02/2020
+ms.date: 04/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -18,12 +18,12 @@ manager: dougeby
 
 <!-- 3601034 -->
 
-Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
+Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-For more general information on BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
+For more general information about BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview). For a comparison of BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 > [!TIP]
 > To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -82,13 +82,17 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
 
-  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
+  - Enable the site for enhanced HTTP. This option applies to version 2103 or later.<!-- 9503186 -->
 
-  - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or later.
+  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option applies to version 2002 or later.<!-- 5925660 -->
+
+  - Configure the management point for HTTPS. This option applies to all supported Configuration Manager versions.
 
   For more information, see [Encrypt recovery data over the network](../deploy-use/bitlocker/encrypt-recovery-data-transit.md).
 
-- Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. To use the recovery service, you need at least one management point not in a replica configuration. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
+- In version 2010 and earlier, to use the recovery service, you need at least one management point not in a replica configuration. Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
+
+  Starting in version 2103, the recovery service supports management points that use a database replica.<!-- 9503186 -->
 
 ### Prerequisites for BitLocker portals
 
@@ -101,6 +105,9 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - On the web server that will host the self-service portal, install [Microsoft ASP.NET MVC 4.0](/aspnet/mvc/mvc4) and .NET Framework 3.5 feature before staring the install process. Other required Windows server roles and features will be installed automatically during the portal installation process.
 
+    > [!TIP]
+    > You don't need to install any version of Visual Studio with ASP.NET MVC.<!-- MEMDocs#1463 -->
+
 - The user account that runs the portal installer script needs SQL Server **sysadmin** rights on the site database server. During the setup process, the script sets login, user, and SQL Server role rights for the web server machine account. You can remove this user account from the sysadmin role after you complete setup of the self-service portal and the administration and monitoring website.
 
 ## Supported configurations
@@ -111,17 +118,15 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM). There's no change to the setup process for BitLocker management. This improvement supports domain-joined and hybrid domain-joined devices.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
-    > [!NOTE]
-    > If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
-    >
-    > 1. In the Configuration Manager console, open the properties of the existing policy.
-    > 1. Switch to the **Client Management** tab.
-    > 1. Select **OK** or **Apply** to save the policy.
-    >
-    > This action revises the policy so that it's available to clients over the CMG.
+   -  If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
+      1. In the Configuration Manager console, open the properties of the existing policy.
+      1. Switch to the **Client Management** tab.
+      1. Select **OK** or **Apply** to save the policy. This action revises the policy so that it's available to clients over the CMG.
 
-> [!TIP]
-> By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
+- By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
+
+> [!Important]
+> The `Invoke-MbamClientDeployment.ps1` PowerShell script is for [stand-alone MBAM](/microsoft-desktop-optimization-pack/mbam-v25/) only. It should not be used with Configuration Manager BitLocker Management.
 
 ## Next steps
 

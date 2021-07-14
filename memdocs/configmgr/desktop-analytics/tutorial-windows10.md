@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
-ms.date: 01/12/2021
+ms.date: 06/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -246,7 +246,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.yml#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal-).
 
 6. Open the deployment plan by selecting its name.  
 
@@ -274,7 +274,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     1. Review the assets with [Microsoft known issues](compat-assessment.md#microsoft-known-issues) across the **Apps** and **Drivers** tabs.
 
-    2. To unblock your pilot devices, change the **Upgrade Decision** to **Ready** or **Ready (with remediation)**.
+    2. To unblock your pilot devices, change the **Upgrade Decision** to **Ready**. Starting in Configuration Manager version 2103 with update rollup 10036164, items can also be marked **Ready (with remediation)**.<!-- CMADO-9906461 -->
 
 ## Deploy Windows 10 in Configuration Manager
 

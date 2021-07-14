@@ -78,7 +78,7 @@ Ensure all of the content referenced by the in-place upgrade task sequence is di
 When you deploy an upgrade task sequence, use the following settings:
 - **Allow task sequence to run for client on the Internet**, on the User Experience tab of the deployment.
 - **Download all content locally before starting task sequence**, on the Distribution Points tab of the deployment. Other options such as **Download content locally when needed by the running task sequence** do not work in this scenario. The task sequence engine is currently unable to obtain content from a cloud distribution point. The Configuration Manager client must download the content from the cloud distribution point before starting the task sequence.
-- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).
+- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](../../osd/deploy-use/configure-precache-content.md).
 
 
 

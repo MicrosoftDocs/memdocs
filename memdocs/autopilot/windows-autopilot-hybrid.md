@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/19/2021
+ms.date: 06/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -129,6 +129,9 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
 
+> [!NOTE]
+> Inactive Intune connectors will still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
+
 ### Configure web proxy settings
 
 If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](../intune/enrollment/autopilot-hybrid-connector-proxy.md).
@@ -189,18 +192,18 @@ After your Autopilot devices are enrolled, their names become the hostname of th
 Here is a list of VPN clients that are known to be tested and validated:
 
 **Supported clients:**
-In-box Windows VPN client
-Cisco AnyConnect (Win32 client)
-Pulse Secure (Win32 client)
-GlobalProtect (Win32 client)
-Checkpoint (Win32 client)
-Citrix NetScaler (Win32 client)
-SonicWall (Win32 client)
+- In-box Windows VPN client
+- Cisco AnyConnect (Win32 client)
+- Pulse Secure (Win32 client)
+- GlobalProtect (Win32 client)
+- Checkpoint (Win32 client)
+- Citrix NetScaler (Win32 client)
+- SonicWall (Win32 client)
 
 **Not supported clients:**
-UWP-based VPN plug-ins
-Anything that requires a user cert
-DirectAccess
+- UWP-based VPN plug-ins
+- Anything that requires a user cert
+- DirectAccess
  
 
 
@@ -213,7 +216,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
-7. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support).
+7. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support-preview).
 8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 9. Select **Next**.
 10. On the **Scope tags** page, select [scope tags](../intune/fundamentals/scope-tags.md) for this profile.

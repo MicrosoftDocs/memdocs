@@ -12,5 +12,5 @@ ms.date: 08/14/2020
 <!--7986450, 7988266-->
 **Scenario:** If the [SMS provider](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md) machine that communicates with the [service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) are configured to use multi-factor authentication, you'll be unable to install applications, run CMPivot queries, and perform other actions from the admin console. You'll receive error code 403, forbidden.  
 
-**Workaround:** The current workaround is to configure the on-premises hierarchy to the default authentication level of **Windows authentication**. For more information, see the [Authentication section in the SMS provider article](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
+**Workaround:** The current workaround is to configure the on-premises hierarchy to the default authentication level of **Windows authentication**. For more information, see the [Authentication section in the SMS provider article](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md#authentication).
 

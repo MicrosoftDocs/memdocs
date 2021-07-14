@@ -1,3 +1,4 @@
+items:
 - name: Protect data and infrastructure documentation
   href: index.yml
 - name: Understand and explore
@@ -62,7 +63,7 @@
         href: deploy-use/endpoint-protection-group-policies.md
     - name: Windows Firewall policies
       href: deploy-use/create-windows-firewall-policies.md
-    - name: Microsoft Defender Advanced Threat Protection
+    - name: Microsoft Defender for Endpoint
       href: deploy-use/defender-advanced-threat-protection.md
     - name: Create and deploy Exploit Guard policy
       href: deploy-use/create-deploy-exploit-guard-policy.md
@@ -79,7 +80,7 @@
     - name: Troubleshooting client
       href: deploy-use/troubleshoot-endpoint-client.md
     - name: Windows Defender FAQ
-      href: deploy-use/endpoint-protection-client-faq.md
+      href: deploy-use/endpoint-protection-client-faq.yml
   - name: BitLocker management
     items:
     - name: Encrypt recovery data over the network

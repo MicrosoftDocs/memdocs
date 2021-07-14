@@ -1,3 +1,4 @@
+items:
 - name: Remote actions
   href: index.yml
 - name: Overview
@@ -25,8 +26,6 @@
       href: device-restart.md
   - name: Apple device actions
     items:
-    - name: Locate lost iOS/iPadOS device
-      href: device-locate.md
     - name: Enable iOS/iPadOS lost mode
       href: device-lost-mode.md
     - name: Turn on iOS/iPadOS supervised mode
@@ -35,6 +34,8 @@
       href: device-erase.md
     - name: Disable Activation Lock
       href: device-activation-lock-disable.md
+    - name: Update cellular data plan
+      href: update-cellular-data-plan.md
   - name: User actions
     items:
     - name: Sign out current user
@@ -45,6 +46,8 @@
       href: find-primary-user.md
   - name: Other actions
     items:
+    - name: Locate device
+      href: device-locate.md
     - name: Rename device
       href: device-rename.md
     - name: Send notifications

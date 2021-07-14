@@ -57,6 +57,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 ## Limitations
 
 - Endpoint analytics insights are not available for devices running Windows Server editions.
+- With the exception of the [Recommended software report](recommended-software.md), Endpoint analytics supports only Windows 10 devices.
 - Using multiple Configuration Manager hierarchies with a single Endpoint analytics instance is not currently supported.
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
@@ -96,6 +97,8 @@ You may also modify the **Enable Endpoint analytics data collection** policy in 
 
 
 ## <a name="bkmk_view"></a> View the Overview page
+
+You won't see your data immediately. The data needs to be gathered and the results calculated. For startup performance, the device needs to have been restarted at least once. Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
 
 [!INCLUDE [Endpoint analytics overview page information](includes/overview-page.md)]
 

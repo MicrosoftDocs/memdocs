@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2021
+ms.date: 06/04/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -660,12 +660,14 @@ These settings use the [WirelessDisplay policy CSP](/windows/client-management/m
 
 ## Reporting and telemetry
 
+For information about recent changes for Windows Telemetry, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection).
+
 - **Share usage data**: Choose the level of diagnostic data that's submitted. Your options:
-  - **Not configured** (default): Intune doesn't change or update this setting. No setting is forced. Users choose the level that's submitted. By default, the OS might not share any data.
-  - **Security**: Information that's required to help keep Windows more secure, including data about the Connected User Experience and Telemetry component settings, the Malicious Software Removal Tool, and Microsoft Defender
-  - **Basic**: Basic device information, including quality-related data, app compatibility, app usage data, and data from the Security level
-  - **Enhanced**: Additional insights, including how Windows, Windows Server, System Center, and apps are used, how they perform, advanced reliability data, and data from both the Basic and the Security levels
-  - **Full**: All data necessary to identify and help to fix problems, plus data from the Security, Basic, and Enhanced level.
+  - **Not configured**: (default): Intune doesn't change or update this setting. No setting is forced. Users choose the level that's submitted. By default, the OS might not share any data.
+  - **Diagnostic data off**: (Not recommended). Review the *CSP System/AllowTelemetry* for details about this setting.
+  - **Required**: Sends basic device information, including quality-related data, app compatibility, and other similar data to keep the device secure and up-to-date.
+  - **Enhanced (1903 and earlier)**: Additional insights, including how Windows, Windows Server, System Center, and apps are used, how they perform, advanced reliability data, and data from the *Required* level. When this option is deployed to a device that run Windows 1909 and later, the device is set to *Required*.
+  - **Optional**: All data necessary to identify and help to fix problems, plus data from the *Required* and *Enhanced* level.
 
   [System/AllowTelemetry CSP](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 

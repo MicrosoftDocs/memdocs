@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 
@@ -51,7 +51,7 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
 
   To learn more, see [Application Guard](/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender for Endpoint documentation.
 
-- **Web protection** – Settings you can manage for Web protection in Microsoft Defender for Endpoint configure network protection to secure your machines against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web protection stops web threats without a web proxy and can protect machines while they're away or on-premises. Web protection stops access to:
+- **Web protection (Microsoft Edge Legacy)** – Settings you can manage for Web protection in Microsoft Defender for Endpoint configure network protection to secure your machines against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web protection stops web threats without a web proxy and can protect machines while they're away or on-premises. Web protection stops access to:
   - Phishing sites
   - Malware vectors
   - Exploit sites

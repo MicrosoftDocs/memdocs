@@ -52,7 +52,7 @@ Starting in version 1906, the user won't see a progress bar in the restart notif
 
 ### Software Center notification before deadline
 
-If the user proactively installs required software before the deadline, and it requires a restart, they'll see a different notification. The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
+If the user proactively installs required software before the deadline, and it requires a restart, they'll see a different notification. The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/plan-design/user-notifications.md).
 
 :::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notification for proactively installed software":::
 
@@ -127,7 +127,7 @@ The default value is 240 minutes.
 
 ### When a deployment requires a restart, show a dialog window to the user instead of a toast notification
 <!--3555947-->
-To change the user experience to be more intrusive, configure this setting to **Yes**. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
+To change the user experience to be more intrusive, configure this setting to **Yes**. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [User notifications](../../../apps/plan-design/user-notifications.md#replace-toast-notifications-with-dialog-window).
 
 ### When a deployment requires a restart, allow low-rights users to restart a device running Windows Server
 
@@ -168,7 +168,7 @@ When it reaches the final countdown, Software Center shows the user a notificati
 
 ### Proactively install required software before the deadline
 
-If the user proactively installs required software that needs restart before the deadline, they'll see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
+If the user proactively installs required software that needs restart before the deadline, they'll see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/plan-design/user-notifications.md).
 
 The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment:
 
@@ -224,4 +224,4 @@ To troubleshoot device restarts, use the **RebootCoordinator.log** and **SCNotif
 
 - [How to configure client settings](configure-client-settings.md)
 - [Application deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)
-- [User notifications for required app deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)
+- [User notifications for required app deployments](../../../apps/plan-design/user-notifications.md)

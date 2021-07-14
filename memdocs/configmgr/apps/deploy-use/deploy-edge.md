@@ -2,7 +2,7 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 10/12/2020
+ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Microsoft Edge Management
@@ -31,7 +29,7 @@ For clients targeted with a Microsoft Edge deployment:
 - PowerShell [Execution Policy](/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
   - PowerShell is executed to perform the installation.
 
-- The Microsoft Edge installer and [CMPivot](../../core/servers/manage/cmpivot.md) are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, the Microsoft Edge installer and CMPivot won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
+- The Microsoft Edge installer and [CMPivot](../../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](../../core/plan-design/network/includes/internet-endpoints-deploy-microsoft-edge.md)]
 

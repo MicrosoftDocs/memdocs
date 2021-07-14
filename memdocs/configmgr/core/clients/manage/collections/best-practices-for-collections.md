@@ -2,7 +2,7 @@
 title: Collections best practices
 titleSuffix: Configuration Manager
 description: Get recommendations for configuring collections and collection evaluation in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Best practices for collections in Configuration Manager
@@ -24,7 +22,7 @@ Use the following best practices for collections in Configuration Manager.
 
 ## Configure maintenance window for updates
 
-You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client might not be able to install critical software updates, which leaves the client vulnerable to the issues the update mitigates.
+You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client may not install critical software updates. This state leaves the client vulnerable to the issues the update mitigates.
 
 Important considerations to keep in mind when planning your maintenance windows:
 
@@ -51,7 +49,7 @@ Enabling incremental updates for many collections might cause evaluation delays.
 - The number of clients in a hierarchy
 - The complexity of collection membership rules in a hierarchy
 
-If the incremental evaluation cycle is taking longer than the configured update frequency, then Configuration Manager is constantly processing collection evaluations, which could impact system performance. Reduce the number of incrementally updated collections, or increase the time between incremental evaluation cycles.
+If the incremental evaluation cycle is taking longer than the configured update frequency, then Configuration Manager is constantly processing collection evaluations, which could affect system performance. Reduce the number of incrementally updated collections, or increase the time between incremental evaluation cycles.
 
 Given the potential impacts of incremental collections, it's important to have a policy or procedure for creating the collections and assigning update schedules. Examples of policy considerations might be:
 
@@ -61,9 +59,9 @@ Given the potential impacts of incremental collections, it's important to have a
 
 ## Avoid evaluation of large trees from the CAS
 
-In a Configuration Manager environment, the Central Administration Site (CAS) doesn't evaluate collection membership. Primary sites are the only sites that evaluate collections. Secondary sites act as proxies that use only data they replicate from their primary site.
+In a Configuration Manager environment, the central administration site (CAS) doesn't evaluate collection membership. Primary sites are the only sites that evaluate collections. Secondary sites act as proxies that use only data they replicate from their primary site.
 
-To request a collection update, the CAS sends a request to each primary site. The primary sites evaluate the collection and send the results back to the CAS. The collection evaluation results appear only after all collection evaluation instructions replicate to all sites, all sites evaluate all collections, and all data returns to the CAS and consolidates.
+To request a collection update, the CAS sends a request to each primary site. The primary sites evaluate the collection and send the results back to the CAS. The collection evaluation results appear only after all collection evaluation instructions replicate to all sites, all sites evaluate all collections, and all data returns to the CAS and is combined.
 
 The following diagram demonstrates the flow when the CAS requests a manual collection update:
 
@@ -73,7 +71,7 @@ A collection update from a CAS with multiple primary sites can be time consuming
 
 Once a collection evaluation thread begins and loads the evaluation graph, evaluation continues until the collection evaluation graph is empty. The thread then terminates and becomes available for the next evaluation. However, if another collection evaluation cycle queues while the thread is evaluating collections, the thread immediately restarts to attempt an evaluation of the "missed" cycle.
 
-Each evaluation method runs in its own thread. It's possible that within the thread, Configuration Manager may attempt to graph the same collection more than once. Configuration Manager then drops the second and subsequent requests.
+Each evaluation method runs in its own thread. It's possible that within the thread, Configuration Manager may attempt to graph the same collection more than once. Configuration Manager then drops the second and later requests.
 
 To prevent these scenarios, avoid manual collection evaluations of large trees, especially when working from the CAS with multiple sites.
 
@@ -81,15 +79,15 @@ To prevent these scenarios, avoid manual collection evaluations of large trees, 
 
 To strike a balance between business requirements and performance, it's important to understand the collection structure you create, and its dependencies on other collections. If you create a collection with rules that reference one or more collections that also refer to other collections, all of those collections are evaluated to create the membership of the collection.
 
-The include and exclude collection rules in Configuration Manager make referencing collections easier than writing a custom WQL query. However, if using include and exclude collections results in a high performance toll, you can use the WQL query method instead:
+The include and exclude collection rules in Configuration Manager make referencing collections easier than writing a custom WQL query. However, if using include and exclude collections results in a high-performance toll, you can use the WQL query method instead. Use the following example queries and replace the example collection ID `XYZ0003F` with the ID of the collection you want to include or exclude.
 
 Include:
 
-`Select * from SMSRSystem where SMSRSystem.ResourceId in (select ResourceID from SMS_CM_RES_COLL_[collection id])`
+`Select * from SMS_R_System where SMS_R_System.ResourceId in (select ResourceID from SMS_CM_RES_COLL_XYZ0003F)`
 
 Exclude:
 
-`Select * from SMSRSystem where SMSRSystem.ResourceId not in (select ResourceID from SMS_CM_RES_COLL_[collection id])`
+`Select * from SMS_R_System where SMS_R_System.ResourceId not in (select ResourceID from SMS_CM_RES_COLL_XYZ0003F)`
 
 ## Use CEViewer to monitor collection evaluation
 
@@ -98,7 +96,7 @@ You can use the [Collection Evaluation Viewer (CEViewer)](../../../support/cevie
 > [!Tip]
 > Starting in Configuration Manager version 2010, this functionality is built-in to the console. For more information, see, [How to view collection evaluation](collection-evaluation-view.md).
 
-To manually perform a similar check with SQL, you can use the following query:
+To manually do a similar check with SQL, you can use the following query:
 
 ```sql
 SELECT [t2].[CollectionName], [t2].[SiteID], [t2].[value] AS [Seconds], [t2].[LastIncrementalRefreshTime], [t2].[IncrementalMemberChanges] AS [IncChanges], [t2].[LastMemberChangeTime] AS [MemberChangeTime]

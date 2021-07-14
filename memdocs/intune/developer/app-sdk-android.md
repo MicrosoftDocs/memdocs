@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 05/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 #ROBOTS:
 #audience:
 
-ms.reviewer: shpate
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -61,15 +61,11 @@ The Intune App SDK consists of the following files:
 * **CHANGELOG.md**: Provides a record of changes made in each SDK version.
 * **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
 
-
 ## Requirements
 
 ### Android versions
-The SDK fully supports Android API 21 (Android 5.0) through Android
-API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android
-minSDKVersion as low as 14, but on those older OS versions it will be
-impossible to install the Intune Company Portal app or use MAM
-policies.
+
+The SDK fully supports Android API 23 (Android 6.0) through Android API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android minSDKVersion as low as 14, but on those older OS versions it will be impossible to install the Intune Company Portal app or use MAM policies.
 
 ### Company Portal app
 
@@ -85,8 +81,11 @@ For app protection without device enrollment, the user is _**not**_ required to 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
-### Sample app
-An example of how to integrate with the Intune App SDK properly is available on [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+### Sample apps
+Examples of how to integrate with the Intune App SDK properly include:
+
+- [Taskr - A Microsoft Intune Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+- [Taskr - A Microsoft Intune React Native + Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App/tree/master/ReactMAM)
 
 ### Referencing Intune App libraries
 
@@ -1089,7 +1088,7 @@ only resources which cannot be CA-protected, you may skip these steps.
     * This will generate a Client ID for your application.
 2. Follow the steps for [Using MSAL] and [Configure MSAL to use a broker].
 3. Set the manifest meta-data parameters per [Common MSAL configurations](#common-msal-configurations) for [App Integrates MSAL](#2-app-integrates-msal), see above.
-4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) and confirming
+4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and confirming the following:
     - That sign-in to your app prompts for installation and enrollment of the Intune Company Portal
     - That after enrollment, sign-in to your app completes successfully.
 5. Once your app has shipped Intune APP SDK integration, contact msintuneappsdk@microsoft.com to be added to the list of approved apps for [app-based Conditional Access](/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
@@ -1468,6 +1467,30 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 
 > [!NOTE]
 > The notification receiver must be registered before calling `remediateCompliance()` to avoid a race condition that could result in the notification being missed.
+
+### Declaring support for App CA
+Once your app is ready to handle App CA remediation, you can tell Microsoft Identity your app is App CA ready.  To do this in your MSAL application, build your Public Client using the Client Capabilities of "protapp"
+
+```java
+{
+	  "client_id" : "4b0db8c2-9f26-4417-8bde-3f0e3656f8e0",
+	  "authorization_user_agent" : "DEFAULT",
+	  "redirect_uri" : "msauth://com.microsoft.identity.client.sample.local/1wIqXSqBj7w%2Bh11ZifsnqwgyKrY%3D",
+	  "multiple_clouds_supported":true,
+	  "broker_redirect_uri_registered": true,
+	  "account_mode": "MULTIPLE",
+	  "client_capabilities": "protapp",
+	  "authorities" : [
+	    {
+	      "type": "AAD",
+	      "audience": {
+	        "type": "AzureADandPersonalMicrosoftAccount"
+	      }
+	    }
+	  ]
+	}
+```
+
 
 ### Implementation Notes
 
@@ -2093,7 +2116,7 @@ Views generated by the MAM SDK can be visually customized to more closely match 
 
 
 ### How to customize
-In order to have style changes apply to the Intune MAM views, you must first create a style override XML file. This file should be placed in the “/res/xml” directory of your app and you may name it whatever you like. Below is an example of the format this file needs to follow.
+In order to have style changes apply to the Intune MAM views, you must first create a style override XML file. This file should be placed in the "/res/xml" directory of your app and you may name it whatever you like. Below is an example of the format this file needs to follow.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -2113,7 +2136,7 @@ In order to have style changes apply to the Intune MAM views, you must first cre
 </styleOverrides>
 ```
 
-You must reuse resources that already exist within your app. For example, you must define the color green in the colors.xml file and reference it here. You cannot use the Hex color code “#0000ff." The maximum size for the app logo is 110 dip (dp). You may use a smaller logo image, but adhering to the maximum size will yield the best looking results. If you exceed the 110 dip limit, the image will scale down and possibly cause blurring.
+You must reuse resources that already exist within your app. For example, you must define the color green in the colors.xml file and reference it here. You cannot use the Hex color code "#0000ff". The maximum size for the app logo is 110 dip (dp). You may use a smaller logo image, but adhering to the maximum size will yield the best looking results. If you exceed the 110 dip limit, the image will scale down and possibly cause blurring.
 
 Below is the complete list of allowed style attributes, the UI elements they control, their XML attribute item names, and the type of resource expected for each.
 

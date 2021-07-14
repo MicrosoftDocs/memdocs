@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: You need to enable encryption | Microsoft Docs
+title: Turn on BitLocker encryption | Microsoft Docs
 titlesuffix: Microsoft Intune
-description: You need to enable encryption on your device.
+description: Learn why BitLocker encryption is required and how to access BitLocker settings on your device.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 03/31/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,10 +29,14 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: 
 ---
-# You need to enable encryption
+# Turn on BitLocker encryption
 
-When you encrypt a device, you are wrapping the information on it in a layer of protective code that prevents unauthorized people from accessing it. As a step towards making sure your information is secured, your organization is requiring you to you enable BitLocker.
+Your organization can require you to turn on BitLocker as a way to keep your device and the data on it secure. Turning on BitLocker encrypts the data on the device so that it's harder to steal, and it prevents unauthorized people from accessing it.  
 
-BitLocker is software that encrypts your drive and helps to protect your data. Follow [these instructions](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d) on how to enable BitLocker on Windows 10 devices.
+To turn on BitLocker:  
+
+1. Open **Control Panel**.
+2. Select **System and Security** > **BitLocker Drive Encryption**.
+3. Select **Turn on BitLocker**.  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

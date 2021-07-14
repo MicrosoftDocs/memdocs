@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 3/18/2021
+ms.date: 03/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -116,8 +116,8 @@ Respecting the data security and compliance policies of our largest and highly r
 
 You can learn more about configuring the org allowed accounts mode setting here:
 
-- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
+- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
 This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Endpoint Manager, you need to consult with your UEM documentation on how to deploy these configuration keys.
 
@@ -148,7 +148,7 @@ Edge for iOS and Android offers organizations several options for adjusting the 
 These settings allow you to customize the New Tab Page for Edge for iOS and Android to display your organization's logo and brand color as the page background.
 
 To upload your organization's logo and color, first complete the following steps:
-1. Within [Microsoft Endpoint Manager](https://endpoint.microsoft.com), navigate to **Tenant Administration** -> **Customization** -> **Company Identity Branding**.
+1. Within [Microsoft Endpoint Manager](https://endpoint.microsoft.com), navigate to **Tenant Administration** > **Customization**. Next to **Settings**, click **Edit**.
 2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
 3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
 

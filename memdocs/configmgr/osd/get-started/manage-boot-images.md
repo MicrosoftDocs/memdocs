@@ -2,7 +2,7 @@
 title: Manage boot images
 titleSuffix: Configuration Manager
 description: In Configuration Manager, learn to manage the Windows PE boot images that you use during an OS deployment.
-ms.date: 11/29/2019
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -18,7 +18,7 @@ manager: dougeby
 
 A boot image in Configuration Manager is a [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) image that's used during an OS deployment. Boot images are used to start a computer in WinPE. This minimal OS contains limited components and services. Configuration Manager uses WinPE to prepare the destination computer for Windows installation.
 
-## <a name="BKMK_BootImageDefault"></a> Default boot images
+## Default boot images
 
 Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in the *x64* or *i386* folders in the following share on the site server: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`. The default boot images are updated or regenerated depending on the action that you take.
 
@@ -42,6 +42,9 @@ Consider the following behaviors for any of the actions described for default bo
 ### Use updates and servicing to install the latest version of Configuration Manager
 
 When you upgrade the Windows Assessment and Deployment Kit (ADK) version, and then use updates and servicing to install the latest version of Configuration Manager, the site regenerates the default boot images. This update includes the new WinPE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, and customizations. The site doesn't modify custom boot images.
+
+> [!NOTE]
+> The site always uses the production version of the Configuration Manager client in default boot images. Even if you configure automatic client upgrades to use a [pre-production collection](../../core/clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
 
 ### Upgrade from Configuration Manager 2012 to current branch
 
@@ -67,13 +70,13 @@ The **Boot Images** node also includes a new column for (**Client Version**). Us
 
 After you update the Windows ADK on the site server, the console won't immediately show the new version. If you use one these actions to update a boot image, the site uses the latest ADK version. To get the console to display the current ADK version, restart the WMI service. For more information, see [Starting and Stopping the WMI Service](/windows/win32/wmisdk/starting-and-stopping-the-wmi-service).<!-- 2839864 -->
 
-## <a name="BKMK_BootImageCustom"></a> Customize a boot image  
+## Customize a boot image  
 
-When a boot image is based on the WinPE version from the supported version of the Windows ADK, you can customize or [modify a boot image](#BKMK_ModifyBootImages) from the console. When you upgrade a site and install a new version of the Windows ADK, custom boot images aren't updated with the new version of Windows ADK. When that happens, you can't customize the boot images in the Configuration Manager console. However, they continue to work as they did before the upgrade.  
+When a boot image is based on the WinPE version from the supported version of the Windows ADK, you can customize or [modify a boot image](#modify-a-boot-image) from the console. When you upgrade a site and install a new version of the Windows ADK, custom boot images aren't updated with the new version of Windows ADK. When that happens, you can't customize the boot images in the Configuration Manager console. However, they continue to work as they did before the upgrade.  
 
 When a boot image is based on a different version of the Windows ADK installed on a site, you must customize the boot images. Use another method to customize these boot images, such as using the Deployment Image Servicing and Management (DISM) command-line tool. DISM is part of the Windows ADK. For more information, see [Customize boot images](customize-boot-images.md).  
 
-## <a name="BKMK_AddBootImages"></a> Add a boot image  
+## Add a boot image
 
 During site installation, Configuration Manager automatically adds boot images that are based on a WinPE version from the supported version of the Windows ADK. Depending on the version of Configuration Manager, you can add boot images based on a different WinPE version from the supported version the Windows ADK. An error occurs when you try to add a boot image that contains an unsupported version of WinPE. The following list is the currently supported Windows ADK and WinPE versions:
 
@@ -85,9 +88,7 @@ During site installation, Configuration Manager automatically adds boot images t
 
   - Windows PE 3.1<sup>[Note 1](#bkmk_note1)</sup>
 
-  - Windows PE 5
-
-For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
+For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 3.1, customize it from a different computer using the version of DISM from the Windows AIK for Windows 7. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
 
 - [Customize boot images](customize-boot-images.md)
 - [Support for Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
@@ -99,6 +100,8 @@ For example, use the Configuration Manager console to customize boot images base
 > **Note 1: Support for Windows PE 3.1**
 >
 > Only add a boot image to Configuration Manager based on Windows PE *version 3.1*. Upgrade the Windows AIK for Windows 7 (based on Windows PE 3.0) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
+
+Use the following process to add a boot image in Configuration Manager:
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.  
 
@@ -122,10 +125,10 @@ For example, use the Configuration Manager console to customize boot images base
 
 The boot image is now listed in the **Boot Image** node. Before using the boot image to deploy an OS, distribute the boot image to distribution points.
 
-> [!Tip]  
+> [!TIP]
 > In the **Boot Image** node of the console, the **Size (KB)** column displays the decompressed size for each boot image. When the site sends a boot image over the network, it sends a compressed copy. This copy is typically smaller than the size listed in the **Size (KB)** column.  
 
-## <a name="BKMK_DistributeBootImages"></a> Distribute boot images  
+## Distribute boot images
 
 Boot images are distributed to distribution points in the same way as you distribute other content. Before you deploy an OS or create media, distribute the boot image to at least one distribution point.
 
@@ -139,7 +142,7 @@ To use PXE to deploy an OS, consider the following points before you distribute 
   
 For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-## <a name="BKMK_ModifyBootImages"></a> Modify a boot image  
+## Modify a boot image
 
 Add or remove device drivers to the image, or edit the properties of the boot image. The drivers that you add or remove can include network or storage drivers. Consider the following factors when you modify boot images:  
 
@@ -149,7 +152,7 @@ Add or remove device drivers to the image, or edit the properties of the boot im
 
 - After you make changes to a boot image, **update** the boot image on the distribution points that already have it. This process makes the most current version of the boot image available to clients. For more information, see [Manage content you've distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
-### Modify the properties of a boot image  
+### Modify the properties of a boot image
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.  
 
@@ -200,7 +203,7 @@ On the **Customization** tab, select any of the following settings:
 
 - Select **Enable command support (testing only)** to open a command prompt by using the **F8** key while the boot image is deployed. This option is useful for troubleshooting while you're testing your deployment. Using this setting in a production deployment isn't advised because of security concerns.  
 
-- **Set default keyboard layout in WinPE**: <!--4910348-->Starting in version 1910, configure the default keyboard layout for a boot image. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
+- **Set default keyboard layout in WinPE**: <!--4910348-->Configure the default keyboard layout for a boot image. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
 
 > [!Tip]
 > Use the [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) PowerShell cmdlet to configure these settings from a script.
@@ -224,7 +227,7 @@ The following components are commonly used by customers:
 - Windows PowerShell (WinPE-PowerShell): This component requires .NET, and adds limited PowerShell support. If you run custom PowerShell scripts during the WinPE phase of your task sequence, add this component. There are other components that may be required for other PowerShell cmdlets.
 - HTML (WinPE-HTA): If you run custom HTML applications during the WinPE phase of your task sequence, add this component.
 
-For more information about adding languages, see [Configure multiple languages](#BKMK_BootImageLanguage).
+For more information about adding languages, see [Configure multiple languages](#configure-multiple-languages).
 
 #### Data Source
 
@@ -268,7 +271,7 @@ On the **Content Locations** tab, select the distribution point or distribution 
 
 On the **Security** tab, view the administrative users that have permissions to this object.
 
-## <a name="BKMK_BootImagePXE"></a> Configure a boot image for PXE  
+## Configure a boot image for PXE
 
 Before you can use a boot image for a PXE-based deployment, configure the boot image to deploy from a PXE-enabled distribution point.  
 
@@ -280,10 +283,10 @@ Before you can use a boot image for a PXE-based deployment, configure the boot i
 
 4. On the **Data Source** tab, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-## <a name="BKMK_BootImageLanguage"></a> Configure multiple languages
+## Configure multiple languages
 
 > [!TIP]
-> Starting in version 1910, configure the default keyboard layout on the properties of a boot image. For more information, see [Customization](#customization).<!--4910348-->
+> You can configure the default keyboard layout on the properties of a boot image. For more information, see [Customization](#customization).<!--4910348-->
 
 Boot images are language neutral. This functionality allows you to use one boot image to display the task sequence text in multiple languages while in WinPE. Include the appropriate language support from the boot image **Optional Components** tab. Then set the appropriate task sequence variable to indicate which language to display. The language of the deployed OS is independent from the language in WinPE. The language that WinPE displays to the user is determined as follows:  
 
@@ -296,8 +299,14 @@ Boot images are language neutral. This functionality allows you to use one boot 
 
 Use the following procedure to set the WinPE language for PXE or media-initiated OS deployments.  
 
-### Set the Windows PE language for a PXE or media-initiated OS deployment  
+### Set the Windows PE language for a PXE or media-initiated OS deployment
 
 1. Before you update the boot image, verify that the appropriate task sequence resource file (tsres.dll) is in the corresponding language folder on the site server. For example, the English resource file is in the following location: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
 2. As part of your prestart command, set the **SMSTSLanguageFolder** environment variable to the appropriate language ID. The language ID must be specified by using decimal and not hexadecimal format. For example, to set the language ID to English, specify the decimal value **1033**, not the hexadecimal value 00000409 of the folder name.
+
+## Next steps
+
+[Customize boot images for Windows PE 3.1](customize-boot-images.md)
+
+[Manage OS images](manage-operating-system-images.md)

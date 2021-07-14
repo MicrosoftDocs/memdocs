@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/10/2021
+ms.date: 05/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,11 +59,14 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
   > [!NOTE]
   > All connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
   >
-  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  > Any instance of this connector can retrieve pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
   >
   > The same applies to certificate revocation.
   >
 - Can install on the same server that hosts an instance of the *Microsoft Intune Connector*.
+- Supports up to 100 instances of this connector per tenant, with each instance on a separate Windows server. When you use multiple connectors:
+  - All instances of the *PFX Certificate Connector* in your environment should be at the same version.
+  - Your infrastructure supports redundancy and load balancing, as any available connector instance can process your certificate requests.
 - Supports [automatic updates](#automatic-update) to new versions. To automatically install new versions, the computer that hosts the connector must contact **autoupdate.msappproxy.net** on port **443**. If the connector fails to automatically update, you can manually update the connector.
 - Supports certificate revocation (requires the connector run version **6.2008.60.607** or later)
 - Has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices)
@@ -99,7 +102,7 @@ If  you use a [third-party Certification Authority](certificate-authority-add-sc
   > [!NOTE]
   > With PKCS, all connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
   >
-  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  > Any instance of this connector can retrieve pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
   >
   > The same applies to certificate revocation.
   >

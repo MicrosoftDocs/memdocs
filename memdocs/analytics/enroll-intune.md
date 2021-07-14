@@ -61,6 +61,8 @@ Onboarding from  the Endpoint analytics portal is required for Intune managed de
 
 ## <a name="bkmk_view"></a> View the Overview page
 
+You won't see your data immediately. The data needs to be gathered and the results calculated. For startup performance, the device needs to have been restarted at least once. Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
+
 [!INCLUDE [Endpoint analytics overview page information](includes/overview-page.md)]
 
 ## Next steps

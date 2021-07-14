@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,8 +41,8 @@ A Conditional Access policy specifies the app or services you want to protect, t
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Conditional Access** > **Policies** > **New policy**.
-  ![Create a new Conditional Access policy](./media/create-conditional-access-intune/create-ca.png)
+2. Select **Endpoint security** > **Conditional Access** > **Policies** > **New policy**.
+:::image type="content" source="./media/create-conditional-access-intune/create-ca.png" alt-text="Create a new Conditional Access policy":::
 
 3. Under **Assignments**, select **Users and groups**.
 
@@ -69,7 +69,7 @@ A Conditional Access policy specifies the app or services you want to protect, t
 
    - **All cloud apps**: Select this option to apply the policy to all apps.
      > [!IMPORTANT]
-     > The Microsoft Azure Management app for access to the Azure portal is included in this list. Be sure to use the **Exclude** tab either here or in the **Users and groups** options to make sure you (or the users or groups you designate) will be able to sign in to the Azure portal. 
+     > The Microsoft Azure Management app for access to the Azure portal, and the Microsoft Intune app are included in this list. Be sure to use the **Exclude** tab either here or in the **Users and groups** options to make sure you (or the users or groups you designate) are able to sign in to the Azure portal or Microsoft Endpoint Manager admin center.
 
    - **Select apps**: Select this option, choose **Select**, and then use the applications list to search for and select the apps or services you want to protect.
 
@@ -106,8 +106,8 @@ A Conditional Access policy specifies the app or services you want to protect, t
       - **Require Hybrid Azure AD joined device**: Devices must be Hybrid Azure AD joined.
       - **Require approved client app**: The device must use approved client apps. 
       - **For multiple controls**: Select **Require all the selected controls** so that all of the requirements are enforced when a device attempts to access the app.
-
-      ![Access controls Grant settings](./media/create-conditional-access-intune/create-ca-grant-access-settings.png)
+      
+      :::image type="content" source="./media/create-conditional-access-intune/create-ca-grant-access-settings.png" alt-text="Access controls Grant settings":::
 
 11. Under **Enable policy**, select **On**.
 

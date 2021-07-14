@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2021
+ms.date: 04/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -30,7 +30,7 @@ After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.
 To use Win32 app management, be sure you meet the following criteria:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
-- Devices must be joined to Azure Active Directory (Azure AD) and auto-enrolled. The Intune management extension supports devices that are Azure AD joined, hybrid domain joined, and group policy enrolled. 
+- Devices must be joined or registered to Azure Active Directory (Azure AD) and be auto-enrolled. The Intune management extension supports devices that are Azure AD joined, Azure AD registered,  hybrid domain joined, or group policy enrolled. 
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Azure AD join their Windows 10 device. The user must log on to the device by using their Azure AD user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
 - Windows application size is capped at 8 GB per app.
@@ -112,6 +112,8 @@ On the **Program** page, configure the app installation and removal commands for
 
     > [!NOTE]
     > You can configure a Win32 app to be installed in **User** or **System** context. **User** context refers to only a particular user. **System** context refers to all users of a Windows 10 device.
+    > 
+    > When a device is enrolled by being Azure AD registered, select **System**.
     >
     > Users are not required to be logged in on the device to install Win32 apps.
     > 
@@ -168,12 +170,12 @@ Select **Next** to display the **Detection rules** page.
 
 ## Step 4: Detection rules
 
-On the **Detection rules** page, configure the rules to detect the presence of the app:
+On the **Detection rules** pane, configure the rules to detect the presence of the app. You can choose to add multiple rules:
     
 - **Rules format**: Select how the presence of the app will be detected. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app. You must choose at least one detection rule. 
 
   > [!NOTE]
-  > On the **Detection rules** pane, you can choose to add multiple rules. The conditions for *all* rules must be met to detect the app.
+  > The conditions for *all* rules must be met to detect the app.
   >
   > If Intune detects that the app is not present on the device, Intune will offer the app again within approximately 24 hours. This will occur only for apps targeted with the required intent.
 
@@ -229,6 +231,8 @@ On the **Detection rules** page, configure the rules to detect the presence of t
 
    > [!NOTE]
    > We recommend encoding your script as UTF-8. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
+
+The version of your Win32 app is displayed in the Microsoft Endpoint Manager admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Dependencies** page.
 
@@ -298,6 +302,9 @@ Click **Select scope tags** to optionally add scope tags for the app. Then selec
 ## Step 7: Assignments
 
 You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+
+> [!IMPORTANT]
+> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device does not have, the app will fail to install.
 
 1. For the specific app, select an assignment type:
     - **Required**: The app is installed on devices in the selected groups.

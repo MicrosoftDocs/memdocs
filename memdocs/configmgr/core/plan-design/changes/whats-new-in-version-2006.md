@@ -49,7 +49,7 @@ For more information about CMPivot from the admin center, see [Tenant attach: La
 ### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
 <!--4812909-->
 You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
-- [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
+- [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
 - [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
 - [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 - [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
@@ -97,13 +97,13 @@ This release adds a new group of management insights, **Optimize for remote work
 
 For more information, see [Management insights](../../servers/manage/management-insights.md).
 
-### Improved support for Windows Virtual Desktop
+### Improved support for Azure Virtual Desktop
 
 <!--6527576-->
 
 The **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
-For more information on Configuration Manager's support for Windows Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+For more information on Configuration Manager's support for Azure Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
 ### Intranet clients can use a CMG software update point
 <!--7102873-->
@@ -197,7 +197,7 @@ For more information, see [device restart notifications](../../clients/deploy/de
 <!--6935376-->
 This release fixes an issue with Software Center and Azure Active Directory (Azure AD) authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.
 
-For more information, see [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+For more information, see [Prerequisites to deploy user-available apps](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ### Microsoft 365 Apps for enterprise
 <!--6298093-->

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 04/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,7 +57,7 @@ When you enable this action:
   - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and additional contact information.
   - Choose to send the message to additional recipients by selecting one or more of your Azure AD Groups.
 
-  When the email is sent, Intune includes details about the noncompliant device in the email notification.
+  Intune uses the email address defined in the end user's profile and not their user principal name (UPN). If there is no defined email address defined in the user's profile, then Intune does not send a notification email. When the email is sent, Intune includes details about the noncompliant device in the email notification.
 
   This action is supported on all platforms supported by Intune.
 
@@ -85,6 +85,7 @@ When you enable this action:
     - Personally-Owned Work Profile
   - iOS/iPadOS
   - macOS
+  - Windows 10
 
   When this action applies to a device, that device is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
 

@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 03/03/2021
+ms.date: 06/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,7 +24,7 @@ This information applies to all versions of the Configuration Manager technical 
 
 For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](../plan-design/changes/whats-new-incremental-versions.md).
 
-> [!Tip]
+> [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
 
@@ -92,7 +92,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2103**
+- **Technical preview version 2106**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -119,13 +119,22 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2103
+### Technical preview version 2106
 
-- [Community hub support for configuration baselines](2021/technical-preview-2103.md#bkmk_hub) <!--7983121-->
-- [Tenant attach: Antivirus policy supports exclusions merge](2021/technical-preview-2103.md#bkmk_av) <!--9089764-->
-- [Cloud attach during site upgrade](2021/technical-preview-2103.md#bkmk_setup) <!--7958749-->
-- [New CMG deployments use TLS 1.2](2021/technical-preview-2103.md#bkmk_cmgtls) <!--9408265-->
-- [PowerShell release notes preview](2021/technical-preview-2103.md#bkmk_powershell) <!--9302248-->
+- [Intune role-based access control for tenant attach](2021/technical-preview-2106.md#bkmk_rbac) <!--8126836-->
+- [Convert a CMG to virtual machine scale set](2021/technical-preview-2106.md#bkmk_cmg) <!--8959690-->
+- [Implicit uninstall of applications](2021/technical-preview-2106.md#bkmk_uninstall) <!--3607457-->
+- [Microsoft .NET requirements](2021/technical-preview-2106.md#bkmk_dotnet) <!--10033951-->
+- [Audit mode for potentially unwanted applications](2021/technical-preview-2106.md#bkmk_audit) <!--9249870-->
+- [External notifications](2021/technical-preview-2106.md#bkmk_pushnotify) <!--9504414-->
+- [List additional third-party updates catalogs](2021/technical-preview-2106.md#bkmk_catalogs) <!--9989251-->
+- [Management insights rule for TLS/SSL software update points](2021/technical-preview-2106.md#bkmk_sup) <!--7470529-->
+- [Renamed Co-management node to Cloud Attach](2021/technical-preview-2106.md#bkmk_cloud) <!--10158821-->
+- [Improvements for managing automatic deployment rules](2021/technical-preview-2106.md#bkmk_adr) <!--9247522-->
+- [New prerequisite check for SQL Server 2012](2021/technical-preview-2106.md#bkmk_sql2012) <!--10092858-->
+- [Console improvements](2021/technical-preview-2106.md#bkmk_console) <!--9575773-->
+- [Client encryption uses AES-256](2021/technical-preview-2106.md#bkmk_encrypt) <!--10129759-->
+- [PowerShell release notes preview](2021/technical-preview-2106.md#bkmk_powershell) <!--9997352-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -138,63 +147,50 @@ Each month, add features from the list above to a new H3 section at the top of t
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
 
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 2010:
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 2103:
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-### Technical preview version 2102
+### Technical preview version 2105.2
 
-- [Improvements to the collection relationships viewer](2021/technical-preview-2102.md#bkmk_coll) <!--8543508-->
-- [Improvements to BitLocker support via cloud management gateway](2021/technical-preview-2102.md#bkmk_bitlocker) <!--8845996-->
-- [TLS certificate pinning for devices scanning HTTPS-configured WSUS servers](2021/technical-preview-2102.md#bkmk_wsus) <!--8913032-->
-- [Improvements to collection evaluation view](2021/technical-preview-2102.md#bkmk_colleval) <!--8787410-->
-- [Improvements to query preview](2021/technical-preview-2102.md#bkmk_query) <!--8680235-->
-- [Add a report as a favorite](2021/technical-preview-2102.md#bkmk_reports) <!--8034298-->
-- [Download Power BI report templates from Community hub](2021/technical-preview-2102.md#bkmk_hub) <!--5679831-->
-- [Change foreground color for Software Center branding](2021/technical-preview-2102.md#bkmk_swctr) <!--8655575-->
-- [Changes for CMPivot](2021/technical-preview-2102.md#bkmk_cmpivot) <!--7898885-->
-- [Improvements to client setting for Software Center custom tabs](2021/technical-preview-2102.md#bkmk_webview) <!--9142301-->
-- [PowerShell release notes preview](2021/technical-preview-2102.md#bkmk_powershell) <!--9117629-->
-- [Change default maximum run time for software updates](2021/technical-preview-2102.md#bkmk_sum) <!--7833866-->
+- [Windows Update native experience for software updates](2021/technical-preview-2105-2.md#bkmk_wu) <!--4316341-->
+- [Send product feedback from error windows](2021/technical-preview-2105-2.md#bkmk_errorfeedback) <!--4262917-->
+- [Custom properties for devices](2021/technical-preview-2105-2.md#bkmk_invext) <!--8939867-->
+- [Hardware inventory for client log settings](2021/technical-preview-2105-2.md#bkmk_diaginv) <!--5602449-->
+- [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
+- [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
+- [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
+- [PowerShell release notes preview](2021/technical-preview-2105-2.md#bkmk_powershell) <!--9881875-->
 
-### Technical preview version 2101
+### Technical preview version 2105
 
-- [Console extension installation](2021/technical-preview-2101.md#bkmk_extensions) <!--3555909-->
-- [Deploy a feature update with a task sequence](2021/technical-preview-2101.md#bkmk_futs) <!--3555906-->
-- [Tenant Attach: Required application deployments display in Microsoft Endpoint Manager admin center](2021/technical-preview-2101.md#bkmk_apps) <!--8795301-->
-- [Client setting for displaying Software Center custom tabs](2021/technical-preview-2101.md#bkmk_webview) <!--9142301-->
-- [Simplified CMPivot permissions requirements](2021/technical-preview-2101.md#bkmk_permission) <!--7898885-->
-- [Allow exclusion of organizational units (OU) from Active Directory User Discovery](2021/technical-preview-2101.md#bkmk_disco) <!--5193509-->
-- [Changes to Support Center](2021/technical-preview-2101.md#bkmk_support) <!--8693068-->
-- [Prerequisite rule for deprecated Azure Monitor connector](2021/technical-preview-2101.md#bkmk_oms) <!--8269855-->
-- [Manage aged distribution point messages](2021/technical-preview-2101.md#bkmk_distmsg) <!--8561493-->
-- [Encryption algorithm to capture and restore user state](2021/technical-preview-2101.md#bkmk_usmt) <!--9171505-->
-- [PowerShell release notes preview](2021/technical-preview-2101.md#bkmk_powershell) <!--8905809-->
+- [Enhanced code editor](2021/technical-preview-2105.md#bkmk_code) <!--8495588-->
+- [Select VM size for CMG](2021/technical-preview-2105.md#bkmk_cmgsize) <!--3555749-->
+- [Support Center dark and light themes](2021/technical-preview-2105.md#bkmk_dark) <!--8218853-->
+- [RBAViewer location change](2021/technical-preview-2105.md#bkmk_rbaviewer) <!--9573789-->
+- [Updated client deployment prerequisite](2021/technical-preview-2105.md#bkmk_vcredist) <!--5170229-->
+- [Change to internet access requirements](2021/technical-preview-2105.md#bkmk_pkgurl) <!--9791281-->
+- [PowerShell release notes preview](2021/technical-preview-2105.md#bkmk_powershell) <!--9752792-->
+<!--don't forget to pickup for CB: Console settings not saved 5452246-->
+### Technical preview version 2104
 
-### Technical preview version 2012
+- [Tenant attach: BitLocker recovery keys](2021/technical-preview-2104.md#bkmk_bitlocker) <!--6979225-->
+- [Tenant attach: Historical inventory data in resource explorer](2021/technical-preview-2104.md#bkmk_dex) <!--9546584-->
+- [Tenant attach: Offboarding](2021/technical-preview-2104.md#bkmk_offboard) <!--7043245-->
+- [Support layered keyboard driver during OS deployment](2021/technical-preview-2104.md#bkmk_keyboard) <!--9735002-->
+- [Improvements to Support Center](2021/technical-preview-2104.md#bkmk_supctr) <!--8272488-->
+- [Run software updates evaluation from deployment status](2021/technical-preview-2104.md#bkmk_evaluate) <!--9012080-->
+- [Improvements to CMTrace](2021/technical-preview-2104.md#bkmk_cmtrace) <!--9607363-->
+- [PowerShell release notes preview](2021/technical-preview-2104.md#bkmk_powershell) <!--9363902-->
 
-- [Windows 10 Servicing dashboard changes](2020/technical-preview-2012.md#bkmk_dashboard) <!--3555940-->
-- [Tenant Attach: Application details](2020/technical-preview-2012.md#bkmk_mem) <!--8364465-->
-- [Get console extensions from the Community hub](2020/technical-preview-2012.md#bkmk_hubext) <!--8116426-->
-- [Community hub support for application content](2020/technical-preview-2012.md#bkmk_hubapp) <!--7983035-->
-- [Task sequence error shows more check readiness details](2020/technical-preview-2012.md#bkmk_tscheck) <!--8888218-->
-- [Disable application deployments](2020/technical-preview-2012.md#bkmk_disableapp) <!--8354812-->
-- [Access the top queries shared in the Community hub from CMPivot](2020/technical-preview-2012.md#bkmk_cmpivot_hub) <!--7137169-->
-- [Improved user experience and security with Software Center custom tabs](2020/technical-preview-2012.md#bkmk_swctr) <!--8655543-->
-- [OneTrace support for jump lists](2020/technical-preview-2012.md#bkmk_jumplist) <!--6991505-->
-- [PowerShell release notes preview](2020/technical-preview-2012.md#bkmk_powershell) <!--8706717-->
+### Technical preview version 2103
 
-### Technical preview version 2011
-
-- [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
-- [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
-- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
-- [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
-- [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
-- [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->
-- [Improvements to OS deployment](2020/technical-preview-2011.md#bkmk_osd) <!--8764365-->
-- [Update PowerShell help](2020/technical-preview-2011.md#bkmk_pwsh) <!--7774961-->
+- [Community hub support for configuration baselines](2021/technical-preview-2103.md#bkmk_hub) <!--7983121-->
+- [Tenant attach: Antivirus policy supports exclusions merge](2021/technical-preview-2103.md#bkmk_av) <!--9089764-->
+- [Cloud attach during site upgrade](2021/technical-preview-2103.md#bkmk_setup) <!--7958749-->
+- [New CMG deployments use TLS 1.2](2021/technical-preview-2103.md#bkmk_cmgtls) <!--9408265-->
+- [PowerShell release notes preview](2021/technical-preview-2103.md#bkmk_powershell) <!--9302248-->
 
 ## Features in previous technical previews
 
@@ -208,16 +204,20 @@ The following features were released with previous versions of the Configuration
 
 | Feature        | Technical preview version |
 |----------------|---------------------------|
+| Simplified CMPivot permissions requirements <!--7898885--> | [Tech preview 2101](2021/technical-preview-2101.md#bkmk_permission) |
+| Manage aged distribution point messages <!--8561493,9388277--> | [Tech preview 2101](2021/technical-preview-2101.md#bkmk_distmsg) |
+| Community hub support for application content <!--7983035--> | [Tech preview 2012](2020/technical-preview-2012.md#bkmk_hubapp) |
+| Software Center notifications display with logo <!--4993167--> | [Tech preview 2011](2020/technical-preview-2011.md#bkmk_notify) |
+| Improvements to Support Center <!--8272488--> | [Tech preview 2011](2020/technical-preview-2011.md#bkmk_support) |
 | Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Phased deployment templates <!--4961086--> | [Tech preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | Remote control anywhere using cloud management gateway <!--4575930--> | [Tech preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) and [Tech preview 2009](2020/technical-preview-2009.md#bkmk_remctrl) |
-| Cloud services cost estimator <!--3555774--> | [Tech preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
 | Client-based PXE responder service <!--3556018, fka 1357148--> | [Tech preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE network boot support for IPv6 <!--3601254, fka 1269793--> |[Tech preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Use Azure Active Directory <!--3607315, fka 1322145--> | [Tech preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
 | Improvements to Asset Intelligence <!--3601024, fka 1307390--> | [Tech preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence) |
 
-## See also
+## Next steps
 
 For more information, see the following articles:
 
@@ -225,7 +225,7 @@ For more information, see the following articles:
 - [What's new in Configuration Manager incremental versions](../plan-design/changes/whats-new-incremental-versions.md)
 - [Introduction to Configuration Manager](../understand/introduction.md)
 
-> [!Tip]
+> [!TIP]
 > For more information on current branch features that require consent to enable, see [pre-release features](../servers/manage/pre-release-features.md).
 >
 > For more information on current branch features that you must enable first, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).

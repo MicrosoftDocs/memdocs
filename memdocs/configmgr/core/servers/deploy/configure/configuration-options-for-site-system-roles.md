@@ -2,7 +2,7 @@
 title: Site system role options
 titleSuffix: Configuration Manager
 description: Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory.
-ms.date: 11/29/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Configuration options for site system roles in Configuration Manager
@@ -20,37 +18,9 @@ manager: dougeby
 
 Most configuration options for Configuration Manager site system roles are self-explanatory or are explained in the wizard or dialog boxes when you configure them. The following sections explain site system roles whose settings might require additional information.  
 
-
-## <a name="BKMK_ApplicationCatalog_Website"></a> Application catalog website point  
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-For more information about how to set up the application catalog website point, see [Plan for and configure application management](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
-
-
-## <a name="BKMK_ApplicationCatalog_WebService"></a> Application catalog web service point  
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-For more information about how to set up the Application Catalog web service point, see [Plan for and configure application management](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
-
-
 ## <a name="BKMK_CertificateRegistrationPoint"></a> Certificate registration point  
 
 For more information about how to set up the certificate registration point, see [Introduction to certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).  
-
 
 ## <a name="BKMK_Distribution_Point"></a> Distribution point  
 
