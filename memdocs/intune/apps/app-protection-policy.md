@@ -400,5 +400,4 @@ The app protection policy settings that leverage Google Play Protect APIs requir
 
 [Available iOS/iPadOS app protection policy settings with Microsoft Intune](app-protection-policy-settings-ios.md)
 
-## See also
-Third-party apps such as the Salesforce mobile app work with Intune in specific ways to protect corporate data. To learn more about how the Salesforce app in particular works with Intune (including MDM app configurations settings), see [Salesforce App and Microsoft Intune](https://aka.ms/intunesalesforce).
+
