@@ -182,6 +182,9 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 4. Select **Next**.
 
+> [!IMPORTANT]
+> Any configuration changes on existing Enrollment profile settings, will not take effect on assigned devices until they are Factory Reset and activated again (this is when the Remote Management Payload is received on ADE devices) and this is by design by Apple and not Microsoft. The only configuration change that does not require a Factory Reset is "Device Name Template".
+
 5. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
     - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
