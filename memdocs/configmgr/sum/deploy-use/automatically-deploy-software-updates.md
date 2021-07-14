@@ -273,10 +273,12 @@ param
 (
 [parameter(Mandatory = $true)]
 [ValidateNotNullOrEmpty()]
+[ValidateLength(1,256)]
 [string]$sourceADRName,
 
 [parameter(Mandatory = $true)]
 [ValidateNotNullOrEmpty()]
+[ValidateLength(1,256)]
 [string]$targetADRName
 )
 
@@ -297,7 +299,6 @@ Catch{
        $exceptionDetails = "Exception: " + $_.Exception.Message + "HResult: " + $_.Exception.HResult
        Write-Error "Failed to apply ADR deployment package settings: $exceptionDetails"
 }
-
 #=============================================
 # END SCRIPT
 #=============================================
