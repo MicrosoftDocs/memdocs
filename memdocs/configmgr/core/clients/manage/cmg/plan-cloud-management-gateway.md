@@ -98,18 +98,20 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
 #### Limitations with versions 2107
 
-- It doesn't support Azure US Government Cloud environments.
+- It doesn't support Azure US Government cloud environments.
 - Users may experience a delay of up to three seconds for actions in Software Center.
+- You can't approve/deny application requests through the CMG.<!-- 10023094 -->
 
 #### Limitations with versions 2010 and 2103
 
 - If you require more than one CMG instance, they all have to use the same deployment method.
 - The supported number of concurrent client connections is 2,000 per VM instance. For more information, see [CMG performance and scale](perf-scale.md).
 - It's only supported with a standalone primary site.
-- It doesn't support Azure US Government Cloud environments.
+- It doesn't support Azure US Government cloud environments.
 - Users may experience a delay of up to three seconds for actions in Software Center.
 - Configuration Manager currently creates the Azure storage container based on the name of the resource group. Azure has different naming requirements for resource groups and storage containers. Make sure the name of the resource group for this service only has lowercase letters, numbers, and hyphens. If you have an existing resource group that doesn't work, rename it in the Azure portal, or create a new resource group.<!-- 8888841 -->
 - If you have more than one HTTPS management point, then you can't install the Configuration Manager client on devices over the internet. If you need to [Install off-premises clients using a CMG](configure-clients.md#install-off-premises-clients-using-a-cmg), then you can only have one HTTPS management point. You also need to enable the CMG for content.<!-- 9760068 -->
+- You can't approve/deny application requests through the CMG.<!-- 10023094 -->
 
 ## Requirements
 
