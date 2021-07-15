@@ -122,8 +122,11 @@ For more information, see [Monitor CMG](monitor-clients-cloud-management-gateway
 To help reduce the number of data transfers from cloud-based sources by clients, use one of the following peer caching technologies:
 
 - Configuration Manager peer cache
-- Windows BranchCache
 - Windows 10 Delivery Optimization  
+- Windows BranchCache
+
+  > [!NOTE]
+  > To enable a content-enabled CMG to use Windows BranchCache, install the BranchCache feature on the site server. For more information, see [Set up CMG: BranchCache](setup-cloud-management-gateway.md#branchcache)
 
 For more information, see [Fundamental concepts for content management](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md).
 

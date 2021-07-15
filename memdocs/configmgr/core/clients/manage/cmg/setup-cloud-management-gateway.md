@@ -94,7 +94,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
     1. By default, the wizard enables the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. If you plan on targeting deployments with content to clients, you need to configure the CMG to serve content.
 
-1. Next is the **Alerts** page of the wizard. To monitor CMG traffic with a 14-day threshold, enable the threshold alert. Then specify the threshold, and the percentage at which to raise the different alert levels. Choose **Next** when you're done.
+1. Next is the **Alerts** page of the wizard. To monitor CMG traffic with a 14-day threshold, enable the threshold alert. Then specify the threshold, and the percentage at which to raise the different alert levels. You can also enable a storage alert threshold. Choose **Next** when you're done.
 
 1. Review the settings, and complete the wizard.
 
@@ -163,6 +163,22 @@ You can associate a CMG with a boundary group. This configuration allows clients
 For more information on boundary groups, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md).
 
 When you [create or configure a boundary group](../../../servers/deploy/configure/boundary-group-procedures.md), on the **References** tab, add a cloud management gateway. This action associates the CMG with this boundary group.
+
+## BranchCache
+
+To enable a content-enabled CMG to use Windows BranchCache, install the BranchCache feature on the site server.<!-- SCCMDocs-pr#4054 -->
+
+- If the site server has an on-premises distribution point site system role, configure the option in that role's properties to **Enable and configure BranchCache**. For more information, see [Configure a distribution point](../../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-general).
+
+- If the site server doesn't have a distribution point role, install the **BranchCache** feature in Windows. For more information, see [Install the BranchCache feature](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+
+If you've already distributed content to a CMG, and then decide to enable BranchCache, first install the feature. Then redistribute the content to the CMG.
+
+## Distribute and manage content
+
+Distribute content to the content-enabled CMG the same as any other distribution point. The management point doesn't include the CMG in the list of content locations unless it has the content that clients request. For more information, see [Distribute and manage content](../../../servers/deploy/configure/deploy-and-manage-content.md).
+
+Manage content on a CMG the same as any other distribution point. These actions include assigning it to a distribution point group and managing content packages. For more information, see [Install and configure distribution points](../../../servers/deploy/configure/install-and-configure-distribution-points.md).
 
 ## Next steps
 

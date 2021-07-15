@@ -47,6 +47,19 @@ The following recommendations can help you improve CMG performance:
 > [!NOTE]
 > The CMG connection point creates a TCP connection to the management point for each client. While Configuration Manager has no hard limit on the number of clients for a CMG connection point, Windows Server has a default maximum TCP dynamic port range of 16,384. If a Configuration Manager site manages more than 16,384 clients with a single CMG connection point, add another site system or increase the Windows Server limit. All clients maintain a channel for client notifications, which holds a port open on the CMG connection point. For more information on how to increase this limit, see [Microsoft Support article 929851](https://support.microsoft.com/help/929851).
 
+## Content performance
+
+As with any distribution point design, consider the following factors for a content-enabled CMG:
+
+- Number of concurrent client connections
+- The size of the content that clients download
+- The length of time allowed to meet your business requirements
+
+Depending upon your design, if clients have the option of more than one CMG for any given content, then they naturally randomize across those cloud sources. If you only distribute a certain piece of content to a single CMG, and a large number of clients try to download this content at the same time, it puts higher load on that single CMG. Adding another CMG includes a separate Azure storage service. For more information on how the client communicates with the CMG components and downloads content, see [Data flow](data-flow.md).
+
+> [!NOTE]
+> The Azure storage service supports 500 requests per second for a single file. Performance testing of a single cloud-based content source supported distribution of a single 100-MB file to 50,000 clients in 24 hours.<!--512106-->
+
 ## Next steps
 
 Next, understand the costs associated with operating an Azure service for the CMG:

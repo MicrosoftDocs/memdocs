@@ -21,13 +21,6 @@ Create the CMG at the top-tier site of your hierarchy. If that's a CAS, then cre
 
 You can create multiple CMG services in Azure, and you can create multiple CMG connection points. Multiple CMG connection points provide load balancing of client traffic from the CMG to the on-premises roles.
 
-You can associate a CMG with a boundary group. This configuration allows clients to default or fall back to the CMG for client communication according to [boundary group relationships](../../../servers/deploy/configure/boundary-groups.md). This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster services in Microsoft Azure.<!--3640932-->
-
-Starting in version 2006, intranet clients can access a CMG-enabled software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
-
-> [!NOTE]
-> Internet-based clients don't fall into any boundary group.
-
 Other factors, such as the number of clients to manage, also affect your CMG design. For more information, see [Performance and scale](perf-scale.md).
 
 ## Design examples
@@ -68,6 +61,18 @@ Many organizations have separate environments for production, test, development,
 Configuration Manager's Azure service for **Cloud management** supports multiple tenants. Multiple Configuration Manager sites can connect to the same tenant. A single site can deploy multiple CMG services into different subscriptions. Multiple sites can deploy CMG services into the same subscription. Configuration Manager provides flexibility depending upon your environment and business requirements.
 
 For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](./cloud-management-gateway-faq.yml#do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service-)
+
+## Boundary groups
+
+You can associate a CMG with a boundary group. This configuration allows clients to default or fall back to the CMG for client communication according to [boundary group relationships](../../../servers/deploy/configure/boundary-groups.md). This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster services in Microsoft Azure.<!--3640932-->
+
+Starting in version 2006, intranet clients can access a CMG-enabled software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
+
+Internet-based clients don't rely on boundary groups. They only use internet-facing or cloud content sources. If you're only using content-enabled CMGs for these types of clients, then you don't need to include them in boundary groups.
+
+If you want clients on your internal network to get content from a CMG, then it needs to be in the same boundary group as the clients. By default, clients prioritize cloud-based sources last in their list of content sources. This behavior is because there's a cost associated with downloading content from Azure. Cloud-based sources are typically used as a fallback source for intranet-based clients. If you want a cloud-first design, then design your boundary groups to meet this business requirement. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md). For more information on content location priority and when intranet-based clients use a cloud-based content source, see [Content source priority](fundamental-concepts-for-content-management.md#content-source-priority).
+
+Even though you install the CMG in a specific region of Azure, clients aren't aware of the Azure regions. They randomly select an available CMG as a content source. If you have CMGs in multiple regions, and a client receives more than one in the content location list, it may not download content from the same Azure region.
 
 ## Next steps
 

@@ -36,7 +36,7 @@ Use this article as a reference for the features and configurations that are sup
 The following table lists CMG support for Configuration Manager features:
 
 | Feature | Support |
-|---------|---------|
+|--|--|
 | Software updates | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Endpoint protection | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: <sup>[Note&nbsp;1](#bkmk_note1)</sup> |
 | Hardware and software inventory | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
@@ -51,12 +51,14 @@ The following table lists CMG support for Configuration Manager features:
 | Software distribution (user-targeted, required)<br>(with Azure AD integration) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | BitLocker Management | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (2010) |
+| Pull distribution point source | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Task sequence with a boot image, started from Software Center <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (2006) |
 | Task sequence with a boot image, started from bootable media <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (2010) |
 | Any other task sequence scenario <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Content for PXE or multicast-enabled deployments | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Client push | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Automatic site assignment | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Software approval requests | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
@@ -68,6 +70,9 @@ The following table lists CMG support for Configuration Manager features:
 | Peer cache | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | On-premises MDM | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Alternate content providers | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
+| Content for App-V streaming applications | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Content for Microsoft 365 Apps updates <!--7366753--> | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| [Prestage content](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent) | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 
 |Key|
 |--|

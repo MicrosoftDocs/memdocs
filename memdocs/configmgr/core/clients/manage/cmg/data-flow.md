@@ -46,6 +46,24 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
 For more information when you integrate with Azure AD, see [Configure Azure services: Cloud management data flow](../../../servers/deploy/configure/azure-services-wizard.md#cloud-management-data-flow).
 
+### Content data flow
+
+When a client uses a CMG as a content location:
+
+1. The management point gives the client an access token along with the list of content sources. This token is valid for 24 hours, and gives the client access to the cloud-based content source.
+
+1. The management point responds to the client's location request with the _service name_ of the CMG. This property is the same as the common name of the server authentication certificate.
+
+    If you're using your domain name, for example, `WallaceFalls.contoso.com`, then the client first tries to resolve this FQDN. Clients use the CNAME alias in your domain's internet-facing DNS to resolve the Azure deployment name.
+
+1. The client next resolves the _deployment name_ to a valid IP address. This response is handled by Azure's DNS.
+
+1. The client connects to the CMG. Azure load balances the connection to one of the VM instances. The client authenticates itself using the access token.
+
+1. The CMG authenticates the client's access token, and then gives the client the exact content location in Azure storage.
+
+1. If the client trusts the CMG's server authentication certificate, it connects to Azure storage to download the content.
+
 ## Required ports
 
 This table lists the required network ports and protocols. The *Client* is the device that starts the connection, requiring an outbound port. The *Server* is the device that accepts the connection, requiring an inbound port.
