@@ -26,17 +26,19 @@ After you create a CMG, you can modify some of its settings. Select the CMG in t
 - **Certificate file**: Change the server authentication certificate for the CMG. This option is useful when you renew the certificate before it expires. When you get a new certificate, make sure its common name is the same.
 
   > [!NOTE]
-  > When you renew the server authentication certificate for the CMG, the FQDN that you specify for the certificate's common name (CN) is case-sensitive. For example, if the CN of the current certificate is `https://granitefalls.contoso.com`, create the new certificate with the same lowercase CN. The wizard won't accept a certificate with the CN `https://GRANITEFALLS.CONTOSO.COM`.
+  > When you renew the server authentication certificate for the CMG, the FQDN that you specify for the certificate's common name (CN) is case-sensitive. For example, if the CN of the current certificate is `granitefalls.contoso.com`, create the new certificate with the same lowercase CN. The wizard won't accept a certificate with the CN `GRANITEFALLS.CONTOSO.COM`.
 
-- **VM Instance**: change the number of virtual machines that the service uses in Azure. This setting allows you to dynamically scale the service up or down based on usage or cost considerations.
+- **Description**: Specify an optional description to further identify this CMG in the Configuration Manager console.
 
-- **Certificates**: add or remove trusted root or intermediate CA certificates. This option is useful when adding new CAs, or retiring expired certificates.
+- **VM Instance**: Change the number of virtual machines that the service uses in Azure. This setting allows you to dynamically scale the service up or down based on usage or cost considerations.
+
+- **Certificates**: Add or remove trusted root or intermediate CA certificates. This option is useful when adding new CAs, or retiring expired certificates.
 
 - **Verify Client Certificate Revocation**: If you didn't originally enable this setting when you created the CMG, you can enable it afterwards after you publish the CRL. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 
-- **Enforce TLS 1.2**: Require the CMG to use the TLS 1.2 encryption protocol. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
+- **Enforce TLS 1.2**: The CMG enables this option by default. Require it to use the TLS 1.2 encryption protocol. For more information, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
 
-- **Allow CMG to function as a cloud distribution point and serve content from Azure storage**: The CMG enables this option by default. A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.<!--1358651-->
+- **Allow CMG to function as a cloud distribution point and serve content from Azure storage**: The CMG enables this option by default. If you plan on targeting deployments with content to clients, you need to configure the CMG to serve content.<!--1358651-->
 
 ### Alerts tab
 
