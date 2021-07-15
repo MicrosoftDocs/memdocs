@@ -56,15 +56,7 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
   - [Configuration Manager co-management](/configmgr/comanage/overview).
  
 > [!IMPORTANT]
-> On all Windows 10, versions 2004, 20H2, and 21H1 builds, there is currently an issue causing remote actions in Microsoft Endpoint Manager such as remote sync to not work properly. As a result, any pending policies assigned to devices can take up to 8 hours to be applied. To resolve this issue, please perform the following steps on your virtual machines **prior to enrolling them in Microsoft Endpoint Manager**:
-> - Use automation such as a GPO to add the following registry key:
->   - Hive: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Server
->   - Value name: ClientExperienceEnabled 
->   - Value type: REG_DWORD
->   - Value data: 1 
-> - Reboot the VM
-
-
+> If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, please ensure that you have the July 2021 or later Windows updates installed. Otherwise, there will be an issue causing remote actions in Microsoft Endpoint Manager such as remote sync to not work properly. As a result, any pending policies assigned to devices can take up to 8 hours to be applied. 
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
