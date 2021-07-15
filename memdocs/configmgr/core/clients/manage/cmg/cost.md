@@ -40,13 +40,13 @@ CMG uses Azure platform as a service (PaaS), which uses virtual machines (VMs). 
 
 If you deploy the CMG as a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets), use this section.
 
-- In version 2103 and earlier, CMG uses a Standard A2_v2 VM. The VM size isn't configurable.
+- In version 2103 and earlier, CMG uses a Standard [A2_v2](/azure/virtual-machines/av2-series) VM. The VM size isn't configurable.
 
 - In version 2107 and later, you can configure the VM size, which will affect this cost.<!-- 3555749 -->
 
-  - Lab (B2s)
-  - Standard (A2_v2)
-  - Large (A4_v2)
+  - Lab ([B2s](/azure/virtual-machines/sizes-b-series-burstable))
+  - Standard ([A2_v2](/azure/virtual-machines/av2-series))
+  - Large ([A4_v2](/azure/virtual-machines/av2-series))
 
   > [!IMPORTANT]
   > The **Lab (B2s)** size VM is only intended for lab testing and small proof-of-concept environments. It isn't intended for production use with the CMG. The B2s VMs are low cost and low performing.

@@ -45,19 +45,23 @@ You can use Intune role-based access control (RBAC) when displaying the **Client
 
 Starting in current branch version 2010, you could deploy the cloud management gateway (CMG) with a virtual machine scale set in Azure. This support was primarily to unblock customers with a Cloud Solution Provider (CSP) subscription.
 
-In this release, any customer with a CMG that uses the classic cloud service deployment can convert to a virtual machine scale set.
+In this release, any customer with a CMG that uses the classic cloud service deployment can convert to a virtual machine scale set. Microsoft recommends that new CMG deployments use a virtual machine scale set.
+
+For more information, see [Plan for CMG: virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
 ### Select VM size for CMG
 
 <!--3555749-->
 
-When you deploy a cloud management gateway (CMG) with a [virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets), you can now choose the virtual machine (VM) size. The following three options are available:
+When you deploy a CMG with a virtual machine scale set, you can now choose the virtual machine (VM) size. The following three options are available:
 
-- **Lab**: [B2s](/azure/virtual-machines/sizes-b-series-burstable)
-- **Standard**: [A2_v2](/azure/virtual-machines/av2-series). This option continues to be the default setting.
-- **Large**: [D2_v3](/azure/virtual-machines/dv3-dsv3-series)
+- Lab (B2s)
+- Standard (A2_v2). This size continues to be the default setting.
+- Large (A4_v2)
 
-This control gives you greater flexibility with your CMG deployment. You can adjust the size for test labs or if you support large environments. For example, the smaller **Lab** size is ideal for testing with a smaller number of clients at less cost. For production deployments, either use the default **Standard** size or add more capacity with the **Large** size. For more information on how these options differ in cost for your region, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
+This control gives you greater flexibility with your CMG deployment. You can adjust the size for test labs or if you support large environments. For example, the smaller **Lab** size is ideal for testing with a smaller number of clients at less cost. For production deployments, either use the default **Standard** size or add more capacity with the **Large** size.
+
+For more information, see [Cost of CMG: Virtual machine scale set](../../clients/manage/cmg/cost.md#virtual-machine-scale-set).
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
@@ -333,9 +337,8 @@ As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), vers
 
 - Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.<!-- 9649296 -->
 
-
 <!--
-As first announced in version 1906, version 2107 drops support for the following client OS versions:  
+As first announced in version 1906, version 2107 drops support for the following client OS versions:
 
 - Windows CE 7.0
 - Windows 10 Mobile
