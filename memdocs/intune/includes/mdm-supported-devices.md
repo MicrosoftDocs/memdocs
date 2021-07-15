@@ -4,7 +4,7 @@
 - Mac OS X 10.13 and later
 
 ### Google
-- Android 5.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
+- Android 6.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
 
 ### Microsoft
