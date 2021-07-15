@@ -79,7 +79,7 @@ You create the CMG using an **Azure Resource Manager deployment**. [Azure Resour
 ## Virtual machine scale sets
 
 > [!NOTE]
-> This feature was first introduced in version 2010 as a [pre-release feature](../../../servers/manage/pre-release-features.md). Starting in version 2107, it's no longer a pre-release feature.
+> This feature was first introduced in version 2010 as a [pre-release feature](../../../servers/manage/pre-release-features.md). Starting in version 2107, it's no longer a pre-release feature.<!-- 8959690 -->
 
 <!--3601040-->
 Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. This support is only if they don't currently have a CMG deployed using classic cloud services to another subscription.
