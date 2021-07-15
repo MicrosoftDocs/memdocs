@@ -77,7 +77,13 @@ When you convert a CMG, you can't change all settings:
 To make changes that the conversion process doesn't support, you need to [Redeploy the service](#redeploy-the-service).
 
 > [!IMPORTANT]
-> If your CMG's _service name_ is in the `cloudapp.net` domain, you can't convert it to a virtual machine scale set. For example, you issued a server authentication certificate from your internal PKI with a common name of `GraniteFalls.cloudapp.net`. Since Microsoft owns the `cloudapp.net` domain, you can't create a DNS CNAME to map this service name to the new deployment name in the `cloudapp.azure.com` domain. Issue a new server authentication certificate from your internal PKI with a new service name. Then [redeploy the service](#redeploy-the-service).<!-- 10362079 -->
+> If your CMG's _service name_ is in the `cloudapp.net` domain, you can't convert it to a virtual machine scale set. For example, you issued a server authentication certificate from your internal PKI with a common name of `GraniteFalls.cloudapp.net`. Since Microsoft owns the `cloudapp.net` domain, you can't create a DNS CNAME to map this service name to the new deployment name in the `cloudapp.azure.com` domain.<!-- 10362079 -->
+>
+> 1. Issue a new server authentication certificate from your internal PKI with a new service name. Consider using your domain name instead of a Microsoft domain. For more information, see [Use an enterprise PKI certificate](server-auth-cert.md#use-an-enterprise-pki-certificate).
+> 1. Deploy a new CMG as a virtual machine scale set with the new certificate.
+> 1. Once clients refresh policy to get this new CMG, delete the old CMG.
+>
+> For more information, see [Replace a CMG with a new service name](#replace-a-cmg-with-a-new-service-name).
 
 ### Process to convert a CMG to a virtual machine scale set
 
@@ -127,7 +133,7 @@ The process to redeploy the service depends upon your service name and whether y
 > [!NOTE]
 > In version 2107 and later, you can have multiple CMGs that use different deployment methods. You can also convert a **cloud service (classic)** CMG to a **virtual machine scale set**. For more information, see [Convert](#convert).
 >
-> In versions 2010 and 2103, if you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**, and vice versa. First [delete the existing CMG](modify-cloud-management-gateway.md#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method. For more information, see [Plan for CMG: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+> In versions 2010 and 2103, if you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**, and vice versa. First [delete the existing CMG](#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method. For more information, see [Plan for CMG: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
 ### Replace a CMG and reuse the same service name
 
