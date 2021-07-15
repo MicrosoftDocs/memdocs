@@ -47,7 +47,7 @@ First, you need to make note of the **Azure AD tenant name** and **tenant ID**. 
 
 1. In the Azure AD menu, select **Properties**.
 
-1. Copy the **Directory ID**. This GUID value is the tenant ID.
+1. Copy the **Tenant ID** GUID value.
 
 ## Register the web (server) app
 
@@ -83,7 +83,7 @@ First, you need to make note of the **Azure AD tenant name** and **tenant ID**. 
 
     1. Expand **User**, and remove the **User.Read** permission.
 
-    1. Select **Updated permissions**.
+    1. Select **Update permissions**.
 
     1. On the API permissions pane, select **Grant admin consent for...**, then select **Yes**.
 
@@ -139,13 +139,11 @@ The web (server) app for CMG is now registered in Azure AD.
 
     1. Under Advanced settings, set **Allow public client flows** to **Yes**. Select **Save**.
 
-1. If you're going to use Azure AD User Discovery in Configuration Manager, you need to adjust the permissions on this app. In the menu of the app properties, select **API permissions**. By default it should have the **User.Read** permission for the **Microsoft Graph** API, which needs to change.
+1. If you're going to use Azure AD User Discovery in Configuration Manager, you need to adjust the permissions on this app. In the menu of the app properties, select **API permissions**. By default it should have the **User.Read** delegated permission for the **Microsoft Graph** API.
 
-    1. Select **Microsoft Graph** to enumerate the list of available API permissions. Expand **User**, and remove the **User.Read** permission. Select **Update permissions**.
+    1. On the API permissions pane, select **Add a permission**.
 
-    1. On the API permissions pane, select **Add a permission**. Select **Azure Active Directory Graph** from the list of Microsoft APIs. Select **Delegated permissions**. In the list of permissions, expand **User**, and select **User.Read**. Select **Add permissions** to save.
-
-    1. Select **Add a permission** again. Switch to the **My APIs** tab, and select your web (server) app. For example, **CMG-ServerApp**. Select the **user_impersonation** permission, and then select **Add permissions** to save.
+    1. Switch to the **My APIs** tab, and select your web (server) app. For example, **CMG-ServerApp**. Select the **user_impersonation** permission, and then select **Add permissions** to save.
 
     1. On the API permissions pane, select **Grant admin consent for...**, and then select **Yes**.
 
