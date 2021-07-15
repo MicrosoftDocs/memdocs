@@ -1,0 +1,50 @@
+---
+# required metadata
+title: Remotely manage Windows 365 devices - Azure | Microsoft Docs
+titleSuffix:
+description: Learn how to remotely manage Windows 365 devices
+keywords:
+author: ErikjeMS  
+ms.author: erikje
+manager: dougeby
+ms.date: 03/08/2021
+ms.topic: how-to
+ms.service: cloudpc
+ms.subservice: 
+ms.localizationpriority: high
+ms.technology:
+ms.assetid: 
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: lebacon
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: intune-azure; get-started
+ms.collection: M365-identity-device-management
+---
+
+# Remotely manage Windows 365 devices
+
+You can remotely manage Cloud PCs in Intune just like any other managed device. For more information, see [Remotely run device actions with Intune](/mem/intune/remote-actions/).
+
+Cloud PCs support the following remote management actions:
+
+- Restart
+- Sync
+- Rename
+- Quick Scan
+- Full Scan
+- Update Windows Defender
+- [Reprovisioning](provisioning.md#reprovisioning) (this is a remote action specific to Cloud PC devices)
+- [Resize](resize-cloud-pc.md#resize-a-cloud-pc) (this is a remote action specific to Cloud PC devices) 
+
+
+<!-- ########################## -->
+## Next steps
+
+[Monitor Cloud PCs](monitor-cloud-pc.md).

@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: Windows 365 documentation
+summary: "DRAFT CONTENT - Official product documentation for Windows 365 in Microsoft Endpoint Manager"
+ 
+
+metadata:
+  title: Windows 365 documentation
+  titleSuffix: Windows 365
+  description: "Official product documentation for Windows 365 in Microsoft Endpoint Manager"
+  ms.product: intune
+  ms.technology: intune
+  ms.topic: landing-page
+  author: erikjeMS
+  ms.author: erikje
+  ms.date: 03/8/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About Cloud PC
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Windows 365
+            url: overview.md
+
+  # Card 
+  - title: Planning
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Planning your Cloud PC deployment
+            url: planning-guide.md
+
+  # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Deploying Windows 365
+            url: deployment-overview.md
+          - text: Troubleshoot
+            url: troubleshooting.md
