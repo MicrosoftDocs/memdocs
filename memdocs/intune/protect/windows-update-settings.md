@@ -114,6 +114,9 @@ User experience settings control the end-user experience for device restart and 
   Supported options:  
 
   - **Notify download** - Notify the user before downloading the update. Users choose to download and install updates.  
+  
+  > [!IMPORTANT]  
+  > If the user takes no action, the update will not install until the deadline you have configured is reached.
 
   - **Auto install at maintenance time** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, users are prompted to restart for up to seven days, and then restart is forced.  
 
@@ -151,7 +154,10 @@ User experience settings control the end-user experience for device restart and 
       **Default**: Any Day  
 
     - **Scheduled install time** - Specify the time of day when you want updates to install.  
-      **Default**: 3 AM  
+      **Default**: 3 AM   
+  
+  > [!IMPORTANT]  
+  > The device might not complete the installation at the specified time because of power policies, user absence, and so on. In this case, it will not attempt installation until the specified time occurs again or until a deadline you have specified is reached.
 
   - **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.  
 
