@@ -16,7 +16,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--1101764-->
-The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. You deploy CMG as a cloud service in Microsoft Azure. Then without additional on-premises infrastructure, you can manage clients that roam on the internet or are in branch offices across the WAN. You also don't need to expose your on-premises infrastructure to the internet.
+The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. You deploy CMG as a cloud service in Microsoft Azure. Then without more on-premises infrastructure, you can manage clients that roam on the internet or are in branch offices across the WAN. You also don't need to expose your on-premises infrastructure to the internet.
 
 :::image type="content" source="media/cmg-basic-architecture.svg" alt-text="Diagram of cloud management gateway (CMG) basic architecture.":::
 
@@ -60,7 +60,7 @@ Across these scenarios, the following specific device use cases may apply:
 
 - Mergers and acquisitions, where it may be easiest to join devices to Azure AD and manage through a CMG.  
 
-- Workgroup clients. These devices may require additional configuration, such as certificates.<!-- SCCMDocs#1925 -->
+- Workgroup clients. These devices may require other configurations, such as certificates.<!-- SCCMDocs#1925 -->
 
     To help with management of remote workgroup clients, use Configuration Manager token-based authentication. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).
 
@@ -72,4 +72,4 @@ Across these scenarios, the following specific device use cases may apply:
 Develop your design and plan for implementing a CMG in your environment:
   
 > [!div class="nextstepaction"]
-> [Plan for the cloud management gateway](plan-cloud-management-gateway.md)
+> [Plan for the CMG](plan-cloud-management-gateway.md)

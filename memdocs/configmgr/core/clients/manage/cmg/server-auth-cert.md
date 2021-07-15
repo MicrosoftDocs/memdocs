@@ -85,7 +85,7 @@ This certificate requires a globally unique name to identify the service in Azur
 
 1. Select the **Subscription** and **Resource group** that you'll use for the CMG.
 
-1. In the **Virtual machine scale set name** field, type the prefix that you want. For example `GraniteFalls`.
+1. In the **Virtual machine scale set name** field, type the prefix that you want. For example, `GraniteFalls`.
 
 1. Select the **Region** that you'll use for the CMG. For example, **(US) West US**.
 

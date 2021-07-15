@@ -25,7 +25,7 @@ The overall CMG setup process is divided into the following five main parts:
 
 1. _Configure Azure Active Directory (Azure AD)_: Configuration Manager requires app registrations in Azure AD. You can let Configuration Manager create them, or an Azure administrator can pre-create the registrations.
 
-1. _Configure client authentication_: Because clients communicate across the internet, Configuration Manager requires additional security for this channel. You can use Azure Active Directory (Azure AD), PKI certificates, or token-based authentication from the site server.
+1. _Configure client authentication_: Because clients communicate across the internet, Configuration Manager requires more security for this channel. You can use Azure Active Directory (Azure AD), PKI certificates, or token-based authentication from the site server.
 
 1. _Set up the CMG_: This step also includes configuring the site, and adding the CMG connection point site system role.
 
@@ -71,7 +71,7 @@ You'll set up other prerequisite components during the next steps in the process
 ## Automate with PowerShell
 
 <!--6978300-->
-Optionally, you can automate aspects of the CMG set up using PowerShell. While some cmdlets were available in earlier versions, version 2010 includes new cmdlets and significant improvements to existing cmdlets.
+Optionally, you can automate aspects of the CMG setup using PowerShell. While some cmdlets were available in earlier versions, version 2010 includes new cmdlets and significant improvements to existing cmdlets.
 
 For example, an Azure administrator first creates the two required apps in Azure Active Directory (Azure AD). Then you write a script that uses the following cmdlets to deploy a CMG:
 

@@ -52,4 +52,4 @@ The following recommendations can help you improve CMG performance:
 Next, understand the costs associated with operating an Azure service for the CMG:
   
 > [!div class="nextstepaction"]
-> [Cost of cloud management gateway](cost.md)
+> [Cost of CMG](cost.md)

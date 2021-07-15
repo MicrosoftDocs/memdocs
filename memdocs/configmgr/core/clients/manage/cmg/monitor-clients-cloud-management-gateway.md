@@ -1,18 +1,17 @@
 ---
-title: Monitor cloud management gateway
+title: Monitor the CMG
 titleSuffix: Configuration Manager
 description: Monitor clients and network traffic through the cloud management gateway (CMG).
-ms.date: 09/28/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# Monitor cloud management gateway
+# Monitor the CMG
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -57,7 +56,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Select
 
 The following screenshot shows the section of the cloud management dashboard specific for the CMG:
 
-:::image type="content" source="media/cloud-management-dashboard-cmg.png" alt-text="Cloud management dashboard tiles CMG traffic and Current online clients" lightbox="media/cloud-management-dashboard-cmg.png":::
+:::image type="content" source="media/cloud-management-dashboard-cmg.png" alt-text="Cloud management dashboard tiles CMG traffic and Current online clients." lightbox="media/cloud-management-dashboard-cmg.png":::
 
 ## Connection analyzer
 
@@ -75,7 +74,7 @@ To aid troubleshooting, use the CMG connection analyzer for real-time verificati
 
 1. Select **Start** to start the analysis. The analyzer window displays the results. Select an entry to see more details in the Description field.  
 
-:::image type="content" source="media/cmg-connection-analyzer.png" alt-text="Example output for the cloud management gateway (CMG) connection analyzer":::
+:::image type="content" source="media/cmg-connection-analyzer.png" alt-text="Example output for the cloud management gateway (CMG) connection analyzer.":::
 
 ## Stop CMG when it exceeds threshold
 

@@ -56,7 +56,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
         - In versions 2010 and 2103, most customers should use this deployment method. Use this option.
 
-        - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set due to one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107).
+        - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set because of one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107).
 
 1. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
@@ -153,7 +153,7 @@ Configure the management point and software update point site systems to accept 
 
 1. Select **OK** to close the management point properties window.
 
-Repeat these steps for additional management points as needed, and for any software update points.
+Repeat these steps for other management points as needed, and for any software update points.
 
 ## Configure boundary groups
 

@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Whether your environment has a central administration site (CAS), a standalone primary site, or a small test lab, design the cloud management gateway (CMG) accordingly. This article provides the information to help you decide how to position the CMG in your environment.
+Whether you have a central administration site (CAS), a standalone primary site, or a small test lab, design the cloud management gateway (CMG) for that environment. This article provides the information to help you decide how to position the CMG in your environment.
 
 Create the CMG at the top-tier site of your hierarchy. If that's a CAS, then create CMG connection points at child primary sites. The cloud service manager component is on the service connection point, which is also on the CAS. This design can share the service across different primary sites if needed.
 

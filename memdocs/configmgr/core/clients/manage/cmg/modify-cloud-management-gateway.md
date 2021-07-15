@@ -52,7 +52,7 @@ To verify that the content files for a package are available on the content-enab
 
 <!--8959690-->
 
-Starting in version 2107, if you have a CMG that uses the classic cloud service deployment, you can convert it to use a virtual machine scale set.
+Starting in version 2107, if you have a CMG that uses the classic cloud service, convert it to use a virtual machine scale set.
 
 > [!TIP]
 > This process reuses the underlying storage account.
@@ -115,7 +115,7 @@ Always keep at least one active CMG for internet-based clients to receive update
 
 Clients refresh policy by default every 24 hours. Before you delete the old CMG, wait at least one day after you create a new one. If clients are turned off or without an internet connection, you may need to wait longer.
 
-If you have an existing CMG from Configuration Manager version 1810 or earlier, it uses the Azure Service Manager deployment method with an Azure management certificate. This method is deprecated, and support will be removed in a later version of Configuration Manager. Redeploy a new CMG to use the Azure Resource Manager deployment method.<!--509753-->
+If you have an existing CMG from version 1810 or earlier, it uses the Azure Service Manager deployment method. This method used an Azure management certificate. This method is deprecated, and support will be removed in a later version of Configuration Manager. Redeploy a new CMG to use the Azure Resource Manager deployment method.<!--509753-->
 
 The process to redeploy the service depends upon your service name and whether you want to reuse it.
 
