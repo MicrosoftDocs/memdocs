@@ -139,13 +139,16 @@ For the web server certificate common name (CN):
 
 - To determine the _service name_, you have two options:
 
-  - Use your domain name. Append the _deployment name_ prefix (`GraniteFalls`) to your organization's domain name (`contoso.com`). For example, `GraniteFalls.contoso.com`. For this option, you also need to [create a DNS CNAME alias](#create-a-dns-cname-alias).
+  - Use your domain name (recommended). Append the _deployment name_ prefix (`GraniteFalls`) to your organization's domain name (`contoso.com`). For example, `GraniteFalls.contoso.com`. For this option, you also need to [create a DNS CNAME alias](#create-a-dns-cname-alias).
 
   - Use the Azure deployment name. This option doesn't require a DNS CNAME alias. For example:
 
     - For the Azure public cloud: `GraniteFalls.WestUS.CloudApp.Azure.Com`.
 
     - For the Azure US Government cloud: `GraniteFalls.usgovcloudapp.net`.
+
+    > [!NOTE]
+    > If the Azure deployment name changes, you'll need to redeploy the service to change this service name. For example, if your service name is in the `cloudapp.net` domain, you can't convert the classic cloud service CMG to a virtual machine scale set. If you use your domain name for the CMG service name, then you can update the DNS CNAME for the new deployment name.<!-- 10362079 -->
 
 - Use this _service name_ for the certificate common name (CN).
 

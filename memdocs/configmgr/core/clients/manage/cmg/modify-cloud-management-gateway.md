@@ -76,6 +76,9 @@ When you convert a CMG, you can't change all settings:
 
 To make changes that the conversion process doesn't support, you need to [Redeploy the service](#redeploy-the-service).
 
+> [!IMPORTANT]
+> If your CMG's _service name_ is in the `cloudapp.net` domain, you can't convert it to a virtual machine scale set. For example, you issued a server authentication certificate from your internal PKI with a common name of `GraniteFalls.cloudapp.net`. Since Microsoft owns the `cloudapp.net` domain, you can't create a DNS CNAME to map this service name to the new deployment name in the `cloudapp.azure.com` domain. Issue a new server authentication certificate from your internal PKI with a new service name. Then [redeploy the service](#redeploy-the-service).<!-- 10362079 -->
+
 ### Process to convert a CMG to a virtual machine scale set
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.
@@ -96,7 +99,7 @@ Since the deployment name changed, you need to update or create a DNS canonical 
 
 For example:
 
-- The CMG's _service name_ is either `GraniteFalls.contoso.com` or `GraniteFalls.cloudapp.net`, which typically depends upon the [certificate type](server-auth-cert.md#summary-comparison-of-certificate-types).
+- The CMG's _service name_ is `GraniteFalls.contoso.com`.
 
 - For the _deployment name_:
 
