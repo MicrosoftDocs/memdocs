@@ -651,6 +651,10 @@ In addition to the Intune SDK, you will need these two components to enable App 
 1. iOS Authenticator app
 2. MSAL authentication library 1.0 or greater
 
+### MAM-CA remediation flow
+
+[ ![Diagram of MAM-CA remediation flow](../media/app-sdk-ios/app-ca-flow.svg) ](../media/app-sdk-ios/app-ca-flow.svg#lightbox)
+
 ### New APIs
 Most of the new API's can be found in the IntuneMAMComplianceManager.h. The app needs to be aware of three differences in behavior explained below.
 
