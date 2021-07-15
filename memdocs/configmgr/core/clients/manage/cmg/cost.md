@@ -32,9 +32,13 @@ To help determine potential costs, use the following Azure resources:
     > [!NOTE]
     > Pricing for data transfer is tiered. The more you use, the less you pay per gigabyte.
 
-## Virtual machine
+## Compute costs
 
-- CMG uses Azure Cloud Services as platform as a service (PaaS). This service uses virtual machines (VMs) that incur compute costs.
+CMG uses Azure platform as a service (PaaS), which uses virtual machines (VMs). These VMs incur compute costs. The specific type to use when estimating costs depends upon which deployment method you use.
+
+### Virtual machine scale set
+
+If you deploy the CMG as a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets), use this section.
 
 - In version 2103 and earlier, CMG uses a Standard A2_v2 VM. The VM size isn't configurable.
 
@@ -45,16 +49,23 @@ To help determine potential costs, use the following Azure resources:
   - Large (A4_v2)
 
   > [!IMPORTANT]
-  > The **Lab (B2s)** size VM is only intended for lab testing and small proof-of-concept environments. They aren't intended for production use with the CMG. The B2s VMs are low cost and low performing.
+  > The **Lab (B2s)** size VM is only intended for lab testing and small proof-of-concept environments. It isn't intended for production use with the CMG. The B2s VMs are low cost and low performing.
+
+  You can't change the VM size after you deploy the CMG. To change the VM size, you need to [Redeploy the service](modify-cloud-management-gateway.md#redeploy-the-service).
 
 - You select how many VM instances support the CMG. One is the default, and 16 is the maximum. This number is set when you create the CMG, but you can change it afterwards to scale the service as needed.
 
 - For more information on how many VMs you need to support your clients, see [CMG performance and scale](perf-scale.md).
 
-## Virtual machine scale set
+### Virtual machine
 
-<!--3601040-->
-If you deploy the CMG with a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets) in Azure. When estimating cost, this deployment method replaces the [virtual machine](#virtual-machine). The specific details are otherwise the same, including the VM size. The cost difference between a virtual machine and a virtual machine scale set should be negligible, but may vary by Azure region.
+If you deploy the CMG as a classic cloud service, this deployment method replaces the [virtual machine scale set](#virtual-machine-scale-set) when estimating cost. The specific details are otherwise the same. With this deployment method, it uses a Standard A2_v2 VM. The VM size isn't configurable.
+
+The cost difference between a virtual machine and a virtual machine scale set should be negligible, but may vary by Azure region.
+
+## Key vault
+
+If you deploy the CMG as a **virtual machine scale set**, it uses [Azure Key Vault](/azure/key-vault/). The CMG usage of Key Vault is low, but included here for transparency. When estimating the cost for vaults, specify a value of `1` for **Operations**.
 
 ## Outbound data transfer
 
@@ -73,7 +84,7 @@ If you deploy the CMG with a [virtual machine scale set](plan-cloud-management-g
 
 - Internet-based clients get Microsoft software update content from Windows Update at no charge. Don't distribute update packages with Microsoft update content to a content-enabled CMG. If you do distribute software update packages to your cloud content sources, you may incur storage and data egress costs.
 
-- Misconfiguration of the CMG option to **Verify client certificate revocation** can cause additional traffic from clients to the CMG. This additional traffic can increase the Azure egress data, which can increase your Azure costs.<!-- SCCMDocs#1434 --> For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
+- Misconfiguration of the CMG option to **Verify client certificate revocation** can cause more traffic from clients to the CMG. This other traffic can increase the Azure egress data, which can increase your Azure costs.<!-- SCCMDocs#1434 --> For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 
 > [!TIP]
 > Any data flows into Azure are free. These flows are otherwise referred to as ingress or upload. When you distribute content from the site to the content-enabled CMG, you're uploading the content to Azure.
@@ -94,7 +105,7 @@ If you deploy the CMG with a [virtual machine scale set](plan-cloud-management-g
 
 ## Other costs
 
-Each cloud service has a dynamic IP address. Each distinct CMG uses a new dynamic IP address. Adding additional VMs per CMG doesn't increase these addresses.
+Each cloud service has a dynamic IP address. Each distinct CMG uses a new dynamic IP address. Adding other VMs per CMG doesn't increase these addresses.
 
 If you get a CMG server authentication certificate from a public provider, there's generally a cost associated with this certificate. For more information, see [CMG server authentication certificate](server-auth-cert.md).
 

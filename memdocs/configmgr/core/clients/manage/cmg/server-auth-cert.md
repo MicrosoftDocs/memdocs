@@ -75,26 +75,35 @@ Clients must trust the CMG server authentication certificate to establish the HT
 
 This certificate requires a globally unique name to identify the service in Azure. Before you request a certificate, confirm that the Azure _deployment name_ you want is unique. For example, `GraniteFalls.WestUS.CloudApp.Azure.Com`.
 
+### Virtual machine scale set
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. From the Azure portal home page, select **Create a resource** under Azure services.
 
-1. Search for **Cloud service**. Select **Create**.
+1. Search for **Virtual machine scale set**. Select **Create**.
 
-1. In the **DNS name** field, type the prefix you want, for example `GraniteFalls`. The interface reflects whether the domain name is available or already in use by another service.
+1. Select the **Subscription** and **Resource group** that you'll use for the CMG.
 
-    > [!IMPORTANT]
-    > Don't create the service in the portal, just use this process to check the name availability.
+1. In the **Virtual machine scale set name** field, type the prefix that you want. For example `GraniteFalls`.
 
-If you also enable the CMG for content, confirm that it's also a unique Azure storage account name. If the CMG cloud service name is unique, but the storage account isn't, Configuration Manager fails to provision the service in Azure. Repeat the above process in the Azure portal with the following changes:
+1. Select the **Region** that you'll use for the CMG. For example, **(US) West US**.
+
+The interface reflects whether the domain name is available or already in use by another service.
+
+> [!IMPORTANT]
+> Don't create the service in the portal, just use this process to check the name availability.
+
+### Content-enabled CMG storage account
+
+If you also enable the CMG for content, confirm that it's also a unique Azure storage account name. If the CMG deployment name is unique, but the storage account isn't, Configuration Manager fails to provision the service in Azure. Repeat the above process in the Azure portal with the following changes:
 
 - Search for **Storage account**.
 
 - Test your name in the **Storage account name** field.
 
 > [!IMPORTANT]
-> The DNS name prefix, for example `GraniteFalls`, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a 
-> dash (`-`).<!-- SCCMDocs#1080 -->
+> The DNS name prefix, for example `GraniteFalls`, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a dash (`-`).<!-- SCCMDocs#1080 -->
 
 ## Issue the certificate
 

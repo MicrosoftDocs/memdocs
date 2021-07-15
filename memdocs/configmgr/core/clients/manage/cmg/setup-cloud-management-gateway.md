@@ -62,7 +62,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
     Select **Next**, and wait as the site tests the connection to Azure.
 
-1. On the **Settings** page of the wizard, first **Browse** to the .PFX file for the CMG server authentication certificate. The common name from this certificate is used to populate the **Service name** and **Deployment name** fields.
+1. On the **Settings** page of the wizard, first **Browse** to the .PFX file for the CMG server authentication certificate (**Certificate file**). The common name from this certificate is used to populate the **Service name** and **Deployment name** fields.
 
     If you use a wildcard certificate, replace the asterisk (`*`) in the **Service name** field with the globally unique deployment name prefix for your CMG.<!--491233-->
 
@@ -90,9 +90,9 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
     1. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 
-    1. **Enforce TLS 1.2**: Enable this option to require the Azure cloud service VM to use the TLS 1.2 encryption protocol. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
+    1. By default, the wizard enables the option to **Enforce TLS 1.2**. This setting requires the Azure VM to use the TLS 1.2 encryption protocol. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
-    1. By default, the wizard enables the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. A CMG can also serve content to clients.
+    1. By default, the wizard enables the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. If you plan on targeting deployments with content to clients, you need to configure the CMG to serve content.
 
 1. Next is the **Alerts** page of the wizard. To monitor CMG traffic with a 14-day threshold, enable the threshold alert. Then specify the threshold, and the percentage at which to raise the different alert levels. Choose **Next** when you're done.
 

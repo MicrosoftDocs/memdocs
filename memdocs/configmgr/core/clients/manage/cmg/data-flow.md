@@ -21,7 +21,7 @@ Use this article to understand how data flows between components of the cloud ma
 
 The following diagram is a basic, conceptual data flow for the CMG:
 
-:::image type="content" source="media/cmg-data-flow.svg" alt-text="Data flow diagram for cloud management gateway (CMG)." lightbox="media/cmg-data-flow.svg":::
+:::image type="content" source="media/cmg-data-flow.svg" alt-text="Data flow diagram for cloud management gateway (CMG).":::
 
 1. The service connection point connects to Azure over HTTPS port 443. It authenticates using Azure Active Directory (Azure AD). The service connection point deploys the CMG in Azure. The CMG creates the HTTPS service using the server authentication certificate.
 
