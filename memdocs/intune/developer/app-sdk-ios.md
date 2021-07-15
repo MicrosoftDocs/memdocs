@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 07/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -641,6 +641,138 @@ Intune administrators can target and deploy configuration data via the [Microsof
 For more information about the capabilities of the Graph API, see [Graph API Reference](/graph/overview).
 
 For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../apps/app-configuration-policies-use-ios.md).
+
+## App Protection CA support (optional)
+App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature will require changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources will not be able to acquire an access token unless they support this feature.
+
+### Dependencies
+In addition to the Intune SDK, you will need these two components to enable App Protectoin CA in your app.
+
+1. iOS Authenticator app
+2. MSAL authentication library 1.0 or greater
+
+### New APIs
+Most of the new API's can be found in the IntuneMAMComplianceManager.h. The app needs to be aware of three differences in behavior explained below.
+
+New behavior	| Description	|
+--	| --	|
+App → ADAL/MSAL: Acquire token	| When an application tries to acquire a token, it should be prepared to receive a ERROR_SERVER_PROTECTION_POLICY_REQUIRED. The app can receive this error during their initial account add flow or when accessing a token later in the application lifecycle. When the app receives this error, it will not be granted an access token and needs to be remediated to retrieve any server data.	|
+App → Intune SDK: Call remediateComplianceForIdentity	| When an app receives a ERROR_SERVER_PROTECTION_POLICY_REQUIRED from ADAL, or MSALErrorServerProtectionPoliciesRequired from MSAL it should call [[IntuneMAMComplianceManager instance] remediateComplianceForIdentity] to let Intune enroll the app and apply policy. The app may be restarted during this call. If the app needs to save state before restarting, it can do so in restartApplication delegate method in IntuneMAMPolicyDelegate. <br><br>remediateComplianceForIdentity provides all the functionality of registerAndEnrollAccount and loginAndEnrollAccount. Therefore, the app does not need to use either of these older APIs.	|
+Intune → App: Delegate remediation notification	|After Intune has retrieved and applied policies, it will notify the app of the result using the IntuneMAMComplianceDelegate protocol. Please refer to IntuneMAMComplianceStatus in IntuneComplianceManager.h for information on how the app should handle each error. In all cases except IntuneMAMComplianceCompliant, the user will not have a valid access token. <br><br>If the app already has managed content and is not able to enter a compliant status, the application should call selective wipe to remove any corporate content. <br><br>If we cannot reach a compliant state, the app should display localized the error message and title string supplied by withErrorMessage and andErrorTitle.	|
+
+Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
+
+```objc
+(void) identity:(NSString*) identity hasComplianceStatus:(IntuneMAMComplianceStatus) status withErrorString:(NSString*) error;
+{
+    switch(status)
+    {
+        case IntuneMAMComplianceCompliant:
+        {
+            /*
+            Handle successful compliance
+            */
+            break;
+        }
+        case IntuneMAMComplianceNotCompliant:
+        case IntuneMAMComplianceNetworkFailure:
+        case IntuneMAMComplianceUserCancelled:
+        case IntuneMAMComplianceServiceFailure:
+        {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:identity
+            message:error
+            preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+            handler:^(UIAlertAction * action) {exit(0);}];
+            [alert addAction:defaultAction];
+            dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:alert animated:YES completion:nil];
+            });
+            break;
+        }
+        case IntuneMAMComplianceInteractionRequired:
+        {
+            [[IntuneMAMComplianceManager instance] remediateComplianceForIdentity:identity silent:NO];
+            break;
+        }
+    }
+}
+```
+
+```swift
+func identity(_ identity: String, hasComplianceStatus status: IntuneMAMComplianceStatus, withErrorMessage errMsg: String, andErrorTitle errTitle: String) {
+        switch status {
+        case .compliant:
+           //Handle successful compliance
+        case .notCompliant, .networkFailure,.serviceFailure,.userCancelled:
+            DispatchQueue.main.async {
+              let alert = UIAlertController(title: errTitle, message: errMsg, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    exit(0)
+                })) 
+                self.present(alert, animated: true, completion: nil) 
+            }
+        case .interactionRequired:
+            IntuneMAMComplianceManager.instance().remediateCompliance(forIdentity: identity, silent: false)
+   }
+```
+
+### MSAL/ADAL
+Apps need to indicate support for App Protection CA by adding client capabilities variable to their MSAL/ADAL configuration.
+The following values are required:   claims = {"access_token":{"xms_cc":{"values":["protapp"]}}} 
+
+[MSALPublicClientApplicationConfig Class Reference (azuread.github.io)](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazuread.github.io%2Fmicrosoft-authentication-library-for-objc%2FClasses%2FMSALPublicClientApplicationConfig.html%23%2Fc%3Aobjc(cs)MSALPublicClientApplicationConfig(py)clientApplicationCapabilities&data=04%7C01%7CJamie.Silvestri%40microsoft.com%7C9b7fffa9a0e14b82cf1a08d8bcc1f11e%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637466888444795023%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=NNYF4cvojrG67BGNMPZdY2dGyATZHkVsYa5vzENWwHk%3D&reserved=0)
+
+```objc
+    MSALAADAuthority *authority = [[MSALAADAuthority alloc] initWithURL:[[NSURL alloc] initWithString:IntuneMAMSettings.aadAuthorityUriOverride] error:&msalError];
+    MSALPublicClientApplicationConfig *config = [[MSALPublicClientApplicationConfig alloc]
+                                                 initWithClientId:IntuneMAMSettings.aadClientIdOverride
+                                                 redirectUri:IntuneMAMSettings.aadRedirectUriOverride
+                                                 authority:authority];
+
+    /*
+     IF YOU'RE IMPLEMENTING CA IN YOUR APP, PLEASE PAY ATTENTION TO THE FOLLOWING...
+     */
+    // This is needed for CA!
+    // This line adds an option to the MSAL token request so that MSAL knows that CA may be active
+    // Without this, MSAL won't know that CA could be activated
+    // In the event that CA is activated and this line isn't in place, the auth flow will fail
+
+    config.clientApplicationCapabilities = @[@"protapp"];
+```
+
+```swift
+guard let authorityURL = URL(string: kAuthority) else {
+            print("Unable to create authority URL")
+            return
+        }
+         let authority = try MSALAADAuthority(url: authorityURL)
+         let msalConfiguration = MSALPublicClientApplicationConfig(clientId: kClientID,redirectUri: kRedirectUri,
+                                                                  authority: authority)
+        msalConfiguration.clientApplicationCapabilities = ["ProtApp"]
+        self.applicationContext = try MSALPublicClientApplication(configuration: msalConfiguration)
+
+```
+### How to test App Protection CA
+#### Configuring a test user for App Protection CA
+1. Log in with your administrator credentials to https://portal.azure.com.
+2. Select **Azure Active Directory** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
+3. Configure conditional access policy by setting the following items:
+	a. Filling in the **Name** field,
+	b. Enabling the policy and,
+	c. Assigning the policy to a user or group.
+4. Assign cloud apps. Select **Include** > **All cloud apps**. As the warning notes, be careful not to misconfigure this setting. For example, if you excluded all cloud apps, you would lock yourself out of the console.
+5. Grant access controls by selecting **Access Controls** > **Grant Access** > **Require app protection policy**. 
+6. When you are finished configuring the policy, select **Create** to save the policy and apply it.
+7. Enable the policy.
+8. You also need to make sure that the users are targeted for MAM policies.
+
+#### Test cases
+Test Case	| How to test	|	Expected Outcome	|
+--	| --	| --	|
+MAM-CA always applied		| Ensure the user is targeted for both App Protection CA and MAM policy before enrolling in your app.|  Verify that your app handles the remediation cases described above and the app can get an access token.	|
+MAM-CA applied after user enrolled	| The user should be logged into the app already, but not targeted for App Protetion CA.	| Target the user for App Protetion CA in the console and verify that you correctly handle MAM remediation	|
+MAM-CA noncompliance	| Set up a App Protection CA policy, but do not assign a MAM policy.	| The user should not be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
 
 ## Telemetry
 
