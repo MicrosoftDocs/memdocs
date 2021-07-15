@@ -47,7 +47,7 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Every device enrolled with DEM accounts needs to be properly licensed to be managed by Intune. The license could be an Intune user license or an Intune device license.
 - If you're [enrolling Android Enterprise personally-owned devices with work profile](android-work-profile-enroll.md) using a DEM account, there is a limit of 10 devices that can be enrolled per account.
 - [Enrolling Android Enterprise fully managed devices](android-fully-managed-enroll.md) with DEM accounts isn't supported.
-- [Enrolling Android Enterprise corporate owned work profile devices](COPE) with DEM accounts isn't supported.
+- [Enrolling Android Enterprise corporate owned work profile devices](android-corporate-owned-work-profile-enroll.md) with DEM accounts isn't supported.
 - Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.
 
 >[!NOTE]
