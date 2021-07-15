@@ -47,7 +47,7 @@ Starting in current branch version 2010, you could deploy the cloud management g
 
 In this release, any customer with a CMG that uses the classic cloud service deployment can convert to a virtual machine scale set. Microsoft recommends that new CMG deployments use a virtual machine scale set.
 
-For more information, see [Plan for CMG: virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+For more information, see [Plan for CMG: virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) and [Modify a CMG: Convert](../../clients/manage/cmg/modify-cloud-management-gateway.md#convert).
 
 ### Select VM size for CMG
 
