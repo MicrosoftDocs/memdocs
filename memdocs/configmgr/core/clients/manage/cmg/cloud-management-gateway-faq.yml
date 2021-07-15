@@ -11,11 +11,11 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-client
     
-title: Frequently asked questions about the cloud management gateway
+title: Frequently asked questions about the CMG
 summary: |
   *Applies to: Configuration Manager (current branch)*
   
-  This article answers your frequently asked questions about the cloud management gateway (CMG). For more information, see [Overview of cloud management gateway](overview.md).
+  This article answers your frequently asked questions about the cloud management gateway (CMG). For more information, see [Overview of CMG](overview.md).
   
 
 sections:
@@ -37,14 +37,16 @@ sections:
       - question: |
           Do I need Azure ExpressRoute?
         answer: |
-          No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the Configuration Manager cloud management gateway. The design of the cloud management gateway allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Overview of cloud management gateway](overview.md)
+          No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the CMG. The design of the CMG allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Overview of CMG](overview.md).
           
           <!-- SCCMDocs#1659 -->
           
       - question: |
-          Do I need to maintain the Azure virtual machines?
+          Do I need to maintain or secure the Azure virtual machines?
         answer: |
-          No maintenance is required. The design of the cloud management gateway uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the virtual machine. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud management gateway is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Securing PaaS deployments](/azure/security/security-paas-deployments).
+          No. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the VMs. You don't need to monitor these VMs. The Azure VMs for CMG aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The CMG is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
+
+          Since the CMG acts as a proxy for client communication, it doesn't process, keep, or store any client data. The communication path over the internet always uses HTTPS. For greater security, configure the management point for HTTPS. Also configure the site option for clients to encrypt inventory and status messages. For more information, see [Plan for security: Signing and encryption](../../../plan-design/security/plan-for-security.md#signing-and-encryption).
           
       - question: |
           How can I ensure service continuity during service updates?
@@ -54,7 +56,7 @@ sections:
       - question: |
           I'm already using IBCM. If I add CMG, how do clients behave?
         answer: |
-          If you already deployed [internet-based client management](../plan-internet-based-client-management.md) (IBCM), you can also deploy the cloud management gateway. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
+          If you already deployed [internet-based client management](../plan-internet-based-client-management.md) (IBCM), you can also deploy the CMG. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
           
       - question: |
           Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?
