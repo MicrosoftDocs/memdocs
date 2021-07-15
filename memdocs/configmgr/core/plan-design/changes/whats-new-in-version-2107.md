@@ -333,6 +333,8 @@ RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's no
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
+- The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances. To provide content to internet-based devices, enable the CMG to distribute content.<!-- 10247883 -->
+
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2107 drops support for the following features:
 
 - Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.<!-- 9649296 -->
