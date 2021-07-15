@@ -191,7 +191,6 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
-| Update policies for iOS/iPadOS | ✔️ |
 | **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | ✔️ |
@@ -304,6 +303,7 @@ The following features don't support using filters:
 - S mode supplemental policies for Windows 10
 - Shell scripts for macOS
 - Terms and conditions
+- Update policies for iOS/iPadOS
 - Windows 10 feature updates
 
 ## Next steps
