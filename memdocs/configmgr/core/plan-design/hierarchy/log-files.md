@@ -446,6 +446,7 @@ The following table lists the log files that contain information related to appl
 |SettingsAgent.log|Enforcement of specific applications, records orchestration of application group evaluation, and details of co-management policies.|Client|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
+|SMS_ImplicitUninstall.log|Records events from the implicit uninstall background worker process.<!--3607457-->|Site server|
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|
 |SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|
 |TSDTHandler.log|For the task sequence deployment type. It logs the process from app enforcement (install or uninstall) to the launch of the task sequence. Use it with AppEnforce.log and smsts.log.<!-- MEMDocs#336 -->|Client|

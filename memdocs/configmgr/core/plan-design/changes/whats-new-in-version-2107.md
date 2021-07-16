@@ -209,6 +209,8 @@ Many customers have lots of collections because for every application they need 
 
 Starting in this release, you can enable an application deployment to support implicit uninstall. If a device is in a collection, the application installs. Then when you remove the device from the collection, the application uninstalls.
 
+For more information, see [Uninstall applications](../../../apps/deploy-use/uninstall-applications.md).
+
 ## OS deployment
 
 ### Support layered keyboard driver during OS deployment
