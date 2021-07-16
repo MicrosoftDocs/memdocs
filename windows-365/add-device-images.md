@@ -51,7 +51,7 @@ You can delete a custom image from Windows 365 by following these steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images**.
 2. On the **Device images** page, select the check box next to the image > **Delete**.
-4. Select **Yes** on the confirmation pop up to permanently delete the image.  
+4. Select **Yes** on the confirmation pop up to permanently delete the image.
 
 <!-- ########################## -->
 ## Next steps
