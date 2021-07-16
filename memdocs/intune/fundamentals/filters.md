@@ -165,6 +165,12 @@ After the filter is created, it's ready to use when assigning your apps or polic
 3. Assign your policy to a users group or a devices group.
 4. Select **Edit filter**. You can choose to **include filtered devices** or **exclude filtered devices**. A list of filters that match the policy platform is shown.
 
+> [!IMPORTANT]
+> - **Do not apply a filter** - all targeted users or devices will recieve the app or policy without filtering.
+> - **Include filtered devices in assignment** - devices that match the filter conditions will recieve the app or policy, devices that don't match will not.
+> - **Exclude filtered devices in assignment** - devices that match the filter conditions will not recieve the app or policy, devices that don't match will.
+
+
 5. Select your filter > **Select**.
 
     For example, select **Include filtered devices in assignment**, and select the filter:
