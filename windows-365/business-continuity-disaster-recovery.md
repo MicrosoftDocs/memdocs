@@ -63,7 +63,7 @@ Storage systems are separate from compute functions, and use storage redundancy 
 
 Using Windows 365 with OneDrive and OneDrive Known Folder Move organizations provides these benefits:
 
-- [Portable user data access](/onedrive/plan-onedrive-enterprise) across all physical and cloud workspaces.
+- [Portable user data access](/onedrive/plan-onedrive-enterprise) across all physical and Cloud PCs.
 - [Active/Active cross region user data resilience](/compliance/assurance/assurance-sharepoint-onedrive-data-resiliency) shared between Cloud PCs and all other authenticated use workspaces.
 - User context portability and cross-region resilience using [Known Folder Move](/onedrive/redirect-known-folders).
 - User data and Known Folder Move based context resilience with an [Recovery Time Objective (RTO) and RPO of 0](/compliance/assurance/assurance-sharepoint-onedrive-data-resiliency#blob-storage-resilience).

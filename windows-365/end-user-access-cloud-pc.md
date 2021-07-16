@@ -32,12 +32,12 @@ ms.collection: M365-identity-device-management
 
 End users can access their Cloud PCs in two different ways:
 
-- [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/en-us/windows-365?rtc=1)
+- [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/windows-365?rtc=1)
 - Microsoft Remote Desktop
 
 ## Windows365 web site
 
-End users can navigate to [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/en-us/windows-365?rtc=1) to access their Cloud PCs.  
+End users can navigate to [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/windows-365?rtc=1) to access their Cloud PCs.  
 
 (Screenshot of end user portal.)
 
@@ -65,7 +65,6 @@ While on soft.com, end users can perform actions on their Cloud PCs by selecting
   | Can’t connect to Cloud PC. We’re working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
   | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it was unable to be fixed. This could be due to a ongoing Windows update or another issue. If this error persists for an extended period of time the Cloud PC may need to be reprovisioned. |
 
-
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
@@ -76,8 +75,10 @@ For a list of clients by operating system, see [Remote Desktop clients](/windows
 
 To set up their Remote Desktop client, users follow these steps:
 
-1. Download the Remote Desktop app from the Download App page on [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/en-us/windows-365?rtc=1).
-2. Subscribe to a workspace as described in [Remote Desktop Workspaces](/windows-server/remote/remote-desktop-services/clients/windowsdesktop#workspaces).
+1. Download the Remote Desktop app from the Download App page on [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/windows-365?rtc=1).
+2. Select **Subscribe**.
+3. Enter their Azure Active Directory credentials.
+4. The Cloud PC appears in the list, and they can double-click it to launch.
 
 ### End user hardware requirements for accessing Cloud PCs
 
@@ -117,7 +118,7 @@ Requirements:
 - **CPU**: 1 GHz or faster processor
 - **RAM**: 1024 MB
 - **Hard drive**: 100 MB or more
-- **Video**: DirectX 9 or later with WDDM 1.0 driver. o	Teams audio and video offloading on Cloud PC benefits from a dedicated Graphics Processing Unit (GPU) within your physical endpoint device.
+- **Video**: DirectX 9 or later with WDDM 1.0 driver. Teams audio and video offloading on Cloud PC benefits from a dedicated Graphics Processing Unit (GPU) within your physical endpoint device.
 
 #### macOS, iOS/iPadOS, and Android
 
@@ -130,5 +131,4 @@ You can install the client and find requirements for other platforms here:
 <!-- ########################## -->
 ## Next steps
 
-
-For information about the different protocol network requirements per scenario, see [LINK TO NETWORK DOC]().
+For information about the different protocol network requirements per scenario, see [Network requirements](requirements-network.md).
