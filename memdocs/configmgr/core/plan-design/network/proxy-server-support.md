@@ -36,7 +36,7 @@ This site system role connects to Microsoft and uses a proxy server configuratio
 ### Cloud distribution point
 
 > [!NOTE]
-> The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances.<!-- 10247883 --> To provide content to internet-based devices, enable a cloud management gateway (CMG) to distribute content. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
+> The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances.<!-- 10247883 --> To provide content to internet-based devices, enable a cloud management gateway (CMG) to distribute content. For more information, see [Deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 The cloud distribution point role runs in Microsoft Azure. You don't configure this site system role to use a proxy. Set the proxy configuration on the primary site server that manages the cloud distribution point.  
 
