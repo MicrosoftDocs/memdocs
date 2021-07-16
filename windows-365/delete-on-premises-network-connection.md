@@ -36,7 +36,7 @@ Only a unassigned on-premises network connection can be deleted. If an on-premis
 - Delete the on-premises network connection
 
 To delete an on-premises network connection:
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Cloud PC** (under **Provisioning**) > **On-premises network connection**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection**.
 2. Select the ellipses (**…**) next to the connection you want to delete > **Delete**.
 3. Select **Confirm** when asked to delete the connection.
 

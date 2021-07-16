@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Only a provisioning policy that has no assignments can be deleted. You can remove assignments by following the steps in [Edit provisioning policy](edit-provisioning-policy.md). After completing those steps, follow the steps below to delete a provisioning policy.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Cloud PC** (under **Provisioning**) > **Provisioning policies**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies**.
 2. Select the ellipses (**…**) next to the policy you want to delete > **Delete**.
 3. Select **Confirm** when asked to delete the policy.
 

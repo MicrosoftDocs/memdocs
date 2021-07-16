@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 You can update provisioning policies to change assignments or key attributes, like Image and Network Connection.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Cloud PC** (under **Provisioning**) > **Provisioning policie**s > select a policy.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policie**s > select a policy.
 2. On the policy page, you can edit the **General** information, **Image**, and **Assignments** by selecting **Edit** next to each header.
 
 If you change the on-premises network connection or image in a provisioning policy, no change will occur for previously provisioned Cloud PC's. Newly provisioned Cloud PC's will honor the changes in your provisioning policy. To change the previously provisioned Cloud PC's to align with the changes, you must reprovision these Cloud PC's. 

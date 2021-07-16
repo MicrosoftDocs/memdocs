@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 4/14/2021
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,6 +45,9 @@ To see a role, choose **Intune** > **Tenant administration** > **Roles** > **All
 
 - **Properties**: The name, description, permissions, and scope tags for the role. 
 - **Assignments**: A list of [role assignments](assign-role.md) defining which users have access to which users/devices. A role can have multiple assignments, and a user can be in multiple assignments.
+
+> [!NOTE]
+> To be able to administer Intune you must have an Intune license assigned. Alternatively, you can allow non-licensed users to administer Intune by setting [Allow access to unlicensed admins to Yes](unlicensed-admins.md).
 
 ### Built-in roles
 You can assign built-in roles to groups without further configuration. You can't delete or edit the name, description, type, or permissions of a built-in role.

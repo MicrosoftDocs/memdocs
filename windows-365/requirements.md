@@ -85,3 +85,5 @@ You can create a virtual network and provision Cloud PCs in the following Azure 
 
 <!-- ########################## -->
 ## Next steps
+
+[Review network requirements](requirements-network.md)
