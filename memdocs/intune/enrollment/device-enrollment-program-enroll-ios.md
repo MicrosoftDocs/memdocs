@@ -182,6 +182,9 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 4. Select **Next**.
 
+> [!IMPORTANT]
+> Any configuration changes on existing Enrollment profile settings, will not take effect on assigned devices until they are Factory Reset and activated again (this is when the Remote Management Payload is received on ADE devices) and this is by design by Apple and not Microsoft. The only configuration change that does not require a Factory Reset is "Device Name Template".
+
 5. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
     - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
@@ -401,7 +404,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
   For more information on Intune licensing, see [Microsoft Intune licensing](../fundamentals/licenses.md) and the [Intune planning guide](../fundamentals/intune-planning-guide.md).
 
-- A device that's been activated needs to be wiped before it can enroll in Intune. After it's been wiped, you can apply the enrollment profile.
+- A device that's been activated needs to be wiped before it can enroll properly using ADE in Intune. After it's been wiped but before activating it again, you can apply the enrollment profile. See [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516)
 
 - If you're enrolling with ADE and user affinity, the following error can happen during setup:
 
