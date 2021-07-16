@@ -57,7 +57,7 @@ Resizing isn’t supported for group-based licenses.
 4. Select **Resize**.
 
     - If there are available licenses the upgrade will take place.
-    - If there are no licenses in your inventory, the resizing will fail. You can contact your procurement admin to request more licenses. After the license has been purchased and assigned to the appropriate user in the Microsoft Admin Center, the user can get a new Cloud PC provisioned.
+    - If there are no licenses in your inventory, the resizing will fail. You can contact your procurement admin to request more licenses. After the license has been purchased and added to the inventory in the Microsoft Admin Center, you can retry the resize operation.
 
 <!-- ########################## -->
 ## Next steps
