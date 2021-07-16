@@ -34,7 +34,7 @@ All on-premises network connections are periodically checked to ensure that the 
 
 To edit an on-premises network connection:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Devices** > **Cloud PC** (under **Provisioning**) > **On-premises network connection** > select the connection you want to edit > **Properties**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > select the connection you want to edit > **Properties**.
 2. On the **Properties** page, you can edit the **General** and **AD domain** settings by selecting **Edit** next to each header.
 
 Once the edits have been saved, the on-premises network connection checks are run to verify the configuration.

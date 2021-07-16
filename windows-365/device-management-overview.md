@@ -34,7 +34,7 @@ To manage your Cloud PCs, you’ll use Microsoft Intune, a service of [Microsoft
 
 ## Cloud PC overview page
 
-The Overview tab is the landing page for managing your Cloud PCs. To see it, sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Cloud PC** (under **Provisioning**).
+The Overview tab is the landing page for managing your Cloud PCs. To see it, sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**).
 
 Here you'll see some info to give you a quick idea of how your Cloud PCs are doing:
 

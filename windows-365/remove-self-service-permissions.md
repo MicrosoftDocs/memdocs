@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Delete a group from this list to remove self-service permissions for that group.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Cloud PC** (under **Provisioning**) > **User settings**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**) > **User settings**.
 2. Select the ellipses (**…**) next to the group that you want to remove from the list.
 3. Select **Delete** to delete the group from the list. Deleting a group from the list removes self-service permissions from users in that group.
 

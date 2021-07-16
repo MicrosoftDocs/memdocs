@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Add a group to this list to give all users in the group self-service permissions.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Cloud PC** (under **Provisioning**) > **User settings** > **Add**. Make sure the **Self-service permission** radio button is set to **On**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**) > **User settings** > **Add**. Make sure the **Self-service permission** radio button is set to **On**.
 2. In the **Select groups to include** page, choose the groups that you want to give self-service permissions to and then choose **Select**.
 
 <!-- ########################## -->
