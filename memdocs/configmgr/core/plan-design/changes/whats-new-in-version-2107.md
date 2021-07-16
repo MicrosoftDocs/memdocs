@@ -285,6 +285,8 @@ Previously, if the Configuration Manager console reported an error in a separate
 
 Starting in this release, error messages include a link to **Report error to Microsoft**. This action opens the standard "send a frown" window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also lets you include the full context of the error message when you share a screenshot.
 
+For more information, see [Product feedback](../../understand/product-feedback.md).
+
 ### Hierarchy approved console extensions don't require signing
 <!--9761129-->
 Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab.
