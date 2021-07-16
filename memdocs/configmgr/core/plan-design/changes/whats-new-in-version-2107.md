@@ -107,6 +107,14 @@ In a complex IT environment, you may have an automation system like [Azure Logic
 
 Starting in this release, you can enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure [subscriptions](../../servers/manage/configure-alerts.md) to send these notifications. These notifications are in response to specific, defined events as they occur. For example, [status message filter rules](../../servers/manage/use-status-system.md#manage-status-filter-rules).
 
+### Internet access requirements
+
+<!--9791281,10237384-->
+
+Before you update to version 2107, if you restrict internet access, confirm that the site system that hosts the service connection point role can communicate with the following internet endpoint: `configmgrbits.azureedge.net`. This endpoint was already required, but its use is expanded in this release. The site system can't download version 2107 or later unless your network allows traffic to this URL.
+
+For more information, see [internet access requirements](../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
+
 ## Real-time management
 
 ### Simplified CMPivot permissions requirements
