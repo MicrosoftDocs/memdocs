@@ -85,3 +85,6 @@ items:
       - name: Autopilot
         tocHref: /mem/autopilot/
         topicHref: /mem/autopilot/
+      - name: Windows 365
+        tocHref: /windows-365/
+        topicHref: /windows-365/
