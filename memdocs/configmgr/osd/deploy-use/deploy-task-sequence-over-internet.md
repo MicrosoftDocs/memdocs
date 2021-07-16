@@ -2,11 +2,10 @@
 title: Deploy a task sequence over the internet
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to remote computers.
-ms.date: 04/30/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 7cffcfc0-14da-4518-9cb2-aaec990448c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -55,7 +54,7 @@ In version 2002 and earlier, operations that require a boot media aren't support
 <!-- 1357149 -->
 The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
 
-Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a content-enabled CMG. Enable the [CMG setting](../../core/clients/manage/cmg/modify-cloud-management-gateway.md#settings-tab): **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. You can also use a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices can't run the task sequence.
+Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a content-enabled CMG. Enable the [CMG setting](../../core/clients/manage/cmg/modify-cloud-management-gateway.md#settings-tab): **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. Otherwise devices can't run the task sequence.
 
 When you deploy an upgrade task sequence, use the following settings:
 
@@ -63,9 +62,9 @@ When you deploy an upgrade task sequence, use the following settings:
 
 - Choose one of the following options on the Distribution Points tab of the deployment:
 
-  - **Download content locally when needed by the running task sequence**. Starting in version 1910, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.<!--3601238-->
+  - **Download content locally when needed by the running task sequence**. The task sequence engine can download packages on-demand from a content-enabled CMG. This option provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.<!--3601238-->
 
-  - **Download all content locally before starting task sequence**. In Configuration Manager version 1906 and earlier, other options such as **Download content locally when needed by the running task sequence** don't work in this scenario. The task sequence engine can't download content from a cloud source. The Configuration Manager client must download the content from the cloud source before starting the task sequence. You can still use this option in version 1910 if needed to meet your requirements.
+  - **Download all content locally before starting task sequence**. With this option, the Configuration Manager client downloads the content from the cloud source before starting the task sequence.
 
 - (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](configure-precache-content.md).
 
@@ -89,11 +88,11 @@ When the task sequence runs, it downloads content from the cloud-based sources. 
 
 - For the boundary group that the client is in:
 
-  - Associate the content-enabled CMG or cloud distribution point site systems. For more information, see [Configure a boundary group](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_config).
+  - Associate the content-enabled CMG. For more information, see [Configure a boundary group](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_config).
 
   - Enable the following option: **Prefer cloud based sources over on-premises sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
-- Distribute the content referenced by the task sequence to the content-enabled CMG or cloud distribution point.
+- Distribute the content referenced by the task sequence to the content-enabled CMG.
 
 ## Deploy an OS over CMG using bootable media
 
@@ -105,7 +104,7 @@ Starting in version 2010, you can use boot media to reimage internet-based devic
 
 - [Set up a CMG](../../core/clients/manage/cmg/overview.md)
 
-- For all content referenced in the task sequence, distribute it to a content-enabled CMG or a cloud distribution point. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+- For all content referenced in the task sequence, distribute it to a content-enabled CMG. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 - Enable the following client settings in the [Cloud services](../../core/clients/deploy/about-client-settings.md#cloud-services) group:
 

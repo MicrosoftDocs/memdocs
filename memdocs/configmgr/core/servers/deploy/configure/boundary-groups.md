@@ -2,11 +2,10 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 04/13/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -64,7 +63,7 @@ For more information, see the following procedures:
 
 <!--6521835-->
 
-Starting in version 2002, to help you better identify and troubleshoot device behaviors with boundary groups, you can view the boundary groups for specific devices. In the **Devices** node or when you show the members of a **Device Collection**, add the new **Boundary Group(s)** column to the list view.
+To help you better identify and troubleshoot device behaviors with boundary groups, you can view the boundary groups for specific devices. In the **Devices** node or when you show the members of a **Device Collection**, add the new **Boundary Group(s)** column to the list view.
 
 - If a device is in more than one boundary group, the value is a comma-separated list of boundary group names.
 
@@ -246,7 +245,7 @@ Common scenarios for enabling this option:
 
 - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
 
-Starting in version 2002, depending on the configuration of your network, you can exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (`2001:0000:%`).<!--3555777-->
+Depending on the configuration of your network, you can exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (`2001:0000:%`).<!--3555777-->
 
 > [!NOTE]
 > In version 2002, when you [expand a stand-alone primary site](../install/prerequisites-for-installing-sites.md#bkmk_expand) to add a central administration site (CAS), the subnet exclusion list reverts to the default. To work around this issue, after site expansion, run the PowerShell script to customize the subnet exclusion list on the CAS.<!-- 6309068 -->
@@ -304,7 +303,7 @@ By default, the management point prioritizes peer cache sources at the top of th
 
 If you have a branch office with a faster internet link, you can prioritize cloud content. Cloud-based sources include the following locations:<!-- SCCMDocs#1529 -->
 
-- Cloud distribution points
+- Content-enabled cloud management gateways
 - Microsoft Update
 
   > [!NOTE]

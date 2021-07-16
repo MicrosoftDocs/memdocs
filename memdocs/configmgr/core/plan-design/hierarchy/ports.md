@@ -57,7 +57,7 @@ Configuration Manager doesn't allow you to configure ports for the following typ
 
 - Configuration Manager console to the internet
 
-- Connections to cloud services, such as Microsoft Intune and cloud distribution points
+- Connections to cloud services, such as Microsoft Azure
 
 ## Ports used by clients and site systems
 

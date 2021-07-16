@@ -36,13 +36,11 @@ The following diagram is a basic, conceptual data flow for the CMG:
 3. The client connects to the CMG over HTTPS port 443. It authenticates using Azure AD, the client authentication certificate, or a site-issued token.
 
     > [!NOTE]
-    > If you enable the CMG to serve content or use a cloud distribution point, the client connects directly to Azure blob storage over HTTPS port 443.<!-- do a separate section for content flows? -->
+    > If you enable the CMG to serve content, the client connects directly to Azure blob storage over HTTPS port 443. For more information, see [Content data flow](#content-data-flow).
 
 4. The CMG forwards the client communication over the existing connection to the on-premises CMG connection point. You don't need to open any inbound firewall ports.
 
 5. The CMG connection point forwards the client communication to the on-premises management point and software update point.
-
-<!-- For more information when you store content in Azure, see [Use a cloud-based distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow). -->
 
 For more information when you integrate with Azure AD, see [Configure Azure services: Cloud management data flow](../../../servers/deploy/configure/azure-services-wizard.md#cloud-management-data-flow).
 
@@ -80,8 +78,6 @@ This table lists the required network ports and protocols. The *Client* is the d
 | Client | HTTPS | 443 | Blob storage | Download cloud-based content |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Management point | On-premises traffic, port depends upon management point configuration |
 | CMG connection point | HTTPS or HTTP | 443 or 80 / 8530 or 8531 | Software update point | On-premises traffic, port depends upon software update point configuration |
-
-When you allow the CMG to function as a cloud distribution point and serve content from Azure storage, some other requirements apply. <!-- For more information, see [Use a cloud distribution point: Ports and data flow](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow). -->
 
 ### Notes on ports
 

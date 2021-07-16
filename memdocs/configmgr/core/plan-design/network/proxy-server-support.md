@@ -2,11 +2,10 @@
 title: Proxy server support
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site system servers use proxy servers.
-ms.date: 05/05/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -36,6 +35,9 @@ This site system role connects to Microsoft and uses a proxy server configuratio
 
 ### Cloud distribution point
 
+> [!NOTE]
+> The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances.<!-- 10247883 --> To provide content to internet-based devices, enable a cloud management gateway (CMG) to distribute content. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
+
 The cloud distribution point role runs in Microsoft Azure. You don't configure this site system role to use a proxy. Set the proxy configuration on the primary site server that manages the cloud distribution point.  
 
 For this configuration, the primary site server:  
@@ -54,7 +56,7 @@ The cloud management gateway (CMG) connection point is an on-premises role that 
 
 <!-- 5856396 -->
 
-Starting in version 2002, if you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through an unauthenticated proxy server for internet access. For more information, see [Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md).
+If you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through an unauthenticated proxy server for internet access. For more information, see [Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md).
 
 ### Exchange Server connector
 
@@ -78,16 +80,14 @@ This site system role uses the proxy when it connects to Microsoft Update to dow
 These settings are on the **Proxy and Account Settings** tab of the software update point properties.  
 
 > [!NOTE]
-> By default, when the automatic deployment rules run, the **System** account on the site server of the site on which an automatic deployment rule was created is used to connect to the internet and download software updates. Alternatively, configure and use the site system proxy server account. 
+> By default, when the automatic deployment rules run, the **System** account on the site server of the site on which an automatic deployment rule was created is used to connect to the internet and download software updates. Alternatively, configure and use the site system proxy server account.
 >
-> When this account cannot access the internet, software updates fail to download. The following entry is logged to **ruleengine.log**:  
-> `Failed to download the update from internet. Error = 12007.`  
+> When this account cannot access the internet, software updates fail to download. The following entry is logged to **ruleengine.log**:
+> `Failed to download the update from internet. Error = 12007.`
 
 ## <a name="bkmk_other"></a> Other features that use the proxy for a site system server
 
-*(Introduced in version 2002)*
-
-Starting in Configuration Manager version 2002, the following features use the proxy of the site system that hosts the [service connection point](#service-connection-point) role: <!--5913817-->
+The following features use the proxy of the site system that hosts the [service connection point](#service-connection-point) role: <!--5913817-->
 
 - [Azure Active Directory (Azure AD) user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - [Azure AD user group discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_azuregroupdisco)

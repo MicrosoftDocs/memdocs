@@ -73,7 +73,7 @@ When you try to create applications in Azure Active Directory (Azure AD), if the
 
 ## Configuration Manager cloud services and TLS 1.2
 
-The Azure virtual machines used by the cloud management gateway and cloud distribution points support TLS 1.2. Supported client versions automatically use TLS 1.2.
+The Azure virtual machines used by the cloud management gateway support TLS 1.2. Supported client versions automatically use TLS 1.2.
 
 The **SMSAdminui.log** may contain an error similar to the following example:
 

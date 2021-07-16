@@ -59,11 +59,11 @@ After you complete these actions, your Configuration Manager site is connected t
 
 ## Configure client settings
 
-These client settings help configure Windows 10 devices to be hybrid-joined. They also enable internet-based clients to use the CMG and cloud distribution point.
+These client settings help configure Windows 10 devices to be hybrid-joined. They also enable internet-based clients to use the CMG.
 
 1. Configure the following client settings in the **Cloud Services** group. For more information, see [How to configure client settings](configure-client-settings.md).
 
-    - **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. If the content isn't available on the cloud distribution point, devices can retrieve the content from the CMG. The client installation bootstrap retries the cloud distribution point for four hours before it falls back to the CMG.<!--495533-->  
+    - **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. Devices can get the content from the CMG.<!--495533-->  
 
     - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows 10, version 1709.
 

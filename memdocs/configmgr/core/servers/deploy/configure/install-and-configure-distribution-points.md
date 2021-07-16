@@ -2,11 +2,10 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 03/05/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -184,7 +183,7 @@ Many customers have large Configuration Manager infrastructures, and are reducin
 This feature lets you reassign a distribution point to another primary site without redistributing the content. The target and destination sites can be either a primary or secondary site.<!-- SCCMDocs #1677, MEMDocs #1356--> This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
 
 > [!IMPORTANT]
-> The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you cannot reassign the distribution point. You cannot reassign a cloud distribution point.
+> The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you can't reassign the distribution point. You can't reassign a cloud management gateway.
 
 Before reassigning a distribution point, add the computer account of the destination site server to the local Administrator group on the target distribution point server.
 
@@ -269,9 +268,9 @@ For more information on automating this process with the Configuration Manager S
 
 ## <a name="bkmk_configs"></a> Configure a distribution point
 
-Individual distribution points support different kinds of configurations. However, not all distribution point types support all configurations. For example, cloud distribution points don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:
+Individual distribution points support different kinds of configurations. However, not all distribution point types support all configurations. For example, cloud management gateways don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:
 
-- [Use a cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+- [Supported configurations for cloud management gateway](../../../clients/manage/cmg/supported-configurations.md)
 
 - [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md)
 

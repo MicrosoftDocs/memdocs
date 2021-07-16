@@ -2,7 +2,7 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 04/23/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -86,7 +86,7 @@ When you use media to deploy operating systems, you should always specify a pass
 
 ### Encryption for cloud-based content
 
-When you enable a cloud management gateway (CMG) to store content, or use a cloud-based distribution point, the content is encrypted with **AES-256**. The content is encrypted whenever you update it. When clients download the content, it's encrypted and protected by the HTTPS connection.
+When you enable a cloud management gateway (CMG) to store content, the content is encrypted with **AES-256**. The content is encrypted whenever you update it. When clients download the content, it's encrypted and protected by the HTTPS connection.
 
 ### Signing in software updates
 
@@ -119,7 +119,7 @@ Configuration Manager requires PKI certificates for the following scenarios:
 
 - When you manage macOS computers
 
-- When you use a cloud management gateway or a cloud-based distribution point
+- When you use a cloud management gateway (CMG)
 
 For most other communication that requires certificates for authentication, signing, or encryption, Configuration Manager automatically uses PKI certificates if available. If they aren't available, Configuration Manager generates self-signed certificates.
 
@@ -157,14 +157,11 @@ This certificate has a key length of 1024 bits.
 
 ### Azure services and certificates
 
-The cloud management gateway (CMG) and cloud-based distribution points require service certificates. These certificates allow the service to provide HTTPS communication to clients over the internet. For more information, see the following articles:
-
-- [CMG server authentication certificate](../../clients/manage/cmg/server-auth-cert.md)
-- [Cloud-based distribution point - Certificates](../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)
+The cloud management gateway (CMG) requires server authentication certificates. These certificates allow the service to provide HTTPS communication to clients over the internet. For more information, see [CMG server authentication certificate](../../clients/manage/cmg/server-auth-cert.md).
 
 Clients require another type of authentication to communicate with a CMG and the on-premises management point. They can use Azure Active Directory, a PKI certificate, or a site token. For more information, see [Configure client authentication for cloud management gateway](../../clients/manage/cmg/configure-authentication.md).
 
-Clients don't require a client PKI certificate to use cloud-based storage. After they authenticate to the management point, the management point issues a Configuration Manager access token to the client. The client presents this token to the cloud-based distribution point to access the content. The token is valid for eight hours.
+Clients don't require a client PKI certificate to use cloud-based storage. After they authenticate to the management point, the management point issues a Configuration Manager access token to the client. The client presents this token to the CMG to access the content. The token is valid for eight hours.
 
 ### CRL checking for PKI certificates
 

@@ -2,11 +2,10 @@
 title: The content library
 titleSuffix: Configuration Manager
 description: Learn about the content library that Configuration Manager uses to reduce the overall size of distributed content.
-ms.date: 07/31/2019
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -61,14 +60,13 @@ Use the following options to manage the content library on the central administr
 
 - After the content library has been created, use the **Content Library Transfer** tool from the Configuration Manager tools to manage the location of the content library. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).  
 
-> [!Note]  
-> Cloud distribution points don't use single-instance storage. The site encrypts packages before sending to Azure, and each package has a unique encrypted key. Even if two files were identical, the encrypted versions wouldn't be the same.  
-
+> [!NOTE]
+> Content-enabled cloud management gateways don't use single-instance storage. The site encrypts packages before sending to Azure, and each package has a unique encrypted key. Even if two files were identical, the encrypted versions wouldn't be the same.
 
 ## <a name="bkmk_remote"></a> Configure a remote content library for the site server
 
 <!--1357525-->
-Starting in version 1806, to configure [site server high availability](../../servers/deploy/configure/site-server-high-availability.md) or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). A SAN is recommended, because it's highly available, and provides elastic storage that grows or shrinks over time to meet your changing content requirements. For more information, see [High availability options](../../servers/deploy/configure/site-server-high-availability.md).
+To configure [site server high availability](../../servers/deploy/configure/site-server-high-availability.md) or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). A SAN is recommended, because it's highly available, and provides elastic storage that grows or shrinks over time to meet your changing content requirements. For more information, see [High availability options](../../servers/deploy/configure/site-server-high-availability.md).
 
 A remote content library is a prerequisite for [site server high availability](../../servers/deploy/configure/site-server-high-availability.md).
 
@@ -109,7 +107,7 @@ A remote content library is a prerequisite for [site server high availability](.
    - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
 
         > [!Note]  
-        > If you have a large content library, you may see `0%` progress in the console for a while. For example, with a 1 TB library, it has to copy 10 GB before it shows `1%`. Review **distmgr.log**, which shows the number of files and bytes copied. Starting in version 1810, the log file also shows an estimated time remaining.
+        > If you have a large content library, you may see `0%` progress in the console for a while. For example, with a 1 TB library, it has to copy 10 GB before it shows `1%`. Review **distmgr.log**, which shows the number of files and bytes copied. The log file also shows an estimated time remaining.
 
    - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
 
@@ -126,7 +124,7 @@ The site actually *copies* the content library files to the remote location. Thi
 
 If the original content library spans two drives, it's merged into a single folder at the new destination.
 
-Starting in version 1810, during the copy process, the **Despooler** and **Distribution manager** components don't process new packages. This action makes sure that content isn't added to the library while it's moving. Regardless, schedule this change during a system maintenance.
+During the copy process, the **Despooler** and **Distribution manager** components don't process new packages. This action makes sure that content isn't added to the library while it's moving. Regardless, schedule this change during a system maintenance.
 
 If you need to move the content library back to the site server, repeat this process, but enter a local drive and path for the **New Location**. It must include a folder name that already exists on the drive, for example, `D:\SCCMContentLib`. When the original content still exists, the process quickly moves the configuration to the location local to the site server.
 
@@ -198,3 +196,7 @@ The following tips may help you troubleshoot issues with the content library:
 - As a last option, redistribute the content. This action should resolve most issues.  
 
 For more in-depth information, see [Understanding and troubleshooting content distribution in Configuration Manager](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).
+
+## Next steps
+
+[Flowchart - Manage content library](manage-content-library-flowchart.md)

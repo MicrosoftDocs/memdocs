@@ -2,11 +2,10 @@
 title: Azure AD authentication workflow
 titleSuffix: Configuration Manager
 description: Details of the Configuration Manager client installation process on a Windows 10 device with Azure Active Directory authentication
-ms.date: 10/07/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: 9aaf466a-3f40-4468-b3cd-f0010f21f05a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -144,7 +143,7 @@ Package:     C:\WINDOWS\ccmsetup\{E6F27809-FF66-4BAA-B0FB-E4A154A6A388}\client.m
 ```
 
 > [!NOTE]
-> If the client finds the content from a content-enabled CMG or cloud-based distribution point, ccmsetup downloads the content from the cloud storage. If the latest client version isn't available on the cloud, it downloads the content from the management point via a CMG request.
+> If the client finds the content from a content-enabled CMG, ccmsetup downloads the content from the cloud storage. If the latest client version isn't available on the cloud, it downloads the content from the management point via a CMG request.
 
 ## Client registration
 
