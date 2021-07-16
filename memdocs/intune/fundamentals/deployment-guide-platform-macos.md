@@ -45,27 +45,33 @@ Complete the following prerequisites to enable macOS device management in Intune
 
 ## Plan for your deployment  
 
-The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios, and requirements. It also describes how to create plans for rollout, communication, support, testing, and validation. Because Company Portal for macOS isn't available in the App Store, we recommend having a communication plan so that end users know how to install Company Portal and enroll their devices.  
+Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. 
+
+Because the Company Portal app for macOS isn't available in the App Store, we recommend having a communication plan so that end users know how to install Company Portal and enroll their devices.    
 
 ## Enroll devices  
 
-You can enable enrollment in Intune for company-owned and personal macOS devices. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for coporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
+Get started by enabling enrollment in Intune for company-owned and personal macOS devices. This step ensures that after devices enroll they can receive Intune policies and configurations. 
+
+Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for coporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
  
-After devices enroll, they can receive Intune policies and configurations. 
+
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Set up enrollment for user-owned (BYOD) devices](../enrollment/macos-enroll.md)|This enrollment method is for organizations that have *Bring Your Own Device* (BYOD) policies. Complete the prerequisites in this article to enable enrollment for user-owned devices. You'll also find enrollment resources and links to share with device users so that they're supported throughout the enrollment experience.  | 
+|[Set up enrollment for user-owned (BYOD) devices](../enrollment/macos-enroll.md)| Complete the prerequisites in this article to enable enrollment for user-owned devices. You'll also find enrollment resources and links to share with device users so that they're supported throughout the enrollment experience. This enrollment method is for organizations that have *Bring Your Own Device* (BYOD) policies. BYOD lets people use their personal devices for work-related things. | 
 |[Set up Apple Automated Device Enrollment (ADE)](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience that automates enrollment on corporate-owned devices purchased through Apple School Manager or Apple Business Manager. This method is ideal for organizations that have a large number of devices to enroll, because it eliminates the need to touch and configure each device individually.  |  
-|[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Set up an enrollment experience for corporate-owned devices unaffiliated with a single user. Direct enrollment doesn't wipe the device so it's ideal to use with devices that don't need access to local user data. You'll need to transfer the enrollment profile to the Mac directly, which requires a USB connection to a Mac computer running Apple Configurator.|  
+|[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Set up an enrollment experience for corporate-owned devices that are unaffiliated with a single user, like devices used in a shared space or retail setting. Direct enrollment doesn't wipe the device so it's ideal to use when devices don't need access to local user data. You'll need to transfer the enrollment profile to the Mac directly, which requires a USB connection to a Mac computer running Apple Configurator.|  
 |[Add a device enrollment manager](../enrollment/device-enrollment-manager-enroll.md)| People designated as device enrollment managers (DEM) can enroll up to 1,000 corporate-owned mobile devices at a time. DEM accounts are useful in organizations that enroll and prepare devices before handing them out to users. | 
-| [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
+| [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| You can assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
 |[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 ## Create compliance rules  
 
-Use compliance policies to define the rules and conditions that users and devices should meet to access your protected resources. If you create a Conditional Access policy, it can work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).  
+Create compliance policies to define the rules and conditions that users and devices must meet to access your protected resources. This is how you ensure that devices accessing your data meet your standards. Intune marks devices that fall short of your requirements as *non-compliant* and takes action (such as sending the user a notification, restricting access, or wiping the device) according to your configurations.  
+
+If you create a Conditional Access policy, it can work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).  
 
 | Task | Detail | 
 | ---- | ------ | 
@@ -77,7 +83,7 @@ Use compliance policies to define the rules and conditions that users and device
 
 ## Configure device settings     
 
-Use Microsoft Intune to enable or disable settings and features on macOS devices. To configure and enforce these settings, create a device configuration profile and then assign the profile to groups in your organization. Devices receive the profile once they enroll.  
+Use Microsoft Intune to enable or disable settings and features on macOS devices being used for work.  To configure and enforce these settings, create a device configuration profile and then assign the profile to groups in your organization. 
 
 | Task | Detail | 
 | ---- | ------ | 
