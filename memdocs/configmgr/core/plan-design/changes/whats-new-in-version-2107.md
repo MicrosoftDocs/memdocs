@@ -348,7 +348,7 @@ As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), vers
 
 
 <!--
-As first announced in version 1906, version 2107 drops support for the following client OS versions:  
+As first announced in version 1906, version xxxx drops support for the following client OS versions:  
 
 - Windows CE 7.0
 - Windows 10 Mobile
