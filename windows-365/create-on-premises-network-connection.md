@@ -67,7 +67,7 @@ The connection name must be unique within the customer tenant.
   - Confirm AD domain password: The password for the user specified above.
 
 7. Select **Next**.
-8. On the **Review + Create** page, select **Create**.
+8. On the **Review + Create** page, select **Create**. 
 
 <!-- ########################## -->
 ## Next steps
