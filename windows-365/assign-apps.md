@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: chbrinkh
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,6 +33,7 @@ ms.collection: M365-identity-device-management
 Follow these steps to deploy Intune Windows 10 apps to your co-managed or Intune-managed Cloud PCs.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Apps** > **All apps** > select an app.
+![Screenshot of select an app](./media/assign-apps/select-app.png)
 2. On the app page, select **Properties** > **Edit** (next to **Assignments**).
 3. On the **Assignments** page, select **Add group** (under **Group**).
 4. In the **Select groups** to include, select the groups to which you want to assign this app > **Select** > **Review + Save**.
