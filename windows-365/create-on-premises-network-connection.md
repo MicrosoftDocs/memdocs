@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: mattsha
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create on-premises network connection
 
-On-premises network connections are required so that Cloud PCs can:
+[On-premises network connections](on-premises-network-connections.md) are required so that Cloud PCs can:
 
 - Be provisioned.
 - Be joined to your company’s domain.
