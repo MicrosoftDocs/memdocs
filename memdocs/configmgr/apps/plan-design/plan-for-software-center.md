@@ -84,10 +84,6 @@ The following image shows an example of Software Center that's customized with a
 
 :::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding.":::
 
-Starting in version 2107, notifications on Windows 10 devices also display the logo. This behavior helps users to trust these notifications.<!--4993167--> When you deploy software to a client, the user sees notifications with your logo. The following example uses a star logo:
-
-:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
-
 For more information, see the following articles:
 
 - [About client settings for Software Center](../../core/clients/deploy/about-client-settings.md#software-center)

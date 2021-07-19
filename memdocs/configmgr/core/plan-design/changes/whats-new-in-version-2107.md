@@ -181,16 +181,6 @@ For more information, see [About log files](../hierarchy/about-log-files.md#hard
 
 ## Software Center
 
-### Software Center notifications display with logo
-
-<!--4993167-->
-
-If you enable Software Center customizations, then notifications on Windows 10 devices display the logo that you configure in client settings. This change helps users to trust these notifications. When you deploy software to a client, the user sees notifications with your logo. The following example uses a star logo:
-
-:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
-
-For more information about customizing Software Center, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).
-
 ### Support for enhanced HTTP
 
 <!-- 9199146 -->
