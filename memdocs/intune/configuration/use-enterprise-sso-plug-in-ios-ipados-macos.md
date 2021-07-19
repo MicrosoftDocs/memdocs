@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/27/2021
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -150,6 +150,10 @@ When the device checks in with the Intune service, it will receive this profile.
   :::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
+
+On macOS, users are prompted to opt in or out of SSO when they sign in to a work or school app. They can select **Don’t ask me again** to opt out of SSO and block future requests about it.
+
+Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, send them to the Company Portal menu bar > **Company Portal** > **Preferences** and tell them to select or deselect **Don’t ask me to sign in with single sign-on for this device**.    
 
 ## Next steps
 
