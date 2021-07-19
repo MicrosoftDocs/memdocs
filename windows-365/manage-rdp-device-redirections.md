@@ -41,7 +41,8 @@ There are two ways to manage RDP redirections:
 
 Screencaps to be added later.
 
-1. Sign in to [Endpoint Manager portal](https://endpoint.microsoft.com) > **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com) > **Devices** > **Configuration profiles** > **Create profile**.
+![Screenshot of delete policy](./media/create-device-configuration-profile/create-profile.png)
 2. In the **Create a profile** pane, select the following options:
     - **Platform**: Windows 10 and later
     - **Profile type**: Settings catalog (preview)
