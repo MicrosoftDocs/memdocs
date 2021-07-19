@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: naramkri
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,6 +37,7 @@ If you want to use a custom device image, you can add it into your Azure subscri
 You can upload the custom image to the Windows 365 service by following these steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
+![Screenshot of add device image](./media/add-device-images/add-device-image.png)
 2. In the **Add image** page, provide the following information:
     - **Image name**: The name of the image you want to add.
     - **Image version**: A version number of the image with this format: Major(int).Minor(int).Patch(int) format. For example: 0.0.1, 1.5.13.
@@ -51,7 +52,7 @@ You can delete a custom image from Windows 365 by following these steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images**.
 2. On the **Device images** page, select the check box next to the image > **Delete**.
-4. Select **Yes** on the confirmation pop up to permanently delete the image.
+3. Select **Yes** on the confirmation pop up to permanently delete the image.
 
 <!-- ########################## -->
 ## Next steps

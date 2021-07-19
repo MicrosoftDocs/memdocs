@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Edit on-premises network connection
 
-All on-premises network connections are periodically checked to ensure that the environment is ready for use when provisioning Cloud PCs. If these checks fail, you may need to need to fix your networking setup on Azure or edit one of the properties provided.
+All [on-premises network connections](on-premises-network-connections.md) are periodically checked to ensure that the environment is ready for use when provisioning Cloud PCs. If these checks fail, you may need to need to fix your networking setup on Azure or edit one of the properties provided.
 
 To edit an on-premises network connection:
 
