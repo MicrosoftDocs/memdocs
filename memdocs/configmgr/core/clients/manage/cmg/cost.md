@@ -63,10 +63,6 @@ If you deploy the CMG as a classic cloud service, this deployment method replace
 
 The cost difference between a virtual machine and a virtual machine scale set should be negligible, but may vary by Azure region.
 
-## Key vault
-
-If you deploy the CMG as a **virtual machine scale set**, it uses [Azure Key Vault](/azure/key-vault/). The CMG usage of Key Vault is low, but included here for transparency. When estimating the cost for vaults, specify a value of `1` for **Operations**.
-
 ## Outbound data transfer
 
 - Charges are based on data flowing out of Azure, otherwise referred to as egress or download.
@@ -105,7 +101,9 @@ If you deploy the CMG as a **virtual machine scale set**, it uses [Azure Key Vau
 
 ## Other costs
 
-Each cloud service has a dynamic IP address. Each distinct CMG uses a new dynamic IP address. Adding other VMs per CMG doesn't increase these addresses.
+Each distinct CMG has one **Basic (ARM)** dynamic IP address. If you add other VMs to a CMG, it doesn't increase the number of these IP addresses. For more information, see [IP addresses pricing](https://azure.microsoft.com/pricing/details/ip-addresses/).
+
+If you deploy the CMG as a virtual machine scale set, it uses **Azure Key Vault**. The CMG usage of Key Vault is low, significantly less than 10,000 operations per month. For more information, see [Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
 
 If you get a CMG server authentication certificate from a public provider, there's generally a cost associated with this certificate. For more information, see [CMG server authentication certificate](server-auth-cert.md).
 
