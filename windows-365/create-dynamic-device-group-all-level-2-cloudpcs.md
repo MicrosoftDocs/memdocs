@@ -35,6 +35,7 @@ You might want to apply the same set of policies to all your Cloud PCs with the 
 You can follow the below steps and create a dynamic group for any of the listed SKUs for Cloud PC. In these steps, you will use the Device Model device property to create the dynamic device group.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Groups** > **New Group**.
+![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
 2. Select the **New Group** page, choose **Security** for **Group type**.
 3. Enter the following:
     1. **Group name** = “All Level 2 Cloud PCs.

@@ -35,6 +35,7 @@ You can create a dynamic device group that contains all Cloud PCs in your enviro
 In these steps, you’ll use the Device Model device property to create a dynamic device group.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Groups** > **New Group**.
+![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
 2. Select the **New Group** page, choose **Security** for **Group type**.
 3. Enter the following:
     1. **Group name** = “All Cloud PCs” (or some other name indicating it will contain all Cloud PCs).
