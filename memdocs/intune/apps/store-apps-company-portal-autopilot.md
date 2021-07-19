@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Add and assign the Windows 10 Company Portal app for Autopilot provisioned devices
+title: Add and assign the Windows 10 Company Portal app for Intune managed devices
 titleSuffix: Microsoft Intune
-description: Add and assign the Windows 10 Company Portal app to Intune for Autopilot provisioned devices.
+description: Add and assign the Windows 10 Company Portal app to Intune managed devices.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -29,15 +29,15 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add and assign the Windows 10 Company Portal app for Autopilot provisioned devices
+# Add and assign the Windows 10 Company Portal app for Intune managed devices
 
-To manage devices and install apps, your users can use the Company Portal app. You can assign the Windows 10 Company Portal app directly from Intune. 
+To manage devices and install apps, your users can optionally use the Company Portal app. You can assign the Windows 10 Company Portal app directly from Intune. 
 
 ## Prerequisites
 
-For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).
-
 You can choose to install the **Company Portal (Offline)** app using the steps below. The Company Portal app will be installed in device context when assigned to the Autopilot group and will be installed on the device before the user logs in. Offline apps are updated using Intune, whereas online apps are updated by the store. Use offline apps when you need to install and maintain a specific app version.
+
+For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).
 
 ## Configure the store settings to show the offline app
 
