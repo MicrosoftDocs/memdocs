@@ -71,6 +71,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 - [View recently connected consoles](../../servers/manage/admin-console.md#bkmk_viewconnected)
 - [BitLocker management key recovery](../../../protect/plan-design/bitlocker-management.md#prerequisites-for-the-recovery-service) (version 2103 and later)
 - [Software Center](../../../apps/plan-design/plan-for-software-center.md#support-for-enhanced-http) user-available applications (version 2107 and later)<!-- 9199146 -->
+- [Company Portal on co-managed devices](../../../comanage/company-portal.md) (version 2107 and later)<!-- 9199146 -->
 
 > [!NOTE]
 > The software update point and related scenarios have always supported secure HTTP traffic with clients as well as the cloud management gateway. It uses a mechanism with the management point that's different from certificate- or token-based authentication.<!-- SCCMDocs issue #1148 -->

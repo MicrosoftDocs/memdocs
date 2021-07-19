@@ -2,11 +2,10 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -66,7 +65,6 @@ To validate this behavior, on a client review the following log files:
 > To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest.
 
 For more information on how to configure the site, see [enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).
-
 
 ## Brand Software Center
 
