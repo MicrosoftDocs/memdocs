@@ -48,7 +48,7 @@ Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-se
 This public preview feature supports Windows 10 Enterprise multi-session VMs which are:
 
 - Running Windows 10 multi-session, version 1903 or later.
-- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
+- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan).
 - Set up as remote desktops in pooled host pools in Azure.
 - Running a Azure Virtual Desktop agent version of 2944.1400 or later.
 - Enrolled in Microsoft Endpoint Manager using one of the following methods:
@@ -176,6 +176,10 @@ The following Windows 10 desktop device remote actions are not supported and wil
 ## Retirement
 
 Deleting VMs from Azure will leave orphaned device records in Microsoft Endpoint Manager. They will be automatically cleaned up according to the cleanup rules configured for the tenant.
+
+## Security baselines
+
+Security baselines are not available for Windows 10 Enterprise multi-session at this time. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
 
 ## Additional configurations which are not supported on Windows 10 Enterprise multi-session VMs
 

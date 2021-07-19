@@ -2,11 +2,10 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -135,45 +134,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 - **Windows Embedded Standard 7 with SP1** (x86, x64)
 
-## Windows CE computers
-
-Manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  
-
-### Requirements and limitations
-
-- The mobile device client requires 0.78 MB of storage space for installation. Sign-in can require up to 256 KB of additional storage space.
-
-- Features for these mobile devices vary by platform and client type. For information about which management functions are supported, see [Choose a device management solution](../choose-a-device-management-solution.md).  
-
-### Supported OS versions
-
-- Windows CE 7.0 (ARM and x86 processors)  
-
-    > [!IMPORTANT]
-    > Configuration Manager version 2006 drops support for Windows CE 7.0 as a client. Deprecation was announced with [version 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
-
-#### Supported languages include
-
-- Chinese (simplified and traditional)
-
-- English (US)
-
-- French (France)
-
-- German
-
-- Italian
-
-- Japanese  
-
-- Korean  
-
-- Portuguese (Brazil)  
-
-- Russian  
-
-- Spanish (Spain)  
-
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
 The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product's End of Extended Support date.
@@ -221,13 +181,6 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 - **Windows 10 IoT Mobile Enterprise**  
 
 - **Windows 10 Team for Surface Hub**  
-
-- **Windows 10 Mobile**  
-
-- **Windows 10 Mobile Enterprise**  
-
-    > [!IMPORTANT]
-    > Configuration Manager version 2006 drops support for Windows 10 Mobile and Windows 10 Mobile Enterprise as a client. Deprecation was announced with [version 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 ## <a name="bkmk_ExSrvConOS"></a> Exchange Server connector  
 

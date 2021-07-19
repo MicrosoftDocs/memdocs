@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2021
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -54,7 +54,7 @@ The actual time that a device starts to update depends on the device being onlin
   > [!IMPORTANT]
   > In some scenarios, Windows Update can install an update that is more recent than the update you specify in expedite update policy. For more information about this scenario, see [About installing the latest applicable update](#identify-the-latest-applicable-update), later in this article.
 
-- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Widows 10 update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
+- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows 10 update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
 
 - When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
 
@@ -73,6 +73,7 @@ In addition to a license for Intune, your organization must have one of the foll
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10 Virtual Desktop Access (VDA) per user
+- Microsoft 365 Business Premium
 
 **Supported Windows 10 versions**:
 
@@ -141,6 +142,10 @@ Group Policy settings override mobile device management policies, and the follow
 - **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
 - **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
 
+**Enable Windows Health Monitoring**:
+
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [Windows Health Monitoring](../configuration/windows-health-monitoring.md). While configuring Windows Health Monitoring, be sure to set the **Scope** to **Windows updates**.
+ 
 ## Create and assign an expedited quality update
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -305,6 +310,6 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [Widows 10 update rings](../protect/windows-10-update-rings.md)
+- Configure [Windows 10 update rings](../protect/windows-10-update-rings.md)
 - Configure [Windows 10 feature updates](../protect/windows-10-feature-updates.md)
 - View [Windows 10 release information](/windows/release-information/)

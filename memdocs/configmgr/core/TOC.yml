@@ -451,7 +451,7 @@ items:
       href: plan-design/hierarchy/accounts.md
     - name: Communications between endpoints
       href: plan-design/hierarchy/communications-between-endpoints.md
-    - name: Enhanced HTTP site systems
+    - name: Enhanced HTTP
       href: plan-design/hierarchy/enhanced-http.md
     - name: Hierarchy maintenance tool
       href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
@@ -489,6 +489,8 @@ items:
       href: servers/manage/cmpivot.md
     - name: CMPivot changes
       href: servers/manage/cmpivot-changes.md
+    - name: CMPivot sample scripts
+      href: servers/manage/cmpivot-sample-scripts.md
     - name: Troubleshooting CMPivot
       href: servers/manage/cmpivot-tsg.md
   - name: Maintenance tasks

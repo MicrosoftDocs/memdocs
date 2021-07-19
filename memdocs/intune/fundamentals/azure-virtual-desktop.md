@@ -81,4 +81,4 @@ Deleting VMs from Azure leaves orphaned device records in Intune. They'll be aut
 ## Next steps
 
 * [Learn more about Azure Virtual Desktops](/azure/virtual-desktop/).
-* [Use Azure Virtual Desktop multi-session with Intune](windows-virtual-desktop-multi-session.md)
+* [Use Azure Virtual Desktop multi-session with Intune](./azure-virtual-desktop-multi-session.md)

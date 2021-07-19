@@ -102,7 +102,6 @@ In addition to Internet Protocol version 4 (IPv4), Configuration Manager support
 | Network Discovery           | IPv4 is required when you configure a DHCP server to search in Network Discovery.   |
 | OS deployment               | Capturing or setting static IP addresses during the task sequence requires IPv4.    |
 | Wake-up proxy communication | IPv4 is required to support the client wake-up proxy packets.                       |
-| Windows CE                  | IPv4 is required to support the Configuration Manager client on Windows CE devices. |
 
 ## <a name="bkmk_NAT"></a> Network Address Translation  
 

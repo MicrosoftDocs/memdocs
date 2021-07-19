@@ -390,14 +390,14 @@ The following table lists the log files that contain information related to the 
 |Dataldr.log|Records information about the processing of MIF files.|Site server|  
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |Distmgr.log|Records details about content distribution requests.|Top-level site server|  
-|Dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|  
-|Dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
+|Dmpdownloader.log|Records details about downloads from Microsoft, such as site updates.|Computer with the service connection point|  
+|Dmpuploader.log|Records detail related to uploading database changes to Microsoft.|Computer with the service connection point|  
 |EndpointConnectivityCheckWorker.log|Starting in version 2010, records detail related to checks for important internet endpoints.|Computer with the service connection point|
 |hman.log|Records information about message forwarding.|Site server|  
 |WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
 |PolicyPV.log|Records policy generation of all policies.|Site server|  
-|outgoingcontentmanager.log|Records content uploaded to Microsoft Intune.|Computer with the  service connection point|  
+|outgoingcontentmanager.log|Records content uploaded to Microsoft.|Computer with the service connection point|  
 |ServiceConnectionTool.log|Records details about use of the [service connection tool](../../servers/manage/use-the-service-connection-tool.md) based on the parameter you use. Each time you run the tool, it replaces any existing log file.|Same location as the tool|
 |Sitecomp.log|Records details of service connection point installation.|Site server|  
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  

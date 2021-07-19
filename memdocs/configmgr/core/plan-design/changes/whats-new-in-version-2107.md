@@ -111,6 +111,14 @@ In a complex IT environment, you may have an automation system like [Azure Logic
 
 Starting in this release, you can enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure [subscriptions](../../servers/manage/configure-alerts.md) to send these notifications. These notifications are in response to specific, defined events as they occur. For example, [status message filter rules](../../servers/manage/use-status-system.md#manage-status-filter-rules).
 
+### Internet access requirements
+
+<!--9791281,10237384-->
+
+Before you update to version 2107, if you restrict internet access, confirm that the site system that hosts the service connection point role can communicate with the following internet endpoint: `configmgrbits.azureedge.net`. This endpoint was already required, but its use is expanded in this release. The site system can't download version 2107 or later unless your network allows traffic to this URL.
+
+For more information, see [internet access requirements](../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
+
 ## Real-time management
 
 ### Simplified CMPivot permissions requirements
@@ -177,23 +185,13 @@ For more information, see [About log files](../hierarchy/about-log-files.md#hard
 
 ## Software Center
 
-### Software Center notifications display with logo
-
-<!--4993167-->
-
-If you enable Software Center customizations, then notifications on Windows 10 devices display the logo that you configure in client settings. This change helps users to trust these notifications. When you deploy software to a client, the user sees notifications with your logo. The following example uses a star logo:
-
-:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
-
-For more information about customizing Software Center, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).
-
 ### Support for enhanced HTTP
 
 <!-- 9199146 -->
 
-When you enable the site for [enhanced HTTP](../hierarchy/enhanced-http.md), Software Center now prefers secure communication over HTTPS to get user-available applications from the management point.
+When you enable the site for [enhanced HTTP](../hierarchy/enhanced-http.md), Software Center and the Company Portal now prefer secure communication over HTTPS to get user-available applications from the management point.
 
-<!-- For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md). -->
+For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md) and [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
 
 ## Application management
 
@@ -222,6 +220,8 @@ For more information, see [Task sequence steps - Apply OS Image](../../../osd/un
 
 An **Audit** option for [potentially unwanted applications (PUA)](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) was added in the **Antimalware policy** settings. Use PUA protection in audit mode to detect potentially unwanted applications without blocking them. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and you'd like to avoid any false positives.
 
+For more information, see [real-time protection settings](../../../protect/deploy-use/endpoint-antimalware-policies.md#real-time-protection-settings).
+
 ## Software updates
 
 ### Windows Update native experience for software updates
@@ -239,9 +239,13 @@ You can now right-click and notify devices to run a software updates evaluation 
 
 [Management insights](../../servers/manage/management-insights.md) has a new rule to detect if your software update points are [configured to use TLS/SSL](../../../sum/get-started/software-update-point-ssl.md). To review the **Configure software update points to use TLS/SSL** rule, go to **Administration** > **Management Insights** > **All Insights** > **Software Updates**.
 
-### List additional third-party updates catalogs
+For more information, see the [Management insights software updates group](../../servers/manage/management-insights.md#software-updates).
+
+### List additional third-party updates catalogsList additional third-party updates catalogs
 <!--9989251-->
-To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
+To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a list of additional third-party software update catalog providers.
+
+For more information, see [Third party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
 
 ### Improvements for managing automatic deployment rules
 
@@ -265,6 +269,8 @@ If you create an ADR with the **No deployment package** option, you're' unable t
 <!--8495588-->
 Building on improvements in Configuration Manager 2010 for [syntax highlighting and code folding](../../servers/manage/admin-console-tips.md#bkmk_syntax), you now have the ability to edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited.
 
+For more information, see the [enhanced code editor](../../servers/manage/admin-console-tips.md#bkmk_code).
+
 ### Send product feedback from error windows
 
 <!--4262917-->
@@ -273,13 +279,17 @@ Previously, if the Configuration Manager console reported an error in a separate
 
 Starting in this release, error messages include a link to **Report error to Microsoft**. This action opens the standard "send a frown" window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also lets you include the full context of the error message when you share a screenshot.
 
+For more information, see [Product feedback](../../understand/product-feedback.md).
+
 ### Hierarchy approved console extensions don't require signing
 <!--9761129-->
 Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
+For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
+
 ### Configuration Manager console settings aren't saved
-<!--5452256-->
-When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.
+<!--5452246-->
+When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.<!-- move to relnote, not "what's new" -->
 
 ### Console improvements
 <!--9575773-->
@@ -293,18 +303,13 @@ In this release we've made the following improvements to the Configuration Manag
 
 - Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
 
-
 ## Support Center
-
-### Support Center dark and light themes
-<!--8218853-->
-The [Support Center](../../support/support-center.md) tools now offer dark and light modes. Choose to use the system default color scheme, or override the system default by selecting either the dark or light theme.
-
-
 ### Improvements to Support Center
 <!--8272488-->
 
 Starting in this release, the **Content** view in the **Support Center Client Tools** has been renamed to **Deployments**.  From **Deployments**, you can review all of the deployments currently targeted to the device. The new view is grouped by **Category** and **Status**. The view can be sorted and filtered to help you find the deployments you're interested in. Select a deployment in the results pane to display more information in the details pane.
+
+For more information, see [Support Center Client Tools user interface reference](../../support/support-center-ui-reference.md#deployment-view).
 
 ## Tools
 
@@ -340,7 +345,7 @@ As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), vers
 - Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.<!-- 9649296 -->
 
 <!--
-As first announced in version 1906, version 2107 drops support for the following client OS versions:
+As first announced in version 1906, version xxxx drops support for the following client OS versions:  
 
 - Windows CE 7.0
 - Windows 10 Mobile

@@ -51,6 +51,19 @@ The user account that runs Configuration Manager setup has **Administrator** rig
 
 The user account that runs Configuration Manager setup has **Administrator** rights on the central administration site server.
 
+### Application catalog rules are unsupported
+
+<!-- 10158844 -->
+
+*Applies to: Primary site*
+
+Starting in version 2107, this error happens if the site has either of the following site system roles:
+
+- Application catalog website point
+- Application catalog web service point
+
+Support for the application catalog was removed in version 1910. For more information, see [Remove the application catalog](../../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog).
+
 ### Asset Intelligence synchronization point on the expanded primary site
 
 *Applies to: Central administration site*
