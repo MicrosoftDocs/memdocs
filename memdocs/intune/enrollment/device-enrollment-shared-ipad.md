@@ -51,6 +51,9 @@ Follow these steps to set up Shared iPads in your environment:
 
 ## Configure settings for Shared iPads
 
+> [!NOTE]
+> *This feature is in public preview.*
+
 You can configure settings in device configuration profiles for a Shared iPad both in device and user context. However, the settings on a Shared iPad follow the applicability rules in the table below. In general, a device applicable setting applies to any active user on a Shared iPad device, while a user applicable setting applies when the user is active on any Shared iPad device.
 
 > [!NOTE]
