@@ -239,14 +239,16 @@ items:
     items:
     - name: Plan for security
       href: plan-design/security/plan-for-security.md
-    - name: Plan for certificates
+    - name: Certificates overview
+      href: plan-design/security/certificates-overview.md
+    - name: Plan for PKI certificates
       href: plan-design/security/plan-for-certificates.md
-    - name: Additional privacy information
-      href: plan-design/security/additional-privacy.md
     - name: Configure security
       href: plan-design/security/configure-security.md
     - name: Cryptographic controls technical reference
       href: plan-design/security/cryptographic-controls-technical-reference.md
+    - name: Additional privacy information
+      href: plan-design/security/additional-privacy.md
     - name: Enable TLS 1.2
       items:
       - name: About enabling TLS 1.2 

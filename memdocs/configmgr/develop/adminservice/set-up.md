@@ -84,7 +84,7 @@ There are two primary methods of using a server authentication certificate:
 
 - From your organization's public key infrastructure (PKI)
 
-  - If your environment already has a PKI, you can use it to issue a server authentication certificate for the SMS Provider. This certificate is similar to the certificate you would use for a management point or distribution point. For more information, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers).
+  - If your environment already has a PKI, you can use it to issue a server authentication certificate for the SMS Provider. This certificate is similar to the certificate you would use for a management point or distribution point. For more information, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md#pki-certificates-for-servers).
 
   - Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to clients. You can scope this trust to only the clients that need to access the administration service.
 
