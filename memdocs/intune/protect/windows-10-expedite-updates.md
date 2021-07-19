@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/12/2021
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -142,6 +142,10 @@ Group Policy settings override mobile device management policies, and the follow
 - **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
 - **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
 
+**Enable Windows Health Monitoring**:
+
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [Windows Health Monitoring](../configuration/windows-health-monitoring.md). While configuring Windows Health Monitoring, be sure to set the **Scope** to **Windows updates**.
+ 
 ## Create and assign an expedited quality update
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
