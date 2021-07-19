@@ -53,8 +53,8 @@ As part of the connection process, the Windows 365 service is granted the follow
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create connection**.
 ![Screenshot of create connection](./media/create-on-premises-network-connection/create-connection.png)
-2. On the **Network details** page, enter a **Connection name** for the new connection.
-The connection name must be unique within the customer tenant.
+2. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
+![Screenshot of connection name](./media/create-on-premises-network-connection/connection-name.png)
 3. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a healthy on-premises network connection, you won't be able to proceed. For more information, see the on-premises network connection creation guide.
 4. Select a **Virtual network** and **Subnet**.
 5. Select **Next**.
@@ -66,7 +66,7 @@ The connection name must be unique within the customer tenant.
     - Confirm AD domain password: The password for the user specified above.
 
 7. Select **Next**.
-8. On the **Review + Create** page, select **Create**. 
+8. On the **Review + Create** page, select **Create**.
 
 <!-- ########################## -->
 ## Next steps
