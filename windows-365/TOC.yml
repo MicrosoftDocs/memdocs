@@ -37,7 +37,7 @@
       - name: Cloud PC role-based access control
         href: role-based-access.md
       - name: Intune role-based access control
-        href: ../intune/fundamentals/role-based-access-control.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
+        href: /intune/fundamentals/role-based-access-control.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
       - name: Cloud PC sizes
         href: cloud-pc-size-recommendations.md
     - name: Deploy
@@ -121,9 +121,9 @@
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
-        href: ../intune/protect/windows-10-update-rings.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
+        href: /intune/protect/windows-10-update-rings.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
       - name: Windows 10 feature updates
-        href: ../intune/protect/windows-10-feature-updates.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
+        href: /intune/protect/windows-10-feature-updates.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
       - name: Windows 10 lifecycle
         href: /windows/release-health/release-information?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
     - name: End user experience
