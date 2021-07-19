@@ -195,9 +195,9 @@ For more information about customizing Software Center, see [Plan for Software C
 
 <!-- 9199146 -->
 
-When you enable the site for [enhanced HTTP](../hierarchy/enhanced-http.md), Software Center now prefers secure communication over HTTPS to get user-available applications from the management point.
+When you enable the site for [enhanced HTTP](../hierarchy/enhanced-http.md), Software Center and the Company Portal now prefer secure communication over HTTPS to get user-available applications from the management point.
 
-<!-- For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md). -->
+For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md) and [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
 
 ## Application management
 

@@ -48,6 +48,24 @@ Software Center gets application deployment information in policy from the manag
 
 Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. Starting in version 2006, they can get user-available apps on internet-based, domain-joined devices. For more information, see [Prerequisites to deploy user-available applications](prerequisites-deploy-user-available-apps.md).
 
+### Support for enhanced HTTP
+
+<!-- 9199146 -->
+
+Starting in version 2107, Software Center can take advantage of enhanced HTTP. This site configuration provides secure communication without the overhead of managing PKI certificates. When you enable the site for enhanced HTTP, Software Center prefers secure communication over HTTPS to get user-available applications from the management point.
+
+The site optimizes user-available deployments to reduce policy traffic between the server and clients. This behavior allows a large number of applications to be available for the user without significantly affecting performance of the overall infrastructure.
+
+To validate this behavior, on a client review the following log files:
+
+- **CCMSDKProvider.log**: Shows the client's selection of the HTTPS endpoint on the management point. For example: `Management URL retrieved: https://...`
+- **SCClient_*.log**: Shows the endpoint URL that the client uses to communicate with the management point, which should use HTTPS. For example: `Using endpoint Url: https://mp01.contoso.com:443/CMUserService, AAD authentication`
+
+> [!NOTE]
+> To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest.
+
+For more information on how to configure the site, see [enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).
+
 ## Brand Software Center
 
 Change the appearance of Software Center to meet your organization's branding requirements. This configuration helps users trust Software Center.
@@ -62,7 +80,7 @@ Customize the appearance of Software Center by adding your organization's brandi
 - **Foreground color**: By default, when you select an item, the font color is white. Starting in version 2103, you can change this color for better visibility with certain primary colors, and better accessibility.<!--8655575-->
 - **Logo**: A JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB
 
-The following image shows a example of Software Center that's customized with all four branding settings:
+The following image shows an example of Software Center that's customized with all four branding settings:
 
 :::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding.":::
 
