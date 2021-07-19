@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 07/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -114,10 +114,8 @@ In addition to a license for Intune, your organization must have one of the foll
 
 - Be configured to get Quality Updates directly from the Windows Update service.
 
-- Have installed the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a).
-
-- Have the Update Health Tools installed. To confirm the presence of the Update Health Tools on a device:
-  - On the device, look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
+- Have the *Update Health Tools* installed, which are installed with [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a). To confirm the presence of the Update Health Tools on a device:
+  - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
   - As an Admin, run the following PowerShell script:
 
     `Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match "Microsoft Update Health Tools"}`
