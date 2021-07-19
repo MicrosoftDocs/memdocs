@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create on-premises network connection
 
-[On-premises network connections](on-premises-network-connection.md) are required so that Cloud PCs can:
+[On-premises network connections](on-premises-network-connections.md) are required so that Cloud PCs can:
 
 - Be provisioned.
 - Be joined to your company’s domain.

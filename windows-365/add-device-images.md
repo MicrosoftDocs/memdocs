@@ -41,7 +41,6 @@ You can upload the custom image to the Windows 365 service by following these st
 2. In the **Add image** page, provide the following information:
     - **Image name**: The name of the image you want to add.
     - **Image version**: A version number of the image with this format: Major(int).Minor(int).Patch(int) format. For example: 0.0.1, 1.5.13.
-    - **Operating system**: The operating system of the image.
     - **Source Image**: Choose an image to add. The list will populate with all custom images from your subscription that meet the pre-requisites.
 
 3. Select **Upload** to add the image to your device image list.
