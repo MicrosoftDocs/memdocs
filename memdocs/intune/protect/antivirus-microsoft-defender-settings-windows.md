@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 07/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -298,13 +298,18 @@ Learn more
 - **Run daily quick scan at**  
   CSP: [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
-  Select the time of day that Defender quick scans run.
-  By default, this setting is **Not configured**
+  Select the time of day that Defender quick scans run. This setting applies only when a device runs a quick scan and doesn't interact with the following three settings:
+
+  - Scan type
+  - Day of week to run a scheduled scan
+  - Time of day to run a  scheduled scan
+
+  By default, *Run daily quick scan at* is set to **Not configured**.
 
 - **Scan type**  
   CSP: [ScanParameter](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
-
-  Select the type of scan that Defender runs.
+  
+  Select the type of scan that Defender runs. This setting interacts with the settings *Day of week to run a scheduled scan* and *Time of day to run a scheduled scan*.
 
   - **Not Configured** (*default*)
   - **Quick scan**
