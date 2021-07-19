@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/10/2021
+ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -163,7 +163,16 @@ After the filter is created, it's ready to use when assigning your apps or polic
     :::image type="content" source="./media/filters/edit-compliance-policy-assignment.png" alt-text="Select a policy or profile, and edit the assignment in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 3. Assign your policy to a users group or a devices group.
-4. Select **Edit filter**. You can choose to **include filtered devices** or **exclude filtered devices**. A list of filters that match the policy platform is shown.
+4. Select **Edit filter**. Your options:
+
+    - **Do not apply a filter**: All targeted users or devices recieve the app or policy without filtering.
+    - **Include filtered devices in assignment**: Devices that match the filter conditions recieve the app or policy. Devices that don't match the filter conditions don't receive the app or policy.
+
+      A list of filters that match the policy platform is shown.
+
+    - **Exclude filtered devices in assignment**: Devices that match the filter conditions don't recieve the app or policy. Devices that don't match the filter conditions receive the app or policy.
+
+      A list of filters that match the policy platform is shown.
 
 5. Select your filter > **Select**.
 
