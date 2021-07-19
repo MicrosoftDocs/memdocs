@@ -157,7 +157,9 @@ Starting in this release, you can use the [administration service](../../../deve
 
 <!--10129759-->
 
-Starting in this release, when you enable the site to **Use encryption**, the client uses the **AES-256** algorithm. This setting requires clients to encrypt inventory data and state messages before it sends to the management point. For more information, see [Plan for security - signing and encryption](../../plan-design/security/plan-for-security.md#signing-and-encryption).
+Starting in this release, when you enable the site to **Use encryption**, the client uses the **AES-256** algorithm. This setting requires clients to encrypt inventory data and state messages before it sends to the management point.
+
+For more information, see [Cryptographic controls technical reference](../security/cryptographic-controls-technical-reference.md).
 
 ### Clients store Configuration Manager self-signed certificates in hardware TPM
 

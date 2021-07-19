@@ -2,7 +2,7 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 04/23/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -19,14 +19,16 @@ Configuration Manager uses signing and encryption to help protect the management
 
 The primary hashing algorithm that Configuration Manager uses for signing is **SHA-256**. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256.
 
-The primary encryption algorithm that Configuration Manager uses is **3DES**. Encryption mainly happens in the following two areas:
+Starting in version 2107, the primary encryption algorithm that Configuration Manager uses is **AES-256**. Encryption mainly happens in the following two areas:
 
 - If you enable the site to **Use encryption**, the client encrypts its inventory data and state messages that it sends to the management point.
 
 - When the client downloads secret policies, the management point always encrypts these policies. For example, an OS deployment task sequence that includes passwords.
 
+For clients on version 2103 and earlier, the primary encryption algorithm is **3DES**.
+
 > [!NOTE]
-> If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with 3DES, then the HTTPS transport is encrypted with AES.
+> If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with AES, then the HTTPS transport is encrypted with AES.
 
 When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. When using CNG v3 certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md) and [CNG v3 certificates overview](../network/cng-certificates-overview.md).
 
@@ -44,7 +46,7 @@ Information in Configuration Manager can be signed and encrypted. It supports th
 
 The site signs client policy assignments with its self-signed certificate. This behavior helps prevent the security risk of a compromised management point from sending tampered policies. If you use [internet-based client management](../../clients/manage/plan-internet-based-client-management.md), this behavior is important because it requires an internet-facing management point.
 
-When policy contains sensitive data, the site encrypts it with 3DES. Policy that contains sensitive data is only sent to authorized clients. The site doesn't encrypt policy that doesn't have sensitive data.
+When policy contains sensitive data, starting in version 2107, the management point encrypts it with AES-256. In version 2103 and earlier, it uses 3DES. Policy that contains sensitive data is only sent to authorized clients. The site doesn't encrypt policy that doesn't have sensitive data.
 
 When a client stores policy, it encrypts the policy using the Windows data protection application programming interface (DPAPI).
 
@@ -52,7 +54,7 @@ When a client stores policy, it encrypts the policy using the Windows data prote
 
 When a client requests policy, it first gets a policy assignment. Then it knows which policies apply to it, and it can request only those policy bodies. Each policy assignment contains the calculated hash for the corresponding policy body. The client downloads the applicable policy bodies and then calculates the hash for each policy body. If the hash on the policy body doesn't match the hash in the policy assignment, the client discards the policy body.
 
-The hashing algorithm for policy is **SHA-1** and **SHA-256**.
+The hashing algorithm for policy is **SHA-256**.
 
 ### Content hashing  
 
@@ -72,7 +74,7 @@ When a client sends hardware or software inventory to a management point, it alw
 
 ### State migration encryption
 
-When a task sequence captures data from a client for OS deployment, it always encrypts the data. In version 2010 and earlier, the task sequence runs the User State Migration Tool (USMT) with the **3DES** encryption algorithm. In version 2103 and later, it uses **AES 256**.<!--9171505-->
+When a task sequence captures data from a client for OS deployment, it always encrypts the data. In version 2103 and later, the task sequence runs the User State Migration Tool (USMT) with the **AES-256** encryption algorithm. In version 2010 and earlier, it uses **3DES**.<!--9171505-->
 
 ### Encryption for multicast packages
 
@@ -100,7 +102,7 @@ When you import configuration data, Configuration Manager verifies the file's di
 
 ### Encryption and hashing for client notification
 
-If you use client notification, all communication uses TLS and the highest algorithms that the server and client can negotiate. For example, a client computer running Windows 7 and a management point running Windows Server 2008 R2 can support **AES-128** encryption. The same negotiation occurs for hashing the packets that are transferred during client notification, which uses **SHA-1** or **SHA-2**.
+If you use client notification, all communication uses TLS and the highest algorithms that the server and client can negotiate. For example, all supported Windows OS versions can use at least **AES-128** encryption. The same negotiation occurs for hashing the packets that are transferred during client notification, which uses **SHA-2**.
 
 ## Certificates
 
