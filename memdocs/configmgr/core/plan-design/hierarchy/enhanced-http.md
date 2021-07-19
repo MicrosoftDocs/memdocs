@@ -123,6 +123,18 @@ When you enable enhanced HTTP, the site server generates a self-signed certifica
 
 To see the status of the configuration, review **mpcontrol.log**.
 
+## Conceptual diagram
+
+This diagram summarizes and visualizes some of the main aspects of the enhanced HTTP functionality in Configuration Manager.<!-- 9789979 -->
+
+:::image type="content" source="media/ehttp-diagram.svg" alt-text="Conceptual diagram of enhanced HTTP functionality.":::
+
+- The connection with Azure AD is recommended but optional. It enables scenarios that require Azure AD authentication.
+
+- When you enable the site option for enhanced HTTP, the site issues self-signed certificates to site systems such as the management point and distribution point roles.
+
+- With the site systems still configured for HTTP connections, clients communicate with them over HTTPS.
+
 ## Frequently asked questions
 
 ### What are the benefits of enhanced HTTP?
