@@ -168,11 +168,11 @@ After the filter is created, it's ready to use when assigning your apps or polic
     - **Do not apply a filter**: All targeted users or devices recieve the app or policy without filtering.
     - **Include filtered devices in assignment**: Devices that match the filter conditions recieve the app or policy. Devices that don't match the filter conditions don't receive the app or policy.
 
-    A list of filters that match the policy platform is shown.
+      A list of filters that match the policy platform is shown.
 
-- **Exclude filtered devices in assignment**: Devices that match the filter conditions don't recieve the app or policy. Devices that don't match the filter conditions receive the app or policy.
+    - **Exclude filtered devices in assignment**: Devices that match the filter conditions don't recieve the app or policy. Devices that don't match the filter conditions receive the app or policy.
 
-    A list of filters that match the policy platform is shown.
+      A list of filters that match the policy platform is shown.
 
 5. Select your filter > **Select**.
 
