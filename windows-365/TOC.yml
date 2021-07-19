@@ -62,8 +62,10 @@
       items:
       - name: Create and assign provisioning policy
         href: create-provisioning-policy.md
-      - name: Edit and delete provisioning policy
+      - name: Edit provisioning policy
         href: edit-provisioning-policy.md
+      - name: Delete provisioning policy
+        href: delete-provisioning-policy.md
       - name: Automated provisioning steps
         href: automated-provisioning-steps.md
     - name: Profiles and policies
