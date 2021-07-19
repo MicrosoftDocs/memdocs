@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: mattsha
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,6 +40,7 @@ A few things to keep in mind:
 ## Create a provisioning policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > **Create policy**.
+![Screenshot of create policy](./media/create-provisioning-policy/create-policy.png)
 2. On the **General** page, enter a **Name** and **Description** (optional) for the new policy.
 3. For **On-premises network connection**, select the connection to use for this policy > **Next**.
 4. On the **Image** page, for **Image type**, select one of the following options:
