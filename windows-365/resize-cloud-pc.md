@@ -49,13 +49,10 @@ Resizing isn’t supported for group-based licenses.
 ## Resize a Cloud PC
 
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
-
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
-
+![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
 3. You’ll see a list with all the possible SKUs that you can upgrade to. You can only increase a Cloud PC’s storage and specifications. Options with lower storage or specifications are grayed out. Select one of the available options.
-
 4. Select **Resize**.
-
     - If there are available licenses the upgrade will take place.
     - If there are no licenses in your inventory, the resizing will fail. You can contact your procurement admin to request more licenses. After the license has been purchased and added to the inventory in the Microsoft Admin Center, you can retry the resize operation.
 
