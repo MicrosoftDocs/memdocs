@@ -92,6 +92,9 @@ When you [deploy the application](deploy-applications.md) to a device collection
 
 - Enable the option to **Uninstall this application if the targeted object falls out of the collection**
 
+> [!IMPORTANT]
+> Be careful with enabling this option on deployments to large query-based collections. Especially queries to external sources like Active Directory groups. An unexpected external change could automatically trigger a large number of devices to uninstall the application.
+
 ### Implicit uninstall process
 
 After you remove the device from the collection, the following process happens:
@@ -103,6 +106,9 @@ After you remove the device from the collection, the following process happens:
 - 15 minutes after the client receives the updated policy, it uninstalls the app.
 
 Depending upon the timing of those steps, the longest time period for the client to uninstall the app is 85 minutes. If the first step happens immediately, and you manually download computer policy on the device, the overall process is 15 minutes.
+
+> [!NOTE]
+> For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
 
 ## Next steps
 
