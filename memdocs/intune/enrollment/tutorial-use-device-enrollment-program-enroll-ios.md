@@ -128,7 +128,7 @@ You must assign an enrollment program profile to devices before they can enroll.
 3. Under **Assign profile**, choose a profile for the devices > **Assign**.
 
 > [!NOTE]
-> Ensure **Device Type Restrictions** under **Enrollment Restrictions** does not have the Default **All Users** policy set to block the iOS/iPadOS platform.  This will cause automated enrollment to fail and your device will show as Invalid Profile, regardless of user attestation.  To permit enrollment by company managed devics only, block personally owned devices only, which will permit corporate devices to enroll.  Microsoft defines a corporate device as those enrolled via a Device Enrollment Program, or devices manually entered under **Corporate device identifiers**.
+> Ensure that **Device Type Restrictions** under **Enrollment Restrictions** does not have the default **All Users** policy set to block the iOS/iPadOS platform. This setting will cause automated enrollment to fail and your device will show as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which will permit corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled via a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.
 
 ## Distribute devices to users
 
