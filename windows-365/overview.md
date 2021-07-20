@@ -43,7 +43,7 @@ Each Cloud PC is assigned to an individual user and is their dedicated Windows d
 With the Windows 365 service, you can:
 
 - Automatically provision on-demand Windows Enterprise Cloud PCs for your users. [Provisioning](provisioning.md) is the automatic creation of Cloud PCs for your end users. After you set up Cloud PC support in Microsoft Endpoint Manager, a Cloud PC is automatically provisioned whenever you assign a user with a Cloud PC license to an appropriate Azure AD user group. To set up Cloud PC support, you’ll:
-  - Create [on-premises network connections](on-premises-network-connection.md) which are links between the Cloud PCs and your on-premises resources.
+  - Create [on-premises network connections](on-premises-network-connections.md) which are links between the Cloud PCs and your on-premises resources.
   - Choose a built-in, optimized Windows [image](device-images.md) (or create your own) to use as the basis for each Cloud PC.
 - Manage your Cloud PCs like your organization’s other devices in [Microsoft Endpoint Manager](/intune/). By default, Cloud PCs are joined to your enterprise Active Directory domain, synced to Azure Active Directory, and fully managed by Microsoft Endpoint Manager. Windows 365 is fully integrated into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are seamlessly managed in Microsoft Endpoint Manager like any other supported device, including configuration, apps, and updates.
 - [Configure provisioning policies](create-provisioning-policy.md) to create custom Cloud PC configurations.
