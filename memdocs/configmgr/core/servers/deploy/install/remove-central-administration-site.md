@@ -137,6 +137,8 @@ After you remove the CAS, review the following steps as they apply to your envir
 
   - Recreate [OS deployment media](../../../../osd/deploy-use/create-task-sequence-media.md).
 
+- If you enable Endpoint Analytics for devices uploaded to Microsoft Endpoint Manager, in version 2107, re-enable this option.<!-- 10362047 -->
+
 - If you connect Configuration Manager with [Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](../configure/azure-services-wizard.md#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
 
     > [!IMPORTANT]
