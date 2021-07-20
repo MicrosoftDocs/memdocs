@@ -56,9 +56,9 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
   - [Configuration Manager co-management](/configmgr/comanage/overview).
  
 > [!IMPORTANT]
-> If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, please ensure that you have the July 2021 or later Windows updates installed. Otherwise, there will be an issue causing remote actions in Microsoft Endpoint Manager such as remote sync to not work properly. As a result, any pending policies assigned to devices can take up to 8 hours to be applied. 
+> If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, be sure that you install the July 2021 Windows Update or a later Windows Update. Otherwise, an issue will cause remote actions in Microsoft Endpoint Manager. For example, remote sync won't work correctly. As a result, any pending policies assigned to devices might take up to 8 hours to be applied. 
 
-For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
+For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements)
 
 Windows 10 Enterprise multi-session VMs are treated as a separate OS edition and some existing Windows 10 Enterprise configurations won’t be supported for this edition. Using Microsoft Endpoint Manager does not depend on or interfere with Azure Virtual Desktop management of the same VM.
 
