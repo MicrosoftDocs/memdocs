@@ -32,14 +32,12 @@ ms.collection: M365-identity-device-management
 
 End users can access their Cloud PCs in two different ways:
 
-- [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/windows-365?rtc=1)
+- [windows365.microsoft.com ](https://Windows365.microsoft.com)
 - Microsoft Remote Desktop
 
 ## Windows365 web site
 
-End users can navigate to [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/windows-365?rtc=1) to access their Cloud PCs.  
-
-(Screenshot of end user portal.)
+End users can navigate to [windows365.microsoft.com ](https://windows365.microsoft.com) to access their Cloud PCs.  
 
 ### Requirements
 
@@ -51,8 +49,6 @@ To access their Cloud PC from this website, the end user's device must meet the 
 ### End-user actions
 
 While on soft.com, end users can perform actions on their Cloud PCs by selecting the gear icon on a Cloud PC card.
-
-(Screenshot of card with gear icon selected.)
 
 - **Rename**: Changes the name of the Cloud PC shown to the user on web site. This action won’t affect any name in MEM, AAD, on the device, or in the Remote Desktop Apps.  
 - **Restart**: Restarts the Cloud PC.
