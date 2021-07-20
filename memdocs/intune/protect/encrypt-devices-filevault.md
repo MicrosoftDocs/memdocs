@@ -37,7 +37,7 @@ Use one of the following policy types to configure FileVault on your managed dev
 
   View the [FileVault settings that are available in profiles for disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Device configuration profile for endpoint protection for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Inunte](../configuration/device-profile-create.md).
+- **[Device configuration profile for endpoint protection for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Intune](../configuration/device-profile-create.md).
 
   View the [FileVault settings that are available in endpoint protection profiles for device configuration policy](../protect/endpoint-protection-macos.md#filevault).
 
