@@ -49,7 +49,7 @@ For more information, see the following articles:
 - Company Portal app version 11.0.8980.0 or later
 
   > [!NOTE]
-  > Starting with Configuration Manager 2107 and Company Portal app version 11.0.12141.0, when you enable the site for [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md), the Company Portal prefers secure communication over HTTPS with the management point.<!-- 9199146 -->
+  > Starting with Configuration Manager 2107 and Company Portal app version 11.0.12141.0, when you enable the site for [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md), the Company Portal prefers secure communication over HTTPS with the management point that's configured for HTTP.<!-- 9199146 --> On any version of Configuration Manager, when you configure the site or the management point to require HTTPS communication, Company Portal always uses HTTPS.
 
 - Windows 10, version 1803 or later:
 

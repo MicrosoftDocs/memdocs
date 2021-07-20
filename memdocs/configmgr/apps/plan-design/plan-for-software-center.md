@@ -48,13 +48,16 @@ Software Center gets application deployment information in policy from the manag
 
 Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. Starting in version 2006, they can get user-available apps on internet-based, domain-joined devices. For more information, see [Prerequisites to deploy user-available applications](prerequisites-deploy-user-available-apps.md).
 
+The site optimizes user-available deployments to reduce policy traffic between the server and clients. This behavior allows a large number of applications to be available for the user without significantly affecting performance of the overall infrastructure.
+
 ### Support for enhanced HTTP
 
 <!-- 9199146 -->
 
-Starting in version 2107, Software Center can take advantage of enhanced HTTP. This site configuration provides secure communication without the overhead of managing PKI certificates. When you enable the site for enhanced HTTP, Software Center prefers secure communication over HTTPS to get user-available applications from the management point.
+Starting in version 2107, Software Center can take advantage of enhanced HTTP when the management point is configured for HTTP. This site configuration provides secure communication without the overhead of managing PKI certificates. When you enable the site for enhanced HTTP, Software Center prefers secure communication over HTTPS to get user-available applications from the management point.
 
-The site optimizes user-available deployments to reduce policy traffic between the server and clients. This behavior allows a large number of applications to be available for the user without significantly affecting performance of the overall infrastructure.
+> [!TIP]
+> On any version of Configuration Manager, when you configure the site or the management point to require HTTPS communication, Software Center always uses HTTPS.
 
 To validate this behavior, on a client review the following log files:
 
