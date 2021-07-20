@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/29/2021
+ms.date: 07/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -89,6 +89,8 @@ This feature applies to:
 >   For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 >
 > - When you apply a home screen layout, it overwrites any user-defined layout. So, it's recommended to use home screen layouts on userless devices.
+> 
+> - You can have preexisting apps installed on the device that are not included in the home screen layout configuration. These apps are shown in alphabetical order after the configured apps.
 
 ### Home screen
 
