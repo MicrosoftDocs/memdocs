@@ -40,7 +40,7 @@ By using Azure Networking, Windows 365 lets you use Virtual Network security and
 - [Azure Network Security Groups](/azure/virtual-network/network-security-groups-overview)
 - [User Defined Routing](/en-us/azure/virtual-network/virtual-networks-udr-overview)
 - [Azure Firewall](/azure/firewall/overview)
-- [network virtual appliances](https://azure.microsoft.com/blog/best-practices-to-consider-before-deploying-a-network-virtual-appliance/) (NVAs)
+- [Network virtual appliances](https://azure.microsoft.com/blog/best-practices-to-consider-before-deploying-a-network-virtual-appliance/) (NVAs)
 
 However, for web filtering and network protection for Cloud PCs, consider using the [Network Protection](/microsoft-365/security/defender-endpoint/network-protection) and [Web Protection](/microsoft-365/security/defender-endpoint/web-protection-overview) features of Microsoft Defender for Endpoint. These features can be deployed across both physical and virtual endpoints by using the Microsoft Endpoint Manager admin center.
 

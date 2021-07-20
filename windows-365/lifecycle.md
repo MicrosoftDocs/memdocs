@@ -38,11 +38,11 @@ The Cloud PC lifecycle has five stages:
 
 ## Provision
 
-Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the Microsoft Endpoint Manager portal. Cloud PCs are provisioned in the Windows 365 service, connected to your Azure subscription’s network, hybrid joined to your Azure AD, and enrolled into Microsoft Endpoint Manager.
+Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are [provisioned](provisioning.md) in the Windows 365 service, connected to your Azure subscription’s network, hybrid joined to your Azure AD, and enrolled into Microsoft Endpoint Manager.
 
 By assigning a Windows 365 license to a user and adding them to a group targeted with a [provisioning policy](provisioning.md), you trigger automatic provisioning of the user’s Cloud PC.
 
-Each Cloud PC is created using an operating system image. Windows 365 includes a gallery of default [images](device-images.md) that provide a remote connection experience optimized for both Windows and Microsoft 365. You can also upload your own custom image and Windows 365 will perform some of the optimizations for you.
+Each Cloud PC is created using an operating system [image](device-images.md). Windows 365 includes a gallery of default [images](device-images.md) that provide a remote connection experience optimized for both Windows and Microsoft 365. You can also upload your own custom images and Windows 365 will perform some of the optimizations for you.
 
 Windows 365 also has monitoring infrastructure and synthetic provisioning tests built into [on-premises network connections](on-premises-network-connections.md). These tests run regularly to test your networking and other prerequisites. This helps minimize provisioning failures due to environmental issues and helps you resolve those issues quicker.
 
@@ -64,7 +64,7 @@ You can also disable clipboard and drive redirection to ensure a foundation of d
 
 A key requirement of Cloud PCs is making sure that the virtual hardware is the right size for the needs of the end user. Windows 365 integrates with the [Endpoint analytics](/mem/analytics/overview) in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score). Endpoint analytics provide measurement of the compute and memory load on your Cloud PCs. You can then use Windows 365 to [resize](resize-cloud-pc.md) those Cloud PCs to match the demands of your users and their apps. This resize action is surfaced in Microsoft Endpoint Manager along with other device actions to provide a seamless experience between your Cloud PCs and other endpoints.
 
-You can also use [Proactive Remediation](/mem/analytics/proactive-remediations) in Endpoint analytics to improve Cloud PC monitoring and remediation. Proactive Remediation lets you extend the built-in Microsoft 365 optimizations that Windows 365 provides, including those for  a heterogenous IT environment.
+You can also use [Proactive Remediation](/mem/analytics/proactive-remediations) in Endpoint analytics to improve Cloud PC monitoring and remediation. Proactive Remediation lets you extend the built-in Microsoft 365 optimizations that Windows 365 provides, including those for a heterogenous IT environment.
 
 ## Deprovision
 
