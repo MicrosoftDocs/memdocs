@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 6/22/2021
+ms.date: 7/20/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -49,9 +49,9 @@ You can enroll Windows 10 devices through the Intune Company Portal website or a
 * [Sign on to the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school credentials.  
 
 ## Enroll Windows 10, version 1607 and later device 
-These steps describe how to enroll a device that runs on Windows 10, version 1607 and later.  
+Use Intune Company Portal to enroll devices running on Windows 10, version 1607 and later.  
 
-1. Open Company Portal and sign in with your work or school account. *For PM: What is the reason for needing to decline the automatic prompt? It sounds like the error message doesn't mean anything b/c they can proceed anyway--is this something we want to tell them so that they don't worry? Can you drop a screenshot in the work item so that I can see the error message?*
+1. Open Company Portal and sign in with your work or school account.  
 
 2. On the **Set up your device** screen, select **Next**. 
 
@@ -61,13 +61,13 @@ These steps describe how to enroll a device that runs on Windows 10, version 160
 
     ![Example image of Company Portal > Connect to work screen highlighting the Connect button.](./media/connect-to-work-company-portal-2107.png)  
 
-4. When prompted to, sign in with your work or school account again. If you're using the Company Portal website, the prompt may open in a new window. *For PM: Is the last sentence accurate in that the caveat is only for website and not app?*  
+4. When prompted to, sign in with your work or school account again. If you're using the Company Portal website, the prompt may open in a new window. 
 
     ![Example image of Microsoft authentication screen that prompts user to "Enter password."](./media/enter-password-prompt-company-portal-2107.png)  
 
 5. On the **Setting up your device** screen, select **Go**.  
 
-6. After setup is complete, you'll be redirected to the **Connect to work** screen. *PM: Is this correct? Or will they be on that screen already?* Select **Next** > **Done** to finish setup.  
+6. After setup is complete, return to the **Connect to work** screen and select **Next** > **Done** to exit setup.  
 
     ![Example image of Company Portal > You're all set screen, highlighting the Done button.](./media/youre-all-set-company-portal-2107.png)  
 
@@ -76,9 +76,7 @@ These steps describe how to enroll a device that runs on Windows 10, version 160
 If at any time after enrolling your device you have trouble accessing work or school things, try syncing your device. Open the Settings app and select **Accounts** > **Access work or school** > **Info** > **Sync**.     
 
 ## Enroll Windows 10, version 1511 and earlier device  
-*For PM: This section does not use Company Portal to enroll devices--do you want to make any updates to this section, delete, or leave as-is?*  
-
-These steps describe how to enroll a device that runs on Windows 10, version 1511 and earlier.  
+Enroll devices running Windows 10, version 1511 and earlier. Company Portal doesn't support these versions, so setup is done in the Settings app.  
 
 1. Go to **Start** and open the **Settings** app. 
 
