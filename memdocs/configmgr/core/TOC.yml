@@ -563,6 +563,8 @@ items:
       href: servers/manage/use-status-system.md
     - name: Configure alerts
       href: servers/manage/configure-alerts.md
+    - name: External notifications
+      href: servers/manage/external-notifications.md
     - name: Monitor scenario health
       href: servers/manage/scenario-health.md
     - name: Health attestation
