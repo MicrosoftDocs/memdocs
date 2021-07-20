@@ -203,6 +203,11 @@ Use the following Configuration Manager log files on the site server to help tro
 
 If you create a [status filter rule](#status-message), you'll see it in the site's list of **Status filter rules** in the Configuration Manager console. If you make a change on the **Actions** tab of the rule properties, the external notification won't work.
 
+In version 2107, after you recover a central administration site (CAS), delete and recreate the subscription.<!-- 10333966 --> For more information, see [Recover sites](recover-sites.md#delete-and-recreate-subscriptions-for-external-notifications-on-the-cas).
+
+> [!TIP]
+> Before you [remove a CAS](../deploy/install/remove-central-administration-site.md), recreate the subscriptions at the child primary site.
+
 ## Script usage
 
 When you run **SetupExternalServiceNotifications.ps1**, it detects whether it's running on a site server:

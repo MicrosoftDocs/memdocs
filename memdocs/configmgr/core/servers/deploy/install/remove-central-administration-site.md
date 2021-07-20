@@ -51,6 +51,8 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 
 - Stop any active migration jobs and remove all configurations for migration. For more information, see [Stop active migration from another hierarchy](prerequisites-for-installing-sites.md#stop-active-migration-from-another-hierarchy).
 
+- If you have any custom [status filter rules](../../manage/use-status-system.md#manage-status-filter-rules) or [alerts and subscriptions](../../manage/configure-alerts.md), recreate them on the child primary site. Starting in version 2107, also recreate any subscriptions for [external notifications](../../manage/external-notifications.md).
+
 - If you use automatic deployment rules for software updates, recreate them on the child primary site.
 
 - If you use Configuration Manager or System Center Updates Publisher to manage [third-party software updates](../../../../sum/deploy-use/third-party-software-updates.md), export the WSUS signing certificate from the software update point on the CAS.
