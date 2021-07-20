@@ -42,21 +42,20 @@ Each Cloud PC is assigned to an individual user and is their dedicated Windows d
 
 With the Windows 365 service, you can:
 
-- Automatically provision on-demand Windows Enterprise Cloud PCs for your users. Provisioning is the automatic creation of Cloud PCs for your end users. After you set up Cloud PC support in MEM, a Cloud PC is automatically provisioned whenever you assign a user with a Cloud PC license to an appropriate Azure AD user group. To set up Cloud PC support, you’ll:
-  - Create on-premises network connections which are links between the Cloud PCs and your on-premises resources.
-  - Choose a built-in, optimized Windows 10 image (or create your own) to use as the basis for each Cloud PC.
-- Manage your Cloud PCs like your organization’s other devices in Microsoft Endpoint Manager. By default, Cloud PCs are joined to your enterprise Active Directory domain, synced to Azure Active Directory, and fully managed by Microsoft Endpoint Manager. Windows 365 is fully integrated into the Microsoft Endpoint Manager administration console. Cloud PCs are seamlessly managed in MEM like any other supported device, including configuration, apps, and updates.
-- Use default images or create a library of virtual desktop images to use as a basis for the on-demand Cloud PCs.
-- Configure provisioning policies to create custom Cloud PC configurations.
+- Automatically provision on-demand Windows Enterprise Cloud PCs for your users. [Provisioning](provisioning.md) is the automatic creation of Cloud PCs for your end users. After you set up Cloud PC support in Microsoft Endpoint Manager, a Cloud PC is automatically provisioned whenever you assign a user with a Cloud PC license to an appropriate Azure AD user group. To set up Cloud PC support, you’ll:
+  - Create [on-premises network connections](on-premises-network-connections.md) which are links between the Cloud PCs and your on-premises resources.
+  - Choose a built-in, optimized Windows [image](device-images.md) (or create your own) to use as the basis for each Cloud PC.
+- Manage your Cloud PCs like your organization’s other devices in [Microsoft Endpoint Manager](/intune/). By default, Cloud PCs are joined to your enterprise Active Directory domain, synced to Azure Active Directory, and fully managed by Microsoft Endpoint Manager. Windows 365 is fully integrated into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are seamlessly managed in Microsoft Endpoint Manager like any other supported device, including configuration, apps, and updates.
+- [Configure provisioning policies](create-provisioning-policy.md) to create custom Cloud PC configurations.
 - Use device groups, policies, and security baselines to customize your Cloud PC configurations to support different user needs.
-- Pre-install apps in your custom Cloud PC image and push additional apps to them through MEM.
-- Monitor Cloud PCs using unique tools and reports, from Cloud PC endpoint analytics to end user connectivity experience insights.
+- Pre-install [apps](app-overview.md) in your custom Cloud PC image and push additional apps to them through Microsoft Endpoint Manager.
+- [Monitor Cloud PCs](monitor-cloud-pc.md) using unique tools and reports, from Cloud PC endpoint analytics to end user connectivity experience insights.
 
 ## What is a Cloud PC?
 
 A Cloud PC is a highly available, optimized, and scalable virtual machine providing end users with a rich Windows desktop experience. It’s hosted in the Windows 365 service and is accessible from anywhere, on any endpoint.
 
-End users have a 1:1 relationship with their Cloud PC. It’s their own personal PC in the cloud. Users can connect to their Cloud PC by using [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/en-us/windows-365?rtc=1). Browser and app-based access is available for Windows, Mac, iOS, and Android devices.
+End users have a 1:1 relationship with their Cloud PC. It’s their own personal PC in the cloud. Users can connect to their Cloud PC by using [windows365.microsoft.com](https://windows365.microsoft.com/). [Browser and app-based access](end-user-access-cloud-pc.md) is available for Windows, Mac, iOS, and Android devices.
 
 ## Billing
 
