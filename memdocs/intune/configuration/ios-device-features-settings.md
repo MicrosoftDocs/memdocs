@@ -89,6 +89,8 @@ This feature applies to:
 >   For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 >
 > - When you apply a home screen layout, it overwrites any user-defined layout. So, it's recommended to use home screen layouts on userless devices.
+> 
+> - Pre-existing apps installed on the device that are not included in the HSL configuration will be shown after the configured apps in alphabetical order. 
 
 ### Home screen
 
