@@ -151,7 +151,9 @@ Many customers have other data that's external to Configuration Manager but usef
 - Cost center
 - Department
 
-Starting in this release, you can use the [administration service](../../../develop/adminservice/index.yml) to set this data on devices. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+You can use the administration service to set this data on devices. The site stores the property's name and its value in the site database as the new **Device Custom Properties** class. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+
+For more information, see [Custom properties for devices](../../../develop/adminservice/custom-properties.md).
 
 ### Client encryption uses AES-256
 
