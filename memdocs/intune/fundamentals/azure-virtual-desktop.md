@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Using Azure Virtual Desktop with Microsoft Intune
+title: Using Azure Virtual Desktop single-session with Microsoft Endpoint Manager
 titleSuffix: 
-description: Guidelines for using Azure Virtual Desktop with Microsoft Intune
+description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Endpoint Manager. 
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -35,7 +35,7 @@ ms.collection: M365-identity-device-management
 
 ## Prerequisites 
 
-Currently, Intune supports Azure Virtual Desktop VMs that are: 
+Currently, for single-session, Intune supports Azure Virtual Desktop VMs that are: 
 
 - Running Windows 10 Enterprise, version 1809 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
@@ -46,6 +46,8 @@ Currently, Intune supports Azure Virtual Desktop VMs that are:
     - [User self-enrollment via Azure AD Join](../enrollment/windows-enrollment-methods.md#user-self-enrollment-in-intune).
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
+
+For information about working with multi-session remote desktops, see [Windows 10 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
 Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine. 
 
