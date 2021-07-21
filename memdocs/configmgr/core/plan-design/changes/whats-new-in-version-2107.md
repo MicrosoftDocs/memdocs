@@ -28,15 +28,6 @@ To take full advantage of new Configuration Manager features, after you update t
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2107+-+Configuration+Manager%22&locale=en-us`
 
-
-
-## Microsoft Endpoint Manager tenant attach
-
-### Intune role-based access control for tenant attach
-<!--8126836, 6415648, 8348644-->
-You can use Intune role-based access control (RBAC) when displaying the **Client details** page for [tenant attached devices](../../../tenant-attach/device-sync-actions.md) in the Microsoft Endpoint Manager admin center. When using Intune as the RBAC authority, a user with the [Help Desk Operator role](/intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. Currently, the Help Desk Operator role can display only the **Client details** page without additional Configuration Manager permissions.
-
-
 ## Cloud-attached management
 
 ### Convert a CMG to virtual machine scale set
