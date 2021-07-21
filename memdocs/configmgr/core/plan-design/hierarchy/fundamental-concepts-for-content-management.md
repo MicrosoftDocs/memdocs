@@ -53,7 +53,7 @@ For more information, see [Manage network bandwidth](manage-network-bandwidth.md
 
 ## Binary differential replication
 
-Configuration Manager uses binary differential replication (BDR) to update content that you previously distributed to other sites or to remote distribution points. To support BDR's reduction of bandwidth usage, install the **Remote Differential Compression** feature on distribution points. For more information, see [Distribution point prerequisites](../configs/site-and-site-system-prerequisites.md#bkmk_2012dppreq).
+Configuration Manager uses binary differential replication (BDR) to update content that you previously distributed to other sites or to remote distribution points. To support BDR's reduction of bandwidth usage, install the **Remote Differential Compression** feature on distribution points. For more information, see [Distribution point prerequisites](../configs/site-and-site-system-prerequisites.md#distribution-point).
 
 BDR minimizes the network bandwidth used to send updates for distributed content. It resends only the new or changed content instead of sending the entire set of content source files each time you change those files.  
 

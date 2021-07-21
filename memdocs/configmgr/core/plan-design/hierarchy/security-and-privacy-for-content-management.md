@@ -53,7 +53,7 @@ For more information, see [Package access accounts](accounts.md#package-access-a
 
 If Configuration Manager installs IIS when you add a distribution point site system role, remove **HTTP redirection** and **IIS Management Scripts and Tools** when the distribution point installation is complete. The distribution point doesn't require these components. To reduce the attack surface, remove these role services for the web server role.
 
-For more information about the role services for the web server role for distribution points, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#bkmk_2012dppreq).
+For more information about the role services for the web server role for distribution points, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#distribution-point).
 
 ### Set package access permissions when you create the package
 

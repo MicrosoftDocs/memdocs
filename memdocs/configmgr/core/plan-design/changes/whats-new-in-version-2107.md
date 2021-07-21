@@ -89,9 +89,17 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 
 ### Microsoft .NET requirements
 
-<!--10033951;10073070,10081488-->
+<!--10402814-->
 
 Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
+
+There's also a new [management insight](../../servers/manage/management-insights.md) to recommend site systems that don't yet have .NET version 4.8 or later.
+
+For more information, see the following articles:
+
+- [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md)
+- [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net)
+- [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md#net-version-requirements)
 
 ### New prerequisite check for SQL Server 2012
 
