@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -39,7 +39,7 @@ Both marketplace and custom images must meet the following requirements:
 - Windows 10 Enterprise version 1909 or later.
 - Hyper-V Gen 1 images.
 - Generalized VM image.
-- Single Session VM images (multi-session isn’t supported)
+- Single Session VM images (multi-session isn’t supported).
 - Default 64 GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
 
 A custom image must also meet the following extra requirements:
@@ -53,15 +53,15 @@ Windows 365 provides a built-in gallery of Windows Enterprise images. They are r
 
 There are three sets of images available to choose from across the different versions of Windows 10 Enterprise:
 
-- Clean OS images: These are out of the box images with factory settings. This is like using a default image on your physical Windows devices with Windows Autopilot.
-- Images with pre-installed Microsoft 365 Apps: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
-  - IsAVDEnvironment reg key (Teams)
-  - C++ Runtime (Teams)
-  - WebRTC Redirector (Teams)
-  - Microsoft Teams (Teams)
-  - Edge settings like Sleeping Tabs, Startup boost, and First Time optimizations based on Azure AD and synchronization
-  - Microsoft Outlook first-time configuration settings (auto log on based on Azure AD profile, support for other profiles)
-- Images with OS optimizations: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
+- **Clean OS images**: These are out-of-the-box images with factory settings. This is like using a default image on your physical Windows devices with Windows Autopilot.
+- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
+  - IsAVDEnvironment reg key (Teams).
+  - C++ Runtime (Teams).
+  - WebRTC Redirector (Teams).
+  - Microsoft Teams (Teams).
+  - Edge settings like Sleeping Tabs, Startup boost, and First Time optimizations based on Azure AD and synchronization.
+  - Microsoft Outlook first-time configuration settings (auto log on based on Azure AD profile, support for other profiles).
+- **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
   - Task scheduler actions disabled.
