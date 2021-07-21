@@ -364,7 +364,15 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ![Deployment Status view, copy asset details](media/1810-deployment-status.PNG)
 
 ## Administration workspace
+### Status message shortcuts
+*(Introduced in version 2107)*
+<!--8942963-->
+Shortcuts to [status messages](../../../../servers/manage/use-status-system.md) were added to the **Administrative Users** node and the **Accounts** node. Select an account, then select **Show Status Messages**.
 
+:::image type="content" source="./media/8942963-show-status-messages.png" alt-text="Screenshot of Administrative Users node with the Show Status Messages option in the ribbon.":::
+
+
+### Enable some security nodes to use the administration service
 <!--4223683-->
 Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#enable-console-usage).
 
