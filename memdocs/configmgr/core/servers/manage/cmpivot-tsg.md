@@ -2,7 +2,7 @@
 title: Troubleshoot CMPivot
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot CMPivot in Configuration Manager.
-ms.date: 10/07/2019
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -217,6 +217,10 @@ select * from vSMS_CMPivotStatus where TaskID='{F8C7C37F-B42B-4C0A-B050-2BB44DF1
 >
 > - `MP_Relay.log`
 > - `SMS_MESSAGE_PROCESSING_ENGINE.log`
+
+## Unhandled exception has occurred in your application
+<!--10304720-->
+If you get an unhandled exception, it may indicate that the [administration service](../../../develop/adminservice/overview.md) is unhealthy. For example, if the certificate used with the administration service is expired, it will impact CMPivot functionality. Verify that the administration service is running properly if you encounter an unhandled exception.  
 
 ## Next steps
 
