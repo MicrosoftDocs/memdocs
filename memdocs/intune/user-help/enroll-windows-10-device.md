@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 7/20/2021
+ms.date: 7/21/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -38,7 +38,6 @@ Enroll your Windows 10 device in Intune to get mobile access to work or school a
 
 To identify the version of Windows running on your device, see [Which version of Windows operating system am I running?](https://go.microsoft.com/fwlink/?linkid=2166188).  
 
-Windows 10 is supported on desktop and mobile devices. Setup steps are the same on all device types but appearance may vary from one device to the next.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/TKQxEckBHiE?rel=0]  
 
@@ -49,7 +48,8 @@ You can enroll Windows 10 devices through the Intune Company Portal website or a
 * [Sign on to the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school credentials.  
 
 ## Enroll Windows 10, version 1607 and later device 
-Use Intune Company Portal to enroll devices running on Windows 10, version 1607 and later.  
+Use Intune Company Portal to enroll devices running on Windows 10, version 1607 and later. 
+
 
 1. Open Company Portal and sign in with your work or school account.  
 
@@ -73,7 +73,7 @@ Use Intune Company Portal to enroll devices running on Windows 10, version 1607 
 
 ## Sync device to fix connection problems  
 
-If at any time after enrolling your device you have trouble accessing work or school things, try syncing your device. Open the Settings app and select **Accounts** > **Access work or school** > **Info** > **Sync**.     
+After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync your Windows device manually](sync-your-device-manually-windows.md).     
 
 ## Enroll Windows 10, version 1511 and earlier device  
 Enroll devices running Windows 10, version 1511 and earlier. Company Portal doesn't support these versions, so setup is done in the Settings app.  
