@@ -37,7 +37,6 @@ Enroll your Windows 10 device in Intune to get mobile access to work or school a
 * Windows 10, version 1511 and earlier  
 
 To identify the version of Windows running on your device, see [Which version of Windows operating system am I running?](https://go.microsoft.com/fwlink/?linkid=2166188).  
-
 </br>
 > [!VIDEO https://www.youtube.com/embed/TKQxEckBHiE?rel=0]  
 
