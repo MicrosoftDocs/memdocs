@@ -51,7 +51,7 @@ The following permissions are needed for CMPivot:
 - **Read** permission on **Inventory Reports**
 - **Read** permission on the **SMS Scripts** object
    - **Read** for **SMS Scripts** isn't required starting in version 2107 <!--7898885-->
-   -  The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts**  if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log. <!--8403036-->
+   - CMPivot doesn't need **Read** for **SMS Scripts** for it's primary scenario starting in version 2107. However, if the administration service is down and the permission has been removed, then when the administration service falls back, CMPivot will fail. <!--10304720--> The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts**  if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log. <!--8403036-->
    - The **default scope**.
    - The **default scope** isn't required starting in version 2107 <!--7898885-->
 
@@ -125,7 +125,8 @@ The CMPivot window contains the following elements:
 
     - The query pane also provides the following options:  
 
-        - Run the query.  
+        - Run the query.
+           - To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**. 
 
         - Move backwards and forwards in the history list of queries.  
 
@@ -183,7 +184,8 @@ The CMPivot window contains the following elements:
    - The total number of rows in the results pane. For example, `1 objects`  
 
 > [!TIP]
-> To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**.
+> Starting in version 2107, use the **Query devices again** button, or **Ctrl** + **F5** to force the client to retrieve the data again from the device for the query. Using **Query devices again** is useful when you expect the data to change to the device since the last query, such as during troubleshooting. Selecting **Run query** again after the initial results are returned only parses the data CMPivot has already retrieved from the client. <!--9966861--> :::image type="content" source="media/query-devices-again.png" alt-text="Screenshot of the query devices again button showing the tooltip that Ctrl + F5 is a shortcut to force clients to retrieve the data again.":::
+
 
 ## Example scenarios
 
