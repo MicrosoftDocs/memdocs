@@ -34,7 +34,7 @@ If the hotfix file only has the **.exe** file extension (not **update.exe**), [u
 
 - Run it on the server with the service connection point site system role.
 
-- Starting in version 2107, the service connection point requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5.2 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+- Starting in version 2107, the service connection point requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5.2 or later. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 - When you run the tool on the service connection point, the account that you use needs the following configurations:
 

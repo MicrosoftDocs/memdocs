@@ -29,7 +29,7 @@ When you run the tool, it connects to the Configuration Manager cloud service, u
 
   - Both the **Visual C++ Redistributable** x86 and x64 files. By default, Configuration Manager installs the x64 version on the computer that hosts the service connection point. To download this component, see [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784).
 
-  - Starting in version 2107, this tool requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this tool requires .NET 4.5.2 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+  - Starting in version 2107, this tool requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this tool requires .NET 4.5.2 or later. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 - The account you use to run the tool needs the following permissions:
 

@@ -756,7 +756,7 @@ _Applies to: CAS, primary site, secondary site_
 <!--10402814-->
 This rule checks if the .NET Framework is at least version 4.8. You'll see this warning if the system has at least version 4.6.2, but less than version 4.8.
 
-Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 ### Remote connection to WMI on secondary site
 
@@ -771,7 +771,7 @@ _Applies to: CAS, primary site, secondary site_
 <!--10402814-->
 This rule checked if the .NET Framework is at least version 4.6.2. You'll see this warning if the system has less than version 4.6.2.
 
-Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 ### Schema extensions
 

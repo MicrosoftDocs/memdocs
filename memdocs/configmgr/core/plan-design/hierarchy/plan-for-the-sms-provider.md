@@ -54,7 +54,7 @@ The SMS Provider has the following prerequisites:
 
 - For the [administration service](../../../develop/adminservice/overview.md) REST API:
 
-  - Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+  - Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
   - Enable Windows server role **Web Server (IIS)**
 
