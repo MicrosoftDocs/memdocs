@@ -344,31 +344,9 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
 
    For example, if the Purpose of your certificate template is **Encryption**, then edit the **EncryptionTemplate** value to be the name of your certificate template.
 
-3. *This step doesn't apply when you configure NDES to support the Certificate Connector for MicrosoftIntune. Instead, skip to the next step*.
+3. Restart the server that hosts the NDES service. Don't use **iisreset**; iireset doesn't complete the required changes.
 
-    When configuring NDES To support the *Microsoft Intune Connector* (NDESConnectorSetup.exe), you must configure IIS request filtering to add support in IIS for the long URLs (queries) that the NDES service receives.
-
-   1. In IIS manager, select **Default Web Site** > **Request Filtering** > **Edit Feature Setting** to open the **Edit Request Filtering Settings** page.
-
-   2. Configure the following settings:
-
-      - **Maximum URL length (Bytes)** = 65534
-      - **Maximum query string (Bytes)** = 65534
-
-   3. Select **OK** to save this configuration and close IIS manager.
-
-   4. Validate this configuration by viewing the following registry key to confirm it has the indicated values:
-
-      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters`
-
-      The following values are set as DWORD entries:
-
-      - Name: **MaxFieldLength**, with a decimal value of **65534**
-      - Name: **MaxRequestBytes**, with a decimal value of **65534**
-
-4. Restart the server that hosts the NDES service. Don't use **iisreset**; iireset doesn't complete the required changes.
-
-5. Browse to *http://*Server_FQDN*/certsrv/mscep/mscep.dll*. You should see an NDES page similar to the following image:
+4. Browse to *http://*Server_FQDN*/certsrv/mscep/mscep.dll*. You should see an NDES page similar to the following image:
 
    ![Test NDES](./media/certificates-scep-configure/scep-ndes-url.png)
 

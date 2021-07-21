@@ -86,8 +86,6 @@ The Certificate Connector for Microsoft Intune supports:
     > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue, process Imported certificates, and handle revocation requests. It's not possible to define which connector handles each request. </br></br>
     > Therefore, each connector that supports PKCS must have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
 
-- *Federal Information Processing Standard* (FIPS) mode. FIPS isn't required. When FIPS is enabled, you can issue and revoke certificates.
-
 ## Lifecycle
 
 Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What’s New](../fundamentals/whats-new.md) article for Intune, and in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.

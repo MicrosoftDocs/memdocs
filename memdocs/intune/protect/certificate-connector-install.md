@@ -46,9 +46,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
    If you’ll use SCEP with a Microsoft Certification Authority (CA), confirm that the Network Device Enrollment Service (NDES) role is installed.
 
-5. Use an account with admin permissions to the server to run the installer (**IntuneCertificateConnector.exe**). The installer also installs the policy module for NDES and the IIS Certificate Registration Point (CRP) Web Service. The CRP Web Service, CertificateRegistrationSvc, runs as an application in IIS.
-
-   When you install NDES for standalone Intune, the CRP service automatically installs with the Certificate Connector.
+5. Use an account with admin permissions to the server to run the installer (**IntuneCertificateConnector.exe**). The installer also installs the policy module for NDES. The policy module runs as an application in IIS.
 
    > [!NOTE]  
    > When **IntuneCertificateConnector.exe** runs to install a new connector or an existing connector auto upgrades while the Windows Event Viewer is open, the installation process logs a message similar to the following with an Event ID 1000 from the source *Microsoft-Intune-CertificateConnectors cannot be found*:
@@ -56,6 +54,7 @@ To support your use of certificates with Intune, you can install the Certificate
    > - Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer.
    >
    > You can safely ignore this message. This message displays because the event viewer manifest for the connector could not load while the event viewer is open. After the event viewer closes and then reopens, the correct messages display.
+
 6. Review and agree to the license terms and conditions, and then select **Install** to continue. Select **Options** to choose a different installation folder.
 
 7. The connector installation takes only a moment. After installation, the setup presents two options:
