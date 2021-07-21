@@ -1,6 +1,12 @@
 {
     "redirections": [
 
+        
+        {
+            "source_path": "memdocs/intune/user-help/using-your-windows-device-with-intune.md",
+            "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",
+            "redirect_document_id": false
+        },  
         {
             "source_path": "memdocs/intune/user-help/send-logs-to-your-it-admin-using-cable-android.md",
             "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
@@ -112,7 +118,7 @@
         },
         {
             "source_path": "memdocs/intune/user-help/windows-enrollment-company-portal.md",  
-            "redirect_url": "/mem/intune/user-help/using-your-windows-device-with-intune",  
+            "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",  
             "redirect_document_id": true 
         },
         {

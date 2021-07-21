@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2021
+ms.date: 07/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -54,7 +54,7 @@ The actual time that a device starts to update depends on the device being onlin
   > [!IMPORTANT]
   > In some scenarios, Windows Update can install an update that is more recent than the update you specify in expedite update policy. For more information about this scenario, see [About installing the latest applicable update](#identify-the-latest-applicable-update), later in this article.
 
-- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Widows 10 update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
+- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows 10 update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
 
 - When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
 
@@ -73,6 +73,7 @@ In addition to a license for Intune, your organization must have one of the foll
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10 Virtual Desktop Access (VDA) per user
+- Microsoft 365 Business Premium
 
 **Supported Windows 10 versions**:
 
@@ -111,11 +112,11 @@ In addition to a license for Intune, your organization must have one of the foll
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
     - *.notify.windows.com
 
-- Have installed the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update for a Windows 10 version of 1809 or later. Both options will install the *Update Health Tools*. To confirm the presence of the Update Health Tools on a device, look for the folder **C:\Program Files\Microsoft Update Health Tools**.
+- Be configured to get Quality Updates directly from the Windows Update service.
 
-  To confirm the presence of the Update Health tools, device administrators can use one of the following methods:  
-  - On a device, review *Add Remove Programs* for **Microsoft Update Health Tools**
-  - Run the following PowerShell script:
+- Have the *Update Health Tools* installed, which are installed with [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a). To confirm the presence of the Update Health Tools on a device:
+  - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
+  - As an Admin, run the following PowerShell script:
 
     `Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match "Microsoft Update Health Tools"}`
 
@@ -141,6 +142,10 @@ Group Policy settings override mobile device management policies, and the follow
 - **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
 - **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
 
+**Enable Windows Health Monitoring**:
+
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [Windows Health Monitoring](../configuration/windows-health-monitoring.md). While configuring Windows Health Monitoring, be sure to set the **Scope** to **Windows updates**.
+ 
 ## Create and assign an expedited quality update
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

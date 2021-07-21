@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2021
+ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,6 +41,9 @@ Organizations can use use Azure AD Conditional Access policies to ensure that us
 
    >[!NOTE]
    > This policy ensures mobile users can access all Office endpoints using the applicable apps.
+
+> [!NOTE]
+> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 ## Create Intune app protection policies
 
@@ -92,8 +95,8 @@ Respecting the data security and compliance policies of our largest and highly r
 
 You can learn more about configuring the org allowed accounts mode setting here:
 
-- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
+- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
 This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Endpoint Manager, you need to consult with your UEM documentation on how to deploy these configuration keys.
 
