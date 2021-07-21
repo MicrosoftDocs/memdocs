@@ -273,6 +273,8 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2106 features
+      href: get-started/2021/technical-preview-2106.md
     - name: 2105.2 features
       href: get-started/2021/technical-preview-2105-2.md
     - name: 2105 features
@@ -281,8 +283,6 @@ items:
       href: get-started/2021/technical-preview-2104.md
     - name: 2103 features
       href: get-started/2021/technical-preview-2103.md
-    - name: 2102 features
-      href: get-started/2021/technical-preview-2102.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -489,6 +489,8 @@ items:
       href: servers/manage/cmpivot.md
     - name: CMPivot changes
       href: servers/manage/cmpivot-changes.md
+    - name: CMPivot sample scripts
+      href: servers/manage/cmpivot-sample-scripts.md
     - name: Troubleshooting CMPivot
       href: servers/manage/cmpivot-tsg.md
   - name: Maintenance tasks

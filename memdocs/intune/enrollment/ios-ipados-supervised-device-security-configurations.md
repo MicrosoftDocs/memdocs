@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 4/15/2021
+ms.date: 6/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -95,6 +95,7 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 | App Store, Doc Viewing, Gaming | Block viewing corporate documents in unmanaged apps | Yes ||
 | App Store, Doc Viewing, Gaming | Block viewing non-corporate documents in corporate apps | Not configured | Enabling this device restriction blocks Outlook for iOS’s ability to export contacts. This setting is not recommended if using Outlook for iOS. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-enabling-outlook-ios-contact-sync-with-ios12-mdm/ba-p/298453). |
 | App Store, Doc Viewing, Gaming | Allow managed apps to write contacts to unmanaged contacts accounts | Yes | This setting is needed to allow Outlook for iOS to export contacts when **Block viewing corporate documents in unmanaged apps** is set to *Yes*. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-enabling-outlook-ios-contact-sync-with-ios12-mdm/ba-p/298453). |
+| Built-in Apps | Block Siri for dictation   | Yes ||
 | Cloud Storage | Block backup of enterprise books | Yes |  |
 | Cloud Storage | Block notes and highlights sync for enterprise books | Yes |  |
 | Cloud Storage | Block iCloud document and data sync | Yes |  |
@@ -135,9 +136,11 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Cloud and Storage | Block Handoff | Yes |  |
 | Cloud and Storage | Block iCloud backup | Yes |  |
 | Connected Devices | Require AirPlay outgoing requests pairing password | Yes |  |
+| Connected Devices | Block Apple Watch auto unlock | Yes |  |
 | Connected Devices | Block AirDrop | Yes |  |
 | Connected Devices | Block pairing with non-Configurator hosts | Yes |  |
 | Connected Devices | Block AirPrint | Yes |  |
+| Connected Devices | Allow users to boot devices into recovery mode with unpaired devices  | Not configured |  |
 | General | Block screenshots and screen recording | Yes |  |
 | General | Block modification of account settings | Yes |  |
 | General | Block use of erase all content and settings | Yes |  |
@@ -151,6 +154,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Password | Prevent reuse of previous passwords | 5 | Organizations may need to update this setting to match their password policy. |
 | Password | Block password AutoFill | Yes | |
 | Wireless | Block voice dialing while device is locked | Yes |  |
+| Wireless | Require joining Wi-Fi networks only using configuration profiles | Not configured | Care should be taken when using this setting as this could affect your ability to connect to the device if the specified Wi-Fi Networks are unavailable or if the setting is configured incorrectly. This could result in a situation where you are locked out of the device and unable to remotely reset the device.   |
 
 ## Next steps
 

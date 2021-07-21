@@ -45,6 +45,7 @@ This feature isn't supported for the following systems:
 - Windows Phone
 - macOS
 - Android
+- Windows Holographic for Business 
 
 ## Locate a lost or stolen device
 

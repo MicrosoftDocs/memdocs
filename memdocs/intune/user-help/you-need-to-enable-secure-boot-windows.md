@@ -34,11 +34,11 @@ ms.collection:
 
 Your organization requires that you enable Windows Secure Boot, which is a security feature that helps protect your device.  
 
-If you're using a mobile device, contact your IT support person and they'll help enable Secure Boot for you.  
+If you're using a mobile device, contact your support person and they'll help enable Secure Boot for you.  
 
 If you're using a PC, you can either:
 
-* Contact your IT support person for help.  
+* Contact your support person for help.  
 * Try enabling Secure Boot on your own through the PC BIOS menu. For step-by-step instructions, see the **Re-enable Secure Boot** section [in this article](/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
 
 ## More information about Secure Boot  
@@ -57,4 +57,4 @@ To check the status of Secure Boot on your PC:
 
 * For more detailed information about the Secure Boot feature, see the [Windows Developer Hardware docs](/windows-hardware/manufacture/desktop/secure-boot-landing).  
 
-* Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+* Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

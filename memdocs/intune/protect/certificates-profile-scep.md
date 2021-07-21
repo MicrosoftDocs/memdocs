@@ -40,7 +40,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/windows-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Create a SCEP certificate profile
 
@@ -117,6 +117,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        - **CN={{UserName}}**: The user name of the user, such as janedoe.
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
+       - **CN={{DeviceId}}**: An ID assigned when you enroll a deivce in Intune.
        - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
        - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
        - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
@@ -142,6 +143,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        Format options for the Subject name format include the following variables:
 
        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
+       - **{{DeviceId}}** - This is the Intune device ID
        - **{{Device_Serial}}**
        - **{{Device_IMEI}}**
        - **{{SerialNumber}}**

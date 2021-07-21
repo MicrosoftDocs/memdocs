@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 06/07/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -61,10 +61,8 @@ Your organization cannot see your personal information when you enroll a device 
  > [!NOTE]
  > An app is considered **managed app** when installed in one of the following ways:
  > 1. A user installs it from Company Portal app after it is published as **available** by an Intune admin.
- > 2. The app is published as **required** by an Intune admin and is installed on the device. 
- >
- > If you are an IT administrator or support person at your organization and want more information about app management in Intune, see [Understanding the capabilities of unmanaged apps, managed apps, and MAM apps](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
-    
+ > 2. The app is published as **required** by an Intune admin and is installed on the device.
+
 **What your organization might be able to see:**
 
 - Phone number: For corporate-owned devices, your full phone number can be seen. For personal-owned devices, just the last four digits of your phone number are visible to your organization. You can see the ownership type for each individual device on its **Device Details** page.
