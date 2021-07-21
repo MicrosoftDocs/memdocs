@@ -1,6 +1,12 @@
 {
     "redirections": [
 
+        
+        {
+            "source_path": "memdocs/intune/user-help/using-your-windows-device-with-intune.md",
+            "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",
+            "redirect_document_id": false
+        },  
         {
             "source_path": "memdocs/intune/user-help/turn-off-microsoft-data-collection-macos.md",
             "redirect_url": "/mem/intune/user-help/intune-company-portal-preferences-macos",
@@ -116,7 +122,7 @@
         },
         {
             "source_path": "memdocs/intune/user-help/windows-enrollment-company-portal.md",  
-            "redirect_url": "/mem/intune/user-help/using-your-windows-device-with-intune",  
+            "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",  
             "redirect_document_id": true 
         },
         {
