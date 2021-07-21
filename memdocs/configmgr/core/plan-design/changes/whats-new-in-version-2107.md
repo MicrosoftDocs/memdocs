@@ -97,7 +97,7 @@ There's also a new [management insight](../../servers/manage/management-insights
 
 For more information, see the following articles:
 
-- [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md)
+- [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#net-version-requirements)
 - [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net)
 - [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md#net-version-requirements)
 

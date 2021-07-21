@@ -58,7 +58,7 @@ Starting in version 2107, site servers and specific site systems require Microso
 
 ### Site server
 
-If the site server doesn't have any collocated roles that require .NET, it still requires .NET, but setup doesn't automatically install it. Make sure the site server itself has at least .NET version 4.6.2, but install .NET 4.8 if possible.
+If the site server doesn't have any collocated roles that require .NET, it still requires .NET, but setup doesn't automatically install it. Make sure the site server itself has at least .NET version 4.6.2. If possible, install .NET 4.8.
 
 ### Site systems
 
@@ -93,7 +93,7 @@ Whether you update .NET before updating the site, or setup updates it, .NET may 
 
 If you need to manage the device restarts before you update the site, use the following recommended process:
 
-1. Install the latest baseline .NET version. For example, starting in version 2107, install .NET version 4.8.
+1. Install the latest baseline .NET version. For example, install .NET version 4.8.
 1. Restart the server.
 1. Scan for software updates and install the latest .NET cumulative update.
 1. Restart the server.
