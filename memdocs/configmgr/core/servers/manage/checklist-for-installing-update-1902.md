@@ -82,7 +82,7 @@ This installation can put the site system server into a reboot pending state and
 For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 #### Review the version of the Windows ADK for Windows 10
-The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 1902. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-10.md#windows-10-adk). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 1902. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 

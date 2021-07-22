@@ -72,7 +72,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### Windows ADK  
 
-- Before you install or upgrade a central administration site or primary site, install the version of the Windows Assessment and Deployment Kit (ADK) that's required by the version of Configuration Manager you're installing or upgrading to. For more information, see [Windows 10 ADK](support-for-windows-10.md#windows-10-adk).  
+- Before you install or upgrade a central administration site or primary site, install the version of the Windows Assessment and Deployment Kit (ADK) that's required by the version of Configuration Manager you're installing or upgrading to. For more information, see [Support for the Windows ADK](support-for-windows-adk.md).
 
 - For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
@@ -146,7 +146,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### Windows ADK
 
-- The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. For more information, see [Windows 10 ADK](support-for-windows-10.md#windows-10-adk).  
+- The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. For more information, see [Support for the Windows ADK](support-for-windows-adk.md).
 
 - For more information about this requirement, see [Infrastructure requirements for operating system deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 

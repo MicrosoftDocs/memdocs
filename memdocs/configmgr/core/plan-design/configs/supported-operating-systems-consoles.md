@@ -21,6 +21,8 @@ To support the Configuration Manager console, the following OS versions require 
 > [!NOTE]
 > Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
 
+- **Windows Server 2022**: Standard, Datacenter (_starting in version 2107_)<!-- 10200029 -->
+
 - **Windows Server 2019**: Standard, Datacenter
 
 - **Windows Server 2016**: Standard, Datacenter

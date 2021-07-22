@@ -71,7 +71,7 @@ For more information, see [What's new in Desktop Analytics](../../../desktop-ana
 
 ## Site infrastructure
 
-### Support for Windows Server 2022
+### Support for Windows Server 2022 and the ADK for Windows 11
 
 <!-- 10200029 -->
 Configuration Manager now supports Windows Server 2022 as site systems and clients. For more information, see the following articles:
@@ -80,7 +80,10 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 - [Supported OS versions for clients](../configs/supported-operating-systems-for-clients-and-devices.md)
 - [Upgrade on-premises infrastructure](../../servers/manage/upgrade-on-premises-infrastructure.md)
 
-<!-- some statement about ADK? -->
+It also supports the Windows ADK for Windows 11 and Server 2022. For more information, see [Support for Windows ADK](../configs/support-for-windows-adk.md).
+
+> [!TIP]
+> Configuration Manager supports [Windows Insider builds](../configs/support-for-windows-10.md#support-for-windows-insider), which is a great way to test the latest version of Windows 11 with Configuration Manager version 2107.
 
 ### Microsoft .NET requirements
 

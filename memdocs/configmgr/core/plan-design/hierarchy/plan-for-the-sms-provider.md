@@ -2,11 +2,10 @@
 title: Plan for the SMS Provider
 titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
-ms.date: 05/04/2021
+ms.date: 07/22/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -183,7 +182,7 @@ The Configuration Manager WMI schema defines the structure of the SMS Provider. 
 
 The computer where you install an instance of the SMS Provider requires a supported version of the Windows ADK.
 
-For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10) and [Support for Windows 10](../configs/support-for-windows-10.md).
+For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk) and [Support for the Windows ADK](../configs/support-for-windows-adk.md).
 
 When you manage OS deployments, the Windows ADK allows the SMS Provider to complete various tasks, such as:
 
