@@ -143,8 +143,6 @@ There are two types of events that are currently supported:
 
 1. Select message-matching criteria for the rule, and specify values to match. Specify `0` to not use a criterion.
 
-    For example, select `0` for all criteria except **Component**. Then select the number for the **SMS_DISTRIBUTION_MANAGER** component, which varies per site.
-
     The following criteria are available:
 
     - **Source**: Client, SMS Provider, Site Server
@@ -157,8 +155,10 @@ There are two types of events that are currently supported:
     - **Property**
     - **Property value**
 
-    > [!TIP]
-    > For more information about criteria for status message rules, see [Use the status system](use-status-system.md).
+    For more information about criteria for status message rules, see [Use the status system](use-status-system.md).
+
+    > [!IMPORTANT]
+    > Be cautious with the type of status filter rule that you create. For external notifications, the site can process 300 status messages every five minutes. If your rule allows more messages than this limit, it will cause a backlog on the site. Create rules with narrow filters for specific scenarios. Avoid generic rules that allow a lot of messages.
 
 1. Rerun the PowerShell script. Select option `3` to create a new subscription.
 
@@ -170,7 +170,7 @@ There are two types of events that are currently supported:
 
 1. Trigger an event for the site component you chose for the status filter rule.
 
-    For example, use the [Configuration Manager Service Manager](../deploy/configure/site-components.md#configuration-manager-service-manager) to restart the **SMS_DISTRIBUTION_MANAGER** component. You can also wait for the component to send a regular health status message.
+    For example, use the [Configuration Manager Service Manager](../deploy/configure/site-components.md#configuration-manager-service-manager) to restart the component.
 
 ### App approval
 
