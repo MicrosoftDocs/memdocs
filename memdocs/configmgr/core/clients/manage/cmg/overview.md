@@ -2,11 +2,10 @@
 title: Cloud management gateway overview
 titleSuffix: Configuration Manager
 description: Learn about managing internet-based clients with Configuration Manager by using the cloud management gateway (CMG) service in Azure.
-ms.date: 09/28/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: overview
-ms.assetid: 02ef7cbd-72d3-4845-bd98-b52dce77a8e7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -17,9 +16,9 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--1101764-->
-The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. You deploy CMG as a cloud service in Microsoft Azure. Then without additional on-premises infrastructure, you can manage clients that roam on the internet or are in branch offices across the WAN. You also don't need to expose your on-premises infrastructure to the internet.
+The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. You deploy CMG as a cloud service in Microsoft Azure. Then without more on-premises infrastructure, you can manage clients that roam on the internet or are in branch offices across the WAN. You also don't need to expose your on-premises infrastructure to the internet.
 
-:::image type="content" source="media/cmg-basic-architecture.png" alt-text="Diagram of cloud management gateway basic architecture":::
+:::image type="content" source="media/cmg-basic-architecture.svg" alt-text="Diagram of cloud management gateway (CMG) basic architecture.":::
 
 After establishing the prerequisites, creating the CMG consists of the following three steps in the Configuration Manager console:
 
@@ -61,9 +60,9 @@ Across these scenarios, the following specific device use cases may apply:
 
 - Mergers and acquisitions, where it may be easiest to join devices to Azure AD and manage through a CMG.  
 
-- Workgroup clients. These devices may require additional configuration, such as certificates.<!-- SCCMDocs#1925 -->
+- Workgroup clients. These devices may require other configurations, such as certificates.<!-- SCCMDocs#1925 -->
 
-    Starting in version 2002, Configuration Manager supports token-based authentication, which may help with management of remote workgroup clients. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).
+    To help with management of remote workgroup clients, use Configuration Manager token-based authentication. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).
 
 > [!IMPORTANT]
 > By default all clients receive policy for a CMG, and start using it when they become internet-based. Depending upon the scenario and use case that applies to your organization, you may need to scope usage of the CMG. For more information, see the [Enable clients to use a cloud management gateway](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway) client setting.
@@ -73,4 +72,4 @@ Across these scenarios, the following specific device use cases may apply:
 Develop your design and plan for implementing a CMG in your environment:
   
 > [!div class="nextstepaction"]
-> [Plan for the cloud management gateway](plan-cloud-management-gateway.md)
+> [Plan for the CMG](plan-cloud-management-gateway.md)

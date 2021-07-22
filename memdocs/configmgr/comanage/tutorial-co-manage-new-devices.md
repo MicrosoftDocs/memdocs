@@ -5,11 +5,10 @@ description: Learn how to configure co-management for new internet-based Windows
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 07/15/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
-ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
 ---
 
 # Tutorial: Enable co-management for new internet-based devices
@@ -52,17 +51,15 @@ Use this tutorial when:
 
 ### On-premises infrastructure
 
-- Configuration Manager current branch, version 1810 or later.
+- A supported version of Configuration Manager current branch.
   
-  Version 1810 introduces [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md), which is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.  
+  [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md) is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.
 
-  Version 1810 also introduces a simpler command line for internet-based installation of the Configuration Manager client.
-
-- The MDM authority must be set to Intune  
+- The MDM authority must be set to Intune.
 
 ### External certificates
 
-- CMG server authentication certificate. This certificate is an SSL certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. You'll export this certificate as .PFX file with Private Key.  
+- CMG server authentication certificate. This certificate is an SSL certificate from a public and globally trusted certificate provider.<!-- memdocs#1668 --> You'll export this certificate as .PFX file with Private Key.  
 
 - Later in this tutorial we provide guidance on how to configure the request for this certificate.
 
@@ -117,12 +114,10 @@ We recommend you use your primary site server to generate the certificate signin
 
 Request a version 2 key provider type when you generate a CSR. Only version 2 certificates are supported.  
 
-> [!TIP]  
-> When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP on the server with the CMG removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn't required to use co-management, it is useful in most environments.  
+> [!TIP]
+> By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Even though the cloud-based content isn't required to use co-management, it's useful in most environments.
 >
-> If you use any additional, separate CDPs, you need to request separate certificates for each additional CDP. To request a public certificate for a CDP, use the same details as for the cloud management gateway CSR. You need to only change the common name so that it is unique for each CDP.
->
-> Using an additional, separate CDP is deprecated and no longer recommended. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
+> The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances.<!-- 10247883 --> To provide content to internet-based devices, enable the CMG to distribute content. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### Details for the cloud management gateway CSR
 
@@ -279,7 +274,7 @@ Use this procedure to install a cloud management gateway as a service in Azure. 
 
 7. Enable the checkbox for **Verify Client Certificate Revocation**.
 
-8. Enable the checkbox for **Allow CMG to function as a cloud distribution point and serve content from Azure storage** if you want to deploy a cloud distribution point with the CMG.
+8. Enable the checkbox to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**.
 
 9. Select **Next** to continue.
 

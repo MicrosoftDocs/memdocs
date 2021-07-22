@@ -179,7 +179,7 @@ When you deploy software updates to clients, configure the deployment for client
 
 You don't have to create a deployment package when deploying software updates. When you select the **No deployment package** option, clients can still download content from local sources if available, but typically download from the Microsoft Update service.<!--1357933-->
 
-Internet-based clients always download content from the Microsoft Update cloud service. Don't distribute software update deployment packages to a cloud distribution point. You're charged for storage with the cloud distribution point, but clients won't download these packages. 
+Internet-based clients always download content from the Microsoft Update cloud service. Don't distribute software update deployment packages to a content-enabled cloud management gateway (CMG).
 
 
 ### <a name="bkmk_thirdparty"></a> Plan for third-party updates

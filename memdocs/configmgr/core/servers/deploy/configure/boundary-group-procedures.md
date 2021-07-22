@@ -2,16 +2,13 @@
 title: Procedures for boundary groups
 titleSuffix: Configuration Manager
 description: Configure boundary groups to logically organize related network locations called boundaries.
-ms.date: 04/13/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
+ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # How to configure boundary groups for Configuration Manager
@@ -91,35 +88,35 @@ To configure fallback behavior, switch to the **Relationships** tab in the bound
   - To prevent fallback to a specific boundary group, select the boundary group, and then select **Never fallback** for the type of site system role. This action can include the *default site boundary group*.  
 
 - To modify the configuration of an existing relationship, select the boundary group in the list, and select **Change**. This action opens the Fallback Boundary Groups window for just this boundary group.  
- 
+
 - To remove a relationship, select the boundary group in the list, and select **Remove**.  
 
-For more information, see [Fallback](boundary-groups.md#fallback). 
-
+For more information, see [Fallback](boundary-groups.md#fallback).
 
 ### <a name="bkmk_options"></a> Configure boundary group options
 <!--1356193-->
-Starting in version 1806, to configure additional options for clients in this boundary group, switch to the **Options** tab. For more information, see [Boundary group options for peer downloads](boundary-groups.md#bkmk_bgoptions).
 
-- **Allow peer downloads in this boundary group**: This option is enabled by default. The management point provides clients a list of content locations that includes peer sources.  
+To configure additional options for clients in this boundary group, switch to the **Options** tab. For more information, see [Boundary group options for peer downloads](boundary-groups.md#bkmk_bgoptions).
 
-    - **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.  
+- **Allow peer downloads in this boundary group**: This option is enabled by default. The management point provides clients a list of content locations that includes peer sources.
 
-    - **Prefer distribution points over peers within the same subnet**: By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients in the same subnet as a peer cache source.  
+  - **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
 
-- **Prefer cloud based sources over on-premises sources**: A common scenario is if you have a branch office with a faster internet link, you can prioritize cloud content. This includes cloud distribution points or Microsoft Update. 
+  - **Prefer distribution points over peers within the same subnet**: By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients in the same subnet as a peer cache source.
 
-## <a name="bkmk_site-fallback"></a> Configure a fallback site for automatic site assignment  
+- **Prefer cloud based sources over on-premises sources**: A common scenario is if you have a branch office with a faster internet link, you can prioritize cloud content. This includes content-enabled cloud management gateways or Microsoft Update.
+
+## <a name="bkmk_site-fallback"></a> Configure a fallback site for automatic site assignment
 
 If clients aren't in a boundary group with an assigned site, assign them to this site when they're installed.
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
 
-2.  On the **Home** tab of the ribbon, in the **Sites** group, select **Hierarchy Settings**.  
+1. On the **Home** tab of the ribbon, in the **Sites** group, select **Hierarchy Settings**.
 
-3.  On the **General** tab, select the checkbox to **Use a fallback site**. Then select a site from the **Fallback site** drop-down list.  
+1. On the **General** tab, select the checkbox to **Use a fallback site**. Then select a site from the **Fallback site** drop-down list.
 
-4.  Select **OK** to save the configuration.  
+1. Select **OK** to save the configuration.
 
 For more information, see [Site assignment](boundary-groups.md#site-assignment).
 

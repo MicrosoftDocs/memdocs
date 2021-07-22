@@ -245,7 +245,7 @@ The following table lists the log files that are on the Configuration Manager si
 |CertMgr.log|Records certificate activities for intrasite communication.|Site system server|  
 |chmgr.log|Records activities of the client health manager.|Site server|  
 |Cidm.log|Records changes to the client settings by the Client Install Data Manager (CIDM).|Site server|  
-|CollectionAADGroupSyncWorker.log | Starting in version 2002, log file for synchronization of collection membership results to Azure Active Directory. In version 1910 and earlier, logging for this feature was combined in SMS_AZUREAD_DISCOVERY_AGENT.log. | Site server|
+|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. | Site server|
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site server|  
 |compmon.log|Records the status of component threads monitored for the site server.|Site system server|  
 |compsumm.log|Records Component Status Summarizer tasks.|Site server|  
@@ -292,7 +292,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitecomp.log|Records details about the maintenance of the installed site components on all site system servers in the site.|Site server|  
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. In version 1910 and earlier, it also included synchronization of collection membership results to Azure AD.| Site server|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. | Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
@@ -556,8 +556,8 @@ The following table lists the log files that contain information related to cont
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|CloudDP-&lt;guid\>.log|Records details for a specific cloud-based distribution point, including information about storage and content access.|Site system server|  
-|CloudMgr.log|Records details about content provisioning, collecting storage and bandwidth statistics, and administrator-initiated actions to stop or start the cloud service that runs a cloud-based distribution point.|Site system server|  
+|CloudDP-&lt;guid\>.log|Records details for a specific cloud-based content source, including information about storage and content access.|Site system server|  
+|CloudMgr.log|Records details about content provisioning, collecting storage and bandwidth statistics, and administrator-initiated actions to stop or start the cloud service that runs a content-enabled cloud management gateway (CMG).|Site system server|  
 |DataTransferService.log|Records all BITS communication for policy or package access. This log also is used for content management by pull-distribution points.|Computer that is configured as a pull-distribution point|  
 |PullDP.log|Records details about content that the pull-distribution point transfers from source distribution points.|Computer that is configured as a pull-distribution point|  
 |PrestageContent.log|Records the details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system role|  

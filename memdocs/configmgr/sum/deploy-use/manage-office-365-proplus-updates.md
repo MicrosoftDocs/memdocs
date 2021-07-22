@@ -53,7 +53,7 @@ For previous Configuration Manager versions, you must take the following steps t
 
 ### Limitations
 
-- Cloud distribution points don't support content for Microsoft 365 Apps updates. <!--7366753-->
+- Content-enabled cloud management gateways don't support content for Microsoft 365 Apps updates. <!--7366753-->
 
 ### Deploy Microsoft 365 Apps using Configuration Manager version 1806 or higher: 
 Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149, these instructions are for 1806 and later-->
