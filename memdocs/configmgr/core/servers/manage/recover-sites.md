@@ -365,15 +365,7 @@ To resolve this issue, [Renew the secret key](../deploy/configure/azure-services
 ### Delete and recreate subscriptions for external notifications on the CAS
 
 <!-- 10333966 -->
-In version 2107, after you recover the CAS, you need to delete and recreate any subscriptions for [External notifications](external-notifications.md).
-
-To delete the subscription:
-
-1. Run the **SetupExternalServiceNotifications.ps1** script with option `1` to list the available subscriptions. Note the subscription IDs.
-
-1. Use the **Delete** method of the **NotificationSubscription** administration service API. Make a GET call to the URI `https://<SMSProviderFQDN>/AdminService/v1.0/NotificationSubscription(<Subscription_ID>).Delete`. For more information, see [How to use the administration service in Configuration Manager](../../../develop/adminservice/usage.md).
-
-Then recreate the subscriptions normally.
+In version 2107, after you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications: Remove a subscription](external-notifications.md#remove-a-subscription).
 
 ### Configure HTTPS for site system roles that use IIS
 

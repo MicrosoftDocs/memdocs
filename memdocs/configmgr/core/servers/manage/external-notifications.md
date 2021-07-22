@@ -74,6 +74,9 @@ These notifications use the following standardized schema:
     (Get-Content $FileName -Raw).TrimEnd("`r`n") | Set-Content $FileName -Force
     ```
 
+    > [!NOTE]
+    > **SetupExternalServiceNotifications.ps1** is digitally signed by Microsoft. This script sample downloads the file and fixes the line breaks to preserve the digital signature.
+
 ## Create an Azure logic app and workflow
 
 Use the following process to create a sample app in Azure Logic Apps to receive the notification from Configuration Manager.
@@ -199,11 +202,23 @@ Use the following Configuration Manager log files on the site server to help tro
 - **ExternalNotificationsWorker.log**: Check if the queue has been processed and notifications are sent to external system.
 - **statmgr.log**: Check if the status filter rules have been processed without errors
 
+## Remove a subscription
+
+If you need to delete a subscription, use the following process:
+
+1. Run the **SetupExternalServiceNotifications.ps1** script with option `1` to list the available subscriptions. Note the subscription ID, which is an integer value.
+
+1. Use the **NotificationSubscription** API of the administration service. Make a DELETE call to the URI `https://<SMSProviderFQDN>/AdminService/v1.0/NotificationSubscription/<Subscription_ID>`.
+
+    For more information, see [How to use the administration service in Configuration Manager](../../../develop/adminservice/usage.md).
+
+After you remove the subscription, the site doesn't send notifications to the external system.
+
 ## Known issues
 
 If you create a [status filter rule](#status-message), you'll see it in the site's list of **Status filter rules** in the Configuration Manager console. If you make a change on the **Actions** tab of the rule properties, the external notification won't work.
 
-In version 2107, after you recover a central administration site (CAS), delete and recreate the subscription.<!-- 10333966 --> For more information, see [Recover sites](recover-sites.md#delete-and-recreate-subscriptions-for-external-notifications-on-the-cas).
+In version 2107, after you [recover a central administration site](recover-sites.md) (CAS), delete and recreate the subscription.<!-- 10333966 -->
 
 > [!TIP]
 > Before you [remove a CAS](../deploy/install/remove-central-administration-site.md), recreate the subscriptions at the child primary site.
