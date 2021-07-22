@@ -136,12 +136,12 @@
       href: troubleshooting.md
     - name: On-premises network connections
       href: troubleshoot-on-premises-network-connection.md
-- name: Reference
-  items:
     - name: On-premises network connection health checklist
       href: health-checks.md
     - name: Provisioning errors
       href: provisioning-errors.md
+- name: Reference
+  items:
     - name: Get audit logs by using PowerShell
       href: get-cloud-pc-audit-logs-using-powershell.md
     - name: Business continuity and disaster recovery
