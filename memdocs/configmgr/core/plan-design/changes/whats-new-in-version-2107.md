@@ -94,6 +94,8 @@ Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for si
 
 When you install or update the site, it now warns for the presence of SQL Server 2012. The [support lifecycle](/lifecycle/products/microsoft-sql-server-2012) for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.
 
+For more information, see [Removed and deprecated for site servers: SQL Server](deprecated/removed-and-deprecated-server.md#sql-server).
+
 ### External notifications
 
 <!--9504414-->
@@ -339,6 +341,8 @@ RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's no
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
 - The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances. To provide content to internet-based devices, enable the CMG to distribute content.<!-- 10247883 -->
+
+- The support lifecycle for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.<!-- 10092858 -->
 
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2107 drops support for the following features:
 

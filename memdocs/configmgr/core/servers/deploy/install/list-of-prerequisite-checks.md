@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](prerequisite-checker.md).  
+This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](prerequisite-checker.md).
 
 
 
@@ -776,6 +776,16 @@ Packages don't have invalid characters in the share name, such as `#`.
 *Applies to: Secondary site, management point*
 
 The account that you configured to run the SQL Server service for the site database instance has a valid service principal name (SPN) in Active Directory Domain Services. Register a valid SPN in Active Directory to support Kerberos authentication.
+
+### SQL Server 2012 lifecycle
+
+<!--10092858-->
+
+_Applies to: CAS, primary site, secondary site_
+
+This rule warns for the presence of SQL Server 2012. The [support lifecycle](/lifecycle/products/microsoft-sql-server-2012) for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.
+
+For more information, see [Removed and deprecated for site servers: SQL Server](../../../plan-design/changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
 ### <a name="bkmk_changetracking"></a> SQL Server change tracking cleanup
 
