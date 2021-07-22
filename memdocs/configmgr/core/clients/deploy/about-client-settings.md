@@ -144,7 +144,7 @@ If you require user policy in this scenario, and accept any potential performanc
 
 ### Allow access to cloud distribution point
 
-Set this option to **Yes** for clients to obtain content from a cloud distribution point. This setting doesn't require the device to be internet-based.
+Set this option to **Yes** for clients to obtain content from a content-enabled CMG. This setting doesn't require the device to be internet-based.
 
 ### Automatically register new Windows 10 domain joined devices with Azure Active Directory
 

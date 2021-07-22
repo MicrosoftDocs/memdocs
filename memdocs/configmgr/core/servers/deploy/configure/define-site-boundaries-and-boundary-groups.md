@@ -2,11 +2,10 @@
 title: Use boundaries and boundary groups
 titleSuffix: Configuration Manager
 description: Use boundaries and boundary groups to define network locations and accessible site systems for devices you manage.
-ms.date: 08/11/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -34,7 +33,7 @@ Clients use boundary groups to:
 
 - **Find certain site system roles they can use:** Associate a boundary group with certain site system roles. Then the site provides clients with that list of site systems in the boundary group. Clients use these site systems for actions such as finding content or a nearby management point.  
 
-Clients that are on the internet or configured as internet-only clients don't use boundary information. These clients can't use automatic site assignment. They can download content from an internet-based distribution point from their assigned site or a cloud-based distribution point.  
+Clients that are on the internet or configured as internet-only clients don't use boundary information. These clients can't use automatic site assignment. They can download content from an internet-based distribution point from their assigned site or a content-enabled cloud management gateway.
 
 During OS deployment, while a device is running Windows PE, the site can convert Active Directory site boundary information to IP subnet information. This behavior is only during this process, and specifically for the purpose of these devices. In other words, if your site only has Active Directory site boundaries, Windows PE clients during an OS deployment will still be in a boundary.<!-- SCCMDocs#2086 -->
 

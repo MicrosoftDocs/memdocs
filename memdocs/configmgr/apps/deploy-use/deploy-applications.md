@@ -2,11 +2,10 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -98,6 +97,8 @@ On the **Deployment Settings** page, specify the following information:
     > When you set the deployment action to **Uninstall**, the deployment purpose is automatically set to **Required**. You can't change this behavior.
 
 - **Allow end users to attempt to repair this application**: If you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->
+
+- **Uninstall this application if the targeted object falls out of the collection**: Starting in version 2107, when you remove the device from the target collection, Configuration Manager runs the uninstall program on that device. For more information, see [Implicit uninstall](uninstall-applications.md#implicit-uninstall). This option is only available for device-targeted deployments and when the deployment is **Required**.<!--3607457-->
 
 - **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user's primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.
 

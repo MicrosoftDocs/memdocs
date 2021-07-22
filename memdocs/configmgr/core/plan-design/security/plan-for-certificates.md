@@ -2,7 +2,7 @@
 title: Plan for certificates
 titleSuffix: Configuration Manager
 description: Plan for the use of self-signed and PKI digital certificates in Configuration Manager.
-ms.date: 05/04/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -19,7 +19,7 @@ Configuration Manager uses a combination of self-signed and public key infrastru
 
 Use PKI certificates whenever possible. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md). When Configuration Manager requests PKI certificates during enrollment for mobile devices, use Active Directory Domain Services and an enterprise certification authority. For all other PKI certificates, deploy and manage them independently from Configuration Manager.
 
-PKI certificates are required when client computers connect to internet-based site systems. Some scenarios with the cloud management gateway and cloud distribution point also require PKI certificates. For more information, see [Manage clients on the internet](../../clients/manage/manage-clients-internet.md).
+PKI certificates are required when client computers connect to internet-based site systems. The cloud management gateway also requires certificates. For more information, see [Manage clients on the internet](../../clients/manage/manage-clients-internet.md).
 
 When you use a PKI, you can also use IPsec to help secure the server-to-server communication between site systems in a site, between sites, and for other data transfer between computers. Implementation of IPsec is independent from Configuration Manager.
 
@@ -40,14 +40,16 @@ Using HTTPS communication is recommended for all Configuration Manager communica
 
 For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).  
 
-## Certificates for CMG and CDP
+## Certificates for CMG
 
-Managing clients on the internet via the cloud management gateway (CMG) and cloud distribution point (CDP) requires the use of certificates. The number and type of certificates varies depending upon your specific scenarios.
+Managing clients on the internet via the cloud management gateway (CMG) requires the use of certificates. The number and type of certificates varies depending upon your specific scenarios.
 
-For more information, see the following articles:
+For more information, see [CMG set up checklist](../../clients/manage/cmg/set-up-checklist.md)
 
-- [CMG set up checklist](../../clients/manage/cmg/set-up-checklist.md)
-- [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)
+> [!NOTE]
+> The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances.<!-- 10247883 --> To provide content to internet-based devices, enable the CMG to distribute content. For more information, see [Deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
+>
+> For more information about certificates for a CDP, see [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs).
 
 ## The site server signing certificate
 

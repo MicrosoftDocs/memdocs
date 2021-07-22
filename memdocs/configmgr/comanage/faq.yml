@@ -7,7 +7,7 @@ metadata:
   ms.author: aaroncz
   ms.reviewer: crosorio
   manager: dougeby
-  ms.date: 04/15/2021
+  ms.date: 07/15/2021
   ms.topic: reference
   ms.prod: configuration-manager
   ms.technology: configmgr-comanage
@@ -164,6 +164,6 @@ sections:
         answer: |
           No. Windows updates are already available on the internet, so you don't need to distribute them to your CMG.
 
-          In past versions, Configuration Manager blocked update packages to cloud distribution points. This constraint was removed so you can distribute third-party software updates. Don't distribute to the CMG any updates that are available from Microsoft Updates.
+          In past versions, Configuration Manager blocked update packages to cloud-based content sources. This constraint was removed so you can distribute third-party software updates. Don't distribute to the CMG any updates that are available from Microsoft Updates.
 
           Configuration Manager clients have native affinity when using a CMG to get updates directly from the Microsoft Updates cloud service. For more information on how CMG works with Microsoft Updates service and configuration guidance, see the blog post on [Managing remote machines with cloud management gateway in Microsoft Endpoint Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895).

@@ -879,8 +879,14 @@ items:
       items:
       - name: Plan for CMG
         href: clients/manage/cmg/plan-cloud-management-gateway.md
+      - name: CMG client authentication
+        href: clients/manage/cmg/plan-client-authentication.md
+      - name: CMG hierarchy design
+        href: clients/manage/cmg/plan-hierarchy-design.md
       - name: Supported configurations for CMG
         href: clients/manage/cmg/supported-configurations.md
+      - name: Performance and scale
+        href: clients/manage/cmg/perf-scale.md
       - name: Cost
         href: clients/manage/cmg/cost.md
     - name: Set up
@@ -893,13 +899,13 @@ items:
         href: clients/manage/cmg/configure-azure-ad.md
       - name: 3. Configure client authentication
         href: clients/manage/cmg/configure-authentication.md
-      - name: 4. Set up CMG
+      - name: 4. Set up a CMG
         href: clients/manage/cmg/setup-cloud-management-gateway.md
       - name: 5. Configure clients for CMG
         href: clients/manage/cmg/configure-clients.md
     - name: Manage
       items:
-      - name: Monitor clients on CMG
+      - name: Monitor a CMG
         href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
       - name: Modify a CMG
         href: clients/manage/cmg/modify-cloud-management-gateway.md

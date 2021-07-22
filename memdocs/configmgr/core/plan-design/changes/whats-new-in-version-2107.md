@@ -28,15 +28,6 @@ To take full advantage of new Configuration Manager features, after you update t
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2107+-+Configuration+Manager%22&locale=en-us`
 
-
-
-## Microsoft Endpoint Manager tenant attach
-
-### Intune role-based access control for tenant attach
-<!--8126836, 6415648, 8348644-->
-You can use Intune role-based access control (RBAC) when displaying the **Client details** page for [tenant attached devices](../../../tenant-attach/device-sync-actions.md) in the Microsoft Endpoint Manager admin center. When using Intune as the RBAC authority, a user with the [Help Desk Operator role](/intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. Currently, the Help Desk Operator role can display only the **Client details** page without additional Configuration Manager permissions.
-
-
 ## Cloud-attached management
 
 ### Convert a CMG to virtual machine scale set
@@ -45,19 +36,23 @@ You can use Intune role-based access control (RBAC) when displaying the **Client
 
 Starting in current branch version 2010, you could deploy the cloud management gateway (CMG) with a virtual machine scale set in Azure. This support was primarily to unblock customers with a Cloud Solution Provider (CSP) subscription.
 
-In this release, any customer with a CMG that uses the classic cloud service deployment can convert to a virtual machine scale set.
+In this release, any customer with a CMG that uses the classic cloud service deployment can convert to a virtual machine scale set. Microsoft recommends that new CMG deployments use a virtual machine scale set.
+
+For more information, see [Plan for CMG: virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) and [Modify a CMG: Convert](../../clients/manage/cmg/modify-cloud-management-gateway.md#convert).
 
 ### Select VM size for CMG
 
 <!--3555749-->
 
-When you deploy a cloud management gateway (CMG) with a [virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets), you can now choose the virtual machine (VM) size. The following three options are available:
+When you deploy a CMG with a virtual machine scale set, you can now choose the virtual machine (VM) size. The following three options are available:
 
-- **Lab**: [B2s](/azure/virtual-machines/sizes-b-series-burstable)
-- **Standard**: [A2_v2](/azure/virtual-machines/av2-series). This option continues to be the default setting.
-- **Large**: [D2_v3](/azure/virtual-machines/dv3-dsv3-series)
+- Lab (B2s)
+- Standard (A2_v2). This size continues to be the default setting.
+- Large (A4_v2)
 
-This control gives you greater flexibility with your CMG deployment. You can adjust the size for test labs or if you support large environments. For example, the smaller **Lab** size is ideal for testing with a smaller number of clients at less cost. For production deployments, either use the default **Standard** size or add more capacity with the **Large** size. For more information on how these options differ in cost for your region, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
+This control gives you greater flexibility with your CMG deployment. You can adjust the size for test labs or if you support large environments. For example, the smaller **Lab** size is ideal for testing with a smaller number of clients at less cost. For production deployments, either use the default **Standard** size or add more capacity with the **Large** size.
+
+For more information, see [Cost of CMG: Virtual machine scale set](../../clients/manage/cmg/cost.md#virtual-machine-scale-set).
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
@@ -203,6 +198,8 @@ Many customers have lots of collections because for every application they need 
 
 Starting in this release, you can enable an application deployment to support implicit uninstall. If a device is in a collection, the application installs. Then when you remove the device from the collection, the application uninstalls.
 
+For more information, see [Uninstall applications](../../../apps/deploy-use/uninstall-applications.md).
+
 ## OS deployment
 
 ### Support layered keyboard driver during OS deployment
@@ -255,9 +252,12 @@ The following items were added to help you better manage your automatic deployme
 <!--9247522-->
 The `-Product` parameter for `New-CMSoftwareUpdateAutoDeploymentRule` was updated. When there are multiple products with the same name, `-Product` now selects all of them.
 <!-- do we want this here, or just rely on PowerShell release notes? -->
+
 #### Script to apply deployment package settings for automatic deployment rule
 <!--3961933, 4396422-->
-If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded the following script into [Community hub](../../servers/manage/community-hub.md):
+If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded a script into [Community hub](../../servers/manage/community-hub.md).
+
+For more information, see [Automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_script).
 <!-- I'll probably scrape the script for this over to PowerShell content as well -->
 
 ## Community hub
@@ -303,6 +303,10 @@ In this release we've made the following improvements to the Configuration Manag
 
 - Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
 
+- You can now use the **All Subfolders** search option from the **Boot Images**, **Operating System Upgrade Packages**, and **Operating System Images** nodes. <!--8325332, 9506942, 9506938, 9506934-->
+
+For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
+
 ## Support Center
 ### Improvements to Support Center
 <!--8272488-->
@@ -338,10 +342,11 @@ RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's no
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
+- The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances. To provide content to internet-based devices, enable the CMG to distribute content.<!-- 10247883 -->
+
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2107 drops support for the following features:
 
 - Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.<!-- 9649296 -->
-
 
 <!--
 As first announced in version 1906, version xxxx drops support for the following client OS versions:  

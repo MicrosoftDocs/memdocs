@@ -5,7 +5,7 @@ description: Learn to recover your sites in Configuration Manager.
 ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -410,10 +410,6 @@ As part of the state migration point properties, you specify the folders that st
 ### Regenerate the certificates for distribution points
 
 After you restore a site, the **distmgr.log** might list the following entry for one or more distribution points: `Failed to decrypt cert PFX data`. This entry indicates that the distribution point certificate data can't be decrypted by the site. To resolve this issue, regenerate or reimport the certificate for affected distribution points. Use the [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet.
-
-### Update certificates used for cloud-based distribution points
-
-Configuration Manager requires an Azure management certificate for the site server to communicate with cloud-based distribution points. After a site recovery, update the certificates for cloud-based distribution points.
 
 ## Recover a secondary site
 

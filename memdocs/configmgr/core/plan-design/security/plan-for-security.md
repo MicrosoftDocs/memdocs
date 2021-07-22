@@ -2,7 +2,7 @@
 title: Plan for security
 titleSuffix: Configuration Manager
 description: Get best practices and other information about security in Configuration Manager.
-ms.date: 05/04/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -111,8 +111,6 @@ Onboarding your site with Azure AD supports the following Configuration Manager 
 - [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)
-
-- [Cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md)
 
 - [User discovery](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)
 
