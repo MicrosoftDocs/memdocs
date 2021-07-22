@@ -80,7 +80,7 @@ Configuration Manager uses self-signed certificates for client identity and to h
 If the client also has a PKI-based certificate, it continues to use that certificate for TLS HTTPS communication. It uses the site's self-signed certificate for signing messages with the site. This behavior means that the client supports elliptical curve cryptography (ECC) certificates from your PKI. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md).
 
 > [!NOTE]
-> For clients that also have a PKI certificate, the client control panel shows the PKI certificate, but the Configuration Manager console for the same client shows the site's self-signed certificate.<!-- 10278780 -->
+> For clients that also have a PKI certificate, the Configuration Manager console displays the **Client certificate** property as **Self-signed**. The client control panel **Client certificate** property shows **PKI**.<!-- 10278780 -->
 
 Configuration Manager doesn't use TPMs that are known vulnerable. If a device has a vulnerable TPM, the client falls back to using a software-based KSP. The certificate is still not exportable.
 
