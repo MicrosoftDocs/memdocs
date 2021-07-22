@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/09/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -101,3 +101,5 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 
 <!-- ########################## -->
 ## Next steps
+
+[Learn about Cloud PC role-based access control](role-based-access.md).

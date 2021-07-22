@@ -41,7 +41,7 @@ Admins need only provide a few configuration details to set up the provisioning 
 
 At a high level, the full provisioning process looks like this:
 
-1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you’ll provide details for the [on-premises network connection](on-premises-network-connection.md), the [image](device-images.md) used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
+1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you’ll provide details for the [on-premises network connection](on-premises-network-connections.md), the [image](device-images.md) used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
 2. When a user in the Azure AD user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC and sends access information to the user. This automation has three stages which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article](automated-provisioning-steps.md).
 3. The end user receives the access information and can then sign in to the Windows Cloud PC from anywhere.
 

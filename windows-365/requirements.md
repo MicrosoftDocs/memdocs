@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: chbrinkh
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -62,7 +62,7 @@ You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.c
 
 ## Role and identity requirements
 
-- Admin role: You should be an [Intune Administrator in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-administrator) to be able to provision Cloud PCs.
+- Admin role: You must be an [Intune Administrator in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-administrator) to provision Cloud PCs.
 - User identity: Cloud PC users must be configured with [hybrid identities](/azure/active-directory/hybrid/whatis-hybrid-identity) so that they can authenticate with resources both on-premises and in the cloud.
 
 ## Supported Azure regions for Cloud PC provisioning
