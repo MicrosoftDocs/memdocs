@@ -362,7 +362,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 ### Compliance settings (Level 2)
 
-- Basic configuration baseline information: count, number of deployments, and number of references
+- ***[Updated]*** Basic configuration baseline information: count, number of deployments, number of references, and frequency of changes
 
 - Compliance policy error statistics
 
@@ -399,6 +399,8 @@ For Configuration Manager version 2107, this level includes the following data:
 - Summary of size and count of admin persisted settings
 
 - Selected console usage information
+
+- ***[NEW]*** Unsigned extension policy
 
 ### Content (Level 2)
 
@@ -499,6 +501,8 @@ For Configuration Manager version 2107, this level includes the following data:
 - Grouped sizes of task sequence policies
 
 - Count of error codes from feature upgrades for Windows 10 clients
+
+- ***[NEW]*** Count of supported and unsupported OS versions
 
 ### Site updates (Level 2)
 
@@ -625,6 +629,10 @@ For Configuration Manager version 2107, this level includes the following data:
 - Summary of how many site systems have the proxy enabled and how many are authenticated proxy
 
 - Usage information for the last seven days of in-console product feedback
+
+- ***[NEW]*** Count of site-to-site accounts by type
+
+- ***[NEW]*** Usage statistics for user and device custom properties
 
 ## Level 3 - Full
 
