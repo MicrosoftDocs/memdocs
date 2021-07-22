@@ -62,7 +62,6 @@ Use the following information to identify the Windows groups, accounts, and SQL 
 - [Database roles that Configuration Manager uses in SQL](#bkmk_sqlroles)
   - [smsdbrole_AITool](#smsdbrole_aitool)
   - [smsdbrole_AIUS](#smsdbrole_aius)
-  - [smsdbrole_AMTSP](#smsdbrole_amtsp)
   - [smsdbrole_CRP](#smsdbrole_crp)
   - [smsdbrole_CRPPfx](#smsdbrole_crppfx)
   - [smsdbrole_DMP](#smsdbrole_dmp)

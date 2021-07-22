@@ -61,7 +61,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 | ![Supported](media/green-check.png) = **Supported**  |
 | ![Not supported](media/red-x.png) = **Not supported** |
 
-## <a name="bkmk_win10-notes"></a> Support notes
+## Support notes
 
 - Support for Windows 10 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
 
@@ -82,7 +82,7 @@ The **All Windows 10 (ARM64)** platform is available in the list of supported OS
 
 OS deployment isn't supported, except for a feature update task sequence. Starting in version 2103, you can deploy a task sequence with a feature update to a Windows 10 on ARM64 device. For more information, see [Deploy a feature update with a task sequence](../changes/whats-new-in-version-2103.md#deploy-a-feature-update-with-a-task-sequence).
 
-## <a name="bkmk_WIfB-support"></a> Support for Windows Insider
+## Support for Windows Insider
 
 You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
 
