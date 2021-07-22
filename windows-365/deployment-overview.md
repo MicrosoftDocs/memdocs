@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Windows 365 deployment overview - Azure | Microsoft Docs
+title: Windows 365 deployment overview
 titleSuffix:
 description: Windows 365 deployment overview
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,13 +30,12 @@ ms.collection: M365-identity-device-management
 
 # Overview of Windows 365 deployment
 
-To set up your system to deploy on-demand Cloud PCs to your users, follow these steps:
+To set up your system to provision on-demand Cloud PCs to your users, follow these steps:
+
 1. [Assign licenses to users](assign-licenses.md).
 2. [Create on-premises network connection](create-on-premises-network-connection.md).
 3. [Add device images](add-device-images.md) (optional).
 4. [Create a provisioning policy](create-provisioning-policy.md).
 
-
 <!-- ########################## -->
-## Next steps
-[Assign licenses to users](assign-licenses.md).
+Next, learn how to [Assign licenses to users](assign-licenses.md)

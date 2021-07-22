@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Add device images for Windows 365 - Azure | Microsoft Docs
+title: Add device images for Windows 365
 titleSuffix:
 description: Learn how to add device images for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 6/14/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -30,13 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Add or delete custom device images
 
-If you want to use a custom device image, you can add it into your Azure subscription and then use it for creating Cloud PCs. You can use standard Azure Marketplace gallery images or [create your own custom images](/azure/virtual-machines/windows/capture-image-resource).
+If you want to use a custom device image, you can add it into your Azure subscription and then use it for provisioning Cloud PCs. You can use standard Azure Marketplace gallery images or [create your own custom images](/azure/virtual-machines/windows/capture-image-resource).
 
 ## Add a custom device image
 
 You can upload the custom image to the Windows 365 service by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
 ![Screenshot of add device image](./media/add-device-images/add-device-image.png)
 2. In the **Add image** pane, provide the following information:
     - **Image name**: The name of the image you want to add.
@@ -49,7 +49,7 @@ You can upload the custom image to the Windows 365 service by following these st
 
 You can delete a custom image from Windows 365 by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images**.
 2. On the **Device images** page, select the check box next to the image > **Delete**.
 3. Select **Yes** on the confirmation pop up to permanently delete the image.
 

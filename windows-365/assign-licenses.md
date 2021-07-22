@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Assign licenses for Windows 365 - Azure | Microsoft Docs
+title: Assign licenses for Windows 365
 titleSuffix:
 description: Learn how to assign licenses for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: mattsha
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,11 +35,7 @@ Before a user can use a Cloud PC, you must assign a license to that user. You ca
 - Microsoft 365 admin center for individual users. For steps on how to do this, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 - [Azure AD admin center](https://aad.portal.azure.com/) for group license assignments. For more information about group license assignments, see [Assign licenses to users by group membership in Azure Active Directory](/azure/active-directory/enterprise-users/licensing-groups-assign).
 
-## Available Windows 365 licenses
-
-To be supplied...
-
 <!-- ########################## -->
-## Next steps
+Next, check out the following article: 
 
 [Create on-premises network connection](create-on-premises-network-connection.md).

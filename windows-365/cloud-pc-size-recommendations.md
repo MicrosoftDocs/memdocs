@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Windows 365 size recommendations - Azure | Microsoft Docs
+title: Windows 365 size recommendations
 titleSuffix:
 description: Learn about the different Cloud PC sizes that are available with different SKUs in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:

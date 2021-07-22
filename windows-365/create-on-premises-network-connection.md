@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Create on-premises network connections for Windows 365 - Azure | Microsoft Docs
+title: Create on-premises network connections for Windows 365
 titleSuffix:
 description: Learn how to create on-premises network connections for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create on-premises network connection
 
-[On-premises network connections](on-premises-network-connections.md) are required so that Cloud PCs can:
+[On-premises network connections](on-premises-network-connections.md) (OPNC) are required so that Cloud PCs can:
 
 - Be provisioned.
 - Be joined to your company’s domain.
@@ -38,24 +38,26 @@ ms.collection: M365-identity-device-management
 
 You can have up to 10 connections per tenant.
 
-To create a connection, you must:
-
-- Be an [Intune Administrator in Azure AD](/en-us/azure/active-directory/roles/permissions-reference).
-- Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network with connectivity to your on-premises domain controller and network.
-
 As part of the connection process, the Windows 365 service is granted the following permissions:
 
 - Reader permission on the Azure subscription.
 - Owner permission on the specified resource group.
 - Network contributor permission on the virtual network.
 
+## Requirements
+
+To create a connection, you must:
+
+- Be an [Intune Administrator in Azure AD](/azure/active-directory/roles/permissions-reference).
+- Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network with connectivity to your on-premises domain controller and network.
+
 ## To create an on-premises network connection
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create connection**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create connection**.
 ![Screenshot of create connection](./media/create-on-premises-network-connection/create-connection.png)
 2. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
 ![Screenshot of connection name](./media/create-on-premises-network-connection/connection-name.png)
-3. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a healthy on-premises network connection, you won't be able to proceed. For more information, see the on-premises network connection creation guide.
+3. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy OPNC](health-checks.md), you won't be able to proceed.
 4. Select a **Virtual network** and **Subnet**.
 5. Select **Next**.
 6. On the **AD domain** page, provide the following information:
