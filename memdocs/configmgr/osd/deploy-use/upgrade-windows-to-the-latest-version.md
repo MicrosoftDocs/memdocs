@@ -1,7 +1,7 @@
 ---
-title: Upgrade to Windows 10
+title: Windows in-place upgrade
 titleSuffix: Configuration Manager
-description: Learn how to use Configuration Manager to upgrade an OS from Windows 7 or later to Windows 10.
+description: Learn how to use Configuration Manager to upgrade Windows to a later version.
 ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
