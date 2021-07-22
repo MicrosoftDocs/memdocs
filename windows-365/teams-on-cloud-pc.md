@@ -40,6 +40,8 @@ The image gallery provides Windows 10 Enterprise images pre-configured with all 
 
 The main benefit of this approach is that you setup the Teams audio and video call directly peer-to-peer from your physical endpoint to the other person. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
 
+Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You could also sign out and in again to your Cloud PC to gain the same result.
+
 Some of the key benefits of the optimizations are:
 
 - High-performance peer-to-peer streaming facilitated by WebRTC.Traffic flows peer-to-peer and is rendered by the endpoint.
