@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/08/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Device configuration for Cloud PCs
 
-After a Cloud PC is [provisioned](provisioning.md), you can manage it like any other Windows 10 device in Microsoft Endpoint Manager. You can create [device configuration profiles](/mem/intune/configuration/device-profiles) to turn different settings on and off in Windows.
+After a Cloud PC is [provisioned](provisioning.md), you can manage it like any other Windows device in Microsoft Endpoint Manager. You can create [device configuration profiles](/mem/intune/configuration/device-profiles) to turn different settings on and off in Windows.
 
 <!-- ########################## -->
 ## Next steps
