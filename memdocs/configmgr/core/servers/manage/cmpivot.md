@@ -47,36 +47,36 @@ The following components are required to use CMPivot:
 
 The following permissions are needed for CMPivot:
 
-- **Read** permission on the **SMS Scripts** object
 - **Run CMPivot** permission on the **Collection**
-   - Starting in version 1906, the **Run CMPivot** permission was split out from the general **Run Script** permission as the new permission to be used on the **Collection**. Prior to version 1906, the **Run Script** permission is required.
 - **Read** permission on **Inventory Reports**
-- The default scope.
+- **Read** permission on the **SMS Scripts** object
+   - **Read** for **SMS Scripts** isn't required starting in version 2107 <!--7898885-->
+   - CMPivot doesn't need **Read** for **SMS Scripts** for it's primary scenario starting in version 2107. However, if the administration service is down and the permission has been removed, then when the administration service falls back, CMPivot will fail. <!--10304720--> The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts**  if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log. <!--8403036-->
+- The **default scope**.
+   - The **default scope** isn't required starting in version 2107 <!--7898885-->
 
-> [!TIP]
-> Starting in version 1906, [permissions for CMPivot were added](cmpivot-changes.md#bkmk_cmpivot_secadmin1906) to Configuration Manager's built-in **Security Administrator** role.
- 
+### CMPivot permissions by Configuration Manager version
+
+|1902 and earlier| Versions 1906 through 2103| 2107 or later <!--7898885-->|
+|---|---|---|
+|**Run Script** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|
+|**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|
+|**Read** permission on **SMS Scripts**|**Read** permission on **SMS Scripts**|N/A </br></br>  The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts** if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.|
+|**Default scope** permission|**Default scope** permission|N/A|
+
 ## Limitations
 
-- In a hierarchy, connect the Configuration Manager console to a *primary site* to run CMPivot. The **Start CMPivot** action doesn't appear in the console when it's connected to a central administration site (CAS).
-  - Starting in Configuration Manager version 1902, you can run CMPivot from a CAS. In some environments, additional permissions are needed. For more information, see [CMPivot changes for version 1902](cmpivot-changes.md#bkmk_cmpivot1902).
-
-- CMPivot only returns data for clients connected to the current site.  
-
-- If a collection contains devices from another site, CMPivot results are only from devices in the current site.  
-
+- CMPivot only returns data for clients connected to the current site unless it's run from the central administration site (CAS).  
+  - If a collection contains devices from another site, CMPivot results are only from devices in the current site unless CMPivot is run from the CAS.
+  - In some environments, additional permissions are needed for CMPivot to run on the CAS. For more information, see [CMPivot changes for version 1902](cmpivot-changes.md#bkmk_cmpivot1902).  
 - You can't customize entity properties, columns for results, or actions on devices.  
-
 - Only one instance of CMPivot can run at the same time on a computer that is running the Configuration Manager console.  
-
-- In version 1806, the query for the **Administrators** entity only works if the group is named "Administrators". It doesn't work if the group name is localized. For example, "Administrateurs" in French.<!--SCCMDocs issue 759-->  
-
+- In CMPivot standalone, you're not able to access CMPivot queries stored in the Community hub. <!--9442715, 9310040, 9391017-->
 
 ## Start CMPivot
 
-1. In the Configuration Manager console, connect to the primary site. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
+1. In the Configuration Manager console, connect to the primary site or the CAS. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
    - Confirm with a site administrator that your account has the required permissions. For more information, see [Prerequisites](#prerequisites).  
-   - Connect the console to a *primary site*.  
 
 2. The interface provides further information about using the tool.  
 
@@ -125,7 +125,8 @@ The CMPivot window contains the following elements:
 
     - The query pane also provides the following options:  
 
-        - Run the query.  
+        - Run the query.
+           - To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**. 
 
         - Move backwards and forwards in the history list of queries.  
 
@@ -183,7 +184,10 @@ The CMPivot window contains the following elements:
    - The total number of rows in the results pane. For example, `1 objects`  
 
 > [!TIP]
-> To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**.
+> Starting in version 2107, use the **Query devices again** button, or **Ctrl** + **F5** to force the client to retrieve the data again for the query. Using **Query devices again** is useful when you expect the data to change on the device since the last query, such as during troubleshooting. Selecting **Run query** again after the initial results are returned only parses the data CMPivot has already retrieved from the client. <!--9966861--> 
+>
+>:::image type="content" source="media/query-devices-again.png" alt-text="Screenshot of the query devices again button showing the tooltip that Ctrl + F5 is a shortcut to force clients to retrieve the data again.":::
+
 
 ## Example scenarios
 
