@@ -35,10 +35,6 @@ Before a user can use a Cloud PC, you must assign a license to that user. You ca
 - Microsoft 365 admin center for individual users. For steps on how to do this, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 - [Azure AD admin center](https://aad.portal.azure.com/) for group license assignments. For more information about group license assignments, see [Assign licenses to users by group membership in Azure Active Directory](/azure/active-directory/enterprise-users/licensing-groups-assign).
 
-## Available Windows 365 licenses
-
-For a full list of Windows 365 licenses, see --waiting for link--.<!--narmarkri to supply link]-->.
-
 <!-- ########################## -->
 ## Next steps
 
