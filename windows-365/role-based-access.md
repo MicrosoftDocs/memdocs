@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2021
+ms.date: 07/23/2021 
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Role-based access control
 
-Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. You can assign roles for your Cloud PCs by using the Microsoft Endpoint Manager admin center.
+Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. You can assign roles for your Cloud PCs by using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
@@ -44,7 +44,7 @@ Two new built-in roles are available for Cloud PC:
 - On-premises network connection configuration
 - Provisioning
 
-**Cloud PC Reader**: Views Cloud PC data available in the Cloud PC node in MEM, but can’t make changes.
+**Cloud PC Reader**: Views Cloud PC data available in the Cloud PC node in Microsoft Endpoint Manager, but can’t make changes.
 
 ## Custom roles
 
