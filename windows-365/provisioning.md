@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -32,17 +32,17 @@ ms.collection: M365-identity-device-management
 
 Provisioning in Windows 365 is the automated process that:
 
-1. Creates a Cloud PC.
+1. Creates a Cloud PC virtual machine.
 2. Sets it up for the user.
 3. Completes other tasks that prepare it to be used.
 4. Send access information to the user.
 
-Admins need only provide a few configuration details to set up the provisioning process. Subsequently, users who have a Windows 365 license and match the configuration details will automatically have a Cloud PC provisioned for them.. Provisioning is a one-time per user and per-license process. Any given user with a license can only have one Cloud PC provisioned for them.
+Admins need only provide a few configuration details to set up the provisioning process. Subsequently, users who have a Windows 365 license and match the configuration details will automatically have a Cloud PC provisioned for them. Provisioning is a one-time per user and per-license process. Any given user and license pair can only have one Cloud PC provisioned for them.
 
 At a high level, the full provisioning process looks like this:
 
-1. You create a provisioning policy to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you’ll provide details for the on-premises network connection, the image used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
-2. When a user in the Azure AD user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC and sends access information to the user. This automation has three stages which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article]().
+1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you’ll provide details for the [on-premises network connection](on-premises-network-connections.md), the [image](device-images.md) used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
+2. When a user in the Azure AD user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC and sends access information to the user. This automation has three stages which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article](automated-provisioning-steps.md).
 3. The end user receives the access information and can then sign in to the Windows Cloud PC from anywhere.
 
 ## Provisioning policy objects
@@ -52,40 +52,39 @@ A Windows 365 provisioning policy is an object in the Microsoft Endpoint Manager
 As the admin, you provide the following required information when creating a provisioning policy:
 
 - **On-premises network connection**: The on-premises network connection (OPNC) lets the policy connect to your on-premises resources. It identifies:
-  - The Azure subscription that will be associated with   the Cloud PC.
+  - The Azure subscription that will be associated with the Cloud PC.
   - The domain and Organizational Unit (OU) to join.
   - The Active Directory credentials to use.
-  Without this information, Windows 365 can’t provision the Cloud PCs.
 - **Image**: A Windows image is used as the reference image for all Cloud PCs provisioned with this policy. You can choose either a gallery image or supply your own custom image.
-- **Assignment**:  The assignment identifies one or more Azure AD user groups. Windows 365 will automatically provision a Cloud PC for each licensed user  in the policy’s Azure AD user groups . If a user is later added to the user groups, they will also get a Cloud PC.
+- **Assignment**:  The assignment identifies one or more Azure AD user groups. Windows 365 will automatically provision a Cloud PC for each licensed user in the policy’s Azure AD user groups. If a user is later added to the user groups, they will also get a Cloud PC.
+
+Without this information, Windows 365 can’t provision the Cloud PCs.
 
 After you’ve created the provisioning policy, Windows 365 handles all of the provisioning process to automatically get licensed users their own Cloud PCs.
 
-Changing the OPNC configuration won’t impact any previously provisioned Cloud PCs. However, any newly provisioned (or reprovisioned) Cloud PCs will reflect the updated settings.
+Changing the these configurations won’t impact any previously provisioned Cloud PCs. However, any newly provisioned (or reprovisioned) Cloud PCs will reflect the updated settings.
 
 ### Changes to provisioning policies
 
-Provisioning is a one-time action per user + license relationship. It is triggered when a user is licensed and targeted with a provisioning policy.
+After the provisioning a Cloud PC is complete, it doesn't re-occur unless you manually perform a [reprovision](reprovision-cloud-pc.md).
 
-After the provisioning is complete, it does not re-occur unless you manually perform a reprovision.
-
-Changes made to any part of a provisioning policy do not trigger a reprovision. Such changes won’t be applied to previously provisioned Cloud PCs. Changes to a provisioning policy will only be applied to  newly provisioned Cloud PCs or reprovisioned Cloud PCs.
+Changes made to any part of a provisioning policy do not trigger a reprovision. Such changes won’t be applied to previously provisioned Cloud PCs. Changes to a provisioning policy will only be applied to subsequently provisioned Cloud PCs or reprovisioned Cloud PCs.
 
 If a provisioning policy name is changed, it won’t update the Cloud PC name under All Cloud PCs, and won’t update the enrollmentProfileName in Azure AD.
 
 ### Deleting a provisioning policy
 
-A provisioning policy can only be deleted if it’s not assigned to any Azure AD groups.
+A provisioning policy can only be [deleted](delete-provisioning-policy.md) if it’s not assigned to any Azure AD groups.
 
-To delete a provisioning policy, edit the policy and remove any assigned Azure AD groups. Removing the targeting of a provisioning policy that was used for successful Cloud PC provisioning will put the Cloud PCs into a grace period. When the grace period expires, the Cloud PCs will be deleted.
+Removing the targeting of a provisioning policy that was used for successful Cloud PC provisioning will put the Cloud PCs into a grace period. When the grace period expires, the Cloud PCs will be deleted automatically.
 
 ### Provisioning policy conflict resolution
 
-Provisioning policies are assigned to user groups and so there’s the possibility of overlapping groups/users.
+Provisioning policies are assigned to user groups so there’s the possibility of overlapping groups/users.
 
 If a user is assigned to more than one provisioning policy, provisioning will honor the first assigned provisioning policy and ignore all others. If one of the provisioning policies is modified and a Cloud PC is reprovisioned, the Cloud PC will be reprovisioned with the most recently changed provisioning policy.
 
-It’s best practice to avoid any policy targeting overlaps to ensure consistent and apparent provisioning.
+It’s best practice to avoid any policy targeting overlaps to ensure consistent provisioning.
 
 ## Provisioning retry
 
@@ -99,7 +98,7 @@ After you’ve resolved the root cause of the error, you can manually trigger a 
 
 ## Reprovisioning
 
-The **Reprovision** remote action lets admins reprovision Cloud PCs. This action can be useful when:
+The [**Reprovision**](reprovision-cloud-pc.md) remote action lets admins reprovision Cloud PCs. This action can be useful when:
 
 - You're testing different Cloud PC configurations.
 - Your provisioned Cloud PC is misbehaving.
@@ -129,7 +128,7 @@ The following objects are cleaned up:
 - Azure AD device objects
 - Azure vNics
 
-Network security groups created for Cloud PCs won’t  be cleaned up, as there may be other objects relying on the NSG.
+Network security groups created for Cloud PCs won’t be cleaned up, as there may be other objects relying on those groups.
 
 Any on-premises Azure AD computer accounts that were joined to the domain during provisioning won't be deleted. Windows 365 doesn't have sufficient permissions to delete on-premises computer objects, so instead the redundant computer objects will be disabled. We encourage your organization to clean-up these disabled computer objects during  your regular maintenance process.
 

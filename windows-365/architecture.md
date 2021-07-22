@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -37,6 +37,7 @@ Windows 365 provides a per-user per-month license model by hosting Cloud PCs on 
 Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. The virtual NICs are created by Windows 365 in your Azure subscription. They’re attached to an Azure Virtual Network based on your on-premises network connection (OPNC) configuration.
 
 By using Azure Networking, Windows 365 lets you use Virtual Network security and routing features, including:
+
 - [Azure Network Security Groups](/azure/virtual-network/network-security-groups-overview)
 - [User Defined Routing](/en-us/azure/virtual-network/virtual-networks-udr-overview)
 - [Azure Firewall](/azure/firewall/overview)
