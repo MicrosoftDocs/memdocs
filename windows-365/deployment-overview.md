@@ -38,6 +38,4 @@ To set up your system to provision on-demand Cloud PCs to your users, follow the
 4. [Create a provisioning policy](create-provisioning-policy.md).
 
 <!-- ########################## -->
-## Next steps
-
-[Assign licenses to users](assign-licenses.md).
+Next, learn how to [Assign licenses to users](assign-licenses.md)

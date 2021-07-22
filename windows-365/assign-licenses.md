@@ -36,6 +36,6 @@ Before a user can use a Cloud PC, you must assign a license to that user. You ca
 - [Azure AD admin center](https://aad.portal.azure.com/) for group license assignments. For more information about group license assignments, see [Assign licenses to users by group membership in Azure Active Directory](/azure/active-directory/enterprise-users/licensing-groups-assign).
 
 <!-- ########################## -->
-## Next steps
+Next, check out the following article: 
 
 [Create on-premises network connection](create-on-premises-network-connection.md).

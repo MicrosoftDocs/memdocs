@@ -48,7 +48,7 @@ As part of the connection process, the Windows 365 service is granted the follow
 
 To create a connection, you must:
 
-- Be an [Intune Administrator in Azure AD](/en-us/azure/active-directory/roles/permissions-reference).
+- Be an [Intune Administrator in Azure AD](/azure/active-directory/roles/permissions-reference).
 - Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network with connectivity to your on-premises domain controller and network.
 
 ## To create an on-premises network connection
