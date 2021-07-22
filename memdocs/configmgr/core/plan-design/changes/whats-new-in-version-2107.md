@@ -293,6 +293,8 @@ In this release we've made the following improvements to the Configuration Manag
 
 - Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
 
+- You can now use the **All Subfolders** search option from the **Boot Images**, **Operating System Upgrade Packages**, and **Operating System Images** nodes. <!--8325332, 9506942, 9506938, 9506934-->
+
 For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 
 ## Support Center
