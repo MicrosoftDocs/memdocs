@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Assign licenses for Windows 365 - Azure | Microsoft Docs
+title: Assign licenses for Windows 365
 titleSuffix:
 description: Learn how to assign licenses for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: mattsha
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,7 +37,7 @@ Before a user can use a Cloud PC, you must assign a license to that user. You ca
 
 ## Available Windows 365 licenses
 
-To be supplied...
+<!--narmarkri to supply link]-->
 
 <!-- ########################## -->
 ## Next steps

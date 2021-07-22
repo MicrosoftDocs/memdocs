@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Windows 365 role-based access - Azure | Microsoft Docs
+title: Windows 365 role-based access
 titleSuffix:
 description: Learn about role-based access control in Windows 365.
 keywords:
