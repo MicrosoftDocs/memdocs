@@ -289,6 +289,14 @@ When searching in a device collection, it doesn't search the keyword against all
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
 ## Software Library workspace
+### Improvements to console search
+<!--8325332, 9506942, 9506938, 9506934-->
+*(Introduced in version 2107)*
+
+You can use the **All Subfolders** search option for the following nodes: 
+- **Boot Images** node
+- **Operating System Upgrade Packages** node
+- **Operating System Images** node
 
 ### Import objects to current folder
 
