@@ -117,8 +117,6 @@ Onboarding your site with Azure AD supports the following Configuration Manager 
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)
 
-- [Cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md)
-
 - [User discovery](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)
 
 ## SMS Provider authentication
@@ -127,7 +125,9 @@ Onboarding your site with Azure AD supports the following Configuration Manager 
 
 ## Next steps
 
-- [Plan for certificates](plan-for-certificates.md)
+- [Certificates in Configuration Manager](certificates-overview.md)
+
+- [Plan for PKI certificates](plan-for-certificates.md)
 
 - [Configure security](configure-security.md)
 

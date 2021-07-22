@@ -2,17 +2,16 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 11/30/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: 2afe572e-d268-4c77-a22d-fdca617e2255
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# Configure Azure Active Directory for cloud management gateway
+# Configure Azure Active Directory for CMG
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -126,15 +125,6 @@ For more information, see [Configure Azure services](../../../servers/deploy/con
 
 The CMG service requires that you register specific resource providers in your Azure subscription. The providers vary depending upon how you deploy the CMG:
 
-- [Virtual machine scale set](#virtual-machine-scale-set)
-- [Cloud service (classic)](#cloud-service-classic)
-
-You need an Azure **global administrator** to register these providers.
-
-For more information including instructions on how to register providers, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
-
-### Virtual machine scale set
-
 Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, register the following resource providers:
 
 - Microsoft.KeyVault
@@ -142,12 +132,24 @@ Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual ma
 - Microsoft.Network
 - Microsoft.Compute
 
-### Cloud service (classic)
-
-The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
+If you'll deploy the CMG using a classic cloud service, your Azure subscription requires the following two resource providers:
 
 - Microsoft.ClassicCompute
 - Microsoft.Storage
+
+Your Azure AD account needs permission to do the `/register/action` operation for the resource provider. By default, the **Contributor** and **Owner** roles include this permission.
+
+The following steps summarize the process to register a resource provider. For more information, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. On the Azure portal menu, search for **Subscriptions**. Select it from the available options.
+
+1. Select the subscription you want to view.
+
+1. On the left menu, under **Settings**, select **Resource providers**.
+
+1. Find the resource provider you want to register, and select **Register**. To maintain least privileges in your subscription, only register those resource providers that you're ready to use.
 
 ## Automate with PowerShell
 

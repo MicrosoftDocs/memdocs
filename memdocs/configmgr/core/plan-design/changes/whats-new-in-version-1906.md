@@ -401,7 +401,7 @@ This release includes the following infrastructure improvements to Software Cent
 > - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
 > - Support ends for the application catalog roles with version 1910.  
 
-For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
+For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
 
 ### Redesigned notification for newly available software
 

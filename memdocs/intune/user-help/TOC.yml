@@ -225,9 +225,7 @@ items:
     items:
     - name: About Windows device enrollment
       href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md
-    - name: Identify Windows version for enrollment
-      href: using-your-windows-device-with-intune.md
-    - name: Enroll Windows 10 device
+    - name: Enroll Windows 10 device  
       href: enroll-windows-10-device.md
     - name: Enroll Windows 8.1 or Windows RT 8.1 device
       href: enroll-your-w81-or-rt81-windows.md

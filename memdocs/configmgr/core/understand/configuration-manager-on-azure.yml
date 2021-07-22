@@ -189,7 +189,7 @@ sections:
 
             - Use standard or pull distribution points on-premises.
             - Enable Windows BranchCache on distribution points or other [peer caching technologies](../plan-design/hierarchy/fundamental-concepts-for-content-management.md#peer-caching-technologies).
-            - Use a [cloud-based distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) (CDP). Note that CDPs and content-enabled cloud management gateways don't support software update packages for Microsoft updates. You need to have an alternate location, or software update deployment need to allow clients to get update content from the internet.
+            - Use a content-enabled [cloud management gateway](../clients/manage/cmg/overview.md) (CMG). Note that it doesn't support software update packages for Microsoft updates. You need to have an alternate location, or configure the software update deployment need to allow clients to get update content from the internet.
           
           > [!NOTE]
           > If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.

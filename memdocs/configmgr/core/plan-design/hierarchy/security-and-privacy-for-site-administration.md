@@ -257,7 +257,7 @@ Site system roles:
 
 A CTL is a defined list of trusted root certification authorities (CAs). When you use a CTL with group policy and a public key infrastructure (PKI) deployment, a CTL enables you to supplement the existing trusted root CAs that are configured on your network. For example, CAs that are automatically installed with Microsoft Windows or added through Windows enterprise root CAs. When a CTL is configured in IIS, it defines a subset of those trusted root CAs.  
 
-This subset provides you with more control over security. The CTL restricts the client certificates that are accepted to only those certificates that are issued from the list of CAs in the CTL. For example, Windows comes with a number of well-known, third-party CA certificates, such as VeriSign and Thawte.
+This subset provides you with more control over security. The CTL restricts the client certificates that are accepted to only those certificates that are issued from the list of CAs in the CTL. For example, Windows comes with a number of well-known, third-party CA certificates.
 
 By default, the computer that runs IIS trusts certificates that chain to these well-known CAs. When you don't configure IIS with a CTL for the listed site system roles, the site accepts as a valid client any device that has a certificate issued from these CAs. If you configure IIS with a CTL that didn't include these CAs, the site refuses client connections, if the certificate chains to these CAs. For Configuration Manager clients to be accepted for the listed site system roles, you must configure IIS with a CTL that specifies the CAs that are used by Configuration Manager clients.  
 

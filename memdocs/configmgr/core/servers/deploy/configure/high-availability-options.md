@@ -2,11 +2,10 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 04/05/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -153,7 +152,7 @@ Secondary sites only support installation of one management point, which must be
 
 ### Distribution point
 
-Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or cloud distribution point. For more information, see [Configure boundary groups](boundary-groups.md).  
+Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or content-enabled cloud management gateway. For more information, see [Configure boundary groups](boundary-groups.md).
 
 ## <a name="bkmk_client"></a> High availability for clients  
 

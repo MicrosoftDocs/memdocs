@@ -144,7 +144,7 @@ If you require user policy in this scenario, and accept any potential performanc
 
 ### Allow access to cloud distribution point
 
-Set this option to **Yes** for clients to obtain content from a cloud distribution point. This setting doesn't require the device to be internet-based.
+Set this option to **Yes** for clients to obtain content from a content-enabled CMG. This setting doesn't require the device to be internet-based.
 
 ### Automatically register new Windows 10 domain joined devices with Azure Active Directory
 
@@ -621,8 +621,6 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 - **Foreground color for Software Center**: Starting in version 2103, configure a custom color for the foreground font. By default, this color is white (Red: 255, Green: 255, Blue: 255). For some customers, their brand color doesn't work well with the default white font color for a selected item. This setting better supports these customers and improves accessibility.<!--8655575-->
 
 - **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
-
-    Starting in version 2107, notifications on Windows 10 devices also display this logo. This behavior helps users to trust these notifications.<!--4993167-->
 
 - **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 

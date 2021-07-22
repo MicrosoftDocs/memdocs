@@ -282,7 +282,7 @@ The following scenarios benefit from these improvements:
 [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/configure-authentication.md#enable-management-point-for-https).  
 
 #### <a name="bkmk_token2"></a> Scenario 2: Client to distribution point
 <!--1358228-->

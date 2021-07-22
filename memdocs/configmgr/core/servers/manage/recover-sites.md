@@ -2,16 +2,13 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 09/24/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
+ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Recover a Configuration Manager site
@@ -359,11 +356,11 @@ For example, before the site failure the **Total activations** count shows as **
 
 <!-- SCCMDocs#1022 -->
 
-In Configuration Manager version 1806, after site recovery you'll see the following error in the cloudmgr.log:
+After site recovery, you may see the following error in the cloudmgr.log:
 
 `Index (zero-based) must be greater than or equal to zero`
 
-To resolve this, [Renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew) for each Azure tenant connection.
+To resolve this issue, [Renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew) for each Azure tenant connection.
 
 ### Configure SSL for site system roles that use IIS
 
@@ -408,10 +405,6 @@ As part of the state migration point properties, you specify the folders that st
 ### Regenerate the certificates for distribution points
 
 After you restore a site, the **distmgr.log** might list the following entry for one or more distribution points: `Failed to decrypt cert PFX data`. This entry indicates that the distribution point certificate data can't be decrypted by the site. To resolve this issue, regenerate or reimport the certificate for affected distribution points. Use the [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet.
-
-### Update certificates used for cloud-based distribution points
-
-Configuration Manager requires an Azure management certificate for the site server to communicate with cloud-based distribution points. After a site recovery, update the certificates for cloud-based distribution points.
 
 ## Recover a secondary site
 

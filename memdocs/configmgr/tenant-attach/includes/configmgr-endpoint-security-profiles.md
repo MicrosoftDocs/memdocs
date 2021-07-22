@@ -4,7 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
-ms.date: 05/18/2021
+ms.date: 07/19/2021
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
 The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
@@ -20,7 +20,6 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows Server 2016 (x64)
     - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010 <!--8763780, 8740844-->
     - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 <!--8763780, 8740844-->
-- Platform: **Windows 10 and Windows Server (ConfigMgr)**
 
   - Profile: **Endpoint detection and response (ConfigMgr)** - Manage [Endpoint detection and response policy settings](../../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 

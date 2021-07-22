@@ -51,13 +51,13 @@ These support numbers are based on using the recommended hardware for Configurat
 
 [!INCLUDE [Size and scale for cloud management gateway](includes/scale-cmg.md)]
 
-For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
+For more information, see CMG [Performance and scale](../../clients/manage/cmg/perf-scale.md).
 
 ### Cloud management gateway connection point
 
 [!INCLUDE [Size and scale for cloud management gateway connection point](includes/scale-cmgcp.md)]
 
-For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
+For more information, see CMG [Performance and scale](../../clients/manage/cmg/perf-scale.md).
 
 ### Distribution point  
 

@@ -2,11 +2,10 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the current branch for early testing in a production environment.
-ms.date: 04/05/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -64,7 +63,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 <!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
 | Feature          | Added as pre-release | Added as a full feature |
 |------------------|----------------------|-------------------------|
-| [Cloud management gateway with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040--> | Version 2010 | ![Not yet](media/red_x.png) |
+| [Cloud management gateway with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040,8959690--> | Version 2010 | Version 2107 |
 | [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!--3555953,CB0CDFFB-9C6F-4B18-8954-A43A387302A2--> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Remove the central administration site](../deploy/install/remove-central-administration-site.md) <!-- 3607277 --> | Version 2002 | Version 2103 |
