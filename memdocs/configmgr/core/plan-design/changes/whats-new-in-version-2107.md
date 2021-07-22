@@ -28,15 +28,6 @@ To take full advantage of new Configuration Manager features, after you update t
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2107+-+Configuration+Manager%22&locale=en-us`
 
-
-
-## Microsoft Endpoint Manager tenant attach
-
-### Intune role-based access control for tenant attach
-<!--8126836, 6415648, 8348644-->
-You can use Intune role-based access control (RBAC) when displaying the **Client details** page for [tenant attached devices](../../../tenant-attach/device-sync-actions.md) in the Microsoft Endpoint Manager admin center. When using Intune as the RBAC authority, a user with the [Help Desk Operator role](/intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. Currently, the Help Desk Operator role can display only the **Client details** page without additional Configuration Manager permissions.
-
-
 ## Cloud-attached management
 
 ### Convert a CMG to virtual machine scale set
@@ -307,6 +298,10 @@ In this release we've made the following improvements to the Configuration Manag
 - Added maintenance window column<!--9708594-->: A **Maintenance window** column was added to the **Collections** tab in the **Devices** node.
 
 - Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
+
+- You can now use the **All Subfolders** search option from the **Boot Images**, **Operating System Upgrade Packages**, and **Operating System Images** nodes. <!--8325332, 9506942, 9506938, 9506934-->
+
+For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 
 ## Support Center
 ### Improvements to Support Center

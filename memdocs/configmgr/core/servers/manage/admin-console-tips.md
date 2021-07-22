@@ -179,6 +179,29 @@ For more information, see [Product Feedback](../../understand/product-feedback.m
 
 ## Assets and Compliance workspace
 
+### Navigate to collection
+<!--9502958-->
+*(Introduced in version 2107)*
+
+You can now navigate to a collection from the **Collections** tab in the **Devices** node. Select **View Collection** from either the ribbon or the right-click menu in the tab. 
+
+:::image type="content" source="./media/9502958-collection.png" alt-text="Screenshot of the Collections tab in the Devices node.":::
+
+### Added maintenance window column
+<!--9708594-->
+*(Introduced in version 2107)*
+
+A **Maintenance window** column was added to the **Collections** tab in the **Devices** node.
+
+:::image type="content" source="./media/9708594-maintenance-window.png" alt-text="Screenshot of the Maintenance window column for the Collections tab in the Devices node.":::
+
+### Display assigned users
+<!--9709014-->
+*(Introduced in version 2107)*
+
+If a collection deletion fails due to scope assignment, the assigned users are displayed.
+
+:::image type="content" source="./media/9709014-assigned-users.png" alt-text="Screenshot of assigned user list when collection fails to delete due to scope assignment.":::
 ### Copy discovery data from the console
 
 <!--6890051-->
@@ -266,6 +289,14 @@ When searching in a device collection, it doesn't search the keyword against all
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
 ## Software Library workspace
+### Improvements to console search
+<!--8325332, 9506942, 9506938, 9506934-->
+*(Introduced in version 2107)*
+
+You can use the **All Subfolders** search option for the following nodes: 
+- **Boot Images** node
+- **Operating System Upgrade Packages** node
+- **Operating System Images** node
 
 ### Import objects to current folder
 
@@ -364,7 +395,15 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ![Deployment Status view, copy asset details](media/1810-deployment-status.PNG)
 
 ## Administration workspace
+### Status message shortcuts
+*(Introduced in version 2107)*
+<!--8942963-->
+Shortcuts to [status messages](use-status-system.md) were added to the **Administrative Users** node and the **Accounts** node. Select an account, then select **Show Status Messages**.
 
+:::image type="content" source="./media/8942963-show-status-messages.png" alt-text="Screenshot of Administrative Users node with the Show Status Messages option in the ribbon.":::
+
+
+### Enable some security nodes to use the administration service
 <!--4223683-->
 Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#enable-console-usage).
 
