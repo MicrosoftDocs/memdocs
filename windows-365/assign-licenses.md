@@ -37,7 +37,7 @@ Before a user can use a Cloud PC, you must assign a license to that user. You ca
 
 ## Available Windows 365 licenses
 
-<!--narmarkri to supply link]-->
+For a full list of Windows 365 licenses, see --waiting for link--.<!--narmarkri to supply link]-->.
 
 <!-- ########################## -->
 ## Next steps

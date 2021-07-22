@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Delete on-premises network connections for Windows 365 - Azure | Microsoft Docs
+title: Delete on-premises network connections for Windows 365
 titleSuffix:
 description: Learn how to delete on-premises network connections for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -30,14 +30,14 @@ ms.collection: M365-identity-device-management
 
 # Delete on-premises network connection
 
-Only a unassigned on-premises network connection can be deleted. If an on-premises network connection is in use by a provisioning policy, then you must do one of the following:
+Only a unassigned on-premises network connection (OPNC) can be deleted. If an OPNC is in use by a provisioning policy, then you must do one of the following:
 
-- Remove the on-premises network connection from all provisioning policies
-- Delete the on-premises network connection
+- Remove the OPNC from all provisioning policies.
+- Delete the OPNC.
 
 To delete an on-premises network connection:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection**.
 ![Screenshot of delete connection](./media/delete-on-premises-network-connection/delete-connection.png)
 2. Select the ellipses (**…**) next to the connection you want to delete > **Delete**.
 3. Select **Confirm** when asked to delete the connection.

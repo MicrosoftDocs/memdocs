@@ -53,7 +53,7 @@ To create a connection, you must:
 
 ## To create an on-premises network connection
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create connection**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create connection**.
 ![Screenshot of create connection](./media/create-on-premises-network-connection/create-connection.png)
 2. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
 ![Screenshot of connection name](./media/create-on-premises-network-connection/connection-name.png)
