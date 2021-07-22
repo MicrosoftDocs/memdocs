@@ -324,6 +324,14 @@ To get the latest information for the Configuration Manager PowerShell module, u
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 
+### Review supported platform conditions
+
+<!-- 10247604 -->
+
+You can select supported platforms on many objects such as applications, task sequences, and configuration baselines. After updating the primary site, existing policies for these objects will update within 24 hours to include any changes to supported platform conditions. If you create a new deployment policy, after you update the site, the new policy will by default include the latest list of supported platforms.
+
+Review all objects with supported platform conditions to make sure they still meet your business requirements.
+
 ## Next steps
 
 Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. There's a tip at the top of that article about how to receive RSS notifications of changes.
