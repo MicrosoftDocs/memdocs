@@ -2,11 +2,10 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 04/05/2021
+ms.date: 07/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -199,11 +198,11 @@ For more information, see [How to deploy clients to Macs](../../clients/deploy/d
 
 ### Supported versions
 
-- **macOS Catalina (10.15)** (requires Configuration Manager site version 1910 or later, and Configuration Manager client for macOS version 5.0.8742.1000 or later)
+- **macOS Big Sur (11)** (requires Configuration Manager client for macOS version 5.0.9000.1002 or later)<!-- 8816608 -->
+
+- **macOS Catalina (10.15)** (requires Configuration Manager client for macOS version 5.0.8742.1000 or later)
 
 - **macOS Mojave (10.14)**
-
-- **macOS High Sierra (10.13)**
 
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 
