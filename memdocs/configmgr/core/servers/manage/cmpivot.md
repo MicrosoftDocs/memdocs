@@ -184,7 +184,9 @@ The CMPivot window contains the following elements:
    - The total number of rows in the results pane. For example, `1 objects`  
 
 > [!TIP]
-> Starting in version 2107, use the **Query devices again** button, or **Ctrl** + **F5** to force the client to retrieve the data again for the query. Using **Query devices again** is useful when you expect the data to change on the device since the last query, such as during troubleshooting. Selecting **Run query** again after the initial results are returned only parses the data CMPivot has already retrieved from the client. <!--9966861--> :::image type="content" source="media/query-devices-again.png" alt-text="Screenshot of the query devices again button showing the tooltip that Ctrl + F5 is a shortcut to force clients to retrieve the data again.":::
+> Starting in version 2107, use the **Query devices again** button, or **Ctrl** + **F5** to force the client to retrieve the data again for the query. Using **Query devices again** is useful when you expect the data to change on the device since the last query, such as during troubleshooting. Selecting **Run query** again after the initial results are returned only parses the data CMPivot has already retrieved from the client. <!--9966861--> 
+>
+>:::image type="content" source="media/query-devices-again.png" alt-text="Screenshot of the query devices again button showing the tooltip that Ctrl + F5 is a shortcut to force clients to retrieve the data again.":::
 
 
 ## Example scenarios
