@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Remotely manage Windows 365 devices - Azure | Microsoft Docs
+title: Remotely manage Windows 365 devices
 titleSuffix:
 description: Learn how to remotely manage Windows 365 devices
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice: 
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,8 +41,7 @@ Cloud PCs support the following remote management actions:
 - Full Scan
 - Update Windows Defender
 - [Reprovisioning](provisioning.md#reprovisioning) (this is a remote action specific to Cloud PC devices)
-- [Resize](resize-cloud-pc.md#resize-a-cloud-pc) (this is a remote action specific to Cloud PC devices) 
-
+- [Resize](resize-cloud-pc.md#resize-a-cloud-pc) (this is a remote action specific to Cloud PC devices)
 
 <!-- ########################## -->
 ## Next steps

@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Applications with Windows 365 - Azure | Microsoft Docs
+title: Applications with Windows 365
 titleSuffix:
 description: Learn how to use apps with Windows 365
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 07/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -45,7 +45,7 @@ The following apps are available with no need to upload:
 
 The IntuneWin format is a way to pre-process Windows classic (Win32) apps. The tool converts application installation files into the .intunewin format.  
 
-After you use this tool on the app installer folder, you can create an app enrollment configuration for enhanced deployment capabilities. For example, OS version dependencies and uninstallation methods when you need to remove applications remotely.  
+After you use this tool on the app installer folder, you can create an app enrollment configuration for enhanced deployment capabilities. For example, OS version dependencies and uninstall methods when you need to remove applications remotely.  
 
 If you select the most common application format (Win32), you must encapsulate the .exe or .msi file into a IntuneWin file. Windows 365 needs this as part of the App configuration set.  
 

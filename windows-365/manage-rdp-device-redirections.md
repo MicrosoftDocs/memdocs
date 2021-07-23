@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 4/21/2021
+ms.date: 7/26/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -39,9 +39,7 @@ There are two ways to manage RDP redirections:
 
 ## Use Microsoft Endpoint Manager to manage RDP device redirections
 
-Screencaps to be added later.
-
-1. Sign in to [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com) > **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
 ![Screenshot of delete policy](./media/create-device-configuration-profile/create-profile.png)
 2. In the **Create a profile** pane, select the following options:
     - **Platform**: Windows 10 and later

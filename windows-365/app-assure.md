@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Get help from App Assure for apps on Cloud PCs - Azure | Microsoft Docs
+title: Get help from App Assure for apps on Cloud PCs
 titleSuffix:
 description: Learn how to use App Assure to get help for apps on Cloud PCS.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/01/2021
+ms.date: 07/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:

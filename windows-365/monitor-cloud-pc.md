@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Monitor Windows 365 devices - Azure | Microsoft Docs
+title: Monitor Windows 365 devices
 titleSuffix:
 description: Learn how to monitor Windows 365 devices.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -43,11 +43,11 @@ The six reporting categories for Cloud PC are:
     - Top 10 processes causing the end user experience to slow down.
 2. **Remoting Connection**: Remoting metrics tell you how much time it takes a user to log in to a Cloud PC to access the full desktop and apps. This report includes the following data:
     - **Round Trip Time** for the users by location and CPC SKUs.
-    - **Log-in failures** so admins can identify users getting impacted. 
-3. **Startup performance**: The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. 
-4. **Proactive Remediation**: Cloud PC remediation scripts help admins and organizations reduce CSS costs, support calls, or raise tickets. These are automated actions to remediate common issues or issues resulting in help desk calls. Admins can configure these PowerShell scripts, specify the type of script and various conditions under which it can execute, and also identify which groups of Cloud PC devices they apply to. 
-5. **Recommended software**: A list of recommended software that can improve the end-user experience, independent of lower-level health metrics. 
-6. **App health**: The number of CPC devices running certain apps, crash date by each app type in the tenant, and scores and thresholds for optimal performance.
+    - **Log-in failures** so admins can identify users getting impacted.
+3. **Startup performance**: The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
+4. **Proactive Remediation**: Cloud PC remediation scripts help admins and organizations reduce CSS costs, support calls, or raise tickets. These are automated actions to remediate common issues or issues resulting in help desk calls. Admins can configure these PowerShell scripts, specify the type of script and various conditions under which it can execute, and also identify which groups of Cloud PC devices they apply to.
+5. **Recommended software**: A list of recommended software that can improve the end-user experience, independent of lower-level health metrics.
+6. **App health**: The number of Cloud PC devices running certain apps, crash date by each app type in the tenant, and scores and thresholds for optimal performance.
 
 <!-- ########################## -->
 ## Next steps
