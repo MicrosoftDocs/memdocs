@@ -131,8 +131,8 @@ After you sign up, you’ll be alerted by email when your tenant has access to t
 >
 > If you use *Always-on VPN* with the standalone Tunnel client app today, during migration to Microsoft Defender for Endpoint:
 >
-> - Disable *Always-on VPN* in profiles for **Microsoft Tunnel (standalone client)**, which is the old client app.
-> - Enable *Always-on VPN* in profiles for **Microsoft Tunnel**, which is the new Microsoft Defender for Endpoint client app.
+> - Set *Always-on VPN* to **Not configured** in profiles for **Microsoft Tunnel (standalone client)**, which is the old client app.
+> - Set *Always-on VPN* to **Enable** in profiles for **Microsoft Tunnel**, which is the new Microsoft Defender for Endpoint client app.
 
 ### Review and record your current Tunnel configurations
 
