@@ -81,6 +81,22 @@ If you need to move the content library back to the site server, repeat this pro
 > [!TIP]
 > To move the content to another drive on the site server, use the **Content Library Transfer** tool. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).
 
+## Support untrusted domains
+
+<!-- 3766940 -->
+
+If your environment has distribution points in untrusted domains, you need to make other configuration changes.
+
+1. On the computer that will host the distribution point role in the untrusted domain:
+
+    1. Create a local user account.
+
+    1. When you [add the distribution point role](../../servers/deploy/configure/install-site-system-roles.md) to this computer, use this local account as the [site system installation account](accounts.md#site-system-installation-account). For example, `COMPUTER.UNTRUSTEDDOMAIN\LocalAccount`.
+
+1. On the server that hosts the remote content library for the site, create a local user account. This account should have the same name and password as the account in the first step.
+
+When the distribution manager component distributes content to the server in the untrusted domain, it will use the local user account. During content distribution, this component gets the files from the content library server in the context of the distribution point's local account. Since this same account exists on the content library server, distribution manager can authenticate to read the content files and copy to the remote distribution point.
+
 ## Next steps
 
 [Flowchart - Manage content library](manage-content-library-flowchart.md)
