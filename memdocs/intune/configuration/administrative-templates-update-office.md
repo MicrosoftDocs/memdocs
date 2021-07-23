@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Update Microsoft 365 using administrative templates in Microsoft Intune - Azure | Microsoft Docs
+title: Update Microsoft 365 using administrative templates in Microsoft Intune
 description: Use Administrative templates in Microsoft Intune to update Microsoft 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
 keywords:
 author: MandiOhlinger

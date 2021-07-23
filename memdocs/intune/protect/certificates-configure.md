@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Learn about certificate types and profiles you use with Microsoft Intune - Azure | Microsoft Docs
+title: Learn about certificate types and profiles you use with Microsoft Intune
 description: Learn about using Simple Certificate Enrollment Protocol (SCEP) or Public Key Cryptography Standards (PKCS) certificates and certificate profiles with Microsoft Intune.
 keywords:
 author: brenduns

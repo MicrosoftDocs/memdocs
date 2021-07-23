@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows Hello for Business settings in Microsoft Intune - Azure | Microsoft Docs
+title: Windows Hello for Business settings in Microsoft Intune
 description: View details for Windows Hello for Business settings you configure in an Intune identity protection profile for device groups in Intune.
 keywords:
 author: brenduns

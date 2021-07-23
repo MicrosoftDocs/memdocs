@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create WiFi profile with pre-shared key in Microsoft Intune - Azure | Microsoft Docs
+title: Create WiFi profile with pre-shared key in Microsoft Intune
 description: Use a custom profile to create a Wi-Fi profile with a pre-shared key, and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
