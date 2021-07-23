@@ -78,7 +78,7 @@ To use Microsoft Defender for Endpoint with Intune, you must have the following 
   - Microsoft 365 E5
   - Windows 10 Enterprise E5 (*This license is included with Microsoft 365 E5*)
 
-  For more information, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](https://docs.microsoft.com/en-us/microsoft-365/security/defender/setup-m365deval?view=o365-worldwide#enable-microsoft-365-trial-subscription).
+  For more information, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 
 - **Microsoft Intune** – This subscription provides access to Intune and the Microsoft Endpoint Manager admin center.
 
