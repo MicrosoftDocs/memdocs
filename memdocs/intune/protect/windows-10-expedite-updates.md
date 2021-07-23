@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Intune to expedite Windows 10 quality updates - Azure | Microsoft Docs
+title: Use Intune to expedite Windows 10 quality updates
 description: Use Microsoft Intune policy to expedite the installation of Windows 10 updates on managed devices as soon as possible.
 keywords:
 author: brenduns

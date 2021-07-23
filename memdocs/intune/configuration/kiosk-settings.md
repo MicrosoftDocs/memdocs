@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Kiosk settings for Windows and Holographic devices in Microsoft Intune - Azure | Microsoft Docs
+title: Kiosk settings for Windows and Holographic devices in Microsoft Intune
 description: Configure your Windows 10 (and later) and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune. 
 keywords:
 author: MandiOhlinger

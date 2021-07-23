@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create trusted certificate profiles in Microsoft Intune - Azure | Microsoft Docs
+title: Create trusted certificate profiles in Microsoft Intune
 description: Create and deploy trusted certificate profiles to deploy a trusted root certificate to managed devices in Intune. Trusted certificate profiles support use of Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles with Microsoft Intune.
 keywords:
 author: brenduns

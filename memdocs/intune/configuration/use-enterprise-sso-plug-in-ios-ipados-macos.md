@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft Enterprise SSO plug-in in Microsoft Intune - Azure | Microsoft Docs
+title: Microsoft Enterprise SSO plug-in in Microsoft Intune
 description: Add or create an iOS, iPadOS, or macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. See if Azure AD or Kerberos authentication is right for your organization.
 keywords:
 author: MandiOhlinger

@@ -1,5 +1,5 @@
 ---
-title: Migrate Microsoft Tunnel to the Microsoft Defender for Endpoint app for Microsoft Intune - Azure | Microsoft Docs
+title: Migrate Microsoft Tunnel to the Microsoft Defender for Endpoint app for Microsoft Intune
 description: Migrate your Microsoft Tunnel configuration from using the standalone tunnel client app to use Microsoft Defender for Endpoint.
 keywords:
 author: brenduns

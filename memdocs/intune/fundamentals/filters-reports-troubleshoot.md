@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Filter reports and troubleshooting in Microsoft Intune - Azure | Microsoft Docs
+title: Filter reports and troubleshooting in Microsoft Intune
 description: Use the device and app filter reports to get more information on successfully applied filters. Learn the impact of include and exclude filters in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger

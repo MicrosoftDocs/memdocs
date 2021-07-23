@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use derived credentials for mobile devices in Microsoft Intune - Azure | Microsoft Docs
+title: Use derived credentials for mobile devices in Microsoft Intune
 description: Use derived credentials on mobile devices as an authentication method for Intune VPN, email, Wi-Fi profiles, applications, and S/MIME and encryption. Derived credentials are an implementation of the NIST guidelines for Special Publication 800-157.  
 keywords:
 author: brenduns

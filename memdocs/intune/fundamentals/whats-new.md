@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: What's new in Microsoft Intune - Azure | Microsoft Docs
+title: What's new in Microsoft Intune
 titleSuffix:
 description: Find out what's new in the Intune Azure portal
 keywords:
