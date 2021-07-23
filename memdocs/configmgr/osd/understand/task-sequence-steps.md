@@ -6,7 +6,6 @@ ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
-ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -1276,36 +1275,44 @@ To delete a partition, choose the partition, and then select **Delete**.
 
 ## <a name="BKMK_InstallApplication"></a> Install Application
 
-This step installs the specified applications, or a set of applications defined by a dynamic list of task sequence variables. When the task sequence runs this step, the application installation begins immediately without waiting for a policy polling interval.  
+This step installs the specified applications, or a set of applications defined by a dynamic list of task sequence variables. When the task sequence runs this step, the application installation begins immediately without waiting for a policy polling interval.
 
-The applications must meet the following criteria:  
+The applications must meet the following criteria:
 
-- The application must have a deployment type of **Windows Installer** or **Script** installer. Windows app package (.appx file) deployment types aren't supported.  
+- The application must have a deployment type of **Windows Installer** or **Script** installer. Windows app package (.appx file) deployment types aren't supported.
 
-- It must run under the Local System account and not the user account.  
+- It must run under the Local System account and not the user account.
 
-- It must not interact with the desktop. The program must run silently or in an unattended mode.  
+- It must not interact with the desktop. The program must run silently or in an unattended mode.
 
-- It must not initiate a restart on its own. The application must request a restart by using the standard restart code, 3010. This behavior makes sure that this step correctly handles the restart. If the application returns a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
+- It must not initiate a restart on its own. The application must request a restart by using the standard restart code, 3010. This behavior makes sure that this step correctly handles the restart. If the application returns a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.
+
+- If the application [checks for running executable files](../../apps/deploy-use/check-for-running-executable-files.md), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
 
 > [!NOTE]
-> If the application [checks for running executable files](../../apps/deploy-use/check-for-running-executable-files.md), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
+> Starting in version 2107, there's a seven-minute delay before this step when the following conditions are true:
+>
+> - The task sequence is running from standalone media.
+> - The previous step was **Restart Computer**.
+> - The current **Install Application** step doesn't _continue on error_.
+>
+> In versions 2103 and earlier, under these conditions the step would fail. The task sequence didn't properly evaluate that the app install was successful.<!-- 9849096 -->
 
 When this step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of this step. Application dependencies aren't supported for stand-alone media.  
 
-> [!NOTE]  
-> To install an application that supersedes another application, the content files for the superseded application must be available. Otherwise this task sequence step fails. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the **Install Application** step installs Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point. If Microsoft Visio isn't installed at all on a client or captured image, the task sequence installs Microsoft Visio 2013 without checking for the Microsoft Visio 2010 content files.  
+> [!NOTE]
+> To install an application that supersedes another application, the content files for the superseded application must be available. Otherwise this task sequence step fails. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the **Install Application** step installs Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point. If Microsoft Visio isn't installed at all on a client or captured image, the task sequence installs Microsoft Visio 2013 without checking for the Microsoft Visio 2010 content files.
 >
 > If you retire a superseded app, and the new app is referenced in a task sequence, the task sequence fails to start.
-This behavior is by design: the task sequence requires all app references.<!-- SCCMDocs 1711 -->  
+This behavior is by design: the task sequence requires all app references.<!-- SCCMDocs 1711 -->
 
-This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
+This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**.
 
 ### Variables for Install Application
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
 - [_TSAppInstallStatus](task-sequence-variables.md#TSAppInstallStatus)  
 - [SMSTSMPListRequestTimeoutEnabled](task-sequence-variables.md#SMSTSMPListRequestTimeoutEnabled)  
