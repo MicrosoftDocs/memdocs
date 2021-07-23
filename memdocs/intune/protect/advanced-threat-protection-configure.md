@@ -35,7 +35,7 @@ Use the information and procedures in this article to configure integration of M
 - Onboard devices that run Android, iOS/iPadOS, and Windows 10
 - Use compliance policies to set device risk levels
 - Use conditional access policies to block devices that exceed your expected risk levels
-For - Android and iOS/iPadOS, use [app protection policies](../protect/mtd-app-protection-policy).md) that set device risk levels. App protection polices work with both enrolled and unenrolled devices.
+For - Android and iOS/iPadOS, use [app protection policies](../protect/mtd-app-protection-policy.md) that set device risk levels. App protection polices work with both enrolled and unenrolled devices.
 
 Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
 
