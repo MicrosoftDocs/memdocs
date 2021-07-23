@@ -84,9 +84,17 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 
 ### Microsoft .NET requirements
 
-<!--10033951;10073070,10081488-->
+<!--10402814-->
 
 Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
+
+There's also a new [management insight](../../servers/manage/management-insights.md) to recommend site systems that don't yet have .NET version 4.8 or later.
+
+For more information, see the following articles:
+
+- [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#net-version-requirements)
+- [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net)
+- [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md#net-version-requirements)
 
 ### New prerequisite check for SQL Server 2012
 
@@ -100,7 +108,9 @@ When you install or update the site, it now warns for the presence of SQL Server
 
 In a complex IT environment, you may have an automation system like [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). Customers use these systems to define and control automated workflows to integrate multiple systems. You could integrate Configuration Manager into a separate automation system through the product's SDK APIs. But this process can be complex and challenging for IT professionals without a software development background.
 
-Starting in this release, you can enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure [subscriptions](../../servers/manage/configure-alerts.md) to send these notifications. These notifications are in response to specific, defined events as they occur. For example, [status message filter rules](../../servers/manage/use-status-system.md#manage-status-filter-rules).
+You can now enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure subscriptions to send these notifications. These notifications are in response to specific, defined events as they occur. For example, status message filter rules.
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
 
 ### Internet access requirements
 
@@ -122,6 +132,8 @@ We've simplified the CMPivot permissions requirements. The new permissions are a
 
 - The **default scope** permission isn't required.
 
+For more information, see [permissions for CMPivot](../../servers/manage/cmpivot.md#permissions).
+
 ### Improvements to CMPivot
 
 <!--9966861-->
@@ -132,6 +144,7 @@ We've made the following improvements to CMPivot:
 - Added [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) and [minif](/azure/data-explorer/kusto/query/minif-aggfunction) aggregators that can be used with the [summarize operator](../../servers/manage/cmpivot-overview.md#table-operators)
 - Improvements to query autocomplete suggestions in the query editor
 
+For more information, see [Changes to CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2107) and [CMPivot overview](../../servers/manage/cmpivot-overview.md#bkmk_onprem_only).
 ## Client management
 
 ### Custom properties for devices
@@ -146,7 +159,9 @@ Many customers have other data that's external to Configuration Manager but usef
 - Cost center
 - Department
 
-Starting in this release, you can use the [administration service](../../../develop/adminservice/index.yml) to set this data on devices. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+You can use the administration service to set this data on devices. The site stores the property's name and its value in the site database as the new **Device Custom Properties** class. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+
+For more information, see [Custom properties for devices](../../../develop/adminservice/custom-properties.md).
 
 ### Client encryption uses AES-256
 

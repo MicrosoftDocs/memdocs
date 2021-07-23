@@ -257,7 +257,7 @@ Use the Configuration Manager console to install a secondary site.
 
 - In a hierarchy, you don't have to connect the console to the parent primary site. If the console isn't connected to the parent primary site for the new secondary site, Configuration Manager replicates the command to install the secondary site to the correct primary site.
 
-- Before you start the secondary site installation, make sure that your user account has the prerequisite permissions. Also make sure that the server that will host the new secondary site meets all the prerequisites for use as a secondary site server. For more information, see [Prerequisites for installing sites](prerequisites-for-installing-sites.md#bkmk_secondary) and [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012secpreq).
+- Before you start the secondary site installation, make sure that your user account has the prerequisite permissions. Also make sure that the server that will host the new secondary site meets all the prerequisites for use as a secondary site server. For more information, see [Prerequisites for installing sites](prerequisites-for-installing-sites.md#bkmk_secondary) and [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#secondary-site-server).
 
 - When you install the secondary site, Configuration Manager configures the new site to use the same client communication ports as the parent primary site.
 

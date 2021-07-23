@@ -106,16 +106,11 @@ For more information, see [Licensing and branches](../../understand/learn-more-e
 
 ### Review Microsoft .NET versions
 
-When a site installs this update, if the minimum requirement of .NET Framework 4.5 isn't installed, Configuration Manager automatically installs .NET Framework 4.5.2. When this prerequisite isn't already installed, the site installs it on each server that hosts one of the following site system roles:
+Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console.<!--10402814--> Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
 
-- Management point
-- Service connection point
-- Enrollment proxy point
-- Enrollment point
+This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. .NET applications on the server might experience random failures until you restart the server.
 
-This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might experience random failures until you restart the server.
-
-For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
+For more information including how to manage restarts, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 ### Review the version of the Windows ADK for Windows 10
 
