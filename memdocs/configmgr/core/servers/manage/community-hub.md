@@ -35,6 +35,7 @@ Community hub supports the following objects:
 - The device running the Configuration Manager console used to access the Community hub needs the following items:
    - .NET Framework version 4.6 or higher
      - .NET Framework version 4.6.2 or higher is required starting in Configuration Manager 2010
+     - Starting in version 2107, the console requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md#net-version-requirements).
    - Windows 10 build 17110 or higher
       - Windows Server isn't supported before version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
       - Starting in version 2010, [install the Microsoft Edge WebView2 console extension](#bkmk_webview2) to support Windows Server. <!--3555940, 8625943, 8717639 -->

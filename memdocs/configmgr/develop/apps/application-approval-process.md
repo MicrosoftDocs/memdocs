@@ -2,11 +2,10 @@
 title: Application approval process
 titleSuffix: Configuration Manager
 description: Learn about the application approval process. See scenarios with code examples and view known issues.
-ms.date: 07/01/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.assetid: e32671bd-3036-4c87-9371-f56b8d2eb57b
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -182,12 +181,14 @@ Administrators can configure email notifications for application approval reques
 
 ### Prerequisites for email notifications
 
-1. The server with the SMS Provider role must have .NET version 4.5.2 or higher installed.
-1. Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
-1. If PKI certificate infrastructure isn't set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Communication Security** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
+- Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+
+- Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+
+- If PKI certificate infrastructure isn't set up, enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).
 
    > [!NOTE]
-   > This checkbox is per primary site but if the checkbox is enabled on **any** of the primary sites, then Configuration Manager-generated certificates will be used on all providers, including the CAS and other primary sites.
+   > The configuration for Enhanced HTTP is per primary site. If you enable it on _any_ of the primary sites in a hierarchy, then Configuration Manager uses self-signed certificates on all providers. This behavior includes the CAS and other primary sites.
 
 ### Configure email notifications
 

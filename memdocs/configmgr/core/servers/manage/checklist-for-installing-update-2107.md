@@ -106,16 +106,11 @@ For more information, see [Licensing and branches](../../understand/learn-more-e
 
 ### Review Microsoft .NET versions
 
-When a site installs this update, if the minimum requirement of .NET Framework 4.5 isn't installed, Configuration Manager automatically installs .NET Framework 4.5.2. When this prerequisite isn't already installed, the site installs it on each server that hosts one of the following site system roles:
+Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console.<!--10402814--> Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
 
-- Management point
-- Service connection point
-- Enrollment proxy point
-- Enrollment point
+This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. .NET applications on the server might experience random failures until you restart the server.
 
-This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might experience random failures until you restart the server.
-
-For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
+For more information including how to manage restarts, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 ### Review the version of the Windows ADK
 
@@ -207,6 +202,9 @@ For example, you add custom entries to the **osdinjection.xml** file in the `bin
 When you install a site update that also updates the client, test that new client update in pre-production before you update all production clients. To use this option, configure your site to support automatic upgrades for pre-production before beginning installation of the update.
 
 For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md) and [How to test client upgrades in a pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md).
+
+> [!NOTE]
+> When you update to version 2107 or later, clients with PKI certificates will recreate self-signed certificates, but don't reregister with the site. Clients without a PKI certificate will reregister with the site, which can cause extra processing at the site. Make sure that your process to update clients allows for randomization. If you simultaneously update lots of clients, it may cause a backlog on the site server.
 
 ### Plan to use service windows
 

@@ -2,7 +2,7 @@
 title: CNG v3 certificates overview
 titleSuffix: Configuration Manager
 description: Learn about support for Cryptography Next Generation (CNG) v3 certificates for Configuration Manager clients and servers.
-ms.date: 05/04/2021
+ms.date: 07/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

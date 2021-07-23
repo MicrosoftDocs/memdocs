@@ -259,6 +259,7 @@ The following table lists the log files that are on the Configuration Manager si
 |EPSetup.log|Provides information about the installation of the Endpoint Protection site system role.|Site system server|  
 |EnrollSrv.log|Records activities of the enrollment service process.|Site system server|  
 |EnrollWeb.log|Records activities of the enrollment website process.|Site system server|  
+|ExternalNotificationsWorker.log|Records the queue and activities for notifications to external systems like Azure Logic Apps.|Site server|
 |fspmgr.log|Records activities of the fallback status point site system role.|Site system server|  
 |hman.log|Records information about site configuration changes, and about the publishing of site information in Active Directory Domain Services.|Site server|  
 |Inboxast.log|Records the files that are moved from the management point to the corresponding INBOXES folder on the site server.|Site server|  

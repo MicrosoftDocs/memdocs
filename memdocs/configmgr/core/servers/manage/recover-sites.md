@@ -2,7 +2,7 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 07/15/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -97,7 +97,7 @@ If possible, use the same version of SQL Server. However, it's supported to rest
 
 Don't change the SQL Server edition. Restoring a site database from Standard edition to Enterprise edition isn't supported.
 
-Additional SQL Server configuration requirements:
+Other SQL Server configuration requirements:
 
 - SQL Server can't be set to **single-user mode**.
 - Make sure the MDF and LDF files are valid. When you recover a site, there's no check for the state of the files.  
@@ -362,7 +362,12 @@ After site recovery, you may see the following error in the cloudmgr.log:
 
 To resolve this issue, [Renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew) for each Azure tenant connection.
 
-### Configure SSL for site system roles that use IIS
+### Delete and recreate subscriptions for external notifications on the CAS
+
+<!-- 10333966 -->
+In version 2107, after you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications: Remove a subscription](external-notifications.md#remove-a-subscription).
+
+### Configure HTTPS for site system roles that use IIS
 
 When you recover site systems that run IIS and you configured for HTTPS, reconfigure IIS to use the web server certificate.
 

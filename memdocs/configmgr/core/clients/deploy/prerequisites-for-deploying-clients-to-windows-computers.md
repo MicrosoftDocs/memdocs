@@ -67,15 +67,26 @@ The Configuration Manager client has external dependencies. These dependencies d
 |Microsoft Visual C++ 2013 Redistributable version 14.28.29914.0 (`vcredist_x*.exe`)|(_Version 2107 and later_) Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- 5170229 -->|
 |Windows Imaging APIs 6.0.6001.18000 or later (`wimgapi.msi`)|Required to allow Configuration Manager to manage Windows image (.wim) files.|
 |Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`)|Required to allow clients to evaluate compliance settings.|
-|Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|Required to support client operations. Automatically installed on the client computer if it doesn't have Microsoft .NET Framework version 4.5 or later installed. For more information, see [More details about Microsoft .NET Framework version 4.5.2](#more-details-about-microsoft-net-framework-version-452).|
+|Microsoft .NET Framework version 4.6.2 or later (`NDP462-KB3151800-x86-x64-AllOS-ENU.exe`)|_Version 2107 and later_:<!--10402814--> Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net).|
+|Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|_Version 2103 and earlier_: Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net).|
 |Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|
 
-#### More details about Microsoft .NET Framework version 4.5.2
+#### More details about Microsoft .NET
+
+<!--10402814-->
+
+When you install or update the Configuration Manager client, if the device doesn't have at least the required version of the .NET Framework, CCMSetup installs it. Starting in version 2107, the minimum required version is 4.6.2.
+
+Microsoft recommends that you install the latest version of .NET version 4.8 to get the latest performance and security improvements. CCMSetup doesn't automatically install .NET version 4.8. A later version of Configuration Manager will require .NET version 4.8.
 
 > [!NOTE]
-> .NET 4.0, 4.5, and 4.5.1 are no longer supported. For more information, see [Lifecycle FAQ - .NET Framework](/lifecycle/faq/dotnet-framework).
+> .NET Framework version 4.6.2 is preinstalled with Windows Server 2016 and Windows 10 version 1607. Later versions of Windows are preinstalled with a later version of the .NET Framework.
+>
+> .NET Framework version 4.8 isn't supported on some OS versions, such as Windows 10 2015 LTSB.
+>
+> For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
-Microsoft .NET Framework version 4.5.2 may require a restart to complete the installation. The user sees a **Restart required** notification in the system tray. The following common scenarios require client computers to restart:
+Whether you update .NET before updating the Configuration Manager client, or CCMSetup updates it, .NET may require a restart to complete its installation. CCMSetup suppresses a restart if necessary. The user sees a **Restart required** notification in the system tray. The following scenarios are common reasons why .NET requires the computer to restart:
 
 - .NET applications or services are running on the computer.
 
@@ -83,7 +94,15 @@ Microsoft .NET Framework version 4.5.2 may require a restart to complete the ins
 
 - The computer is pending a restart from prior installation of .NET framework software updates.
 
-After .NET Framework 4.5.2 is installed, it may require updates. These later updates may require the computer to restart.
+After .NET Framework is installed, it may require other updates. These updates may also require the computer to restart.
+
+If you need to manage the device restarts before you update the Configuration Manager client, use the following recommended process:
+
+1. Install the latest baseline .NET version. For example, starting in version 2107, install .NET version 4.8.
+1. Restart the device.
+1. Scan for software updates and install the latest .NET cumulative update.
+1. Restart the device.
+1. Install the latest Configuration Manager client version.
 
 ## Configuration Manager dependencies
 
