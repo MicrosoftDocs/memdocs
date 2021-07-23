@@ -108,7 +108,9 @@ When you install or update the site, it now warns for the presence of SQL Server
 
 In a complex IT environment, you may have an automation system like [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). Customers use these systems to define and control automated workflows to integrate multiple systems. You could integrate Configuration Manager into a separate automation system through the product's SDK APIs. But this process can be complex and challenging for IT professionals without a software development background.
 
-Starting in this release, you can enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure [subscriptions](../../servers/manage/configure-alerts.md) to send these notifications. These notifications are in response to specific, defined events as they occur. For example, [status message filter rules](../../servers/manage/use-status-system.md#manage-status-filter-rules).
+You can now enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure subscriptions to send these notifications. These notifications are in response to specific, defined events as they occur. For example, status message filter rules.
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
 
 ### Internet access requirements
 
@@ -157,7 +159,9 @@ Many customers have other data that's external to Configuration Manager but usef
 - Cost center
 - Department
 
-Starting in this release, you can use the [administration service](../../../develop/adminservice/index.yml) to set this data on devices. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+You can use the administration service to set this data on devices. The site stores the property's name and its value in the site database as the new **Device Custom Properties** class. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+
+For more information, see [Custom properties for devices](../../../develop/adminservice/custom-properties.md).
 
 ### Client encryption uses AES-256
 
