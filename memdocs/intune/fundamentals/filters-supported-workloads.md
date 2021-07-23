@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Platforms and policy types supported by filters in Microsoft Intune - Azure | Microsoft Docs
+title: Platforms and policy types supported by filters in Microsoft Intune
 description: Supported apps, compliance policies, and device configuration profiles that support filters in Microsoft Endpoint Manager and Microsoft Intune.
 keywords:
 author: MandiOhlinger

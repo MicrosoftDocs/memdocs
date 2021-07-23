@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: See device profiles with Microsoft Intune - Azure | Microsoft Docs
+title: See device profiles with Microsoft Intune
 description: See and manage the device configuration profile details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a profile, and see which devices have profiles assigned or deployed. Can also troubleshoot profiles that have conflict settings. 
 keywords:
 author: MandiOhlinger

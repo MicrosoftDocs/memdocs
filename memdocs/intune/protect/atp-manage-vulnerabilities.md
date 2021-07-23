@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Intune to remediate vulnerabilities found by Microsoft Defender for Endpoint - Azure | Microsoft Docs
+title: Use Intune to remediate vulnerabilities found by Microsoft Defender for Endpoint
 description: See how to manage security tasks from  and Threat & vulnerability Management, part of Microsoft Defender for Endpoint from within the Intune console.
 keywords:
 author: brenduns 
