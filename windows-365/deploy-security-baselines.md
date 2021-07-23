@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Deploy security baselines for Windows 365 - Azure | Microsoft Docs
+title: Deploy security baselines for Windows 365
 titleSuffix:
 description: Learn how to deploy security baselines for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -40,10 +40,10 @@ Windows 365-branded security baselines are a group of tested and validated recom
 
 You can optionally apply Windows 365 security baselines to the Azure AD groups containing Cloud PC devices in your tenant.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) select **Endpoint Security** > **View Security Baselines**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Endpoint Security** > **View Security Baselines**.
 ![Screenshot of view security baselines](./media/deploy-security-baselines/view-security-baselines.png)
 2. Select **Cloud PC Security Baseline (Preview)**.
-3. Select **Create Profile** and provide a name for your profile. 
+3. Select **Create Profile** and provide a name for your profile.
 4. On the **Configuration settings** tab, view the groups of settings that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
     - Select a group to expand and review the available settings.
     - Use the Search bar and specify keywords that filter the view to display only those groups that contain your search criteria.

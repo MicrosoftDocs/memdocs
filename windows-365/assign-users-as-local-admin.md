@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Assign user as a local admin for Windows 365 - Azure | Microsoft Docs
+title: Assign user as a local admin for Windows 365
 titleSuffix:
 description: Learn how to assign a user as a local admin for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/15/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice: 
@@ -45,10 +45,10 @@ When managing settings, keep the following in mind:
 ![Screenshot of add user setting](./media/assign-users-as-local-admin/user-settings.png)
 2. Under **Settings**, enter a **Name** for the setting and set **Enable Local admin** to **On**.
 3. Select **Next**.  
-Under **Assignments**, choose **Select Groups**.
-Under **Select groups to include**, choose a group of users to get the settings > **Select**.  
-4. Select **Next**.
-5. On the **Review + save** page, select **Create**.  
+4. Under **Assignments**, choose **Select Groups**.
+5. Under **Select groups to include**, choose a group of users to get the settings > **Select**.  
+6. Select **Next**.
+7. On the **Review + save** page, select **Create**.  
 
 ## Edit a user setting
 
