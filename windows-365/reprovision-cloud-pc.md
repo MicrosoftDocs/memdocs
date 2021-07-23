@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Reprovision a Cloud PC - Azure | Microsoft Docs
+title: Reprovision a Cloud PC
 titleSuffix:
 description: Learn how to Reprovision a Cloud PC by using Microsoft Endpoint Manager.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/30/2021
+ms.date: 07/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Reprovision a Cloud PC
 
-The **Reprovision** remote action deletes a user's current Cloud PC  and creates a brand new Cloud PC for the same user.
+The **Reprovision** remote action deletes a user's current Cloud PC and creates a brand new Cloud PC for the same user.
 
 When the **Reprovision** remote action starts, the user is signed off. The original Cloud PC is deleted, including all user data, applications, customizations, and so on.
 
@@ -45,4 +45,5 @@ For information on when to use the **Reprovision** action, see [Reprovisioning](
 
 <!-- ########################## -->
 ## Next steps
+
 For more information, see [Provisioning](provisioning.md).
