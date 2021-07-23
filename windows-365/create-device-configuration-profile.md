@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Create device configuration profile for Windows 365 - Azure | Microsoft Docs
+title: Create device configuration profile for Windows 365
 titleSuffix:
 description: Learn how to create device configuration profile for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -37,7 +37,7 @@ In this example, we’ll apply a **Device restrictions** [device configuration p
 
 Now that you’ve created a dynamic device group for all Cloud PCs, you can target policies to apply to all Cloud PCs in the tenant. To do so, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
 ![Screenshot of delete policy](./media/create-device-configuration-profile/create-profile.png)
 2. On the **Create profile** page, select **Windows 10 and later** for the **Platform** and **Device restrictions** for **Profile**.
 3. Select **Create**.
