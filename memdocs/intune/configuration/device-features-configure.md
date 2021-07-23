@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
+title: Create iOS/iPadOS or macOS device profile with Microsoft Intune
 description: Add or create an iOS, iPadOS, or macOS device profile. Configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger

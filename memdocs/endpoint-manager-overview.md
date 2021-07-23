@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft Endpoint Manager overview - Azure | Microsoft Docs
+title: Microsoft Endpoint Manager overview
 description: Endpoint Manager includes Intune, Configuration Manager, co-management, Desktop Analytics, Windows Autopilot, and the admin center to manage all devices, including on-premises.
 keywords:
 author: MandiOhlinger

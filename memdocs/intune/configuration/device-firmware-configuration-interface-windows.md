@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Update Windows BIOS features using MDM policies in Microsoft Intune - Azure | Microsoft Docs
+title: Update Windows BIOS features using MDM policies in Microsoft Intune
 description: Add a Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings, such as the CPU, built-in hardware, and boot options on Windows 10 devices in Microsoft Intune.
 keywords:
 author: MandiOhlinger

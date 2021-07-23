@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: iOS/iPadOS device feature settings in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS device feature settings in Microsoft Intune
 description: See all the settings to configure iOS and iPadOS devices for AirPrint, home screen layout, app notifications, shared devices, single sign-on, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS/iPadOS devices to use these Apple features in your organization.
 keywords:
 author: MandiOhlinger
