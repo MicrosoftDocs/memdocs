@@ -46,7 +46,7 @@ Plan to update the extended interoperability client on devices that you manage w
 
 ## Limitations
 
-- Updates for the extended interoperability client software aren't available by using in-console updates. For more information on how to update the EIC, see [How to upgrade an excluded client](../clients/manage/upgrade/exclude-clients-windows.md#bkmk_override).
+- Updates for the extended interoperability client software aren't available by using in-console updates. For more information on how to update the EIC, see [How to upgrade an excluded client](../clients/manage/upgrade/exclude-clients-windows.md#how-to-upgrade-an-excluded-client).
 
 - The EIC only supports the following features:
 
