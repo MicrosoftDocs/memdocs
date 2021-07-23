@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Add custom settings to iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings to iOS/iPadOS devices in Microsoft Intune
 titleSuffix:
 description: Export iOS and iPadOS settings from Apple Configurator or Apple Profile Manager tools, and then import these settings into Microsoft Intune. These settings can create, use, and control custom settings and features on iOS/iPadOS devices. This custom profile can then be assigned or distributed to iOS/iPadOS devices in your organization to create a baseline or standard.
 keywords:

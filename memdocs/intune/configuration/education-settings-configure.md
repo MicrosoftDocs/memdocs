@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Add or configure education settings in Microsoft Intune - Azure | Microsoft Docs
+title: Add or configure education settings in Microsoft Intune
 description: Use the Take a Test app in a device configuration profile on Windows 10 and later devices in Microsoft Intune. Create a configuration profile using the Education settings, and enter a test app URL, choose how users sign-in, monitor the screen during the test, and allow or prevent text suggestions during the test.
 keywords:
 author: lenewsad

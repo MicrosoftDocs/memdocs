@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create a Windows Health Monitoring profile in Microsoft Intune - Azure | Microsoft Docs
+title: Create a Windows Health Monitoring profile in Microsoft Intune
 description: Add a Windows Health Monitoring profile to collect endpoint analytics and software update events on Windows 10 devices in Microsoft Intune. Use these data to recommend software, review startup performance, and fix support issues.
 keywords:
 author: MandiOhlinger

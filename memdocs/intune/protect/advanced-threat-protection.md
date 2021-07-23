@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
+title: Use Microsoft Defender for Endpoint in Microsoft Intune
 description: Use Microsoft Defender for Endpoint with Intune, including setup and configuration, onboarding of your Intune devices, and then use a devices Defender for Endpoint risk assessment with your Intune device compliance and conditional access policies to protect network resources.
 keywords:
 author: brenduns 

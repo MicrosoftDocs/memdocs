@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: iOS/iPadOS bundle IDs for built-in apps in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS bundle IDs for built-in apps in Microsoft Intune
 titleSuffix:
 description: See a list of the bundle IDs for the built-in iOS and iPadOS apps. Use these bundle IDs to explicitly allow apps in device configuration profiles and policies in Microsoft Intune.
 keywords:

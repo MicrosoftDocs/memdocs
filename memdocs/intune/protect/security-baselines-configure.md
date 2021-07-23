@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create security baseline profiles in Microsoft Intune - Azure | Microsoft Docs
+title: Create security baseline profiles in Microsoft Intune
 description: Create default profiles and customized profiles to deploy security baselines to devices you manage with Intune. Security baselines manage settings on windows devices to help keep your users and devices secure. 
 keywords:
 author: brenduns 

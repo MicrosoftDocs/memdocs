@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Windows 10 feature updates policy in Intune - Azure | Microsoft Docs
+title: Configure Windows 10 feature updates policy in Intune
 description: Create and manage Intune policy for Windows 10 feature updates. Configure and deploy policy to maintain the Windows feature version of Windows 10 devices you manage with Microsoft Intune.
 keywords:
 author: brenduns

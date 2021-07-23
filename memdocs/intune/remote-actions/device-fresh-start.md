@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Reset Windows 10 devices with Microsoft Intune - Azure | Microsoft Docs
+title: Reset Windows 10 devices with Microsoft Intune
 description: Use Fresh Start to remove or uninstall apps on Windows 10 PCs by using Microsoft Intune. 
 keywords:
 author: ErikjeMS

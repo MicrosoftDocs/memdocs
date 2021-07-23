@@ -1,5 +1,5 @@
 ---
-title: Set up a telecom expense management service in Microsoft Intune - Azure | Microsoft Docs
+title: Set up a telecom expense management service in Microsoft Intune
 titleSuffix: 
 description: Integrate Microsoft Intune with the Saaswedo telecom expense management service to monitor data usage and set thresholds or limits on Android device administrator, iOS, and iPadOS devices.
 keywords: Saaswedo

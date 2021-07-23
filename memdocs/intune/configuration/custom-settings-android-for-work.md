@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Add custom settings to Android Enterprise devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings to Android Enterprise devices in Microsoft Intune
 description: Add or create a custom profile for Android Enterprise devices to create  in Microsoft Intune
 keywords:
 author: MandiOhlinger
