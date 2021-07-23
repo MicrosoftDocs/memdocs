@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Microsoft Teams on Cloud PCs - Azure | Microsoft Docs
+title: Microsoft Teams on Cloud PCs
 titleSuffix:
 description: Learn about using Microsoft Teams on a Cloud PC.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2021
+ms.date: 07/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Teams on a Cloud PC
 
-Microsoft Teams is one of the core Microsoft 365 applications as part of Windows 365. The Microsoft 365 optimized Windows 10 image available in the Windows 365 image gallery supports Teams chat, presence, calling, and meeting optimizations.
+Microsoft Teams is one of the core Microsoft 365 applications used with Windows 365. The Microsoft 365 optimized Windows 10 image available in the Windows 365 image gallery supports Teams chat, presence, calling, and meeting optimizations.
 
 Using Teams on a Cloud PC is different from using Teams on a physical PC environment. For more information about the limitations of Teams in virtualized environments, see [Teams for Virtualized Desktop Infrastructure](/microsoftteams/teams-for-vdi#known-issues-and-limitations).
 
@@ -40,7 +40,7 @@ The image gallery provides Windows 10 Enterprise images pre-configured with all 
 
 The main benefit of this approach is that you setup the Teams audio and video call directly peer-to-peer from your physical endpoint to the other person. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
 
-Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You could also sign out and in again to your Cloud PC to gain the same result.
+Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You can also sign out and in again to your Cloud PC to gain the same result.
 
 Some of the key benefits of the optimizations are:
 
@@ -65,8 +65,8 @@ The following known issues are currently active when using Microsoft Teams as pa
 - Reactions: Like, Heart Applause, and Laugh Emoticons in meetings aren’t supported.
 - Creation of Live events isn’t possible. You can attend Live events.
 - Save Audio and Camera device selection: when using multiple webcams you might have to re-select your primary webcam after signing back in.
-- Sharing outgoing camera and screen simultaneously isn’t supported. - You can only share your desktop or webcam, not both at the same time.
-Shared system audio while presenting your desktop isn’t supported.
+- Sharing outgoing camera and screen simultaneously isn’t supported. You can only share your desktop or webcam, not both at the same time.
+- Shared system audio while presenting your desktop isn’t supported.
 
 The following features might experience issues when using Microsoft Teams as part of Windows 365:
 
@@ -85,8 +85,8 @@ The following features might experience issues when using Microsoft Teams as par
 - Live Captions
 - Give control and take control
 - Transcripts
-- Addition Video modes during a video call [3x3]
-- Addition Video modes during a video call [7X7, together mode]
+- Addition Video modes during a video call (3x3)
+- Addition Video modes during a video call (7X7, together mode)
 
 ## Collect Teams logs for Microsoft support
 

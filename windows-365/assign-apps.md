@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Assign apps with Windows 365 - Azure | Microsoft Docs
+title: Assign apps with Windows 365
 titleSuffix:
 description: Learn how to assign apps with Windows 365
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -30,9 +30,9 @@ ms.collection: M365-identity-device-management
 
 # Assign apps to Cloud PCs
 
-Follow these steps to deploy Intune Windows 10 apps to your co-managed or Intune-managed Cloud PCs.
+Follow these steps to deploy Intune Windows 10 apps to your Cloud PCs.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Apps** > **All apps** > select an app.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All apps** > select an app.
 ![Screenshot of select an app](./media/assign-apps/select-app.png)
 2. On the app page, select **Properties** > **Edit** (next to **Assignments**).
 3. On the **Assignments** page, select **Add group** (under **Group**).
