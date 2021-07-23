@@ -32,30 +32,6 @@ ms.collection:
 
 Remote Desktop Protocol (RDP) can be used to create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. For security reasons, you might want to override the default and block these redirections.
 
-There are two ways to manage RDP redirections:
-
-- Use Microsoft Endpoint Manager
-- Use Group Policy Objects (GPO)
-
-## Use Microsoft Endpoint Manager to manage RDP device redirections
-
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
-![Screenshot of delete policy](./media/create-device-configuration-profile/create-profile.png)
-2. In the **Create a profile** pane, select the following options:
-    - **Platform**: Windows 10 and later
-    - **Profile type**: Settings catalog (preview)
-3. Select **Create**.
-4. On the **Basics** tab of the **Create device configuration profile** page, type a **Name** and (optional) **Description** for the profile and then select **Next**.
-5. On the **Configuration settings** tab, choose **Add settings**.
-6. In the **Settings picker**, search for *Device and Resource Redirection*, and then select it in the results. This category is under Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Device and Resource Redirection.
-7. You'll see a list of settings. Choose **Select all these settings**.
-8. If you want to manage printer redirection, search for *Printer Redirection* > select the category that ends with *Remote Desktop Session Host\Printer Redirection* > **Select all these settings**.
-9. After you're done adding settings, select the **X** to exit the **Settings picker**.
-10. If you want to remove any settings from the configuration profile, choose the minus icon next to the setting.
-11. Select **Next**.
-12. On the **Assignments** page, you can assign the profile to users or devices. Some settings from the Configuration settings have **(User)** or **(Device)** at the end of the setting. If you assign the configuration profile to a group of users, the device settings will not apply, and vice versa.
-13. Select **Create** to create the configuration profile.
-
 ## Use GPO to manage RDP device redirections
 
 To block any of the redirections, create and assign a Group Policy Object with the corresponding policies as shown in the table below. To learn more about the policies, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451) :
