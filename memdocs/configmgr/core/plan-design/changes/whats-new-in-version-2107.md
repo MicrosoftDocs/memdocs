@@ -54,6 +54,19 @@ This control gives you greater flexibility with your CMG deployment. You can adj
 
 For more information, see [Cost of CMG: Virtual machine scale set](../../clients/manage/cmg/cost.md#virtual-machine-scale-set).
 
+### Tenant attach support for US Government cloud
+
+<!-- 8353823 -->
+
+United States Government customers can now use the following Microsoft Endpoint Manager tenant attach features in the US Government cloud:
+
+- Account onboarding
+- Tenant sync to Intune
+- Device sync to Intune
+- Device actions in the Microsoft Endpoint Manager admin center
+
+For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
 To better reflect the additional cloud services Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
