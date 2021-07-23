@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Learn about using Windows Update for Business in Microsoft Intune - Azure | Microsoft Docs
+title: Learn about using Windows Update for Business in Microsoft Intune
 description: Manage Windows 10 software updates by using Intune policy for Windows 10 update rings and Windows 10 feature updates for Windows Update for Business settings in Microsoft Intune.
 keywords:
 author: brenduns

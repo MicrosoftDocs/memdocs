@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: What's new in previous months in the Microsoft Intune - Azure | Microsoft Docs
+title: What's new in previous months in the Microsoft Intune
 titleSuffix: 
 description: Review older announcements from the Intune what's new page
 keywords:

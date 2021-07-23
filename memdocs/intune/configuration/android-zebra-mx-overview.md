@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Zebra Mobility Extensions on Android devices in Microsoft Intune - Azure | Microsoft Docs
+title: Use Zebra Mobility Extensions on Android devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use Zebra devices running Android with Zebra Mobility Extensions (MX). See all the steps, including install the Company Portal app, sideload the app, assign device administrator role, create a StageNow profile, and more.
 keywords:
 author: MandiOhlinger
