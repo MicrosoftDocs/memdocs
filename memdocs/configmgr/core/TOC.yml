@@ -159,6 +159,8 @@ items:
         href: plan-design/hierarchy/use-a-pull-distribution-point.md
       - name: The content library
         href: plan-design/hierarchy/the-content-library.md
+      - name: Configure a remote content library
+        href: plan-design/hierarchy/remote-content-library.md
       - name: Flowchart - Manage content library
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool

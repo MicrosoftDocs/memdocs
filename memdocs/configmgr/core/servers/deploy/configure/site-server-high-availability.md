@@ -89,7 +89,7 @@ For more information, see [Site system installation account](../../../plan-desig
 
 ### Content library
 
-The site content library must be on a remote network share. Both site servers need **Full Control** permissions to the share and its contents. For more information, see [Manage content library](../../../plan-design/hierarchy/the-content-library.md#bkmk_remote).<!--1357525-->
+The site content library must be on a remote network share. Both site servers need **Full Control** permissions to the share and its contents. For more information, see [Configure a remote content library for the site server](../../../plan-design/hierarchy/remote-content-library.md).<!--1357525-->
 
 - The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
 

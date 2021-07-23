@@ -66,7 +66,7 @@ Install an additional site server in *passive* mode for a central administration
 
 ### Use a remote content library
 
-Move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](../../../plan-design/hierarchy/the-content-library.md#bkmk_remote).
+Move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [Configure a remote content library for the site server](../../../plan-design/hierarchy/remote-content-library.md).
 
 ### Centralize content sources
 
