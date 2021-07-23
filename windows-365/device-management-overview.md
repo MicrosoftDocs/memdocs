@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Managing Cloud PCs with Microsoft Intune - Azure | Microsoft Docs
+title: Managing Cloud PCs with Microsoft Intune
 titleSuffix:
 description: Learn how to  manage Windows 365 devices
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,11 +30,11 @@ ms.collection: M365-identity-device-management
 
 # Device management overview for Cloud PCs
 
-To manage your Cloud PCs, you’ll use Microsoft Intune, a service of [Microsoft Endpoint Manager](https://admin.microsoft.com/). Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices (including Cloud PCs). To sign in to Intune, go to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/).
+To manage your Cloud PCs, you’ll use Microsoft Intune, a service of [Microsoft Endpoint Manager](https://admin.microsoft.com/). Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices (including Cloud PCs). To sign in to Intune, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Cloud PC overview page
 
-The Overview tab is the landing page for managing your Cloud PCs. To see it, sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) > **Devices** > **Windows 365** (under **Provisioning**).
+The Overview tab is the landing page for managing your Cloud PCs. To see it, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**).
 
 Here you'll see some info to give you a quick idea of how your Cloud PCs are doing:
 
@@ -51,13 +51,13 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
 
 ### Column details
 
-**Name**: The name of the Cloud PC, which is composed of the assigned provisioning policy and the assigned user’s name. For example, My first provisioning policy – Jack Zibell.
+**Name**: The name of the Cloud PC, which is composed of the assigned provisioning policy and the assigned user’s name. For example, My first provisioning policy – Henry Ross.
 
 **Device name**: The Windows computer name, which is also used in Intune and Azure AD.
 
 **Image**: The image used during provisioning. This might not be the current Cloud PC version. For example, an administrator may have updated Windows using Windows Update for Business and this wouldn’t be reflected in this list view.  
 
-**PC type**: The Windows 365 SKU assigned to the user. A user may have more than one license/SKU assigned to them. If so, they’llhave two Cloud PC’s in this list view.  
+**PC type**: The Windows 365 SKU assigned to the user. A user may have more than one license/SKU assigned to them. If so, they’ll have two Cloud PCs in this list view.  
 
 **Status**: The current provisioning status of the Cloud PC. Possible states include:
   
@@ -66,7 +66,7 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
 - **Provisioned with warnings**: If a non-critical step in the provisioning process fails, user access isn’t blocked but a warning is flagged.  
 - **Not provisioned**: The user has been assigned a Windows 365 license but no provisioning policy has been targeted. To provision a Cloud PC, assign this user to a provisioning policy.
 
-  When a user is licensed with a Windows 365 license,  a new row is automatically created in the All Cloud PCs list. If the user also has a provisioning policy assigned to them, a Cloud PC is automatically provisioned.
+  When a user is licensed with a Windows 365 license, a new row is automatically created in the **All Cloud PCs** list. If the user also has a provisioning policy assigned to them, a Cloud PC is automatically provisioned.
 
   If they don’t have a provisioning policy assigned to them, no Cloud PC is created. This is indicated by a **Not provisioned** status. This is not a bad state. It’s an informational state and we encourage you to assign a provisioning policy to make the most of your Windows 365 investment.  
 
