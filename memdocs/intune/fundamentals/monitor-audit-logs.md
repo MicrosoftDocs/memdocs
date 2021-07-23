@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Audit changes and events in Microsoft Intune - Azure | Microsoft Docs
+title: Audit changes and events in Microsoft Intune
 description: Learn how to review audit logs that record Microsoft Intune activities.
 keywords: 
 ms.author: dougeby

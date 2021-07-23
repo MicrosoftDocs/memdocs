@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Route logs to Azure Monitor using Microsoft Intune - Azure | Microsoft Docs
+title: Route logs to Azure Monitor using Microsoft Intune
 description: Use Diagnostics Settings to send audit logs and operational logs in Microsoft Intune to Azure storage account, event hubs, or log analytics. Choose how long you want to keep the data, and see some estimated costs for different size tenants.
 keywords:
 author: MandiOhlinger

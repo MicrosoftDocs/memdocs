@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Windows Hello to authenticate to Windows 10 devices using Microsoft Intune - Azure | Microsoft Docs
+title: Use Windows Hello to authenticate to Windows 10 devices using Microsoft Intune
 description: Create an identity protection profile In Microsoft Intune that uses Windows Hello for Business to enable users to authenticate devices. 
 keywords:
 author: brenduns

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure endpoint protection settings in Microsoft Intune - Azure | Microsoft Docs
+title: Configure endpoint protection settings in Microsoft Intune
 description: Create endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
 keywords:
 author: brenduns

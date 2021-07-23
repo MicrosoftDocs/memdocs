@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot device profiles in Microsoft Intune - Azure | Microsoft Docs
+title: Troubleshoot device profiles in Microsoft Intune
 description: Common questions and answers with device policies and profiles, including profile changes not applied to users or devices, how long it takes for new policies to be pushed to devices, which settings are applied when there are multiple policies, what happens when a profile is deleted or removed, and more with Microsoft Intune.
 keywords:
 author: MandiOhlinger

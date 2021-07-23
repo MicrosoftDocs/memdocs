@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Sign and encrypt email using S/MIME - Microsoft Intune - Azure | Microsoft Docs
+title: Sign and encrypt email using S/MIME - Microsoft Intune
 description: Learn how to use email digital certificates in Microsoft Intune to sign and encrypt emails on devices. These certificates are called S/MIME and are configured using device configuration profiles. Signing and encryption certificates use PKCS, or private certificates, and use a connector to import certificates.
 keywords:
 author: brenduns

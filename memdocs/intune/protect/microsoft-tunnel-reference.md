@@ -1,5 +1,5 @@
 ---
-title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune
 description: Find file and command-line references for tools you use to install or manage the Microsoft Tunnel Gateway, a VPN server that runs on Linux.
 keywords:
 author: brenduns

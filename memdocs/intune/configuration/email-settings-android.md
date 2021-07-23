@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android email settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android email settings in Microsoft Intune
 description: Create a device configuration email profiles that use Exchange servers, and retrieve attributes from Azure Active Directory. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Samsung Knox devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
