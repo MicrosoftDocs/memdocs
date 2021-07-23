@@ -82,6 +82,8 @@ If the client also has a PKI-based certificate, it continues to use that certifi
 > [!NOTE]
 > For clients that also have a PKI certificate, the Configuration Manager console displays the **Client certificate** property as **Self-signed**. The client control panel **Client certificate** property shows **PKI**.<!-- 10278780 -->
 
+When you update to version 2107 or later, clients with PKI certificates will recreate self-signed certificates, but don't reregister with the site. Clients without a PKI certificate will reregister with the site, which can cause extra processing at the site. Make sure that your process to update clients allows for randomization. If you simultaneously update lots of clients, it may cause a backlog on the site server.
+
 Configuration Manager doesn't use TPMs that are known vulnerable. If a device has a vulnerable TPM, the client falls back to using a software-based KSP. The certificate is still not exportable.
 
 OS deployment media doesn't use hardware-bound certificates, it continues to use self-signed certificates from the site. You create the media on a device that has the console, but then it can run on any client.
