@@ -171,7 +171,7 @@ As part of the update installation, Configuration Manager does the following act
 
 - Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).  
 
-- Site system servers generally don't need to restart as part of the update. If a role uses .NET, and the package updates that prerequisite component, then the site system may restart.  
+- Site system servers generally don't need to restart as part of the update. If a role uses .NET, and the package updates that prerequisite component, then the site system may restart. For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 > [!TIP]  
 > When you install Configuration Manager updates, the site also updates the CD.Latest folder. For more information, see [The CD.Latest folder](the-cd.latest-folder.md).  

@@ -106,16 +106,11 @@ For more information, see [Licensing and branches](../../understand/learn-more-e
 
 ### Review Microsoft .NET versions
 
-When a site installs this update, if the minimum requirement of .NET Framework 4.5 isn't installed, Configuration Manager automatically installs .NET Framework 4.5.2. When this prerequisite isn't already installed, the site installs it on each server that hosts one of the following site system roles:
+Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console.<!--10402814--> Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
 
-- Management point
-- Service connection point
-- Enrollment proxy point
-- Enrollment point
+This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. .NET applications on the server might experience random failures until you restart the server.
 
-This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might experience random failures until you restart the server.
-
-For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
+For more information including how to manage restarts, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 ### Review the version of the Windows ADK for Windows 10
 
@@ -135,7 +130,7 @@ A site update can fail because of existing operational problems. Before you upda
 - The site database server  
 - Remote site system roles on other servers
 
-For more information, see [Use the status system](use-status-system.md).
+For more information, see [Use the status system](use-status-system.md).
 
 ### Review file and data replication between sites
 
@@ -172,7 +167,7 @@ For more information, see [Database replicas for management points](../deploy/co
 
 ### Set SQL Server Always On availability groups to manual failover
 
-If you use an availability group, make sure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+If you use an availability group, make sure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Disable site maintenance tasks at each site
 
@@ -184,7 +179,7 @@ Before you install the update, disable any site maintenance task that might run 
 
 When a site database maintenance task runs during the update installation, the update installation can fail. Before you disable a task, record the schedule of the task so you can restore its configuration after the update has been installed.
 
-For more information, see [Maintenance tasks](maintenance-tasks.md) and [Reference for maintenance tasks](reference-for-maintenance-tasks.md).
+For more information, see [Maintenance tasks](maintenance-tasks.md) and [Reference for maintenance tasks](reference-for-maintenance-tasks.md).
 
 ### Temporarily stop any antivirus software
 
@@ -194,7 +189,7 @@ Before you update a site, stop antivirus software on the Configuration Manager s
 
 Before you update a site, back up the site database at the CAS and primary sites. This backup makes sure you have a successful backup to use for disaster recovery.
 
-For more information, see [Backup and recovery](backup-and-recovery.md).
+For more information, see [Backup and recovery](backup-and-recovery.md).
 
 ### Back up customized files
 
@@ -206,11 +201,11 @@ For example, you add custom entries to the **osdinjection.xml** file in the `bin
 
 When you install a site update that also updates the client, test that new client update in pre-production before you update all production clients. To use this option, configure your site to support automatic upgrades for pre-production before beginning installation of the update.
 
-For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md) and [How to test client upgrades in a pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md).
+For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md) and [How to test client upgrades in a pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md).
 
 ### Plan to use service windows
 
-To define a period during which updates to a site server can be installed, use service windows. They can help you control when sites in your hierarchy install the update. For more information, see [Service windows for site servers](service-windows.md).
+To define a period during which updates to a site server can be installed, use service windows. They can help you control when sites in your hierarchy install the update. For more information, see [Service windows for site servers](service-windows.md).
 
 ### Review supported extensions
 
@@ -238,7 +233,7 @@ To run a prerequisite check from the console, go to the **Administration** works
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. After running the prerequisite checker, but before installing the update, if you need to do a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
+> When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. After running the prerequisite checker, but before installing the update, if you need to do a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
 
@@ -246,7 +241,7 @@ You're now ready to start the update installation for your hierarchy. For more i
 
 You may plan to install the update outside of normal business hours. Determine when the process will have the least effect on your business operations. Installing the update and its actions reinstall site components and site system roles.
 
-For more information, see [Updates for Configuration Manager](updates.md).
+For more information, see [Updates for Configuration Manager](updates.md).
 
 ## Post-update checklist
 
