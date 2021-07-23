@@ -2,7 +2,7 @@
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
-ms.date: 10/05/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: tutorial
@@ -164,13 +164,9 @@ With hybrid Azure AD set-up and Configuration Manager client configurations in p
 > - When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.
 > - Starting in Configuration Manager version 1906, you may need multiple collections since you can assign a different *Pilot group* for each workload.
 
-### Enable co-management starting in version 1906
+### Enable co-management
 
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
-
-### Enable co-management in version 1902 and earlier
-
-[!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
 ## Next steps
 

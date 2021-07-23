@@ -2,7 +2,7 @@
 title: Enable co-management
 titleSuffix: Configuration Manager
 description: Quickly enable co-management in Configuration Manager to gain immediate value.
-ms.date: 10/05/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -21,13 +21,10 @@ When you enable co-management, you can gain immediate value. Then once you're re
 
 Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites).
 
-## Enable co-management starting in version 1906
+## Enable co-management
 
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
-## Enable co-management in version 1902 and earlier
-
-[!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
 ## Next steps
 
