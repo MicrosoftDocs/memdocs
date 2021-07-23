@@ -13,7 +13,7 @@ When enabling co-management, you can use the Azure Public Cloud, Azure US Govern
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Attach** node. Select **Configure Cloud Attach** in the ribbon to open the **Cloud Attach Configuration Wizard**.
    - For version 2103 and earlier, expand **Cloud Services** and select the **Co-management** node. Select **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
-1. On the **Tenant onboarding** page of the wizard, configure the **Azure environment** to use. Choose one of the following environments:
+1. On the onboarding page of the wizard, configure the **Azure environment** to use. Choose one of the following environments:
 
    - Azure Public Cloud
    - Azure US Government Cloud.<!--4075452-->

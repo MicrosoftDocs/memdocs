@@ -48,7 +48,7 @@ Starting in version 2010, the service connection point validates important inter
 
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
-If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Configure co-management** wizard](#bkmk_config) to enable device upload instead.
+If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Cloud Attach Configuration Wizard**](#bkmk_config) to enable device upload instead.
 
 When co-management is already enabled, edit the co-management properties to enable device upload using the instructions below:
 
@@ -58,7 +58,7 @@ When co-management is already enabled, edit the co-management properties to enab
 1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
    - Starting in Configuration Manager version 2010, when a single collection is selected, its child collections are also uploaded.
-1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
+1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights for optimizing the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
 
 > [!Important]
 > When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../analytics/enroll-configmgr.md#bkmk_cm_enable).
@@ -71,16 +71,17 @@ When co-management is already enabled, edit the co-management properties to enab
 
 ## <a name="bkmk_config"></a> Enable device upload when co-management isn't enabled
 
-If you don't have co-management enabled, you'll use the **Configure co-management** wizard to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. All Devices managed by Configuration Manager that have **Yes** in the **Client** column will be uploaded. If needed, you can limit upload to a single device collection. If co-management is already enabled in your environment, [Edit co-management properties](#bkmk_edit) to enable device upload instead.
+If you don't have co-management enabled, you'll use the **Cloud Attach Configuration Wizard** to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. All Devices managed by Configuration Manager that have **Yes** in the **Client** column will be uploaded. If needed, you can limit upload to a single device collection. If co-management is already enabled in your environment, [Edit co-management properties](#bkmk_edit) to enable device upload instead.
 
 When co-management isn't enabled, use the instructions below to enable device upload:
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** >  **Cloud Attach**.
    - For version 2103 and earlier, select the **Co-management** node.
-1. In the ribbon, select **Configure co-management** to open the wizard.
-1. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
+1. In the ribbon, select **Configure Cloud Attach** to open the wizard.
+   - For version 2103 and earlier, select **Configure co-management** to open the wizard. 
+1. On the onboarding page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
 1. Select **Sign In**. Use your *Global Administrator* account to sign in.
-1. Ensure the **Upload to Microsoft Endpoint Manager admin center** option is selected on the **Tenant onboarding** page.
+1. Ensure the **Upload to Microsoft Endpoint Manager admin center** option is selected on the onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
    - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
 
@@ -112,7 +113,7 @@ When co-management isn't enabled, use the instructions below to enable device up
 
 During a [new onboarding](#bkmk_config), an administrator can specify a previously created application during onboarding to tenant attach. Don't share or reuse Azure AD applications across multiple hierarchies. If you have multiple hierarchies, create separate Azure AD applications for each.
 
-From the **Tenant onboarding** page in the **Co-management Configuration Wizard**, select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
+From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-management Configuration Wizard** in versions 2103 and earlier), select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
 
 - Azure AD tenant name
 - Azure AD tenant ID
