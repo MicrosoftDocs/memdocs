@@ -51,6 +51,8 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 
 - Stop any active migration jobs and remove all configurations for migration. For more information, see [Stop active migration from another hierarchy](prerequisites-for-installing-sites.md#stop-active-migration-from-another-hierarchy).
 
+- If you have any custom [status filter rules](../../manage/use-status-system.md#manage-status-filter-rules) or [alerts and subscriptions](../../manage/configure-alerts.md), recreate them on the child primary site. Starting in version 2107, also recreate any subscriptions for [external notifications](../../manage/external-notifications.md).
+
 - If you use automatic deployment rules for software updates, recreate them on the child primary site.
 
 - If you use Configuration Manager or System Center Updates Publisher to manage [third-party software updates](../../../../sum/deploy-use/third-party-software-updates.md), export the WSUS signing certificate from the software update point on the CAS.
@@ -134,6 +136,8 @@ After you remove the CAS, review the following steps as they apply to your envir
   - Update OS deployment boot images to include the latest Configuration Manager binaries.
 
   - Recreate [OS deployment media](../../../../osd/deploy-use/create-task-sequence-media.md).
+
+- If you enable Endpoint Analytics for devices uploaded to Microsoft Endpoint Manager, in version 2107, re-enable this option.<!-- 10362047 -->
 
 - If you connect Configuration Manager with [Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](../configure/azure-services-wizard.md#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
 

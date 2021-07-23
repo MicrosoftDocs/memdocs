@@ -2,11 +2,10 @@
 title: Prerequisites for sites
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
-ms.date: 11/30/2020
+ms.date: 07/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -30,7 +29,7 @@ If you're installing a CAS as part of a hierarchy expansion, see the section for
 
 ### <a name="bkmk_PrereqPri"></a> Prerequisites for installing a primary site or a CAS
 
-- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012sspreq)
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#central-administration-site-and-primary-site-servers)
 
 - The user account that installs the site must have the following permissions:
 
@@ -140,7 +139,7 @@ Instead of renewing the secret key, remove and then recreate the connection to t
 
 The following prerequisites are for installing secondary sites:
 
-- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012secpreq).
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#secondary-site-server).
 
 - The administrator who configures the installation of the secondary site in the Configuration Manager console needs role-based administration permissions that are equivalent to the security role of **Infrastructure Administrator** or **Full Administrator**.
 

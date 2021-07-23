@@ -6,7 +6,6 @@ ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
@@ -20,11 +19,21 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 ## Prerequisites
 
-- An account that is a *Global Administrator* for signing  in when applying this change. For more information, see [Azure Active Directory (Azure AD) administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
-   - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
-   
+- An account that is a *Global Administrator* for signing in when applying this change. For more information, see [Azure Active Directory (Azure AD) administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+
+  - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
+
 - An Azure public cloud environment.
-   - The **Upload to Microsoft Endpoint Manager admin center** option is disabled for Microsoft Azure China 21Vianet (Azure China Cloud) and Azure US Government Cloud. <!--8815787-->
+
+  - The **Upload to Microsoft Endpoint Manager admin center** option is disabled for Microsoft Azure China 21Vianet (Azure China Cloud) and Azure US Government Cloud.<!--8815787--> Starting in version 2107, this option is available for US Government customers.
+
+- Starting in version 2107, United States Government customers can use the following tenant attach features in the US Government cloud:<!-- 8353823 -->
+
+  - Account onboarding
+  - Tenant sync to Intune
+  - Device sync to Intune
+  - Device actions in the Microsoft Endpoint Manager admin center
+
 - The user accounts triggering device actions have the following prerequisites:
    - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
      - For Configuration Manager version 2103, and later: </br>
@@ -32,10 +41,10 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
      - For Configuration Manager version 2010, and earlier: </br>
    Has been discovered with both [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 .
-   
+
    - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Endpoint Manager admin center. 
       - For more information about adding or verifying permissions in the admin center, see [Role-based access control (RBAC) with Microsoft Intune](../../intune/fundamentals/role-based-access-control.md#roles).
-      
+
 - If your central administration site has a [remote provider](../core/plan-design/hierarchy/plan-for-the-sms-provider.md), then follow the instructions for the [CAS has a remote provider](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article. <!--7796824-->
 
 This feature supports all OS versions that Configuration Manager currently supports as a client. For more information, see [Supported OS versions for clients and devices](../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).<!-- MEMDocs#545 -->
@@ -75,11 +84,10 @@ If you don't have co-management enabled, you'll use the **Cloud Attach Configura
 
 When co-management isn't enabled, use the instructions below to enable device upload:
 
-1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** >  **Cloud Attach**.
-   - For version 2103 and earlier, select the **Co-management** node.
-1. In the ribbon, select **Configure Cloud Attach** to open the wizard.
-   - For version 2103 and earlier, select **Configure co-management** to open the wizard. 
+1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** >  **Cloud Attach**. For version 2103 and earlier, select the **Co-management** node.
+1. In the ribbon, select **Configure Cloud Attach** to open the wizard. For version 2103 and earlier, select **Configure co-management** to open the wizard. 
 1. On the onboarding page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
+   - Starting in version 2107, US Government customers can select **AzureUSGovernmentCloud**.<!-- 8353823 -->
 1. Select **Sign In**. Use your *Global Administrator* account to sign in.
 1. Ensure the **Upload to Microsoft Endpoint Manager admin center** option is selected on the onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.

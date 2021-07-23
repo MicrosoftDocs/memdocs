@@ -54,6 +54,19 @@ This control gives you greater flexibility with your CMG deployment. You can adj
 
 For more information, see [Cost of CMG: Virtual machine scale set](../../clients/manage/cmg/cost.md#virtual-machine-scale-set).
 
+### Tenant attach support for US Government cloud
+
+<!-- 8353823 -->
+
+United States Government customers can now use the following Microsoft Endpoint Manager tenant attach features in the US Government cloud:
+
+- Account onboarding
+- Tenant sync to Intune
+- Device sync to Intune
+- Device actions in the Microsoft Endpoint Manager admin center
+
+For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
 To better reflect the additional cloud services Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
@@ -85,9 +98,17 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 
 ### Microsoft .NET requirements
 
-<!--10033951;10073070,10081488-->
+<!--10402814-->
 
 Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
+
+There's also a new [management insight](../../servers/manage/management-insights.md) to recommend site systems that don't yet have .NET version 4.8 or later.
+
+For more information, see the following articles:
+
+- [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#net-version-requirements)
+- [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net)
+- [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md#net-version-requirements)
 
 ### New prerequisite check for SQL Server 2012
 
@@ -101,7 +122,9 @@ When you install or update the site, it now warns for the presence of SQL Server
 
 In a complex IT environment, you may have an automation system like [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). Customers use these systems to define and control automated workflows to integrate multiple systems. You could integrate Configuration Manager into a separate automation system through the product's SDK APIs. But this process can be complex and challenging for IT professionals without a software development background.
 
-Starting in this release, you can enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure [subscriptions](../../servers/manage/configure-alerts.md) to send these notifications. These notifications are in response to specific, defined events as they occur. For example, [status message filter rules](../../servers/manage/use-status-system.md#manage-status-filter-rules).
+You can now enable the site to send notifications to an external system or application. This feature simplifies the process by using a web service-based method. You configure subscriptions to send these notifications. These notifications are in response to specific, defined events as they occur. For example, status message filter rules.
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
 
 ### Internet access requirements
 
@@ -150,14 +173,27 @@ Many customers have other data that's external to Configuration Manager but usef
 - Cost center
 - Department
 
-Starting in this release, you can use the [administration service](../../../develop/adminservice/index.yml) to set this data on devices. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+You can use the administration service to set this data on devices. The site stores the property's name and its value in the site database as the new **Device Custom Properties** class. You can then use the custom properties in Configuration Manager for reporting or to create collections.
+
+For more information, see [Custom properties for devices](../../../develop/adminservice/custom-properties.md).
 
 ### Client encryption uses AES-256
 
 <!--10129759-->
 
-Starting in this release, when you enable the site to **Use encryption**, the client uses the **AES-256** algorithm. This setting requires clients to encrypt inventory data and state messages before it sends to the management point. For more information, see [Plan for security - signing and encryption](../../plan-design/security/plan-for-security.md#signing-and-encryption).
+Starting in this release, when you enable the site to **Use encryption**, the client uses the **AES-256** algorithm. This setting requires clients to encrypt inventory data and state messages before it sends to the management point.
 
+For more information, see [Cryptographic controls technical reference](../security/cryptographic-controls-technical-reference.md).
+
+### Clients store Configuration Manager self-signed certificates in hardware TPM
+
+<!--9217033-->
+
+Configuration Manager uses self-signed certificates for client identity and to help protect communication between the client and site systems. When you update the site and clients to version 2107, the client stores its certificate from the site in a hardware-bound key storage provider (KSP). This KSP is typically the trusted platform module (TPM). The certificate is also marked non-exportable.
+
+If the client also has a PKI-based certificate, it continues to use that certificate for TLS HTTPS communication. It uses the site's self-signed certificate for signing messages with the site. This change means that the client now supports elliptical curve cryptography (ECC) certificates from your PKI.
+
+For more information, see [Certificates overview](../security/certificates-overview.md#hardware-bound-key-storage-provider).
 
 ### Updated client deployment prerequisite
 

@@ -2,11 +2,10 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 06/09/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -26,9 +25,22 @@ The Configuration Manager console is always installed on the site server for the
 
 - You have local **Administrator** rights on the target computer for the console.
 
-- You have **Read** permissions to the location of the Configuration Manager console installation files.
+- You have **Read** permissions to the location of the console installation files.
 
-- Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
+### .NET version requirements
+
+<!--10402814-->
+
+Starting in version 2107, the console requires Microsoft .NET Framework version 4.6.2, but version 4.8 is recommended. If you install the console on other devices, make sure to update .NET. If the device doesn't already have it, the console setup doesn't install this prerequisite.
+
+Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
+
+> [!NOTE]
+> .NET Framework version 4.6.2 is preinstalled with Windows Server 2016 and Windows 10 version 1607. Later versions of Windows are preinstalled with a later version of the .NET Framework.
+>
+> .NET Framework version 4.8 isn't supported on some OS versions, such as Windows 10 2015 LTSB.
+>
+> For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
 ## Source paths
 
