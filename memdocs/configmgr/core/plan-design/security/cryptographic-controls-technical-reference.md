@@ -2,7 +2,7 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 07/15/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -278,4 +278,12 @@ To improve the security of your Configuration Manager clients and servers, do th
 
 - Reorder the TLS-related cipher suites.
 
-For more information, see [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel) and [Prioritizing Schannel Cipher Suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites). These procedures don't affect Configuration Manager functionality.
+For more information, see the following articles:
+
+- [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel)
+- [Prioritizing Schannel cipher suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites)
+
+These procedures don't affect Configuration Manager functionality.
+
+> [!NOTE]
+> Updates to Configuration Manager download from the Azure content delivery network (CDN), which has cipher suite requirements. For more information, see [Internet access requirements for updates and servicing](../network/internet-endpoints.md#updates-and-servicing).<!-- 10424111 -->

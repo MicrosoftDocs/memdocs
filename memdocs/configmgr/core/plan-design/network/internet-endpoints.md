@@ -51,7 +51,17 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `sccmconnected-a01.cloudapp.net`  
 
-- `configmgrbits.azureedge.net`  
+- `configmgrbits.azureedge.net`
+
+    > [!IMPORTANT]
+    > This Azure endpoint only supports TLS 1.2. Make sure your environment supports the following cipher suites:<!-- 10424111 -->
+    >
+    > - `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`
+    > - `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256`
+    > - `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`
+    > - `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`
+    >
+    > For more information, see [About SSL vulnerabilities](../security/cryptographic-controls-technical-reference.md#about-ssl-vulnerabilities).
 
 - `ceuswatcab01.blob.core.windows.net`
 
