@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/22/2021
+ms.date: 07/16/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -58,7 +58,8 @@ For internet-based devices in the second path, you need to create an app in Intu
 
 ### Get the command line from Configuration Manager
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Attach** node.
+   - For version 2103 and earlier, select the **Co-management** node.
 
 1. Select the co-management object, and then choose **Properties** in the ribbon.
 

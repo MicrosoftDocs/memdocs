@@ -2,7 +2,7 @@
 title: Monitor co-management
 titleSuffix: Configuration Manager
 description: Use the co-management dashboard to review information about co-managed devices.
-ms.date: 04/27/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -28,7 +28,8 @@ After you enable co-management, monitor co-management devices using the followin
 
 This dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.<!--1356648,1358980-->
 
-In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Co-management** node.
+In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Cloud Attach** node.
+   - For version 2103 and earlier, select the **Co-management** node.
 
 ![Screenshot of the co-management dashboard](media/co-management-dashboard.png)
 

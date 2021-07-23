@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 06/15/2021
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -52,7 +52,8 @@ If you have co-management enabled currently, you'll use the co-management proper
 
 When co-management is already enabled, edit the co-management properties to enable device upload using the instructions below:
 
-1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
+1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Cloud Attach**.
+   - For version 2103 and earlier, select the **Co-management** node.
 1. In the ribbon, select **Properties** for your co-management production policy.
 1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
@@ -74,7 +75,8 @@ If you don't have co-management enabled, you'll use the **Configure co-managemen
 
 When co-management isn't enabled, use the instructions below to enable device upload:
 
-1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
+1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** >  **Cloud Attach**.
+   - For version 2103 and earlier, select the **Co-management** node.
 1. In the ribbon, select **Configure co-management** to open the wizard.
 1. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
 1. Select **Sign In**. Use your *Global Administrator* account to sign in.
@@ -154,7 +156,8 @@ While we know customers get enormous value by enabling tenant attach, there are 
 
 When tenant attach is already enabled, edit the co-management properties to disable device upload and offboard.
 
-1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
+1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Cloud Attach**.
+   - For version 2103 and earlier, select the **Co-management** node.
 1. In the ribbon, select **Properties** for your co-management production policy.
 1. In the **Configure upload** tab, remove the **Upload to Microsoft Endpoint Manager admin center** selection.
 1. Select **Apply**.

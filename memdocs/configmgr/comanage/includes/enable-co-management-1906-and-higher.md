@@ -10,7 +10,8 @@ ms.date: 08/11/2020
 
 When enabling co-management, you can use the Azure Public Cloud, Azure US Government Cloud, or Microsoft Azure China 21Vianet (added in version 2006). To enable co-management starting in Configuration Manager version 1906, follow the instructions below:
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Select **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Attach** node. Select **Configure Cloud Attach** in the ribbon to open the **Cloud Attach Configuration Wizard**.
+   - For version 2103 and earlier, expand **Cloud Services** and select the **Co-management** node. Select **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
 1. On the **Tenant onboarding** page of the wizard, configure the **Azure environment** to use. Choose one of the following environments:
 
