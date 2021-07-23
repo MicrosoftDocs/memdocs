@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Automated provisioning steps for Windows 365 - Azure | Microsoft Docs
+title: Automated provisioning steps for Windows 365
 titleSuffix:
 description: Learn about the automated steps that Windows 365 conducts to provision a Cloud PC.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2021
+ms.date: 07/23/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Automated provisioning steps
 
-As an admin, you create provisioning policies and on-premises network connections to set up Windows 365 to create Cloud PCs. Using this information, Windows 365 provisions Cloud PCs for your licensed users. This article explains all of the steps that Windows 365 completes automatically in the provisioning process.
+As an admin, you create provisioning policies and on-premises network connections to set up Windows 365 to provision Cloud PCs. Using this information, Windows 365 provisions Cloud PCs for your licensed users. This article explains all of the steps that Windows 365 completes automatically in the provisioning process.
 
 There are three stages that Windows 365 automatically completes for Cloud PC provisioning:
 
@@ -43,7 +43,7 @@ There are three stages that Windows 365 automatically completes for Cloud PC pro
 Core provisioning is optimized to only perform absolutely necessary steps to make sure a Cloud PC is provisioned successfully.
 
 1. **Allocate Azure capacity**: When provisioning first begins, Windows 365 allocates Azure capacity in the customer’s supported region of choice. Customers don’t need to manage capacity and allocation manually.
-2. **Create VM**: A virtual machine is created based on the Windows 365 license assigned to the user. Each Windows 365 license includes hardware capacity information, and the VM is created with these specs.
+2. **Create VM**: A virtual machine is created based on the Windows 365 license assigned to the user. Each Windows 365 license includes hardware capacity information. The VM is created with these specs.
 3. **Perform vNic injection**: When the VM is created, a virtual NIC is created and injected into the customers provided vNet. This lets the Cloud PC connect to the customers on-premises network.
 4. **Active Directory domain join**: After the VM is running, an Active Directory domain join operation is performed to join the machine to the customer's domain.
 5. **Hybrid Azure AD Join**: To enable the cloud management scenarios, a Hybrid Azure AD Join must occur. At this stage, the Cloud PC is domain joined and should be a member of an Azure AD syncing OU. In this step, we wait for the computer object to appear in Azure AD.
@@ -57,7 +57,7 @@ After core provisioning is complete, Windows 365 optimizes the configuration to 
 1. **Hide Start Menu power icons**: Hide the shutdown button in the start menu (HKLM:\Software\Microsoft\PolicyManager\default\Start\HideShutDown\value) and Hide the shutdown button in the login screen (HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\ShutDownWithoutLogon).
 2. **Disable Windows reset action**: reagent: c.exe /disable
 3. **Assign user as administrator (when applicable)**:
-  $Member = 'foo@bar.com'  # use OnPremisesUserPrincipalName
+  $Member = 'user@contoso.com'  # use OnPremisesUserPrincipalName
   Add-LocalGroupMember -Group "Administrators" -Member $Member
 4. **Set Teams for VDI mode**: Hosted desktop optimization (HKLM:\SOFTWARE\Microsoft\Teams\IsAVDEnvironment).
 5. **Enable time zone Redirection**: Enable the setting (HKLM:\Softare\Policies\Microsoft\Windows NT\Terminal Services\ fEnabletimezoneRedirection).
@@ -71,13 +71,13 @@ After core provisioning is complete, Windows 365 optimizes the configuration to 
 
 Unlike core provisioning, if one or more of these optimizations fail for some reason, provisioning will still succeed. The Cloud PC will be marked as **Success with warnings** and the process will move onto the assignment stage.
 
-You can manually trigger a reprovisioning if you would prefer to see post provisioning configuration succeed in the case of failure.
+In the case of failure, you can manually trigger a reprovisioning if you prefer to see post provisioning configuration succeed.
 
 ## Assignment
 
 After core provisioning and post provisioning configuration workflows are complete, the relevant user is assigned to the Cloud PC.
 
-At this point, the user can sign in to [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/en-us/windows-365?rtc=1) and access their Cloud PC.
+At this point, the user can sign in to [windows365.microsoft.com ](https://Windows365.microsoft.com) and access their Cloud PC.
 
 <!-- ########################## -->
 ## Next steps

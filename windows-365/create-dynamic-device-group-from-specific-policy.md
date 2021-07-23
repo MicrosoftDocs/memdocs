@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Create a dynamic device group for containing all Cloud PCs from a specific provisioning policy - Azure | Microsoft Docs
+title: Create a dynamic device group for containing all Cloud PCs from a specific provisioning policy
 titleSuffix:
 description: Learn how to create dynamic device groups for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -36,7 +36,7 @@ For the example below, we use "UX Engineering" as the name of the provisioning p
 
 In these steps, you’ll use the Enrollment Profile Name and Device Model device property to create the dynamic device group.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Groups** > **New Group**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
 2. Select the **New Group** page, choose **Security** for **Group type**.
 3. Enter the following:
