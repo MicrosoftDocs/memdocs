@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/09/2021
+ms.date: 07/27/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,28 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of July 26, 2021
+
+### Device configuration
+
+#### Certificate Connector for Microsoft Intune combines separate certificate connectors<!-- 9843502  -->
+
+We’ve released the [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md). This new connector replaces the use of separate certificate connectors for SCEP and PKCS, and includes the following features:
+
+- Configure each instance of the connector to support one or more of the following capabilities:
+  - SCEP
+  - PKCS
+  - PFX imported certificates
+  - Certificate revocation
+- Use a normal Active Directory account or the system account for the connector service.
+- Based on your tenant location, select government vs. commercial environments.
+- Removes the need to select a client certificate for SCEP integration with NDES.
+- Auto-updates to the latest version of the connector. Manual update of this connector is also supported.
+- Improved logging.
+
+The previous connectors remain in support but are no longer available for download. If you need to install or reinstall a connector, install the new Certificate Connector for Microsoft Intune.
 
 <!-- ########################## -->
 ## Week of July 5, 2021
