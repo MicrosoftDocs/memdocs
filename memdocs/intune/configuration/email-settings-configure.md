@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure email settings in Microsoft Intune - Azure | Microsoft Docs
+title: Configure email settings in Microsoft Intune
 titleSuffix:
 description: Create an email profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use email profiles to configure common email settings, including an email server and authentication methods to connect to corporate email on devices you manage.
 keywords:

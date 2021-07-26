@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Device compliance partners in Microsoft Intune - Azure | Microsoft Docs
+title: Device compliance partners in Microsoft Intune
 description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune. 
 keywords:
 author: brenduns

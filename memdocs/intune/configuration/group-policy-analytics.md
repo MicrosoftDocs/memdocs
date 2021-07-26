@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use group policy analytics to import GPOs in Microsoft Intune - Azure | Microsoft Docs
+title: Use group policy analytics to import GPOs in Microsoft Intune
 description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that have the same Configuration Service Provider (CSP) setting in the cloud, and assign to your Windows 10 users and devices.
 keywords:
 author: MandiOhlinger

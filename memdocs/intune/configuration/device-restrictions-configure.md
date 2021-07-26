@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Restrict devices features using policy in Microsoft Intune - Azure | Microsoft Docs
+title: Restrict devices features using policy in Microsoft Intune
 description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, and Windows 10 devices in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger
