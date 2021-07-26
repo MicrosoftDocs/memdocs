@@ -2,7 +2,7 @@
 title: Content library cleanup tool
 titleSuffix: Configuration Manager
 description: Use the content library cleanup tool to remove orphaned content no longer associated with a Configuration Manager deployment.
-ms.date: 07/15/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -128,8 +128,8 @@ Use these command-line parameters in any order.
 
 ### Known issue
 
-When any package or deployment has failed, or is in progress, the tool might return the following error:
+In version 2103 and earlier, when any package or deployment has failed, or is in progress, the tool might return the following error:
 
 `System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.`
 
-There's no workaround for this issue. When content is in progress or has failed to deploy, the tool can't reliably identify orphaned files. The tool won't allow you to clean up content until you resolve that issue.
+To work around this issue, update the site to version 2107.<!-- 4411374 --> The tool can't reliably identify orphaned files, but will display a warning and continue.
