@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Windows 365 planning guide - Azure | Microsoft Docs
+title: Windows 365 planning guide
 titleSuffix:
 description: Windows 365 planning guide
 keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2021
+ms.date: 07/26/2021
 ms.topic: conceptual
 ms.service: cloudpc
 ms.subservice:
