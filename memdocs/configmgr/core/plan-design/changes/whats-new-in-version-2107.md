@@ -159,6 +159,7 @@ We've made the following improvements to CMPivot:
 - Improvements to query autocomplete suggestions in the query editor
 
 For more information, see [Changes to CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2107) and [CMPivot overview](../../servers/manage/cmpivot-overview.md#bkmk_onprem_only).
+
 ## Client management
 
 ### Custom properties for devices
@@ -211,8 +212,15 @@ You can now inventory client log file settings such as log levels and size. This
 
 For more information, see [About log files](../hierarchy/about-log-files.md#hardware-inventory-for-client-log-settings).
 
-## Collections
+### Support for macOS Big Sur
 
+<!-- 8816608 -->
+
+Configuration Manager now supports the macOS Big Sur version 11. For more information, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
+
+<!-- 
+## Collections
+ -->
 
 ## Software Center
 
@@ -323,10 +331,6 @@ Starting in this release, you can choose to allow unsigned [hierarchy approved c
 
 For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
 
-### Configuration Manager console settings aren't saved
-<!--5452246-->
-When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.<!-- move to relnote, not "what's new" -->
-
 ### Console improvements
 <!--9575773-->
 In this release we've made the following improvements to the Configuration Manager console:
@@ -343,15 +347,14 @@ In this release we've made the following improvements to the Configuration Manag
 
 For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 
-## Support Center
+## Tools
+
 ### Improvements to Support Center
 <!--8272488-->
 
 Starting in this release, the **Content** view in the **Support Center Client Tools** has been renamed to **Deployments**.  From **Deployments**, you can review all of the deployments currently targeted to the device. The new view is grouped by **Category** and **Status**. The view can be sorted and filtered to help you find the deployments you're interested in. Select a deployment in the results pane to display more information in the details pane.
 
 For more information, see [Support Center Client Tools user interface reference](../../support/support-center-ui-reference.md#deployment-view).
-
-## Tools
 
 ### Improvements to CMTrace
 
@@ -368,11 +371,9 @@ This release includes multiple performance improvements to the CMTrace log viewe
 <!--9579789-->
 RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's now located in the Configuration Manager console directory. After you install the console, RBAViewer.exe will be in the same directory. The default location is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\rbaviewer.exe`.
 
-
 <!-- 
 ## Content management
  -->
-
 
 ## Deprecated features
 
