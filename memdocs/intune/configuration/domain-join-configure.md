@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Domain join profile settings for Windows 10 in Microsoft Intune - Azure | Microsoft Docs
+title: Domain join profile settings for Windows 10 in Microsoft Intune
 description: Create a domain join device configuration profile for hybrid Azure AD joined devices. Use this profile to deploy on-premises Active Directory domain information to devices provisioned with Windows Autopilot and Microsoft Intune.
 keywords:
 author: MandiOhlinger

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use custom device settings in Microsoft Intune - Azure | Microsoft Docs
+title: Use custom device settings in Microsoft Intune
 description: Add or create a profile to use custom settings for Windows 8.1, Windows 10 and later, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger

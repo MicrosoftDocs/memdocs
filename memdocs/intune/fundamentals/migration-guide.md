@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Intune mobile device management migration guide - Azure | Microsoft Docs
+title: Intune mobile device management migration guide
 titleSuffix: Microsoft Intune
 description: This overview includes a summary of the planning and deployment guides for Microsoft Intune.
 keywords:

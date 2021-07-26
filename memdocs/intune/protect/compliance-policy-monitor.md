@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Monitor device compliance policies in Microsoft Intune - Azure | Microsoft Docs
+title: Monitor device compliance policies in Microsoft Intune
 description: Use the device compliance dashboard to monitor overall device compliance, view reports, and view per-policy and per-setting device compliance.
 keywords:
 author: brenduns

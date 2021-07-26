@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Bind Android devices by network location in Microsoft Intune - Azure | Microsoft Docs
+title: Bind Android devices by network location in Microsoft Intune
 description: Create or configure network locations in Microsoft Intune for Android devices. You can mark devices as noncompliant based on the device's network location. If the device goes outside the network location, you can block access to company resources.
 keywords:
 author: Brenduns

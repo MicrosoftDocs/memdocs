@@ -159,11 +159,11 @@ For more information, see [How to deploy clients to Macs](../../clients/deploy/d
 
 ### Supported versions
 
-- **macOS Catalina (10.15)** (requires Configuration Manager site version 1910 or later, and Configuration Manager client for macOS version 5.0.8742.1000 or later)
+- **macOS Big Sur (11)** (requires Configuration Manager client for macOS version 5.0.9000.1002 or later)<!-- 8816608 -->
+
+- **macOS Catalina (10.15)** (requires Configuration Manager client for macOS version 5.0.8742.1000 or later)
 
 - **macOS Mojave (10.14)**
-
-- **macOS High Sierra (10.13)**
 
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 
