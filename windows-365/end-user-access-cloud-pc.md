@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Accessing Cloud PCs - Azure | Microsoft Docs
+title: Accessing Cloud PCs
 titleSuffix:
 description: Learn how end users can access their Cloud PC.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 End users can access their Cloud PCs in two different ways:
 
-- [windows365.microsoft.com ](https://Windows365.microsoft.com)
+- [windows365.microsoft.com](https://Windows365.microsoft.com)
 - Microsoft Remote Desktop
 
 ## Windows365 web site
@@ -43,23 +43,25 @@ End users can navigate to [windows365.microsoft.com ](https://windows365.microso
 
 To access their Cloud PC from this website, the end user's device must meet the following requirements:
 
-- Supported OS versions: Windows, macOS, ChromeOS, Linux
+- Supported operating systems: Windows, macOS, ChromeOS, Linux
 - A modern browser like Microsoft Edge, Google Chrome, Safari, or Mozilla Firefox (v55.0 and later).
 
 ### End-user actions
 
-While on soft.com, end users can perform actions on their Cloud PCs by selecting the gear icon on a Cloud PC card.
+While on windows365.microsoft.com, end users can perform actions on their Cloud PCs by selecting the gear icon on a Cloud PC card.
 
-- **Rename**: Changes the name of the Cloud PC shown to the user on web site. This action won’t affect any name in MEM, AAD, on the device, or in the Remote Desktop Apps.  
+- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action won’t affect any name in Microsoft Endpoint Manager, Azure Active Directory, on the device, or in the Remote Desktop Apps.  
 - **Restart**: Restarts the Cloud PC.
-- **Troubleshoot**: Troubleshoot and attempt to resolve any issues that may be preventing a user from connecting to their Cloud PC. The checks run include checking whether any files or agents required for connectivity are correctly installed and ensuring that the Azure resources are available.
+- **Troubleshoot**: Troubleshoot and attempt to resolve any issues that may be preventing a user from connecting to their Cloud PC. The checks run include:
+    - Check whether any files or agents required for connectivity are correctly installed.
+    - Make sure that the Azure resources are available.
 
   | Return state | Description |
   | ------------- | ------------- |
-  | No issues detected | None of the checks ran discovered an issue with the Cloud PC. |
+  | No issues detected | None of the checks discovered an issue with the Cloud PC. |
   | Issues resolved  | An issue was detected and fixed. |
   | Can’t connect to Cloud PC. We’re working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
-  | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it was unable to be fixed. This could be due to a ongoing Windows update or another issue. If this error persists for an extended period of time the Cloud PC may need to be reprovisioned. |
+  | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This could be due to a ongoing Windows update or another issue. If this error persists for an extended period of time the Cloud PC may need to be reprovisioned. |
 
 ## Remote Desktop
 
@@ -96,7 +98,7 @@ Requirements:
 - **.NET Framework version**: 4.6.1 or later
 - **Video**: DirectX 9 or later with WDDM 1.0 driver
 
-If you'll be using Microsoft Teams on the Cloud PCs, the following Window device requirements increase to:
+If you'll be using Microsoft Teams on the Cloud PCs, the Windows device requirements increase to:
 
 - **CPU**: At least 2vCPU with Minimum 1.6 GHz or faster processor. For higher video/screen share resolution and frame rate, a 4-core processor or better is recommended.
 - **RAM**: 1024 MB
