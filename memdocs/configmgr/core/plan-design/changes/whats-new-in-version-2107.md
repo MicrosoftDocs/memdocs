@@ -110,6 +110,17 @@ For more information, see the following articles:
 - [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net)
 - [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md#net-version-requirements)
 
+### Updated Visual C++ prerequisite
+
+<!--5170229-->
+
+The Configuration Manager client and several server components require the Microsoft Visual C++ Redistributable component (`vcredist_x*.exe`). During Configuration Manager installation, if the VCRedist doesn't already exist, it automatically installs. Starting in this release, Configuration Manager now uses the Microsoft Visual C++ 2015-2019 redistributable version 14.28.29914.0. This version improves stability in Configuration Manager operations.
+
+For more information on client and site system prerequisites, see the following articles:
+
+- [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#components-automatically-downloaded-during-installation)
+- [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md)
+
 ### New prerequisite check for SQL Server 2012
 
 <!--10092858-->
@@ -195,14 +206,6 @@ Configuration Manager uses self-signed certificates for client identity and to h
 If the client also has a PKI-based certificate, it continues to use that certificate for TLS HTTPS communication. It uses the site's self-signed certificate for signing messages with the site. This change means that the client now supports elliptical curve cryptography (ECC) certificates from your PKI.
 
 For more information, see [Certificates overview](../security/certificates-overview.md#hardware-bound-key-storage-provider).
-
-### Updated client deployment prerequisite
-
-<!--5170229-->
-
-The Configuration Manager client requires the Microsoft Visual C++ Redistributable component (`vcredist_x*.exe`). When you install the client, it automatically installs this component if it doesn't already exist. Starting in this release, it now uses the Microsoft Visual C++ 2015-2019 Redistributable version 14.28.29914.0. This version improves stability in Configuration Manager client operations.
-
-For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#components-automatically-downloaded-during-installation).
 
 ### Hardware inventory for client log settings
 
