@@ -71,6 +71,7 @@ For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisit
 <!--10158821, 10115058-->
 To better reflect the additional cloud services Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
 
+For more information, see [Co-management](../../../comanage/overview.md), [Tenant attach](../../../tenant-attach/device-sync-actions.md), and [Endpoint analytics](../../../../analytics/enroll-configmgr.md).
 
 ## Desktop Analytics
 
