@@ -288,4 +288,4 @@ For more information, see the following articles:
 These procedures don't affect Configuration Manager functionality.
 
 > [!NOTE]
-> Updates to Configuration Manager download from the Azure content delivery network (CDN), which has cipher suite requirements. For more information, see [Internet access requirements for updates and servicing](../network/internet-endpoints.md#updates-and-servicing).<!-- 10424111 -->
+> Updates to Configuration Manager download from the Azure content delivery network (CDN), which has cipher suite requirements. For more information, see [Azure Front Door: TLS configuration FAQ](/azure/frontdoor/front-door-faq#tls-configuration)..<!-- 10424111 -->
