@@ -52,7 +52,7 @@ JsonADDomainExtension is the Azure function used to perform this domain join. Ma
 
 ## Hybrid Azure AD join failed
 
-Windows 365 doesn’t perform any hybrid Azure Active Directy (Azure AD) join function on behalf of the customer. Hybrid Azure AD join must be configured and healthy as a pre-requisite for Cloud PC.
+Windows 365 doesn’t perform any hybrid Azure Active Directory (Azure AD) join function on behalf of the customer. Hybrid Azure AD join must be configured and healthy as a pre-requisite for Cloud PC.
 
 If provisioning fails due to hybrid Azure AD join, it’s likely due to an insufficient sync period configured in your AD Sync service. Make sure that Azure AD connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will timeout if the Azure AD object doesn’t appear within 90 minutes.
 
