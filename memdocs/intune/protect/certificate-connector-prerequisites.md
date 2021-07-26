@@ -133,7 +133,7 @@ The connector service account must have the following permissions:
 The following options are supported for use as the certificate connector service account:
 
 - **SYSTEM**
-- **Domain user**
+- **Domain user** - Use any domain user account that is an administrator on the Windows Server.
 
 For more information, see [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md).
 

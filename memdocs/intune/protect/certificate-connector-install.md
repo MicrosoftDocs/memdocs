@@ -95,7 +95,7 @@ Use the following procedure to both configure a new connector and modify a previ
    Options include:
 
    - **SYSTEM**
-   - **Domain account** – Use any domain account that has the required permissions.
+   - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
 4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access.
 
