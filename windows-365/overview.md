@@ -47,7 +47,6 @@ With the Windows 365 service, you can:
 - [Configure provisioning policies](create-provisioning-policy.md) to create custom Cloud PC configurations.
 - Use device groups, policies, and security baselines to customize your Cloud PC configurations to support different user needs.
 - Pre-install [apps](app-overview.md) in your custom Cloud PC image and push additional apps to them through Microsoft Endpoint Manager.
-- [Monitor Cloud PCs](monitor-cloud-pc.md) using unique tools and reports, from Cloud PC endpoint analytics to end user connectivity experience insights.
 
 ## What is a Cloud PC?
 

@@ -49,4 +49,4 @@ To get audit log events for up to a year, run the following PowerShell script:
 <!-- ########################## -->
 ## Next steps
 
-[Learn more about monitoring Cloud PC](monitor-cloud-pc.md).
+[Business continuity and disaster recovery](business-continuity-disaster-recovery.md).

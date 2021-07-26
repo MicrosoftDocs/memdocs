@@ -46,4 +46,4 @@ Cloud PCs support the following remote management actions:
 <!-- ########################## -->
 ## Next steps
 
-[Monitor Cloud PCs](monitor-cloud-pc.md).
+[Reprovision a Cloud PC](reprovision-cloud-pc.md).
