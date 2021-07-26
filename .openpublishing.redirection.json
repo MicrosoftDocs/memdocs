@@ -8,6 +8,10 @@
             "redirect_document_id": false
         },  
         {
+            "source_path": "memdocs/intune/user-help/turn-off-microsoft-data-collection-macos.md",
+            "redirect_url": "/mem/intune/user-help/intune-company-portal-preferences-macos",
+            "redirect_document_id": false
+        },         {
             "source_path": "memdocs/intune/user-help/send-logs-to-your-it-admin-using-cable-android.md",
             "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
             "redirect_document_id": false
