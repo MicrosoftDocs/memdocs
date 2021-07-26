@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: iOS/iPadOS device compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS device compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your iOS/iPadOS devices in Microsoft Intune. Require an email, check jailbroken or rooted devices, set the allowed minimum and maximum operating system, set any password restrictions, including password length and device inactivity, restrict apps, and more.
 keywords:
 author: brenduns

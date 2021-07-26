@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title:  Windows for Business Update settings for  Microsoft Intune - Azure | Microsoft Docs
+title:  Windows for Business Update settings for  Microsoft Intune
 description: WUfB settings for Windows 10 devices that you can deploy using Intune.
 keywords:
 author: brenduns

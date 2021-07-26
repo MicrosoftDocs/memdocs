@@ -1,5 +1,5 @@
 ---
-title: Configure infrastructure to support SCEP certificate profiles with Microsoft Intune - Azure | Microsoft Docs
+title: Configure infrastructure to support SCEP certificate profiles with Microsoft Intune
 description: To use Simple Certificate Enrollment Protocol (SCEP) wiht Microsoft Intune, configure your on-premises AD domain, create a certification authority, and set up the NDES server to support use of the Certificate Connector.
 keywords:
 author: brenduns

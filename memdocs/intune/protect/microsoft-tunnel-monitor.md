@@ -1,5 +1,5 @@
 ---
-title: Monitor the status of the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: Monitor the status of the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Monitor the status of Microsoft Tunnel Gateway, a VPN server that runs on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
 keywords:
 author: brenduns

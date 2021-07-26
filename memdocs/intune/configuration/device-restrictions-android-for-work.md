@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android Enterprise device settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android Enterprise device settings in Microsoft Intune
 description: On Android Enterprise or Android for Work devices, restrict settings on the device, including copy and paste, show notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords:
 author: MandiOhlinger

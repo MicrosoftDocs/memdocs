@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Supported filter device properties and operators in Microsoft Intune - Azure | Microsoft Docs
+title: Supported filter device properties and operators in Microsoft Intune
 description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger

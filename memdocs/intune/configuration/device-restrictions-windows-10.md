@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Device restriction settings for Windows 10 in Microsoft Intune - Azure | Microsoft Docs
+title: Device restriction settings for Windows 10 in Microsoft Intune
 description: See a list of all the settings and their descriptions for creating device restrictions on Windows 10 and later devices. Use these settings in a configuration profile to control screenshots, password requirements, kiosk settings, apps in the store, Microsoft Edge browser, Microsoft Defender, access to the cloud, start menu, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger

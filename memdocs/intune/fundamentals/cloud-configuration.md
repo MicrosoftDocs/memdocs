@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Windows cloud configuration in Microsoft Intune - Azure | Microsoft Docs
+title: Use Windows cloud configuration in Microsoft Intune
 description: Use a guided scenario to configure Windows 10 in a cloud configuration. Cloud config focuses on browsing using Microsoft Intune and Endpoint Manager, and using Microsoft 365 apps.
 keywords:
 author: MandiOhlinger

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Upgrade or use S mode on Windows 10 devices - Microsoft Intune - Azure | Microsoft Docs
+title: Upgrade or use S mode on Windows 10 devices - Microsoft Intune
 description: Use Microsoft Intune to upgrade Windows 10 devices to a different edition, or switch S mode. Administrators can use a device configuration profile to upgrade Windows 10 Professional to Windows 10 Enterprise, and switch out of S mode. See the supported upgrade paths for Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic, and Mobile. 
 keywords:
 author: MandiOhlinger

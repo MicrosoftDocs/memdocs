@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use templates for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Use templates for Windows 10 devices in Microsoft Intune
 description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10 devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
 keywords:
 author: MandiOhlinger

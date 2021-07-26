@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create device compliance policies in Microsoft Intune - Azure | Microsoft Docs
+title: Create device compliance policies in Microsoft Intune
 description: Create device compliance policies for Microsoft Intune.
 keywords:
 author: brenduns

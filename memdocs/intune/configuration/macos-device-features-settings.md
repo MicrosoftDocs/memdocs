@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: macOS device feature settings in Microsoft Intune - Azure | Microsoft Docs
+title: macOS device feature settings in Microsoft Intune
 description: See the settings to configure macOS devices for AirPrint and customize the Login window to show or hide power buttons in Microsoft Intune. See the steps to get the IP address, path, and port settings of an AirPrint server in your network. Use these settings in a device configuration profile to configure macOS device features.
 keywords:
 author: MandiOhlinger

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Noncompliant message and actions with Microsoft Intune - Azure | Microsoft Docs
+title: Noncompliant message and actions with Microsoft Intune
 description: Create a notification email to send to non-compliant devices. Add actions to apply to devices that don't meet your compliance policies. Actions can include a grace period to get compliant, block access to network resources, or retire the noncompliant device.
 keywords:
 author: brenduns
