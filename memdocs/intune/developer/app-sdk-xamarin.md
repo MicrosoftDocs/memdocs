@@ -7,7 +7,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/18/2021
+ms.date: 07/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
