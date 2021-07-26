@@ -34,7 +34,7 @@ The following errors can occur during Cloud PC provisioning.
 
 ## Disk allocation error
 
-Windows 365 provisioned the Cloud PC but didn’t allocate the full OS storage according to what the user should have received based on their assigned Windows 365 license. As a result, the user won’t see or be able to use the full amount of storage they were assigned.
+Windows 365 provisioned the Cloud PC but didn’t allocate the full OS storage according to what the user should have received based on their assigned Windows 365 license. As a result, the user won’t see or be able to use the full storage that they were assigned.
 
 **Suggested test**: Retry provisioning.
 
@@ -52,17 +52,20 @@ JsonADDomainExtension is the Azure function used to perform this domain join. Ma
 
 ## Hybrid Azure AD join failed
 
-Windows 365 doesn’t perform any hybrid Azure Active Directy (Azure AD) join function on behalf of the customer. Hybrid Azure AD join must be configured and healthy as a pre-requisite for Cloud PC.
+Windows 365 doesn’t perform any hybrid Azure Active Directory (Azure AD) join function for the customer. Hybrid Azure AD join must be configured and healthy as a pre-requisite for Cloud PC.
 
-If provisioning fails due to hybrid Azure AD join, it’s likely due to an insufficient sync period configured in your AD Sync service. Make sure that Azure AD connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will timeout if the Azure AD object doesn’t appear within 90 minutes.
+If provisioning fails because of hybrid Azure AD join, it’s likely because of an insufficient sync period configured in your AD Sync service. Make sure that Azure AD connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will time out if the Azure AD object doesn’t appear within 90 minutes.
 
 Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 will be replicated fast enough to make it into Azure AD within this timeout window.
 
-**Suggested test**: Check to see that the AD object appears in the correct OU, and that it’s successfully synced to Azure AD before provisioning times out.
+**Suggested test**: Check to see that the AD object:
+
+- Appears in the correct OU.
+- Is successfully synced to Azure AD before provisioning times out.
 
 ## Intune enrollment failed
 
-Windows 365 performs a device-based MDM enrollment into Intune. This should be very reliable.
+Windows 365 performs a device-based MDM enrollment into Intune.
 
 If Intune enrollment is failing, make sure that:
 
@@ -80,13 +83,13 @@ While a provisioning is in progress, someone has removed the user’s Windows 36
 
 ## Local administrator permissions error
 
-Windows 365 provisioned the Cloud PC but didn’t grant the user local administrator permissions as defined by a User Settings policy. As a result, the user won’t be an administrator on their Cloud PC. Therefore, they can’t make system-level changes or install apps on the system-level context.
+Windows 365 provisioned the Cloud PC but didn’t grant the user local administrator permissions as defined by a User Settings policy. As a result, the user won’t be an administrator on their Cloud PC. So, they can’t make system-level changes or install apps on the system-level context.
 
 **Suggested test**: Retry provisioning or create a new User Settings policy.
 
 ## Microsoft Teams optimization error
 
-Windows 365 provisioned the Cloud PC but didn’t configure the Cloud PC to use Microsoft Teams in the mode optimized for running on a VM remotely. This optimization doesn't install Microsoft Teams and all components. It only sets the configuration that takes effect if you do install Microsoft Teams on the Cloud PC. If this optimization is not set and Microsoft Teams is installed on this device, Microsoft Teams won’t run in the optimized mode for remote connections.
+Windows 365 provisioned the Cloud PC. However, it didn’t configure the Cloud PC to use Microsoft Teams in the mode optimized for running on a remote VM. This optimization doesn't install Microsoft Teams and all components. It only sets the configuration that takes effect if you do install Microsoft Teams on the Cloud PC. If this optimization isn't set and Microsoft Teams is installed on this device, Microsoft Teams won’t run in the optimized mode for remote connections.
 
 **Suggested test**: Retry provisioning.
 
@@ -122,13 +125,13 @@ Windows 365 uses the customer provided vNet to perform a vNic ingestion from the
 
 ## Start Menu power icons error
 
-Windows 365 provisioned the Cloud PC but didn’t hide the shutdown and restart icons in the Start Menu. As a result, the user will see the shutdown and restart icons in the Start Menu. If the users ends their Cloud PC connection by selecting the shutdown icon, they may need to restart the Cloud PC from the Cloud PC portal before connecting again.
+Windows 365 provisioned the Cloud PC but didn’t hide the shutdown and restart icons in the Start Menu. As a result, the user will see the shutdown and restart icons in the Start Menu. If the user ends their Cloud PC connection by selecting the shutdown icon, they may need to restart the Cloud PC from the Cloud PC portal before connecting again.
 
 **Suggested test**: Retry provisioning or create a device configuration policy to [hide the shut down button](/windows/client-management/mdm/policy-csp-start#start-hideshutdown) and to [hide the restart button](/windows/client-management/mdm/policy-csp-start#start-hiderestart).
 
 ## Time zone redirection error
 
-Windows 365 provisioned the Cloud PC but didn’t configure time zone redirection. As a result, the user won’t see their local time reflected when connected to their Cloud PC. Instead, they will see the standard UTC time.
+Windows 365 provisioned the Cloud PC but didn’t configure time zone redirection. As a result, the user won’t see their local time reflected when connected to their Cloud PC. Instead, they'll see the standard UTC time.
 
 **Suggested test**: Retry provisioning or create a Group Policy Object with the Allow time zone redirection group policy configured. To learn more about the policy, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
 
