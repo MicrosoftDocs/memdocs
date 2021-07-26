@@ -63,10 +63,7 @@ For internet-based devices in the second path, you need to create an app in Intu
 
 1. Select the co-management object, and then choose **Properties** in the ribbon.
 
-1. On the **Enablement** tab, copy the command line. Paste it into Notepad to save for the next process.
-
-    > [!TIP]
-    > The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.<!-- MEMDocs#635 -->
+1. On the **Enablement** tab, copy the command line. Paste it into Notepad to save for the next process. The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.<!-- MEMDocs#635 -->
 
 The following command line is an example:
 `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
