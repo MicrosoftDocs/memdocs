@@ -285,11 +285,11 @@ You can now right-click and notify devices to run a software updates evaluation 
 
 For more information, see the [Management insights software updates group](../../servers/manage/management-insights.md#software-updates).
 
-### List additional third-party updates catalogsList additional third-party updates catalogs
+### List additional third-party update catalogs
 <!--9989251-->
 To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a list of additional third-party software update catalog providers.
 
-For more information, see [Third party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
+For more information, see [Third-party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
 
 ### Improvements for managing automatic deployment rules
 
