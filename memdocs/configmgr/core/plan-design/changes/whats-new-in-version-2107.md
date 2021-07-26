@@ -360,12 +360,9 @@ For more information, see [Support Center Client Tools user interface reference]
 
 <!--9607363-->
 
-This release includes multiple performance improvements to the CMTrace log viewer. Configuration Manager automatically installs this tool in the following locations:
+This release includes multiple performance improvements to the CMTrace log viewer. If you have a copy of CMTrace in a non-default location, consider removing it and using a copy in one of the default paths. If it's in a custom location that meets your business requirements, then make sure you have a process to keep it up to date. A script is available in the Community Hub to help you locate and update versions of CMTrace to the latest version.
 
-- The site server's tools directory. For example: `cd.latest\SMSSETUP\Tools\CMTrace.exe`
-- The Management point's installation directory. For example: `C:\SMS_CCM\CMTrace.exe`
-- The client installation directory. For example: `C:\Windows\CCM\CMTrace.exe`
-- OS deployment boot images. For example: `X:\sms\bin\x64\CMTrace.exe`
+For more information, see [CMTrace](../../support/cmtrace.md).
 
 ### RBAViewer location change
 <!--9579789-->
