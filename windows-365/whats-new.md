@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: What's new in Windows 365 - Azure | Microsoft Docs
+title: What's new in Windows 365
 titleSuffix:
 description: Find out what's new in Windows 365
 keywords:

@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Windows 365 architecture - Azure | Microsoft Docs
+title: Windows 365 architecture
 titleSuffix:
 description: Windows 365 architecture
 keywords:

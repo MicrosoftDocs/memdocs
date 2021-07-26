@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: On-premises network connection overview - Azure | Microsoft Docs
+title: On-premises network connection overview
 titleSuffix:
 description: Learn about on-premises network connections in Windows 365
 keywords:

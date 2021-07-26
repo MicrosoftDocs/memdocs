@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Windows 365 requirements - Azure | Microsoft Docs
+title: Windows 365 requirements
 titleSuffix:
 description: Windows 365 requirements
 keywords:

@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Provisioning in Windows 365 - Azure | Microsoft Docs
+title: Provisioning in Windows 365
 titleSuffix:
 description: Learn how provisioning works in Windows 365.
 keywords:

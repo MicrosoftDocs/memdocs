@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: What is Windows 365? - Azure | Microsoft Docs
+title: What is Windows 365?
 titleSuffix:
 description: What is Windows 365?
 keywords:
