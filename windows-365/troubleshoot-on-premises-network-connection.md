@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Troubleshoot on-premisses network connections
+title: Troubleshoot on-premises network connections
 titleSuffix:
 description: Troubleshoot on-premises network connections in Windows 365.
 keywords:
@@ -37,7 +37,7 @@ The on-premises network connection (OPNC) periodically checks your environment t
 When a Cloud PC is provisioned, it’s automatically joined to the provided domain. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
 
 - The domain join user has sufficient permissions to join the domain provided.  
-- The domain join user can write to the organizational unit (OU)provided.  
+- The domain join user can write to the organizational unit (OU) provided.  
 - The domain join user is not restricted in how many computers they can join. For example, the default maximum joins per user is 10 and this can effect Cloud PC provisioning.
 - The subnet being used can reach a domain controller.
 - You test Add-Computer using the domain join credentials on a VM connected to the Cloud PC vNet/subnet.
@@ -46,7 +46,7 @@ When a Cloud PC is provisioned, it’s automatically joined to the provided doma
 
 ## Azure Active Directory device Sync
 
-Before MDM enrollment can take place during provisioning, an Azure  Directory (Azure AD) object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Azure AD in a timely manner.  
+Before MDM enrollment can take place during provisioning, an Azure Active Directory (Azure AD) object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Azure AD in a timely manner.  
 
 Make sure that your Azure AD computer objects appear in Azure AD quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Azure AD within 90 minutes, provisioning will fail.  
 
