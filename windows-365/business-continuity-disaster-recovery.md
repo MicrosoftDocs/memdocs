@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Business continuity and disaster recovery with Windows 365 - Azure | Microsoft Docs
+title: Business continuity and disaster recovery with Windows 365
 titleSuffix:
 description: Learn about business continuity and disaster recovery with Windows 365
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/20/2021
+ms.date: 07/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:

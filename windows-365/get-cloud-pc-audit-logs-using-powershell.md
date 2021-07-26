@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Get Cloud PC audit logs using PowerShell - Azure | Microsoft Docs
+title: Get Cloud PC audit logs using PowerShell
 titleSuffix:
 description: Learn how to use PowerShell to retrieve Cloud PC audit logs.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice: 
@@ -44,5 +44,9 @@ Users with the following permissions can review audit logs:
 
 To get audit log events for up to a year, run the following PowerShell script:
 
+<!--waiting for script to be provided-->
+
 <!-- ########################## -->
 ## Next steps
+
+[Learn more about monitoring Cloud PC](monitor-cloud-pc.md).
