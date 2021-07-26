@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Business continuity and disaster recovery with Windows 365 - Azure | Microsoft Docs
+title: Business continuity and disaster recovery with Windows 365
 titleSuffix:
 description: Learn about business continuity and disaster recovery with Windows 365
 keywords:
-author: ErikjeMS  
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/20/2021
+ms.date: 07/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -30,14 +30,14 @@ ms.collection: M365-identity-device-management
 
 # Business continuity and disaster recovery overview
 
-Windows 365  provides highly resilient user cloud pcs, including:
+Windows 365 provides highly resilient user cloud pcs, including:
 
-- Highly available Windows 365 cloud pc user sessions (reference and Link to SLA TBD).
+- Highly available Windows 365 Cloud PC user sessions.
 - Locally Redundant Storage (LRS) with data object resiliency of 11 9s.
 - Automated in-zone disaster recovery for compute.
 - Recovery Point Objective (RPO) of ~0.
 
-Windows 365 is part of Microsoft 365 and seamlessly uses Windows and Microsoft 365 solutions, features, and tools. This helps to make sure that user data and user context are portable and resilient. Important    optional Windows and Microsoft 365 solutions include:
+Windows 365 is part of Microsoft 365 and seamlessly uses Windows and Microsoft 365 solutions, features, and tools. This helps to make sure that user data and user context are portable and resilient. Important optional Windows and Microsoft 365 solutions include:
 
 - OneDrive
 - OneDrive for Business
@@ -45,7 +45,7 @@ Windows 365 is part of Microsoft 365 and seamlessly uses Windows and Microsoft 3
 - Windows Sync Your Settings
 - Enterprise State Roaming
 
-Using these Windows and Microsoft 365 solutions preserves user context and user data in cases when an individual Cloud PC has a non-Azure failure. These failures, like a failed OS update or user configuration errors, can result in an inaccessible Cloud PC, even if the underlying system is healthy.  When using Windows 365 with these solutions, you can enjoy highly resilient and portable user data and user context, even if a specific Cloud PC must be reprovisioned from a base image.  
+Using these Windows and Microsoft 365 solutions preserves user context and user data in cases when an individual Cloud PC has a non-Azure failure. These failures, like a failed OS update or user configuration errors, can result in an inaccessible Cloud PC, even if the underlying system is healthy. When using Windows 365 with these solutions, you can enjoy highly resilient and portable user data and user context, even if a specific Cloud PC must be reprovisioned from a base image.
 
 ## Data Resilience
 
@@ -53,11 +53,18 @@ If there's a larger disruption, like a full zone or region outage, LRS storage m
 
 ## Automated in-zone Disaster Recovery for Compute
 
-Although rare, in zone failures  may disrupt Cloud PC operations. This includes, for example, vNic failure, compute failure, storage plane failure, compute power failure or similar. Azure automatically identifies compute failures and automatically moves the user workload to another resource in the zone.
+Although rare, in-zone failures may disrupt Cloud PC operations. Examples of such failures include:
 
-If a user is actively using a session, there may be a slight disruption to the user while the service is restored. After restoration, the user will need to restore the connection by signing into their Cloud PC session again. If an in-zone failure occurs while the user is signed in and actively using their CPC session, the user will lose access until the system is restored.
+- vNic failure
+- compute failure
+- storage plane failure
+- compute power failure
 
-Storage systems are separate from compute functions, and use storage redundancy to help deliver Windows 365 disaster recovery with an RPO of ~0.  Automated Windows 365 disaster recovery is based on an up-to-date copy of the OS disk, with an RPO of ~0. Therefore the process of recovery starts automatically because there is no need to accept the data loss associated with a past ‘point in time’ recovery.
+Azure automatically identifies compute failures and automatically moves the user workload to another resource in the zone.
+
+If a user is actively using a session, there may be a slight disruption to the user while the service is restored. After restoration, the user must restore the connection by signing into their Cloud PC session again. If an in-zone failure occurs while the user is signed in and actively using their Cloud PC session, the user will lose access until the system is restored.
+
+Storage systems are separate from compute functions, and use storage redundancy to help deliver Windows 365 disaster recovery with an RPO of ~0. Automated Windows 365 disaster recovery is based on an up-to-date copy of the OS disk, with an RPO of ~0. Therefore, the process of recovery starts automatically because there is no need to accept the data loss associated with a past point-in-time recovery.
 
 ## OneDrive, OneDrive for Business and OneDrive with Known Folder Move
 
@@ -69,7 +76,7 @@ Using Windows 365 with OneDrive and OneDrive Known Folder Move organizations pro
 - User data and Known Folder Move based context resilience with an [Recovery Time Objective (RTO) and RPO of 0](/compliance/assurance/assurance-sharepoint-onedrive-data-resiliency#blob-storage-resilience).
 - Data [Versioning, corruption and accidental delete protection, and Point in Time Restore](/compliance/assurance/assurance-sharepoint-onedrive-data-resiliency#versioning-and-files-restore).
 
-For more information on  deploying and managing OneDrive for Small business, Medium-sized business, and Enterprises, see [this article](/onedrive/plan-onedrive-enterprise#deployment-and-management-options).
+For more information on deploying and managing OneDrive for Small business, Medium-sized business, and Enterprises, see [this article](/onedrive/plan-onedrive-enterprise#deployment-and-management-options).
 
 ## Windows Sync Your Settings and Enterprise State Roaming
 
@@ -79,23 +86,23 @@ For an overview of Windows Settings, see [Windows Settings overview](/azure/acti
 
 ## Cloud PC Management Service
 
-The Cloud PC Management service includes:
+The Cloud PC management service includes:
 
-- Microsoft Endpoint Manager Cloud PC management interface
-- Cloud PC End User Portal
+- [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+- [Cloud PC end user portal](https://Windows365.microsoft.com)
 
 The Cloud PC Management Service has a regionally redundant architecture that is designed to be highly available, with a target uptime of 99.99%. If there's a Management Service outage, the service has the following target objectives:
 
 - RTO of < 6 hours.
 - RPO of <30 minutes for changes made in the management service.
 
-If there's a Management Service outage, assuming no other impacting outages, users won’t be able to access their Cloud PC sessions through the End User Portal. Users will still be able to access their Cloud PC instances by using any of the following options:
+If there's a Management Service outage, assuming no other impacting outages, users won’t be able to access their Cloud PC sessions through the end user portal. Users will still be able to access their Cloud PC instances by using any of the following options:
 
 - a native app.
-- directly from a bookmark for their CPC session.
+- directly from a bookmark for their Cloud PC session.
 - [https://rdweb.wvd.microsoft.com/webclient/index.html](https://rdweb.wvd.microsoft.com/webclient/index.html)
 
-## BCDR Summary
+## Summary
 
 Windows 365 offers organizations with user workspaces that are:
 
@@ -111,3 +118,5 @@ When using Windows 365 with specified Windows and Microsoft 365 solutions and fe
 
 <!-- ########################## -->
 ## Next steps
+
+[Monitor Cloud PCs](monitor-cloud-pc.md).

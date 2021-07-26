@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: On-premises network connection health checks in Windows 365 - Azure | Microsoft Docs
+title: On-premises network connection health checks in Windows 365
 titleSuffix:
 description: Learn about the health checks that are automatically run on on-premises network connections.
 keywords:
-author: ErikjeMS  
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/19/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: mattsha
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,32 +30,32 @@ ms.collection: M365-identity-device-management
 
 # On-premises network connections health checks
 
-A unique feature of Windows 365 is the on-premises network connection health checks. The health checks are periodically run to make sure that
+A unique feature of Windows 365 is the on-premises network connection (OPNC) health checks. The health checks are periodically run to make sure that
 
 - Cloud PC provisioning is successful.
 - End-user Cloud PC experiences are optimal.
 
 ## On-premises network connection status
 
-In the **On-premises network connection** tab, every on-premises network connection created displays a status. This status helps you determine if new Cloud PCs can be expected to provision successfully, and that existing end-users are having an optimal Cloud PC experience.
+In the **On-premises network connection** tab, every OPNC created displays a status. This status helps you determine if new Cloud PCs can be expected to provision successfully, and that existing end-users are having an optimal Cloud PC experience.
 
 Statuses include:
 
-- **Running checks**: The health checks are currently running. The on-premises network connection list view automatically refreshes every five minutes. Wait for the checks to complete before attempting to assign it to a provisioning policy.
-- **Checks successful**: All health checks passed. The on-premises network connection is ready for use.  
-- **Checks successful with warnings**: All critical health checks passed. However one-or-more non-critical checks may have issues. An example of a check that may trigger this state is the hybrid Azure AD join sync check. Hybrid Azure AD join sync can take up to 90 minutes, so we check much of the hybrid Azure AD join sync service but can’t confirm the device sync succeeded until later. On-premises network connections with this status can be used by provisioning policies.
-- **Checks failed**: One or more required checks failed. An on-premises network connection can’t be used if it is in a failed state. You’ll have to resolve the underlying issue and Retry the health checks.
+- **Running checks**: The health checks are currently running. The OPNC list view automatically refreshes every five minutes. Wait for the checks to complete before attempting to assign it to a provisioning policy.
+- **Checks successful**: All health checks passed. The OPNC is ready for use.
+- **Checks successful with warnings**: All critical health checks passed. However at least one non-critical check may have issues. An example of a check that may trigger this state is the hybrid Azure AD join sync check. Hybrid Azure AD join sync can take up to 90 minutes, so we check much of the hybrid Azure AD join sync service but can’t confirm the device sync succeeded until later. OPNCs with this status can be used by provisioning policies.
+- **Checks failed**: One or more required checks failed. An OPNC can’t be used if it's in a failed state. You’ll have to resolve the underlying issue and Retry the health checks.
 
 ## Status error details
 
-Every failed or success with warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you’ve fixed the underlying issue, **Retry** the health check to re-run the tests.
+Every failed OPNC or success with warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you’ve fixed the underlying issue, **Retry** the health check to re-run the tests.
 
 ## Supported checks
 
 - **DNS can resolve Active Directory domain**: Resolve the provided Active Directory domain name.
 - **Active directory domain join**: A domain join using the credentials, domain, and OU provided.
 - **Endpoint connectivity**: Connectivity to the required URL/endpoints.
-- **Azure AD device sync (warning)**: Azure AD sync is enabled on the AAD tenant, and the computer object is being synced within 90 minutes.
+- **Azure AD device sync (warning)**: Azure AD sync is enabled on the Azure AD tenant, and the computer object is being synced within 90 minutes.
 - **Azure subnet IP address usage**: Sufficient IP addresses are available in the provided Azure subnet.
 - **Azure subscription is valid**: The defined Azure subscription is enabled and ready for use.
 - **Azure policy restrictions**: No Azure policy restrictions are blocking Windows 365 resources from being created.
@@ -68,3 +68,4 @@ Every failed or success with warning error state includes the technical details 
 <!-- ########################## -->
 ## Next steps
 
+[Learn more about on-premises network connections](on-premises-network-connections.md).

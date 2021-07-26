@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Resize a Cloud PC - Azure | Microsoft Docs
+title: Resize a Cloud PC
 titleSuffix:
 description: Learn how to resize a Cloud PC by using Microsoft Endpoint Manager.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/08/2021
+ms.date: 7/26/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -34,9 +34,8 @@ The **Resize** remote action lets you upgrade a Cloud PC’s RAM, CPU, and stora
 
 ## Requirements
 
-To resize a Cloud PC, the admin must have any of the following built in roles:
+To resize a Cloud PC, the admin must have any of the following built in Azure Active Directory roles:
 
-- Azure AD Roles:
 - Global Admin
 - Intune Service Admin
 - Windows 365 Service Admin  

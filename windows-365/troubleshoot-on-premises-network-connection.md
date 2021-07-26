@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Troubleshoot on-premisses network connections - Azure | Microsoft Docs
+title: Troubleshoot on-premisses network connections
 titleSuffix:
 description: Troubleshoot on-premises network connections in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 07/26/2021
 ms.topic: troubleshooting
 ms.service: cloudpc
 ms.subservice: 
@@ -30,30 +30,30 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot on-premises network connections
 
-The on-premises network connection periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you'll see error messages in the Microsoft Endpoint Manager admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
+The on-premises network connection (OPNC) periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you'll see error messages in the Microsoft Endpoint Manager admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
 
 ## Active Directory domain join
 
 When a Cloud PC is provisioned, it’s automatically joined to the provided domain. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
 
 - The domain join user has sufficient permissions to join the domain provided.  
-- The domain join user can write to the Organizational Unit provided.  
+- The domain join user can write to the organizational unit (OU)provided.  
 - The domain join user is not restricted in how many computers they can join. For example, the default maximum joins per user is 10 and this can effect Cloud PC provisioning.
 - The subnet being used can reach a domain controller.
 - You test Add-Computer using the domain join credentials on a VM connected to the Cloud PC vNet/subnet.
 - You troubleshoot domain join failures like any physical computer in your organization.
 - If you have a domain name that can be resolved on the internet (like contoso.com), make sure that your DNS servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records and not your public domain name.  
 
-## Azure AD device Sync
+## Azure Active Directory device Sync
 
-Before MDM enrollment can take place during provisioning, an Azure Active Directory object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Azure AD in a timely manner.  
+Before MDM enrollment can take place during provisioning, an Azure  Directory (Azure AD) object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Azure AD in a timely manner.  
 
-Make sure that your Azure AD computer objects appear in Active AD quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Azure AD within 90 minutes, provisioning will fail.  
+Make sure that your Azure AD computer objects appear in Azure AD quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Azure AD within 90 minutes, provisioning will fail.  
 
 If provisioning fails, make sure that:
 
 - The sync period configuration on Azure AD is set appropriately. Speak with your identity team to make sure that your directory is syncing fast enough.  
-- Your Azure Active Directory is active and healthy.  
+- Your Azure AD is active and healthy.  
 - Azure AD Connect is running correctly and there are no issues with the sync server.  
 - You manually perform an Add-Computer into the OU provided for Cloud PCs. Time how long it takes for that computer object to appear in Azure AD.
 
@@ -65,7 +65,7 @@ To troubleshoot this failure, visit the Azure portal and view Policies. Make sur
 
 ## Azure subnet IP address range usage
 
-As part of the on-premises network connection setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC provisioning will create a virtual NIC and consume an IP address from the subnet.  
+As part of the OPNC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC provisioning will create a virtual NIC and consume an IP address from the subnet.  
 
 Make sure that there is sufficient IP Address allocation available for the volume of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.  
 
@@ -78,13 +78,13 @@ If this check fails, make sure that:
 
 ## Azure subscription is valid
 
-When checks are performed, we check that the provided Azure subscription is valid and healthy. If it is not valid and healthy, we’re unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
+When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we’re unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
 
 Sign in to the Azure portal and make sure that the Azure subscription is enabled, valid, and healthy.  
 
 ## Azure vNet in a supported region
 
-When creating an on-premises network connection, we block the use of any vNet located in an unsupported region. You can view the supported network regions here (link)  
+When creating an OPNC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](requirements.md).  
 
 If this check fails, make sure that the vNet provided is in a region in the supported region list.
 
@@ -110,19 +110,19 @@ If this test fails, make sure that:
 - The DNS server provided can resolve the external services correctly.
 - There is no proxy between the Cloud PC subnet and the internet.
 - There are no firewall rules (physical, virtual, or in Windows) that might block required traffic.
-- You consider testing the endpoints from a vm on the same subnet declared for Cloud PCs.
+- You consider testing the endpoints from a VM on the same subnet declared for Cloud PCs.
 
 ## Environment and configuration is ready
 
-This check is used for many infrastructure related issues that might related to infrastructure customers are responsible for. It can include errors such as internal service time outs or those caused by customers deleting/changing Azure resources while checks are being run.  
+This check is used for many infrastructure related issues that might be related to infrastructure that customers are responsible for. It can include errors such as internal service time outs or those caused by customers deleting/changing Azure resources while checks are being run.  
 
-Sometimes, these service errors are intermittent and a Retry will complete successfully. Other times there’s no further troubleshooting that can be performed without the help of support.  
+Sometimes, these service errors are intermittent and a retry will complete successfully. Other times there’s no further troubleshooting that can be performed without the help of support.  
 
 We suggest you retry the checks in case of this error. If it persists, contact support for help.  
 
 ## First party app permissions
 
-When creating an on-premises network connection, the wizard grants a certain level of permissions on the resource group and subscription. This lets the service smoothly provision Cloud PCs.  
+When creating an OPNC, the wizard grants a certain level of permissions on the resource group and subscription. This lets the service smoothly provision Cloud PCs.  
 
 These permissions can be viewed and modified by Azure admins who hold such permissions.  
 
@@ -134,8 +134,9 @@ If any of these permissions are revoked, this check will fail. Make sure that th
 
 The role assignment on the subscription will be granted to the Cloud PC service principal.  
 
-Also, be sure the permissions haven't been granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or “Roles (Classic)”. This role is not sufficient. It must be one of Azure RBAC built-in roles as listed above.
+Also, make sure that the permissions haven't been granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)". This role is not sufficient. It must be one of Azure role-based access control built-in roles as listed above.
 
 <!-- ########################## -->
 ## Next steps
 
+[Learn about the OPNC health checks](health-checks.md).

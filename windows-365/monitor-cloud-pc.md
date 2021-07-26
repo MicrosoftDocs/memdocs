@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,7 +42,7 @@ The six reporting categories for Cloud PC are:
     - Scores and recommendations on how to improve device performance (device upgrades).
     - Top 10 processes causing the end user experience to slow down.
 2. **Remoting Connection**: Remoting metrics tell you how much time it takes a user to log in to a Cloud PC to access the full desktop and apps. This report includes the following data:
-    - **Round Trip Time** for the users by location and CPC SKUs.
+    - **Round Trip Time** for the users by location and Cloud PC SKUs.
     - **Log-in failures** so admins can identify users getting impacted.
 3. **Startup performance**: The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 4. **Proactive Remediation**: Cloud PC remediation scripts help admins and organizations reduce CSS costs, support calls, or raise tickets. These are automated actions to remediate common issues or issues resulting in help desk calls. Admins can configure these PowerShell scripts, specify the type of script and various conditions under which it can execute, and also identify which groups of Cloud PC devices they apply to.
