@@ -96,7 +96,7 @@ Microsoft Intune provides configuration settings that are unique to an app. You 
 ### Add a setting
 
 1. For each key and value in the configuration, set:
-   - **Configuration key** - The key that uniquely identifies the specific setting configuration.
+   - **Configuration key** - The key that uniquely identifies the specific setting configuration. Case Sensitive.
    - **Value type** - The data type of the configuration value. Types include Integer, Real, String, or Boolean.
    - **Configuration value** - The value for the configuration.
 2. Choose **OK** to set your configuration settings.
