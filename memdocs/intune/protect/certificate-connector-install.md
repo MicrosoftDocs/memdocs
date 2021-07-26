@@ -95,9 +95,6 @@ Use the following procedure to both configure a new connector and modify a previ
    Options include:
 
    - **SYSTEM**
-
-   - **Managed service account** – To use this option you'll first need to create a [group managed service account (gMSA)](/azure/active-directory-domain-services/create-gmsa) in Azure Active Directory.
-
    - **Domain account** – Use any domain account that has the required permissions.
 
 4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access.

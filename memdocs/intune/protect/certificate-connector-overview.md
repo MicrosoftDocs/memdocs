@@ -49,7 +49,7 @@ During the installation, you can install one or more connector features, includi
 - Simple Certificate Enrollment Protocol (SCEP)
 - Certificate revocation
 
-You'll also assign a service account to run the connector. This account is used for all interactions with your Certification Authority, and for certificate issuance, revocation, and renewal. Supported options for the service account include the connector servers SYSTEM account, a Domain account, or a Managed service account from Azure Active Directory (Azure AD).
+You'll also assign a service account to run the connector. This account is used for all interactions with your Certification Authority, and for certificate issuance, revocation, and renewal. Supported options for the service account include the connector servers SYSTEM account or a Domain account.
 
 After the connector installs, you can run configuration of the connector again at any time to update it or change the features you’ve installed. After it's installed and configured, the connector can automatically install future updates to keep your connectors current to the most recent release.
 
@@ -204,10 +204,21 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 **SCEP**
 - **Admin**
-  - *Details pending*
+  - *ScrepRequestSuccess* - Successfully received and processed SCEP request and notified Intune
+  - *ScepRequestIssuedFailure* - Failed to issue certificate for SCEP request
+  - *ScepRequestUploadFailure* - Successfully processed SCEP request but failed to notify Intune
+
 - **Operational**
-  - *Details pending*
- 
+  - *ScepRequestReceived* - Received request from device
+  - *ScepVerifySuccess* - Successfully verified request with Intune
+  - *ScepVerifyFailure* - Verification of request failed
+  - *ScepIssuedSuccess* - Successfully issued certificate for request
+  - *ScepIssuedFailure* - Failed to issue certificate for request
+  - *ScepNotifySuccess* - Successfully notified Intune of request
+  - *ScepNotifyAttemptFailed* - Failed attempt to notify Intune of request status.
+  - *ScepNotifySaveToDiskFailed* - Failed to write notification to disk. Will not be able to notify Intune of request status.
+
+
 ## What's new for the Certificate Connector
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
