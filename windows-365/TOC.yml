@@ -112,8 +112,6 @@
         href: device-management-overview.md
       - name: Remotely manage Cloud PC devices
         href: remotely-manage-cloud-pc.md
-      - name: Monitor Cloud PC devices
-        href: monitor-cloud-pc.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC

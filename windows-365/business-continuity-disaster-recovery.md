@@ -119,4 +119,4 @@ When using Windows 365 with specified Windows and Microsoft 365 solutions and fe
 <!-- ########################## -->
 ## Next steps
 
-[Monitor Cloud PCs](monitor-cloud-pc.md).
+[Learn about troubleshooting Windows 365 issues](troubleshooting.md).
