@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Use Azure AD to access the Windows 365 APIs in Microsoft Graph - Azure | Microsoft Docs
+title: Use Azure AD to access the Windows 365 APIs in Microsoft Graph
 titleSuffix:
 description: Learn how to use Azure AD to access the Windows 365 APIs in Microsoft Graph.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -77,4 +77,3 @@ You can also choose to grant permission for all tenant accounts to use the app w
 [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
 
 [Understand OAuth 2.0](https://oauth.net/2/).
-
