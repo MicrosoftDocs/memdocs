@@ -180,6 +180,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Bartec | com.bartec.oemconfig | |
 | Bluebird | com.bluebird.android.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig.common | |
+| Crosscall | com.hmct.crosscalloemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Ecom - Ex-Handy 10 | com.ecom.econfig | |
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
@@ -188,6 +189,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
 | HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
+| HMDGlobal - OEMConfig | com.hmdglobal.app.oemconfig |
 | imotion | com.iwaylink.oemconfig | |
 | Janam | com.janam.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
@@ -204,6 +206,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - Logging | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
+| Sunmi | com.sunmi.oemconfig.V25 | |
 | Unitech Electronics | com.unitech.oemconfig | |
 | Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
 

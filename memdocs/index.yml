@@ -17,7 +17,7 @@ highlightedContent:
       itemType: overview
       url: endpoint-manager-overview.md
     - title: Getting started with Microsoft Endpoint Manager
-      itemType: overview
+      itemType: get-started
       url: endpoint-manager-getting-started.md
     - title: Microsoft Endpoint Manager (product page)
       itemType: get-started
