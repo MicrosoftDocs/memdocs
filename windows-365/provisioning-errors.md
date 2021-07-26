@@ -40,7 +40,7 @@ Windows 365 provisioned the Cloud PC but didn’t allocate the full OS storage a
 
 ## Domain join failed
 
-Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD) domain . This failure can be caused by many factors that are in control of your organization.
+Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD) domain. This failure can be caused by many factors that are in control of your organization.
 
 - Makes sure that the AD domain, organizational unit (OU), and credentials in the associated on-premises network connection (OPNC) are correct.
 - Make sure that the domain join user has sufficient permissions to perform the domain join.
