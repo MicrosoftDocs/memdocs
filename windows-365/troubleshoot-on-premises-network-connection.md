@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Troubleshoot on-premisses network connections - Azure | Microsoft Docs
+title: Troubleshoot on-premisses network connections
 titleSuffix:
 description: Troubleshoot on-premises network connections in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 07/26/2021
 ms.topic: troubleshooting
 ms.service: cloudpc
 ms.subservice: 

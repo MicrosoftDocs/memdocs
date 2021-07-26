@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Troubleshooting Windows 365 - Azure | Microsoft Docs
+title: Troubleshooting Windows 365
 titleSuffix:
 description: Troubleshooting issues with Windows 365
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 7/01/2021
+ms.date: 7/26/2021
 ms.topic: troubleshooting
 ms.service: cloudpc
 ms.subservice: 
@@ -36,13 +36,13 @@ This article provides suggestions for troubleshooting Windows 365 issues.
 
 For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Endpoint Manager](/mem/get-support.md). Support is included as part of your Windows 365 subscription.
 
-Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows 10](/troubleshoot/windows-client/welcome-windows-client) and [Microsoft 365 services](/microsoft-365/).
+Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows 10](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Endpoint Manager admin center](/mem/get-support).
 
 ## Help users in your organization
 
 You can use the Intune Troubleshooting page to view enrollment issues, remediation steps, and user details. For more information, see [Use the troubleshooting portal to help users at your company](/mem/intune/fundamentals/help-desk-operators).
 
-[App Assure](https://www.microsoft.com/fasttrack/microsoft-365/app-assure) is a service for Microsoft’s enterprise customers who encounter application compatibility issues. App Assure will help remediate issues with your ISV, LOB and Microsoft-developed apps at no additional cost. Follow the instructions above to submit a case if you encounter any app compatibility issues, and please include a short description of the issue you’re facing.
+[App Assure](https://www.microsoft.com/fasttrack/microsoft-365/app-assure) is a service for Microsoft’s enterprise customers who encounter application compatibility issues. App Assure will help remediate issues with your ISV, line-of-business and Microsoft-developed apps at no additional cost. Follow the instructions above to submit a case if you encounter any app compatibility issues, and please include a short description of the issue you’re facing.
 
 ## On-premises network connections
 
@@ -54,7 +54,7 @@ For suggested remediations on, see [Troubleshoot provisioning errors](provisioni
 
 ## Conditional access
 
-Make sure that you apply conditional access policies to the dedicated Windows 365 cloud app in the conditional access UI of MEM or Azure Active Directory. The Windows 365 cloud app includes the Azure Virtual Desktop cloud app.
+Make sure that you apply conditional access policies to the dedicated Windows 365 cloud app in the conditional access UI of Microsoft EndpointM Manager admin center or Azure Active Directory. The Windows 365 cloud app includes the Azure Virtual Desktop cloud app.
 
 Any conditional access policy that you apply will affect access to the end-user web portal and the connection to the Cloud PC from the Remote Desktop apps. For more information about service dependencies in Azure AD Conditional Access, see [Conditional Access service dependencies](/azure/active-directory/conditional-access/service-dependencies).
 
@@ -66,7 +66,7 @@ For more information on how a given policy may impact your environment, see [Tro
 
 The [on-premises network connection checks](health-checks.md) help to make sure that network connectivity is working. Always retry the on-premises network connection if you suspect networking issues might be causing issues. Using the on-premises network connection checks will help to ensure that repeated and consistent checks are used as the first troubleshooting step.
 
-Keep in mind that the on-premises network connection checks are validating the infrastructure configuration of your environment. They do not run check to validate any additional configuration or applications deployed to Cloud PCs after provisioning by Microsoft Endpoint Manager or 3rd party agents. These agents or configurations can introduce additional issues that the on-premises network connection cannot test for ahead of provisioning.
+Keep in mind that the on-premises network connection checks are validating the infrastructure configuration of your environment. They don't run checks to validate any additional configuration or applications deployed to Cloud PCs after provisioning by Microsoft Endpoint Manager or 3rd party agents. These agents or configurations can introduce additional issues that the on-premises network connection can't test for ahead of provisioning.
 
 For example, if you deploy a VPN client to all devices in Microsoft Endpoint Manager, make sure that this client doesn’t:
 
@@ -79,7 +79,7 @@ Finally, consider temporarily deploying a test Azure virtual machine to the Azur
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see End-user actions](end-user-access-cloud-pc.md#end-user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](end-user-access-cloud-pc.md#end-user-actions)
 
 ## Audio and video redirection not working
 
@@ -87,8 +87,7 @@ For connections using the Remote Desktop client for Windows to access Cloud PCs,
 
 After the installation, the optimizations to redirect audio and video to your local Windows endpoint don’t work. The user must close Teams and sign off from or restart the Cloud PC to activate the Optimized status.
 
-Add conceptual toc entry: /azure/virtual-desktop/troubleshoot-client
-
 <!-- ########################## -->
 ## Next steps
 
+[Troubleshoot on-premises network connections](troubleshoot-on-premises-network-connection.md).
