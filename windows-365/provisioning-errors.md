@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Troubleshoot provisioning errors - Azure | Microsoft Docs
+title: Troubleshoot provisioning errors
 titleSuffix:
 description: Troubleshoot provisioning errors in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2021
+ms.date: 07/26/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -40,9 +40,9 @@ Windows 365 provisioned the Cloud PC but didn’t allocate the full OS storage a
 
 ## Domain join failed
 
-Windows 365 failed to join the Cloud PC to your on-premises Active Directory domain (AD). This failure can be caused by many factors that are in control of your organization.
+Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD) domain . This failure can be caused by many factors that are in control of your organization.
 
-- Makes sure that the AD domain, Organizational Unit (OU), and credentials in the associated on-premises network connection are correct.
+- Makes sure that the AD domain, organizational unit (OU), and credentials in the associated on-premises network connection (OPNC) are correct.
 - Make sure that the domain join user has sufficient permissions to perform the domain join.
 - Make sure that the vNet and subnet can reach a domain controller correctly.
 
@@ -52,7 +52,7 @@ JsonADDomainExtension is the Azure function used to perform this domain join. Ma
 
 ## Hybrid Azure AD join failed
 
-Windows 365 doesn’t perform any hybrid Azure AD join function on behalf of the customer. Hybrid Azure AD join must be configured and healthy as a pre-requisite for Cloud PC.
+Windows 365 doesn’t perform any hybrid Azure Active Directy (Azure AD) join function on behalf of the customer. Hybrid Azure AD join must be configured and healthy as a pre-requisite for Cloud PC.
 
 If provisioning fails due to hybrid Azure AD join, it’s likely due to an insufficient sync period configured in your AD Sync service. Make sure that Azure AD connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will timeout if the Azure AD object doesn’t appear within 90 minutes.
 
@@ -86,13 +86,13 @@ Windows 365 provisioned the Cloud PC but didn’t grant the user local administr
 
 ## Microsoft Teams optimization error
 
-Windows 365 provisioned the Cloud PC but didn’t configure the Cloud PC to use Microsoft Teams in the mode optimized for running on a VM remotely. Note: This optimization does not install Microsoft Teams and all components. It only sets the configuration that takes effect if you do install Microsoft Teams on the Cloud PC. If this optimization is not set and Microsoft Teams is installed on this device, Microsoft Teams won’t run in the optimized mode for remote connections.
+Windows 365 provisioned the Cloud PC but didn’t configure the Cloud PC to use Microsoft Teams in the mode optimized for running on a VM remotely. This optimization doesn't install Microsoft Teams and all components. It only sets the configuration that takes effect if you do install Microsoft Teams on the Cloud PC. If this optimization is not set and Microsoft Teams is installed on this device, Microsoft Teams won’t run in the optimized mode for remote connections.
 
 **Suggested test**: Retry provisioning.
 
 ## Not enough IP addresses available
 
-When providing a subnet to the on-premises network connection, make sure that there are more than sufficient IP addresses.
+When providing a subnet to the OPNC, make sure that there are more than sufficient IP addresses.
 
 Every Cloud PC provisioning process uses one of the IP addresses provided in the range.
 
@@ -102,7 +102,7 @@ If a provisioning fails, it will be retried a total of three times. Each time, a
 
 ## On-premises network connection isn’t healthy
 
-Cloud PC provisioning will be blocked if the associated on-premises network connection isn’t healthy.
+Cloud PC provisioning will be blocked if the associated OPNC isn’t healthy.
 
 The OPNC will refresh every 6 hours. Provisioning will fail if the OPNC refresh fails while provisioning is under way.
 
@@ -118,7 +118,7 @@ While a provisioning is in progress, someone has deleted the provisioning policy
 
 Windows 365 uses the customer provided vNet to perform a vNic ingestion from the Cloud PC into the customer’s vNet. Sometimes an enterprise will implement an Azure Policy to restrict certain Azure objects being created. Make sure that there are no Azure policies that may restrict Windows 365 from creating Azure objects on your behalf.
 
-**Suggested test**: View ‘Policy’ in the Azure portal and look for any policy events that would stop the Windows 365 service from provisioning the Cloud PC.
+**Suggested test**: View **Policy** in the Azure portal and look for any policy events that would stop the Windows 365 service from provisioning the Cloud PC.
 
 ## Start Menu power icons error
 

@@ -68,4 +68,4 @@ Every failed OPNC or success with warning error state includes the technical det
 <!-- ########################## -->
 ## Next steps
 
-[Learn more about on-premises network connections](on-premises-network-connection.md).
+[Learn more about on-premises network connections](on-premises-network-connections.md).
