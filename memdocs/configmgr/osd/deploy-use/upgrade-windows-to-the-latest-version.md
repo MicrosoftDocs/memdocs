@@ -1,12 +1,11 @@
 ---
-title: Upgrade to Windows 10
+title: Windows in-place upgrade
 titleSuffix: Configuration Manager
-description: Learn how to use Configuration Manager to upgrade an OS from Windows 7 or later to Windows 10.
-ms.date: 04/05/2021
+description: Learn how to use Configuration Manager to upgrade Windows to a later version.
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -40,6 +39,7 @@ Only create OS upgrade packages to upgrade to the following OS versions:
 - Windows 10
 - Windows Server 2016
 - Windows Server 2019
+- Windows Server 2022<!-- 10200029 -->
 
 ### Original version
 
@@ -62,6 +62,7 @@ For more information, see [Windows 10 upgrade paths](/windows/deployment/upgrade
 - Windows Server 2012 R2
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
+- An earlier version of Windows Server 2022
 
 For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](/windows-server/upgrade/upgrade-overview).
 

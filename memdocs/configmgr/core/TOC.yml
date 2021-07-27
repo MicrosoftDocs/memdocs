@@ -119,6 +119,8 @@ items:
       href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
     - name: Support for Windows 10 as a client
       href: plan-design/configs/support-for-windows-10.md
+    - name: Support for the Windows ADK
+      href: plan-design/configs/support-for-windows-adk.md
     - name: Supported operating systems for consoles
       href: plan-design/configs/supported-operating-systems-consoles.md
     - name: Support for SQL Server versions

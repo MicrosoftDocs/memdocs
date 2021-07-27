@@ -69,7 +69,7 @@ For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisit
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
-To better reflect the additional cloud services Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
+To better reflect the other cloud services that Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
 
 For more information, see [Co-management](../../../comanage/overview.md), [Tenant attach](../../../tenant-attach/device-sync-actions.md), and [Endpoint analytics](../../../../analytics/enroll-configmgr.md).
 
@@ -79,13 +79,13 @@ For more information, see [Co-management](../../../comanage/overview.md), [Tenan
 
 <!-- 10220671 -->
 
-Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data on behalf of the controller.
+Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data for the controller.
 
 For more information, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
 ## Site infrastructure
 
-### Support for Windows Server 2022
+### Support for Windows Server 2022 and the ADK for Windows 11
 
 <!-- 10200029 -->
 Configuration Manager now supports Windows Server 2022 as site systems and clients. For more information, see the following articles:
@@ -94,7 +94,10 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 - [Supported OS versions for clients](../configs/supported-operating-systems-for-clients-and-devices.md)
 - [Upgrade on-premises infrastructure](../../servers/manage/upgrade-on-premises-infrastructure.md)
 
-<!-- some statement about ADK? -->
+It also supports the Windows ADK for Windows 11 and Server 2022. For more information, see [Support for Windows ADK](../configs/support-for-windows-adk.md).
+
+> [!TIP]
+> Configuration Manager supports [Windows Insider builds](../configs/support-for-windows-10.md#support-for-windows-insider), which is a great way to test the latest version of Windows 11 with Configuration Manager version 2107.
 
 ### Microsoft .NET requirements
 
@@ -127,6 +130,8 @@ For more information on client and site system prerequisites, see the following 
 
 When you install or update the site, it now warns for the presence of SQL Server 2012. The [support lifecycle](/lifecycle/products/microsoft-sql-server-2012) for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.
 
+For more information, see [Removed and deprecated for site servers: SQL Server](deprecated/removed-and-deprecated-server.md#sql-server).
+
 ### External notifications
 
 <!--9504414-->
@@ -153,7 +158,7 @@ We've simplified the CMPivot permissions requirements. The new permissions are a
 
 - CMPivot no longer requires **SMS Scripts** read permission
 
-  - The [SMS Provider](../hierarchy/plan-for-the-sms-provider.md) still requires this permission if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.
+  - The [SMS Provider](../hierarchy/plan-for-the-sms-provider.md) still requires this permission if the [administration service](../../../develop/adminservice/overview.md) falls back to it because of a 503 (Service Unavailable) error, as seen in the CMPivot.log.
 
 - The **default scope** permission isn't required.
 
@@ -221,10 +226,6 @@ For more information, see [About log files](../hierarchy/about-log-files.md#hard
 
 Configuration Manager now supports the macOS Big Sur version 11. For more information, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
-<!-- 
-## Collections
- -->
-
 ## Software Center
 
 ### Support for enhanced HTTP
@@ -268,10 +269,6 @@ For more information, see [real-time protection settings](../../../protect/deplo
 
 ## Software updates
 
-### Windows Update native experience for software updates
-<!--4316341-->
-When installing software updates from Configuration Manager, you can now choose to use the native Windows Update interface and restart experience. The client's Windows Update Settings page will display the updates like they appear when using Windows Update for scanning. Restarts from software updates will also behave as though you're using Windows Update. To use this feature, client devices must be running [Windows Insider build 21277 or later](/windows-insider/active-dev-branch#build-21277).
-
 ### Run software updates evaluation from deployment status
 <!--9012080 -->
 
@@ -285,11 +282,11 @@ You can now right-click and notify devices to run a software updates evaluation 
 
 For more information, see the [Management insights software updates group](../../servers/manage/management-insights.md#software-updates).
 
-### List additional third-party update catalogs
+### List third-party update catalogs
 <!--9989251-->
-To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a list of additional third-party software update catalog providers.
+To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a list of third-party software update catalog providers.
 
-For more information, see [Third-party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
+For more information, see [Third-party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
 
 ### Improvements for managing automatic deployment rules
 
@@ -298,23 +295,18 @@ The following items were added to help you better manage your automatic deployme
 #### Updated Product parameter for New-CMSoftwareUpdateAutoDeploymentRule cmdlet
 <!--9247522-->
 The `-Product` parameter for `New-CMSoftwareUpdateAutoDeploymentRule` was updated. When there are multiple products with the same name, `-Product` now selects all of them.
-<!-- do we want this here, or just rely on PowerShell release notes? -->
 
 #### Script to apply deployment package settings for automatic deployment rule
 <!--3961933, 4396422-->
-If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded a script into [Community hub](../../servers/manage/community-hub.md).
+If you create an ADR with the **No deployment package** option, you're unable to go back and add one later. To help you resolve this issue, we've uploaded a script into [Community hub](../../servers/manage/community-hub.md).
 
 For more information, see [Automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_script).
-<!-- I'll probably scrape the script for this over to PowerShell content as well -->
-
-## Community hub
-
 
 ## Configuration Manager console
 
 ### Enhanced code editor
 <!--8495588-->
-Building on improvements in Configuration Manager 2010 for [syntax highlighting and code folding](../../servers/manage/admin-console-tips.md#bkmk_syntax), you now have the ability to edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited.
+Building on improvements in Configuration Manager 2010 for [syntax highlighting and code folding](../../servers/manage/admin-console-tips.md#bkmk_syntax), you can now edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited.
 
 For more information, see the [enhanced code editor](../../servers/manage/admin-console-tips.md#bkmk_code).
 
@@ -330,7 +322,7 @@ For more information, see [Product feedback](../../understand/product-feedback.m
 
 ### Hierarchy approved console extensions don't require signing
 <!--9761129-->
-Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab.
+Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions because of an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
 For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
 
@@ -344,7 +336,7 @@ In this release we've made the following improvements to the Configuration Manag
 
 - Added maintenance window column<!--9708594-->: A **Maintenance window** column was added to the **Collections** tab in the **Devices** node.
 
-- Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
+- Display assigned users<!--9709014-->: If a collection deletion fails because of scope assignment, the assigned users are displayed.
 
 - You can now use the **All Subfolders** search option from the **Boot Images**, **Operating System Upgrade Packages**, and **Operating System Images** nodes. <!--8325332, 9506942, 9506938, 9506934-->
 
@@ -368,12 +360,8 @@ This release includes multiple performance improvements to the CMTrace log viewe
 For more information, see [CMTrace](../../support/cmtrace.md).
 
 ### RBAViewer location change
-<!--9579789-->
+<!--9573789-->
 RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's now located in the Configuration Manager console directory. After you install the console, RBAViewer.exe will be in the same directory. The default location is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\rbaviewer.exe`.
-
-<!-- 
-## Content management
- -->
 
 ## Deprecated features
 
@@ -381,17 +369,11 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 - The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances. To provide content to internet-based devices, enable the CMG to distribute content.<!-- 10247883 -->
 
+- The support lifecycle for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.<!-- 10092858 -->
+
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2107 drops support for the following features:
 
 - Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.<!-- 9649296 -->
-
-<!--
-As first announced in version 1906, version xxxx drops support for the following client OS versions:  
-
-- Windows CE 7.0
-- Windows 10 Mobile
-- Windows 10 Mobile Enterprise
- -->
 
 ## Other updates
 
@@ -401,9 +383,7 @@ Starting with this version, the following features are no longer [pre-release](.
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2107 release notes](/powershell/sccm/2107-release-notes).
 
-<!-- For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md). -->
-
-<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/9210721.md). -->
+<!--Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/10096997.md). dependent on PR 4991 -->
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).

@@ -2,11 +2,10 @@
 title: Support for virtualization
 titleSuffix: Configuration Manager
 description: The requirements for installing Configuration Manager client and site system roles in a virtualization environment.
-ms.date: 08/11/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -22,12 +21,13 @@ For example, you use Microsoft Hyper-V Server 2016 to host a VM that runs Window
 
 ## Virtualization environments
 
-- Windows Server 2019  
-- Windows Server 2016 <sup>[Note 1](#bkmk_note1)</sup>  
-- Microsoft Hyper-V Server 2016 <sup>[Note 1](#bkmk_note1)</sup>  
-- Windows Server 2012 R2  
-- Microsoft Hyper-V Server 2012  
-- Windows Server 2012  
+- Windows Server 2022 (_starting in version 2107_)<!-- 10200029 -->
+- Windows Server 2019
+- Windows Server 2016 <sup>[Note 1](#bkmk_note1)</sup>
+- Microsoft Hyper-V Server 2016 <sup>[Note 1](#bkmk_note1)</sup>
+- Windows Server 2012 R2
+- Microsoft Hyper-V Server 2012
+- Windows Server 2012
 
 <a name="bkmk_note1"></a>
 
