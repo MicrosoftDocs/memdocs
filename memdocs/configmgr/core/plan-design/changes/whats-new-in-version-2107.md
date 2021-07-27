@@ -69,8 +69,9 @@ For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisit
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
-To better reflect the additional cloud services Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
+To better reflect the other cloud services that Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
 
+For more information, see [Co-management](../../../comanage/overview.md), [Tenant attach](../../../tenant-attach/device-sync-actions.md), and [Endpoint analytics](../../../../analytics/enroll-configmgr.md).
 
 ## Desktop Analytics
 
@@ -78,7 +79,7 @@ To better reflect the additional cloud services Configuration Manager offers, th
 
 <!-- 10220671 -->
 
-Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data on behalf of the controller.
+Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data for the controller.
 
 For more information, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
@@ -146,7 +147,7 @@ We've simplified the CMPivot permissions requirements. The new permissions are a
 
 - CMPivot no longer requires **SMS Scripts** read permission
 
-  - The [SMS Provider](../hierarchy/plan-for-the-sms-provider.md) still requires this permission if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.
+  - The [SMS Provider](../hierarchy/plan-for-the-sms-provider.md) still requires this permission if the [administration service](../../../develop/adminservice/overview.md) falls back to it because of a 503 (Service Unavailable) error, as seen in the CMPivot.log.
 
 - The **default scope** permission isn't required.
 
@@ -163,6 +164,7 @@ We've made the following improvements to CMPivot:
 - Improvements to query autocomplete suggestions in the query editor
 
 For more information, see [Changes to CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2107) and [CMPivot overview](../../servers/manage/cmpivot-overview.md#bkmk_onprem_only).
+
 ## Client management
 
 ### Custom properties for devices
@@ -215,8 +217,11 @@ You can now inventory client log file settings such as log levels and size. This
 
 For more information, see [About log files](../hierarchy/about-log-files.md#hardware-inventory-for-client-log-settings).
 
-## Collections
+### Support for macOS Big Sur
 
+<!-- 8816608 -->
+
+Configuration Manager now supports the macOS Big Sur version 11. For more information, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 ## Software Center
 
@@ -261,10 +266,6 @@ For more information, see [real-time protection settings](../../../protect/deplo
 
 ## Software updates
 
-### Windows Update native experience for software updates
-<!--4316341-->
-When installing software updates from Configuration Manager, you can now choose to use the native Windows Update interface and restart experience. The client's Windows Update Settings page will display the updates like they appear when using Windows Update for scanning. Restarts from software updates will also behave as though you're using Windows Update. To use this feature, client devices must be running [Windows Insider build 21277 or later](/windows-insider/active-dev-branch#build-21277).
-
 ### Run software updates evaluation from deployment status
 <!--9012080 -->
 
@@ -278,11 +279,11 @@ You can now right-click and notify devices to run a software updates evaluation 
 
 For more information, see the [Management insights software updates group](../../servers/manage/management-insights.md#software-updates).
 
-### List additional third-party updates catalogsList additional third-party updates catalogs
+### List third-party updates catalogs
 <!--9989251-->
-To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a list of additional third-party software update catalog providers.
+To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a list of third-party software update catalog providers.
 
-For more information, see [Third party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of additional third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
+For more information, see [Third party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
 
 ### Improvements for managing automatic deployment rules
 
@@ -291,23 +292,18 @@ The following items were added to help you better manage your automatic deployme
 #### Updated Product parameter for New-CMSoftwareUpdateAutoDeploymentRule cmdlet
 <!--9247522-->
 The `-Product` parameter for `New-CMSoftwareUpdateAutoDeploymentRule` was updated. When there are multiple products with the same name, `-Product` now selects all of them.
-<!-- do we want this here, or just rely on PowerShell release notes? -->
 
 #### Script to apply deployment package settings for automatic deployment rule
 <!--3961933, 4396422-->
-If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded a script into [Community hub](../../servers/manage/community-hub.md).
+If you create an ADR with the **No deployment package** option, you're unable to go back and add one later. To help you resolve this issue, we've uploaded a script into [Community hub](../../servers/manage/community-hub.md).
 
 For more information, see [Automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_script).
-<!-- I'll probably scrape the script for this over to PowerShell content as well -->
-
-## Community hub
-
 
 ## Configuration Manager console
 
 ### Enhanced code editor
 <!--8495588-->
-Building on improvements in Configuration Manager 2010 for [syntax highlighting and code folding](../../servers/manage/admin-console-tips.md#bkmk_syntax), you now have the ability to edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited.
+Building on improvements in Configuration Manager 2010 for [syntax highlighting and code folding](../../servers/manage/admin-console-tips.md#bkmk_syntax), you can now edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited.
 
 For more information, see the [enhanced code editor](../../servers/manage/admin-console-tips.md#bkmk_code).
 
@@ -323,13 +319,9 @@ For more information, see [Product feedback](../../understand/product-feedback.m
 
 ### Hierarchy approved console extensions don't require signing
 <!--9761129-->
-Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab.
+Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions because of an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
 For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
-
-### Configuration Manager console settings aren't saved
-<!--5452246-->
-When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.<!-- move to relnote, not "what's new" -->
 
 ### Console improvements
 <!--9575773-->
@@ -341,21 +333,20 @@ In this release we've made the following improvements to the Configuration Manag
 
 - Added maintenance window column<!--9708594-->: A **Maintenance window** column was added to the **Collections** tab in the **Devices** node.
 
-- Display assigned users<!--9709014-->: If a collection deletion fails due to scope assignment, the assigned users are displayed.
+- Display assigned users<!--9709014-->: If a collection deletion fails because of scope assignment, the assigned users are displayed.
 
 - You can now use the **All Subfolders** search option from the **Boot Images**, **Operating System Upgrade Packages**, and **Operating System Images** nodes. <!--8325332, 9506942, 9506938, 9506934-->
 
 For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 
-## Support Center
+## Tools
+
 ### Improvements to Support Center
 <!--8272488-->
 
 Starting in this release, the **Content** view in the **Support Center Client Tools** has been renamed to **Deployments**.  From **Deployments**, you can review all of the deployments currently targeted to the device. The new view is grouped by **Category** and **Status**. The view can be sorted and filtered to help you find the deployments you're interested in. Select a deployment in the results pane to display more information in the details pane.
 
 For more information, see [Support Center Client Tools user interface reference](../../support/support-center-ui-reference.md#deployment-view).
-
-## Tools
 
 ### Improvements to CMTrace
 
@@ -369,14 +360,8 @@ This release includes multiple performance improvements to the CMTrace log viewe
 - OS deployment boot images. For example: `X:\sms\bin\x64\CMTrace.exe`
 
 ### RBAViewer location change
-<!--9579789-->
+<!--9573789-->
 RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's now located in the Configuration Manager console directory. After you install the console, RBAViewer.exe will be in the same directory. The default location is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\rbaviewer.exe`.
-
-
-<!-- 
-## Content management
- -->
-
 
 ## Deprecated features
 
@@ -390,14 +375,6 @@ As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), vers
 
 - Log Analytics connector for Azure Monitor. This feature was called the _OMS Connector_ in the Azure Services node.<!-- 9649296 -->
 
-<!--
-As first announced in version 1906, version xxxx drops support for the following client OS versions:  
-
-- Windows CE 7.0
-- Windows 10 Mobile
-- Windows 10 Mobile Enterprise
- -->
-
 ## Other updates
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
@@ -406,9 +383,7 @@ Starting with this version, the following features are no longer [pre-release](.
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2107 release notes](/powershell/sccm/2107-release-notes).
 
-<!-- For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md). -->
-
-<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/9210721.md). -->
+<!--Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/10096997.md). dependent on PR 4991 -->
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).

@@ -141,6 +141,12 @@ No workaround is required for this issue. Don't uninstall the April ESU. If othe
 
 ## Configuration Manager console
 
+### Configuration Manager console settings aren't saved
+<!--5452246-->
+_Applies to version 2107_
+
+When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.
+
 ### Console extensions
 <!--3555909-->
 *Applies to version 2103* 

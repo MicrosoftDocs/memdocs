@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create filters in Microsoft Intune - Azure | Microsoft Docs
+title: Create filters in Microsoft Intune
 description: Learn more about policy assignment filters, and see the steps to create, update, or delete a filter in Microsoft Endpoint Manager and Microsoft Intune.
 keywords:
 author: MandiOhlinger

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure 802.1x wired network settings for macOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure 802.1x wired network settings for macOS devices in Microsoft Intune
 titleSuffix:
 description: Create or add a wired network device configuration profile for macOS desktop computer devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
 keywords:
