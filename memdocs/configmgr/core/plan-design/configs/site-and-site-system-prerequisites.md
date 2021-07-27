@@ -125,7 +125,7 @@ For more information on all prerequisites including permissions, see [Prerequisi
 
 ### Visual C++ Redistributable for the site server
 
-- Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that installs a site server.
+- Starting in version 2107, Configuration Manager installs the Microsoft Visual C++ 2015-2019 redistributable package (14.28.29914.0) on each computer that installs a site server. In version 2103 and earlier, it installs the Visual C++ 2013 version (12.0.40660.0).<!--5170229-->
 
 - The CAS and primary sites require both the x86 and x64 versions of the applicable redistributable file.
 
@@ -149,7 +149,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### Visual C++ Redistributable for the secondary site server
 
-- Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that installs a site server.
+- Starting in version 2107, Configuration Manager installs the Microsoft Visual C++ 2015-2019 redistributable package (14.28.29914.0) on each computer that installs a secondary site server. In version 2103 and earlier, it installs the Visual C++ 2013 version (12.0.40660.0).<!--5170229-->
 
 - Secondary sites require only the x64 version.
 
@@ -288,7 +288,7 @@ Distribution points require that IIS allows the following HTTP verbs:
 
 ### Visual C++ Redistributable for the DP
 
-- Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that hosts a distribution point.
+- Starting in version 2107, Configuration Manager installs the Microsoft Visual C++ 2015-2019 redistributable package (14.28.29914.0) on each computer that hosts a distribution point. In version 2103 and earlier, it installs the Visual C++ 2013 version (12.0.40660.0).<!--5170229-->
 
 - The version that's installed depends on the computer's platform (x86 or x64).
 
@@ -504,7 +504,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### Visual C++ Redistributable for the SCP
 
-Configuration Manager installs the Microsoft Visual C++ 2013 x64 Redistributable Package on the service connection point.
+- Starting in version 2107, Configuration Manager installs the Microsoft Visual C++ 2015-2019 redistributable package (14.28.29914.0) on the service connection point. In version 2103 and earlier, it installs the Visual C++ 2013 version (12.0.40660.0).<!--5170229-->
 
 ### SQL Server Native Client for the SCP
 

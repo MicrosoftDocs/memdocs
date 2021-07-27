@@ -113,6 +113,17 @@ For more information, see the following articles:
 - [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net)
 - [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md#net-version-requirements)
 
+### Updated Visual C++ prerequisite
+
+<!--5170229-->
+
+The Configuration Manager client and several server components require the Microsoft Visual C++ Redistributable component (`vcredist_x*.exe`). During Configuration Manager installation, if the VCRedist doesn't already exist, it automatically installs. Starting in this release, Configuration Manager now uses the Microsoft Visual C++ 2015-2019 redistributable version 14.28.29914.0. This version improves stability in Configuration Manager operations.
+
+For more information on client and site system prerequisites, see the following articles:
+
+- [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#components-automatically-downloaded-during-installation)
+- [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md)
+
 ### New prerequisite check for SQL Server 2012
 
 <!--10092858-->
@@ -201,14 +212,6 @@ If the client also has a PKI-based certificate, it continues to use that certifi
 
 For more information, see [Certificates overview](../security/certificates-overview.md#hardware-bound-key-storage-provider).
 
-### Updated client deployment prerequisite
-
-<!--5170229-->
-
-The Configuration Manager client requires the Microsoft Visual C++ Redistributable component (`vcredist_x*.exe`). When you install the client, it automatically installs this component if it doesn't already exist. Starting in this release, it now uses the Microsoft Visual C++ 2015-2019 Redistributable version 14.28.29914.0. This version improves stability in Configuration Manager client operations.
-
-For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#components-automatically-downloaded-during-installation).
-
 ### Hardware inventory for client log settings
 
 <!--5602449-->
@@ -279,11 +282,11 @@ You can now right-click and notify devices to run a software updates evaluation 
 
 For more information, see the [Management insights software updates group](../../servers/manage/management-insights.md#software-updates).
 
-### List third-party updates catalogs
+### List third-party update catalogs
 <!--9989251-->
 To help you find custom catalogs that you can import for third-party software updates, there's now a documentation page with links to catalog providers. Choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node. Right-clicking on **Third-Party Software Update Catalogs** node also displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to a documentation page containing a list of third-party software update catalog providers.
 
-For more information, see [Third party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
+For more information, see [Third-party software updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_list-catalogs) and [list of third-party software update catalog providers](../../../sum/deploy-use/third-party-software-update-catalogs.md).
 
 ### Improvements for managing automatic deployment rules
 
@@ -352,12 +355,9 @@ For more information, see [Support Center Client Tools user interface reference]
 
 <!--9607363-->
 
-This release includes multiple performance improvements to the CMTrace log viewer. Configuration Manager automatically installs this tool in the following locations:
+This release includes multiple performance improvements to the CMTrace log viewer. If you have a copy of CMTrace in a non-default location, consider removing it and using a copy in one of the default paths. If it's in a custom location that meets your business requirements, then make sure you have a process to keep it up to date. A script is available in the Community Hub to help you locate and update versions of CMTrace to the latest version.
 
-- The site server's tools directory. For example: `cd.latest\SMSSETUP\Tools\CMTrace.exe`
-- The Management point's installation directory. For example: `C:\SMS_CCM\CMTrace.exe`
-- The client installation directory. For example: `C:\Windows\CCM\CMTrace.exe`
-- OS deployment boot images. For example: `X:\sms\bin\x64\CMTrace.exe`
+For more information, see [CMTrace](../../support/cmtrace.md).
 
 ### RBAViewer location change
 <!--9573789-->
