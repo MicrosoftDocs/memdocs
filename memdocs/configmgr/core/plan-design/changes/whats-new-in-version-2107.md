@@ -379,7 +379,7 @@ As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), vers
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-- [Remove the central administration site](../../servers/deploy/install/remove-central-administration-site.md) <!-- 3607277 -->
+- [Cloud management gateway (CMG) with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040,8959690-->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2107 release notes](/powershell/sccm/2107-release-notes).
 
