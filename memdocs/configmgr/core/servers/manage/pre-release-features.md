@@ -77,6 +77,6 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 <!--Image used = ![Not yet](media/red-x.png) -->
 
 > [!TIP]
-> For more information on non-pre-release features that you must enable first, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).
+> For more information on non-pre-release features that you must enable first, see [Enable optional features from updates](optional-features.md).
 >
 > For more information on features that are only available in the technical preview branch, see [Technical Preview](../../get-started/technical-preview.md).

@@ -30,7 +30,7 @@ Configuration Manager provides comprehensive control over feature updates for Wi
 |[Updates to Configuration Manager current branch](../servers/manage/updates.md)|Explains the easy in-console method of applying feature updates to Configuration Manager.|
 |[Get available updates](../servers/manage/install-in-console-updates.md#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
 |[Update checklist](../servers/manage/install-in-console-updates.md#bkmk_beforeinstall)|Provides update version-specific checklists, if applicable.| 
-|[Install new Configuration Manager feature updates](../servers/manage/install-in-console-updates.md#bkmk_install)|Explains the simple installation steps for feature updates.|
+|[Install new Configuration Manager feature updates](../servers/manage/install-in-console-updates.md)|Explains the simple installation steps for feature updates.|
 |[Support for Windows 10](../plan-design/configs/support-for-windows-10.md)|Provides a support matrix for Windows 10 (and ADK) versions.|
 |[Technical Previews for Configuration Manager](../get-started/technical-preview.md)|Provides information about the ConfigMgr technical preview program.|
 

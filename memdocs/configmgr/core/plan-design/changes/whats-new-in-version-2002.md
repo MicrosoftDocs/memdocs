@@ -119,7 +119,7 @@ For more information, see [Token-based authentication for CMG](../../clients/dep
 
 <!--5834830-->
 
-When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).
+When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/optional-features.md).
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 

@@ -27,12 +27,12 @@ If necessary, you can run a test database upgrade before you install an in-conso
 
 The deprecation of this upgrade test is made possible because of changes that are introduced with Configuration Manager current branch. These changes simplify the process and speed by which setup can update a production environment to a newer version. This redesign was done to help you stay current with less risk, and less operational overhead when installing each new update.
 
-The changes are to how updates install, including logic that automatically rolls back a failed update without the need to run a site recovery. These changes enable the use of the console to manage update installations, and include an option to [retry installation of a failed update](install-in-console-updates.md#bkmk_retry).
+The changes are to how updates install, including logic that automatically rolls back a failed update without the need to run a site recovery. These changes enable the use of the console to manage update installations, and include an option to [retry installation of a failed update](install-in-console-updates.md#retry-installation-of-a-failed-update).
 
 > [!TIP]
 > When you upgrade to Configuration Manager current branch from an older product, like System Center 2012 Configuration Manager, [test database upgrades remain a recommended step](../deploy/install/upgrade-to-configuration-manager.md#test-the-site-database-upgrade).
 
-If you still plan to test the upgrade of a site database when you install an in-console update, the following information supplements the [guidance on installing an in-console update](install-in-console-updates.md#bkmk_install).
+If you still plan to test the upgrade of a site database when you install an in-console update, the following information supplements the [guidance on installing an in-console update](install-in-console-updates.md).
 
 ## Prepare to run a test database upgrade
 

@@ -134,7 +134,7 @@ Starting in version 2010, the client data sources dashboard now offers an expand
 :::image type="content" source="media/7102084-client-data-sources.png" alt-text="Client data sources dashboard in version 2010." lightbox="media/7102084-client-data-sources.png":::
 
 > [!NOTE]
-> Configuration Manager doesn't enable this optional feature by default. Before you can use it, enable the **Client Peer Cache** feature. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).
+> Configuration Manager doesn't enable this optional feature by default. Before you can use it, enable the **Client Peer Cache** feature. For more information, see [Enable optional features from updates](../../manage/optional-features.md).
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and select the **Client Data Sources** node.
 

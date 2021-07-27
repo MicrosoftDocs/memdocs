@@ -24,7 +24,7 @@ The application approval behavior depends upon whether you enable the recommende
 ### <a name="bkmk_opt"></a> An administrator must approve a request for this application on the device
 
 > [!NOTE]
-> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 >
 > If you don't enable this feature, you see the [prior experience](#bkmk_prior).  
 
@@ -99,7 +99,7 @@ Users can add a comment to the request from Software Center. This comment shows 
 
 With these prerequisites, recipients receive an email with notification of the request. If they are on the internal network, they can also approve or deny the request from the email.
 
-- Enable the [optional feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../../core/servers/manage/optional-features.md) **Approve application requests for users per device**.  
 
 - Configure [email notification for alerts](../../core/servers/manage/configure-alerts.md#configure-email-notification-for-alerts).  
 

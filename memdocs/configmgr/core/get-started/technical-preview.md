@@ -228,4 +228,4 @@ For more information, see the following articles:
 > [!TIP]
 > For more information on current branch features that require consent to enable, see [pre-release features](../servers/manage/pre-release-features.md).
 >
-> For more information on current branch features that you must enable first, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
+> For more information on current branch features that you must enable first, see [Enable optional features from updates](../servers/manage/optional-features.md).
