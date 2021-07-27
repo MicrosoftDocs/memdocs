@@ -242,7 +242,7 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
 
 > [!TIP]
-> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).  
+> Windows 10 media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#support-notes).
 >
 > Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 >
@@ -2521,7 +2521,7 @@ This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
 > [!TIP]
-> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).  
+> Windows 10 media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#support-notes).
 >
 > Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 

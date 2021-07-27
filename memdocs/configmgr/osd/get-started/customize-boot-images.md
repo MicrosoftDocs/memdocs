@@ -2,11 +2,10 @@
 title: Customize boot images
 titleSuffix: Configuration Manager
 description: Learn several ways to use Configuration Manager or the Deployment Image Servicing and Management (DISM) command-line tool to customize a boot image.
-ms.date: 04/19/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -18,15 +17,9 @@ manager: dougeby
 
 Each version of Configuration Manager supports a specific version of the Windows Assessment and Deployment Kit (Windows ADK). You can service, or customize, boot images from the Configuration Manager console when they're based on a Windows PE (WinPE) version from the supported version of Windows ADK. For other boot images, you must customize them by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK.
 
-- Currently supported Windows ADK version: **Windows ADK for Windows 10**
+If you use a [supported version of the Windows ADK](../../core/plan-design/configs/support-for-windows-adk.md), you can customize those boot images in the Configuration Manager console. For more information on how to customize boot images in the Configuration Manager console, see [Manage boot images](manage-boot-images.md#modify-a-boot-image).
 
-    For more information, see [Support for Windows 10 as a client](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk).
-
-- Windows PE versions for boot images that you can customize from the Configuration Manager console: **Windows PE 10**
-
-    For more information on how to customize boot images in the Configuration Manager console, see [Manage boot images](manage-boot-images.md#modify-a-boot-image).
-
-- Supported Windows PE versions for boot images that you _can't_ customize from the Configuration Manager console: **Windows PE 3.1**
+Configuration Manager also supports boot images based on **Windows PE version 3.1**. However, you can't customize these boot images in the Configuration Manager console.
 
 For example, you can customize boot images based on Windows PE 10 from the Windows ADK for Windows 10 from the Configuration Manager console. However, while boot images based on Windows PE 3.1 are supported, you need to customize them from a different computer and use the version of DISM that's installed with the Windows AIK for Windows 7. Then, you can add the boot image to the Configuration Manager console.
 

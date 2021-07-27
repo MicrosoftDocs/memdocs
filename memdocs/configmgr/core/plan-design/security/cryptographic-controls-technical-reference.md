@@ -280,4 +280,12 @@ To improve the security of your Configuration Manager clients and servers, do th
 
 - Reorder the TLS-related cipher suites.
 
-For more information, see [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel) and [Prioritizing Schannel Cipher Suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites). These procedures don't affect Configuration Manager functionality.
+For more information, see the following articles:
+
+- [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel)
+- [Prioritizing Schannel cipher suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites)
+
+These procedures don't affect Configuration Manager functionality.
+
+> [!NOTE]
+> Updates to Configuration Manager download from the Azure content delivery network (CDN), which has cipher suite requirements. For more information, see [Azure Front Door: TLS configuration FAQ](/azure/frontdoor/front-door-faq#tls-configuration)..<!-- 10424111 -->

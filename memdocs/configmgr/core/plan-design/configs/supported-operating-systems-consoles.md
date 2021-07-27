@@ -17,6 +17,8 @@ manager: dougeby
 
 Configuration Manager supports the installation of the console on the following Windows OS versions:
 
+- **Windows Server 2022**: Standard, Datacenter (_starting in version 2107_)<!-- 10200029 -->
+
 - **Windows Server 2019**: Standard, Datacenter
 
 - **Windows Server 2016**: Standard, Datacenter

@@ -104,6 +104,13 @@ If you need to manage the device restarts before you update the Configuration Ma
 1. Restart the device.
 1. Install the latest Configuration Manager client version.
 
+##### Known issue with .NET version 4.6.2 on Windows Server 2008 SP2
+
+<!-- 10422078 -->
+The release of .NET version 4.6.2 that Configuration Manager redistributes doesn't install on Windows Server 2008 SP2. This version of the OS is covered under the [Extended Security Updates](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_ESU) (ESU) program. While products under this program are no longer supported for use with Configuration Manager, you can use the _latest released version of Configuration Manager current branch_ to deploy and install Windows security updates released under the ESU program.
+
+Microsoft recommends updating the OS to a later version that's fully supported. If your business requirements necessitate use of this OS version, download the latest release of .NET version 4.6.2 published on 6/23/2021 or later. For more information, see [The .NET Framework 4.6.2 offline installer for Windows](https://support.microsoft.com/topic/the-net-framework-4-6-2-offline-installer-for-windows-9dce3874-a9e5-9b11-289d-5594824aafe0). This .NET release does install on Server 2008 SP2. Manually update .NET on devices with this OS version before you update the Configuration Manager client to version 2107.
+
 ## Configuration Manager dependencies
 
 For more information, see [Determine the site system roles for clients](plan/determine-the-site-system-roles-for-clients.md).

@@ -85,7 +85,7 @@ For more information, see [What's new in Desktop Analytics](../../../desktop-ana
 
 ## Site infrastructure
 
-### Support for Windows Server 2022
+### Support for Windows Server 2022 and the ADK for Windows 11
 
 <!-- 10200029 -->
 Configuration Manager now supports Windows Server 2022 as site systems and clients. For more information, see the following articles:
@@ -94,7 +94,10 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 - [Supported OS versions for clients](../configs/supported-operating-systems-for-clients-and-devices.md)
 - [Upgrade on-premises infrastructure](../../servers/manage/upgrade-on-premises-infrastructure.md)
 
-<!-- some statement about ADK? -->
+It also supports the Windows ADK for Windows 11 and Server 2022. For more information, see [Support for Windows ADK](../configs/support-for-windows-adk.md).
+
+> [!TIP]
+> Configuration Manager supports [Windows Insider builds](../configs/support-for-windows-10.md#support-for-windows-insider), which is a great way to test the latest version of Windows 11 with Configuration Manager version 2107.
 
 ### Microsoft .NET requirements
 
@@ -115,6 +118,8 @@ For more information, see the following articles:
 <!--10092858-->
 
 When you install or update the site, it now warns for the presence of SQL Server 2012. The [support lifecycle](/lifecycle/products/microsoft-sql-server-2012) for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.
+
+For more information, see [Removed and deprecated for site servers: SQL Server](deprecated/removed-and-deprecated-server.md#sql-server).
 
 ### External notifications
 
@@ -363,6 +368,8 @@ RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's no
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
 - The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances. To provide content to internet-based devices, enable the CMG to distribute content.<!-- 10247883 -->
+
+- The support lifecycle for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.<!-- 10092858 -->
 
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2107 drops support for the following features:
 

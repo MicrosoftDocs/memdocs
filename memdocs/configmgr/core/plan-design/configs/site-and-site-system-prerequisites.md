@@ -119,7 +119,7 @@ For more information on all prerequisites including permissions, see [Prerequisi
 
 ### Windows ADK for the site server
 
-- Before you install or upgrade a CAS or primary site, install the version of the Windows Assessment and Deployment Kit (ADK) that's required by the version of Configuration Manager you're installing or upgrading to. For more information, see [Windows 10 ADK](support-for-windows-10.md#windows-10-adk).
+- Before you install or upgrade a central administration site or primary site, install the version of the Windows Assessment and Deployment Kit (ADK) that's required by the version of Configuration Manager you're installing or upgrading to. For more information, see [Support for the Windows ADK](support-for-windows-adk.md).
 
 - For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).
 
@@ -185,7 +185,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### Windows ADK for the SMS Provider
 
-- The server where you install an instance of the SMS Provider must have a supported version of the Windows ADK. For more information, see [Windows 10 ADK](support-for-windows-10.md#windows-10-adk).
+- The server where you install an instance of the SMS Provider must have a supported version of the Windows ADK. For more information, see [Support for the Windows ADK](support-for-windows-adk.md).
 
 - For more information about this requirement, see [Infrastructure requirements for operating system deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).
 
