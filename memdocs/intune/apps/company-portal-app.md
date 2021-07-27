@@ -219,9 +219,10 @@ The following keyboard shortcuts are available in the Windows Company Portal app
 | Navigation menu | Navigation | Alt+M |
 |  | Home | Alt+H |
 |  | All apps | Alt+A |
-|  | Installed apps | Alt+I |
+|  | All devices | Alt+D |
+|  | Downloads & updates | Alt+U |
 |  | Send feedback | Alt+F |
-|  | My profile | Alt+U |
+|  | My profile | Alt+P |
 |  | Settings | Alt+T |
 | Device tile | Rename | F2 |
 |  | Remove | Ctrl+D or Delete |
