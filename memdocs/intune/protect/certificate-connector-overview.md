@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/28/2021
+ms.date: 07/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -222,6 +222,8 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 ## What's new for the Certificate Connector
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
+
+New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
 
 ### July 19, 2021
 
