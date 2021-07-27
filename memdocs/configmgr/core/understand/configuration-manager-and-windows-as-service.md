@@ -2,19 +2,16 @@
 title: Configuration Manager and Windows as a Service
 titleSuffix: Configuration Manager
 description: Get basic information on adopting Configuration Manager current branch to support Windows as a service.
-ms.date: 06/15/2018
+ms.date: 07/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
+ms.topic: overview
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
-# Configuration Manager and Windows as a Service
+# Configuration Manager and Windows as a service
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -28,12 +25,11 @@ Configuration Manager provides comprehensive control over feature updates for Wi
 |[Support lifecycle](../servers/manage/current-branch-versions-supported.md)|Explains the new support and servicing model.|
 |[Removed and deprecated items](../plan-design/changes/deprecated/removed-and-deprecated.md)|Provides early notice about future changes that might affect your use of Configuration Manager.|
 |[Updates to Configuration Manager current branch](../servers/manage/updates.md)|Explains the easy in-console method of applying feature updates to Configuration Manager.|
-|[Get available updates](../servers/manage/install-in-console-updates.md#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
-|[Update checklist](../servers/manage/install-in-console-updates.md#bkmk_beforeinstall)|Provides update version-specific checklists, if applicable.| 
+|[Get available updates](../servers/manage/prepare-in-console-updates.md#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
+|[Update checklist](../servers/manage/prepare-in-console-updates.md#before-you-install-an-in-console-update)|Provides update version-specific checklists, if applicable.|
 |[Install new Configuration Manager feature updates](../servers/manage/install-in-console-updates.md)|Explains the simple installation steps for feature updates.|
 |[Support for Windows 10](../plan-design/configs/support-for-windows-10.md)|Provides a support matrix for Windows 10 (and ADK) versions.|
 |[Technical Previews for Configuration Manager](../get-started/technical-preview.md)|Provides information about the ConfigMgr technical preview program.|
-
 
 ## Key articles about adopting Windows as a service
 
@@ -46,7 +42,6 @@ Configuration Manager provides comprehensive control over feature updates for Wi
 |[Use Desktop Analytics](../../desktop-analytics/overview.md)|Desktop Analytics allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10.|
 |[Windows Update for Business integration (optional)](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)|Explains how to define and deploy Windows Update for Business (WUfB) policies using Configuration Manager.|
 |[Use co-management with Microsoft Intune and Windows Update for Business (optional)](../../comanage/overview.md)|Provides an overview of co-management|
-
 
 ## Related articles
 

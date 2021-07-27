@@ -115,7 +115,7 @@ After the first site update completes installation:
 
 - Child primary sites install the update automatically. No further action is required.
 
-- Manually update secondary sites from within the Configuration Manager console. For more information, see [start the update installation at a secondary site](#bkmk_secondary).
+- Manually update secondary sites from within the Configuration Manager console. For more information, see [start the update installation at a secondary site](#start-the-update-installation-at-a-secondary-site).
 
 - Until all sites in your hierarchy update to the new version, your hierarchy operates in a mixed version mode. For more information, see [Interoperability between different versions](../../plan-design/hierarchy/interoperability-between-different-versions.md).
 

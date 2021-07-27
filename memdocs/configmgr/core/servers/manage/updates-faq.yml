@@ -26,7 +26,7 @@ sections:
 
               If you think you have the required configurations and prerequisites for a missing update, confirm the service connection point is in online mode. Then, use the **Check for Updates** option in the **Updates and Servicing** node to force a check. If your service connection point is in offline mode, use the service connection tool to manually sync with the cloud service.
 
-          - Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console. For more information, see [Permissions to manage updates](#assign-permissions-to-view-and-manage-updates-and-features).
+          - Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console. For more information, see [Permissions to manage updates](prepare-in-console-updates.md#permissions).
 
       - question: |
           Why did the current branch name change with version 2103?

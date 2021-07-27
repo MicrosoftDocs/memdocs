@@ -83,7 +83,7 @@ To opt in to the early update ring:
 
     Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2107.ps1 cmprimary01`
 
-1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](prepare-in-console-updates.md#get-available-updates).
 
 The version 2107 update should now be available in the console.
 
