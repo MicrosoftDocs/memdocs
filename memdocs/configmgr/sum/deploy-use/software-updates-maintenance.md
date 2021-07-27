@@ -163,11 +163,11 @@ Starting in version 1906, the following **WSUS Server Cleanup Wizard** options a
   For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 
-### Known issues for version 1906
+### Known issue
 
 Consider the following scenario:
 <!--5418148-->
-- You are using Configuration Manager version 1906
+- You are using Configuration Manager version 1906 or later
 - You have remote software update points using a Windows Internal Database
 - In the **Software Update Point Component Properties**, you have any of the following selected options under the **WSUS Maintenance** tab:
    - Add non-clustered indexes to the WSUS database
