@@ -195,8 +195,8 @@ items:
     items:
     - name: Manually sync macOS device
       href: sync-your-device-manually-macos.md
-    - name: Turn off Microsoft usage data collection
-      href: turn-off-microsoft-usage-data-collection-macos.md
+    - name: Manage Company Portal preferences
+      href: intune-company-portal-preferences-macos.md
   - name: Update device settings
     items:
     - name: My version of macOS isn't yet supported
