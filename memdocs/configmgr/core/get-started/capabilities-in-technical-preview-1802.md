@@ -256,7 +256,7 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. 
 
 > [!NOTE]
-> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
+> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/optional-features.md).
 
 ### Prerequisites
 - Upgrade the Configuration Manager client to the latest version

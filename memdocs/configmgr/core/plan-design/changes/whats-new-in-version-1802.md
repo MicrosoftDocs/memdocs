@@ -183,7 +183,7 @@ Configure an application deployment to not automatically upgrade any superseded 
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings).
 
  > [!Note]  
- > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).  
+ > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/optional-features.md).  
 
 
 ### Run scripts improvements 

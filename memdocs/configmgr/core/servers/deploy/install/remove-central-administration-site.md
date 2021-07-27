@@ -22,7 +22,7 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 > [!NOTE]
 > This feature was first introduced in version 2002 as a [pre-release feature](../../manage/pre-release-features.md). Starting in version 2103, it's no longer a pre-release feature.
 >
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../manage/optional-features.md).
 
 ## Plan
 

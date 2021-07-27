@@ -20,7 +20,7 @@ Starting in version 1906, from the Configuration Manager console you can install
 
 ## Prerequisites
 
-- Enable the [optional feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../../core/servers/manage/optional-features.md) **Approve application requests for users per device**.  
 
 - [Deploy the application](deploy-applications.md) as *Available* to a device collection.  
 

@@ -141,7 +141,7 @@ Configuration Manager discovers new updates for you. Synchronize your Configurat
 
 - In-console updates replace the need to independently locate and install individual updates, service packs, and new features.  
 
-- Install only the in-console updates you choose. When installing some updates, you can select individual features to enable and use. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
+- Install only the in-console updates you choose. When installing some updates, you can select individual features to enable and use. For more information, see [Enable optional features from updates](optional-features.md).
 
 When you install an in-console update, the following process occurs:  
 

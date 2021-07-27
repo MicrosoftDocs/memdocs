@@ -83,7 +83,7 @@ To opt in to the early update ring:
 
     Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2107.ps1 cmprimary01`
 
-1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](prepare-in-console-updates.md#get-available-updates).
 
 The version 2107 update should now be available in the console.
 
@@ -233,14 +233,14 @@ When the console lists the update as **Available**, you can run the prerequisite
 
 To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2107** update package, and select **Run prerequisite check** in the ribbon.
 
-For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](install-in-console-updates.md#bkmk_beforeinstall).
+For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
 > [!IMPORTANT]  
 > When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. After running the prerequisite checker, but before installing the update, if you need to do a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
 
-You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](install-in-console-updates.md#bkmk_install).
+You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](install-in-console-updates.md).
 
 You may plan to install the update outside of normal business hours. Determine when the process will have the least effect on your business operations. Installing the update and its actions reinstall site components and site system roles.
 

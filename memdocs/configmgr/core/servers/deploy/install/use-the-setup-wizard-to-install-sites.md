@@ -223,7 +223,7 @@ If you're installing a CAS as part of a site expansion scenario, review [Expandi
 
     - After Setup completes, you can connect a console to edit objects and settings.
 
-    - Starting in Configuration Manager version 2010, if setup fails, you can **Report update error to Microsoft**. For more information, see [Report setup and upgrade failures to Microsoft](../../manage/install-in-console-updates.md#bkmk_report).
+    - Starting in Configuration Manager version 2010, if setup fails, you can **Report update error to Microsoft**. For more information, see [Report setup and upgrade failures to Microsoft](../../manage/post-in-console-updates.md#report-setup-and-upgrade-failures-to-microsoft).
 
 ## <a name="bkmk_expand"></a> Expand a stand-alone primary site
 
