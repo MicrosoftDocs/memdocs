@@ -604,3 +604,28 @@ If you have applications that use MSI, EXE or script installers, you can deploy 
 
 > [!NOTE]
 > To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. You can install MSI or EXE apps with Win32 apps.
+
+## Phase 5 – Deploy at scale with Autopilot
+
+:::image type="content" source="./media/cloud-native-windows-endpoints/phase-5.png" alt-text="Phase 5.":::
+
+Now that you’ve configured your Cloud Native Windows endpoint and provisioned it with Autopilot, consider how you can import more devices and work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
+
+- [Overview of Windows Autopilot](/mem/autopilot/windows-autopilot)
+- [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
+
+If for some reason Autopilot isn’t the right option for you, there are other enrollment methods for Windows detailed here – [Intune enrollment methods for Windows devices](/mem/intune/enrollment/windows-enrollment-methods).
+
+## Next Steps
+
+Learn more about the following subjects:
+
+- [Co-management for Windows devices](/mem/configmgr/comanage/overview)
+- [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
+- Configure an Intune [device compliance policy](/mem/intune/protect/compliance-policy-create-windows) that can allow or deny access to resources based on an Azure AD [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
+- Add [Store Apps](/mem/intune/apps/windows-store-for-business)
+- Add [Win32 apps](/mem/intune/apps/apps-win32-app-management)
+- [Use certificates for authentication in Intune](/mem/intune/protect/certificates-configure)
+- Deploy network profiles, including [VPN](/mem/intune/configuration/vpn-settings-windows-10) and [Wi-Fi](/mem/intune/configuration/wi-fi-settings-windows)
+- Deploy [Multi-factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
+- Security baseline for [Edge](/mem/intune/protect/security-baseline-settings-edge)
