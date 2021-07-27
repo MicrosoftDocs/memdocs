@@ -523,6 +523,8 @@ items:
         href: servers/manage/prepare-in-console-updates.md
       - name: Install in-console updates
         href: servers/manage/install-in-console-updates.md
+      - name: After the site updates
+        href: servers/manage/post-in-console-updates.md
       - name: Optional features
         href: servers/manage/optional-features.md
       - name: In-console updates FAQ
