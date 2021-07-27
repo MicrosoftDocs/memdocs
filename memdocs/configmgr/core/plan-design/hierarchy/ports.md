@@ -492,7 +492,7 @@ This communication is used when you deploy certificate profiles by using the cer
 
 ### <a name="BKMK_PortsSite-RCL"></a> Site server `-->` Server hosting remote content library share
 
-You can move the content library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](the-content-library.md#bkmk_remote).
+You can move the content library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](remote-content-library.md).
 
 |Description|UDP|TCP|
 |-----------------|---------|---------|
