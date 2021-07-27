@@ -91,7 +91,7 @@ Different platforms may have additional requirements. For example, iOS/iPadOS an
 
 The following resources will help you learn more about device enrollment for each platform:
 
-- [What is device enrollment in Intune?](/mem/intune/enrollment/device-enrollmentd)
+- [What is device enrollment in Intune?](/mem/intune/enrollment/device-enrollment)
 - [Enrolled device management capabilities of Microsoft Intune](/mem/intune/enrollment/device-management-capabilities)
 - [Enrollment options for devices managed by Intune](/mem/intune/enrollment/enrollment-options)
 - [Intune enrollment methods for Windows devices](/mem/intune/enrollment/windows-enrollment-methods)
@@ -137,7 +137,7 @@ The following articles will help you understand how to create and monitor compli
 
 ## Intune app protection policies
 
-Intune app protection policies (APP) allow you to protect organizational data within an application. Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from both managed and unmanaged devices. With MAM without enrollment (MAM-WE), you can use Intune to manage work or school-related apps, including productivity apps such as the Microsoft Office apps, on almost any [device](/mem/intune/apps/app-management.md#app-management-capabilities-by-platform), including personal devices in bring-your-own-device (BYOD) scenarios. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) available for public use.
+Intune app protection policies (APP) allow you to protect organizational data within an application. Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from both managed and unmanaged devices. With MAM without enrollment (MAM-WE), you can use Intune to manage work or school-related apps, including productivity apps such as the Microsoft Office apps, on almost any [device](/mem/intune/apps/app-management#app-management-capabilities-by-platform), including personal devices in bring-your-own-device (BYOD) scenarios. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) available for public use.
 
 To get an overview of app protection policies and how they work, check out the following articles:
 
@@ -162,7 +162,7 @@ Check out these resources to find out how to add and manage apps with Intune:
 - [Add iOS store apps to Microsoft Intune](/mem/intune/apps/store-apps-ios)
 - [How to manage iOS and macOS apps purchased through Apple Business Manager](/mem/intune/apps/vpp-apps-ios)
 - [Windows 10 app deployment by using Microsoft Intune](/mem/intune/apps/apps-windows-10-app-deploy)
-- [How to protect your company app data with Microsoft Intune](/graph/api/resources/intune-app-conceptual.md?view=graph-rest-beta&preserve-view=true)
+- [How to protect your company app data with Microsoft Intune](/graph/api/resources/intune-app-conceptual?view=graph-rest-beta&preserve-view=true)
 - [Manage Android Enterprise system apps in Microsoft Intune](/mem/intune/apps/apps-ae-system)
 
 ## Privacy and personal data in Intune
