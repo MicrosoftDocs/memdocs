@@ -56,9 +56,9 @@ You're presented with the Updates Wizard that displays a list of the product are
 
 - On the **General** page of the wizard, configure **Prerequisite warnings** as necessary:
 
-  - Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](#retry-installation-of-a-failed-update).
+  - Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](post-in-console-updates.md#retry-installation-of-a-failed-update).
 
-  - Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#retry-installation-of-a-failed-update).
+  - Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](post-in-console-updates.md#retry-installation-of-a-failed-update).
 
   - **Ignore any prerequisite check warnings and install this update regardless of missing requirements**: Set a condition for the update installation to ignore prerequisite warnings. This option allows the update installation to continue. If you don't select this option, the update installation stops on a warning. Unless you've previously run the prerequisite check and fixed prerequisite warnings for a site, don't use this option.
 
@@ -97,7 +97,7 @@ Use the following steps to monitor progress:
 
   - **Installation**
 
-  - **Post Installation**: For more information, see [post installation tasks](#post-installation-tasks).
+  - **Post Installation**: For more information, see [post installation tasks](post-in-console-updates.md#post-installation-tasks).
 
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.
 
