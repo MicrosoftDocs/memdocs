@@ -163,7 +163,7 @@ Starting in version 1906, the following **WSUS Server Cleanup Wizard** options a
   For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 
-### Known issue
+## Known issue
 
 Consider the following scenario:
 <!--5418148-->
