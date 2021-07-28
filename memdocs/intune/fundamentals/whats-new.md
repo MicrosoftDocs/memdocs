@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/09/2021
+ms.date: 07/28/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,81 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+<!-- ########################## -->
+## Week of July 26, 2021 (Service release 2107)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### New app categories available to better target app protection policies<!-- 4802581  -->
+
+We have improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically applied to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Improved policy support for iPadOS devices enrolled as Shared iPads for Business (public preview)<!-- 9779187   -->
+
+We've added support for user-assigned device configuration policies for [Shared iPads for Business](../enrollment/device-enrollment-shared-ipad.md).
+
+With this change, settings like the home screen layout and most device restrictions assigned to user groups apply to Shared iPad devices while a user from the assigned user groups is active on the device.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Use filters to assign Windows 10 update rings in Endpoint Manager admin center - public preview<!-- 7423515   -->
+
+In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies.
+
+When assigning Windows 10 update ring policies, you can use filters (**Devices** > **Windows** > **Windows 10 Update Rings**). You can filter the devices that get the update rings policy based on a device property, such as the OS version, device manufacturer, and more. After you create the filter, use the filter when you assign the update rings policy.
+
+- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+- For more information on Windows 10 update rings policies, see [Windows 10 update rings policy in Intune](../protect/windows-10-update-rings.md).
+
+Applies to:
+
+- Windows 10 and newer
+
+#### Collect diagnostics remote action moved to general availability<!--10022807   -->
+
+The **Collect diagnostics** remote action lets you collect diagnostics from corporate devices without interrupting or waiting for the end user. Collected diagnostics include MDM, Autopilot, event viewers, registry key, Configuration Manager client, networking, and other critical troubleshooting diagnostics. For more information see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md).
+
+#### Autopilot support for Microsoft HoloLens is now generally available<!--9602654 -->
+
+For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Work from anywhere report<!-- 7207657  -->
+
+[Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the [Recommended software](../../analytics/recommended-software.md) report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
+
+> [!Note]
+> The **Work from anywhere** report will go live after the July service update. We expect it within the week after the 2107 release completes.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Intune apps
+
+#### Improvements to SSO app extension screen for Company Portal for macOS <!-- 9674212  -->
+
+We've improved the Intune Company Portal authentication screen that prompts macOS users to log in to their account using single sign-on (SSO). Users can now:
+
+- See the app that's requesting SSO.
+- Select **Don't ask me again** to opt out of future SSO requests.
+- Opt back in to SSO requests by going to Company Portal > **Preferences** and deselecting **Don't ask me to sign in with single sign-on for this account**.
+
+#### Newly available protected apps for Intune<!-- 10078767, 10129082, 10172869  -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Webex for Intune by Cisco Systems, Inc.
+- LumApps for Intune by LumApps
+- ArchXtract (MDM) by CEGB CO., Ltd.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 
 <!-- ########################## -->
 ## Week of July 5, 2021
@@ -65,35 +140,39 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Device security
 
 #### Settings catalog support for Microsoft Defender for Endpoint on macOS<!-- 5520115 -->
- 
+
 We’ve added the settings to manage Microsoft Defender for Endpoint on macOS to the Intune [settings catalog](../configuration/settings-catalog.md) to configure Microsoft Defender for Endpoint on macOS.
 
 The new settings can be found as follows under the following four categories in the settings catalog. For information about these settings, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the *Microsoft Defender for Endpoint on Mac* documentation.
 
 **Microsoft Defender - Antivirus engine**:  
+
 - Allowed threats
 - Enable passive mode
 - Enable real-time protection
 - Scan exclusions
 - Threat type settings
- 
+
 **Microsoft Defender - Cloud delivered protection preferences**:  
+
 - Diagnostic collection level
 - Enable - disable automatic sample submissions
 - Enable - disable cloud delivered protection
 
 **Microsoft Defender - EDR preferences**:  
+
 - Device tags
 - Enable - disable early preview
- 
-**Microsoft Defender - User interface preferences**: 
-- Show - hide status menu icon
 
+**Microsoft Defender - User interface preferences**:
+
+- Show - hide status menu icon
 
 <!-- ########################## -->
 ## Week of June 28, 2021
 
-### New iOS/iPadOS remote action lets you update the eSIM cellular plan  (public preview)<!--7119250 wnready-->
+### New iOS/iPadOS remote action lets you update the eSIM cellular plan  (public preview)<!--7119250 -->
+
 The new **Update cellular data plan (preview)** action lets you remotely activate the eSIM cellular plan on iOS/iPadOS devices that support it. This feature is currently in public preview. For more information, see [Update cellular data plan](../remote-actions/update-cellular-data-plan.md).
 
 <!-- ########################## -->
@@ -368,7 +447,7 @@ The `IntuneAosp` property value is now supported in the `managementAgentType` en
 
 #### Improved Conditional Access messaging for Android and iOS/iPadOS users<!-- 9908622 -->
 
-Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. For more information about this change, see [What's new in Azure Active Directory](/azure/active-directory/fundamentals/whats-new#improved-conditional-access-messaging-for-android-and-ios). 
+Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users will see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. For more information about this change, see [What's new in Azure Active Directory](/azure/active-directory/fundamentals/whats-new#improved-conditional-access-messaging-for-android-and-ios).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -438,6 +517,7 @@ From the **Installed apps** page of the Windows Company Portal or the Company Po
 The version of your Win32 app is now displayed in the Microsoft Endpoint Manager admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list. For related information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
 #### Maximum OS version setting for app conditional launch on iOS devices<!-- 9493137 -->
+
 Using Intune app protection policies, you can add a new conditional launch setting to ensure end users are not using any pre-release or beta OS build to access work or school account data on iOS devices. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality on iOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -736,8 +816,8 @@ The Company Portal app can now store, as well as display, push notifications sen
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Scripting
 
-
 #### Export localized Intune report data using Graph APIs<!-- 8612346  -->
+
 You can now specify that the report data that you export using the Microsoft Endpoint Manager reporting export [API](../fundamentals/reports-export-graph-apis.md) can contain localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports, which will prevent breaking changes. For related information about reports, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md) and [Intune reports and properties available using Graph API](../fundamentals/reports-export-graph-apis.md).
 
 <!-- ########################## -->
@@ -759,6 +839,7 @@ For more information about certificate connectors, including a list of connector
 ### App management
 
 #### Support for Win32 app supersedence in Intune<!-- 8517457-->
+
 We've enabled a public preview of app supersedence in Intune. You can now create supersedence relationships between apps, which allows you to update and replace existing Win32 apps with newer versions of the same app, or entirely different Win32 apps. For more information, see [Win32 app supersedence](../apps/apps-win32-supersedence.md).
 
 #### Maximum OS version setting for app conditional launch on Android devices<!-- 7764870  -->
