@@ -10,12 +10,14 @@ ms.assetid: 2a77cfd2-7fa1-4b00-96b2-ff3baa7f5c77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX
 ---
 
 # Work from anywhere (preview) report
 <!--8668496-->
 The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. The **Work from anywhere** report is an evolution of the [Recommended software report](recommended-software.md). You may notice changes in your scores because the calculations are different in the **Work from anywhere** report.  From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.  
+
+> [!Note]
+> The Work from anywhere report will go live after the July service update. We expect it within the week after the 2107 release completes.
 
 ## <a name="bkmk_score"></a> Work from anywhere score
 
