@@ -1,6 +1,6 @@
 ---
 title: Configure infrastructure to support SCEP certificate profiles with Microsoft Intune
-description: To use Simple Certificate Enrollment Protocol (SCEP) wiht Microsoft Intune, configure your on-premises AD domain, create a certification authority, and set up the NDES server to support use of the Certificate Connector.
+description: To use Simple Certificate Enrollment Protocol (SCEP) with Microsoft Intune, configure your on-premises AD domain, create a certification authority, and set up the NDES server to support use of the Certificate Connector.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -107,7 +107,7 @@ The following certificates and templates are used when you use SCEP.
 |**Trusted Root CA certificate**       |To use a SCEP certificate profile, devices must trust your Trusted Root Certification Authority (CA). Use a *trusted certificate profile* in Intune to provision the Trusted Root CA certificate to users and devices. <br/><br/> **-**  Use a single Trusted Root CA certificate per operating system platform and associate that certificate with each trusted certificate profile you create. <br /><br /> **-**  You can use additional Trusted Root CA certificates when needed. For example, you might use additional certificates to provide a trust to a CA that signs the server authentication certificates for your Wi-Fi access points. Create additional Trusted Root CA certificates for issuing CAs.  In the SCEP certificate profile you create in Intune, be sure to specify the Trusted Root CA profile for the issuing CA.<br/><br/> For information about the trusted certificate profile, see [Export the trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. |
 
 > [!NOTE]
-The following certificate is not used with the Certificate Connector for Microsoft Intune. This information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
+>The following certificate is not used with the Certificate Connector for Microsoft Intune. This information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
 > 
 > |Object    |Details    |
 > |----------|-----------|
@@ -490,4 +490,3 @@ To validate that the service is running, open a browser, and enter the following
 ## Next steps
 
 [Create a SCEP certificate profile](certificates-profile-scep.md)  
-
