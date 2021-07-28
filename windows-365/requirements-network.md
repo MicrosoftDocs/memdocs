@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Network requirements for Windows 365 - Azure | Microsoft Docs
+title: Network requirements for Windows 365
 titleSuffix:
 description: Learn about the network requirements for using Windows 365.
 keywords:

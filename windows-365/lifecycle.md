@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Cloud PC lifecycle in Windows 365 - Azure | Microsoft Docs
+title: Cloud PC lifecycle in Windows 365
 titleSuffix:
 description: Learn about the lifecycle of Cloud PCs in Windows 365.
 keywords:

@@ -3,10 +3,7 @@ items:
   tocHref: /
   topicHref: /
   items:
-  - name: Enterprise Mobility + Security
-    tocHref: /enterprise-mobility-security/
-    topicHref: /enterprise-mobility-security/
-    items:
     - name: Windows 365
       tocHref: /windows-365/
       topicHref: /windows-365/  
+      items:

@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Device images in Windows 365 - Azure | Microsoft Docs
+title: Device images in Windows 365
 titleSuffix:
 description: Learn about device images in Windows 365.
 keywords:
