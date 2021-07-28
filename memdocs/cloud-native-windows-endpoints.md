@@ -20,7 +20,7 @@ ms.assetid:
  
 #audience:
 #ms.devlang:
-ms.reviewer: scottbreenmsft;rogerso
+ms.reviewer: scbree;rogerso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
