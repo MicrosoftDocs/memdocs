@@ -5,10 +5,11 @@ title: Get started with cloud native Windows endpoints
 titleSuffix: Microsoft Endpoint Manager
 description: Use this guide to set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Autopilot.
 keywords:
-author: scottbreenmsft; rogersoMS
+author: scottbreenmsft; rogersoms
+  
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2021
+ms.date: 07/29/2021
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -122,7 +123,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
 To test the Cloud Native Windows endpoint, we need to start by getting a virtual machine or physical device ready for testing. The following steps will gather the device details and upload them into the Autopilot service for use later in this document.
 
 > [!NOTE]
-> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Autopilot on your behalf as part of purchasing. There is more information about Autopilot in [Phase 5](#phase-5-deploy-at-scale-with-autopilot).
+> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Autopilot on your behalf as part of purchasing. There is more information about Autopilot in [Phase 5](#phase-5---deploy-at-scale-with-autopilot).
 
 1. Install Windows (preferably 20H2 or later) in a virtual machine or reset physical device so that it’s waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
@@ -150,7 +151,7 @@ To test the Cloud Native Windows endpoint, we need to start by getting a virtual
 
 9. Log into the credential prompt with your Intune Administrator account.
 
-10. Leave the computer at the out of box experience until [Phase 2](#phase-2-build-your-first-cloud-native-windows-endpoint).
+10. Leave the computer at the out of box experience until [Phase 2](#phase-2---build-your-first-cloud-native-windows-endpoint).
 
 ### Step 4 - Create Azure AD dynamic group for the device
 
@@ -254,7 +255,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
 
   - Select **configuration designer** for the settings format, as opposed to XML.
   - Select **Current Channel** for the update channel.
-  - Ensure that you de-select (uncheck) the option for **OneDrive (Groove)** as this is the legacy OneDrive. Because OneDrive is included with Windows, it isn't mandatory to install it. Remove other applications you don't want installed by unchecking them.
+  - Ensure that you de-select (uncheck) the option for **OneDrive (Groove)** as this app is the legacy OneDrive. Because OneDrive is included with Windows, it isn't mandatory to install it. Remove other applications you don't want installed by unchecking them.
 
   To deploy Microsoft 365 Apps, see [Add Microsoft 365 apps to Windows devices using Microsoft Intune](/mem/intune/apps/apps-add-office365)
 
@@ -272,9 +273,9 @@ Your cloud native endpoint will need some applications. To get started, we recom
   For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224).
 
 - **Company Portal**  
-  Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal is the self-service hub for users that they use to install applications from multiple sources (like Intune, Microsoft Store, and Configuration Manager), sync their device with Intune, check compliance status, and so on.
+  Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the portal to sync their device with Intune, check compliance status, and so on.
 
-  To set up a relationship between Intune and the Microsoft Store for Business (MSfB), and to acquire the Company Portal app as an offline app that can be synched to Intune and targeted at devices, see [Add and assign the Windows Company Portal app for Autopilot provisioned devices](/mem/intune/apps/store-apps-company-portal-autopilot).
+  You can set up a relationship between Intune and the Microsoft Store for Business (MSfB) and get the Company Portal app as an offline app  that can be synched to Intune and targeted at devices. For more information, see [Add and assign the Windows Company Portal app for Autopilot provisioned devices](/mem/intune/apps/store-apps-company-portal-autopilot).
 
 - **Microsoft Store App** (Whiteboard)  
   While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps from [Get the offline Company Portal app from the store](/mem/intune/apps/store-apps-company-portal-autopilot#get-the-offline-company-portal-app-from-the-store) but select *Microsoft Whiteboard* as the app. Then, set the app to be *Online* and deploy it as *available* instead of as a required app. The app should later appear within Company Portal for manual installation by the user.
@@ -283,7 +284,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-2.png" alt-text="Phase 2.":::
 
-With the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1-set-up-your-environment), go through the Autopilot process.
+To bur first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1---set-up-your-environment). With this device, go through the Autopilot process.
 
 - Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
 
@@ -425,7 +426,7 @@ These settings can be enabled in the [Microsoft Endpoint Manager admin center](h
 
 You can use security baselines to apply a set of configurations that are known to increase the security of a Windows endpoint. For more information about security baselines, see [Windows MDM security baseline settings for Intune](/mem/intune/protect/security-baseline-settings-mdm-all).
 
-Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation. Isolation means applying the baseline to a selective group of test endpoints, and applying only the baseline, without any other configuration profiles or settings.
+Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation by applying only the baseline to a selective group of test endpoints without any other configuration profiles or settings.
 
 For example, the following settings in the **Windows security baseline** can cause issues with Windows Autopilot:
 
@@ -444,7 +445,7 @@ This phase is designed to help you build out custom settings that apply to your 
 
 Two components of the Microsoft Edge experience, which apply when users sign in with their Microsoft 365 credentials, can be configured from the Microsoft 365 Admin Center.
 
-- The start page logo in Microsoft Edge can be customized by configuring the *your organization* section within the Microsoft 365 admin center. For more information, see [Customize ‎Office 365‎ for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
+- The start page logo in Microsoft Edge can be customized by configuring the *Your organization* section within the Microsoft 365 admin center. For more information, see [Customize ‎Office 365‎ for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
 - The default new tab page experience in Edge includes Office 365 information and personalized news. How this page is displayed can be customized from the Microsoft 365 admin center under **Settings** > **Org settings** > **News** > **Microsoft Edge new tab page**.
 
 You can also set other settings for Microsoft Edge using settings catalog profiles. For example, you might want to configure specific sync settings for your organization.
@@ -476,7 +477,7 @@ The settings catalog is a single location where all configurable Windows setting
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
 - **Azure Active Directory preferred tenant domain**  
-  This setting configures the preferred tenant domain name to be appended to a user’s username. Use of a preferred tenant domain allows users to sign in to Azure AD endpoints with only their username rather than their whole UPN so long as the user’s domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
+  This setting configures the preferred tenant domain name to be appended to a user’s username. A preferred tenant domain allows users to sign in to Azure AD endpoints with only their username rather than their whole UPN so long as the user’s domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
 
   The setting can be found in:
   - Authentication
@@ -501,7 +502,7 @@ Following are some settings available in the settings catalog that might be rele
 
 ### Device Restrictions
 
-Windows Device Restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows CSPs. Over time, more of these settings will be made available in the settings catalog. For more information, see [Device Restrictions](/mem/intune/configuration/device-restrictions-configure).
+Windows Device Restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, see [Device Restrictions](/mem/intune/configuration/device-restrictions-configure).
 
 Following are some device restrictions that might be relevant to your organization:
 
@@ -517,7 +518,7 @@ Following are some device restrictions that might be relevant to your organizati
 
 ### Delivery Optimization
 
-Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources (such as other peers on the network) in addition to the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization).
+Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization).
 
 To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](/mem/intune/configuration/delivery-optimization-settings) or a settings catalog profile.
 
@@ -546,9 +547,11 @@ There are several options for creating your device configuration when considerin
 2. Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics).
 3. Use Group Policy Analytics to create Device Configuration profiles directly for supported settings.
 
-The transition to a cloud native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, aim to start fresh with a minimal set of policies to avoid carrying forward unnecessary baggage and legacy settings from older operating systems, like Windows 7 or Windows XP, or from a domain-joined environment. To start fresh, review your current requirements and implement a minimal collection of settings to meet these requirements. Requirements might include regulatory or mandatory security settings and settings to enhance the end-user experience. The list of requirements should be driven by the business and not by IT. Every setting should be documented, understood, and should serve a purpose.
+The transition to a cloud native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Try to avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP. 
 
-Migrating settings from existing Group Policies to MDM (Microsoft Endpoint Manager and Intune) isn't the preferred approach. When transitioning to cloud native Windows, the intention shouldn't be to lift and shift existing group policy settings. Instead, consider the target audience and what settings they require. It's time consuming and likely impractical to review each group policy setting in your environment to determine its relevance and compatibility with a modern managed device. Avoid trying to assess every group policy and individual setting, but rather to quickly assess those common policies that cover most devices and scenarios.
+To start fresh, review your current requirements and implement a minimal collection of settings to meet these requirements. Requirements might include regulatory or mandatory security settings and settings to enhance the end-user experience. The list of requirements should be driven by the business and not by IT. Every setting should be documented, understood, and should serve a purpose.
+
+Migrating settings from existing Group Policies to MDM (Microsoft Endpoint Manager and Intune) isn't the preferred approach. When transitioning to cloud native Windows, the intention shouldn't be to lift and shift existing group policy settings. Instead, consider the target audience and what settings they require. It's time consuming and likely impractical to review each group policy setting in your environment to determine its relevance and compatibility with a modern managed device. Avoid trying to assess every group policy and individual setting. Instead, focus on assessing those common policies that cover most devices and scenarios.
 
 Instead, identify the group policy settings that are mandatory and review those settings against available MDM settings. Any gaps would represent blockers that can prevent you from moving forward with a cloud native device if unresolved. Tools such as [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics) can be used to analyze group policy settings and determine if they can be migrated to MDM policies or not.
 
@@ -567,7 +570,7 @@ Cloud native scenarios have no built-in solution for mapped network drives. Inst
 
 For document storage, users can also benefit from SharePoint integration with File Explorer and the ability to sync libraries locally, as referenced here: [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88).
 
-If you use corporate Office document templates, which are typically located on internal servers, consider the newer cloud-based equivalent that allows users to access the templates from anywhere.
+If you use corporate Office document templates, which are typically on internal servers, consider the newer cloud-based equivalent that allows users to access the templates from anywhere.
 
 - [Create an organization assets library](/sharepoint/organization-assets-library)
 
@@ -600,7 +603,7 @@ Intune supports the deployment of many different Windows application types.
 - Store apps – [Add Microsoft Store apps to Microsoft Intune](/mem/intune/apps/store-apps-windows)
 - Web links – [Add web apps to Microsoft Intune](/mem/intune/apps/web-app)
 
-If you have applications that use MSI, EXE or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. We recommend wrapping these installers in the Win32 format because it provides more flexibility and benefits that include notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Autopilot.
+If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits that include notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Autopilot.
 
 > [!NOTE]
 > To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. You can install MSI or EXE apps with Win32 apps.
@@ -609,7 +612,7 @@ If you have applications that use MSI, EXE or script installers, you can deploy 
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-5.png" alt-text="Phase 5.":::
 
-Now that you’ve configured your Cloud Native Windows endpoint and provisioned it with Autopilot, consider how you can import more devices and work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
+Now that you’ve configured your cloud native Windows endpoint and provisioned it with Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
 - [Overview of Windows Autopilot](/mem/autopilot/windows-autopilot)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
