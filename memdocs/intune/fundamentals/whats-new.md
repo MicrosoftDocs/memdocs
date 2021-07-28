@@ -97,7 +97,7 @@ Applies to:
 
 The **Collect diagnostics** remote action lets you collect diagnostics from corporate devices without interrupting or waiting for the end user. Collected diagnostics include MDM, Autopilot, event viewers, registry key, Configuration Manager client, networking, and other critical troubleshooting diagnostics. For more information see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md).
 
-#### Autopilot support for Microsoft Hololens is now generally available<!--9602654 -->
+#### Autopilot support for Microsoft HoloLens is now generally available<!--9602654 -->
 
 For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
