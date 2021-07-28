@@ -141,6 +141,27 @@ No workaround is required for this issue. Don't uninstall the April ESU. If othe
 
 ## Configuration Manager console
 
+### Supported platform conditions don't update for some objects
+
+<!-- 10247604,10425120 -->
+_Applies to version 2107_
+
+You can select supported platforms on many objects such as applications, task sequences, and configuration items. Starting in version 2107, these lists are updated to include categories for Windows 11. After you update the primary site to version 2107, there are different behaviors depending upon the type of object:
+
+- Within 24 hours of updating the site, the supported platforms for the following objects will automatically update:
+  - Packages and programs
+  - Task sequences
+  - Compliance settings, for example, endpoint protection
+
+  In that initial 24-hour period, existing policies with Windows 10 conditions also apply to Windows 11. After the site updates the objects, they only apply to Windows 10. You can select Windows 11 as a supported platform at any time.
+
+- You need to manually review and update the supported platforms for the following objects:
+  - Applications
+  - Configuration items
+  - Objects referenced in a task sequence
+
+  For these objects, existing policies with Windows 10 conditions also apply to Windows 11. You need to manually revise the supported platform list.
+
 ### Configuration Manager console settings aren't saved
 <!--5452246-->
 _Applies to version 2107_
