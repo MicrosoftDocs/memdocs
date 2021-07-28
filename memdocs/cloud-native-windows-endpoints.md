@@ -277,11 +277,11 @@ Your cloud native endpoint will need some applications. To get started, we recom
 - **Microsoft Store App** (Whiteboard)  
   While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps from [Get the offline Company Portal app from the store](/mem/intune/apps/store-apps-company-portal-autopilot#get-the-offline-company-portal-app-from-the-store) but select *Microsoft Whiteboard* as the app. Then, set the app to be *Online* and deploy it as *available* instead of as a required app. The app should later appear within Company Portal for manual installation by the user.
 
-## Phase 2 - Build your first cloud native Windows endpoint
+## Phase 2 - Build a cloud native Windows endpoint
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-2.png" alt-text="Phase 2.":::
 
-To bur first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Autopilot process.
+To build your first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Autopilot process.
 
 - Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
 
@@ -432,11 +432,11 @@ For example, the following settings in the **Windows security baseline** can cau
 
 For more information, see [Windows Autopilot policy conflicts](/mem/autopilot/policy-conflicts).
 
-## Phase 4 – Apply organization-specific settings, apps, and review your on-premises configuration
+## Phase 4 – Apply customizations and review your on-premises configuration
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
 
-This phase is designed to help you build out custom settings that apply to your organization. This section draws your attention to the various components of Windows and touches on how you can review any existing configuration from an on-premises Active Directory Group Policy environment and apply them to cloud native endpoints.
+In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase is designed to help you build out customizations specific to your organization. We also draw your attention to the various components of Windows and how you can review existing configurations from an on-premises Active Directory Group Policy environment and apply them to cloud native endpoints.
 
 ### Microsoft Edge
 
