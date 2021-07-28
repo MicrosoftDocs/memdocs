@@ -5,7 +5,7 @@ title: Get started with cloud native Windows endpoints
 titleSuffix: Microsoft Endpoint Manager
 description: Use this guide to set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Autopilot.
 keywords:
-author: scottbreenmsft <!-- also rogersoms -->
+author: scottbreenmsft
   
 ms.author: brenduns
 manager: dougeby
