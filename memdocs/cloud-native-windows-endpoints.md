@@ -3,7 +3,7 @@
 
 title: Get started with cloud native Windows endpoints 
 titleSuffix: Microsoft Endpoint Manager
-description: Use this guide to set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Autopilot.
+description: Set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Autopilot.
 keywords:
 author: scottbreenmsft
   
@@ -28,7 +28,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Get started with cloud native Windows endpoints with Microsoft Endpoint Manager
+# Getting started with cloud native Windows endpoints with Microsoft Endpoint Manager
 
 Increasing demand for remote work is accelerating adoption of Zero Trust security models, enabled by cloud- powered solutions. The shifting of device management to the cloud provides a better end-user experience and simplifies IT operations, while reducing reliance on on-premises infrastructure. This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization.
 
