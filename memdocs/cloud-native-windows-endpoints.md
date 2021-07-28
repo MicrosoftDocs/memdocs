@@ -20,7 +20,7 @@ ms.assetid:
  
 #audience:
 #ms.devlang:
-ms.reviewer: 
+ms.reviewer: scottbreenmsft;rogerso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 Increasing demand for remote work is accelerating adoption of Zero Trust security models, enabled by cloud- powered solutions. The shifting of device management to the cloud provides a better end-user experience and simplifies IT operations, while reducing reliance on on-premises infrastructure. This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization.
 
 > [!TIP]
-> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows Cloud Configuration for Endpoint Management - Microsoft 365](/microsoft-365/windows/cloud-configuration). This guide (for *cloud native Windows endpoints*) differs from the *Windows in cloud configuration for Endpoint Management* solution by guiding you through the configuration and highlighting areas you might want to customise.
+> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). This guide (for *cloud native Windows endpoints*) differs from the *Windows in cloud configuration for Endpoint Management* solution by guiding you through the configuration and highlighting areas you might want to customise.
 
 ## Overview
 
@@ -151,7 +151,7 @@ To test the Cloud Native Windows endpoint, we need to start by getting a virtual
 
 9. Log into the credential prompt with your Intune Administrator account.
 
-10. Leave the computer at the out of box experience until [Phase 2](#phase-2---build-your-first-cloud-native-windows-endpoint).
+10. Leave the computer at the out of box experience until [Phase 2](#phase-2---build-a-cloud-native-windows-endpoint).
 
 ### Step 4 - Create Azure AD dynamic group for the device
 
