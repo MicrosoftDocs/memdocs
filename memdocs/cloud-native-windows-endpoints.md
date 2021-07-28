@@ -5,7 +5,7 @@ title: Get started with cloud native Windows endpoints
 titleSuffix: Microsoft Endpoint Manager
 description: Use this guide to set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Autopilot.
 keywords:
-author: scottbreenmsft; rogersoms
+author: scottbreenmsft <!-- also rogersoms -->
   
 ms.author: brenduns
 manager: dougeby
@@ -123,7 +123,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
 To test the Cloud Native Windows endpoint, we need to start by getting a virtual machine or physical device ready for testing. The following steps will gather the device details and upload them into the Autopilot service for use later in this document.
 
 > [!NOTE]
-> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Autopilot on your behalf as part of purchasing. There is more information about Autopilot in [Phase 5](#phase-5---deploy-at-scale-with-autopilot).
+> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Autopilot on your behalf as part of purchasing. There is more information about Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-autopilot).
 
 1. Install Windows (preferably 20H2 or later) in a virtual machine or reset physical device so that it’s waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
@@ -240,9 +240,6 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
     - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
     - Silently move Windows known folders to OneDrive – **Enabled**
 
-<!-- NOT SURE HOW THIS NEXT LINE FITS. PENDING FEEDBACK FROM ROGER > 
-    Navigate to aad.portal.azure.com to get the Azure AD tenant ID and paste it in.
--->
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 :::image type="content" source="./media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Example of a settings catalog profile.":::
 
@@ -284,7 +281,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-2.png" alt-text="Phase 2.":::
 
-To bur first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1---set-up-your-environment). With this device, go through the Autopilot process.
+To bur first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Autopilot process.
 
 - Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
 
@@ -547,7 +544,7 @@ There are several options for creating your device configuration when considerin
 2. Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics).
 3. Use Group Policy Analytics to create Device Configuration profiles directly for supported settings.
 
-The transition to a cloud native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Try to avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP. 
+The transition to a cloud native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Try to avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP.
 
 To start fresh, review your current requirements and implement a minimal collection of settings to meet these requirements. Requirements might include regulatory or mandatory security settings and settings to enhance the end-user experience. The list of requirements should be driven by the business and not by IT. Every setting should be documented, understood, and should serve a purpose.
 
