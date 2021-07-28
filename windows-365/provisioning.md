@@ -104,7 +104,7 @@ The [**Reprovision**](reprovision-cloud-pc.md) remote action lets admins reprovi
 - Your provisioned Cloud PC is misbehaving.
 - The user simply wants to start from a fresh Cloud PC.
 
-The **Reprovision** action can also be used when a Cloud PC is in a **Failed provisioning** state in the Cloud PC provisioning node. You can think of reprovisioning as a similar process to resetting a physical device.
+The **Reprovision** action can also be used when a Cloud PC is in a **Failed provisioning** state in the Windows 365 provisioning node. You can think of reprovisioning as a similar process to resetting a physical device.
 
 When a reprovision is triggered, the Cloud PC will be deleted and recreated as a new Cloud PC. All user data, applications, customizations, and the like will be deleted.
 
