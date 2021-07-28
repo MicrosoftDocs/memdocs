@@ -32,6 +32,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 |The geographical view in the **Site Hierarchy** node of the **Monitoring** workspace in the Configuration Manager console.<!--8116777-->|August 2020|TBD|
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 |Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
+|Legacy MBAM-based [Recovery Service](../../../../protect/deploy-use/bitlocker/deploy-management-agent#recovery-service) for BitLocker management.|March 2021|TBD|
 
 ### <a name="bkmk_note1"></a> Note 1: Support removed TBD
 
