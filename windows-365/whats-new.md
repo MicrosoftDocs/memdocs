@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,19 +30,10 @@ ms.collection: M365-identity-device-management
 
 # What's new in Windows 365
 
-Learn what's new each week in Windows 365 in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). You can also find [important notices](#notices).
+Learn what new features are available in Windows 365.
 
 > [!Note]
-> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to three days to rollout and will be in the following order:
->
-> - Day 1: Asia Pacific (APAC)
-> - Day 2: Europe, Middle East, Africa (EMEA)
-> - Day 3: North America
-> - Day 4+: Intune for Government
->
-> Some features may roll out over several weeks and might not be available to all customers in the first week.
->
-> Check the [In development page](in-development.md) for a list of upcoming features in a release.
+> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to a week to rollout to all customers.
 
 <!-- Common categories:  
 ### App management
@@ -57,17 +48,16 @@ Learn what's new each week in Windows 365 in [Microsoft Endpoint Manager admin c
 
 <!-- ########################## -->
 
-## Week of July 1, 2021
+## Week of August 2, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Feature area alpha
+<!--### Feature area alpha-->
 
-#### New feature<!-- 8517457-->
+### Windows 365 released<!-- -->
 
-This is a new feature.
+Marketing announcement.
 
-<!-- ########################## -->
-## Notices
+For information on purchasing Windows 365 licenses, see [license purchase page]().
 
 <!-- ########################## -->
 ## Next steps
