@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Add or delete custom device images
 
-If you want to use a custom device image, you can add it into your Azure subscription and then use it for provisioning Cloud PCs. You can use standard Azure Marketplace gallery images or [create your own custom images](/azure/virtual-machines/windows/capture-image-resource).
+If you want to use a custom device image, you can add it into your Azure subscription and then use it for provisioning Cloud PCs. You can use standard Azure Marketplace gallery images or [create your own custom images](/azure/virtual-machines/windows/capture-image-resource). 
 
 ## Add a custom device image
 
