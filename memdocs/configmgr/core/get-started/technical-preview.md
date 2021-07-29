@@ -161,36 +161,6 @@ The following features were released with previous versions of the Configuration
 - [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
 - [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
 - [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
-- [PowerShell release notes preview](2021/technical-preview-2105-2.md#bkmk_powershell) <!--9881875-->
-
-### Technical preview version 2105
-
-- [Enhanced code editor](2021/technical-preview-2105.md#bkmk_code) <!--8495588-->
-- [Select VM size for CMG](2021/technical-preview-2105.md#bkmk_cmgsize) <!--3555749-->
-- [Support Center dark and light themes](2021/technical-preview-2105.md#bkmk_dark) <!--8218853-->
-- [RBAViewer location change](2021/technical-preview-2105.md#bkmk_rbaviewer) <!--9573789-->
-- [Updated client deployment prerequisite](2021/technical-preview-2105.md#bkmk_vcredist) <!--5170229-->
-- [Change to internet access requirements](2021/technical-preview-2105.md#bkmk_pkgurl) <!--9791281-->
-- [PowerShell release notes preview](2021/technical-preview-2105.md#bkmk_powershell) <!--9752792-->
-<!--don't forget to pickup for CB: Console settings not saved 5452246-->
-### Technical preview version 2104
-
-- [Tenant attach: BitLocker recovery keys](2021/technical-preview-2104.md#bkmk_bitlocker) <!--6979225-->
-- [Tenant attach: Historical inventory data in resource explorer](2021/technical-preview-2104.md#bkmk_dex) <!--9546584-->
-- [Tenant attach: Offboarding](2021/technical-preview-2104.md#bkmk_offboard) <!--7043245-->
-- [Support layered keyboard driver during OS deployment](2021/technical-preview-2104.md#bkmk_keyboard) <!--9735002-->
-- [Improvements to Support Center](2021/technical-preview-2104.md#bkmk_supctr) <!--8272488-->
-- [Run software updates evaluation from deployment status](2021/technical-preview-2104.md#bkmk_evaluate) <!--9012080-->
-- [Improvements to CMTrace](2021/technical-preview-2104.md#bkmk_cmtrace) <!--9607363-->
-- [PowerShell release notes preview](2021/technical-preview-2104.md#bkmk_powershell) <!--9363902-->
-
-### Technical preview version 2103
-
-- [Community hub support for configuration baselines](2021/technical-preview-2103.md#bkmk_hub) <!--7983121-->
-- [Tenant attach: Antivirus policy supports exclusions merge](2021/technical-preview-2103.md#bkmk_av) <!--9089764-->
-- [Cloud attach during site upgrade](2021/technical-preview-2103.md#bkmk_setup) <!--7958749-->
-- [New CMG deployments use TLS 1.2](2021/technical-preview-2103.md#bkmk_cmgtls) <!--9408265-->
-- [PowerShell release notes preview](2021/technical-preview-2103.md#bkmk_powershell) <!--9302248-->
 
 ## Features in previous technical previews
 
@@ -204,11 +174,11 @@ The following features were released with previous versions of the Configuration
 
 | Feature        | Technical preview version |
 |----------------|---------------------------|
-| Simplified CMPivot permissions requirements <!--7898885--> | [Tech preview 2101](2021/technical-preview-2101.md#bkmk_permission) |
+| Support Center dark and light themes <!--8218853--> | [Tech preview 2105](2021/technical-preview-2105.md#bkmk_dark) |
+| Tenant attach: BitLocker recovery keys <!--6979225--> | [Tech preview 2104](2021/technical-preview-2104.md#bkmk_bitlocker) |
 | Manage aged distribution point messages <!--8561493,9388277--> | [Tech preview 2101](2021/technical-preview-2101.md#bkmk_distmsg) |
 | Community hub support for application content <!--7983035--> | [Tech preview 2012](2020/technical-preview-2012.md#bkmk_hubapp) |
 | Software Center notifications display with logo <!--4993167--> | [Tech preview 2011](2020/technical-preview-2011.md#bkmk_notify) |
-| Improvements to Support Center <!--8272488--> | [Tech preview 2011](2020/technical-preview-2011.md#bkmk_support) |
 | Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Phased deployment templates <!--4961086--> | [Tech preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | Remote control anywhere using cloud management gateway <!--4575930--> | [Tech preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) and [Tech preview 2009](2020/technical-preview-2009.md#bkmk_remctrl) |
