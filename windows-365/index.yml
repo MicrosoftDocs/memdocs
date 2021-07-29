@@ -1,43 +1,91 @@
-### YamlMime:Landing
+### YamlMime:Hub
 title: Windows 365 documentation
-summary: "Official product documentation for Windows 365"
- 
+summary: Official product documentation for Windows 365
 
 metadata:
-  title: Windows 365 documentation
-  titleSuffix: Windows 365
-  description: "Official product documentation for Windows 365 in Microsoft Endpoint Manager"
-  ms.product: intune
-  ms.technology: intune
-  ms.topic: landing-page
+  services: service
+  ms.service: cloudpc
+  ms.topic: hub-page
   author: erikjeMS
   ms.author: erikje
-  ms.date: 03/8/2021
+  manager: dougeby
+  ms.date: 08/02/2021
 
-# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+highlightedContent:
+  items:
+    - title: What is Windows 365?
+      itemType: overview
+      url: overview.md
+    - title: Planning your Windows 365 deployment
+      itemType: get-started
+      url: planning-guide.md
+    - title: What is provisioning?
+      itemType: overview
+      url: provisioning.md
 
-landingContent:
-  - title: About Cloud PC
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: What is Windows 365
-            url: overview.md
+conceptualContent:
+  items:
+    - title: Planning
+      links:
+        - url: planning-guide.md
+          itemType: how-to-guide
+          text: Planning guide
+        - url: requirements.md
+          itemType: how-to-guide
+          text: Requirements
+        - url: .role-based-access.md
+          itemType: concept
+          text: Role-based access control
+        - url: cloud-pc-size-recommendations.md
+          itemType: concept
+          text: Cloud PC size recommendations
+    - title: Set up Windows 365
+      links:
+        - url: deployment-overview.md
+          itemType: how-to-guide
+          text: Deployment steps
+        - url: assign-licenses.md
+          itemType: how-to-guide
+          text: Assign licenses to users
+        - url: create-on-premises-network-connection.md
+          itemType: how-to-guide
+          text: Create on-premises network connection
+        - url: add-devices.md
+          itemType: how-to-guide
+          text: Add device images
+    - title: Provisioning policies
+      links:
+        - url: create-provisioning-policy.md
+          itemType: how-to-guide
+          text: Create provisioning policy
+        - url: automated-provisioning-steps.md
+          itemType: concept  
+          text: Automated provisioning steps
+additionalContent:
+  sections:
+    - title: Additional resources to manage devices
+      items:
+      - title: Microsoft Intune
+        links: 
+        - text: Explore Microsoft Intune, a complete MDM tool
+          url: /mem/intune/
+      - title: Microsoft 365
+        links: 
+        - text: Explore Microsoft 365, a complete solution that includes Intune
+          url: /microsoft-365/
+        - text: Microsoft 365 Enterprise documentation
+          url: /microsoft-365/enterprise/
+        - text: Microsoft 365 Enterprise foundation infrastructure
+          url: /microsoft-365/enterprise/deploy-foundation-infrastructure
+      - title: Azure Active Directory
+        links: 
+        - text: User management documentation
+          url: /azure/active-directory/fundamentals/active-directory-manage-groups
+        - text: Authentication documentation
+          url: /azure/active-directory/authentication/
+        - text: Device identity documentation
+          url: /azure/active-directory/devices/
+        - text: Hybrid identity documentation
+          url: /azure/active-directory/hybrid/
 
-  # Card 
-  - title: Planning
-    linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Planning your Cloud PC deployment
-            url: planning-guide.md
-
-  # Card
-  - title: Top tasks
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Deploying Windows 365
-            url: deployment-overview.md
-          - text: Troubleshoot
-            url: troubleshooting.md
+  footer: "Have feedback or want to contribute to docs? [See this resource](../use-docs.md)!"
