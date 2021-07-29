@@ -38,8 +38,6 @@ To resize a Cloud PC, the admin must have any of the following built in Azure Ac
 
 - Global Admin
 - Intune Service Admin
-- Windows 365 Service Admin  
-- Cloud PC Admin  
 
 Alternatively, you can assign a custom role that includes the permissions of the built in roles above.
 
