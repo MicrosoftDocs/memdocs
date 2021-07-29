@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: include
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ---
 
 This section covers the following features:

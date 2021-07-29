@@ -2,7 +2,7 @@
 title: Manage clients over the internet
 titleSuffix: Configuration Manager
 description: Learn about managing clients with cloud management gateway and internet-based client management in Configuration Manager.
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.technology: configmgr-client

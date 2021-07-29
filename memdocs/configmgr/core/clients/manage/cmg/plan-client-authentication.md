@@ -2,7 +2,7 @@
 title: CMG client authentication
 titleSuffix: Configuration Manager
 description: Plan for how clients authenticate to the cloud management gateway (CMG).
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

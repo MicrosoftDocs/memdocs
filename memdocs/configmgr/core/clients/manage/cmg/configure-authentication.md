@@ -2,7 +2,7 @@
 title: Configure CMG client authentication
 titleSuffix: Configuration Manager
 description: Configure authentication methods for clients to use a cloud management gateway (CMG).
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
