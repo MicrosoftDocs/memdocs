@@ -30,6 +30,18 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Cloud-attached management
 
+
+### Cloud attach your environment during site update
+<!-- 9563659,7958749-->
+
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Cloud attach brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. Starting with this release, sites that aren't already onboarded to Microsoft Endpoint Manager will be prompted to optionally cloud attach as part of the upgrade wizard. Environments are considered cloud attached if at least one of the following features are already enabled:
+
+- [Tenant attach](../../../tenant-attach/device-sync-actions.md)
+- [Co-management](../../../comanage/overview.md)
+- [Endpoint analytics](../../../../analytics/enroll-configmgr.md)
+
+For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md).
+
 ### Convert a CMG to virtual machine scale set
 
 <!--8959690-->
