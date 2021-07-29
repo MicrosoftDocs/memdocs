@@ -190,27 +190,6 @@ Applies to:
 
 - iOS/iPadOS
 
-<!-- ***********************************************-->
-## Device security
-
-
-### Certificate Connector for Microsoft Intune combines separate certificate connectors<!-- 9843502  -->
-
-The separate certificate connectors are being combined into a unified connector called **Certificate Connector for Microsoft Intune**. This unified connector replaces existing connectors, and includes the following new features:
-
-- Configure SCEP, PKCS, PFX imported certs, and revocation in the same connector.
-- Use normal Active Directory accounts or the system account for the connector service.
-- Based on your tenant location, select government vs. commercial environments.
-- Removes the need to select a client certificate for SCEP integration with NDES.
-- Auto-updates to the latest version of the connector.
-- Improved logging.
-
-To use the **Certificate Connector for Microsoft Intune**:
-
-1. Uninstall any existing certificate connectors.
-2. Install the Certificate Connector for Microsoft Intune.
-
-For more information on certificate connectors, see [Certificate connectors for Microsoft Intune](../protect/certificate-connectors.md).
 
 <!-- ***********************************************-->
 ## Intune apps
