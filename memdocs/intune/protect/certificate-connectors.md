@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 # Certificate connectors for Microsoft Intune
 
 > [!IMPORTANT]
-> As of June 21, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the previous connectors remain in support, they are no longer available for download and will not be further developed.
+> As of July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the previous connectors remain in support, they are no longer available for download and will not be further developed.
 >
 > If you need to install a new certificate connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune. For more information, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
 
