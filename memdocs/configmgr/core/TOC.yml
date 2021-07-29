@@ -207,12 +207,6 @@ items:
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
       href: plan-design/network/websites-for-site-system-servers.md
-    - name: CNG v3 certificates overview
-      href: plan-design/network/cng-certificates-overview.md
-    - name: PKI certificate requirements
-      href: plan-design/network/pki-certificate-requirements.md
-    - name: Example PKI certificate deployment
-      href: plan-design/network/example-deployment-of-pki-certificates.md
   - name: Diagnostics and usage data
     items:
     - name: Overview of diagnostics and usage data
@@ -243,14 +237,20 @@ items:
     items:
     - name: Plan for security
       href: plan-design/security/plan-for-security.md
-    - name: Certificates overview
-      href: plan-design/security/certificates-overview.md
-    - name: Plan for PKI certificates
-      href: plan-design/security/plan-for-certificates.md
     - name: Configure security
       href: plan-design/security/configure-security.md
     - name: Cryptographic controls technical reference
       href: plan-design/security/cryptographic-controls-technical-reference.md
+    - name: Certificates overview
+      href: plan-design/security/certificates-overview.md
+    - name: Plan for PKI certificates
+      href: plan-design/security/plan-for-certificates.md
+    - name: CNG v3 certificates overview
+      href: plan-design/network/cng-certificates-overview.md
+    - name: PKI certificate requirements
+      href: plan-design/network/pki-certificate-requirements.md
+    - name: Example PKI certificate deployment
+      href: plan-design/network/example-deployment-of-pki-certificates.md
     - name: Additional privacy information
       href: plan-design/security/additional-privacy.md
     - name: Enable TLS 1.2
