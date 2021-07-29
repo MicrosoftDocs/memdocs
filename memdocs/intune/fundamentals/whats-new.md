@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/28/2021
+ms.date: 07/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,7 +75,25 @@ We have improved the UX of Microsoft Endpoint Manager by creating categories of 
 
 We've added support for user-assigned device configuration policies for [Shared iPads for Business](../enrollment/device-enrollment-shared-ipad.md).
 
-With this change, settings like the home screen layout and most device restrictions assigned to user groups apply to Shared iPad devices while a user from the assigned user groups is active on the device.
+With this change, settings like the home screen layout and most device restrictions assigned to user groups apply to Shared iPad devices while a user from the assigned user groups is active on the device
+
+#### Certificate Connector for Microsoft Intune combines separate certificate connectors<!-- 9843502  -->
+
+We’ve released the [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md). This new connector replaces the use of separate certificate connectors for SCEP and PKCS, and includes the following features:
+
+- Configure each instance of the connector to support one or more of the following capabilities:
+  - SCEP
+  - PKCS
+  - PFX imported certificates
+  - Certificate revocation
+- Use a normal Active Directory account or the system account for the connector service.
+- Based on your tenant location, select government vs. commercial environments.
+- Removes the need to select a client certificate for SCEP integration with NDES.
+- Auto-updates to the latest version of the connector. Manual update of this connector is also supported.
+- Improved logging.
+
+The previous connectors remain in support but are no longer available for download. If you need to install or reinstall a connector, install the new Certificate Connector for Microsoft Intune.
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -132,7 +150,6 @@ The following protected apps are now available for Microsoft Intune:
 - ArchXtract (MDM) by CEGB CO., Ltd.
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
 
 <!-- ########################## -->
 ## Week of July 5, 2021

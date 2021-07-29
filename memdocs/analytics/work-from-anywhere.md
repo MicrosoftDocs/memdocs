@@ -2,7 +2,7 @@
 title: Work from anywhere (preview) report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: The Work from anywhere (preview) report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 07/26/2020
+ms.date: 07/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
