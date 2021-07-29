@@ -5,10 +5,6 @@ items:
   items:
   - name: Windows 365 overview
     href: overview.md
-  - name: What's new?
-    href: whats-new.md
-  - name: Features in development
-    href: in-development.md
 - name: Concepts
   items:
   - name: Architecture
