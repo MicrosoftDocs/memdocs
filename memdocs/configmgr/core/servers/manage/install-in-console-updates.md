@@ -66,6 +66,12 @@ You're presented with the Updates Wizard that displays a list of the product are
 
 - When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md).
 
+- Starting in Configuration Manager 2107, sites that aren't already onboarded to Microsoft Endpoint Manager will be prompted to optionally cloud attach as part of the upgrade wizard. Environments are considered cloud attached if at least one of the following features are already enabled:
+
+   - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
+   - [Co-management](../../../comanage/overview.md)
+   - [Endpoint analytics](../../../../analytics/enroll-configmgr.md)
+
 ### 2. During the update installation
 
 As part of the update installation, Configuration Manager does the following actions:
