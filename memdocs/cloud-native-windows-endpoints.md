@@ -41,6 +41,8 @@ Increasing demand for remote work is accelerating adoption of Zero Trust securit
 
 A cloud native Windows endpoint is joined to [Azure AD](/azure/active-directory/devices/concept-azure-ad-join) (AADJ) and managed by a Mobile Device Management (MDM) solution. Unlike traditional domain join or [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) endpoints, it has no dependencies on on-premises Active Directory. This document focuses on Microsoft Endpoint Manager (MEM) as the MDM solution. Cloud native endpoints can be easily deployed by using [Autopilot](/mem/autopilot/windows-autopilot) to transform the pre-installed Windows operating system.
 
+:::image type="content" source="./media/cloud-native-windows-endpoints/cloud-native-endpoint-graphic.png" alt-text="Graphic representation of a cloud native Windows endpoint.":::
+
 ### Benefits of cloud native Windows endpoints
 
 - **Best for remote work**  
