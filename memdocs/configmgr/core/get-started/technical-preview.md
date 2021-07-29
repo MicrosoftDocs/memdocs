@@ -2,11 +2,10 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 06/24/2021
+ms.date: 07/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -119,22 +118,10 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2106
+### Technical preview version 2107
 
-- [Intune role-based access control for tenant attach](2021/technical-preview-2106.md#bkmk_rbac) <!--8126836-->
-- [Convert a CMG to virtual machine scale set](2021/technical-preview-2106.md#bkmk_cmg) <!--8959690-->
-- [Implicit uninstall of applications](2021/technical-preview-2106.md#bkmk_uninstall) <!--3607457-->
-- [Microsoft .NET requirements](2021/technical-preview-2106.md#bkmk_dotnet) <!--10033951-->
-- [Audit mode for potentially unwanted applications](2021/technical-preview-2106.md#bkmk_audit) <!--9249870-->
-- [External notifications](2021/technical-preview-2106.md#bkmk_pushnotify) <!--9504414-->
-- [List additional third-party updates catalogs](2021/technical-preview-2106.md#bkmk_catalogs) <!--9989251-->
-- [Management insights rule for TLS/SSL software update points](2021/technical-preview-2106.md#bkmk_sup) <!--7470529-->
-- [Renamed Co-management node to Cloud Attach](2021/technical-preview-2106.md#bkmk_cloud) <!--10158821-->
-- [Improvements for managing automatic deployment rules](2021/technical-preview-2106.md#bkmk_adr) <!--9247522-->
-- [New prerequisite check for SQL Server 2012](2021/technical-preview-2106.md#bkmk_sql2012) <!--10092858-->
-- [Console improvements](2021/technical-preview-2106.md#bkmk_console) <!--9575773-->
-- [Client encryption uses AES-256](2021/technical-preview-2106.md#bkmk_encrypt) <!--10129759-->
-- [PowerShell release notes preview](2021/technical-preview-2106.md#bkmk_powershell) <!--9997352-->
+- [Tenant attach: Software updates information](2021/technical-preview-2107.md#bkmk_sum) <!--6024419-->
+- [Publish query to Community hub from CMPivot](2021/technical-preview-2107.md#bkmk_hub) <!--9965423-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -151,6 +138,23 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2106
+
+- [Intune role-based access control for tenant attach](2021/technical-preview-2106.md#bkmk_rbac) <!--8126836-->
+- [Convert a CMG to virtual machine scale set](2021/technical-preview-2106.md#bkmk_cmg) <!--8959690-->
+- [Implicit uninstall of applications](2021/technical-preview-2106.md#bkmk_uninstall) <!--3607457-->
+- [Microsoft .NET requirements](2021/technical-preview-2106.md#bkmk_dotnet) <!--10033951-->
+- [Audit mode for potentially unwanted applications](2021/technical-preview-2106.md#bkmk_audit) <!--9249870-->
+- [External notifications](2021/technical-preview-2106.md#bkmk_pushnotify) <!--9504414-->
+- [List additional third-party updates catalogs](2021/technical-preview-2106.md#bkmk_catalogs) <!--9989251-->
+- [Management insights rule for TLS/SSL software update points](2021/technical-preview-2106.md#bkmk_sup) <!--7470529-->
+- [Renamed Co-management node to Cloud Attach](2021/technical-preview-2106.md#bkmk_cloud) <!--10158821-->
+- [Improvements for managing automatic deployment rules](2021/technical-preview-2106.md#bkmk_adr) <!--9247522-->
+- [New prerequisite check for SQL Server 2012](2021/technical-preview-2106.md#bkmk_sql2012) <!--10092858-->
+- [Console improvements](2021/technical-preview-2106.md#bkmk_console) <!--9575773-->
+- [Client encryption uses AES-256](2021/technical-preview-2106.md#bkmk_encrypt) <!--10129759-->
+- [PowerShell release notes preview](2021/technical-preview-2106.md#bkmk_powershell) <!--9997352-->
 
 ### Technical preview version 2105.2
 
