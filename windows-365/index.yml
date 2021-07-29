@@ -33,7 +33,7 @@ conceptualContent:
         - url: requirements.md
           itemType: how-to-guide
           text: Requirements
-        - url: .role-based-access.md
+        - url: role-based-access.md
           itemType: concept
           text: Role-based access control
         - url: cloud-pc-size-recommendations.md
@@ -50,7 +50,7 @@ conceptualContent:
         - url: create-on-premises-network-connection.md
           itemType: how-to-guide
           text: Create on-premises network connection
-        - url: add-devices.md
+        - url: add-device-images.md
           itemType: how-to-guide
           text: Add device images
     - title: Provisioning policies
@@ -87,5 +87,3 @@ additionalContent:
           url: /azure/active-directory/devices/
         - text: Hybrid identity documentation
           url: /azure/active-directory/hybrid/
-
-  footer: "Have feedback or want to contribute to docs? [See this resource](../use-docs.md)!"
