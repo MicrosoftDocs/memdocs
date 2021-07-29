@@ -63,7 +63,7 @@ conceptualContent:
           text: Automated provisioning steps
 additionalContent:
   sections:
-    - title: Additional resources to manage devices
+    - title: Additional resources related to Windows 365
       items:
       - title: Microsoft Intune
         links: 
