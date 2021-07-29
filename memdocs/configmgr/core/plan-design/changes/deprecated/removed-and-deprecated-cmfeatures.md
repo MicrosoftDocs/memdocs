@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 07/07/2021
+ms.date: 07/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -25,6 +25,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Support&nbsp;removed|
 |-----------|---|--------------|
+| The BitLocker management implementation for the [recovery service](../../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service) has changed. The legacy MBAM-based service is replaced by the messaging processing engine on the management point. | March 2021 | The first release after May 2022 |
 |Desktop Analytics data for Windows 7, Windows 8, and earlier versions of Windows 10 that don't support the [Windows diagnostic data processor configuration](../../../../desktop-analytics/whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->|July 2021|January 31, 2022|
 |Older style of console extensions that haven't been approved in the **Console Extension** node, will no longer be supported. For more information about new console extensions, see [Manage console extensions](../../../servers/manage/admin-console-extensions.md). <!--3555909-->|April 2021|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 | The following compliance settings for **Company resource access**: <!-- 9315387 --> [Certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md), [VPN profiles](../../../../protect/deploy-use/vpn-profiles.md), [Wi-Fi profiles](../../../../protect/deploy-use/create-wifi-profiles.md), [Windows Hello for Business settings](../../../../protect/deploy-use/windows-hello-for-business-settings.md), and email profiles. This deprecation includes the [co-management resource access workload](../../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../../intune/configuration/device-profiles.md). | March 2021 | The first release after March 1, 2022 |
