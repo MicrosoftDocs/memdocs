@@ -77,7 +77,7 @@ For more information on how to install clients with a copy of the site server si
 
 Configuration Manager uses self-signed certificates for client identity and to help protect communication between the client and site systems. When you update the site and clients to version 2107 or later, the client stores its certificate from the site in a hardware-bound key storage provider (KSP). This KSP is typically the trusted platform module (TPM). The certificate is also marked non-exportable.
 
-If the client also has a PKI-based certificate, it continues to use that certificate for TLS HTTPS communication. It uses the site's self-signed certificate for signing messages with the site. This behavior means that the client supports elliptical curve cryptography (ECC) certificates from your PKI. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md).
+If the client also has a PKI-based certificate, it continues to use that certificate for TLS HTTPS communication. It uses its self-signed certificate for signing messages with the site. This behavior means that the client supports elliptical curve cryptography (ECC) certificates from your PKI. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md).
 
 > [!NOTE]
 > For clients that also have a PKI certificate, the Configuration Manager console displays the **Client certificate** property as **Self-signed**. The client control panel **Client certificate** property shows **PKI**.<!-- 10278780 -->
