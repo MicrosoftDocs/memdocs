@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: kellieei
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,7 +41,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 ## Prerequisites
 
-- The macOS device must be running macOS 10.12 or later before installing Microsoft Edge.
+- The macOS device must be running macOS 10.14 or later before installing Microsoft Edge.
 
 ## Add Microsoft Edge to Intune
 
@@ -93,10 +93,7 @@ You can use scope tags to determine who can see client app information in Intune
 ## Add the app
 When you've completed configuring, select **Add** from the **App app** pane. 
 
-The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
-
-> [!NOTE]
-> Currently, Apple does not provide a way for Intune to uninstall Microsoft Edge on macOS devices.
+The app you've created is displayed in the apps list, where you can assign it to the groups that you select.
 
 ## Next steps
 - To learn how to configure Microsoft Edge on macOS devices, see [Configure Microsoft Edge on macOS devices](/deployedge/configure-microsoft-edge-on-mac).

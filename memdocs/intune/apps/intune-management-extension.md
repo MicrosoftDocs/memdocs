@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Add PowerShell scripts to Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add PowerShell scripts to Windows 10 devices in Microsoft Intune
 description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10 devices in Microsoft Intune. Read common issues and resolutions. 
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 07/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -19,7 +19,7 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 
 #ROBOTS:
 #audience:
-ms.reviewer:
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -70,10 +70,9 @@ The Intune management extension has the following prerequisites. Once they're me
   
 - Devices joined to Azure Active Directory (AD), including:  
   
-  - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
+  - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AAD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
   
-  > [!TIP]
-  > Be sure devices are [joined](/azure/active-directory/user-help/user-help-join-device-on-network) to Azure AD. Devices that are only [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD won't receive your scripts.  
+- Azure AD registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.    
 
 - Devices enrolled in Intune, including:
 
@@ -133,6 +132,7 @@ The Intune management extension has the following prerequisites. Once they're me
 
         > [!NOTE]
         > PowerShell scripts in Intune can be targeted to Azure AD device security groups or Azure AD user security groups.
+        > However, when targeting workplace joined (WPJ) devices, only Azure AD device security groups can be used (user targeting will be ignored). For more information, see [Win32 app support for Workplace join (WPJ) devices](../fundamentals/whats-new-archive.md#win32-app-support-for-workplace-join-wpj-devices-).
 
     2. Select **Next**.
 
@@ -174,7 +174,7 @@ The Intune management extension has the following prerequisites. Once they're me
 
 ## Monitor run status
 
-You can monitor the run status of PowerShell scripts for users and devices in the Azure portal.
+You can monitor the run status of PowerShell scripts for users and devices in the portal.
 
 In **PowerShell scripts**, select the script to monitor, choose **Monitor**, and then choose one of the following reports:
 
@@ -233,7 +233,7 @@ To see if the device is auto-enrolled, you can:
 
 - To isolate scripting problems, you can:
 
-  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) for guidance.
+  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1) for guidance.
   - Run a sample script using the Intune management extension. For example, create the `C:\Scripts` directory, and give everyone full control. Run the following script:
 
     ```powershell

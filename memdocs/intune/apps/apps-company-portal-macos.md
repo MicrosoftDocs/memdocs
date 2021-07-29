@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 04/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,7 +41,7 @@ You can use any of the following options to install the Company Portal for macOS
 To help keep the apps more secure and up to date once installed, the Company Portal app comes with Microsoft AutoUpdate (MAU).
 
 > [!NOTE]
-> The Company Portal app can only be installed automatically on devices using Intune that are already enrolled using direct enrolment or Automated Device Enrolment. For personal device or manual enrolment, the Company Portal app must be downloaded and installed to initiate enrollment. See [Instruct users to download and install Company Portal](#instruct-users-to-download-and-install-company-portal).
+> The Company Portal app can only be installed automatically on devices using Intune that are already enrolled using direct enrollment or Automated Device Enrollment. For personal device or manual enrollment, the Company Portal app must be downloaded and installed to initiate enrollment. See [Instruct users to download and install Company Portal](#instruct-users-to-download-and-install-company-portal).
 ## Instruct users to download and install Company Portal
 
 You can instruct users to download, install, and sign in to Company Portal for macOS. For instructions on downloading, installing, and signing into the Company Portal, see [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
@@ -68,6 +68,13 @@ Company Portal for macOS can be downloaded and installed using the [macOS Shell 
 
 > [!NOTE]
 > The script will require Internet access when it runs to download the current version of the Company Portal for macOS. 
+
+## Install Company Portal for macOS using the Apple Setup Assistant
+
+For macOS devices running 10.15 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication (preview)**. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance.
+
+Users must sign into the Company Portal to complete Azure AD authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the additional Azure AD login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
+
 ## Next steps
 - To learn more about assigning apps, see [Assign apps to groups](apps-deploy.md).
 - To learn more about configuring Automated Device Enrollment, see [Device Enrollment Program - Enroll macOS](../enrollment/device-enrollment-program-enroll-macos.md).

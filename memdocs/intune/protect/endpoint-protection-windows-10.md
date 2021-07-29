@@ -1,11 +1,12 @@
 ---
 # required metadata
-title: Protection settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Protection settings for Windows 10 devices in Microsoft Intune
 description: On Windows 10 devices, use or configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
+ms.date: 01/29/2021
 ms.topic: reference
 ms.technology:
 ms.service: microsoft-intune
@@ -26,7 +27,10 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 (and later) settings to protect devices using Intune
 
-Microsoft Intune includes many settings to help protect your devices. This article describes all the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
 
 To configure Microsoft Defender Antivirus, see [Windows 10 device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
 
@@ -791,7 +795,7 @@ Attack surface reduction rules help prevent behaviors malware often uses to infe
 
 #### Attack Surface Reduction rules  
 
-To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender ATP documentation.
+To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
 **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -802,7 +806,7 @@ Attack surface reduction rule merge behavior is as follows:
 - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
   - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
   - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
-  - Endpoint security > Security baselines > Microsoft Defender ATP Baseline > **Attack Surface Reduction Rules**.
+  - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
 - Settings that do not have conflicts are added to a superset of policy for the device.
 - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
 - Only the configurations for conflicting settings are held back.
@@ -909,7 +913,7 @@ Block the following to help prevent against script threats:
   
 - **Executables that don't meet a prevalence, age, or trusted list criteria**  
   **Default**: Not configured  
-  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
   - **Not configured**  
   - **Block** - Block executable files from running unless they meet a prevalence, age, or trusted list criteria.  
@@ -1178,7 +1182,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 - **Tamper Protection**  
   **Default**: Not configured
 
-  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender Advanced Threat Protection with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
+  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
   - **Not configured** - No change is made to device settings.
   - **Enabled** - Tamper Protection is turned on and restrictions are enforced on devices.
   - **Disabled** - Tamper Protection is turned off and restrictions are not enforced.

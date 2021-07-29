@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows 8.1 compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: Windows 8.1 compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Windows 8.1 in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, enable encryption on data storage, and more.
 keywords:
 author: brenduns
@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 8.1 settings to mark devices as compliant or not compliant using Intune
+# Device Compliance settings for Windows 8.1 in Intune
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 This article lists and describes the different compliance settings you can configure on Windows 8.1 devices in Intune. As part of your mobile device management (MDM) solution, use these settings to block simple passwords, set a minimum and maximum OS version, and more.

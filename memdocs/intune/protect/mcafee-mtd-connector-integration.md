@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,7 @@ Complete the following steps to integrate the MVISION Mobile mobile threat defen
 
 ## Before you begin
 
-The following steps are done in the MVISION Mobile console <!-- Link pending --> and will enable a connection to MVISION Mobile's service for Intune enrolled devices (using device compliance).
+The following steps are done in the MVISION Mobile console <!-- Link pending --> and will enable a connection to MVISION Mobile's service for Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating MVISION Mobile with Intune, make sure you have the following subscription and credentials:
 
@@ -95,3 +95,4 @@ For more information about consent and Azure Active Directory applications, see 
 ## Next steps
 
 - [Set up MVISION Mobile apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up MVISION Mobile apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)

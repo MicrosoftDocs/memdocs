@@ -1,11 +1,11 @@
 ---
 title: Manage user state
 titleSuffix: Configuration Manager
-description: Configuration Manager uses the User State Migration Tool to capture and restore user state data in operating system deployment scenarios.
-ms.date: 01/23/2017
+description: Configuration Manager uses the User State Migration Tool to capture and restore user state data in OS deployment scenarios.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: how-to
+ms.topic: conceptual
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
@@ -16,112 +16,102 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-You can use Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. For example:  
+You can use Configuration Manager task sequences to capture and restore the user state data in OS deployment scenarios where you want to keep the user state of the current OS. For example:
 
-- Deployments where you want to capture the user state from one computer to restore it on another computer.  
+- Deployments where you want to capture the user state from one computer to restore it on another computer.
 
-- Update deployments where you want to capture and restore the user state on the same computer.  
+- Update deployments where you want to capture and restore the user state on the same computer.
 
 Configuration Manager uses the User State Migration Tool (USMT) 10.0 to manage the migration of user state data from a source computer to a destination computer after the operating system installation completes. For more information about common migration scenarios for the USMT 10.0, see  [Common Migration Scenarios](/windows/deployment/usmt/usmt-common-migration-scenarios).
 
-Use the following sections to help you capture and restore user data.
+## Capture user state data
 
-## <a name="BKMK_StoringUserData"></a> Store user state data
-
- When you capture user state, you can store the user state data on the destination computer or on a state migration point. To store the user state on a user state migration point, you must use a Configuration Manager site system server that hosts the state migration point site system role. To store the user state on the destination computer, you must configure your task sequence to store the data locally using links.
+When you capture user state, you can store the user state data on the destination computer or on a state migration point. To store the user state on a state migration point, first configure a site system server to host the role. To store the user state on the destination computer, configure the task sequence to store the data locally using links.
 
 > [!NOTE]
-> The links that are used to store the user state locally are referred to as hard-links. Hard-links is a USMT 10.0 feature that scans the computer for user files and settings and then creates a directory of hard-links to those files. The hard-links are then used to restore the user data after the new operating system is deployed.
+> The links that Windows uses to store the user state locally are referred to as _hard-links_. A hard-link migration store is a USMT 10.0 feature. It scans the computer for user files and settings and then creates a directory of hard-links to those files. USMT then uses the hard-links to restore the user data after the task sequence deploys the new OS.
 
 > [!IMPORTANT]
-> You cannot use a state migration point and use hard-links to store the user state data at the same time.
+> You can't use a state migration point and use hard-links to store the user state data at the same time.
 
-When the user state information is captured, the information can be stored in one of the following ways:  
+When USMT captures the user state, it can store the information in one of the following ways:
 
-- You can store the user state data remotely by configuring a state migration point. The **Capture** task sequence sends the data to the state migration point. Then, after the operating system is deployed, the **Restore** task sequence retrieves the data and restores the user state on the destination computer.  
+- Store the data remotely on a state migration point. The **Capture User State** task sequence step sends the data to the server. After the task sequence deploys the OS, the **Restore User State** step downloads the data from the server and restores the user state on the destination computer.
 
-- You can store the user state data locally to a specific location. In this scenario, the **Capture** task sequence copies the user data to a specific location on the destination computer. Then, after the operating system is deployed, the **Restore** task sequence retrieves the user data from that location.  
+- Store the data locally to a specific location. In this scenario, the **Capture User State** step copies the user data to a specific location on the destination computer. After the task sequence deploys the OS, the **Restore User State** step gets the user data from that local location.
 
-- You can specify hard links that can be used to restore the user data to its original location. In this scenario, the user state data remains on the drive when the old operating system is removed. Then, after the new operating system is deployed, the **Restore** task sequence uses the hard-links to restore the user state data to its original location.  
+- Use hard-links. In this scenario, the user state data remains on the drive when the task sequence removes the old OS. After the task sequence deploys the OS, the **Restore User State** step uses the hard-links to restore the user state data to its original location.
 
-### <a name="BKMK_UserDataSMP"></a> Store user data on a state migration point
+### Store user state data on a state migration point
 
- To store the user state data on a state migration point, you must do the following:  
+To store the user state data on a state migration point, use the following steps:
 
-1. [Configure a state migration point](#BKMK_StateMigrationPoint) to store the user state data.  
+1. Configure a [state migration point](#the-state-migration-point) to store the user state data.
 
-1. [Create a computer association](#BKMK_ComputerAssociation) between the source computer and the destination computer. You must create this association before you capture the user state on the source computer.  
+1. Create a [computer association](#computer-associations) between the source computer and the destination computer. Create this association before you capture the user state on the source computer.
 
-1. [Create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer, store the user date on a state migration point, and restore the user data to a computer:  
+1. [Create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, add the following task sequence steps to capture user data from a computer, store the user date on a state migration point, and restore the user data to a computer:
 
-    - [Request State Store](../understand/task-sequence-steps.md#BKMK_RequestStateStore) to request access to a state migration point when capturing state from a computer or restoring state to a computer.  
+    - [Request State Store](../understand/task-sequence-steps.md#BKMK_RequestStateStore): Requests access to a state migration point when capturing state from a computer or restoring state to a computer.
 
-    - [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState) to capture and store the user state data on the state migration point.  
+    - [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState): Runs USMT to capture and store the user state data on the state migration point.
 
-    - [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState) to restore the user state on the destination computer by retrieving the data from a user state migration point.  
+    - [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState): Runs USMT to restore the data from a state migration point to the destination computer.
 
-    - [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) to notify the state migration point that the capture or restore action is complete.  
+    - [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore): Notifies the state migration point that the capture or restore action is complete.
 
-### <a name="BKMK_UserDataDestination"></a> Store user data locally
+### Store user data locally
 
- To store the user state data locally, you must do the following:  
+To store the user state data locally, [create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, add the following task sequence steps to capture user data from a computer and restore it:
 
-- [Create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer and restore the user data to a computer by using hard-links;
+- [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState): Run USMT to capture and store the user state to a local folder, with or without hard-links.
 
-  - [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState) to capture and store the user state data to a local folder by using hard-links.  
+- [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState): Run USMT to restore the data from the local store to the destination computer.
 
-  - [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState) to restore the user state on the destination computer by retrieving the data by using hard-links.  
+  > [!NOTE]
+  > The user state data that the hard-links reference remains on the computer after the task sequence removes the old OS.
 
-    > [!NOTE]
-    > The user state data that the hard-links reference remains on the computer after the task sequence removes the old operating system. This is the data that is used to restore the user state when the new operating system is deployed.  
+## The state migration point
 
-## <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point
+The state migration point stores user state data. The task sequence captures it from one computer and then restores it on another computer. When you capture user settings for an OS deployment on the same computer, you can store the data on the same computer by using hard-links or you can use a state migration point. For some deployments, when you create the state store, Configuration Manager automatically creates an association between the state store and the destination computer.
 
-The state migration point stores user state data that is captured on one computer and then restored on another computer. However, when you capture user settings for an operating system deployment on the  same computer, such as a deployment where you refresh the operating system on the destination computer, you can store the data on the same computer by using hard-links or on a state migration point. For some computer deployments, when you create the state store, Configuration Manager automatically creates an association between the state store and the destination computer. You can use the following methods to configure a state migration point to store the user state data:  
+For more information about the state migration point and the steps to configure it, see [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).
 
-- Use the **Create Site System Server Wizard** to create a new site system server for the state migration point.  
+## Computer associations
 
-- Use the **Add Site System Roles Wizard** to add a state migration point to an existing server.  
+You use a computer association when you install an OS on new hardware and restore user data settings from another computer. The association defines the relationship between the source and destination computers. The source computer is an existing computer that Configuration Manager manages. It has the original user state. The destination computer is a new computer with a new OS. You restore the user state to the destination computer.
 
-  When you use these wizards, you are prompted to provide the following information for the state migration point:  
+> [!NOTE]
+> It's not supported to create a computer association between computers located in a Configuration Manager parent site with computers located in a child site. Computer associations are site specific and don't replicate.
 
-- The folders to store the user state data.  
+### Create a computer association
 
-- The maximum number of clients that can store data on the state migration point.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **User State Migration** node.
 
-- The minimum free space for the state migration point to store user state data.  
+1. On the **Home** tab, in the **Create** group, select **Create Computer Association**.
 
-- The deletion policy for the role. You can specify that the user state data is deleted immediately after it is restored on a computer, or after a specific number of days after the user data is restored on a computer.  
+1. On the **Computer Association** tab:
 
-- Whether the state migration point responds only to requests to restore user state data. When you enable this option, you cannot use the state migration point to store user state data.  
+    1. For the **Source computer**, select **Search**. Locate and select the existing computer that has the user state.
 
-  For more information about the state migration point and the steps to configure it, see [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+    1. Repeat this process for the **Destination computer**. You may need to [Import computer information](../../core/clients/manage/manage-clients.md#import-computer-information) to predefine the device record.
 
-## <a name="BKMK_ComputerAssociation"></a> Create a computer association
+1. Switch to the **User Accounts** tab to specify the user accounts to migrate to the destination computer. Select one of the following migration behaviors:
 
-Create a computer association to define a relationship between a source computer and a destination computer when you install an operating system on new hardware and want to capture and restore user data settings. The source computer is an existing computer that Configuration Manager manages. When you deploy the new operating system to the destination computer, the source computer contains the user state that is migrated to the destination computer.  
+    - **Capture and restore all user accounts**: Use this option to create multiple associations to the same source computer.
 
-> [!NOTE]  
-> It is not supported to create a computer association between computers located in a Configuration Manager parent site with computers located in a child site. Computer Associations are site specific and do not  replicate.  
+    - **Capture all user accounts and restore specified accounts**: This option captures all user accounts from the source computer and only restores the accounts that you specify to the destination computer. You can also use this setting to create multiple associations to the same source computer.
 
-### To create a computer association
+    - **Capture and restore specified user accounts**: This option captures and restores only the accounts that you specify. When you select this option, you can't create multiple associations to the same source computer. This value is the default option.
 
-1. In the Configuration Manager console, click **Assets and Compliance**.  
+    Select the new button (gold asterisk) to add user accounts from Active Directory.
 
-1. In the **Assets and Compliance** workspace, click **User State Migration**.  
+## When a deployment fails
 
-1. On the **Home** tab, in the **Create** group, click **Create Computer Association**.  
+If the OS deployment fails, use the USMT 10.0 LoadState tool to manually get the user state data that the task sequence captured. Use this process for data stored on a state migration point or saved locally on the computer. For more information on command-line options, see [LoadState Syntax](/windows/deployment/usmt/usmt-loadstate-syntax).
 
-1. On the **Computer Association** tab of the **Computer Association Properties** dialog box, specify the source computer that has the user state to capture, and the destination computer on which to restore the user state data.  
+## Next steps
 
-1. On the **User Accounts** tab, specify the user accounts to migrate to the destination computer. Specify one of the following settings:  
+[State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)
 
-    - **Capture and restore all user accounts**: This setting captures and restores all user accounts. Use this setting to create multiple associations to the same source computer.  
-
-    - **Capture all user accounts and restore specified accounts**: This setting captures all user accounts on the source computer and only restores the accounts that you specify on the destination computer. In addition, you can use this setting when you want to create multiple associations to the same source computer.  
-
-    - **Capture and restore specified user accounts**: This setting captures and restores only the accounts that you specify. You cannot create multiple associations to the same source computer when you select this setting.  
-
-## <a name="BKMK_MigrationFails"></a> Restore user state data when an operating system deployment fails
-
-If the operating system deployment fails, use the USMT 10.0 LoadState feature to retrieve the user states data that was captured during the deployment process. This includes data that is stored on a state migration point or data that is saved locally on the destination computer. For more information on this USMT feature, see [LoadState Syntax](/windows/deployment/usmt/usmt-loadstate-syntax).
+[Create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)

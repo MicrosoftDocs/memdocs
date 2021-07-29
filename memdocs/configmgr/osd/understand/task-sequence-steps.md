@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -199,6 +199,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [New-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting)
 - [Remove-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting)
 - [Set-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting)
+- [New-CMTSNetworkAdapterSetting](/powershell/module/configurationmanager/new-cmtsnetworkadaptersetting)
 
 ### Properties for Apply Network Settings
 
@@ -432,7 +433,7 @@ Specify the time zone to configure on the destination computer. The value that t
 
 <!--5411057, 5138936-->
 
-Starting in version 1910, control the language configuration during OS deployment. If you're already applying these language settings, this change can help you simplify your OS deployment task sequence. Instead of using multiple steps per language or separate scripts, use one instance per language of this step with a condition for that language.
+Use these settings to control the language configuration during OS deployment. If you're already applying these language settings, this change can help you simplify your OS deployment task sequence. Instead of using multiple steps per language or separate scripts, use one instance per language of this step with a condition for that language.
 
 Configure the following settings:
 
@@ -568,7 +569,7 @@ Captures the network adapter configuration of the destination computer. It captu
 
 - Global network settings  
 - Number of adapters  
-- The following network settings associated with each adapter: DNS, WINS, IP, and port filters
+- The following network settings associated with each adapter: DNS, IP, and port filters
 
 
 
@@ -637,13 +638,18 @@ Enter the Windows account that has permissions to the specified network share. S
 
 This step uses the User State Migration Tool (USMT) to capture user state and settings from the computer running the task sequence. This task sequence step is used in conjunction with the **Restore User State** task sequence step. This step always encrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
 
+Starting in version 2103, this step and the **Restore User State** step use the current highest supported encryption algorithm, **AES 256**.<!--9171505-->
+
+> [!IMPORTANT]
+> If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Otherwise, the updated client will fail to restore the user state when it tries to use a different encryption algorithm. If necessary, you can manually restore the user state and explicitly use the USMT parameter `/decrypt:3DES`.
+
 For more information about managing the user state when deploying operating systems, see [Manage user state](../get-started/manage-user-state.md).  
 
 If you want to save and restore user state settings from a state migration point, use this step with the **Request State Store** and **Release State Store** steps.  
 
 This step provides control over a limited subset of the most commonly used USMT options. Specify additional command-line options using the **OSDMigrateAdditionalCaptureOptions** task sequence variable.  
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
+This task sequence step runs in either Windows PE or the full OS.
 
 To add this step in the task sequence editor, select **Add**, select **User State**, and select **Capture User State**.
 
@@ -677,7 +683,7 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 Specify the package that contains the User State Migration Tool (USMT). The task sequence uses this version of USMT to capture the user state and settings. This package doesn't require a program. Specify a package containing the 32-bit or 64-bit version of USMT. The architecture of USMT depends upon the architecture of the OS from which the task sequence is capturing state.  
 
-#### Capture all user profiles with standard options
+#### Capture all user profiles by using standard options
 
 Migrate all user profile information. This option is the default.  
 
@@ -693,9 +699,9 @@ If you have no local user accounts, this setting doesn't apply.
 
 Select this option to specify a custom profile file for migration. Select **Files** to select the configuration files for USMT to use with this step. Specify a custom .xml file that contains rules that define the user state files to migrate.  
 
-#### Click here to select configuration files
+#### Select configuration files
 
-Select this option to select the configuration files in the USMT package you want to use for capturing user profiles. Select the **Files** button to launch the **Configuration Files** dialog box. To specify a configuration file, enter the name of the file on the **Filename** line and select the **Add** button.  
+Choose this option and select **Files** to select the configuration files in the USMT package you want to use to capture user profiles. To add a configuration file, enter the **Filename** and select **Add**.
 
 #### Enable verbose logging
 
@@ -787,6 +793,8 @@ Starting in version 2002, this step includes eight new checks. None of these new
 
 Starting in version 2006, this step includes includes a check to determine if the device uses UEFI, **Computer is in UEFI mode**.<!--6452769-->
 
+Starting in version 2103, the task sequence progress displays more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements of this step, the user can select an option to **Inspect**. This action shows the checks that failed on the device. For more information, see [User experiences for OS deployment](user-experience.md#task-sequence-error).<!--8888218-->
+
 > [!IMPORTANT]
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -833,7 +841,9 @@ Verify that the speed of the processor, in megahertz (MHz), meets or exceeds the
 
 #### Minimum free disk space (MB)
 
-Verify that the amount of free disk space, in megabytes (MB), meets or exceeds the specified amount.  
+Verify that the amount of free disk space, in megabytes (MB), meets or exceeds the specified amount.
+
+Starting in version 2103, it also checks free space on disks without partitions.<!-- 8751864 -->
 
 #### Current OS to be refreshed is
 
@@ -1032,11 +1042,11 @@ Configuration Manager adds a numerical suffix to the variable name. For example,
 
 #### If a package download fails, continue downloading other packages in the list
 
-If the task sequence fails to download a package, it starts to download the next package in the list.  
+If the task sequence fails to download a package, it starts to download the next package in the list. This behavior applies to all packages in the step. The task sequence ignores download failures for any referenced package.
 
 ### <a name="bkmk_note1"></a> Note 1: Use of boot images in the Download Package Content step
 
-*Applies to version 1910 and later*<!-- SCCMDocs-pr #4202 -->
+<!-- SCCMDocs-pr #4202 -->
 
 If you configure the [task sequence properties](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
 
@@ -1137,7 +1147,7 @@ By default or if not specified, the step continues to use the default encryption
 By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
 > [!TIP]
-> Starting in version 1910, you can create and deploy BitLocker management policies, which use *full disk* encryption. To manage BitLocker on devices after the task sequence deploys the OS, enable this option. For more information, see [Plan for BitLocker management](../../protect/plan-design/bitlocker-management.md).
+> You can also use Configuration Manager to create and deploy BitLocker management policies. These policies use *full disk* encryption. To manage BitLocker on devices after the task sequence deploys the OS, enable this option. For more information, see [Plan for BitLocker management](../../protect/plan-design/bitlocker-management.md).
 
 #### Choose where to create the recovery key
 
@@ -1157,23 +1167,23 @@ Starting in version 2006, select this option to skip drive encryption on a compu
 
 ## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk
 
-Use this step to format and partition a specified disk on the destination computer.  
+Use this step to format and partition a specified disk on the destination computer.
 
-> [!IMPORTANT]  
-> Every setting you specify for this step applies to a single specified disk. To format and partition another disk on the destination computer, add an additional **Format and Partition Disk** step to the task sequence.  
+> [!IMPORTANT]
+> Every setting you specify for this step applies to a single specified disk. To format and partition another disk on the destination computer, add an additional **Format and Partition Disk** step to the task sequence.
 
-This step runs only in Windows PE. It doesn't run in the full OS.  
+This step runs only in Windows PE. It doesn't run in the full OS.
 
 To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Format and Partition Disk**.
 
 ### Variables for Format and Partition Disk
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [OSDDiskIndex](task-sequence-variables.md#OSDDiskIndex)  
-- [OSDGPTBootDisk](task-sequence-variables.md#OSDGPTBootDisk)  
-- [OSDPartitions](task-sequence-variables.md#OSDPartitions)  
-- [OSDPartitionStyle](task-sequence-variables.md#OSDPartitionStyle)  
+- [OSDDiskIndex](task-sequence-variables.md#OSDDiskIndex)
+- [OSDGPTBootDisk](task-sequence-variables.md#OSDGPTBootDisk)
+- [OSDPartitions](task-sequence-variables.md#OSDPartitions)
+- [OSDPartitionStyle](task-sequence-variables.md#OSDPartitionStyle)
 
 ### Cmdlets for Format and Partition Disk
 
@@ -1183,14 +1193,17 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [New-CMTSStepPartitionDisk](/powershell/module/configurationmanager/new-cmtssteppartitiondisk)
 - [Remove-CMTSStepPartitionDisk](/powershell/module/configurationmanager/remove-cmtssteppartitiondisk)
 - [Set-CMTSStepPartitionDisk](/powershell/module/configurationmanager/set-cmtssteppartitiondisk)
+- [New-CMTSPartitionSetting](/powershell/module/configurationmanager/new-cmtspartitionsetting)
 
 ### Properties for Format and Partition Disk
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Disk Number
 
-The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.  
+The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.
+
+In version 2010 and earlier, this number can't be larger than 99. In version 2103 and later, the maximum number is 10,000. This change helps support storage area network (SAN) scenarios.<!-- 9528541 -->
 
 #### Variable name to store disk number
 
@@ -1221,25 +1234,25 @@ A variation of this example uses disk numbers and partitioning plans for differe
 
 The type of the disk to format. There are two options to select from the drop-down list:
 
-- **Standard (MBR)**: Master Boot Record  
-- **GPT**: GUID Partition Table  
+- **Standard (MBR)**: Master Boot Record
+- **GPT**: GUID Partition Table
 
-> [!NOTE]  
-> If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, the task sequence removes all extended and logical partitions from the layout. The task sequence editor prompts to confirm this action before changing the disk type.  
+> [!NOTE]
+> If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, the task sequence removes all extended and logical partitions from the layout. The task sequence editor prompts to confirm this action before changing the disk type.
 
 #### Volume
 
-Specific information about the partition or volume that the task sequence creates, including the following attributes:  
+Specific information about the partition or volume that the task sequence creates, including the following attributes:
 
-- Name  
-- Remaining disk space  
+- Name
+- Remaining disk space
 
-To create a new partition, select **New** to launch the **Partition Properties** dialog box. Specify the partition type and size, and if it's a boot partition. To modify an existing partition, select the partition to be modified, and then select the **Properties** button. For more information about how to configure hard drive partitions, see one of the following articles:  
+To create a new partition, select **New** to launch the **Partition Properties** dialog box. Specify the partition type and size, and if it's a boot partition. To modify an existing partition, select the partition to be modified, and then select the **Properties** button. For more information about how to configure hard drive partitions, see one of the following articles:
 
-- [UEFI/GPT-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
-- [BIOS/MBR-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
+- [UEFI/GPT-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)
+- [BIOS/MBR-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)
 
-To delete a partition, choose the partition, and then select **Delete**.  
+To delete a partition, choose the partition, and then select **Delete**.
 
 
 
@@ -1257,8 +1270,8 @@ The applications must meet the following criteria:
 
 - It must not initiate a restart on its own. The application must request a restart by using the standard restart code, 3010. This behavior makes sure that this step correctly handles the restart. If the application returns a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
-> [!Note]
-> If the application [checks for running executable files](../../apps/deploy-use/deploy-applications.md#bkmk_exe-check), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
+> [!NOTE]
+> If the application [checks for running executable files](../../apps/deploy-use/check-for-running-executable-files.md), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
 
 When this step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of this step. Application dependencies aren't supported for stand-alone media.  
 
@@ -1870,6 +1883,11 @@ For more information about managing the user state when deploying operating syst
 
 Use this step with the **Request State Store** and **Release State Store** steps to save or restore the state settings with a state migration point. This option always decrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
 
+Starting in version 2103, this step and the **Capture User State** step use the current highest supported encryption algorithm, **AES 256**.<!--9171505-->
+
+> [!IMPORTANT]
+> If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Otherwise, the updated client will fail to restore the user state when it tries to use a different encryption algorithm. If necessary, you can manually restore the user state and explicitly use the USMT parameter `/decrypt:3DES`.
+
 The **Restore User State** step provides control over a limited subset of the most commonly used USMT options. Specify additional command-line options with the **OSDMigrateAdditionalRestoreOptions** variable.  
 
 > [!IMPORTANT]  
@@ -1987,9 +2005,9 @@ Examples:
 
 <!--user story 4977616/bug 4798352-->
 
-Starting in version 1910, save the command output to a custom task sequence variable.
+Use this setting to save the command output to a custom task sequence variable.
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager limits this output to the last 1000 characters.
 
 #### Disable 64-bit file system redirection
@@ -2046,32 +2064,34 @@ Include other exit codes from the script that the step should evaluate as succes
 
 ## <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script
 
-Use this step to run the specified Windows PowerShell script.  
+Use this step to run the specified Windows PowerShell script.
 
-The script must meet the following criteria:  
+The script must meet the following criteria:
 
-- It shouldn't interact with the desktop. The script must run silently or in an unattended mode.  
+- It shouldn't interact with the desktop. The script must run silently or in an unattended mode.
 
-- It must not initiate a restart on its own. The sscript must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the script does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.
+- It must not initiate a restart on its own. The script must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the script does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.
 
-This step can be run in the full OS or Windows PE. To run this step in Windows PE, enable PowerShell in the boot image. Enable the WinPE-PowerShell component from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images](../get-started/manage-boot-images.md).  
+- Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
 
-> [!NOTE]  
-> PowerShell isn't enabled by default on Windows Embedded operating systems.  
+This step can be run in the full OS or Windows PE. To run this step in Windows PE, enable PowerShell in the boot image. Enable the WinPE-PowerShell component from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images](../get-started/manage-boot-images.md).
+
+> [!NOTE]
+> PowerShell isn't enabled by default on Windows Embedded operating systems.
 
 > [!WARNING]
-> Certain anti-malware software may inadvertently trigger events against the Configuration Manager Run PowerShell Script task sequence step. It is recommended to exclude %windir%\temp\smstspowershellscripts so that the anti-malware software permits those scripts to run without interference.
+> Some antimalware software may inadvertently trigger events for this task sequence step. To allow these scripts to run without interference, configure the antimalware software to exclude `%windir%\temp\smstspowershellscripts`.
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 
 ### Variables for Run PowerShell Script
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters)<!--3556028-->  
+- [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters)<!--3556028-->
 - [SMSTSRunPowerShellAsUser](task-sequence-variables.md#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
-- [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName)  
-- [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword)  
+- [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName)
+- [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword)
 
 ### Cmdlets for Run PowerShell Script
 
@@ -2082,52 +2102,47 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript)
 - [Set-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/set-cmtssteprunpowershellscript)
 
-> [!Note]  
-> Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
-
 ### Properties for Run PowerShell Script
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Package
 
-Specify the Configuration Manager package that contains the PowerShell script. One package can contain multiple PowerShell scripts.  
+Specify the Configuration Manager package that contains the PowerShell script. One package can contain multiple PowerShell scripts.
 
 #### Script name
 
-Specifies the name of the PowerShell script to run. This field is required.  
+Specifies the name of the PowerShell script to run. This field is required.
 
 #### Enter a PowerShell script
 
 <!-- 3556028 -->
 Directly enter Windows PowerShell code in this step. This feature lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
 
-When you add or edit a script, the PowerShell script window provides the following actions:  
+When you add or edit a script, the PowerShell script window provides the following actions:
 
-- Edit the script directly  
+- Edit the script directly
 
-- Open an existing script from file  
+- Open an existing script from file
 
 - Browse to an existing approved [script](../../apps/deploy-use/create-deploy-scripts.md) in Configuration Manager
 
-> [!Important]  
-> To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
 #### Parameters
 
-Specifies the parameters passed to the PowerShell script. These parameters are the same as the PowerShell script parameters on the command line.  
+Specifies the parameters passed to the PowerShell script. These parameters are the same as the PowerShell script parameters on the command line.
 
-Provide parameters consumed by the script, not for the Windows PowerShell command line.  
-The following example contains valid parameters:  
+Provide parameters consumed by the script, not for the Windows PowerShell command line.
 
-`-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
+The following example contains valid parameters:
 
-The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.  
+`-MyParameter1 MyValue1 -MyParameter2 MyValue2`
+
+The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.
 
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
 <!-- SCCMDocs-pr issue 3561 -->
-If a parameter value includes a special character, use single quotation marks (`'`) around the value. Using double quotation marks (`"`) may cause the task sequence step to incorrectly process the parameter.
+If a parameter value includes a special character or a space, use single quotation marks (`'`) around the value. Using double quotation marks (`"`) may cause the task sequence step to incorrectly process the parameter.
 
 For example: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
@@ -2135,50 +2150,50 @@ Starting in version 2002, set this property to a variable.<!-- 5690481 --> For e
 
 #### PowerShell execution policy
 
-Determine which PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:  
+Determine which PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:
 
-- **AllSigned**: Only run scripts signed by a trusted publisher  
+- **AllSigned**: Only run scripts signed by a trusted publisher.
 
-- **Undefined**: Don't define any execution policy  
+- **Undefined**: Don't define any execution policy.
 
-- **Bypass**: Load all configuration files and run all scripts. If you download an unsigned script from the internet, Windows PowerShell doesn't prompt for permission before running the script.  
+- **Bypass**: Load all configuration files and run all scripts. If you download an unsigned script from the internet, Windows PowerShell doesn't prompt for permission before running the script.
 
-> [!IMPORTANT]  
-> PowerShell 1.0 doesn't support Undefined and Bypass execution policies.  
+> [!IMPORTANT]
+> PowerShell 1.0 doesn't support Undefined and Bypass execution policies.
 
 #### Output to task sequence variable
 
 <!-- 3556028 -->
 Save the script output to a custom task sequence variable.
 
-> [!Note]  
-> Starting in version 1910, Configuration Manager limits this output to the last 1000 characters.
+> [!NOTE]
+> Configuration Manager limits this output to the last 1000 characters.
 
 For an example of how to use this step property, see [How to set variables](using-task-sequence-variables.md#bkmk_run-ps).
 
 #### Start in
 
 <!-- 3556028 -->
-Specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.  
+Specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.
 
-> [!NOTE]  
-> The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.  
+> [!NOTE]
+> The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.
 
 #### Time-out
 
 <!-- 3556028 -->
-Specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.  
+Specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.
 
-> [!IMPORTANT]  
-> If you enter a value that doesn't allow enough time for the specified script to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the PowerShell process.  
+> [!IMPORTANT]
+> If you enter a value that doesn't allow enough time for the specified script to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the PowerShell process.
 
 #### Run this step as the following account
 
 <!-- 3556028 -->
-Specify that the PowerShell script is run as a Windows user account other than the Local System account.  
+Specify that the PowerShell script is run as a Windows user account other than the Local System account.
 
 > [!NOTE]  
-> To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex actions.  
+> To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex actions.
 
 #### Account
 
@@ -2190,7 +2205,7 @@ Specify the Windows user account this step uses to run the PowerShell script. Th
 
 ### Options for Run PowerShell Script
 
-Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
+Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:
 
 #### Success codes
 
@@ -2200,9 +2215,6 @@ Include other exit codes from the script that the step should evaluate as succes
 
 
 ## <a name="child-task-sequence"></a> Run Task Sequence
-
-> [!Note]  
-> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 This step runs another task sequence. It creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
@@ -2238,8 +2250,6 @@ Manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#11
 - [New-CMTSStepRunTaskSequence](/powershell/module/configurationmanager/new-cmtsstepruntasksequence)
 - [Remove-CMTSStepRunTaskSequence](/powershell/module/configurationmanager/remove-cmtsstepruntasksequence)
 - [Set-CMTSStepRunTaskSequence](/powershell/module/configurationmanager/set-cmtsstepruntasksequence)
-
-For more information, see [1906 release notes - New cmdlets](/powershell/sccm/1906-release-notes#new-cmdlets).
 
 ### Properties for Run Task Sequence
 
@@ -2283,6 +2293,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [New-CMTSStepSetDynamicVariable](/powershell/module/configurationmanager/new-cmtsstepsetdynamicvariable)
 - [Remove-CMTSStepSetDynamicVariable](/powershell/module/configurationmanager/remove-cmtsstepsetdynamicvariable)
 - [Set-CMTSStepSetDynamicVariable](/powershell/module/configurationmanager/set-cmtsstepsetdynamicvariable)
+- [New-CMTSRule](/powershell/module/configurationmanager/new-cmtsrule)
 
 ### Properties for Set Dynamic Variables
 
@@ -2302,7 +2313,7 @@ To set a dynamic variable for use in the task sequence, add a rule. Then set a v
 
     Specify an asterisk (`*`) and question mark (`?`) as wild cards characters. The asterisk matches multiple characters and the question mark matches a single character. For example, the string `DELL*900?` matches both `DELL-ABC-9001` and `DELL9009`.  
 
-- **Task Sequence Variable**: Add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
+- **Task Sequence Variable**: Add a [task sequence variable](task-sequence-variables.md), condition, and value to evaluate. The conditions are the same as for [step conditions](using-task-sequence-variables.md#bkmk_access-condition). The rule evaluates to true when the value set for the variable meets the specified condition.
 
     Specify one or more variables to set for a rule that evaluates to true, or set variables without using a rule. Select an existing variable, or create a custom variable.  
 
@@ -2474,9 +2485,9 @@ When you run an OS deployment task sequence on an internet-based client, that's 
 
 ## <a name="BKMK_UpgradeOS"></a> Upgrade Operating System
 
-Use this step to upgrade an older version of Windows to a newer version of Windows 10.  
+Use this step to upgrade an older version of Windows to a newer version of Windows 10.
 
-This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
+This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
@@ -2487,11 +2498,11 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 
 ### Variables for Upgrade OS
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [_SMSTSOSUpgradeActionReturnCode](task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)  
+- [_SMSTSOSUpgradeActionReturnCode](task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)
 - [SetupCompletePause](task-sequence-variables.md#SetupCompletePause)
-- [OSDSetupAdditionalUpgradeOptions](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)  
+- [OSDSetupAdditionalUpgradeOptions](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)
 
 ### Cmdlets for Upgrade OS
 
@@ -2504,35 +2515,49 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 ### Properties for Upgrade OS
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Upgrade package
 
-Select this option to specify the Windows 10 OS upgrade package to use for the upgrade.  
+Select this option to specify the Windows 10 OS upgrade package to use for the upgrade.
 
 #### Source path
 
 Specifies a local or network path to the Windows 10 media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`.
 
-You can also specify a variable, such as `%MyContentPath%` or `%DPC01%`. When you use a variable for the source path, set its value earlier in the task sequence. For example, use the [Download Package Content](#BKMK_DownloadPackageContent) step to specify a variable for the location of the OS upgrade package. Then, use that variable for the source path for this step.  
+You can also specify a variable, such as `%MyContentPath%` or `%DPC01%`. When you use a variable for the source path, set its value earlier in the task sequence. For example, use the [Download Package Content](#BKMK_DownloadPackageContent) step to specify a variable for the location of the OS upgrade package. Then, use that variable for the source path for this step.
 
 #### Edition
 
-Specify the edition within the OS media to use for the upgrade.  
+Specify the edition within the OS media to use for the upgrade.
 
 #### Product key
 
-Specify the product key to apply to the upgrade process.  
+Specify the product key to apply to the upgrade process.
+
+#### Install the following feature updates
+
+<!--3555906-->
+Starting in version 2103, select this option to upgrade a client's Windows OS by using a feature update. This option uses content that you synchronize through the software update point. The size of the servicing ESD file is generally smaller than the OS upgrade package and WIM image file.
+
+Select the new button (gold asterisk), and add a feature update.
+
+> [!NOTE]
+> You can only add feature updates.
+
+If your environment supports multiple languages or architectures, add multiple feature updates to the step. The client uses the first applicable update that's not superseded by any other deployed updates.
+
+The user experience with a feature update in a task sequence is the same as with an OS upgrade package.
 
 #### Provide the following driver content to Windows Setup during upgrade
 
 Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
-Specify one of the following options:  
+Specify one of the following options:
 
 - **Driver package**: Select **Browse** and choose an existing driver package from the list.
 
-- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.  
+- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.
 
 > [!TIP]
 > If you want to have dynamic content for multiple types of hardware:
@@ -2543,7 +2568,7 @@ Specify one of the following options:
 
 #### Time-out (minutes)
 
-Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.  
+Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.
 
 #### Perform Windows Setup compatibility scan without starting upgrade
 
@@ -2552,25 +2577,25 @@ Perform the Windows Setup compatibility scan without starting the upgrade proces
 <!--SCCMDocs-pr issue 2812-->
 When you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](provisioning-mode.md).
 
-Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
+Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:
 
-|Exit code|Details|  
-|-|-|  
-|MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|No compatibility issues ("success").|  
-|MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|Actionable compatibility issues.|  
-|MOSETUP_E_COMPAT_MIGCHOICE_BLOCK (0xC1900204)|Selected migration choice isn't available. For example, an upgrade from Enterprise to Professional.|  
-|MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Not eligible for Windows 10.|  
-|MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Not enough free disk space.|  
+|Exit code|Details|
+|-|-|
+|MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|No compatibility issues ("success").|
+|MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|Actionable compatibility issues.|
+|MOSETUP_E_COMPAT_MIGCHOICE_BLOCK (0xC1900204)|Selected migration choice isn't available. For example, an upgrade from Enterprise to Professional.|
+|MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Not eligible for Windows 10.|
+|MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Not enough free disk space.|
 
-For more information about this parameter, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
+For more information about this parameter, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).
 
 #### Ignore any dismissible compatibility messages
 
-Specifies that Setup completes the installation, ignoring any dismissible compatibility messages. This setting corresponds to the Windows Setup command-line option `/Compat IgnoreWarning`.  
+Specifies that Setup completes the installation, ignoring any dismissible compatibility messages. This setting corresponds to the Windows Setup command-line option `/Compat IgnoreWarning`.
 
 #### Dynamically update Windows Setup with Windows Update
 
-Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option `/DynamicUpdate`. This setting isn't compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.  
+Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option `/DynamicUpdate`. This setting isn't compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.
 
 #### Override policy and use default Microsoft Update
 

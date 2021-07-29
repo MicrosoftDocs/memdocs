@@ -65,6 +65,9 @@ The ApplicationID is the ModelName property of the SMS_Application instance. Thi
 - `Comments` - Comments for the approved request to be displayed in the Software Center. By default, it specifies an empty string.
 - `AutoInstall` - Install the application immediately after the request is approved. By default, this parameter is true.
 
+    > [!NOTE]
+    > In version 2006 and earlier, you could only call this method once for a specific app. Starting in version 2010, you can call this method more than once. If the **AutoInstall** parameter is `$true`, the client tries to install the app again.<!-- 7353824 -->
+
 The following code sample is a Windows PowerShell script that shows how to invoke the WMI method for a specific user, machine, and application:
 
 ```powershell

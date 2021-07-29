@@ -3,7 +3,7 @@ title: Icons used for software updates
 titleSuffix: "Configuration Manager"
 description: "The Configuration Manager console contains icons that indicate a state for the synchronized update or software update group."
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -60,8 +60,7 @@ Synchronized software updates are displayed in the Configuration Manager console
   On the Supersedence Rules tab in the Software Update Point Component properties, you can specify how to manage superseded software updates. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
   **Operational Concerns:**  
-
-  When possible, deploy the superseding software update to client computers instead of the superseded software update. You can display a list of the software updates that supersede the software update on the **Supersedence Information** tab in the software update properties.  
+   Configuration Manager can [automatically expire superseded updates](../get-started/install-a-software-update-point.md#supersedence-rules) based on a schedule you choose. The default setting is to wait 3 months before expiring a superseded update. The 3 month default is to give you time to verify the update is no longer needed by any of your client computers. It's recommended that you don't assume that superseded updates should be immediately expired in favor of the new, superseding update. You can display a list of the software updates that supersede the software update on the **Supersedence Information** tab in the software update properties.  
 
 ### Invalid Icon  
  ![Invalid icon](../media/Invalid.jpg) The icon with the red X represents an invalid software update.  

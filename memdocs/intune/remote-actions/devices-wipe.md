@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Retire or wipe devices using Microsoft Intune - Azure | Microsoft Docs
+title: Retire or wipe devices using Microsoft Intune
 description: Retire or wipe a device on an Android, Android work profile, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Azure Active Directory.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 2/27/2020
+ms.date: 1/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -20,7 +20,7 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 #ROBOTS:
 #audience:
 
-#ms.reviewer:
+#ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -46,9 +46,8 @@ The **Wipe** action restores a device to its factory default settings. The user 
 |**Wipe**| Not checked | Yes | Wipes all user accounts, data, MDM policies, and settings. Resets the operating system to its default state and settings.|
 |**Wipe**| Checked | No | Wipes all MDM Policies. Keeps user accounts and data. Resets user settings back to default. Resets the operating system to its default state and settings.|
 
-
 > [!NOTE]
-> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment.
+> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment. To create a User Enrollment profile: [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/ios-user-enrollment.md)
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
@@ -74,7 +73,7 @@ A wipe is useful for resetting a device before you give the device to a new user
     |User data outside of the user profile||
     |User autologon|| 
     
-7. The **Wipe device, and continue to wipe even if device loses power.** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](troubleshoot-device-actions.md#wipe-action).        
+7. The **Wipe device, and continue to wipe even if device loses power.** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).        
 8. To confirm the wipe, select **Yes**.
 
 If the device is on and connected, the **Wipe** action propagates across all device types in less than 15 minutes.
@@ -91,7 +90,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 
 |Data type|iOS|
 |-------------|-------|
-|Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use mobile app management and were installed from App Store:** For apps that are not managed by the Company Portal, company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed. Personal app data and the apps are not removed.|
+|Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use App Protection Policies and were installed from App Store:** When a Retire action is initiated against an enrolled device, Intune also initiates a [selective wipe](../apps/apps-selective-wipe.md) for apps (including those installed from the App Store) that have work or school account data protected by an [App Protection Policy](../apps/app-protection-policy.md). The next time the app is launched, the selective wipe removes the protected work or school account data. In order for the selective wipe to occur, an App Protection Policy check-in must occur between the MDM enrollment and retire events. Personal app data and the apps are not removed after a selective wipe.|
 |Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
 |Wi-Fi and VPN profile settings|Removed.|
 |Certificate profile settings|Certificates are removed and revoked.|
@@ -138,7 +137,7 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 ### Windows
 
 |Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows 10|
-|-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
+|-------------|----------------------------------------------------------------|--------------|-----------------------------------------|
 |Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
 |Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
 |Wi-Fi and VPN profile settings|Removed.|Removed.|Removed.|
@@ -158,9 +157,18 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
 If the device is on and connected, the **Retire** action propagates across all device types in less than 15 minutes.
 
+## Manually un-enroll devices
+
+Device owners can manually un-enroll their devices as explained in the following end user help articles:
+
+- [Remove device from Company Portal for Android](../user-help/unenroll-your-device-from-intune-android.md)
+- [Remove device from Company Portal for iOS app](../user-help/unenroll-your-device-from-intune-ios.md)
+- [Remove device from Company Portal for macOS app](../user-help/unenroll-your-device-from-intune-macos.md)
+- [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
+
 ## Delete devices from the Intune portal
 
-If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed.
+If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the console.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.

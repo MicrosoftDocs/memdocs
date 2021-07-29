@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 06/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -48,7 +48,7 @@ Additionally, you can synchronize, manage, and assign books you purchased from A
 Location tokens are volume purchase licenses that were commonly known as Volume Purchase Program (VPP) tokens. These location tokens are used to assign and manage licenses purchased using Apple Business Manager. Content Managers can purchase and associate licenses with location tokens they have permissions to in Apple Business Manager. These location tokens are then downloaded from Apple Business Manager and uploaded in Microsoft Intune. Microsoft Intune supports uploading multiple location tokens per tenant. Each token is valid for one year.
 
 > [!NOTE]
-> The Apple Volume Purchase Program (VPP) has been integrated into Apple Business Manager. Apple Business Manager is a portal for admins to deploy Apple devices and buy content in volume. Content may include apps, books, and custom apps. Location tokens are used to assign and manage licenses purchased using Apple Business Manager. VPP is now called legacy VPP tokens.
+> The Apple Volume Purchase Program (VPP) has been integrated into Apple Business Manager. Apple Business Manager is a portal for admins to deploy Apple devices and acquire content in volume. Content may include apps, books, and custom apps. Location tokens are used to assign and manage licenses purchased using Apple Business Manager. VPP is now called legacy VPP tokens.
 
 ## How are purchased apps licensed?
 Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
@@ -65,11 +65,13 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 
 > [!NOTE]  
 > Company Portal does not show device-licensed apps on User Enrollment devices because only user-licensed apps can be installed on User Enrollment devices.
+>
+> When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is now "device". Existing assignments remain unchanged. 
 
 ## What app types are supported?
 You can purchase and distribute public as well as private apps using Apple Business Manager.
-- **Store apps:** Using Apple Business Manager, Content Managers can buy both free and paid apps that are available in the App Store.
-- **Custom Apps:** Using Apple Business Manager, Content Managers can also buy Custom Apps made available privately to your organization. These apps are tailored to your organization's specific needs by developers with whom you work directly. Learn more about [how to distribute Custom Apps](https://developer.apple.com/business/custom-apps/).
+- **Store apps:** Using Apple Business Manager, Content Managers can acquire both free and paid apps that are available in the App Store.
+- **Custom Apps:** Using Apple Business Manager, Content Managers can also acquire Custom Apps made available privately to your organization. These apps are tailored to your organization's specific needs by developers with whom you work directly. Learn more about [how to distribute Custom Apps](https://developer.apple.com/business/custom-apps/).
 
 ## Prerequisites
 - An [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) account for your organization. 
@@ -115,7 +117,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
         > Changing the country/region will update the apps metadata and App Store URL on next sync with the Apple service for apps created with this token. The app will not be updated if it does not exist in the new country/region store.
 
    - **Type of VPP account** - Choose from **Business** or **Education**.
-   - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
+   - **Automatic app updates** - Choose from **Yes** or **No** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
 
         > [!NOTE]
         > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
@@ -133,12 +135,13 @@ You can synchronize the app names, metadata and license information for your pur
 ## Assign a volume-purchased app
 
 1. Select **Apps** > **All apps**.
-2. On the list of apps pane, choose the app you want to assign, and then choose **Assignments**.
-3. On the **App name** - **Assignments** pane, choose **Add group** then, on the **Add group** pane, choose an **Assignment type** and choose the Azure AD user or device groups to which you want to assign the app.
-5. For each group you selected, choose the following settings:
-    - **Type** - Choose whether the app will be **Available** (end users can install the app from the Company Portal), or **Required** (end user devices will automatically get the app installed).
-    - **License type** - Choose from **User licensing**, or **Device licensing**.
-6. Once you are done, choose **Save**.
+2. On the list of apps pane, choose the app you want to assign, and then choose **Properties**. Select **Edit** next to **Assignments**.
+3. On the **Assignments** tab, choose whether the app will be **Required**, **Available for enrolled devices**, or **Available with or without enrollment**. 
+4. Choose **Add group** under the assignment type you've selected, then on the **Select groups** pane choose the Azure AD user or device groups to which you want to assign the app.
+
+    > [!NOTE]
+    > When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is "device". Existing assignments remain unchanged.
+5. Once you are done, choose **Save**.
 
 
 >[!NOTE]
@@ -172,8 +175,8 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 
 | Action | iOS/iPadOS | macOS |
 |------- | ---------- | ----- |
-| Remove app assignment | When you remove an app that was assigned to a user,   Intune reclaims the user or device license and uninstalls the app from the   device. | When you remove an app that was assigned to a user,   Intune reclaims the user or device license. The app is not uninstalled from   the device. |
-| Revoke app license | Revoking an app license reclaims the app license from   the user or device. You must change the assignment to **Uninstall** to remove the app from the device. | Revoking an app license reclaims the app license from   the user or device. The macOS app with revoked license remains usable on the   device, but cannot be updated until a license is reassigned to the user or   device. According to Apple, such apps are removed after a 30-day grace   period. However, Apple does not provide a means for Intune to remove the app   using Uninstall assignment action. |
+| Remove app assignment | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you revoke the license. If the app is installed, it will remain installed but it will no longer be offered for installation to the user or device. | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you revoke the license. If the app is installed, it will remain installed but it will no longer be offered for installation to the user or device. |
+| Revoke app license | After removing an app assignment, you can reclaim an app license from the user or device using **Revoke license** action. You must change the assignment to **Uninstall** to remove the app from the device. | After removing an app assignment, you can reclaim an app license from the user or device using **Revoke license** action. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. You must change the assignment to **Uninstall** to remove the app from the device. |
 
 >[!NOTE]
 > - Intune reclaims app licenses when an employee leaves the company and is no longer part of the AAD groups.
@@ -192,21 +195,34 @@ To revoke the license of all VPP apps for a given VPP token, you must first revo
 
 ## Renewing VPP tokens or Apple Business Manager location token
 
-You can renew an Apple Business Manager location token (Apple VPP token) by downloading a new token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) and updating the existing token in Intune. 
+You can renew an Apple Business Manager location token (Apple VPP token) by downloading the token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) again and updating the existing token in Intune. 
 
 To renew an Apple Business Manager location token (Apple VPP token), use the following steps:
 
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
-2. Download the new token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
+2. Download the existing token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
 3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 4. Select the VPP token you are renewing, click **Edit** on the Basics category, upload the new token on this page, and then save your changes.
 
->[!NOTE]
->You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
+> [!NOTE]
+> You must renew the existing Apple VPP token or location token when the user who set up the token in Apple Business Manager changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
 
 ## Deleting a VPP app
+You can delete purchased apps that don't have any available or used licenses associated with them. This may be necessary to clean up apps that are no longer assigned.
 
-Currently, you cannot delete an iOS/iPadOS VPP app from Microsoft Intune.
+To delete a VPP app, use the following steps:
+1. Create a new location in [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). 
+2. Revoke all licenses for the app that use the associated location token. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the app to delete* > **App licenses** > **Revoke licenses**.
+3. In Apple Business Manager or Apple School Manager, transfer all licenses for the app from the original location to the new location. 
+4. Sync the location token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+5. Delete the app in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
+
+Deleting a VPP app will cause the following results:
+- The associated app assignments will be removed. 
+- If the VPP app has assigned licenses when attempting to delete, an error will be displayed to you.
+
+> [!NOTE]
+> Purchased books associated with a VPP token won't be deleted.
 
 ## Assigning custom role permissions for VPP
 
@@ -219,7 +235,7 @@ Access to Apple Business Manager location token and apps (Apple VPP tokens and V
 
 Apple provides direct assistance to create and renew VPP tokens. For more information, see [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) as part of Apple's documentation. 
 
-If **Assigned to external MDM** is indicated in the Intune portal, then you (the Admin) must remove the VPP token from the 3rd party MDM before using the VPP token in Intune.
+If **Assigned to external MDM** is indicated in Intune, then you (the admin) must remove the VPP token from the 3rd party MDM before using the VPP token in Intune.
 
 If status is **Duplicate** for a token, then multiple tokens with the same **Token Location** have been uploaded. Remove the duplicate token to begin syncing the token again. You can still assign and revoke licenses for tokens that are marked as duplicate. However, licenses for new apps and books purchased may not be reflected once a token is marked as duplicate.
 
@@ -241,4 +257,4 @@ Yes. The Intune admin can oversubscribe an app. For example, if the admin purcha
 
 See [How to monitor apps](apps-monitor.md) for information to help you monitor app assignments.
 
-See [How to troubleshoot apps](troubleshoot-app-install.md) for information on troubleshooting app-related issues.
+See [How to troubleshoot apps](/troubleshoot/mem/intune/troubleshoot-app-install) for information on troubleshooting app-related issues.

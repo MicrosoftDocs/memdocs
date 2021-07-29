@@ -45,9 +45,9 @@ Reply Message Body : <Reply XML Body>
 > [!IMPORTANT]
 > Although Location Services component handles the location requests, it doesn't directly request locations from the Management Point. All requests to the Management Point typically go through CCM Messaging component, which logs to **CcmMessaging.log**.
 
-Location reply XML contains the list of distribution points based on the client's boundary group. This list is parsed and persisted in WMI on the client according to the [Content Source Priority](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#content-source-priority). This activity can be seen in **ContentTransferManager.log**, by using the Content Unique ID and looking for `Persisted location`. 
+Location reply XML contains the list of distribution points based on the client's boundary group. This list is parsed and persisted in WMI on the client according to the [Content Source Priority](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#content-source-priority). This activity can be seen in **ContentTransferManager.log**, by using the Content Unique ID and looking for `Persisted location`.
 
-If the location reply XML doesn't contain any distribution points, **ContentTransferManager.log** would show `Received empty location update` and the client may get stuck at 0% while downloading the application. This reply can typically occur because of boundary group configuration issues. For more information, see [Download failures](../deploy-use/troubleshoot-application-deployment.md#download-failures).
+If the location reply XML doesn't contain any distribution points, **ContentTransferManager.log** would show `Received empty location update` and the client may get stuck at 0% while downloading the application. This reply can typically occur because of boundary group configuration issues. For more information, see [Download failures](/troubleshoot/mem/configmgr/troubleshoot-application-deployment#download-failures).
 
 ## Content Download
 

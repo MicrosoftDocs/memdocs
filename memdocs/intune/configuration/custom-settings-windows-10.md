@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Add custom settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings for Windows 10 devices in Microsoft Intune
 description: Add or create a custom profile to use the OMA-URI settings for devices running Windows 10 in Microsoft Intune. Use a custom profile to add custom settings.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,7 +28,10 @@ ms.collection: M365-identity-device-management
 
 # Use custom settings for Windows 10 devices in Intune
 
-This article lists and describes all the different custom settings you can control on Windows 10 and newer devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built-in to Intune.
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+This article describes some of the different custom settings you can control on Windows 10 and newer devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built-in to Intune.
 
 For more information on custom profiles, see [Create a profile with custom settings](custom-settings-configure.md).
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Android device compliance settings in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of all the settings you can use when setting compliance for your Android devices in Microsoft Intune. Set password rules, choose a minimum or maximum operating system version, restrict specific apps, prevent reusing password, and more.
+title: Android device compliance settings in Microsoft Intune
+description: View the device compliance settings that are available for  Android device administrator devices in Microsoft Intune.
 keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 04/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,9 +28,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Android settings to mark devices as compliant or not compliant using Intune
+# Device Compliance settings for Android device administrator in Intune
 
-This article lists and describes the different compliance settings you can configure on Android devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
+This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
 This feature applies to:
 
@@ -42,11 +42,11 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android device administrator**.
 
-## Microsoft Defender ATP
+## Microsoft Defender for Endpoint
 
 - **Require the device to be at or under the machine risk score**  
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -151,7 +151,6 @@ As an Intune administrator, use these compliance settings to help protect your o
     - Has the default runtime environment installed
     - Is properly signed
     - Isn't in debug-mode
-    - Is installed from a known source
 
 - **Block USB debugging on device**  
   *(Supported on Android 4.2 or later)*

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android Enterprise email settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android Enterprise email settings in Microsoft Intune
 description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Azure Active Directory. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Enterprise personally owned devices with a work profile using Microsoft Intune.
 keywords:
 author: MandiOhlinger
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise device settings to configure email, authentication, and synchronization in Intune
 
-This article lists and describes the different email settings you can control on Android Enterprise personally owned devices with a work profile. As part of your mobile device management (MDM) solution, use these settings to configure an email server, use SSL to encrypt emails, and more.
+This article describes the different email settings you can control on Android Enterprise personally owned devices with a work profile. As part of your mobile device management (MDM) solution, use these settings to configure an email server, use SSL to encrypt emails, and more.
 
 This feature applies to:
 

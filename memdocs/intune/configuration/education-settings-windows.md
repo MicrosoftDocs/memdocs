@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Windows 10 education settings in Microsoft Intune - Azure | Microsoft Docs
+title: Windows 10 education settings in Microsoft Intune
 description: See a list of all the education settings for Windows 10 devices. Use these settings in a device configuration profile with the Take a Test app, choose how users or students sign in, monitor the screen during the test, and more in Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,10 @@ ms.collection: M365-identity-device-management
 
 # Configure the Take a Test app on Windows 10 devices using Intune
 
-The Take a Test app lets you securely administer online tests on your classroom's Windows 10 devices. To set up the Take a Test app, you'll need to create a device configuration profile in Intune and configure the secure assessment settings. This article describes the settings you'll find for the Take a Test app. 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+The Take a Test app lets you securely administer online tests on your classroom's Windows 10 devices. To set up the Take a Test app, you'll need to create a device configuration profile in Intune and configure the secure assessment settings. This article describes some of the settings you'll find for the Take a Test app.
 
 After you've configured the profile, assign and deploy it to your students. 
 

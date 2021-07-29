@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create WiFi profile with pre-shared key in Microsoft Intune - Azure | Microsoft Docs
+title: Create WiFi profile with pre-shared key in Microsoft Intune
 description: Use a custom profile to create a Wi-Fi profile with a pre-shared key, and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi profile using a pre-shared key. To create the profile, use the **Custom device profiles** feature within Intune. This article also includes some examples of how to create an EAP-based Wi-Fi profile.
 
-This feature supports:
+This feature applies to:
 
 - Android device administrator
 - Android Enterprise personally owned devices with a work profile
@@ -59,12 +59,12 @@ This feature supports:
 3. Enter the following properties:
 
     - **Platform**: Choose your platform.
-    - **Profile**: Select **Custom**.
+    - **Profile**: Select **Custom**. Or, select **Templates** > **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile settings for Android device administrator devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile for Android DA**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -121,7 +121,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 ``` xml
 <!--
 <hex>53534944</hex> = The hexadecimal value of <name><SSID of wifi profile></name>
-<Name of wifi profile> = Name of profile shown to users. It could be <name>Your Company's Network</name>.
+<Name of wifi profile> = Name of profile shown to users. For example, enter <name>ContosoWiFi</name>.
 <SSID of wifi profile> = Plain text of SSID. Does not need to be escaped. It could be <name>Your Company's Network</name>.
 <nonBroadcast><true/false></nonBroadcast>
 <Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
@@ -130,8 +130,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 <password> = Plain text of the password to connect to the network
 -->
 
-<WLANProfile
-xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
   <name><Name of wifi profile></name>
   <SSIDConfig>
     <SSID>
@@ -260,6 +259,10 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
         `key=clear` exports the key in plain text, which is required to successfully use the profile.
+
+    - If the exported Wi-Fi profile `<name></name>` element includes a space, then it might return a `ERROR CODE 0x87d101f4 ERROR DETAILS Syncml(500)` error when assigned. When this issue happens, the profile is listed in `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces`, and shows as a known network. But, it doesn't successfully display as managed policy in the "Areas managed by..." URI.
+
+      To resolve this issue, remove the space.
 
 After you have the XML file, copy and paste the XML syntax into OMA-URI settings > **Data type**. [Create a custom profile](#create-a-custom-profile) (in this article) lists the steps.
 

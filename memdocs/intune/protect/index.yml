@@ -79,7 +79,7 @@ landingContent:
             url: mobile-threat-defense.md
       - linkListType: how-to-guide
         links:
-          - text: Microsoft Defender ATP
+          - text: Microsoft Defender for Endpoint
             url: advanced-threat-protection.md
           - text: Mobile Threat Defense partners
             url: mtd-apps-ios-app-configuration-policy-add-assign.md

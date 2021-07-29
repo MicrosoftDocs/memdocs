@@ -2,7 +2,7 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
@@ -16,20 +16,24 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Create or simulate a deployment of an application to a device or user collection in Configuration Manager. This deployment gives instructions to the Configuration Manager client on how and when to install the software.
+Create or simulate a deployment of an application to a device or user collection in Configuration Manager. This deployment gives instructions to the Configuration Manager client on how and when to install or uninstall the software.
 
-Before you can deploy an application, create at least one deployment type for the application. For more information, see [Create applications](create-applications.md).
+Before you can deploy an application, create at least one _deployment type_ for the application. For more information, see [Create deployment types for the application](create-applications.md#bkmk_create-dt).
 
-Starting in version 1906, you can create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
+In some situations, consider another feature as a better solution:
 
-You can also simulate an application deployment. This simulation tests the applicability of a deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments](simulate-application-deployments.md).
+- If you have several applications that you need to deploy together, instead of creating multiple deployments, create an _application group_. You can send the app group to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
 
-> [!NOTE]
-> You can only simulate the deployment of required applications, but not packages or software updates.
->
-> MDM-enrolled devices don't support simulated deployments, user experience, or scheduling settings.
+- For more complex deployments, first test it with a _simulated deployment_. This simulation tests the applicability of a deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments](simulate-application-deployments.md).
 
-## <a name="bkmk_deploy"></a> Deploy an application
+    > [!NOTE]
+    > You can only simulate the deployment of required applications, but not packages or software updates.
+    >
+    > On-prem MDM-enrolled devices don't support simulated deployments, user experience, or scheduling settings.
+
+- _Phased deployments_ allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria. For more information, see [Create a phased deployment](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json).<!--1358147-->
+
+## <a name="bkmk_deploy"></a> Start the deployment wizard
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select either the **Applications** or **Application Groups** node.
 
@@ -45,7 +49,7 @@ You can also simulate an application deployment. This simulation tests the appli
 > - [User Experience](#bkmk_deploy-ux)
 > - [Alerts](#bkmk_deploy-alerts)
 
-### <a name="bkmk_deploy-general"></a> Deployment **General** information
+## <a name="bkmk_deploy-general"></a> General information
 
 On the **General** page of the Deploy Software wizard, specify the following information:  
 
@@ -62,7 +66,7 @@ On the **General** page of the Deploy Software wizard, specify the following inf
 
 - **Comments (optional)**: Optionally, enter a description for this deployment.
 
-### <a name="bkmk_deploy-content"></a> Deployment **Content** options
+## <a name="bkmk_deploy-content"></a> Content options
 
 On the **Content** page, select **Add** to distribute the content for this application to a distribution point or a distribution point group.
 
@@ -70,42 +74,45 @@ If you selected the option to **Use default distribution points associated to th
 
 If the application content is already distributed, then they appear here.
 
-### <a name="bkmk_deploy-settings"></a> **Deployment Settings**
+## <a name="bkmk_deploy-settings"></a> Deployment settings
 
-On the **Deployment Settings** page, specify the following information:  
+On the **Deployment Settings** page, specify the following information:
 
-- **Action**: From the drop-down list, choose whether this deployment is to **Install** or **Uninstall** the application.  
+- **Action**: From the drop-down list, choose whether this deployment is to **Install** or **Uninstall** the application.
 
-    > [!NOTE]  
-    > If you create a deployment to **Install** an app and another deployment to **Uninstall** the same app on the same device, the **Install** deployment takes priority.  
+    > [!NOTE]
+    > If you create a deployment to **Install** an app and another deployment to **Uninstall** the same app on the same device, the **Install** deployment takes priority.
 
-    You can't change the action of a deployment after you create it.  
+    You can't change the action of a deployment after you create it.
 
-- **Purpose**: From the drop-down list, choose one of the following options:  
+- **Purpose**: From the drop-down list, choose one of the following options:
 
-  - **Available**: The user sees the application in Software Center. They can install it on demand.  
+  - **Available**: The user sees the application in Software Center. They can install it on demand.
 
-  - **Required**: The client automatically installs the app according to the schedule that you set. If the application isn't hidden, a user can track its deployment status. They can also use Software Center to install the application before the deadline.  
+    > [!NOTE]
+    > When you deploy apps as available to user collections, there are other requirements for some types of clients. For more information, see [Prerequisites to deploy user-available apps](../plan-design/prerequisites-deploy-user-available-apps.md).
 
-    > [!NOTE]  
-    > When you set the deployment action to **Uninstall**, the deployment purpose is automatically set to **Required**. You can't change this behavior.  
+  - **Required**: The client automatically installs the app according to the schedule that you set. If the application isn't hidden, a user can track its deployment status. They can also use Software Center to install the application before the deadline.
 
-- **Allow end users to attempt to repair this application**: If you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->  
+    > [!NOTE]
+    > When you set the deployment action to **Uninstall**, the deployment purpose is automatically set to **Required**. You can't change this behavior.
 
-- **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user's primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.  
+- **Allow end users to attempt to repair this application**: If you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->
 
-- **Send wake-up packets**: If the deployment is **Required**, Configuration Manager sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computers at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](../../core/clients/deploy/plan/plan-wake-up-clients.md).  
+- **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user's primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.
 
-- **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for deployments with a purpose of **Required**.  
+- **Send wake-up packets**: If the deployment is **Required**, Configuration Manager sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computers at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](../../core/clients/deploy/plan/plan-wake-up-clients.md).
+
+- **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for deployments with a purpose of **Required**.
 
 - **Automatically upgrade any superseded version of this application**: The client upgrades any superseded version of the application with the superseding application.
 
     > [!NOTE]
-    > This option works regardless of administrator approval. If an administrator already approved the superseded version, they don't need to also approve the superseding version. Approval is only for new requests, not superseding upgrades.<!--515824-->  
+    > This option works regardless of administrator approval. If an administrator already approved the superseded version, they don't need to also approve the superseding version. Approval is only for new requests, not superseding upgrades.<!--515824-->
     >
     > For **Available** install purpose, you can enable or disable this option. <!--1351266-->
 
-#### <a name="bkmk_approval"></a> Approval settings
+### <a name="bkmk_approval"></a> Approval settings
 
 The application approval behavior depends upon whether you enable the recommended optional feature, **Approve application requests for users per device**.
 
@@ -115,13 +122,13 @@ The application approval behavior depends upon whether you enable the recommende
 
 For more information, see [Approve applications](app-approval.md).
 
-#### Deployment properties **Deployment Settings**
+### Deployment properties: Deployment settings
 
 When you view the properties of a deployment, if supported by the deployment type technology, the following option appears on the **Deployment Settings** tab:
 
-**Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**. For more information, see [check for running executable files before installing an application](#bkmk_exe-check).
+**Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**. For more information, see [check for running executable files before installing an application](check-for-running-executable-files.md).
 
-### <a name="bkmk_deploy-sched"></a> Deployment **Scheduling** settings
+## <a name="bkmk_deploy-sched"></a> Scheduling settings
 
 On the **Scheduling** page, set the time when this application is deployed or available to client devices.
 
@@ -133,7 +140,7 @@ For example, you need to deploy a new line-of-business application. All users ne
 
 If the application you're deploying supersedes another application, set the installation deadline when users receive the new application. Set the **Installation Deadline** to upgrade users with the superseded application.
 
-#### Delay enforcement with a grace period
+### Delay enforcement with a grace period
 
 You might want to give users more time to install required applications *beyond* any deadlines you set. This behavior is typically required when a computer is turned off for a long time, and needs to install many applications. For example, when a user returns from vacation, they have to wait for a long time as the client installs overdue deployments. To help solve this problem, define an enforcement grace period.
 
@@ -150,13 +157,13 @@ After the deadline, the client installs the application in the first non-busines
 > [!NOTE]
 > Most of the time, this feature addresses the scenario when the device is powered off while the user is out of the office. Technically, the grace period starts when the client gets policy after the deployment deadline. The same behavior happens if you stop the Configuration Manager client service (CcmExec), and then restart it at some time after the deployment deadline.
 
-### <a name="bkmk_deploy-ux"></a> Deployment **User Experience** settings
+## <a name="bkmk_deploy-ux"></a> User experience settings
 
 On the **User Experience** page, specify information about how users can interact with the application installation.
 
 - **User notifications**: Specify whether to display notification in Software Center at the configured available time. This setting also controls whether to notify users on the client computers. For available deployments, you can't select the option to **Hide in Software Center and all notifications**.  
 
-  - **When software changes are required, show a dialog window to the user instead of a toast notification**<!--3555947-->: Select this option to change the user experience to be more intrusive. It only applies to required deployments. For more information, see [Plan for Software Center](../plan-design/plan-for-software-center.md#bkmk_impact).
+  - **When software changes are required, show a dialog window to the user instead of a toast notification**<!--3555947-->: Select this option to change the user experience to be more intrusive. It only applies to required deployments. For more information, see [User notifications](../plan-design/user-notifications.md#replace-toast-notifications-with-dialog-window).
 
 - **Software Installation** and **System restart**: Only configure these settings for required deployments. They specify the behaviors when the deployment reaches the deadline outside of any defined maintenance windows. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
@@ -164,150 +171,23 @@ On the **User Experience** page, specify information about how users can interac
 
   - When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window. For more information about maintenance windows and Windows Embedded devices, see [Create Windows Embedded applications](../get-started/creating-windows-embedded-applications.md).  
 
-### <a name="bkmk_deploy-alerts"></a> Deployment **Alerts**
+## <a name="bkmk_deploy-alerts"></a> Alerts
 
 On the **Alerts** page, configure how Configuration Manager generates alerts for this deployment. If you're also using System Center Operations Manager, configure its alerts as well. You can only configure some alerts for required deployments.
-
-## <a name="bkmk_phased"></a> Create a phased deployment
-
-<!--1358147-->
-Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria.
-
-For more information, see the following articles:  
-
-- [Create a phased deployment](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
-
-- [Manage and monitor phased deployments](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
-
-## <a name="bkmk_delete"></a> Delete a deployment
-
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select either the **Applications** or **Application Groups** node.  
-
-1. Select the application or application group that includes the deployment you want to delete.  
-
-1. Switch to the **Deployments** tab of the details pane, and select the deployment.  
-
-1. In the ribbon, on the **Deployment** tab in the **Deployment** group, select **Delete**.  
-
-When you delete an application deployment, any instances of the application that clients have already installed aren't removed. To remove these applications, deploy the application to computers to **Uninstall**. If you delete an application deployment, the application is no longer visible in Software Center. The same behavior happens when you remove a resource from the target collection for the deployment.
-
-## <a name="bkmk_notify"></a> User notifications for required deployments
-
-When users receive required software, and select the **Snooze and remind me** setting, they can choose from the following options:  
-
-- **Later**: Specifies that notifications are scheduled based on the notification settings configured in client settings.  
-
-- **Fixed time**: Specifies that the notification is scheduled to display again after the selected time. For example, if you select 30 minutes, the notification displays again in 30 minutes.  
-
-:::image type="content" source="media/ComputerAgentSettings.png" alt-text="Computer Agent group in default client settings":::
-
-The maximum snooze time is always based on the notification values configured in the client settings at every time along the deployment timeline. For example:  
-
-- You configure the **Deployment deadline greater than 24 hours, remind users every (hours)** setting on the **Computer Agent** page for 10 hours.  
-
-- The client displays the notification dialog more than 24 hours before the deployment deadline.  
-
-- The dialog shows snooze options up to but never greater than 10 hours.  
-
-- As the deployment deadline approaches, the dialog shows fewer options. These options are consistent with the relevant client settings for each component of the deployment timeline.  
-
-For a high-risk deployment, such as a task sequence that deploys an OS, the user notification experience is more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays each time you're notified that critical software maintenance is required:
-
-:::image type="content" source="media/client-toast-notification.png" alt-text="Required software dialog notifies you of critical software maintenance":::
-
-## <a name="bkmk_exe-check"></a> Check for running executable files
-
-Configure a deployment to check if certain executable files are running on the client. Use this option to check for processes that might disrupt the installation of the application. If one of these executable files is running, the client blocks the installation of the deployment type. The user must close the running executable file before the client can install the deployment type. For deployments with a purpose of required, the client can automatically close the running executable file.
-
-1. Open the **Properties** for the deployment type.
-
-1. Switch to the **Install Behavior** tab, and select **Add**.
-
-1. In the **Add Executable File** window, enter the name of the target executable file. Optionally, enter a friendly name for the application to help you identify it in the list.
-
-1. Select **OK** to save and close the deployment type properties window.
-
-1. When you deploy the application, select the option to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**. This option is on the **Deployment Settings** tab of the deployment properties.  
-
-> [!NOTE]
-> If you configure an application to check for running executable files, and include it in the [Install Application](../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication) task sequence step, the task sequence will fail to install it. If you don't configure this task sequence step to continue on error, then the entire task sequence fails.
-
-### Client behaviors and user notifications
-
-After clients receive the deployment, the following behavior applies:  
-
-- If you deployed the application as **Available**, and a user tries to install it, the client prompts the user to close the specified running executable files before proceeding with the installation.  
-
-- If you deployed the application as **Required**, and specified to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then the client displays a notification. It informs the user that the specified executable files are automatically closed when the application installation deadline is reached. If the user tries to install the application before the deadline, the deployment will fail. It notifies the user that the installation couldn't complete because the specified executables are running.
-
-  - Schedule these dialogs in the **Computer Agent** group of client settings. For more information, see [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
-
-  - If you don't want the user to see these messages, select the option to **Hide in Software Center and all notifications** on the **User Experience** tab of the deployment's properties. For more information, see [Deployment User Experience settings](#bkmk_deploy-ux).  
-
-- If you deployed the application as **Required**, and didn't specify to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then the installation of the app fails if one or more of the specified applications are running.  
-
-## Deploy user-available applications
-
-When you deploy applications as **Available** to user collections, then users can browse Software Center and install the apps they need. For on-premises domain-joined clients, Software Center uses the user's domain credentials to get the list of available applications from the management point.
-
-There are additional requirements for clients that are internet-based, joined to Azure Active Directory (Azure AD), or both.
-
-### Azure AD-joined devices
-<!-- 1322613 -->
-
-If you deploy applications as available to users, they can browse and install them through Software Center on Azure AD devices. Configure the following prerequisites to enable this scenario:
-
-- Enable HTTPS on the management point  
-
-- Integrate the site with [Azure AD](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
-
-  - Configure [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
-
-- Deploy an application as available to a collection of users from Azure AD  
-
-- Enable the client setting **Use new Software Center** in the [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent) group  
-
-- The client OS must be Windows 10, and joined to Azure AD. Either as purely cloud domain-joined, or hybrid Azure AD-joined.  
-
-- To support internet-based clients:  
-
-  - [Cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG)
-
-  - Distribute any application content to a content-enabled CMG or a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
-
-  - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../../core/clients/deploy/about-client-settings.md#client-policy) group  
-
-- To support clients on the intranet:  
-
-  - Add the content-enabled CMG or cloud distribution point to a boundary group used by the clients  
-
-  - Clients must resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point  
-
-  > [!NOTE]
-  > For a client detected as on the intranet, but communicating via the cloud management gateway (CMG), in Configuration Manager version 2002 and earlier, Software Center uses Windows authentication. When it tried to get the list of user-available apps via CMG, it would fail. Starting in version 2006, it uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.<!--6935376-->
-
-### Internet-based domain-joined devices
-
-<!--7033501-->
-
-Starting in version 2010, an internet-based, domain-joined device that isn't joined to Azure AD and communicates via a cloud management gateway (CMG) can get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
-
-Configure the following prerequisites to enable this functionality:
-
-- Windows 10 device
-
-  - Joined to your on-premises Active Directory domain
-
-  - Communicate via [CMG](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)
-
-- The site has discovered the user by _both_ [Active Directory](../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)
-
-> [!NOTE]
-> If you apply a [software restriction policy](/windows-server/identity/software-restriction-policies/administer-software-restriction-policies) to the device, it can block the authentication prompt in Windows. Review any domain or local group policies that you apply to the device. Then remove any that might interfere with this Software Center behavior.
 
 ## Next steps
 
 - [Monitor applications](monitor-applications-from-the-console.md)
-- [Troubleshoot application deployments](troubleshoot-application-deployment.md)
+- [Disable and delete application deployments](disable-delete-deployments.md)
+- [Troubleshoot application deployments](/troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
 - [Management tasks for applications](management-tasks-applications.md)
 - [Software Center user guide](../../core/understand/software-center.md)
+
+> [!NOTE]
+> This article used to include more sections, which have moved to the following articles:
+>
+> - [Delete a deployment](disable-delete-deployments.md)
+> - [User notifications for required deployments](../plan-design/user-notifications.md)
+> - [Check for running executable files](check-for-running-executable-files.md)
+> - [Deploy user-available apps](../plan-design/prerequisites-deploy-user-available-apps.md)

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 07/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -66,9 +66,6 @@ We will use the email addresses listed in your questionnaire response to reach o
 
 The deep link is the link to your app's listing in the public app store. If your app's deep link changes in the future, you will need to re-register your app.
 
-> [!NOTE]
-> You must inform us if you update your app with a new version of the Intune App SDK.
-
 ## Download the SDK files
 
 The Intune App SDKs for native iOS and Android are hosted on a Microsoft GitHub account. These public repositories have the SDK files for native iOS and Android, respectively:
@@ -92,7 +89,8 @@ You will need one of the following developer guides to help you integrate the In
 
 * **[Intune App SDK Xamarin Bindings guide](app-sdk-xamarin.md)**: This document will help you build iOS and Android apps using Xamarin for Intune app protection policies.
 
-
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ## Enable your iOS or Android app for app based Conditional Access
 
@@ -116,7 +114,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 ## Line-of-business app version numbers
 
-Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the Azure portal in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
+Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
 
 ### Full version number
 
@@ -170,13 +168,13 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 * **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but is not listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting 'Custom Apps'. 
 
-* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](../apps/troubleshoot-app-install.md). 
+* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install). 
 
 ### Give your app access to the Intune app protection service (optional)
 
 If your app is using its own custom Azure Active Directory (AAD) settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**. 
 
-Once you have registered your app within an Azure tenant, and it is showing up under **All Applications**, you must give your app access to the Intune app protection service (previously known as MAM service). In the Azure portal:
+Once you have registered your app within an Azure tenant, and it is showing up under **All Applications**, you must give your app access to the Intune app protection service (previously known as MAM service). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
 1. Go to the **Azure Active Directory** blade.
 2. Under **App registrations**, go to the listing set up for the application.

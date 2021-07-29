@@ -21,7 +21,7 @@ ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 #ROBOTS:
 #audience:
 
-ms.reviewer: kerimh
+ms.reviewer: srink
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

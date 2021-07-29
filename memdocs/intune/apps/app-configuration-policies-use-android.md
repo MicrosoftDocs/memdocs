@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -52,8 +52,8 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
-    - **Name** - The name of the profile that appears in the Azure portal.
-    - **Description** - The description of the profile that appears in the Azure portal.
+    - **Name** - The name of the profile that appears in the portal.
+    - **Description** - The description of the profile that appears in the portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **Android Enterprise** as the **Platform**.
 5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
@@ -61,7 +61,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 7. Click **Next** to display the **Settings** page.
 8. Click **Add** to display the **Add permissions** pane.
 9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
-10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**. For more information about permissions, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md).
+10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.  
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**
@@ -118,7 +118,7 @@ You can choose the following options if you choose variable as the value type:
 | User name | John Doe |
 | User Principal Name | john@contoso.com |
 
-### Allow only configured organization accounts in multi-identity apps 
+### Allow only configured organization accounts in apps 
 
 As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For Android devices, use the following key/value pairs in a Managed Devices app configuration policy:
 

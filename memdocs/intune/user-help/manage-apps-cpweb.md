@@ -36,7 +36,7 @@ Visit the [Company Portal website](https://portal.manage.microsoft.com) to view 
 ## View all apps  
 From the menu, select **Apps** to see all apps made available by your organization. 
 
-   ![Screenshot of Company Portal website, Apps page, showing Refine options.](./media/intune-view-apps-1907.png)  
+   ![Screenshot of Company Portal website, Apps page.](./media/intune-view-apps-1907.png)  
 
 This page lists the following details about each app:  
 

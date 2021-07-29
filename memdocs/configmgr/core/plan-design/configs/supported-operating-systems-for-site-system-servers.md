@@ -2,7 +2,7 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 02/19/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -28,7 +28,7 @@ Use the information in this article with the information in the following articl
 
 *Applies to Windows Server 2019: Standard and Datacenter* 
 
-Starting in version 1810, this OS version is supported for the following roles:
+This OS version is supported for the following roles:
 
 #### Site servers
 
@@ -38,8 +38,6 @@ Starting in version 1810, this OS version is supported for the following roles:
 
 #### Site system servers
 
-- Application Catalog web service point  
-- Application Catalog website point  
 - Asset Intelligence synchronization point  
 - Certificate registration point  
 - Cloud management gateway connection point  
@@ -71,8 +69,6 @@ This OS version is supported for the following roles:
 
 #### Site system servers
 
-- Application Catalog web service point  
-- Application Catalog website point  
 - Asset Intelligence synchronization point  
 - Certificate registration point  
 - Cloud management gateway connection point  
@@ -108,8 +104,6 @@ This OS version is supported for the following roles:
 
 #### Site system servers
 
-- Application Catalog web service point  
-- Application Catalog website point  
 - Asset Intelligence synchronization point  
 - Certificate registration point  
 - Cloud management gateway connection point  
@@ -139,8 +133,6 @@ This OS version is supported for the following roles:
 
 #### Site system servers
 
-- Application Catalog web service point  
-- Application Catalog website point  
 - Asset Intelligence synchronization point  
 - Certificate registration point  
 - Cloud management gateway connection point  
@@ -170,23 +162,23 @@ The following client OS versions are supported for use as a **distribution point
 
 This support has the following limitation:  
 
-- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
+- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 ## <a name="bkmk_core"></a> Server core installations
 
 The server core installation of the following server OS versions are supported for use as a **distribution point**:
 
-- Windows Server 2019 (starting in Configuration Manager, version 1810)  
-- Windows Server, version 1809 (starting in Configuration Manager, version 1810)  
-- Windows Server, version 1803 (starting in Configuration Manager, version 1802)  
-- Windows Server, version 1709 (starting in Configuration Manager, version 1710)  
+- Windows Server 2019
+- Windows Server, version 1809
+- Windows Server, version 1803
+- Windows Server, version 1709
 - Windows Server 2016  
 - Windows Server 2012 R2  
 - Windows Server 2012  
 
 This support has the following limitation:  
 
-- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
+- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 ## General notes
 

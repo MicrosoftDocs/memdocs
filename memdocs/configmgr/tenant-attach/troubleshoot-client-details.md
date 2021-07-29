@@ -2,7 +2,7 @@
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
 description: "Troubleshoot client details for Configuration Manager tenant attach"
-ms.date: 12/03/2020
+ms.date: 02/10/2021
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -31,7 +31,7 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 **Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 
-### <a name="bkmk_noinfo"></a> Unable to get device or collection information
+### <a name="bkmk_noinfo"></a> Unable to get device information
 
 **Error message 1:** Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
@@ -51,7 +51,21 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
     If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
+### <a name="bkmk_timeout"></a> Results timed out
 
+**Error message:** Getting results timed out. Make sure the Configuration Manager service connection point is operational and has a connection to the cloud. <!-- 8974697 -->
+
+**Possible causes**:
+
+- Make sure the hierarchy is still tenant-attached and connected. For more information, see the **CMGatewayNotificationWorker.log** file.
+- If the service connection point or site server were recently rebooted, this error occurs temporarily.
+- A site upgrade or a transient network error can cause this message to occur temporarily.
+
+### <a name="bkmk_firewall"></a> Error validating request
+
+**Error message:** Error validating request. Verify that the Configuration Manager service connection point can reach the internet endpoints required for tenant attach.
+
+**Possible causes:** Typically this error is seen when URLs that are needed by tenant attach are blocked. If the service connection point can't access the needed internet endpoints, a validation error will occur. For more information, see [Internet endpoints](device-sync-actions.md#internet-endpoints).
 ### <a name="bkmk_1603"></a> Unexpected error occurred
 
 **Error message:** Unexpected error occurred
@@ -62,16 +76,10 @@ When viewing the ConfigMgr client details, you may run across one of these error
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on the central site.
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
 1. Verify the clock on the service connection point is in sync. If the service connection point's clock is slightly behind, apply [KB4563473 - Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473). Check **AdminService.log** on the provider machine for any errors.
+1. Verify the device is in the security scope for the administrator's security role. For more information, see [Fundamentals of role-based administration](../core/understand/fundamentals-of-role-based-administration.md).
+
 
 ## Known issues
-
-### Getting results timed out
-
-**Scenario:** If you have a remote service connection point and you installed 2002 early update ring before March 30, 2020, you'll see a timeout error in the admin center.
-
-**Error message:** Getting results timed out. Make sure the Configuration Manager service connection point is operational and has a connection to the cloud.
-
-**Workaround:** Copy the `Microsoft.ConfigurationManagement.ManagementProvider.dll` from site server's `bin\x64` folder to the remote service connection point's `bin\x64` folder.  Restart the `SMS_EXECUTIVE` service on the service connection point server.
 
 ### Boundary groups list is empty
 

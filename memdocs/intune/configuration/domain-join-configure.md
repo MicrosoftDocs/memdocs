@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Domain join profile settings for Windows 10 in Microsoft Intune - Azure | Microsoft Docs
+title: Domain join profile settings for Windows 10 in Microsoft Intune
 description: Create a domain join device configuration profile for hybrid Azure AD joined devices. Use this profile to deploy on-premises Active Directory domain information to devices provisioned with Windows Autopilot and Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,20 +47,20 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Domain Join (preview)**.
+    - **Profile**: Select **Templates** > **Domain Join**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Domain join profile that includes on-premises domain information to enroll hybrid AD joined devices with Windows Autopilot**.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Windows Autopilot domain join**.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended. For example, enter **Windows 10: Domain join profile that includes on-premises domain information to enroll hybrid AD joined devices with Windows Autopilot**.
 
 6. Select **Next**.
 7. In **Configuration settings**, enter the following properties:
 
     - **Computer name prefix**: Enter a prefix for the device name. Computer names are 15 characters long. After the prefix, the remaining 15 characters are randomly generated.
     - **Domain name**: Enter the Fully Qualified Domain Name (FQDN) the devices are to join. For example, enter `americas.corp.contoso.com.`
-    - **Organizational unit** (optional): Enter the full path ([distinguished name](/windows/win32/ad/object-names-and-identities#distinguished-name)) to the organizational unit (OU) the computer accounts are to be created. For example, enter `"CN=Users,DC=Contoso,DC=com"`. If you don't enter a value, a well-known computer object container is used.
+    - **Organizational unit** (optional): Enter the full path ([distinguished name](/windows/win32/ad/object-names-and-identities#distinguished-name)) to the organizational unit (OU) the computer accounts are to be created. For example, enter `OU=Mine,DC=Contoso,DC=com`. Don't enter quotation marks. To use the well-known computer object container (CN=Computers, DC=Contoso, DC=Com), leave this property blank.
 
       For more information and advice on this setting, see [Deploy hybrid Azure AD-joined devices](../../autopilot/windows-autopilot-hybrid.md).
 

@@ -56,10 +56,13 @@ Select **I agree.** to give Microsoft permission to send data to Apple.
 Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
 
 ### Step 3. Create an Apple MDM push certificate
-Select **Create your MDM push Certificate** to go to the Apple Push Certificates Portal. Sign in with your company Apple ID, and then click **Create a Certificate**. Select **Choose File** and browse to the certificate signing request file, and then choose **Upload**. On the Confirmation page, choose **Download** to the download the certificate (.pem)  file, and save the file locally.
+Select **Create your MDM push Certificate** to go to the Apple Push Certificates Portal. Sign in with your company email address Apple ID, and then click **Create a Certificate**. Select **Choose File** and browse to the certificate signing request file, and then choose **Upload**. On the Confirmation page, choose **Download** to the download the certificate (.pem)  file, and save the file locally.
 
 > [!NOTE]
-> The certificate is associated with the Apple ID used to create it. As a best practice, use a company Apple ID for management tasks and make sure the mailbox is monitored by more than one person like a distribution list. Never use a personal Apple ID.
+> The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address for Apple ID for management tasks and make sure the mailbox is monitored by more than one person like a distribution list. Avoid using personal Apple ID.
+
+> [!NOTE]
+> If you plan to federate your existing AAD Accounts with Apple for Managed Apple ID Usage, please contact Apple to have the existing APNS certificate migrated to new managed apple ID. Refer https://support.apple.com/en-in/guide/apple-school-manager/apd6603d9206/web for more info.
 
 ### Step 4. Enter the Apple ID used to create your Apple MDM push certificate
 Record this ID as a reminder for when you need to renew this certificate.
@@ -83,3 +86,6 @@ The certificate is associated with the Apple ID used to create it. Renew the MDM
 7. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select the **Apple MDM push certificate** browse icon, select the .pem file downloaded from Apple, and choose **Upload**.
 
 Your Apple MDM push certificate appears **Active** and has 365 days until expiration.
+
+> [!IMPORTANT]
+> Please be aware that if you renew an expired APNs certificate outside of the grace period (30 days as of this writing), Apple will issue you a brand new certificate. When this happens, because the certificate is now different, you will be forced to un-enroll and re-enroll all existing, Intune-managed iOS devices.

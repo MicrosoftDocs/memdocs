@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Email settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Email settings for Windows 10 devices in Microsoft Intune
 description: Create a device configuration email profile that that uses Exchange servers, and retrieves attributes from Azure Active Directory. You can also enable SSL, and synchronize email and schedules on Windows 10 devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +27,10 @@ ms.collection: M365-identity-device-management
 
 # Email profile settings for devices running Windows 10 in Microsoft Intune
 
-Use the email profile settings to configure the Mail app on your devices running Windows 10 and newer.
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+Use the email profile settings to configure the Mail app on your devices running Windows 10 and newer. This article describes some of the settings you can configure.
 
 ## Before you begin
 

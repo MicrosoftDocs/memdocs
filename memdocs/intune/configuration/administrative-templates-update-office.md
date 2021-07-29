@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Update Microsoft 365 using administrative templates in Microsoft Intune - Azure | Microsoft Docs
+title: Update Microsoft 365 using administrative templates in Microsoft Intune
 description: Use Administrative templates in Microsoft Intune to update Microsoft 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,7 +80,7 @@ After you assign the policy and the device syncs, you can confirm the policy is 
     :::image type="content" source="./media/administrative-templates-update-office/admx-update-branch-registry-key.png" alt-text="Administrative template L_Updatebranch registry key example for Microsoft Office":::
 
     > [!TIP]
-    > [Manage Microsoft 365 Apps with Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
+    > [Manage Microsoft 365 Apps with Configuration Manager](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
     >
     >- Monthly Channel                - value="Current"
     >- Monthly Channel (Targeted)     - value="Current"
@@ -100,7 +100,7 @@ At this point, the Intune policy is successfully applied to the device.
     - `UpdateChannel`: A dynamic key that changes, depending on the configured settings.
     - `CDNBaseUrl`: Set when Microsoft 365 installs on the device.
 
-3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they're set to.
+3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they're set to.
 
     Looking at the following example, you see `UpdateChannel` is set to `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, which is **monthly**:
 
@@ -157,9 +157,9 @@ If you want to do more, you can force Office to get the latest version update. T
 
 ### Step 2: Check the Office version
 
-Consider using these steps to test your policy before deploying the policy to all users.
+Consider using the following steps to test your policy before deploying the policy to all users:
 
-1. In the **Registry Editor** app, go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`
+1. In the **Registry Editor** app, go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`.
 
 2. Look at the `L_UpdateTargetVersion` value. Once the policy applies, the value is set to the version you entered, such as `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.10730.20344" />`.
 
@@ -178,7 +178,7 @@ Consider using these steps to test your policy before deploying the policy to al
 
 ## Next steps
 
-[Update channel values for Microsoft 365 clients](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Update channel values for Microsoft 365 clients](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel)
 
 [Overview of the Office cloud policy service for Microsoft 365 Apps](/deployoffice/overview-office-cloud-policy-service)
 

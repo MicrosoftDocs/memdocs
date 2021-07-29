@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enroll iOS/iPadOS devices - User Enrollment
+title: Enroll iOS/iPadOS devices with user enrollment in Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Learn how to set up iOS/iPadOS and iPadOS User Enrollment.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/2/2019
+ms.date: 12/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -64,7 +64,7 @@ An enrollment profile defines the settings applied to a group of devices during 
 
     - **Device enrollment**: All the users in this profile will use Device Enrollment.
     - **User enrollment**: All the users in this profile will use User Enrollment.
-    - **Determine based on user choice**: All users in this group will be given the choice of which enrollment type to use. When users enroll their devices, they'll see an option to choose between **I own this device** and **(Company) owns this device**. If they choose the latter, the device will be enrolled by using Device Enrollment. If the user chooses **I own this device**, they'll get another option to secure the entire device or only secure work-related apps and data. The end user's selection of whether they own the device determines which enrollment type is implemented on their device. This user choice is also reflected in the Device Ownership attribute in Intune. To learn more about the user experience, see [Set up iOS/iPadOS device access to your company resources](../user-help/enroll-your-device-in-intune-macos-cp.md).
+    - **Determine based on user choice**: All users in this group will be given the choice of which enrollment type to use. When users enroll their devices, they'll see an option to choose between **I own this device** and **(Company) owns this device**. If they choose the latter, the device will be enrolled by using Device Enrollment. If the user chooses **I own this device**, they'll get another option to secure the entire device or only secure work-related apps and data. The end user's selection of whether they own the device determines which enrollment type is implemented on their device. This user choice is also reflected in the Device Ownership attribute in Intune. To learn more about the user experience, see [Set up iOS/iPadOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios.md).
     
 5. Select **Next**.
 

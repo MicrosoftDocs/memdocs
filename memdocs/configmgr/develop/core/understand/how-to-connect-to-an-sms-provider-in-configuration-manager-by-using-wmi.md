@@ -136,7 +136,7 @@ $connection = $SWbemLocator.ConnectServer($siteServer,$Namespace,$username,$pass
 
  The preceding example sets the authentication to packet privacy. This is the same managed SMS Provider.  
 
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [SMS Provider fundamentals](sms-provider-fundamentals.md)   

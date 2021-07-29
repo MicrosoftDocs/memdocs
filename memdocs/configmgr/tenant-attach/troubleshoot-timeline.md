@@ -8,7 +8,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.assetid: 54a58548-45f3-4f75-93d6-d2fd96227e6a
 manager: dougeby
-author: mestew
+author: mestew 
 ms.author: mstewart
 ---
 
@@ -70,6 +70,13 @@ Verify the account has the following permissions:
 
 ## Known issues
 
+### Time out error
+<!--9114968, 9102454-->
+You will receive a time out error if the following condition applies:
+
+- You're opening **Timeline** for the very first time after restarting SMSExecutive on the service connection point's on-premises server. 
+
+To workaround the issue, reload the **Timeline** page.
 ### Boundary group ID is used rather than the name
 
 **Scenario:** If you are running Configuration Manager version 2002 and a device changes boundary groups, you may see the event message shows the boundary group ID rather than the name.

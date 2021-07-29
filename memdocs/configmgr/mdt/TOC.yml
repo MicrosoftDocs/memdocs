@@ -1,12 +1,21 @@
+items:
 - name: Microsoft Deployment Toolkit (MDT) documentation
   href: index.yml
   items:
-  - name: Release notes
-    href: release-notes.md
-  - name: MDT user guide
-    href: use-the-mdt.md
-  - name: Samples guide
-    href: samples-guide.md
+  - name: Overview
+    items:
+    - name: Release notes
+      href: release-notes.md
+    - name: Known issues
+      href: known-issues.md
+    - name: Frequently asked questions (FAQ)
+      href: faq.yml
+  - name: How-to guides
+    items:
+    - name: MDT user guide
+      href: use-the-mdt.md
+    - name: Samples guide
+      href: samples-guide.md
   - name: Quickstarts
     items:
     - name: Lite-touch installation (LTI)
@@ -20,6 +29,6 @@
     - name: Toolkit reference
       href: toolkit-reference.md
     - name: Troubleshooting reference
-      href: troubleshooting-reference.md
+      href: /troubleshoot/mem/configmgr/troubleshooting-reference
     - name: UDI developers guide
       href: user-driven-installation-developers-guide.md

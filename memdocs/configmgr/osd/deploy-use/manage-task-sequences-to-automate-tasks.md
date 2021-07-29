@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 11/30/2020
+ms.date: 06/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -161,6 +161,9 @@ Use the following procedure to set a task sequence as high-impact.
 
 ### Create a custom notification for high-risk deployments
 
+> [!NOTE]
+> The client only displays high-impact notifications for required OS deployment task sequences. It doesn't display them for non-OS deployment or stand-alone task sequences.
+
 Use the following procedure to create a custom notification for high-impact deployments.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
@@ -223,7 +226,7 @@ When the task sequence starts, in most scenarios it records the currently enable
 > [!Warning]
 > Be cautious with this setting on low performance hardware. Running intense system operations for an extended period of time can strain low-end hardware. Check with your hardware manufacturer for specific guidance.
 
-Starting in version 2010, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby). It also supports other devices that don't have that default power plan. When you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->
+Starting in version 2010, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby).<!--7721999 & 8177793--> It also supports other devices that don't have that default power plan. When you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. This power plan modifies the timeout values to `0` for standby, monitor, disk, and hibernate when plugged in. These configurations prevent these devices from falling asleep during an OS deployment task sequence.<!--MEMDocs#1646--> After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.
 
 ### Known issue
 
@@ -269,7 +272,8 @@ Export and import task sequences with or without their related objects. This ref
 - Boot images  
 - Packages like the client install package  
 - Driver packages  
-- Applications with dependencies  
+- Applications with dependencies
+- Other task sequences referenced with the **Run task sequence** step<!-- 8915013 -->
 
 Consider the following points when you export and import task sequences:  
 
@@ -295,7 +299,7 @@ Consider the following points when you export and import task sequences:
 
     - **File**: Specify the location and name of the export file. If you enter the file name directly, be sure to include the .zip extension to the file name. If you browse for the export file, the wizard automatically adds this file name extension.  
 
-    - If you don't want to export task sequence dependencies, deselect the option to **Export all task sequence dependencies**. By default, the wizard scans for all the related objects and exports them with the task sequence. These dependencies include any for applications.  
+    - If you don't want to export task sequence dependencies, deselect the option to **Export all task sequence dependencies**. By default, the wizard scans for all the related objects and exports them with the task sequence. These dependencies include any for applications and child task sequences.  
 
     - If you don't want to copy the content from the package source to the export location, deselect the option to **Export all content for the selected task sequences and dependencies**. If you select this option, the Import Task Sequence Wizard uses the import path as the new package source location.  
 
@@ -404,7 +408,7 @@ Moves the selected task sequence to another folder in the **Task Sequences** nod
 
 ### Set Security Scopes
 
-Select the security scopes for the selected task sequence. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
+Select the security scopes for the selected task sequence. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#security-scopes).
 
 ### Properties
 

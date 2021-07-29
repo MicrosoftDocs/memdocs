@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: aanavath
 
 ---
 
@@ -55,7 +55,7 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
-- **Microsoft Defender Firewall rules** *(Preview)* - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
+- **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
 
 ### Devices managed by Configuration Manager
 
@@ -76,6 +76,62 @@ When you use **Microsoft Defender Firewall rules** profiles, you can apply multi
 When rules from multiple rules profiles don't conflict with each other, devices merge the rules from each profile to create a combined firewall rule configuration on the device. This behavior enables you to deploy more than the 150 rules that each individual profile supports to a device.
 
 - For example, you have two Microsoft Defender Firewall rules profiles. The first profile allows *Teams.exe* through the firewall. The second profile allows *Outlook.exe* through the firewall. When a device receives both profiles, the device is configured to allow both apps through the firewall.
+
+## Firewall policy reports
+
+*Reports for Firewall policy are in public preview.*
+
+The reports for Firewall policy display status details about the firewall status for your managed devices.  Firewall reports support managed devices that run the following operating systems.
+
+- Windows 10 or later
+
+### Summary
+
+Summary is the default view when you open the Firewall node. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **Summary**.
+
+This view provides:
+
+- An aggregate count of devices that have the firewall turned off.
+- A list of your Firewall policies, including the name, type, if it's assigned, and when it was last modified.
+
+### Windows 10 MDM devices with firewall off
+
+This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **Windows 10 MDM devices with firewall off**.
+
+Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
+
+- Device name
+- Firewall status
+- User principle name
+- Target (The method of device management)
+- Last check in time
+
+> [!div class="mx-imgBorder"]
+> ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
+
+### Windows 10 MDM Firewall status
+
+*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#windows-10-mdm-firewall-status-organizational)*.
+
+As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
+
+> [!div class="mx-imgBorder"]
+> ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)
+
+Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices. You can filter returns for this report by using one or more of the status detail categories.
+
+Status details include:
+
+- **Enabled** – The firewall on, and successfully reporting.
+- **Disabled** - The firewall is turned off.
+- **Limited** – The firewall isn’t monitoring all networks, or some rules are turned off.
+- **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
+- **Not applicable** – The device doesn’t support firewall reporting.
+
+You can filter returns for this report by using one or more of the status detail categories.
+
+> [!div class="mx-imgBorder"]
+> ![View the Firewall Status report](media/endpoint-security-firewall-policy/firewall-status.png)
 
 ## Next steps
 

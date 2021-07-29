@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure VPN settings to macOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure VPN settings to macOS devices in Microsoft Intune
 description: Add or create a virtual private network (VPN) configuration profile in Microsoft Intune. Add the connection details, split tunneling, custom VPN settings with the identifier, key and value pairs, proxy settings with a configuration script, IP or FQDN address, and TCP port in Microsoft Intune on devices running macOS.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/10/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration

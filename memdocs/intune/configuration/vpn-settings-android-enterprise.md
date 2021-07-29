@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use VPN settings for Android Enterprise in Microsoft Intune - Azure | Microsoft Docs
+title: Use VPN settings for Android Enterprise in Microsoft Intune
 description: See all the settings to create VPN connections on Android Enterprise devices in Microsoft Intune, including COBO, COSU, COPE, and BYOD. Enter the connection name, IP address or FQDN of the VPN server, choose how users authenticate, and choose Citrix, SonicWall, Check Point Capsule, and Pulse Secure connection types.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 06/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise device settings to configure VPN in Intune
 
-This article lists and describes the different VPN connection settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to create a VPN connection, choose how the VPN authenticates, select a VPN server type, and more.
+This article describes the different VPN connection settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to create a VPN connection, choose how the VPN authenticates, select a VPN server type, and more.
 
 This feature applies to:
 
@@ -59,7 +59,10 @@ Create an [Android Enterprise VPN device configuration profile](vpn-settings-con
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
-  - **Microsoft Tunnel** *(Microsoft Tunnel isn't supported with* Android Enterprise dedicated *devices.)*
+  - **Microsoft Tunnel** (Not supported on Android Enterprise dedicated devices.)  
+
+    > [!Important]
+    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later after August 14, 2021.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -74,6 +77,8 @@ The available settings depend on the VPN client you choose. Some settings are on
   - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
     For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+
+- **Enter key and value pairs for the NetMotion Mobility VPN attributes**: Add or import **Keys** and **Values** that customize your VPN connection. These values are typically supplied by your VPN provider.
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
@@ -106,7 +111,11 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
-  - **Microsoft Tunnel**
+  - **NetMotion Mobility**
+  - **Microsoft Tunnel**  
+
+    > [!Important]
+    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later after August 14, 2021.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -125,6 +134,8 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **Fingerprint** (Check Point Capsule VPN only): Enter the fingerprint string given to you by the VPN vendor, such as `Contoso Fingerprint Code`. This fingerprint verifies that the VPN server can be trusted. 
 
   When authenticating, a fingerprint is sent to the client so the client knows to trust any server that has the same fingerprint. If the device doesn't have the fingerprint, it prompts the user to trust the VPN server while showing the fingerprint. The user manually verifies the fingerprint, and chooses to trust to connect.
+
+- **Enter key and value pairs for the NetMotion Mobility VPN attributes**: Add or import **Keys** and **Values** that customize your VPN connection. These values are typically supplied by your VPN provider.
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
@@ -152,4 +163,4 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create VPN profiles for [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md).
+You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md).

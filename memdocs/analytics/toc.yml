@@ -1,3 +1,4 @@
+items:
 - name: Endpoint analytics documentation
   href: index.yml
 - name: Overview
@@ -18,8 +19,16 @@
   items:
   - name: Startup performance
     href: startup-performance.md
+  - name: Restart frequency
+    href: restart-frequency.md    
   - name: Recommended software
     href: recommended-software.md
+  - name: Application reliability
+    href: app-reliability.md
+  - name: Work from anywhere
+    href: work-from-anywhere.md
+  - name: Endpoint analytics in Microsoft Productivity Score
+    href: productivity-score.md
 - name: How-to guides
   items:
   - name: Manage settings

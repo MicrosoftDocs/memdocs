@@ -1,7 +1,26 @@
 {
     "redirections": [
 
+        
         {
+            "source_path": "memdocs/intune/user-help/using-your-windows-device-with-intune.md",
+            "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/user-help/turn-off-microsoft-data-collection-macos.md",
+            "redirect_url": "/mem/intune/user-help/intune-company-portal-preferences-macos",
+            "redirect_document_id": false
+        },         {
+            "source_path": "memdocs/intune/user-help/send-logs-to-your-it-admin-using-cable-android.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/tutorial-walkthrough-intune-portal.md",
+            "redirect_url": "/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager",
+            "redirect_document_id": false
+        },          {
             "source_path": "memdocs/intune/fundamentals/migration-guide-communication-plan.md",
             "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
             "redirect_document_id": false
@@ -103,7 +122,7 @@
         },
         {
             "source_path": "memdocs/intune/user-help/windows-enrollment-company-portal.md",  
-            "redirect_url": "/mem/intune/user-help/using-your-windows-device-with-intune",  
+            "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",  
             "redirect_document_id": true 
         },
         {
@@ -547,7 +566,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/memdocs/intune/enrollment/troubleshoot-ios-enrollment-errors.md",
+            "source_path": "memdocs/intune/enrollment/troubleshoot-ios-enrollment-errors.md",
             "redirect_url": "/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors",
             "redirect_document_id": false
         },
@@ -556,6 +575,11 @@
             "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors",
             "redirect_document_id": false
         },
+        {
+            "source_path": "memdocs/intune/enrollment/troubleshoot-windows-auto-enrollment.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment",
+            "redirect_document_id": false
+        },        
         {
             "source_path": "memdocs/intune/fundamentals/troubleshoot-company-resource-access-problems.md",
             "redirect_url": "/troubleshoot/mem/intune/troubleshoot-company-resource-access-problems",
@@ -577,7 +601,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/mem/intune/apps/app-install-error-codes.md",
+            "source_path": "memdocs/intune/apps/app-install-error-codes.md",
             "redirect_url": "/troubleshoot/mem/intune/app-install-error-codes",
             "redirect_document_id": false
         },
@@ -659,6 +683,61 @@
         {
             "source_path": "memdocs/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
             "redirect_url": "/mem/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/security-best-practices-and-privacy-information.md",
+            "redirect_url": "/mem/configmgr/security/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/security-and-privacy.md",
+            "redirect_url": "/mem/configmgr/security/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/develop/core/understand/securing-configuration-manager-applications.md",
+            "redirect_url": "/mem/configmgr/develop/core/servers/configure/role-based-administration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/conditional-access-intune-reassign.md",
+            "redirect_url": "/mem/intune/protect/conditional-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/hierarchy/content-source-location-scenarios.md",
+            "redirect_url": "/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md",
+            "redirect_url": "/mem/configmgr/core/servers/deploy/configure/boundary-groups",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/enrollment-autopilot.md#add-devices",
+            "redirect_url": "/mem/autopilot/add-devices#add-devices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/hotfix/2103/KB9603111.md",
+            "redirect_url": "/mem/configmgr/hotfix/2103/9603111",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/hotfix/2103/KB9210721.md",
+            "redirect_url": "/mem/configmgr/hotfix/2103/9210721",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/windows-virtual-desktop.md",
+            "redirect_url": "/mem/intune/fundamentals/azure-virtual-desktop",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/windows-virtual-desktop-multi-session.md",
+            "redirect_url": "/mem/intune/fundamentals/azure-virtual-desktop-multi-session",
             "redirect_document_id": false
         }
     ]

@@ -7,7 +7,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 01/26/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -49,7 +49,7 @@ If after enrollment your organization enforces a new security requirement, such 
 To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
 ## Get your macOS device managed  
-Use the following steps to enroll your macOS device with your organization. Your device must be running macOS 10.12 or later.   
+Use the following steps to enroll your macOS device with your organization. Your device must be running macOS 10.13 or later.   
 
 > [!NOTE]
 > Throughout this process, you might be prompted to allow Company Portal to use confidential information that's stored in your keychain. These prompts are part of Apple security. When you get the prompt, type in your login keychain password and select **Always Allow**. If you press **Enter** or **Return** on your keyboard, the prompt will instead select **Allow**, which may result in additional prompts.  

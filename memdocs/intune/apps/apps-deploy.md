@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 07/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,12 +33,12 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-After you've [added an app](apps-add.md) to Microsoft Intune, you can assign the app to users and devices. It is important to note that you can assign an app to a device whether or not the device is managed by Intune.
+After you've [added an app](apps-add.md) to Microsoft Intune, you can assign the app to users and devices. It is important to note that you can deploy an app to a device whether or not the device is managed by Intune.
 
 > [!NOTE]
 > The **Available** deployment intent is only supported for **device groups** when targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally-enabled (COPE) devices.
 
-The following table lists the various options for assigning apps to users and devices:
+The following table lists the various options for *assigning* apps to users and devices:
 
 | Option  | Devices enrolled with Intune | Devices not enrolled with Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
@@ -56,6 +56,8 @@ The following table lists the various options for assigning apps to users and de
 > Currently, you can assign iOS/iPadOS and Android apps (line-of-business and store-purchased apps) to devices that aren't enrolled with Intune.
 >
 > To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
+> 
+> *Available assignments* are only valid for user groups, not device groups.
 
 ## Assign an app
 
@@ -74,10 +76,13 @@ The following table lists the various options for assigning apps to users and de
      > **For iOS/iPadOS apps only**:
      > - To configure what happens to managed apps when devices are no longer managed, you can select the intended setting under **Uninstall on device removal**. For more information, see [App uninstall setting for iOS/iPadOS managed apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
      > - If you have created an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app is run, the VPN connection is opened. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-ios.md).
+     > - To configure whether a required iOS/iPadOS app is installed as a removable app by end users, you can select the setting under **Install as removable**. 
+	 >
+     > **For Android apps only**: 
+	 > - If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
      >
-     > **For Android apps only**: If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
-     >
-     > For **Available for enrolled devices**: The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
+     > **For Available for enrolled devices**: 
+	 > - The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
 
 7. To select the groups of users that are affected by this app assignment, select **Included Groups**.
 8. After you have selected one or more groups to include, select **Select**.
@@ -130,7 +135,8 @@ Steps to assign a Managed Google Play app to unmanaged devices:
 2. Add apps from managed Google Play to your Intune console.
 3. Target managed Google Play apps as **Available with or without enrollment** to the desired user group. **Required** and **Uninstall** app targeting are not supported for non-enrolled devices.
 4. Assign an App Protection Policy to the user group.
-5. The next time the end user opens the Company Portal app and completes the log in process, they will see a message indicating in the Apps section that there are apps available for them. The user can select this notification to navigate to the Play Store.
+5. User logs in any protected app.
+6. The next time the end user opens the Company Portal app and completes the log in process, they will see a message indicating in the Apps section that there are apps available for them. The user can select this notification to navigate to the Play Store.
 
    > [!NOTE]
    > You can configure [device enrollment setting options](./company-portal-app.md#device-enrollment-setting-options) to be **Available, no prompts** or **Unavailable**. This setting will prevent user from unintentionally enrolling their device or receiving notifications to enroll their device after they logged in to the Company Portal.
@@ -154,7 +160,7 @@ Default values for the setting are prepopulated for new assignments as follows:
 >[!NOTE]
 >**"Available" assignment types:** If you're updating this setting for "available for enrolled devices" or "available with or without enrollment" groups, users who already have the managed app won't get the updated setting until they sync the device with Intune and re-install the app. 
 >
->**Pre-existing assignments:** Assignments that existed prior to the introduction of this setting are unmodified and all managed apps will be removed on device removal from management.
+>**Pre-existing assignments:** The App uninstall setting was introduced in May 2019. Assignments that existed prior to this date are unmodified and all managed apps will be removed on device removal from management. If your assignment was created before May 2019, you may need to explicitly set the App uninstall setting, as the default settings above may not apply. 
 
 ## Next steps
 

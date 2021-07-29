@@ -1,5 +1,5 @@
 ---
-title: Windows Autopilot Self-Deploying mode
+title: Windows Autopilot Self-Deploying mode (Public Preview)
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows 10 as a kiosk, digital signage device, or a shared device.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: greglin
@@ -13,11 +13,12 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-# Windows Autopilot Self-Deploying mode
+# Windows Autopilot Self-Deploying mode (Public Preview)
 
 **Applies to**
 
@@ -25,7 +26,7 @@ ms.topic: how-to
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
-> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 Windows Autopilot self-deploying mode lets you deploy a device with little to no user interaction. For devices with an Ethernet connection, no user interaction is required. For devices connected via Wi-fi, the user must only:
 - Choose the language, locale, and keyboard.
@@ -41,12 +42,15 @@ Self-deploying mode provides all the following:
 > Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
 
 Self-deploying mode lets you deploy a Windows 10 device as a kiosk, digital signage device, or a shared device.
+Autopilot now has a kiosk mode that supports Kiosk Browser, any UWP app and specific versions of Edge. 
 
 You can use the [Kiosk Browser](https://www.microsoft.com/p/kiosk-browser/9ngb5s5xg2kp?rtc=1&activetab=pivot:overviewtab) when setting up a kiosk device. This app is built on Microsoft Edge and can be used to create a tailored, MDM-managed browsing experience.
 
 You can completely automate device configuration by combining self-deploing mode with MDM policies. Use the MDM policies to create a local account configured to automatically log on. For more information, see:
 - [Simplifying kiosk management for IT with Windows 10](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/simplifying-kiosk-management-for-it-with-windows-10/ba-p/187691).
 - [Set up a kiosk or digital sign in Intune or other MDM service](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service).
+
+Optionally, you can use a [device-only subscription](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/microsoft-intune-announces-device-only-subscription-for-shared/ba-p/280817) service that helps manage devices that are not affiliated with specific users. The Intune device SKU is licensed per device per month.
 
 > [!NOTE]
 > Self-deploying mode does not presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Azure AD and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
@@ -56,6 +60,9 @@ You can completely automate device configuration by combining self-deploing mode
 ## Requirements
 
 Self-deploying mode uses a device’s TPM 2.0 hardware to authenticate the device into an organization’s Azure AD tenant. Therefore, devices without TPM 2.0 can't be used with this mode. Devices must also support TPM device attestation. All new Windows devices should meet these requirements. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
+
+> [!NOTE]
+> For Windows Autopilot software requirments, see [Windows Autopilot software requirements](./software-requirements.md).
 
 >[!IMPORTANT]
 >If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Window 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. Since Windows 10 Enterprise 2019 LTSC is based on Windows 10 version 1809, self-deploying mode is also not supported on Windows 10 Enterprise 2019 LTSC. See [Windows Autopilot known issues](known-issues.md) to review other known errors and solutions.

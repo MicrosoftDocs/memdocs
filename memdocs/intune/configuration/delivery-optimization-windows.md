@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Delivery Optimization settings for Windows 10 in Microsoft Intune - Azure | Microsoft Docs
+title: Delivery Optimization settings for Windows 10 in Microsoft Intune
 description: Configure how Windows 10 devices you manage with Intune use Delivery Optimization. In Intune, create a device configuration profile to install updates from the internet. Also see how to replace existing update rings with a Delivery Optimization profile.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,7 +45,7 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile**: Select **Delivery Optimization**.
+   - **Profile**: Select **Templates** > **Delivery Optimization**.
 
 4. Select **Create**.
 
@@ -84,7 +84,7 @@ Delivery Optimization was previously configured as part of Software Update Rings
     2. Enter the following properties:
 
         - **Platform**: Select **Windows 10 and later**.
-        - **Profile**: Select **Delivery Optimization**.
+        - **Profile**: Select **Templates** > **Delivery Optimization**.
 
     3. Select **Create**.
     4. In **Basics**, enter the following properties:

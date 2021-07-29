@@ -18,7 +18,7 @@ To install the Configuration Manager client on Windows 10 devices using Azure AD
 
 Setting up Azure AD may be easier for some customers than setting up a public key infrastructure for certificate-based authentication. There are features that require you onboard the site to Azure AD, but don't necessarily require the clients to be Azure AD-joined.<!-- SCCMDocs issue 1259 --> For more information, see the following articles:
 
-- [Plan for Azure Active Directory](../../plan-design/security/plan-for-security.md#bkmk_planazuread)
+- [Plan for Azure Active Directory](../../plan-design/security/plan-for-security.md#azure-active-directory)
 - [Use Azure AD for co-management](../../../comanage/quickstart-hybrid-aad.md)
 
 ## Before you begin
@@ -84,7 +84,7 @@ To manually install the client using Azure AD identity, first review the general
 > The device needs access to the internet to contact Azure AD, but doesn't need to be internet-based.
 
 The following example shows the general structure of the command line:
-`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
+`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSITECODE=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
 
 For more information, see [Client installation properties](about-client-installation-properties.md).
 
@@ -97,9 +97,9 @@ The **/mp** parameter and **CCMHOSTNAME** property specify one of the following,
 The **SMSMP** property specifies the on-premises management point. It's not required. It's recommended for Azure AD-joined devices that roam onto the intranet, so they can find an on-premises management point.
 
 This example uses a cloud management gateway. It replaces sample values:
-`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
-The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies installing the client in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
+The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies installing the client in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSITECODE**.<!--3607731-->
 
 To automate the client install using Azure AD identity via Microsoft Intune, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
 

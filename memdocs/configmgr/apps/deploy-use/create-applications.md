@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
-ms.date: 07/10/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -110,9 +110,6 @@ To add more deployment types or configure other settings, see [Create deployment
 
 3. On the **Software Center** page of the Create Application wizard, specify the following information:  
 
-    > [!Note]  
-    > In version 1902 and earlier, this page was named **Application Catalog**.
-
     - **Selected language**: In the drop-down list, select the language version of the application that you want to set up. Choose **Add/Remove** to set up more languages for this application.  
 
     - **Localized application name**: Specify the application name in the selected language.  
@@ -122,10 +119,8 @@ To add more deployment types or configure other settings, see [Create deployment
 
     - **User categories**: Choose **Edit** to specify application categories in the selected language. Users of Software Center use these categories to help filter and sort the applications.  
 
-        > [!Note]  
-        > In version 1902 and earlier, user categories only apply to available deployments to user collections. If an application is deployed to a computer collection, the user categories are ignored.
-        >
-        > Starting in version 1906, user categories for device-targeted application deployments show as filters in Software Center. These deployments can be either available or required.
+        > [!NOTE]
+        > User categories for device-targeted application deployments show as filters in Software Center. These deployments can be either available or required.
         >
         > <!-- 4726793 -->Renaming or deleting a category doesn't automatically apply to apps with this category. These changes apply on the next revision of the app. To work around this issue for rename or delete:
         >
@@ -166,7 +161,7 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 > - [Return Codes](#bkmk_dt-return)
 > - [Dependencies](#bkmk_dt-depend)
 >  
-> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](deploy-applications.md#bkmk_exe-check).  
+> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](check-for-running-executable-files.md).
 
 ### Start the Create Deployment Type wizard  
 
@@ -271,7 +266,8 @@ When you view the properties of a deployment type, the following options appear 
 
 - **Deployment options**: Specify if clients should download the application when they use a distribution point from a neighbor or the default site boundary groups.  
 
-- **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). BranchCache is always enabled on clients. This setting was removed in version 1802, as clients use BranchCache if the distribution point supports it.  
+> [!NOTE]
+> Windows BranchCache is always enabled on clients. If the distribution point supports BranchCache, clients use it. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).
 
 ### <a name="bkmk_dt-ts"></a> Deployment type **Task Sequence** options
 
@@ -725,7 +721,7 @@ Windows clients always evaluate deployment types that use a link to a store befo
 
 After creating an application in Configuration Manager, the next step is to [deploy the application](deploy-applications.md).
 
-Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
+Create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
 
 For more information about creating applications on different OS platforms, see the following articles:  
 

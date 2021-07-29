@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 04/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune can use Azure Active Directory (AD) multi-factor authentication (MFA) for device enrollment to help you secure your corporate resources.
+Intune can use Azure Active Directory (AD) Conditional Access policies to require multi-factor authentication (MFA) for device enrollment to help you secure your corporate resources.
 
 MFA works by requiring any two or more of the following verification methods:
 
@@ -41,9 +41,9 @@ MFA works by requiring any two or more of the following verification methods:
 - Something you have (a trusted device that isn't easily duplicated, like a phone).
 - Something you are (biometrics, like a fingerprint).
 
-MFA is supported for iOS/iPadOS, Android, and Windows 8.1 or later devices.
+MFA is supported for iOS/iPadOS, macOS, Android, and Windows 8.1 or later devices.
 
-When you enable MFA, end users must supply two forms of credentials to enroll a device.
+When you enable MFA, end users needs a second device and must supply two forms of credentials to enroll a device.
 
 ## Configure Intune to require multi-factor authentication at device enrollment
 
@@ -61,17 +61,27 @@ To require MFA when a device is enrolled, follow these steps:
 4. In the **Assignments** section, choose **Users and groups**. 
 5. In **Users and groups**, choose **Select users or groups**, and check **Users and groups**. Then select the users and /or groups that will receive this policy, then choose **Done**.
 6. In the **Assignments** section, choose **Cloud apps**.
-7. On the **Include** tab of **Cloud apps**, choose **Select apps**, then choose **Select** > **Microsoft Intune Enrollment**, and then choose **Done**. By choosing **Microsoft Intune Enrollment**, conditional access MFA is applied only to the enrollment of the device (one-time MFA prompt).
-8. In the **Assignments** section, for **Conditions** you don't need to configure any settings for MFA.
-9. In the **Access controls** section, choose **Grant**.
-10. In **Grant**, choose **Grant access**, and then select **Require multi-factor authentication**. Don't select **Require device to be marked as compliant** because a device can't be evaluated for compliance until it's enrolled. Then choose **Select**.
-11. In **New policy**, choose **Enable policy** > **On**, and then choose **Create**.
+7. On the **Include** tab of **Cloud apps**, choose **Select apps**, then choose **Select** > **Microsoft Intune Enrollment**, and then choose **Done**. By choosing Microsoft Intune Enrollment, conditional access MFA is applied only to the enrollment of the device (one-time MFA prompt).
+
+    For Apple Automated Device Enrollments using **Setup assistant with modern authentication**, you have two options:
+
+    | Cloud app | MFA prompt location | Automated Device Enrollment notes |
+    | --- | --- | --- |
+    | **Microsoft Intune** | Setup Assistant,<br>Company Portal app | With this option, MFA is required during enrollment and for each login to the Company Portal app/Company Portal website. Conditional access MFA is applied only to the login of the Company Portal on the device. |
+    | **Microsoft Intune Enrollment** | Setup Assistant | With this option, MFA is applied only to the enrollment of the device (one-time MFA prompt). Conditional access MFA is applied only to the login of the Company Portal on the device. |
+
+8. Choose **Done**.
+9. In the **Assignments** section, for **Conditions** you don't need to configure any settings for MFA.
+10. In the **Access controls** section, choose **Grant**.
+11. In **Grant**, choose **Grant access**, and then select **Require multi-factor authentication**. Don't select **Require device to be marked as compliant** because a device can't be evaluated for compliance until it's enrolled. Then choose **Select**.
+12. In **New policy**, choose **Enable policy** > **On**, and then choose **Create**.
 
 > [!NOTE]
 > A second device is required to complete the MFA challenge for corporate devices like the following:
 > - Android Enterprise Fully Managed.
 > - Android Enterprise Corporate Owned Work Profile.
 > - iOS/iPadOS Automated Device Enrollment.
+> - macOS Automated Device Enrollment.
 >
 > The second device is required because the primary device can't receive calls or text messages during the provisioning process.
 

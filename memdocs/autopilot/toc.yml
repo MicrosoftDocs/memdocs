@@ -1,3 +1,4 @@
+items:
 - name: Windows Autopilot deployment
   href: index.yml
 - name: What's new
@@ -66,12 +67,20 @@
        
     - name: Troubleshoot Windows Autopilot
       items:
-      - name: Troubleshooting Windows Autopilot
+      - name: Troubleshooting overview
         href: troubleshooting.md
+      - name: Troubleshoot device enrollment
+        href: troubleshoot-device-enrollment.md
+      - name: Troubleshoot OOBE issues
+        href: troubleshoot-oobe.md
+      - name: Troubleshoot Azure AD-join issues
+        href: troubleshoot-aad-join.md
       - name: Policy conflicts
         href: policy-conflicts.md
       - name: Known issues
         href: known-issues.md
+      - name: Resolved issues
+        href: resolved-issues.md
 
 - name: Reference
   items:
@@ -80,7 +89,7 @@
     - name: Support information  
       items: 
         - name: FAQ
-          href: autopilot-faq.md
+          href: autopilot-faq.yml
         - name: Contacts
           href: autopilot-support.md
         - name: Registration authorization

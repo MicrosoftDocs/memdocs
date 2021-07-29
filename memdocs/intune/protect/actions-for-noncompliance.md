@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Noncompliant message and actions with Microsoft Intune - Azure | Microsoft Docs
+title: Noncompliant message and actions with Microsoft Intune
 description: Create a notification email to send to non-compliant devices. Add actions to apply to devices that don't meet your compliance policies. Actions can include a grace period to get compliant, block access to network resources, or retire the noncompliant device.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 07/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -54,10 +54,10 @@ Following are the available actions for noncompliance:
 - **Send email to end user**: This action sends an email notification to the user.
 When you enable this action:
 
-  - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the subject, message body, and can include the company logo, company name, and additional contact information.
+  - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and additional contact information.
   - Choose to send the message to additional recipients by selecting one or more of your Azure AD Groups.
 
-  When the email is sent, Intune includes details about the noncompliant device in the email notification.
+  Intune uses the email address defined in the end user's profile and not their user principal name (UPN). If there is no defined email address defined in the user's profile, then Intune does not send a notification email. When the email is sent, Intune includes details about the noncompliant device in the email notification.
 
   This action is supported on all platforms supported by Intune.
 
@@ -85,6 +85,7 @@ When you enable this action:
     - Personally-Owned Work Profile
   - iOS/iPadOS
   - macOS
+  - Windows 10
 
   When this action applies to a device, that device is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
 
@@ -137,25 +138,39 @@ To create a device compliance policy, see the following platform-specific guidan
 
 ## Create a notification message template
 
-To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
+To send email to your users, create a notification message template and associate that to your compliance policy as an action for noncompliance. Then, when a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
+
+A *notification message template* can include multiple messages that are each specified for a different locale. One local must be specified as the default.
+
+When you specify multiple messages and locales, non-compliant end-users receive the appropriate localized message based on their O365 preferred language. Intune sends the default message to users that haven’t set a preferred language or when the template doesn’t include a specific message for their locale.
+
+### To create the template
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.
-3. Under *Basics*, specify the following information:
+3. On the **Basics** page, configure the following settings:
 
-   - **Name**
-   - **Subject**
-   - **Message**
-
-4. Also under *Basics*, configure the following options for the notification:
-
+   - **Name** - Give the template a friendly name to help you identify it.
    - **Email header – Include company logo** (default = *Enable*) - The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
    - **Email footer – Include company name** (default = *Enable*)
    - **Email footer – Include contact information** (default = *Enable*)
    - **Company Portal Website Link** (default = *Disable*) - When set to *Enable*, the email includes a link to the Company Portal website.
 
    > [!div class="mx-imgBorder"]
-   > ![Example of a compliant notification message in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > ![Example of the basics page for a notification message in Intune](./media/actions-for-noncompliance/actions-for-noncompliance-1.png)
+
+   Select **Next** to continue.
+
+4. On the **Notification message templates** page, configure one or more messages. For each message, specify the following details:
+
+   - **Locale**
+   - **Subject**
+   - **Message body text**
+
+   Before continuing, you must select the checkbox for *Is Default* for one of the messages. Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Example of the Notification message temmplate page in Intune](./media/actions-for-noncompliance/actions-for-noncompliance-2.png)
 
    Select **Next** to continue.
 
@@ -201,7 +216,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
 5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
 
-   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in, the device is evaluated as non-compliant immediately. If also using conditional access, then conditional access kicks in immediately. If you want to allow a grace period, then change the **Schedule** on the **Mark device noncompliant** action.
+   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in with Intune and evaluates the policy, if it is not compliant to that policy Intune immediately marks that device as noncompliant. If the client checks-in at a later time after remediating the issues that lead to noncompliance, it’s status will update to its new compliance status. If you use Conditional Access, those policies also apply as soon as a device is marked as noncompliant. To set a grace period to allow for a condition of noncompliance to be remediated before the device is marked as noncompliant, change the **Schedule** on the **Mark device noncompliant** action.
 
    In your compliance policy, for example, you also want to notify the user. You can add the **Send email to end user** action. On this **Send email** action, you set the **Schedule** to two days. If the device or end user is still evaluated as non-compliant on day two, then your email is sent on day two. If you want to email the user again on day five of noncompliance, then add another action, and set the **Schedule** to five days.
 

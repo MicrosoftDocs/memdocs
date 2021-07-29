@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Configure email settings in Microsoft Intune - Azure | Microsoft Docs
+title: Configure email settings in Microsoft Intune
 titleSuffix:
 description: Create an email profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use email profiles to configure common email settings, including an email server and authentication methods to connect to corporate email on devices you manage.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ Microsoft Intune includes different email settings you can deploy to devices in 
 You can use email profiles to configure the built-in email settings for the following devices:
 
 - Android device administrator on Samsung Knox Standard 5.0 and newer
-- Android Enterprise
+- Android Enterprise personally-owned devices with a work profile
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - Windows 10 (desktop)
@@ -54,7 +54,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
         - **iOS/iPadOS**
         - **Windows 10 and later**
 
-    - **Profile**: Select **Email**.
+    - **Profile**: Select **Email**. Or, select **Templates** > **Email**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -98,9 +98,12 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
   - Device groups are typically used when there's not a primary user, or if you don't know who the user will be. Email profiles targeted to device groups (not user groups) may not be delivered to the device.
 
-    For example, your email profile targets an all iOS/iPadOS devices group. Be sure all these devices have a user. If any device doesn't have a user, then the email profile may not deploy. You limit the profile, and could miss some devices. If the device has a primary user, then deploying to device groups should work.
+    For example, your email profile targets an all iOS/iPadOS devices group. Be sure all these devices have a user.
 
-    For more information on possible issues with using device groups, see [Common issues with email profiles](troubleshoot-email-profiles-in-microsoft-intune.md).
+    - If any device doesn't have a user, then the email profile may not deploy. You limit the profile, and could miss some devices.
+    - If the device has a primary user, then deploying to device groups should work.
+
+    For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune).
 
 ## Remove an email profile
 

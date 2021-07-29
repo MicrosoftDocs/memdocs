@@ -2,11 +2,10 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 12/07/2020
+ms.date: 07/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -23,6 +22,42 @@ Learn what's new each month in Desktop Analytics.
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
 
+## July 2021
+
+### Support for the Windows diagnostic data processor configuration
+
+<!-- 10220671 -->
+
+Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data for you as the controller. You'll continue to get insights to plan your deployments, and can fulfill [data subject requests](/windows/privacy/windows-10-and-privacy-compliance#3-the-process-for-exercising-data-subject-rights). These requests are typically to access or export Windows diagnostic data for a particular user.
+
+To take advantage of this change, make sure your environment is up to date:
+
+- Use Configuration Manager version 2006 with [update rollup (4575789)](https://support.microsoft.com/topic/revised-update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2006-5861b9ee-9257-a15c-723e-c60110ce0c85) or a later version. Configuration Manager configures enrolled devices with policies for the Windows diagnostic data processor configuration. Update your site and clients to make sure they're using the latest configurations. Use Configuration Manager for the best experience with configuring and [enrolling devices into Desktop Analytics](enroll-devices.md#device-enrollment).
+
+- The Windows diagnostic data processor configuration is supported on the following Windows 10 versions:
+  - Pro, Education, and Enterprise editions
+  - Version 1809 or later
+  - July 2021 cumulative update or later
+
+  > [!IMPORTANT]
+  > Devices with an older OS version like Windows 7 will continue to show in Desktop Analytics until January 31, 2022. Use Desktop Analytics to update those devices to a supported version of Windows 10. After that date, Desktop Analytics will only display devices with supported versions of Windows 10.
+
+## January 2021
+
+### Change to required permissions for administrator role
+
+<!-- 9049337 -->
+
+By the end of March 2021, the [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator-permissions) role in Azure Active Directory will no longer require the following permissions:
+
+- `microsoft.office365.webPortal/allEntities/basic/read`
+- `microsoft.office365.serviceHealth/allEntities/allTasks`
+- `microsoft.office365.supportTickets/allEntities/allTasks`
+
+These permissions aren't currently used by this role.
+
+There's no action required at this time, this notice is a deprecation announcement.
+
 ## December 2020
 
 ### Security updates are deprecated in Desktop Analytics
@@ -35,9 +70,9 @@ In the Desktop Analytics portal, the **Security updates** tile on the home page 
 
 <!-- 8630465 -->
 
-In the Desktop Analytics portal, when you monitor security and feature updates, you'll now see Windows 10, version 20H2. When you create a deployment plan, you can select Windows 10, version 20H2, as the target version.
+In the Desktop Analytics portal, when you monitor feature updates, you'll now see Windows 10, version 20H2. When you create a deployment plan, you can select Windows 10, version 20H2, as the target version.
 
-For more information, see the FAQ [Why aren't new Windows releases available immediately in Desktop Analytics?](faq.md#why-arent-new-windows-releases-available-immediately-in-desktop-analytics)
+For more information, see the FAQ [Why aren't new Windows releases available immediately in Desktop Analytics?](faq.yml#why-aren-t-new-windows-releases-available-immediately-in-desktop-analytics-)
 
 ## August 2020
 
@@ -63,7 +98,7 @@ Microsoft improved how they collect and process Windows diagnostic data from dev
 
 <!-- 7370207 -->
 
-In the Desktop Analytics portal, when you monitor security and feature updates, you'll now see Windows 10, version 2004. When you create a deployment plan, you can select Windows 10, version 2004, as the target version.
+In the Desktop Analytics portal, when you monitor feature updates, you'll now see Windows 10, version 2004. When you create a deployment plan, you can select Windows 10, version 2004, as the target version.
 
 ### Improved support for viewing the portal from any device
 
@@ -85,110 +120,9 @@ The Desktop Analytics portal now can display notification banners. These notific
 
 Desktop Analytics no longer requires that you deploy a Microsoft 365 service in your Azure Active Directory (Azure AD) tenant. The **Office 365 client admin** app in Azure AD is now the **Desktop Analytics** app, to enable Configuration Manager retrieval of information and status from the service.
 
-## May 2020
-
-### Reduce the number of apps for review
-
-<!-- 5542186 -->
-
-To help consolidate and reduce the number of apps shown on the assets page in the portal, it now combines all versions of apps with the same name and publisher. The count of apps in the **Noteworthy Apps** tile reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, this behavior is configurable.
-
-For more information, see [About assets - Apps](about-assets.md#apps).
-
-## March 2020
-
-### Support for multiple hierarchies
-
-<!-- 4814075, 6079184 -->
-
-You can now connect multiple Configuration Manager hierarchies to a single Azure Active Directory tenant with a single Commercial ID for Desktop Analytics. The portal categorizes devices from different hierarchies, and improves the experiences for global pilots and deployment plans.
-
-- When you configure your global pilot, if you include collections that contain more than 20% of your total enrolled devices, the portal displays a warning.
-- When you create a deployment plan, if you select collections for multiple hierarchies, the portal displays a warning.
-
-> [!NOTE]
-> Support for multiple hierarchies requires Configuration Manager version 1910 or later.
-
-For more information, see the following articles:
-
-- [Global pilot](deploy-pilot.md#bkmk_GlobalPilot)
-- [How to create deployment plans](create-deployment-plans.md)
-
-### Identify compatibility safeguards
-
-<!-- 5746559 -->
-
-Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or rollback. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update. For more information, see [Compatibility assessment - Safeguards](compat-assessment.md#safeguards).
-
-## January 2020
-
-### Additional app usage detail
-
-<!-- 5533890 -->
-
-When you select an app to see more information, the details pane now includes additional usage information. You can use this data to help understand the breadth of install for an app, as well as devices on which users regularly use the app. For more information, see [About assets - App usage](about-assets.md#usage).
-
-### Provide feedback on Desktop Analytics
-
-<!-- 5451636 -->
-
-To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal on the right side. For more information, see [Share product feedback](get-support.md#bkmk_feedback).
-
-## October 2019
-
-### Improvements to compatibility recommendations
-
-<!-- 3594545 -->
-
-Desktop Analytics now provides additional detail when it detects that the Windows upgrade will completely or partially remove an application or driver. For more information, see [Compatibility assessment](compat-assessment.md#asset-is-removed-during-upgrade).
-
-### Migrate from Windows Analytics to existing tenant
-
-<!-- 5202803 -->
-
-You can now migrate inputs from an existing Windows Analytics workspace after onboarding to Desktop Analytics.
-
-## September 2019
-
-### Migrate inputs from Windows Analytics
-
-<!-- 4252663 -->
-
-During onboarding, you can now migrate inputs from an existing Windows Analytics workspace.
-
-### Offboard from Desktop Analytics
-
-<!-- 4972396 -->
-
-If you set up Desktop Analytics in your environment, but want to stop using the service, you can now close your account. If you change your mind in 90 days, you can reactivate the account. For more information, see [How to close your account](account-close.md).
-
-## August 2019
-
-### Reset your account
-
-<!-- 3733897 -->
-
-If you set up Desktop Analytics in your environment, but want to start over with onboarding and enrollment, you can now reset it. For more information on the process, see [Reset your account](account-reset.md).
-
-### Automatic upgrade decision of system and store apps
-
-<!-- 3587232 -->
-
-To help reduce your efforts in annotating noteworthy apps, certain types of apps are automatically marked as *Not important*. The deployment plan upgrade decision for these apps is also marked as *Ready*. The following apps are compatible and should continue to work after you upgrade Windows:
-
-- System apps and components published by Microsoft
-
-- Apps managed and updated from the Microsoft Store
-
-For more information, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp).
-
 ## What's new in Configuration Manager
 
-The Desktop Analytics docs always refer to functionality in the latest version of Configuration Manager current branch. For more information on the latest changes in Configuration Manager, see the following articles:
-
-<!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
-
-- [What's new in version 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+The Desktop Analytics docs always refer to functionality in the latest version of Configuration Manager current branch. For more information on the latest changes in Configuration Manager, see [What's new in Configuration Manager incremental versions](../core/plan-design/changes/whats-new-incremental-versions.md).
 
 ## Deprecated features
 

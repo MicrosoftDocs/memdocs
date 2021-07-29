@@ -13,6 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 06/09/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -42,7 +43,7 @@ When Autopilot reset is used on a device, the device's primary user will be remo
  
  
 >[!NOTE]
->The Autopilot Reset does not support Hybrid Azure AD joined devices.
+>The Autopilot Reset does not support Hybrid Azure AD joined devices; a full device wipe is required. When a hybrid device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device
 
 ## Scenarios
 

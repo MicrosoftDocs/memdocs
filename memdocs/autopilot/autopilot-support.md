@@ -10,6 +10,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.reviewer: 
 manager: laurawi
 ms.collection: M365-modern-desktop
@@ -22,7 +23,7 @@ ms.topic: troubleshooting
 
 The following table displays support information for the Windows Autopilot program.  
 
-Before contacting the resources listed below for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](autopilot-faq.md).
+Before contacting the resources listed below for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](autopilot-faq.yml).
 
 | Audience   |   Support contact     |
 |------------|---------------------------------------|

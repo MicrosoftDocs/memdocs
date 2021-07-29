@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create a Windows Health Monitoring profile in Microsoft Intune - Azure | Microsoft Docs
+title: Create a Windows Health Monitoring profile in Microsoft Intune
 description: Add a Windows Health Monitoring profile to collect endpoint analytics and software update events on Windows 10 devices in Microsoft Intune. Use these data to recommend software, review startup performance, and fix support issues.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 04/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Use Windows Health Monitoring profile on Windows devices in Microsoft Intune
 
-Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint Analytics](/mem/analytics/overview) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
+Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint Analytics](../../analytics/overview.md) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
 
 In Intune, you can create a Windows Health Monitoring device configuration profile to enable this data collection, and then deploy this profile to your devices.
 
@@ -41,13 +41,6 @@ This feature applies to:
 
 This article shows you how to create the profile, and enable the monitoring.
 
-## Before you begin
-
-These settings use the following CSPs:
-
-- [DeviceHealthMonitoring/AllowDeviceHealthMonitoring](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
-- [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)
-
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -55,10 +48,10 @@ These settings use the following CSPs:
 3. Enter the following properties:
 
     - **Platform**: Choose **Windows 10 and later**.
-    - **Profile**: Select **Windows health monitoring**.
+    - **Profile**: Select **Templates** > **Windows health monitoring**.
 
     > [!NOTE]
-    > 
+    >
     > If you don't see **Windows health monitoring** in the list, then:
     >
     > 1. Go to **Reports** > **Endpoint Analytics** > **Settings**.
@@ -73,13 +66,18 @@ These settings use the following CSPs:
 6. Select **Next**.
 7. In **Configuration settings**, configure the following settings:
 
-    - **Health monitoring**: This settings turns on health monitoring to track Windows updates and events. Your options:
+    - **Health monitoring**: This setting turns on health monitoring to track Windows updates and events. Your options:
       - **Not configured**: Intune doesn't change or update this setting.
       - **Enable**: Event information is collected from the devices, and sent to Microsoft for analytics and insights.
       - **Disable**: Event information isn't collected from the devices.
+
+      [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
+
     - **Scope**: Choose the event information you want collected and evaluated. Your options:
-      - **Windows updates**
+      - **Windows updates**: This option configures devices to send Windows Update data to Intune. This data is then used in a [compliance policy](../protect/windows-update-compliance-reports.md) that reports on Windows updates.
       - **Endpoint analytics**
+
+      [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)
 
 8. Select **Next**.
 
@@ -103,4 +101,4 @@ The next time each device checks in, the policy is applied.
 
 After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
 
-[What is Endpoint analytics](/mem/analytics/overview)
+[What is Endpoint analytics](../../analytics/overview.md)

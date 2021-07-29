@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows Holographic Business shared device settings - Microsoft Intune - Azure | Microsoft Docs
+title: Windows Holographic Business shared device settings - Microsoft Intune
 description: Add and use Windows Holographic for Business to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of the Account Management settings and what they do on the devices, including Microsoft HoloLens. 
 keywords:
 author: MandiOhlinger
@@ -35,7 +35,7 @@ Windows Holographic for Business devices, such as the Microsoft HoloLens, can be
 
 Using Microsoft Intune, users can sign in to these shared devices with a guest account. As they use the device, they only get access to features you allow.
 
-This article lists and describes the settings you use in a Windows Holographic for Business device configuration profile. When the profile is created in Intune, you then deploy or assign the profile to device groups in your organization. You can also assign this profile to a device group with mixed device types and OS versions.
+This article describes the settings you use in a Windows Holographic for Business device configuration profile. When the profile is created in Intune, you then deploy or assign the profile to device groups in your organization. You can also assign this profile to a device group with mixed device types and OS versions.
 
 For more information on this feature in Intune, see [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md). For more information on the Windows CSP, see [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp).
 

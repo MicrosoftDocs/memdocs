@@ -62,7 +62,7 @@ landingContent:
     - linkListType: reference
       links:
       - text: Frequenty asked questions
-        url: autopilot-faq.md
+        url: autopilot-faq.yml
       - text: Support contacts
         url: autopilot-support.md
       - text: Registration authorization
@@ -93,16 +93,16 @@ landingContent:
   # Card (optional)
   - title: Troubleshoot Windows Autopilot
     linkLists:
-    - linkListType: how-to-guide
-      links:
-      - text: Troubleshooting Windows Autopilot
-        url: troubleshooting.md
     - linkListType: reference
       links:
+      - text: Troubleshooting overview
+        url: troubleshooting.md
       - text: Policy conflicts
         url: policy-conflicts.md
       - text: Known issues
         url: known-issues.md
+      - text: Resolved issues
+        url: resolved-issues.md
 
   # Card (optional)
   - title: Resources

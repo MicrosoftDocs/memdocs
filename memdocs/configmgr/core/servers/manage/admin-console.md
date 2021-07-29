@@ -2,7 +2,7 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 08/11/2020
+ms.date: 06/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -47,7 +47,7 @@ To connect to a different site server, use the following steps:
 
 3. Select **Connect**.  
 
-Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth). <!--1357013-->  
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md#authentication). <!--1357013-->  
 
 ## Navigation
 
@@ -200,6 +200,14 @@ Starting in Configuration Manager version 1902, there's a **Documentation** node
 ### Troubleshooting connection errors
 The **Documentation** node has no explicit proxy configuration. It uses any OS-defined proxy in the **Internet Options** control panel applet. To retry after a connection error, refresh the **Documentation** node.
 
+## Connect via Windows PowerShell
+
+The Configuration Manager console includes a PowerShell module with over a thousand cmdlets to interact programmatically from the command line. Select the arrow at the top of the [ribbon](#ribbon), and choose **Connect via Windows PowerShell**.
+
+For more information, see [Get started with Configuration Manager cmdlets](/powershell/sccm/overview).
+
+> [!NOTE]
+> Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
 
 ## Command-line options
 
@@ -212,6 +220,7 @@ The Configuration Manager console has the following command-line options:
 |`/sms:ResetSettings`|The console ignores user-persisted connection and view states. The window size isn't reset.|  
 |`/sms:IgnoreExtensions`|Disables any Configuration Manager extensions.|  
 |`/sms:NoRestore`|The console ignores previous persisted node navigation.|  
+|`/server=[ServerName]`|Connect to a CAS or Primary site server by specifying the fully qualified domain name (FQDN) or server name for that site.|  
 
 
 ## Next steps

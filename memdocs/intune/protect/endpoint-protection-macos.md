@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 06/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,6 +33,63 @@ This article shows you the endpoint protection settings that you can configure f
 ## Before you begin
 
 [Create a macOS endpoint protection profile](endpoint-protection-configure.md).
+
+## FileVault
+
+For more information about Apple FileVault settings, see [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) in the Apple developer content.
+
+> [!IMPORTANT]
+> As of macOS 10.15, FileVault configuration requires user approved MDM enrollment.
+
+- **Enable FileVault**  
+
+  You can *enable* Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later.
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+  When *Enable FileVault* is set to *Yes*, a personal recovery key is generated for the device during encryption and the following settings apply to that key:
+
+  - **Escrow location description of personal recovery key**
+
+    Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
+
+  - **Personal recovery key rotation**
+
+    Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.
+
+  - **Hide recovery key**
+
+    Choose to hide the personal key from a device user during FileVault 2 encryption.
+
+    - **Not configured**  (*default*) – The personal key is visible to the device user during encryption.
+    - **Yes** - The personal key is hidden from the device user during encryption.
+
+    After encryption, device users can view their personal recovery key for an encrypted macOS device from the following locations:
+    - iOS/iPadOS company portal app
+    - Intune app
+    - company portal website
+    - Android company portal app
+
+    To view the key, from the app or website, go to device details of the encrypted macOS device and select *get recovery key*.
+
+  - **Disable prompt at sign out**
+
+    Prevent the prompt to the user that requests they enable FileVault when they sign out.  When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.
+
+    - **Not configured** (*default*)
+    - **Yes** - Disable the prompt at sign-out.
+
+  - **Number of times allowed to bypass**
+
+    Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in.
+
+    - **Not configured** - Encryption on the device is required before the next sign-in is allowed.
+    - **0** - Require devices to encrypt the next time a user signs in to the device.
+    - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.
+    - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.
+
+    The default for this setting depends on the configuration of *Disable prompt at sign out*. When *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Yes**, this setting defaults to **1** and a value of **Not configured** isn't an option.
 
 ## Firewall
 
@@ -88,67 +145,6 @@ Use the firewall to control connections per-application, rather than per-port. U
 
   - **Not configured** (*default*) - Users can Control-click to install apps.
   - **Yes** - Prevents users from using Control-click to install apps.
-
-## FileVault
-
-For more information about Apple FileVault settings, see [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) in the Apple developer content.
-
-> [!IMPORTANT]
-> As of macOS 10.15, FileVault configuration requires user approved MDM enrollment.
-
-- **Enable FileVault**  
-
-  You can *enable* Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later.
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-  When *Enable FileVault* is set to *Yes*, you can configure the following settings:
-
-  - **Recovery key type**
-
-    *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.
-
-  - **Escrow location description of personal recovery key**
-
-    Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
-
-  - **Personal recovery key rotation**
-
-    Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.
-
-  - **Hide recovery key**
-
-    Choose to hide the personal key from a device user during FileVault 2 encryption.
-
-    - **Not configured**  (*default*) – The personal key is visible to the device user during encryption.
-    - **Yes** - The personal key is hidden from the device user during encryption.
-
-    After encryption, device users can view their personal recovery key for an encrypted macOS device from the following locations:
-    - iOS/iPadOS company portal app
-    - Intune app
-    - company portal website
-    - Android company portal app
-
-    To view the key, from the app or website, go to device details of the encrypted macOS device and select *get recovery key*.
-
-  - **Disable prompt at sign out**
-
-    Prevent the prompt to the user that requests they enable FileVault when they sign out.  When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.
-
-    - **Not configured** (*default*)
-    - **Yes** - Disable the prompt at sign-out.
-
-  - **Number of times allowed to bypass**
-
-    Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in.
-
-    - **Not configured** - Encryption on the device is required before the next sign-in is allowed.
-    - **0** - Require devices to encrypt the next time a user signs in to the device.
-    - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.
-    - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.
-
-    The default for this setting depends on the configuration of *Disable prompt at sign out*. When *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Yes**, this setting defaults to **1** and a value of **Not configured** isn't an option.
 
 ## Next steps
 

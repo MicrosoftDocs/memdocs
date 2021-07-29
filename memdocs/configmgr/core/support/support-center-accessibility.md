@@ -2,45 +2,38 @@
 title: Support Center accessibility
 titleSuffix: Configuration Manager
 description: Learn about the accessibility features of Support Center in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1b931c9d-ffae-4d8e-baa7-c330a152674f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Accessibility features in Support Center
 
 *Applies to: Configuration Manager (current branch)*
 
-Support Center has many helpful accessibility features that make it easier for everyone to use. 
-
-
+Support Center has many helpful accessibility features that make it easier for everyone to use.
 
 ## Use the keyboard to move around the ribbon
 
 Use keyboard shortcuts to access every menu of the Support Center ribbon. This ribbon contains all commands used by Support Center.
 
-1.  Press **Alt** or **F10** to see keyboard shortcuts for each menu.
+- Press **Alt** or **F10** to see keyboard shortcuts for each menu.
 
-2.  To switch to a menu, press the associated shortcut key. For example, to go to the **Logs** menu, press **Alt** and then **L**.
-
-
+- To switch to a menu, press the associated shortcut key. For example, to go to the **Logs** menu, press **Alt** and then **L**.
 
 ## Use the keyboard to perform common tasks
 
-You can also use a keyboard to perform common tasks in Support Center, Support Center Viewer, and Log Viewer. The following table lists the most common tasks that you can perform with the keyboard:
+You can also use a keyboard to perform common tasks in the Support Center suite of tools. The following table lists the most common tasks that you can perform with the keyboard:
 
-
-|Task  |Keyboard shortcut  |
+| Task | Keyboard shortcut |
 |---------|---------|
 |Open application configuration options |**F4**|
-|Exit     |**Alt** + **F4**|
+|Exit |**Alt** + **F4**|
 |Load or Refresh client details<br>(on the Support Center **Client Details** tab)|**F5**|
 |Load selected policy view<br>(on the Support Center **Client Policy** tab)|**F5**|
 |Refresh a policy<br>(on the Support Center **Client Policy** tab, after selecting a policy)|**F5** |
@@ -63,11 +56,10 @@ You can also use a keyboard to perform common tasks in Support Center, Support C
 |Annotate a log file<br>(on **Logs** tab, and in the **Log Viewer** window)|**Ctrl** + **Shift** + **N** <sup>[Note 1](#bkmk_note1)</sup>|
 |Open Help|**F1**|
 
+### <a name="bkmk_note1"></a> Note 1: Annotate a log file
 
-#### <a name="bkmk_note1"></a> Note 1: Annotate a log file
 Support Center stores annotations in memory. You can only use them within a log viewing session. To retain an annotation for future use, take a screen capture to save the resulting image.
 
-
-## See also
+## Next steps
 
 [Accessibility features in Configuration Manager](../understand/accessibility-features.md)

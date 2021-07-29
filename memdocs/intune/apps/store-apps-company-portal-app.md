@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 04/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,19 +42,17 @@ To manage devices and install apps, your users can install the Company Portal ap
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
 ## Configure settings to show offline apps
-1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account.
+1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account. Ensure that you sign into the Microsoft Store for Business using the same tenant account you use to sign into Intune. Your Microsoft Store for Business account must be associated with Intune. For more information, see [Associate your Microsoft Store for Business account with Intune](../apps/windows-store-for-business.md#associate-your-microsoft-store-for-business-account-with-intune).  
 2. Select the **Manage** tab near the top of the window.
 3. In the left pane, select **Settings**.
-4. Under **Shopping experience**, set **Show offline apps** to **On**.  
-    The offline licensed apps are displayed.
+4. Select the **Shop** tab. Then,under **Shopping experience**, set **Show offline apps** to **On**.  
 
 ## Download the offline Company Portal app
-1. Search for and then select the **Company Portal** app.
-2. Set the **License type** to **Offline**.
-3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory.
-4. On the **Company portal** app page, select **Manage**.
-5. For **Platform**, select **Windows 10 all devices**, and then select the appropriate **Minimum version**, **Architecture**, and **Download app metadata** values. 
-6. Select **Download** under **Package details** to save the file to your local machine.
+1. Search for and then select the **Company Portal** app. 
+2. Set the **License type** to **Offline**. Offline apps are managed by Intune, whereas online apps are managed by the store. Use offline apps when you need to install and maintain a specific app version.
+3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory. If you already have the offline app, you can select the **Manage** option.
+4. For **Platform**, select **Windows 10 all devices**, and then select the appropriate **Minimum version**, **Architecture**, and **Download app metadata** values. 
+5. Select **Download** to save the file to your local machine.
 
     ![Windows 10 devices, where architecture equals X86, is selected](./media/app-sideload-windows/Win10CP-all-devices.png)
 
@@ -63,7 +61,7 @@ To manage devices and install apps, your users can install the Company Portal ap
     This action must be completed for x86, x64, and ARM architectures:<br> 
     *There are 9 Required Framework Packages when selecting 1507 as the minimum OS Version, 12 packages when selecting 1511, and 15 packages when selecting 1607.*
 
-8. In Microsoft Intune in the Azure portal, upload the Company Portal app as a new app. You add the application by selecting Line-of-business app as the **App type** in the **Select app type** pane. You then select the app package file (extension .AppxBundle).
+8. In Microsoft Intune in the portal, upload the Company Portal app as a new app. You add the application by selecting Line-of-business app as the **App type** in the **Select app type** pane. You then select the app package file (extension .AppxBundle).
 
 9. Under **Select dependency app files** select all the dependencies you downloaded in step 7 by using shift-click, and verify that the **Added** column displays **Yes** for the architectures you need.
 
@@ -96,8 +94,8 @@ If you sign and assign the Windows 10 Company Portal app in this way, you will n
 
 Here's how you sign and assign the app in this way:
 
-1. Download the [Microsoft Intune Windows 10 Company Portal App Signing Script](https://aka.ms/win10cpscript).  
-    This script requires the Windows SDK for Windows 10 to be installed on the host computer. [Download the Windows SDK for Windows 10](https://go.microsoft.com/fwlink/?LinkId=619296).
+1. Download the [Microsoft Intune Windows 10 Company Portal App Signing Script](https://aka.ms/intunecpscript).  
+    This script requires the Windows SDK for Windows 10 to be installed on the host computer. [Download the Windows SDK for Windows 10](https://go.microsoft.com/fwlink/?linkid=162443).
 2. Download the Windows 10 Company Portal app from the Microsoft Store for Business, as discussed previously.  
 3. To sign the Windows 10 Company Portal app, run the script with the input parameters detailed in the script header, as shown in the following table.  
     Dependencies do not need to be passed into the script. They are required only when the app is being uploaded to the Intune Admin Console.

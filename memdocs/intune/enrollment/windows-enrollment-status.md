@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 12/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -49,7 +49,7 @@ You can create multiple Enrollment Status Page profiles with different configura
 These profiles are specified in a priority order; the highest priority that is applicable will be used.  Each ESP profile can be targeted to groups containing devices or users.  When determining which profile to use, the following criteria will be followed:
 
 - The highest-priority profile targeted to the device will be used first.
-- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used.)
+- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used. Only profiles targeted to the device are used during the device preparation and device setup phases.)
 - If there are no profiles targeted to specific groups, then the default ESP profile will be used.
 
 ## Available settings
@@ -84,8 +84,9 @@ To turn on the Enrollment Status Page, follow the steps below.
 2. Provide a **Name** and **Description**.
 3. Choose **Create**.
 4. Choose the new profile in the **Enrollment Status Page** list.
-5. Choose **Assignments** > **Select groups** > choose the groups that you want to adopt this profile > **Select** > **Save**.
-6. Choose **Settings** > choose the settings you want to apply to this profile > **Save**.
+5. Optionally, on the **Scope tags** page, you can add the scope tags that you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with Enrollment Status Page profiles, users can only re-order profiles for which they have scope. Also, they can only reorder for the profile positions for which they have scope. Users see the true profile priority number on each policy. A scoped user can tell the relative priority of their profile even if they can't see all the other profiles.
+6. Choose **Assignments** > **Select groups** > choose the groups that you want to adopt this profile > **Select** > **Save**.
+7. Choose **Settings** > choose the settings you want to apply to this profile > **Save**.
 
 ## Set the enrollment status page priority
 
@@ -135,6 +136,11 @@ The Enrollment Status Page tracks the following device setup items:
   - LoB store apps with installation context = Device.
   - Offline store and LoB store apps with installation context = Device.
   - Win32 applications (Windows 10 version 1903 and newer only) 
+
+  > [!NOTE]
+  > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.
+  > 
+
 - Connectivity profiles
   - VPN or Wi-Fi profiles that are assigned to **All Devices** or a device group in which the enrolling device is a member, but only for Autopilot devices
 - Certificate profiles that are assigned to **All Devices** or a device group in which the enrolling device is a member, but only for Autopilot devices
@@ -166,7 +172,10 @@ The following are known issues related to the Enrollment Status Page.
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
 - Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
-- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration defined in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. This delay gives time for the on-prem AD connector to create the new device record to Azure AD. 
+- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes.
+
+  This delay gives time for the on-prem AD connector to create the new device record to Azure AD.
+  
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
@@ -175,6 +184,8 @@ The following are known issues related to the Enrollment Status Page.
 - When the DeviceLock policy (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) is enabled as part of an ESP profile, the OOBE or user desktop autologon could fail unexpectantly for two reasons.
   - If the device didn't reboot before exiting the ESP Device setup phase, the user may be prompted to enter their Azure AD credentials. This prompt occurs instead of a successful autologon where the user sees the Windows first login animation.
   - The autologon will fail if the device rebooted after the user entered their Azure AD credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
+- ESP doesn't apply to a Windows device that was enrolled with Group Policy (GPO).
+- Scripts that run in user context ('Run this script using the logged on credentials' on the script properties is set to 'yes') may not execute during ESP.  As a workaround, execute scripts in System context by changing this setting to 'no'.
 
 ## Next steps
 

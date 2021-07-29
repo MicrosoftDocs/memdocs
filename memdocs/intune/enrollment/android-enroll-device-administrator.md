@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Android device administrator enrollment
 
-Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](https://www.android.com/enterprise/management/) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
+Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is  available with [Android Enterprise](https://www.android.com/enterprise/management/). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
 
 Therefore, to avoid such reduced functionality, we advise against enrolling new devices using the device administrator process described below.
 

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Create macOS system and kernel extensions with Microsoft Intune - Azure | Microsoft Docs
+title: Create macOS system and kernel extensions with Microsoft Intune
 titleSuffix:
 description: Add or create a macOS device profile that configures system extensions or kernel extensions to allow user override, adds team identifier, and adds a bundle and team identifier in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 05/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -60,6 +60,11 @@ With this feature, administrators can allow users to override kernel extensions,
 
 For more information on kernel extensions, see [kernel extensions](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (opens Apple's web site).
 
+> [!IMPORTANT]
+> Kernel extensions don't work on macOS devices with the M1 chip, which are macOS devices running on Apple silicon. This behavior is a known issue, with no ETA. It's possible you can get them to work, but it's not recommended. For more information, see [Kernel extensions in macOS](https://support.apple.com/guide/deployment-reference-macos/kernel-extensions-in-macos-apd37565d329/web) (opens Apple's web site).
+> 
+> For any macOS devices running 10.15 and newer, we recommend using [system extensions](#system-extensions) (in this article). If you use the kernel extensions settings, then consider excluding macOS devices with M1 chips from receiving the kernel extensions profile.
+
 ## Prerequisites
 
 - This feature applies to:
@@ -97,12 +102,12 @@ For more information on kernel extensions, see [kernel extensions](https://devel
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**
-    - **Profile**: Select **Extensions**.
+    - **Profile**: Select **Templates** > **Extensions**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add antivirus scanning to kernel extensions on devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add AV scanning to kernel extensions on devices**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -124,4 +129,4 @@ For more information on kernel extensions, see [kernel extensions](https://devel
 
 ## Next steps
 
-After the profile is created, it's ready to be assigned. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

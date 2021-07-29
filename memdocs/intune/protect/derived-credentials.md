@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use derived credentials for mobile devices in Microsoft Intune - Azure | Microsoft Docs
+title: Use derived credentials for mobile devices in Microsoft Intune
 description: Use derived credentials on mobile devices as an authentication method for Intune VPN, email, Wi-Fi profiles, applications, and S/MIME and encryption. Derived credentials are an implementation of the NIST guidelines for Special Publication 800-157.  
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/01/2020
+ms.date: 04/28/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 *This article applies to iOS/iPadOS, Android Enterprise fully managed devices that run version 7.0 and above, and devices that run Windows*
 
-In an environment where smart cards are required for authentication or encryption and signing, you can now use Intune to provision mobile devices with a certificate that's derived from a user's smart card. That certificate is called a *derived credential*. Intune [supports several derived credential issuers](#supported-issuers), though you can use only a single issuer per tenant at a time.
+In an environment where smart cards are required for authentication or encryption and signing, you can use Intune to provision mobile devices with a certificate that's derived from a user's smart card. That certificate is called a *derived credential*. Intune [supports several derived credential issuers](#supported-issuers), though you can use only a single issuer per tenant at a time.
 
 Derived credentials are an implementation of the National Institute of Standards and Technology (NIST) guidelines for Derived Personal Identity Verification (PIV) credentials as part of Special Publication (SP) 800-157.
 
@@ -75,7 +75,7 @@ Intune supports derived credentials on the following platforms:
 Intune supports a single derived credential issuer per tenant. You can configure Intune to work with the following issuers:
 
 - **DISA Purebred**: https://public.cyber.mil/pki-pke/purebred/
-- **Entrust Datacard**: https://www.entrustdatacard.com/
+- **Entrust**: https://www.entrust.com/
 - **Intercede**: https://www.intercede.com/
 
 For important details about using the different issuers, review guidance for that issuer. For more information, see [Plan for derived credentials](#plan-for-derived-credentials) in this article.
@@ -85,12 +85,12 @@ For important details about using the different issuers, review guidance for tha
 >
 > See [Change the derived credential issuer](#change-the-derived-credential-issuer) later in this article.
 
-### Company Portal app
+### Required apps
 
-Plan to deploy the Intune Company Portal app to devices that will enroll for a derived credential. Device users use the Company Portal app to start the credential enrollment process.
+Plan to deploy the relevant user facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
 
-- For iOS devices, see [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
-- For Android devices, see [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
+- iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+- Android devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 ## Plan for derived credentials
 
@@ -118,14 +118,14 @@ Similarly, some derived credential request workflows require the use of the devi
 
 ### 2) Review the end-user workflow for your chosen issuer
 
-Following are key considerations for each supported partner.  Become familiar with this information so you can ensure your Intune policies and configurations don't block users and devices from successfully completing enrollment for a derived credential from that issuer.
+Following are key considerations for each supported partner. Become familiar with this information so you can ensure your Intune policies and configurations don't block users and devices from successfully completing enrollment for a derived credential from that issuer.
 
 #### DISA Purebred
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
-- [Android Enterprise fully managed devices](../user-help/enroll-android-device-disa-purebred.md)
+- [Android Enterprise](../user-help/enroll-android-device-disa-purebred.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -139,12 +139,12 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 For information getting and configuring the DISA Purebred app, see [Deploy the DISA Purebred app](#deploy-the-disa-purebred-app) later in this article.
 
-#### Entrust Datacard
+#### Entrust
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
-- [Android Enterprise fully managed devices](../user-help/enroll-android-device-entrust-datacard.md)
+- [Android Enterprise](../user-help/enroll-android-device-entrust-datacard.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -154,7 +154,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 - Users are prompted by the Company Portal app or through email to enroll for derived credentials.
 - When changes are made to a policy that uses derived credentials, such as creating a new Wi-Fi profile:
   - **iOS and iPadOS** - Users are notified to open the Company Portal app.
-  - **Android Enterprise fully managed devices** - The Company Portal app doesn't need to open.
+  - **Android Enterprise** *Corporate-Owned Work Profile* or *Fully managed devices* - The Company Portal app doesn't need to open.
 - Users are notified to open the Company Portal app when they need to renew their derived credential.
 
 #### Intercede
@@ -162,7 +162,8 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](/intune-user-help/enroll-ios-device-intercede)
-- [Android Enterprise fully managed devices](../user-help/enroll-android-device-intercede.md)
+- [Android Enterprise](../user-help/enroll-android-device-intercede.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
+
 
 **Key requirements include**:
 
@@ -172,7 +173,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 - Users are prompted by the Company Portal app or through email to enroll for derived credentials.
 - When changes are made to a policy that uses derived credentials, such as creating a new Wi-Fi profile:
   - **iOS and iPadOS** - Users are notified to open the Company Portal app.
-  - **Android Enterprise fully managed devices** - The Company Portal app doesn't need to open.
+  - **Android Enterprise** *Corporate-Owned Work Profile* or *Fully managed devices* - The Company Portal app doesn't need to open.
 - Users are notified to open the Company Portal app when they need to renew their derived credential.
 
 ### 3) Deploy a trusted root certificate to devices
@@ -211,8 +212,8 @@ Before you create policies that require use of a derived credential, set up a cr
 
 4. For **Derived credential issuer**, select the derived credential issuer that you have chosen for your tenant:
    - DISA Purebred (iOS only)
-   - Entrust Datacard
-   - Intercede  
+   - Entrust
+   - Intercede
 
 5. Specify a **Derived credential help URL** to provide a link to a location that includes custom instructions to help users get derived credentials for your organization. The instructions should be specific to your organization and to the workflow that's necessary to get a credential from your chosen issuer. The link appears in the Company Portal app and should be accessible from the device.
 
@@ -222,7 +223,7 @@ Before you create policies that require use of a derived credential, set up a cr
 
    - Enroll a device with an issuer to get a new derived credential.
    - Get a new derived credential when the current credential is close to expiration.
-   - Use a derived credential with a [supported object](#supported-objects).
+   - Use a derived credential with a [supported object](#-5-deploy-intune-policies-that-require-derived-credentials).
 
 7. When ready, select **Save** to complete configuration of the derived credential issuer.
 
@@ -244,6 +245,8 @@ In addition to the deploying the app with Intune, configure an Intune per-app VP
 
    - See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
    - See [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md)
+
+   Additional settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 
 3. [Create a per-app VPN](../configuration/vpn-settings-configure.md) for the DISA Purebred application.
 
@@ -299,7 +302,7 @@ Users receive the app or email notification depending on the settings you specif
 You can use derived certificates as an authentication method for Wi-Fi and VPN profiles on Windows devices. The same providers that are supported by Android and iOS/iPadOS devices are supported as providers for Windows:
 
 - **DISA Purebred**
-- **Entrust Datacard**
+- **Entrust**
 - **Intercede**
 
 For Windows, users do not work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with Windows, complete the following configurations:

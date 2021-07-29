@@ -1,11 +1,11 @@
 ---
-title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune
 description: Find file and command-line references for tools you use to install or manage the Microsoft Tunnel Gateway, a VPN server that runs on Linux.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/23/2020
+ms.date: 02/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,6 +37,7 @@ The information in this reference for Microsoft Tunnel Gateway is provided to su
 - Set or update the configuration of the tunnel server.
 - Restart the tunnel server.
 - Uninstall the tunnel server.
+
 The following are common command line uses of the tool.
 
 **Command-line interface**:  
@@ -48,7 +49,7 @@ The following are common command line uses of the tool.
   - `server` - Operate on the server component.
   - `uninstall` - Uninstall the Microsoft Tunnel.
   - `eula` - Show the EULA.
-  - `import_cert` - Import the TLS certificate.
+  - `import_cert` - Import or update the TLS certificate.
 
 - `mst-cli agent –help` - Usage: **mst-cli agent [command]**
 

@@ -2,7 +2,7 @@
 title: Install Power BI sample reports
 titleSuffix: Configuration Manager
 description: Learn how to install the Power BI sample reports in Configuration Manager
-ms.date: 08/18/2020
+ms.date: 02/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -42,6 +42,11 @@ To download the sample reports:
 1. Move the file to a computer with Microsoft Power BI Desktop (Optimized for Power BI Report Server) installed if you downloaded it from a different device.
 
 1. Run the `ConfigMgrSamplePowerBIReports.exe` file to extract the .pbit files.
+
+> [!NOTE]
+> These sample reports are also available for download in [Community hub](community-hub.md).
+> - Community hub direct link to the [Software Update Compliance Status sample report](https://communityhub.microsoft.com/item/10428)
+> - Community hub direct link to the [Software Update Deployment Status sample report](https://communityhub.microsoft.com/item/10429)
 
 ## Install the sample reports
 

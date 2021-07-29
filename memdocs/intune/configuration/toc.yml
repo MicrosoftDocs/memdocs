@@ -1,3 +1,4 @@
+items:
 - name: Configure device settings
   href: index.yml
 - name: Overview
@@ -15,8 +16,10 @@
     href: tutorial-walkthrough-administrative-templates.md
 - name: How-to guides
   items:
-  - name: Profile overview
+  - name: Profiles - Get started
     href: device-profile-create.md
+  - name: Settings catalog
+    href: settings-catalog.md
   - name: Custom settings
     displayName: oma-uri, csp
     items:
@@ -32,7 +35,7 @@
     - name: Configure email
       href: email-settings-configure.md
     - name: Issues and resolutions 
-      href: troubleshoot-email-profiles-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune
   - name: VPN
     items:
     - name: Configure VPN
@@ -46,11 +49,13 @@
     - name: Configure Wi-Fi
       href: wi-fi-settings-configure.md
       displayName: wifi, wireless
+    - name: Import Wi-Fi settings
+      href: wi-fi-settings-import-windows-8-1.md
     - name: Wi-Fi with a pre-shared key
       href: wi-fi-profile-shared-key.md
       displayName: psk, oma-uri, eap
     - name: Troubleshoot Wi-Fi
-      href: troubleshoot-wi-fi-profiles.md
+      href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
   - name: Group policy and Administrative templates
     displayName: admx, gpo
     items:
@@ -74,8 +79,12 @@
   - name: Upgrade Windows and S mode
     href: edition-upgrade-configure-windows-10.md
   - name: Device features on iOS/iPadOS and macOS
-    href: device-features-configure.md
-    displayName: airprint, home screen, lock screen, sso, single sign-on
+    items:
+    - name: Device features
+      href: device-features-configure.md
+      displayName: airprint, home screen, lock screen, sso, single sign-on
+    - name: Use Enterprise SSO plug-in
+      href: use-enterprise-sso-plug-in-ios-ipados-macos.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
     displayName: kernel extensions, system extensions
@@ -129,7 +138,7 @@
   - name: Troubleshoot
     items:
     - name: Troubleshoot policies and profiles
-      href: troubleshoot-policies-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
     - name: Common questions and answers
       href: device-profile-troubleshoot.md
 - name: Reference
@@ -244,8 +253,6 @@
         href: device-restrictions-windows-8-1.md
       - name: VPN
         href: vpn-settings-windows-8-1.md
-      - name: Wi-Fi import
-        href: wi-fi-settings-import-windows-8-1.md
     - name: Windows Phone 8.1
       items:
       - name: Custom

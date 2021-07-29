@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enroll iOS/iPadOS devices in Intune
+title: Enroll iOS/iPadOS devices in Intune in Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Set up enrollment of iOS/iPadOS devices in Microsoft Intune.
+description: Enrollment summary and overview of iOS/iPadOS devices in Microsoft Intune. Get information on the different enrollment methods.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 12/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -103,7 +103,9 @@ User affinity is required to support the following:
 
 ### About corporate-owned managed devices with no user affinity
 
-Devices that are configured with no user affinity do not support the Company Portal and should not have the app installed. The Company Portal is designed for users who have corporate credentials and require access to personalized corporate resources (like email). Devices that are enrolled with no user affinity aren't intended to have a dedicated user sign in. Kiosk, point of sale (POS), or shared-utility devices are typical use cases for devices that are enrolled with no user affinity.
+The Company Portal app is designed for users who have corporate credentials, and require access to personalized corporate resources (like email). On devices configured with no user affinity, the Company Portal app isn't needed. Devices that are enrolled with no user affinity aren't intended to have a dedicated user sign in. Kiosk, point of sale (POS), or shared-utility devices are typical use cases for devices that are enrolled with no user affinity.
+
+In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this, add the Company Portal app using an app configuration policy. For more information, see [Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
 
 If user affinity is required, be sure that the device's enrollment profile has **User Affinity** selected before enrolling the device. To change the affinity status on a device, you must retire the device and reenroll it.
 

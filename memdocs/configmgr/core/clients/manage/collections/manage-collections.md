@@ -2,7 +2,7 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -52,31 +52,31 @@ Opens the **Run Script** wizard to run a PowerShell script on all of the clients
 
 Opens CMPivot for this collection. Use CMPivot to query device information and take action in real time. For more information, see [CMPivot for real-time data](../../../servers/manage/cmpivot.md).
 
-#### Manage Affinity Requests
+#### Manage Affinity requests
 
 Opens the **Manage User Device Affinity Requests** dialog box. Approve or reject pending requests to establish user device affinities for devices in the selected collection. For more information, see [Link users and devices with user device affinity](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-#### Clear Required PXE Deployments
+#### Clear Required PXE deployments
 
 Clears any required PXE boot deployments from all members of the selected collection. For more information, see [Use PXE to deploy Windows over the network](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
-#### Update Membership
+#### Update membership
 
 Evaluates the membership for the selected collection. For collections with many members, this update might take some time to finish. Use the **Refresh** action to update the display with the new collections members after the update is completed.
 
-#### Synchronize Membership
+#### Synchronize membership
 
 If you configured this collection for cloud sync, synchronize the current membership with an Azure Active Directory group. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
-#### Add Resources
+#### Add resources
 
 Opens the **Add Resources to Collection** window. Search for new resources to add to the selected collection. The icon for the selected collection displays an hourglass symbol while the update is in progress.
 
-#### Client Notification
+#### Client notification
 
 For more information, see [Client notifications](../client-notification.md).
 
-#### Client Diagnostics
+#### Client diagnostics
 
 Displays the following options:
 
@@ -92,7 +92,7 @@ For more information, see [Client notifications: Endpoint protection](../client-
 
 #### Export
 
-Opens the **Export Collection Wizard** that helps you export this collection to a Managed Object Format (MOF) file. You can then archive this file, or import it to another Configuration Manager site. When you export a collection, referenced collections aren't exported. A referenced collection is referenced by the selected collection through the use of an **Include** or **Exclude** rule.
+Opens the **Export Collection Wizard** that helps you export this collection to a Managed Object Format (MOF) file. You can then archive this file, or import it to another Configuration Manager site. When you export a collection, referenced collections aren't exported. A referenced collection is referenced by the selected collection by using an **Include** or **Exclude** rule.
 
 #### Copy
 
@@ -108,7 +108,7 @@ Deletes the selected collection. You can also delete all of the resources in the
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
 
-#### Simulate Deployment
+#### Simulate deployment
 
 Opens the **Simulate Application Deployment Wizard**. This wizard lets you test the results of an application deployment without installing or uninstalling the application. For more information, see [How to simulate application deployments](../../../../apps/deploy-use/simulate-application-deployments.md).
 
@@ -126,7 +126,7 @@ Displays the following options:
 
 - **Software Updates**: Opens the **Deploy Software Updates Wizard**. Configure the deployment of software updates to resources in the selected collection. For more information, see [Deploy software updates](../../../../sum/deploy-use/deploy-software-updates.md).
 
-#### View Relationships
+#### View relationships
 
 For more information, see [View collection relationships](#view-collection-relationships).
 
@@ -181,9 +181,9 @@ When you view properties for a collection, you can view and configure the follow
 
 - **Distribution Point Groups**: Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](../../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
-- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md) starting in version 1906. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
+- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md). For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
-    Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center](../../../../tenant-attach/atp-onboard.md).
+    Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center](../../../../tenant-attach/atp-onboard.md).
 
 - **Security**: Displays the administrative users who have permissions for the selected collection from associated roles and security scopes. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
@@ -197,7 +197,7 @@ Starting in version 2010, you can view dependency relationships between collecti
 
 :::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
 
-If you want to change or delete collections, view the relationships to understand the impact of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
+If you want to change or delete collections, view the relationships to understand the effect of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
 
 When you select the **View Relationships** action on a device or user collection:
 
@@ -242,6 +242,35 @@ Use the following tips to navigate the relationship viewer:
   - If you have permission for **All Systems** or **All Users and User Groups**, then you'll see all relationships.
 
   - If you don't have permission for a specific collection, you don't see it in the graph, and can't view its relationships.
+
+### Improvements in version 2103
+
+<!--8543508-->
+
+Starting in version 2103, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
+
+The following example shows the relationships for the "c1" collection in the center. It's dependent upon the collections above it (parents), and has dependencies below it (children).
+
+:::image type="content" source="media/8543508-view-collection-relationships.png" alt-text="Example graph of collection relationships" lightbox="media/8543508-view-collection-relationships.png":::
+
+To see the relationships of another collection in the graph, select it to open a new window targeted on that collection.
+
+Other improvements:
+
+- There's a new **Filter** button in the upper right corner. This action lets you reduce the graph to specific relationship types: **Limiting**, **Include**, or **Exclude**.
+
+- If you don't have permissions to all related collections, the graph includes a warning message that the graph may be incomplete.
+
+- When the graph is wider than the window can display, use the page navigation controls in the upper left corner. The first number is the page for parents (above), and the second number is the page for children (below). The window title also shows the page numbers.
+
+- The tooltip for a collection displays the count of dependencies it has and the count of dependant collections where applicable. This count only includes unique subcollections. The count no longer displays in the parentheses next to the collection name.
+
+- Previously the **Back** button took you through your viewing history. Now it takes you to the previously selected collection. For example, changing pages for the current collection doesn't activate the **Back** button. When you select a new collection, you can select **Back** to return to the original collection graph.
+
+> [!TIP]
+> Hold the **Ctrl** key and scroll the mouse wheel to zoom the graph.
+
+For more information on how to navigate the collection dependency graph with a keyboard, see [Accessibility features](../../../understand/accessibility-features.md#collection-relationship-diagram-shortcuts).
 
 ## PowerShell
 

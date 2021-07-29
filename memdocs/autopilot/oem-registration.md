@@ -12,6 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -40,9 +41,8 @@ Before an OEM can register devices for an organization, the organization must gr
 
 ## Microsoft Surface registration
 
-For Surface devices, see [Surface registration support for Windows Autopilot](https://docs.microsoft.com/surface/surface-autopilot-registration-support).
+For Surface devices, see [Surface registration support for Windows Autopilot](/surface/surface-autopilot-registration-support).
 
 ## Also see
 
 [Registration overview](registration-overview.md)
-

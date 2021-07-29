@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Endpoint analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 01/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -16,7 +16,7 @@ manager: dougeby
 
 # <a name="bkmk_tshoot"></a> Troubleshooting Endpoint analytics
 
-The sections below can be used to assist in troubleshooting issues you may come across.
+The following sections can be used to help in troubleshooting issues you may come across.
 
 ## <a name="bkmk_known"></a> Known issues
 
@@ -40,19 +40,11 @@ This issue impacts co-managed devices. Devices enrolled only via Intune or only 
 **Workaround:**
 The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Navigate to **Startup performance** > **Device performance**, then click to drill down into a device.
 
-### Some Servers are appearing in Endpoint analytics reports
+### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
-Some devices running Windows Server are unexpectedly appearing in Endpoint analytics reports, such as **Startup performance** and **Recommended software**.
-
-**Impacted devices:**
-This issue impacts some Windows Server devices that are managed by Configuration Manager with tenant attach enabled.
-
-**Mitigation:**
-This issue is being fixed on the back end, and no action is required. We do not recommend removing Windows Server devices from your target collection for tenant attach, as this will affect all Microsoft Endpoint Manager services.
-
-### Error code -2016281112 (Remediation failed)
-
-There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
+  - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+  - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 
 ### Hardware inventory may fail to process
 <!--7535675-->
@@ -66,9 +58,9 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently leveraged by Endpoint analytics and isn't transmitted to Microsoft.
+**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently used by Endpoint analytics and isn't transmitted to Microsoft.
 
-### Script requirements for Proactive remediations
+### Script requirements for proactive remediations
 
 If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
@@ -84,9 +76,9 @@ First, ensure devices meet the prerequisites:
 For Intune or co-managed devices configured with the Intune data collection policy:
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
 1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.  
-   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. For more information, see the [Error code -2016281112](#bkmk_2016281112) section.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#bkmk_flow)
-1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you're still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
+1. If your device has been successfully configured for data collection, has later restarted, and after 25 hours you're still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
 For Configuration Manager-managed devices:
 1. Ensure all devices you want to see performance data are [enrolled](enroll-configmgr.md#bkmk_cm_enroll).
@@ -94,7 +86,7 @@ For Configuration Manager-managed devices:
 1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.  
 1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
 1. Check and resolve any errors occurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
-
+1. Client devices require a restart to fully enable all analytics. <!--7698085-->
 
 ## <a name="bkmk_endpoints"></a> Proxy configuration
 
@@ -124,7 +116,7 @@ Configure devices to use the signed-in user's context for proxy authentication. 
 - Make sure that the users have proxy permission to reach the data sharing endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
 
 > [!IMPORTANT]
-> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and internet connectivity settings in Microsoft Defender ATP](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> The user proxy authentication approach is incompatible with the use of Microsoft Defender for Endpoint. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender for Endpoint requires it to be set to `1`. For more information, see [Configure machine proxy and internet connectivity settings in Microsoft Defender for Endpoint](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### Device proxy authentication
 
@@ -132,9 +124,9 @@ This approach supports the following scenarios:
 
 - Headless devices, where no user signs in, or users of the device don't have internet access
 
-- Authenticated proxies that don't use Windows Integrated Authentication
+- Authenticated proxies that don't use Windows-Integrated Authentication
 
-- If you also use Microsoft Defender Advanced Threat Protection
+- If you also use Microsoft Defender for Endpoint
 
 This approach is the most complex because it requires the following configurations:
 
@@ -142,7 +134,7 @@ This approach is the most complex because it requires the following configuratio
 
   - The command line `netsh winhttp set proxy`
 
-  - Web proxy auto-discovery (WPAD) protocol
+  - Web proxy autodiscovery (WPAD) protocol
 
   - Transparent proxy
 
@@ -150,13 +142,13 @@ This approach is the most complex because it requires the following configuratio
 
   - Routed connection, or that uses network address translation (NAT)
 
-- Configure proxy servers to allow the computer accounts in Active Directory to access the data endpoints. This configuration requires proxy servers to support Windows Integrated Authentication.  
+- Configure proxy servers to allow the computer accounts in Active Directory to access the data endpoints. This configuration requires proxy servers to support Windows-Integrated Authentication.  
 
 ## <a name="bkmk_faq"></a> Frequently asked questions
 
 ### If my devices are co-managed, should I enroll them via Intune, Configuration Manager, or both?
 
-We recommend using Intune to enroll eligible co-managed devices. Devices that do not meet the device requirements for Intune enrollment (such as Windows Home devices or devices running older versions of Windows) can be enrolled via Configuration Manager. Note that deduplication logic in our back end prevents devices enrolled via both Intune and Configuration Manager from appearing multiple times in the Endpoint analytics portal.
+We recommend using Intune to enroll eligible co-managed devices. Devices that do not meet the device requirements for Intune enrollment (such as Windows Home devices or devices running older versions of Windows) can be enrolled via Configuration Manager. Deduplication logic in our back end prevents devices enrolled via both Intune and Configuration Manager from appearing multiple times in the Endpoint analytics portal.
 
 ### Will my Endpoint analytics data migrate if I move my Intune tenant to a different tenant location?
 

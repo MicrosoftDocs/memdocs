@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Android device enrollment guide for  Microsoft Intune - Azure | Microsoft Docs
+title: Android device enrollment guide for  Microsoft Intune
 description: Enroll Android and Android Enterprise corporate-owned work profile, personally owned devices with a work profile, fully managed, and dedicated devices in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment

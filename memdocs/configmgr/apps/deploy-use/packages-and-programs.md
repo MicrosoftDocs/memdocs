@@ -112,7 +112,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
     - **Allow users to view and interact with the program installation**: Use this setting, if available, to specify whether to allow users to interact with the program installation. This option is only available if the following conditions are met:
 
-        - **Program can run** setting is **Only when no user is logged on** or **Whether or not a user is logged on**
+        - **Program can run** setting is **Only when a user is logged on** or **Whether or not a user is logged on**
         - **Run mode** setting is to **Run with administrative rights**  
 
     - **Drive mode**: Specify information about how this program runs on the network. Choose one of the following options:  

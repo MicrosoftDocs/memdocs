@@ -1,3 +1,4 @@
+items:
 - name: Configuration Manager SDK documentation
   href: index.yml
 - name: Overview
@@ -350,8 +351,6 @@
       href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
     - name: Add a context qualifier by using WMI
       href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
-  - name: Secure Configuration Manager applications
-    href: core/understand/securing-configuration-manager-applications.md
 - name: Application management
   items:
   - name: Create an application with the script deployment type
@@ -510,6 +509,8 @@
     href: core/servers/console/console-extension-architecture.md
   - name: Console extension deployment
     href: core/servers/console/console-extension-deployment.md
+  - name: New style console managed extensions
+    href: core/servers/console/console-extension-register.md    
   - name: Console actions
     items:
     - name: About console actions

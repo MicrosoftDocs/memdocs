@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Certificate connectors for Microsoft Intune - Azure | Microsoft Docs
+title: Certificate connectors for Microsoft Intune
 description: Learn about certificate connectors for Simple Certificate Enrollment Protocol (SCEP) or Public Key Cryptography Standards (PKCS) certificates and certificate profiles with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 07/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,6 +30,11 @@ ms.collection: M365-identity-device-management
 
 # Certificate connectors for Microsoft Intune
 
+> [!IMPORTANT]
+> As of June 21, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the previous connectors remain in support, they are no longer available for download and will not be further developed.
+>
+> If you need to install a new certificate connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune. For more information, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
+
 To support the use of certificates for authentication and the signing and encryption of email using S/MIME, Intune requires the use of a certificate connector. A certificate connector is software you install on an on-premises server. The connector enables cloud-managed devices to provision certificates from on-premises infrastructure, like an issuing Certificate Authority.
 
 This article describes the available connectors, their lifecycle, prerequisites for use, and how to keep them up to date.  
@@ -40,7 +45,7 @@ There are two certificate connectors for Intune. Each has its own uses and requi
 
 ### PFX Certificate Connector for Microsoft Intune
 
-The **PFX Certificate Connector** supports certificate deployment for PCKS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
+The **PFX Certificate Connector** supports certificate deployment for PKCS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
 
 > [!TIP]
 > Prior to the August update for this connector (version 6.2008.60.607), PKCS #12 certificate requests were handled by the *Intune Certificate Connector*. With the August update, the functionality for all PKCS certificate requests was consolidated in the *PFX Certificate Connector*, which supports auto-update of the connector to new versions, and requires use of .NET Framework version 4.7.2.
@@ -59,11 +64,14 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
   > [!NOTE]
   > All connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
   >
-  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  > Any instance of this connector can retrieve pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
   >
   > The same applies to certificate revocation.
   >
 - Can install on the same server that hosts an instance of the *Microsoft Intune Connector*.
+- Supports up to 100 instances of this connector per tenant, with each instance on a separate Windows server. When you use multiple connectors:
+  - All instances of the *PFX Certificate Connector* in your environment should be at the same version.
+  - Your infrastructure supports redundancy and load balancing, as any available connector instance can process your certificate requests.
 - Supports [automatic updates](#automatic-update) to new versions. To automatically install new versions, the computer that hosts the connector must contact **autoupdate.msappproxy.net** on port **443**. If the connector fails to automatically update, you can manually update the connector.
 - Supports certificate revocation (requires the connector run version **6.2008.60.607** or later)
 - Has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices)
@@ -99,7 +107,7 @@ If  you use a [third-party Certification Authority](certificate-authority-add-sc
   > [!NOTE]
   > With PKCS, all connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
   >
-  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  > Any instance of this connector can retrieve pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
   >
   > The same applies to certificate revocation.
   >
@@ -183,6 +191,76 @@ When viewing the connector status:
 - Deprecated connectors will show with a **Warning**. After the six-month grace period, the warning changes to an Error.
 - Connectors that are beyond the grace period show an Error. These connectors are no longer supported and can stop working at any time.
 
+## Logging
+
+*The following logging details are available beginning with connector version 6.2101.13.0.*
+
+Logs for the PFX Certificate Connector are available as Event logs on the server where the connector is installed:
+
+- **Event Viewer** > **Application and Service Logs** > **Microsoft** > **Intune** > **Certificate Connectors**
+
+The following logs are available and default to 50 MB, with automatic archiving enabled:
+
+- **Admin Log** - This log contains one log event per request to the connector. Events include either a *success* with information about the request, or an *error* with information about the request and the error.
+- **Operational Log** - This log displays additional information than is found in the Admin log, and can be of use in debugging issues. This log also displays a ongoing operations for the PFX Certificate connector instead of single events.
+
+### Event IDs
+
+All events have one of the following IDs:
+
+- **0001-0999** - Not associated with any specific scenario
+- **1000-1999** - PKCS
+- **2000-2999** - PKCS Import
+- **3000-3999** - Revoke
+
+### Task Categories
+
+All events are tagged with a Task Category to aid in filtering.  Task categories contain but are not limited to the following list:
+
+**PKCS**  
+- **Admin**  
+  - *PkcsRequestSuccess* - Successfully fulfilled and uploaded a PKCS Request to Intune.
+  - *PkcsRequestFailure* - Failed to fulfill or upload a PKCS Request to Intune.
+- **Operational**
+  - *PkcsDownloadSuccess* - Successfully downloaded PKCS requests from Intune
+  - *PkcsDownloadFailure* - A failure occurred when downloading PKCS requests from Intune
+  - *PkcsDownloadedRequest* - Details of a single downloaded request from Intune
+  - *PkcsIssuedSuccess* - Issued a certificate for a request
+  - *PkcsIssuedFailedAttempt* - A failure occurred while issuing a certificate for a request
+  - *PkcsIssuedFailure* - Failed to issue a certificate for a Request
+  - *PkcsUploadSuccess* - Details of successful request that was uploaded to Intune
+  - *PkcsUploadFailure* - A failure occurred when uploading requests to  Intune
+  - *PkcsUploadedRequest* - Details of an uploaded request to Intune
+
+**PKCS Import**  
+- **Admin**  
+  - *PkcsImportRequestSuccess* - Successfully downloaded PKCS Import requests from Intune
+  - *PkcsImportRequestFailure* - A failure occurred when downloading PKCS Import requests from Intune
+- **Operational**
+  - *PkcsImportDownloadSuccess* - Successfully downloaded PKCS Import requests from Intune
+  - *PkcsImportDownloadFailure* - A failure occurred when downloading PKCS Import requests from Intune
+  - *PkcsImportDownloadedRequest* - Details of a single downloaded request from Intune
+  - *PkcsImportReencryptSuccess* - Re-encrypted an imported certificate
+  - *PkcsImportReencryptFailedAttempt* - A failure occurred while re-encrypting an imported certificate
+  - *PkcsImportReencryptFailure* - Failed to re-encrypt an imported certificate
+  - *PkcsImportUploadFailure* - A failure occurred when uploading requests to Intune
+  - *PkcsImportUploadedRequest* - Details of an uploaded request to Intune
+
+**Revocation**
+- **Admin**
+  - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
+  - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
+- **Operational**
+  - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
+  - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
+  - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
+  - *RevokeSuccess* - Successfully revoked certificate
+  - *RevokeFailure* - A failure occurred while revoking a certificate
+  - *RevokeFailedAttempt* - Failed to revoke a certificate
+  - *RevokeUploadSuccess* - Details of successful request that was uploaded to Intune
+  - *RevokeUploadFailure* - A failure occurred when uploading requests to Intune
+  - *RevokeUploadedRequest* - Details of an uploaded request to Intune
+
 ## What's new for Connectors
 
 Updates for the two certificate connectors are released periodically. When we update a connector, you can read about the changes here.
@@ -191,6 +269,32 @@ Updates for the two certificate connectors are released periodically. When we up
 
 The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#automatic-update).
 
+#### March 10, 2021
+
+Version **6.2101.16.0**. - Changes in this release:
+
+- Improvements to to the PFX Create flow to prevent duplication of Certificate Request files on on-premises servers that host the connector.
+
+#### February 24, 2021
+
+Version **6.2101.13.0**. This new connector version adds [improvements for logging](#logging) to the PFX Connector:
+
+- New location for Event Logs, with logs broken down into Admin, Operational & Debug
+- Admin & Operational logs default to 50 MB - with auto archiving enabled.
+- EventIDs for PKCS Import, PKCS Create and Revocation.
+
+#### January 26, 2021
+
+**Version 6.2009.2.0** - Changes in this release:
+
+- Improves upgrade of the Connector to persist accounts that run Connector Services.
+
+#### January 15, 2021
+
+**Version 6.2009.1.9** - Changes in this release:
+
+- Improvements to the renewal of the connector certificate.
+
 #### October 2, 2020
 
 **Version 6.2008.60.612** - Changes in this release:
@@ -198,12 +302,15 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 - Fixed an issue with PKCS certificate delivery to Android Enterprise Fully Managed devices. The issue required the cryptography Key Storage Provider (KSP) be a legacy provider. You can now use a Cryptographic Next Generation (CNG) Key Storage Provider as well.
 - Changes to *CA Account* tab of the PFX Certificate Connector: The Username and password (credentials) that you specify are now used to issue certificates and to revoke certificates. Previously these credentials were used only for certificate revocation.
 
+<!-- Rolling Archive for PFX Certificate Connector release history
+ that are five or more releases old:
+
 #### August 26, 2020
 
 **Version 6.2008.60.607** - Changes in this release:
 
 - Requires .NET Framework version 4.7.2
-- Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PCKS #12 or Imported PFX certificates.
+- Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PKCS #12 or Imported PFX certificates.
 - Adds support for using PKCS certificate profiles with all supported platforms except Windows 8.1.
 - Adds support for certificate revocation for Outlook S/MIME.
 
@@ -212,7 +319,7 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 **Version: 6.1911.11.602** - Changes in this release:
 
 - Added S/MIME support for PFX Import.  
-
+- 
 #### May 17, 2019
 
 **Version 6.1905.0.404** - Changes in this release:
@@ -232,6 +339,8 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 - This connector now supports automatic update.
 - Fixed an issue where the connector might fail to enroll to Intune after signing in to the connector with a global administrator account.
 
+End of PFX Certificate Connector release history archive -->
+
 ### Microsoft Intune Connector release history
 
 #### April 2, 2019
@@ -249,3 +358,4 @@ Create SCEP, PKCS, or PKCS imported certificate profiles for each platform you w
 - [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)  
 - [Configure and manage PKCS certificates with Intune](certificates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [Troubleshoot issues for the Microsoft Intune Connector ](/troubleshoot/mem/intune/troubleshoot-certificate-connector-events)

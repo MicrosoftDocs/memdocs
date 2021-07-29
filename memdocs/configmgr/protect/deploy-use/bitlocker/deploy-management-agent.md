@@ -2,7 +2,7 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -45,7 +45,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - **Operating System Drive**: Manage whether the OS drive is encrypted
 
-    - **Fixed Drive**: Manage encryption for additional data drives in a device
+    - **Fixed Drive**: Manage encryption for other data drives in a device
 
     - **Removable Drive**: Manage encryption for drives that you can remove from a device, like a USB key
 
@@ -130,7 +130,11 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
 > [!IMPORTANT]
-> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded.
+> If a remote desktop protocol (RDP) connection is active, the MBAM client doesn't start BitLocker Drive Encryption actions. Close all remote console connections and sign in to a console session with a domain user account. Then BitLocker Drive Encryption begins and the client uploads recovery keys and packages. If you sign in with a local user account, BitLocker Drive Encryption doesn't start.
+>
+> You can use RDP to remotely connect to the console session of the device with the `/admin` switch. For example: `mstsc.exe /admin /v:<IP address of device>`
+>
+> A _console session_ is either when you're at the computer's physical console, or a remote connection that's the same as if you're at the computer's physical console.
 
 Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
@@ -154,7 +158,7 @@ Use the following logs to monitor and troubleshoot:
 
 - MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM.  For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Client event logs](../../tech-ref/bitlocker/client-event-logs.md).
 
-- **BitlockerMangementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
+- **BitlockerManagementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
 
 ### Management point logs (recovery service)
 
@@ -170,8 +174,15 @@ Configuration Manager stores the recovery information in the site database. With
 
 Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When domain-joined clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
 
-> [!IMPORTANT]
-> The message processing engine channel only escrows keys for OS and fixed drive volumes. It currently doesn't support recovery keys for removable drives or the TPM password hash.
+Starting in version 2103, all supported clients use the message processing engine component of the management point as the recovery service. This change reduces dependencies on legacy MBAM components, and enables support for [enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md).<!-- 9503186 -->
+
+> [!NOTE]
+> For version 2010, the message processing engine channel only escrows keys for OS and fixed drive volumes. It doesn't support recovery keys for removable drives or the TPM password hash.
+>
+> Starting in version 2103, BitLocker management policies over a CMG support the following capabilities:<!--8845996-->
+>
+> - Recovery keys for removable drives
+> - TPM password hash, otherwise known as TPM owner authorization
 
 ## Migration considerations
 
@@ -187,7 +198,7 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
   > [!NOTE]
   > If a group policy setting exists for standalone MBAM, it will override the equivalent setting attempted by Configuration Manager. Standalone MBAM uses domain group policy, while Configuration Manager sets local policies for BitLocker management. Domain policies will override the local Configuration Manager BitLocker management policies. If the standalone MBAM domain group policy doesn't match the Configuration Manager policy, Configuration Manager BitLocker management will fail. For example, if a domain group policy sets the standalone MBAM server for key recovery services, Configuration Manager BitLocker management can't set the same setting for the management point. This behavior causes clients to not report their recovery keys to the Configuration Manager BitLocker management key recovery service on the management point.
 
-- Configuration Manager doesn't implement all MBAM group policy settings. If you configure additional settings in group policy, the BitLocker management agent on Configuration Manager clients honors these settings.
+- Configuration Manager doesn't implement all MBAM group policy settings. If you configure more settings in group policy, the BitLocker management agent on Configuration Manager clients honors these settings.
 
   > [!IMPORTANT]
   > Don't set a group policy for a setting that Configuration Manager BitLocker management already specifies. Only set group policies for settings that don't currently exist in Configuration Manager BitLocker management. Configuration Manager version 2002 has feature parity with standalone MBAM. With Configuration Manager version 2002 and later, in most instances there should be no reason to set domain group policies to configure BitLocker policies. To prevent conflicts and problems, avoid use of group policies for BitLocker. Configure all settings through Configuration Manager BitLocker management policies.
@@ -196,9 +207,10 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 - Previous MBAM clients don't upload the TPM password hash to Configuration Manager. The client only uploads the TPM password hash once.
 
-- If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it will upload the new TPM password hash to the recovery service.
+- If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it uploads the new TPM password hash to the recovery service.
 
-Uploading of the TPM password hash mainly pertains to versions of Windows prior to Windows 10. Windows 10 by default does not save the TPM password hash so therefore does not normally upload the TPM password hash. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
+> [!NOTE]
+> Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
 
 ### Re-encryption
 
@@ -220,7 +232,7 @@ The Configuration Manager client handler for BitLocker is co-management aware. I
 For more information about managing BitLocker with Intune, see the following articles:
 
 - [Use device encryption with Intune](../../../../intune/protect/encrypt-devices.md)
-- [Troubleshoot BitLocker policies in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
+- [Troubleshoot BitLocker policies in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 
 ## Next steps
 

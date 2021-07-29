@@ -1,11 +1,11 @@
 ---
-title: Use imported PFX certificates in Microsoft Intune - Azure | Microsoft Docs
-description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune. Import certificates, configure certificate templates, install the Intune Imported PFX Certificate Connector, and create an Imported PKCS Certificate profile.
+title: Use imported PFX certificates in Microsoft Intune
+description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune. Import certificates, configure certificate templates, and create an Imported PKCS Certificate profile.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 07/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,26 +57,21 @@ Intune supports import of PFX certificates for the following platforms:
 
 To use imported PKCS certificates with Intune, you'll need the following infrastructure:
 
-- **PFX Certificate Connector for Microsoft Intune**:
+- **Certificate Connector for Microsoft Intune**:
+  
+  The certificate connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user. Ensure that each connector you install has access to the private key that is used to encrypt the passwords of the uploaded PFX files.
 
-  Each Intune tenant supports multiple instance of this connector. Ensure each connector has access to the private key used to encrypt the passwords of the uploaded PFX files.
-  You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector.
+  For information about the certificate connector, see:
+  - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md).
+  - [Prerequisites](certificate-connector-prerequisites.md).
+  - [Installation and configuration](certificate-connector-install.md).
 
-  This connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
-
-  This connector can automatically update itself when new versions become available. To use the update capability, you must ensure firewalls are open that allow the connector to contact **autoupdate.msappproxy.net** on port **443**.
-
-  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+  > [!TIP]
+  > Beginning on June 21, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the [previous connectors remain in support](../protect/certificate-connectors.md), they are no longer available for download.  If you need to install a new connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune.
 
 - **Windows Server**:
 
-  You use a Windows Server to host the PFX Certificate Connector for Microsoft Intune.  The connector is used to process requests for certificates imported to Intune.
-  
-  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
-
-  Intune supports install of the *Microsoft Intune Certificate Connector* on the same server as the *PFX Certificate Connector for Microsoft Intune*.
-
-  To support the connector, the server must run .NET 4.7.2 Framework or higher. If .NET 4.7.2 Framework isn't installed when you start the installation of the connector, the connector installation will install it automatically.
+  The certificate connector installs on a Windows Server that meets the connectors [prerequisites](certificate-connector-prerequisites.md).
 
 - **Visual Studio 2015 or above** (optional):
 
@@ -88,9 +83,9 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 - **Intune Service**: Stores the PFX certificates in an encrypted state and handles the deployment of the certificate to the user device.  The passwords protecting the private keys of the certificates are encrypted before they're uploaded using either a hardware security module (HSM) or Windows Cryptography, ensuring that Intune can't access the private key at any time.
 
-- **PFX Certificate Connector for Microsoft Intune**: When a device requests a PFX certificate that was imported to Intune, the encrypted password, the certificate, and the device's public key are sent to the connector.  The connector decrypts the password using the on-premises private key, and then re-encrypts the password (and any plist profiles if using iOS) with the device key before sending the certificate back to Intune.  Intune then delivers the certificate to the device and the device is able to decrypt it with the device's private key and install the certificate.
+- **Certificate Connector for Microsoft Intune**: When a device requests a PFX certificate that was imported to Intune, the encrypted password, the certificate, and the device's public key are sent to the connector. The connector decrypts the password using the on-premises private key, and then re-encrypts the password (and any plist profiles if using iOS) with the device key before sending the certificate back to Intune. Intune then delivers the certificate to the device and the device decrypts it with the device's private key and install the certificate.
 
-## Download, install, and configure the PFX Certificate Connector for Microsoft Intune
+<!-- Remainder is deprecated content, now covered by the install of the new certificate connector>
 
 Before you begin, [review requirements for the connector](certificate-connectors.md) and ensure your environment and your Windows server is ready to support the connector.
 
@@ -114,6 +109,40 @@ Before you begin, [review requirements for the connector](certificate-connectors
 6. Close the window.
 
 7. In the Microsoft Endpoint Manager admin center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
+
+> [!NOTE]
+> The following changes must be made for GCC High and DoD tenants prior to using the PFX Certificate Connector.
+>
+> 1. Use a text editor to edit the two following *.config* files, which updates the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of three URI updates, two updates within the **PFXCertificateConnectorUI.exe.config** file, and one update in the **Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config** file.  
+>    - File Name: <install_Path>\Microsoft Intune\PFXCertificateConnector\ConnectorUI\ PFXCertificateConnectorUI.exe.config
+>
+>      Example: (%programfiles%\Microsoft Intune\PFXCertificateConnector\ConnectorUI\ PFXCertificateConnectorUI.exe.config)
+>      ```
+>      <appSettings>
+>        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon" />
+>        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses" />
+>        <add key="AccountPortalURL" value="https://manage.microsoft.us" />
+>      </appSettings> 
+>      ```
+>
+>    - </appSettings>File Name: <install_Path>\Microsoft Intune\PFXCertificateConnector\ConnectorSvc\Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config
+>
+>      Example: (%programfiles%\ Microsoft Intune\PFXCertificateConnector\ConnectorSvc\Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config)
+>      ```
+>      <appSettings>
+>        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
+>        <add key="TimerFrequency" value="30000" />
+>        <add key="PfxTimerFrequency" value="30000" />
+>        <add key="PfxImportRecryptionFrequency" value="30000" />
+>        <add key="CloudCAConnTimeoutInMilliseconds" value="30000" />
+>      ```
+>
+> 2. On the server that hosts the connector, add or edit the following registry key to match teh following:
+>    `HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector\MbaseManagementAddress`
+>    - If *MbaseManagementAddress* isn't present, add it as a child key below *PFXCertificateConnector*.
+>    - Set the *String Value* for *MbaseManagementAddress* to `https://manage.microsoft.us`
+
+-->
 
 ## Import PFX Certificates to Intune
 
@@ -149,7 +178,7 @@ The PowerShell module provides methods to create a key using Windows cryptograph
 
 #### To create the encryption key using Windows cryptography
 
-1. Copy the *Release* folder that's created by Visual Studio to the server where you installed the **PFX Certificate Connector for Microsoft Intune**. This folder contains the PowerShell module.
+1. Copy the *Release* folder that's created by Visual Studio to the server where you installed the **Certificate Connector for Microsoft Intune**. This folder contains the PowerShell module.
 
 2. On the server, open *PowerShell* as an Administrator and then navigate to the *Release* folder that contains the PowerShell module.
 
@@ -163,7 +192,7 @@ The PowerShell module provides methods to create a key using Windows cryptograph
    If you plan to import the certificate from your workstation, you can export this key to a file with the following command:
     `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
-   The private key must be imported on the server that hosts the PFX Certificate Connector for Microsoft Intune so that imported PFX certificates can be processed successfully.
+   The private key must be imported on each server that hosts the Certificate Connector for Microsoft Intune so that imported PFX certificates can be processed successfully.
 
 #### To use a hardware security module (HSM)
 
@@ -189,9 +218,23 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 #### To import the PFX certificate  
 
-1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
+1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](http://web.archive.org/web/20200319074455/https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
 
-2. On the server, open *PowerShell* as an Administrator and then navigate to the *Release* folder that contains the PowerShell module.
+2. On the server, open *PowerShell* as an Administrator and then navigate to the *Release* folder that contains the PowerShell module *IntunePfxImport.psd1*.
+
+   > [!NOTE]
+   > The following changes must be made for GCC High and DoD tenants prior to running *IntunePfxImport.psd1*.
+   >
+   > Use a text editor or PowerShell ISE to edit the file, which updates the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of two updates within *IntunePfxImport.psd1*. One for **AuthURI** and the second for **GraphURI**:  
+   > ```
+   > PrivateData = @{
+   >     AuthURI = "login.microsoftonline.us"
+   >     GraphURI = "https://graph.microsoft.us"
+   >     SchemaVersion = "beta"
+   >     }
+   > ```
+   >
+   > After saving the changes, restart PowerShell.  
 
 3. To import the module, run `Import-Module .\IntunePfxImport.psd1`
 
@@ -234,7 +277,7 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices.
-   - **Profile**: Select **PKCS imported certificate**
+   - **Profile**: Select **PKCS imported certificate**. Or, select **Templates** > **PKCS imported certificate**.
 
 4. Select **Create**.
 
@@ -248,28 +291,21 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
    - **Intended purpose**: Specify the intended purpose of the certificates that are imported for this profile. Administrators can import certificates with different intended purposes (like S/MIME signing or S/MIME encryption). The intended purpose selected in the certificate profile matches the certificate profile with the right imported certificates. Intended purpose is a tag to group imported certificates together and doesn't guarantee that certificates imported with that tag will meet the intended purpose.  
 
-   <!-- Not in new UI:
-   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
-   -->
    - **Key storage provider (KSP)**: For Windows, select where to store the keys on the device.
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-    Select **Next**.
-
-11. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+10. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
     For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
     Select **Next**.
 
-12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Support for third-party partners
 
@@ -289,4 +325,4 @@ To learn more about KeyTalk’s integration with Intune, see https://keytalk.com
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. [Assign](../configuration/device-profile-assign.md) the new device profile.
+[Use SCEP for certificates](certificates-scep-configure.md)

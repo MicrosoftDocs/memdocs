@@ -3,7 +3,7 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 12/17/2019
+ms.date: 04/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -47,7 +47,7 @@ Before Configuration Manager version 1806, the WSUS cleanup option runs the foll
 - A cleanup for software update configuration items in the Configuration Manager database occurs every seven days and removes unneeded updates from the console.
   - This cleanup won't remove expired updates from the Configuration Manager console if they're currently deployed.
 
-Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup behavior starting in version 1806
 
@@ -71,7 +71,7 @@ All WSUS maintenance needs to be run manually on secondary site WSUS databases. 
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup behavior starting in version 1810
 
@@ -94,7 +94,7 @@ The following **WSUS Server Cleanup Wizard** options aren't run on the CAS, prim
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup starting in version 1906
 <!--41101009-->
@@ -130,7 +130,8 @@ When the WSUS database is on a remote SQL Server, you might need to add permissi
 - The `CONNECT SQL` server permission must be granted to the account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 > [!NOTE]  
->  If the WSUS database is on a remote SQL Server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
+> - If the WSUS database is on a remote SQL Server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
+> - If the Software Update Point is remote to the site server and is using a Windows Internal Database, then the indexes will not be added.
 
 ### Remove obsolete updates from the WSUS database
 
@@ -149,6 +150,9 @@ When the WSUS database is on a remote SQL Server, the site server's computer acc
 - The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
 - The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
+> [!NOTE]  
+> If the Software Update Point is remote to the site server and is using a Windows Internal Database, then obsolete updates will not be removed.
+
 #### WSUS cleanup wizard
 
 Starting in version 1906, the following **WSUS Server Cleanup Wizard** options aren't run on the CAS, primary, and secondary sites:
@@ -156,14 +160,14 @@ Starting in version 1906, the following **WSUS Server Cleanup Wizard** options a
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 
-### Known issues for version 1906
+## Known issue
 
 Consider the following scenario:
 <!--5418148-->
-- You are using Configuration Manager version 1906
+- You are using Configuration Manager version 1906 or later
 - You have remote software update points using a Windows Internal Database
 - In the **Software Update Point Component Properties**, you have any of the following selected options under the **WSUS Maintenance** tab:
    - Add non-clustered indexes to the WSUS database

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Enroll Android work profile with Intune Company Portal | Microsoft Docs
+title: Enroll device and create Android work profile - Microsoft Intune | Microsoft Docs
 description: How create a work profile and enroll device with Intune Company Portal.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2020  
+ms.date: 03/19/2021  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -34,13 +34,16 @@ ms.collection:
 
 Enroll your personal Android device to get access to work or school email, apps, and other data. During enrollment, you'll set up an Android work profile, which separates the personal data on your device from your work data. If this type of setup is something you're required to do, your organization will let you know through their preferred communication channel or Intune Company Portal app. 
 
-After your profile is set up, your organization will manage the work-side of it, which consists of only the work files and work data. Your company support can't manage the personal data on your device.  
+After your profile is set up, your organization will manage the work-side of it, which consists of only the work files and work data. Your IT administrator can configure and enforce certain device-level settings on your device, such as requiring you to set a device PIN. They can't see any data in the apps on the personal side of your device.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 
 Find out more about [what happens when you create a work profile](what-happens-when-you-create-a-work-profile-android.md).
 
 ## Create work profile and enroll device
+
+> [!NOTE]
+> To create a work profile on your device, you must be using the primary user account on your device. Creating a work profile on a secondary user account is not supported. 
 
 1. Open the Company Portal app and sign in with your work or school account. If you haven't installed the free app, install it from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).  
 
@@ -60,24 +63,22 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Screenshot of "Setting up work profile" screen.](./media/android-wp-05a-1908.png)  
 
-   Depending on your version of Android, you might see an additional screen that explains the type of apps you need to use. Wait a few moments and you'll be redirected and signed in to the Company Portal app.  
+6. On devices running certain Android versions, you'll see another informational screen about the type of apps you need. Wait to be redirected and signed in to the Company Portal app.  
 
-    ![Screenshot of Company Portal redirection and badged app information, includes two links.](./media/intune-company-portal-work-profile-redirect-2009.png)  
-
-6. On the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
+    When you get to the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
 
     ![Screenshot of Company Access Setup showing work profile is created.](./media/work-profile-complete-1911.png)  
 
-7. Check that your work profile is active. Then tap **CONTINUE**. 
+8. Check that your work profile is active. Then tap **CONTINUE**. 
 
     ![Screenshot of Company Access Setup showing work profile is active.](./media/work-profile-active-1911.png)  
 
-8. Your organization might require you to update your device settings. Tap **RESOLVE** to adjust a setting. When you're done updating settings, tap **CONTINUE**.    
+9. Your organization might require you to update your device settings. Tap **RESOLVE** to adjust a setting. When you're done updating settings, tap **CONTINUE**.    
 
     ![Example image of Company Portal, Update device settings screen, highlighting Resolve and Continue buttons.](./media/resolve-settings-1911.png) 
 
 
-9. When setup is complete, tap **DONE**.  
+10. When setup is complete, tap **DONE**.  
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
 
@@ -89,7 +90,9 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Example image of Company Portal menu, highlighting Get Apps link.](./media/updated-drawer-android-2005.png) 
 
+## Android Enterprise availability 
 
+Work profile setup is supported in [countries and regions where Android Enterprise is available](https://support.google.com/work/android/answer/6270910) (opens Google Support website). Company Portal can't set up a work profile on your device if you're outside these areas. If Android Enterprise isn't available in your country or region, ask your support person for other ways to access work resources.  
 
 ## Next steps  
 

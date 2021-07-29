@@ -5,7 +5,7 @@ description: "Review Microsoft 365 Apps client information from the Office 365 C
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -27,34 +27,36 @@ Beginning in Configuration Manager version 1802, you can review Microsoft 365 Ap
 
 ### Enable hardware inventory
 
-The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Enable hardware inventory and select the **Office 365 ProPlus Configurations** hardware inventory class for data to display in the dashboard.
+The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Enable hardware inventory and select the **Office 365 Configurations** hardware inventory class for data to display in the dashboard.
  
 1. Enable hardware inventory, if it isn't yet enabled. For details, see [Configure hardware inventory](../../core/clients/manage/inventory/configure-hardware-inventory.md).
 2. In the Configuration Manager console, navigate to **Administration** > **Client Settings** > **Default Client Settings**.  
 3. On the **Home** tab, in the **Properties** group, click **Properties**.  
 4. In the **Default Client Settings** dialog box, click **Hardware Inventory**.  
 5. In the **Device Settings** list, click **Set Classes**.  
-6. In the **Hardware Inventory Classes** dialog box, select **Office 365 ProPlus Configurations**.  
+6. In the **Hardware Inventory Classes** dialog box, select **Office 365 Configurations**.  
 7. Click **OK** to save your changes and close the **Hardware Inventory Classes** dialog box.
 
 The Office 365 Client Management dashboard starts displaying data as hardware inventory is reported.
 
-### Connectivity for top level site server
+### Connectivity for the top-level site server
 
 *(Introduced in version 1906 as a prerequisite)*
 
-Your top level site server needs access to the following endpoint to download the readiness file:
+Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
 
-`https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
+- Starting March 2, 2021: `https://omex.cdn.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
+   - Location prior to March 2, 2021: `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
 
 > [!NOTE]
-> Internet connectivity isn't required for the client devices for any of these scenarios.
+> - The location of this file is changing *March 2, 2021* <!--edit this, placeholder line-->. For more information, see [Download location change for Microsoft 365 Apps readiness file](https://techcommunity.microsoft.com/t5/configuration-manager-blog/download-location-change-for-microsoft-365-apps-readiness-file/ba-p/2110282).
+> - Internet connectivity isn't required for the client devices for any of these scenarios.
 
 ### Enable data collection for Microsoft 365 Apps
 
 *(Introduced in version 1910 as a prerequisite)*
 
-Starting in version 1910, you'll need to enable data collection for Microsoft 365 Apps to populate information in the  **Office 365 ProPlus Pilot and Health Dashboard**. The data is stored in the Configuration Manager site database and not sent to Microsoft.
+Starting in version 1910, you'll need to enable data collection for Microsoft 365 Apps to populate information in the  **Office 365 Pilot and Health Dashboard**. The data is stored in the Configuration Manager site database and not sent to Microsoft.
 
 This data is different from the diagnostic data, which is described in [Diagnostic data sent from Microsoft 365 Apps to Microsoft](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
@@ -92,7 +94,7 @@ The Office 365 Client Management dashboard provides charts for the following inf
 <!--3735402-->
 Starting in Configuration Manager version 1902, you can use the dashboard to identify devices with high confidence that are ready to upgrade to Microsoft 365 Apps. This integration provides insights into potential compatibility issues with add-ins and macros in your environment. Then use Configuration Manager to deploy Microsoft 365 Apps to ready devices.
 
-The Office 365 client management dashboard includes a new tile, **Office 365 ProPlus Upgrade Readiness**. This tile is a bar chart of devices in the following states:
+The Office 365 client management dashboard includes a tile, **Office 365 Apps Upgrade Readiness**. This tile is a bar chart of devices in the following states:
 - Not assessed
 - Ready to upgrade
 - Needs review
@@ -129,7 +131,7 @@ For more information, see [Getting readiness information for multiple users in a
 *(Introduced in version 1906)*
 
 <!--4021125-->
-To help you determine which devices are ready to upgrade to Microsoft 365 Apps, there's a readiness dashboard starting in version 1906. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. The following new tiles on this dashboard help you evaluate add-in and macro readiness:
+To help you determine which devices are ready to upgrade to Microsoft 365 Apps, there's a readiness dashboard starting in version 1906. It includes the **Office 365 Apps Upgrade Readiness** tile that released in Configuration Manager current branch version 1902. The following new tiles on this dashboard help you evaluate add-in and macro readiness:
 
 - Deployment
 - Device readiness
@@ -144,7 +146,7 @@ The following video is a session from Ignite 2019, which includes more informati
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3090]
 
-[Best practices for compatibility assessment and Microsoft Office 365 ProPlus upgrades using Office Readiness in Configuration Manager](https://myignite.microsoft.com/archives/IG19-BRK3090)
+[Best practices for compatibility assessment and Microsoft Office 365 upgrades using Office Readiness in Configuration Manager](https://myignite.microsoft.com/archives/IG19-BRK3090)
 
 ### Using the Microsoft 365 Apps upgrade readiness dashboard
 
@@ -183,11 +185,14 @@ This report can be used to identify which devices have recently used files which
 
 For more information about how to carry out the scan, see [Detailed macro readiness](#bkmk_ort).
 
-## <a name="bkmk_pilot"></a> Office 365 ProPlus pilot and health dashboard
+> [!TIP]
+> Macro inventory is populated by default based on the document extensions in the MRU. Macro compatibility and macro status are populated once the **Readiness Toolkit for Office** scan runs on the device.
+
+## <a name="bkmk_pilot"></a> Office 365 Pilot and Health dashboard
 <!--4488272, 4488301-->
 *(Introduced in version 1910)*
 
-Starting in version 1910, the **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and perform your Microsoft 365 Apps deployment. The dashboard provides health insights for devices with Microsoft 365 Apps to help identify possible issues that may affect your deployment plans. The **Office 365 ProPlus Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory. The following tiles are in the dashboard:
+Starting in version 1910, the **Office 365 Pilot and Health Dashboard** helps you plan, pilot, and perform your Microsoft 365 Apps deployment. The dashboard provides health insights for devices with Microsoft 365 Apps to help identify possible issues that may affect your deployment plans. The **Office 365 Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory. The following tiles are in the dashboard:
 
 - Generate pilot
 - Recommended pilot devices
@@ -197,19 +202,19 @@ Starting in version 1910, the **Office 365 ProPlus Pilot and Health Dashboard** 
 - Add-ins not meeting health goals
 - Macros not meeting health goals
 
-### Using the Office 365 ProPlus pilot and health dashboard
+### Using the Office 365 Pilot and Health dashboard
 
 After verifying you have the [prerequisites](#prerequisites), use the following instructions to use the dashboard:
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**.
 1. Select the **Office 365 Pilot and Health** node.
 
-![Office 365 ProPlus pilot and health dashboard](./media/4488272-office-365-pro-plus-pilot.png)
+![Office 365 Pilot and Health dashboard](./media/4488272-office-365-pro-plus-pilot.png)
 
 
 ### Generate pilot
 
-Generate a pilot recommendation from a limiting collection at the click of a button. As soon as the action is launched, a background task starts calculating your pilot collection. Your limiting collection must contain at least one device with an Office version that isn't ProPlus.
+Generate a pilot recommendation from a limiting collection at the click of a button. As soon as the action is launched, a background task starts calculating your pilot collection. Your limiting collection must contain at least one device with an Office version that isn't Office 365 Apps.
 
 ### Recommended pilot devices
 

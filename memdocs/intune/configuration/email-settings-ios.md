@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Email settings for iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure Email settings for iOS/iPadOS devices in Microsoft Intune
 description: See a list of all the email settings you can configure and add to iOS and iPadOS devices in Microsoft Intune, including using Exchange servers, and getting attributes from Azure Active Directory. You can also enable SSL, authenticate users with certificates or username/password, and synchronize email on iOS/iPadOS devices using device configuration profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 In Microsoft Intune, you can create and configure email to connect to an email server, choose how users authenticate, use S/MIME for encryption, and more.
 
-This article lists and describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
+This article describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
 
 ## Before you begin
 

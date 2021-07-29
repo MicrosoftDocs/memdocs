@@ -320,12 +320,12 @@ For more information, see [Synchronize Microsoft 365 updates from a disconnected
 
 ## <a name="bkmk_protect"></a> Protection
 
-### Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding
+### Expand Microsoft Defender for Endpoint onboarding
  
 <!-- 5229962 -->
-Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md).
+Configuration Manager has expanded its support for onboarding devices to Microsoft Defender for Endpoint. For more information, see [Microsoft Defender for Endpoint](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
-### <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center
+### <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager admin center
 <!--5691658-->
 You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
@@ -411,7 +411,7 @@ For more information, see [Support Center OneTrace](../../support/support-center
 <!--5665775, 6307931-->
 The tool to extend and migrate on-premises site to Microsoft Azure now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
 
-For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md#bkmk_add_role).
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md#add-site-roles-to-an-existing-vm).
 
 ## Other updates
 

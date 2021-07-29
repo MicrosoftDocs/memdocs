@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 07/28/2020
+ms.date: 04/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -39,7 +39,7 @@ As part of your deployment plan, you do the following actions:
 
 - Decide how to fix issues with apps based on recommendations from Desktop Analytics  
 
-By default, Desktop Analytics refreshes deployment plan data daily. Any changes you make within a deployment plan, such as assigning importance to an app or choosing a device to include in a pilot, takes up to 24 hours to process. To speed up this process, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
+By default, Desktop Analytics refreshes deployment plan data daily. Any changes you make within a deployment plan, such as assigning importance to an app or choosing a device to include in a pilot, takes up to 24 hours to process. To speed up this process, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.yml#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal-).  
 
 After connecting Desktop Analytics to Configuration Manager, select your collections in the deployment plans. This integration then lets you deploy Windows to a collection based on the Desktop Analytics data.
 
@@ -95,7 +95,7 @@ In the details of the app, you can also see the following information: Recommend
 The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](create-deployment-plans.md#readiness-rules).
 
    > [!Tip]
-   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
+   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](about-assets.md#automatic-upgrade-decision-of-system-and-store-apps). <!-- 3587232 -->
 
 The **App versions details** setting is off by default, so this tab combines all versions of apps with the same name and publisher.<!-- 5542186 --> The default behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. The count of apps in the **Noteworthy Apps** tile also reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, turn on this setting. You can also configure this setting when working at the global assets level. For more information, see [About assets - Apps](about-assets.md#apps).
 
@@ -123,8 +123,8 @@ After creating a deployment plan, use Configuration Manager to deploy the produc
 
 ## Next steps
 
-- [Learn about Desktop Analytics assets](about-assets.md): devices, drivers, and apps  
+- [Learn about Desktop Analytics assets](about-assets.md): devices, drivers, and apps
 
-- [Learn about security and feature updates](about-updates.md)  
+- [Learn about feature updates](about-updates.md)
 
 - [Create a deployment plan](create-deployment-plans.md)

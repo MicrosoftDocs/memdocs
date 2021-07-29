@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/20/2020
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,9 @@ ms.collection: M365-identity-device-management
 
 Edge for iOS and Android is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is like what is offered in other Microsoft mobile apps.
 
-Edge for iOS is supported on iOS 12.0 and later. Edge for Android is supported on Android 5 and later.
+This feature applies to:
+- iOS 12.0 and newer
+- Android 5.0 and newer
 
 > [!NOTE]
 > Edge for iOS and Android doesn't consume settings that users set for the native browser on their devices, because Edge for iOS and Android can't access these settings.
@@ -52,6 +54,9 @@ Organizations can use Azure AD Conditional Access policies to ensure that users 
    > This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
 
 With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+
+> [!NOTE]
+> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 ## Create Intune app protection policies
 
@@ -102,6 +107,9 @@ App configuration can be delivered either through the mobile device management (
 
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
 
+> [!IMPORTANT]
+> App configuration keys are case sensitive. Use the proper casing to ensure the configuration takes affect.
+
 > [!NOTE]
 > With Microsoft Endpoint Manager, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the App Protection Policy channel is referred to as a **Managed Apps** App Configuration Policy.
 
@@ -111,8 +119,8 @@ Respecting the data security and compliance policies of our largest and highly r
 
 You can learn more about configuring the org allowed accounts mode setting here:
 
-- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
+- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
 This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Endpoint Manager, you need to consult with your UEM documentation on how to deploy these configuration keys.
 
@@ -134,6 +142,8 @@ These settings can be deployed to the app regardless of device enrollment status
 
 ### New Tab Page experiences
 
+When you sign in into Edge for iOS and Android, opening a new tab page delivers the familiar productivity content and new pivots that organize news feeds relevant to your organization's industry and interests in one view. The New Tab Page experience provides links for your organization's home page, top sites, and industry news.
+
 Edge for iOS and Android offers organizations several options for adjusting the New Tab Page experience.
 
 #### Organization logo and brand color
@@ -141,7 +151,7 @@ Edge for iOS and Android offers organizations several options for adjusting the 
 These settings allow you to customize the New Tab Page for Edge for iOS and Android to display your organization's logo and brand color as the page background.
 
 To upload your organization's logo and color, first complete the following steps:
-1. Within [Microsoft Endpoint Manager](https://endpoint.microsoft.com), navigate to **Tenant Administration** -> **Customization** -> **Company Identity Branding**.
+1. Within [Microsoft Endpoint Manager](https://endpoint.microsoft.com), navigate to **Tenant Administration** > **Customization**. Next to **Settings**, click **Edit**.
 2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
 3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
 
@@ -154,7 +164,7 @@ Next, utilize the following key/value pairs to pull your organization's branding
 
 #### Homepage shortcut
 
-This setting allows you to configure a homepage shortcut for Edge for iOS and Android. The homepage shortcut you configure appears as the first icon beneath the search bar when the user opens a new tab in Edge for iOS and Android. The user can't edit or delete this shortcut in their managed context. The homepage shortcut displays your organization's name to distinguish it. 
+This setting allows you to configure a homepage shortcut for Edge for iOS and Android in the New Tab Page. The homepage shortcut you configure appears as the first icon beneath the search bar when the user opens a new tab in Edge for iOS and Android. The user can't edit or delete this shortcut in their managed context. The homepage shortcut displays your organization's name to distinguish it.
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
@@ -162,7 +172,7 @@ This setting allows you to configure a homepage shortcut for Edge for iOS and An
 
 #### Multiple top site shortcuts
 
-Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on new tab pages in Edge for iOS and Android. The user can't edit or delete these shortcuts in a managed context. Note: you can configure a total of 8 shortcuts, including a homepage shortcut. If you have configured a homepage shortcut, that will override the first top site configured. 
+Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on New Tab Pages in Edge for iOS and Android. The user can't edit or delete these shortcuts in a managed context. Note: you can configure a total of 8 shortcuts, including a homepage shortcut. If you have configured a homepage shortcut, that will override the first top site configured. 
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
@@ -175,6 +185,14 @@ You can configure the New Tab Page experience within Edge for iOS and Android to
 |    Key    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **true** shows Industry News on the New Tab Page<br>**false** (default) hides Industry News from the New Tab Page    |
+
+#### Homepage instead of New Tab Page experience
+
+Edge for iOS and Android allows organizations to disable the New Tab Page experience and instead have a web site launch when the user opens a new tab. While this is a supported scenario, Microsoft recommends organizations take advantage of the New Tab Page experience to provide dynamic content that is relevant to the user.
+
+|    Key    |    Value    |
+|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL    |    Specify a valid URL. If no URL is specified, the app utilizes the New Tab Page experience. Incorrect URLs are blocked as a security measure.<br>For example: `https://www.bing.com`    |
 
 ### Bookmark experiences
 
@@ -237,11 +255,14 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 #### Disable extensions
 
-You can disable the extension framework within Edge for Android to prevent users from installing any app extensions. To do this, configure the following setting:
+You can disable the extension framework, like Coupons, within Edge for iOS and Android to prevent users from installing or using any pre-configured app extensions. To do this, configure the following setting:
 
 |    Key    |    Value    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.disableExtensionFramework    |    **true** disables the extension framework<br>**false** (default) enables the extension framework    |
+
+> [!NOTE]
+> Edge for iOS does not support disabling extensions.
 
 ### Kiosk mode experiences on Android devices
 

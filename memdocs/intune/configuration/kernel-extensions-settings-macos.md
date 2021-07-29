@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: macOS extension settings in Microsoft Intune - Azure | Microsoft Docs
+title: macOS extension settings in Microsoft Intune
 titleSuffix:
 description: Add, configure, or create settings on macOS devices to use system extensions and kernel extensions. Also, allow users to override approved extensions, allow all extensions from a team identifier, or allow specific extensions or apps in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 03/25/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > macOS kernel extensions are being replaced with system extensions. For more information, see [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
-This article lists and describes the different kernel and system extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage extensions on your devices.
+This article describes the different kernel and system extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage extensions on your devices.
 
 To learn more about extensions in Intune, and any prerequisites, see [add macOS extensions](kernel-extensions-overview-macos.md).
 
@@ -51,6 +51,11 @@ This feature applies to:
 
 - macOS 10.13.2 and newer
 - User approved device enrollment is required 
+
+> [!IMPORTANT]
+> Kernel extensions don't work on macOS devices with the M1 chip, which are macOS devices running on Apple silicon. This behavior is a known issue, with no ETA.
+> 
+> For any macOS devices running 10.15 and newer, we recommend using [system extensions](#system-extensions) (in this article). If you use the kernel extensions settings, then consider excluding macOS devices with M1 chips from receiving the kernel extensions profile.
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
@@ -124,7 +129,7 @@ This feature applies to:
   >
   > and note the output:
   >
-  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender ATP Network Extension`
+  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender for Endpoint Network Extension`
   >
   > The first entry is the Team ID you need. `UBF8T346G9` in our example
 

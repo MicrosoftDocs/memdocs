@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 07/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: laarrizz
 
 ---
 
@@ -55,7 +55,7 @@ These settings are available in the following profiles:
   Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
   - **Not configured** (*default*) - Default Defender blocking level.
   - **High** - Aggressively block unknowns while optimizing client performance, which includes a greater chance of false positives.
-  - **High plus** - Aggressively block unknowns and apply additional protection measures that might impact client performance.
+  - **High plus** - Aggressively block unknowns and apply additional protection measures that might affect client performance.
   - **Zero tolerance** - Block all unknown executable files.
 
 - **Defender cloud extended timeout in seconds**  
@@ -65,12 +65,21 @@ These settings are available in the following profiles:
 
 ## Microsoft Defender Antivirus Exclusions
 
-These settings are available in the following profiles:
+The following setting is only available in the Microsoft Defender Antivirus profile:
+
+- **Defender local admin merge**  
+  CSP: [Configuration/DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)
+
+  This setting controls if exclusion list settings that are configured by a local administrator merge with managed settings from Intune policy. This setting applies to lists such as threats and exclusions.
+
+  - **Not configured** *(default)* - Unique items defined in preference settings that are configured by a local administrator merge into the resulting effective policy. If there are conflicts, management settings from Intune policy override local preference settings.
+  - **No** - Behavior is the same as *Not configured*.
+  - **Yes** - Only items defined by management are used in the resulting effective policy. Managed settings override preference settings that are configured by the local administrator.
+
+The following settings are available in the following profiles:
 
 - Microsoft Defender Antivirus
 - Microsoft Defender Antivirus Exclusions
-
-**Settings**:
 
 For each setting in this group, you can expand the setting, select **Add**, and then specify a value for the exclusion.
 
@@ -187,7 +196,7 @@ These settings are available in the following profiles:
 - **Number of days (0-90) to keep quarantined malware**  
   CSP: [DaysToRetainCleanedMalware](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
-  Specify a number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and doesn't automatically remove them.
+  Specify the number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and doesn't automatically remove them.
 
 - **Submit samples consent**  
 
@@ -257,18 +266,18 @@ Learn more
 - **Disable catch-up full scan**  
   CSP: [DisableCatchupFullScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupfullscan)
 
-  Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+  Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is run because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
-  - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up scans for full scans, however the user can turn them off.
+  - **Not configured** (*default*) - The setting is returned to client default, which is to disable catch-up scans for full scans. 
   - **No** - The setting is disabled. Device users can't change this setting.
   - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
 - **Disable catchup quick scan**  
   CSP: [DisableCatchupQuickScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupquickscan)
 
-  Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+  Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is run because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
-  - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up quick scans, however the user can turn them off.
+  - **Not configured** (*default*) - The setting is returned to client default, which is to disable catch-up scans for full scans.
   - **No** - The setting is disabled. Device users can't change this setting.
   - **Yes** - Catch-up scans for scheduled quick scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
@@ -289,13 +298,18 @@ Learn more
 - **Run daily quick scan at**  
   CSP: [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
-  Select the time of day that Defender quick scans run.
-  By default, this setting is **Not configured**
+  Select the time of day that Defender quick scans run. This setting applies only when a device runs a quick scan and doesn't interact with the following three settings:
+
+  - Scan type
+  - Day of week to run a scheduled scan
+  - Time of day to run a  scheduled scan
+
+  By default, *Run daily quick scan at* is set to **Not configured**.
 
 - **Scan type**  
   CSP: [ScanParameter](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
-
-  Select the type of scan that Defender runs.
+  
+  Select the type of scan that Defender runs. This setting interacts with the settings *Day of week to run a scheduled scan* and *Time of day to run a scheduled scan*.
 
   - **Not Configured** (*default*)
   - **Quick scan**
@@ -328,7 +342,7 @@ These settings are available in the following profiles:
 - **Define file shares for downloading definition updates**  
   CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
-  Manage locations, like a UNC file share, as a download source location to get definition updates. Once definition updates have successfully downloaded from one specified source, the remaining sources in the list won't be contacted.
+  Manage locations, like a UNC file share, as a download source location to get definition updates. After definition updates successfully download from a specified source, the remaining sources in the list won't be contacted.
 
   You can **Add** individual locations, or **Import** a list of locations as a .csv file.
 

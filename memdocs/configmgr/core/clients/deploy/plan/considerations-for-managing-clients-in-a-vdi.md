@@ -24,7 +24,7 @@ Configuration Manager supports installing the Configuration Manager client on th
 
 - **Pooled virtual machines**: The VM doesn't persist between sessions. When a user closes a session, the virtual environment discards all data and settings. Pooled virtual machines are useful when you can't use Remote Desktop Services. For example, if a required application can't run on the Windows Server that hosts the client sessions.
 
-- **Windows Virtual Desktop**: A desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
+- **Azure Virtual Desktop**: A desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
 
 ## Personal VMs
 
@@ -44,9 +44,9 @@ When you decommission a pooled virtual machine, any changes made by Configuratio
 
 Because the VM might only be operational for a short length of time, some Configuration Manager features may not return relevant data. For example, hardware inventory, software inventory, and software metering. Consider excluding pooled VM from inventory tasks.
 
-## Windows Virtual Desktop
+## Azure Virtual Desktop
 
-For more information, see [Supported operating systems for clients and devices](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+For more information, see [Supported operating systems for clients and devices](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
 ## Other considerations
 

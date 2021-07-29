@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows Holographic Business device settings - Microsoft Intune - Azure | Microsoft Docs
+title: Windows Holographic Business device settings - Microsoft Intune
 description: Read about and configure device restriction settings in Microsoft Intune for Windows Holographic for Business. Control unenrollment, geolocation, passwords, install apps from app store, cookies, and pop ups in Microsoft Edge, Microsoft Defender, search, cloud and storage, bluetooth connectivity, system time, and usage data.
 keywords:
 author: MandiOhlinger
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Windows Holographic for Business device settings to allow or restrict features using Intune
 
-This article lists and describes the different settings you can control on Windows Holographic for Business devices, such as Microsoft Hololens. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, control security, and more.
+This article describes the different settings you can control on Windows Holographic for Business devices, such as Microsoft Hololens. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, control security, and more.
 
 As an Intune administrator, you can create and assign these settings to your devices.
 

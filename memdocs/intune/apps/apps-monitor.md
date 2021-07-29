@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 07/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -43,6 +43,8 @@ Intune provides several ways to monitor the properties of apps that you manage a
 > Android Store apps that are deployed as **Available** do not report their installation status.
 >
 > For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune. 
+> 
+> From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps. 
 
 ## App overview pane
 
@@ -86,6 +88,8 @@ A device status list is shown when you select **Device install status** in the *
 | **Status details**   | The details of the status.                                                                                                                                                                                                                                     |
 | **Last check-in**    | The date of the device's last sync with Intune.                                                                                                                                                                                                                  |
 
+> [!NOTE]
+> Even if the App is targetted to device context and into a device group, the user name will always be reported. You may refer to the corresponded [API Call](/graph/api/intune-apps-mobileappinstallstatus-get?view=graph-rest-beta). Additionally, the system context may appear as "No user".
 
 ### User install status
 

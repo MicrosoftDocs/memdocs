@@ -1,8 +1,8 @@
 ---
 title: Tutorial - Proactive remediations
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user 
-ms.date: 11/19/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -49,7 +49,7 @@ Proactive remediations also requires the [licensing for Endpoint analytics](enro
 
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows Virtual Desktop Access E3 or E5
+- Windows 10 Virtual Desktop Access (VDA) per user
 
 ### Permissions
 
@@ -127,6 +127,10 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
        [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Select **Device status** to get status details for each device in your deployment.
        [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
+
+## <a name="bkmk_prs_export"></a> Export script output
+<!-- 10198545 -->
+To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when remediations run on devices with issues. Exporting also allows you to share the results with others for additional analysis.  
 
 ## Next steps
 

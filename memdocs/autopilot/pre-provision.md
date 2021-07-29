@@ -13,11 +13,12 @@ manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 06/03/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-# Windows Autopilot for pre-provisioned deployment
+# Windows Autopilot for pre-provisioned deployment (Public preview)
 
 **Applies to: Windows 10, version 1903** 
 
@@ -61,7 +62,7 @@ If these scenarios can't be completed, Windows Autopilot for pre-provisioned dep
 
 Before starting the pre-provisioning process in the provisioning service facility, you must configure an additional Autopilot profile setting by using your Intune account:
 
- ![allow pre-provisioning](images/allow-white-glove-oobe.png)
+:::image type="content" source="images/allow-white-glove-oobe.png" alt-text="Screenshot of the Out-of-box experience (OOBE) portal and the highlighted setting to allow pre-provisioning":::
 
 The Windows Autopilot for pre-provisioned deployment pre-provisioning process will apply all device-targeted policies from Intune. That includes certificates, security templates, settings, apps, and more – anything targeting the device. Additionally, any Win32 or LOB apps will be installed if they meet these two conditions:
 - configured to install in the device context.
@@ -122,6 +123,9 @@ If the pre-provisioning process completed successfully and the device was reseal
 - On the branded sign-on screen, enter the user’s Azure Active Directory credentials.
 - If using Hybrid Azure AD Join, the device will reboot; after the reboot, enter the user’s Active Directory credentials.
 - Additional policies and apps will be delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user will can access the desktop.
+
+>[!NOTE]
+>If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Related topics
 

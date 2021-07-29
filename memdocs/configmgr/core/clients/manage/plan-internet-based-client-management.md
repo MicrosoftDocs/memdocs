@@ -46,9 +46,6 @@ The following site system roles at primary sites support connections from client
 
 - Software update point
 
-> [!NOTE]
-> Support ended for the application catalog roles with version 1910. For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). For Configuration Manager versions 1906 and earlier that are still in support, the application catalog website point can accept connections from internet-based clients.
-
 ### About internet facing site systems
 
 There's no requirement to have a trust between a client's forest and that of the site system server. However, when the forest that contains an internet-facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the internet when you enable the **Client Policy** client setting **Enable user policy requests from internet clients**.
@@ -120,6 +117,8 @@ IBCM in Configuration Manager has the following dependencies:
 
 - Register public DNS host entries for the internet fully qualified domain names (FQDN) of site systems that support IBCM.
 
+- Enable the option to **Use PKI client certificate (client authentication capability) when available** on the **Communication Security** tab of the site properties. Starting with the [update rollup for version 2006](https://support.microsoft.com/help/4578605), this option is required.<!-- MEMDocs#1010 -->
+
 ### Client communication requirements
 
 Intervening firewalls or proxy servers must allow the client communication for internet-based site systems:
@@ -137,7 +136,6 @@ Allow the following verbs for the internet-based site system server roles:
 | Management point | - HEAD<br>- CCM_POST<br>- BITS_POST<br>- GET<br>- PROPFIND |
 | Distribution point | - HEAD<br>- GET<br>- PROPFIND |
 | Fallback status point | POST |
-| Application catalog website point | -POST<br>-GET |
 
 #### HTTP headers
 
@@ -166,7 +164,7 @@ The following features aren't supported when you manage clients on the internet 
 
 - Remote control
 
-- Software deployment to users. This feature relies upon the application catalog, which is deprecated.
+- Software deployment to users. This feature relied upon the application catalog, which is no longer supported.
 
 - Client roaming. Roaming enables clients to always find the closest distribution points to download content. Clients non-deterministically select one of the internet-based site systems, whatever the bandwidth or physical location.
 

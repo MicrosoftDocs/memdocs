@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 04/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: 4ef8f421-9610-4d34-a464-cc02eb1578a9
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,11 +41,11 @@ If you do not already have a tenant with your company, you can create a demo ten
 5. [Assign licenses](../fundamentals/licenses-assign.md) as appropriate for your testing.
 
 
-## Azure portal policy configuration
-[Create and assign app protection policies](../apps/app-protection-policies.md) in the [Azure portal's Intune blade](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). You can also create and assign your [app configuration policy](../apps/app-configuration-policies-overview.md) in the Intune blade.
+## App protection policy configuration
+[Create and assign app protection policies](../apps/app-protection-policies.md) in the Microsoft Endpoint Manager admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy](../apps/app-configuration-policies-overview.md) in Endpoint Manager.
 
 > [!NOTE]
-> If your app isn't listed in the Azure portal, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.
+> If your app isn't listed in the Microsoft Endpoint Mangager portal, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.
 
 ## Test Cases
 
@@ -58,11 +58,11 @@ You can require a PIN to access corporate resources. Also, you can enforce corpo
 1. Set **Require PIN for access** and **Require corporate credentials for access** to **Yes**. For more information, see [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Confirm the following conditions:
     - App launch should present a prompt for PIN input, or the production user that was used during enrollment with the Company Portal.
-    - Failure to present a valid sign-in prompt might be due to an incorrectly configured Android manifest, specifically the values for Azure Active Directory Authentication Library (ADAL) integration (SkipBroker, ClientID, and Authority).
+    - Failure to present a valid sign-in prompt might be due to an incorrectly configured Android manifest, specifically the values for MSAL integration (SkipBroker, ClientID, and Authority).
     - Failure to present any prompt might be due to an incorrectly integrated `MAMActivity` value. For more information about `MAMActivity`, see [Microsoft Intune App SDK for Android developer guide](app-sdk-android.md).
 
 > [!NOTE] 
-> If the preceding test isn't working, the following tests will likely also fail. Review [SDK](app-sdk-android.md#sdk-integration) and [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) integration.
+> If the preceding test isn't working, the following tests will likely also fail. Review [SDK](app-sdk-android.md#sdk-integration) and [MSAL configuration](app-sdk-android.md#configure-microsoft-authentication-library-msal) integration.
 
 ### Restrict transferring and receiving data with other apps
 You can control data transfer between corporate managed applications, as follows:
@@ -123,7 +123,7 @@ You can control app backup, as follows:
 ### Wipe
 You can remotely wipe managed apps from containing corporate email and documents. Personal data is decrypted when it's no longer administered. Here's how:
 
-1. From the Azure portal, [issue a wipe](../apps/apps-selective-wipe.md).
+1. From the Endpoint Manager admin center, [issue a wipe](../apps/apps-selective-wipe.md).
 2. If your app doesn't register for any wipe handlers, confirm the following conditions:
     - A full wipe of the app occurs.
 3. If your app has registered for `WIPE_USER_DATA` or `WIPE_USER_AUXILARY_DATA`, confirm the following conditions:

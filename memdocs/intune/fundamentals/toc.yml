@@ -1,3 +1,4 @@
+items:
 - name: Microsoft Intune fundamentals
   href: index.yml
 - name: Overview
@@ -18,11 +19,13 @@
       href: in-development.md   
     - name: Important notices
       href: whats-new.md#notices
+    - name: Public preview
+      href: public-preview.md
 - name: Quickstarts
   items:
   - name: Try Intune for free
     href: free-trial-sign-up.md    
-    displayName: tenant; trial; get started, start; help
+    displayName: tenant; trial; get started, start; help; MDM
   - name: Create a user
     href: quickstart-create-user.md
   - name: Create a group
@@ -33,8 +36,6 @@
   items:
   - name: Walkthrough Intune in Microsoft Endpoint Manager
     href: tutorial-walkthrough-endpoint-manager.md 
-  - name: Walkthrough Intune in the Azure portal
-    href: tutorial-walkthrough-intune-portal.md     
 - name: Concepts
   items:
   - name: What is Intune for Education?
@@ -57,10 +58,13 @@
       href: guided-scenarios-cloud-managed-pc.md   
     - name: Secure Microsoft Office mobile apps
       href: guided-scenarios-office-mobile.md              
+    - name: Windows 10 in cloud configuration
+      href: cloud-configuration.md
   - name: Common scenarios
     href: common-scenarios.md
   - name: Technology decisions for BYOD with EMS
     href: byod-technology-decisions.md    
+    displayName: MDM
   - name: Manage operating system versions
     href: manage-os-versions.md
   - name: Manage Windows Holographic
@@ -79,6 +83,8 @@
         items:
         - name: Setup deployment guide
           href: deployment-guide-intune-setup.md
+        - name: Migrate from Basic Mobility and Security
+          href: migrate-to-intune.md
         - name: Use conditional access
           href: migration-guide-drive-adoption.md
       - name: Enroll devices
@@ -89,12 +95,19 @@
           href: deployment-guide-enrollment-mamwe.md
         - name: Android, Android Enterprise
           href: deployment-guide-enrollment-android.md
+          displayName: COBO
         - name: iOS, iPadOS
           href: deployment-guide-enrollment-ios-ipados.md
         - name: macOS
           href: deployment-guide-enrollment-macos.md
         - name: Windows
           href: deployment-guide-enrollment-windows.md
+      - name: Device platform deployment
+        items:
+        - name: iOS/iPadOS  
+          href: deployment-guide-platform-ios-ipados.md    
+        - name: Android, Android Enterprise 
+          href: deployment-guide-platform-android.md 
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection
@@ -135,8 +148,10 @@
         href: network-bandwidth-use.md
       - name: Using Windows 10 VMs with Intune
         href: windows-10-virtual-machines.md
-      - name: Using Windows Virtual Desktop with Intune
-        href: windows-virtual-desktop.md
+      - name: Using Azure Virtual Desktop with Intune
+        href: azure-virtual-desktop.md
+      - name: Using Azure Virtual Desktop multi-session
+        href: azure-virtual-desktop-multi-session.md
       - name: Intune endpoints
         href: intune-endpoints.md
       - name: Intune US government endpoints
@@ -182,7 +197,17 @@
   - name: Protect devices and data
     href: ../protect/index.yml   
   - name: Manage and protect apps
-    href: ../apps/index.yml  
+    href: ../apps/index.yml
+  - name: Use filters when assigning policies
+    items:
+    - name: Create a filter
+      href: filters.md
+    - name: Filter properties
+      href: filters-device-properties.md
+    - name: Supported workloads
+      href: filters-supported-workloads.md
+    - name: Reporting and troubleshooting
+      href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
   - name: Developer guidance
@@ -203,6 +228,8 @@
       href: reports.md
     - name: Export reports using Graph
       href: reports-export-graph-apis.md
+    - name: Intune reports and properties using Graph
+      href: reports-export-graph-available-reports.md
     - name: Audit logs for Intune activities
       href: monitor-audit-logs.md
     - name: Review logs with Azure Monitor
@@ -213,6 +240,16 @@
     items: 
     - name: Troubleshoot company resource access problems
       href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
+  - name: Policy map between Basic Mobility and Security and Intune
+    items: 
+    - name: Policy mapping between Basic Mobility and Security and Intune
+      href: policy-map-between-basic-mobility-security-intune.md
+    - name: Access requirements policy mapping
+      href: policy-map-access-requirements.md
+    - name: Configurations policy mapping
+      href: policy-map-configurations.md
+    - name: Miscellaneous policy mapping
+      href: policy-map-miscellaneous.md
 - name: Resources
   items:
   - name: Archive
@@ -236,8 +273,8 @@
     - name: Legacy Intune PC software client
       href: intune-legacy-pc-client.md
     - name: Troubleshoot software updates
-      href: troubleshoot-software-updates-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
     - name: Endpoint protection common errors
-      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
   - name: Intune end-user documentation
     href: ../user-help/use-managed-devices-to-get-work-done.md

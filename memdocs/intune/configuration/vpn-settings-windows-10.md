@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Windows 10 VPN settings in Microsoft Intune - Azure | Microsoft Docs
+title: Windows 10 VPN settings in Microsoft Intune
 description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, conditional access, and DNS and proxy settings for Windows 10 and Windows Holographic for Business devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 06/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,9 +29,12 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 and Windows Holographic device settings to add VPN connections using Intune
 
-You can add and configure VPN connections for devices using Microsoft Intune. This article lists and describes the settings and features you can configure when creating virtual private networks (VPNs). These VPN settings are used in device configuration profiles, and then pushed or deployed to devices.
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-As part of your mobile device management (MDM) solution, use these settings to allow or disable features, including using a VPN vendor, enabling always on, using DNS, adding a proxy, and more.
+You can add and configure VPN connections for devices using Microsoft Intune. This article describes some of the settings and features you can configure when creating virtual private networks (VPNs). These VPN settings are used in device configuration profiles, and then pushed or deployed to devices.
+
+As part of your mobile device management (MDM) solution, use these settings to allow or disable features, including using a specific VPN vendor, enabling always on, using DNS, adding a proxy, and more.
 
 These settings apply to devices running:
 
@@ -40,11 +43,9 @@ These settings apply to devices running:
 
 ## Before you begin
 
-Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md).
+- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
-The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
-
-These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+- These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 ## Base VPN
 
@@ -60,9 +61,10 @@ These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 
+  - **Cisco AnyConnect**
   - **Pulse Secure**
   - **F5 Access**
-  - **SonicWALL Mobile Connect**
+  - **SonicWall Mobile Connect**
   - **Check Point Capsule VPN**
   - **Citrix**
   - **Palo Alto Networks GlobalProtect**
@@ -173,8 +175,24 @@ For more information about creating custom EAP XML, see [EAP configuration](/win
 
 - **Associate WIP or apps with this VPN**: Enable this setting if you only want some apps to use the VPN connection. Your options:
 
-  - **Associate a WIP with this connection**: Enter a **WIP domain for this connection**
-  - **Associate apps with this connection**: You can **Restrict VPN connection to these apps**, and then add **Associated Apps**. The apps you enter automatically use the VPN connection. The type of app determines the app identifier. For a universal app, enter the package family name. For a desktop app, enter the file path of the app.
+  - **Not configured** (default): Intune doesn't change or update this setting.
+  - **Associate a WIP with this connection**: All apps in the Windows Identity Protection domain automatically use the VPN connection.
+    - **WIP domain for this connection**: Enter a Windows Identity Protection (WIP) domain. For example, enter `contoso.com`.
+  - **Associate apps with this connection**: The apps you enter automatically use the VPN connection.
+    - **Restrict VPN connection to these apps**: **Disable** (default) allows all apps to use the VPN connection. **Enable** restricts the VPN connection to the apps you enter (per-app VPN). Traffic rules for the apps you add are automatically added to the **Network traffic rules for this VPN connection** setting.
+
+      When you select **Enable**, the app identifier list becomes read-only. Before you enable this setting, add your associated apps.
+
+    - **Associated Apps**: Select **Import** to import a `.csv` file with your list of apps. Your `.csv` looks similar to the following file:
+
+      ```csv
+      %windir%\system32\notepad.exe,desktop
+      Microsoft.Office.OneNote_8wekyb3d8bbwe,universal
+      ```
+
+      The type of app determines the app identifier. For a universal app, enter the package family name, such as `Microsoft.Office.OneNote_8wekyb3d8bbwe`. For a desktop app, enter the file path of the app, such as `%windir%\system32\notepad.exe`.
+
+      To get the package family name, you can use the `Get-AppxPackage` Windows PowerShell cmdlet. For example, to get the OneNote package family name, open Windows PowerShell, and enter `Get-AppxPackage *OneNote`. For more information, see [Find a PFN for an app that's installed on a Windows 10 computer](../../configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn.md#find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer) and [Get-AppxPackage cmdlet](/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps).
 
   > [!IMPORTANT]
   > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
@@ -205,7 +223,7 @@ For more information about creating custom EAP XML, see [EAP configuration](/win
 
 - **Name Resolution Policy table (NRPT) rules**: Name Resolution Policy table (NRPT) rules define how DNS resolves names when connected to the VPN. After the VPN connection is established, you choose which DNS servers the VPN connection uses.
 
-  You can add rules to the table that include the domain, DNS server, proxy, and other details to resolve the domain you enter. The VPN connection uses these rules when users connect to the domains you enter.
+  You can add rules that include the domain, DNS server, proxy, and other details. These rules resolve the domain you enter. The VPN connection uses these rules when users connect to the domains you enter.
 
   Select **Add** to add a new rule. For each server, enter:
 

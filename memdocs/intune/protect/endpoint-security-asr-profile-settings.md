@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 04/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 # Attack surface reduction policy settings for endpoint security in Intune
@@ -35,7 +35,7 @@ Supported platforms and profiles:
 
 - **Windows 10 and later**:
   - Profile: **App and browser isolation**
-  - Profile: **Web protection**
+  - Profile: **Web protection (Microsoft Edge Legacy)**
   - Profile: **Application control**
   - Profile: **Attack surface reduction rules**
   - Profile: **Device control**
@@ -45,13 +45,15 @@ Supported platforms and profiles:
 
 ### App and browser isolation
 
-- **Turn on Application Guard for Edge (Options)**  
+- **Turn on Application Guard**  
   CSP: [AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
 
-  - **Not configured** (*default*)
+  - **Not configured** (*default*) - Microsoft Defender Application Guard is not configured for Microsoft Edge or isolated Windows environments.
   - **Enabled for Edge** - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
+  - **Enabled for isolated Windows environments** - Application Guard is turned on for any applications enabled for App Guard within Windows.
+  - **Enabled for Edge AND isolated Windows environments** - Application Guard is configured for both scenarios.
 
-  When set to *Enabled for Edge*, the following settings are available:
+  When set to *Enabled for Edge* or *Enabled for Edge AND isolated Windows environments*, the following settings are available, which apply to Edge:
   
   - **Clipboard behavior**  
     CSP: [ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
@@ -93,6 +95,13 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Allow users to download files from the virtualized browser onto the host operating system​.
 
+  - **Application Guard allow camera and microphone access**  
+    CSP: [AllowCameraMicrophoneRedirection](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowcameramicrophoneredirection)
+
+    - **Not configured** (*default*) - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device.
+    - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user’s device.
+    - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device. This is the same behavior as *Not configured*.
+
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
@@ -112,6 +121,15 @@ Supported platforms and profiles:
 
   - **Not configured** (*default*)
   - **Yes** - - Allow printing print to XPS.
+
+- **Application Guard allow use of Root Certificate Authorities from the user's device**  
+  CSP: [CertificateThumbprints](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#certificatethumbprints)
+
+  Configure certificate thumbprints to automatically transfer the matching root certificate to the  Microsoft Defender Application Guard container.
+
+  To add thumbprints one at a time, select **Add**. You can use **Import** to specify a .CSV file that contains multiple thumbprint entries that are all added to the profile at the same time. When you use a .CSV file, each thumbprint must be separated by a comma. For example: `b4e72779a8a362c860c36a6461f31e3aa7e58c14,1b1d49f06d2a697a544a1059bd59a7b058cda924`
+
+  All entries that are listed in the profile are active. You do not need to select a checkbox for a thumbprint entry to make it active. Instead, use the checkboxes to help you manage the entries that have been added to the profile. For example, you can select the checkbox of one or more certificate thumbprint entries and then **Delete** those entries from the profile with a single action.
 
 - **Windows network isolation policy**  
   
@@ -146,9 +164,9 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
-## Web protection profile
+## Web protection (Microsoft Edge Legacy) profile
 
-### Web Protection
+### Web Protection (Microsoft Edge Legacy)
 
 - **Enable network protection**  
   CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
@@ -206,8 +224,22 @@ Supported platforms and profiles:
 
 ### Attack Surface Reduction Rules
 
+- **Block persistence through WMI event subscription**  
+  [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
+  This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+
+  This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
+ 
+  - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
+  - **Block** – Persistence through WMI is blocked.
+  - **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
+  - **Disable** - Turn this rule off. Persistence is not blocked
+
+  To learn more about this setting, see [Block persistence through WMI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx#block-persistence-through-wmi-event-subscription).
+
+
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
-  <!-- Defender ATP security baseline, Device configuration Endpoint protection profile -->
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2

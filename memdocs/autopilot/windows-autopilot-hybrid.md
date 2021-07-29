@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/19/2020
+ms.date: 06/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 
 - Windows 10
 
-You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.
+You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.  For more information about hybrid Azure AD join, see [Understanding hybrid Azure AD join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Successfully configure your [hybrid Azure AD-joined devices](/azure/active-direc
 
 The device to be enrolled must follow these requirements:
 - Use Windows 10 v1809 or greater.
-- Have access to the internet [following Windows Autopilot network requirements](/mem/autopilot/networking-requirements).
+- Have access to the internet [following Windows Autopilot network requirements](./networking-requirements.md).
 - Have access to an Active Directory domain controller. The device must be connected to the organization's network so that it can:
   - Resolve the DNS records for the AD domain and the AD domain controller.
   - Communicate with the domain controller to authenticate the user.
@@ -129,6 +129,9 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
 
+> [!NOTE]
+> Inactive Intune connectors will still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
+
 ### Configure web proxy settings
 
 If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](../intune/enrollment/autopilot-hybrid-connector-proxy.md).
@@ -184,17 +187,36 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
 
+## Supported BYO VPNs 
+
+Here is a list of VPN clients that are known to be tested and validated:
+
+**Supported clients:**
+- In-box Windows VPN client
+- Cisco AnyConnect (Win32 client)
+- Pulse Secure (Win32 client)
+- GlobalProtect (Win32 client)
+- Checkpoint (Win32 client)
+- Citrix NetScaler (Win32 client)
+- SonicWall (Win32 client)
+
+**Not supported clients:**
+- UWP-based VPN plug-ins
+- Anything that requires a user cert
+- DirectAccess
+ 
+
 
 ## Create and assign an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 2. On the **Basics** page, type a **Name** and optional **Description**.
-3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](enrollment-autopilot.md#delete-autopilot-devices).
+3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
-7. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support).
+7. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support-preview).
 8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 9. Select **Next**.
 10. On the **Scope tags** page, select [scope tags](../intune/fundamentals/scope-tags.md) for this profile.
@@ -219,7 +241,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile.
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Domain Join (Preview)**.
+    - **Profile type**: Select **Domain Join**.
 3. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**.
 4. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
     - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.

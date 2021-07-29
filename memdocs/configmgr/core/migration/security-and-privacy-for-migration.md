@@ -42,7 +42,7 @@ When you migrate data from a source site to a destination site, you lose any aud
 ## Privacy Information for Migration  
  Migration discovers information from the site databases that you identify in a source infrastructure and stores this data to the database in the destination hierarchy. The information that Configuration Manager can discover from a source site or hierarchy depends upon the features that were enabled in the source environment, as well as the management operations that were performed in that source environment.  
 
-For more information about security and privacy information, see [Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md). 
+For more information about security and privacy information, see [Security and privacy for Configuration Manager](../../security/index.yml). 
 
 You can migrate some or all of the supported data from a source site to a destination hierarchy.  
 

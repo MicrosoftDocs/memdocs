@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Add VPN settings to devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add VPN settings to devices in Microsoft Intune
 description: On Android device administrator, Android Enterprise, iOS, iPadOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2020
+ms.date: 06/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,19 +30,38 @@ ms.collection: M365-identity-device-management
 
 Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization. Use these settings so users can easily and securely connect to your organizational network.
 
-For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
+This feature applies to:
 
-> [!NOTE]
->
-> - User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
-> - You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
->
->   - Android 4 and later
->   - Enrolled devices that run Windows 8.1 and later
->   - Enrolled devices that run Windows 10 desktop
->   - Windows Holographic for Business
+- Android device administrator
+- Android Enterprise personally-owned devices with a work profile
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
+- Windows 8.1 and newer
+
+For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. You assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
+
+This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
+
+## Before you begin
+
+- VPN profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+
+- If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+
+- User enrollment for iOS/iPadOS and macOS only support [per-app VPN](vpn-setting-configure-per-app.md).
+
+- You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
+
+  - Android 4 and later
+  - Enrolled devices that run Windows 8.1 and later
+  - Enrolled devices that run Windows 10 desktop
+  - Windows Holographic for Business
 
 ## VPN connection types
+
+> [!IMPORTANT]
+> Before you can use VPN profiles assigned to a device, you must install the VPN app for the profile. To help you assign the app using Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).  
 
 You can create VPN profiles using the following connection types:
 
@@ -64,6 +83,7 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
+  - Windows 10
 
 - Cisco (IPSec)
   - iOS/iPadOS
@@ -97,10 +117,19 @@ You can create VPN profiles using the following connection types:
 - L2TP
   - Windows 10
 
-- Microsoft Tunnel
-  - iOS/iPadOS
+- Microsoft Tunnel (standalone client)
+  - iOS/iPadOS  
+
+- Microsoft Tunnel  
+  - Android Enterprise personally owned devices with a work profile
+  - Android Enterprise fully managed and corporate-owned work profile
+
+  > [!Important]
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later after August 14, 2021.
 
 - NetMotion Mobility
+  - Android Enterprise personally owned devices with a work profile
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
 
@@ -135,9 +164,6 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
-> [!IMPORTANT]
-> Before you can use VPN profiles assigned to a device, you must install the applicable VPN app for the profile. To help you assign the app using Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).  
-
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -152,7 +178,7 @@ You can create VPN profiles using the following connection types:
       - **macOS**
       - **Windows 10 and later**
       - **Windows 8.1 and later**
-    - **Profile**: Select **VPN**.
+    - **Profile**: Select **VPN**. Or, select **Templates** > **VPN**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -183,7 +209,7 @@ You can create VPN profiles using the following connection types:
 
 ## Secure your VPN profiles
 
-VPN profiles can use a number of different connection types and protocols from different manufacturers. These connections are typically secured through the following methods.
+VPN profiles can use many different connection types and protocols from different manufacturers. These connections are typically secured through the following methods.
 
 ### Certificates
 
