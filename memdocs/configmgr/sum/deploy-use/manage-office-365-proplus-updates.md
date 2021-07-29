@@ -187,7 +187,7 @@ Currently, the title of an update package for Office 365 ProPlus begins with "Of
 
 &nbsp; &nbsp; Office 365 Client Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.20648)
 
-For update packages released on and after June 9, the title will begin with "Microsoft 365 Apps Update" as seen in the following example:
+For update packages released on and after June 9, 2020, the title will begin with "Microsoft 365 Apps Update" as seen in the following example:
 
 &nbsp; &nbsp; Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)
 </br>

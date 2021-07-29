@@ -68,7 +68,7 @@ Devices enrolled in Endpoint analytics need a valid Microsoft Endpoint Manager l
 Proactive remediations also require one of the following licenses for the managed devices:
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows Virtual Desktop Access E3 or E5
+- Windows 10 Virtual Desktop Access (VDA) per user
 
 ## Permissions
 

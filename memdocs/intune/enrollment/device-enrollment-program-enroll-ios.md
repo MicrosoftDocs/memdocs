@@ -182,6 +182,9 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 4. Select **Next**.
 
+> [!IMPORTANT]
+> Any configuration changes on existing Enrollment profile settings, will not take effect on assigned devices until they are Factory Reset and activated again (this is when the Remote Management Payload is received on ADE devices) and this is by design by Apple and not Microsoft. The only configuration change that does not require a Factory Reset is "Device Name Template".
+
 5. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
     - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
@@ -219,7 +222,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or during Company Portal sign in, then MFA is required. However, MFA is optional based on the AAD settings in the targeted Conditional Access policy.
 
-        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials, the device:
+        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials and taps "Begin" at the "Setup <Company> access" screen, the device:
 
         - Won’t be fully registered with Azure AD.
         - Won’t show up in the user’s device list in the Azure AD portal.
@@ -273,7 +276,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     > [!NOTE]
     > A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models,  and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.
 
-    If you configured your devices as Apple Shared iPad for Business devices, you need to set **Maximum cached users**. Set this value to the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users might not have enough disk space.  
+    If you configured your devices as Apple Shared iPad for Business devices, you need to set **Maximum cached users**. This setting is supported by iPadOS version 14.3.x and earlier. Set this value to the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users might not have enough disk space.  
 
     > [!NOTE]
     > If you want to set up Apple Shared iPad for Business, configure these settings:
@@ -342,10 +345,10 @@ Now that you've installed your token, you can create an enrollment profile for A
 19. To save the profile, select **Create**.
 
 > [!NOTE]
-> If you need to re-enroll your Automated Device Enrollment device, you need to first [add the serial number of the device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting a problem, like if the device isn't receiving policy. To re-enroll:
-> 1. Retire the device from the Intune console.
-> 2. [Add the device's serial number as a corporate device identifier](corporate-identifiers-add.md).
-> 3. Re-enroll the device by downloading Company Portal and completing device enrollment.
+> If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Intune admin console. To re-enroll:
+> 1. Wipe the device from the Intune console.
+>     - Alternatively, retire the device from the Intune console and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
+> 2. Activate the device again and run through Setup Assistant to receive the *Remote Management Profile*.
 
 ### Dynamic groups in Azure Active Directory
 
@@ -390,6 +393,9 @@ You can pick a default profile to be applied to all devices that enroll with a s
 1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**. Select a token in the list.
 2. Select **Set Default Profile**, select a profile in the list, and then select **Save**. The profile will be applied to all devices that enroll with the token.
 
+> [!NOTE]
+> Ensure that **Device Type Restrictions** under **Enrollment Restrictions** does not have the default **All Users** policy set to block the iOS/iPadOS platform. This setting will cause automated enrollment to fail and your device will show as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which will permit corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled via a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.
+  
 ## Distribute devices
 
 You enabled management and syncing between Apple and Intune and assigned a profile so your ADE devices can be enrolled. You're now ready to distribute devices to users. Some things to know:
@@ -401,13 +407,13 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
   For more information on Intune licensing, see [Microsoft Intune licensing](../fundamentals/licenses.md) and the [Intune planning guide](../fundamentals/intune-planning-guide.md).
 
-- A device that's been activated needs to be wiped before it can enroll in Intune. After it's been wiped, you can apply the enrollment profile.
+- A device that's been activated needs to be wiped before it can enroll properly using ADE in Intune. After it's been wiped but before activating it again, you can apply the enrollment profile. See [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516)
 
 - If you're enrolling with ADE and user affinity, the following error can happen during setup:
 
   `The SCEP server returned an invalid response.`
 
-   To resolve this error, you need to factory reset the device. This error occurs because of a 15-minute time limit on SCEP certificates, which is enforced for security.
+   You can resolve this error by trying to download the management again within 15 minutes. If it's been more than 15 minutes, to resolve this error you'll need to factory reset the device. This error occurs because of a 15-minute time limit on SCEP certificates, which is enforced for security.
   
 For information on the end-user experience, see [Enroll your iOS/iPadOS device in Intune by using ADE](../user-help/enroll-your-device-dep-ios.md).
 

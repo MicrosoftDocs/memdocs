@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Retire or wipe devices using Microsoft Intune - Azure | Microsoft Docs
+title: Retire or wipe devices using Microsoft Intune
 description: Retire or wipe a device on an Android, Android work profile, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Azure Active Directory.
 keywords:
 author: ErikjeMS
@@ -168,7 +168,7 @@ Device owners can manually un-enroll their devices as explained in the following
 
 ## Delete devices from the Intune portal
 
-If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed.
+If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the console.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.

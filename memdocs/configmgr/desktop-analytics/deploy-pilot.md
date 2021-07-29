@@ -2,11 +2,10 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 04/14/2021
+ms.date: 07/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -45,9 +44,6 @@ You can also make system-wide decisions about which Configuration Manager collec
 
 If you connect multiple Configuration Manager hierarchies to the same Desktop Analytics instance, a display name for the hierarchy prefixes the collection name in the global pilot configuration. This name is the **Display Name** property on the Desktop Analytics connection in the Configuration Manager console.<!-- 4814075 -->
 
-> [!NOTE]
-> Support for multiple hierarchies requires Configuration Manager version 1910 or later.
-
 - Don't include collections that contain more than 20% of your total enrolled devices to Desktop Analytics. If you include a large collection, the portal displays a warning. You can include multiple small collections without warning, but still be cautious about the number of devices in your pilot. <!-- 6079184 -->
 
 - To get accurate pilot recommendations for deployment plans in a specific Configuration Manager hierarchy, only include collections from that hierarchy.
@@ -76,7 +72,7 @@ If you connect multiple Configuration Manager hierarchies to the same Desktop An
 
 ## Address issues
 
-Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** <!-- or **Ready (with remediation)** 9733137 -->before the pilot deployment starts.
+Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** before the pilot deployment starts. Starting in Configuration Manager version 2103 with update rollup 10036164, items can also be marked **Ready (with remediation)**.<!-- CMADO-9906461 -->
 
 1. Go to the [Desktop Analytics portal](https://aka.ms/desktopanalytics), and in the Manage group select **Deployment plans**.  
 
@@ -84,9 +80,13 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 3. In the Prepare group of the deployment plan menu, select **Prepare pilot**.  
 
-4. On the **Apps** tab, review the apps that need your input.  
+4. On the **Apps** tab, review the apps that need your input.
 
-5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose   an option other than **Ready**<!--  **Not reviewed** or **Unable** 9733137-->, then Desktop Analytics doesn't include devices with this app in the pilot deployment. If you choose **Ready (with remediation)**, use the **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer's recommended version*.
+5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision.
+
+    If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment.
+
+    If you choose **Ready (with remediation)**, use the **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer's recommended version*.
 
 6. Repeat this review for other assets.  
 
@@ -111,7 +111,7 @@ To make sure devices are healthy after each deployment phase, use the following 
 
 3. Select **Create Phased Deployment** in the ribbon. This action launches the Create Phased Deployment wizard.
 
-    > [!Tip]  
+    > [!TIP]
     > If you want to create a classic task sequence deployment for just the pilot collection, select **Deploy** in the **Pilot status** tile. This action launches the Deploy Software Wizard. For more information, see [Deploy a task sequence](../osd/deploy-use/deploy-a-task-sequence.md).  
 
 4. Enter a name for the deployment, and select the task sequence to use. Use the option to **Automatically create a default two phase deployment**, and then configure the following collections:  
@@ -120,14 +120,14 @@ To make sure devices are healthy after each deployment phase, use the following 
 
     - **Second Collection**: Find and select the **Production** collection for this deployment plan. The standard naming convention for this collection is `<deployment plan name> (Production)`.
 
-    > [!Note]  
+    > [!NOTE]
     > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](troubleshooting.md#data-latency).<!-- 4984639 -->
     >
     > These collections are reserved for Desktop Analytics deployment plan devices. Manual changes to these collections aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 5. Complete the wizard to configure the phased deployment. For more information, see [Create phased deployments](../osd/deploy-use/create-phased-deployment-for-task-sequence.md).
 
-    > [!Note]  
+    > [!NOTE]
     > Use the default setting to **Automatically begin this phase after a deferral period (in days)**. The following criteria must be met for the second phase to start:
     >
     > 1. The first phase reaches the **deployment success percentage** criteria for success. You configure this setting on the phased deployment.
@@ -165,11 +165,14 @@ You can also use Configuration Manager deployment monitoring the same as any oth
 
 Use the [Desktop Analytics portal](https://aka.ms/desktopanalytics) to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**.
 
-![Screenshot of deployment plan overview in Desktop Analytics](media/deployment-plan-overview.png)
+:::image type="content" source="media/deployment-plan-overview.png" alt-text="Screenshot of deployment plan overview in Desktop Analytics.":::
 
 Select the **Pilot** tile. It summarizes the current state of the pilot deployment. This tile also displays data for the number of devices not started, in progress, completed, or returning issues.
 
-Any devices reporting errors or other issues are also listed in the Pilot detail area to the right. To get details of the reported issue, select **Review**. This action changes the view to the **Deployment status** page
+Any devices reporting errors or other issues are also listed in the Pilot detail area to the right. To get details of the reported issue, select **Review**. This action changes the view to the **Deployment status** page.
+
+> [!NOTE]
+> Starting in July 2021, the **Deployment status** page only reports the last 28 days of deployment data. For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->
 
 The **Deployment status** page lists devices in the following categories:
 

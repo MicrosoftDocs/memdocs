@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: What's new in previous months in the Microsoft Intune - Azure | Microsoft Docs
+title: What's new in previous months in the Microsoft Intune
 titleSuffix: 
 description: Review older announcements from the Intune what's new page
 keywords:
@@ -193,7 +193,7 @@ You can control mobile device access to corporate resources using Conditional Ac
 
 A new **Assignment failures** operational report is available in public preview to help troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You have the ability to filter, sort, and search across all of the records throughout the report. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find this report by selecting **Devices** > **Monitor** > **Assignment failures (preview)**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
-#### Reporting updates for Windows Virtual Desktop VMs<!--5736314   -->
+#### Reporting updates for Azure Virtual Desktop VMs<!--5736314   -->
 
 The following settings are marked as **Not applicable** in the Policy reports:
 - BitLocker settings

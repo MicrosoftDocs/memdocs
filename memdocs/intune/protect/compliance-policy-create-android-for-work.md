@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android Enterprise compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android Enterprise compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Android Enterprise devices in Microsoft Intune. Set password rules, choose a minimum or maximum operating system version, restrict specific apps, prevent reusing password, and more.
 keywords:
 author: brenduns

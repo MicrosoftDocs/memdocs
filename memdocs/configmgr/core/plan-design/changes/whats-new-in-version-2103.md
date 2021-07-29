@@ -2,7 +2,7 @@
 title: What's new in version 2103
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2103 of Configuration Manager current branch.
-ms.date: 05/20/2021
+ms.date: 06/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -390,6 +390,8 @@ For more information, see [Support Center OneTrace](../../support/support-center
 
 ## PowerShell
 
+Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
+
 ### Known issue with updateable PowerShell help
 
 <!-- 8617455 -->
@@ -441,9 +443,7 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2103](../../../hotfix/2103/9210721.md).
 
-<!--
-The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
--->
+The following update rollup (10036164) is available in the console starting on June 11, 2021: [Update rollup for Configuration Manager current branch, version 2103](../../../hotfix/2103/10036164.md).
 
 ### Hotfixes
 

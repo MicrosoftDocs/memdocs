@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Add VPN settings to devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add VPN settings to devices in Microsoft Intune
 description: On Android device administrator, Android Enterprise, iOS, iPadOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 06/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,18 +43,20 @@ For example, you want to configure all iOS/iPadOS devices with the required sett
 
 This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
 
-> [!TIP]
-> *VPN* profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/windows-virtual-desktop-multi-session.md).
+## Before you begin
 
-> [!NOTE]
->
-> - User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
-> - You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
->
->   - Android 4 and later
->   - Enrolled devices that run Windows 8.1 and later
->   - Enrolled devices that run Windows 10 desktop
->   - Windows Holographic for Business
+- VPN profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+
+- If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+
+- User enrollment for iOS/iPadOS and macOS only support [per-app VPN](vpn-setting-configure-per-app.md).
+
+- You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
+
+  - Android 4 and later
+  - Enrolled devices that run Windows 8.1 and later
+  - Enrolled devices that run Windows 10 desktop
+  - Windows Holographic for Business
 
 ## VPN connection types
 
@@ -116,12 +118,14 @@ You can create VPN profiles using the following connection types:
   - Windows 10
 
 - Microsoft Tunnel (standalone client)
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS  
 
+- Microsoft Tunnel  
+  - Android Enterprise personally owned devices with a work profile
+  - Android Enterprise fully managed and corporate-owned work profile
+
   > [!Important]
-  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later after August 14, 2021.
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile

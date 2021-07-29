@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create device profiles in Microsoft Intune - Azure | Microsoft Docs
+title: Create device profiles in Microsoft Intune
 description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, add a scope tag.
 keywords:
 author: MandiOhlinger
@@ -32,15 +32,15 @@ ms.collection: M365-identity-device-management
 
 Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
 
-- **Administrative templates**: On Windows 10 and newer devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune and Endpoint Manager.
+- **Administrative templates**: On Windows 10 and later devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune and Endpoint Manager.
 
   For more information, see [Administrative Templates](administrative-templates-windows.md)
 
-- **Baselines**: On Windows 10 and newer devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
+- **Baselines**: On Windows 10 and later devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
   For more information, see [Security baselines](../protect/security-baselines.md).
 
-- **Settings catalog**: On Windows 10 and newer devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and newer settings. 
+- **Settings catalog**: On Windows 10 and later devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings. 
 
   For more information, see [Settings catalog](settings-catalog.md).
 

@@ -1,3 +1,4 @@
+items:
 - name: Microsoft Intune fundamentals
   href: index.yml
 - name: Overview
@@ -147,10 +148,10 @@
         href: network-bandwidth-use.md
       - name: Using Windows 10 VMs with Intune
         href: windows-10-virtual-machines.md
-      - name: Using Windows Virtual Desktop with Intune
-        href: windows-virtual-desktop.md
-      - name: Using Windows Virtual Desktop multi-session
-        href: windows-virtual-desktop-multi-session.md
+      - name: Using Azure Virtual Desktop with Intune
+        href: azure-virtual-desktop.md
+      - name: Using Azure Virtual Desktop multi-session
+        href: azure-virtual-desktop-multi-session.md
       - name: Intune endpoints
         href: intune-endpoints.md
       - name: Intune US government endpoints

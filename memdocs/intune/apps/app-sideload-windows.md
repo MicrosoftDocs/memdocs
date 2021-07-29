@@ -51,7 +51,7 @@ The first step is to code sign your appx package. For details, see [Sign app pac
 
 Next, you must upload the signed appx file. For details, see [Add a Windows line-of-business app to Microsoft Intune](lob-apps-windows.md).
 
-If you deploy the app as required to users or devices then you do not need the Inutne Company Portal app. However if you deploy the app as available to users, then they can either use the Company Portal app from the Public Microsoft Store, use the Company Portal app from the Private Microsoft Store for Business, or you will need to sign and manually deploy the Intune Company Portal app.
+If you deploy the app as required to users or devices then you do not need the Intune Company Portal app. However if you deploy the app as available to users, then they can either use the Company Portal app from the Public Microsoft Store, use the Company Portal app from the Private Microsoft Store for Business, or you will need to sign and manually deploy the Intune Company Portal app.
 
 ### Upload the code-signing certificate
 

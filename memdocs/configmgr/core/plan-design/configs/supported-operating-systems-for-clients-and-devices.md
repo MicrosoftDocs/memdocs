@@ -2,11 +2,10 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 04/05/2021
+ms.date: 07/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -36,22 +35,18 @@ To manage the following Windows OS versions, use the client that's included with
 
 - **Windows 8.1** (x86, x64): Professional, Enterprise
 
-#### Windows Virtual Desktop
+#### Azure Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
+[Azure Virtual Desktop](/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. You can use Configuration Manager to manage these virtual devices running Windows in Azure.
 
 Similar to a terminal server, some of these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows 10 Enterprise multi-session and terminal servers.
 
 The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to this version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
-If you require user policy in this scenario, and accept any potential performance impact, use one of the following methods to enable user policy:
+If you require user policy in this scenario, and accept any potential performance impact, use [client settings](../../clients/deploy/configure-client-settings.md) to enable user policy. In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
 
-- In version 1910 and later, use [client settings](../../clients/deploy/configure-client-settings.md). In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
-
-- In version 1906, use the Configuration Manager SDK with the [SMS_PolicyAgentConfig server WMI class](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md). Set the new `PolicyEnableUserPolicyOnTS` property to `true`.
-
-> [!Note]  
+> [!NOTE]
 > You can't use co-management with a client running Windows 10 Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
 
 Starting in version 2006, the **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576-->
@@ -203,11 +198,11 @@ For more information, see [How to deploy clients to Macs](../../clients/deploy/d
 
 ### Supported versions
 
-- **macOS Catalina (10.15)** (requires Configuration Manager site version 1910 or later, and Configuration Manager client for macOS version 5.0.8742.1000 or later)
+- **macOS Big Sur (11)** (requires Configuration Manager client for macOS version 5.0.9000.1002 or later)<!-- 8816608 -->
+
+- **macOS Catalina (10.15)** (requires Configuration Manager client for macOS version 5.0.8742.1000 or later)
 
 - **macOS Mojave (10.14)**
-
-- **macOS High Sierra (10.13)**
 
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Endpoint security firewall rule migration tool for Microsoft Intune - Azure | Microsoft Docs
+title: Endpoint security firewall rule migration tool for Microsoft Intune
 description: Learn about the endpoint security firewall rule migration tool for Microsoft Intune.
 keywords:
 author: brenduns
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ---
 
 # Endpoint security firewall rule migration tool overview

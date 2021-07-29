@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Device restriction settings for Windows 10 in Microsoft Intune - Azure | Microsoft Docs
+title: Device restriction settings for Windows 10 in Microsoft Intune
 description: See a list of all the settings and their descriptions for creating device restrictions on Windows 10 and later devices. Use these settings in a configuration profile to control screenshots, password requirements, kiosk settings, apps in the store, Microsoft Edge browser, Microsoft Defender, access to the cloud, start menu, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/04/2021
+ms.date: 07/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -660,7 +660,7 @@ These settings use the [WirelessDisplay policy CSP](/windows/client-management/m
 
 ## Reporting and telemetry
 
-For information about recent changes for Windows Telemetry, see [Changes to Windows diagnostic data collection](https://go.microsoft.com/fwlink/?linkid=2158774).
+For information about recent changes for Windows Telemetry, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection).
 
 - **Share usage data**: Choose the level of diagnostic data that's submitted. Your options:
   - **Not configured**: (default): Intune doesn't change or update this setting. No setting is forced. Users choose the level that's submitted. By default, the OS might not share any data.
@@ -1120,11 +1120,13 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
 - **Detect potentially unwanted applications**: This feature identifies and blocks potentially unwanted applications (PUA) from downloading and installing in your network. These applications aren't considered viruses, malware, or other types of threats. But, they can run actions on endpoints that might affect their performance or use. Choose the level of protection when Windows detects PUAs. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, Microsoft Defender might disable this feature.
-  - **Off**: PUA Protection off.
+  - **Off** or **Disabled**: PUA Protection off.
   - **Enable**: Microsoft Defender detects PUAs, and detected items are blocked. These items show in history along with other threats.
   - **Audit**: Microsoft Defender detects PUAs, but takes no action. You can review information about the applications Microsoft Defender would take action against. For example, search for events created by Microsoft Defender in the Event Viewer.
 
-  For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
+  In **Endpoint Security** > **Antivirus** > **Microsoft Defender Antivirus** > **Remediation**, this setting is called **Action to take on potentially unwanted applications**.
+
+  For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus). 
 
   [Defender/PUAProtection CSP](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

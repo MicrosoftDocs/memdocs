@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Find lost devices with Microsoft Intune - Azure | Microsoft Docs
+title: Find lost devices with Microsoft Intune
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
 keywords:
 author: ErikjeMS
@@ -45,6 +45,7 @@ This feature isn't supported for the following systems:
 - Windows Phone
 - macOS
 - Android
+- Windows Holographic for Business 
 
 ## Locate a lost or stolen device
 

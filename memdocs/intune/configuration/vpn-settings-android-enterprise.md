@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use VPN settings for Android Enterprise in Microsoft Intune - Azure | Microsoft Docs
+title: Use VPN settings for Android Enterprise in Microsoft Intune
 description: See all the settings to create VPN connections on Android Enterprise devices in Microsoft Intune, including COBO, COSU, COPE, and BYOD. Enter the connection name, IP address or FQDN of the VPN server, choose how users authenticate, and choose Citrix, SonicWall, Check Point Capsule, and Pulse Secure connection types.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2021
+ms.date: 06/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -59,10 +59,10 @@ Create an [Android Enterprise VPN device configuration profile](vpn-settings-con
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
-  - **Microsoft Tunnel (standalone client)** (Not supported on Android Enterprise dedicated devices.)  
+  - **Microsoft Tunnel** (Not supported on Android Enterprise dedicated devices.)  
 
     > [!Important]
-    > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.  
+    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later after August 14, 2021.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -112,10 +112,10 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
   - **F5 Access**
   - **Pulse Secure**
   - **NetMotion Mobility**
-  - **Microsoft Tunnel (standalone client)**  
+  - **Microsoft Tunnel**  
 
     > [!Important]
-    > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
+    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later after August 14, 2021.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 

@@ -88,7 +88,7 @@ The OMS Connector is a pre-release feature. To enable it, see [Use pre-release f
 
 ### Support for cache size in Client Settings
 
-You can now configure the size of the cache folder on client computers with **Client Settings** in the Configuration Manager console. Previously, you could only set the client cache size when installing or reinstalling the client software. Now you can specify the cache size as a client setting (either default or custom), and then have those settings applied with the next policy update on the client, without requiring a client reinstall. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
+You can now configure the size of the cache folder on client computers with **Client Settings** in the Configuration Manager console. Previously, you could only set the client cache size when installing or reinstalling the client software. Now you can specify the cache size as a client setting (either default or custom), and then have those settings applied with the next policy update on the client, without requiring a client reinstall. For more information, see [Configure the client cache](../../../core/clients/manage/configure-client-cache.md).
 
 ## On-premises mobile device management
 

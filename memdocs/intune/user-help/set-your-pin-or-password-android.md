@@ -39,6 +39,6 @@ You can use the following steps to set a PIN or password.
 
 2. Choose and confirm your new password.
 
-On certain devices, you must create a startup PIN *and* a lock screen password. You can configure Secure Startup from the Settings app on your device. On the Samsung Galaxy S7, for example, go to **Settings** > **Lock Screen and Security** > **Secure Startup**. For more information about setting up your device securely with enryption, see [Device encrypted but apps say otherwise](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
+On certain devices, you must create a startup PIN *and* a lock screen password. You can configure Secure Startup from the Settings app on your device. On the Samsung Galaxy S7, for example, go to **Settings** > **Lock Screen and Security** > **Secure Startup**. For more information about setting up your device securely with encryption, see [Device encrypted but apps say otherwise](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
 
 Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

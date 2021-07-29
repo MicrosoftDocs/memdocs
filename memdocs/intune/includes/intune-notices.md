@@ -4,12 +4,94 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 05/12/2021
+ms.date: 07/09/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
+
+Intune is announcing end of support for the [network fence feature](../protect/use-network-locations.md) for use only in devices enrolled through Android device administrator. Google has reduced support for devices enrolled using device administrator and Intune customers have provided feedback leading to a re-envisioning of the location based fencing to better meet customer needs across multiple Android enrollment options.
+
+#### How does this affect me?
+
+This will only affect you if you currently use a location-based (network fence) compliance policy, either on your trial or paid account. In 90 days from the date of this feature end-of-support announcement (on or around October 7, 2021 unless otherwise updated) any network location-based compliance policies targeted to devices enrolled using Android device administrator will no longer work to provide a network fence.
+
+#### What do I need to do to prepare for this change?
+
+No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features, and we will follow up with additional information when it’s available regarding re-envisioned location-based services.
+
+### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year<!--10144130-->
+
+Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and higher shortly after iOS 15’s release.
+
+#### How does this affect me?
+
+If you are managing iOS/iPadOS devices, you might have devices that will not be able to upgrade to the minimum supported version (iOS/iPadOS 13). Provided that Office 365 mobile apps are supported on iOS/iPadOS 13.0 and higher, this may not affect you; you’ve likely already upgraded your OS or devices. See the following Apple documentation for devices to check which devices support iOS 13 or iPadOS 13 (if applicable).
+
+- [Supported iPhone models](https://support.apple.com/guide/iphone/supported-iphone-models-iphe3fa5df43/13.0/ios/13.0)
+- [Supported iPad models](https://support.apple.com/guide/ipad/supported-models-ipad213a25b2/13.0/ipados/13.0)
+- [Supported iPod models](https://support.apple.com/guide/ipod-touch/your-ipod-touch-iphdd4353af4/13.0/ios/13.0)
+
+For instructions on how to check in the Microsoft Endpoint Manager admin center which devices or users may be affected, read below.
+
+#### What do I need to do to prepare for this change?
+
+Check your Intune reporting to see what devices or users may be affected. For devices with mobile device management (MDM) go to **Devices** > **All devices** and filter by OS. For devices with app protection policies  go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
+
+To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both MDM and APP.  For more information, please review: [Manage operating system versions with Intune - Microsoft Intune](../fundamentals/manage-os-versions.md).
+
+### Plan for Change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
+
+With Apple's expected release of macOS 12 Monterey in the fall of 2021, Microsoft Intune, the Company Portal app and the Intune MDM agent will be moving to support macOS 10.15 (Catalina) and higher shortly after the release.
+
+#### How does this affect me?
+
+This will only affect you if you currently manage, or plan to manage macOS devices with Intune. This may not impact you because your users have likely already upgraded their macOS devices. See [macOS Catalina is compatible with these computers](https://support.apple.com/en-us/HT210222) for a list of devices that are supported.
+
+> [!NOTE]
+> Devices that are currently enrolled on macOS 10.13.x and 10.14 will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if running macOS 10.14 or below.
+
+#### What do I need to do to prepare for this change?
+
+Check your Intune reporting to see what devices or users may be affected. Go to Devices > All devices and filter by macOS. You can add in additional columns to help identify who in your organization has devices running macOS 10.14 or below. Request that your users upgrade their devices to a supported OS version before the release of macOS 12.
+
+### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
+We have recently released an updated Company Portal for iOS to the Apple Store that is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
+
+#### What action do I need to take?
+If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices. Otherwise, no action is needed, but if you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app.
+
+#### How does this affect me?
+User impact - Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+
+> [!NOTE]
+> If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you may need to manually push an update to the related devices.
+
+### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
+
+Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, after August 14, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
+
+#### How this change will affect your organization
+
+If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before August 14 2021 to ensure users can still access the Tunnel Gateway configuration.
+
+#### What you need to do to prepare
+
+For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
+### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
+
+We’ve released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices. 
+
+The new version for the Microsoft Intune Management Extension is **1.43.203.0**. Intune automatically upgrades all versions of the extension that are less than **1.43.203.0** to this latest version. To check the version of the extension on a device, review the version for *Microsoft Intune Management Extension* in the program list under **Apps & features**.
+
+For more information, see **CVE-2021-31980** at [https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31980).
+
+#### What action do I need to take?
+
+No action is required. As soon as the client connects to the service, it automatically receives a message to upgrade.
 
 ### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 
