@@ -2,7 +2,7 @@
 title: What's new in version 2107
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2107 of Configuration Manager current branch.
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -383,7 +383,7 @@ Starting with this version, the following features are no longer [pre-release](.
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2107 release notes](/powershell/sccm/2107-release-notes).
 
-<!--Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/10096997.md). dependent on PR 4991 -->
+Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/10096997.md).
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).

@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference

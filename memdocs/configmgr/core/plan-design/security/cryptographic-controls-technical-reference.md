@@ -2,7 +2,7 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference

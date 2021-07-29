@@ -2,7 +2,7 @@
 title: Console extensions for Configuration Manager
 titleSuffix: Configuration Manager
 description: Learn about managing Configuration Manager console extensions
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

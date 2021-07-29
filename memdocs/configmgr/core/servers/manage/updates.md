@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -53,11 +53,11 @@ Some updates for Configuration Manager are available as both an in-console updat
 > [!NOTE]
 > To better align with other releases within Microsoft Endpoint Manager, starting this year the current branch version names will be 2103, 2107, and 2111. They will still release every four months, and release at the same time of the year.
 
-The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:  
+The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:
 
-| Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |  
-|-------------|-----------|------------|--------------|------------------------|  
-| [**2107**](../../plan-design/changes/whats-new-in-version-2107.md)<br /> (5.00.90xx) | July 16, 2021 | January 16, 2023 | No | Yes |
+| Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
+|-------------|-----------|------------|--------------|------------------------|
+| [**2107**](../../plan-design/changes/whats-new-in-version-2107.md)<br /> (5.00.9058) | July 30, 2021 | January 30, 2023 | No | Yes |
 | [**2103**](../../plan-design/changes/whats-new-in-version-2103.md)<br /> (5.00.9049) | April 5, 2021 | October 5, 2022 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2010**](../../plan-design/changes/whats-new-in-version-2010.md)<br /> (5.00.9040) | November 30, 2020 | May 30, 2022 | No | Yes |
 | [**2006**](../../plan-design/changes/whats-new-in-version-2006.md)<br /> (5.00.9012) | August 11, 2020 | February 11, 2022 | No | Yes |

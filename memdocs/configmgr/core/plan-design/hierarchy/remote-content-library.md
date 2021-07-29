@@ -2,7 +2,7 @@
 title: Configure a remote content library
 titleSuffix: Configuration Manager
 description: Learn how to relocate the site server's content library to another storage location.
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

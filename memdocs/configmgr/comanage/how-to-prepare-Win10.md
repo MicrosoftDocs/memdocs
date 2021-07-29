@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/16/2021
+ms.date: 07/30/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
