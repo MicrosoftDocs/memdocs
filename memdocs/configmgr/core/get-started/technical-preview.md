@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 07/29/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -139,32 +139,7 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-### Technical preview version 2106
-
-- [Intune role-based access control for tenant attach](2021/technical-preview-2106.md#bkmk_rbac) <!--8126836-->
-- [Convert a CMG to virtual machine scale set](2021/technical-preview-2106.md#bkmk_cmg) <!--8959690-->
-- [Implicit uninstall of applications](2021/technical-preview-2106.md#bkmk_uninstall) <!--3607457-->
-- [Microsoft .NET requirements](2021/technical-preview-2106.md#bkmk_dotnet) <!--10033951-->
-- [Audit mode for potentially unwanted applications](2021/technical-preview-2106.md#bkmk_audit) <!--9249870-->
-- [External notifications](2021/technical-preview-2106.md#bkmk_pushnotify) <!--9504414-->
-- [List additional third-party updates catalogs](2021/technical-preview-2106.md#bkmk_catalogs) <!--9989251-->
-- [Management insights rule for TLS/SSL software update points](2021/technical-preview-2106.md#bkmk_sup) <!--7470529-->
-- [Renamed Co-management node to Cloud Attach](2021/technical-preview-2106.md#bkmk_cloud) <!--10158821-->
-- [Improvements for managing automatic deployment rules](2021/technical-preview-2106.md#bkmk_adr) <!--9247522-->
-- [New prerequisite check for SQL Server 2012](2021/technical-preview-2106.md#bkmk_sql2012) <!--10092858-->
-- [Console improvements](2021/technical-preview-2106.md#bkmk_console) <!--9575773-->
-- [Client encryption uses AES-256](2021/technical-preview-2106.md#bkmk_encrypt) <!--10129759-->
-- [PowerShell release notes preview](2021/technical-preview-2106.md#bkmk_powershell) <!--9997352-->
-
-### Technical preview version 2105.2
-
-- [Windows Update native experience for software updates](2021/technical-preview-2105-2.md#bkmk_wu) <!--4316341-->
-- [Send product feedback from error windows](2021/technical-preview-2105-2.md#bkmk_errorfeedback) <!--4262917-->
-- [Custom properties for devices](2021/technical-preview-2105-2.md#bkmk_invext) <!--8939867-->
-- [Hardware inventory for client log settings](2021/technical-preview-2105-2.md#bkmk_diaginv) <!--5602449-->
-- [Simplified CMPivot permissions requirements](2021/technical-preview-2105-2.md#bkmk_cmpivot) <!--7898885-->
-- [Hierarchy approved console extensions don't require signing](2021/technical-preview-2105-2.md#bkmk_ext) <!--9761129-->
-- [Improvements to CMPivot](2021/technical-preview-2105-2.md#bkmk_maxif) <!--9966861-->
+<!-- ### Technical preview version 2106 -->
 
 ## Features in previous technical previews
 
@@ -178,6 +153,8 @@ The following features were released with previous versions of the Configuration
 
 | Feature        | Technical preview version |
 |----------------|---------------------------|
+| Intune role-based access control for tenant attach <!--8126836--> | [Tech preview 2106](2021/technical-preview-2106.md#bkmk_rbac) |
+| Windows Update native experience for software updates <!--4316341--> | [Tech preview 2105.2](2021/technical-preview-2105-2.md#bkmk_wu) |
 | Support Center dark and light themes <!--8218853--> | [Tech preview 2105](2021/technical-preview-2105.md#bkmk_dark) |
 | Tenant attach: BitLocker recovery keys <!--6979225--> | [Tech preview 2104](2021/technical-preview-2104.md#bkmk_bitlocker) |
 | Manage aged distribution point messages <!--8561493,9388277--> | [Tech preview 2101](2021/technical-preview-2101.md#bkmk_distmsg) |
