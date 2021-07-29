@@ -23,8 +23,8 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2107/1234567.md)] -->
 
-[!INCLUDE [6024419](includes/2107/6024419.md)]
-[!INCLUDE [9965423](includes/2107/9965423.md)]
+[!INCLUDE [Tenant attach: Software updates information](includes/2107/6024419.md)]
+[!INCLUDE [Publish query to Community hub from CMPivot](includes/2107/9965423.md)]
 
 <!-- ## General known issues
 

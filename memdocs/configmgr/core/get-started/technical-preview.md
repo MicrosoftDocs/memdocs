@@ -120,8 +120,8 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2107
 
-- [6024419](2021/technical-preview-2107.md) <!--6024419-->
-- [9965423](2021/technical-preview-2107.md) <!--9965423-->
+- [Tenant attach: Software updates information](2021/technical-preview-2107.md#bkmk_sum) <!--6024419-->
+- [Publish query to Community hub from CMPivot](2021/technical-preview-2107.md#bkmk_hub) <!--9965423-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
