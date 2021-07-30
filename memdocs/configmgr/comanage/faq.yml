@@ -92,7 +92,7 @@ sections:
       - question: |
           Do I need to do anything with the deprecation of the Azure AD Graph API and Azure AD Authentication Library (ADAL)?
         answer: |
-          Most likely not. For more information, see [CMG FAQ](../core/clients/manage/cmg/cloud-management-gateway-faq.yml#do-i-need-to-do-anything-with-the-deprecation-of-the-azure-ad-graph-api-and-azure-ad-authentication-library-adal-).<!--10488538-->
+          Most likely not. For more information, see [CMG FAQ](../core/clients/manage/cmg/cloud-management-gateway-faq.yml#do-i-need-to-do-anything-with-the-deprecation-of-the-azure-ad-graph-api-and-azure-ad-authentication-library--adal--).<!--10488538-->
 
   - name: Workloads
     questions:
