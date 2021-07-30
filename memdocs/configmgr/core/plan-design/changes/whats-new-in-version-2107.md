@@ -286,7 +286,7 @@ For more information, see [real-time protection settings](../../../protect/deplo
 
 You can now right-click and notify devices to run a software updates evaluation cycle from the [software update deployment status](../../../sum/deploy-use/monitor-software-updates.md#BKMK_SUDeployStatus). You can target a single device under the **Asset Details** pane or select a group of devices based on their deployment status.
 
-For more information, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md) or [Software update deployment status](../../../sum/deploy-use/monitor-software-updates.md#BKMK_SUDeployStatus).
+For more information, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 
 ### Management insights rule for TLS/SSL software update points
 
