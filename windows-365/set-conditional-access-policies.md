@@ -51,10 +51,16 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint Security** > **Conditional Access** > **New Policy**.
 2. Provide a **Name** for your specific Conditional Access policy.
 3. On the **New Policy** tab, under **Users and groups**, choose **Specific users included**. Select the specific user or group you want to target with the CA policy. You can also **Exclude certain users or groups** to fine-tune the assignment.
-4. Under **Cloud apps or actions**, select **No cloud apps or actions selected**. Select **Cloud apps** > **Include** > **Select apps** > select the **Windows 365 app**. By choosing the **Windows 365 app**, you make sure that the policy applies to the Cloud PC End-user portal and the connection to the Cloud PC.
-5. If you want to fine-tune your policy, under **Access controls**, choose **0 controls selected**.  Under **Grant**, choose the options that you want to apply to all objects assigned to this policy.
-6. If you want to test your policy first, under **Enable Policy**, set **Report-only** to **Off**. If you set it to **On**, the policy will be applied as soon as you create it.
-7. Select **Create** to create the policy.
+4. Under **Cloud apps or actions**, select **No cloud apps, action, or authentication contexts selected**.
+5. Select **Cloud apps** > **Include** > **Select apps**.
+6. In the **Select** pane, search for and select both the following apps:
+    - **Windows 365** (you can also search for "cloud" to find this app).
+    - **Windows Virtual Desktop** (this may also appear as **Azure Virtual Desktop**)
+
+    By choosing both of these apps, you make sure that the policy applies to the Cloud PC End-user portal and the connection to the Cloud PC. If you want to exclude apps, you must also choose both these apps.
+7. If you want to fine-tune your policy, under **Access controls**, choose **0 controls selected**.  Under **Grant**, choose the options that you want to apply to all objects assigned to this policy.
+8. If you want to test your policy first, under **Enable Policy**, set **Report-only** to **Off**. If you set it to **On**, the policy will be applied as soon as you create it.
+9. Select **Create** to create the policy.
 
 You can see your list of active and inactive policies in the **Policies** view in the Conditional Access UI.
 
