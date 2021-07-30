@@ -13,19 +13,22 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/17/2020
+ms.date: 07/30/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
 
 # Troubleshoot Autopilot OOBE issues
 
-**Applies to: Windows 10**
+**Applies to:**
+
+- Windows 10
+- Windows 11
 
 When the out-of-box-experience (OOBE) includes unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
 
 > [!NOTE]
-> With Windows 11 or Windows 10, version 21H2 and later, you can enable users to view detailed troubleshooting logs of the Autopilot provisioning process. The **Windows Autopilot Diagnostic Page** provides IT admins and end users with a user-friendly view to troubleshoot Autopilot failures. This feature can be enabled by going to the [ESP profile](enrollment-status.md#esp-profiles) and selecting **Yes** to **Allow users to collect logs about installation errors**. This feature is currently supported for commercial OOBE, and Autopilot user-driven mode.
+> With Windows 11, you can enable users to view additional detailed troubleshooting logs of the Autopilot provisioning process. The **Windows Autopilot Diagnostic Page** provides IT admins and end users with a user-friendly view to troubleshoot Autopilot failures. This feature can be enabled by going to the [ESP profile](enrollment-status.md#esp-profiles) and selecting **Yes** to **Allow users to collect logs about installation errors**. This feature is currently supported for commercial OOBE, and Autopilot user-driven mode.
 
 ## Can't connect to MDM terms of use error
 
