@@ -31,7 +31,7 @@ ms.topic: article
 
 When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot Diagnostic Page** is available to provide IT admins and end users with a user-friendly view to troubleshoot Autopilot failures. 
 
-An example of the diagnostic page is shown below. In this example, the user has expanded Configuration info and then clicks on Deployjment info to display details about Network Connectivity, Autopilot Settings, and Enrollment Status. The user also has the option to Export logs to perform detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+An example of the diagnostic page is shown below. In this example, **Configuration info** is expanded and the user clicks on **Deployment info** to display details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
 
 ![diagnostics page start](images/oobe-tx-01.png)<br>
 ![diagnostics page click](images/oobe-tx-02.png)<br>
@@ -39,7 +39,7 @@ An example of the diagnostic page is shown below. In this example, the user has 
 
 The diagnostics page can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status#available-settings) and selecting **Yes** to **Allow users to collect logs about installation errors**. 
 
-The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. The new diagnostics page is only available on Windows 11, however Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
+The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. The new diagnostics page is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 
 ## Windows Autopilot for HoloLens 2
 
