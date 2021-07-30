@@ -3,7 +3,7 @@ title: Windows Autopilot what's new
 ms.reviewer: 
 manager: laurawi
 description: Read news and resources about the latest updates and past versions of Windows Autopilot.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens
+keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens, diagnostics
 ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -29,7 +29,7 @@ ms.topic: article
 
 ## [Preview] Windows Autopilot diagnostics page
 
-When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics Page** is available to provide IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. 
+When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available to provide IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. 
 
 An example of the diagnostics page is shown below. In this example, **Configuration info** is expanded and the user clicks on **Deployment info** to display details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
 
@@ -39,7 +39,7 @@ An example of the diagnostics page is shown below. In this example, **Configurat
 
 The diagnostics page can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status#available-settings) and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. 
 
-The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. It is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
+The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 
 ## Windows Autopilot for HoloLens 2
 
