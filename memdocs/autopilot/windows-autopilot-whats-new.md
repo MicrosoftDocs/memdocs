@@ -37,7 +37,7 @@ An example of the diagnostics page is shown below. In this example, **Configurat
 ![diagnostics page click](images/oobe-02.png)<br>
 ![diagnostics page expand](images/oobe-03.png)
 
-The diagnostics page can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status#available-settings) and selecting **Yes** to **Allow users to collect logs about installation errors**. 
+The diagnostics page can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status#available-settings) and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. 
 
 The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. It is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 
