@@ -36,5 +36,5 @@ You'll need the following requirements for CMPivot and for contributing to the C
    - PRs shouldn't be submitted directly to the GitHub repository.
 
 > [!NOTE]
-> - When you publish a query through CMPivot, you can't edit or delete it after publishing.
+> - Currently, when you publish a query through CMPivot, you can't edit or delete it after publishing.
 > - Community hub is only available in CMPivot when you run it from the Configuration Manager console. Community hub isn't available from [standalone CMPivot](../cmpivot.md#install-cmpivot-standalone). <!--9442715, 9310040, 9391017-->

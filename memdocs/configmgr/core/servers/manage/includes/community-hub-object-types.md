@@ -17,3 +17,4 @@ ms.date: 03/02/2021
 - Power BI report templates
    - For information about sharing and using PowerBI report templates with Community hub, see [Integrate with Power BI Report Server](../powerbi-report-server.md#bkmk_community_hub).
  - [Console extensions](../community-hub-extensions.md) are available for download, but contributions are currently limited <!--3555909-->
+    - Content for console extensions isn't hosted by Microsoft. Currently, the source download location displays in the [verbose SmsAdminUi.log](../../../plan-design/hierarchy/about-log-filesmd#bkmk_reg-console) for the console that initiates the download.
