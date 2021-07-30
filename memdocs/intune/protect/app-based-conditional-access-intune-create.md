@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 07/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -60,7 +60,7 @@ Before you can create Conditional Access policies from the Microsoft Endpoint Ma
 
    Select **Done** to save your changes.
 
-6. Under *Access controls*, select **Grant** to apply Conditional Access based on device compliance. For example, select **Grant access** > **Require approved client app** and **Require app protection policy (preview)** then select **Require one of the selected controls**
+6. Under *Access controls*, select **Grant** to apply Conditional Access based on device compliance. For example, select **Grant access** > **Require approved client app** and **Require app protection policy** then select **Require one of the selected controls**
 
    Choose **Select** to save your changes.
 
