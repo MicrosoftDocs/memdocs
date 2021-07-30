@@ -13,7 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 07/30/2021
 ms.collection: M365-modern-desktop
 ms.topic: article
 ---
@@ -24,8 +24,22 @@ ms.topic: article
 **Applies to**
 
 - Windows 10
+- Windows 11
 - Windows Holographic, version 2004
 
+## [Preview] Windows Autopilot diagnostics page
+
+When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics Page** is available to provide IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. 
+
+An example of the diagnostics page is shown below. In this example, **Configuration info** is expanded and the user clicks on **Deployment info** to display details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+
+![diagnostics page start](images/oobe-01.png)<br>
+![diagnostics page click](images/oobe-02.png)<br>
+![diagnostics page expand](images/oobe-03.png)
+
+The diagnostics page can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status#available-settings) and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. 
+
+The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. It is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 
 ## Windows Autopilot for HoloLens 2
 
