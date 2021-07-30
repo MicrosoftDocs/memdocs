@@ -105,7 +105,7 @@ items:
       items:
       - name: Overview
         href: device-management-overview.md
-      - name: Remotely manage Cloud PC devices
+      - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
