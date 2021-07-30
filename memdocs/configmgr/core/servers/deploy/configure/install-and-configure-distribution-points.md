@@ -39,7 +39,7 @@ Configure most of the distribution point settings with either method. A few sett
 
 ## Install a distribution point
 
-Before you can make content available to clients, choose a site system server as a distribution point. Assign each distribution point to at least one [boundary group](boundary-groups.md#distribution-points). Add the distribution point role to a new server, or add it to an existing server.
+Before you can make content available to clients, choose a site system server as a distribution point. Assign each distribution point to at least one [boundary group](boundary-groups-distribution-points.md). Add the distribution point role to a new server, or add it to an existing server.
 
 ### Prerequisites
 

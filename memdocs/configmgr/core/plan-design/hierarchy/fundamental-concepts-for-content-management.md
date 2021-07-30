@@ -223,7 +223,7 @@ Delivery Optimization isn't applicable to this source prioritization. This list 
 
 BranchCache applies to this list only when you enable a distribution point for BranchCache. For example, if a client gets to option #3 in the prioritization list, it first asks the distribution point for BranchCache metadata. The BranchCache-enabled distribution point is what provides the client information for BranchCache peer discovery. The client will download content from a BranchCache peer if it can. If it can't download the content via BranchCache, it then tries the distribution point itself, before continuing down the list of content sources. This behavior applies at any point in the priority list where the client uses a BranchCache-enabled distribution point. <!-- 8287190 -->
 
-The configuration of [boundary group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions) can modify the sort order of this priority list.
+The configuration of [boundary group options](../../servers/deploy/configure/boundary-group-options.md) can modify the sort order of this priority list.
 
 ## Content library
 

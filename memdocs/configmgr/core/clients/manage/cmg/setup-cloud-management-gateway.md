@@ -158,7 +158,7 @@ Repeat these steps for other management points as needed, and for any software u
 ## Configure boundary groups
 
 <!--3640932-->
-You can associate a CMG with a boundary group. This configuration allows clients to use the CMG for client communication according to boundary group relationships. This configuration is beneficial for VPN or branch office clients where it might be better to manage them via a CMG than over the VPN or WAN connection.
+You can associate a CMG with a boundary group. This configuration allows clients to use the CMG for client communication according to boundary group relationships. This configuration is beneficial for VPN or branch office clients where it might be better to manage them via a CMG than over the VPN or WAN connection. If you enable the option to **Prefer cloud-based sources over on-premises sources** then clients will prefer the CMG for both policy and content.
 
 For more information on boundary groups, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md).
 
