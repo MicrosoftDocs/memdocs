@@ -31,7 +31,7 @@ ms.topic: article
 
 When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available to provide IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. 
 
-An example of the diagnostics page is shown below. In this example, **Configuration info** is expanded and the user clicks on **Deployment info** to display details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+An example of the diagnostics page is shown below. In this example, **Configuration info** is expanded first by clicking on **Show details**. Next, the user expands **Deployment info** and displays details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
 
 ![diagnostics page start](images/oobe-01.png)<br>
 ![diagnostics page click](images/oobe-02.png)<br>
