@@ -605,7 +605,7 @@ Intune supports the deployment of many different Windows application types.
 If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits that include notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Autopilot.
 
 > [!NOTE]
-> To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. You can install MSI or EXE apps with Win32 apps.
+> To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. If you have applications that are packaged as .msi or .exe, those can be converted to Win32 apps (.intunewin) by using the *Microsoft Win32 Content Prep Tool*, which is [available from GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
 
 ## Phase 5 – Deploy at scale with Autopilot
 
