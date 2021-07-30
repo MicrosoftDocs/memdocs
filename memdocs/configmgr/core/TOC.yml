@@ -483,10 +483,12 @@ items:
     href: servers/manage/management-insights.md
   - name: Community hub
     items:
-    - name: Use community hub
+    - name: Use Community hub
       href: servers/manage/community-hub.md
-    - name: Contribute to community hub
-      href: servers/manage/community-hub-contribute.md      
+    - name: Contribute to Community hub
+      href: servers/manage/community-hub-contribute.md
+    - name: Console extensions in Community hub
+      href: servers/manage/community-hub-extensions.md      
   - name: CMPivot
     items:
     - name: CMPivot overview
