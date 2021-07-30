@@ -53,7 +53,7 @@ conceptualContent:
         - url: add-device-images.md
           itemType: how-to-guide
           text: Add device images
-    - title: Provisioning policies
+    - title: Cloud PC provisioning
       links:
         - url: create-provisioning-policy.md
           itemType: how-to-guide
