@@ -52,8 +52,8 @@ conceptualContent:
           text: Create on-premises network connection
         - url: add-device-images.md
           itemType: how-to-guide
-          text: Add device images
-    - title: Provisioning policies
+          text: Add device images 
+    - title: Cloud PC provisioning
       links:
         - url: create-provisioning-policy.md
           itemType: how-to-guide

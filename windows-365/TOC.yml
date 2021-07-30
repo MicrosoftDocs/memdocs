@@ -1,5 +1,5 @@
 items:
-- name: Windows 365 DRAFT docs
+- name: Windows 365 docs
   href: index.yml
 - name: Overview 
   items:
@@ -53,7 +53,7 @@ items:
           href: delete-on-premises-network-connection.md
       - name: Device images
         items:
-        - name: Add device images
+        - name: Add or delete device images
           href: add-device-images.md
     - name: Provisioning
       items:
@@ -105,7 +105,7 @@ items:
       items:
       - name: Overview
         href: device-management-overview.md
-      - name: Remotely manage Cloud PC devices
+      - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
@@ -114,11 +114,11 @@ items:
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
-        href: /intune/protect/windows-10-update-rings.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
+        href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
-        href: /intune/protect/windows-10-feature-updates.md?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
+        href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
       - name: Windows 10 lifecycle
-        href: /windows/release-health/release-information?toc=/mem/cloudpc/toc.json&bc=/mem/breadcrumb/toc.json
+        href: /windows/release-health/release-information?context=/windows-365/context/pr-context
     - name: End user experience
       items:
       - name: Access a Cloud PC

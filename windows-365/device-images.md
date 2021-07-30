@@ -47,7 +47,7 @@ A custom image must also meet the following extra requirements:
 - Exist in an Azure subscription that has an on-premises network connection already setup.
 - Is stored as a managed image in Azure.
 
-Storing a managed image on Azure incurs storage costs. However customers can delete the managed image from Azure once they've successfully uploaded it as Device Images to Microsoft Endpoint Manager. 
+Storing a managed image on Azure incurs storage costs. However customers can delete the managed image from Azure once they've successfully uploaded it as Device Images to Microsoft Endpoint Manager.
 
 ## Gallery images
 
@@ -75,9 +75,8 @@ You can choose any image for any Windows 365 license. However, for optimal perfo
 
 | Windows 365 license | Recommended gallery image |
 | --- | --- |
-| 2vCPU/4GB/128GB and above | Windows 10 Enterprise + Microsoft 365 Apps |
+| 2vCPU/4GB/64GB and above | Windows 10 Enterprise + Microsoft 365 Apps |
 | 1vCPU/2GB/64GB | Windows 10 Enterprise + OS Optimizations |
-| All licenses | Windows 10 Enterprise |
 
 ## Custom images
 

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Get Cloud PC audit logs by using PowerShell
 
-Audit logs include a record of activities that generate a change in a Cloud PC. Create, update (edit), delete, assign, and remote actions all create audit events that administrators can review for most Cloud PC actions. By default, auditing is enabled for all customers. It can't be disabled.
+Audit logs for Windows 365 include a record of activities that generate a change in a Cloud PC. Create, update (edit), delete, assign, and remote actions all create audit events that administrators can review for most Cloud PC actions that go through Graph. By default, auditing is enabled for all customers. It can't be disabled.
 
 ## Who can access the data?
 
@@ -38,13 +38,29 @@ Users with the following permissions can review audit logs:
 
 - Global Administrator
 - Intune Service Administrator
-- Administrators assigned to an Intune role with Audit data - Read permissions
+- Administrators assigned to an Intune role with **Audit data - Read** permissions
 
 ## Use Graph API and PowerShell to retrieve audit events
 
-To get audit log events for up to a year, run the following PowerShell script:
+To get audit log events for up to seven days for your Windows 365 tenant, follow these steps:
 
-<!--waiting for script to be provided-->
+### Install the SDK
+
+1. Run this command: ```Install-Module Microsoft.Graph -Scope CurrentUser```
+2. Verify the installation by running this command:```Get-InstalledModule Microsoft.Graph```
+3. To get all Cloud PC Graph endpoints, run this command: ```Get-Command -Module Microsoft.Graph* *virtualEndpoint*```
+
+### Sign in as test user
+
+1. Run either of these two commands:
+    - ```Connect-MgGraph -Scopes "CloudPC.ReadWrite.All"```
+    - ```Connect-MgGraph -Scopes "CloudPC.Read.All"```
+2. On the resulting web page, sign in to your tenant with a user account that has the appropriate read and/or write permissions.
+3. Switch to the Graph beta environment by using this command: ```Select-MgProfile -Name "beta"```
+
+### Get audit data
+
+
 
 <!-- ########################## -->
 ## Next steps
