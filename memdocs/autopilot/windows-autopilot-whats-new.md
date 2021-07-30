@@ -27,11 +27,11 @@ ms.topic: article
 - Windows 11
 - Windows Holographic, version 2004
 
-## [Preview] Windows Autopilot Diagnostics page
+## [Preview] Windows Autopilot diagnostics page
 
-When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot Diagnostic Page** is available to provide IT admins and end users with a user-friendly view to troubleshoot Autopilot failures. 
+When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics Page** is available to provide IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. 
 
-An example of the diagnostic page is shown below. In this example, **Configuration info** is expanded and the user clicks on **Deployment info** to display details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+An example of the diagnostics page is shown below. In this example, **Configuration info** is expanded and the user clicks on **Deployment info** to display details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
 
 ![diagnostics page start](images/oobe-tx-01.png)<br>
 ![diagnostics page click](images/oobe-tx-02.png)<br>
