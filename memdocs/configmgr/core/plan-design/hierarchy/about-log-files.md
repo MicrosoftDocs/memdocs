@@ -200,7 +200,7 @@ For example, for the distribution point role:
 > [!NOTE]
 > Don't change other values that may exist in this registry key.
 
-#### Configuration Manager console logging options
+#### <a name="bkmk_reg-console"></a> Configuration Manager console logging options
 
 To change the verbose level of the AdminUI.log for the Configuration Manager console, use the following procedure:
 

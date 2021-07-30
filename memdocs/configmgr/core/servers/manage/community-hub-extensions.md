@@ -36,7 +36,7 @@ You'll download the extension from Community hub, then use the **Console Extensi
 1. Once you've found an extension in Community hub that you want in your environment, select **Download**.
 1. The downloaded extension will appear in the [**Console Extensions**](admin-console-extensions.md) node.
 1. Change the security scope for the extension, approve it, then install and test it on a local console. For more information on this process, see [Install and test an extension on a local console](admin-console-extensions.md#bkmk_local_install).
-1. When testing is complete, [enable user notifications](admin-console-extensions.md#enable-user-notifications-for-extension-installation) for installation.
+1. When testing is complete, [enable user notifications](admin-console-extensions.md#bkmk_enable-notifications) for installation.
 
 ## <a name="bkmk_notification"></a> Console extension installation notifications
 <!--3555909-->
