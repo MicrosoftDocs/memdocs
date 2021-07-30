@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 04/30/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -639,7 +639,14 @@ Use the following process:
 After the client installs and properly registers with the site, it starts the referenced task sequence. If client registration fails, the task sequence won't start.
 
 > [!NOTE]
-> The task sequence launched by **PROVISIONTS** uses the **Default Client Settings**. Since the task sequence launched by **PROVISIONTS** launches immediately after the client registers, it will not be part of any Collection that custom client settings are deployed to. Custom client settings therefore are not processed or applied. For this reason certain client settings necessary for the task sequence to work properly may need to be changed in the **Default Client Settings**. Examples include **Enable clients to use a cloud management gateway** and **Allow access to cloud distribution point**, both found under **Cloud Services**, and **PowerShell execution policy** found under **Computer Agent**. If these client settings are not desired after the task sequence completes, deploy new custom client settings reversing the settings.
+> The task sequence launched by **PROVISIONTS** uses the **Default Client Settings**. This task sequence starts immediately after the client registers, so it won't be part of any collection to which you've deployed custom client settings. The client doesn't process or apply custom client settings before this task sequence runs.
+> 
+> For the task sequence to work properly, you may need to change certain settings in the **Default Client Settings**. For example, 
+> 
+> - **Cloud Services** group: **Enable clients to use a cloud management gateway** and **Allow access to cloud distribution point**
+> - **Computer Agent** group: **PowerShell execution policy**
+> 
+> If devices don't need these client settings after the task sequence completes, deploy new custom client settings to reverse the default settings.
 
 ### RESETKEYINFORMATION
 
