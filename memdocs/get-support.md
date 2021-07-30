@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/12/2021
+ms.date: 08/02/2021
 ms.topic: how-to
 ms.service: mem
 ms.subservice: fundamentals
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
  
 # How to get support in Microsoft Endpoint Manager admin center
 
-Microsoft provides global technical, pre-sales, billing, and subscription support for device management cloud-based services, including Intune, Configuration Manager, and Microsoft Managed Desktop. You can access support for all of these from the Microsoft Endpoint Manager admin center.
+Microsoft provides global technical, pre-sales, billing, and subscription support for device management cloud-based services, including Intune, Configuration Manager, Windows 365, and Microsoft Managed Desktop. You can access support for all of these from the Microsoft Endpoint Manager admin center.
 
 Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
 
@@ -82,6 +82,10 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
   - Reporting an incident or outage
 
   If you are a Microsoft Managed Desktop customer, selecting that tile for Microsoft Managed Desktop related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
+
+- **Windows 365**:
+  - When you have a subscription for Windows 365, this tile opens Help and support for Windows 365.
+
 
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
