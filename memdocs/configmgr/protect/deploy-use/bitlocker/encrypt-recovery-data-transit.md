@@ -2,11 +2,10 @@
 title: Encrypt recovery data over the network
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes over the network.
-ms.date: 04/05/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
-ms.assetid: eddfaaba-5e07-41dc-9b14-a7f5169799c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -28,17 +27,17 @@ Configuration Manager requires an HTTPS connection between the client and the re
 
 - Enable the site for [enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md). This option applies to version 2103 or later.<!-- 9503186 -->
 
-- HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option applies to version 2002 or later.<!-- 5925660 -->
+- HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role.<!-- 5925660 -->
 
 - Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to all supported versions of Configuration Manager.
 
 ## Configure the management point for HTTPS
 
-In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
+In earlier versions of Configuration Manager current branch, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
 ## HTTPS-enable the IIS website
 
-Starting in version 2002, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.
+The HTTPS requirement is now for the IIS website that hosts the recovery service, not the entire management point role. This configuration relaxes the certificate requirements, and still encrypts the recovery keys in transit.
 
 The **Client connections** property of the management point can be **HTTP** or **HTTPS**. If the management point is configured for **HTTP**, to support the BitLocker recovery service:
 
@@ -53,7 +52,10 @@ The **Client connections** property of the management point can be **HTTP** or *
 > [!TIP]
 > The only clients that need to communicate with the recovery service are those clients that you plan to target with a BitLocker management policy and includes a **Client Management** rule.
 
-On the client, use the **BitLockerManagementHandler.log** to troubleshoot this connection. For connectivity to the recovery service, the log shows the URL that the client is using. Locate an entry that starts with `Checking for Recovery Service at`.
+On the client, use the **BitLockerManagementHandler.log** to troubleshoot this connection. For connectivity to the recovery service, the log shows the URL that the client is using. Locate an entry in the log based on the version of Configuration Manager:<!-- MEMDocs#1688 -->
+
+- In version 2103 and later, the entry starts with `Recovery keys escrowed to MP`
+- In version 2010 and earlier, the entry starts with `Checking for Recovery Service at`
 
 > [!NOTE]
 > If your site has more than one management point, enable HTTPS on all management points at the site with which a BitLocker-managed client could potentially communicate. If the HTTPS management point is unavailable, the client could fail over to an HTTP management point, and then fail to escrow its recovery key.
