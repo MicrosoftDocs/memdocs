@@ -32,7 +32,7 @@ When the out-of-box-experience (OOBE) includes unexpected Autopilot behavior, it
 
 ## Can't connect to MDM terms of use error
 
-If you receive an error during OOBE that **Something went wrong** and **Can't connect to the URL of your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.** This is often due to a licensing issue. Check that the user who is signing into the device has a valid Intune, EMS, or M365 license.
+If you receive an error during OOBE that **Something went wrong** and **Can't connect to the URL of your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.** This is often due to a licensing issue. Check that the user who is signing into the device has a valid Intune, EMS, or Microsoft 365 license.
 
 ## Windows 10 version 1803 and above
 
