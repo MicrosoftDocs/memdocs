@@ -5,7 +5,7 @@ ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/30/2021
 ---
-<!--This file is shared by the CMPivot overview article and the Contribute to Community hub article-->
+<!--This file is shared by the CMPivot overview article (cmpivot.md) and the Contribute to Community hub (community-hub-contribute.md) article-->
 
 
 ## "bkmk_publish" Publish query to Community hub from CMPivot
@@ -13,7 +13,7 @@ ms.date: 07/30/2021
 *(Applies to version 2107 or later)*
 Starting in version 2107, you can publish a CMPivot query to the Community hub directly from the CMPivot window. Submitting your queries directly through CMPivot makes contributing to the Community hub easier.
 
-you'll need the following requirements for CMPivot and for contributing to the Community hub:
+You'll need the following requirements for CMPivot and for contributing to the Community hub:
 
 - Meet all of the [CMPivot prerequisites and permissions](../cmpivot.md#prerequisites)
 - Enable [Community hub](../community-hub.md).
