@@ -118,6 +118,16 @@ When you contribute a [configuration baseline](../../../compliance/deploy-use/cr
 1. If the configuration item already exists in the Community hub, verify the contributor is the author. If the contributor isn't the author, a new configuration item is created in Community hub.
 1. If the contributor is the author, check for local updates to the configuration item. If the configuration item changed, update the item in the Community hub.
 
+### Console extensions
+<!--3555909-->
+
+You contribute extensions the same way you would any other community hub object. However, for there are additional requirements and additional information you need to supply for an extension. When you contribute a console extension to Community hub, the content must be signed. Content for console extensions isn't hosted by Microsoft. When you contribute your item, you'll be asked to provide a location to the signed `.cab` file along with other information for the extension. The following items are required for contributing extensions:  
+
+- **Content URL**: Location for the downloadable `.cab` file
+- **SHA-256 hash of the content**: SHA-256 hash of the `.cab` file
+- **License URL**: URL of the license for the extension, such as [https://mit-license.org/](https://mit-license.org/)
+- **Privacy statement URL**: URL of your privacy statement
+
 ## Next steps
 
 Learn more about creating and using the following objects:
