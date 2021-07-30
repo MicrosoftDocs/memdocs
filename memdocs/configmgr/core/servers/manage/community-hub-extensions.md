@@ -1,5 +1,5 @@
 ---
-title: Console extensions from community hub
+title: Console extensions from Community hub
 titleSuffix: Configuration Manager
 description: Learn about managing console extensions for Configuration Manager
 ms.date: 07/30/2021

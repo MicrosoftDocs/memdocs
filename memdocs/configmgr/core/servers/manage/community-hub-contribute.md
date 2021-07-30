@@ -137,3 +137,4 @@ Learn more about creating and using the following objects:
 - [Create and manage task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
 - [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md)
 - [Create configuration items](../../../compliance/deploy-use/create-configuration-items.md)
+- [Create and contribute console extensions](../../../develop/core/servers/console/console-extension-register.md)
