@@ -411,14 +411,24 @@ items:
         href: servers/deploy/configure/select-discovery-methods-to-use.md
       - name: Configure discovery methods
         href: servers/deploy/configure/configure-discovery-methods.md
-    - name: Site boundaries and boundary groups
+    - name: Boundaries and boundary groups
       items:
-      - name: Site boundaries and boundary groups overview
+      - name: Overview
         href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
-      - name: Boundaries
+      - name: Define boundaries
         href: servers/deploy/configure/boundaries.md
-      - name: Boundary groups
+      - name: About boundary groups
         href: servers/deploy/configure/boundary-groups.md
+      - name: Boundary group options
+        href: servers/deploy/configure/boundary-group-options.md
+      - name: Distribution points
+        href: servers/deploy/configure/boundary-groups-distribution-points.md
+      - name: Software update points
+        href: servers/deploy/configure/boundary-groups-software-update-points.md
+      - name: Management points
+        href: servers/deploy/configure/boundary-groups-management-points.md
+      - name: Boundary group example
+        href: servers/deploy/configure/boundary-groups-example.md
       - name: Procedures for boundary groups
         href: servers/deploy/configure/boundary-group-procedures.md
     - name: High availability

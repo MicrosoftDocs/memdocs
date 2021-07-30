@@ -66,7 +66,7 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 You can associate a CMG with a boundary group. This configuration allows clients to default or fall back to the CMG for client communication according to [boundary group relationships](../../../servers/deploy/configure/boundary-groups.md). This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster services in Microsoft Azure.<!--3640932-->
 
-Starting in version 2006, intranet clients can access a CMG-enabled software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
+Starting in version 2006, intranet clients can access a CMG-enabled software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups-software-update-points.md#intranet-clients-can-use-a-cmg-software-update-point). <!--7102873-->
 
 Internet-based clients don't rely on boundary groups. They only use internet-facing or cloud content sources. If you're only using content-enabled CMGs for these types of clients, then you don't need to include them in boundary groups.
 

@@ -190,7 +190,7 @@ When upgrading the site to this version, Configuration Manager adds all non-inte
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
 ### Prerequisites
-- Enable [preferred management points](../servers/deploy/configure/boundary-groups.md#bkmk_preferred). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
+- Enable [preferred management points](../servers/deploy/configure/boundary-groups-management-points.md#preferred-management-points). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
 
 ### Known issues
 - Operating system deployment processes are not aware of boundary groups.

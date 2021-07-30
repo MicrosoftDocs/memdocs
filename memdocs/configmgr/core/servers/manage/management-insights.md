@@ -212,11 +212,11 @@ In version 2006, the following insight moved to this group from the **Proactive 
 
 Starting in version 2006, the following insights help you create better experiences for remote workers and reduce load on your infrastructure:
 
-- **Configure VPN connected clients to prefer cloud based content sources**: To reduce traffic on the VPN, enable the boundary group option to **Prefer cloud based sources over on-premises sources**. This option allows clients to download content from the internet instead of distribution points across the VPN. For more information, see [Boundary group options](../deploy/configure/boundary-groups.md#bkmk_bgoptions4).<!-- 1BFD7A7A-077C-4E8A-9EAA-4559E41D400A -->
+- **Configure VPN connected clients to prefer cloud based content sources**: To reduce traffic on the VPN, enable the boundary group option to **Prefer cloud based sources over on-premises sources**. This option allows clients to download content from the internet instead of distribution points across the VPN. For more information, see [Boundary group options](../deploy/configure/boundary-group-options.md4).<!-- 1BFD7A7A-077C-4E8A-9EAA-4559E41D400A -->
 
 - **Define VPN boundary groups**: Create a VPN boundary and associate it to a boundary group. Associate VPN-specific site systems to the group, and configure the settings for your environment. This insight checks for at least one boundary group with at least one VPN boundary in it. From the properties of this insight, select **Review Actions** to go to the **Boundary Groups** node. For more information, see [VPN boundary type](../deploy/configure/boundaries.md#vpn).<!-- E44BF0CC-0ADA-4B00-A4DF-4005256DF73E -->
 
-- **Disable peer to peer content sharing for VPN connected clients**: To prevent unnecessary peer-to-peer traffic that likely doesn't benefit the remote clients, disable the boundary group option to **Allow peer downloads in this boundary group**. For more information, see [Boundary group options](../deploy/configure/boundary-groups.md#bkmk_bgoptions1).<!-- 60404B23-96A9-4EE2-B8D6-1F226C2F2F5A -->
+- **Disable peer to peer content sharing for VPN connected clients**: To prevent unnecessary peer-to-peer traffic that likely doesn't benefit the remote clients, disable the boundary group option to **Allow peer downloads in this boundary group**. For more information, see [Boundary group options](../deploy/configure/boundary-group-options.md1).<!-- 60404B23-96A9-4EE2-B8D6-1F226C2F2F5A -->
 
 ### Proactive maintenance
 
