@@ -27,9 +27,11 @@ ms.topic: article
 - Windows 11
 - Windows Holographic, version 2004
 
-## Windows Autopilot Diagnostics
+## Windows Autopilot Diagnostics page
 
-When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot Diagnostic Page** is available to provide IT admins and end users with a user-friendly view to troubleshoot Autopilot failures. This feature can be enabled by going to the [ESP profile](enrollment-status.md#esp-profiles) and selecting **Yes** to **Allow users to collect logs about installation errors**. The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. Windows 10 users can still collect and export logs if this setting is enabled in Intune, but the new diagnostics page is only available on Windows 11.
+When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot Diagnostic Page** is available to provide IT admins and end users with a user-friendly view to troubleshoot Autopilot failures. This feature can be enabled by going to the [ESP profile](enrollment-status.md#esp-profiles) and selecting **Yes** to **Allow users to collect logs about installation errors**. 
+
+The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. The new diagnostics page is only available on Windows 11, however Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 
 ## Windows Autopilot for HoloLens 2
 
