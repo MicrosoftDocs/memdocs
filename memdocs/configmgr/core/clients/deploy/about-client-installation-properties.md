@@ -638,6 +638,9 @@ Use the following process:
 
 After the client installs and properly registers with the site, it starts the referenced task sequence. If client registration fails, the task sequence won't start.
 
+> [!NOTE]
+> The task sequence launched by **PROVISIONTS** uses the **Default Client Settings**. Since the task sequence launched by **PROVISIONTS** launches immediately after the client registers, it will not be part of any Collection that custom client settings are deployed to. Custom client settings therefore are not processed or applied. For this reason certain client settings necessary for the task sequence to work properly may need to be changed in the **Default Client Settings**. Examples include **Enable clients to use a cloud management gateway** and **Allow access to cloud distribution point**, both found under **Cloud Services**, and **PowerShell execution policy** found under **Computer Agent**. If these client settings are not desired after the task sequence completes, deploy new custom client settings reversing the settings.
+
 ### RESETKEYINFORMATION
 
 If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
