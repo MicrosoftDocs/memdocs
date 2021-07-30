@@ -33,9 +33,9 @@ When you deploy Windows 11 with Autopilot, you can enable users to view addition
 
 An example of the diagnostics page is shown below. In this example, **Configuration info** is expanded and the user clicks on **Deployment info** to display details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
 
-![diagnostics page start](images/oobe-tx-01.png)<br>
-![diagnostics page click](images/oobe-tx-02.png)<br>
-![diagnostics page expand](images/oobe-tx-03.png)
+![diagnostics page start](images/oobe-01.png)<br>
+![diagnostics page click](images/oobe-02.png)<br>
+![diagnostics page expand](images/oobe-03.png)
 
 The diagnostics page can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status#available-settings) and selecting **Yes** to **Allow users to collect logs about installation errors**. 
 
