@@ -5,7 +5,7 @@ ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/30/2021
 ---
-<!--This file is shared by the CMPivot overview article (cmpivot.md) and the Contribute to Community hub (community-hub-contribute.md) article. H2 is driven by the article and is used there so bookmarks function properly-->
+<!--This file is shared by the CMPivot overview article (cmpivot.md) and the Contribute to Community hub (community-hub-contribute.md) article for 9965423. H2s for this are in the articles themselves to help note where the content sits-->
 
 
 

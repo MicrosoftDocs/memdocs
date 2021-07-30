@@ -187,7 +187,7 @@ The CMPivot window contains the following elements:
 >
 >:::image type="content" source="media/query-devices-again.png" alt-text="Screenshot of the query devices again button showing the tooltip that Ctrl + F5 is a shortcut to force clients to retrieve the data again.":::
 
-## "bkmk_publish" Publish query to Community hub from CMPivot
+## <a name="bkmk_publish"></a> Publish query to Community hub from CMPivot
 <!--9965423-->
 [!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)] <!--using include for shared content-->
 
