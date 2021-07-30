@@ -8,7 +8,7 @@ ms.date: 07/30/2021
 <!--This file is shared by the CMPivot overview article and the Contribute to Community hub article-->
 
 
-## Publish query to Community hub from CMPivot
+## "bkmk_publish" Publish query to Community hub from CMPivot
 <!--9965423-->
 *(Applies to version 2107 or later)*
 Starting in version 2107, you can publish a CMPivot query to the Community hub directly from the CMPivot window. Submitting your queries directly through CMPivot makes contributing to the Community hub easier.
