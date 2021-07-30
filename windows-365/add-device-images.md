@@ -53,6 +53,8 @@ You can delete a custom image from Windows 365 by following these steps:
 2. On the **Device images** page, select the check box next to the image > **Delete**.
 3. Select **Yes** on the confirmation pop up to permanently delete the image.
 
+Device Images being used in a provisioning policy cannot be deleted. Delete the provisioning policy first and then the associated device image. 
+
 <!-- ########################## -->
 ## Next steps
 

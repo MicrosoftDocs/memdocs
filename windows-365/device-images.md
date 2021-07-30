@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Device images overview
 
-Windows 365 uses both default and custom operating system images to automatically create the virtual Cloud PCs that you provide to your end users. The default images are available from the marketplace. You can also [upload custom images](add-device-images.md) that you create.
+Windows 365 uses both default and custom operating system images to automatically create the virtual Cloud PCs that you provide to your end users. The default images are available from the gallery in Microsoft Endpoint Manager as a part of creating your provisioning policy. You can also [upload custom images](add-device-images.md) that you create.
 
 ## Image requirements
 
@@ -45,15 +45,16 @@ Both marketplace and custom images must meet the following requirements:
 A custom image must also meet the following extra requirements:
 
 - Exist in an Azure subscription that has an on-premises network connection already setup.
-- Is stored as an Azure-managed image object.
+- Is stored as a managed image in Azure.
+
+Storing a managed image on Azure incurs storage costs. However customers can delete the managed image from Azure once they've successfully uploaded it as Device Images to Microsoft Endpoint Manager. 
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images. They are replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They are replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
 
-There are three sets of images available to choose from across the different versions of Windows 10 Enterprise:
+There are two sets of images available to choose from across the different versions of Windows 10 Enterprise:
 
-- **Clean OS images**: These are out-of-the-box images with factory settings. This is like using a default image on your physical Windows devices with Windows Autopilot.
 - **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
   - IsAVDEnvironment reg key (Teams).
   - C++ Runtime (Teams).
@@ -66,7 +67,7 @@ There are three sets of images available to choose from across the different ver
   - UWP packages removed.
   - Task scheduler actions disabled.
 
-A custom image can be created using any of the images above as a starting point. For example, you can start with an image above and then install more applications and make more configuration changes.
+A custom image can be created using [any of the images above as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with an image above and then install more applications and make more configuration changes.
 
 ### Recommended image by license
 
