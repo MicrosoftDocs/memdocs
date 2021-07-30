@@ -34,7 +34,7 @@ items:
       - name: Cloud PC role-based access control
         href: role-based-access.md
       - name: Intune role-based access control
-        href: /intune/fundamentals/role-based-access-control.md?context=/windows-365/context/pr-context
+        href: /intune/fundamentals/role-based-access-control?context=/windows-365/context/pr-context
       - name: Cloud PC sizes
         href: cloud-pc-size-recommendations.md
     - name: Deploy
