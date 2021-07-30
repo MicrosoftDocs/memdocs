@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -65,7 +65,7 @@ The following settings can be configured to customize behavior of the Enrollment
 <tr><td>Allow users to use device if installation error occurs<td>A <b>Continue anyway</b> button is displayed if there's an installation failure.<td>The <b>Continue anyway</b> button isn't displayed if there's an installation failure.
 <tr><td>Show timeout error when installation takes longer than specified number of minutes<td colspan="2">Specify the number of minutes to wait for installation to complete. A default value of 60 minutes is entered.
 <tr><td>Show custom message when an error occurs<td>A text box is provided where you can specify a custom message to display if an installation error occurs.<td>The default message is displayed: <br><b>Installation exceeded the time limit set by your organization. Try again or contact your IT support person for help.<b>
-<tr><td>Turn on log collection and diagnostics page for end users<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b>.<br>In Windows 11, the <b>Windows Autopilot diagnostics</b> page is also displayed.<td>The <b>Collect logs</b> button isn't displayed if there's an installation error.<br>The <b>Windows Autopilot diagnoatics</b> page is not displayed in Windows 11.
+<tr><td>Turn on log collection and diagnostics page for end users<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b>.<br>In Windows 11, the <b>Windows Autopilot diagnostics</b> page is also displayed.<td>The <b>Collect logs</b> button isn't displayed if there's an installation error.<br>The <b>Windows Autopilot diagnostics</b> page is not displayed in Windows 11.
 <tr><td>Block device use until these required apps are installed if they're assigned to the user/device<td colspan="2">Choose <b>All</b> or <b>Selected</b>. <br><br>If <b>Selected</b> is chosen, a <b>Select apps</b> button appears that lets you choose which apps must be installed before enabling the device.
 </table>
 
