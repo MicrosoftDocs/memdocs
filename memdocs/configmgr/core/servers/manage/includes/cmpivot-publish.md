@@ -5,11 +5,10 @@ ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/30/2021
 ---
-<!--This file is shared by the CMPivot overview article (cmpivot.md) and the Contribute to Community hub (community-hub-contribute.md) article-->
+<!--This file is shared by the CMPivot overview article (cmpivot.md) and the Contribute to Community hub (community-hub-contribute.md) article. H2 is driven by the article and is used there so bookmarks function properly-->
 
 
-## "bkmk_publish" Publish query to Community hub from CMPivot
-<!--9965423-->
+
 *(Applies to version 2107 or later)*
 Starting in version 2107, you can publish a CMPivot query to the Community hub directly from the CMPivot window. Submitting your queries directly through CMPivot makes contributing to the Community hub easier.
 
