@@ -32,7 +32,7 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
 - When a feature enters production, whether it's a preview or generally available, the feature description will move from this page to [What's new](whats-new.md).
-- This page and the [What's new](whats-new.md) page are updated periodically. Check back for additional updates.
+- This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
 > [!NOTE]
@@ -65,15 +65,15 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 ### Export underlying discovered apps list data<!-- 9370255  -->
 
-In addition to exporting the summarized discovered apps list data, you will also be able export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the additional new experience will also provide the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data will be a list of every device and each app discovered for that device. This functionality is being added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset, which will be removed in the 2108 release. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+In addition to exporting the summarized discovered apps list data, you'll also be able export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the new experience will also provide the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data will be a list of every device and each app discovered for that device. This functionality is being added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset, which will be removed in the 2108 release. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 ### Maximum OS version setting for app conditional launch<!-- 9493137  -->
 
-Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
+Using iOS app protection policies in Microsoft Intune app protection policies, you'll be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
 ### Update to Outlook S/MIME settings for iOS and Android devices<!-- 7882166  -->
 
-You'll be able to enable Outlook S/MIME settings to always sign and/or always encrypt on iOS and Android devices when using the managed apps option. You will be able to find this setting in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) when using managed apps by selecting **Apps** > **App configuration policies**.  In addition, you can add a LDAP (Lightweight Directory Access Protocol) URL for Outlook S/MIME on iOS and Android devices for both managed apps and managed devices. For related information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
+You'll be able to enable Outlook S/MIME settings to always sign and/or always encrypt on iOS and Android devices when using the managed apps option. You'll be able to find this setting in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) when using managed apps by selecting **Apps** > **App configuration policies**.  In addition, you can add a LDAP (Lightweight Directory Access Protocol) URL for Outlook S/MIME on iOS and Android devices for both managed apps and managed devices. For related information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
 
 ### Unified delivery of Azure AD Enterprise and Office Online applications in the Android Company Portal<!-- 1817862  -->
 
@@ -81,7 +81,7 @@ Last year, we announced [Unified delivery of Azure AD Enterprise and Office Onli
 
 ### Content of macOS LOB apps will be displayed in Intune<!-- 6991005  -->
 
-Intune will display the contents of macOS LOB apps ( .intunemac files) in the console. You will be able to review and edit the app detection details in the Intune console that are captured from the *.intunemac* file when adding a macOS LOB app. When uploading a PKG file, detection rules will be auto-created. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. Continue by selecting the **Line-of-business** app type and the **App package file** containing the *.intunemac* file. For more information, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune](../apps/lob-apps-macos.md).
+Intune will display the contents of macOS LOB apps ( .intunemac files) in the console. You'll be able to review and edit the app detection details in the Intune console that are captured from the *.intunemac* file when adding a macOS LOB app. When uploading a PKG file, detection rules will be auto-created. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. Continue by selecting the **Line-of-business** app type and the **App package file** containing the *.intunemac* file. For more information, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -105,7 +105,7 @@ Applies to:
 
 ### Settings catalog policies for policy sets<!-- 8683467  -->
 
-In addition to profiles based on templates, you will be able to add a profiles based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
+In addition to profiles based on templates, you'll be able to add a profiles based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
 
 ### New macOS device configuration profile settings, and iOS/iPadOS setting name is changing<!-- 9772945  -->
 
@@ -223,7 +223,7 @@ Applies to:
 
 When creating a device restrictions policy for iOS/iPadOS devices, there's a new setting available (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile):
 
-- **Require devices to use Wi-Fi networks set up via configuration profiles**: Set to **Yes**to require devices to only use Wi-Fi networks set up through configuration profiles.
+- **Require devices to use Wi-Fi networks set up via configuration profiles**: Set to **Yes** to require devices to only use Wi-Fi networks set up through configuration profiles.
 
 To see the settings you can currently configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
@@ -261,9 +261,9 @@ Applies to:
 
 We’re improving the experience of managing Windows updates for pre-release builds. (**Devices** > **Windows** > **Windows 10 update rings**).
 
-The improvements include the following:
+You'll see the following improvements:
 
-- Devices assigned to Windows update rings will no longer have the *ManagePreviewBuilds* setting changed during Autopilot. When this setting changes during Autopilot it forces an additional reboot.
+- Devices assigned to Windows update rings will no longer have the *ManagePreviewBuilds* setting changed during Autopilot. When this setting changes during Autopilot it forces an another reboot.
 - There will be a new control named **Enable pre-release builds** added to Windows update rings to indicate whether to configure assigned devices to update to pre-release builds.
 - The list of pre-release builds will update:
   - The default, non-prerelease **Semi-Annual Channel** will be removed.
@@ -299,7 +299,7 @@ After the change, only new policies you then create will use the new API. Your e
 
 ### Export capability for Enrollment failures report<!-- 5491082  -->
 
-You will be able to export data from the Enrollment failures operational report. This report will allow you to quickly export reporting data generated from any size tenant. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Enrollment failures** > **Export**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
+You'll be able to export data from the Enrollment failures operational report. This report will allow you to quickly export reporting data generated from any size tenant. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Enrollment failures** > **Export**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 ### Filter evaluation report will be improved<!-- 9974516   -->
 
@@ -307,7 +307,7 @@ The **Filter evaluation** page, which shows every app or policy that was filtere
 
 ### Confirm Tunnel Gateway servers can access your internal network from within the Microsoft Endpoint Manager admin center<!-- 9840576 -->
 
-We're adding the capability to the Microsoft Endpoint Manager admin center to confirm that your Tunnel Gateway servers can access your internal network, without someone having to access the servers directly. To enable this, you'll configure a new option called **URL for internal network access check** in the properties of each Tunnel Gateway site (**Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**).
+We're adding the capability to the Microsoft Endpoint Manager admin center to confirm that your Tunnel Gateway servers can access your internal network, without someone having to access the servers directly. To enable this capability, you'll configure a new option called **URL for internal network access check** in the properties of each Tunnel Gateway site (**Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**).
 
 After adding a URL from your internal network to a Tunnel Gateway site, each server in that site periodically attempts to access it, and then reports on the result.
 
@@ -346,7 +346,7 @@ The metrics that support the trend charts include:
 
 ### Device configuration reporting will be updated<!-- 10005568  -->
 
-All device configuration and endpoint security profiles will be merged into one report. You will be able to view all the policies applied to your device in a single report with improved data. You will be able to see the distinction of profile types in a new **Policy type** field. Also, selecting a policy will provide additional details about settings applied to the device and status of the device. Role-based access control (RBAC) permissions will be applied to filter the list of profiles based on your permissions. In Microsoft Endpoint Manger admin center, you will select **Devices** > **All devices** > *select a device* > **Device configuration** to see this report when it is available. For related information, see [Microsoft Intune reports](../fundamentals/reports.md).
+All device configuration and endpoint security profiles will be merged into one report. You'll be able to view all the policies applied to your device in a single report with improved data. You'll be able to see the distinction of profile types in a new **Policy type** field. Also, selecting a policy will provide more details about settings applied to the device and status of the device. Role-based access control (RBAC) permissions will be applied to filter the list of profiles based on your permissions. In Microsoft Endpoint Manger admin center, you'll select **Devices** > **All devices** > *select a device* > **Device configuration** to see this report when it's available. For related information, see [Microsoft Intune reports](../fundamentals/reports.md).
 
 ### Export GPO XML file size increased to 4 MB when using group policy analytics (preview) on Windows 10 and later devices<!-- 9560131  -->
 
@@ -382,7 +382,7 @@ Applies to:
 
 ### Scope tags for Managed Google Play apps<!-- 6114508  -->
 
-Scope tags determine which objects an admin with specific rights can view in Intune. Most newly-created items in Intune take on the scope tags of the creator. This is not the case for Managed Google Play Store apps. You will be able to optionally assign a scope tag to apply to all newly-synced Managed Google Play apps on the **Managed Google Play connector** pane. The chosen scope tag will only apply to new Managed Google Play apps, not Managed Google Play apps that have already been approved in the tenant. For related information see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+Scope tags determine which objects an admin with specific rights can view in Intune. Most newly created items in Intune take on the scope tags of the creator. This scope behavior is not the case for Managed Google Play Store apps. You'll be able to optionally assign a scope tag to apply to all newly synced Managed Google Play apps on the **Managed Google Play connector** pane. The chosen scope tag will only apply to new Managed Google Play apps, not Managed Google Play apps that have already been approved in the tenant. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 <!-- ***********************************************-->
 ## Scripting
@@ -439,7 +439,7 @@ The new settings by settings category:
 - **Microsoft Defender - User interface preferences**:
   - User initiated feedback
 
-- **Microsoft Defender - Network protection** - This is a new category for Microsoft Defender for Endpoint in the catalog:
+- **Microsoft Defender - Network protection** - A new category for Microsoft Defender for Endpoint in the catalog:
   - Enforcement level
 
 ### Additional Android SafetyNet evaluation type support for conditional launch policies<!-- 9076664  -->
