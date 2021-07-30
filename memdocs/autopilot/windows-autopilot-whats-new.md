@@ -39,7 +39,7 @@ An example of the diagnostic page is shown below. In this example, **Configurati
 
 The diagnostics page can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status#available-settings) and selecting **Yes** to **Allow users to collect logs about installation errors**. 
 
-The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. The new diagnostics page is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
+The Autopilot diagnostic page is currently supported for commercial OOBE, and Autopilot user-driven mode. It is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 
 ## Windows Autopilot for HoloLens 2
 
