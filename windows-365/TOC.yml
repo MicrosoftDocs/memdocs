@@ -53,7 +53,7 @@ items:
           href: delete-on-premises-network-connection.md
       - name: Device images
         items:
-        - name: Add device images
+        - name: Add or delete device images
           href: add-device-images.md
     - name: Provisioning
       items:
