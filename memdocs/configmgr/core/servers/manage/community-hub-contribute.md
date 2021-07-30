@@ -2,7 +2,7 @@
 title: Contribute to the Community hub
 titleSuffix: Configuration Manager
 description: Contribute to the Configuration Manager Community hub
-ms.date: 04/05/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -102,6 +102,8 @@ To use branding:
 ## <a name="bkmk_deeplink"></a> Directly link to Community hub items
 <!--4224406-->
 [!INCLUDE [Community hub direct link information](includes/community-hub-links.md)]
+
+[!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)] <!--using include for shared content-->
 
 ## Object type information
 

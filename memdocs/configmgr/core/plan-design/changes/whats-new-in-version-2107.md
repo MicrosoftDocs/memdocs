@@ -314,6 +314,16 @@ If you create an ADR with the **No deployment package** option, you're unable to
 
 For more information, see [Automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_script).
 
+
+## Community hub
+
+### Publish query to Community hub from CMPivot
+<!--9965423-->
+You can now publish a CMPivot query to the Community hub directly from the CMPivot window. Submitting your queries directly through CMPivot makes contributing to the Community hub easier.
+
+For more information, see [Contribute to Community hub](../../servers/manage/community-hub-contribute.md#bkmk_publish) and [CMPivot](../../servers/manage/cmpivot.md#bkmk_publish).
+
+
 ## Configuration Manager console
 
 ### Enhanced code editor
