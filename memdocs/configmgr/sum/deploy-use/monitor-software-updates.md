@@ -65,11 +65,14 @@ After you configure the alert settings, if the specified conditions occur, Confi
 
 #### To monitor deployment status  
 
-1.  In the Configuration Manager console, navigate to **Monitoring** > **Overview** > **Deployments**.  
+1. In the Configuration Manager console, navigate to **Monitoring** > **Overview** > **Deployments**.  
 
-2.  Click the software update group or software update for which you want to monitor the deployment status.  
+1. Click the software update group or software update for which you want to monitor the deployment status.  
 
-3.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
+1. On the **Home** tab, in the **Deployment** group, click **View Status**.  
+
+> [!TIP]
+> Starting in version 2107, you can right-click the status of a deployment and select **Evaluate Software Update Deployments** to send a notification to the selected devices to run a software update deployment evaluation cycle.
 
 ##  <a name="BKMK_SUReports"></a> Software updates reports  
  The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They're organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
