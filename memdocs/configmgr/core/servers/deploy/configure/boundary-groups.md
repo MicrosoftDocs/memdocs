@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 07/15/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -248,7 +248,7 @@ Common scenarios for enabling this option:
 Depending on the configuration of your network, you can exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (`2001:0000:%`).<!--3555777-->
 
 > [!NOTE]
-> In version 2002, when you [expand a stand-alone primary site](../install/prerequisites-for-installing-sites.md#bkmk_expand) to add a central administration site (CAS), the subnet exclusion list reverts to the default. To work around this issue, after site expansion, run the PowerShell script to customize the subnet exclusion list on the CAS.<!-- 6309068 -->
+> When you [expand a stand-alone primary site](../install/prerequisites-for-installing-sites.md#bkmk_expand) to add a central administration site (CAS), the subnet exclusion list reverts to the default. To work around this issue, after site expansion, run the PowerShell script to customize the subnet exclusion list on the CAS.<!-- 6309068 -->
 
 Import your subnet exclusion list as a comma-separated subnet string. Use the percent sign (`%`) as a wildcard character. On the top-level site server, set or read the **SubnetExclusionList** embedded property for the **SMS_HIERARCHY_MANAGER** component in the **SMS_SCI_Component** class. For more information, see [SMS_SCI_Component server WMI class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md).
 
@@ -301,9 +301,9 @@ By default, the management point prioritizes peer cache sources at the top of th
 
 #### <a name="bkmk_bgoptions4"></a> Prefer cloud based sources over on-premises sources
 
-If you have a branch office with a faster internet link, you can prioritize cloud content. Cloud-based sources include the following locations:<!-- SCCMDocs#1529 -->
+If you have a branch office with a faster internet link, you can prioritize cloud-based sources, which include the following locations:<!-- SCCMDocs#1529 -->
 
-- Content-enabled cloud management gateways
+- Cloud management gateway (CMG). Clients will prefer the CMG for both policy and content.
 - Microsoft Update
 
   > [!NOTE]
