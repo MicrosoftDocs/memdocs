@@ -298,6 +298,20 @@ You can use the **All Subfolders** search option for the following nodes:
 - **Operating System Upgrade Packages** node
 - **Operating System Images** node
 
+### Run software updates evaluation from deployment status
+<!--9012080 -->
+*(Introduced in version 2107)*
+
+You can right-click and notify devices to run a software updates evaluation cycle from the [software update deployment status](../../../sum/deploy-use/monitor-software-updates.md#BKMK_SUDeployStatus). You can target a single device under the **Asset Details** pane or select a group of devices based on their deployment status.
+
+:::image type="content" source="./media/9012080-run-software-update-deployment-evaluation.png" alt-text="Screenshot of the right-click action for software updates deployment evaluation from the software update deployment status":::
+
+1. In the Configuration Manager console, navigate to **Monitoring** > **Overview** > **Deployments**.
+1. Select the software update group or software update for which you want to monitor the deployment status.
+1. On the Home tab, in the Deployment group, select **View Status**.
+1. Right-click on either a specific deployment status for the devices, or on a single device under **Asset Details** pane.
+1. Select **Evaluate Software Update Deployments** to send a notification to the selected devices to run an evaluation cycle for software update deployments.
+
 ### Import objects to current folder
 
 <!--6601203-->
