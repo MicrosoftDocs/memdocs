@@ -71,10 +71,6 @@ In addition to exporting the summarized discovered apps list data, you will also
 
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
-### New app categories to target app protection policies more easily<!-- 4802581  -->
-
-We'll improve the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically apply to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
-
 <!-- ***********************************************-->
 ## Device configuration
 
@@ -135,12 +131,6 @@ Applies to:
 
 - iOS/iPadOS
 
-### Improved policy support for iPadOS devices enrolled as Shared iPads for Business<!-- 9779187  -->
-
-We’re adding support for user-assigned device configuration policies for [Shared iPads for Business](../enrollment/device-enrollment-shared-ipad.md).
-
-With this change, settings like the home screen layout and most device restrictions assigned to user groups will apply to Shared iPad devices while a user from the assigned user groups is active on the device.
-
 ### Use filters on DFCI configuration profiles on Windows 10 RS5+ devices<!-- 8817773  -->
 
 In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
@@ -163,18 +153,6 @@ Applies to:
 ### Tenant attach: Offboarding <!--9412904 -->
 
 While we know customers get enormous value by enabling tenant attach with Configuration Manager, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard from the cloud following a disaster recovery scenario where the on-premises environment was removed. You'll soon be able to offboard a Configuration Manager environment from the Microsoft Endpoint Manager admin center.
-
-### Use Filters to assign Windows 10 update rings<!-- 7423515   -->
-
-We're adding the capability to use **filters** to assign *Windows 10 Update ring policies*.
-
-A filter allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
-
-Filters are in public preview and must be enabled for your tenant before you can configure and use them. For more information about how to enable and then configure Filters for any Intune policy that supports them, see [Use filters when assigning policies](../fundamentals/filters.md).
-
-### Collect diagnostics remote action moving to general availability<!--10022807 -->
-
-The **Collect diagnostics** remote action will move to general availability. For more information about this remote action, see  [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md)
 
 ### Use filters to assign iOS/iPadOS software update policies in Endpoint Manager admin center - public preview<!-- 7423817 -->
 
@@ -202,14 +180,6 @@ Using the Company Portal, end users will be able to restart an app installation 
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 
-### Improvements to SSO app extension screen for Company Portal for macOS <!-- 9674212  -->
-
-We're improving the Intune Company Portal authentication screen that prompts macOS users to log in to their account using single sign-on (SSO). Users will be able to:
-
-- See the app that's requesting SSO.
-- Select **Don't ask me again** to opt out of future SSO requests.
-- Opt back in to SSO requests by going to Company Portal > **Preferences** and deselecting **Don't ask me to sign in with single sign-on for this account**.
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
@@ -226,10 +196,6 @@ You will be able to export data from the Enrollment failures operational report.
 ### Filter evaluation report will be improved<!-- 9974516   -->
 
 The **Filter evaluation** page, which shows every app or policy that was filtered, will be improved to include results for available app assignments. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices** > *select a device* > **Filter evaluation**.
-
-### Work from anywhere report<!-- 7207657   -->
-
-[Endpoint analytics](../../analytics/overview.md) will soon have a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the [Recommended software](../../analytics/recommended-software.md) report. The new report will contain metrics for Windows 10, cloud management, cloud identity, and cloud provisioning.
 
 <!-- ***********************************************-->
 ## Role-based access control
