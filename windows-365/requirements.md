@@ -50,6 +50,7 @@ To use Cloud PCs, you must meet the following requirements:
 
 - If an organizational unit is specified, ensure it exists and is valid.
 - An Active Directory user account with sufficient permissions to join the computer into the specified organizational unit within the Active Directory domain. If you do not specify an organizational unit, the user account must have sufficient permissions to join the computer to the Active Directory domain.
+- User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Azure Active Directory.
 
 ## Licensing requirements
 
