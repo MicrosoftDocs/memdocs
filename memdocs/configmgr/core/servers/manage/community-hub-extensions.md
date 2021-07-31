@@ -1,7 +1,7 @@
 ---
 title: Console extensions from Community hub
 titleSuffix: Configuration Manager
-description: Learn about managing console extensions for Configuration Manager
+description: Learn about managing Community hub console extensions for Configuration Manager
 ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -11,13 +11,13 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Manage console extensions for Configuration Manager
+# Console extensions from Community hub
 
 *Applies to: Configuration Manager (current branch)*
 
 When you use Configuration Manager version 2103 or later, you can download console extensions from the [Community hub](community-hub.md) and have it applied to all consoles connected to a hierarchy. The **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. Getting an extension from community hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
 
-After you approve an extension, when you open the console, you'll see a [console notification](#bkmk_notification). From the notification, you can start the extension installer. After the installer completes, the console restarts automatically, and then you can use the extension.
+After you approve an extension, when you open the console, you'll see a [console notification](#bkmk_notification). From the notification, you can start the extension installer. After the installer completes, the console restarts automatically, and then you can use the extension. <!--3555909-->
 
 ## Find extensions in Community hub
 
