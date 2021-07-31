@@ -34,7 +34,7 @@ The **Reprovision** remote action deletes a user's current Cloud PC and creates 
 
 When the **Reprovision** remote action starts, the user is signed off. The original Cloud PC is deleted, including all user data, applications, customizations, and so on.
 
-To **Reprovision** a Cloud PC, it must have a status of **Failed** or **Provisioned** in the Windows 365 provisioning node
+To **Reprovision** a Cloud PC, it must have a status of **Failed** or **Provisioned** in the Windows 365 provisioning node.
 
 For information on when to use the **Reprovision** action, see [Reprovisioning](provisioning.md#reprovisioning).
 
