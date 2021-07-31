@@ -327,7 +327,7 @@ For more information, see [Contribute to Community hub](../../servers/manage/com
 
 When you use Configuration Manager version 2103 or later, you can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. Manage the approval and installation of console extensions used in your environment from the **Console extensions** node.
 
-For more information, see [Console extensions from Community hub](../../servers/manage/community-hub-extensions.md)
+For more information, see [Console extensions from Community hub](../../servers/manage/community-hub-extensions.md).
 
 ## Configuration Manager console
 
