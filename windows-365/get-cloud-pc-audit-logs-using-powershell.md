@@ -72,15 +72,15 @@ To get all the events, use the **-All** parameter: ```Get-MgDeviceManagementVirt
 
 To get only the top N events, use the following parameters: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -All -Top {TopNumber}```
 
-#### Get a single event by event id
+#### Get a single event by event ID
 
-You can use the following command to a single event: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event id}```
+You can use the following command to a single event: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
 
 #### Get audit actor
 
 You can also find out who performed an audit event by running teh following commands:
 
-```$res=Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event id}```dotnetcli
+```$res=Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```dotnetcli
 ```$res.Actor```
 
 <!-- ########################## -->
