@@ -46,7 +46,7 @@ To get audit log events for up to seven days for your Windows 365 tenant, follow
 
 ### Install the SDK
 
-1. Run this command: ```Install-Module Microsoft.Graph -Scope CurrentUser```
+1. In PowerShell, run this command: ```Install-Module Microsoft.Graph -Scope CurrentUser```
 2. Verify the installation by running this command:```Get-InstalledModule Microsoft.Graph```
 3. To get all Cloud PC Graph endpoints, run this command: ```Get-Command -Module Microsoft.Graph* *virtualEndpoint*```
 
@@ -60,7 +60,28 @@ To get audit log events for up to seven days for your Windows 365 tenant, follow
 
 ### Get audit data
 
+You can view audit data in multiple ways.
 
+#### List audit events
+
+To see a list of audit events, use the following command:
+
+```Get-MgDeviceManagementVirtualEndpointAuditEvent```
+
+To get all the events, use the **-All** parameter: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -All```
+
+To get only the top N events, use the following parameters: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -All -Top {TopNumber}```
+
+#### Get a single event by event id
+
+You can use the following command to a single event: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event id}```
+
+#### Get audit actor
+
+You can also find out who performed an audit event by running teh following commands:
+
+```$res=Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event id}```dotnetcli
+```$res.Actor```
 
 <!-- ########################## -->
 ## Next steps
