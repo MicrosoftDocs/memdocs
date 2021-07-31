@@ -117,8 +117,6 @@ items:
         href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
-      - name: Windows 10 lifecycle
-        href: /windows/release-health/release-information?context=/windows-365/context/pr-context
     - name: End user experience
       items:
       - name: Access a Cloud PC
