@@ -78,7 +78,7 @@ You can use the following command to a single event: ```Get-MgDeviceManagementVi
 
 #### Get audit actor
 
-You can also find out who performed an audit event by running teh following commands:
+You can also find out who performed an audit event by running the following commands:
 
 ```$res=Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```dotnetcli
 ```$res.Actor```
