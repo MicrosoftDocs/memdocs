@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2021
+ms.date: 07/31/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -59,6 +59,14 @@ You must allow traffic in your Azure network configuration to the following serv
   - cpcsacnrysa1prodpreu01.blob.core.windows.net
   - cpcsacnrysa1prodpreu02.blob.core.windows.net
   - cpcsacnrysa1prodprna01.blob.core.windows.net
+  - cpcstprovprodpreu01.blob.core.windows.net
+  - cpcstprovprodpreu02.blob.core.windows.net
+  - cpcstprovprodprna01.blob.core.windows.net
+  - cpcstprovprodprna02.blob.core.windows.net
+  - cpcstprovprodprap01.blob.core.windows.net
+  - cpcstprovprodprau01.blob.core.windows.net
+
+All endpoints connect over  port 443.
 
 ## DNS requirements
 
