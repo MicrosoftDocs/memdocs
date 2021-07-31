@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 07/30/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -94,6 +94,9 @@ We’ve released the [Certificate Connector for Microsoft Intune](../protect/cer
 
 The previous connectors remain in support but are no longer available for download. If you need to install or reinstall a connector, install the new Certificate Connector for Microsoft Intune.
 
+#### Windows Autopilot diagnostics page (public preview)
+
+[Available settings](/mem/intune/enrollment/windows-enrollment-status#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](/mem/autopilot/windows-autopilot-whats-new#preview-windows-autopilot-diagnostics-page). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
