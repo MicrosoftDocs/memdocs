@@ -40,7 +40,7 @@ conceptualContent:
           itemType: concept
           text: Cloud PC size recommendations
       footerLink:
-        url: planning guide.md
+        url: planning-guide.md
         text: See more
     - title: Set up Windows 365
       links:
@@ -78,7 +78,7 @@ conceptualContent:
         - url: deploy-security-baselines.md
           itemType: how-to-guide
           text: Deploy security baselines
-        - url: set-conditional-access-policies
+        - url: set-conditional-access-policies.md
           itemType: how-to-guide
           text: Set conditional access policies
       footerLink:
@@ -96,7 +96,7 @@ conceptualContent:
         itemType: overview
         text: Microsoft Teams on a Cloud PC
       footerLink:
-        url: apps-overview.md
+        url: app-overview.md
         text: See more
     - title: Device management
       links: 
