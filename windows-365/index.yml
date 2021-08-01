@@ -98,7 +98,7 @@ conceptualContent:
       footerLink:
         url: app-overview.md
         text: See more
-    - title: Device management
+    - title: Windows 365 device management
       links: 
       - url: device-management-overview.md
         itemType: overview
