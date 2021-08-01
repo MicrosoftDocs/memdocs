@@ -34,13 +34,15 @@ Microsoft Teams is one of the core Microsoft 365 applications used with Windows 
 
 Using Teams on a Cloud PC is different from using Teams on a physical PC environment. For more information about the limitations of Teams in virtualized environments, see [Teams for Virtualized Desktop Infrastructure](/microsoftteams/teams-for-vdi#known-issues-and-limitations).
 
+> [!NOTE]
+> Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You can also sign out and in again to your Cloud PC to gain the same result.
+
+
 ## Teams optimizations
 
 The image gallery provides Windows 10 Enterprise images pre-configured with all the software that’s needed for an optimized Teams experience on Cloud PCs. As an IT admin or user, you need only install and configure the Microsoft Teams application and then you are ready to use it.
 
 The main benefit of this approach is that you setup the Teams audio and video call directly peer-to-peer from your physical endpoint to the other person. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
-
-Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You can also sign out and in again to your Cloud PC to gain the same result.
 
 Some of the key benefits of the optimizations are:
 
