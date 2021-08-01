@@ -119,7 +119,7 @@ additionalContent:
       - title: Microsoft Endpoint Manager
         links: 
         - text: Microsoft Endpoint Manager overview
-          url: /mem/endpoint-manager-overview.md
+          url: /mem/endpoint-manager-overview
         - text: Explore Microsoft Intune, a complete MDM tool
           url: /mem/intune/
       - title: Microsoft 365
