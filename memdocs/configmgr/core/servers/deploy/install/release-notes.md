@@ -85,6 +85,14 @@ For more information, see [internet access requirements](../../../plan-design/ne
 
 ## OS deployment
 
+### app revisions ...
+
+<!-- 10506770  -->
+
+_Applies to: version 2107_
+
+If you have a task sequence that includes the **Install Application** task sequence step, and you install the task sequence via PXE, don't revise these applications. In this scenario, if you make a change to the application properties, the PXE-deployed client doesn't install the latest version. For example, the task sequence currently references revision 6 of the application. You change the command-line to include a new parameter, which updates the application to revision 7. When a PXE client runs the task sequence, it installs revision 6 of the application.
+
 ### Task sequences can't run over CMG
 
 *Applies to: version 2002*
