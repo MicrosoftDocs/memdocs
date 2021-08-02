@@ -7,7 +7,7 @@ metadata:
   ms.author: aaroncz
   ms.reviewer: crosorio
   manager: dougeby
-  ms.date: 07/15/2021
+  ms.date: 07/30/2021
   ms.topic: reference
   ms.prod: configuration-manager
   ms.technology: configmgr-comanage
@@ -88,6 +88,11 @@ sections:
           When you set up co-management, enable autoenrollment of devices currently managed by Configuration Manager. If needed, you can scope autoenrollment only for a pilot collection. 
 
           For more information, see [How to enable co-management](how-to-enable.md). Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites). 
+
+      - question: |
+          Do I need to do anything with the deprecation of the Azure AD Graph API and Azure AD Authentication Library (ADAL)?
+        answer: |
+          Most likely not. For more information, see [CMG FAQ](../core/clients/manage/cmg/cloud-management-gateway-faq.yml#do-i-need-to-do-anything-with-the-deprecation-of-the-azure-ad-graph-api-and-azure-ad-authentication-library--adal--).<!--10488538-->
 
   - name: Workloads
     questions:
