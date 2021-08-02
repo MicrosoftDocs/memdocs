@@ -36,7 +36,7 @@ Windows 365 is a cloud-based service that automatically creates a new type of Wi
 - Azure Active Directory (Azure AD) for identity and access control.
 - Azure Virtual Desktop for remote connectivity.
 
-Each Cloud PC is assigned to an individual user and is their dedicated Windows device. Assigning a Cloud PC to a user is just like assigning an Exchange Online mailbox to a user. When a Windows 365 license is assigned to a user, provisioning of a new Cloud PC automatically starts and the Cloud PC is enrolled into Microsoft Endpoint Management.
+Each Cloud PC is assigned to an individual user and is their dedicated Windows device. Assigning a Cloud PC to a user is just like assigning an Exchange Online mailbox to a user. When a [Windows 365 license](https://www.microsoft.com/windows-365/enterprise/compare-plans-pricing) is assigned to a user, provisioning of a new Cloud PC automatically starts and the Cloud PC is enrolled into Microsoft Endpoint Management.
 
 With the Windows 365 service, you can:
 
