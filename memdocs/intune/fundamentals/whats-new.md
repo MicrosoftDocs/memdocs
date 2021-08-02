@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -125,9 +125,6 @@ For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2
 #### Work from anywhere report<!-- 7207657  -->
 
 [Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the [Recommended software](../../analytics/recommended-software.md) report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
-
-> [!Note]
-> The **Work from anywhere** report will go live after the July service update. We expect it within the week after the 2107 release completes.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
