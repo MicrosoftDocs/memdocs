@@ -16,10 +16,20 @@ manager: dougeby
 <!--9526630, 3555909-->
 Console extension authors can contribute extensions they've written to the community hub. Community hub users can download the extensions and manage the installation of them across their Configuration Manager hierarchy. Contributing extensions through Community hub supersedes the [previous deployment process](console-extension-deployment.md).
 
-> [!IMPORTANT]
-> - Currently only technical preview versions of Configuration Manager can get console extensions from the [Community hub](../../../../core/servers/manage/community-hub.md).
-> - Importing an unsigned extension can be done with [technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later. Unsigned extensions are for local import and testing purposes only.
-> - If you are using Configuration Manager version 2103, you can test your own extensions by [importing them locally](../../../../core/servers/manage/admin-console-extensions.md#bkmk_local_install), but the extension must be signed to import.
+## Version information
+
+To download console extensions from the [Community hub](../../../../core/servers/manage/community-hub.md), you'll need either:
+- A technical preview version of Configuration Manager
+- Configuration Manager [version 2103](../../../../core/plan-design/changes/whats-new-in-version-2103.md) or later
+
+You can test your own signed extensions by [importing them locally](../../../../core/servers/manage/admin-console-extensions.md#bkmk_local_install) with the following versions:
+- A technical preview version of Configuration Manager
+- Configuration Manager [version 2103](../../../../core/plan-design/changes/whats-new-in-version-2103.md) or later
+
+You can [import an unsigned extension](../../../../core/servers/manage/admin-console-extensions.md#bkmk_import-unsigned) locally. Unsigned extensions are for local import and testing purposes only. Unsigned extensions can't be submitted to Community hub. Importing an unsigned extension requires one of the following versions:
+- [Technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later.
+- Configuration Manager [version 2107](../../../../core/plan-design/changes/whats-new-in-version-2107.md) or later
+
 ## Prerequisites
 
  To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following prerequisites:
@@ -142,6 +152,9 @@ Example manifest.xml file:
 ## <a name="bkmk_test"></a> Register the extension to a site for testing
 
 When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
+
+> [!Important]
+> For local testing, you can import unsigned console extensions when you use version 2107 or later. For more information, see [import an unsigned extension](../../../../core/servers/manage/admin-console-extensions.md#bkmk_import-unsigned).
 
 1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
