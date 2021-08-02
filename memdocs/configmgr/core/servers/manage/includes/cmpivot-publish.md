@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ---
 <!--This file is shared by the CMPivot overview article, cmpivot.md, and the Contribute to Community hub, community-hub-contribute.md, article for 9965423-->
 

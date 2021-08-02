@@ -4,7 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ---
 
 - `https://aka.ms/configmgrgateway`

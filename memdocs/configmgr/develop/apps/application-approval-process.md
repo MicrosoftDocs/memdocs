@@ -2,7 +2,7 @@
 title: Application approval process
 titleSuffix: Configuration Manager
 description: Learn about the application approval process. See scenarios with code examples and view known issues.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core

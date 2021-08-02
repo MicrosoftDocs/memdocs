@@ -2,7 +2,7 @@
 title: Service connection tool
 titleSuffix: Configuration Manager
 description: Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

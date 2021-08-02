@@ -5,7 +5,7 @@ description: "The Configuration Manager console provides alerts and statuses to 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

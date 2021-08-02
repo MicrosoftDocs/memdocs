@@ -2,7 +2,7 @@
 title: Support for virtualization
 titleSuffix: Configuration Manager
 description: The requirements for installing Configuration Manager client and site system roles in a virtualization environment.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
