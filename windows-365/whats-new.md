@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 Learn what new features are available in Windows 365.
 
 > [!Note]
-> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to a week to rollout to all customers.
+> Each monthly update may take up to a week to rollout to all customers.
 
 <!-- Common categories:  
 ### App management
