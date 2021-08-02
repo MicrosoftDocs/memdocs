@@ -69,6 +69,8 @@ items:
       items:
       - name: Create a dynamic device group
         href: create-dynamic-device-group-all-cloudpcs.md
+      - name: Create a dynamic device group for a specific configuration
+        href: create-dynamic-device-group-for-specific-configuration.md
       - name: Create a dynamic device group from a specific policy
         href: create-dynamic-device-group-from-specific-policy.md
       - name: Create device configuration profile
