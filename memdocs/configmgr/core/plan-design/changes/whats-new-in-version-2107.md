@@ -392,6 +392,8 @@ For more information, see [CMTrace](../../support/cmtrace.md).
 <!--9573789-->
 RBAViewer has moved from `<installdir>\tools\servertools\rbaviewer.exe`. It's now located in the Configuration Manager console directory. After you install the console, RBAViewer.exe will be in the same directory. The default location is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\rbaviewer.exe`.
 
+For more information, see [Configuration Manager tools](../../support/tools.md).
+
 ## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
