@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,6 +39,8 @@ Requirements for the computer where you install the connector software:
 - Windows Server 2012 R2 or later
 
 - .NET 4.7.2
+
+- Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/active-directory/enable-support-tls-environment) in the Azure Active Directory documentation.  
 
 - The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md)
 
