@@ -229,9 +229,9 @@ If you already have a template that includes these properties, you can reuse it,
 
 Communications between managed devices and IIS on the NDES server use HTTPS, which requires use of a certificate. You can use the **Web Server** certificate template to issue this certificate. Or, if you prefer to have a dedicated template, the following properties are required:
 
-- **Extensions** > **Application Policies** must contain **Server Authentication**
+- **Extensions** > **Application Policies** must contain **Server Authentication**.
 - **Subject name** > **Supply in the request**.
-- **Security** > On the Security tab, the computer account of the NDES server should have **Read** and **Enroll** permission
+- On the **Security** tab, the computer account of the NDES server must have **Read** and **Enroll** permissions.
 
 > [!NOTE]
 > If you have a certificate that satisfies both requirements from the client and server certificate templates, you can use a single certificate for both IIS and the certificate connector.
