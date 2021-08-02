@@ -70,3 +70,5 @@ By default, Cloud PCs are joined to your enterprise Active Directory domain, syn
 ## Next steps
 
 [Plan your Cloud PC deployment](planning-guide.md).
+
+If you're looking for Windows 365 Business documentation, see [Get started with Windows 365 Business and Cloud PCs](/microsoft-365/admin/setup/get-started-windows-365-business).
