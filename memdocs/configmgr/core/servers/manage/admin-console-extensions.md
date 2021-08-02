@@ -86,6 +86,10 @@ if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successf
 else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
 ```
 
+> [!NOTE]
+> Currently, when an unsigned extension isn't [enabled for user notification](#bkmk_enable-notifications), in the **Console Extensions** node, the **Required** column remains blank instead of populating a value of **No**. <!--10349053, 10401804 -->
+
+
 ## Next steps
 
 - [Console tips](admin-console-tips.md)
