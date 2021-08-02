@@ -104,10 +104,9 @@ To use branding:
 
 [!INCLUDE [Community hub direct link information](includes/community-hub-links.md)]
 
-## <a name="bkmk_publish"></a> Publish query to Community hub from CMPivot
-<!--9965423-->
+<!--using include for shared content for 9965423-->
 
-[!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)] <!--using include for shared content-->
+[!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)] 
 
 ## Object type information
 
