@@ -231,6 +231,7 @@ Communications between managed devices and IIS on the NDES server use HTTPS, whi
 
 - **Extensions** > **Application Policies** must contain **Server Authentication**
 - **Subject name** > **Supply in the request**.
+- **Security** > On the Security tab, the computer account of the NDES server should have **Read** and **Enroll** permission
 
 > [!NOTE]
 > If you have a certificate that satisfies both requirements from the client and server certificate templates, you can use a single certificate for both IIS and the certificate connector.
