@@ -68,7 +68,7 @@ The client randomly selects a software update point from the list. It prioritize
 ###  <a name="BKMK_SUPSwitching"></a> Software update point switching  
 
 > [!NOTE]  
-> Clients use boundary groups to find a new software update point. If their current software update point is no longer accessible, they also use boundary groups to fallback and find a new one. Add individual software update points to different boundary groups to control which servers a client can find. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
+> Clients use boundary groups to find a new software update point. If their current software update point is no longer accessible, they also use boundary groups to fallback and find a new one. Add individual software update points to different boundary groups to control which servers a client can find. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups-software-update-points.md).  
 
 If you have multiple software update points at a site, and one fails or becomes unavailable, clients will connect to a different software update point. With this new server, clients continue to scan for the latest software updates. When a client is first assigned a software update point, it stays assigned to that software update point unless it fails to scan.  
 
@@ -108,7 +108,7 @@ Switch Configuration Manager clients to a new software update point when there a
 > [!IMPORTANT]    
 > When you switch devices to use a new server, the devices use fallback to find that new server. Clients switch to the new software update point during their next software updates scan cycle.<!-- SCCMDocs#1537 -->
 >
-> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
+> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups-software-update-points.md).  
 >
 > Switching to a new software update point generates additional network traffic. The amount of traffic depends on your WSUS configuration settings, for example, the synchronized classifications and products, or use of a shared WSUS database. If you plan to switch multiple devices, consider doing so during maintenance windows. This timing reduces the impact to your network when clients scan with the new software update point.  
 
@@ -147,7 +147,7 @@ When you need to manage devices that roam off your network onto the internet, de
 #### Cloud management gateway
 Create a cloud management gateway in Microsoft Azure and enable at least one on-premises software update point to allow traffic from internet-based clients. As clients roam onto the internet, they continue to scan against your software update points. All internet-based clients always get content from the Microsoft Update cloud service. 
 
-For more information, see [Overview of cloud management gateway](../../core/clients/manage/cmg/overview.md) and [Configure boundary groups](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
+For more information, see [Overview of cloud management gateway](../../core/clients/manage/cmg/overview.md) and [Configure boundary groups](../../core/servers/deploy/configure/boundary-groups-software-update-points.md).  
 
 #### Internet-based client management
 Place a software update point in an internet-facing network and enable it to allow traffic from internet-based clients. As clients roam onto the internet, they switch to this software update point for scanning. All internet-based clients always get content from the Microsoft Update cloud service.

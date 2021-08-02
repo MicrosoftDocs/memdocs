@@ -70,7 +70,7 @@ Starting in this release, use CNG certificates for the following HTTPS-enabled s
 
 ### Boundary group fallback for management points
 <!-- 1324594 -->
-Configure fallback relationships for management points between [boundary groups](../../servers/deploy/configure/boundary-groups.md). This behavior provides greater control for the management points that clients use. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#management-points).
+Configure fallback relationships for management points between [boundary groups](../../servers/deploy/configure/boundary-groups.md). This behavior provides greater control for the management points that clients use. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-management-points.md).
 
 
 ### Cloud distribution point site affinity
