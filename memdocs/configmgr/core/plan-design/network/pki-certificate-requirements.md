@@ -2,7 +2,7 @@
 title: PKI certificate requirements
 titleSuffix: Configuration Manager
 description: Find requirements for PKI certificates that you might need for Configuration Manager.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference

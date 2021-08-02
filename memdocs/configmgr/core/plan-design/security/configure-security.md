@@ -2,7 +2,7 @@
 title: Configure security
 titleSuffix: Configuration Manager
 description: How to configure security-related options for Configuration Manager.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

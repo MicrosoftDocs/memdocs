@@ -2,7 +2,7 @@
 title: The status system
 titleSuffix: Configuration Manager
 description: Use the status system to understand the state of your Configuration Manager environment.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

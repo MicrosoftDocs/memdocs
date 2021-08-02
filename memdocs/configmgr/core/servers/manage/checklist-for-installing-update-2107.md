@@ -2,7 +2,7 @@
 title: Checklist for 2107
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2107.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

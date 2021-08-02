@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ---
 <!--This file is shared by the admin-console-extensions.md, and admin-console-notifications.md files. Some headings may be context driven by the article-->
 
