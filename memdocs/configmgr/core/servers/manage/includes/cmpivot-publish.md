@@ -26,11 +26,14 @@ You'll need the following requirements for CMPivot and for contributing to the C
 1. From the CMPivot window, select the Community hub icon on the menu.
 
     :::image type="content" source="../media/7137169-hub-icon.png" alt-text="Community hub icon":::
+
 1. Select **Sign in**, then sign into GitHub.
 1. Create a CMPivot query, then select **Run Query** to verify it functions as expected.
    - Optionally, select the folder icon to access your favorites list to use a query you've already created.
 1. Select the **Publish** link at top of CMPivot's Community hub window when you're ready to submit your query.
+
    :::image type="content" source="../media/9965423-publish.png" alt-text="Screenshot of the Community hub window in CMPivot showing the publishing tab":::
+
 1. Give your query a **Name** and **Description**, then select the **Publish** button to send your query to the Community hub.
 1. Once the contribution is complete, you can access your query anytime from the **Me** tab.
 1. To view the GitHub pull request (PR), go to [https://github.com/Microsoft/configmgr-hub/pulls](https://github.com/Microsoft/configmgr-hub/pulls). You can also access the PR link from the **Your hub** page in the **Community hub** node.
