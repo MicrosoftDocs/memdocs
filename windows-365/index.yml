@@ -39,6 +39,9 @@ conceptualContent:
         - url: cloud-pc-size-recommendations.md
           itemType: concept
           text: Cloud PC size recommendations
+      footerLink:
+        url: planning-guide.md
+        text: See more
     - title: Set up Windows 365
       links:
         - url: deployment-overview.md
@@ -53,6 +56,9 @@ conceptualContent:
         - url: add-device-images.md
           itemType: how-to-guide
           text: Add device images 
+      footerLink:
+        url: deployment-overview.md
+        text: See more
     - title: Cloud PC provisioning
       links:
         - url: create-provisioning-policy.md
@@ -61,12 +67,59 @@ conceptualContent:
         - url: automated-provisioning-steps.md
           itemType: concept  
           text: Automated provisioning steps
+      footerLink:
+        url: create-provisioning-policy.md
+        text: See more
+    - title: Windows 365 security
+      links:
+        - url: security-guidelines.md
+          itemType: concept
+          text: Security guidelines
+        - url: deploy-security-baselines.md
+          itemType: how-to-guide
+          text: Deploy security baselines
+        - url: set-conditional-access-policies.md
+          itemType: how-to-guide
+          text: Set conditional access policies
+      footerLink:
+        url: security-guidelines.md
+        text: See more
+    - title: Apps in Windows 365
+      links: 
+      - url: app-overview.md
+        itemType: overview
+        text: Apps overview
+      - url: assign-apps.md
+        itemType: how-to-guide
+        text: Assign apps to Cloud PCs
+      - url: teams-on-cloud-pc.md
+        itemType: overview
+        text: Microsoft Teams on a Cloud PC
+      footerLink:
+        url: app-overview.md
+        text: See more
+    - title: Windows 365 device management
+      links: 
+      - url: device-management-overview.md
+        itemType: overview
+        text: Device management overview
+      - url: remotely-manage-cloud-pc.md
+        itemType: concept
+        text: Remotely manage Windows 365 devices
+      - url: reprovision-cloud-pc.md
+        itemType: how-to-guide
+        text: Reprovision a Cloud PC
+      footerLink:
+        url: device-management-overview.md
+        text: See more
 additionalContent:
   sections:
     - title: Additional resources related to Windows 365
       items:
-      - title: Microsoft Intune
+      - title: Microsoft Endpoint Manager
         links: 
+        - text: Microsoft Endpoint Manager overview
+          url: /mem/endpoint-manager-overview
         - text: Explore Microsoft Intune, a complete MDM tool
           url: /mem/intune/
       - title: Microsoft 365

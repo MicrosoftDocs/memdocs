@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2021
+ms.date: 08/02/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -36,8 +36,8 @@ If you want to create custom images that don’t include the optimizations for M
 
 The following steps are only needed when you aren’t using the Windows 365 gallery images with Microsoft 365 pre-installed. You can also use the gallery image to create your custom image. If you do so, you also don’t have to perform the steps below.
 
-1. Create the following registry setting key required for Azure Virtual Desktop in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams:
-    - Name: IsAVDEnvironment
+1. Create the following registry setting key required custom images in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams:
+    - Name: IsWVDEnvironment
     - Type: DWORD
     - Value: 1
 2. Install the [latest Visual C++ runtime](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). This is required for the Teams WebRTC protocol redirection to work.
@@ -51,7 +51,7 @@ The following steps are only needed when you aren’t using the Windows 365 gall
 If you need to verify that Teams optimizations are working on a Cloud PC (for an end user, for example), tell the Cloud PC user to follow these steps:
 
 1. In Microsoft Teams, select the ellipses (**…**) in the menu bar > **About** > **Version**.
-2. Confirm that **Azure Virtual Desktop Media Optimized** is listed alongside the version. If it is,you’re ready to test the better experience.
+2. Confirm that **WVD Media Optimized** is listed alongside the version. If it is,you’re ready to test the better experience.
 
 If media optimizations loaded successfully, the audio devices and cameras available locally are listed in the device menu. If the menu shows **Remote audio**, follow these steps:
 

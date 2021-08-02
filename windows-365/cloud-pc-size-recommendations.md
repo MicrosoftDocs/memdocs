@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2021
+ms.date: 08/02/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -38,8 +38,8 @@ This table shows examples of the different sizes available for a Cloud PC:
 
 | Cloud PC CPUs, RAM, and storage | Example scenarios | Recommended gallery image | Recommended apps |
 | --- | --- | --- | --- |
-| 1vCPU/2GB/64GB | First-line workers, call centers, education/training/CRM access.  | Windows 10 Enterprise with Lite OS Optimizations  | Office light (web-based), Microsoft Edge, OneDrive, lightweight line-of-business app (call center application – web-apps), Defender support. |
-| 2vCPU/4GB/256GB<br>2vCPU/4GB/128GB<br>2vCPU/4GB/64GB  | Mergers and acquisition, short-term and seasonal, customer services  | Windows 10 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams light (Chat and Audio only),  OneDrive, Adobe Reader, Edge, line-of-business app(s), Defender support. |
+| 1vCPU/2GB/64GB | First-line workers, call centers, education/training/CRM access.  | Windows 10 Enterprise with OS Optimizations  | Office (web-based), Microsoft Edge, OneDrive, lightweight line-of-business app (call center application – web-apps), Defender support. |
+| 2vCPU/4GB/256GB<br>2vCPU/4GB/128GB<br>2vCPU/4GB/64GB  | Mergers and acquisition, short-term and seasonal, customer services  | Windows 10 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams (Audio only),  OneDrive, Adobe Reader, Edge, line-of-business app(s), Defender support. |
 | 2vCPU/8GB/256GB<br>2vCPU/8GB/128GB | Bring-your-own-PC, work from home, market researchers, government, consultants. | Windows 10 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, OneDrive, Adobe Reader, Edge, line-of-business app(s) , Defender support. |
 | 4vCPU/16GB/512GB<br>4vCPU/16GB/256GB<br>4vCPU/16GB/128GB | Finance, government, consultants, healthcare services, bring-your-own-PC, work from home. | Windows 10 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, PowerBI, Dynamics 365, OneDrive, Adobe Reader, Edge, line-of-business app(s), Defender support. |
 | 8vCPU/32GB/512GB<br>8vCPU/32GB/256GB<br>8vCPU/32GB/128GB | Software developers, engineers, content creators, design and engineering workstations. | Windows 10 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams, Outlook, Access, OneDrive, Adobe Reader, Edge, PowerBI, Visual Studio Code, line-of-business app(s), Defender support. |
