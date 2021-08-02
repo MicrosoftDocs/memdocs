@@ -317,6 +317,8 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
 
 ### Configure the NDES service
 
+To configure the NDES service, use an account that is an *Enterprise Administrator*.
+ 
 1. On the computer that hosts the NDES service, open the **AD CS Configuration** wizard, and then make the following updates*:
 
    > [!TIP]
@@ -327,8 +329,6 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
    - In **CA for NDES**, click **Select**, and then select the issuing CA where you configured the certificate template.
    - In **Cryptography for NDES**, set the key length to meet your company requirements.
    - In **Confirmation**, select **Configure** to complete the wizard.
-
-* The Enterprise Administrator Role is required to configure the NDES Service
 
 2. After the wizard completes, update the following registry key on the computer that hosts the NDES service:
 
