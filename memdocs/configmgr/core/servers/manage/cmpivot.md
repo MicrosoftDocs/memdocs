@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 04/30/2021
+ms.date: 07/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -75,20 +75,19 @@ The following permissions are needed for CMPivot:
 
 ## Start CMPivot
 
-1. In the Configuration Manager console, connect to the primary site or the CAS. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
+1. In the Configuration Manager console, connect to the primary site or the CAS. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and select **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
    - Confirm with a site administrator that your account has the required permissions. For more information, see [Prerequisites](#prerequisites).  
 
 2. The interface provides further information about using the tool.  
 
-     - Manually enter query strings at the top, or click the links in the in-line documentation.  
+     - Manually enter query strings at the top, or select the links in the in-line documentation.  
 
-     - Click one of the **Entities** to add it to the query string.  
+     - Select one of the **Entities** to add it to the query string.  
 
      - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the [Kusto Query Language (KQL)](/azure/kusto/query/).  
 
 3. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete.
    - If the query has been sent, then clients still send a state message response to the server.  
-
 
 
 ## How to use CMPivot
@@ -121,7 +120,7 @@ The CMPivot window contains the following elements:
 
     - Cut, copy, or paste content in the query pane.  
     <!-- markdownlint-disable MD038 -->
-    - By default, this pane uses IntelliSense. For example, if you start typing `D`, IntelliSense suggests all of the entities that start with that letter. Select an option and press Tab to insert it. Type a pipe character and a space `| `, and then IntelliSense suggests all of the table operators. Insert `summarize` and type a space, and IntelliSense suggests all of the aggregation functions. For more information on these operators and functions, click the **Home** tab in CMPivot.  
+    - By default, this pane uses IntelliSense. For example, if you start typing `D`, IntelliSense suggests all of the entities that start with that letter. Select an option and press Tab to insert it. Type a pipe character and a space `| `, and then IntelliSense suggests all of the table operators. Insert `summarize` and type a space, and IntelliSense suggests all of the aggregation functions. For more information on these operators and functions, select the **Home** tab in CMPivot.  
 
     - The query pane also provides the following options:  
 
@@ -138,7 +137,7 @@ The CMPivot window contains the following elements:
 
    - The available columns vary based upon the entity and the query.  
 
-   - Click a column name to sort the results by that property.  
+   - Select a column name to sort the results by that property.  
 
    - Right-click on any column name to group the results by the same information in that column, or sort the results.  
 
@@ -163,7 +162,7 @@ The CMPivot window contains the following elements:
 
      - **Bing it**: Launch the default web browser to https://www.bing.com with this value as the query string.  
 
-   - Click any hyperlinked text to pivot the view on that specific information.  
+   - Select any hyperlinked text to pivot the view on that specific information.  
 
    - The results pane doesn't show more than 20,000 rows. Either adjust the query to further filter the data, or restart CMPivot on a smaller collection.  
 
@@ -188,15 +187,18 @@ The CMPivot window contains the following elements:
 >
 >:::image type="content" source="media/query-devices-again.png" alt-text="Screenshot of the query devices again button showing the tooltip that Ctrl + F5 is a shortcut to force clients to retrieve the data again.":::
 
+<!--9965423-using include for shared content-->
 
-## Example scenarios
+[!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)]
+
+## Example scenarios for CMPivot
 
 The following sections provide examples of how you might use CMPivot in your environment:
 
 
 ### Example 1: Stop a running service
 
-Your security administrator asks you to stop and disable the Computer Browser service as quickly as possible on all devices in the accounting department. You start CMPivot on a collection for all devices in accounting, and select **Query all** on the **Service** entity. 
+Your security administrator asks you to stop and disable the Computer Browser service as quickly as possible on all devices in the accounting department. You start CMPivot on a collection for all devices in accounting, and select **Query all** on the **Service** entity.
 
 `Service`
 
@@ -204,7 +206,7 @@ As results appear, you right-click on the **Name** column and select **Group by*
 
 `Service | summarize dcount( Device ) by Name`
 
-In the row for the **Browser** service, you click the hyperlinked number in the **dcount_** column. 
+In the row for the **Browser** service, you select the hyperlinked number in the **dcount_** column. 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 

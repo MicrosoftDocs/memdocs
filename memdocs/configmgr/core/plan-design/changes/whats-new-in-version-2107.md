@@ -316,6 +316,21 @@ If you create an ADR with the **No deployment package** option, you're unable to
 
 For more information, see [Automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_script).
 
+
+## Community hub
+
+### Publish query to Community hub from CMPivot
+<!--9965423-->
+You can now publish a CMPivot query to the Community hub directly from the CMPivot window. Submitting your queries directly through CMPivot makes contributing to the Community hub easier.
+
+For more information, see [Contribute to Community hub](../../servers/manage/community-hub-contribute.md#bkmk_publish) and [CMPivot](../../servers/manage/cmpivot.md#bkmk_publish).
+
+### Support for console extensions in Community hub
+
+When you use Configuration Manager version 2103 or later, you can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. Manage the approval and installation of console extensions used in your environment from the **Console extensions** node.
+
+For more information, see [Console extensions from Community hub](../../servers/manage/community-hub-extensions.md).
+
 ## Configuration Manager console
 
 ### Enhanced code editor

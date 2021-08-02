@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 04/05/2021
+ms.date: 07/30/2021
 ---
 <!--This file is shared by the admin-console-extensions.md, and admin-console-notifications.md files. Some headings may be context driven by the article-->
 
@@ -21,3 +21,6 @@ Users are notified when console extensions are approved for installation. These 
 1. When the install completes, select **Close** to restart the console and enable the new extension.
 
     :::image type="content" source="../media/3555909-extension-installed.png" alt-text="Console extension completed install":::
+
+> [!Note]
+> When you upgrade to Configuration Manager 2107, you will be prompted to install the WebView2 console extension again. For more information about the WebView2 installation, see the [WebView2 installation](../community-hub.md#bkmk_webview2) section if the Community hub article. <!--10247811, 10005418-->
