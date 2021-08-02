@@ -40,7 +40,7 @@ Requirements for the computer where you install the connector software:
 
 - .NET 4.7.2
 
-- Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/active-directory/enable-support-tls-environment) in the Azure Active Directory documentation.  
+- Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Azure Active Directory documentation.  
 
 - The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md)
 
