@@ -20,7 +20,7 @@ Starting in Configuration Manager 2103, the **Console extensions** node allows y
 
 After you approve an extension, when you open the console, you'll see a [console notification](#bkmk_notification). From the notification, you can start the extension installer. After the installer completes, the console restarts automatically, and then you can use the extension.
 
-The new style of console extensions have the following benefits:
+The new style of console extensions has the following benefits:
 
 1. Centralized management of console extensions for the site from the console instead of manually placing binaries on individual consoles.
 1. A clear separation of console extensions from different extension providers.
@@ -41,11 +41,11 @@ The old style of console extensions may start being phased out in favor of the n
 <!--9761129-->
 (*Applies to Configuration Manager version 2107 or later*)
 
-Starting in Configuration Manager version 2107 , you can choose to allow unsigned hierarchy approved console extensions. It's a best practice to always used signed extensions to minimize security risks and to confirm the authenticity of a console extension. However, in some cases you may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab. To import and install an unsigned hierarchy approved console extension, the high-level steps are:
+Starting in Configuration Manager version 2107, you can choose to allow unsigned hierarchy approved console extensions. It's a best practice to always used signed extensions to minimize security risks and to confirm the authenticity of a console extension. However, in some cases you may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab. To import and install an unsigned hierarchy approved console extension, the high-level steps are:
 
    1. [Allow unsigned](#bkmk_allow-unsigned) hierarchy approved console extensions.
    1. [Import](#bkmk_import-unsigned) the unsigned console extension.
-   1. [Test](#bkmk_local_install) the the unsigned console extension in a local console.
+   1. [Test](#bkmk_local_install) the unsigned console extension in a local console.
    1. [Enable notifications](#bkmk_enable-notifications) to allow console users to install the unsigned console extension.
 
 ### <a name="bkmk_allow-unsigned"></a> Allow unsigned hierarchy approved console extensions

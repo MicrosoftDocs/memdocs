@@ -75,14 +75,14 @@ The following permissions are needed for CMPivot:
 
 ## Start CMPivot
 
-1. In the Configuration Manager console, connect to the primary site or the CAS. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
+1. In the Configuration Manager console, connect to the primary site or the CAS. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and select **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
    - Confirm with a site administrator that your account has the required permissions. For more information, see [Prerequisites](#prerequisites).  
 
 2. The interface provides further information about using the tool.  
 
-     - Manually enter query strings at the top, or click the links in the in-line documentation.  
+     - Manually enter query strings at the top, or select the links in the in-line documentation.  
 
-     - Click one of the **Entities** to add it to the query string.  
+     - Select one of the **Entities** to add it to the query string.  
 
      - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the [Kusto Query Language (KQL)](/azure/kusto/query/).  
 
@@ -120,7 +120,7 @@ The CMPivot window contains the following elements:
 
     - Cut, copy, or paste content in the query pane.  
     <!-- markdownlint-disable MD038 -->
-    - By default, this pane uses IntelliSense. For example, if you start typing `D`, IntelliSense suggests all of the entities that start with that letter. Select an option and press Tab to insert it. Type a pipe character and a space `| `, and then IntelliSense suggests all of the table operators. Insert `summarize` and type a space, and IntelliSense suggests all of the aggregation functions. For more information on these operators and functions, click the **Home** tab in CMPivot.  
+    - By default, this pane uses IntelliSense. For example, if you start typing `D`, IntelliSense suggests all of the entities that start with that letter. Select an option and press Tab to insert it. Type a pipe character and a space `| `, and then IntelliSense suggests all of the table operators. Insert `summarize` and type a space, and IntelliSense suggests all of the aggregation functions. For more information on these operators and functions, select the **Home** tab in CMPivot.  
 
     - The query pane also provides the following options:  
 
@@ -137,7 +137,7 @@ The CMPivot window contains the following elements:
 
    - The available columns vary based upon the entity and the query.  
 
-   - Click a column name to sort the results by that property.  
+   - Select a column name to sort the results by that property.  
 
    - Right-click on any column name to group the results by the same information in that column, or sort the results.  
 
@@ -162,7 +162,7 @@ The CMPivot window contains the following elements:
 
      - **Bing it**: Launch the default web browser to https://www.bing.com with this value as the query string.  
 
-   - Click any hyperlinked text to pivot the view on that specific information.  
+   - Select any hyperlinked text to pivot the view on that specific information.  
 
    - The results pane doesn't show more than 20,000 rows. Either adjust the query to further filter the data, or restart CMPivot on a smaller collection.  
 
@@ -206,7 +206,7 @@ As results appear, you right-click on the **Name** column and select **Group by*
 
 `Service | summarize dcount( Device ) by Name`
 
-In the row for the **Browser** service, you click the hyperlinked number in the **dcount_** column. 
+In the row for the **Browser** service, you select the hyperlinked number in the **dcount_** column. 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 
