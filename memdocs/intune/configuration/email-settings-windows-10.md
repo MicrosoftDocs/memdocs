@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 08/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,13 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-Use the email profile settings to configure the Mail app on your devices running Windows 10 and newer. This article describes some of the settings you can configure.
+In Microsoft Intune, you can create and configure email to connect to an Exchange email server, choose how users authenticate, use S/MIME for encryption, and more. The email profile uses the native or built-in email app on the device, and allows users to connect to their organization email.
+
+This feature applies to:
+
+- Windows 10 and newer
+
+This article describes some of the settings you can configure. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
 
 ## Before you begin
 

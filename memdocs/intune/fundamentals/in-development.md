@@ -8,11 +8,11 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 7/2/2021
+ms.date: 7/30/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.assetid: 25b3c26e-cf4e-4152-8306-bf4be4af2ad1
+ms.assetid:
 
 # optional metadata
 
