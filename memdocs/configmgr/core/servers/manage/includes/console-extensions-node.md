@@ -11,7 +11,7 @@ ms.date: 07/30/2021
 <!--3555909-->
 (*Introduced in version 2103*)
 
-The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Actions for console extensions are grouped in the ribbon and the right-click menu.
+The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Actions for console extensions are grouped in the ribbon and the right-click menu. Console extensions downloaded from [Community hub](../community-hub-extensions.md) will be shown here. 
 
 :::image type="content" source="../media/3555909-console-extensions-node.png" alt-text="The Console Extensions node in the Configuration Manager console" lightbox="../media/3555909-console-extensions-node.png":::
 
