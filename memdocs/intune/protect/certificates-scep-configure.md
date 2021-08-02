@@ -318,6 +318,8 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
 
 ### Configure the NDES service
 
+To configure the NDES service, use an account that is an *Enterprise Administrator*.
+ 
 1. On the computer that hosts the NDES service, open the **AD CS Configuration** wizard, and then make the following updates:
 
    > [!TIP]
