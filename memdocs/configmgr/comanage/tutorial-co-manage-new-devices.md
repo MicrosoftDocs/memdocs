@@ -372,6 +372,11 @@ The phrase **Pilot group** is used throughout the co-management feature and conf
 You can use Intune to install the Configuration Manager client on Windows 10 devices that are currently only managed with Intune.  
 
 Then, when a previously unmanaged Windows 10 device enrolls with Intune, it automatically installs the Configuration Manager client.
+  
+>[!NOTE]
+> If you are planning to deploy the Configuration Manager client to devices going through Autopilot it is recommended to target users for the assignment of the Configuration Manager client instead of devices.
+>
+> This will avoid a conflict between [installing line-of-business apps and Win32 apps during Autopilot](../../intune/apps/lob-apps-windows).
 
 ### Create an Intune app to install the Configuration Manager client
 
