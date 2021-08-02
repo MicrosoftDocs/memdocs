@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/24/2020
+ms.date: 8/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 As an administrator, you can join large numbers of new Windows devices to Azure Active Directory and Intune. To bulk enroll devices for your Azure AD tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Azure AD tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Azure AD users to sign in.
 
 > [!NOTE]
-> Creating a provisioning package does not require any administrator roles in your Azure AD tenant.
+> Creating a provisioning package does not require any administrator roles in your Azure AD tenant but the user used to retrieve the token must [be allowed to join devices to Azure AD](../../../azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 Azure AD users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
 
