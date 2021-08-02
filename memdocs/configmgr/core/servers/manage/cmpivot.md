@@ -189,6 +189,7 @@ The CMPivot window contains the following elements:
 
 ## <a name="bkmk_publish"></a> Publish query to Community hub from CMPivot
 <!--9965423-->
+
 [!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)] <!--using include for shared content-->
 
 ## Example scenarios for CMPivot

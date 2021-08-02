@@ -5,9 +5,7 @@ ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/30/2021
 ---
-<!--This file is shared by the CMPivot overview article (cmpivot.md) and the Contribute to Community hub (community-hub-contribute.md) article for 9965423. H2s for this are in the articles themselves to help note where the content sits-->
-
-
+<!--This file is shared by the CMPivot overview article, cmpivot.md, and the Contribute to Community hub, community-hub-contribute.md, article for 9965423. H2s for this are in the articles themselves to help note where the content sits-->
 
 *(Applies to version 2107 or later)*
 Starting in version 2107, you can publish a CMPivot query to the Community hub directly from the CMPivot window. Submitting your queries directly through CMPivot makes contributing to the Community hub easier.
