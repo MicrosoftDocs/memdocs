@@ -148,7 +148,7 @@ Before you uninstall a primary site, review the following tasks:
 
 - Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
 
-- If the hierarchy uses a [fallback site](../configure/boundary-group-procedures.md#bkmk_site-fallback) for automatic site assignment, make sure it doesn't reference this primary site.
+- If the hierarchy uses a [fallback site](../configure/boundary-group-procedures.md#configure-a-fallback-site-for-automatic-site-assignment) for automatic site assignment, make sure it doesn't reference this primary site.
 
 - Reconfigure any [client installation methods](../../../clients/deploy/plan/client-installation-methods.md) that may reference a static site code.
 

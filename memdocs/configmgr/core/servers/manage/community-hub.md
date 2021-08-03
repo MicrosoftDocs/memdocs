@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 06/07/2021 
+ms.date: 08/02/2021 
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -26,6 +26,7 @@ Community hub supports the following objects:
 
 ## <a name="bkmk_new"></a> What's new
 
+- Support for downloading signed console extensions and limited contribution, added in July 2021 <!--3555909, 8116426-->
 - [Filter content](#bkmk_search) when using search, added in June 2021 <!--8516139-->
 - Support for configuration baselines including child configuration items, added in March 2021 <!--7983121-->
 - Support for Power BI reports, added in February 2021 <!--5679831-->
@@ -35,6 +36,7 @@ Community hub supports the following objects:
 - The device running the Configuration Manager console used to access the Community hub needs the following items:
    - .NET Framework version 4.6 or higher
      - .NET Framework version 4.6.2 or higher is required starting in Configuration Manager 2010
+     - Starting in version 2107, the console requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md#net-version-requirements).
    - Windows 10 build 17110 or higher
       - Windows Server isn't supported before version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
       - Starting in version 2010, [install the Microsoft Edge WebView2 console extension](#bkmk_webview2) to support Windows Server. <!--3555940, 8625943, 8717639 -->
@@ -72,21 +74,7 @@ Community hub supports the following objects:
 <!--8516139-->
 You can filter content in the Community hub when using search. The following filters are available to use when searching:
 
-|Filter name|Example search| Uses a `like` filter|
----|---|
-| **Type**|`type:report`| Yes|
-|**Curated**| `curated:false`| No|
-|**User**| `user:<GitHubUserName>`| No|
-|**Organization**| `org:<GitHubOrganizationName>`| No|
-|**Name**| `name:test_report`| Yes|
-|**Description**| `desc:description`| Yes|
-
-When filtering Community hub items in search:
-- The filtering on some items is done using `like` so you don't need to know the exact name of an item you are trying to find. For instance, using `type:task` would return task sequences.
-- You can't use the same filter twice in a search. For instance, using `type:report` and `type:task` would only return reports since the second filter gets ignored.
-- Search filtering respects the hierarchy setting for displaying [Community hub content categories](#bkmk_category).
-  - If your hierarchy is set to **Display Microsoft and curated community content**, then `curated:false` is ignored.
-  - If your hierarchy is set to **Display Microsoft content**, then the `curated:` filter is ignored.
+[!INCLUDE [Community hub search filters](includes/community-hub-search-filter.md)]
 
 ## <a name="bkmk_deeplink"></a> Direct links to Community hub items
 <!--4224406-->
@@ -137,7 +125,8 @@ Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console exte
    - GitHub sign-in is needed for [contributing to Community hub](community-hub-contribute.md) but not for downloading items.
 
 > [!IMPORTANT]
-> Configuration Manager versions 2006 and earlier can’t sign into GitHub but can still download items. Using Community hub on Windows Server requires the WebView2 console extension and Configuration Manager version 2010 or later. <!--9082812-->
+> - When you upgrade to Configuration Manager 2107, you will be prompted to install the WebView2 console extension again. <!--0247811, 10005418-->
+> - Configuration Manager versions 2006 and earlier can’t sign into GitHub but can still download items. Using Community hub on Windows Server requires the WebView2 console extension and Configuration Manager version 2010 or later. <!--9082812-->
 
 Follow the instructions below to enable the full functionality of Community hub:
 

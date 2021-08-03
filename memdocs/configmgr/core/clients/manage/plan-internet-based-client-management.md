@@ -2,11 +2,10 @@
 title: Internet-based client management
 titleSuffix: Configuration Manager
 description: Create a plan to manage internet-based clients in Configuration Manager.
-ms.date: 04/29/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -36,7 +35,7 @@ The following site system roles at primary sites support connections from client
 
 - Distribution point
 
-- Cloud-based distribution point
+- Content-enabled cloud management gateway (CMG)
 
 - Enrollment proxy point
 

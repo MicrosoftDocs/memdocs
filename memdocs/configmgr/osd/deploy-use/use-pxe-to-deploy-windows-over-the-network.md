@@ -2,11 +2,10 @@
 title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
 description: Use PXE-initiated OS deployments to refresh a computer's operating system or to install a new version of Windows on a new computer.
-ms.date: 08/11/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -32,7 +31,7 @@ Complete the steps in one of the OS deployment scenarios, and then use the secti
 > [!WARNING]
 > If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. [Deployment verification](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
 
-Starting in version 2006, PXE-based task sequences can download cloud-based content. The PXE-enabled distribution point still requires the boot image, and the device needs an intranet connection to the management point. It can then get additional content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
+Starting in version 2006, PXE-based task sequences can download cloud-based content. The PXE-enabled distribution point still requires the boot image, and the device needs an intranet connection to the management point. It can then get additional content from a content-enabled cloud management gateway (CMG).<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## <a name="BKMK_Configure"></a> Configure distribution points for PXE
 
@@ -41,9 +40,7 @@ To deploy operating systems to Configuration Manager clients that make PXE boot 
 > [!NOTE]
 > When you configure a single PXE-enabled distribution point to support multiple subnets, it's not supported to use DHCP options. To allow the network to forward client PXE requests to PXE-enabled distribution points, configure IP helpers on the routers.
 
-In version 1810, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
-
-Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service.<!--3734270, SCCMDocs-pr #3416--> Add the following settings to support this configuration:
+When you enable a PXE responder on a distribution point without Windows Deployment Service, it can be on the same server as the DHCP service.<!--3734270, SCCMDocs-pr #3416--> Add the following settings to support this configuration:
 
 - Set the DWord value **DoNotListenOnDhcpPort** to `1` in the following registry key: `HKLM\Software\Microsoft\SMS\DP`.
 - Set DHCP option 60 to `PXEClient`.
@@ -101,7 +98,7 @@ To use a PXE-initiated OS deployment, configure the deployment to make the OS av
 
 ## Option 82 during PXE DHCP handshake
 
-Starting with version 1906, Configuration Manager supports option 82 during the PXE DHCP handshake with the PXE responder without WDS. If you require option 82, make sure to use the PXE responder without WDS. Configuration Manager doesn't support option 82 with WDS.
+Configuration Manager supports option 82 during the PXE DHCP handshake with the PXE responder without WDS. If you require option 82, make sure to use the PXE responder without WDS. Configuration Manager doesn't support option 82 with WDS.
 
 ## <a name="BKMK_Deploy"></a> Deploy the task sequence
 

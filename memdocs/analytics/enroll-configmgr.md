@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
-ms.date: 10/23/2020
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -62,11 +62,12 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
-Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md).
 
 ### <a name="bkmk_cm_upload"></a> Enable data upload in Configuration Manager
 
-1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
+1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Cloud Attach**.
+   - For version 2103 and earlier, select the **Co-management** node.
 1. Select **CoMgmtSettingsProd** then click **Properties**.
 1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
 

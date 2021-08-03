@@ -107,7 +107,7 @@ For more information on Configuration Manager's support for Azure Virtual Deskto
 
 ### Intranet clients can use a CMG software update point
 <!--7102873-->
-Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
+Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-software-update-points.md#intranet-clients-can-use-a-cmg-software-update-point).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 

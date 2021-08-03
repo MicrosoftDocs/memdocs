@@ -66,7 +66,7 @@ The following are changes to the Updates and Servicing node in the Configuration
 
 
 ###  Pre-release features
-Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### New distribution point update behavior
 Update 1606 introduces changes that improve the availability of distribution points when you install future updates.
@@ -84,7 +84,7 @@ The following are changes to Administration in the Configuration Manager console
 
 You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](/azure/azure-monitor/platform/collect-sccm).
 
-The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### Support for cache size in Client Settings
 

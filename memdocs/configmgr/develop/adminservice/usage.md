@@ -132,3 +132,7 @@ Verb: Post
 URI: https://<ProviderFQDN>/AdminService/wmi/SMS_Admin.GetAdminExtendedData
 Body: {"Type":1}
 ```
+
+## Next steps
+
+[Custom properties for devices](custom-properties.md)

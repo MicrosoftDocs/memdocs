@@ -40,7 +40,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 ### Site server and permission prerequisites
 - To see all of the orchestration groups and updates for those groups, your account needs to be a **Full Administrator**.
    - Role-based administration for orchestration groups currently isn't available.
-- Enable the **Orchestration Groups** feature. For more information, see [Enable optional features](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+- Enable the **Orchestration Groups** feature. For more information, see [Enable optional features](../../core/servers/manage/optional-features.md).
    - When you enable **Orchestration Groups**, the site disables the **Server Groups** feature. This behavior avoids any conflicts between the two features.
 
 ### Client prerequisites

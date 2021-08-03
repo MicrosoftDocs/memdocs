@@ -73,13 +73,6 @@ For documentation on how to manage Windows 365 in your organization, see the [Wi
 ## Week of July 26, 2021 (Service release 2107)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
-
-#### New app categories available to better target app protection policies<!-- 4802581  -->
-
-We have improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically applied to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
 #### Improved policy support for iPadOS devices enrolled as Shared iPads for Business (public preview)<!-- 9779187   -->
@@ -139,9 +132,6 @@ For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2
 #### Work from anywhere report<!-- 7207657  -->
 
 [Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the [Recommended software](../../analytics/recommended-software.md) report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
-
-> [!Note]
-> The **Work from anywhere** report will go live after the July service update. We expect it within the week after the 2107 release completes.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

@@ -2,11 +2,10 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -70,7 +69,7 @@ Install the following components on the server or client computer on which you i
 
 - Any Windows OS version supported by Configuration Manager. For more information, see [Supported OS versions for clients](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md). Support Center doesn't support mobile devices or macOS.
 
-- .NET Framework 4.5.2 is required on the computer where you run Support Center and its components.  
+- Starting in version 2107, the all site and client components require .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements). In version 2103 and earlier, this tool requires .NET 4.5.2 or later.
 
 ## Install
 
@@ -87,7 +86,7 @@ After you install it, find the following items on the Start menu in the **Micros
 
 Starting in version 2103, the Start menu group for Support Center includes these five tools:
 
-:::image type="content" source="media/8693068-support-center-start-menu.png" alt-text="Start menu showing five Support Center tools in version 2103 and later":::
+:::image type="content" source="media/8693068-support-center-start-menu.png" alt-text="Start menu showing five Support Center tools in version 2103 and later.":::
 
 ## Known issues
 

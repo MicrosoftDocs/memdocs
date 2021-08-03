@@ -2,11 +2,10 @@
 title: Apps in Company Portal
 titleSuffix: Configuration Manager
 description: Provide a consistent user experience for co-managed devices to use the Company Portal app.
-ms.date: 02/18/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
-ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -26,7 +25,7 @@ The Company Portal supports the following actions:
 - View available and installed Configuration Manager apps in the Company Portal alongside Intune apps.
 - Install available Configuration Manager apps from the Company Portal and receive installation status information.
 
-:::image type="content" source="media/3601237-company-portal.png" alt-text="Company Portal with app from Configuration Manager" lightbox="media/3601237-company-portal.png":::
+:::image type="content" source="media/3601237-company-portal.png" alt-text="Company Portal with app from Configuration Manager." lightbox="media/3601237-company-portal.png":::
 
 The behavior of the Company Portal depends upon your co-management workload configuration:
 
@@ -48,6 +47,9 @@ For more information, see the following articles:
 - Configuration Manager current branch version 2006 or later <sup>([See FAQ](#bkmk_ver-prereq))</sup>
 
 - Company Portal app version 11.0.8980.0 or later
+
+  > [!NOTE]
+  > Starting with Configuration Manager 2107 and Company Portal app version 11.0.12141.0, when you enable the site for [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md), the Company Portal prefers secure communication over HTTPS with the management point that's configured for HTTP.<!-- 9199146 --> On any version of Configuration Manager, when you configure the site or the management point to require HTTPS communication, Company Portal always uses HTTPS.
 
 - Windows 10, version 1803 or later:
 
@@ -102,7 +104,7 @@ For more information on branding the Company Portal for your organization, see [
 
     - Select the ellipsis (`...`) for additional actions, such as **Repair** and **Share**.
 
-        :::image type="content" source="media/3601237-company-portal-app-details.png" alt-text="Configuration Manager app with details in Company Portal" lightbox="media/3601237-company-portal-app-details.png":::
+        :::image type="content" source="media/3601237-company-portal-app-details.png" alt-text="Configuration Manager app with details in Company Portal." lightbox="media/3601237-company-portal-app-details.png":::
 
     - After you install a Configuration Manager web app, select the ellipsis menu, then select **Open in Browser** to launch the web app.
 

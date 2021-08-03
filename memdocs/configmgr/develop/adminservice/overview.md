@@ -2,11 +2,10 @@
 title: What is the administration service
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager administration service REST API to interact with the site over an HTTPS OData connection.
-ms.date: 11/30/2020
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
-ms.assetid: 30139ba6-e288-4ddb-9d78-0eb76ff62d1a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -40,7 +39,7 @@ Configuration Manager natively uses the administration service for the following
 
 - The **Security** [node of the console](set-up.md#enable-console-usage)
 
-- Microsoft Endpoint Manager [tenant attach](../../tenant-attach/device-sync-actions.md) (version 2002 and later)
+- Microsoft Endpoint Manager [tenant attach](../../tenant-attach/device-sync-actions.md)
 
 - [Community hub](../../core/servers/manage/community-hub.md) (version 2006 and later)
 
@@ -60,7 +59,7 @@ Configure the following prerequisites on the server that hosts the SMS Provider 
 
 - In version 2006 and earlier, enable the Windows server role **Web Server (IIS)**. Starting in version 2010, this role is no longer required.
 
-- Install the .NET Framework version 4.5 or later.
+- Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 - Enable secure HTTPS communication with a trusted certificate. For more information, see [Enable secure HTTPS communication](set-up.md#enable-secure-https-communication).
 
