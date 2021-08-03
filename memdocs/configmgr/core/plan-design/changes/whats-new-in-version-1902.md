@@ -108,7 +108,7 @@ For more information, see [Azure Resource Manager for the cloud management gatew
 <!--3640932-->
 You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
 
-For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design) and [Set up CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
+For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-hierarchy-design.md) and [Set up CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
 
 
 ## <a name="bkmk_real"></a> Real-time management

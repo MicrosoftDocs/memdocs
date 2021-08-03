@@ -34,7 +34,7 @@ This article provides suggestions for troubleshooting Windows 365 issues.
 
 ## Contact help/support
 
-For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Endpoint Manager](/mem/get-support.md). Support is included as part of your Windows 365 subscription.
+For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Endpoint Manager](/mem/get-support). Support is included as part of your Windows 365 subscription.
 
 Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows 10](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Endpoint Manager admin center](/mem/get-support).
 

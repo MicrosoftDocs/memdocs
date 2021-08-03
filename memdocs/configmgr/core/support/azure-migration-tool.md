@@ -32,7 +32,7 @@ Starting in version 1910, this tool helps you to programmatically create Azure v
 
 - Your user account needs to be a Configuration Manager **Full Administrator** and have administrator rights on the primary site server.
 
-- To add a site server in passive mode, the site server must meet the [high availability requirements](../servers/deploy/configure/site-server-high-availability.md#prerequisites). For example, it requires a [remote content library](../plan-design/hierarchy/the-content-library.md#bkmk_remote).
+- To add a site server in passive mode, the site server must meet the [high availability requirements](../servers/deploy/configure/site-server-high-availability.md#prerequisites). For example, it requires a [remote content library](../plan-design/hierarchy/remote-content-library.md).
 
 ### Required Azure permissions
 

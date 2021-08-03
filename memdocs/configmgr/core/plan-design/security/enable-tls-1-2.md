@@ -57,7 +57,7 @@ This section describes the dependencies for specific Configuration Manager featu
 |Site system roles| - [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net) and verify strong cryptography settings <br/> - [Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql) on roles that require it, including the [SQL Server Native Client](enable-tls-1-2-server.md#bkmk_sql-client)|
 |Reporting services point|- [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net) on the site server, the SQL Server Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
 |Software update point|[Update WSUS](enable-tls-1-2-server.md#bkmk_wsus)|
-|Cloud management gateway|[Enforce TLS 1.2](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
+|Cloud management gateway|[Enforce TLS 1.2](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#enforce-tls-12)|
 |Configuration Manager console| - [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net)<br/> - Verify strong cryptography settings|
 |Configuration Manager client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](enable-tls-1-2-client.md#bkmk_winhttp)|
 |Software Center| - [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net)<br/> - Verify strong cryptography settings|

@@ -213,7 +213,10 @@ The following seven reports are listed under the **Data warehouse** category.
 
 ## Device management  
 
-The following 37 reports are listed under the **Device Management** category. 
+The following 37 reports are listed under the **Device Management** category.
+
+> [!NOTE]
+> Configuration Manager version 2006 dropped support for Windows CE 7.0 as a client. Deprecation was announced with [version 1906](../../plan-design/changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 |Report name|Description|  
 |-----------------|-----------------|  

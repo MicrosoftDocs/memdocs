@@ -36,7 +36,7 @@ Configuration Manager supports the same versions of SQL Server for reporting as 
 
 Before you can use reporting in Configuration Manager, configure the reporting services point site system role.
 
-For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012RSpoint).
+For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#reporting-services-point).
 
 ## Power BI Report Server
 

@@ -2,11 +2,10 @@
 title: Microsoft Defender for Endpoint
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
-ms.date: 04/27/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -28,15 +27,8 @@ Microsoft Defender for Endpoint is a service in the [Microsoft Defender Security
 
 ### <a name="bkmk_os"></a> Supported client operating systems
 
-Based on the version of Configuration Manager you're running, the following client operating systems can be onboarded:
-
-#### Configuration Manager version 1910 and prior
-
-- Clients computers running Windows 10, version 1607 and later
-
-#### Configuration Manager version 2002 and later
 <!--5229962-->
-Starting in Configuration Manager version 2002, you can onboard the following operating systems:
+You can onboard the following operating systems:
 
 - Windows 8.1
 - Windows 10, version 1607 or later
@@ -44,6 +36,7 @@ Starting in Configuration Manager version 2002, you can onboard the following op
 - Windows Server 2016
 - Windows Server 2016, version 1803 or later
 - Windows Server 2019
+- Windows Server 2022<!-- 10200029 -->
 
 ## About onboarding to ATP with Configuration Manager
 
@@ -53,6 +46,7 @@ Up-level operating systems include:
 - Windows 10, version 1607 and later
 - Windows Server 2016, version 1803 or later
 - Windows Server 2019
+- Windows Server 2022
 
 Down-level operating systems include:
 - Windows 8.1
@@ -117,6 +111,7 @@ Up-level clients require an onboarding configuration file for onboarding to ATP.
 - Windows 10, version 1607 and later 
 - Windows Server 2016, version 1803 and later
 - Windows Server 2019
+- Windows Server 2022
 
 If your target collection contains both up-level and down-level devices, or if you're not sure, then use the instructions to [onboard devices running any supported operating system (recommended)](#bkmk_any_os).
 

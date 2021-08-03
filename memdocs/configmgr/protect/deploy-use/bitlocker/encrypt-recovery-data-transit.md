@@ -2,7 +2,7 @@
 title: Encrypt recovery data over the network
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes over the network.
-ms.date: 07/30/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -45,7 +45,7 @@ The **Client connections** property of the management point can be **HTTP** or *
 
 2. Configure clients to trust the server authentication certificate. There are two methods to accomplish this trust:
 
-    - Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate that's issued by one of these providers, your clients should automatically trust it.
+    - Use a certificate from a public and globally trusted certificate provider.<!-- memdocs#1668 --> Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate that's issued by one of these providers, your clients should automatically trust it.
 
     - Use a certificate issued by a CA from your organization's public key infrastructure (PKI). Most PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to clients.
 

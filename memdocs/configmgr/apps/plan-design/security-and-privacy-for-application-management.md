@@ -52,7 +52,7 @@ Deploy mobile device applications only if they're code-signed by a certification
 
 For example:
 
-- An application from a vendor, which is signed by a well-known CA like VeriSign.
+- An application from a vendor, which is signed by a public and globally trusted certificate provider.
 
 - An internal application that you sign independent from Configuration Manager by using your internal CA.
 
