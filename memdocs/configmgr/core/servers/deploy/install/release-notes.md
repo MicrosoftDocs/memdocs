@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/02/2021
+ms.date: 08/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -82,6 +82,16 @@ WARNING: Retry in the next polling cycle
 This failure happens because the service connection point can't communicate with the required internet endpoint, `configmgrbits.azureedge.net`. Confirm that the site system that hosts the service connection point role can communicate with this internet endpoint. It was already required, but its use is expanded in version 2107. The site system can't download version 2107 or later unless your network allows traffic to this URL.
 
 For more information, see [internet access requirements](../../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
+
+### Management point installation or update fails due to later Visual C++ version
+
+<!-- 10518360 -->
+
+_Applies to: version 2107 early update ring_
+
+If the site system server has a version of the Visual C++ redistributable later than 14.28.29914, Configuration Manager setup will fail to install or update the management point role.
+
+To work around this issue, temporarily uninstall the later version of Visual C++ redistributable. When you install Configuration Manager version 2107, it will install version 14.28.29914.
 
 ## OS deployment
 
