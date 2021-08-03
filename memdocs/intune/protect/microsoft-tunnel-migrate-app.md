@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2021
+ms.date: 08/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,9 +34,16 @@ If you've previously configured Microsoft Tunnel for Android using the standalon
 The following device platforms support Microsoft Defender for Endpoint as the tunnel client app:
 
 - Android Enterprise:
-  - Fully Managed
-  - Corporate-Owned Work Profile
-  - Personally-Owned Work Profile - *For devices enrolled as Personally-Owned Work Profile where you use Microsoft Defender for Endpoint for more than the Microsoft Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile.*
+  - Fully managed
+  - Corporate-owned work profile
+  - Personally-owned work Profile - *For devices enrolled as personally-owned work profile where you use Microsoft Defender for Endpoint for more than the Microsoft Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile.*
+     > [!IMPORTANT]
+     > To support Android Enterprise personally-owned work profile (BYOD) in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md##create-a-server-configuration). The conditions:
+     >
+     > - You use both Microsoft Defender for Endpoint and the Microsoft Tunnel functionality.
+     > - You use *per-app* VPNs.
+     >
+     > This addition of a publicly accessible DNS server prevents connection issues back to Intune issues for non-per-app VPN apps that use work profiles.
 
 <!-- The following is retained for future use should iOS receive the same style of preview  >
 
