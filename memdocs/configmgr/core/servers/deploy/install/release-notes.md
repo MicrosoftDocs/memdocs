@@ -191,3 +191,15 @@ If the setting was enabled in error, disabling the setting allows the old style 
 <!-- ## Role based administration -->
 
 <!-- ## Application management -->
+
+## CMPivot
+
+### Favorite queries lose line breaks
+
+<!-- 10517223 -->
+
+_Applies to: version 2107 early update ring_
+
+After you update the site to version 2107, any CMPivot queries that you saved as a favorite won't work. When you edit the query, you'll see the character `\r` in place of line breaks.
+
+To work around this issue, replace the `\r` character with a line break and then save the query.
