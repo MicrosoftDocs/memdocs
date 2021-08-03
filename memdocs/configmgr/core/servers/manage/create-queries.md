@@ -153,7 +153,6 @@ Use one of these values for &lt;Device ID\>:
 |Nokia Symbian|3|  
 |Windows Phone|4|  
 |Mac computer|5|  
-|Windows CE|6|  
 |Windows Embedded|7|  
 |Intel system on a chip|12|  
 |Microsoft HoloLens (MDM)|15|
@@ -163,6 +162,7 @@ Use one of these values for &lt;Device ID\>:
 > Values that aren't listed in this table are associated with devices that are no longer supported.
 
 <!-- old, unsupported values
+|Windows CE|6|
 |iOS|8|  
 |iPad|9|  
 |iPod touch|10|  

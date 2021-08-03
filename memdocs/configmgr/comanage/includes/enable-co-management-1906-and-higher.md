@@ -10,9 +10,10 @@ ms.date: 08/11/2020
 
 When enabling co-management, you can use the Azure Public Cloud, Azure US Government Cloud, or Microsoft Azure China 21Vianet (added in version 2006). To enable co-management starting in Configuration Manager version 1906, follow the instructions below:
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Select **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Attach** node. Select **Configure Cloud Attach** in the ribbon to open the **Cloud Attach Configuration Wizard**.
+   - For version 2103 and earlier, expand **Cloud Services** and select the **Co-management** node. Select **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
-1. On the **Tenant onboarding** page of the wizard, configure the **Azure environment** to use. Choose one of the following environments:
+1. On the onboarding page of the wizard, configure the **Azure environment** to use. Choose one of the following environments:
 
    - Azure Public Cloud
    - Azure US Government Cloud.<!--4075452-->
@@ -38,12 +39,8 @@ When enabling co-management, you can use the Azure Public Cloud, Azure US Govern
       
       Automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.<!--1358003-->
 
-      > [!Note]  
-      > Starting in version 1906:
-      >
-      > - A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the enrollment status *Pending user sign in*.<!-- 4454491 --> To support this behavior, the device needs to be running Windows 10, version 1803 or later. For more information, see [Co-management enrollment status](../how-to-monitor.md#co-management-enrollment-status).
-      >
-      > - If you already have devices enrolled to co-management, new devices now enroll immediately once they meet the [prerequisites](../overview.md#prerequisites).<!--4321130-->
+   - A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the enrollment status *Pending user sign in*.<!-- 4454491 --> To support this behavior, the device needs to be running Windows 10, version 1803 or later. For more information, see [Co-management enrollment status](../how-to-monitor.md#co-management-enrollment-status).
+   - If you already have devices enrolled to co-management, new devices now enroll immediately once they meet the [prerequisites](../overview.md#prerequisites).<!--4321130-->
 
 1. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You'll use this command line to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
 

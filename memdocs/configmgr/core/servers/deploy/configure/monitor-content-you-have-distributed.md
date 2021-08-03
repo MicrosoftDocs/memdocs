@@ -2,11 +2,10 @@
 title: Monitor content
 titleSuffix: Configuration Manager
 description: Understand how to monitor distributed content by using the Configuration Manager console.
-ms.date: 11/30/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -132,10 +131,10 @@ Use the **Client data sources** dashboard to better understand from where client
 
 Starting in version 2010, the client data sources dashboard now offers an expanded selection of filters to view information about where clients get content. The following screenshot shows the dashboard in the version 2010 console:<!--7102084-->
 
-:::image type="content" source="media/7102084-client-data-sources.png" alt-text="Client data sources dashboard in version 2010" lightbox="media/7102084-client-data-sources.png":::
+:::image type="content" source="media/7102084-client-data-sources.png" alt-text="Client data sources dashboard in version 2010." lightbox="media/7102084-client-data-sources.png":::
 
 > [!NOTE]
-> Configuration Manager doesn't enable this optional feature by default. Before you can use it, enable the **Client Peer Cache** feature. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).
+> Configuration Manager doesn't enable this optional feature by default. Before you can use it, enable the **Client Peer Cache** feature. For more information, see [Enable optional features from updates](../../manage/optional-features.md).
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and select the **Client Data Sources** node.
 
@@ -176,18 +175,18 @@ This summary tile replaces the following four tiles in prior versions:
 Displays the sources from which clients got content:
 
 - Distribution point
-- [Cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+- Cloud distribution point, which includes content-enabled cloud management gateways
 - [BranchCache](../../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 - [Peer Cache](../../../plan-design/hierarchy/client-peer-cache.md)
-- [Delivery Optimization](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) (starting in version 1906)<sup>[Note 1](#bkmk_note1)</sup>
+- [Delivery Optimization](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) <sup>[Note 1](#bkmk_note1)</sup>
 - Microsoft Update: Devices report this source when the Configuration Manager client downloads software updates from Microsoft cloud services. These services include Microsoft Update and Microsoft 365 Apps for enterprise.
 
-![Client Content Sources tile on the dashboard](media/3555759-do-source.png)
+:::image type="content" source="media/3555759-do-source.png" alt-text="Client Content Sources tile on the dashboard.":::
 
 <a name="bkmk_note1"></a>
 
 > [!NOTE]
-> Starting in version 1906<!--3555759-->, to include Delivery Optimization on this dashboard, do the following actions:
+> To include Delivery Optimization on this dashboard, do the following actions:<!--3555759-->
 >
 > - Configure the client setting, **Enable installation of Express Updates on clients** in the Software Updates group
 >

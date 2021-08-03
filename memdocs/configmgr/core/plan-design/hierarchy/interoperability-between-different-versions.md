@@ -27,7 +27,7 @@ Sites of different versions can't coexist in the same Configuration Manager hier
 
 You can deploy a Configuration Manager current branch site and hierarchy side by side with an existing System Center 2012 Configuration Manager site or hierarchy. Plan to prevent clients from either version from trying to join a site from the other version.
 
-For example, if two or more Configuration Manager hierarchies have [overlapping boundaries](../../servers/deploy/configure/boundary-groups.md#overlapping-boundaries) that include the same network locations, assign each new client to a specific site instead of using automatic site assignment. For more information, see [How to assign clients to a site](../../clients/deploy/assign-clients-to-a-site.md).  
+For example, if two or more Configuration Manager hierarchies have [overlapping boundaries](../../servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#overlapping-boundaries) that include the same network locations, assign each new client to a specific site instead of using automatic site assignment. For more information, see [How to assign clients to a site](../../clients/deploy/assign-clients-to-a-site.md).  
 
 Additionally, you can't install a client from System Center 2012 Configuration Manager on a computer that hosts a site system role from Configuration Manager current branch. You also can't you install a Configuration Manager current branch client on a computer that hosts a site system role from System Center 2012 Configuration Manager.  
 

@@ -9,6 +9,8 @@ items:
     href: set-up.md
   - name: How to use
     href: usage.md
+  - name: Custom properties for devices
+    href: custom-properties.md
 - name: Reference
   items:
   - name: Frequently asked questions

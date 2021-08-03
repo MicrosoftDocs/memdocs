@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ---
 <!--This file will be shared. Currently it's in use by the admin-console-extensions.md file. Some headings may be context driven by the article-->
 
@@ -11,7 +11,7 @@ ms.date: 04/05/2021
 <!--3555909-->
 (*Introduced in version 2103*)
 
-The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Actions for console extensions are grouped in the ribbon and the right-click menu.
+The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Actions for console extensions are grouped in the ribbon and the right-click menu. Console extensions downloaded from [Community hub](../community-hub-extensions.md) will be shown here. 
 
 :::image type="content" source="../media/3555909-console-extensions-node.png" alt-text="The Console Extensions node in the Configuration Manager console" lightbox="../media/3555909-console-extensions-node.png":::
 
@@ -38,7 +38,8 @@ The **Console Extensions** node is located under **Administration** > **Overview
 - **Uninstall**: Uninstalls the selected extension from the current local console
 
 > [!NOTE]
-> The WebView2 console extension is approved by default to enable using Community hub. The files are automatically downloaded from `https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section` with the other redistributable files.
+> - The WebView2 console extension is approved by default to enable using Community hub. The files are automatically downloaded from `https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section` with the other redistributable files.
+> - When you upgrade to Configuration Manager 2107, you will be prompted to install the WebView2 console extension again. <!--10247811, 10005418-->
 
 ## Enable or disable hierarchy approved console extensions
 
@@ -64,7 +65,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 1. Install the extension on the local console by choosing **Install**.
 1. Once the extension is installed, verify it displays and you can use it from the local console.
 
-## Enable user notifications for extension installation
+## <a name="bkmk_enable-notifications"></a> Enable user notifications for extension installation
 
 1. If needed, modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
 1. Select **Enable Notifications**.

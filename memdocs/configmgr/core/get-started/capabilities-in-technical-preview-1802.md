@@ -190,7 +190,7 @@ When upgrading the site to this version, Configuration Manager adds all non-inte
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
 ### Prerequisites
-- Enable [preferred management points](../servers/deploy/configure/boundary-groups.md#bkmk_preferred). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
+- Enable [preferred management points](../servers/deploy/configure/boundary-groups-management-points.md#preferred-management-points). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
 
 ### Known issues
 - Operating system deployment processes are not aware of boundary groups.
@@ -256,7 +256,7 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. 
 
 > [!NOTE]
-> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
+> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/optional-features.md).
 
 ### Prerequisites
 - Upgrade the Configuration Manager client to the latest version
