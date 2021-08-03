@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/01/2021
+ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -70,7 +70,13 @@ Microsoft recommends reviewing and categorizing usage scenarios, and then config
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Intune App Protection Policy Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ### Conditional Access Policies
-To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. See **Scenario 1: Office 365 apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies.
+
+To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. These policies are described in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+
+ See **Scenario 1: Office 365 apps require approved apps with app protection policies** and **Scenario 2: Browser apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies. Finally, see [Block legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication) for how to block legacy authentication capable iOS and Android apps.
+
+ > [!NOTE]
+> These policies leverage the grant controls [Require approved client app](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app) and [Require app protection policy](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
 ### Apps to include in the App Protection Policies  
 
@@ -84,7 +90,7 @@ For each App Protection Policy, the following core Microsoft apps should be incl
 - Outlook
 - PowerPoint
 - Microsoft Teams
-- Microsoft To-Do
+- Microsoft To Do
 - Word
 - Microsoft SharePoint
 
