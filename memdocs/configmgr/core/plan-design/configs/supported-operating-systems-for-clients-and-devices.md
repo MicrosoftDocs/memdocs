@@ -29,6 +29,10 @@ To manage the following Windows OS versions, use the client that's included with
 
 ### Supported client OS versions
 
+- **Windows 11**
+
+    Starting in version 2107.
+
 - **Windows 10**
 
     For more detailed information, see [Support for Windows 10](support-for-windows-10.md).
