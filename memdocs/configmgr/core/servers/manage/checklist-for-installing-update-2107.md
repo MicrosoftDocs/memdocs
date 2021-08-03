@@ -66,7 +66,7 @@ The first time you use a Configuration Manager console after the update has fini
 
 At this time, version 2107 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2107:
 
-[Version 2107 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
+[Version 2107 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
