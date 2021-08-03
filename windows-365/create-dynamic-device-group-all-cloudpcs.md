@@ -52,4 +52,4 @@ In these steps, you’ll use the Device Model device property to create a dynami
 <!-- ########################## -->
 ## Next steps
 
-[Create a dynamic device group containing all Cloud PCs from a specific provisioning policy](create-dynamic-device-group-from-specific-policy.md).
+[Create a dynamic device group containing all Cloud PCs for a specific configuration](create-dynamic-device-group-for-specific-configuration.md).
