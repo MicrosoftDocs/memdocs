@@ -370,17 +370,6 @@ The  `applicationInventory`  entity will be removed from the Intune Data Warehou
 <!-- ***********************************************-->
 ## Security
 
-### New options for Tunnel Gateway server upgrades<!-- 8664465    -->
-
-You'll soon be able to configure some aspects of Microsoft Tunnel Gateway server upgrades. (**Tenant administration** > **Microsoft Tunnel Gateway (preview)**)
-
-Options include:
-
-- Restrict the start of server upgrades to a specific time window.
-- Configure servers at a site to upgrade manually, or require the admin to approve an upgrade before it can start.
-
-We're also adding a new health check setting that helps you identify when a server is running the latest version of Tunnel Gateway.
-
 ### New details for the Intune antivirus reports<!-- 8504648 -->
 
 We're adding two new columns of detail to both the Windows 10 unhealthy endpoints report and the Antivirus agent status report. The new details include:
