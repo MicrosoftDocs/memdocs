@@ -70,7 +70,8 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
 
   If they don’t have a provisioning policy assigned to them, no Cloud PC is created. This is indicated by a **Not provisioned** status. This is not a bad state. It’s an informational state and we encourage you to assign a provisioning policy to make the most of your Windows 365 investment.  
 
-- **Failed**: The provisioning process failed for this Cloud PC. Select the link to get a detailed reason for the failure, troubleshoot, and retry provisioning  
+- **Deprovisioning**: This short-lived status indicates that the 7-day grace period has ended and the Cloud PC is now being actively deprovisioned. Once the deprovisioning is complete, the Cloud PC can’t be restored and a new Cloud PC must be provisioned for the affected user(s).
+- **Failed**: The provisioning process failed for this Cloud PC. Select the link to get a detailed reason for the failure, troubleshoot, and retry provisioning.
 - **In grace period**: When a license/assignment change occurs for a user with a current Cloud PC, the Cloud PC object is marked as **In grace period**. Grace periods help admins avoid licensing/targeting mistakes that might cause users to lose access to their Cloud PC.
 
   With the nature of dynamic Azure AD groups, users can become unassigned to a provisioning policy or Windows 365 license. As license and provisioning policies are required for a Cloud PC to function, removing either or both will result in the end user losing access to their Cloud PC.
