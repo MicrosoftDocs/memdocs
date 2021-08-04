@@ -218,7 +218,7 @@ We’re adding a new device compliance setting for Android Enterprise personally
  **Required SafetyNet evaluation type**:
 
 - **Not configured (defaults to basic evaluation)** – This is the setting default.
-- **Hardware-backed key** – Require that devices have hardware-backed key attestation was used for SafetyNet evaluation. Devices that don’t support hardware-backed key attestation will be marked as not compliant.
+- **Hardware-backed key** – Require that hardware-backed key attestation was used for SafetyNet evaluation. Devices that don’t support hardware-backed key attestation will be marked as not compliant.
   
 For more information about SafetyNet and which devices support hardware-backed key attestation, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafteyNet documentation for Android.
 
@@ -278,10 +278,6 @@ When you deploy shell scripts or custom attributes for macOS devices from Micros
 We’re reworking the endpoint security Account protection policy to use the new APIs for Windows Hello for Business. The new APIs will result in a more consistent experience. The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts.   This API replaces the use of  *./User/Vendor/MSFT/PassportForWork*.  (**Endpoint security** > **Account protection**)
 
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
-
-### Export capability for Enrollment failures report<!-- 5491082  -->
-
-You'll be able to export data from the Enrollment failures operational report. This report will allow you to quickly export reporting data generated from any size tenant. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Enrollment failures** > **Export**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 ### Filter evaluation report will be improved<!-- 9974516   -->
 
