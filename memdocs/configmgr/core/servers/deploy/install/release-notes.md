@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/03/2021
+ms.date: 08/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -200,6 +200,8 @@ If the setting was enabled in error, disabling the setting allows the old style 
 
 _Applies to: version 2107 early update ring_
 
-After you update the site to version 2107, some CMPivot queries that you saved as a favorite won't work. When you edit the query, you may see the character `\r` in place of line breaks.
+After you update the site to version 2107, there are two issues with CMPivot queries that you saved as a favorite:
 
-To work around this issue, remove the `\r` character, and then save the query.
+- When you edit the query, you may see unexpected characters like `\r` or `\t`. To work around this issue, remove the `\r` or `\t` characters, and then save the query.
+
+- The query after the last comma (`,`) is removed. There's currently no work around for this issue. Recreate the query.
