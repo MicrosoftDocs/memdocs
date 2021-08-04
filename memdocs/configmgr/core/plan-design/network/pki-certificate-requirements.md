@@ -43,15 +43,6 @@ Configuration Manager supports _Cryptography: Next Generation_ (CNG) v3 certific
 
 For more information, see [CNG v3 certificates overview](cng-certificates-overview.md).
 
-### Elliptical curve cryptography (ECC) certificates
-
-Starting in version 2107, the Configuration Manager client supports the use of an ECC certificate. It uses this certificate to secure the communication channel with site system roles like the management point. The client uses a self-signed certificate from the site for message signing. For more information, see [Certificates in Configuration Manager](../security/certificates-overview.md#hardware-bound-key-storage-provider).
-
-Configuration Manager doesn't support the use of ECC certificates for the following components:
-
-- Site system roles in version 2107
-- Any component in version 2103 and earlier
-
 ## PKI certificates for servers
 
 ### Site systems that run IIS and support HTTPS client connections
