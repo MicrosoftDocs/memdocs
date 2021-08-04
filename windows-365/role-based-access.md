@@ -48,7 +48,7 @@ Two new built-in roles are available for Cloud PC:
 
 ## Custom roles
 
-Custom roles aren't supported for Cloud PCs.
+Custom roles aren't supported for Cloud PCs. 
 
 <!-- ########################## -->
 ## Next steps
