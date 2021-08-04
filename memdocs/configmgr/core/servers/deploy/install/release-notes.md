@@ -85,13 +85,32 @@ For more information, see [internet access requirements](../../../plan-design/ne
 
 ## OS deployment
 
-### app revisions ...
+### Task sequence and application policy issue
 
-<!-- 10506770  -->
+<!-- 10506770 -->
 
 _Applies to: version 2107_
 
-If you have a task sequence that includes the **Install Application** task sequence step, and you install the task sequence via PXE, don't revise these applications. In this scenario, if you make a change to the application properties, the PXE-deployed client doesn't install the latest version. For example, the task sequence currently references revision 6 of the application. You change the command-line to include a new parameter, which updates the application to revision 7. When a PXE client runs the task sequence, it installs revision 6 of the application.
+If you have all of the following conditions:
+
+- Task sequence _A_
+  - Includes the **Install Application** step with app _X_
+  - Deployed and made available to either type that includes **Configuration Manager clients**
+
+- Task sequence _B_
+  - Includes the **Install Application** step with app _X_
+  - Deployed and made available to either **Only media and PXE** option
+
+After you update to version 2107, if you make any change to app _X_, the task sequence _A_ will fail to run on clients that receive the deployment policy after the site update. The Configuration Manager client won't be able to get all of the policies for the task sequence and referenced applications. For clients that already had the deployment policy for task sequence _A_ before the site update, the task sequence will run, but clients won't have the revised application policy.
+
+If you updated the site to version 2107, have already revised an app, and are in this state, then use the following workaround:
+
+1. Temporarily [create a new custom task sequence](../../../../osd/deploy-use/create-a-custom-task-sequence.md).
+1. Add the [Install Application](../../../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication) step.
+1. Add the revised app to the step.
+1. Save the new task sequence.
+
+This process causes the site to update the policy with the correct flag.
 
 ### Task sequences can't run over CMG
 
