@@ -66,6 +66,10 @@ Cloud PCs are billed in a per-user per-month cost model. This model means your o
 
 By default, Cloud PCs are joined to your enterprise Active Directory domain, synced to Azure Active Directory, and fully managed by Microsoft Endpoint Manager.
 
+## Microsoft 365 Lighthouse
+
+Managed Server Providers (MSPs) can manage Cloud PCs in Microsoft 365 Lighthouse for their customer tenants. For more information, see [Windows 365 (Cloud PCs) page overview](/microsoft-365/lighthouse/m365-lighthouse-win365-page-overview).
+
 <!-- ########################## -->
 ## Next steps
 
