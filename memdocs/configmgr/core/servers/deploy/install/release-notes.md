@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/03/2021
+ms.date: 08/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -94,6 +94,34 @@ If the site system server has a version of the Visual C++ redistributable later 
 To work around this issue, temporarily uninstall the later version of Visual C++ redistributable. When you install Configuration Manager version 2107, it will install version 14.28.29914.
 
 ## OS deployment
+
+### Task sequence and application policy issue
+
+<!-- 10506770 -->
+
+_Applies to: version 2107_
+
+If you have all of the following conditions:
+
+- Task sequence _A_
+  - Includes the **Install Application** step with app _X_
+  - Deployed and made available to either type that includes **Configuration Manager clients**
+
+- Task sequence _B_
+  - Includes the **Install Application** step with app _X_
+  - Deployed and made available to either **Only media and PXE** option
+
+After you update to version 2107, if you make any change to app _X_, then task sequence _A_ will fail to run on clients that receive the deployment policy after the site update. The Configuration Manager client won't be able to get all of the policies for the task sequence and referenced applications. For clients that already had the deployment policy for task sequence _A_ before the site update, the task sequence will run, but clients won't have the revised application policy.
+
+If you updated the site to version 2107, have already revised an app, and are in this state, then use the following workaround:
+
+1. Edit task sequence _A_.
+1. Remove app _X_ from every **Install Application** step in which it's referenced.
+1. Save the task sequence.
+1. Add app _X_ back to the task sequence as previously included.
+1. Save the task sequence.
+
+This process causes the site to update the policy with the correct flag.
 
 ### Task sequences can't run over CMG
 
@@ -194,12 +222,14 @@ If the setting was enabled in error, disabling the setting allows the old style 
 
 ## CMPivot
 
-### Favorite queries lose line breaks
+### Favorite queries lose line breaks or are truncated
 
 <!-- 10517223 -->
 
 _Applies to: version 2107 early update ring_
 
-After you update the site to version 2107, some CMPivot queries that you saved as a favorite won't work. When you edit the query, you may see the character `\r` in place of line breaks.
+After you update the site to version 2107, there are two issues with CMPivot queries that you saved as a favorite:
 
-To work around this issue, remove the `\r` character, and then save the query.
+- When you edit the query, you may see unexpected characters like `\r` or `\t`. To work around this issue, remove the `\r` or `\t` characters, and then save the query.
+
+- The query after the last comma (`,`) is removed. There's currently no workaround for this issue. Recreate the query.
