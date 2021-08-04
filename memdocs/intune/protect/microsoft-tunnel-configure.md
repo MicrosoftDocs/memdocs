@@ -57,7 +57,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
      > - You use Microsoft Defender for Endpoint for both Defender for Endpoint and Microsoft Tunnel functionality
      > - You use per-app VPN.
      >
-     > This addition of a publicly accessible DNS server prevents connection issues back to Intune for non-per-app VPN apps that use work profiles.
+     > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
 
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
 

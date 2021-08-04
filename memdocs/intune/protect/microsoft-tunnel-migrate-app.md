@@ -44,7 +44,7 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
   > - You use Microsoft Defender for both Defender for Endpoint Endpoint and Microsoft Tunnel functionality.
   > - You use *per-app* VPN.
   >
-  > This addition of a publicly accessible DNS server prevents connection issues back to Intune for non-per-app VPN apps that use work profiles.
+  > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
 
 <!-- The following is retained for future use should iOS receive the same style of preview  >
 
