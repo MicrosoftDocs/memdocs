@@ -86,12 +86,6 @@ Intune will display the contents of macOS LOB apps ( .intunemac files) in the co
 <!-- ***********************************************-->
 ## Device configuration
 
-### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
-
-To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you'll be able to see the overall compliance status for the policy. With device level reporting, you'll be able to see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
-
-For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
-
 ### Use a Settings Catalog policy in a policy set for Windows and macOS devices<!-- 8851701  -->
 
 In Intune, you can create a policy using [Settings Catalog](../configuration/settings-catalog.md), which lists all the settings you can configure. Now, you can use the Settings Catalog policy within a policy set.
@@ -217,6 +211,34 @@ Applies to:
 
 - iOS/iPadOS 14.5 and newer
 
+### Compliance setting for hardware-backed key attestation for Android Enterprise personally-owned work profile devices<!--8903071  -->
+
+We’re adding a new device compliance setting for Android Enterprise personally-owned work profile devices, **Required SafetyNet evaluation type**. This new setting will be available when you configure *SafetyNet device attestation* to either *Check basic integrity* or *Check basic integrity & certified devices*.  The new setting:
+
+ **Required SafetyNet evaluation type**:
+
+- **Not configured (defaults to basic evaluation)** – This is the setting default.
+- **Hardware-backed key** – Require that devices have hardware-backed key attestation was used for SafetyNet evaluation. Devices that don’t support hardware-backed key attestation will be marked as not compliant.
+  
+For more information about SafetyNet and which devices support hardware-backed key attestation, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafteyNet documentation for Android.
+
+### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461  -->
+
+You’ll soon be able to use the Settings Catalog to deploy Windows 10 quality updates to Windows 10 Enterprise multi-session virtual machines. (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 or later** > **Settings catalog**)
+
+To find the relevant settings, in the Settings Catalog, [use the Settings filter to focus on the OS type of Enterprise multi-session](../fundamentals/azure-virtual-desktop-multi-session#to-configure-policies). Then select the Windows Update for Business category where you’ll now see only those settings that are supported for multi-session VMs.
+
+The Windows Update settings for quality updates that you’ll soon be able to use with multi-session VMs include:
+
+- Active Hours End
+- Active Hours Max Range
+- Active Hours Start
+- Block "Pause Updates" ability
+- Configure Deadline Grace Period
+- Defer Quality Updates Period (Days)
+- Pause Quality Updates Start Time
+- Quality Update Deadline Period (Days)
+
 <!-- ***********************************************-->
 <!--
 ## Device enrollment
@@ -228,18 +250,6 @@ Applies to:
 ### Tenant attach: Offboarding <!--9412904 -->
 
 While we know customers get enormous value by enabling tenant attach with Configuration Manager, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard from the cloud following a disaster recovery scenario where the on-premises environment was removed. You'll soon be able to offboard a Configuration Manager environment from the Microsoft Endpoint Manager admin center.
-
-### Improvements for managing Windows Updates for pre-release builds<!-- 10198684 -->
-
-We’re improving the experience of managing Windows updates for pre-release builds. (**Devices** > **Windows** > **Windows 10 update rings**).
-
-You'll see the following improvements:
-
-- Devices assigned to Windows update rings will no longer have the *ManagePreviewBuilds* setting changed during Autopilot. When this setting changes during Autopilot it forces an another reboot.
-- There will be a new control named **Enable pre-release builds** added to Windows update rings to indicate whether to configure assigned devices to update to pre-release builds.
-- The list of pre-release builds will update:
-  - The default, non-prerelease **Semi-Annual Channel** will be removed.
-  - The names of the pre-release builds will reflect the current names of **Dev Channel**, **Beta Channel**, and **Windows Insider - Release Preview**.
 
 ### Intune moving to support iOS/iPadOS 13 and higher later this year<!-- 9964998 idrady-->
 
