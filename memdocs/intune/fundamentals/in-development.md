@@ -262,10 +262,6 @@ Apple is expected to release macOS 12 (Monterey) in the fall of 2021. Microsoft 
 <!-- ***********************************************-->
 ## Intune apps
 
-### End users can restart an app install from the Company Portal<!-- 652935  -->
-
-Using the Company Portal, end users will be able to restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
-
 ### Intune management agent for macOS devices will be a universal app<!-- 9294405  -->
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
