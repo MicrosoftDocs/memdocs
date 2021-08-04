@@ -6,5 +6,7 @@ items:
   items:
   - name: Microsoft Endpoint Manager overview
     href: endpoint-manager-overview.md
+  - name: Getting started with Microsoft Endpoint Manager
+    href: endpoint-manager-getting-started.md  
   - name: Get Support
     href: get-support.md

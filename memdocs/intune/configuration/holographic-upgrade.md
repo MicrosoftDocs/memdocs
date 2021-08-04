@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Upgrade to Windows Holographic for Business in Microsoft Intune - Azure | Microsoft Docs
+title: Upgrade to Windows Holographic for Business in Microsoft Intune
 description: Upgrade HoloLens (1st gen) to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/28/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Platforms and policy types supported by filters in Microsoft Intune - Azure | Microsoft Docs
+title: Platforms and policy types supported by filters in Microsoft Intune
 description: Supported apps, compliance policies, and device configuration profiles that support filters in Microsoft Endpoint Manager and Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 07/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -132,6 +132,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | N/A |
 | Device restrictions | ✔️ |
@@ -161,6 +162,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | ✔️ |
 | Device restrictions | ✔️ |
@@ -189,6 +191,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | ✔️ |
 | Device restrictions | ✔️ |
@@ -216,6 +219,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| **Device configuration profile** | &nbsp; |
 | Custom | ✔️ |
 | Derived credential | N/A |
 | Device restrictions | ✔️ |
@@ -246,6 +250,8 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
+| Windows 10 update rings | ✔️ |
+| **Device configuration profile** | &nbsp; |
 | Administrative Templates | ✔️ |
 | Custom | ✔️ |
 | Derived credential | N/A |
@@ -253,7 +259,7 @@ You can use filters for some common device configuration policies on the followi
 | Device restrictions | ✔️ |
 | Device Restrictions (Windows 10 Team) | ✔️ |
 | Device Features | N/A |
-| Device Firmware Configuration Interface | ❌ |
+| Device Firmware Configuration Interface (DFCI) | ❌ |
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
@@ -299,7 +305,6 @@ The following features don't support using filters:
 - Terms and conditions
 - Update policies for iOS/iPadOS
 - Windows 10 feature updates
-- Windows 10 update rings
 
 ## Next steps
 

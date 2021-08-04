@@ -2,7 +2,7 @@
 title: Create stand-alone media
 titleSuffix: Configuration Manager
 description: Use stand-alone media to deploy the OS on a computer without a network connection.
-ms.date: 05/02/2019
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -31,7 +31,7 @@ Use stand-alone media with the following OS deployment scenarios:
 
 Stand-alone media includes the task sequence that automates the steps to install the OS, and all other required content. This content includes the boot image, OS image, and device drivers. Because the stand-alone media stores everything to deploy the OS, it requires more disk space than required for other types of media.
 
-When you create stand-alone media on a central administration site, the client retrieves its assigned site code from Active Directory. Stand-alone media created at child sites automatically assigns to the client the site code for that site.  
+When you create stand-alone media on a CAS, the client retrieves its assigned site code from Active Directory. Stand-alone media created at child sites automatically assigns to the client the site code for that site.  
 
 
 ## Prerequisites
@@ -64,16 +64,27 @@ The following actions aren't supported for stand-alone media:
 
 - The **Use pre-production client package when available** setting in the **Setup Windows and ConfigMgr** task sequence step. For more information about this setting, see [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).  
 
-> [!NOTE]  
-> An error might occur if your task sequence includes the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site. The central administration site doesn't have the necessary client configuration policies. These policies are required to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file:  
->
-> `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
->
-> For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled.
->
-> Alternatively, use a custom [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run Command Line** step runs the following WMIC command to enable the software distribution agent before the first Install Package step:  
->
-> `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+#### Known issue with Install Package step and media created at the central administration site
+
+An error might occur if your task sequence includes the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site (CAS). The CAS doesn't have the necessary client configuration policies. These policies are required to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file: `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
+
+For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled.
+
+Alternatively, use a custom [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run PowerShell Script** step runs the following commands to enable the software distribution agent before the first Install Package step:
+
+```powershell
+$namespace = "root\ccm\policy\machine\requestedconfig"
+$class = "CCM_SoftwareDistributionClientConfig"
+$classArgs = @{
+    ComponentName = 'Enable SWDist'
+    Enabled = 'true'
+    LockSettings='TRUE'
+    PolicySource='local'
+    PolicyVersion='1.0'
+    SiteSettingsKey='1'
+}
+Set-WmiInstance -Namespace $namespace -Class $class -Arguments $classArgs -PutType CreateOnly
+```
 
 ### Distribute all content associated with the task sequence
 

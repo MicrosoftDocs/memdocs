@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 07/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -79,9 +79,9 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
     | Value/Option | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
+    | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No** to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
     |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
-    | Public apps | Click **Select public apps** to choose the apps to target.    |
+    | Public apps | In the **Target policy to** dropdown box, choose to target your app protection policy to **All public apps**, **Microsoft Apps**, or **Core Microsoft Apps**. Next, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy.<p>If needed, you can choose to target individual apps by clicking **Select public apps**.  |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
     The app(s) you have selected will appear in the public and custom apps list.
@@ -146,7 +146,7 @@ To see the effect of the changes immediately, the end user must sign out of the 
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. Additional app configuration may be required for this setting. For more information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
     |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
-    | Public apps | Click **Select public apps** to choose the apps to target.  |
+    | Public apps | In the **Target policy to** dropdown box, choose to target your app protection policy to **All public apps**, **Microsoft Apps**, or **Core Microsoft Apps**. Next, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy.<p>If needed, you can choose to target individual apps by clicking **Select public apps**.  |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
     The app(s) you have selected will appear in the public and custom apps list.

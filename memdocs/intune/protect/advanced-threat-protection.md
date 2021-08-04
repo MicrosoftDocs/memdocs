@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
+title: Use Microsoft Defender for Endpoint in Microsoft Intune
 description: Use Microsoft Defender for Endpoint with Intune, including setup and configuration, onboarding of your Intune devices, and then use a devices Defender for Endpoint risk assessment with your Intune device compliance and conditional access policies to protect network resources.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2021
+ms.date: 07/23/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,7 +78,7 @@ To use Microsoft Defender for Endpoint with Intune, you must have the following 
   - Microsoft 365 E5
   - Windows 10 Enterprise E5 (*This license is included with Microsoft 365 E5*)
 
-  For more information, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements).
+  For more information, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 
 - **Microsoft Intune** – This subscription provides access to Intune and the Microsoft Endpoint Manager admin center.
 

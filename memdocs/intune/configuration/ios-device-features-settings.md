@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: iOS/iPadOS device feature settings in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS device feature settings in Microsoft Intune
 description: See all the settings to configure iOS and iPadOS devices for AirPrint, home screen layout, app notifications, shared devices, single sign-on, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS/iPadOS devices to use these Apple features in your organization.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/29/2021
+ms.date: 07/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -89,6 +89,8 @@ This feature applies to:
 >   For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 >
 > - When you apply a home screen layout, it overwrites any user-defined layout. So, it's recommended to use home screen layouts on userless devices.
+> 
+> - You can have preexisting apps installed on the device that are not included in the home screen layout configuration. These apps are shown in alphabetical order after the configured apps.
 
 ### Home screen
 

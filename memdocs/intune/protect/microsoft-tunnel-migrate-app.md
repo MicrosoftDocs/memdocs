@@ -1,11 +1,11 @@
 ---
-title: Migrate Microsoft Tunnel to the Microsoft Defender for Endpoint app for Microsoft Intune - Azure | Microsoft Docs
+title: Migrate Microsoft Tunnel to the Microsoft Defender for Endpoint app for Microsoft Intune
 description: Migrate your Microsoft Tunnel configuration from using the standalone tunnel client app to use Microsoft Defender for Endpoint.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2021
+ms.date: 08/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,9 +34,16 @@ If you've previously configured Microsoft Tunnel for Android using the standalon
 The following device platforms support Microsoft Defender for Endpoint as the tunnel client app:
 
 - Android Enterprise:
-  - Fully Managed
-  - Corporate-Owned Work Profile
-  - Personally-Owned Work Profile - *For devices enrolled as Personally-Owned Work Profile where you use Microsoft Defender for Endpoint for more than the Microsoft Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile.*
+  - Fully managed
+  - Corporate-owned work profile
+  - Personally-owned work Profile - *For devices enrolled as personally-owned work profile where you use Microsoft Defender for Endpoint for more than the Microsoft Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile.*
+     > [!IMPORTANT]
+     > To support Android Enterprise personally-owned work profile (BYOD) in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md#create-a-server-configuration). The conditions:
+     >
+     > - You use both Microsoft Defender for Endpoint and Microsoft Tunnel functionality.
+     > - You use *per-app* VPN.
+     >
+     > This addition of a publicly accessible DNS server prevents connection issues back to Intune for non-per-app VPN apps that use work profiles.
 
 <!-- The following is retained for future use should iOS receive the same style of preview  >
 
@@ -127,18 +134,12 @@ Sign up at https://aka.ms/VPNpreview where you provide your Managed Google Play 
 After you sign up, you’ll be alerted by email when your tenant has access to the preview app. The email includes instructions for deploying the preview Microsoft Defender for Endpoint app from the Managed Google Play store.
 -->
 
-> [!IMPORTANT]  
-> There’s a known issue with always-on VPN that prevents the following steps from working properly. If you're using always-on VPN with the standalone Tunnel client app today, you'll need to do the following:
+> [!IMPORTANT]
 >
-> 1. Disable the Always-on configuration in the VPN profiles for both the standalone Tunnel app, and for Microsoft Defender for Endpoint as the Tunnel app. To do so, edit the profiles and set *Always on VPN* to **Not configured**.
-> 2. Create a [Device Restrictions profile](../configuration/device-restrictions-configure.md) for Android Enterprise:
->    1. For *Profile type* select **Device restrictions**.
->    2. For *Configuration settings*, expand *Connectivity*, and set *Always-on VPN (work profile-level)* to **Enable**.
->       - For *VPN client* select **Custom**
->       - For *Package ID* enter **com.microsoft.scmx**
->    3. Deploy the profile to the same devices that have the new and old VPN profiles for Tunnel.
+> If you use *Always-on VPN* with the standalone Tunnel client app today, during migration to Microsoft Defender for Endpoint:
 >
-> 3. After the device restriction profile deploys, you can successfully remove the VPN profile for the standalone Tunnel client app.
+> - Set *Always-on VPN* to **Not configured** in profiles for **Microsoft Tunnel (standalone client)**, which is the old client app.
+> - Set *Always-on VPN* to **Enable** in profiles for **Microsoft Tunnel**, which is the new Microsoft Defender for Endpoint client app.
 
 ### Review and record your current Tunnel configurations
 

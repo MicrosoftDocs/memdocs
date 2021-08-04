@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/04/2021
+ms.date: 07/21/2021
 ---
 
 <!-- ## Update and configure the .NET Framework to support TLS 1.2 Note: the heading in in the 2 articles (enable-tls-1-2-client & enable-tls-1-2-server) to better facilitate linking. -->
@@ -17,6 +17,9 @@ First, determine the installed .NET versions. For more information, see [Determi
 Install the .NET updates so you can enable strong cryptography. Some versions of .NET Framework might require updates to enable strong cryptography. Use these guidelines:
 
 - NET Framework 4.6.2 and later supports TLS 1.1 and TLS 1.2. Confirm the registry settings, but no additional changes are required.
+
+  > [!NOTE]
+  > Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console.<!--10402814--> If possible in your environment, install the latest version of .NET version 4.8.
 
 - Update NET Framework 4.6 and earlier versions to support TLS 1.1 and TLS 1.2. For more information, see [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies).
 

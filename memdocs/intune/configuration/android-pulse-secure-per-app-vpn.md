@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Custom per-app VPN profile for Android device administrator in Microsoft Intune - Azure | Microsoft Docs
+title: Custom per-app VPN profile for Android device administrator in Microsoft Intune
 description: Use a custom profile for per-app VPN profiles on Android device administrator with the Pulse Secure or Citrix VPN connection types in Microsoft Intune.
 keywords:
 author: MandiOhlinger

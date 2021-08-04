@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add custom settings to Android devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings to Android devices in Microsoft Intune
 description: Add or create a custom profile for Android devices to create a WiFi profile with a pre-shared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices in Microsoft Intune
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 12/18/2020
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium

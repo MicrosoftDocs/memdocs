@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 08/02/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -246,15 +246,63 @@ Deployments can also be added programmatically using Windows PowerShell cmdlets.
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 ## Known issues
-<!--9354590, 9391270-->
-### Error code 0x87D20417
 
+### Error code 0x87D20417
+<!--9354590, 9391270-->
 **Scenario:** When running Configuration Manager version 2010, you may notice that an automatic deployment rule fails and returns **Last Error Code** of 0x87D20417. In the **PatchDownloader.log**, you see `Failed to create temp file with GetTempFileName() at temp location C:\Windows\TEMP\, error 80 ` and 0-byte files in the %temp% directory. 
 
 **Workaround:** Remove all the files from the temp directory specified in the **PatchDownloader.log** and rerun the ADR. 
 
 **Resolution:** Install [KB 4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95), Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010.
 
+### <a name="bkmk_script"></a> Script to apply deployment package settings for automatic deployment rule
+<!--3961933, 4396422-->
+
+If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded the following script into [Community hub](../../core/servers/manage/community-hub.md):
+
+   > [!TIP]
+   > [Open this script](https://communityhub.microsoft.com/item/19635) directly in Community hub. For more information, see [Direct links to Community hub items](../../core/servers/manage/community-hub.md).
+
+```powershell
+<# Apply-ADRDeploymentPackageSettings #>
+
+#=============================================
+# START SCRIPT
+#=============================================
+param
+(
+[parameter(Mandatory = $true)]
+[ValidateNotNullOrEmpty()]
+[ValidateLength(1,256)]
+[string]$sourceADRName,
+
+[parameter(Mandatory = $true)]
+[ValidateNotNullOrEmpty()]
+[ValidateLength(1,256)]
+[string]$targetADRName
+)
+
+Try {
+       # Source ADR that already has the needed deployment package. You may need to create one if it doesn’t exist.
+       $sourceADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name $sourceADRName
+
+       # Target ADR that will be updated to use the source ADR’s deployment package. Typically, this is the ADR that used the “No deployment package” option. 
+       $targetADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name $targetADRName
+
+       # Apply the deployment package settings
+       $targetADR.ContentTemplate = $sourceADR.ContentTemplate
+
+       # Update the wmi object
+       $targetADR.Put()
+}
+Catch{
+       $exceptionDetails = "Exception: " + $_.Exception.Message + "HResult: " + $_.Exception.HResult
+       Write-Error "Failed to apply ADR deployment package settings: $exceptionDetails"
+}
+#=============================================
+# END SCRIPT
+#=============================================
+```
 
 ## Next steps
 [Monitor software updates](monitor-software-updates.md)

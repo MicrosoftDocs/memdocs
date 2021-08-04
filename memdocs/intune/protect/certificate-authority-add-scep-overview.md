@@ -1,5 +1,5 @@
 ---
-title: Use third-party certification authorities (CA) with SCEP in Microsoft Intune - Azure | Microsoft Docs
+title: Use third-party certification authorities (CA) with SCEP in Microsoft Intune
 description: In Microsoft Intune, you can add a vendor or third-party certificate authority (CA) to issue certificates to mobile devices using the SCEP protocol. In this overview, an Azure Active Directory (Azure AD) application gives Microsoft Intune permissions to validate certificates. Then, use the application ID, authentication key, and tenant ID of the AAD application in the setup of your SCEP server to issue certificates. 
 keywords:
 author: brenduns
@@ -141,7 +141,7 @@ The following third-party certification authorities support Intune:
 - [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
-- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
+- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)

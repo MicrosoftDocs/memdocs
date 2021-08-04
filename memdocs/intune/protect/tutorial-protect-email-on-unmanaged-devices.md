@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 07/09/2021
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,10 +78,9 @@ In this tutorial, we'll set up an Intune [app protection policy](../apps/app-pro
 
    - For **Send org data to other apps**, select **None**.
    - For **Receive data from other apps**, select **None**.
-   - For **Save copies of org data**, select **Block**.
    - For **Restrict cut, copy and paste between other apps**, select **Blocked**.
 
-   ![Select the Outlook app protection policy data relocation settings](./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png" alt-text="Select the Outlook app protection policy data relocation settings.":::
 
    Select **Next** to continue.
 
@@ -90,7 +89,7 @@ In this tutorial, we'll set up an Intune [app protection policy](../apps/app-pro
    - For **PIN for access**, select **Require**.
    - For **Work or school account credentials for access**, select **Require**.
 
-   ![Select the Outlook app protection policy access actions](./media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png)
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png" alt-text="Select the Outlook app protection policy access actions.":::
 
    Select **Next** to continue.
 
@@ -133,7 +132,7 @@ When you configure Conditional Access policies in the Microsoft Endpoint Manager
    3. In the Applications list, select **Office 365 Exchange Online**, and then choose **Select**.
    4. Select **Done** to return to the New policy pane.
 
-   ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-cloud-apps.png)
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-cloud-apps.png" alt-text="Select the Office 365 Exchange Online app.":::
 
 6. Under **Assignments**, select **Conditions** > **Device platforms**.
 
@@ -148,7 +147,7 @@ When you configure Conditional Access policies in the Microsoft Endpoint Manager
    3. Clear the other check boxes.
    4. Select **Done** > **Done** to return to the New policy pane.
 
-   ![Select Mobile apps and clients](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png" alt-text="Select Mobile apps and clients.":::
 
 8. Under **Access controls**, select **Grant**.
 
@@ -158,11 +157,11 @@ When you configure Conditional Access policies in the Microsoft Endpoint Manager
    4. Under **For multiple controls**, select **Require all the selected controls**. This setting ensures that both requirements you selected are enforced when a device tries to access email.
    5. Choose **Select**.
 
-   ![Select access controls](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png" alt-text="Select access controls.":::
 
 9. Under **Enable policy**, select **On**, and then select **Create**.
 
-   ![Create policy](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png" alt-text="Create policy.":::
 
 The Conditional Access policy for Modern Authentication clients is created. Now you can create a policy for Exchange Active Sync clients.
 
@@ -191,11 +190,11 @@ The Conditional Access policy for Modern Authentication clients is created. Now 
 
    1. Under **Configure**, select **Yes**.
    2. Select **Mobile apps and desktop clients**.
-   3. Select **Exchange ActiveSync clients** and **Apply policy only to supported platforms**.  
+   3. Select **Exchange ActiveSync clients**.
    4. Clear all other check boxes.  
    5. Select **Done**, and then select **Done** again.  
 
-   ![Apply to supported platforms](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png" alt-text="Apply to supported platforms.":::
 
 8. Under **Access controls**, select **Grant**.
 
@@ -203,7 +202,7 @@ The Conditional Access policy for Modern Authentication clients is created. Now 
    2. Select **Require approved client app**. Clear all other check boxes.
    3. Choose **Select**.
 
-   ![Require approved client app](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png" alt-text="Require approved client app.":::
 
 9. Under **Enable policy**, select **On**, and then select **Create**.
 

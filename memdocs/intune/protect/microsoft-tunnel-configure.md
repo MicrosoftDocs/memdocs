@@ -1,11 +1,11 @@
 ---
-title: Install and configure the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: Install and configure the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Install and configure the Microsoft Tunnel Gateway, a VPN server that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 6/14/2021
+ms.date: 08/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,7 +51,16 @@ Use of a *Server configuration* lets you create a configuration a single time an
 3. On the **Settings** tab, configure the following items:
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
+     > [!IMPORTANT]
+     > To support Android Enterprise personally-owned work profile (BYOD) in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
+     >
+     > - You use both Microsoft Defender for Endpoint and Microsoft Tunnel functionality.
+     > - You use per-app VPN.
+     >
+     > This addition of a publicly accessible DNS server prevents connection issues back to Intune for non-per-app VPN apps that use work profiles.
+
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
+
    - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
 
      Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
@@ -229,7 +238,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]  
-   > For *Android Enterprise Personally-Owned Work Profile* devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. Use of custom settings is optional for all other platforms.
+   > For *Android Enterprise personally-owned work profile* devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. Use of custom settings is optional for all other platforms.
 
 5. On the **Assignments** tab, configure groups that will receive this profile.
 

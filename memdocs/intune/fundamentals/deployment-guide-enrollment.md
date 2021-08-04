@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Device enrollment guide for Microsoft Intune - Azure | Microsoft Docs
+title: Device enrollment guide for Microsoft Intune
 description: Enroll Android, Android Enterprise, iOS, iPadOS, macOS, and Windows devices In Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger

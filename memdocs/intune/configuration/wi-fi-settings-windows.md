@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Wi-Fi settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Wi-Fi settings for Windows 10 devices in Microsoft Intune
 description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10 and later devices in Microsoft Intune. You can configure basic settings, or enterprise level settings. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/29/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium

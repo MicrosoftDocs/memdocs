@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Protection settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Protection settings for Windows 10 devices in Microsoft Intune
 description: On Windows 10 devices, use or configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/29/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.technology:
 ms.service: microsoft-intune
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a

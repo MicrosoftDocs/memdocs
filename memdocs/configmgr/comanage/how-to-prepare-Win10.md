@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/22/2021
+ms.date: 08/02/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -26,7 +26,7 @@ To configure your devices to be automatically enroll into Intune when they join 
 > [!NOTE]
 > As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (Azure AD) joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
 >
-> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 -->
+> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
 
 ### Gather information from Configuration Manager
 
@@ -58,14 +58,12 @@ For internet-based devices in the second path, you need to create an app in Intu
 
 ### Get the command line from Configuration Manager
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Attach** node.
+   - For version 2103 and earlier, select the **Co-management** node.
 
 1. Select the co-management object, and then choose **Properties** in the ribbon.
 
-1. On the **Enablement** tab, copy the command line. Paste it into Notepad to save for the next process.
-
-    > [!TIP]
-    > The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.<!-- MEMDocs#635 -->
+1. On the **Enablement** tab, copy the command line. Paste it into Notepad to save for the next process. The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.<!-- MEMDocs#635 -->
 
 The following command line is an example:
 `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`

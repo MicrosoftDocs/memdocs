@@ -5,11 +5,10 @@ description: Learn how to configure co-management for new internet-based Windows
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 08/02/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
-ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
 ---
 
 # Tutorial: Enable co-management for new internet-based devices
@@ -52,17 +51,15 @@ Use this tutorial when:
 
 ### On-premises infrastructure
 
-- Configuration Manager current branch, version 1810 or later.
+- A supported version of Configuration Manager current branch.
   
-  Version 1810 introduces [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md), which is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.  
+  [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md) is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.
 
-  Version 1810 also introduces a simpler command line for internet-based installation of the Configuration Manager client.
-
-- The MDM authority must be set to Intune  
+- The MDM authority must be set to Intune.
 
 ### External certificates
 
-- CMG server authentication certificate. This certificate is an SSL certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. You'll export this certificate as .PFX file with Private Key.  
+- CMG server authentication certificate. This certificate is an SSL certificate from a public and globally trusted certificate provider.<!-- memdocs#1668 --> You'll export this certificate as .PFX file with Private Key.  
 
 - Later in this tutorial we provide guidance on how to configure the request for this certificate.
 
@@ -117,12 +114,10 @@ We recommend you use your primary site server to generate the certificate signin
 
 Request a version 2 key provider type when you generate a CSR. Only version 2 certificates are supported.  
 
-> [!TIP]  
-> When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP on the server with the CMG removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn't required to use co-management, it is useful in most environments.  
+> [!TIP]
+> By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Even though the cloud-based content isn't required to use co-management, it's useful in most environments.
 >
-> If you use any additional, separate CDPs, you need to request separate certificates for each additional CDP. To request a public certificate for a CDP, use the same details as for the cloud management gateway CSR. You need to only change the common name so that it is unique for each CDP.
->
-> Using an additional, separate CDP is deprecated and no longer recommended. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
+> The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances.<!-- 10247883 --> To provide content to internet-based devices, enable the CMG to distribute content. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### Details for the cloud management gateway CSR
 
@@ -234,11 +229,11 @@ Run the following procedure from the primary site server.
 
    1. Select the Web app you created.
 
-   2. Go to **API Permissions** > select **Grant admin consent for** <your tenant>, and then select **Yes**.  
+   2. Go to **API Permissions** > select **Grant admin consent for** your tenant, and then select **Yes**.  
 
    3. Select the Native Client app you created.
 
-   4. Go to **API Permissions** > select **Grant admin consent for** <your tenant>, and then select **Yes**.
+   4. Go to **API Permissions** > select **Grant admin consent for** your tenant, and then select **Yes**.
 
 9. In the Configuration Manager console, go to **Administration > Overview > Cloud Services > Azure Services**, and select your Azure Service. Then right-click on **Azure Active Directory User Discover** and select **Run Full Discovery Now**. Select **Yes** to confirm the action.  
 
@@ -279,7 +274,7 @@ Use this procedure to install a cloud management gateway as a service in Azure. 
 
 7. Enable the checkbox for **Verify Client Certificate Revocation**.
 
-8. Enable the checkbox for **Allow CMG to function as a cloud distribution point and serve content from Azure storage** if you want to deploy a cloud distribution point with the CMG.
+8. Enable the checkbox to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**.
 
 9. Select **Next** to continue.
 
@@ -355,17 +350,11 @@ With the Azure configurations, site system roles, and client settings in place, 
 
 The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices.
 
-> [!TIP]
-> - When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.
-> - Starting in Configuration Manager version 1906, you may need multiple collections since you can assign a different *Pilot group* for each workload.
+When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
 
-### Enable co-management starting in version 1906
+### Enable co-management
 
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
-
-### Enable co-management in version 1902 and earlier
-
-[!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
 ## Use Intune to deploy the Configuration Manager client
 
