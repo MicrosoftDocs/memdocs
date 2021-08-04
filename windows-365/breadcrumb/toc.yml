@@ -6,6 +6,4 @@ items:
   - name: Windows 365
     tocHref: /windows-365/
     topicHref: /windows-365/index
-  - name: Windows 365
-    tocHref: /mem/intune/
-    topicHref: /windows-365/index
+  
