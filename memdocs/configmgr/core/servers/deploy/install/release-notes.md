@@ -194,7 +194,7 @@ If the setting was enabled in error, disabling the setting allows the old style 
 
 ## CMPivot
 
-### Favorite queries lose line breaks
+### Favorite queries truncate or lose line breaks
 
 <!-- 10517223 -->
 
