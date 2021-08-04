@@ -54,7 +54,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
      > [!IMPORTANT]
      > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
      >
-     > - You use Microsoft Defender for Endpoint for both Defender for Endpoint and Microsoft Tunnel functionality
+     > - You use Microsoft Defender for Endpoint for both Defender for Endpoint and Microsoft Tunnel functionality.
      > - You use per-app VPN.
      >
      > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
