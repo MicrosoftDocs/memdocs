@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/03/2021
+ms.date: 08/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,12 +52,12 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
      > [!IMPORTANT]
-     > To support Android Enterprise personally-owned work profile (BYOD) in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
+     > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
      >
-     > - You use both Microsoft Defender for Endpoint and Microsoft Tunnel functionality.
+     > - You use Microsoft Defender for Endpoint for both Defender for Endpoint and Microsoft Tunnel functionality.
      > - You use per-app VPN.
      >
-     > This addition of a publicly accessible DNS server prevents connection issues back to Intune for non-per-app VPN apps that use work profiles.
+     > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
 
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
 

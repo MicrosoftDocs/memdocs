@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/03/2021
+ms.date: 08/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,13 +37,14 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
   - Fully managed
   - Corporate-owned work profile
   - Personally-owned work Profile - *For devices enrolled as personally-owned work profile where you use Microsoft Defender for Endpoint for more than the Microsoft Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile.*
-     > [!IMPORTANT]
-     > To support Android Enterprise personally-owned work profile (BYOD) in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md#create-a-server-configuration). The conditions:
-     >
-     > - You use both Microsoft Defender for Endpoint and Microsoft Tunnel functionality.
-     > - You use *per-app* VPN.
-     >
-     > This addition of a publicly accessible DNS server prevents connection issues back to Intune for non-per-app VPN apps that use work profiles.
+     
+  > [!IMPORTANT]
+  > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md#create-a-server-configuration). The conditions:
+  >
+  > - You use Microsoft Defender for both Defender for Endpoint Endpoint and Microsoft Tunnel functionality.
+  > - You use *per-app* VPN.
+  >
+  > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
 
 <!-- The following is retained for future use should iOS receive the same style of preview  >
 
