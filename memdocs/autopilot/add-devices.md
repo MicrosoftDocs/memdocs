@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 03/16/2021
+ms.date: 08/05/2021
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -78,14 +78,14 @@ New-Item -Type Directory -Path "C:\HWID"
 Set-Location -Path "C:\HWID"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted
 Install-Script -Name Get-WindowsAutoPilotInfo
-Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
+Get-WindowsAutoPilotInfo -OutputFile AutoPilotHWID.csv
 ```
 
 You can run the commands remotely if both of the following are true:
 - WMI permissions are in place
 - WMI is accessible through the Windows Firewall on the remote computer.
 
-For more information about running the script, see the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) script’s help by using “Get-Help Get-WindowsAutoPilotInfo.ps1”.
+For more information about running the script, see the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) script’s help by using “Get-Help Get-WindowsAutoPilotInfo”.
 
 ## Add devices
 

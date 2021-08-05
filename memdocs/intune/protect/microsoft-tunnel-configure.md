@@ -201,7 +201,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
   The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
 
   > [!Note]
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later on August 14 2021.
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
 
 - iOS/iPadOS: **Microsoft Tunnel (standalone client)**
 
