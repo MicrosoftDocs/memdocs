@@ -59,7 +59,7 @@ You can install multiple Linux servers to support Microsoft Tunnel, and combine 
 To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses Microsoft Tunnel for its connection type.
 
   > [!Important]
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)** on Android devices. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later on August 14 2021.
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app on Android devices, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated for Android and drop from support 60 days later on August 14 2021.
   >
   > iOS/iPadOS continues to use the standalone client app, which remains in preview, and a connection type of *Microsoft Tunnel (standalone client)*.
 
