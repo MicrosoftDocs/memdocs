@@ -52,12 +52,42 @@ Once you have captured the image as an Azure managed image, follow the steps in 
 ## Configure the default language using group policy
 Now that the languages are installed on the image that users will receive, you need to create a group policy to apply the correct pre-installed language as the default for your users when they sign in to their Cloud PC.
 
-1. Create a security group per language in your Active Directory domain.
-2. Add all users of the respective language to the group as members.
-3. Link the GPO to the Organizational Unit (OU) or the domain that will contain your users' Cloud PC devices.
-4. Adjust the item-level targeting setting for the Group Policy Preference settings with the group names from Step 1.
-5. Enable loopback processing in merge mode in a higher ranking GPO linked to the OU or domain for the Cloud PCs devices.
-6. Close the Group Policy Editor
+First, you need to create a group policy that will replace the default language in the user's preferred language list:
+
+1. Create a security group in your Active Directory domain that will map a specific language to a specific set of users.
+2. Add all Cloud PC users to this new security group who should receive that language.
+3. In Server Manager, open **Group Policy Management** and create a new group policy object linked to the Organization Unit (OU) or domain that will contain the Cloud PCs for those users.
+4. Right-click the new group policy object, and select **Edit...**
+5. Navigate to **User Configuration** > **Preferences** > **Windows Settings**, right-click **Registry**, and select **New** > **Registry Item**.
+6. Enter the following details in the **General**. Here is an example that shows Spanish (Spain) with language code es-ES:
+    - Action: Replace
+    - Hive: HKEY_CURRENT_USER
+    - Key Path: ControlPanel\Desktop
+    - Value name: PreferreUILanguages
+    - Value type: REG_SZ
+    - Value data: [Language code].
+        !Note: To find the language code for your desired language and region combination, see (link).
+7. Switch to the **Common** tab and check the following three options:
+    - **Run in logged-on user's security context (user policy option)**
+    - **Apply once and do not reapply**
+    - **Item-level targeting**
+8. Select **Targeting...**, **New Item**, and **Security Group**.
+9. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
+10. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
+11. In the "Group Policy Management Editor", navigate to **User Configuration** > **Preferences** > **Windows Settings**, right-click **Regional Options**, and select **New** > **Regional Options**.
+12. Switch to the **Common** tab and check the following three options:
+    - **Run in logged-on user's security context (user policy option).**
+    - **Apply once and do not reapply.**
+    - **Item-level targeting.**
+13. Select **Targeting..**, **New Item**, and **Security Group**.
+14. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
+15. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
+
+Next, you need to enable loopback processing in a GPO with higher precedence:
+1. In **Group Policy Management**, select the OU or domain with the new group policy object, then select **Group Policy Inheritance** to see the order in which the group policy objects will be enforced.
+1. Identify a group policy object with a higher precedence (closer to 0) with which you want to enable loopback processing, then double-click it from the **Group Policy Inheritance** view.
+1. Enable loopback processing in merge mode in a higher ranking GPO linked to the OU or domain for the Cloud PCs devices.
+1. Close the Group Policy Editor
 
 ## Next steps
 [Create a provisioning policy](create-provisioning-policy.md)
