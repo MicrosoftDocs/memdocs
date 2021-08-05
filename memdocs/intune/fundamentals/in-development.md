@@ -137,7 +137,7 @@ Applies to:
 
 - iOS/iPadOS
 
-### Use filters on DFCI configuration profiles on Windows 10 RS5+ devices<!-- 8817773  -->
+### Use filters on DFCI configuration profiles on Windows 10 1809 and newer devices<!-- 8817773  -->
 
 In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
 
@@ -146,7 +146,7 @@ In Endpoint Manager, you can create filters to target devices based on different
 
 Applies to:
 
-- Windows 10 RS5 (1809) and newer on supported UEFI
+- Windows 10 1809 and newer on supported UEFI
 
 ### Add certificate server names to enterprise Wi-Fi profiles on Android Enterprise personally-owned devices with a work profile<!-- 10285509  -->
 
