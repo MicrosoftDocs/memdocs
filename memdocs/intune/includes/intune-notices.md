@@ -4,7 +4,7 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 07/09/2021
+ms.date: 08/05/2021
 ms.author: erikje
 ms.custom: include file
 ---
@@ -72,11 +72,11 @@ User impact - Most users have app updates set to automatic, so they receive the 
 
 ### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
-Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, after August 14, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
+Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending after October 26, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
 
 #### How this change will affect your organization
 
-If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before August 14 2021 to ensure users can still access the Tunnel Gateway configuration.
+If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before October 26, 2021 to ensure users can still access the Tunnel Gateway configuration.
 
 #### What you need to do to prepare
 
