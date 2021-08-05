@@ -55,6 +55,8 @@ items:
         items:
         - name: Add or delete device images
           href: add-device-images.md
+      - name: Provide localized Windows experience
+      - href: provide-localized-windows-experience.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
