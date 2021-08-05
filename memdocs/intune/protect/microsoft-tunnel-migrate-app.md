@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 On June 14 2021, Microsoft Defender for Endpoint became generally available as the Microsoft Tunnel client app for Android for use with the Microsoft Tunnel Gateway in Microsoft Intune.
 
-If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the Android standalone tunnel client app ends on August 14 2021.
+If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the Android standalone tunnel client app ends on October 26, 2021.
 
 The following device platforms support Microsoft Defender for Endpoint as the tunnel client app:
 

@@ -290,7 +290,6 @@ Each metric that appears on the **Health check** tab for Tunnel Gateway servers 
 - Memory usage
 - Disk space usage
 - Latency
-- TLS certificate
 
 When you update the thresholds, the values in the *Health check* tab will automatically update to reflect status based on the updated thresholds.
 
