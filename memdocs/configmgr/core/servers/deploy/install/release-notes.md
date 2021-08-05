@@ -99,7 +99,7 @@ To work around this issue, temporarily uninstall the later version of Visual C++
 
 <!-- 10506770 -->
 
-_Applies to: version 2107_
+_Applies to: version 2107 early update ring_
 
 If you have all of the following conditions:
 
@@ -108,10 +108,22 @@ If you have all of the following conditions:
   - Deployed and made available to either type that includes **Configuration Manager clients**
 
 - Task sequence _B_
-  - Includes the **Install Application** step with app _X_
+  - Includes the **Install Application** step with the same app _X_
   - Deployed and made available to either **Only media and PXE** option
 
 After you update to version 2107, if you make any change to app _X_, then task sequence _A_ will fail to run on clients that receive the deployment policy after the site update. The Configuration Manager client won't be able to get all of the policies for the task sequence and referenced applications. For clients that already had the deployment policy for task sequence _A_ before the site update, the task sequence will run, but clients won't have the revised application policy.
+
+You can use the following SQL script to determine if your site has this issue:
+
+```sql
+select COUNT(*) from Policy where PolicyID like '%/VI%' 
+  AND ((ISNULL(PolicyFlags, 0) & 4096 = 4096) 
+  OR (ISNULL(PolicyFlags, 0) & 2048 = 2048))
+```
+
+If this query returns `0`, there's currently no issue. If the query returns a non-zero value, the issue only exists given the above conditions.
+
+#### Workaround for task sequence and application policy issue in version 2107 early update ring
 
 If you updated the site to version 2107, have already revised an app, and are in this state, then use the following workaround:
 
@@ -122,6 +134,13 @@ If you updated the site to version 2107, have already revised an app, and are in
 1. Save the task sequence.
 
 This process causes the site to update the policy with the correct flag.
+
+Repeat this process for every revised app. You don't need to do it for every task sequence where the app is referenced, only once for each revised app.
+
+Even after doing this process, if you revise an app that's referenced in the task sequence, repeat this process to correct the issue.
+
+> [!NOTE]
+> This workaround addresses the issue for clients that have not yet received the deployment policy. Clients that already have the deployment policy won't have the revised application policy.
 
 ### Task sequences can't run over CMG
 

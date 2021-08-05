@@ -76,7 +76,7 @@ To install it directly and capture the hardware hash from the local computer, us
 ```powershell
 New-Item -Type Directory -Path "C:\HWID"
 Set-Location -Path "C:\HWID"
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 Install-Script -Name Get-WindowsAutoPilotInfo
 Get-WindowsAutoPilotInfo -OutputFile AutoPilotHWID.csv
 ```
