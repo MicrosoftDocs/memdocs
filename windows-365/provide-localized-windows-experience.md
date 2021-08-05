@@ -40,19 +40,16 @@ Cloud PCs provisioned from this image will be fully configured to work in any of
 Creating a custom image with the languages installed is the best way to ensure that the desired languages are available on the Cloud PCs when the user logs in.
 
 ### Add languages to Windows and capture the image
-Follow the steps in [Add language packs to a Windows 10 multi-session image](https://docs.microsoft.com/azure/virtual-desktop/language-packs) to install the desired languages to your Windows 10 Enterprise custom image.
+Follow the steps in [Add language packs to a Windows 10 multi-session image](https://docs.microsoft.com/azure/virtual-desktop/language-packs) up to and including [finish customizing your image](https://docs.microsoft.com/azure/virtual-desktop/language-packs#finish-customizing-your-image) to install the desired languages to your Windows 10 Enterprise custom image.
 
-Note:
-- Though these instructions are wrriten for Windows 10 Enterprise multi-session, these same steps apply to Windows 10 Enterprise, which Windows 365 supports.
-- Follow all of the steps up and through [Finish customizing your image](https://docs.microsoft.com/azure/virtual-desktop/language-packs#finish-customizing-your-image).
+> [!NOTE]
+> Though these instructions are written specifically for Windows 10 Enterprise multi-session, these same steps apply to Windows 10 Enterprise.
 
 ### Upload the custom image
 Once you have captured the image as an Azure managed image, follow the steps in [Add or delete device images](add-device-images.md) to upload the custom image to the Windows 365 service.
 
 ## Configure the default language using group policy
 Now that the languages are installed on the image that users will receive, you need to create a group policy to apply the correct pre-installed language as the default for your users when they sign in to their Cloud PC.
-
-First, you need to create a group policy that will replace the default language in the user's preferred language list:
 
 1. Create a security group in your Active Directory domain that will map a specific language to a specific set of users.
 2. Add all Cloud PC users to this new security group who should receive that language.
@@ -83,11 +80,10 @@ First, you need to create a group policy that will replace the default language 
 14. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
 15. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
 
-Next, you need to enable loopback processing in a GPO with higher precedence:
-1. In **Group Policy Management**, select the OU or domain with the new group policy object, then select **Group Policy Inheritance** to see the order in which the group policy objects will be enforced.
-1. Identify a group policy object with a higher precedence (closer to 0) with which you want to enable loopback processing, then double-click it from the **Group Policy Inheritance** view.
-1. Enable loopback processing in merge mode in a higher ranking GPO linked to the OU or domain for the Cloud PCs devices.
-1. Close the Group Policy Editor
+You can perform these steps for each language you need to provide as the default language for users.
+
+> [!NOTE]
+> Step 6 above uses the "Replace" command, setting the user's preferred language to just the one language defined in the registry item. If you create multiple group policies to assign different languages to users, make sure users are only targeted by a single group policy object.
 
 ## Next steps
 [Create a provisioning policy](create-provisioning-policy.md)
