@@ -152,7 +152,7 @@ Before you update a Configuration Manager central administration site or primary
 
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.
 
-Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](install-in-console-updates.md#bkmk_step2) from **Before you install an in-console update**.
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable.
 -->
 
 **Plan for client piloting:**   
@@ -178,7 +178,7 @@ For more information about starting and then monitoring the prerequisite check, 
 > When the prerequisite checker runs independently or as part of an update installation, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 **Update sites:**   
-You are now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates.](install-in-console-updates.md#bkmk_install).
+You are now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates.](install-in-console-updates.md).
 
 We recommend that you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
 

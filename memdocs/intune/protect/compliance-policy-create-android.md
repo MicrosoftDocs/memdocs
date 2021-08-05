@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Android device compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android device compliance settings in Microsoft Intune
 description: View the device compliance settings that are available for  Android device administrator devices in Microsoft Intune.
 keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/09/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium

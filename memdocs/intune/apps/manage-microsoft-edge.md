@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/18/2021
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -54,6 +54,9 @@ Organizations can use Azure AD Conditional Access policies to ensure that users 
    > This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
 
 With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+
+> [!NOTE]
+> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 ## Create Intune app protection policies
 
@@ -116,8 +119,8 @@ Respecting the data security and compliance policies of our largest and highly r
 
 You can learn more about configuring the org allowed accounts mode setting here:
 
-- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
+- [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
 This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Endpoint Manager, you need to consult with your UEM documentation on how to deploy these configuration keys.
 

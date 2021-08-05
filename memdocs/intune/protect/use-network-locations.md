@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Bind Android devices by network location in Microsoft Intune - Azure | Microsoft Docs
+title: Bind Android devices by network location in Microsoft Intune
 description: Create or configure network locations in Microsoft Intune for Android devices. You can mark devices as noncompliant based on the device's network location. If the device goes outside the network location, you can block access to company resources.
 keywords:
 author: Brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/27/2021
+ms.date: 07/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,6 +29,12 @@ ms.collection: M365-identity-device-management
 ---
 
 # Use Locations (network fence) in Intune
+
+> [!IMPORTANT]
+> **Announcing end of support for the existing Use Locations (network fence) feature in Intune**  
+> Support for the current implementation of Locations (network fence) will end on or around October 7, 2021. For information about this change and how to prepare, see *Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune* in the [Notices](../fundamentals/whats-new.md#notices) section of the *What's new in Microsoft Intune* article.
+
+
 
 You may want to block access to a corporate network if a device leaves a location. The **Locations** feature in Intune provides this functionality. 
 

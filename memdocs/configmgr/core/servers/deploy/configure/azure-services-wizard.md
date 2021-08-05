@@ -2,11 +2,10 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 04/19/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -39,8 +38,8 @@ Configure the following Azure services using this wizard:
 
 - **Log Analytics Connector**: [Connect to Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
 
-    > [!NOTE]
-    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](/azure/azure-monitor/terminology#log-analytics).  
+    > [!IMPORTANT]
+    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. This feature was deprecated in November 2020. It's removed from Configuration Manager in version 2107. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).<!-- 9649296 -->
 
 - **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
 

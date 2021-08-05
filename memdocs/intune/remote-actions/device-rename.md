@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rename a device with Microsoft Intune - Azure | Microsoft Docs
+title: Rename a device with Microsoft Intune
 description: Rename a device by using Microsoft Intune.
 keywords:
 author: ErikjeMS

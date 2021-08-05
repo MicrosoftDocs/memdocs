@@ -1,11 +1,11 @@
 ---
-title: Identify the prerequisites to install and use the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: Identify the prerequisites to install and use the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Learn what is required to support use of the Microsoft Tunnel Gateway in your environment, including Linux servers, network, and firewall configurations.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/24/2021
+ms.date: 06/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,11 +31,11 @@ Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, yo
 
 At a high level, you’ll need the following to use the Microsoft Tunnel:
 
-- An Azure subscription
-- An Intune subscription
-- Linux server that runs Docker. This server can be on-premises or in the cloud
-- A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server
-- Devices that run Android or iOS/iPadOS
+- An Azure subscription.
+- An Intune subscription.
+- Linux server that runs Docker. This server can be on-premises or in the cloud. 
+- A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
+- Devices that run Android or iOS/iPadOS.
 
 Prerequisites you’ll configure include preparing your network, firewalls, and proxy to support the use of the Microsoft Tunnel.
 
@@ -100,7 +100,15 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 ## Network
 
-- **Enable packet forwarding for IPv4**: On  each Linux server that hosts the Tunnel server software, edit the **/etc/sysctl.conf** file and remove the leading hashtag (#) from *#net.ipv4.ip_forward=1* to enable packet forwarding. After your edit, the entry should appear as follows:
+- **Enable packet forwarding for IPv4**: Each Linux server that hosts the Tunnel server software must have IP forwarding for IPv4 enabled. To check on the status of IP forwarding, on the server run one of the following generic commands as *root* or *sudo*. Both commands return a value of **0** for *disabled* and a value of **1** for *enabled*:
+  - `sysctl net.ipv4.ip_forward`
+  - `cat /proc/sys/net/ipv4/ip_forward`
+
+  If not enabled, you can temporarily enable IP forwarding by running one of the following generic commands as *root* or *sudo* on the server. These commands can change the IP forwarding configuration until the server restarts. After a restart, the server returns IP forwarding behavior to its previous state. For both commands, use a value of **1** to *enable* forwarding. A value of **0** will disable forwarding. The following command examples use a value of *1* to *enable* forwarding:
+  - `sysctl -w net.ipv4.ip_forward=1`
+  - `echo 1 > /proc/sys/net/ipv4/ip_forward`
+
+  To make IP forwarding permanent, on each Linux server edit the **/etc/sysctl.conf** file and remove the leading hashtag (#) from *#net.ipv4.ip_forward=1* to enable packet forwarding. After your edit, the entry should appear as follows:
 
   ```
   # Uncomment the next line to enable packet forwarding for IPv4
@@ -108,6 +116,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   ```
 
   For this change to take effect, you must either reboot the server or run `sysctl -p`.
+
+  If the expected entry isn't present in the sysctl.conf file, consult the documentation for the distribution you use for how to enable IP forwarding. Typically, you can edit **sysctl.conf** to add the missing line at the end of the file to permanently enable IP forwarding.
 
 - **Configure multiple NICs per server** *(Optional)*: We recommend using two Network Interface controllers (NICs) per Linux server to improve performance, though use of two is optional.
 

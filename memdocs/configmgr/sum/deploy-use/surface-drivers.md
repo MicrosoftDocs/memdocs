@@ -22,7 +22,7 @@ Configuration Manager allows you to synchronize drivers for Surface devices and 
 
 - An internet connected top-level software update point.
 - All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
-- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
 
 ## Enable sync for Surface drivers
 

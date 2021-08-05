@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Windows 10 compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: Windows 10 compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Windows 10, Windows Holographic, and Surface Hub devices in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, check for partner anti-virus (AV) solutions, enable encryption on data storage, and more.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 5/5/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium

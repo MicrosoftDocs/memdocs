@@ -2,11 +2,10 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 04/27/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -246,7 +245,7 @@ The following table lists the log files that are on the Configuration Manager si
 |CertMgr.log|Records certificate activities for intrasite communication.|Site system server|  
 |chmgr.log|Records activities of the client health manager.|Site server|  
 |Cidm.log|Records changes to the client settings by the Client Install Data Manager (CIDM).|Site server|  
-|CollectionAADGroupSyncWorker.log | Starting in version 2002, log file for synchronization of collection membership results to Azure Active Directory. In version 1910 and earlier, logging for this feature was combined in SMS_AZUREAD_DISCOVERY_AGENT.log. | Site server|
+|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. | Site server|
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site server|  
 |compmon.log|Records the status of component threads monitored for the site server.|Site system server|  
 |compsumm.log|Records Component Status Summarizer tasks.|Site server|  
@@ -260,6 +259,7 @@ The following table lists the log files that are on the Configuration Manager si
 |EPSetup.log|Provides information about the installation of the Endpoint Protection site system role.|Site system server|  
 |EnrollSrv.log|Records activities of the enrollment service process.|Site system server|  
 |EnrollWeb.log|Records activities of the enrollment website process.|Site system server|  
+|ExternalNotificationsWorker.log|Records the queue and activities for notifications to external systems like Azure Logic Apps.|Site server|
 |fspmgr.log|Records activities of the fallback status point site system role.|Site system server|  
 |hman.log|Records information about site configuration changes, and about the publishing of site information in Active Directory Domain Services.|Site server|  
 |Inboxast.log|Records the files that are moved from the management point to the corresponding INBOXES folder on the site server.|Site server|  
@@ -293,7 +293,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitecomp.log|Records details about the maintenance of the installed site components on all site system servers in the site.|Site server|  
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. In version 1910 and earlier, it also included synchronization of collection membership results to Azure AD.| Site server|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. | Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
@@ -391,14 +391,14 @@ The following table lists the log files that contain information related to the 
 |Dataldr.log|Records information about the processing of MIF files.|Site server|  
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |Distmgr.log|Records details about content distribution requests.|Top-level site server|  
-|Dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|  
-|Dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
+|Dmpdownloader.log|Records details about downloads from Microsoft, such as site updates.|Computer with the service connection point|  
+|Dmpuploader.log|Records detail related to uploading database changes to Microsoft.|Computer with the service connection point|  
 |EndpointConnectivityCheckWorker.log|Starting in version 2010, records detail related to checks for important internet endpoints.|Computer with the service connection point|
 |hman.log|Records information about message forwarding.|Site server|  
 |WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
 |PolicyPV.log|Records policy generation of all policies.|Site server|  
-|outgoingcontentmanager.log|Records content uploaded to Microsoft Intune.|Computer with the  service connection point|  
+|outgoingcontentmanager.log|Records content uploaded to Microsoft.|Computer with the service connection point|  
 |ServiceConnectionTool.log|Records details about use of the [service connection tool](../../servers/manage/use-the-service-connection-tool.md) based on the parameter you use. Each time you run the tool, it replaces any existing log file.|Same location as the tool|
 |Sitecomp.log|Records details of service connection point installation.|Site server|  
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
@@ -447,6 +447,7 @@ The following table lists the log files that contain information related to appl
 |SettingsAgent.log|Enforcement of specific applications, records orchestration of application group evaluation, and details of co-management policies.|Client|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
+|SMS_ImplicitUninstall.log|Records events from the implicit uninstall background worker process.<!--3607457-->|Site server|
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|
 |SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|
 |TSDTHandler.log|For the task sequence deployment type. It logs the process from app enforcement (install or uninstall) to the launch of the task sequence. Use it with AppEnforce.log and smsts.log.<!-- MEMDocs#336 -->|Client|
@@ -556,8 +557,8 @@ The following table lists the log files that contain information related to cont
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|CloudDP-&lt;guid\>.log|Records details for a specific cloud-based distribution point, including information about storage and content access.|Site system server|  
-|CloudMgr.log|Records details about content provisioning, collecting storage and bandwidth statistics, and administrator-initiated actions to stop or start the cloud service that runs a cloud-based distribution point.|Site system server|  
+|CloudDP-&lt;guid\>.log|Records details for a specific cloud-based content source, including information about storage and content access.|Site system server|  
+|CloudMgr.log|Records details about content provisioning, collecting storage and bandwidth statistics, and administrator-initiated actions to stop or start the cloud service that runs a content-enabled cloud management gateway (CMG).|Site system server|  
 |DataTransferService.log|Records all BITS communication for policy or package access. This log also is used for content management by pull-distribution points.|Computer that is configured as a pull-distribution point|  
 |PullDP.log|Records details about content that the pull-distribution point transfers from source distribution points.|Computer that is configured as a pull-distribution point|  
 |PrestageContent.log|Records the details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system role|  

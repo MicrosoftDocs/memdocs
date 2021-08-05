@@ -169,7 +169,7 @@ Configure email notifications for application approval requests. When a user req
 ### Prerequisites
 
 #### To send email notifications
-- Enable the [optional feature](../servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../servers/manage/optional-features.md) **Approve application requests for users per device**.  
 
 - Configure [email notification for alerts](../servers/manage/configure-alerts.md#configure-email-notification-for-alerts).  
 

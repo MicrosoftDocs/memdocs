@@ -2,7 +2,7 @@
 title: "Console extension registration through community hub"
 description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
-ms.date: "06/07/2021"
+ms.date: "07/30/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -10,18 +10,31 @@ ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX
 ---
 
 # Console extension registration though community hub
 <!--9526630, 3555909-->
-Starting in Configuration Manager version 2103, the [community hub](../../../../core/servers/manage/community-hub.md) supports console extensions. Console extension authors can contribute extensions they've written to the community hub. Community hub users can download the extensions and manage the installation of them across their Configuration Manager hierarchy. Contributing extensions through community hub supersedes the [previous deployment process](console-extension-deployment.md).
+Console extension authors can contribute extensions they've written to the community hub. Community hub users can download the extensions and manage the installation of them across their Configuration Manager hierarchy. Contributing extensions through Community hub supersedes the [previous deployment process](console-extension-deployment.md).
+
+## Version information
+
+To download console extensions from the [Community hub](../../../../core/servers/manage/community-hub.md), you'll need either:
+- A technical preview version of Configuration Manager
+- Configuration Manager [version 2103](../../../../core/plan-design/changes/whats-new-in-version-2103.md) or later
+
+You can test your own signed extensions by [importing them locally](../../../../core/servers/manage/admin-console-extensions.md#bkmk_local_install) with the following versions:
+- A technical preview version of Configuration Manager
+- Configuration Manager [version 2103](../../../../core/plan-design/changes/whats-new-in-version-2103.md) or later
+
+You can [import an unsigned extension](../../../../core/servers/manage/admin-console-extensions.md#bkmk_import-unsigned) locally. Unsigned extensions are for local import and testing purposes only. Unsigned extensions can't be submitted to Community hub. Importing an unsigned extension requires one of the following versions:
+- [Technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later.
+- Configuration Manager [version 2107](../../../../core/plan-design/changes/whats-new-in-version-2107.md) or later
 
 ## Prerequisites
 
  To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following prerequisites:
 
-- Configuration Manager version 2103, or later
+
 - Meet all of the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
 - Configuration Manager **Full Administrator** with **All** scope rights.
 
@@ -140,6 +153,9 @@ Example manifest.xml file:
 
 When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
 
+> [!Important]
+> For local testing, you can import unsigned console extensions when you use version 2107 or later. For more information, see [import an unsigned extension](../../../../core/servers/manage/admin-console-extensions.md#bkmk_import-unsigned).
+
 1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
    - `$cabFilePath` - Path to the extension's authenticode-signed `.cab` file
@@ -177,7 +193,14 @@ When you have your extension built and packaged into an authenticode-signed `.ca
 
 ## Share your extension on community hub
 
-Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. You contribute extensions the same way you would any other community hub object. For more information, see [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md).
+*Applies only to technical preview versions of Configuration Manager*
+
+Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. You contribute extensions the same way you would [contribute other community hub objects](../../../../core/servers/manage/community-hub-contribute.md). However, for there are additional requirements and additional information you need to supply for an extension. When you contribute a console extension to Community hub, the content must be signed. Content for console extensions isn't hosted by Microsoft. When you contribute your item, you'll be asked to provide a location to the signed `.cab` file along with other information for the extension. The following items are required for contributing extensions:  
+
+- **Content URL**: Location for the downloadable `.cab` file
+- **SHA-256 hash of the content**: SHA-256 hash of the `.cab` file
+- **License URL**: URL of the license for the extension, such as [https://mit-license.org/](https://mit-license.org/)
+- **Privacy statement URL**: URL of your privacy statement
 
 ## Next steps
 

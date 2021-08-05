@@ -1,6 +1,10 @@
 items:
 - name: Hotfix documentation
   href: index.yml
+- name: Version 2107
+  items:
+  - name: KB 10096997 Summary of changes in 2107
+    href: 2107/10096997.md
 - name: Version 2103
   items:
   - name: KB 9210721 Summary of changes in 2103
@@ -11,6 +15,10 @@ items:
     href: 2103/9833643.md
   - name: KB 10036164 Update rollup for 2103
     href: 2103/10036164.md
+  - name: KB 10216365 Availability group
+    href: 2103/10216365.md
+  - name: KB 10372804 BitLocker management
+    href: 2103/10372804.md
 - name: Version 2010
   items:
   - name: KB 4599442 Summary of changes in 2010

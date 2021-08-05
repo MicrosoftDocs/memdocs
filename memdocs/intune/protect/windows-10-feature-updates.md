@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure Windows 10 feature updates policy in Intune - Azure | Microsoft Docs
+title: Configure Windows 10 feature updates policy in Intune
 description: Create and manage Intune policy for Windows 10 feature updates. Configure and deploy policy to maintain the Windows feature version of Windows 10 devices you manage with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2021
+ms.date: 06/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 *This feature is in public preview.*
 
-With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or version 2004. Intune supports setting a feature level of 1909 or later.
+With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or version 2004. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
 
 Windows 10 feature updates policies work with your *Windows 10 update ring* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
 
@@ -68,7 +68,7 @@ Intune's Windows 10 feature updates requires the following prerequisites:
   
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10 or later. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
 
-  - Have Microsoft Sign-In Assistant (wlidsvc) running. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
+  - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
 - Feature updates are supported for the following Windows 10 editions:  
   - Windows 10 Pro

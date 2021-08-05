@@ -2,7 +2,7 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 11/30/2020
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -19,6 +19,46 @@ manager: dougeby
 Use the information below to find out about changes to the Configuration Manager console and tips for using the console:
 
 ## General tips
+
+### <a name="bkmk_code"></a> Enhanced code editor
+<!--8495588-->
+*(Introduced in version 2107)*
+
+Starting in Configuration Manager 2107, you can edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited. The enhanced editor improves the [syntax highlighting and code folding](#bkmk_syntax) that was first introduced in version 2010.
+
+:::image type="content" source="./media/8495588-code-editor.png" alt-text="Screenshot of the new code editor in Configuration Manager":::
+
+Open the new code editor to view or edit scripts and queries from the following locations:
+
+- Configuration item
+   - Scripts
+   - SQL and WQL queries
+   - Detection methods
+- Application detection scripts
+- Query statement properties
+- Create script wizard
+- Script properties
+- Orchestration group
+   - pre-installation scripts
+   - post-installation scripts
+- Task sequence
+   - PowerShell scripts
+   - Query WMI option
+
+The new code editor supports the following features:
+
+- Editor mode with syntax highlighting and plain text toggle
+- Toggle word wrap and line numbers
+- Code folding
+- Language selection
+- *Find*, *Find and Replace*, and *Go To* line number
+- Font type and size selection
+- Zoom using buttons or with Ctrl + mouse wheel.
+- The information bar at the bottom displays:
+   - Number of lines and characters in the script
+   - Cursor position
+   - If the script is read-only
+- Persistent settings across instances for the code window, such as code folding, word wrap, and window size.
 
 ### <a name="bkmk_syntax"></a> Syntax highlighting for scripting languages
 <!--7964912-->
@@ -139,6 +179,29 @@ For more information, see [Product Feedback](../../understand/product-feedback.m
 
 ## Assets and Compliance workspace
 
+### Navigate to collection
+<!--9502958-->
+*(Introduced in version 2107)*
+
+You can now navigate to a collection from the **Collections** tab in the **Devices** node. Select **View Collection** from either the ribbon or the right-click menu in the tab. 
+
+:::image type="content" source="./media/9502958-collection.png" alt-text="Screenshot of the Collections tab in the Devices node.":::
+
+### Added maintenance window column
+<!--9708594-->
+*(Introduced in version 2107)*
+
+A **Maintenance window** column was added to the **Collections** tab in the **Devices** node.
+
+:::image type="content" source="./media/9708594-maintenance-window.png" alt-text="Screenshot of the Maintenance window column for the Collections tab in the Devices node.":::
+
+### Display assigned users
+<!--9709014-->
+*(Introduced in version 2107)*
+
+If a collection deletion fails due to scope assignment, the assigned users are displayed.
+
+:::image type="content" source="./media/9709014-assigned-users.png" alt-text="Screenshot of assigned user list when collection fails to delete due to scope assignment.":::
 ### Copy discovery data from the console
 
 <!--6890051-->
@@ -226,6 +289,28 @@ When searching in a device collection, it doesn't search the keyword against all
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
 ## Software Library workspace
+### Improvements to console search
+<!--8325332, 9506942, 9506938, 9506934-->
+*(Introduced in version 2107)*
+
+You can use the **All Subfolders** search option for the following nodes: 
+- **Boot Images** node
+- **Operating System Upgrade Packages** node
+- **Operating System Images** node
+
+### Run software updates evaluation from deployment status
+<!--9012080 -->
+*(Introduced in version 2107)*
+
+You can right-click and notify devices to run a software updates evaluation cycle from the [software update deployment status](../../../sum/deploy-use/monitor-software-updates.md#BKMK_SUDeployStatus). You can target a single device under the **Asset Details** pane or select a group of devices based on their deployment status.
+
+:::image type="content" source="./media/9012080-run-software-update-deployment-evaluation.png" alt-text="Screenshot of the right-click action for software updates deployment evaluation from the software update deployment status":::
+
+1. In the Configuration Manager console, navigate to **Monitoring** > **Overview** > **Deployments**.
+1. Select the software update group or software update for which you want to monitor the deployment status.
+1. On the Home tab, in the Deployment group, select **View Status**.
+1. Right-click on either a specific deployment status for the devices, or on a single device under **Asset Details** pane.
+1. Select **Evaluate Software Update Deployments** to send a notification to the selected devices to run an evaluation cycle for software update deployments.
 
 ### Import objects to current folder
 
@@ -324,7 +409,15 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ![Deployment Status view, copy asset details](media/1810-deployment-status.PNG)
 
 ## Administration workspace
+### Status message shortcuts
+*(Introduced in version 2107)*
+<!--8942963-->
+Shortcuts to [status messages](use-status-system.md) were added to the **Administrative Users** node and the **Accounts** node. Select an account, then select **Show Status Messages**.
 
+:::image type="content" source="./media/8942963-show-status-messages.png" alt-text="Screenshot of Administrative Users node with the Show Status Messages option in the ribbon.":::
+
+
+### Enable some security nodes to use the administration service
 <!--4223683-->
 Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#enable-console-usage).
 

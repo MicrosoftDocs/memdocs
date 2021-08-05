@@ -124,3 +124,17 @@ The following query will look at events in the last 1 hour:
 CcmLog('Scripts',1h)
 ```
 
+## Find information in the registry
+
+Search for registry information.
+
+```kusto
+// Change the path to match your desired registry hive query
+// The RegistryKey entity (added in version 2107) isn't supported with CMPivot for tenant attached devices.  
+
+Registry('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+RegistryKey('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+
+RegistryKey('hklm:\SOFTWARE\Microsoft\SMS\*')
+Registry('hklm:\SOFTWARE\Microsoft\SMS\*')
+```

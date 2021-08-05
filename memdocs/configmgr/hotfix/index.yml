@@ -15,6 +15,12 @@ metadata:
   ms.date: 06/10/2021
 
 landingContent:
+  - title: Configuration Manager 2107
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 10096997 Summary of changes in 2107
+            url: 2107/10096997.md
   - title: Configuration Manager 2103
     linkLists:
       - linkListType: overview

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Setup guide for Microsoft Intune - Azure | Microsoft Docs
+title: Setup guide for Microsoft Intune
 description: Deployment guide to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
 keywords:
 author: MandiOhlinger

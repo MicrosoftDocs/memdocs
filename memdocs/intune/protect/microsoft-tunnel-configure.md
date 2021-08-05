@@ -1,11 +1,11 @@
 ---
-title: Install and configure the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: Install and configure the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Install and configure the Microsoft Tunnel Gateway, a VPN server that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 6/14/2021
+ms.date: 08/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,7 +51,16 @@ Use of a *Server configuration* lets you create a configuration a single time an
 3. On the **Settings** tab, configure the following items:
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
+     > [!IMPORTANT]
+     > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
+     >
+     > - You use Microsoft Defender for Endpoint for both Defender for Endpoint and Microsoft Tunnel functionality.
+     > - You use per-app VPN.
+     >
+     > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
+
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
+
    - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
 
      Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
@@ -74,7 +83,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
    - **Description** *(optional)*
 
-   - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address can be an individual server or the IP or FQDN of a load-balancing server. The IP address must be publicly routable and the FQDN must be resolvable in public DNS.
+   - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address or FQDN can identify an individual server or a load-balancing server. The IP address or FQDN must be resolvable in public DNS and the resolved IP address must be publicly routable.
 
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
 
@@ -135,7 +144,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 5. When prompted, copy the full chain of your Transport Layer Security (TLS) certificate file to the Linux server. The script displays the correct location to use on the Linux server.
 
-   The TLS certificate secures the connection between the devices that use the tunnel and the Tunnel Gateway endpoint. The certificate must have the IP address or FQDN of the Tunnel Gateway server in its SAN.
+   The TLS certificate secures the connection between the devices that use the tunnel and the Tunnel Gateway endpoint. The certificate must have the IPI address or FQDN of the Tunnel Gateway server in its SAN.
 
    The private key will remain available on the machine where you create the certificate signing request for the TLS certificate. This file must be exported with a name of **site.key**.
 
@@ -229,7 +238,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]  
-   > For *Android Enterprise Personally-Owned Work Profile* devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. Use of custom settings is optional for all other platforms.
+   > For *Android Enterprise personally-owned work profile* devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. Use of custom settings is optional for all other platforms.
 
 5. On the **Assignments** tab, configure groups that will receive this profile.
 

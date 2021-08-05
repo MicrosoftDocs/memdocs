@@ -2,11 +2,10 @@
 title: Data warehouse
 titleSuffix: Configuration Manager
 description: Data warehouse service point and database for Configuration Manager
-ms.date: 07/14/2020
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
+ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -18,9 +17,6 @@ manager: dougeby
 
 <!--1277922-->
 Use the data warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
-
-> [!NOTE]
-> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).<!--505213-->
 
 The data warehouse supports up to 2 TB of data, with timestamps for change tracking. The data warehouse stores data by automatically synchronizing data from the Configuration Manager site database to the data warehouse database. This information is then accessible from your reporting service point. Data synchronized to the data warehouse database is kept for three years. Periodically, a built-in task removes data that's older than three years.
 
@@ -39,7 +35,7 @@ When the site system role installs, it installs and configures the data warehous
 
 - The data warehouse site system role is supported only at the top-tier site of your hierarchy. For example, a central administration site (CAS) or standalone primary site.
 
-- The computer where you install the site system role requires .NET Framework 4.5.2 or later.
+- Starting in version 2107, the server where you install this site system role requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5.2 or later. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 - Grant the **Reporting Services Point Account** the **db_datareader** permission on the data warehouse database.
 
@@ -215,7 +211,7 @@ To work around this issue, use the following steps to configure certificates:
 
 ## Data flow
 
-:::image type="content" source="media/datawarehouse.png" alt-text="Diagram showing the logical data flow between site components for the data warehouse" lightbox="media/datawarehouse.png":::
+:::image type="content" source="media/datawarehouse.png" alt-text="Diagram showing the logical data flow between site components for the data warehouse." lightbox="media/datawarehouse.png":::
 
 ### Data storage and synchronization
 

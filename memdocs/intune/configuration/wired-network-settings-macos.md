@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure wired network settings for macOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure wired network settings for macOS devices in Microsoft Intune
 titleSuffix:
 description: Create or add a wired network device configuration profile for macOS devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune. 
 keywords:
