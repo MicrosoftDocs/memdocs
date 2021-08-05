@@ -137,17 +137,6 @@ Applies to:
 
 - iOS/iPadOS
 
-### Use filters on DFCI configuration profiles on Windows 10 RS5+ devices<!-- 8817773  -->
-
-In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
-
-- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-- For more information on the DFCI profile, see [Use Device Firmware Configuration Interface profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md).
-
-Applies to:
-
-- Windows 10 RS5 (1809) and newer on supported UEFI
-
 ### Add certificate server names to enterprise Wi-Fi profiles on Android Enterprise personally-owned devices with a work profile<!-- 10285509  -->
 
 On Android devices, you can use certificate-based authentication for Wi-Fi networks on personal devices with a work profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Personally-owned work profile** > **Wi-Fi**).
