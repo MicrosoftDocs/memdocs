@@ -782,7 +782,7 @@ items:
     - name: Client notification
       href: clients/manage/client-notification.md
     - name: Sync data to Azure Monitor
-      href: /azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context
+      href: /azure/azure-monitor/logs/collect-sccm?toc=/mem/configmgr/core/toc.json&bc=/mem/configmgr/core/breadcrumb/toc.json
     - name: Maintain Mac clients
       href: clients/manage/maintain-mac-clients.md
     - name: Surface device dashboard
