@@ -41,7 +41,7 @@ Skip to 10:00 for an in-depth demo.
 > [!NOTE]
 > Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
 >
-> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](./faq.yml#existing-windows-analytics-customers).
+> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](/mem/configmgr/desktop-analytics/faq#existing-windows-analytics-customers).
 
 ## Benefits
 
