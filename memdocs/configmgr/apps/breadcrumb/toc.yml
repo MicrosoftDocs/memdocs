@@ -51,13 +51,13 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /troubleshoot/mem/
+      tocHref: /troubleshoot/
       topicHref: /mem/
       items:
       - name: Configuration Manager
-        tocHref: /troubleshoot/mem/configmgr/
+        tocHref: /troubleshoot/mem/
         topicHref: /mem/configmgr/index
         items:
-        - name: Core infrastructure
+        - name: Application management
           tocHref: /troubleshoot/mem/configmgr/
-          topicHref: /mem/configmgr/core/index
+          topicHref: /mem/configmgr/apps/index
