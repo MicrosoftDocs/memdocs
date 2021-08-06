@@ -81,7 +81,7 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 
 ### Resource performance report in Endpoint Analytics<!— 32978343-->
 
-A new repot will be added to Endpoint Analytics: the **Resource performance report**. This report will include metrics for CPU and RAM performance on Cloud PCs.
+A new report will be added to Endpoint Analytics: the **Resource performance report**. This report will include metrics for CPU and RAM performance on Cloud PCs.
 
 ### Remoting connection report in Endpoint Analytics<!— 33039368-->
 
