@@ -69,7 +69,7 @@ In a future update, you’ll be able to immediately end the grace period for ind
 
 For more information on grace periods, see [Device management overview for Cloud PCs](device-management-overview.md).
 
-### Support for Azure AD joined Cloud PCs (Enterprise only)<!-- 35060203-->
+### Support for Azure AD joined Cloud PCs<!-- 35060203-->
 
 Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These devices will run in a Microsoft-hosted network, so customers:
 
