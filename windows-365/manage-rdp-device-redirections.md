@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/02/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: cloudpc
 ms.subservice:
 ms.localizationpriority: high
