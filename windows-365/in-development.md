@@ -61,7 +61,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device management
 
-### End grace period option<!— 34841603-->
+### End grace period option<!-- 34841603-->
 
 Currently, certain conditions will put a Cloud PC into a seven-day grace period. At the end of this time the Cloud PC will be deprovisioned and user will lose access.
 
@@ -69,7 +69,7 @@ In a future update, you’ll be able to immediately end the grace period for ind
 
 For more information on grace periods, see [Device management overview for Cloud PCs](device-management-overview.md).
 
-### Support for Azure AD joined Cloud PCs (Enterprise only)<-- 35060203-->
+### Support for Azure AD joined Cloud PCs (Enterprise only)<!-- 35060203-->
 
 Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These devices will run in a Microsoft-hosted network, so customers:
 
@@ -79,11 +79,11 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### Resource performance report in Endpoint Analytics<!— 32978343-->
+### Resource performance report in Endpoint Analytics<!-- 32978343-->
 
 A new report will be added to Endpoint Analytics: the **Resource performance report**. This report will include metrics for CPU and RAM performance on Cloud PCs.
 
-### Remoting connection report in Endpoint Analytics<!— 33039368-->
+### Remoting connection report in Endpoint Analytics<!-- 33039368-->
 
 A new repot will be added to Endpoint Analytics: the **Remoting connection report**. This report will include the following metrics:
 
