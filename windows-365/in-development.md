@@ -59,14 +59,18 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## Feature area
+## Device management
 
-### Feature 1<!-- 5291507  -->
+### Feature<!-- xxx  -->
 
-Description of feature 1.
+Description of feature.
 
 <!-- ***********************************************-->
-## Notices
+## Monitor and troubleshoot
+
+### Feature<!-- xx  -->
+
+Description of feature.
 
 ## Next steps
 
