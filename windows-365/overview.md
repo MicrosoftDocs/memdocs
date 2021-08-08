@@ -38,6 +38,15 @@ Windows 365 is a cloud-based service that automatically creates a new type of Wi
 
 Each Cloud PC is assigned to an individual user and is their dedicated Windows device. Assigning a Cloud PC to a user is just like assigning an Exchange Online mailbox to a user. When a [Windows 365 license](https://www.microsoft.com/windows-365/enterprise/compare-plans-pricing) is assigned to a user, provisioning of a new Cloud PC automatically starts and the Cloud PC is enrolled into Microsoft Endpoint Management.
 
+## Introductory video
+
+Learn about Windows 365 cloud PC, why it's unique, and what's new in this video:
+
+<br></br><iframe src="https://www.youtube.com/watch?v=V14Ia2uwrtk&t=32s" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+
+For a more technical video about Windows 365, see [this other video](https://www.youtube.com/watch?v=elLNBGEw_T4).
+
+# Key capabilities?
 With the Windows 365 service, you can:
 
 - Automatically provision on-demand Windows Enterprise Cloud PCs for your users. [Provisioning](provisioning.md) is the automatic creation of Cloud PCs for your end users. After you set up Cloud PC support in Microsoft Endpoint Manager, a Cloud PC is automatically provisioned whenever you assign a user with a Cloud PC license to an appropriate Azure AD user group. To set up Cloud PC support, you’ll:
