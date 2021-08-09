@@ -42,13 +42,17 @@ A few things to keep in mind:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > **Create policy**.
 ![Screenshot of create policy](./media/create-provisioning-policy/create-policy.png)
 2. On the **General** page, enter a **Name** and **Description** (optional) for the new policy.
-3. For **On-premises network connection**, select the connection to use for this policy > **Next**.
-4. On the **Image** page, for **Image type**, select one of the following options:
+
+> [!TIP]
+> Your provisioning policy name cannot contain the following characters: < > & | " ^
+
+4. For **On-premises network connection**, select the connection to use for this policy > **Next**.
+5. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
     - **Custom image**:  Choose **Select** > select an image from the list > **Select**. This will show the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
-5. Select **Next**.
-6. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**.
-7. On the **Review + create** page, select **Create**. It can take up to 60 minutes for the policy creation process to complete, depending on when the Azure AD connect sync last happened.
+6. Select **Next**.
+7. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**.
+8. On the **Review + create** page, select **Create**. It can take up to 60 minutes for the policy creation process to complete, depending on when the Azure AD connect sync last happened.
 
 <!-- ########################## -->
 ## Next steps
