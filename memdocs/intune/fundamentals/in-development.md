@@ -155,7 +155,7 @@ Applies to:
 
 In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
 
-- [Endpoint analytics proactive remediations Windows PowerShell scripts](/mem/analytics/proactive-remediations) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
+- [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
 - [Endpoint Security policies](../protect/endpoint-security-policy.md), including Account protection, Antivirus, Attack surface reduction, and more.
 
 For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
