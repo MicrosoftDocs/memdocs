@@ -49,7 +49,7 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
 
 - Running Windows 10 multi-session, version 1903 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan).
-- Set up as remote desktops in pooled host pools in Azure.
+- Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager. 
 - Running a Azure Virtual Desktop agent version of 2944.1400 or later.
 - Enrolled in Microsoft Endpoint Manager using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.

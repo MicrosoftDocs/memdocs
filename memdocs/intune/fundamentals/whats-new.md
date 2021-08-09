@@ -100,7 +100,7 @@ The previous connectors remain in support but are no longer available for downlo
 
 #### Windows Autopilot diagnostics page (public preview)
 
-[Available settings](/mem/intune/enrollment/windows-enrollment-status#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](/mem/autopilot/windows-autopilot-whats-new#preview-windows-autopilot-diagnostics-page). 
+[Available settings](../enrollment/windows-enrollment-status.md#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#preview-windows-autopilot-diagnostics-page). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
