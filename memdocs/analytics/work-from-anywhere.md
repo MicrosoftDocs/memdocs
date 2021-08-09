@@ -72,7 +72,7 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 
 > [!NOTE] 
 > - Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
-> - You can export a device list as a `.csv` file from **Cloud provisioning** and use it to [Manually register devices with Windows Autopilot](../autopilot/add-devices.md#add-devices).
+> - You can export a device list as a `.csv` file from **Cloud provisioning** 
 
 :::image type="content" source="media/8668496-cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list":::
 
