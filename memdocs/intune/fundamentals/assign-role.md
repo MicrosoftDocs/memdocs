@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 08/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,13 +38,13 @@ To create, edit, or assign roles, your account must have one of the following pe
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles**.
 
-2. On the **Intune roles - All roles** blade, choose the built-in role you want to assign > **Assignments** > **Assign**.
+2. On the **Endpoint Manager roles - All roles** blade, choose the built-in role you want to assign > **Assignments** > **+ Assign**.
 
 5. On the **Basics** page, enter an **Assignment name** and optional **Assignment description**, and then choose **Next**.
 
 6. On the **Admin Groups** page, select the group that contains the user you want to give the permissions to. Choose **Next**
 
-7. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. Choose **Next**.
+7. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. You also have the option to choose all users and/or all devices. Choose **Next**.
 
 8. On the **Scope (Tags)** page, choose tags where this role assignment will be applied. Choose **Next**.
 
