@@ -104,8 +104,6 @@ Windows 10 Administrative Templates are supported for Windows 10 Enterprise mult
 
 > [!NOTE]
 > Some ADMX settings currently require an insider build. You can hover over the information bubble next to the setting name to see if an insider build is required for a specific setting.
-> 
-> The applicability of some ADMX based settings for applications like Microsoft Edge and Microsoft Office is not based on the Windows edition or version. To add these settings to your policy, you may have to remove any filters applied in the Settings Picker.
 
 ## Compliance and Conditional access
 
@@ -134,7 +132,10 @@ All other policies report as **Not applicable**.
 > [!Important]
 > You’ll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren’t supported.
 
-[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 Enterprise multi-session.  
+[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 Enterprise multi-session. 
+
+> [!NOTE]
+> [Conditional Access for Exchange on-premises](memdocs-pr/memdocs/intune/protect/conditional-access-exchange-create.md) is not supported for Windows 10 Enterprise multi-session VMs.
 
 ## Application deployment
 
