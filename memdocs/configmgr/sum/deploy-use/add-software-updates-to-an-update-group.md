@@ -36,10 +36,9 @@ ms.author: mstewart
 
 > [!Note]
 > Feature updates can't be added to a software update group.<!--10507437--> Use the following options to manage feature updates:
-> - [Manually deploy the update]()
 > - [Windows servicing](../../osd/deploy-use/manage-windows-as-a-service.md)
 > - [Phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)
-> - [Task sequences]().
+> - [Upgrade OS task sequences](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md).
 
 ## Add software updates to an existing software update group  
 
@@ -62,6 +61,11 @@ ms.author: mstewart
 
 1. In the Configuration Manager console, select **Software Library**.
 1. In the Software Library workspace, expand **Software Updates**, and then select **Software Update Groups**.
+1. Select the software update group from which you want to remove updates, then select **Show members**
+1. Right-click on the update to remove and select **Edit Membership**.
+   - Select multiple updates by using either the Shift or Ctrl keys.
+   - From the **All Software Updates** node, you can also use **Edit Membership** from the ribbon after selecting an update.
+1. Uncheck the box for the software update group from which you'd like to remove the update, then select **Ok**.  
 
 ## Next steps
 
