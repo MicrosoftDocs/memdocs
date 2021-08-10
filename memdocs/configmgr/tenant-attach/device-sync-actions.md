@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 08/02/2021
+ms.date: 08/10/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -133,6 +133,9 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 - Secret key
 - Secret key expiry
 - App ID URI
+
+> [!Important]
+> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
 
 ### Azure AD application permissions and configuration
 
