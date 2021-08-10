@@ -2,7 +2,7 @@
 title: "Add updates to an update group "
 titleSuffix: "Configuration Manager"
 description: "Manually or automatically add software updates to a software update group in your environment."
-ms.date: 08/10/2021
+ms.date: 08/11/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
