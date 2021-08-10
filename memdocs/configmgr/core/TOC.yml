@@ -231,6 +231,8 @@ items:
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
         - name: Data for version 2002
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
+    - name: Configuration Manager tools
+      href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.yml
   - name: Security and privacy for Configuration Manager
