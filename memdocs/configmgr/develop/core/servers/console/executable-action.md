@@ -1,5 +1,6 @@
 ---
 title: Executable action
+titleSuffix: Configuration Manager
 description: The executable action runs a program or opens a file by using the program registered with Windows for that file type.
 ms.date: 09/20/2016
 ms.prod: configuration-manager
