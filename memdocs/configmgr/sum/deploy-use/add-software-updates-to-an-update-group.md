@@ -63,7 +63,6 @@ ms.author: mstewart
 1. In the Configuration Manager console, select **Software Library**.
 1. In the Software Library workspace, expand **Software Updates**, and then select **Software Update Groups**.
 
-
 ## Next steps
 
 [Deploy software updates](deploy-software-updates.md)
