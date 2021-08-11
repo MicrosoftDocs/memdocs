@@ -85,6 +85,17 @@ You can run the commands remotely if both of the following are true:
 - WMI permissions are in place
 - WMI is accessible through the Windows Firewall on the remote computer.
 
+During the OOBE you also can initate the hardware hash upload by launching a command prompt (Shift+F10 at the sign in prompt), and using the following commands;
+
+```PowerShell.exe -ExecutionPolicy Bypass
+Install-Script -name Get-WindowsAutopilotInfo -Force
+Get-WindowsAutoPilotInfo -Online
+```
+
+At this point you will be prompted to sign in, an account with the Intune Administrator role is sufficient, and the device hash will then be uploaded automatically. Upon confirmation of the uploaded device hash details, run a sync in the Microsoft Endpoint Manager Admin Center and wait for your new device to appear. Once the device is shown in your device list, and an autopilot profile is assigned, restarting the device will result in OOBE running through Windows Autopilot provisioning process. 
+
+Note: On first run you will be prompted to approve the required app registration permissions.
+
 For more information about running the script, see the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) script’s help by using “Get-Help Get-WindowsAutoPilotInfo”.
 
 ## Add devices
