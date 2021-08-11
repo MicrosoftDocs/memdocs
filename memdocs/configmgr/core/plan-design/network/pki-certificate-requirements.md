@@ -2,7 +2,7 @@
 title: PKI certificate requirements
 titleSuffix: Configuration Manager
 description: Find requirements for PKI certificates that you might need for Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -269,7 +269,7 @@ Certificate requirements:
   > [!NOTE]
   > If you use multiple values for the **Subject Alternative Name**, it only uses the first value.
 
-- Maximum supported key length is 2,048 bits.
+- There's no maximum supported key length.<!-- 10568126 -->
 
 By default, Configuration Manager looks for computer certificates in the Personal store in the Computer certificate store.
 
