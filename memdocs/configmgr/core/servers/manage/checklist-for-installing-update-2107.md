@@ -2,7 +2,7 @@
 title: Checklist for 2107
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2107.
-ms.date: 08/02/2021
+ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -288,6 +288,12 @@ If you use an availability group, reset the failover configuration to automatic.
 ### Reconfigure any disabled maintenance tasks
 
 If you disabled database [maintenance tasks](maintenance-tasks.md) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.  
+
+### Restore user state from active deployments
+
+<!-- 10362100 -->
+
+If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Due to [changes to the encryption algorithm in version 2103](../../plan-design/changes/whats-new-in-version-2103.md#encryption-algorithm-to-capture-and-restore-user-state), the updated client will fail to restore the user state when it tries to use a different encryption algorithm.
 
 ### Update clients
 
