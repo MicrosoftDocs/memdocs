@@ -96,10 +96,14 @@ This feature applies to:
 
 Use this feature to add apps. And, see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps, line-of business apps, and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md). 
 
-- **Layout size**: Choose an appropriate grid size for the device's home screen. An app or folder takes up one place in the grid. If the target device doesn't support the selected size, some apps may not fit and will be pushed to the next available position on a new page. For reference:
+- **Layout size**: Choose an appropriate grid size for the device's home screen. An app or folder takes up one place in the grid. If the target device doesn't support the selected size, some apps may not fit and will be pushed to the next available position on a new page. For reference:  
+
     - iPhone 6 and later support 4 columns x 6 rows  
+
     - iPhone 5 supports 4 columns x 5 rows  
+
     - iPads support 5 columns x 6 rows  
+
 - **+**: Select the add button to add apps.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
   - **App**: Select existing apps from the list. This option adds apps to the home screen on devices. If you don't have any apps, then [Add apps to Intune](../apps/apps-add.md).
