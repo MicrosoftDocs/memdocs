@@ -216,7 +216,7 @@ For more information, see [Manage boot images](../../../osd/get-started/manage-b
 
 When you import an OS upgrade package, you can use the **Extract a specific image index from install.wim file of selected upgrade package** option. This behavior is similar as with [OS images](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages), except that it overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location and then moves it into the original source directory.
 
-For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#BKMK_AddOSUpgradePkgs).
+For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#add-an-os-upgrade-package).
 
 #### Output the results of a Run Command Line step to a variable during a task sequence
 
