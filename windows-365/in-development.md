@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 8/6/2021
+ms.date: 8/11/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -75,6 +75,14 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 
 - Don’t need their own Azure infrastructure
 - Don’t need to create an on-premises network connection.
+
+### Support for Windows 11<!--35091970 -->
+
+In a future update, Windows 365 will support Windows 11 as a Cloud PC operating system.
+
+### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
+
+New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
