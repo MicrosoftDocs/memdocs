@@ -119,7 +119,7 @@ In this step, you must configure the requirements for accessing and sharing the 
 
 In this step, you can choose the user groups that you want to include to ensure that they have access to your corporate data. App protection is assigned to users, and not devices, so your corporate data will be secure regardless of the device used and its enrollment status.
 
-Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and nonmanged local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
+Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and non-managed local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
 
 ## Step 6 - Review + create
 
