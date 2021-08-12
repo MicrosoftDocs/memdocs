@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/12/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -66,6 +66,9 @@ Also known as modern (UWP) apps. Files with an AppX extension added are ready fo
 Within the Windows Store as part of Windows 10 Enterprise, apps are automatically distributed as AppX – UWP format.  
 
 AppX is very beneficial for distributing applications supported for multiple devices, including PCs, tablets, and smartphones that run on Windows.
+
+## Universal Print
+
 
 <!-- ########################## -->
 ## Next steps
