@@ -135,7 +135,7 @@ All other policies report as **Not applicable**.
 [Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 Enterprise multi-session. 
 
 > [!NOTE]
-> [Conditional Access for Exchange on-premises](memdocs-pr/memdocs/intune/protect/conditional-access-exchange-create.md) is not supported for Windows 10 Enterprise multi-session VMs.
+> [Conditional Access for Exchange on-premises](../protect/conditional-access-exchange-create.md) isn't supported for Windows 10 Enterprise multi-session VMs.
 
 ## Application deployment
 
