@@ -121,7 +121,7 @@ Files:
 
 ## Disable device diagnostics
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
+1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Diagnostics settings**.
 2.	Change the control to **Disabled**.
 
 ## Known issues with device diagnostics
