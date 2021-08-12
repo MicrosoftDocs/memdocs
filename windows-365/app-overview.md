@@ -69,6 +69,11 @@ AppX is very beneficial for distributing applications supported for multiple dev
 
 ## Universal Print
 
+[Universal Print](/universal-print/fundamentals/universal-print-whatis) is a modern print solution that organizations can use to simplify their print infrastructure through cloud services from Microsoft. You can use Universal Print with Windows 365 Enterprise, either natively or through one of the Universal Print [partners](/universal-print/fundamentals/universal-print-partner-integrations). Legacy print-server environments are also possible to use together with Windows 365.
+
+For information on Universal Print requirements, see [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool).
+
+For information on setting up Universal Print with a Windows 365 Enterprise hybrid Azure Active Directory configuration, see [Enable Hybrid AD/AAD Environment on Universal Print](/universal-print/fundamentals/universal-print-hybrid-ad-aad-environment-setup).
 
 <!-- ########################## -->
 ## Next steps
