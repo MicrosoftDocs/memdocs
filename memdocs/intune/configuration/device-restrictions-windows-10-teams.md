@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes some of the Microsoft Intune device restrictions settings that you can configure for devices running Windows 10 Team, including [Surface Hub devices](/surface-hub/differences-between-surface-hub-and-windows-10-enterprise).
+This article describes some of the Microsoft Intune device restrictions settings that you can configure for Surface Hub devices running [Windows 10 Team](/surface-hub/differences-between-surface-hub-and-windows-10-enterprise).
 
 ## Before you begin
 
