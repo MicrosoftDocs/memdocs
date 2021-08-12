@@ -28,16 +28,16 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 # Provide users a localized Windows experience
-For users to be productive on their Windows 365 Cloud PC, it's important that Windows be presented to the user in a language in which they are comfortable. Though users always have the ability to change the display language themselves through the time and language settings in Windows, the Windows experience is more welcoming if the user experiences the desired language immediately, starting with their first logon.
+For users to be productive on their Windows 365 Cloud PC, it's important that Windows be presented to the user in a language in which they are comfortable. Though users always have the ability to change the display language themselves through the time and language settings in Windows, the Windows experience is more welcoming if the user experiences the desired language immediately, starting when they first sign in.
 
-To provide a localized Windows experience starting at first logon, there are two steps:
-- [Create a custom device image with the languages installed](#create-a-custom-image-with-the-languages-installed).
-- [Configure the default language using group policy](#configure-the-default-language-using-group-policy). 
+To provide a localized Windows experience when users first sign in, there are two steps:
+1. [Create a custom device image with the languages installed](#create-a-custom-image-with-the-languages-installed).
+2. [Configure the default language using group policy](#configure-the-default-language-using-group-policy). 
 
-Cloud PCs provisioned from this image will be fully configured to work in any of the installed languages, without any user action. When the user logs in to the Cloud PC, group policy will evaluate and the device set the appropriate pre-installed language as the user's preferred language for Windows. 
+Cloud PCs provisioned from this image will be fully configured to work in any of the installed languages, without any user action. When the user signs in to the Cloud PC, group policy will evaluate and the device set the appropriate pre-installed language as the user's preferred language for Windows. 
 
 ## Create a custom image with the languages installed
-Creating a custom image with the languages installed is the best way to ensure that the desired languages are available on the Cloud PCs when the user logs in.
+Creating a custom image with the languages installed is the best way to ensure that the desired languages are available on the Cloud PCs when the user signs in.
 
 ### Add languages to Windows and capture the image
 Follow the steps in [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs) up to and including [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image) to install the desired languages to your Windows 10 Enterprise custom image.
@@ -56,7 +56,7 @@ Now that the languages are installed on the image that users will receive, you n
 3. In Server Manager, open **Group Policy Management** and create a new group policy object linked to the Organization Unit (OU) or domain that will contain the Cloud PCs for those users.
 4. Right-click the new group policy object, and select **Edit...**
 5. Navigate to **User Configuration** > **Preferences** > **Windows Settings**, right-click **Registry**, and select **New** > **Registry Item**.
-6. Enter the following details in the **General**. Here is an example that shows Spanish (Spain) with language code es-ES:
+6. Enter the following details in the **General** tab. Here is an example that shows Spanish (Spain) with language code es-ES:
     - Action: Replace
     - Hive: HKEY_CURRENT_USER
     - Key Path: ControlPanel\Desktop
