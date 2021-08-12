@@ -49,14 +49,14 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
 
 - Running Windows 10 multi-session, version 1903 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan).
-- Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager. 
+- Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
 - Running a Azure Virtual Desktop agent version of 2944.1400 or later.
 - Enrolled in Microsoft Endpoint Manager using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
- 
+
 > [!IMPORTANT]
-> If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, be sure that you install the July 2021 Windows Update or a later Windows Update. Otherwise, an issue will cause remote actions in Microsoft Endpoint Manager. For example, remote sync won't work correctly. As a result, any pending policies assigned to devices might take up to 8 hours to be applied. 
+> If you’re using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in Microsoft Endpoint Manager, like remote sync, won’t work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements)
 
@@ -99,13 +99,12 @@ Intune won't deliver unsupported templates to multi-session devices, and those p
 ### Administrative templates
 
 Windows 10 Administrative Templates are supported for Windows 10 Enterprise multi-session via the Settings catalog with some limitations:
+
 - ADMX-backed policies are supported. Some policies are not yet available in the Settings catalog.
 - ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings will not be applicable to Windows 10 Enterprise multi-session.
 
 > [!NOTE]
 > Some ADMX settings currently require an insider build. You can hover over the information bubble next to the setting name to see if an insider build is required for a specific setting.
-> 
-> The applicability of some ADMX based settings for applications like Microsoft Edge and Microsoft Office is not based on the Windows edition or version. To add these settings to your policy, you may have to remove any filters applied in the Settings Picker.
 
 ## Compliance and Conditional access
 
@@ -134,7 +133,10 @@ All other policies report as **Not applicable**.
 > [!Important]
 > You’ll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren’t supported.
 
-[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 Enterprise multi-session.  
+[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 Enterprise multi-session.
+
+> [!NOTE]
+> [Conditional Access for Exchange on-premises](../protect/conditional-access-exchange-create.md) isn't supported for Windows 10 Enterprise multi-session VMs.
 
 ## Application deployment
 
