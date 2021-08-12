@@ -41,7 +41,7 @@ You can have up to 10 connections per tenant.
 As part of the connection process, the Windows 365 service is granted the following permissions:
 
 - Reader permission on the Azure subscription.
-- Reader permission on the specified resource group.
+- Network contributor permission on the specified resource group.
 - Network contributor permission on the virtual network.
 
 ## Requirements
