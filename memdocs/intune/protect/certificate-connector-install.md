@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/13/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,7 +67,11 @@ After a connector installs, you can run the installation program again to uninst
 
 ## Configure the certificate connector
 
-To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by going to *C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Intune*.
+To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by opening an elevated command prompt and running **C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe**. An example is provided below. The command must be run as an administrator.
+
+   ``` command
+   C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe
+   ```
 
 Each time **Certificate Connector for Microsoft Intune** starts on a server you’ll see the following *Welcome* page:
 
