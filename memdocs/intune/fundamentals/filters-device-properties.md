@@ -204,6 +204,9 @@ This article describes the different [device properties](#device-properties) and
 
   - Windows 10 and newer
 
+> [!TIP]
+> Use the powershell command `Get-WindowsEdition -Online` from a Windows device to return the Edition name
+
 ## Advanced rule editing
 
 When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar Azure AD dynamic groups: `([entity].[property name] [operation] [value])`.
