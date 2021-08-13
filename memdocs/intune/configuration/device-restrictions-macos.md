@@ -43,7 +43,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
-## App Store, Doc viewing, Gaming  
+## App Store, doc viewing, gaming  
 
 ### Settings apply to: Automated device enrollment (supervised)
 
