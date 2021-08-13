@@ -36,15 +36,15 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
 - Android Enterprise:
   - Fully managed
   - Corporate-owned work profile
-  - Personally-owned work Profile - *For devices enrolled as personally-owned work profile where you use Microsoft Defender for Endpoint for more than the Microsoft Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile.*
+  - Personally-owned work Profile
+  - 
+When using Microsoft Defender for Endpoint to connect to Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile. If you do not intend to use any Defender functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
      
   > [!IMPORTANT]
-  > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md#create-a-server-configuration). The conditions:
+  > If you are using per-app VPN and also have Defender web protection enabled, you may experience connectivity issues for apps outside your per-app VPN list in the following scenarios, which may prevent devices from communicating with Intune:
+  > - You are using an internal proxy. In this case, you must disable web protection in the VPN profile by adding the **antiphishing** setting in the [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) section and entering a value of **0**.
+  > - You are using internal DNS servers. You must include the IP address of at least one publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md#create-a-server-configuration).
   >
-  > - You use Microsoft Defender for both Defender for Endpoint Endpoint and Microsoft Tunnel functionality.
-  > - You use *per-app* VPN.
-  >
-  > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
 
 <!-- The following is retained for future use should iOS receive the same style of preview  >
 
