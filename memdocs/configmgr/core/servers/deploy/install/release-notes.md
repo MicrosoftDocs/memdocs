@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/05/2021
+ms.date: 08/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -99,7 +99,7 @@ To work around this issue, temporarily uninstall the later version of Visual C++
 
 <!-- 10506770 -->
 
-_Applies to: version 2107 early update ring_
+_Applies to: version 2107 early update ring installed between 8/2/2021 and 8/6/2021_
 
 If you have all of the following conditions:
 
@@ -113,7 +113,7 @@ If you have all of the following conditions:
 
 After you update to version 2107, if you make any change to app _X_, then task sequence _A_ will fail to run on clients that receive the deployment policy after the site update. The Configuration Manager client won't be able to get all of the policies for the task sequence and referenced applications. For clients that already had the deployment policy for task sequence _A_ before the site update, the task sequence will run, but clients won't have the revised application policy.
 
-You can use the following SQL script to determine if your site has this issue:
+You can run the following SQL script on a primary site database to determine if your site has this issue:
 
 ```sql
 select COUNT(*) from Policy where PolicyID like '%/VI%' 
@@ -122,6 +122,9 @@ select COUNT(*) from Policy where PolicyID like '%/VI%'
 ```
 
 If this query returns `0`, there's currently no issue. If the query returns a non-zero value, the issue only exists given the above conditions.
+
+> [!NOTE]
+> If there are many media and PXE task sequences that reference an application that you revise, the site will take longer to update these task sequence policies. During this time, some media and PXE task sequence deployments may fail. There's no workaround for this timing issue.
 
 #### Workaround for task sequence and application policy issue in version 2107 early update ring
 
@@ -138,9 +141,6 @@ This process causes the site to update the policy with the correct flag.
 Repeat this process for every revised app. You don't need to do it for every task sequence where the app is referenced, only once for each revised app.
 
 Even after doing this process, if you revise an app that's referenced in the task sequence, repeat this process to correct the issue.
-
-> [!NOTE]
-> This workaround addresses the issue for clients that have not yet received the deployment policy. Clients that already have the deployment policy won't have the revised application policy.
 
 ### Task sequences can't run over CMG
 
