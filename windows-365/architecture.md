@@ -92,9 +92,11 @@ Windows 365 aligns with Microsoft 365 data protection policies and provisions. C
 
 ## Azure Virtual Desktop connectivity
 
-Cloud PC connectivity is provided by the Azure Virtual Desktop platform. Connectivity occurs from the Cloud PC to the Azure Virtual Desktop endpoints. No inbound connections direct from the Internet are made to the Cloud PC. Instead, Windows 365 seamlessly integrates Azure Virtual Desktop connectivity components into gallery or custom images. For more information on these ports, see [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
+Cloud PC connectivity is provided by Azure Virtual Desktop. No inbound connections direct from the Internet are made to the Cloud PC. Instead, connections are made from the Cloud PC to the Azure Virtual Desktop endpoints and from Remote Desktop clients to Azure Virtual Desktop endpoints. For more information on these ports, see [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list). To ease configuration of network security controls, use Service Tags for Azure Virtual Desktop to identity those endpoints. For more information on Azure Service Tags and their use in simplifying virtual network configuration, see [Azure service tags overview](/azure/virtual-network/service-tags-overview).
 
-Service Tags are listed in the Azure Virtual Desktop documentation to ease the configuration of Azure Networking security controls. For more information on Azure Service Tags and their use in simplifying virtual network configuration, see [Azure service tags overview](/azure/virtual-network/service-tags-overview).
+There is no requirement to configure your Cloud PCs to make these connections. Windows 365 seamlessly integrates Azure Virtual Desktop connectivity components into gallery or custom images.
+
+For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](azure/virtual-desktop/network-connectivity).
 
 <!-- ########################## -->
 ## Next steps
