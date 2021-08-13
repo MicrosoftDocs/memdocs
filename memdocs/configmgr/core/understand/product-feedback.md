@@ -180,7 +180,7 @@ When you **Send a smile** or **Send a frown**, the feedback includes the followi
 
 - OS build information
 
-- Configuration Manager hierarchy ID
+- Configuration Manager support ID, also known as the hierarchy ID
 
 - Product build information
 
