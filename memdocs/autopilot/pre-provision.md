@@ -13,7 +13,7 @@ manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 06/03/2021
+ms.date: 08/11/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -86,6 +86,9 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin has targeted all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM – each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 - Boot the device (running Windows 10 Pro, Enterprise, or Education SKUs, version 1903 or later).
 - From the first OOBE screen (which could be a language selection or locale selection screen), don't click **Next**. Instead, press the Windows key five times to view an additional options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then click **Continue**.
+
+> [!NOTE]
+> Starting with Windows 10, version 20H2, If your Autopilot deployment profile does not have the Language/Region setting set to **User Select**, you might not get the chance to Press Windows Key five times.  Depending on the other settings in the profile you could end up at the login page which is too late to enter Pre-Provisioning
 
  ![Windows Autopilot provisioning option](images/choice.png)
 
