@@ -63,7 +63,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 **Possible causes:**
 
 - The list of entities may not have been uploaded from on-premises. Wait an hour then see if the error persists.
-- An invalid **Tenant ID** or **Hierarchy ID** may have been specified. Check the service connection point and make sure it's functioning.
+- An invalid **Tenant ID** or **Support ID** may have been specified. Check the service connection point and make sure it's functioning.
 - Unable to successfully execute query to get classes. Wait 15 minutes to see if the error persists.
 
 ### <a name="bkmk_get"></a> Failed to get inventory classes with data
