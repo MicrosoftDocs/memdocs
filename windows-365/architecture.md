@@ -39,7 +39,7 @@ Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. The
 By using Azure Networking, Windows 365 lets you use Virtual Network security and routing features, including:
 
 - [Azure Network Security Groups](/azure/virtual-network/network-security-groups-overview)
-- [User Defined Routing](/en-us/azure/virtual-network/virtual-networks-udr-overview)
+- [User Defined Routing](/azure/virtual-network/virtual-networks-udr-overview)
 - [Azure Firewall](/azure/firewall/overview)
 - [Network virtual appliances](https://azure.microsoft.com/blog/best-practices-to-consider-before-deploying-a-network-virtual-appliance/) (NVAs)
 
@@ -96,7 +96,7 @@ Cloud PC connectivity is provided by Azure Virtual Desktop. No inbound connectio
 
 There is no requirement to configure your Cloud PCs to make these connections. Windows 365 seamlessly integrates Azure Virtual Desktop connectivity components into gallery or custom images.
 
-For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](azure/virtual-desktop/network-connectivity).
+For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](/azure/virtual-desktop/network-connectivity).
 
 <!-- ########################## -->
 ## Next steps
