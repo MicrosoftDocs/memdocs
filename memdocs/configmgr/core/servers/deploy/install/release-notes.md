@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/02/2021
+ms.date: 08/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -83,7 +83,64 @@ This failure happens because the service connection point can't communicate with
 
 For more information, see [internet access requirements](../../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
 
+### Management point installation or update fails due to later Visual C++ version
+
+<!-- 10518360 -->
+
+_Applies to: version 2107 early update ring_
+
+If the site system server has a version of the Visual C++ redistributable later than 14.28.29914, Configuration Manager setup will fail to install or update the management point role.
+
+To work around this issue, temporarily uninstall the later version of Visual C++ redistributable. When you install Configuration Manager version 2107, it will install version 14.28.29914.
+
 ## OS deployment
+
+### Task sequence and application policy issue
+
+<!-- 10506770 -->
+
+_Applies to: version 2107 early update ring installed between 8/2/2021 and 8/6/2021_
+
+If you have all of the following conditions:
+
+- Task sequence _A_
+  - Includes the **Install Application** step with app _X_
+  - Deployed and made available to either type that includes **Configuration Manager clients**
+
+- Task sequence _B_
+  - Includes the **Install Application** step with the same app _X_
+  - Deployed and made available to either **Only media and PXE** option
+
+After you update to version 2107, if you make any change to app _X_, then task sequence _A_ will fail to run on clients that receive the deployment policy after the site update. The Configuration Manager client won't be able to get all of the policies for the task sequence and referenced applications. For clients that already had the deployment policy for task sequence _A_ before the site update, the task sequence will run, but clients won't have the revised application policy.
+
+You can run the following SQL script on a primary site database to determine if your site has this issue:
+
+```sql
+select COUNT(*) from Policy where PolicyID like '%/VI%' 
+  AND ((ISNULL(PolicyFlags, 0) & 4096 = 4096) 
+  OR (ISNULL(PolicyFlags, 0) & 2048 = 2048))
+```
+
+If this query returns `0`, there's currently no issue. If the query returns a non-zero value, the issue only exists given the above conditions.
+
+> [!NOTE]
+> If there are many media and PXE task sequences that reference an application that you revise, the site will take longer to update these task sequence policies. During this time, some media and PXE task sequence deployments may fail. There's no workaround for this timing issue.
+
+#### Workaround for task sequence and application policy issue in version 2107 early update ring
+
+If you updated the site to version 2107, have already revised an app, and are in this state, then use the following workaround:
+
+1. Edit task sequence _A_.
+1. Remove app _X_ from every **Install Application** step in which it's referenced.
+1. Save the task sequence.
+1. Add app _X_ back to the task sequence as previously included.
+1. Save the task sequence.
+
+This process causes the site to update the policy with the correct flag.
+
+Repeat this process for every revised app. You don't need to do it for every task sequence where the app is referenced, only once for each revised app.
+
+Even after doing this process, if you revise an app that's referenced in the task sequence, repeat this process to correct the issue.
 
 ### Task sequences can't run over CMG
 
@@ -181,3 +238,17 @@ If the setting was enabled in error, disabling the setting allows the old style 
 <!-- ## Role based administration -->
 
 <!-- ## Application management -->
+
+## CMPivot
+
+### Favorite queries lose line breaks or are truncated
+
+<!-- 10517223 -->
+
+_Applies to: version 2107 early update ring_
+
+After you update the site to version 2107, there are two issues with CMPivot queries that you saved as a favorite:
+
+- When you edit the query, you may see unexpected characters like `\r` or `\t`. To work around this issue, remove the `\r` or `\t` characters, and then save the query.
+
+- The query after the last comma (`,`) is removed. There's currently no workaround for this issue. Recreate the query.

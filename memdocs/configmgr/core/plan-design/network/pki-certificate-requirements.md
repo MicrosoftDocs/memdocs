@@ -2,7 +2,7 @@
 title: PKI certificate requirements
 titleSuffix: Configuration Manager
 description: Find requirements for PKI certificates that you might need for Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -42,15 +42,6 @@ Windows doesn't trust certificates signed with SHA-1. For more information, see 
 Configuration Manager supports _Cryptography: Next Generation_ (CNG) v3 certificates. Configuration Manager clients can use a PKI client authentication certificate with private key in a CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private keys, such as a TPM KSP for PKI client authentication certificates.
 
 For more information, see [CNG v3 certificates overview](cng-certificates-overview.md).
-
-### Elliptical curve cryptography (ECC) certificates
-
-Starting in version 2107, the Configuration Manager client supports the use of an ECC certificate. It uses this certificate to secure the communication channel with site system roles like the management point. The client uses a self-signed certificate from the site for message signing. For more information, see [Certificates in Configuration Manager](../security/certificates-overview.md#hardware-bound-key-storage-provider).
-
-Configuration Manager doesn't support the use of ECC certificates for the following components:
-
-- Site system roles in version 2107
-- Any component in version 2103 and earlier
 
 ## PKI certificates for servers
 
@@ -278,7 +269,7 @@ Certificate requirements:
   > [!NOTE]
   > If you use multiple values for the **Subject Alternative Name**, it only uses the first value.
 
-- Maximum supported key length is 2,048 bits.
+- There's no maximum supported key length.<!-- 10568126 -->
 
 By default, Configuration Manager looks for computer certificates in the Personal store in the Computer certificate store.
 

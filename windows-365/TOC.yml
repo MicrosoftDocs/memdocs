@@ -1,5 +1,5 @@
 items:
-- name: Windows 365 docs
+- name: Windows 365 Enterprise docs
   href: index.yml
 - name: Overview 
   items:
@@ -7,6 +7,8 @@ items:
     href: overview.md
   - name: What's new
     href: whats-new.md
+  - name: Features in development
+    href: in-development.md
 - name: Concepts
   items:
   - name: Architecture

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/13/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,7 +67,11 @@ After a connector installs, you can run the installation program again to uninst
 
 ## Configure the certificate connector
 
-To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by going to *C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Intune*.
+To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by opening an elevated command prompt and running **C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe**. An example is provided below. The command must be run as an administrator.
+
+   ``` command
+   C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe
+   ```
 
 Each time **Certificate Connector for Microsoft Intune** starts on a server you’ll see the following *Welcome* page:
 
@@ -101,7 +105,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access.
+6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. This user account must have an Intune license assigned.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 

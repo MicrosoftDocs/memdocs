@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 08/02/2021
+ms.date: 08/10/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -23,7 +23,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
   - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
 
-- An Azure public cloud environment.
+- An Azure cloud environment.
 
   - The **Upload to Microsoft Endpoint Manager admin center** option is disabled for Microsoft Azure China 21Vianet (Azure China Cloud) and Azure US Government Cloud.<!--8815787--> Starting in version 2107, this option is available for US Government customers.
 
@@ -33,6 +33,8 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
   - Tenant sync to Intune
   - Device sync to Intune
   - Device actions in the Microsoft Endpoint Manager admin center
+
+- At least one Intune license for you as the administrator to access the Intune portal. <!--10254915-->
 
 - The user accounts triggering device actions have the following prerequisites:
    - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
@@ -133,6 +135,9 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 - Secret key
 - Secret key expiry
 - App ID URI
+
+> [!Important]
+> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
 
 ### Azure AD application permissions and configuration
 

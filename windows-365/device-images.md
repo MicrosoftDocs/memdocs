@@ -67,8 +67,6 @@ There are two sets of images available to choose from across the different versi
   - UWP packages removed.
   - Task scheduler actions disabled.
 
-A custom image can be created using [any of the images above as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with an image above and then install more applications and make more configuration changes.
-
 ### Recommended image by license
 
 You can choose any image for any Windows 365 license. However, for optimal performance, the following recommendations apply:
@@ -83,6 +81,8 @@ You can choose any image for any Windows 365 license. However, for optimal perfo
 If none of the default gallery images meet your requirements, you can upload up to 20 of your own custom device images.
 
 For more information on creating such a custom image, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource). For best performance, you should also make sure to optimize your image for a virtual desktop role. For more information on this optimization, see [Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role](/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004).
+
+A custom image can be created using [any of the images above as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with an image above and then install more applications and make more configuration changes.
 
 For more information about adding a device image to Windows 365, see [Add and delete custom device images](add-device-images.md).
 

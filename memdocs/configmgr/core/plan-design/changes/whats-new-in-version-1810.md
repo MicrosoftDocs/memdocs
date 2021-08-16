@@ -241,7 +241,7 @@ For more information, see [Windows Autopilot for existing devices](../../../../a
 <!--1358924-->
 Now specify the drive that Configuration Manager uses when adding software updates to OS images and OS upgrade packages. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use.
 
-For more information, see [Manage OS images](../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive) or [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#bkmk_servicing-drive).
+For more information, see [Manage OS images](../../../osd/get-started/manage-operating-system-images.md#specify-the-drive-for-offline-os-image-servicing) or [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#specify-the-drive-for-offline-os-image-servicing).
 
 
 ### Task sequence support for boundary groups

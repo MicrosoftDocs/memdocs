@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 08/02/2021
+ms.date: 08/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -258,7 +258,7 @@ Insights that help you simplify the day-to-day management of your environment.
 
 - **Non-CB Client Versions**: Lists all clients whose versions aren't a current branch (CB) build. For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md).<!-- 450090EA-DF71-428C-AB49-6DEBB85A004C -->
 
-- **Update clients to a supported Windows 10 version**:<!--3897268--> This insight reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!-- 560669D6-1756-4814-9505-C54BDB4930D0 -->
+- **Update clients to a supported Windows 10 version**:<!--3897268, 9742262, 9910532--> This insight reports on clients that are running a version of Windows 10 that's no longer supported.<!-- 560669D6-1756-4814-9505-C54BDB4930D0 -->
 
 ### Software Center
 

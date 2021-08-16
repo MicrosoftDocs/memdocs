@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/29/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.technology:
 ms.service: microsoft-intune
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
