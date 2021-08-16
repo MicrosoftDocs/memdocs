@@ -59,6 +59,21 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+## Week of August 16, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### New version of the Certificate Connector for Microsoft Intune <!-- 10592539  -->
+
+We’ve released a new version of the Certificate Connector for Microsoft Intune, version **6.2108.18.0**. This update includes:
+
+- A fix to correctly display the current connector status in Microsoft Endpoint Manager admin center.
+- A fix to correctly report on failures to deliver SCEP certificates.
+
+For more information about the certificate connector, including a list of connector releases and updates, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
+
+<!-- ########################## -->
 ## Week of August 2, 2021
 
 ### Windows 365 now generally available<!--10393594 -->

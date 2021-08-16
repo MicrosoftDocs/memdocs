@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -222,9 +222,21 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
 
+### August 16, 2021
+
+Version **6.2108.18.0**. - Changes in this release:
+
+This update includes:
+
+- A fix to correctly display the current connector status in Microsoft Endpoint Manager admin center.
+- A fix to correctly report on failures to deliver SCEP certificates.
+
 ### July 29, 2021
 
-The Certificate Connector for Microsoft Intune is released. This connector is a unified connector in that it includes the capabilities of both the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*, which it replaces.  With this release, the previous connectors remain supported, but are no longer developed nor available for download. Plan to replace existing installations of the individual with installations of this new unified connector.
+Version **6.2107.45.0** - The Certificate Connector for Microsoft Intune is released. 
+
+This connector is a unified connector in that it includes the capabilities of both the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*, which it replaces.  With this release, the previous connectors remain supported, but are no longer developed nor available for download. Plan to replace existing installations of the individual with installations of this new unified connector.
+
 
 ## Next steps
 
