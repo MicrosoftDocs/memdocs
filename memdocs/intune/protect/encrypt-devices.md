@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/12/2021
+ms.date: 08/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -137,8 +137,9 @@ The following two settings for *BitLocker base settings* must be configured in t
 - **Warning for other disk encryption** = *Block*.
 - **Allow standard users to enable encryption during Azure AD Join** = *Allow*
 
-The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker can't silently enable and requires interaction from the end user.  This requirement is met through the following three *BitLocker OS drive settings* in the same policy:
+The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker can not silently enable and requires interaction from the end user.  This requirement is met through the following four *BitLocker OS drive settings* in the same policy:
 
+- **Compatible TPM startup** must be set to *Allowed* or *Required*
 - **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
 - **Compatible TPM startup key** must not set to *Require startup key with TPM*
 - **Compatible TPM startup key and PIN** must not set to *Require startup key and PIN with TPM*
@@ -161,6 +162,9 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
    - Drive Type
 
    When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
+
+> [!NOTE]
+> Currently, Azure AD supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption will fail due to the failing backup of recovery keys before starting encryption on the device.
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
 

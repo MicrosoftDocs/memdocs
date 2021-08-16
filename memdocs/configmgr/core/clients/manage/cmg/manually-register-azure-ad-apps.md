@@ -2,7 +2,7 @@
 title: Manually register Azure AD apps
 titleSuffix: Configuration Manager
 description: Manually create the required apps in Azure Active Directory (Azure AD) to integrate the Configuration Manager site to support the cloud management gateway (CMG).
-ms.date: 08/02/2021
+ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -110,6 +110,8 @@ First, you need to make note of the **Azure AD tenant name** and **tenant ID**. 
 
 The web (server) app for CMG is now registered in Azure AD.
 
+
+
 ## Register the native (client) app
 
 1. In the Azure AD menu, select **App registrations**. Select **New registration** to create a new app.
@@ -176,6 +178,9 @@ When you select **Import** from the _Server app_ window, it opens the _Import ap
 - **App ID URI**: The value is the **Application ID URI** of the app registration entry in the Azure AD portal. The format is similar to `https://ConfigMgrService`.
 
 After entering the information, select **Verify**. Then select **OK** to close the _Import apps_ window.
+
+> [!Important]
+> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../../../servers/manage/admin-console-notifications.md). <!--10568158--> 
 
 ### Import native (client) app
 

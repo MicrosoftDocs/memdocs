@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/04/2021
+ms.date: 08/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -99,7 +99,7 @@ To work around this issue, temporarily uninstall the later version of Visual C++
 
 <!-- 10506770 -->
 
-_Applies to: version 2107_
+_Applies to: version 2107 early update ring installed between 8/2/2021 and 8/6/2021_
 
 If you have all of the following conditions:
 
@@ -108,10 +108,25 @@ If you have all of the following conditions:
   - Deployed and made available to either type that includes **Configuration Manager clients**
 
 - Task sequence _B_
-  - Includes the **Install Application** step with app _X_
+  - Includes the **Install Application** step with the same app _X_
   - Deployed and made available to either **Only media and PXE** option
 
 After you update to version 2107, if you make any change to app _X_, then task sequence _A_ will fail to run on clients that receive the deployment policy after the site update. The Configuration Manager client won't be able to get all of the policies for the task sequence and referenced applications. For clients that already had the deployment policy for task sequence _A_ before the site update, the task sequence will run, but clients won't have the revised application policy.
+
+You can run the following SQL script on a primary site database to determine if your site has this issue:
+
+```sql
+select COUNT(*) from Policy where PolicyID like '%/VI%' 
+  AND ((ISNULL(PolicyFlags, 0) & 4096 = 4096) 
+  OR (ISNULL(PolicyFlags, 0) & 2048 = 2048))
+```
+
+If this query returns `0`, there's currently no issue. If the query returns a non-zero value, the issue only exists given the above conditions.
+
+> [!NOTE]
+> If there are many media and PXE task sequences that reference an application that you revise, the site will take longer to update these task sequence policies. During this time, some media and PXE task sequence deployments may fail. There's no workaround for this timing issue.
+
+#### Workaround for task sequence and application policy issue in version 2107 early update ring
 
 If you updated the site to version 2107, have already revised an app, and are in this state, then use the following workaround:
 
@@ -122,6 +137,10 @@ If you updated the site to version 2107, have already revised an app, and are in
 1. Save the task sequence.
 
 This process causes the site to update the policy with the correct flag.
+
+Repeat this process for every revised app. You don't need to do it for every task sequence where the app is referenced, only once for each revised app.
+
+Even after doing this process, if you revise an app that's referenced in the task sequence, repeat this process to correct the issue.
 
 ### Task sequences can't run over CMG
 

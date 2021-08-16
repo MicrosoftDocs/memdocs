@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 08/02/2021
+ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -404,6 +404,14 @@ The SQL Server meets the minimum requirements for site upgrade. For more informa
 *Applies to: Site database server*
 
 SQL Server at the site isn't SQL Server Express.
+
+### SQL Server Express database size on secondary site
+
+*Applies to: Secondary site*
+
+<!-- 6047275 -->
+
+Starting in version 2107, this check will fail if the amount of replicated data from the primary site will exceed the 10-GB size limit of SQL Server Express. For more information, see [Configuration Manager site sizing and performance FAQ](../../../understand/site-size-performance-faq.yml#when-should-i-use-full-sql-server-instead-of-sql-server-express-on-my-secondary-sites-).
 
 ### SQL Server Express on secondary site
 

@@ -100,7 +100,7 @@ The previous connectors remain in support but are no longer available for downlo
 
 #### Windows Autopilot diagnostics page (public preview)
 
-[Available settings](/mem/intune/enrollment/windows-enrollment-status#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](/mem/autopilot/windows-autopilot-whats-new#preview-windows-autopilot-diagnostics-page). 
+[Available settings](../enrollment/windows-enrollment-status.md#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#preview-windows-autopilot-diagnostics-page). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -311,7 +311,7 @@ The **Certificates** report, which shows the current device certificates in use,
 The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functionality on Android is now out of preview and [generally available for use](../protect/microsoft-tunnel-overview.md). With this change:
 
 - You no longer need to opt in to use Defender of Endpoint as the tunnel app on Android.
-- The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on August 14, 2021.
+- The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on October 26, 2021.
 
 Plan to download and use the updated Microsoft Defender for Endpoint app for Microsoft Tunnel app for Android. If you participated in the preview, update your devices with the new version of Defender for Endpoint from the Google Play store. If you are still using the standalone tunnel app, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
 

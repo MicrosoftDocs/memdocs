@@ -201,7 +201,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
   The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
 
   > [!Note]
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later on August 14 2021.
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
 
 - iOS/iPadOS: **Microsoft Tunnel (standalone client)**
 
@@ -235,10 +235,13 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
+   > [!IMPORTANT]  
+   > You cannot use Defender web protection side-by-side with Tunnel if you use an internal proxy with Tunnel, as this can cause connectivity issues which would prevent the device from communicating with Intune. Disable web protection by adding the **antiphishing** setting to the [custom settings](#use-custom-settings-for-microsoft-defender-for-endpoint) section in the VPN profile and setting it to **0**.
+
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]  
-   > For *Android Enterprise personally-owned work profile* devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. Use of custom settings is optional for all other platforms.
+   > For Android Enterprise devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. If you do not intend to use any Defender functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
 
 5. On the **Assignments** tab, configure groups that will receive this profile.
 

@@ -247,7 +247,7 @@ When you apply software updates to an OS image, there's a new option to optimize
 
 When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#bkmk_resetbase).
+For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#optimized-image-servicing).
 
 ### Improvements to Run PowerShell Script task sequence step
 

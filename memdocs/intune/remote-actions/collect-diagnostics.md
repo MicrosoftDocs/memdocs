@@ -55,73 +55,73 @@ The **Collect diagnostics** remote action is supported for:
 
 ## Data collected
 
-No personal information is collected. This list below is the same order as the diagnostic zip file.  Each collection contains the following data:
+No personal information is collected. This list below is the same order as the diagnostic zip.  Each collection contains the following data:
 
 Registry Keys:
 
-- HKLM\Software\Microsoft\IntuneManagementExtension
-- HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
-- HKLM\SOFTWARE\Microsoft\Windows Endpoint
-- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
-- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
-- HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
-- HKLM\Software\Policies
-- HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
-- HKLM\SOFTWARE\Policies\Microsoft\Windows Endpoint
-- HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
-- HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+1. HKLM\Software\Microsoft\IntuneManagementExtension
+2. HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
+3. HKLM\SOFTWARE\Microsoft\Windows Endpoint
+4. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
+5. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
+6. HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
+7. HKLM\Software\Policies
+8. HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
+9. HKLM\SOFTWARE\Policies\Microsoft\Windows Endpoint
+10. HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+11. HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 Commands:
 
-- %programfiles%\windows defender\mpcmdrun.exe -GetFiles
-- %windir%\system32\certutil.exe -store
-- %windir%\system32\certutil.exe -store -user my
-- %windir%\system32\Dsregcmd.exe /status
-- %windir%\system32\ipconfig.exe /all
-- %windir%\system32\mdmdiagnosticstool.exe 
-- %windir%\system32\msinfo32.exe /report %temp%\MDMDiagnostics\msinfo32.log
-- %windir%\system32\netsh.exe advfirewall show allprofiles
-- %windir%\system32\netsh.exe advfirewall show global
-- %windir%\system32\netsh.exe lan show profiles
-- %windir%\system32\netsh.exe winhttp show proxy
-- %windir%\system32\netsh.exe wlan show profiles
-- %windir%\system32\netsh.exe wlan show wlanreport
-- %windir%\system32\ping.exe -n 50 localhost
-- %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
-- %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
+12. %programfiles%\windows defender\mpcmdrun.exe -GetFiles
+13. %windir%\system32\certutil.exe -store
+14. %windir%\system32\certutil.exe -store -user my
+15. %windir%\system32\Dsregcmd.exe /status
+16. %windir%\system32\ipconfig.exe /all
+17. %windir%\system32\mdmdiagnosticstool.exe 
+18. %windir%\system32\msinfo32.exe /report %temp%\MDMDiagnostics\msinfo32.log
+19. %windir%\system32\netsh.exe advfirewall show allprofiles
+20. %windir%\system32\netsh.exe advfirewall show global
+21. %windir%\system32\netsh.exe lan show profiles
+22. %windir%\system32\netsh.exe winhttp show proxy
+23. %windir%\system32\netsh.exe wlan show profiles
+24. %windir%\system32\netsh.exe wlan show wlanreport
+25. %windir%\system32\ping.exe -n 50 localhost
+26. %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
+27. %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
 
 Event Viewers:
 
-- Application
-- Microsoft-Windows-AppLocker/EXE and DLL
-- Microsoft-Windows-AppLocker/MSI and Script
-- Microsoft-Windows-AppLocker/Packaged app-Deployment
-- Microsoft-Windows-AppLocker/Packaged app-Execution
-- Microsoft-Windows-Bitlocker/Bitlocker Management
-- Microsoft-Windows-SENSE/Operational
-- Microsoft-Windows-SenseIR/Operational
-- Setup
-- System
+28. Application
+29. Microsoft-Windows-AppLocker/EXE and DLL
+30. Microsoft-Windows-AppLocker/MSI and Script
+31. Microsoft-Windows-AppLocker/Packaged app-Deployment
+32. Microsoft-Windows-AppLocker/Packaged app-Execution
+33. Microsoft-Windows-Bitlocker/Bitlocker Management
+34. Microsoft-Windows-SENSE/Operational
+35. Microsoft-Windows-SenseIR/Operational
+36. Setup
+37. System
 
 Files:
- 
-- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
-- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
-- %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
-- %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-- %temp%\MDMDiagnostics\battery-report.html
-- %temp%\MDMDiagnostics\energy-report.html
-- %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
-- %temp%\MDMDiagnostics\msinfo32.log
-- %windir%\ccm\logs\*.log
-- %windir%\ccmsetup\logs\*.log
-- %windir%\logs\CBS\cbs.log
-- %windir%\logs\measuredboot\*.*
-- %windir%\Logs\WindowsUpdate\*.etl
+
+38. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+40. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+41. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
+42. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+43. %temp%\MDMDiagnostics\battery-report.html
+44. %temp%\MDMDiagnostics\energy-report.html
+45. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
+46. %temp%\MDMDiagnostics\msinfo32.log
+47. %windir%\ccm\logs\*.log
+48. %windir%\ccmsetup\logs\*.log
+49. %windir%\logs\CBS\cbs.log
+50. %windir%\logs\measuredboot\*.*
+51. %windir%\Logs\WindowsUpdate\*.etl
 
 ## Disable device diagnostics
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
+1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Diagnostics settings**.
 2.	Change the control to **Disabled**.
 
 ## Known issues with device diagnostics
