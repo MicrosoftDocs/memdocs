@@ -73,6 +73,8 @@ Azure AD provides user authentication and authorization for both the Windows 365
   - cookie persistence for the Windows 365 web portal
 - device compliance controls
 
+For more information on how to use Azure AD Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md). 
+
 ### Active Directory Domain Services
 
 Windows 365 requires that Cloud PCs be joined to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information see, [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
