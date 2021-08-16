@@ -141,12 +141,12 @@ Applies to:
 
 In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
 
-- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-- For more information on the DFCI profile, see [Use Device Firmware Configuration Interface profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md).
+- For more information about filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
+- For more information about the DFCI profile, see [Use Device Firmware Configuration Interface profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md).
 
 Applies to:
 
-- WWindows 10 RS5 (1809) and newer on supported UEFI
+- Windows 10 RS5 (1809) and newer on supported UEFI
 
 ### Add certificate server names to enterprise Wi-Fi profiles on Android Enterprise personally-owned devices with a work profile<!-- 10285509  -->
 
