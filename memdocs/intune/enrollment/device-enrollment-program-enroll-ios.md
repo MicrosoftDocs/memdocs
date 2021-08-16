@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 08/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -52,7 +52,7 @@ ADE enrollments aren't compatible with the App Store version of the Company Port
 
 To enable modern authentication during enrollment, push the app to the device by using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
-To enable Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required VPP app with an [application configuration policy](../apps/app-configuration-policies-use-ios.md) applied. Deploy the Company Portal app in this way to enable Device Staging. With Device Staging, a device is fully enrolled and receives device policies before the addition of a user affinity.
+To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required VPP app with an [application configuration policy](../apps/app-configuration-policies-use-ios.md) applied. Deploy the Company Portal app in this way to enable Device Staging for devices only without user affinity. With Device Staging, a device is fully enrolled and receives device policies before the addition of a user affinity. Device Staging can also be used to transition a device without user affinity, to a device with user affinity.
 
 ## What is supervised mode?
 
