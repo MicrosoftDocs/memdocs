@@ -68,7 +68,7 @@ You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.c
 
 ## Supported Azure regions for Cloud PC provisioning
 
-You can create a virtual network and provision Cloud PCs in the following Azure regions:
+Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we leverage features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network and provision Cloud PCs in the following Azure regions:
 
 - US East
 - US East 2
