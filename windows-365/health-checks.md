@@ -54,7 +54,7 @@ Every failed OPNC or success with warning error state includes the technical det
 
 - **DNS can resolve Active Directory domain**: Resolve the provided Active Directory domain name.
 - **Active directory domain join**: A domain join using the credentials, domain, and OU provided.
-- **Endpoint connectivity**: Connectivity to the required [URL/endpoints](https://docs.microsoft.com/windows-365/requirements-network). 
+- **Endpoint connectivity**: Connectivity to the required [URL/endpoints](requirements-network.md). 
 - **Azure AD device sync (warning)**: Azure AD sync is enabled on the Azure AD tenant, and the computer object is being synced within 90 minutes.
 - **Azure subnet IP address usage**: Sufficient IP addresses are available in the provided Azure subnet.
 - **Azure subscription is valid**: The defined Azure subscription is enabled and ready for use.
