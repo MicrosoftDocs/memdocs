@@ -36,6 +36,8 @@ Windows 365 provides a per-user per-month license model by hosting Cloud PCs on 
 
 Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. The virtual NICs are created by Windows 365 in your Azure subscription. They’re attached to an Azure Virtual Network based on your on-premises network connection (OPNC) configuration.
 
+Windows 365 is [supported in a number of Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You can leverage Azure [virtual network peering](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) or [Virtual WAN](/azure/architecture/networking/hub-spoke-vwan-architecture) to extend access between Azure regions you currently use to one or more Windows 365 supported Azure regions.
+
 By using Azure Networking, Windows 365 lets you use Virtual Network security and routing features, including:
 
 - [Azure Network Security Groups](/azure/virtual-network/network-security-groups-overview)
@@ -71,9 +73,11 @@ Azure AD provides user authentication and authorization for both the Windows 365
   - cookie persistence for the Windows 365 web portal
 - device compliance controls
 
+For more information on how to use Azure AD Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md). 
+
 ### Active Directory Domain Services
 
-Windows 365 requires that Cloud PCs be joined to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/expressroute/expressroute-introduction) or a [site-to-site VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information see, [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
+Windows 365 requires that Cloud PCs be joined to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information see, [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
 
 ## "Hosted on behalf of" connectivity
 
