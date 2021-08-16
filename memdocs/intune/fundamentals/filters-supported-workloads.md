@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/21/2021
+ms.date: 08/23/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -263,6 +263,7 @@ You can use filters for some common device configuration policies on the followi
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
+|Endpoint analytics proactive remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
