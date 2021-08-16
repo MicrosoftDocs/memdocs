@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 8/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -53,9 +53,12 @@ This feature is supported for the following platforms:
 | Platform | IMEI numbers | Serial numbers |
 |---|---|---|
 | Windows | Not supported | Not supported |
-| iOS/iPadOS and macOS | Not supported (see Important below)  | Supported |
-| Device admin managed Android OS v10 | Not supported | Not supported |
-| Android Enterprise personally-owned work profile | Not supported | Supported |
+| iOS/iPadOS | Supported in some cases. See Important below.  | Supported |
+| macOS | Not supported | Supported |
+| Android device administrator, before Android v10 | Supported | Supported |
+| Android device administrator, Android v10 and later | Not supported | Not supported |
+| Android Enterprise personally-owned work profile, before Android 12 | Supported | Supported |
+| Android Enterprise personally-owned work profile, Android 12 and later | Not supported | Not supported |
 | Android Enterprise corporate-owned work profile | Not supported | Not Supported |
 | Android Enterprise fully managed | Not supported | Not Supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
