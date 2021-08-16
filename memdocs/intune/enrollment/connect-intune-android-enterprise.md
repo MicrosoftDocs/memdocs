@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 5/13/2019
+ms.date: 8/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -73,6 +73,9 @@ Intune makes it easier for you to configure and use Android Enterprise managemen
 6. Provide your company's name for **Organization name**. For **Enterprise mobility management (EMM) provider**, **Microsoft Intune** should be displayed.
 
 7. Agree to the Android agreement, and then choose **Confirm**. Your request will be processed.
+
+> [!NOTE]
+> Choose a scope tag for your Managed Google Play apps. Under this section, you can select a scope tag that will apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this section:<ul><li>Android Sync - Read</li><li>Android Sync – UpdateOnBoarding</li></ul>.<p><p>Admins without these permissions will not be able to remove the scope tag selected on the pane.
 
 ## Disconnect your Android Enterprise administrative account
 
