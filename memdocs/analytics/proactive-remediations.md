@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user 
-ms.date: 06/25/2020
+ms.date: 08/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -82,7 +82,9 @@ To assign the script package:
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
 1. To change the **Scope tags**, select **Edit** then **Select scope tags**.
 1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
-1. When you're done, select **Review + save**.
+1. When you're done, select **Review + save**.  
+
+When you create an Endpoint Analytics policy, and are ready to deploy this policy to your users or devices, you can use filters. For more information, see [Create filters in Microsoft Intune](../fundamentals/filters.md).  
 
 ## <a name="bkmk_prs_ps1"></a> Create and deploy custom script packages
 
@@ -97,7 +99,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
     - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts.md#bkmk_scripts).
 
 ### Deploy the script packages
-Proactive remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them.
+Proactive remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them. 
 
 1. Go to the **Proactive remediations** node in the console.
 1. Choose the **Create script package** button to create a script package.
@@ -117,7 +119,7 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. 
 1. Complete the **Review + Create** step for your deployment.
 
 
