@@ -56,7 +56,7 @@ The following table captures the key differences between the two available share
 | Unsupported scenarios | Conditional Access (see note below)<br>App Protection Policies<br>Intune Company Portal app<br>Available apps | Conditional Access (see note below)<br>App Protection Policies<br>Intune Company Portal app<br>Available apps<br>Apps that don’t support Shared Device Mode<br>User-assigned policies and apps |
 
 > [!IMPORTANT]
-> The following Conditional Access configurations are not supported:<ul><li>Granting Conditional Access conditions for a device that require an approved client app, require an app protection policy, require per-device terms of use, or must be marked as compliant.</li><li>Conditional Access conditions that use filters for devices.</li></ul>
+> The following Conditional Access configurations are not supported:<ul><li>Granting Conditional Access conditions for a device that require an approved client app, require an app protection policy, require [per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use), or must be marked as compliant.</li><li>Conditional Access conditions that use filters for devices.</li></ul>
 
 ## Recommended iOS/iPadOS shared device strategy
 
