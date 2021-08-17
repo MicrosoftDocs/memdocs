@@ -263,6 +263,7 @@ You can use filters for some common device configuration policies on the followi
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
+|Endpoint analytics proactive remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
