@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 08/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,6 +71,50 @@ Select a server and then open the **Health check** tab to view the following inf
   - **Unhealthy** - Two or more versions behind, and out of support
 
   When *Server version* isn’t *Healthy*, plan to [install upgrades for Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
+
+## Manage health status thresholds
+
+You can customize several of the Microsoft Tunnel health status metrics to change the thresholds each uses to report their status. Customizations are tenant-wide and apply to all Tunnel severs. The health check metrics you can customize include:
+
+- CPU usage
+- Memory usage
+- Disk space usage
+- Latency
+- TLS certificate
+
+**To modify a metrics threshold value**:
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
+3. Select **Configure thresholds**.
+4. On the *Configure thresholds* page, set new thresholds for each health check category that you want to customize.
+   - Threshold values apply to all servers at all sites.
+   - Select **Revert to default** to restore *all* thresholds back to their default values.
+
+5. Select **Save**.
+6. On the Health status pane, select **Refresh** to update the status of all servers based on the customized threshold values.
+When you update the thresholds, the values on a servers *Health check* tab automatically update to reflect status that’s based on the current thresholds.
+
+## Health status trends for Tunnel servers
+
+View health status trends Microsoft Tunnel Gateway health metrics in the form of a chart. Data for the charts is averaged over a three-hour block and therefore can be delayed up to three hours.
+
+The health status trend charts are available for the following metrics:
+
+- Connections
+- CPU usage
+- Disk space usage
+- Memory usage
+- Average latency
+- Throughput
+
+To view trend charts:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status** > *Select a server*, and then select **Trends**
+
+3. Use the **Metric** drop-down to select the metric chart you want to view.
 
 ## Use mst-cli command-line tool
 
