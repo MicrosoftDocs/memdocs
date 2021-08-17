@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/26/2021
+ms.date: 08/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -38,7 +38,7 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 ## Requirements
 
 The **Collect diagnostics** remote action is supported for:
-- Intune or Co-Managed devices.
+- Intune or co-managed devices.
 - Windows 10 version 1909 and later.
 - Microsoft HoloLens 2 2004 and later.
 - Global Admins, Intune Admins, or a role with **Collect diagnostics** permissions (under **Remote tasks**).
@@ -98,14 +98,15 @@ Event Viewers:
 31. Microsoft-Windows-AppLocker/Packaged app-Deployment
 32. Microsoft-Windows-AppLocker/Packaged app-Execution
 33. Microsoft-Windows-Bitlocker/Bitlocker Management
-34. Microsoft-Windows-SENSE/Operational
-35. Microsoft-Windows-SenseIR/Operational
-36. Setup
-37. System
+34. Microsoft-Windows-HelloForBusiness/Operational
+35. Microsoft-Windows-SENSE/Operational
+36. Microsoft-Windows-SenseIR/Operational
+37. Setup
+38. System
 
 Files:
 
-38. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+39. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
 40. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
 41. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 42. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
@@ -125,6 +126,6 @@ You can disable the **Collect diagnostics** remote action for all devices by fol
 2.	Change the control to **Disabled**.
 
 ## Known issues with device diagnostics
-Currently there are the two main issues which may cause device diagnostics to fail:  
-1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP which prevents timeout during upload.  After installing the update please make sure to reboot your device.
-2. The device wasn't able to receive the device action within a 24 hour window.  If the device is offline or turned off this may cause a failure.
+Currently there are the two main issues that may cause device diagnostics to fail:  
+1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP that prevents timeout during upload.  After installing the update please make sure to reboot your device.
+2. The device wasn't able to receive the device action within a 24-hour window.  If the device is offline or turned off this may cause a failure.

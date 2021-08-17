@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/17/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,6 +72,15 @@ We’ve released a new version of the Certificate Connector for Microsoft Intune
 - A fix to correctly report on failures to deliver SCEP certificates.
 
 For more information about the certificate connector, including a list of connector releases and updates, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Adding Windows Hello for Business to Windows 10 Diagnostics<!-- 10184621  -->
+
+We've added the information from the Operational Event Viewer for **Windows Hello for Business** to the data that’s collected for Windows 10 device diagnostics. See [Data collected](../remote-actions/collect-diagnostics.md#data-collected).
+
+
 
 <!-- ########################## -->
 ## Week of August 2, 2021
