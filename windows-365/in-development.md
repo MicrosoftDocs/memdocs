@@ -93,7 +93,7 @@ A new report will be added to Endpoint Analytics: the **Resource performance rep
 
 ### Remoting connection report in Endpoint Analytics<!-- 33039368-->
 
-A new repot will be added to Endpoint Analytics: the **Remoting connection report**. This report will include the following metrics:
+A new report will be added to Endpoint Analytics: the **Remoting connection report**. This report will include the following metrics:
 
 - **Cloud PC Sign in time (sec)** provides the total time users take to connect to the cloud PC.
 - **Round Trip Time (ms)** provides insights on the speed and reliability of network connections from the user location.
