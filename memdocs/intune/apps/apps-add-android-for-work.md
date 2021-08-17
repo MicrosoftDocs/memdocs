@@ -60,7 +60,7 @@ There are three types of apps that are available with Managed Google Play:
 ## Managed Google Play store apps
 
 > [!NOTE]
-> Most newly-created items in Intune take on the scope tags of the creator. This is not the case for Managed Google Play Store apps. Admins can assign a scope tag to apply to all newly-synced Managed Google Play apps on the Managed Google Play connector blade. For more information, see [Connect your Intune Account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+> Most newly-created items in Intune take on the scope tags of the creator. This is not the case for Managed Google Play Store apps. Admins can assign a scope tag to apply to all newly-synced Managed Google Play apps on the Managed Google Play connector pane. For more information, see [Connect your Intune Account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 There are two ways to browse and approve Managed Google Play store apps with Intune:
 
