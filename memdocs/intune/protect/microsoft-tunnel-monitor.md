@@ -80,21 +80,26 @@ You can customize several of the Microsoft Tunnel health status metrics to chang
 - Memory usage
 - Disk space usage
 - Latency
-- TLS certificate
 
 **To modify a metrics threshold value**:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
-3. Select **Configure thresholds**.
-4. On the *Configure thresholds* page, set new thresholds for each health check category that you want to customize.
+:::image type="content" source="./media/microsoft-tunnel-monitor/thresholds.png" alt-text="Screen capture of how to select and configure health status threaholds.":::
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
+
+2. Select **Configure thresholds**.
+
+3. On the *Configure thresholds* page, set new thresholds for each health check category that you want to customize.
    - Threshold values apply to all servers at all sites.
    - Select **Revert to default** to restore *all* thresholds back to their default values.
 
-5. Select **Save**.
-6. On the Health status pane, select **Refresh** to update the status of all servers based on the customized threshold values.
-When you update the thresholds, the values on a servers *Health check* tab automatically update to reflect status that’s based on the current thresholds.
+4. Select **Save**.
 
+5. On the Health status pane, select **Refresh** to update the status of all servers based on the customized threshold values.
+
+After you modify thresholds, the values on a servers *Health check* tab automatically update to reflect its status, based on the current thresholds.
+
+:::image type="content" source="./media/microsoft-tunnel-monitor/server-health-check.png" alt-text="Screen capture of a servers Health check view.":::
 ## Health status trends for Tunnel servers
 
 View health status trends Microsoft Tunnel Gateway health metrics in the form of a chart. Data for the charts is averaged over a three-hour block and therefore can be delayed up to three hours.
