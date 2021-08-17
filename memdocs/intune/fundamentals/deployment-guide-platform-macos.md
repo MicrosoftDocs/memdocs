@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/16/2021
+ms.date: 08/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage macOS devices in Microsoft Intune
 
-Secure access to work email, data, and apps on macOS devices. This article lists macOS-specific tasks to help you enable Intune mobile device management for macOS, configure policies, and deploy apps.  
+Secure access to work email, data, and apps on macOS devices. This article guides you through macOS-specific tasks to help you enable Intune mobile device management for macOS, configure policies, and deploy apps.  
 
 
 ## Prerequisites  
@@ -41,21 +41,16 @@ Complete the following prerequisites to enable macOS device management in Intune
 * [Have Global Administrator or Intune administrator Azure Active Directory permissions](role-based-access-control.md)  
 * [Set up Apple MDM push (APNs) certificate](../enrollment/apple-mdm-push-certificate-get.md)  
 
- For more detailed information about how to set up, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
+ For more detailed information about how to do the initial set up, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 
 ## Plan for your deployment  
 
-Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. 
-
-Because the Company Portal app for macOS isn't available in the App Store, we recommend having a communication plan so that end users know how to install Company Portal and enroll their devices.    
+Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. For example, because the Company Portal app for macOS isn't available in the App Store, we recommend having a communication plan so that end users know how to install Company Portal and enroll their devices.    
 
 ## Enroll devices  
 
-Get started by enabling enrollment in Intune for company-owned and personal macOS devices. This step ensures that after devices enroll they can receive Intune policies and configurations. 
-
-Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for coporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
+Configure the enrollment methods and experience for company-owned and personal macOS devices. This step ensures that devices receive Intune policies and configurations after they enroll. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for coporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
  
-
 
 | Task | Detail | 
 | ---- | ------ | 
