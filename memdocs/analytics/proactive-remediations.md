@@ -84,8 +84,6 @@ To assign the script package:
 1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.  
 
-When you create an Endpoint Analytics policy, and are ready to deploy this policy to your users or devices, you can use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).  
-
 ## <a name="bkmk_prs_ps1"></a> Create and deploy custom script packages
 
 The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions below:
@@ -119,7 +117,7 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. 
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).  
 1. Complete the **Review + Create** step for your deployment.
 
 
