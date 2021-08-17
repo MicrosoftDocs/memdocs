@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/26/2021
+ms.date: 08/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -98,14 +98,15 @@ Event Viewers:
 31. Microsoft-Windows-AppLocker/Packaged app-Deployment
 32. Microsoft-Windows-AppLocker/Packaged app-Execution
 33. Microsoft-Windows-Bitlocker/Bitlocker Management
-34. Microsoft-Windows-SENSE/Operational
-35. Microsoft-Windows-SenseIR/Operational
-36. Setup
-37. System
+34. Microsoft-Windows-HelloForBusiness/Operational
+35. Microsoft-Windows-SENSE/Operational
+36. Microsoft-Windows-SenseIR/Operational
+37. Setup
+38. System
 
 Files:
 
-38. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+39. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
 40. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
 41. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 42. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
