@@ -89,16 +89,6 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
 
-- **Required SafetyNet evaluation type**  
-  This setting is only available when *SafetyNet device attestation* is set to either *Check basic integrity* or *Check basic integrity & certified devices*.
-
-  Select the evaluation type you want to use to compute the SafetyNet device attestation response.
-
-  - **Not configured (defaults to basic evaluation)** – This is the default.
-  - **Hardware-backed key** – Require devices have hardware-backed key attestation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
-
-  For more information, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafteyNet documentation for Android.
-
 ### Device Properties
 
 #### Operating System Version
@@ -220,6 +210,15 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
 
+- **Required SafetyNet evaluation type**  
+  This setting is only available when *SafetyNet device attestation* is set to either *Check basic integrity* or *Check basic integrity & certified devices*.
+
+  Select the evaluation type you want to use to compute the SafetyNet device attestation response.
+
+  - **Not configured (defaults to basic evaluation)** – This is the default.
+  - **Hardware-backed key** – Require devices have hardware-backed key attestation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
+
+  For more information, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafteyNet documentation for Android.
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
