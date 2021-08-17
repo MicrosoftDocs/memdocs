@@ -48,6 +48,9 @@ Determine what your end users need to access on their Cloud PC. If your end user
 
 Determine where your end users are physically located. Windows 365 can provide Cloud PCs in multiple Azure locations around the world. Provide the Cloud PCs in a location with the lowest latency to your end users' physical location. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 
+> [!TIP] 
+> If you currently use another Azure region not in the list of Windows 365 supported Azure regions, consider leveraging Virtual Network peering to connect a virtual network in a supported Azure region to networks and resources in an Azure regions already in use in your subscription. For more information, see [hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke). You can also create [hub-spoke network topology with Azure Virtual WAN](/azure/architecture/networking/hub-spoke-vwan-architecture).
+
 **Task**: Map out where your end users are located. List the groups and Azure regions required for all use cases.
 
 ### Objective: Management of Cloud PCs
