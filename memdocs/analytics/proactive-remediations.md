@@ -84,7 +84,7 @@ To assign the script package:
 1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.  
 
-When you create an Endpoint Analytics policy, and are ready to deploy this policy to your users or devices, you can use filters. For more information, see [Create filters in Microsoft Intune](../fundamentals/filters.md).  
+When you create an Endpoint Analytics policy, and are ready to deploy this policy to your users or devices, you can use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).  
 
 ## <a name="bkmk_prs_ps1"></a> Create and deploy custom script packages
 
