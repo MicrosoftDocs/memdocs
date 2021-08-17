@@ -117,7 +117,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        - **CN={{UserName}}**: The user name of the user, such as janedoe.
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
-       - **CN={{DeviceId}}**: An ID assigned when you enroll a deivce in Intune.
+       - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
        - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
        - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
        - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
@@ -266,7 +266,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - **iOS/iPadOS**: Intune randomizes the URLs and provides a single URL to a device. If the device can’t access the NDES server, the SCEP request fails.
      - **Windows**: The list of NDES URLs is randomized and then passed to the Windows device, which then tries them in the order received, until one that's available is found. If the device can’t access any of the NDES servers, the process fails.
 
-     If a device fails to reach the same NDES server successfully during any of the three calls to the NDES server, the SCEP request fails. For example, this might happen when a load balancing solution provides a different URL for the second or third call to the NDES server, or provides a different actual NDES server based on a virtualized URL for NDES. After a failed request, a device tries the process again on its next policy cycle, starting with the randomized list of NDES URLs (or a single URL for iOS/iPadOS).  
+     If a device fails to reach the same NDES server successfully during any of the three calls to the NDES server, the SCEP request fails. For example, this might happen when a load-balancing solution provides a different URL for the second or third call to the NDES server, or provides a different actual NDES server based on a virtualized URL for NDES. After a failed request, a device tries the process again on its next policy cycle, starting with the randomized list of NDES URLs (or a single URL for iOS/iPadOS).  
 
 8. Select **Next**.
 
