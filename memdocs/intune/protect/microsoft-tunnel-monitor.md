@@ -33,7 +33,7 @@ After installation of Microsoft Tunnel, you can view the server configuration an
 
 Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
-Select a server and then open the **Health check** tab to view the that servers health status metrics. By default, each metric uses predefined threshold values that determine the status. The following metrics [support customization of these thresholds](#manage-health-status-thresholds):
+Select a server and then open the **Health check** tab to view that servers health status metrics. By default, each metric uses predefined threshold values that determine the status. The following metrics [support customization of these thresholds](#manage-health-status-thresholds):
 
 - CPU usage
 - Memory usage
@@ -75,7 +75,7 @@ Default values for server health metrics:
 - **Internal network accessibility** – Status from the most recent check of the internal URL. You configure the URL as part of a [Tunnel Site configuration](../protect/microsoft-tunnel-configure.md#to-create-a-site-configuration).
   - **Healthy** - The server can access the URL specified in the site properties.
   - **Unhealthy** - The server can't access the URL specified in the site properties.
-  - **Unknown** - This status appears when you haven't set a URL in the site properties. This doesn’t affect the overall status of the site.
+  - **Unknown** - This status appears when you haven't set a URL in the site properties. This status doesn’t affect the overall status of the site.
 
 - **Server version** - The status of the Tunnel Gateway Server software, in relation to the most recent version.
   - **Healthy** - Up to date with the most recent software version
@@ -114,7 +114,7 @@ After you modify thresholds, the values on a servers *Health check* tab automati
 :::image type="content" source="./media/microsoft-tunnel-monitor/server-health-check.png" alt-text="Screen capture of a servers Health check view.":::
 ## Health status trends for Tunnel servers
 
-View health status trends Microsoft Tunnel Gateway health metrics in the form of a chart. Data for the charts is averaged over a three-hour block and therefore can be delayed up to three hours.
+View health status trends Microsoft Tunnel Gateway health metrics in the form of a chart. Data for the charts is averaged over a three-hour block and as such can be delayed up to three hours.
 
 The health status trend charts are available for the following metrics:
 

@@ -93,7 +93,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
      For more information, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
-   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there is no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
+   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there's no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
 
      When set to *Yes*, configure the following options:
 
@@ -262,7 +262,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.  
    - **Per-app VPN**:  
-     - To enable a per-app VPN, select **Enable**. Additional configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
+     - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
 
         For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
 
