@@ -55,13 +55,13 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator**.
 
-    ![Create a profile for Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
+    ![Create a profile for Apple Configurator.](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
 2. Choose **Profiles** > **Create**.
 
-3. Under **Create Enrollment Profile**, On **Basics** tab type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
+3. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
 
-    ![apple-configurator-profile-create-new](https://user-images.githubusercontent.com/73707106/129382812-6a8c4eac-f3d2-44e6-a1ed-c2b56c254afd.png)
+    :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
 4. Click **Next** to display the **Settings** page.
 
