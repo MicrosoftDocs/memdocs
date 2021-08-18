@@ -55,15 +55,17 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator**.
 
-    ![Create a profile for Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
+    ![Create a profile for Apple Configurator.](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
 2. Choose **Profiles** > **Create**.
 
-3. Under **Create Enrollment Profile**, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
+3. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
 
-    ![Screenshot of the create profile screen with Enroll with user affinity selected](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
+    :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
-4. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
+4. Click **Next** to display the **Settings** page.
+
+5. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
 
     - **Enroll with user affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. The device must be affiliated with a user with Setup Assistant and can then access company data and email. Only supported for Setup Assistant enrollment. User affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
@@ -72,7 +74,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
      > [!NOTE]
      > When **Enroll with user affinity** is selected, make sure that the device is affiliated with a user with Setup Assistant within the first 24 hours of the device being enrolled. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
 
-5. If you chose **Enroll with User Affinity**, you have the option to let users authenticate with Company Portal instead of the Apple Setup Assistant.
+6. If you chose **Enroll with User Affinity**, you have the option to let users authenticate with Company Portal instead of the Apple Setup Assistant.
 
     > [!NOTE]
     > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
@@ -83,7 +85,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
     > These are not supported when authenticating with Apple Setup Assistant.
 
 
-6. Choose **Create** to save the profile.
+7. Choose **Create** to save the profile.
 
 ## Setup Assistant enrollment
 

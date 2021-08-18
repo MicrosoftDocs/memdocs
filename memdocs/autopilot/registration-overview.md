@@ -74,7 +74,7 @@ For more information about device IDs, see the following topics:
 
 ## Windows Autopilot devices
 
-Devices that have been registered with the Windows Autopilot service are displayed in the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices | Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**:
+Devices that have been registered with the Windows Autopilot service are displayed in the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices > **Enroll devices** | Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**:
 
 ![Autopilot devices](images/ap-devices.png)
 
