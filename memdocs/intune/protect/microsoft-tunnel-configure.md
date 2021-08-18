@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/04/2021
+ms.date: 08/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,11 +87,13 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
 
+   - **URL for internal network access check**: Specify an HTTP or HTTPS URL for a location on your internal network. Every five minutes, each server that's assigned to this site will attempt to access the URL to confirm that it can access your internal network. Servers report the status of this check as *Internal network accessibility* on the servers [*Health check*](../protect/microsoft-tunnel-monitor.md#use-the-admin-center-ui) tab.
+
    - **Automatically upgrade servers at this site**: If *Yes*, servers upgrade automatically when an upgrade is available. If *No*, upgrade is manual and an administrator must approve an upgrade before it can start.
 
      For more information, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
-   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there is no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
+   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there's no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
 
      When set to *Yes*, configure the following options:
 
@@ -260,7 +262,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.  
    - **Per-app VPN**:  
-     - To enable a per-app VPN, select **Enable**. Additional configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
+     - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
 
         For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
 
@@ -299,7 +301,7 @@ Intune periodically releases updates to the Microsoft Tunnel server. To stay in 
 By default, after a new upgrade is available Intune automatically starts the upgrade of tunnel servers as soon as possible, at each of your tunnel sites. To help you manage upgrades, you can configure options that manage the upgrade process:
 
 - You can allow automatic upgrade of servers at a site, or require admin approval before upgrades being.
-- You can configure a maintenance window which limits when upgrades at a site can start. 
+- You can configure a maintenance window which limits when upgrades at a site can start.
 
 For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade opotons, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
