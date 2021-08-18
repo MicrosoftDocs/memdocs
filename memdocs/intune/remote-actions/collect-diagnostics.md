@@ -122,8 +122,11 @@ Files:
 
 ## Disable device diagnostics
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Diagnostics settings**.
+1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
 2.	Change the control to **Disabled**.
+
+![Disable-Device-Diagnostics-Intune-MEM-Admin-Center](https://user-images.githubusercontent.com/73707106/129567069-06e7c19e-58e6-4650-b0e8-77cb252aa65b.jpeg)
+
 
 ## Known issues with device diagnostics
 Currently there are the two main issues that may cause device diagnostics to fail:  
