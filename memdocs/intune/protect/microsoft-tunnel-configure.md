@@ -87,7 +87,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
 
-   - **URL for internal network access check**: Specify an HTTP or HTTPS URL for a location on your internal network. Every five minutes each server assigned to this site attempts to access this URL to confirm that the server can access your internal network. You can view the status of these access checks in the Microsoft Endpoint Manager admin center while [viewing a servers *Health status*](../protect/microsoft-tunnel-monitor.md#use-the-admin-center-ui).
+   - **URL for internal network access check**: Specify an HTTP or HTTPS URL for a location on your internal network. Every five minutes each server assigned to this site attempts to access this URL to confirm that the server can access your internal network. The status of this check is reported as *Internal network accessibility* on a servers [*Health check*](../protect/microsoft-tunnel-monitor.md#use-the-admin-center-ui) tab.
 
    - **Automatically upgrade servers at this site**: If *Yes*, servers upgrade automatically when an upgrade is available. If *No*, upgrade is manual and an administrator must approve an upgrade before it can start.
 

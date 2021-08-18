@@ -72,7 +72,7 @@ Default values for server health metrics:
   - *Warning* - 30 days or less
   - *Unhealthy* - The certificate is expired
 
-- **Internal check** – Status from the most recent check of the internal URL. You configure the URL as part of a [Tunnel Site configuration](../protect/microsoft-tunnel-configure.md#to-create-a-site-configuration).
+- **Internal network accessibility** – Status from the most recent check of the internal URL. You configure the URL as part of a [Tunnel Site configuration](../protect/microsoft-tunnel-configure.md#to-create-a-site-configuration).
   - **Healthy** - The server can access the URL specified in the site properties.
   - **Unhealthy** - The server can't access the URL specified in the site properties.
   - **Unknown** - This status appears when you haven't set a URL in the site properties. This doesn’t affect the overall status of the site.
