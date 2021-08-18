@@ -73,13 +73,16 @@ Now that the languages are installed on the image that users will receive, you n
 9. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
 10. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
 11. In the "Group Policy Management Editor", navigate to **User Configuration** > **Preferences** > **Windows Settings**, right-click **Regional Options**, and select **New** > **Regional Options**.
-12. Switch to the **Common** tab and check the following three options:
+12. Under "User Locale", select the language and region combination that matches the registry key you created abveo.
+13. After selecting your desired language and region combination from the dropdown, the dropdown menu may underlined in red, indicating that the selection is not confirmed. Hit the **F5** function key on your keyboard to confirm the selection, resulting in a green underline.
+14. Click the language dropdown menu and selectthe same language you specified in the reg key above.
+15. Switch to the **Common** tab and check the following three options:
     - **Run in logged-on user's security context (user policy option).**
     - **Apply once and do not reapply.**
     - **Item-level targeting.**
-13. Select **Targeting..**, **New Item**, and **Security Group**.
-14. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
-15. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
+16. Select **Targeting..**, **New Item**, and **Security Group**.
+17. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
+18. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
 
 You can perform these steps for each language you need to provide as the default language for users. If your users have both Cloud PCs and physical devices, you may want to apply [group policy loopback](https://docs.microsoft.com/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy) so these settings only affect users when they sign in to ther Cloud PC.
 
