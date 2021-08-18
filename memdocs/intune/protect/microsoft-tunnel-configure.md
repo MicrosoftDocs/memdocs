@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/04/2021
+ms.date: 08/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -86,6 +86,8 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
    - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address or FQDN can identify an individual server or a load-balancing server. The IP address or FQDN must be resolvable in public DNS and the resolved IP address must be publicly routable.
 
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
+
+   - **URL for internal network access check**: Specify an HTTP or HTTPS URL for a location on your internal network. Every five minutes each server assigned to this site attempts to access this URL to confirm that the server can access your internal network. You can view the status of these access checks in the Microsoft Endpoint Manager admin center while [viewing a servers *Health status*](../protect/microsoft-tunnel-monitor.md#use-the-admin-center-ui).
 
    - **Automatically upgrade servers at this site**: If *Yes*, servers upgrade automatically when an upgrade is available. If *No*, upgrade is manual and an administrator must approve an upgrade before it can start.
 
@@ -299,7 +301,7 @@ Intune periodically releases updates to the Microsoft Tunnel server. To stay in 
 By default, after a new upgrade is available Intune automatically starts the upgrade of tunnel servers as soon as possible, at each of your tunnel sites. To help you manage upgrades, you can configure options that manage the upgrade process:
 
 - You can allow automatic upgrade of servers at a site, or require admin approval before upgrades being.
-- You can configure a maintenance window which limits when upgrades at a site can start. 
+- You can configure a maintenance window which limits when upgrades at a site can start.
 
 For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade opotons, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
