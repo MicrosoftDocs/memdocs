@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/10/2021
+ms.date: 08/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -215,7 +215,12 @@ You can view the **Antivirus agent status** report using the following steps:
 3. Select the **Reports** tab > **Antivirus agent status** to open the report.
 4. Click **Generate report** (or **Generate again**) to retrieve current data.
 
-The information for this report is based on details available from the [Defender CSP](/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
+After you generate the report, you can select **Columns** to view the full list of details that are available in the report.
+
+The information for this report is based on details available from the following CSPs, which are documented in the Windows client-management documentation:
+
+- [Defender CSP](/windows/client-management/mdm/defender-csp)
+- [WindowsAdvancedThreatProtection CSP](/windows/client-management/mdm/windowsadvancedthreatprotection-csp).
 
 Additional reports for Microsoft Defender Antivirus include:
 
