@@ -59,11 +59,12 @@ Now that the languages are installed on the image that users will receive, you n
 6. Enter the following details in the **General**. Here is an example that shows Spanish (Spain) with language code es-ES:
     - Action: Replace
     - Hive: HKEY_CURRENT_USER
-    - Key Path: ControlPanel\Desktop
-    - Value name: PreferreUILanguages
+    - Key Path: Control Panel\Desktop
+    - Value name: PreferredUILanguages
     - Value type: REG_SZ
     - Value data: [Language code].
-        !Note: To find the language code for your desired language and region combination, see (link).
+      > [!Note]
+      > To find the language code for your desired language and region combination, see the [language pack list](https://docs.microsoft.com/windows-hardware/manufacture/desktop/available-language-packs-for-windows#language-packs).
 7. Switch to the **Common** tab and check the following three options:
     - **Run in logged-on user's security context (user policy option)**
     - **Apply once and do not reapply**
