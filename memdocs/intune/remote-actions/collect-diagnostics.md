@@ -121,11 +121,17 @@ Files:
 51. %windir%\Logs\WindowsUpdate\*.etl
 
 ## Disable device diagnostics
+
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Diagnostics settings**.
+
+1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
 2.	Change the control to **Disabled**.
 
+     :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control set to Disabled.":::
+
 ## Known issues with device diagnostics
-Currently there are the two main issues that may cause device diagnostics to fail:  
+
+Currently there are the two main issues that may cause device diagnostics to fail:
+
 1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP that prevents timeout during upload.  After installing the update please make sure to reboot your device.
 2. The device wasn't able to receive the device action within a 24-hour window.  If the device is offline or turned off this may cause a failure.
