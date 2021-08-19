@@ -205,7 +205,7 @@ This article describes the different [device properties](#device-properties) and
   - Windows 10 and newer
 
 > [!TIP]
-> Use the powershell command `Get-WindowsEdition -Online` from a Windows device to return the edition name.  
+> Use the powershell command `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` from a Windows device to return the SKU number.
 
 ## Advanced rule editing
 
