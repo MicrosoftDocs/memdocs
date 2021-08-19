@@ -873,7 +873,7 @@ By default, apps are considered single identity. The SDK sets the process identi
 
 ## Siri Intents
 
-If your app integrates with Siri Intents, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
+If your app integrates with Siri Intents or makes Siri Intent Donations, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
     
 ## Notifications
 
