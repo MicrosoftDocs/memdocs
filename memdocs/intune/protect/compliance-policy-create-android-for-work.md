@@ -56,7 +56,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **Require the device to be at or under the machine risk score**  
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -173,7 +173,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 ### Microsoft Defender for Endpoint - *for Personally-Owned Work Profile*
 
 - **Require the device to be at or under the machine risk score**  
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -215,10 +215,10 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   Select the evaluation type you want to use to compute the SafetyNet device attestation response.
 
-  - **Not configured (defaults to basic evaluation)** – This is the default.
-  - **Hardware-backed key** – Require devices have hardware-backed key attestation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
+  - **Not configured (defaults to basic evaluation)** – (*default*)
+  - **Hardware-backed key** – Require that hardware-backed key attestation is used for SafetyNet evaluation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
 
-  For more information, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafteyNet documentation for Android.
+  For more information about SafetyNet and which devices support hardware-backed key attestation, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafteyNet documentation for Android.
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
