@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/17/2021
+ms.date: 08/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,6 +60,11 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- ########################## -->
 ## Week of August 16, 2021
+
+### App management
+
+#### Intune Company Portal for macOS devices is now a universal app<!-- 10650481 -->
+When you download Intune Company Portal for macOS devices version 2.18.2107 and later, it installs the new universal version of the app that runs natively on Apple Silicon Macs. The same app will install the x64 version of the app on Intel Mac machines. For related information, see [Add the Company Portal for macOS app](..\apps\apps-company-portal-macos.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
