@@ -34,9 +34,11 @@ Windows 365 provides a per-user per-month license model by hosting Cloud PCs on 
 
 ## Virtual network connectivity
 
-Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. The virtual NICs are created by Windows 365 in your Azure subscription. They’re attached to an Azure Virtual Network based on your on-premises network connection (OPNC) configuration.
+Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. The virtual NICs are created by Windows 365 in your Azure subscription. They’re attached to an Azure Virtual Network based on your [on-premises network connection (OPNC)](on-premises-network-connections.md) configuration.
 
-Windows 365 is [supported in a number of Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You can leverage Azure [virtual network peering](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) or [Virtual WAN](/azure/architecture/networking/hub-spoke-vwan-architecture) to extend access between Azure regions you currently use to one or more Windows 365 supported Azure regions.
+Windows 365 is [supported in a number of Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You control which Azure region used by selecting an Azure virtual network from your Azure subscription when [creating an OPNC](create-on-premises-network-connection.md). The Azure virtual network's region determines where the Cloud PC is created and [hosted](architecture.md##hosted-on-behalf-of-connectivity). 
+
+You can leverage Azure [virtual network peering](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) or [Virtual WAN](/azure/architecture/networking/hub-spoke-vwan-architecture) to extend access between Azure regions you currently use to one or more Windows 365 supported Azure regions.
 
 By using Azure Networking, Windows 365 lets you use Virtual Network security and routing features, including:
 
@@ -45,13 +47,15 @@ By using Azure Networking, Windows 365 lets you use Virtual Network security and
 - [Azure Firewall](/azure/firewall/overview)
 - [Network virtual appliances](https://azure.microsoft.com/blog/best-practices-to-consider-before-deploying-a-network-virtual-appliance/) (NVAs)
 
-However, for web filtering and network protection for Cloud PCs, consider using the [Network Protection](/microsoft-365/security/defender-endpoint/network-protection) and [Web Protection](/microsoft-365/security/defender-endpoint/web-protection-overview) features of Microsoft Defender for Endpoint. These features can be deployed across both physical and virtual endpoints by using the Microsoft Endpoint Manager admin center.
+> [!TIP]
+> For web filtering and network protection for Cloud PCs, consider using the [Network Protection](/microsoft-365/security/defender-endpoint/network-protection) and [Web Protection](/microsoft-365/security/defender-endpoint/web-protection-overview) features of Microsoft Defender for Endpoint. These features can be deployed across both physical and virtual endpoints by using the Microsoft Endpoint Manager admin center.
 
 ## Microsoft Endpoint Manager integration
 
-Microsoft Endpoint Manager is used to manage all of your Cloud PCs. Microsoft Endpoint Manager and associated Windows components have a variety of [network endpoints that must be allowed](/mem/intune/fundamentals/intune-endpoints) through the Virtual Network. Apple and Android endpoints may be safely ignored if you don’t use Microsoft Endpoint Manager for managing those device types.
+[Microsoft Endpoint Manager](/mem/endpoint-manager-overview) is used to manage all of your Cloud PCs. Microsoft Endpoint Manager and associated Windows components have a variety of [network endpoints that must be allowed](/mem/intune/fundamentals/intune-endpoints) through the Virtual Network. Apple and Android endpoints may be safely ignored if you don’t use Microsoft Endpoint Manager for managing those device types.
 
-Be sure to allow access to [Windows Notification Services (WNS)](/mem/intune/fundamentals/intune-endpoints#windows-push-notification-services-wns). You might not immediately notice an impact if access is blocked. However, WNS enables Microsoft Endpoint Manager to trigger actions on Windows endpoints immediately instead of waiting for normal policy polling intervals on those devices or policy polling at startup/logon behavior. WNS [recommends](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) direct connectivity from the Windows client to WNS.
+> [!TIP]
+> Be sure to allow access to [Windows Notification Services (WNS)](/mem/intune/fundamentals/intune-endpoints#windows-push-notification-services-wns). You might not immediately notice an impact if access is blocked. However, WNS enables Microsoft Endpoint Manager to trigger actions on Windows endpoints immediately instead of waiting for normal policy polling intervals on those devices or policy polling at startup/logon behavior. WNS [recommends](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) direct connectivity from the Windows client to WNS.
 
 You’ll only need to grant access to a subset of endpoints based on your Microsoft Endpoint Manager tenant location. To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. Under **Tenant location**, you’ll see something similar to "North America 0501" or "Europe 0202". The rows in the Microsoft Endpoint Manager documentation are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Because tenants may be relocated within a region, it’s best to allow access to an entire region rather than a specific endpoint in that region.
 
@@ -77,11 +81,13 @@ Azure AD provides user authentication and authorization for both the Windows 365
 
 Windows 365 requires that Cloud PCs be joined to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information see, [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
 
-## "Hosted on behalf of" connectivity
+## "Hosted on behalf of" architecture
 
-The "hosted on behalf of" connectivity lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network, attach hosted Azure services to a customer subscription. This lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
+The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
 
 All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exists in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
+
+Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-on-premises-network-connection.md). 
 
 Windows 365 aligns with Microsoft 365 data protection policies and provisions. Customer data within Microsoft's enterprise cloud services is protected by a variety of technologies and processes:
 
