@@ -36,7 +36,7 @@ Windows 365 provides a per-user per-month license model by hosting Cloud PCs on 
 
 Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. The virtual NICs are created by Windows 365 in your Azure subscription. They’re attached to an Azure Virtual Network based on your [on-premises network connection (OPNC)](on-premises-network-connections.md) configuration.
 
-Windows 365 is [supported in a number of Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You control which Azure region used by selecting an Azure virtual network from your Azure subscription when [creating an OPNC](create-on-premises-network-connection.md). The Azure virtual network's region determines where the Cloud PC is created and [hosted](architecture.md##hosted-on-behalf-of-connectivity). 
+Windows 365 is [supported in a number of Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You control which Azure region used by selecting an Azure virtual network from your Azure subscription when [creating an OPNC](create-on-premises-network-connection.md). The Azure virtual network's region determines where the Cloud PC is created and [hosted](architecture.md#hosted-on-behalf-of-architecture).
 
 You can leverage Azure [virtual network peering](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) or [Virtual WAN](/azure/architecture/networking/hub-spoke-vwan-architecture) to extend access between Azure regions you currently use to one or more Windows 365 supported Azure regions.
 
@@ -87,7 +87,7 @@ The "hosted on behalf of" architecture lets Microsoft services, after they’re 
 
 All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exists in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
 
-Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-on-premises-network-connection.md). 
+Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-on-premises-network-connection.md).
 
 Windows 365 aligns with Microsoft 365 data protection policies and provisions. Customer data within Microsoft's enterprise cloud services is protected by a variety of technologies and processes:
 
