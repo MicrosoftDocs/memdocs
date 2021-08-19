@@ -47,7 +47,7 @@ To help keep the apps more secure and up to date once installed, the Company Por
 You can instruct users to download, install, and sign in to Company Portal for macOS. For instructions on downloading, installing, and signing into the Company Portal, see [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 > [!NOTE]
-> When you download the Intune Company Portal for macOS devices version 2.18.2107, it installs the new universal version of the app that runs natively on Apple Silicon Macs. The same app will install the x64 version of the app on Intel Mac machines.
+> When you download the Intune Company Portal for macOS devices version 2.18.2107 and later, it installs the new universal version of the app that runs natively on Apple Silicon Macs. The same app will install the x64 version of the app on Intel Mac machines.
 
 ##	Install Company Portal for macOS as a macOS LOB app
 
