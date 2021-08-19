@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2021
+ms.date: 08/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,13 +50,13 @@ Create an [iOS/iPadOS device features configuration profile](device-features-con
 > Be sure to add all printers to the same profile. Apple prevents multiple AirPrint profiles from targeting the same device.
 
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use hostnames to identify printers, you can get the IP address by pinging the printer in the terminal. Get the IP address and path (in this article) provides more details.
-- **Path**: The path is typically `ipp/print` for printers on your network. Get the IP address and path (in this article) provides more details.
+- **Resource path**: The path is typically `ipp/print` for printers on your network. Get the IP address and path (in this article) provides more details.
 - **Port**: Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port. Available on iOS 11.0+, and iPadOS 13.0+.
-- **TLS**: **Enable** secures AirPrint connections with Transport Layer Security (TLS). Available on iOS 11.0+, and iPadOS 13.0+.
+- **Force TLS**: **Enable** secures AirPrint connections with Transport Layer Security (TLS). Available on iOS 11.0+, and iPadOS 13.0+.
 
 To add AirPrint servers, you can:
 
-- **Add** adds the AirPrint server to the list. Many AirPrint servers can be added.
+- Enter printer details to add an AirPrint destination to the list. Many AirPrint servers can be added.
 - **Import** a comma-separated file (.csv) with this information. Or, **Export** to create a list of the AirPrint servers you added.
 
 ### Get server IP address, resource path, and port
@@ -203,14 +203,14 @@ When you assign the policy to an iPhone, the page looks similar to the following
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
   - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
   - **Notifications**: **Enable** or **Disable** the app from sending notifications to devices.
-    - **Show in Notification Center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center.
-    - **Show in Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.
+    - **Show in notifications center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center.
+    - **Show on Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.
     - **Alert type**: When devices are unlocked, choose how the notification is shown. Your options:
       - **None**: No notification is shown.
       - **Banner**: A banner is briefly shown with the notification.
       - **Modal**: The notification is shown and users must manually dismiss it before continuing to use the device.
     - **Badge on app icon**: Select **Enable** to add a badge to the app icon. The badge means the app sent a notification.
-    - **Sounds**: Select **Enable** to play a sound when a notification is delivered.
+    - **Enable sounds**: Select **Enable** to play a sound when a notification is delivered.
     - **Show previews**: Shows a preview of recent app notifications. Select when to show the preview. The value you choose overrides the user configured value on the device (Settings > Notifications > Show Previews). Your options:
       - **Not configured**: Intune doesn't change or update this setting.
       - **When unlocked**: The preview only shows when the device is unlocked.
@@ -230,11 +230,11 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
+- **"If Lost, Return to..." Message**: If devices are lost or stolen, enter a note that might help get the device returned if found. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
+
+ The text you enter is shown on the sign in window and lock screen on devices.
+
 - **Asset tag information**: Enter information about the asset tag of the device. For example, enter `Owned by Contoso Corp` or `Serial Number: {{serialnumber}}`.
-
-  The text you enter is shown on the sign in window and lock screen on devices.
-
-- **Lock screen footnote**: If devices are lost or stolen, enter a note that might help get the device returned. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
 
   Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}` or `Device ID: {{DEVICEID}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `DEVICENAME` or any other device-specific value.
 
@@ -246,7 +246,7 @@ This feature applies to:
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Realm**: Enter the domain part of the URL. For example, enter `contoso.com`.
-- **Kerberos principal name**: Intune looks for this attribute for each user in Azure AD. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
+- **Azure AD username attribute**: Intune looks for this attribute for each user in Azure AD. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS will prompt users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
@@ -285,7 +285,7 @@ This feature applies to:
 
   The `http://.com` and `https://.com` patterns match all HTTP and HTTPS URLs, respectively.
 
-- **Renewal certificate**: If using certificates for authentication (not passwords), select the existing SCEP or PFX certificate as the authentication certificate. Typically, this certificate is the same certificate that's deployed to users for other profiles, such as VPN, Wi-Fi, or email.
+- **Credential renewal certificate**: If using certificates for authentication (not passwords), select the existing SCEP or PFX certificate as the authentication certificate. Typically, this certificate is the same certificate that's deployed to users for other profiles, such as VPN, Wi-Fi, or email.
 
 ## Web content filter
 
@@ -341,7 +341,7 @@ This feature applies to:
 
   After users successfully sign in to the Authenticator app, they aren't prompted to sign in to other apps that use the SSO extension. The first time users open managed apps that don't use the SSO extension, they're prompted to select the account that's signed in.
 
-- **Shared device mode** (Microsoft Azure AD only): Choose **Enable** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
+- **Enable shared device mode** (Microsoft Azure AD only): Choose **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
   For more information about shared device mode and how to enable it, see [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).  
 
@@ -380,15 +380,16 @@ This feature applies to:
 
   - **Add**: Select to add your configuration keys.
 
-- **Keychain usage** (Kerberos only): **Block** prevents passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
-- **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
-- **Default realm** (Kerberos only): **Enable** sets the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
+- **Block keychain usage** (Kerberos only): **Yes** prevents passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
+- **Require Face ID, Touch ID, or passcode** (Kerberos only): **Yes** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
+- **Set as default realm** (Kerberos only): **Yes** sets the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
   > [!TIP]
-  > - **Enable** this setting if you're configuring multiple Kerberos SSO app extensions in your organization.
-  > - **Enable** this setting if you're using multiple realms. It sets the **Realm** value you entered as the default realm.
+  > - Select **Yes** for this setting if you're configuring multiple Kerberos SSO app extensions in your organization.
+  > - Select **Yes** for this setting if you're using multiple realms. It sets the **Realm** value you entered as the default realm.
   > - If you only have one realm, leave it **Not configured** (default).
 
+- **Block Autodiscover** (Kerberos only): **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name. 
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   > [!TIP]
@@ -413,7 +414,7 @@ This feature applies to:
   - Have access to the authentication ticket
   - Authenticate users to services they’re authorized to access
 
-- **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
+- **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Wallpaper
