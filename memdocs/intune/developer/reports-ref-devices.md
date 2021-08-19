@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/13/2021
+ms.date: 08/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -278,7 +278,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 
 ## devicePropertyHistories
 
-The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 90 days. The DateKey column indicates the day for each row.
+The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 60 days. The DateKey column indicates the day for each row.
 
 |          Property          |                                                                                      Description                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
