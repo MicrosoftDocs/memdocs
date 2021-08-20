@@ -22,7 +22,7 @@ With Intune's October (2110) service release, **Safe boot** and **Debugging feat
 **Developer settings** will be available for new and existing profiles in the September (2109) service release. By default, it is set as "Not configured". If you choose to set this to "Allow", users will be able to access developer settings which may include the ability to enable debugging features and/or reboot the device into safe boot mode. 
 
 > [!NOTE]
-> If Developer settings is set to **Allow**, will override both the **Safe boot** and **Debugging features** settings.
+> If **Developer settings** is set to **Allow**, it will override both the **Safe boot** and **Debugging features** settings.
 
 **What you need to do to prepare:**
 
