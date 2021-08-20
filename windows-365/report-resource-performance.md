@@ -66,8 +66,7 @@ You can review the CPU spike time and RAM spike time scores and percentages by f
 
 When you click on a particular device in one of the reports, you'll see specific information for that device. If device score is below the baseline, you can improve device performance and score by adding more resources to the device and taking a resize action.  
 
-
 <!-- ########################## -->
 ## Next steps
 
-[]()
+[Remoting connection report](report-remoting-connection.md)
