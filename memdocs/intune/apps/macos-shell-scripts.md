@@ -51,18 +51,21 @@ Ensure that the following prerequisites are met when composing shell scripts and
  
 ## Create and assign a shell script policy
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **macOS** > **Scripts** > **Add**.
-3. In **Basics**, enter the following properties, and select **Next**:
+2. Select **Devices** > **macOS** > **Shell scripts** > **Add**.
+   
+   ![macOS_Shell scripts](https://user-images.githubusercontent.com/73707106/130217876-5ce7b65b-8ceb-402b-8fb3-34d98756486d.jpg)
+ 
+4. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the shell script.
    - **Description**: Enter a description for the shell script. This setting is optional, but recommended.
-4. In **Script settings**, enter the following properties, and select **Next**:
+5. In **Script settings**, enter the following properties, and select **Next**:
    - **Upload script**: Browse to the shell script. The script file must be less than 200 KB in size.
    - **Run script as signed-in user**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script as the root user. 
    - **Hide script notifications on devices:** By default, script notifications are shown for each script that is run. End users see a *IT is configuring your computer* notification from Intune on macOS devices.
    - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once.
    - **Max number of times to retry if script fails:** Select how many times the script should be run if it returns a non-zero exit code (zero meaning success). Choose **Not configured** (default) to not retry when a script fails.
-5. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
-6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
+6. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
    > [!NOTE]
    > - Shell scripts assigned to user groups applies to any user logging in to the Mac.  
    > - Updating assignments for shell scripts also updates assignments for [Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
