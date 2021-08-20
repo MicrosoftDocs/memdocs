@@ -63,6 +63,17 @@ Another factor to consider is your on-premises AD replication time. Make sure th
 - Appears in the correct OU.
 - Is successfully synced to Azure AD before provisioning times out.
 
+## Azure AD service connection point (SCP) misconfigured
+
+The service connection point (SCP) is used by your cloud PC's to discover your Azure AD tenant information. You must configure your CSP's via Azure AD connect for each forest you plan to join cloud PC's to. 
+
+If the SCP configuration nis non-existent, or cannot be discovered via the vNet declared, provisioning will fail. 
+
+To understand more about the SCP and learn how to configure it, see the [Azure AD documentation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
+
+**Suggested test**: Confirm with your identity team that the SCP exists for all target forests. 
+
+
 ## Intune enrollment failed
 
 Windows 365 performs a device-based MDM enrollment into Intune.
