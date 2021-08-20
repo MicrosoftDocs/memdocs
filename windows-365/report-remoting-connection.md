@@ -32,14 +32,14 @@ ms.collection: M365-identity-device-management
 
 The Remoting connection report in [Endpoint analytics](/mem/analytics/overview) helps you monitor key performance metrics for connecting to the Cloud PCs. There are two metrics in this report:
 
-- **Cloud PC Sign in time (sec)**
-- **Round Trip Time (ms)**
+- **Round trip time (ms)**
+- **Sign in time (sec)**
 
 Resource performance score also contributes to your organization's [Microsoft Productivity score](/microsoft-365/admin/productivity/productivity-score).
 
 ## Prerequisites
 
-Before you can use this report, you'll need to enroll your Cloud PC devices in Endpoint analytics. For more information, see [Enroll Intune devices in Endpoint analytics](/mem/analytics/enroll-intune).
+Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/mem/analytics/enroll-intune).
 
 ## Use the Remoting connection report
 

@@ -41,7 +41,7 @@ Resource performance score also contributes to your organization's [Microsoft Pr
 
 ## Prerequisites
 
-Before you can use this report, you'll need to enroll your Cloud PC devices in Endpoint analytics. For more information, see [Enroll Intune devices in Endpoint analytics](/mem/analytics/enroll-intune).
+Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/mem/analytics/enroll-intune).
 
 ## Use the Resource performance report
 
