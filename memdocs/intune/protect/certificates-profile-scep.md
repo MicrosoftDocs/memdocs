@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/17/2021
+ms.date: 08/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -256,7 +256,11 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
 
-     The URL can be HTTP or HTTPS. However, to support Android Enterprise Device Owner devices, the SCEP Server URL must use HTTPS.
+     The URL can be HTTP or HTTPS. However, to support the following devices, the SCEP Server URL must use HTTPS:
+     - Android device administrator
+     - Android Enterprise device owner
+     - Android Enterprise corporate-owned work profile
+     - Android Enterprise personally-owned work profile
 
      You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs its possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.
 
