@@ -105,6 +105,9 @@ The Intune management extension has the following prerequisites. Once they're me
 3. In **Basics**, enter the following properties, and select **Next**:
     - **Name**: Enter a name for the PowerShell script. 
     - **Description**: Enter a description for the PowerShell script. This setting is optional, but recommended.
+
+     ![Basics tab](https://user-images.githubusercontent.com/73707106/130206555-75c3d256-6623-4d56-b75c-b6d1a8492781.jpg)
+     
 4. In **Script settings**, enter the following properties, and select **Next**:
     - **Script location**: Browse to the PowerShell script. The script must be less than 200 KB (ASCII).
     - **Run this script using the logged on credentials**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script in the system context. Many administrators choose **Yes**. If the script is required to run in the system context, choose **No**.
