@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2021
+ms.date: 08/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -90,12 +90,12 @@ To learn more about identity protection profiles in Intune, see [configure ident
     **Default**: Not allowed
 
   - **PIN expiration (days)**  
-    It's a good practice to specify an expiration period for a PIN, after which users must change it. Windows device defaults are 41 days.
+    If configured, the user will be forced to change their PIN after the set number of days. The user can still proactively change their PIN before expiration.
 
     **Default**: Not Configured
 
   - **Remember PIN history**  
-    Restricts the reuse of previously used PINs. Windows devices default to preventing reuse of the last five PINs.  
+    If configured, the user will not be able to reuse this number of previous PINs.
 
     **Default**: Not Configured  
 
