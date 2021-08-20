@@ -24,7 +24,7 @@ ms.reviewer: nandis
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+ms.custom: intune-azure;
 ms.collection: M365-identity-device-management
 ---
 
@@ -42,6 +42,10 @@ Resource performance score also contributes to your organization's [Microsoft Pr
 ## Prerequisites
 
 Before you can use this report, you'll need to enroll your Cloud PC devices in Endpoint analytics. For more information, see [Enroll Intune devices in Endpoint analytics](/mem/analytics/enroll-intune).
+
+## Use the Resource performance report
+
+To get to the **Resource performance** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Resource performance**.
 
 ## Resource performance score tab
 
