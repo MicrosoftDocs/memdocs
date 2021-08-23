@@ -2,7 +2,7 @@
 title: CMG server authentication certificate
 titleSuffix: Configuration Manager
 description: The CMG uses HTTPS for secure client communication over the public internet. You can get a certificate from a public provider, or issue one from your public key infrastructure (PKI).
-ms.date: 08/02/2021
+ms.date: 08/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -103,7 +103,7 @@ If you also enable the CMG for content, confirm that it's also a unique Azure st
 - Test your name in the **Storage account name** field.
 
 > [!IMPORTANT]
-> The DNS name prefix, for example `GraniteFalls`, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a dash (`-`).<!-- SCCMDocs#1080 -->
+> The DNS name prefix should be 3 to 24 characters long, and contain numbers and lowercase letters only. Don't use special characters, like a dash (`-`). For example: `granitefalls`.<!-- SCCMDocs#1080, MEMDocs#1910 -->
 
 ## Issue the certificate
 
