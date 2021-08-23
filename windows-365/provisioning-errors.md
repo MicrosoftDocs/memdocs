@@ -65,11 +65,11 @@ Another factor to consider is your on-premises AD replication time. Make sure th
 
 ## Azure AD service connection point (SCP) misconfigured
 
-The service connection point (SCP) is used by your cloud PC's to discover your Azure AD tenant information. You must configure your CSP's via Azure AD connect for each forest you plan to join cloud PC's to. 
+The service connection point (SCP) is used by your Cloud PCs to discover your Azure AD tenant information. You must configure your SCPs by using Azure AD connect for each forest you plan to join Cloud PCs to. 
 
-If the SCP configuration nis non-existent, or cannot be discovered via the vNet declared, provisioning will fail. 
+If the SCP configuration doesn't exist, or can't be discovered by using the vNet declared, provisioning will fail. 
 
-To understand more about the SCP and learn how to configure it, see the [Azure AD documentation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
+To understand more about the SCP and learn how to configure it, see the [Azure AD documentation](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
 **Suggested test**: Confirm with your identity team that the SCP exists for all target forests. 
 
