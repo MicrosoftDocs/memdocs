@@ -184,20 +184,19 @@ Out of Box Experience (OOBE) enrollment isn't supported for Window 10 Enterprise
 
 Windows 10 Enterprise multi-session managed by Microsoft Endpoint Manager is not currently supported for US Government Community (GCC), GCC High, DoD, or China.
 
-## Known issues and troubleshooting tips
-
+## Known issues
 ### Enrollment issues
 
-|Issue|Possible causes and how to fix|
+|Issue|Details|
 |---------------|---------------------------------|
-|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you’re using is not updated. The agent must be version 2944.1400 or above.<li>You have more than one MDM provider, which is not yet supported.<li>Windows 10 Enterprise multi-session VM is configured outside of a host pool. Microsoft Endpoint Manager only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool was not created through the Azure Resource Manager template.|
+|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you’re using must be version 2944.1400 or later.<li>You have more than one MDM provider, which is not supported.<li>Windows 10 Enterprise multi-session VM is configured outside of a host pool. Microsoft Endpoint Manager only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool was not created through the Azure Resource Manager template.|
 |Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you’re using is not updated. The agent must be version 2944.1400 or above.<li>Azure Virtual Desktop host pool was not created through the Azure Resource Manager template.|
 
 ### Configuration issues
 
-Issue|Possible causes and how to fix|
+Issue|Details|
 --------|------------------------------|
-|Settings catalog policy fails|Confirm the VM is enrolled using device credentials. Enrollment with user credentials is not supported for Windows 10 Enterprise multi-session.|
+|Settings catalog policy fails|Confirm the VM is enrolled using device credentials. Enrollment with user credentials is not currently supported for Windows 10 Enterprise multi-session.|
 |Configuration policy did not apply|Templates (with the exception of Certificates) are not supported on Windows 10 Enterprise multi-session. All policies must be created via the settings catalog.|
 Configuration policy reports as Not applicable|Some policies are not applicable to Azure Virtual Desktop VMs. For a detailed list, review the documentation.|
 |Administrative template policy did not apply|Some ADMX settings currently require a Windows Insider Preview Build. You can hover over the information bubble next to the setting name to see if an Insider build is required for a specific setting.|
