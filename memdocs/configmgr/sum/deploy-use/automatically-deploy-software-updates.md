@@ -62,7 +62,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
 4.  On the **Deployment Settings** page, configure the following settings:
 
-    -  **Type of deployment**: Starting in version 2107, you can specify the deployment type for the software update deployment.
+    -  **Type of deployment**: Starting in version 2107, you can specify the deployment type for the software update deployment. Prior to version 2107, all deployments created by an automatic deployment rule are required.
 
        - Select Required to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.
 
