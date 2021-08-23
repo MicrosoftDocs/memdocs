@@ -117,6 +117,12 @@ items:
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
+    - name: Reports
+      items:
+      - name: Resource performance report
+        href: report-resource-performance.md
+      - name: Remoting connection report
+        href: report-remoting-connection.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
