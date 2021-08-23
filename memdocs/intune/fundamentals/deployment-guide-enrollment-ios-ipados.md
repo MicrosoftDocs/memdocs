@@ -77,7 +77,7 @@ This task list provides an overview. For more specific information, see [Apple B
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (.p7m) is active. For more specific information, see [Get an Apple ADE token](../enrollment/device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- Decide how users will authenticate on their devices: the **Company Portal** app, **Setup Assistant (legacy)**, or **Setup Assistant with modern authentication** ([public preview](public-preview.md)). Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication.
+- Decide how users will authenticate on their devices: the **Company Portal** app, **Setup Assistant (legacy)**, or **Setup Assistant with modern authentication**. Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication.
 
   - Select the **Company Portal** app when:
 
