@@ -22,7 +22,7 @@ The **Work from anywhere score** is a number between 0 and 100. The score re
 
 The following metrics are weighted and used to compute the **Work from anywhere score**:
 
-- [Windows](#bkmk_win10)
+- [Windows](#windows)
 - [Cloud management](#bkmk_management)
 - [Cloud identity](#bkmk_identity)
 - [Cloud provisioning](#bkmk_provisioning)
