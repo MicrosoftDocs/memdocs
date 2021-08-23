@@ -48,12 +48,12 @@ Microsoft Endpoint Manager only supports managing Windows 10 Enterprise multi-se
 This public preview feature supports Windows 10 Enterprise multi-session VMs which are:
 
 - Running Windows 10 multi-session, version 1903 or later.
-- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan).
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
 - Running a Azure Virtual Desktop agent version of 2944.1400 or later.
-- Enrolled in Microsoft Endpoint Manager using one of the following methods:
+- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Microsoft Endpoint Manager using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
+- Azure AD-joined and enrolled in Microsoft Endpoint Manager by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 
 > [!IMPORTANT]
 > If you’re using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in Microsoft Endpoint Manager, like remote sync, won’t work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
