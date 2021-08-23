@@ -2,15 +2,13 @@
 title: Scores, baselines, and insights in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 07/01/2021
+ms.date: 08/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: ce1cdea9-b530-4d4d-a01f-aadc42021831
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
 ---
 
 # <a name="bkmk_device"></a> Endpoint analytics scores, baselines, and insights
@@ -47,7 +45,7 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 - The `Learn more` link takes you to information about how the metric is scored and the recommended course of action is for the insight.  
 
 ## <a name="bkmk_per-device"></a> Per device scores
-
+<!--IN8462182-->
 To help you identify devices that could be impacting user experience, Endpoint analytics shows some scores per device. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk.From the **Endpoint analytics** main page, select the **Device scores** tab to display individual device scores. Sorting by scores can assist you in finding devices that might need attention. The following scores are displayed per device:
 
 - [Endpoint analytics score](enroll-intune.md#bkmk_view)
