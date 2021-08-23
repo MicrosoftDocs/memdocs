@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/16/2021
+ms.date: 08/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -53,7 +53,7 @@ When you upgrade the client from versions 2010 or 2103 to version 2107, the foll
 
 When you look at the **Configurations** tab of the Configuration Manager control panel on the client, it will be blank.
 
-A fix for this issue is planned for when version 2107 is generally available for all customers. If you previously opted in to the early update ring, watch for an update to this current branch version.
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
 If you have to work around the issue before updating to the final build, use the following steps depending upon the scenario.
 
