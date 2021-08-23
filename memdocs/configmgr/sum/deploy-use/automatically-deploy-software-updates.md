@@ -60,7 +60,13 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         -   When you don't enable the deployment, the updates that meet the rule's defined criteria are added to a software update group. The software update deployment content is downloaded, as necessary, and distributed to the specified distribution points. The site creates a disabled deployment on the software update group to prevent the updates from being deployed to clients. This option provides time to prepare to deploy the updates, verify the updates that meet the criteria are adequate, and then enable the deployment.  
 
-4.  On the **Deployment Settings** page, configure the following settings:  
+4.  On the **Deployment Settings** page, configure the following settings:
+
+    -  **Type of deployment**: Starting in version 2107, you can specify the deployment type for the software update deployment.
+
+       - Select Required to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.
+
+       - Select Available to create an optional software update deployment. This deployment is available for users to install from Software Center.
 
     -   **Use Wake on LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](../../core/clients/deploy/configure-wake-on-lan.md).  
 
@@ -119,7 +125,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         -   **Specific time**: Makes software updates included in the deployment available to clients at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
 
-    -   **Installation deadline**: Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
+    -   **Installation deadline**: These options are only available for **Required** deployments. Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
 
         -   **As soon as possible**: Select this setting to automatically install the software updates in the deployment as soon as possible.  
 
@@ -141,12 +147,12 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the clients.  
 
-    -   **Deadline behavior**: Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Deadline behavior**: This setting is only configurable for **Required** deployments. Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
         
         > [!Note]
         > This applies only when the maintenance window is configured for the client device. If no maintenance window is defined on the device, the update of the installation and restart will always happen after the deadline.
 
-    -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
+    -   **Device restart behavior**: This setting is only configurable for **Required** deployments. Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
 
         > [!WARNING]  
         >  Suppressing system restarts can be useful in server environments, or when you don't want the target computers to restart by default. However, doing so can leave computers in an insecure state. Allowing a forced restart helps to ensure immediate completion of the software update installation.  
