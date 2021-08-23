@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Configure infrastructure to support SCEP with Intune
 
-Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](certificates-configure.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices. The [Certificate Connector for Microft Intune](../protect/certificate-connector-overview.md) is required to use SCEP certificate profiles with Intune when you also use an Active Directory Certificate Services Certification Authority, also called a Microsoft CA. The connector isn't required when using [3rd party Certification Authorities](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
+Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](certificates-configure.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices. The [Certificate Connector for Microft Intune](../protect/certificate-connector-overview.md) is required to use SCEP certificate profiles with Intune when you also use an Active Directory Certificate Services Certification Authority, also called a Microsoft CA. The connector isn't required when using [Third-party Certification Authorities](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
 
 The information in this article can help you configure your infrastructure to support SCEP when using Active Directory Certificate Services. After your infrastructure is configured, you can [create and deploy SCEP certificate profiles](certificates-profile-scep.md) with Intune.
 
@@ -60,7 +60,7 @@ To support SCEP, the following on-premises infrastructure must run on servers th
   > [!TIP]
   > Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the [previous connectors remain in support](../protect/certificate-connectors.md), they are no longer available for download.  If you need to install a new connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune.
 
-- **Certification Authority** – Use a Microsoft Active Directory Certificate Services Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 with service pack 1, or later. The version of Windows Server you use must remain in support by Microsoft. A Standalone CA is not supported. For more information, see [Install the Certification Authority](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)). 
+- **Certification Authority** – Use a Microsoft Active Directory Certificate Services Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 with service pack 1, or later. The version of Windows Server you use must remain in support by Microsoft. A Standalone CA isn't supported. For more information, see [Install the Certification Authority](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)).
 
   If your CA runs Windows Server 2008 R2 SP1, you must [install the hotfix from KB2483564](https://support.microsoft.com/kb/2483564/).
 
@@ -74,17 +74,34 @@ To support SCEP, the following on-premises infrastructure must run on servers th
 
 #### Support for NDES on the internet
 
-To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use either an *Azure AD Application Proxy* or a *Web ApplicationProxy Server*. You can also use another reverse proxy of your choice.
+To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use a reverse proxy like *Azure AD Application Proxy*, *Microsoft’s Web Application Proxy Server*, or a third-party reverse proxy service or device.
 
-- **Azure AD Application Proxy** – You can use the Azure AD Application Proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Azure AD Application Proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
+- **Azure AD Application Proxy** – You can use the Azure AD Application Proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This solution allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Azure AD Application Proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
-- **Web Application Proxy Server** - Use a server that runs Windows Server 2012 R2 or later as a Web Application Proxy (WAP) server to publish your NDES URL to the internet.  This allows both intranet and internet facing devices to get certificates.
+- **Web Application Proxy Server** - Use a server that runs Windows Server 2012 R2 or later as a Web Application Proxy (WAP) server to publish your NDES URL to the internet. This solution allows both intranet and internet facing devices to get certificates.
 
   The server that hosts WAP [must install an update](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) that enables support for the long URLs that are used by the Network Device Enrollment Service. This update is included with the [December 2014 update rollup](https://support.microsoft.com/kb/3013769), or individually from [KB3011135](https://support.microsoft.com/kb/3011135).
 
   The WAP server must have an SSL certificate that matches the name that's published to external clients and trust the SSL certificate that's used on the computer that hosts the NDES service. These certificates enable the WAP server to terminate the SSL connection from clients and create a new SSL connection to the NDES service.
 
   For more information, see [Plan certificates for WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) and [general information about WAP servers](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+
+- **Third-party reverse proxy** – When you use a third-party reverse proxy, ensure that the proxy supports a long URI get request. As part of the certificate request flow, the client makes a request with the certificate request in the query string. As a result, the URI length can be large, up to 40 kb in size.
+
+SCEP protocol limitations prevent use of pre-authentication. When you publish the NDES URL via a reverse proxy server you must have *Pre Authentication* set to *Passthrough*. Intune secures the NDES URL when you install the Intune Certificate connector, by installing an Intune-SCEP policy module on the NDES server. The module helps to secure the NDES URL by preventing certificates from being issued to invalid or digitally tampered certificate requests. This limits access to only Intune enrolled devices that you manage with Intune and that have well-formed certificate requests.
+
+When an Intune SCEP certificate profile is delivered to a device, Intune generates a custom challenge blob that it encrypts and signs. The blob isn't readable by the device. Only the policy module and the Intune service can read and verify the challenge blob.  The blob includes details Intune expects will be provided by the device in its certificate signing request (CSR). For example, the expected *Subject* and *Subject Alternative Name* (SAN).
+
+The Intune policy module works to secure NDES in the following ways:
+
+- When attempting to access the published NDES URL directly, the server returns a **403 – Forbidden: Access is denied** response.
+
+- When a well-formed SCEP certificate request is received and the request payload includes both the challenge blob and the device CSR, the policy module compares the details of the device CSR against the challenge blob:
+
+  - If the validation fails, no certificate is issued.
+
+  - Only the certificate requests from an Intune enrolled device that passes the challenge blob validation are issued a certificate.
+
 
 ### Accounts
 

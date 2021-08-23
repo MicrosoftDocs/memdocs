@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Turn on Windows Defender | Microsoft Docs
-description: Learn how to turn on Windows Defender to access company resources.
+title: Turn on Microsoft Defender Antivirus | Microsoft Docs
+description: Learn how to turn on Microsoft Defender Antivirus to access company resources.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2020
+ms.date: 08/23/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,20 +30,20 @@ ms.collection:
 ---
 
 
-# Turn on Windows Defender to access company resources
+# Turn on Microsoft Defender Antivirus to access company resources  
 
-Organizations want to ensure that devices accessing their resources are secured so they may require you to use [Windows Defender](https://www.microsoft.com/safety/pc-security/windows-defender.aspx). Windows Defender is an antivirus software that's included in Windows and can help protect your device from viruses and other malware and threats. 
+Organizations want to ensure that devices accessing their resources are secured, so they may require you to use Microsoft Defender Antivirus and additional Windows Security features. Microsoft Defender Antivirus is an antivirus software that's included in Windows and can help protect your device from viruses, malware, and other threats. 
 
 This article describe how to update your device settings to meet your organization's antivirus requirements and resolve access problems. 
 
-## Turn on Windows Defender
-Complete the following steps to turn on Windows Defender on your device. 
+## Turn on Microsoft Defender Antivirus
+Complete the following steps to turn on Microsoft Defender Antivirus on your device. 
 
 1. Select the **Start** menu.
 2. In the search bar, type **group policy**. Then select **Edit group policy** from the listed results. The Local Group Policy Editor will open.
-4. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Defender Antivirus**. 
-5. Scroll to the bottom of the list and select **Turn off Windows Defender Antivirus**.  
-6. Select **Disabled** or **Not configured**. It might feel counter-intuitive to select these options because the names suggest that you're turning Windows Defender off. Don't worry, these options actually ensure that it's turned on. 
+4. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**. 
+5. Scroll to the bottom of the list and select **Turn off Microsoft Defender Antivirus**.  
+6. Select **Disabled** or **Not configured**. It might feel counter-intuitive to select these options because the names suggest that you're turning Microsoft Defender Antivirus off. Don't worry, these options actually ensure that it's turned on. 
 7. Select **Apply** > **OK**.  
 
 
@@ -74,4 +74,4 @@ Complete the following steps to update your antivirus definitions.
 
 ## Next steps  
 
-Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. To find your organization's contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). 

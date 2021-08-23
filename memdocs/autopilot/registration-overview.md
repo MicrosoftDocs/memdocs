@@ -25,6 +25,7 @@ ms.collection:
 **Applies to**
 
 - Windows 10
+- Windows 11
 - Windows Holographic, version 2004
 
 Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. 

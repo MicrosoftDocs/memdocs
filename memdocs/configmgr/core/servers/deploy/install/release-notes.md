@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/13/2021
+ms.date: 08/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -35,6 +35,40 @@ For information about the new features in Desktop Analytics, see [What's new in 
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 ## Client management
+
+### Some policies may not apply to upgraded clients
+
+<!-- 10608021 -->
+_Applies to version 2107 early update ring_
+
+When you upgrade the client from versions 2010 or 2103 to version 2107, the following policies may not apply on some devices:
+
+- Co-management policies on Windows 10 Enterprise multi-session devices such as Azure Virtual Desktop, and Windows 11 Insider Preview devices
+- Desktop Analytics on any Windows version
+- Windows Update for Business policies on Windows 10 x86 and ARM
+- Microsoft Edge browser profiles on Windows 10 x64 and x86
+
+> [!NOTE]
+> The timing of how clients apply and evaluate these policies is non-deterministic. Even if you have these policies and these supported platforms, they may not immediately experience this issue.
+
+When you look at the **Configurations** tab of the Configuration Manager control panel on the client, it will be blank.
+
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, watch for an update to this current branch version.
+
+If you have to work around the issue before updating to the final build, use the following steps depending upon the scenario.
+
+For Desktop Analytics:
+
+1. Disconnect the site from the service:<!-- FYI, these are the same steps as in this section https://docs.microsoft.com/en-us/mem/configmgr/desktop-analytics/account-close#disconnect-configuration-manager, but including the explicit steps here instead of just a link so that customers don't accidentally do other steps in that article to close their account! -->
+    1. Open the Configuration Manager console as a user with the **Full administrator** role.
+    1. Go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.
+    1. Delete the Desktop Analytics service.
+1. [Reconnect the site](../../../../desktop-analytics/connect-configmgr.md#bkmk_connect) to the service.
+
+For other types of policies:
+
+- Remove from the deployment the supported platform for Windows 10 Enterprise multi-session or Windows 11, or completely remove the deployment.
+- Until a fix is available, recreate the deployment without these supported platforms.
 
 ### Client notification actions apply to entire collection
 
