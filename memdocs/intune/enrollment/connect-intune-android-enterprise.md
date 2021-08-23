@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 5/13/2019
+ms.date: 8/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -67,12 +67,15 @@ Intune makes it easier for you to configure and use Android Enterprise managemen
    > Be sure to use or create an Enterprise account rather than a personal GMail account. Keep in mind that the account you use should be one that is easily shared or
    > transferred in the case that the person setting up the Managed Google Play connection leaves the company or moves teams.  
     
-    > [!Note]
-    > If you are using the Microsoft Edge browser, click **Sign-In** in the upper right corner to sign-in to your Google account.
+   > [!Note]
+   > If you are using the Microsoft Edge browser, click **Sign-In** in the upper right corner to sign-in to your Google account.
 
 6. Provide your company's name for **Organization name**. For **Enterprise mobility management (EMM) provider**, **Microsoft Intune** should be displayed.
 
 7. Agree to the Android agreement, and then choose **Confirm**. Your request will be processed.
+
+   > [!NOTE]
+   > Choose a scope tag for your Managed Google Play apps. Under this section, you can select a scope tag that will apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this section:<ul><li>Android Sync - Read</li><li>Android Sync – UpdateOnBoarding</li></ul><p>Admins without these permissions will not be able to remove the scope tag selected on the pane. Tenant admins, or admins who are in charge of giving admin permissions to others, can update permissions in Microsoft Endpoint Manager admin center by selecting **Tenant Administration** > **Roles**.
 
 ## Disconnect your Android Enterprise administrative account
 

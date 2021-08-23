@@ -255,7 +255,7 @@ items:
       href: you-need-to-enable-uac-windows.md
     - name: Update OS build versions
       href: you-need-to-update-os-build-version-windows.md
-    - name: Turn on Windows Defender
+    - name: Turn on Microsoft Defender Antivirus 
       href: turn-on-defender-windows.md
     - name: My version of Windows isn't supported
       href: your-windows-version-isnt-yet-supported.md
