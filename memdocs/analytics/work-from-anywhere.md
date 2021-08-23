@@ -28,7 +28,7 @@ The following metrics are weighted and used to compute the **Work from anywhereâ
 - [Cloud provisioning](#bkmk_provisioning)
 
 :::image type="content" source="media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics":::
-## <a name="bkmk_win10"></a> Windows
+## Windows
 
 Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../intune/protect/windows-10-feature-updates.md). For Configuration Manager devices, create a deployment plan usingâ€¯[Desktop Analytics](../configmgr/desktop-analytics/overview.md). Your score is based on if these remediation actions have been completed or not.
 
