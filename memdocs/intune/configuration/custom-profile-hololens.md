@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 08/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -146,12 +146,16 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     - **Allow**: Enter `PackageVersion, 0.0.0.0`, which means "Allow this version and above".
     - **Deny**: Enter `PackageVersion, 65535.65535.65535.65535`, which means "Deny this version and below".
 
-6. If you plan to deploy and run any apps not originated from the Microsoft Store (for example, line of business apps. See [App Management](/hololens/app-deploy-overview)), you'll need to explicitly allow these apps by adding their signer to the WDAC policy. 
+6. If you plan to deploy and run any apps that didn't originate from the Microsoft Store, such as line of business apps (see [App Management](/hololens/app-deploy-overview), then explicitly allow these apps by adding their signer to the WDAC policy.
 
     > [!NOTE]
-    > This feature of using WDAC and LOB apps is currently only available in [Windows Insiders features for HoloLens](/hololens/hololens-insider).
+    > Using WDAC and LOB apps is currently only available in [Windows Insiders features for HoloLens](/hololens/hololens-insider).
 
-    For example, if you plan on deploying `ATestApp.msix` and `ATestApp.msix` is signed by a certificate `TestCert.cer`: ```powershellAdd-SignerRule -FilePath .\newPolicy.xml -CertificatePath .\TestCert.cer -User```
+    For example, you plan on deploying `ATestApp.msix`. `ATestApp.msix` is signed by the `TestCert.cer` certificate. Use the following Windows PowerShell script to add the signer to the WDAC policy:
+    
+    ```powershell
+    Add-SignerRule -FilePath .\newPolicy.xml -CertificatePath .\TestCert.cer -User
+    ```
 
 7. Merge **newPolicy.xml** with the default policy that's on your desktop computer. This step creates **mergedPolicy.xml**. For example, allow the Windows, WHQL signed drivers, and Store signed apps to run:
 
