@@ -144,6 +144,9 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 - **Compatible TPM startup key** must not set to *Require startup key with TPM*
 - **Compatible TPM startup key and PIN** must not set to *Require startup key and PIN with TPM*
 
+> [!NOTE]
+> Silent enablement of BitLocker will encrypt used disk space only.
+
 ### View details for recovery keys
 
 Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Microsoft Endpoint Manager admin center. To be accessible, the device must have its keys escrowed to Azure AD.
