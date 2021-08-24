@@ -127,7 +127,7 @@ A device must meet the following conditions to be eligible for silently enabling
 - If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
 - If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
 - The device must be Azure AD Joined or Hybrid Azure AD Joined.
-- Device must contain TPM (Trusted Platform Module) 2.0
+- Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only. 
 
 **BitLocker policy configuration**:
@@ -143,6 +143,9 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 - **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
 - **Compatible TPM startup key** must not set to *Require startup key with TPM*
 - **Compatible TPM startup key and PIN** must not set to *Require startup key and PIN with TPM*
+
+> [!NOTE]
+> Silent enablement of BitLocker will encrypt used disk space only.
 
 ### View details for recovery keys
 
