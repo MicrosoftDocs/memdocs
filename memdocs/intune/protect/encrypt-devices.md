@@ -144,7 +144,7 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 - **Compatible TPM startup key and PIN** must not set to *Require startup key and PIN with TPM*
 
 > [!NOTE]
-> Silent enablement of Bitlocker will encrypt used disk space only.
+> Silent enablement of BitLocker will encrypt used disk space only.
 
 ### View details for recovery keys
 
