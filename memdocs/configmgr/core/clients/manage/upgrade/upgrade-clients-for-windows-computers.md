@@ -2,7 +2,7 @@
 title: Upgrade clients on Windows
 titleSuffix: Configuration Manager
 description: Upgrade clients on Windows computers in Configuration Manager.
-ms.date: 07/23/2021
+ms.date: 08/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -54,7 +54,7 @@ A client can automatically upgrade in the following scenarios:
 
 Configuration Manager creates an upgrade package by default. It automatically sends the package to all distribution points in the hierarchy. If you make changes to the client package on the CAS, Configuration Manager automatically updates the package, and redistributes it. An example change is when you add a client language pack. If you enable automatic client upgrade, every client automatically installs the new client language package.
 
-Enable automatic client upgrade across your hierarchy. This configuration keeps your clients up-to-date with less effort.
+Enable automatic client upgrade across your hierarchy. This configuration keeps your clients up to date with less effort.
 
 If you also manage your Configuration Manager site systems as clients, determine whether to include them as part of the automatic upgrade process. You can exclude all servers, or a specific collection from client upgrade. Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. These roles upgrade when you update the site, so the client version on these servers updates at the same time.
 
@@ -88,7 +88,7 @@ Use the following procedure to configure automatic client upgrade at the CAS. Th
 Clients receive these settings when they next download policy.
 
 > [!NOTE]
-> Client upgrades honor any Configuration Manager maintenance windows you've configured. The execmgr thread only runs the client setup bootstrap program (ccmsetup.exe) during a maintenance window. If the device runs an edition of Windows with a write filter, ccmsetup tries to download and install at the same time. Otherwise, ccmsetup randomizes a time to download content. After it downloads content and compiles the local policy, execmgr schedules the client upgrade during the next maintenance window.<!-- SCCMDocs#896 -->
+> Client upgrades honor any Configuration Manager maintenance windows you've configured. The ClientServicing thread only runs the client setup bootstrap program (ccmsetup.exe) during a maintenance window. If the device runs an edition of Windows with a write filter, ccmsetup tries to download and install at the same time. Otherwise, ccmsetup randomizes a time to download content. After it downloads content and compiles the local policy, ClientServicing schedules the client upgrade during the next maintenance window.<!-- SCCMDocs#896, MEMDocs#1920 -->
 
 ## Next steps
 

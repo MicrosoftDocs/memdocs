@@ -39,7 +39,7 @@ Complete the following steps to integrate the Check Point SandBlast Mobile Threa
 
 ## Before you begin
 
-The instructions in this article are done in the [Check Point SandBlast Mobile console](https://intune-4.eu1.locsec.net/). 
+The instructions in this article are done in the [Check Point SandBlast Mobile console](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Gh1u). 
 
 Before starting the process of integrating Check Point SandBlast Mobile with Intune, make sure you have the following:
 
@@ -71,7 +71,7 @@ The Check Point SandBlast app authorization process consists of the following:
 
 ## To set up Check Point SandBlast Mobile integration
 
-1. Go to [Check Point SandBlast Mobile MTD console](https://intune-4.eu1.locsec.net/) and sign in with your credentials.
+1. Go to [Check Point SandBlast Mobile MTD console](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Gh1u) and sign in with your credentials.
 
 2. Click on the **Settings** tab.
 

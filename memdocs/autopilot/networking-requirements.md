@@ -13,7 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 08/23/2021
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ms.custom: 
@@ -31,12 +31,12 @@ ms.custom:
 
 Windows Autopilot depends on a variety of internet-based services. Access to these services must be provided for Autopilot to function properly. In the simplest case, enabling proper functionality can be achieved by ensuring the following conditions:
 
-- Ensure Domain Name Services (DNS) name resolution for internet DNS names
-- Allow access to all hosts via port 80 (HTTP), 443 (HTTPS), and 123 (UDP/NTP)
+- Ensure Domain Name Services (DNS) name resolution for internet DNS names.
+- Allow access to all hosts via port 80 (HTTP), 443 (HTTPS), and 123 (UDP/NTP).
 
 Additional configuration may be required to grant access to required services in environments that:
-- have more restrictive Internet access.
-- require authentication before internet access can be obtained. 
+- Have more restrictive Internet access.
+- Require authentication before internet access can be obtained. 
 
 > [!NOTE]
 > Smart card and certificate based authentication isn't supported during OOBE. For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
@@ -78,8 +78,8 @@ If the WNS services aren't available, the Autopilot process will still continue 
 If the Microsoft Store isn't accessible, the Autopilot process will still continue without Microsoft Store apps.
 
 <tr><td><b>Microsoft 365<b><td>As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise may be required. For more information, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 URLs and IP address ranges</a>. This article includes all Office services, DNS names, IP addresses. It also includes Azure AD and other services that may overlap with the services listed above.
-<tr><td><b>Certificate revocation lists (CRLs)<b><td>Some of these services will also need to check certificate revocation lists (CRLs) for certificates used in the services.  For a full list, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">Office 365 URLs and IP address ranges</a> and <a href="/microsoft-365/compliance/encryption-office-365-certificate-chains">Office 365 Certificate Chains</a>.
-<tr><td><b>Hybrid Azure AD join<b><td>The device can be hybrid Azure AD joined. The computer should be on corporate network for hybrid Azure AD join to work. See details at <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot user-driven mode</a>
+<tr><td><b>Certificate revocation lists (CRLs)<b><td>Some of these services will also need to check certificate revocation lists (CRLs) for certificates used in the services. For a full list, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">Office 365 URLs and IP address ranges</a> and <a href="/microsoft-365/compliance/encryption-office-365-certificate-chains">Office 365 Certificate Chains</a>.
+<tr><td><b>Hybrid Azure AD join<b><td>The device can be hybrid Azure AD joined. The computer should be on corporate network for hybrid Azure AD join to work. See details at <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot user-driven mode</a>.
 <tr><td><a href="" id="tpm"></a><b>Autopilot self-Deploying mode and Autopilot pre-provisioning<b><td>
 The TPM attestation process requires access to a set of HTTPS URLs (unique for each TPM provider).  Ensure access to this URL pattern: *.microsoftaik.azure.net.<br><br>
  
@@ -87,9 +87,9 @@ Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, don't 
 
 For each firmware TPM provider, make sure that the appropriate URL is accessible so that certificates can be successfully requested. For example:
 
- Intel- <code>https://ekop.intel.com/ekcertservice</code>
- <br>Qualcomm- <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
- <br>AMD- <code>https://ftpm.amd.com/pki/aia</code>
+ Intel - <code>https://ekop.intel.com/ekcertservice</code>
+ <br>Qualcomm - <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
+ <br>AMD - <code>https://ftpm.amd.com/pki/aia</code>
 
 </table>
 
