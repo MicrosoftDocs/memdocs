@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 08/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -92,7 +92,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
 - App suite information
 - Properties
 
-<img alt="Add Microsoft 365 Apps - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
+:::image type="content" source="./media/apps-add-office365/apps-add-Microsoft365-02.png" alt-text="Add Microsoft 365 Apps - Configuration designer.":::
 
 1. On the **Configuration app suite** page choose **Configuration designer**.
    - **Select Office apps**: Select the standard Office apps that you want to assign to devices by choosing the apps in the dropdown list.
@@ -124,7 +124,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
 
 If you selected the **Enter XML data** option under the **Setting format** dropdown box on the **Configure app suite** page, you can configure the Office app suite using a custom configuration file.
 
-![Add Office 365 configuration designer](./media/apps-add-office365/apps-add-office365-01.png)
+:::image type="content" source="./media/apps-add-office365/apps-add-Microsoft365-01.png" alt-text="Add Microsoft 365 Configuration designer - XML example.":::
 
 1. Added your configuration XML.
 
