@@ -146,7 +146,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     - **Allow**: Enter `PackageVersion, 0.0.0.0`, which means "Allow this version and above".
     - **Deny**: Enter `PackageVersion, 65535.65535.65535.65535`, which means "Deny this version and below".
 
-6. If you plan to deploy and run any apps that didn't originate from the Microsoft Store, such as line of business apps (see [App Management](/hololens/app-deploy-overview), then explicitly allow these apps by adding their signer to the WDAC policy.
+6. If you plan to deploy and run any apps that didn't originate from the Microsoft Store, such as line of business apps (see [App Management](/hololens/app-deploy-overview)), then explicitly allow these apps by adding their signer to the WDAC policy.
 
     > [!NOTE]
     > Using WDAC and LOB apps is currently only available in [Windows Insiders features for HoloLens](/hololens/hololens-insider).
