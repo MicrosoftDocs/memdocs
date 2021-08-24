@@ -92,9 +92,11 @@ When working with the csv file with the activation codes, be sure you or your mo
 
         :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
 
-3. The csv file name becomes the cellular subscription pool name in the Endpoint Manager admin center. In the previous image, the file name is `UnlimitedDataSkynet.csv`. So, Intune names the subscription pool `UnlimitedDataSkynet.csv`:
+3. The cellular subscription becomes the first part of the SMDP of your mobile operator. In the previous image, the first row contains the URL of the mobile operator (smdp.skynet.mobile), Intune names the cellular subscription pool name as 'smdp':
 
     :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
+
+Important note: If you want to add devices beyond what you have already added for the same carrier, you have to remove the current CSV and upload a new one containing all the old device/ICCID pairs + the new devices that you want to add.
 
 ## Step 2: Create an Azure AD device group
 
