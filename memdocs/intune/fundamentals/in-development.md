@@ -331,9 +331,9 @@ Applies to:
 
 - Windows 10 and later
 
-### See the available apps that can be assigned in filter reports<!-- 9974516   -->
+### Device filter evaluation reports now include filter results for assigned apps<!-- 9974516   -->
 
-In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. In **Devices** > **All Devices** > select a device > **Filter evaluation (preview)**, you can see the available apps that can be assigned to the device.
+If you’re using filters for assigning apps as available, you can now use the filter evaluation report on a device to determine if an app has been made available for install. You can see this report per device, under **Devices > All Devices > select a device > Filter evaluation (preview)**.
 
 - For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 - For more information on filter reports, see [Filter reports and troubleshooting in Microsoft Endpoint Manager](filters-reports-troubleshoot.md).
