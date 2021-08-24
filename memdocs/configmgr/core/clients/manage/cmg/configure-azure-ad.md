@@ -2,7 +2,7 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 08/02/2021
+ms.date: 08/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -68,7 +68,10 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 
     - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 
-    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
+    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+
+       - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+       - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.com/ConfigMgrService`
 
     - **Secret key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
