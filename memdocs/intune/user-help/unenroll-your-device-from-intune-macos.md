@@ -55,7 +55,7 @@ Follow these steps to remove a device from Company Portal that you no longer nee
 3. From the app toolbar, select the **Devices** menu > **Remove**. 
 4. When asked to confirm the removal, select **Remove**. The device is immediately removed from Intune.  
 
-After you complete these steps, you can uninstiall Company Portal from your device.  
+After you complete these steps, you can uninstall Company Portal from your device.  
 
 ## Remove management profile  
 To remove a device after you've left your workplace or school:  
