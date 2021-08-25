@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2021
+ms.date: 08/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,7 +51,7 @@ When a device receives a Windows 10 feature updates policy:
 
 ## Prerequisites
 
-Intune's Windows 10 feature updates requires the following prerequisites:
+The following are prerequisites for Intune's Windows 10 feature updates:
 
 - In addition to a license for Intune, your organization must have one of the following subscriptions:
   - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
@@ -62,7 +62,7 @@ Intune's Windows 10 feature updates requires the following prerequisites:
 - Devices must:  
   - Run a version of Windows 10 that remains in support.
   - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
-  - Have Telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
+  - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
     Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy. The prerequisite to require Telemetry is under review as this feature moves towards general availability.
   
@@ -95,13 +95,13 @@ Intune's Windows 10 feature updates requires the following prerequisites:
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
-  To prevent this initial delay from impacting your co-managed devices, configure a [Windows 10 feature update policy](../protect/windows-10-feature-updates.md) and target this to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows 10 feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
+  To prevent this initial delay from impacting your co-managed devices, configure a [Windows 10 feature update policy](../protect/windows-10-feature-updates.md) and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows 10 feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
 - Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives. The service is utilized by Microsoft Endpoint Manager and works with your Intune policies for Windows 10 updates to deploy feature updates to devices.
 
-  When a device is no longer assigned to any feature update policies, Intune waits 90 days to unenroll that device from feature update management and to unenroll that device from the deployment service. This delay allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that was not intended.
+  When a device is no longer assigned to any feature update policies, Intune waits 90 days to unenroll that device from feature update management and to unenroll that device from the deployment service. This delay allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that wasn't intended.
 
   This means that when a feature updates policy no longer applies to a device, that device won’t be offered any feature updates until one of the following happens:
 
