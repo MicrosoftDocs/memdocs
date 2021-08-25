@@ -56,7 +56,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
        - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
-       - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.com/ConfigMgrService`
+       - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
     - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 

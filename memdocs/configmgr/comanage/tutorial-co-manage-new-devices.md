@@ -203,7 +203,7 @@ Run the following procedure from the primary site server.
    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default, this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
      - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
-     - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.com/ConfigMgrService`
+     - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
    Next, select **Sign in**, and specify an Azure AD Global Administrator account. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
 
