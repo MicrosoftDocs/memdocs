@@ -2,7 +2,7 @@
 title: Manually register Azure AD apps
 titleSuffix: Configuration Manager
 description: Manually create the required apps in Azure Active Directory (Azure AD) to integrate the Configuration Manager site to support the cloud management gateway (CMG).
-ms.date: 08/10/2021
+ms.date: 08/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -89,7 +89,12 @@ First, you need to make note of the **Azure AD tenant name** and **tenant ID**. 
 
 1. In the menu of the app properties, select **Expose an API**.
 
-    1. For the Application ID URI, select **Set**. Specify a URI that's unique for the tenant. You'll use this value later as the _App ID URI_. For example, `https://ConfigMgrService`. Select **Save**.
+    1. For the Application ID URI, select **Set**. Specify a URI that's unique for the tenant. You'll use this value later as the _App ID URI_. Use one of the following recommended formats:<!-- 10617402 -->
+
+       - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+       - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
+
+        Select **Save**.
 
     1. Select **Add a scope**, and specify the following required information:
 

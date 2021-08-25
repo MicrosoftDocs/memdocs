@@ -141,6 +141,8 @@ items:
       href: troubleshoot-on-premises-network-connection.md
     - name: On-premises network connection health checklist
       href: health-checks.md
+    - name: Remote Desktop client
+      href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
     - name: Provisioning errors
       href: provisioning-errors.md
 - name: Reference
