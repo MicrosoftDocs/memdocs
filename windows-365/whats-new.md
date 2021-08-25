@@ -63,11 +63,11 @@ For more information on grace periods, see [Device management overview for Cloud
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-#### Resource performance report in Endpoint Analytics<!— 32978343 -->
+#### Resource performance report in Endpoint Analytics<!-- 32978343 -->
 
 Endpoint analytics has a new report named **Resource performance**. The **Resource performance report** includes metrics for CPU and RAM performance on Cloud PCs. For more information, see [Resource performance report](report-resource-performance.md).
 
-#### Remoting connection report in Endpoint Analytics<!— 33039368 -->
+#### Remoting connection report in Endpoint Analytics<!-- 33039368 -->
 
 Endpoint analytics has a new report named **Remoting connection report**. This report includes the following metrics:
 
