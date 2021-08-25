@@ -45,6 +45,8 @@ Before you can use this report, you'll need to [enroll your Cloud PC devices in 
 
 To get to the **Remoting connection** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Remoting connection**.
 
+![Screenshot of using the remoting connection report](./media/report-remoting-connection/remoting-connection-report.png)
+
 ## Remoting connection tab
 
 The **Remoting connection** tab lists the following information: 
