@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 08/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -146,19 +146,30 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     - **Allow**: Enter `PackageVersion, 0.0.0.0`, which means "Allow this version and above".
     - **Deny**: Enter `PackageVersion, 65535.65535.65535.65535`, which means "Deny this version and below".
 
-6. Merge **newPolicy.xml** with the default policy that's on your desktop computer. This step creates **mergedPolicy.xml**. For example, allow the Windows, WHQL signed drivers, and Store signed apps to run:
+6. If you plan to deploy and run any apps that didn't originate from the Microsoft Store, such as line of business apps (see [App Management](/hololens/app-deploy-overview)), then explicitly allow these apps by adding their signer to the WDAC policy.
+
+    > [!NOTE]
+    > Using WDAC and LOB apps is currently only available in [Windows Insiders features for HoloLens](/hololens/hololens-insider).
+
+    For example, you plan on deploying `ATestApp.msix`. `ATestApp.msix` is signed by the `TestCert.cer` certificate. Use the following Windows PowerShell script to add the signer to the WDAC policy:
+    
+    ```powershell
+    Add-SignerRule -FilePath .\newPolicy.xml -CertificatePath .\TestCert.cer -User
+    ```
+
+7. Merge **newPolicy.xml** with the default policy that's on your desktop computer. This step creates **mergedPolicy.xml**. For example, allow the Windows, WHQL signed drivers, and Store signed apps to run:
 
     ```powershell
     Merge-CIPolicy -PolicyPaths .\newPolicy.xml,C:\Windows\Schemas\codeintegrity\examplepolicies\DefaultWindows_Audit.xml -o mergedPolicy.xml
     ```
 
-7. Disable the **Audit mode** rule in **mergedPolicy.xml**. When you merge, audit mode is automatically turned on:
+8. Disable the **Audit mode** rule in **mergedPolicy.xml**. When you merge, audit mode is automatically turned on:
 
     ```powershell
     Set-RuleOption -o 3 -Delete .\mergedPolicy.xml
     ```
 
-8. Enable the **InvalidateEAs on a reboot** rule in **mergedPolicy.xml**:
+9. Enable the **InvalidateEAs on a reboot** rule in **mergedPolicy.xml**:
 
     ```powershell
     Set-RuleOption -o 15 .\mergedPolicy.xml
@@ -166,13 +177,13 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
     For more information on these rules, see [Understand WDAC policy rules and file rules](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
 
-9. Convert **mergedPolicy.xml** to binary format. This step creates **compiledPolicy.bin**. You'll add this **compiledPolicy.bin** binary file to Intune.
+10. Convert **mergedPolicy.xml** to binary format. This step creates **compiledPolicy.bin**. You'll add this **compiledPolicy.bin** binary file to Intune.
 
     ```powershell
     ConvertFrom-CIPolicy .\mergedPolicy.xml .\compiledPolicy.bin
     ```
 
-10. Create the custom device configuration profile in Intune:
+11. Create the custom device configuration profile in Intune:
 
     1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10 custom device configuration profile.
 
