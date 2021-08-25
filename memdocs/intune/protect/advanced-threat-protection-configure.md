@@ -64,6 +64,9 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
    3. Select **Save preferences**.
 
+   > [!NOTE]
+   > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive** 
+
 4. Return to **Microsoft Defender for Endpoint** page in the Microsoft Endpoint Manager admin center.
 
    1. To use Defender for Endpoint with **compliance policies**, configure the following under **MDM Compliance Policy Settings** for the platforms you support:

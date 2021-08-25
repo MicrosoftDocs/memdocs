@@ -89,7 +89,7 @@ Add a new task sequence step that runs another task sequence. This step creates 
 For more information, see [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence).
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
 
 ## <a name="BKMK_TSVariables"></a> Task sequence variables  
 

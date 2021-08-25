@@ -2,11 +2,10 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -54,15 +53,15 @@ Some updates for Configuration Manager are available as both an in-console updat
 > [!NOTE]
 > To better align with other releases within Microsoft Endpoint Manager, starting this year the current branch version names will be 2103, 2107, and 2111. They will still release every four months, and release at the same time of the year.
 
-The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:  
+The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:
 
-| Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |  
-|-------------|-----------|------------|--------------|------------------------|  
+| Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
+|-------------|-----------|------------|--------------|------------------------|
+| [**2107**](../../plan-design/changes/whats-new-in-version-2107.md)<br /> (5.00.9058) | August 2, 2021 | February 2, 2023 | No | Yes |
 | [**2103**](../../plan-design/changes/whats-new-in-version-2103.md)<br /> (5.00.9049) | April 5, 2021 | October 5, 2022 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2010**](../../plan-design/changes/whats-new-in-version-2010.md)<br /> (5.00.9040) | November 30, 2020 | May 30, 2022 | No | Yes |
 | [**2006**](../../plan-design/changes/whats-new-in-version-2006.md)<br /> (5.00.9012) | August 11, 2020 | February 11, 2022 | No | Yes |
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | April 1, 2020 | October 1, 2021 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
-| [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
 
 <a name="bkmk_note1"></a>
 
@@ -71,18 +70,19 @@ The following supported versions of Configuration Manager are currently availabl
 >
 > - Microsoft Endpoint Configmgr (current branch)
 > - System Center Datacenter
-> - System Center Standard  
+> - System Center Standard
 >
 > For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.
 >
-> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2103.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
+> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2107.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
 
 #### Historical versions
 
 The following table lists historical versions of Configuration Manager current branch that are out of support:
 
-| Version | Availability date | Support end date | Baseline | In-console update |  
-|-------------|-----------|------------|--------------|------------------------|  
+| Version | Availability date | Support end date | Baseline | In-console update |
+|-------------|-----------|------------|--------------|------------------------|
+| **1910** <br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
 | **1906** <br /> (5.00.8853) | July 26, 2019 | January 26, 2021 | No | Yes |
 | **1902** <br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes | Yes |
 | **1810** <br /> (5.00.8740) | November 27, 2018 | December 1, 2020 | No | Yes |
@@ -110,7 +110,7 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:  
 
-- New versions, like version 2006, 2010 or 2103.
+- New versions, like version 2010, 2103, or 2107.
 
 - Updates that include new features for your current version.
 
@@ -141,7 +141,7 @@ Configuration Manager discovers new updates for you. Synchronize your Configurat
 
 - In-console updates replace the need to independently locate and install individual updates, service packs, and new features.  
 
-- Install only the in-console updates you choose. When installing some updates, you can select individual features to enable and use. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
+- Install only the in-console updates you choose. When installing some updates, you can select individual features to enable and use. For more information, see [Enable optional features from updates](optional-features.md).
 
 When you install an in-console update, the following process occurs:  
 

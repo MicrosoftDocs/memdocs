@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2021
+ms.date: 08/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -96,7 +96,7 @@ Microsoft Intune provides configuration settings that are unique to an app. You 
 ### Add a setting
 
 1. For each key and value in the configuration, set:
-   - **Configuration key** - The key that uniquely identifies the specific setting configuration.
+   - **Configuration key** - The case sensitive key that uniquely identifies the specific setting configuration.
    - **Value type** - The data type of the configuration value. Types include Integer, Real, String, or Boolean.
    - **Configuration value** - The value for the configuration.
 2. Choose **OK** to set your configuration settings.
@@ -219,7 +219,10 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
-    - **Use the Company Portal on a DEP device enrolled with user affinity:**
+    - **Use the Company Portal on an Automated Device Enrollment (ADE) device enrolled with user affinity**: 
+    
+        > [!NOTE]
+        > This process is not needed for iOS/iPadOS devices enrolling with ADE through Setup Assistant with modern authentication. Also, this is not needed for devices enrolling with ADE with user affinity if a VPP token is being used to send the Company Portal app to the device.
 
         ``` xml
         <dict>

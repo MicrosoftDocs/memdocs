@@ -4,12 +4,31 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 07/09/2021
+ms.date: 08/20/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for Change: Safe boot and Debugging features in Android Enterprise device restrictions will be replaced
+
+[Google announced](https://developers.google.com/android/management/release-notes#march-2021) they have deprecated several settings in the Android Management API and will stop supporting the settings for Intune on **November 1, 2021**. This impacts the **Safe boot** and **Debugging features** configuration settings for Android Enterprise device restrictions, and they will be no longer be available at the end of October. To prepare for this change, we will be adding a new setting **Developer settings** in September's (2109) service release.
+
+**How this will affect your organization:**
+
+With Intune's October (2110) service release, **Safe boot** and **Debugging features** will be removed from the admin center UI and then removed shortly after from Microsoft Graph API on October 31, 2021. If applicable, you should use the new setting, **Developer settings**.
+
+**Developer settings** will be available for new and existing profiles in the September (2109) service release. By default, it is set as "Not configured". If you choose to set this to "Allow", users will be able to access developer settings which may include the ability to enable debugging features and/or reboot the device into safe boot mode. 
+
+> [!NOTE]
+> If **Developer settings** is set to **Allow**, it will override both the **Safe boot** and **Debugging features** settings.
+
+**What you need to do to prepare:**
+
+Review the configuration settings for your Android Enterprise device restrictions. **Safe boot** and **Debugging features** will be removed from the UI in the October service release and from Microsoft Graph on October 31, 2021.
+
+If you want users to have access to developer settings moving forward, you will need to set **Developer settings** to **Allow**, otherwise it will remain as **Not configured** and users will not have access to any developer settings.
 
 ### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
 
@@ -72,11 +91,11 @@ User impact - Most users have app updates set to automatic, so they receive the 
 
 ### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
-Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending in 60 days, after August 14, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
+Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending after October 26, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
 
 #### How this change will affect your organization
 
-If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before August 14 2021 to ensure users can still access the Tunnel Gateway configuration.
+If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before October 26, 2021 to ensure users can still access the Tunnel Gateway configuration.
 
 #### What you need to do to prepare
 

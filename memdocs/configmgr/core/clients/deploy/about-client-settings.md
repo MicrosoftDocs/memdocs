@@ -2,11 +2,10 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -136,7 +135,7 @@ If you set this option to **No**, or any of the previous requirements aren't met
 
 By default, this setting is disabled. Even if you enable user policies, the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Azure Virtual Desktop](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
-The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
+The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to a later client version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
 If you require user policy in this scenario, and accept any potential performance impact, enable this client setting.
 
@@ -145,7 +144,7 @@ If you require user policy in this scenario, and accept any potential performanc
 
 ### Allow access to cloud distribution point
 
-Set this option to **Yes** for clients to obtain content from a cloud distribution point. This setting doesn't require the device to be internet-based.
+Set this option to **Yes** for clients to obtain content from a content-enabled CMG. This setting doesn't require the device to be internet-based.
 
 ### Automatically register new Windows 10 domain joined devices with Azure Active Directory
 
@@ -364,7 +363,7 @@ Choose **Yes** if you want Configuration Manager to install only the initial def
 
 ### Polling interval for mobile device legacy clients
 
-Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, or macOS.
+Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include macOS.
 
 ### Polling interval for modern devices (minutes)
 
@@ -623,9 +622,6 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 - **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
 
-    > [!NOTE]
-    > The window displays a preview of the combination of these first four settings.
-
 - **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 
 - **Hide installed applications in Software Center**: When you enable this option, applications that are already installed no longer show in the **Applications** tab. This option is enabled by default. Installed applications are still available for review under the **Installation Status** tab.<!--1357592-->
@@ -670,7 +666,7 @@ Enable this option for Software Center to use the Microsoft Edge WebView2 browse
 If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device.
 
 > [!NOTE]
-> If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control.
+> If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
 
 If you don't enable this option, Software Center uses the Windows built-in Internet Explorer browser control.
 
@@ -873,11 +869,11 @@ This setting configures the local port for the HTTP listener to download delta c
 
 If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is 5 minutes. The following options are available:
 
-- **Yes**: For delta content, the client doesn't wait to reach the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback). Clients immediately fall back to a neighbor or the site default content distribution points when both of the following conditions are met:
+- **Yes**: For delta content, the client doesn't wait to reach the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#configure-fallback-behavior). Clients immediately fall back to a neighbor or the site default content distribution points when both of the following conditions are met:
       - Delta content is unavailable from distribution points in the current boundary group.
       - The software update deployment allows fallback.
 
-- **No** (default): The client honors the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback) when it's allowed on the software update deployment. Delta download content may fail with a timeout even if the update content is available on a neighbor or the site default distribution point group.
+- **No** (default): The client honors the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#configure-fallback-behavior) when it's allowed on the software update deployment. Delta download content may fail with a timeout even if the update content is available on a neighbor or the site default distribution point group.
 
 > [!NOTE]
 > This setting is for delta content only.

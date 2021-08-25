@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,9 +56,6 @@ After the connector installs, you can run configuration of the connector again a
 Intune supports installing of multiple instances of the connector in a tenant, and each instance can support different features. If you use multiple connectors that support different features, certificate requests are always routed to a relevant connector. For example, if you install two connectors that support PKCS, and install two more that support both PKCS and SCEP, certificate tasks for PKCS can be managed by any of the four connectors, but tasks for SCEP are only directed to the two connectors that support SCEP.
   
 Each instance of the certificate connector has the same network requirements as devices that are managed by Intune. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
-
-> [!NOTE]
-> The Certificate Connector for Microsoft Intune supports TLS 1.2. If the server that hosts the connector supports TLS 1.2, then TLS 1.2 is used. If the server doesn't support TLS 1.2, then TLS 1.1 is used.
 
 ## Capabilities of the certificate connector
 
@@ -225,9 +222,21 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
 
+### August 16, 2021
+
+Version **6.2108.18.0**. - Changes in this release:
+
+This update includes:
+
+- A fix to correctly display the current connector status in Microsoft Endpoint Manager admin center.
+- A fix to correctly report on failures to deliver SCEP certificates.
+
 ### July 29, 2021
 
-The Certificate Connector for Microsoft Intune is released. This connector is a unified connector in that it includes the capabilities of both the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*, which it replaces.  With this release, the previous connectors remain supported, but are no longer developed nor available for download. Plan to replace existing installations of the individual with installations of this new unified connector.
+Version **6.2107.45.0** - The Certificate Connector for Microsoft Intune is released. 
+
+This connector is a unified connector in that it includes the capabilities of both the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*, which it replaces.  With this release, the previous connectors remain supported, but are no longer developed nor available for download. Plan to replace existing installations of the individual with installations of this new unified connector.
+
 
 ## Next steps
 

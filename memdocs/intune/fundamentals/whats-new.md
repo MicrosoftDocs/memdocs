@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,14 +59,47 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
-## Week of July 26, 2021 (Service release 2107)
+## Week of August 16, 2021
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### New app categories available to better target app protection policies<!-- 4802581  -->
+#### Intune Company Portal for macOS devices is now a universal app<!-- 10650481 -->
+When you download Intune Company Portal for macOS devices version 2.18.2107 and later, it installs the new universal version of the app that runs natively on Apple Silicon Macs. The same app will install the x64 version of the app on Intel Mac machines. For related information, see [Add the Company Portal for macOS app](..\apps\apps-company-portal-macos.md).
 
-We have improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically applied to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### New version of the Certificate Connector for Microsoft Intune <!-- 10592539  -->
+
+We’ve released a new version of the Certificate Connector for Microsoft Intune, version **6.2108.18.0**. This update includes:
+
+- A fix to correctly display the current connector status in Microsoft Endpoint Manager admin center.
+- A fix to correctly report on failures to deliver SCEP certificates.
+
+For more information about the certificate connector, including a list of connector releases and updates, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Adding Windows Hello for Business to Windows 10 Diagnostics<!-- 10184621  -->
+
+We've added the information from the Operational Event Viewer for **Windows Hello for Business** to the data that’s collected for Windows 10 device diagnostics. See [Data collected](../remote-actions/collect-diagnostics.md#data-collected).
+
+
+
+<!-- ########################## -->
+## Week of August 2, 2021
+
+### Windows 365 now generally available<!--10393594 -->
+
+Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that use both the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
+
+For more information about Windows 365, see [Windows 365]( https://www.microsoft.com/windows-365?rtc=1).
+
+For documentation on how to manage Windows 365 in your organization, see the [Windows 365 documentation](/windows-365/).
+
+<!-- ########################## -->
+## Week of July 26, 2021 (Service release 2107)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -94,6 +127,9 @@ We’ve released the [Certificate Connector for Microsoft Intune](../protect/cer
 
 The previous connectors remain in support but are no longer available for download. If you need to install or reinstall a connector, install the new Certificate Connector for Microsoft Intune.
 
+#### Windows Autopilot diagnostics page (public preview)
+
+[Available settings](../enrollment/windows-enrollment-status.md#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#preview-windows-autopilot-diagnostics-page). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -125,9 +161,6 @@ For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2
 #### Work from anywhere report<!-- 7207657  -->
 
 [Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the [Recommended software](../../analytics/recommended-software.md) report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
-
-> [!Note]
-> The **Work from anywhere** report will go live after the July service update. We expect it within the week after the 2107 release completes.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -307,7 +340,7 @@ The **Certificates** report, which shows the current device certificates in use,
 The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functionality on Android is now out of preview and [generally available for use](../protect/microsoft-tunnel-overview.md). With this change:
 
 - You no longer need to opt in to use Defender of Endpoint as the tunnel app on Android.
-- The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on August 14, 2021.
+- The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on October 26, 2021.
 
 Plan to download and use the updated Microsoft Defender for Endpoint app for Microsoft Tunnel app for Android. If you participated in the preview, update your devices with the new version of Defender for Endpoint from the Google Play store. If you are still using the standalone tunnel app, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
 

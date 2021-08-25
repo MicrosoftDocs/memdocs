@@ -2,7 +2,7 @@
 title: Monitor co-management
 titleSuffix: Configuration Manager
 description: Use the co-management dashboard to review information about co-managed devices.
-ms.date: 04/27/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -28,7 +28,8 @@ After you enable co-management, monitor co-management devices using the followin
 
 This dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.<!--1356648,1358980-->
 
-In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Co-management** node.
+In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Cloud Attach** node.
+   - For version 2103 and earlier, select the **Co-management** node.
 
 ![Screenshot of the co-management dashboard](media/co-management-dashboard.png)
 
@@ -40,8 +41,6 @@ Shows the number of client devices per OS by version. It uses the following grou
 - Windows 10 lower than 1709  
 - Windows 10 1709 and above  
 
-    > [!Tip]  
-    > Windows 10, version 1709 and later, is a prerequisite for co-management.  
 
 Hover over a graph section to show the percentage of devices in that OS group.
 
@@ -68,11 +67,7 @@ Shows the breakdown of device status in the following categories:
 - Failure, hybrid Azure AD-joined  
 - Failure, Azure AD-joined  
 - Pending user sign in  
-
-    > [!NOTE]
-    > Starting in version 1906, to reduce the number of devices in this pending state, a new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure AD *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. To support this behavior, the device needs to be running Windows 10, version 1803 or later.
-    >
-    > If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
+   - To reduce the number of devices in this pending state, a new co-managed device automatically enrolls to the Microsoft Intune service based on its Azure AD *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. To support this behavior, the device needs to be running Windows 10, version 1803 or later. If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
     > `Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
 Select a state in the tile to drill through to a list of devices in that state.  
@@ -81,9 +76,7 @@ Select a state in the tile to drill through to a list of devices in that state.
 
 ### Workload transition
 
-Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads.
-
-The list of workloads varies by version of Configuration Manager. For more information, see [Workloads able to be transitioned to Intune](workloads.md).
+Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads. For more information, see [Workloads able to be transitioned to Intune](workloads.md).
 
 Hover over a chart section to show the number of devices transitioned for the workload.
 

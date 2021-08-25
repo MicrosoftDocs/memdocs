@@ -2,11 +2,10 @@
 title: Support Center OneTrace
 titleSuffix: Configuration Manager
 description: OneTrace is a new log viewer with Support Center that has improvements over CMTrace.
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4cde43d1-9b09-4601-b389-0776de451b4e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -26,7 +25,7 @@ OneTrace is a new log viewer with Support Center. It works similarly to CMTrace,
 - Fast log opening for large files
 - Windows jump lists for recently opened files (version 2103 and later)
 
-:::image type="content" source="media/3555962-onetrace.png" alt-text="Screenshot of Support Center OneTrace log viewer" lightbox="media/3555962-onetrace.png":::
+:::image type="content" source="media/3555962-onetrace.png" alt-text="Screenshot of Support Center OneTrace log viewer." lightbox="media/3555962-onetrace.png":::
 
 OneTrace works with many types of log files, such as:
 
@@ -38,7 +37,9 @@ OneTrace works with many types of log files, such as:
 
 ## Prerequisites
 
-- .NET Framework version 4.6 or later
+Starting in version 2107, the all site and client components require .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+
+In version 2103 and earlier, this tool requires .NET 4.6 or later.
 
 ## Install
 
@@ -53,7 +54,7 @@ By default, the OneTrace application is installed at `C:\Program Files (x86)\Con
 
 <!--5559993-->
 
-Starting in version 2002, OneTrace supports customizable log groups, similar to the feature in Support Center. Log groups allow you to open all log files for a single scenario. OneTrace currently includes groups for the following scenarios:
+OneTrace supports customizable log groups, similar to the feature in Support Center. Log groups allow you to open all log files for a single scenario. OneTrace currently includes groups for the following scenarios:
 
 - Application management
 - Compliance settings (also referred to as Desired Configuration Management)
@@ -61,7 +62,7 @@ Starting in version 2002, OneTrace supports customizable log groups, similar to 
 
 To show log groups, go to the **View** menu, and select **Log groups**.
 
-:::image type="content" source="media/5559993-onetrace-log-groups.png" alt-text="Screenshot of Support Center OneTrace log group for application management":::
+:::image type="content" source="media/5559993-onetrace-log-groups.png" alt-text="Screenshot of Support Center OneTrace log group for application management.":::
 
 ### Customize log groups
 
@@ -109,13 +110,13 @@ There are three methods to open recent files in OneTrace:
 
 When the OneTrace icon is on the Windows taskbar, right-click it, and then select a file from the **Recently opened** list.
 
-:::image type="content" source="media/6991505-onetrace-jump-list.png" alt-text="Support Center OneTrace jump list from Windows taskbar with recently opened list":::
+:::image type="content" source="media/6991505-onetrace-jump-list.png" alt-text="Support Center OneTrace jump list from Windows taskbar with recently opened list.":::
 
 ### Windows Start menu recently opened list
 
 Go to the **Start** menu, and type `onetrace`. Select a file from the **Recently opened** list.
 
-:::image type="content" source="media/6991505-onetrace-start-menu.png" alt-text="Support Center OneTrace in Windows Start menu with recently opened list":::
+:::image type="content" source="media/6991505-onetrace-start-menu.png" alt-text="Support Center OneTrace in Windows Start menu with recently opened list.":::
 
 ### OneTrace recently opened list
 
@@ -124,7 +125,7 @@ There are two locations in OneTrace that show the list of recently opened files:
 - The **Recently opened** tab in the lower right corner.
 - Go to the **File** menu and select a file at the bottom of the menu.
 
-:::image type="content" source="media/6991505-onetrace-recently-opened.png" alt-text="Support Center OneTrace recently opened lists":::
+:::image type="content" source="media/6991505-onetrace-recently-opened.png" alt-text="Support Center OneTrace recently opened lists.":::
 
 ## Next steps
 

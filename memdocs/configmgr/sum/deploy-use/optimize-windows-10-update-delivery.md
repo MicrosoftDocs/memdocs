@@ -76,7 +76,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 #### Configuration recommendations for clients downloading delta content
 <!--7913814-->
-When the **Allow clients to download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled on clients for software update content, there are limitations in the [distribution point fallback](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback) behavior. To ensure these clients can properly download software update content, we recommend the following configurations:
+When the **Allow clients to download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled on clients for software update content, there are limitations in the [distribution point fallback](../../core/servers/deploy/configure/boundary-group-procedures.md#configure-a-fallback-site-for-automatic-site-assignment) behavior. To ensure these clients can properly download software update content, we recommend the following configurations:
 
 - Ensure that clients are in a boundary group and that there's a reliable distribution point that has the needed content associated with that boundary group.
 - Deploy software updates with fallback to Microsoft Update enabled for clients that are able to download directly from the internet.

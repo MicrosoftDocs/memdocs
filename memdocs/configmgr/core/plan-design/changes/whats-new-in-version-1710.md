@@ -101,7 +101,7 @@ To add an icon for your app in Software Center, see [Create applications](../../
 ## Operating system deployment
  > [!TIP]   
  > <!-- 1354281 -->
- > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](../configs/support-for-windows-10.md#windows-10-as-a-client).
+ > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](../configs/support-for-windows-10.md).
 
 ### Add child task sequences to a task sequence
 <!-- 1261338 -->

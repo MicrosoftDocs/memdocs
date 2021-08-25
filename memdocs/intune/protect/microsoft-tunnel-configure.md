@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 6/14/2021
+ms.date: 08/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,7 +51,16 @@ Use of a *Server configuration* lets you create a configuration a single time an
 3. On the **Settings** tab, configure the following items:
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
+     > [!IMPORTANT]
+     > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
+     >
+     > - You use Microsoft Defender for Endpoint for both Defender for Endpoint and Microsoft Tunnel functionality.
+     > - You use per-app VPN.
+     >
+     > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
+
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
+
    - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
 
      Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
@@ -78,11 +87,13 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
 
+   - **URL for internal network access check**: Specify an HTTP or HTTPS URL for a location on your internal network. Every five minutes, each server that's assigned to this site will attempt to access the URL to confirm that it can access your internal network. Servers report the status of this check as *Internal network accessibility* on the servers [*Health check*](../protect/microsoft-tunnel-monitor.md#use-the-admin-center-ui) tab.
+
    - **Automatically upgrade servers at this site**: If *Yes*, servers upgrade automatically when an upgrade is available. If *No*, upgrade is manual and an administrator must approve an upgrade before it can start.
 
      For more information, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
-   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there is no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
+   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there's no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
 
      When set to *Yes*, configure the following options:
 
@@ -192,7 +203,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
   The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
 
   > [!Note]
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support 60 days later on August 14 2021.
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
 
 - iOS/iPadOS: **Microsoft Tunnel (standalone client)**
 
@@ -226,10 +237,13 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
+   > [!IMPORTANT]  
+   > You cannot use Defender web protection side-by-side with Tunnel if you use an internal proxy with Tunnel, as this can cause connectivity issues which would prevent the device from communicating with Intune. Disable web protection by adding the **antiphishing** setting to the [custom settings](#use-custom-settings-for-microsoft-defender-for-endpoint) section in the VPN profile and setting it to **0**.
+
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]  
-   > For *Android Enterprise Personally-Owned Work Profile* devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. Use of custom settings is optional for all other platforms.
+   > For Android Enterprise devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. If you do not intend to use any Defender functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
 
 5. On the **Assignments** tab, configure groups that will receive this profile.
 
@@ -248,7 +262,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.  
    - **Per-app VPN**:  
-     - To enable a per-app VPN, select **Enable**. Additional configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
+     - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
 
         For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
 
@@ -287,7 +301,7 @@ Intune periodically releases updates to the Microsoft Tunnel server. To stay in 
 By default, after a new upgrade is available Intune automatically starts the upgrade of tunnel servers as soon as possible, at each of your tunnel sites. To help you manage upgrades, you can configure options that manage the upgrade process:
 
 - You can allow automatic upgrade of servers at a site, or require admin approval before upgrades being.
-- You can configure a maintenance window which limits when upgrades at a site can start. 
+- You can configure a maintenance window which limits when upgrades at a site can start.
 
 For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade opotons, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 

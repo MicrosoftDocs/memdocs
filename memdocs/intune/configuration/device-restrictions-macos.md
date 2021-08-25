@@ -8,8 +8,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/15/2021
-ms.topic: reference
+ms.date: 08/23/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -42,6 +42,28 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
+
+## App Store, doc viewing, gaming  
+
+### Settings apply to: Automated device enrollment (supervised)
+
+- **Block adding Game Center friends**: **Yes** prevents users from adding friends to Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add friends to Game Center.  
+
+  This feature applies to:  
+  - macOS 10.13 and newer  
+
+
+- **Block Game Center**: **Yes** disables Game Center, and the Game Center icon is removed from the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make Game Center available to users.   
+
+  This feature applies to:    
+  - macOS 10.13 and newer  
+
+
+- **Block multiplayer gaming in the Game Center**: **Yes** prevents multiplayer gaming when using Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games. 
+
+  This feature applies to:  
+  - macOS 10.13 and newer  
+
 
 ## Built-in Apps
 
@@ -105,7 +127,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 - **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
 
-### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
+### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)  
 
 - **Defer software updates**: **Yes** allows you to delay when OS updates and non-OS updates are shown on devices. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting.
 
@@ -122,7 +144,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
     This feature applies to:  
     - macOS 10.13.4 and newer
 
-### Settings apply to: Automated device enrollment
+### Settings apply to: Automated device enrollment  
 
 - **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
 
@@ -136,7 +158,13 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 - **Allow Classroom to lock the device without prompting**: **Yes** lets teachers lock a student's device or app without the student's approval. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students agree before teachers can lock the device or app.
 
-- **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.
+- **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.  
+
+- **Block modification of wallpaper**: 
+**Yes** prevents users from changing the device wallpaper. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the wallpaper.  
+
+  This feature applies to:  
+  - macOS 10.13 and newer  
 
 ## Password
 

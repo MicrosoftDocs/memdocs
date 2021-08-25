@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Autopilot OOBE issues
-description: How troubleshoot Autopilot OOBE issues
+description: How to troubleshoot Autopilot OOBE issues
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
@@ -13,20 +13,26 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/17/2020
+ms.date: 07/30/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
 
 # Troubleshoot Autopilot OOBE issues
 
-**Applies to: Windows 10**
+**Applies to:**
+
+- Windows 10
+- Windows 11
 
 When the out-of-box-experience (OOBE) includes unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
 
+> [!NOTE]
+> **[Preview]** With Windows 11, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. The [Windows Autopilot diagnostics page](windows-autopilot-whats-new.md#preview-windows-autopilot-diagnostics-page) provides IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. This feature can be enabled by going to the [ESP profile](../intune/enrollment/windows-enrollment-status.md#available-settings) and selecting **Yes** to **Allow users to collect logs about installation errors**. This feature is currently supported for commercial OOBE, and Autopilot user-driven mode.
+
 ## Can't connect to MDM terms of use error
 
-If you receive an error during OOBE that **Something went wrong** and **Can't connect to the URL of your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.** This is often due to a licensing issue. Check that the user who is signing into the device has a valid Intune, EMS, or M365 license.
+If you receive an error during OOBE that **Something went wrong** and **Can't connect to the URL of your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.** This is often due to a licensing issue. Check that the user who is signing into the device has a valid Intune, EMS, or Microsoft 365 license.
 
 ## Windows 10 version 1803 and above
 

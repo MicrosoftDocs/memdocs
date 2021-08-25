@@ -136,7 +136,7 @@ You can synchronize the app names, metadata and license information for your pur
 
 1. Select **Apps** > **All apps**.
 2. On the list of apps pane, choose the app you want to assign, and then choose **Properties**. Select **Edit** next to **Assignments**.
-3. On the **Assignments** tab, choose whether the app will be **Required**, **Available for enrolled devices**, or **Available with or without enrollment**. 
+3. On the **Assignments** tab, choose whether the app will be **Required** or **Available for enrolled devices**.
 4. Choose **Add group** under the assignment type you've selected, then on the **Select groups** pane choose the Azure AD user or device groups to which you want to assign the app.
 
     > [!NOTE]
