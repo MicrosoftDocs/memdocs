@@ -34,14 +34,14 @@ Increasing demand for remote work is accelerating adoption of Zero Trust securit
 
 > [!TIP]
 > If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). 
-> 
-> The table below describes the key difference between this guide and *Windows in cloud configuration*.
-> | Solution | Objective |
-> | --- | --- |
-> | Get started with cloud native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing |
-> | [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices |
-> 
-> You can use this guide in combination with *Windows in cloud configuration* to further customize the pre-built experience.
+
+The table below describes the key difference between this guide and *Windows in cloud configuration*.
+| Solution | Objective |
+| --- | --- |
+| Get started with cloud native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing |
+| [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices |
+
+You can use this guide in combination with *Windows in cloud configuration* to further customize the pre-built experience.
 
 ## Overview
 
