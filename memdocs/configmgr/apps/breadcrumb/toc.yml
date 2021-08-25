@@ -41,3 +41,23 @@ items:
         - name: Application management
           tocHref: /mem/configmgr/tenant-attach/
           topicHref: /mem/configmgr/apps/index
+
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
+    items:
+    - name: Microsoft Endpoint Manager
+      tocHref: /troubleshoot/
+      topicHref: /mem/
+      items:
+      - name: Configuration Manager
+        tocHref: /troubleshoot/mem/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Application management
+          tocHref: /troubleshoot/mem/configmgr/
+          topicHref: /mem/configmgr/apps/index

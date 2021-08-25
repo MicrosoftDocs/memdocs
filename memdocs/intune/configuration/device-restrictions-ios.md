@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2021
-ms.topic: reference
+ms.date: 08/23/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -96,7 +96,7 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Block Game Center**: **Yes** prevents using the Game Center app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the Game Center app on devices.
-- **Block multiplayer gaming**: **Yes** prevents multiplayer gaming. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games on devices.
+- **Block multiplayer gaming in Game Center**: **Yes** prevents multiplayer gaming. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games on devices.
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
@@ -733,16 +733,19 @@ You can also:
 
   This feature applies to:  
   - iOS 12.2 and newer
-  - iPadOS 13.0 and newer
+  - iPadOS 13.0 and newer  
 
 - **Require joining Wi-Fi networks only using configuration profiles**: **Yes** forces devices to use only Wi-Fi networks set up through Intune configuration profiles. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow devices to use other Wi-Fi networks.
 
-  - This setting is available for iOS/iPadOS 14.4 and older devices. On iOS/iPadOS 14.5 and newer devices, create a [Custom configuration profile](custom-settings-ios.md) to deploy this setting.
-  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.
-  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
+  - This setting is available for iOS/iPadOS 14.4 and older devices. On iOS/iPadOS 14.5 and newer devices, use the **Require devices to use Wi-Fi networks set up via configuration profiles** setting.  
 
-  This feature applies to:  
-  - iOS/iPadOS 14.4 and older
+  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.  
+
+  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.  
+
+
+    This feature applies to:  
+    - iOS/iPadOS 14.4 and older  
 
 - **Require Wi-Fi always on**: **Yes** keeps Wi-Fi on in the Settings app. It can't be turned off in Settings or in the Control Center, even when the device is in airplane mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to turn on or turn off Wi-Fi.
 
@@ -750,7 +753,19 @@ You can also:
 
   This feature applies to:  
   - iOS 13.0 and newer
-  - iPadOS 13.0 and newer
+  - iPadOS 13.0 and newer  
+
+- **Require devices to use Wi-Fi networks set up via configuration profiles**: **Yes** forces the device to use Wi-Fi networks set up through configuration profiles. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow devices to use other Wi-Fi networks.
+
+  - On iOS/iPadOS 14.5 and newer devices, use this setting. Don't use the **Require joining Wi-Fi networks only using configuration profiles** setting.  
+
+  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.  
+
+  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.  
+
+
+    This feature applies to:  
+    - iOS/iPadOS 14.5 and newer  
 
 ## Settings that require supervised mode
 

@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/11/2021
-ms.topic: reference
+ms.date: 08/19/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -48,7 +48,7 @@ Create an [Android Enterprise device restrictions profile](device-restrictions-c
 - Fully managed, dedicated, and corporate-owned work profile
 - Personally owned devices with a work profile
 
-## Fully Managed, Dedicated, and Corporate-Owned Work Profile
+## Fully managed, dedicated, and corporate-owned work profile
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 

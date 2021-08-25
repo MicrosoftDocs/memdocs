@@ -55,7 +55,7 @@ For more information, see [Install a software update point](../../../../sum/get-
 
 ### OS deployment
 
-For more information, see [Specify the drive for offline OS image servicing](../../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive).
+For more information, see [Specify the drive for offline OS image servicing](../../../../osd/get-started/manage-operating-system-images.md#specify-the-drive-for-offline-os-image-servicing).
 
 ### Management point
 

@@ -25,6 +25,7 @@ ms.collection:
 **Applies to**
 
 - Windows 10
+- Windows 11
 - Windows Holographic, version 2004
 
 Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. Windows Autopilot can be used to deploy Windows PCs or HoloLens 2 devices. For more information about deploying HoloLens 2 with Autopilot, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).

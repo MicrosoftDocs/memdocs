@@ -122,7 +122,7 @@ For more information, see [Monitor scenario health](../../servers/manage/scenari
 <!--5622909-->
 If the setup or update process fails to complete successfully, you can now report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. In technical previews, this button is always enabled even when the setup completes successfully.
 
-For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_report).
+For more information, see [Install in-console updates](../../servers/manage/post-in-console-updates.md#report-setup-and-upgrade-failures-to-microsoft).
 
 ### Delete Aged Collected Diagnostic Files task
 <!--6503308-->

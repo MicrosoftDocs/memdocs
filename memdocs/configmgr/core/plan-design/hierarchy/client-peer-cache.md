@@ -22,7 +22,7 @@ manager: dougeby
 Use peer cache to help manage deployment of content to clients in remote locations. Peer cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.   
 
 > [!Note]  
-> In version 1906, Configuration Manager enables this feature by default. In version 1902 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+> In version 1906, Configuration Manager enables this feature by default. In version 1902 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../servers/manage/optional-features.md).<!--505213-->  
 
 
 
@@ -60,7 +60,7 @@ To enable peer cache, deploy the [client settings](#bkmk_settings) to a collecti
 
 - As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
 
-Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).<!--1356193-->
+Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-group-options.md).<!--1356193-->
 
 > [!NOTE]  
 > If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.  

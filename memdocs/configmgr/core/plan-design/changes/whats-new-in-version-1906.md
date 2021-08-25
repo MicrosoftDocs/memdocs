@@ -39,7 +39,7 @@ Because of weaknesses in the SHA-1 algorithm and to align to industry standards,
 - Windows Server 2008 R2 SP1
 - Windows Server 2008 SP2
 
-For more information, see [Prerequisites for Windows clients](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_sha2).
+For more information, see [Prerequisites for Windows clients](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#sha-2-code-signing-support).
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure
@@ -401,7 +401,7 @@ This release includes the following infrastructure improvements to Software Cent
 > - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
 > - Support ends for the application catalog roles with version 1910.  
 
-For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
+For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
 
 ### Redesigned notification for newly available software
 
@@ -602,7 +602,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 Version 1906 drops support for the following features:  
 
-- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex).
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#configure-software-center).
 
 Version 1906 deprecates support for the following products:  
 

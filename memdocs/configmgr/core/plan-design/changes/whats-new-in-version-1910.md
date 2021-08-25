@@ -10,8 +10,7 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby 
-
-
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
@@ -217,7 +216,7 @@ For more information, see [Manage boot images](../../../osd/get-started/manage-b
 
 When you import an OS upgrade package, you can use the **Extract a specific image index from install.wim file of selected upgrade package** option. This behavior is similar as with [OS images](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages), except that it overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location and then moves it into the original source directory.
 
-For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#BKMK_AddOSUpgradePkgs).
+For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#add-an-os-upgrade-package).
 
 #### Output the results of a Run Command Line step to a variable during a task sequence
 
@@ -268,7 +267,7 @@ For more information, see [Task sequence variables - SetupCompletePause](../../.
 <!--4469002-->
 You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When you use catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to Windows Server Update Services (WSUS).
 
-For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_1910).
+For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md).
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->

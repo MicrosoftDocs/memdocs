@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -65,7 +65,7 @@ The following settings can be configured to customize behavior of the Enrollment
 <tr><td>Allow users to use device if installation error occurs<td>A <b>Continue anyway</b> button is displayed if there's an installation failure.<td>The <b>Continue anyway</b> button isn't displayed if there's an installation failure.
 <tr><td>Show timeout error when installation takes longer than specified number of minutes<td colspan="2">Specify the number of minutes to wait for installation to complete. A default value of 60 minutes is entered.
 <tr><td>Show custom message when an error occurs<td>A text box is provided where you can specify a custom message to display if an installation error occurs.<td>The default message is displayed: <br><b>Installation exceeded the time limit set by your organization. Try again or contact your IT support person for help.<b>
-<tr><td>Allow users to collect logs about installation errors<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b><td>The <b>Collect logs</b> button isn't displayed if there's an installation error.
+<tr><td>Turn on log collection and diagnostics page for end users<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b>.<br>In Windows 11, the <b>Windows Autopilot diagnostics</b> page is also displayed.<td>The <b>Collect logs</b> button isn't displayed if there's an installation error.<br>The <b>Windows Autopilot diagnostics</b> page is not displayed in Windows 11.
 <tr><td>Block device use until these required apps are installed if they're assigned to the user/device<td colspan="2">Choose <b>All</b> or <b>Selected</b>. <br><br>If <b>Selected</b> is chosen, a <b>Select apps</b> button appears that lets you choose which apps must be installed before enabling the device.
 </table>
 
@@ -181,7 +181,7 @@ The following are known issues related to the Enrollment Status Page.
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
 - ESP is stuck for a long time or never completes the "Identifying" phase. Intune computes the ESP policies during the identifying phase. A device may never complete computing ESP policies if the current user doesn't have an Intune licensed assigned.  
 - Configuring Microsoft Defender Application Control causes a prompt to reboot during Autopilot. Configuring Microsoft Defender Application (AppLocker CSP) requires a reboot. When this policy is configured, it may cause a device to reboot during Autopilot. Currently, there's no way to suppress or postpone the reboot.
-- When the DeviceLock policy (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) is enabled as part of an ESP profile, the OOBE or user desktop autologon could fail unexpectantly for two reasons.
+- When the [DeviceLock policy](/windows/client-management/mdm/policy-csp-devicelock) is enabled as part of an ESP profile, the OOBE or user desktop autologon could fail unexpectantly for two reasons.
   - If the device didn't reboot before exiting the ESP Device setup phase, the user may be prompted to enter their Azure AD credentials. This prompt occurs instead of a successful autologon where the user sees the Windows first login animation.
   - The autologon will fail if the device rebooted after the user entered their Azure AD credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
 - ESP doesn't apply to a Windows device that was enrolled with Group Policy (GPO).

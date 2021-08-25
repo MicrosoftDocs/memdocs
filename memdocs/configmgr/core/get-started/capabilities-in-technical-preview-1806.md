@@ -293,7 +293,7 @@ These task sequences can be for OS deployment or custom. It is also supported fo
 
 ## Software Center infrastructure improvements
 <!--1358309-->
-Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../servers/deploy/configure/boundary-groups.md#management-points).
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../servers/deploy/configure/boundary-groups-management-points.md).
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.

@@ -101,7 +101,7 @@ Boundary groups now include the following additional settings to give you more c
 
 - **Prefer cloud distribution points over distribution points**: If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
-For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-group-options.md).
 
 
 ### Management insights rule for peer cache source client version
@@ -147,7 +147,7 @@ For more information, see [How to create collections](../../clients/manage/colle
 <!--1358840-->
 When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. Previously in this process the management point only returns distribution points in the client's current boundary group. If no content is available, the setup process falls back to download content from the management point. There's no option to fall back to distribution points in other boundary groups that might have the necessary content. Now the management point returns distribution points based on boundary group configuration.
 
-For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup).
+For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-distribution-points.md#client-installation).
 
 
 
@@ -241,7 +241,7 @@ For more information, see [Windows Autopilot for existing devices](../../../../a
 <!--1358924-->
 Now specify the drive that Configuration Manager uses when adding software updates to OS images and OS upgrade packages. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use.
 
-For more information, see [Manage OS images](../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive) or [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#bkmk_servicing-drive).
+For more information, see [Manage OS images](../../../osd/get-started/manage-operating-system-images.md#specify-the-drive-for-offline-os-image-servicing) or [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#specify-the-drive-for-offline-os-image-servicing).
 
 
 ### Task sequence support for boundary groups
@@ -249,7 +249,7 @@ For more information, see [Manage OS images](../../../osd/get-started/manage-ope
 <!--1359025-->
 When a device runs a task sequence and needs to acquire content, it now uses boundary group behaviors similar to the Configuration Manager client.
 
-For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_bgr-osd).
+For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups-distribution-points.md#task-sequence-support).
 
 
 ### Improvements to driver maintenance
