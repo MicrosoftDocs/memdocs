@@ -47,7 +47,7 @@ Learn what new features are available in Windows 365.
 ### Scripts
 
 <!-- ########################## -->
-## Week of August 2, 2021 (Service release 2108)
+## Week of September 6, 2021 (Service release 2108)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
