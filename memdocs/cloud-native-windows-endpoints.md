@@ -42,6 +42,7 @@ The table below describes the key difference between this guide and *Windows in 
 | --- | --- |
 | Get started with cloud native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing |
 | [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices |
+
 ---
 
 You can use this guide in combination with *Windows in cloud configuration* to further customize the pre-built experience.
