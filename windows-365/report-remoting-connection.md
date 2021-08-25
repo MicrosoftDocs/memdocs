@@ -65,6 +65,8 @@ The **Remoting connection** tab lists the following information:
 
 **Insights and recommendations** suggests actions that you can take to improve your scores.
 
+![Screenshot of using the remoting connection tab](./media/report-remoting-connection/remoting-connection-tab.png)
+
 ## Model performance tab
 
 You can review the **Round trip time** and **Sign in time** for each Cloud PC model SKU in your organization.
