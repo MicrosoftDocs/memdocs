@@ -298,7 +298,8 @@ Your cloud native endpoint will need some applications. To get started, we recom
 To build your first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Autopilot process.
 
 - Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
-  > [!NOTE] If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn’t triggered. In that situation, restart the device and ensure it has internet access. If it still doesn’t work, try resetting the PC or reinstalling Windows.
+  > [!NOTE] 
+  > If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn’t triggered. In that situation, restart the device and ensure it has internet access. If it still doesn’t work, try resetting the PC or reinstalling Windows.
 
 - Sign in with Azure AD credentials (*UPN* or *AzureAD\username*).
 - The enrollment status page will appear and provide the status of the device configuration.
