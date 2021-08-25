@@ -33,7 +33,19 @@ ms.collection: M365-identity-device-management
 Increasing demand for remote work is accelerating adoption of Zero Trust security models, enabled by cloud- powered solutions. The shifting of device management to the cloud provides a better end-user experience and simplifies IT operations, while reducing reliance on on-premises infrastructure. This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization.
 
 > [!TIP]
-> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). This guide (for *cloud native Windows endpoints*) differs from the *Windows in cloud configuration for Endpoint Management* solution by guiding you through the configuration and highlighting areas you might want to customise.
+> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). 
+
+The table below describes the key difference between this guide and *Windows in cloud configuration*.
+
+---
+| Solution | Objective |
+| --- | --- |
+| Get started with cloud native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing |
+| [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices |
+
+---
+
+You can use this guide in combination with *Windows in cloud configuration* to further customize the pre-built experience.
 
 ## Overview
 
@@ -286,11 +298,10 @@ Your cloud native endpoint will need some applications. To get started, we recom
 To build your first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Autopilot process.
 
 - Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
-
-  If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn’t triggered. In that situation, restart the device and ensure it has internet access. If it still doesn’t work, try resetting the PC or reinstalling Windows.
+  > [!NOTE] 
+  > If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn’t triggered. In that situation, restart the device and ensure it has internet access. If it still doesn’t work, try resetting the PC or reinstalling Windows.
 
 - Sign in with Azure AD credentials (*UPN* or *AzureAD\username*).
-
 - The enrollment status page will appear and provide the status of the device configuration.
 
 **Congratulations!** You’ve provisioned your first cloud native Windows endpoint!
@@ -298,9 +309,7 @@ To build your first cloud native Windows endpoint, use the same virtual machine 
 Some things to check out on your new cloud native Windows endpoint:
 
 - Notice that OneDrive folders are redirected and when Outlook opens, it's configured automatically to connect to Office 365.
-
 - Open **Company Portal** from the **Start Menu** and notice that **Microsoft Whiteboard** is available for installation.
-
 - Consider testing access from the device to on-premises resources like file shares, printers, and intranet sites.
 
   > [!NOTE]
@@ -316,6 +325,7 @@ This phase is designed to help you build out security settings for your organiza
 - Windows Firewall
 - BitLocker
 - Security baselines
+- Windows Update for Business
 
 ### Microsoft Defender Antivirus (MDAV)
 
@@ -334,6 +344,7 @@ The following settings are recommended as a minimum configuration for Microsoft 
 - Monitoring for incoming and outgoing files: **Monitor all files**
 - Turn on behavior monitoring: **Yes**
 - Turn on intrusion prevention: **Yes**
+- Enable network protection: **Enable**
 - Scan all downloaded file and attachments: **Yes**
 - Scan scripts that are used in Microsoft browsers: **Yes**
 - Scan network files: **Not Configured**
@@ -361,6 +372,9 @@ For more information on Windows Defender configuration, including Microsoft Defe
 ### Microsoft Defender Firewall
 
 Use Endpoint Security in Microsoft Endpoint Manager to configure the firewall and firewall rules. For more information, see [Firewall policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-firewall-policy).
+
+> [!NOTE]
+> Azure AD joined devices cannot use the 'domain' network profile as they cannot leverage LDAP to detect a domain connection in the same way that domain-joined devices do. Microsoft is aware of this issue/challenge and is investigating alternatives that can help to improve this experience in future Windows releases. As a workaround, consider leveraging a PowerShell script to detect whether a device is on the corporate network, and if so, switch the current network profile to 'private'. The PowerShell cmdlet to change network profiles is: [Set-NetConnectionProfile](/powershell/module/netconnection/set-netconnectionprofile). Note that using ‘private’ as a replacement for ‘domain’ allows you to separate rules based on your domain network and all other networks between the ‘private’ and ‘public’ profiles. However, users with administrative privileges will occasionally be prompted at run time to create new firewall rules and apply them to either public or private profiles. If these users are not aware of the use of the private network profile as a stand-in for the domain profile, unexpected firewall rule configuration may result.
 
 ### BitLocker Encryption
 
@@ -427,12 +441,29 @@ You can use security baselines to apply a set of configurations that are known t
 
 Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation by applying only the baseline to a selective group of test endpoints without any other configuration profiles or settings.
 
-For example, the following settings in the **Windows security baseline** can cause issues with Windows Autopilot:
+For example, the following settings in the **Windows security baseline** can cause issues with Windows Autopilot or attempting to install apps as a standard user:
 
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
 
 For more information, see [Windows Autopilot policy conflicts](/mem/autopilot/policy-conflicts).
+
+### Windows Update for Business
+
+*Windows Updates for Business* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update for Business can be configured using:
+
+- [Windows update rings](/mem/intune/protect/windows-10-update-rings)
+- [Windows Feature Updates](/mem/intune/protect/windows-10-feature-updates)
+
+For more information, see:
+
+ - [Learn about using Windows Update for Business in Microsoft Intune](/mem/intune/protect/windows-update-for-business-configure)
+ - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
+
+If you’d like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](/mem/configmgr/comanage/overview).
+
+> [!NOTE]
+> Applying a Windows Update ring will cause a reboot during the Enrollment Status Page phase and require the user to authenticate again.
 
 ## Phase 4 – Apply customizations and review your on-premises configuration
 
@@ -534,9 +565,11 @@ If you have only one group of people that need local administrator access to all
 
 You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
 
-- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 20H2.
-- If you have Windows 20H1 (2004) use the [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace).
-- Windows versions prior to Windows 20H1 (2004) can't use groups, only individual use accounts.
+- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 10 20H2.
+- If you have Windows 10 20H1 (2004) use the [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace).
+- Windows versions prior to Windows 10 20H1 (2004) can't use groups, only individual accounts.
+
+For more information, see [How to manage the local administrators group on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin)
 
 ### Group Policy to MDM Setting Migration
 
@@ -560,12 +593,7 @@ You can use PowerShell scripts for any settings or customizations that you need 
 
 ### Mapping Network Drives and Printers
 
-Cloud native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary. The following link is to a community example that's provided only to demonstrate what is possible:
-
-- [Automating network drive mapping configuration with Intune](https://tech.nicolonsky.ch/next-level-network-drive-mapping-with-intune/).
-
-> [!IMPORTANT]
-> The scripts at the previous link are examples. Microsoft fully supports Intune but does not support the scripts themselves. **The scripts are provided for example only, and you are responsible for anything they might do within your environment**. Always test!
+Cloud native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary. 
 
 For document storage, users can also benefit from SharePoint integration with File Explorer and the ability to sync libraries locally, as referenced here: [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88).
 
@@ -577,20 +605,6 @@ For printing solutions, consider Universal Print. For more information, see the 
 
 - [What is Universal Print?](/universal-print/fundamentals/universal-print-whatis)
 - [Announcing general availability of Universal Print](https://techcommunity.microsoft.com/t5/universal-print-blog/announcing-general-availability-of-universal-print/ba-p/2176759)
-
-### Windows Update for Business
-
-*Windows Updates for Business* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update for Business can be configured using:
-
-- [Windows update rings](/mem/intune/protect/windows-10-update-rings)
-- [Windows Feature Updates](/mem/intune/protect/windows-10-feature-updates)
-
-For more information, see [Learn about using Windows Update for Business in Microsoft Intune](/mem/intune/protect/windows-update-for-business-configure).
-
-If you’d like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](/mem/configmgr/comanage/overview).
-
-> [!NOTE]
-> Applying a Windows Update ring will cause a reboot during the Enrollment Status Page phase and require the user to authenticate again.
 
 ### Applications
 
