@@ -71,13 +71,19 @@ The **Remoting connection** tab lists the following information:
 
 You can review the **Round trip time** and **Sign in time** for each Cloud PC model SKU in your organization.
 
+![Screenshot of using the model performance tab](./media/report-remoting-connection/model-performance-tab.png)
+
 ## Device performance
 
 You can review the **Round trip time** and **Sign in time** for each Cloud PC device in your organization.
 
+![Screenshot of using the device performance tab](./media/report-remoting-connection/device-performance-tab.png)
+
 ## Device history
 
 When you click on a particular device in one of the reports, you'll see specific information for that device.  
+
+![Screenshot of using the device history](./media/report-remoting-connection/device-history.png)
 
 <!-- ########################## -->
 ## Next steps
