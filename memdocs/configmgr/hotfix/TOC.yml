@@ -19,6 +19,10 @@ items:
     href: 2103/10216365.md
   - name: KB 10372804 BitLocker management
     href: 2103/10372804.md
+  - name: KB 10589155 Client update
+    href: 2103/10589155.md
+  - name: KB 10582136 Tenant attach update
+    href: 2103/10582136.md
 - name: Version 2010
   items:
   - name: KB 4599442 Summary of changes in 2010
