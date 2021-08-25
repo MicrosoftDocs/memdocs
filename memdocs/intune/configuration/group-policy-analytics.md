@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 08/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -82,11 +82,9 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
     - **Group Policy Setting Category**: Shows the setting category for ADMX settings, such as Internet Explorer and Microsoft Edge. Not all settings have a setting category.
-    - **ADMX Support**: **Yes** means there's an ADMX template for this setting. **No** means there isn't an ADMX template for the specific setting.
+    - **MDM Support**: 
 
-      For more information on ADMX templates, see [Administrative Templates in Microsoft Intune](administrative-templates-windows.md).
-
-    - **MDM Support**: **Yes** means there's a matching setting available in Endpoint Manager. You can configure this setting in a device configuration profile. Settings in device configuration profiles are mapped to Windows CSPs.
+      **Yes** means there's a matching setting available in Endpoint Manager. You can configure this setting in the Settings Catalog.
 
       **No** means there isn't a matching setting available to MDM providers, including Intune.
 
