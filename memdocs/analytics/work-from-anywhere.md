@@ -27,7 +27,7 @@ The following metrics are weighted and used to compute the **Work from anywhereâ
 - [Cloud identity](#bkmk_identity)
 - [Cloud provisioning](#bkmk_provisioning)
 
-:::image type="content" source="media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics":::
+:::image type="content" source="media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics" lightbox="media/8668496-work-from-anywhere-score.png":::
 ## Windows
 
 Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../intune/protect/windows-10-feature-updates.md). For Configuration Manager devices, create a deployment plan usingâ€¯[Desktop Analytics](../configmgr/desktop-analytics/overview.md). Your score is based on if these remediation actions have been completed or not.
@@ -37,7 +37,7 @@ For information about the cost savings and benefits enabled by Windows, download
 > [!NOTE] 
 > Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
 
-:::image type="content" source="media/8668496-windows.png" alt-text="Screenshot of the Windows fly out showing graph and insights":::
+:::image type="content" source="media/8668496-windows.png" alt-text="Screenshot of the Windows fly out showing graph and insights" lightbox="media/8668496-windows.png":::
 
 ## <a name="bkmk_management"></a> Cloud management
 
@@ -64,7 +64,7 @@ Cloud identity provides users with many productivity benefits including device-w
 > [!NOTE] 
 > Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
 
-:::image type="content" source="media/8668496-cloud-identity.png" alt-text="Screenshot of the Cloud identity fly out showing insights for the metric":::
+:::image type="content" source="media/8668496-cloud-identity.png" alt-text="Screenshot of the Cloud identity fly out showing insights for the metric" lightbox="media/8668496-cloud-identity.png":::
 
 ## <a name="bkmk_provisioning"></a> Cloud provisioning
 
@@ -74,7 +74,7 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 > - Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
 > - You can export a device list as a `.csv` file from **Cloud provisioning** and use it to [Manually register devices with Windows Autopilot](../autopilot/add-devices.md#add-devices).
 
-:::image type="content" source="media/8668496-cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list":::
+:::image type="content" source="media/8668496-cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list" lightbox="media/8668496-cloud-provisioning.png":::
 
 ## <a name="bkmk_np"></a> No commercial median
 
