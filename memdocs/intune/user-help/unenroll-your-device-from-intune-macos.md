@@ -65,7 +65,7 @@ To remove a device after you've left your workplace or school:
 3. Go down to the bottom of the list and you'll see a **plus (+)** and **minus (-)** sign. Select the **minus (-)** sign.
 4. Follow the onscreen prompts to finish removing the management profile.  
 
-After you complete these steps, you can uninstiall Company Portal from your device.  
+After you complete these steps, you can uninstall Company Portal from your device.  
 
 ## Uninstall Company Portal app  
 To uninstall the Company Portal app from a macOS device:
