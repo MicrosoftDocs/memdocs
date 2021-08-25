@@ -62,11 +62,11 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
 4.  On the **Deployment Settings** page, configure the following settings:
 
-    -  **Type of deployment**: Starting in version 2107, you can specify the deployment type for the software update deployment. Prior to version 2107, all deployments created by an automatic deployment rule are required.
+    -  **Type of deployment**: Starting in version 2107, you can specify the deployment type for the software update deployment. Prior to version 2107, all deployments created by an automatic deployment rule are required. <!--9900107, 7033498-->
 
-       - Select Required to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.
+       - Select **Required** to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.
 
-       - Select Available to create an optional software update deployment. This deployment is available for users to install from Software Center.
+       - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center.
 
     -   **Use Wake on LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](../../core/clients/deploy/configure-wake-on-lan.md).  
 
