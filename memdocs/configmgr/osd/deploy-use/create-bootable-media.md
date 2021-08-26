@@ -2,7 +2,7 @@
 title: Create bootable media
 titleSuffix: Configuration Manager
 description: Use bootable media in Configuration Manager to install a new version of Windows or replace a computer.
-ms.date: 07/15/2021
+ms.date: 08/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -75,7 +75,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 ## Process
 
 > [!NOTE]
-> For PKI environments, since you specify the root certificate authority (CA) at the primary site, make sure to create the bootable media at the primary site. The central administration site (CAS) doesn't have the root CA information to properly create the bootable media.
+> For PKI environments, since you specify the root certificate authority (CA) at the primary site, make sure to create the bootable media at the primary site. The central administration site (CAS) doesn't have the root CA information to properly create the bootable media. For more technical information on this issue, see [Sending with winhttp failed 80072f8f error in Smsts.log during OS deployment by using bootable or prestaged media](/troubleshoot/mem/configmgr/sending-with-winhttp-failed-80072f8f-error).
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.
 
