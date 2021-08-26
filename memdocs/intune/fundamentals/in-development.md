@@ -190,8 +190,9 @@ Applies to:
 - macOS
 - Windows 10 and newer
 
-<!-- ***********************************************-->
+<!-- ***********************************************
 ## Role-based access control
+-->
 
 <!-- ***********************************************-->
 ## Scripting
@@ -204,9 +205,9 @@ When you use the Graph API to export Intune reports without selecting any column
 
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
-<!-- ***********************************************-->
+<!-- ***********************************************
 ## Security
-
+-->
 <!-- ***********************************************-->
 ## Notices
 
