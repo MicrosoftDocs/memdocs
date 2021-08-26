@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,6 +39,9 @@ When you use Microsoft Intune and Microsoft Defender for Endpoint (MDE) in the s
 
 With MDE-Attach, security configurations for MDE settings are sent directly to applicable devices through their Azure AD membership. On each device it’s the Microsoft Defender for Endpoint Sense agent that reads the policy, acts to configure the security settings, and then report on those configurations.
 
+<!-- Placeholder image follows -->
+:::image type="content" source="./media/mde-attach-overview/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution.":::
+
 Because the MDE Sense agent receives and acts on the policy, the MDE-Attach solutions primary requirements are:
 
 - You have subscriptions for both Intune and Microsoft Defender for Endpoint
@@ -65,8 +68,8 @@ MDE-Attach policies are supported for the following device platforms:
 With the required subscriptions for both Intune and MDE in the same Azure AD environment, you can use MDE-Attach. When you use MDE-Attach, Microsoft Endpoint Manager becomes the umbrella for policy management and reporting on your devices that use MDE for security.
 
 ## Architecture
-
-:::image type="content" source="./media/mde-attach-overview/FILENAME.PNG" alt-text="Conceptual representation of the MDE-Attach solution.":::
+<!-- Placeholder image follows. Use of AAD and MEM for Azure AD and Microsoft Endpoint Manager must be fixed for use in docs -->
+:::image type="content" source="./media/mde-attach-overview/pending-mde-attach-architecture.png" alt-text="Conceptual representation of the MDE-Attach solution.":::
 
 1. Blah
 2. Blah
