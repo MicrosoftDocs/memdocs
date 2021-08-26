@@ -186,7 +186,7 @@ Applies to:
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device enrollment
 
-#### Modern authentication method with Apple Setup Assistant is out of preview for automated device enrollment<!--9579675 -->
+#### Modern authentication method with Apple Setup Assistant is out of preview for automated device enrollment<!--9579676 -->
 
 The modern authentication method with Apple Setup Assistant is now out of preview and generally available for use for automated device enrollment.
 
@@ -226,10 +226,6 @@ The new settings are found as follows under the following four categories in the
 - **Microsoft Defender - Network protection** - This is a new category for Microsoft Defender for Endpoint in the catalog:
   - Enforcement level
 
-The setting we’ve removed:
-
-- **Microsoft Defender - EDR Preferences**:
-  - Device tags
 
 #### Confirm Tunnel Gateway servers can access your internal network from within the Microsoft Endpoint Manager admin center<!-- 9840576    -->
 
@@ -243,7 +239,7 @@ The status for this internal network access check is reported as *Internal netwo
 - **Unhealthy** - The server can't access the URL specified in the site properties.
 - **Unknown** - This status appears when you haven't set a URL in the site properties, and doesn't affect the overall status of the site.
 
-Your servers will need to uupgrade to the latest version of the Tunnel Gateway server software for this feature to work.
+Your servers will need to upgrade to the latest version of the Tunnel Gateway server software for this feature to work.
 
 #### Compliance setting for SafetyNet hardware-backed key attestation for Android Enterprise personally-owned work profile<!--8903071  -->
 
