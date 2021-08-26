@@ -72,6 +72,8 @@ You're presented with the Updates Wizard that displays a list of the product are
    - [Co-management](../../../comanage/overview.md)
    - [Endpoint analytics](../../../../analytics/enroll-configmgr.md)
 
+  If you don't wish to onboard, clear the checkmarks from both the **Enable Microsoft Endpoint Manager admin center** and **Enable automatic client enrollement for co-management** options. <!--1074186-->
+
 ### 2. During the update installation
 
 As part of the update installation, Configuration Manager does the following actions:
