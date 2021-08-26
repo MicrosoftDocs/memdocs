@@ -38,7 +38,7 @@ To **Reprovision** a Cloud PC, it must have a status of **Failed** or **Provisio
 
 For information on when to use the **Reprovision** action, see [Reprovisioning](provisioning.md#reprovisioning).
 
-## Resize a Cloud PC
+## Reprovision a Cloud PC
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a Cloud PC device > **Reprovision**.
 ![Screenshot of reprovision a Cloud PC](./media/reprovision-cloud-pc/reprovision.png)
