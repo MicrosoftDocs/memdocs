@@ -73,7 +73,7 @@ You can review the **Round trip time** and **Sign in time** for each Cloud PC mo
 
 ![Screenshot of using the model performance tab](./media/report-remoting-connection/model-performance-tab.png)
 
-## Device performance
+## Device performance tab
 
 You can review the **Round trip time** and **Sign in time** for each Cloud PC device in your organization.
 

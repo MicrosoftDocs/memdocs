@@ -68,7 +68,7 @@ You can review the CPU spike time and RAM spike time scores and percentages by f
 
 ![Screenshot of using the model performance tab](./media/report-resource-performance/model-performance-tab.png)
 
-## Device performance
+## Device performance tab
 
 You can review the CPU spike time and RAM spike time scores and percentages by for each Cloud PC device in your organization.
 
