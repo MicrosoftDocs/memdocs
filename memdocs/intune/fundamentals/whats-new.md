@@ -243,7 +243,7 @@ The status for this internal network access check is reported as *Internal netwo
 - **Unhealthy** - The server can't access the URL specified in the site properties.
 - **Unknown** - This status appears when you haven't set a URL in the site properties, and doesn't affect the overall status of the site.
 
-Your servers will need to uupgrade to the latest version of the Tunnel Gateway server software for this feature to work.
+Your servers will need to upgrade to the latest version of the Tunnel Gateway server software for this feature to work.
 
 #### Compliance setting for SafetyNet hardware-backed key attestation for Android Enterprise personally-owned work profile<!--8903071  -->
 
