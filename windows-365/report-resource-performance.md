@@ -47,6 +47,8 @@ Before you can use this report, you'll need to [enroll your Cloud PC devices in 
 
 To get to the **Resource performance** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Resource performance**.
 
+![Screenshot of using the resource performance report](./media/report-resource-performance/resource-performance-report.png)
+
 ## Resource performance score tab
 
 The **Resource performance score** is an overall performance rating (from 0 to 100) for all the Cloud PCs that you manage. This score is a weighted average of **CPU spike time score** and **RAM Spike time score**.
@@ -58,9 +60,13 @@ The **Resource performance score** is an overall performance rating (from 0 to 1
 
 **Insights and recommendations** suggests actions that you can take to improve your scores.
 
+![Screenshot of using the resource performance score tab](./media/report-resource-performance/resource-performance-score-tab.png)
+
 ## Model performance tab
 
 You can review the CPU spike time and RAM spike time scores and percentages by for each Cloud PC model SKU in your organization.
+
+![Screenshot of using the model performance tab](./media/report-resource-performance/model-performance-tab.png)
 
 ## Device performance
 
