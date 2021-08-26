@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,9 @@ Before you install and configure the Certificate Connector for Microsoft Intune,
 
 Requirements for the computer where you install the connector software:
 
-- Windows Server 2012 R2 or later
+- Windows Server 2012 R2 or later.
+  > [!NOTE]
+  > The Server installation must include the Desktop Experience and support use of a browser. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
 
 - .NET 4.7.2
 
