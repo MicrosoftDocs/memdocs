@@ -45,6 +45,8 @@ Before you can use this report, you'll need to [enroll your Cloud PC devices in 
 
 To get to the **Remoting connection** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Remoting connection**.
 
+![Screenshot of using the remoting connection report](./media/report-remoting-connection/remoting-connection-report.png)
+
 ## Remoting connection tab
 
 The **Remoting connection** tab lists the following information: 
@@ -63,17 +65,25 @@ The **Remoting connection** tab lists the following information:
 
 **Insights and recommendations** suggests actions that you can take to improve your scores.
 
+![Screenshot of using the remoting connection tab](./media/report-remoting-connection/remoting-connection-tab.png)
+
 ## Model performance tab
 
 You can review the **Round trip time** and **Sign in time** for each Cloud PC model SKU in your organization.
+
+![Screenshot of using the model performance tab](./media/report-remoting-connection/model-performance-tab.png)
 
 ## Device performance
 
 You can review the **Round trip time** and **Sign in time** for each Cloud PC device in your organization.
 
+![Screenshot of using the device performance tab](./media/report-remoting-connection/device-performance-tab.png)
+
 ## Device history
 
 When you click on a particular device in one of the reports, you'll see specific information for that device.  
+
+![Screenshot of using the device history](./media/report-remoting-connection/device-history.png)
 
 <!-- ########################## -->
 ## Next steps
