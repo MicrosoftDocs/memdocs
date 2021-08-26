@@ -77,12 +77,10 @@ Now that the languages are installed on the image that users will receive, you n
 13. After selecting your desired language and region combination from the dropdown, the dropdown menu may be underlined in red, indicating that the selection is not confirmed. Hit the **F5** function key on your keyboard to confirm the selection, resulting in a green underlined dropdown menu.
     Before hitting **F5**:
     
-    [!div class="mx-imgBorder"]
     ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice hasn't been confirmed.](media/provide-localized-windows-experience/regionaloption-selected-redunderline.png)
 
     After hitting **F5**:
     
-    [!div class="mx-imgBorder"]
     ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice has been confirmed. ](media/provide-localized-windows-experience/regionaloption-selected-greenunderline.png)
 
 14. Switch to the **Common** tab and check the following three options:
