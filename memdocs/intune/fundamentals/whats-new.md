@@ -186,7 +186,7 @@ Applies to:
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device enrollment
 
-#### Modern authentication method with Apple Setup Assistant is out of preview for automated device enrollment<!--9579675 -->
+#### Modern authentication method with Apple Setup Assistant is out of preview for automated device enrollment<!--9579676 -->
 
 The modern authentication method with Apple Setup Assistant is now out of preview and generally available for use for automated device enrollment.
 
