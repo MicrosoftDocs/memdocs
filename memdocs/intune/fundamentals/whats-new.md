@@ -226,10 +226,6 @@ The new settings are found as follows under the following four categories in the
 - **Microsoft Defender - Network protection** - This is a new category for Microsoft Defender for Endpoint in the catalog:
   - Enforcement level
 
-The setting we’ve removed:
-
-- **Microsoft Defender - EDR Preferences**:
-  - Device tags
 
 #### Confirm Tunnel Gateway servers can access your internal network from within the Microsoft Endpoint Manager admin center<!-- 9840576    -->
 
