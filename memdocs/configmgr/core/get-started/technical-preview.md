@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/26/2021
+ms.date: 08/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -120,8 +120,10 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2108
 
-- [9663857](2021/technical-preview-2108.md) <!--9663857-->  
-- [10326535](2021/technical-preview-2108.md) <!--10326535-->
+- [Export to CSV](2021/technical-preview-2108.md#bkmk_csv) <!--9663857-->
+- [Custom properties for devices in the console](2021/technical-preview-2108.md#bkmk_custom) <!--10642650-->
+- [Improvements to Software Center notifications with logos](2021/technical-preview-2108.md#bkmk_notify) <!--4993167-->
+- [PowerShell release notes preview](2021/technical-preview-2108.md#bkmk_powershell) <!--10326535-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
