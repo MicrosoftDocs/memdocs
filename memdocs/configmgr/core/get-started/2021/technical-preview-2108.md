@@ -2,7 +2,7 @@
 title: Technical preview 2108
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2108.
-ms.date: 08/26/2021
+ms.date: 08/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -23,10 +23,10 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2108/1234567.md)] -->
 
-[!INCLUDE [10642650](includes/2108/10642650.md)]
-[!INCLUDE [9663857](includes/2108/9663857.md)]
-[!INCLUDE [4993167](includes/2108/4993167.md)]
-[!INCLUDE [10326535](includes/2108/10326535.md)]
+[!INCLUDE [Export to CSV](includes/2108/9663857.md)]
+[!INCLUDE [Custom properties for devices in the console](includes/2108/10642650.md)]
+[!INCLUDE [Improvements to Software Center notifications with logos](includes/2108/4993167.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2108/10326535.md)]
 
 <!-- ## General known issues
 
