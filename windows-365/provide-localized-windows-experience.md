@@ -101,7 +101,7 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
 You can perform these steps for each language you need to provide as the default language for users. If your users have both Cloud PCs and physical devices, you may want to apply [Group Policy loopback](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy) so these settings only affect users when they sign in to ther Cloud PC.
 
 > [!NOTE]
-> Step 6 above uses the "Replace" command, setting the user's preferred language to just the one language defined in the registry item. If you create multiple Group Policy objects  to assign different languages to users, make sure each user is a part of a single security group.
+> Step 6 above uses the "Replace" command, setting the user's preferred language to just the one language defined in the registry item. If you create multiple Group Policy objects to assign different languages to users, make sure each user is only a member of a single security group that is being targeted.
 
 ## Next steps
 [Create a provisioning policy](create-provisioning-policy.md)
