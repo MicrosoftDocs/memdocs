@@ -2,7 +2,7 @@
 title: Tenant attach - Create and deploy Antivirus policies from the admin center (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy Antivirus policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 05/18/2021
+ms.date: 08/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -30,7 +30,7 @@ ms.author: mstewart
 1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
-1. For the **Platform**, select **Windows 10 and Windows Server (ConfigMgr)**.
+1. For the **Platform**, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
 1. For the **Profile**, select **Microsoft Defender Antivirus (Preview)** then **Create**.
 1. Assign a **Name** and optionally a **Description** on the **Basics** page.
 1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about available policies, see [Antivirus policy settings for tenant attached devices](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
@@ -41,7 +41,7 @@ ms.author: mstewart
 1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
-1. For the **Platform**, select **Windows 10 and Windows Server (ConfigMgr)**.
+1. For the **Platform**, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
 1. For the **Profile**, select **Windows Security experience (preview)** then **Create**.
 1. Assign a **Name** and optionally a **Description** on the **Basics** page.
 1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about the available settings, see [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).

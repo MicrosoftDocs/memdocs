@@ -2,7 +2,7 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 08/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -27,6 +27,7 @@ Use client settings to configure the appearance and behaviors of Software Center
 - Change the branding of Software Center to include your organization's name, colors, and logo. For more information, see [Brand Software Center](#brand-software-center).
 
 - Configure which default tabs are visible, and add up to five custom tabs to Software Center.<!--4063773-->
+   - In Configuration Manager 2103 and earlier, when single sign on with multifactor authentication is used, you may not be able to sign into custom tabs that load a website that's subject to conditional access policies. <!--10436429-->
 
 - Starting in version 2006, you can configure co-managed devices to use the Company Portal for both Intune and Configuration Manager apps. For more information, see [Use the Company Portal app on co-managed devices](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 08/27/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -84,7 +84,7 @@ Prerequisites to support managing tamper protection with these profiles:
 
  Profiles for *Antivirus* policy that support tamper protection for [devices managed by Configuration Manager](#devices-managed-by-configuration-manager):
 
-- Platform: **Windows 10 and Windows Server (ConfigMgr)**
+- Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
   - Profile: **Windows Security experience (preview)**
 
 ## Antivirus profiles
