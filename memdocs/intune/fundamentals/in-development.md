@@ -136,9 +136,18 @@ The Windows Update settings for quality updates that you’ll soon be able to us
 - Quality Update Deadline Period (Days)
 
 <!-- ***********************************************-->
-<!--
 ## Device enrollment
--->
+
+### Four new Shared iPad enrollment settings<!--9684925 -->
+
+Four new settings will be available for Shared iPad devices. These settings get applied at the time of Automated Device Enrollment.
+
+- For iPadOS 14.5 and later in Shared iPad mode:
+  - Require Shared iPad temporary setting only: When set to Yes, users only see the Guest Welcome pane, and can only sign in as a guest user. Users can't sign in with a Managed Apple ID.
+  - Maximum seconds of inactivity until temporary session logs out: If there isn't any activity after the value you enter, then the temporary session automatically signs out.
+  - Maximum seconds of inactivity until user session logs out: If there isn't any activity after the value you enter, then the user session automatically signs out.
+- For iPadOS 13.0 and later in Shared iPad mode:
+  - Maximum seconds after screen lock before password is required for Shared iPad.
 
 <!-- ***********************************************-->
 ## Device management
@@ -155,12 +164,75 @@ Later this year, Apple is expected to release iOS 15. Microsoft Intune, includin
 
 Apple is expected to release macOS 12 (Monterey) in the fall of 2021. Microsoft Intune, including the Company Portal and Intune MDM agent, will require macOS 10.15 (Catalina) and later shortly after the release of macOS 12.
 
+### New Android filtering options in device lists<!--7479654 -->
+
+You'll be able to choose the following Android enrollment types when filtering the device lists in Intune:
+
+- Android (work profile)
+- Android (corporate-owned work profile)
+- Android (fully managed)
+- Android (dedicated)
+- Android (device administrator)
+
+### Support for Locate device remote action on Android Enterprise dedicated devices<!--8589952 -->
+
+You'll be able to use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. For an offline device, you can get the last known location (for a limited time). For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
+
+### Android Enterprise dedicated devices will support the Rename remote action<!--8590028 -->
+
+You'll be able to use the Rename remote action on Android Enterprise dedicated devices. You can rename devices individually and in bulk. When using bulk Rename actions, you must include either a random number or the device's serial number.
+
+### New device restriction setting for Android Enterprise: Developer settings<!--10510385 -->
+
+A new Android Enterprise device restriction setting will be available: Developer settings. When set to **Allow**, the setting lets users access developer settings on the device. By default, it's set to **Not configured**.
+
+### New iOS device restriction settings for connected devices, doc viewing  <!--10119553 -->
+
+There will be two new device restriction settings you can configure on iOS devices (**Devices** > **iOS/iPadOS** > **Configuration profiles** > **Create profile**  and select **Device restrictions** for profile) in Intune.  
+
+- **Block Siri for translation** (Connected devices): Disables the connection to Siri servers so that users can't use Siri to translate text. Applies to iOS and iPadOS versions 15 and later.  
+- **Allow copy/paste to be affected by managed open-in** (App Store, Doc Viewing, Gaming): Enforces copy/paste restrictions based on how you configured **Block viewing corporate documents in unmanaged apps**  and **Block viewing non-corporate documents in corporate apps**.
+
+For more information about iOS device restriction profiles in Intune, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
+
+### New macOS device restriction setting blocks users from erasing all content and settings on device<!--10131859 -->
+
+When creating a device restriction policy for macOS devices, there will be a new general setting available (**Devices** > **macOS** > **Configuration profiles** > **Create profile** > and then select **Templates** > **Device restrictions** for profile) that lets you Block users from erasing all content and settings on device. Use this setting to disable the reset option on supervised devices, so that users can't reset their device to factory settings.
+
+For more information about macOS device restriction profiles in Intune, see [macOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-macos.md).
+
+Applies to:
+
+- macOS version 12 and later
+
+### New software update restriction settings for macOS<!--10255184 -->
+
+There will be five new software update settings available when configuring a macOS device restriction profile (**Devices** > **macOS** > **Configuration profiles** > **Create profile** > and then select **Templates** > **Device restrictions** for profile) in Intune.  
+
+- **Defer software updates** (General): Prevents users from seeing certain types of newly released updates until after a deferral period. Deferring software updates doesn't stop or change scheduled updates. Types of software updates you can defer include: **Major OS software updates**, **Minor OS software updates**, **Non-OS software updates**, or any combination of the three.
+
+- **Delay default visibility of software updates**(General): Defers the default visibility of all software updates for up to 90 days.  After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to macOS, version 10.13.4 and later.  
+- **Delay visibility of major OS software updates**(General):  Delays visibility of major OS software updates for up to 90 days. After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to macOS, version 11.3 and later.  
+
+- **Delay visibility of minor OS software updates**(General): Delays visibility of minor OS software updates for up to 90 days. After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to  macOS, version 11.3 and later.  
+- **Delay visibility of non OS software updates**(General): Delays visibility of non-OS software updates (such as Safari updates) for up to 90 days. After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to macOS, version 11.0 and later.
+
+For more information about macOS device restriction profiles in Intune, see [macOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-macos.md).  
+
 <!-- ***********************************************-->
 ## Intune apps
 
 ### Intune management agent for macOS devices will be a universal app<!-- 9294405  -->
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+
+### Syncing the iOS/iPadOS/macOS Company Portal version<!-- 10535709  -->
+
+The version of the iOS/iPadOS Company Portal and the macOS Company Portal syncing to version 5.2019 for the next release. Going forward, the iOS/iPadOS and macOS Company Portal apps will have the same version number. For related information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+### Improved flow when saving logs in Android Company Portal app<!-- 10414688  -->
+
+In the Android Company Portal app, when users need to download a copy of the Android Company Portal logs they will be prompted to choose a folder location. In the Android Company Portal app, users will select **Settings** > **Diagnostic logs** > **SAVE LOGS** to choose the folder location.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
@@ -190,6 +262,10 @@ Applies to:
 - macOS
 - Windows 10 and newer
 
+### Update to the Assignment failures operational report<!-- 6473096  -->
+
+We will be adding [security baselines](../protect/security-baselines.md) and endpoint security profiles to the existing **Assignment failures** report. Role-based access control (RBAC) permissions will be applied to the report to filter on the set of policies that an admin can see. The profile types are differentiated using the **Policy type** column with the ability to filter. The report will show the number of devices in a state of error and conflict for a given profile, with the ability to drill down into a detailed list of those devices or users and further into the setting details. You can find the **Assignment failures** report in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**, or by selecting **Endpoint Security** > **Monitor**. For more information, see [Assignment failures report (Operational)](../fundamentals/reports.md#assignment-failures-report-operational).
+
 <!-- ***********************************************
 ## Role-based access control
 -->
@@ -205,10 +281,27 @@ When you use the Graph API to export Intune reports without selecting any column
 
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
-<!-- ***********************************************
-## Security
--->
 <!-- ***********************************************-->
+## Security
+
+### Attack Surface Reduction profiles for  Configuration Manager tenant attach<!--7323386  -->
+
+We’re adding two endpoint security profiles for *Attack Surface Reduction* to Intune in support of  [Configuration Manager tenant attach](../protect/tenant-attach-intune.md). (**Endpoint security** > **Create Policy** > **Attack surface reduction**)
+
+The new profiles:
+
+- **Exploit Protection** - This profile will allow a device that connects to Intune via tenant attach to receive and apply the exploit protection profile.
+- **Web Protection** - This profile will allow a device that connects to Intune though tenant attach to receive and apply the web protection profile.
+
+For more information about these profiles, see [Attack surface reduction profiles](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles).
+
+### Expanded support for Windows Defender Security Center  for tenant attach devices<!-- 7323443   -->
+
+Today Intune supports Tamper Protection on [tenant attached devices](../protect/tenant-attach-intune.md) through the *Windows Security Experience* profile, which is part of endpoint security Antivirus policy.  
+
+Soon, we'll add additional settings to that profile to configure the Windows Defender Security Center.  (**Endpoint security** > **Antivirus** > **Create Policy** > Platform **Windows 10, and Windows Server (ConfigMgr)** > Profile:
+**Windows Security experience**).  
+
 ## Notices
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
