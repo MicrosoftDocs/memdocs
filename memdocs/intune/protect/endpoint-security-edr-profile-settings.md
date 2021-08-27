@@ -36,7 +36,7 @@ Supported platforms and profiles:
 - **Windows 10 and later**: Use this platform for policy you deploy to devices managed with Intune.
   - Profile: **Endpoint detection and response (MDM)**
 
-- **Windows 10 and Windows Server (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
+- **Windows 10, Windows 11, and Windows Server (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
   - Profile: **Endpoint detection and response (ConfigMgr)**
 
 ## Endpoint detection and response (MDM)
