@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 08/02/2021 
+ms.date: 08/27/2021 
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -169,6 +169,14 @@ If you delete a downloaded report from the **Monitoring** > **Reports** node, th
  If you previously downloaded a configuration item from Community hub using Configuration Manager 2010, you may receive an error when downloading a baseline after upgrading to Configuration Manager version 2103. A download error can occur when the baseline contains an updated version of the configuration item you previously downloaded with Configuration Manager 2010.
 
 **Workaround**: To work around this issue, delete the configuration item you previously downloaded, then download the baseline with the new version of the configuration item.
+
+### Unable to sign in when single sign on with multifactor authentication is used
+<!--10436429-->
+
+When single sign on with multifactor authentication is used, you may not be able to sign in for the following features when using Configuration Manager 2103 and earlier:
+- Community hub
+- Community hub from CMPivot
+- Custom tabs in Software Center that load a website that's subject to conditional access policies
 
 ## Next steps
 
