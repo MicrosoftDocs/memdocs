@@ -84,7 +84,7 @@ Network access to and from a Cloud PC in Windows 365 Enterprise is at the contro
 
 All the isolation described above happens on a per user, per Cloud PC basis, since Windows 365 doesn't support multi-user scenarios.
 
-For a full description of Windows 365 architecture, see [Windows 365 architecture](architecture.md). For more information on isolation in Microsoft 365, see [Isolation and Access Control in Microsoft 365](/microsoft-365/enterprise/microsoft-365-isolation-in-microsoft-365). For more on Access Management in Microsoft 365, refer to [Identity and Access Management - Microsoft Service Assurance](/compliance/assurance/assurance-identity-and-access-management)
+For a full description of Windows 365 architecture, see [Windows 365 architecture](architecture.md). For more information on isolation in Microsoft 365, see [Isolation and Access Control in Microsoft 365](/microsoft-365/enterprise/microsoft-365-isolation-in-microsoft-365). For more on Access Management in Microsoft 365, refer to [Identity and Access Management - Microsoft Service Assurance](/compliance/assurance/assurance-identity-and-access-management).
 
 ## Compliance and Legal
 
