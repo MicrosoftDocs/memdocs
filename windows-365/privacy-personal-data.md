@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Privacy, Customer data and Customer Content in Windows 365
+# Privacy, customer data, and customer content in Windows 365
 
 Windows 365 is a cloud-based service that lets you provision and manage Cloud PC for your users. You manage the Cloud PCs with the rest of your devices by using Microsoft Endpoint Manager (Windows 365 Enterprise) or a self-serviced experience (Windows 365 Business). This documentation provides details on data platform and privacy compliance for Windows 365.
 
