@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Privacy and personal data in Windows 365
+# Privacy, Customer data and Customer Content in Windows 365
 
 Windows 365 is a cloud-based service that lets you provision and manage Cloud PC for your users. You manage the Cloud PCs with the rest of your devices by using Microsoft Endpoint Manager (Windows 365 Enterprise) or a self-serviced experience (Windows 365 Business). This documentation provides details on data platform and privacy compliance for Windows 365.
 
@@ -42,21 +42,23 @@ Windows 365 provides its service to customers by gathering and using data from t
 - [Endpoint Analytics](/mem/analytics/overview) – part of Microsoft Endpoint manager, specifically for analytical insights about device and app usage.
 - [Microsoft 365 apps for enterprise](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans?rtc=1) – for management of Microsoft 365 Apps.
 
-To protect and maintain enrolled devices, Windows 365 processes and copies data from these services to Windows 365. When Windows 365 processes data, it follows the documented directions you provide, as referenced in the [Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/all) and [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). Windows 365 ensures appropriate data confidentiality, security, and resilience. Windows 365 employs additional internal privacy and security measures to ensure proper handling of personal data.
+To protect and maintain enrolled devices, Windows 365 processes and copies data from online services and data pipelines configured by the customer to Windows 365. Once data is integrated from these services into Windows 365, the [Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/all) and [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) applicable to Windows 365 also applies to the data. Windows 365 ensures appropriate data confidentiality, security, and resilience. Windows 365 employs additional internal privacy and security measures to ensure proper handling of personal data.
 
 ## Windows 365 data storage
 
-Depending on a tenant's region adn preference, Windows 365 stores its data in Azure data centers in North America, Europe, or Asia Pacific.
+Depending on a tenant's region and preference, Windows 365 stores its customer data in Azure regions in North America, Europe, or Asia Pacific. For Windows 365 Enterprise, The region is chosen based on On-Prem Netwrok Connection (ONPC) configuration, specifically the region of the Azure Virtual Network selected during the creation of the OPNC.  Windows 365 Business stores customer data in the Azure region of the VM itself. Windows 365 Enterprise stores service generated metadata in Azure data centers in in North America, Europe, or Asia Pacific. This is mapped based on Microsoft Online tenant's country to the nearest region. Windows 365 Business stores service metadata in the Azure region based on the tenant's country and geo mapping.
 
-For more information on where your Azure AD data is located, see:
+For more information on where your data is located, see:
 
 - [Azure Active Directory - Where is your data located?](https://msit.powerbi.com/view?r=eyJrIjoiODdjOWViZDctMWRhZS00ODUzLWI4MmQtNWM5NjBkZTBkNjFlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9)
 - [Data locations for Azure Virtual Desktop](/azure/virtual-desktop/data-locations)
 - [Windows 365 supported regions](planning-guide.md#objective-geographical-regions)
+- [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations)
 
-### How long is personal data stored?
+### How long is customer data and customer content stored?
 
-When a user is removed from Windows 365, Windows 365 keeps non-alert personal data for a maximum of 90 days. For security purposes, alert data collected by Microsoft Defender for Endpoint is stored for 180 days.
+Windows 365 treats both the Cloud PC disk and the data on the VM itself as customer data. 
+When a user is removed from Windows 365, Windows 365 keeps non-alert personal data for a maximum of 90 days. For security purposes, alert data collected by Microsoft Defender for Endpoint is stored for 180 days if the customer uses Microsoft Defender for Endpoint.
 
 For more information on data retention, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
@@ -80,7 +82,7 @@ Network access to and from a Cloud PC in Windows 365 Enterprise is at the contro
 
 All the isolation described above happens on a per user, per Cloud PC basis, since Windows 365 doesn't support multi-user scenarios.
 
-For a full description of Windows 365 architecture, see [Windows 365 architecture](architecture.md). For more information on isolation in Microsoft 365, see [Isolation and Access Control in Microsoft 365](/microsoft-365/enterprise/microsoft-365-isolation-in-microsoft-365).
+For a full description of Windows 365 architecture, see [Windows 365 architecture](architecture.md). For more information on isolation in Microsoft 365, see [Isolation and Access Control in Microsoft 365](/microsoft-365/enterprise/microsoft-365-isolation-in-microsoft-365). For more on Access Management in Microsoft 365, refer to [Identity and Access Management - Microsoft Service Assurance](/compliance/assurance/assurance-identity-and-access-management)
 
 ## Compliance and Legal
 
