@@ -153,6 +153,15 @@ Four new settings will be available for Shared iPad devices. These settings get 
 - For iPadOS 13.0 and later in Shared iPad mode:
   - Maximum seconds after screen lock before password is required for Shared iPad.
 
+### New device restrictions setting prevents sharing work profile contacts with paired Bluetooth devices  <!-- 8630136  -->
+
+A new device restrictions setting for corporate-owned, work profile devices will prevent users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  The new setting will be available in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
+
+- Setting name:  **Contact sharing via Bluetooth (work profile-level)**
+- Setting toggles:  
+- **Block**: Blocks users from sharing work profile contacts via Bluetooth.
+- **Not configured**:  Doesn't enforce any restrictions on the device, so users might be able to share their work profile contacts via Bluetooth.
+
 <!-- ***********************************************-->
 ## Device management
 
