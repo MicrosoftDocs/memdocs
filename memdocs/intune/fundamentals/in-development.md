@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 8/04/2021
+ms.date: 8/30/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -265,6 +265,10 @@ Applies to:
 ### Update to the Assignment failures operational report<!-- 6473096  -->
 
 We will be adding [security baselines](../protect/security-baselines.md) and endpoint security profiles to the existing **Assignment failures** report. Role-based access control (RBAC) permissions will be applied to the report to filter on the set of policies that an admin can see. The profile types are differentiated using the **Policy type** column with the ability to filter. The report will show the number of devices in a state of error and conflict for a given profile, with the ability to drill down into a detailed list of those devices or users and further into the setting details. You can find the **Assignment failures** report in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**, or by selecting **Endpoint Security** > **Monitor**. For more information, see [Assignment failures report (Operational)](../fundamentals/reports.md#assignment-failures-report-operational).
+
+### Organizational report focused on device configuration<!-- 8455708  -->
+
+We will be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or not applicable. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
 
 <!-- ***********************************************
 ## Role-based access control
