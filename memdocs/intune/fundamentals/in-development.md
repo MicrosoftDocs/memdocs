@@ -168,11 +168,11 @@ Later this year, Apple is expected to release iOS 15. Microsoft Intune, includin
 
 Apple is expected to release macOS 12 (Monterey) in the fall of 2021. Microsoft Intune, including the Company Portal and Intune MDM agent, will require macOS 10.15 (Catalina) and later shortly after the release of macOS 12.
 
-### New Android filtering options in device lists<!--7479654 -->
+### New Android device filtering options<!--7479654 -->
 
-You'll be able to choose the following Android enrollment types when filtering the device lists in Intune:
+You'll be able to choose the following Android enrollment types when filtering by OS in the **All devices** list in Intune:
 
-- Android (work profile)
+- Android (personally-owened work profile)
 - Android (corporate-owned work profile)
 - Android (fully managed)
 - Android (dedicated)
