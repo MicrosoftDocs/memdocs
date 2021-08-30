@@ -89,7 +89,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      >
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
      >
-     >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store. 
+     >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store.
 
    - **Subject name format**:
 
@@ -105,6 +105,17 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      > - ;
      > - ,
      > - =
+
+     > [!IMPORTANT]
+     > Beginning with Android 12, Android no longer supports use of hardware identifiers for personally-owned work profile devices. This affects use of the following variables in the subject name or SAN of certificates:
+     >
+     > - Serial number
+     > - IMEI
+     > - MEID
+     >
+     > With this change, certificates can fail to deploy when the certificate profile uses one of these variables and the value isn’t populated. This change of support can affect downstream systems that rely on these values in the Subject and SAN of certificates.
+     >
+     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
      - **User certificate type**
 

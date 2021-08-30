@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 08/31/2021
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -288,6 +288,19 @@ Platforms:
 > - ;
 > - ,
 > - =
+
+> [!IMPORTANT]
+> Beginning with Android 12, Android no longer supports use of hardware identifiers for personally-owned work profile devices. This affects use of the following variables in the subject name or SAN of certificates:
+>
+> - Serial number
+> - IMEI
+> - MEID
+>
+> With this change, certificates can fail to deploy when the certificate profile uses one of these variables and the value isn’t populated. This change of support can affect downstream systems that rely on these values in the Subject and SAN of certificates.
+>
+>For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
+
+
 
 - **User certificate type**  
   Format options for the *Subject name format* include two variables: **Common Name (CN)** and **Email (E)**. Email (E) would usually be set with the {{EmailAddress}} variable.
