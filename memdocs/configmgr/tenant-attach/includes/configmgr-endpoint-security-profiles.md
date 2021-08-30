@@ -4,13 +4,13 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
-ms.date: 07/19/2021
+ms.date: 08/27/2021
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
 The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
 <!--The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:-->
 
-- Platform: **Windows 10 and Windows Server (ConfigMgr)**
+- Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
 
   - Profile: **Microsoft Defender Antivirus Policy (preview)** - Manage [Antivirus policy settings for Configuration Manager devices](../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 

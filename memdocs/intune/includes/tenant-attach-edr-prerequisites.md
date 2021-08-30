@@ -4,7 +4,7 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/12/2020
+ms.date: 08/27/2021
 ms.author: brenduns
 ms.custom: include file
 ---
@@ -17,7 +17,7 @@ Manage [Endpoint detection and response policy settings for Configuration Manage
 
 **Policy path**:
 
-- Endpoint security > Endpoint detection and response > Windows 10 and Windows Server (ConfigMgr)
+- Endpoint security > Endpoint detection and response > Windows 10, Windows 11, and Windows Server (ConfigMgr)
 
 **Profiles**:
 
