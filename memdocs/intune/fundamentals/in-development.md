@@ -327,7 +327,7 @@ Soon, we'll add additional settings to that profile to configure the Windows Def
 
 To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you can see the overall compliance status for the policy. With device level reporting, you can see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
 
-For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions).
+For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](/mem/configmgr/tenant-attach/device-sync-actions).
 
 ## Notices
 
