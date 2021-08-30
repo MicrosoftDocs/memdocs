@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/30/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,6 +48,25 @@ Learn what new features are available in Windows 365.
 
 <!-- ########################## -->
 
+## Week of August 30, 2021
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### Resource performance report in Endpoint Analytics<!-- 32978343-->
+
+A new report is available in Endpoint Analytics: the **Resource performance report**. This report will include metrics for CPU and RAM performance on Cloud PCs. For more information, see [Resource performance report](report-resource-performance.md).
+
+#### Remoting connection report in Endpoint Analytics<!-- 33039368-->
+
+A new report will be added to Endpoint Analytics: the **Remoting connection report**. This report will include the following metrics:
+
+- **Cloud PC Sign in time (sec)** provides the total time users take to connect to the cloud PC.
+- **Round Trip Time (ms)** provides insights on the speed and reliability of network connections from the user location.
+
+For more information, see [Remoting connection report](report-remoting-connection.md).
+
+<!-- ########################## -->
 ## Week of August 2, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
