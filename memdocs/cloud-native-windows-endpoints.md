@@ -561,7 +561,7 @@ Customers using Microsoft Endpoint Configuration Manager can deploy connected ca
 
 ### Local Administrators
 
-If you have only one group of people that need local administrator access to all Windows Azure AD joined devices, you can add them to the [Cloud Device Administrator Azure AD role](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
+If you have only one group of people that need local administrator access to all Windows Azure AD joined devices, you can add them to the [Azure AD Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator).
 
 You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
 
