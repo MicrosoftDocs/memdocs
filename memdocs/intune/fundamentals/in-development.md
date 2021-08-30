@@ -75,6 +75,10 @@ Using iOS app protection policies in Microsoft Intune app protection policies, y
 
 Last year, we announced [Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal website](../fundamentals/whats-new-archive.md#unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal). This feature will be supported for users who get their apps directly from the Android Company Portal. On the **Customization** pane of Intune, select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
+#### New app categories available to better target app protection policies<!-- 4802581  -->
+
+We have improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically applied to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
+
 <!-- ***********************************************-->
 ## Device configuration
 
@@ -234,6 +238,10 @@ The version of the iOS/iPadOS Company Portal and the macOS Company Portal syncin
 
 In the Android Company Portal app, when users need to download a copy of the Android Company Portal logs they will be prompted to choose a folder location. In the Android Company Portal app, users will select **Settings** > **Diagnostic logs** > **SAVE LOGS** to choose the folder location.
 
+#### Notifications from the iOS/iPadOS Company Portal app<!-- 10565849 -->
+
+Notifications from the iOS/iPadOS Company Portal app will now be delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle. For related information, see [Company Portal app notifications](../apps/company-portal-app.md#company-portal-app-notifications).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
@@ -304,7 +312,13 @@ For more information about these profiles, see [Attack surface reduction profile
 Today Intune supports Tamper Protection on [tenant attached devices](../protect/tenant-attach-intune.md) through the *Windows Security Experience* profile, which is part of endpoint security Antivirus policy.  
 
 Soon, we'll add additional settings to that profile to configure the Windows Defender Security Center.  (**Endpoint security** > **Antivirus** > **Create Policy** > Platform **Windows 10, and Windows Server (ConfigMgr)** > Profile:
-**Windows Security experience**).  
+**Windows Security experience**).
+
+### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
+
+To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you can see the overall compliance status for the policy. With device level reporting, you can see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
+
+For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md).
 
 ## Notices
 
