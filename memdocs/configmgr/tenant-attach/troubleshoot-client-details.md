@@ -2,7 +2,7 @@
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
 description: "Troubleshoot client details for Configuration Manager tenant attach"
-ms.date: 02/10/2021
+ms.date: 08/31/2021
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -33,9 +33,20 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 ### <a name="bkmk_noinfo"></a> Unable to get device information
 
-**Error message 1:** Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message:** Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
-**Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
+#### Possible causes for Configuration Manager versions 2103 and later
+
+Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
+
+1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+
+    If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+
+#### Possible causes for Configuration Manager versions 2010 and earlier
+
+Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
