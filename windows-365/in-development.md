@@ -85,18 +85,7 @@ In a future update, Windows 365 will support Windows 11 as a Cloud PC operating 
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
 
 <!-- ***********************************************-->
-## Monitor and troubleshoot
-
-### Resource performance report in Endpoint Analytics<!-- 32978343-->
-
-A new report will be added to Endpoint Analytics: the **Resource performance report**. This report will include metrics for CPU and RAM performance on Cloud PCs.
-
-### Remoting connection report in Endpoint Analytics<!-- 33039368-->
-
-A new report will be added to Endpoint Analytics: the **Remoting connection report**. This report will include the following metrics:
-
-- **Cloud PC Sign in time (sec)** provides the total time users take to connect to the cloud PC.
-- **Round Trip Time (ms)** provides insights on the speed and reliability of network connections from the user location.
+<!-- ## Monitor and troubleshoot-->
 
 ## Next steps
 
