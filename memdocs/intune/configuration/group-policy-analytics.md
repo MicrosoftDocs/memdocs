@@ -114,7 +114,7 @@ Group Policy analytics can parse the following CSPs:
 
 ### Known Issues
 
-The Group Policy analytics (preview) tool currently is not able to support non-ADMX settings in languages other than English at this time. As a result of this, if you import a GPO with settings in languages other than English, you may find your MDM Support % to be inaccurate.
+Currently, the Group Policy analytics (preview) tool only supports non-ADMX settings in the English language. If you import a GPO with settings in languages other than English, then your **MDM Support %** will be inaccurate.
 
 ## Group Policy migration readiness report
 
