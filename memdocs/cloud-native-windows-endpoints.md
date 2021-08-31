@@ -81,6 +81,7 @@ A cloud native Windows endpoint is joined to [Azure AD](/azure/active-directory/
 Use the five ordered phases in this guide, which build on each other to help you prepare your cloud native Windows endpoint configuration. By completing these phases in order, you'll see tangible progress along the way and to be ready to provision new devices at the end of this guide.
 
 **Phases**:
+
 :::image type="content" source="./media/cloud-native-windows-endpoints/phases.png" alt-text="Five phases for setting up cloud native Windows endpoints.":::
 
 - Phase 1 – Set up your environment
