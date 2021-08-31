@@ -321,11 +321,11 @@ Some things to check out on your new cloud native Windows endpoint:
 
 This phase is designed to help you build out security settings for your organization. This section draws your attention to the various Endpoint Security components in Microsoft Endpoint Manager including:
 
-- Microsoft Defender Antivirus (MDAV)
-- Windows Firewall
-- BitLocker
-- Security baselines
-- Windows Update for Business
+- [Microsoft Defender Antivirus (MDAV)](#microsoft-defender-antivirus-MDAV)
+- [Microsoft Defender Firewall](#microsoft-defender-firewall)
+- [BitLocker Encryption](#bitlocker-encryption)
+- [Security baselines](#security-baselines)
+- [Windows Update for Business](#windows-update-for-business)
 
 ### Microsoft Defender Antivirus (MDAV)
 
@@ -441,7 +441,8 @@ You can use security baselines to apply a set of configurations that are known t
 
 Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation by applying only the baseline to a selective group of test endpoints without any other configuration profiles or settings.
 
-For example, the following settings in the **Windows security baseline** can cause issues with Windows Autopilot or attempting to install apps as a standard user:
+#### Security Baselines Known Issues
+The following settings in the **Windows security baseline** can cause issues with Windows Autopilot or attempting to install apps as a standard user:
 
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
@@ -469,7 +470,18 @@ If you’d like more granular control for Windows Updates and you use Configurat
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
 
-In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase is designed to help you build out customizations specific to your organization. We also draw your attention to the various components of Windows and how you can review existing configurations from an on-premises Active Directory Group Policy environment and apply them to cloud native endpoints.
+In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase is designed to help you build out customizations specific to your organization. We also draw your attention to the various components of Windows and how you can review existing configurations from an on-premises Active Directory Group Policy environment and apply them to cloud native endpoints. There are sections for each of the following:
+
+- [Microsoft Edge](#microsoft-edge)
+- [Start and Taskbar layout](#start-and-taskbar-layout)
+- [Settings catalog](#settings-catalog)
+- [Device Restrictions](#device-restrictions)
+- [Delivery Optimization](#delivery-optimization)
+- [Local Administrators](#local-administrators)
+- [Group Policy to MDM Setting Migration](#group-policy-to-mdm-setting-migration)
+- [Scripts](#scripts)
+- [Mapping Network Drives and Printers](#mapping-network-drives-and-printers)
+- [Applications](#applications)
 
 ### Microsoft Edge
 
