@@ -1,11 +1,10 @@
 ---
 title: MDT known issues
 description: Current limitations with the Microsoft Deployment Toolkit (MDT).
-ms.date: 12/23/2020
+ms.date: 08/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: 686f04cd-26f7-4361-a0a3-ddfd8fc4e9a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -14,6 +13,14 @@ manager: dougeby
 # Microsoft Deployment Toolkit known issues
 
 This article provides details of any current known issues and limitations with the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
+
+## ZTI extensions with version 2013 or 2107
+
+<!-- 10695200 -->
+
+If you install a new Configuration Manager site with version 2103 or 2107, when you run the MDT **Configure ConfigMgr Integration Wizard**, the MDT extensions aren't added to the site.
+
+To work around this issue, disable the hierarchy setting for approved console extensions. For more information, see [Enable or disable hierarchy approved console extensions](../core/servers/manage/admin-console-extensions.md#enable-or-disable-hierarchy-approved-console-extensions).
 
 ## Windows 10, version 2004
 
