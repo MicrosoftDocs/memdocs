@@ -193,6 +193,9 @@ To limit the configurations from this guide to the test devices that you import 
 > [!TIP]
 > Dynamic groups take a few minutes to populate after changes occur. In large organizations, it [can take much longer](/azure/active-directory/enterprise-users/groups-troubleshooting#troubleshooting-dynamic-memberships-for-groups). After creating a new group, wait a few minutes before you check to confirm the device is now a member of the group.
 
+> [!NOTE]
+> For more information about dynamic groups for devices, see [Rules for devices](/azure/active-directory/enterprise-users/groups-dynamic-membership#rules-for-devices).
+
 ### Step 5 - Configure the Enrollment Status Page
 
 The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud Native Windows Endpoints** group created in the previous step, *Create Azure AD dynamic group for the device*.
@@ -254,6 +257,9 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
   - OneDrive
     - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
     - Silently move Windows known folders to OneDrive – **Enabled**
+
+    > [!NOTE]
+    > For more information, see [Redirect Known Folder](/onedrive/redirect-known-folders).
 
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 :::image type="content" source="./media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Example of a settings catalog profile.":::
@@ -607,6 +613,8 @@ You can use PowerShell scripts for any settings or customizations that you need 
 ### Mapping Network Drives and Printers
 
 Cloud native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary. 
+
+For personal storage, in [Step 8 - Configure settings for an optimal Microsoft 365 experience](#step-8---configure-settings-for-an-optimal-microsoft-365-experience), we configured OneDrive Known Folder move. For more information, see [Redirect Known Folder](/onedrive/redirect-known-folders).
 
 For document storage, users can also benefit from SharePoint integration with File Explorer and the ability to sync libraries locally, as referenced here: [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88).
 
