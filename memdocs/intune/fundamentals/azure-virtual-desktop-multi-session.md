@@ -185,6 +185,7 @@ Out of Box Experience (OOBE) enrollment isn't supported for Window 10 Enterprise
 Windows 10 Enterprise multi-session managed by Microsoft Endpoint Manager is not currently supported for US Government Community (GCC), GCC High, DoD, or China.
 
 ## Known issues
+
 ### Enrollment issues
 
 |Issue|Details|
