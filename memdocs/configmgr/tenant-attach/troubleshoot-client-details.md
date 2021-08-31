@@ -36,7 +36,7 @@ When viewing the ConfigMgr client details, you may run across a common error. Us
 - Verify that Configuration Manager's [role based access control](../core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
 - The machine account of [SMS Provider role](../core/plan-design/hierarchy/plan-for-the-sms-provider.md) of the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
 
-### Error message2: Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager
+### Error message 2: Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager
 
 **Possible causes for Configuration Manager versions 2103 and later:**
 
