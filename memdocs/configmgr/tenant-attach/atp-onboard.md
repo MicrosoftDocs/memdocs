@@ -2,7 +2,7 @@
 title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview) 
 titleSuffix: Configuration Manager
 description: "Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
-ms.date: 05/20/2021
+ms.date: 08/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -35,7 +35,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 1. Select the following platform and profile for your policy:
 
-   - Platform: **Windows 10 and Windows Server (ConfigMgr)**
+   - Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
    - Profile: **Endpoint detection and response (ConfigMgr)**
 
 1. Select **Create**.
