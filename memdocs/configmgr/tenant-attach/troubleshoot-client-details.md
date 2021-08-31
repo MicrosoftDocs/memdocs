@@ -85,6 +85,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 **Error message:** Error validating request. Verify that the Configuration Manager service connection point can reach the internet endpoints required for tenant attach.
 
 **Possible causes:** Typically this error is seen when URLs that are needed by tenant attach are blocked. If the service connection point can't access the needed internet endpoints, a validation error will occur. For more information, see [Internet endpoints](device-sync-actions.md#internet-endpoints).
+
 ## <a name="bkmk_1603"></a> Unexpected error occurred
 
 **Error message:** Unexpected error occurred
@@ -96,7 +97,6 @@ Typically, this error is caused by an issue with the admin account. Below are th
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
 1. For Configuration Manager version 2002, verify the clock on the service connection point is in sync. If the service connection point's clock is slightly behind, apply [KB4563473 - Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473). Check **AdminService.log** on the provider machine for any errors.
 1. For Configuration Manager version 2002, verify the device is in the security scope for the administrator's security role. For more information, see [Fundamentals of role-based administration](../core/understand/fundamentals-of-role-based-administration.md).
-
 
 ## Known issues
 
