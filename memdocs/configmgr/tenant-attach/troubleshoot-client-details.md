@@ -33,9 +33,16 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 ### <a name="bkmk_noinfo"></a> Unable to get device information
 
-**Error message:** Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+#### Error message 1: Device can't be found or you don't have permission to access the device
 
-#### Possible causes for Configuration Manager versions 2103 and later
+**Possible causes**:
+
+- Verify that Configuration Manager's [role based access control](../core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
+- The machine account of [SMS Provider role](../core/plan-design/hierarchy/plan-for-the-sms-provider.md) of the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
+
+#### Error message2: Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager
+
+**Possible causes for Configuration Manager versions 2103 and later:**
 
 Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
@@ -44,7 +51,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
-#### Possible causes for Configuration Manager versions 2010 and earlier
+**Possible causes for Configuration Manager versions 2010 and earlier:**
 
 Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
@@ -60,15 +67,6 @@ Typically, this error is caused by an issue with the admin account. Below are th
     - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
 
     If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
-
-### <a name="bkmk_not-found"></a> Device can't be found or you don't have permission to access the device
-
-**Error message:** Device can't be found or you don't have permission to access the device.
-
-**Possible causes**:
-
-- Verify that Configuration Manager's [role based access control](../core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
-- The machine account of [SMS Provider role](../core/plan-design/hierarchy/plan-for-the-sms-provider.md) of the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
 
 ### <a name="bkmk_timeout"></a> Results timed out
 
