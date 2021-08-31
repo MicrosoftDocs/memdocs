@@ -5,8 +5,8 @@ title: Android device administrator enrollment in Microsoft Intune
 titleSuffix: 
 description: Enroll Android devices into Intune by using device administrator enrollment.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/23/2019
 ms.topic: how-to
