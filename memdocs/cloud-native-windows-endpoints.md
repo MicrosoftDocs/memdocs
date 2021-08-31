@@ -259,7 +259,7 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
     - Silently move Windows known folders to OneDrive – **Enabled**
 
     > [!NOTE]
-    > For more information, see [Redirect Known Folder](/onedrive/redirect-known-folders).
+    > For more information, see [Redirect Known Folders](/onedrive/redirect-known-folders).
 
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 :::image type="content" source="./media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Example of a settings catalog profile.":::
@@ -614,7 +614,7 @@ You can use PowerShell scripts for any settings or customizations that you need 
 
 Cloud native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary. 
 
-For personal storage, in [Step 8 - Configure settings for an optimal Microsoft 365 experience](#step-8---configure-settings-for-an-optimal-microsoft-365-experience), we configured OneDrive Known Folder move. For more information, see [Redirect Known Folder](/onedrive/redirect-known-folders).
+For personal storage, in [Step 8 - Configure settings for an optimal Microsoft 365 experience](#step-8---configure-settings-for-an-optimal-microsoft-365-experience), we configured OneDrive Known Folder move. For more information, see [Redirect Known Folders](/onedrive/redirect-known-folders).
 
 For document storage, users can also benefit from SharePoint integration with File Explorer and the ability to sync libraries locally, as referenced here: [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88).
 
