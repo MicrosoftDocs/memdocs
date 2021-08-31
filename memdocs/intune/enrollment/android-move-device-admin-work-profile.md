@@ -5,8 +5,8 @@ title: Move Android devices from device administrator to personally-owned work p
 titleSuffix: Microsoft Intune
 description: Move Android devices from device administrator to personally-owned work profile management in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 03/20/2020
 ms.topic: how-to

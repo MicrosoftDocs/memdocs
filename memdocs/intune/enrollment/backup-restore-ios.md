@@ -5,8 +5,8 @@ title: Back up and restore iOS/iPadOS
 titleSuffix: Microsoft Intune
 description: Learn about backup and restore scenarios for iOS/iPadOS devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 01/14/2021
 ms.topic: how-to
