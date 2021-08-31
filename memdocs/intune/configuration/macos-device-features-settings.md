@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2021
+ms.date: 08/31/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -327,13 +327,13 @@ This setting applies to:
 
   - **Value**: Enter the data.
 
-- **Block Keychain usage** (Kerberos only): **Yes** prevents passwords from being saved and stored in the keychain. If configured, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
+- **Block Keychain usage** (Kerberos only): **Yes** prevents passwords from being saved and stored in the keychain. When set to **Yes**, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
 - **Require Face ID, Touch ID, or passcode** (Kerberos only): **Yes** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
 - **Set as default realm** (Kerberos only): Choose **Yes** to set the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
   > [!TIP]
   > - Select **Yes** for this setting if you're configuring multiple Kerberos SSO app extensions in your organization.
-  > - Select **Yes** this setting if you're using multiple realms. It sets the **Realm** value you entered as the default realm.
+  > - Select **Yes** for this setting if you're using multiple realms. It sets the **Realm** value you entered as the default realm.
   > - If you only have one realm, leave it **Not configured** (default).
 
 - **Block Autodiscover** (Kerberos only): When set to **Yes**, the Kerberos extension doesn't automatically use LDAP and DNS to determine its Active Directory site name. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the extension to automatically find the Active Directory site name.
@@ -361,8 +361,8 @@ This setting applies to:
 
   For more information about shared device mode, see [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
 
-- **App bundle IDs** (Microsoft Azure AD, Kerberos): The app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
-- **Domain realm mapping** (Kerberos only): The domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
+- **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
+- **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Next steps
