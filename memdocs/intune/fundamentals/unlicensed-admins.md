@@ -36,7 +36,7 @@ The Unlicensed admins option has been enabled by default on all accounts created
 
 ## Allow access
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Roles** > **Administrator licensing**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Roles** > **Administrator Licensing**.
 2. Select **Allow access to unlicensed admins** > **Yes**.
 
     > [!WARNING]
