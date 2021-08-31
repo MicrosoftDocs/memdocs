@@ -321,7 +321,7 @@ Some things to check out on your new cloud native Windows endpoint:
 
 This phase is designed to help you build out security settings for your organization. This section draws your attention to the various Endpoint Security components in Microsoft Endpoint Manager including:
 
-- [Microsoft Defender Antivirus (MDAV)](#microsoft-defender-antivirus-MDAV)
+- [Microsoft Defender Antivirus (MDAV)](#microsoft-defender-antivirus-mdav)
 - [Microsoft Defender Firewall](#microsoft-defender-firewall)
 - [BitLocker Encryption](#bitlocker-encryption)
 - [Security baselines](#security-baselines)
