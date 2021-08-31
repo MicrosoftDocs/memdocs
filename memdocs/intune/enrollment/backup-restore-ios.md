@@ -52,7 +52,7 @@ For more information about restoring Apple devices from backup, see [Get started
 
 When a user restores their content from an iCloud or iTunes backup, there are many considerations to bear in mind:
  
-- Restoring a backup is only possible during Apple Setup Assistant.This backup is a ‘one-time’ opportunity. Linking the Apple ID in settings post-setup isn't the same as a restore.
+- Restoring a backup is only possible during Apple Setup Assistant. This backup is a ‘one-time’ opportunity. Linking the Apple ID in settings post-setup isn't the same as a restore.
 While it links files and documents, it doesn't typically restore any user data and preferences (think 'look and feel' such as wallpaper, widgets, installed applications, user preferences, and so on). Only a limited set of data may be restored such as iCloud Photo Library and messages for example.  
 - The restore process workflow is different, depending on whether you restore the backup to the same device, or a different device.  
     - When restoring to a different device than the one on which the backup was performed, after the backup is successfully restored, setup assistant will continue with the enrollment process (from the 'remote management' screen onwards). The result is that you are enrolled in the MDM vendor and also maintain your content that has been restored from your iCloud account.  
