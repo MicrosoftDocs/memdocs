@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 08/10/2021
+ms.date: 08/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -153,12 +153,12 @@ When you select **Import** from the Server app dialog or the App page of the Azu
 - **Client ID**: The **Application (client) ID** value of the app registration. The format is a standard GUID.
 - **Secret Key**: You have to copy the secret key when you register the app in Azure AD.
 - **Secret Key Expiry**: Select a future date from the calendar.
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. The value is the **Application ID URI** of the app registration entry in the Azure AD portal. The format is similar to `https://ConfigMgrService`.
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. The value is the **Application ID URI** of the app registration entry in the Azure AD portal.
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to either the [App page](#azure-app-properties) of the Azure Services Wizard, or the [Server app dialog](#server-app-dialog).
 
-> [!Important]
-> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../../manage/admin-console-notifications.md). <!--10568158--> 
+> [!IMPORTANT]
+> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../../manage/admin-console-notifications.md). <!--10568158-->
 
 #### Create Server Application dialog
 
@@ -166,7 +166,11 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 
 - **Application Name**: A friendly name for the app.
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+
+  - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+  - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
+
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
     > [!NOTE]
@@ -193,7 +197,7 @@ When you select **Browse** for the **Native Client app** on the App page of the 
 
 There are three actions you can take from the Client App dialog:
 
-- To reuse an existing native app, select it from the list. 
+- To reuse an existing native app, select it from the list.
 - Select **Import** to open the [Import apps dialog](#import-apps-dialog-client).
 - Select **Create** to open the [Create Client Application dialog](#create-client-application-dialog).
 
@@ -234,10 +238,9 @@ After specifying the web and native apps on the **Apps** page, the Azure Service
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
-## <a name="bkmk_SRVAppSettings"></a> Update application settings
+## Update application settings
 
 To allow your Configuration Manager clients to request an **Azure AD device token** and to enable the **Reading directory data** permissions, you need to update the web server application settings.
-### Update Application Settings
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
 1. Select the Azure AD tenant for the application you want to update.

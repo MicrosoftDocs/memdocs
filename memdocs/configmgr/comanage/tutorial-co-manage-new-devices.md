@@ -1,11 +1,11 @@
 ---
 title: Tutorial&#58; Enable co-management for internet devices
-titleSuffix: Configuration Manager 
-description: Learn how to configure co-management for new internet-based Windows 10 devices with Configuration Manager and Microsoft Intune. 
+titleSuffix: Configuration Manager
+description: Learn how to configure co-management for new internet-based Windows 10 devices with Configuration Manager and Microsoft Intune.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/24/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -15,7 +15,7 @@ ms.technology: configmgr-comanage
 
 With co-management, you can keep your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning.
 
-In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
+In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune.
 
 If you have a hybrid Azure AD that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](tutorial-co-manage-clients.md).
 
@@ -79,7 +79,7 @@ This tutorial uses a public certificate called **CMG server authentication certi
 
 The **CMG server authentication certificate** is used to encrypt the communications traffic between the Configuration Manager client and the CMG. The certificate traces back to a Trusted Root to verify the server's identity to the client. The public certificate includes a Trusted Root that Windows clients already trust.
 
-About this certificate: 
+About this certificate:
 
 - You identify a unique name for your CMG service in Azure, and then specify that name in your certificate request.  
 - You generate your certificate request on a specific server, and then submit the request to a public certificate provider to get the necessary SSL certificate.  
@@ -180,8 +180,8 @@ After you copy the certificate to the primary site server, you can delete the Ce
 
 To configure Azure services from within the Configuration Manager console, you use the Configure Azure Services wizard and create two Azure Active Directory (Azure AD) apps.  
 
-- **Server app** –  a *Web app* in Azure AD  
-- **Client app** – a *Native Client* app in Azure AD  
+- **Server app**:  a *Web app* in Azure AD  
+- **Client app**: a *Native Client* app in Azure AD  
 
 Run the following procedure from the primary site server.  
 
@@ -200,7 +200,10 @@ Run the following procedure from the primary site server.
 
    - **HomePage URL**: This value isn't used by Configuration Manager but is required by Azure AD. By default, this value is `https://ConfigMgrService`.  
 
-   - **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default, this value is `https://ConfigMgrService`.  
+   - **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default, this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+
+     - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+     - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
    Next, select **Sign in**, and specify an Azure AD Global Administrator account. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
 

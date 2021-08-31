@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/12/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -43,7 +43,7 @@ The following apps are available with no need to upload:
 
 ### .IntuneWin  
 
-The IntuneWin format is a way to pre-process Windows classic (Win32) apps. The tool converts application installation files into the .intunewin format.  
+The IntuneWin format is a way to pre-process Windows classic (Win32) apps. The tool converts application installation files into the intunewin format.  
 
 After you use this tool on the app installer folder, you can create an app enrollment configuration for enhanced deployment capabilities. For example, OS version dependencies and uninstall methods when you need to remove applications remotely.  
 
@@ -55,7 +55,7 @@ MSI format installers are supported by both the Line of Business and Windows app
 
 ### MSIX  
 
-MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and/or install files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
+MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and install files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
 
 MSIX combines the best features of MSI, .appx, App-V.
 
@@ -65,7 +65,15 @@ Also known as modern (UWP) apps. Files with an AppX extension added are ready fo
 
 Within the Windows Store as part of Windows 10 Enterprise, apps are automatically distributed as AppX – UWP format.  
 
-AppX is very beneficial for distributing applications supported for multiple devices, including PCs, tablets, and smartphones that run on Windows.
+AppX is helpful for distributing applications supported for multiple devices, including PCs, tablets, and smartphones that run on Windows.
+
+## Universal Print
+
+[Universal Print](/universal-print/fundamentals/universal-print-whatis) is a modern print solution that organizations can use to simplify their print infrastructure through cloud services from Microsoft. You can use Universal Print with Windows 365 Enterprise, either natively or through one of the Universal Print [partners](/universal-print/fundamentals/universal-print-partner-integrations). Legacy print-server environments are also possible to use together with Windows 365.
+
+For information on Universal Print requirements, see [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool).
+
+For information on setting up Universal Print with a Windows 365 Enterprise hybrid Azure Active Directory configuration, see [Enable Hybrid AD/AAD Environment on Universal Print](/universal-print/fundamentals/universal-print-hybrid-ad-aad-environment-setup).
 
 <!-- ########################## -->
 ## Next steps

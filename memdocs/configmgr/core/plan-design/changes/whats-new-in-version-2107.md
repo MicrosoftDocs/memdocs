@@ -2,7 +2,7 @@
 title: What's new in version 2107
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2107 of Configuration Manager current branch.
-ms.date: 08/23/2021
+ms.date: 08/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -304,7 +304,13 @@ For more information, see [Third-party software updates](../../../sum/deploy-use
 
 ### Improvements for managing automatic deployment rules
 
-The following items were added to help you better manage your automatic deployment rules:
+The following items were added to help you better manage your automatic deployment rules (ADRs):
+
+#### Deployment types for automatic deployment rules
+<!--9900107, 7033498-->
+You can now specify the deployment type for the software update deployment created by an ADR. Select **Required** to create a mandatory software update deployment or select **Available** to create an optional software update deployment.
+
+For more information, see [Create an automatic deployment rule](../../../sum/deploy-use/automatically-deploy-software-updates.md#BKMK_CreateAutomaticDeploymentRule).
 
 #### Updated Product parameter for New-CMSoftwareUpdateAutoDeploymentRule cmdlet
 <!--9247522-->
