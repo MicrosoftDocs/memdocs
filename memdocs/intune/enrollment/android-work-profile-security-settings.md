@@ -5,8 +5,8 @@ title: Android Enterprise security configurations for personally-owned work prof
 titleSuffix: Microsoft Intune
 description: Learn the restrictions and settings suggested for Android Enterprise device basic and high security.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 4/1/2021
 ms.topic: reference

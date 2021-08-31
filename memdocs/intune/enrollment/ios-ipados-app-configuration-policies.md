@@ -5,8 +5,8 @@ title: iOS/iPadOS security app configuration policies
 titleSuffix: Microsoft Intune
 description: Learn the app configuration policies for iOS/iPadOS devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/15/2021
 ms.topic: how-to
