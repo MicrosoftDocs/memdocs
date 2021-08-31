@@ -67,7 +67,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
 **Possible causes**:
 
-- Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
+- Verify that Configuration Manager's [role based access control](../core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
 - The machine account of [SMS Provider role](../core/plan-design/hierarchy/plan-for-the-sms-provider.md) of the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
 
 ### <a name="bkmk_timeout"></a> Results timed out
