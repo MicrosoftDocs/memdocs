@@ -6,8 +6,8 @@ titleSuffix:
 description: Learn how to enroll corporate-owned macOS devices.
 keywords:
 author: ErikjeMS
-ms.author: erikje
-manager: dougeby
+author: Lenewsad
+ms.author: lanewsad
 ms.date: 12/06/2018
 ms.topic: how-to
 ms.service: microsoft-intune

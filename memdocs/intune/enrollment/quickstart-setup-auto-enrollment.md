@@ -4,8 +4,8 @@
 title: Quickstart - Set up automatic enrollment in Intune
 description: Quickstart - Set up automatic enrollment for Windows 10 devices in Intune.
 services: microsoft-intune
-author: ErikjeMS
-manager: dougeby
+author: Lenewsad
+ms.author: lanewsad
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high

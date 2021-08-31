@@ -5,8 +5,8 @@ title: Set up the Enrollment Status Page
 titleSuffix: Microsoft Intune
 description: Set up a greeting page for users enrolling Windows 10 devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/30/2020
 ms.topic: how-to

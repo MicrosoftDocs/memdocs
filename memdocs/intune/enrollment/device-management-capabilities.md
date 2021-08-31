@@ -4,8 +4,8 @@
 title: Device management capabilities in Microsoft Intune 
 description: Read this topic to find out how Intune can help you manage devices that you enroll.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/16/2019
 ms.topic: overview
