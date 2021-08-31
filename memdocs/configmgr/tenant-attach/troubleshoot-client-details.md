@@ -49,7 +49,6 @@ Typically, this error is caused by an issue with the admin account. Below are th
 Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
-1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
 1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
@@ -61,6 +60,15 @@ Typically, this error is caused by an issue with the admin account. Below are th
     - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
 
     If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+
+### <a name="bkmk_not-found"></a> Device can't be found or you don't have permission to access the device
+
+**Error message:** Device can't be found or you don't have permission to access the device.
+
+**Possible causes**:
+
+- Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
+- The machine account of [SMS Provider role](../core/plan-design/hierarchy/plan-for-the-sms-provider.md) of the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
 
 ### <a name="bkmk_timeout"></a> Results timed out
 
