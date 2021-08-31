@@ -89,9 +89,6 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 11. Corporate e-mail is delivered to the user's mailbox.
 
-> [!TIP]
-> The Company Portal app is required by Intune mobile application management (MAM) scenarios. On Android devices, the Authenticator app includes functions of the broker and might be used as the broker in some situations, such as when the Authenticator was installed before the Company Portal app.
-
 ## Next steps
 
 - [Create an app-based Conditional Access policy](app-based-conditional-access-intune-create.md)
