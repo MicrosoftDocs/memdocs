@@ -49,6 +49,9 @@ Before running the tool, review [Security considerations for running the App Wra
   - It must not have previously been wrapped by the Intune App Wrapping Tool.
   - It must be written for Android 4.0 or later.
 
+  > [!NOTE]
+  > If your input app is an Android App Bundle (.aab), you will need to convert it to an APK before using the Intune App Wrapping Tool. For details, see [Convert Android App Bundle (AAB) to APK](app-wrapper-prepare-android.md#Convert-Android-App-Bundle-AAB-to-APK). As of August 2021, [new private apps can still be published to the Google Play Store as APKs](https://support.google.com/googleplay/work/answer/6145139?hl=en).
+  
 - The app must be developed by or for your company. You cannot use this tool on apps downloaded from the Google Play Store.
 
 - To run the App Wrapping Tool, you must install the latest version of the [Java Runtime Environment](https://java.com/download/) and then ensure that the Java path variable has been set to C:\ProgramData\Oracle\Java\javapath in your Windows environment variables. For more help, see the [Java documentation](https://java.com/en/download/help/index.html).
@@ -164,6 +167,20 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
 - Ensure that the application is coming from a trusted source.
 
 - Secure the output directory that has the wrapped app. Consider using a user-level directory for the output.
+
+## Convert Android App Bundle (AAB) to APK
+
+The Intune App Wrapping Tool currently only supports APK inputs. Android App Bundles must first be converted to an APK for use with the tool. 
+
+An Android App Bundle can be converted to an APK using [Google's command line tool, `bundletool`](https://developer.android.com/studio/command-line/bundletool). The latest version of `bundle-tool` can be downloaded from Google's [bundletool GitHub repo](https://github.com/google/bundletool/releases).
+
+`bundletool` can be used to produce a single universal APK for use with the Intune App Wrapping Tool using the following command:
+
+```
+bundletool build-apks --bundle=input.aab --mode=universal --output=input.apks
+```
+
+The `.apks` output file is a ZIP archive containing a single universal APK file. Unzip the archive and use that APK file as input to the Intune App Wrapping Tool.
 
 ## See also
 - [Decide how to prepare apps for mobile application management with Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
