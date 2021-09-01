@@ -5,8 +5,8 @@ title: iOS/iPadOS personal device security configurations
 titleSuffix: Microsoft Intune
 description: Learn the settings suggested for iOS/iPadOS personal device basic and high security.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 6/01/2021
 ms.topic: reference

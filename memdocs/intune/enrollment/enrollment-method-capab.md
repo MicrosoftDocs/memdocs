@@ -5,8 +5,8 @@ title: Intune enrollment method capabilities for Windows devices
 titleSuffix: Microsoft Intune
 description: Capabilities for each enrollment method for Windows devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 09/21/2018
 ms.topic: conceptual

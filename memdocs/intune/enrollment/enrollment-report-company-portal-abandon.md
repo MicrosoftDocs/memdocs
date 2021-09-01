@@ -5,8 +5,8 @@ title: Incomplete user enrollments report in Intune
 titleSuffix: Microsoft Intune
 description: Learn about the Incomplete user enrollments report.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 2/22/2019
 ms.topic: conceptual

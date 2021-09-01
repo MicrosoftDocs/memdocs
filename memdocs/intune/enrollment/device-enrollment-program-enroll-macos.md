@@ -5,8 +5,8 @@ title: Enroll macOS devices - Apple Business Manager or Apple School Manager
 titleSuffix: 
 description: Learn how to enroll corporate-owned macOS devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: how-to

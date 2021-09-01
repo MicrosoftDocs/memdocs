@@ -5,8 +5,8 @@ title: Set up enrollment for Windows devices by using Microsoft Intune
 titleSuffix:
 description: Set up enrollment for Windows devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/12/2021
 ms.topic: how-to

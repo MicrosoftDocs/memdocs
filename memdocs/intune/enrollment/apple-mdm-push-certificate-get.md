@@ -5,8 +5,8 @@ title: Get an Apple MDM Push certificate for Intune
 titleSuffix: 
 description: Get an Apple MDM Push certificate to manage iOS/iPadOS devices with Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: how-to
