@@ -35,6 +35,8 @@ The **Collect diagnostics** remote action lets you collect and download Windows 
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
+*Collect diagnostics* is also available as a [Bulk device action](../remote-actions/bulk-device-actions.md) that collects diagnostic logs from up to 25 Windows devices at a time.
+
 ## Requirements
 
 The *Collect diagnostics* remote action is supported for:
@@ -55,8 +57,6 @@ To use the *Collect diagnostics* action:
 3. To see the status of the action, select **Device diagnostics monitor**.
 4. After the  action completes, select **Download** in the row for the action > **Yes**.
 5. The data zip file is added to your download tray and you can save it to your computer.
-
-*Collect diagnostics* is also available as a [Bulk device action](../remote-actions/bulk-device-actions.md) that collects diagnostic logs from up to 25 Windows devices at a time.
 
 ## Data collected
 
