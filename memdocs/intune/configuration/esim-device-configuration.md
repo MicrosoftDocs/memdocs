@@ -159,7 +159,7 @@ After you create your device profile, Intune provides graphical charts. These ch
 You can monitor and view a detailed list of devices you can view in Device Status.**
 
 1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
-2. Select **Device Status**. Intune shows additional details about the device:
+2. Select **Device Status**. Intune shows more details about the device:
 
     - **Device Name**: Name of the device that is targeted
     - **User**: User of the enrolled device
@@ -191,9 +191,9 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
 
 ## Best practices & troubleshooting
 
-- Be sure your csv file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
+- Be sure your `.csv` file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
 - Create a static device Azure AD group that only includes the eSIM devices that are targeted.
-- If there's an issue with the deployment status, check the following:
+- If there's an issue with the deployment status, check the following settings:
   - **File format not proper**: See **Step 1: Add cellular activation codes** (in this article) on how to properly format your file.
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 
