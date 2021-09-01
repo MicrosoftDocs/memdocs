@@ -9,7 +9,7 @@ author: scottbreenmsft
   
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 09/01/2021
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
