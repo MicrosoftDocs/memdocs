@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2021
+ms.date: 09/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -92,11 +92,16 @@ When working with the csv file with the activation codes, be sure you or your mo
 
         :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
 
-3. The cellular subscription becomes the first part of the SMDP of your mobile operator. In the previous image, the first row contains the URL of the mobile operator (smdp.skynet.mobile), Intune names the cellular subscription pool name as 'smdp':
+3. The cellular subscription becomes the first part of the SMDP of your mobile operator. For example, in the previous image, the first row includes the `smdp.skynet.mobile` URL of the mobile operator. Intune names the cellular subscription pool name as `smdp`:
 
     :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
 
-Important note: If you want to add devices beyond what you have already added for the same carrier, you have to remove the current CSV and upload a new one containing all the old device/ICCID pairs + the new devices that you want to add.
+> [!IMPORTANT]
+> You can't have two lists with the same provider. If you try to upload two lists with the same provider, you may get a `The request is invalid` error message. 
+> 
+> To add more devices with the same provider or carrier, then you must:
+> - Remove the current `.csv`.
+> - Upload a new `.csv` that has all the old device/ICCID pairs and has the new devices you want to add.
 
 ## Step 2: Create an Azure AD device group
 
