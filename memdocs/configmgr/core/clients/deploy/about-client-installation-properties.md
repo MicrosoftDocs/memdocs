@@ -496,7 +496,7 @@ This property can specify the address of a cloud management gateway (CMG). To ge
 - Run the following command:
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
 - Use the returned value as-is with the **CCMHOSTNAME** property.
