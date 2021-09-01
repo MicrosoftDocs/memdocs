@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 8/30/2021
+ms.date: 9/1/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -155,7 +155,7 @@ Four new settings will be available for Shared iPad devices. These settings get 
 
 ### New device restrictions setting prevents sharing work profile contacts with paired Bluetooth devices  <!-- 8630136  -->
 
-A new device restrictions setting for corporate-owned, work profile devices will prevent users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  The new setting will be available in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
+A new device restrictions setting for corporate-owned work profile devices will prevent users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  The new setting will be available in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
 
 - Setting name:  **Contact sharing via Bluetooth (work profile-level)**
 - Setting toggles:  
