@@ -1,3 +1,4 @@
+items:
 - name: Microsoft Intune user help
   href: index.yml
 - name: Overview
@@ -194,8 +195,8 @@
     items:
     - name: Manually sync macOS device
       href: sync-your-device-manually-macos.md
-    - name: Turn off Microsoft usage data collection
-      href: turn-off-microsoft-usage-data-collection-macos.md
+    - name: Manage Company Portal preferences
+      href: intune-company-portal-preferences-macos.md
   - name: Update device settings
     items:
     - name: My version of macOS isn't yet supported
@@ -224,9 +225,7 @@
     items:
     - name: About Windows device enrollment
       href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md
-    - name: Identify Windows version for enrollment
-      href: using-your-windows-device-with-intune.md
-    - name: Enroll Windows 10 device
+    - name: Enroll Windows 10 device  
       href: enroll-windows-10-device.md
     - name: Enroll Windows 8.1 or Windows RT 8.1 device
       href: enroll-your-w81-or-rt81-windows.md
@@ -256,7 +255,7 @@
       href: you-need-to-enable-uac-windows.md
     - name: Update OS build versions
       href: you-need-to-update-os-build-version-windows.md
-    - name: Turn on Windows Defender
+    - name: Turn on Microsoft Defender Antivirus 
       href: turn-on-defender-windows.md
     - name: My version of Windows isn't supported
       href: your-windows-version-isnt-yet-supported.md

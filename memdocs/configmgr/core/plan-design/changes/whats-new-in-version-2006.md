@@ -97,17 +97,17 @@ This release adds a new group of management insights, **Optimize for remote work
 
 For more information, see [Management insights](../../servers/manage/management-insights.md).
 
-### Improved support for Windows Virtual Desktop
+### Improved support for Azure Virtual Desktop
 
 <!--6527576-->
 
 The **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
-For more information on Configuration Manager's support for Windows Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+For more information on Configuration Manager's support for Azure Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
 ### Intranet clients can use a CMG software update point
 <!--7102873-->
-Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
+Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-software-update-points.md#intranet-clients-can-use-a-cmg-software-update-point).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 

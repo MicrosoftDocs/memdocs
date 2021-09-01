@@ -5,10 +5,10 @@ title: iOS/iPadOS personal device security configurations
 titleSuffix: Microsoft Intune
 description: Learn the settings suggested for iOS/iPadOS personal device basic and high security.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 4/15/2021
+ms.date: 6/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -82,6 +82,7 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 | App Store, Doc Viewing, Gaming | Block viewing corporate documents in unmanaged apps | Yes ||
 | App Store, Doc Viewing, Gaming | Block viewing non-corporate documents in corporate apps | Not configured | Enabling this device restriction blocks Outlook for iOS’s ability to export contacts. This setting is not recommended if using Outlook for iOS. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-enabling-outlook-ios-contact-sync-with-ios12-mdm/ba-p/298453). |
 | App Store, Doc Viewing, Gaming | Allow managed apps to write contacts to unmanaged contacts accounts | Yes | This setting is needed to allow Outlook for iOS to export contacts when **Block viewing corporate documents in unmanaged apps** is set to *Yes*. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-enabling-outlook-ios-contact-sync-with-ios12-mdm/ba-p/298453). |
+| Built-in Apps | Block Siri for dictation   | Yes ||
 | Cloud Storage | Block backup of enterprise books | Yes |  |
 | Cloud Storage | Block notes and highlights sync for enterprise books | Yes |  |
 | General | Block sending diagnostic and usage data to Apple | Yes |  |
@@ -107,6 +108,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | ----- | ----- | ----- | ----- |
 | Cloud and Storage | Block Handoff | Yes |  |
 | Connected Devices | Require AirPlay outgoing requests pairing password | Yes |  |
+| Connected Devices | Block Apple Watch auto unlock | Yes |  |
 | General | Block screenshots and screen recording | Yes |  |
 | Password | Number of sign-in failures before wiping the device | 5 | Organizations may need to update this setting to match their password policy. |
 | Password | Password expiration (days) | 365 | Organizations may need to update this setting to match their password policy. |

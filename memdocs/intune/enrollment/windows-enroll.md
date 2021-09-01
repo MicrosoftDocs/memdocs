@@ -5,10 +5,10 @@ title: Set up enrollment for Windows devices by using Microsoft Intune
 titleSuffix:
 description: Set up enrollment for Windows devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 08/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,10 +46,10 @@ Two factors determine how you can simplify Windows device enrollment:
 - **Do you use Azure Active Directory Premium?** [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
 - **What versions of Windows clients will users enroll?** Windows 10 devices can automatically enroll by adding a work or school account. Earlier versions must enroll using the Company Portal app.
 
-||**Azure AD Premium**|**Other AD**|
+| | **Azure AD Premium** | **Other AD** |
 |----------|---------------|---------------|  
-|**Windows 10**|[Automatic enrollment](#enable-windows-10-automatic-enrollment) |User enrollment|
-|**Earlier Windows versions**|User enrollment|User enrollment|
+| **Windows 10** | [Automatic enrollment](#enable-windows-10-automatic-enrollment) | User enrollment |
+| **Earlier Windows versions** | User enrollment | User enrollment |
 
 Organizations that can use automatic enrollment can also configure [bulk enroll devices](windows-bulk-enroll.md) by using the Windows Configuration Designer app.
 
@@ -63,8 +63,8 @@ You can also let unlicensed admins sign in to MEM. For more information, see [Un
 
 Intune supports multiple users on devices that both:
 
-- run the Windows 10 Creator's update
-- are Azure Active Directory domain-joined.
+- Run the Windows 10 Creator's update
+- Are Azure Active Directory domain-joined.
 
 When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device's [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and device actions (like Remove or Reset). For shared Windows 10 devices that don't have a primary user assigned, the Company Portal can still be used to install Available apps.
 
@@ -80,10 +80,10 @@ Create CNAME DNS resource records for your company's domain. For example, if you
 
 Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
 
-|Type|Host name|Points to|TTL|
+| Type | Host name | Points to | TTL |
 |----------|---------------|---------------|---|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hour|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 hour|
+| CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
+| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
 
 If the company uses more than one UPN suffix, you need to create one CNAME for each domain name and point each one to EnterpriseEnrollment-s.manage.microsoft.com. For example, users at Contoso use the following formats as their email/UPN:
 
@@ -93,11 +93,11 @@ If the company uses more than one UPN suffix, you need to create one CNAME for e
 
 The Contoso DNS admin should create the following CNAMEs:
 
-|Type|Host name|Points to|TTL|  
+| Type | Host name | Points to | TTL |  
 |----------|---------------|---------------|---|
-|CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hour|
-|CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hour|
-|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hour|
+| CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
+| CNAME | EnterpriseEnrollment.us.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
+| CNAME | EnterpriseEnrollment.eu.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – Supports a redirect to the Intune service with domain recognition from the email's domain name
 
@@ -136,7 +136,7 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
+| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
 
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
@@ -149,7 +149,7 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-|CNAME | EnterpriseEnrollment.company_domain.com | Enrollment.manage.microsoft.us | 1 hour|
+|CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
 |CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
 
 ## Next steps

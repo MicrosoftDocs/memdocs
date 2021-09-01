@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 06/22/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -102,10 +102,12 @@ In addition to the core requirements for user driven Hybrid Azure AD Join mentio
 - The device must be running Windows 10, version 1809 or later. 
 - The device must have access to an Active Directory domain controller. It must be connected to the organization's network. It must be able to resolve the DNS records for the AD domain and the AD domain controller. It must be able to communicate with the domain controller to authenticate the user.
 
->[!Tip]
->As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (AD) joined devices. Many customers confuse these two topics – the first is a management option, while the second is an identity option. See the blog post [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201) This blog aims to clarify Hybrid Azure AD Join and co-management, how they work together but are not the same thing.
+## User-driven mode for hybrid Azure Active Directory join with VPN support (Preview)
 
-## User-driven mode for hybrid Azure Active Directory join with VPN support
+> [!Tip]
+> As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (Azure AD) joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
+>
+> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](../configmgr/core/clients/deploy/plan/client-installation-methods.md) for alternative options for installing the client.<!-- CMADO-10205503 -->
 
 Devices joined to Active Directory require connectivity to an Active Directory domain controller for many activities. These activities include user sign-in (validating the user's credentials) and Group Policy application. As a result, the Windows Autopilot user-driven Hybrid Azure AD Join process would validate that the device is able to contact an Active Directory domain controller by pinging that domain controller.
 

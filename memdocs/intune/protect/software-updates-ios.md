@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure iOS/iPadOS software update policies in Microsoft Intune - Azure | Microsoft Docs
+title: Configure iOS/iPadOS software update policies in Microsoft Intune
 description: In Microsoft Intune, create or add a configuration policy to restrict when software updates automatically install on iOS/iPadOS devices. You can choose the date and time when updates aren't installed. You can also assign this policy to groups, users, or devices, and check for any installation failures. 
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 06/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,7 +56,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 2. Select **Devices** > **Update policies for iOS/iPadOS** > **Create profile**.
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 
-   ![Basics tab](./media/software-updates-ios/basics-tab.png)
+   :::image type="content" source="./media/software-updates-ios/basics-tab.png" alt-text="Example Update policy settings.":::
 
 4. On the **Update policy settings** tab, configure the following options:
 
@@ -73,7 +73,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
-      ![Example of selecting to update during scheduled time](./media/software-updates-ios/scheduled-time.png)
+      :::image type="content" source="./media/software-updates-ios/scheduled-time.png" alt-text="Example of selecting an update during scheduled time.":::
 
       - **Time zone**: Choose a time zone.
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. By using a start day and end day, overnight blocks are supported. Options include:
@@ -117,7 +117,7 @@ You can edit an existing policy, including changing the restricted times:
 
 2. While viewing the policies **Properties**, select **Edit** for the policy page you want to modify.
 
-   ![Edit a policy](./media/software-updates-ios/edit-policy.png)
+   :::image type="content" source="./media/software-updates-ios/edit-policy.png" alt-text="Editing an existing policy.":::
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits, and return to the policies *Properties*.
 

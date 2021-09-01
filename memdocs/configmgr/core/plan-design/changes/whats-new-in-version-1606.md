@@ -66,7 +66,7 @@ The following are changes to the Updates and Servicing node in the Configuration
 
 
 ###  Pre-release features
-Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### New distribution point update behavior
 Update 1606 introduces changes that improve the availability of distribution points when you install future updates.
@@ -84,11 +84,11 @@ The following are changes to Administration in the Configuration Manager console
 
 You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](/azure/azure-monitor/platform/collect-sccm).
 
-The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### Support for cache size in Client Settings
 
-You can now configure the size of the cache folder on client computers with **Client Settings** in the Configuration Manager console. Previously, you could only set the client cache size when installing or reinstalling the client software. Now you can specify the cache size as a client setting (either default or custom), and then have those settings applied with the next policy update on the client, without requiring a client reinstall. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
+You can now configure the size of the cache folder on client computers with **Client Settings** in the Configuration Manager console. Previously, you could only set the client cache size when installing or reinstalling the client software. Now you can specify the cache size as a client setting (either default or custom), and then have those settings applied with the next policy update on the client, without requiring a client reinstall. For more information, see [Configure the client cache](../../../core/clients/manage/configure-client-cache.md).
 
 ## On-premises mobile device management
 

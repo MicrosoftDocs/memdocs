@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 08/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -149,7 +149,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
      - Profile: **Endpoint detection and response (MDM)**
 
    - Configuration Manager - Configuration Manager deploys the policy to devices in your Configuration Manager collections. When you create the policy, select:
-     - Platform: **Windows 10 and Windows Server (ConfigMgr)**
+     - Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
      - Profile: **Endpoint detection and response (ConfigMgr)**
 
 4. Select **Create**.
@@ -187,7 +187,7 @@ You can view details about the EDR policies you deploy in the Microsoft Endpoint
 
   The chart for **Devices with Defender for Endpoint sensor** displays only devices that successfully onboard to Microsoft Defender for Endpoint through use of the **Windows 10 and later** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
 
-- For policies that target the **Windows 10 and Windows Server (ConfigMgr)** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
+- For policies that target the **Windows 10, Windows 11, and Windows Server (ConfigMgr)** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
 [View the settings](endpoint-security-edr-profile-settings.md) you can configure for both platforms and profiles.
 

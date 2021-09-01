@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Android Enterprise device settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android Enterprise device settings in Microsoft Intune
 description: On Android Enterprise or Android for Work devices, restrict settings on the device, including copy and paste, show notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/11/2021
-ms.topic: reference
+ms.date: 08/19/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -48,7 +48,7 @@ Create an [Android Enterprise device restrictions profile](device-restrictions-c
 - Fully managed, dedicated, and corporate-owned work profile
 - Personally owned devices with a work profile
 
-## Fully Managed, Dedicated, and Corporate-Owned Work Profile
+## Fully managed, dedicated, and corporate-owned work profile
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 
@@ -381,9 +381,9 @@ End of comment -->
   > [!NOTE]
   > Users on fully managed, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   > 
-  > On dedicated devices running OS 9 and newer, users are prompted to set a password if the device is set up with single or multi-app kiosk mode. Screens force and guide users to create a compliant password before they can continue using the device.
+  > On dedicated devices users are prompted to set a password if the device is set up with single or multi-app kiosk mode. Screens force and guide users to create a compliant password before they can continue using the device.
   >
-  > On dedicated devices running OS 8 and older, or dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements. 
+  > On dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements. 
 
 - **Disabled lock screen features**: When the device is locked, choose the features that can't be used. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
 

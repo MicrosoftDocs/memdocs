@@ -2,7 +2,7 @@
 title: Manage Application Guard policies
 titleSuffix: Configuration Manager
 description: Learn how to create and deploy Microsoft Defender Application Guard policies
-ms.date: 06/05/2020
+ms.date: 07/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -69,6 +69,9 @@ Configures application behavior inside the Application Guard session. Before Con
 
 - **Content:**
   - Enterprise sites can load non-enterprise content, such as third-party plug-ins.
+    > [!NOTE]
+    > This policy setting is no longer supported in the new Microsoft Edge browser. Webpages that contain mixed content, both enterprise and non-enterprise, may load incorrectly or fail completely if this feature is enabled. See the setting [Windows Defender Application Guard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) documentation for more information.
+
 - **Other:**
   - Retain user-generated browser data
   - Audit security events in the isolated application guard session

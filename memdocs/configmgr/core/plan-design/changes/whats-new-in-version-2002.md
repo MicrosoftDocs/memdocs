@@ -119,7 +119,7 @@ For more information, see [Token-based authentication for CMG](../../clients/dep
 
 <!--5834830-->
 
-When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).
+When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/optional-features.md).
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
@@ -153,7 +153,7 @@ For more information, see [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk
 
 Boundary groups include the following option for peer downloads: **During peer downloads, only use peers within the same subnet**. If you enable this option, the content location list from the management point only includes peer sources that are in the same subnet and boundary group as the client. Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet.
 
-For more information, see [Boundary group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+For more information, see [Boundary group options](../../servers/deploy/configure/boundary-group-options.md).
 
 ### Proxy support for Microsoft Connected Cache
 
@@ -360,7 +360,7 @@ For more information, see [Integrate with Power BI Report Server](../../servers/
 
 To help you better troubleshoot device behaviors with boundary groups, you can now view the boundary groups for specific devices. In the **Devices** node or when you show the members of a **Device Collection**, add the new **Boundary Group(s)** column to the list view.
 
-For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_show-boundary).
+For more information, see [Procedures for boundary groups](../../servers/deploy/configure/boundary-group-procedures.md#show-boundary-groups-for-devices).
 
 ### Send a smile improvements
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 07/21/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -131,7 +131,7 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 
 - Security tasks – Seamless communication between Defender for Endpoint and Intune admins about devices at risk, how to remediate them, and confirmation when those risks are mitigated.
 - Streamlined onboarding for Microsoft Defender for Endpoint on clients.
-- Use of Defender for Endpoint device risk signals in Intune compliance policies.
+- Use of Defender for Endpoint device risk signals in Intune compliance policies and app protection policies.
 - Access to *Tamper protection* capabilities.
 
  To learn more about using Microsoft Defender for Endpoint with Intune, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).

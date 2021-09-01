@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/12/2021
+ms.date: 06/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,8 +33,8 @@ ms.collection: M365-identity-device-management
 With Intune, you can deploy updates to Windows 10 devices by using policies for [Windows 10 update rings](../protect/windows-10-update-rings.md)  and [Windows 10 feature updates](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
 
 - **Reports in Intune**:
-  - **Windows 10 update rings** – Use a [built-in report](#reports-for-windows-10-update-rings-policy) that’s ready by default when you deploy update rings to your devices.
-  - **Windows 10 feature updates** *In public preview* - Use [two built-in reports](#reports-for-windows-10-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
+  - **Windows 10 update rings** – Use a [built-in report](#reports-for-windows-10-update-rings-policy) that's ready by default when you deploy update rings to your devices.
+  - **Windows 10 feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
 
 - **Update Compliance**:
 
@@ -53,9 +53,9 @@ Intune offers integrated report views for the Windows 10 update ring policies yo
 3. To view more details, select **Monitor**. Then below **Software updates**, select **Per update ring deployment state** and choose the deployment ring to review.
 
    In the **Monitor** section, choose from the following reports to view more detailed information about the update ring:
-   - **Device status** - View the device configuration status. See [Update deviceConfigurationDeviceStatus](/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0&preserve-view=true).
-   - **User status** - View the user name, status, and last report date. See [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0&preserve-view=true).
-   - **End-user update status** - View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
+   - **Device status** – View the device configuration status. See [Update deviceConfigurationDeviceStatus](/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0&preserve-view=true).
+   - **User status** – View the user name, status, and last report date. See [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0&preserve-view=true).
+   - **End-user update status** – View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
 
 ## Reports for Windows 10 feature updates policy
 
@@ -63,7 +63,7 @@ Intune offers integrated report views for the Windows 10 update ring policies yo
 
 Intune offers integrated reports to view detailed Windows 10 update deployment status for devices using Windows 10 feature updates policies. To use reports for this feature, you must first configure prerequisites and policies that support data collection from devices.
 
-The data in the Intune reports for Windows 10 feature updates policy is used only for these reports and doesn’t surface in other Intune reports.
+The data in the Intune reports for Windows 10 feature updates policy is used only for these reports and doesn't surface in other Intune reports.
 
 - [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report)  - This report provides an overall view of compliance for devices on a per-policy basis.
 - [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
@@ -72,22 +72,22 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 ### Prerequisites  
 
-- **Data collection**:  Before a device can send the reporting data that’s used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configure-data-collection):
+- **Data collection**:  Before a device can send the reporting data that's used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configure-data-collection):
 
-  - Service-based data is collected for all feature update versions and doesn’t require you to configure data collection. 
+  - Service-based data is collected for all feature update versions and doesn't require you to configure data collection. 
   - Client-based data is collected from devices only after data collection is configured.
   
-  Service and client based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
+  Service and client-based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
 
 - **Devices**: Devices must:
 
   - Meet the [prerequisites for Windows 10 feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Windows 10 feature updates with Intune**.
   - Be Azure Active Directory Joined, or Hybrid Azure Active Directory Joined to support submitting of data for  reporting.
-  - Run Windows 10 1903 or later. Although Windows 10 feature updates policy supports earlier versions of Windows, earlier versions don’t support reporting of the data that Intune uses for the feature updates reports.
+  - Run Windows 10 1903 or later. Although Windows 10 feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
 
 ### Configure data collection
 
-The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune, but through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
+The data that powers Intune's Windows 10 feature updates reports isn't collected by the typical device sync with Intune, but through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
 #### Enable data collection
 
@@ -111,21 +111,21 @@ To Configure this setting for your devices, [Create a profile](../configuration/
 
     > [!div class="mx-imgBorder"]
     > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
-    
+
 When you complete the creation of the Windows health monitoring profile, the profile deploys to the assigned groups, and configuration of data collection is complete.
 
 It can take up to 24 hours after setting up Windows health monitoring with Windows updates before the policy is applied.  
 
-> [TIP]  
+> [!TIP]
 > If you use [Endpoint Analytics](../../analytics/overview.md), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
 
 ### About reporting data latency
 
 The data for these reports is generated at different times, which depend on the type of data:
 
-- **Service-based data from Windows Update** - This data typically arrives in less than an hour after an event happens in the service. Events include Alerts that for a device tht can't register with Windows Update (which is viewable in the *Feature update failures report*), to status updates about when Windows Update began offering an update to clients. This data is available without configuring data collection.
+- **Service-based data from Windows Update** – This data typically arrives in less than an hour after an event happens in the service. Events include Alerts for a device that can't register with Windows Update (which is viewable in the *Feature update failures report*), to status updates about when Windows Update began offering an update to clients. This data is available without configuring data collection.
 
-- **Client-based data from Intune devices that are configured to send data to Intune** - This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn’t have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
+- **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
 
 ### Use the Windows 10 feature updates (Organizational) report
 
@@ -133,7 +133,7 @@ The data for these reports is generated at different times, which depend on the 
 
 The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows 10 feature updates](../protect/windows-10-feature-updates.md) policy.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Before this report can show data, you must [configure data collection](#configure-data-collection) for the Windows 10 feature updates reports.
 
 This report provides you update installation status that's based on the update state from device and device-specific update details. The data in this report is timely, calls out the device name and state, and other update-related details. This report also supports filtering, searching, paging, and sorting.
@@ -160,30 +160,30 @@ To use the report:
   
    The following list identifies the columns that are available in the view:
    - **Devices** – The name of the device.
-   - **UPN** –Intune user identifier (email).
-   - **Intune Device ID** - Intune device identifier.
-   - **AAD Device ID** - Azure Active Directory identifier for device.
-   - **Last Event Time** - The last time there was new data, or something happened for the device and update.
-   - **Update State** - The state of the update for the device. Initial state data is from the service-side, which is the status of the update in the system before it begins to install on the device. When client-side data is available, client-side data is shown, replacing the server-side data.
-   - **Update Substate** - A low-level detailed version of the Update State.
-   - **Update Aggregated Status** - A high-level summary of the Update State, like *In progress* or *Error*.
-   - **Alert Type** - When applicable, Alert Type displays the most recent alert message.
+   - **UPN** – Intune user identifier (email).
+   - **Intune Device ID** – Intune device identifier.
+   - **AAD Device ID** – Azure Active Directory identifier for device.
+   - **Last Event Time** – The last time there was new data, or something happened for the device and update.
+   - **Update State** – The state of the update for the device. Initial state data is from the service-side, which is the status of the update in the system before it begins to install on the device. When client-side data is available, client-side data is shown, replacing the server-side data.
+   - **Update Substate** – A low-level detailed version of the Update State.
+   - **Update Aggregated Status** – A high-level summary of the Update State, like *In progress* or *Error*.
+   - **Alert Type** – When applicable, Alert Type displays the most recent alert message.
    - **Alert Details** – *This column isn't in use.*
-   - **Last Scan Time** - The last time this device ran a scan for Windows Update. <br>
+   - **Last Scan Time** – The last time this device ran a scan for Windows Update.
 
    The following information applies to **Update State** and **Update Substate**:
 
    - **Service-side data**:
      - **Pending**:
-       - **Validation** – The update can’t be offered to the device because of a validation issue with the device and Windows Update.
-       - **Scheduled** – The update isn’t ready to be offered to the device but it's scheduled to be offered.
+       - **Validation** – The update can't be offered to the device because of a validation issue with the device and Windows Update.
+       - **Scheduled** – The update isn't ready to be offered to the device but it's scheduled to be offered.
      - **On hold**:
        - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
-     - **Cancelled**:
-       - **Admin Cancelled** - The update offer was cancelled by explicit Administrator action.
-       - **Service Cancelled** - The update was cancelled because of an automatic action by Windows Update.
-       - **Removed from Deployment** - The update offer was cancelled because it was removed from the Deployment by explicit Administrator action.
+     - **Canceled**:
+       - **Admin Cancelled** – The update offer was cancelled by explicit Administrator action.
+       - **Service Cancelled** – The update was cancelled because of an automatic action by Windows Update.
+       - **Removed from Deployment** – The update offer was cancelled because it was removed from the Deployment by explicit Administrator action.
      - **Offering**:
        - **OfferReady** – The update is currently being offered to the device by Windows Update.
 
@@ -196,25 +196,23 @@ To use the report:
        - **Download Start** – The download process has begun.
        - **Download Complete** – The download process has completed.
        - **Install Start** – The pre-restart install process has started.
-       - **Install Complete** – The pre-restart install process has finished. If the update doesn’t require a restart, the update process ends here.
+       - **Install Complete** – The pre-restart install process has finished. If the update doesn't require a restart, the update process ends here.
        - **Restart Required** – A restart is required to finish update.
-       - **Restart Initiated** - The device has gone into restart.
+       - **Restart Initiated** – The device has gone into restart.
        - **Restart Complete** – The device has come back from restart.
      - **Installed**:
        - **Update Installed** – The update successfully installed.
      - **Uninstalling**:
-       - **Uninstall**– The device is actively uninstalling the update.
+       - **Uninstall** – The device is actively uninstalling the update.
        - **Rollback** – A rollback has been initiated to a previous update because of a serious issue during installation.
        - **Update Uninstalled** – The update successfully uninstalled.
        - **Rollback complete** – A rollback has completed.
      - **Cancelled**:
        - **User Cancelled** – A user cancelled the update.
-       - **Device Cancelled** - The device cancelled the update for a user. This action is usually because the update no longer applies.
+       - **Device Cancelled** – The device cancelled the update for a user. This action is usually because the update no longer applies.
 
    - **Other**:
      - **Needs attention**: The device has some issue and needs attention.
-
-    
 
 ### Use the Feature update failures (Operational) report
 
@@ -255,7 +253,7 @@ The following list identifies Alert Messages, and suggested remediation actions:
 |Alert Message |Description  |Recommendation |
 |----|----|----|
 | **CancelledByUser** | User cancelled the update. | Retry the installation. |
-| **DamagedMedia**  | The update file or the hard drive is damaged. | Run **Chkdsk/F** on the device with administrator privileges, then retry the update. |
+| **DamagedMedia**  | The update file or the hard drive is damaged. | Run **Chkdsk /F** on the device with administrator privileges, then retry the update. |
 | **DeploymentConflict** | Device is in more than one deployment of the same update type. Only the first deployment assigned is effective. | Remove the device from any deployments that shouldn't apply. |
 | **DeviceRegistrationInvalidAzureADDeviceId**|The device isn't able to register or authenticate properly with Windows Update  because of an invalid Azure AD Device ID. | Check that the device is joined to the Azure Active Directory tenant making the request. |
 | **DeviceRegistrationInvalidGlobalDeviceId** | The device isn't able to register or authenticate properly with Windows Update  because of an invalid Global Device ID. | The Microsoft Account Sign-In Assistant (MSA) Service might be disabled, preventing Global Device ID assignment. Check that the MSA Service is running or able to run on the device. |
@@ -279,7 +277,7 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **InstallAccessDenied** | Installer doesn't have permission to access or replace a file. The installer might have tried to replace a file that an antivirus, antimalware, or a backup program is currently scanning. | Retry the installation. |
 | **InstallCancelled** | The installation was cancelled. | Retry the installation. |
 | **InstallFileLocked** | Installer couldn't access a file that is already in use. The installer might have tried to replace a file that an antivirus, antimalware, or backup program is currently scanning. | Check the files under the *%SystemDrive%\$Windows.~bt* directory. Retry the installation. |
-| **InstallIssue**  | There was an issue installing the update. | Run **dism/online /cleanup-image /restorehealth** on the device with administrator privileges, then retry the update. If the commands fail, a reinstall of Windows might be required. |
+| **InstallIssue**  | There was an issue installing the update. | Run **dism /online /cleanup-image /restorehealth** on the device with administrator privileges, then retry the update. If the commands fail, a reinstall of Windows might be required. |
 | **InstallIssueRedirection**| A known folder that doesn't support redirection to another drive might have been redirected to another drive. | Report this issue to Microsoft if this error is encountered more than a once. |
 | **InstallMissingInfo** | Windows Update doesn't have information it needs about the update to finish the installation. | Another update might have replaced the one you're trying to install. Check the update, and then try reinstalling it. |
 | **InstallOutOfMemory** | The installation couldn't complete because Windows ran out of memory. | Restart Windows, then try the installation again. If it still fails, allocate more memory to the virtual machine, or increase the size of the virtual memory pagefiles. |
@@ -295,31 +293,25 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **VersionMismatch** | Device is on a version of Windows that was not intended by Windows Update. | Confirm whether the device is on the intended version. |
 | **WindowsRepairRequired** | The current version of Windows needs to be repaired before it can be updated. | Run the Startup Repair Tool on this device. |
 | **WUBusy**   | Windows Update can't do this task because it's busy. | Restart Windows. Retry the installation. |
-| **WUComponentMissing** | Windows Update might be missing a component or the update file might be damaged. | Run **dism/online /cleanup-image /restorehealth** on the device with administrator privileges, and then retry the update. If the commands fail, a reinstall of Windows might be required. |
-| **WUDamaged**  | Windows Update or the update file might be damaged. | Run **dism/online /cleanup-image /restorehealth** on the device with administrator privileges, and then retry the update. If the commands fail, a reinstall of Windows might be required. |
+| **WUComponentMissing** | Windows Update might be missing a component or the update file might be damaged. | Run **dism /online /cleanup-image /restorehealth** on the device with administrator privileges, and then retry the update. If the commands fail, a reinstall of Windows might be required. |
+| **WUDamaged**  | Windows Update or the update file might be damaged. | Run **dism /online /cleanup-image /restorehealth** on the device with administrator privileges, and then retry the update. If the commands fail, a reinstall of Windows might be required. |
 | **WUDecryptionIssue** | Windows Update couldn't decrypt the encrypted update file because it couldn't find the proper key. | Retry the installation. |
 | **WUDiskError**  | Windows Update encountered an error while reading or writing to the system drive. | Run the Windows Update Troubleshooter on the device. Retry the installation. |
 | **WUIssue**  | Windows Update couldn't understand the metadata provided by the update service. This error usually indicates a problem with the update. | Contact support. |
 
 ## Use Update Compliance
 
-You can monitor Windows 10 update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-monitor). Update Compliance is offered through the Azure portal and is available free for devices that meet its [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+You can monitor Windows 10 update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-get-started). Update Compliance is offered through the Azure portal and is included as part of Windows 10 licenses listed in the [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Update Compliance data.
 
-When you use this solution, you deploy a commercial ID to any of your Intune managed Windows 10 devices for which you want to report update compliance.  
+To use this solution, you'll:
 
-In Intune, you use the OMA-URI settings of a custom policy to configure the commercial ID. See [Use custom settings for Windows 10 devices in Intune](../configuration/custom-settings-windows-10.md).
+- Use an Intune device configuration profile to deploy your [CommercialID](/windows/deployment/update/update-compliance-get-started#get-your-commercialid) to your Windows 10 devices. The CommericalID associates the devices with your Log Analytics workspace.
 
-The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
+- Optionally deploy a configuration script as a Win32 app to those same devices to validate their configuration for Update Compliance.
 
-For example, you can use the following values in **Add or edit OMA-URI Setting**:
+- Use the Update Compliance workspace to [Monitor Windows updates](/windows/deployment/update/update-compliance-monitor).
 
-- **Setting Name**: Update Compliance Commercial ID
-- **Setting Description**: Configure devices with the Commercial ID for Update Compliance solutions
-- **OMA-URI**: Enter the following path, which is case sensitive, and avoid trailing spaces: `./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID`
-
-  For more information about this configuration service provider (CSP) and the Provider ID *ProviderID*, see [DMClient CSP](/windows/client-management/mdm/dmclient-csp)
-- **Data Type**: Select *String*. When you String, you can then specify a Value.
-- **Value**: Specify the GUID for your *CommercialID*, which you get from your Update Compliance Settings in Microsoft Azure.
+For guidance on this solution, see [Configuring devices for Update Compliance in Microsoft Endpoint Manager](/windows/deployment/update/update-compliance-configuration-mem) in the Update Compliance documentation.
 
 ## Next steps
 

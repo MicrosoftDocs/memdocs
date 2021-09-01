@@ -5,11 +5,11 @@ title: Android Enterprise fully managed security configurations
 titleSuffix: Microsoft Intune
 description: Learn the suggested settings for Android Enterprise fully managed basic, enhanced, and high security.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 3/24/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high

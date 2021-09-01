@@ -2,11 +2,10 @@
 title: Prerequisites to deploy user-available apps
 titleSuffix: Configuration Manager
 description: When you deploy apps as Available to user collections, there are other requirements for some types of clients.
-ms.date: 04/05/2021
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 1a36d4f9-0bea-462c-9b89-cb85b7498676
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -43,13 +42,13 @@ If you deploy applications as available to users, they can browse and install th
 
   - [Cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG)
 
-  - Distribute any application content to a content-enabled CMG or a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+  - Distribute any application content to a content-enabled CMG
 
   - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../../core/clients/deploy/about-client-settings.md#client-policy) group
 
 - To support clients on the intranet:
 
-  - Add the content-enabled CMG or cloud distribution point to a boundary group used by the clients
+  - Add the content-enabled CMG to a boundary group used by the clients
 
   - Clients must resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point
 

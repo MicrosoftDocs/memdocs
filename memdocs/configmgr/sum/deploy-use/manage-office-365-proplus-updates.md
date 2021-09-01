@@ -53,7 +53,7 @@ For previous Configuration Manager versions, you must take the following steps t
 
 ### Limitations
 
-- Cloud distribution points don't support content for Microsoft 365 Apps updates. <!--7366753-->
+- Content-enabled cloud management gateways don't support content for Microsoft 365 Apps updates. <!--7366753-->
 
 ### Deploy Microsoft 365 Apps using Configuration Manager version 1806 or higher: 
 Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149, these instructions are for 1806 and later-->
@@ -113,7 +113,7 @@ If Microsoft 365 Apps was installed recently and deployed updates are not detect
 
 ## Restart behavior and client notifications for Microsoft 365 Apps updates
 
-The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart. <!--510006--> For more information about notifications from Microsoft 363 Apps see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
+The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart. <!--510006--> For more information about notifications from Microsoft 365 Apps see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
 
 ## <a name="bkmk_o365_lang"></a> Add languages for Microsoft 365 Apps update downloads
 You can add support for Configuration Manager to download updates for any languages that are supported by Microsoft 365 Apps.
@@ -187,7 +187,7 @@ Currently, the title of an update package for Office 365 ProPlus begins with "Of
 
 &nbsp; &nbsp; Office 365 Client Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.20648)
 
-For update packages released on and after June 9, the title will begin with "Microsoft 365 Apps Update" as seen in the following example:
+For update packages released on and after June 9, 2020, the title will begin with "Microsoft 365 Apps Update" as seen in the following example:
 
 &nbsp; &nbsp; Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)
 </br>

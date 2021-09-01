@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Monitor integration of Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
+title: Monitor integration of Microsoft Defender for Endpoint in Microsoft Intune
 description: Monitor Microsoft Defender for Endpoint with Intune, including device compliance and onboarding status.
 keywords:
 author: brenduns 

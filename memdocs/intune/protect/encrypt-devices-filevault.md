@@ -37,7 +37,7 @@ Use one of the following policy types to configure FileVault on your managed dev
 
   View the [FileVault settings that are available in profiles for disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Device configuration profile for endpoint protection for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Inunte](../configuration/device-profile-create.md).
+- **[Device configuration profile for endpoint protection for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Intune](../configuration/device-profile-create.md).
 
   View the [FileVault settings that are available in endpoint protection profiles for device configuration policy](../protect/endpoint-protection-macos.md#filevault).
 
@@ -73,9 +73,10 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
 3. On the **Create a profile** page, set the following options, and then click **Create**:
    - **Platform**: macOS
-   - **Profile**: Endpoint protection
+   - **Profile type**: Templates
+   - **Template name**: Endpoint protection
 
-   ![Select the Endpoint protection profile](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
+   :::image type="content" source="./media/encrypt-devices-filevault/select-macos-filevault-dc.png" alt-text="Select the Endpoint protection profile.":::
 
 4. On the **Basics** page, enter the following properties:
 
@@ -85,8 +86,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
 5. On the **Configuration settings** page, select **FileVault** to expand the available settings:
 
-   > [!div class="mx-imgBorder"]
-   > ![FileVault settings](./media/encrypt-devices-filevault/filevault-settings.png)
+   :::image type="content" source="./media/encrypt-devices-filevault/filevault-settings.png" alt-text="FileVault settings."::: 
 
 6. Configure the following settings:
   

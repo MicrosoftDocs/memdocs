@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/13/2021
+ms.date: 08/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -163,13 +163,13 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
 ## ownerTypes
 
-The **enrollmentType** entity indicates whether a device is corporate, personally owned, or unknown.
+The **ownerType** entity indicates whether a device is corporate, personally owned, or unknown.
 
 | Property  | Description | Example |
 |---------|------------|--------|
 | ownerTypeID |Unique identifier of the owner type. | |
 | ownerTypeKey |Unique identifier of the owner type in the data warehouse - surrogate key. | |
-| ownerTypeName |Represents the owner type of the devices:  <br>Corporate - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Corporate Personal Unknown |
+| ownerTypeName |Represents the owner type of the devices:  <br>Company - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Company Personal Unknown |
 
 > [!Note]  
 > For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
@@ -273,9 +273,12 @@ The **devices** entity lists all enrolled devices under management and their cor
 | SubnetAddressV4Wifi           | The subnet address for IPV4 Wifi connection.                                                                                                                             |
 | IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
+> [!NOTE]
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
+
 ## devicePropertyHistories
 
-The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 90 days. The DateKey column indicates the day for each row.
+The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 60 days. The DateKey column indicates the day for each row.
 
 |          Property          |                                                                                      Description                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

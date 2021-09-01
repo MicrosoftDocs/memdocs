@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Retire or wipe devices using Microsoft Intune - Azure | Microsoft Docs
+title: Retire or wipe devices using Microsoft Intune
 description: Retire or wipe a device on an Android, Android work profile, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Azure Active Directory.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/11/2021
+ms.date: 08/31/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -58,11 +58,11 @@ A wipe is useful for resetting a device before you give the device to a new user
 ### Wiping a device
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **All devices**.
-4. Select the name of the device that you want to wipe.
-5. In the pane that shows the device name, select **Wipe**.
-6. For Windows 10 version 1709 or later, you also have the **Wipe device, but keep enrollment state and associated user account** option. 
-    
+2. Select **Devices** > **All devices**.
+3. Select the name of the device that you want to wipe.
+4. In the pane that shows the device name, select **Wipe**.
+5. For Windows 10 version 1709 or later, you also have the **Wipe device, but keep enrollment state and associated user account** option.
+
     |Retained during a wipe |Not retained|
     | -------------|------------|
     |User accounts associated with the device|User files|
@@ -71,9 +71,12 @@ A wipe is useful for resetting a device before you give the device to a new user
     |OEM-installed apps \(store and Win32 apps)||
     |User profile||
     |User data outside of the user profile||
-    |User autologon|| 
-    
-7. The **Wipe device, and continue to wipe even if device loses power.** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).        
+    |User autologon||
+
+6. The **Wipe device, and continue to wipe even if device loses power.** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).
+7. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
+    >[!NOTE]
+    >If you're using bulk actions to wipe several iOS/iPadOS devices at once, the data plan is not preserved by default.
 8. To confirm the wipe, select **Yes**.
 
 If the device is on and connected, the **Wipe** action propagates across all device types in less than 15 minutes.
@@ -168,7 +171,7 @@ Device owners can manually un-enroll their devices as explained in the following
 
 ## Delete devices from the Intune portal
 
-If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed.
+If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the console.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
@@ -202,13 +205,13 @@ You might need to delete devices from Azure AD due to communication issues or mi
 6. Select **Devices**.
 7. Remove devices as appropriate. For example, you might remove devices that are no longer in use, or devices that have inaccurate definitions.
 
-## Retire an Apple DEP device from Intune
+## Retire an Apple ADE device from Intune
 
-If you want to completely remove an Apple DEP device from management by Intune, follow these steps:
+If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
-![Screenshot for retire](./media/devices-wipe/retire.png)
+   :::image type="content" source="./media/devices-wipe/retire.png" alt-text="Screen capture of the Retire U I from the M E M admin center.":::
 3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
 4. In the **Assigned to** menu, choose **Unassigned**.
 

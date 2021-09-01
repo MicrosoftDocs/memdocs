@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Surface Hub Windows 10 Team device restrictions in Microsoft Intune - Azure | Microsoft Docs
+title: Surface Hub Windows 10 Team device restrictions in Microsoft Intune
 titleSuffix:
 description: Add or configure Surface Hub devices settings running Windows 10 Team. Add a wake up screen, create a maintenance window, use Miracast, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 08/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes some of the Microsoft Intune device restrictions settings that you can configure for devices running Windows 10 Team, including the Surface Hub devices.
+This article describes some of the Microsoft Intune device restrictions settings that you can configure for Surface Hub devices running [Windows 10 Team](/surface-hub/differences-between-surface-hub-and-windows-10-enterprise).
 
 ## Before you begin
 
@@ -48,7 +48,7 @@ These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehu
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **Organizer and time only**
   - **Organizer, time, and subject (subject hidden for private meetings)**
-- **Welcome screen background image URL**: Enter the URL of a .png image that you want as a custom background on the **Welcome** screen on Windows 10 Team devices. The image must be in PNG format, and the URL must begin with `https://`.
+- **Welcome screen background image URL**: Enter the URL of a `.png` image. On Windows 10 Team devices, this image shows as the background during user sessions, and on the **Welcome** screen. The image must be in PNG format, and the URL must begin with `https://`.
 - **Auto-launch Connect**: **Block** prevents the Connect app from automatically opening when a projection is started. If blocked, users can manually launch the Connect app from the Hub's settings. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Sign-in suggestions**: **Block** disables autofilling the sign-in dialog with invitees from scheduled meetings. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **My meetings and files**: **Block** disables the **My meetings and files** feature in the Start menu. This feature shows the signed-in user's meetings and files from Microsoft 365. When set to **Not configured** (default), Intune doesn't change or update this setting.

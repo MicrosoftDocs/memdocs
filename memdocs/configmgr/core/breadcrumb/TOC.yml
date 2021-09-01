@@ -1,6 +1,7 @@
 ### 
 ### STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the EMMDocs team. 
 ### 
+items:
 - name: Docs
   tocHref: /
   topicHref: /
@@ -18,5 +19,5 @@
         topicHref: /mem/configmgr/index
         items:
         - name: Core infrastructure
-          tocHref: /azure/azure-monitor/platform/
+          tocHref: /azure/azure-monitor/logs/
           topicHref: /mem/configmgr/core/index

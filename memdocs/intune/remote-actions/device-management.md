@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage devices with Microsoft Intune - Azure | Microsoft Docs
+title: Manage devices with Microsoft Intune
 description: Review the devices you manage with Microsoft Intune, including exporting a devices list into csv format, view your Azure Active Directory-joined devices, review a change log of actions on the device, use TeamViewer Connector to allow IT admins remotely troubleshoot Android devices, and view all the actions you can run on your devices.
 keywords:
 author: ErikjeMS
@@ -70,7 +70,7 @@ The available actions depend on the device platform and the device configuration
   - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
   - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
-  - [Erase](https://docs.microsoft.com/mem/intune/remote-actions/device-erase) (macOS Only)
+  - [Erase](./device-erase.md) (macOS Only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 only)
   - [Locate device](device-locate.md) (iOS only)
@@ -87,6 +87,8 @@ The available actions depend on the device platform and the device configuration
   - [Wipe](devices-wipe.md#wipe)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronize device](device-sync.md)
+  - [Update cellular data plan](update-cellular-data-plan.md) (iOS/iPadOS)
+
 
 ## Next steps
 

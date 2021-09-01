@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Android Enterprise compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android Enterprise compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Android Enterprise devices in Microsoft Intune. Set password rules, choose a minimum or maximum operating system version, restrict specific apps, prevent reusing password, and more.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/08/2021
+ms.date: 08/23/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,7 +56,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **Require the device to be at or under the machine risk score**  
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -84,6 +84,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **SafetyNet device attestation**  
   Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
@@ -172,7 +173,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 ### Microsoft Defender for Endpoint - *for Personally-Owned Work Profile*
 
 - **Require the device to be at or under the machine risk score**  
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -209,6 +210,15 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
 
+- **Required SafetyNet evaluation type**  
+  This setting is only available when *SafetyNet device attestation* is set to either *Check basic integrity* or *Check basic integrity & certified devices*.
+
+  Select the evaluation type you want to use to compute the SafetyNet device attestation response.
+
+  - **Not configured (defaults to basic evaluation)** – (*default*)
+  - **Hardware-backed key** – Require that hardware-backed key attestation is used for SafetyNet evaluation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
+
+  For more information about SafetyNet and which devices support hardware-backed key attestation, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafetyNet documentation for Android.
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 

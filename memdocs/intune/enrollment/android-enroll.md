@@ -5,10 +5,10 @@ title: Enroll Android devices in Intune
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 11/9/2020
+ms.date: 08/10/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -57,4 +57,4 @@ For Samsung Knox Standard devices, there are [more prerequisites](android-samsun
 - [Set up Android Enterprise dedicated device enrollments](android-kiosk-enroll.md)
 - [Set up Android Enterprise fully managed enrollments](android-fully-managed-enroll.md)
 - [Set up Android device administrator enrollment](android-enroll-device-administrator.md)
-- [Set up Android Enterprise corporate-owned work profile**](android-corporate-owned-work-profile-enroll.md)
+- [Set up Android Enterprise corporate-owned work profile](android-corporate-owned-work-profile-enroll.md)

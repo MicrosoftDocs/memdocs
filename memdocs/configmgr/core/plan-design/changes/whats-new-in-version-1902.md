@@ -108,7 +108,7 @@ For more information, see [Azure Resource Manager for the cloud management gatew
 <!--3640932-->
 You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
 
-For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design) and [Set up CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
+For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-hierarchy-design.md) and [Set up CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
 
 
 ## <a name="bkmk_real"></a> Real-time management
@@ -247,7 +247,7 @@ When you apply software updates to an OS image, there's a new option to optimize
 
 When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#bkmk_resetbase).
+For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#optimized-image-servicing).
 
 ### Improvements to Run PowerShell Script task sequence step
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Walkthrough - Create administrative template in Microsoft Intune - Azure | Microsoft Docs
+title: Walkthrough - Create administrative template in Microsoft Intune
 description: This tutorial or walkthrough uses Microsoft Intune to configure Office, Windows, and Microsoft Edge ADMX templates on Windows 10 and newer devices.
 keywords:
 author: MandiOhlinger

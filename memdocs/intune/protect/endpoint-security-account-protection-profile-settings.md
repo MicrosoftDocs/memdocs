@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: reference
+ms.date: 06/14/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -48,6 +48,9 @@ Supported platforms and profiles:
   - **Disabled** - Devices provision Windows Hello for Business.
   - **Enabled** - Devices don't provision Windows Hello for Business for any user
   
+> [!IMPORTANT]
+> Due to how Intune determines the scope and applicability of Windows Hello for Business policy, the device may log **Event ID 454** as a result of applying policy. This can be safely ignored when policy is being successful applied (and enforced).
+
 - **Enable to use security keys for sign-in**
 
   Enable Windows Hello security key as a sign-in credential for all PCs in the tenant.

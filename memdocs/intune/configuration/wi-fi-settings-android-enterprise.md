@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2021
-ms.topic: reference
+ms.date: 08/23/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -50,7 +50,7 @@ Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-Select this option if you're deploying to an Android Enterprise dedicated or fully managed device.
+Select this option if you're deploying to an Android Enterprise dedicated, corporate-owned work profile, or fully managed device.
 
 ### Basic
 
@@ -77,7 +77,8 @@ Select this option if you're deploying to an Android Enterprise dedicated or ful
 
   - **EAP-TLS**: To authenticate, the Extensible Authentication Protocol (EAP) Transport Layer Security (TLS) uses a digital certificate on the server, and a digital certificate on the client. Both certificates are signed by a certificate authority (CA) that the server and client trust.
 
-    Also enter:
+    Also enter:  
+
 
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
 
@@ -139,7 +140,9 @@ Select this option if you're deploying to an Android Enterprise dedicated or ful
 - **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
 - **EAP type**: Select the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:
 
-  - **EAP-TLS**: Also enter:
+  - **EAP-TLS**: Also enter:  
+  
+    - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.  
 
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
 
@@ -192,3 +195,5 @@ Select this option if you're deploying to an Android Enterprise dedicated or ful
 The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
 You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.
+
+[Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).

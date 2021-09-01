@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Device restriction settings for Android in Microsoft Intune - Azure | Microsoft Docs
+title: Device restriction settings for Android in Microsoft Intune
 description: See a list of all the Android device administrator settings you can control and restrict in Microsoft Intune. Use these settings to control the password, access Google Play, allow or prohibit apps, control the browser settings, block apps, backup to the Google cloud, and control the message, voice, data roaming, Wi-Fi, and Bluetooth connection options.
 keywords:
 author: MandiOhlinger

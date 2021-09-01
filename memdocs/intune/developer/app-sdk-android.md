@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 07/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -61,15 +61,11 @@ The Intune App SDK consists of the following files:
 * **CHANGELOG.md**: Provides a record of changes made in each SDK version.
 * **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
 
-
 ## Requirements
 
 ### Android versions
-The SDK fully supports Android API 21 (Android 5.0) through Android
-API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android
-minSDKVersion as low as 14, but on those older OS versions it will be
-impossible to install the Intune Company Portal app or use MAM
-policies.
+
+The SDK fully supports Android API 23 (Android 6.0) through Android API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android minSDKVersion as low as 14, but on those older OS versions it will be impossible to install the Intune Company Portal app or use MAM policies.
 
 ### Company Portal app
 
@@ -85,8 +81,11 @@ For app protection without device enrollment, the user is _**not**_ required to 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
-### Sample app
-An example of how to integrate with the Intune App SDK properly is available on [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+### Sample apps
+Examples of how to integrate with the Intune App SDK properly include:
+
+- [Taskr - A Microsoft Intune Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
+- [Taskr - A Microsoft Intune React Native + Android MAM SDK Example](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App/tree/master/ReactMAM)
 
 ### Referencing Intune App libraries
 
@@ -1073,28 +1072,6 @@ Also see the requirements for [Conditional Access](#conditional-access) below.
 
 Authority and NonBrokerRedirectURI may be specified if necessary.
 
-
-### Conditional Access
-Conditional Access (CA) is an Azure Active Directory
-[feature](/azure/active-directory/develop/active-directory-conditional-access-developer)
-which can be used to control access to AAD resources. [Intune
-administrators can define CA rules](../protect/conditional-access.md)
-which allow resource access only from devices or apps which are
-managed by Intune. In order to ensure that your app is able to access
-resources when appropriate, it is necessary to follow the steps
-below. If your app does not acquire any AAD access tokens, or accesses
-only resources which cannot be CA-protected, you may skip these steps.
-
-1. [Register your application with Azure Active Directory].
-    * This will generate a Client ID for your application.
-2. Follow the steps for [Using MSAL] and [Configure MSAL to use a broker].
-3. Set the manifest meta-data parameters per [Common MSAL configurations](#common-msal-configurations) for [App Integrates MSAL](#2-app-integrates-msal), see above.
-4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and confirming the following:
-    - That sign-in to your app prompts for installation and enrollment of the Intune Company Portal
-    - That after enrollment, sign-in to your app completes successfully.
-5. Once your app has shipped Intune APP SDK integration, contact msintuneappsdk@microsoft.com to be added to the list of approved apps for [app-based Conditional Access](/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
-6. Once your app has been added to the approved list, validate by [Configuring app-based CA](../protect/app-based-conditional-access-intune-create.md) and ensuring that sign-in to your app completes successfully.
-
 ## App protection policy without device enrollment
 
 ### Overview
@@ -1349,14 +1326,28 @@ The [getEnrollmentResult] method returns the result of the enrollment request.  
 
 The registered user account's status may change when an enrollment notification is received, but it will not change in all cases (for example, if `AUTHORIZATION_NEEDED` notification is received after a more informative result such as `WRONG_USER`, the more informative result will be maintained as the account's status).  Once the account is successfully enrolled, the status will remain as `ENROLLMENT_SUCCEEDED` until the account is unenrolled or wiped.
 
+### Conditional Access
+Conditional Access (CA) is an Azure Active Directory
+[feature](/azure/active-directory/develop/active-directory-conditional-access-developer)
+which can be used to control access to AAD resources. [Intune
+administrators can define CA rules](../protect/conditional-access.md)
+which allow resource access only from devices or apps which are
+managed by Intune. In order to ensure that your app is able to access
+resources when appropriate, it is necessary to follow the steps
+below. If your app does not acquire any AAD access tokens, or accesses
+only resources which cannot be CA-protected, you may skip these steps.
 
-## APP CA with Policy Assurance
+1. Register your application with Azure Active Directory. This will generate a Client ID for your application.
+2. Follow the steps for [Using MSAL] and [Configure MSAL to use a broker].
+3. Set the manifest meta-data parameters per [Common MSAL configurations](#common-msal-configurations) for [App Integrates MSAL](#2-app-integrates-msal), see above.
+
+## App Protection CA
 
 ### Overview
-With APP CA (Conditional Access) with Policy Assurance, access to resources is conditionalized on the application of Intune App Protection Policies.  AAD enforces this by requiring the app to be enrolled and managed by APP before granting a token to access an APP CA with Policy Assurance protected resource.  The app is required to use the MSAL broker for token acquisition, and the setup is the same as described above in [Conditional Access](#conditional-access).
+With App Protection CA (Conditional Access), access to resources is conditionalized on the application of Intune App Protection Policies.  AAD enforces this by requiring the app to be enrolled and managed by APP before granting a token to access a CA protected resource.  
 
 > [!NOTE]
-> Support for APP CA with Policy Assurance requires version 1.0.0 (or greater) of the MSAL library.
+> Support for App Protection CA requires version 1.0.0 (or greater) of the MSAL library.
 
 ### Handle non-compliance with MSAL
 When acquiring a token for a user, the MSAL library may return or throw an `MsalIntuneAppProtectionPolicyRequiredException` to indicate non-compliance with APP management. Additional parameters can be extracted from the exception for use in remediating compliance (see [MAMComplianceManager](#mamcompliancemanager)). Once the remediation is successful, the app can re-attempt the token acquisition through MSAL.

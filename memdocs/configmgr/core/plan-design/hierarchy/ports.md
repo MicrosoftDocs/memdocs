@@ -2,11 +2,10 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 05/04/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -58,7 +57,7 @@ Configuration Manager doesn't allow you to configure ports for the following typ
 
 - Configuration Manager console to the internet
 
-- Connections to cloud services, such as Microsoft Intune and cloud distribution points
+- Connections to cloud services, such as Microsoft Azure
 
 ## Ports used by clients and site systems
 
@@ -114,7 +113,7 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |-----------------|---------|---------|
 |HTTPS|--|443|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsClient-DP"></a> Client `-->` Distribution point, both standard and pull
 
@@ -182,9 +181,18 @@ A Configuration Manager client doesn't contact a global catalog server when it's
 |HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
 |Server Message Block (SMB)|--|445|
 
-### <a name="bkmk_cmgcp-cmg"></a> CMG connection point `-->` CMG cloud service
+### <a name="bkmk_cmgcp-cmg2"></a> CMG connection point `-->` CMG virtual machine scale set
 
-Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
+
+|Description|UDP|TCP|
+|-----------------|---------|---------|
+|HTTPS (one VM)|--|443|
+|HTTPS (two or more VMs)|--|10124-10139|
+
+### <a name="bkmk_cmgcp-cmg"></a> CMG connection point `-->` CMG classic cloud service
+
+Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 |Description|UDP|TCP|
 |-----------------|---------|---------|
@@ -197,8 +205,9 @@ Configuration Manager uses these connections to build the CMG channel. For more 
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |HTTPS|--|443|
+|HTTP|--|80|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+The specific port required depends upon the management point configuration.<!--MEMDocs#1658--> For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="bkmk_cmgcp-sup"></a> CMG connection point `-->` Software update point
 
@@ -209,7 +218,7 @@ The specific port depends upon the software update point configuration.
 |HTTPS|--|443/8531|
 |HTTP|--|80/8530|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsConsole-Client"></a> Configuration Manager console `-->` Client
 
@@ -372,7 +381,7 @@ A distribution point communicates to the management point in the following scena
 |-----------------|---------|---------|
 |HTTPS for CMG service deployment|--|443|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsSite-AISP"></a> Site server `<-->` Asset Intelligence synchronization point
 
@@ -483,7 +492,7 @@ This communication is used when you deploy certificate profiles by using the cer
 
 ### <a name="BKMK_PortsSite-RCL"></a> Site server `-->` Server hosting remote content library share
 
-You can move the content library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](the-content-library.md#bkmk_remote).
+You can move the content library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](remote-content-library.md).
 
 |Description|UDP|TCP|
 |-----------------|---------|---------|

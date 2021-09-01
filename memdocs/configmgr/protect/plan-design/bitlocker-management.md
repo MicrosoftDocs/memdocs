@@ -21,9 +21,9 @@ manager: dougeby
 Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!NOTE]
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).  
 
-For more general information on BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
+For more general information about BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview). For a comparison of BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 > [!TIP]
 > To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -118,17 +118,15 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM). There's no change to the setup process for BitLocker management. This improvement supports domain-joined and hybrid domain-joined devices.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
-    > [!NOTE]
-    > If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
-    >
-    > 1. In the Configuration Manager console, open the properties of the existing policy.
-    > 1. Switch to the **Client Management** tab.
-    > 1. Select **OK** or **Apply** to save the policy.
-    >
-    > This action revises the policy so that it's available to clients over the CMG.
+   -  If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
+      1. In the Configuration Manager console, open the properties of the existing policy.
+      1. Switch to the **Client Management** tab.
+      1. Select **OK** or **Apply** to save the policy. This action revises the policy so that it's available to clients over the CMG.
 
-> [!TIP]
-> By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
+- By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
+
+> [!Important]
+> The `Invoke-MbamClientDeployment.ps1` PowerShell script is for [stand-alone MBAM](/microsoft-desktop-optimization-pack/mbam-v25/) only. It should not be used with Configuration Manager BitLocker Management.
 
 ## Next steps
 

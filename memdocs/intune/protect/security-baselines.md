@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Learn about security baselines in Microsoft Intune - Azure | Microsoft Docs
+title: Learn about security baselines in Microsoft Intune
 description: Deploy security baselines to devices to help protect users and data on devices you manage with Microsoft Intune. The default baseline configurations are the recommended windows security settings from the relevant security teams. You can also customize baselines to meet your business requirements. 
 keywords:
 author: brenduns 

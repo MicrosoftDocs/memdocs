@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2021
+ms.date: 07/13/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -208,6 +208,9 @@ By default, there can only be one **Global** policy per tenant. However, you can
 
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy will override these settings.
 
+> [!NOTE]
+> The policy settings in the OneDrive Admin Center are no longer being updated. Microsoft Enpoint Manager may be used instead. For more information, see [Control access to features in the OneDrive and SharePoint mobile apps](/onedrive/control-access-to-mobile-app-features).
+
 ## App protection features
 
 ### Multi-identity
@@ -397,5 +400,4 @@ The app protection policy settings that leverage Google Play Protect APIs requir
 
 [Available iOS/iPadOS app protection policy settings with Microsoft Intune](app-protection-policy-settings-ios.md)
 
-## See also
-Third-party apps such as the Salesforce mobile app work with Intune in specific ways to protect corporate data. To learn more about how the Salesforce app in particular works with Intune (including MDM app configurations settings), see [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).
+

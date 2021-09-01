@@ -2,11 +2,10 @@
 title: Create an OS upgrade task sequence
 titleSuffix: Configuration Manager
 description: Use a task sequence to automatically upgrade from Windows 7 or later to Windows 10
-ms.date: 04/05/2021
+ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -65,6 +64,8 @@ Before you create the task sequence, make sure the following requirements are in
 
 ##### Create a new task sequence
 
+_Applies to version 2103_
+
 <!-- bug 8976935 -->
 If you need to create a new task sequence, you need an OS upgrade package to complete the Create Task Sequence Wizard.
 
@@ -74,6 +75,8 @@ If you need to create a new task sequence, you need an OS upgrade package to com
 > You can create a custom task sequence and add the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) step. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the **Upgrade OS** step. Make sure to use the setting for **The currently installed default operating system** to restart the computer into the installed OS and not Windows PE.
 
 If you have an existing Windows 10 in-place upgrade task sequence, [edit](../understand/task-sequence-editor.md#bkmk_edit) or [copy](manage-task-sequences-to-automate-tasks.md#copy) it. Then change the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to install the feature update.
+
+Starting in version 2107, you can create a new task sequence with just a feature update.<!-- 10092835 -->
 
 ##### Export, import, and migrate task sequences
 

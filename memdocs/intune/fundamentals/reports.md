@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/10/2021
+ms.date: 08/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -153,7 +153,7 @@ The **App Install Status** report provides a list of apps with versions and inst
 To see a generated report, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
+2. Select **Apps** > **Monitor** > **App Install Status** to view the current data.
 
 ## Device Install Status report for apps (Operational)
 
@@ -162,8 +162,18 @@ Based on a selected app, the **Device Install Status** report provides a list of
 To see a generated report of device state, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Install Status** > **Device Install Status** > **Select an app**.
-3. Click **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Apps** > **All Apps** > *Select an app* > **Device Install status**.
+
+## Device configuration report (Operational)
+
+The **Device configuration** report provides both device configuration and endpoint security profiles in one report.
+
+You can view all the policies applied to your device in the new single report that contains improved data. For instance, you can see the distinction of profile types in the new **Policy type** field. Also, selecting a policy will provide additional details about settings applied to the device and status of the device. Role-based access control (RBAC) permissions have been applied to filter the list of profiles based on your permissions.
+
+To view the Device configuration report:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **All devices** > *select a device* > **Device configuration**.
 
 ## Device compliance report (Organizational)
 
@@ -216,7 +226,12 @@ You can view the **Antivirus agent status** report using the following steps:
 3. Select the **Reports** tab > **Antivirus agent status** to open the report.
 4. Click **Generate report** (or **Generate again**) to retrieve current data.
 
-The information for this report is based on details available from the [Defender CSP](/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
+After you generate the report, you can select **Columns** to view the full list of details that are available in the report.
+
+The information for this report is based on details available from the following CSPs, which are documented in the Windows client-management documentation:
+
+- [Defender CSP](/windows/client-management/mdm/defender-csp)
+- [WindowsAdvancedThreatProtection CSP](/windows/client-management/mdm/windowsadvancedthreatprotection-csp).
 
 Additional reports for Microsoft Defender Antivirus include:
 
@@ -270,8 +285,7 @@ Based on a selected app, the **User Install Status** report provides a list of u
 To see a generated report, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Install Status** > **User Install Status** > **Select an app**.
-3. Click **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Apps** > **All Apps** > *Select an app* > **User Install status**.
 
 ## Windows 10 MDM Firewall status (Organizational)
 

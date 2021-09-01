@@ -5,8 +5,8 @@ title: Enroll iOS/iPadOS devices in Intune in Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Enrollment summary and overview of iOS/iPadOS devices in Microsoft Intune. Get information on the different enrollment methods.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 12/21/2020
 ms.topic: overview
