@@ -5,7 +5,7 @@ title: Collect diagnostics from a Windows device
 titleSuffix: Microsoft Intune
 description: Learn how to collect diagnostics from a Windows device.
 keywords:
-author: ErikjeMS
+author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 09/20/2021
