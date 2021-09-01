@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 Increasing demand for remote work is accelerating adoption of Zero Trust security models, enabled by cloud- powered solutions. The shifting of device management to the cloud provides a better end-user experience and simplifies IT operations, while reducing reliance on on-premises infrastructure. This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization.
 
 > [!TIP]
-> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). 
+> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). 
 
 The table below describes the key difference between this guide and *Windows in cloud configuration*.
 
@@ -41,7 +41,7 @@ The table below describes the key difference between this guide and *Windows in 
 | Solution | Objective |
 | --- | --- |
 | Get started with cloud native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing |
-| [Windows Cloud Configuration for Endpoint Management - Microsoft 365](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices |
+| [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs |
 
 ---
 
@@ -81,6 +81,7 @@ A cloud native Windows endpoint is joined to [Azure AD](/azure/active-directory/
 Use the five ordered phases in this guide, which build on each other to help you prepare your cloud native Windows endpoint configuration. By completing these phases in order, you'll see tangible progress along the way and to be ready to provision new devices at the end of this guide.
 
 **Phases**:
+
 :::image type="content" source="./media/cloud-native-windows-endpoints/phases.png" alt-text="Five phases for setting up cloud native Windows endpoints.":::
 
 - Phase 1 – Set up your environment
@@ -192,6 +193,9 @@ To limit the configurations from this guide to the test devices that you import 
 > [!TIP]
 > Dynamic groups take a few minutes to populate after changes occur. In large organizations, it [can take much longer](/azure/active-directory/enterprise-users/groups-troubleshooting#troubleshooting-dynamic-memberships-for-groups). After creating a new group, wait a few minutes before you check to confirm the device is now a member of the group.
 
+> [!NOTE]
+> For more information about dynamic groups for devices, see [Rules for devices](/azure/active-directory/enterprise-users/groups-dynamic-membership#rules-for-devices).
+
 ### Step 5 - Configure the Enrollment Status Page
 
 The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud Native Windows Endpoints** group created in the previous step, *Create Azure AD dynamic group for the device*.
@@ -253,6 +257,9 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
   - OneDrive
     - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
     - Silently move Windows known folders to OneDrive – **Enabled**
+
+    > [!NOTE]
+    > For more information, see [Redirect Known Folders](/onedrive/redirect-known-folders).
 
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 :::image type="content" source="./media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Example of a settings catalog profile.":::
@@ -321,11 +328,11 @@ Some things to check out on your new cloud native Windows endpoint:
 
 This phase is designed to help you build out security settings for your organization. This section draws your attention to the various Endpoint Security components in Microsoft Endpoint Manager including:
 
-- Microsoft Defender Antivirus (MDAV)
-- Windows Firewall
-- BitLocker
-- Security baselines
-- Windows Update for Business
+- [Microsoft Defender Antivirus (MDAV)](#microsoft-defender-antivirus-mdav)
+- [Microsoft Defender Firewall](#microsoft-defender-firewall)
+- [BitLocker Encryption](#bitlocker-encryption)
+- [Security baselines](#security-baselines)
+- [Windows Update for Business](#windows-update-for-business)
 
 ### Microsoft Defender Antivirus (MDAV)
 
@@ -441,7 +448,8 @@ You can use security baselines to apply a set of configurations that are known t
 
 Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation by applying only the baseline to a selective group of test endpoints without any other configuration profiles or settings.
 
-For example, the following settings in the **Windows security baseline** can cause issues with Windows Autopilot or attempting to install apps as a standard user:
+#### Security Baselines Known Issues
+The following settings in the **Windows security baseline** can cause issues with Windows Autopilot or attempting to install apps as a standard user:
 
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
@@ -463,13 +471,24 @@ For more information, see:
 If you’d like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](/mem/configmgr/comanage/overview).
 
 > [!NOTE]
-> Applying a Windows Update ring will cause a reboot during the Enrollment Status Page phase and require the user to authenticate again.
+> Known Issue: Applying a Windows Update ring will cause a reboot during the Enrollment Status Page phase and require the user to authenticate again.
 
 ## Phase 4 – Apply customizations and review your on-premises configuration
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
 
-In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase is designed to help you build out customizations specific to your organization. We also draw your attention to the various components of Windows and how you can review existing configurations from an on-premises Active Directory Group Policy environment and apply them to cloud native endpoints.
+In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase is designed to help you build out customizations specific to your organization. We also draw your attention to the various components of Windows and how you can review existing configurations from an on-premises Active Directory Group Policy environment and apply them to cloud native endpoints. There are sections for each of the following:
+
+- [Microsoft Edge](#microsoft-edge)
+- [Start and Taskbar layout](#start-and-taskbar-layout)
+- [Settings catalog](#settings-catalog)
+- [Device Restrictions](#device-restrictions)
+- [Delivery Optimization](#delivery-optimization)
+- [Local Administrators](#local-administrators)
+- [Group Policy to MDM Setting Migration](#group-policy-to-mdm-setting-migration)
+- [Scripts](#scripts)
+- [Mapping Network Drives and Printers](#mapping-network-drives-and-printers)
+- [Applications](#applications)
 
 ### Microsoft Edge
 
@@ -561,7 +580,7 @@ Customers using Microsoft Endpoint Configuration Manager can deploy connected ca
 
 ### Local Administrators
 
-If you have only one group of people that need local administrator access to all Windows Azure AD joined devices, you can add them to the [Cloud Device Administrator Azure AD role](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
+If you have only one group of people that need local administrator access to all Windows Azure AD joined devices, you can add them to the [Azure AD Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator).
 
 You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
 
@@ -594,6 +613,8 @@ You can use PowerShell scripts for any settings or customizations that you need 
 ### Mapping Network Drives and Printers
 
 Cloud native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary. 
+
+For personal storage, in [Step 8 - Configure settings for an optimal Microsoft 365 experience](#step-8---configure-settings-for-an-optimal-microsoft-365-experience), we configured OneDrive Known Folder move. For more information, see [Redirect Known Folders](/onedrive/redirect-known-folders).
 
 For document storage, users can also benefit from SharePoint integration with File Explorer and the ability to sync libraries locally, as referenced here: [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88).
 
