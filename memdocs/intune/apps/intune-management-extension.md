@@ -100,9 +100,7 @@ The Intune management extension has the following prerequisites. Once they're me
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Scripts** > **Add** > **Windows 10 and later**.
 
-    ![Scripts_PS](https://user-images.githubusercontent.com/73707106/130204896-0fe45a71-e18f-4308-8bf7-d4c1c1bdf268.jpg)
-
-
+    ![Screenshot that shows creating a new script policy for a Windows 10 device.](./media/intune-management-extension/create-script-policy-windows.png)
 
 3. In **Basics**, enter the following properties, and select **Next**:
     - **Name**: Enter a name for the PowerShell script. 
