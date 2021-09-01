@@ -13,7 +13,7 @@ manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 08/11/2021
+ms.date: 09/01/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
