@@ -181,7 +181,7 @@ Apple is expected to release macOS 12 (Monterey) in the fall of 2021. Microsoft 
 
 You'll be able to choose the following Android enrollment types when filtering by OS in the **All devices** list in Intune:
 
-- Android (personally-owened work profile)
+- Android (personally-owned work profile)
 - Android (corporate-owned work profile)
 - Android (fully managed)
 - Android (dedicated)
