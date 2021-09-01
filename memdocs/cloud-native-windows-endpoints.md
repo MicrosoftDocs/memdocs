@@ -28,12 +28,12 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Getting started with cloud native Windows endpoints with Microsoft Endpoint Manager
+# Get started with cloud native Windows endpoints with Microsoft Endpoint Manager
 
 Increasing demand for remote work is accelerating adoption of Zero Trust security models, enabled by cloud- powered solutions. The shifting of device management to the cloud provides a better end-user experience and simplifies IT operations, while reducing reliance on on-premises infrastructure. This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization.
 
 > [!TIP]
-> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). 
+> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](/mem/intune/fundamentals/guided-scenarios-overview) in Intune. See [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration).
 
 The table below describes the key difference between this guide and *Windows in cloud configuration*.
 
@@ -304,12 +304,12 @@ Your cloud native endpoint will need some applications. To get started, we recom
 
 To build your first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Autopilot process.
 
-- Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
-  > [!NOTE] 
-  > If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn’t triggered. In that situation, restart the device and ensure it has internet access. If it still doesn’t work, try resetting the PC or reinstalling Windows.
+1. Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
+   > [!NOTE]
+   > If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn’t triggered. In that situation, restart the device and ensure it has internet access. If it still doesn’t work, try resetting the PC or reinstalling Windows.
 
-- Sign in with Azure AD credentials (*UPN* or *AzureAD\username*).
-- The enrollment status page will appear and provide the status of the device configuration.
+2. Sign in with Azure AD credentials (*UPN* or *AzureAD\username*).
+3. The enrollment status page will appear and provide the status of the device configuration.
 
 **Congratulations!** You’ve provisioned your first cloud native Windows endpoint!
 
@@ -381,7 +381,11 @@ For more information on Windows Defender configuration, including Microsoft Defe
 Use Endpoint Security in Microsoft Endpoint Manager to configure the firewall and firewall rules. For more information, see [Firewall policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-firewall-policy).
 
 > [!NOTE]
-> Azure AD joined devices cannot use the 'domain' network profile as they cannot leverage LDAP to detect a domain connection in the same way that domain-joined devices do. Microsoft is aware of this issue/challenge and is investigating alternatives that can help to improve this experience in future Windows releases. As a workaround, consider leveraging a PowerShell script to detect whether a device is on the corporate network, and if so, switch the current network profile to 'private'. The PowerShell cmdlet to change network profiles is: [Set-NetConnectionProfile](/powershell/module/netconnection/set-netconnectionprofile). Note that using ‘private’ as a replacement for ‘domain’ allows you to separate rules based on your domain network and all other networks between the ‘private’ and ‘public’ profiles. However, users with administrative privileges will occasionally be prompted at run time to create new firewall rules and apply them to either public or private profiles. If these users are not aware of the use of the private network profile as a stand-in for the domain profile, unexpected firewall rule configuration may result.
+> Azure AD joined devices cannot use the *domain* network profile as they cannot leverage LDAP to detect a domain connection in the same way that domain-joined devices do. Microsoft is aware of this issue and is investigating alternatives that can help to improve this experience in future Windows releases.
+>
+> As a workaround, consider leveraging a PowerShell script to detect whether a device is on the corporate network, and if so, switch the current network profile to *private*. The PowerShell cmdlet to change network profiles is: [Set-NetConnectionProfile](/powershell/module/netconnection/set-netconnectionprofile).
+>
+> Using *private* as a replacement for *domain* allows you to separate rules based on your domain network and all other networks between the *private* and *public* profiles. However, users with administrative privileges will occasionally be prompted at run time to create new firewall rules and apply them to either public or private profiles. If these users are not aware of the use of the private network profile as a stand-in for the domain profile, unexpected firewall rule configuration may result.
 
 ### BitLocker Encryption
 
@@ -449,6 +453,7 @@ You can use security baselines to apply a set of configurations that are known t
 Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation by applying only the baseline to a selective group of test endpoints without any other configuration profiles or settings.
 
 #### Security Baselines Known Issues
+
 The following settings in the **Windows security baseline** can cause issues with Windows Autopilot or attempting to install apps as a standard user:
 
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
@@ -465,8 +470,8 @@ For more information, see [Windows Autopilot policy conflicts](/mem/autopilot/po
 
 For more information, see:
 
- - [Learn about using Windows Update for Business in Microsoft Intune](/mem/intune/protect/windows-update-for-business-configure)
- - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
+- [Learn about using Windows Update for Business in Microsoft Intune](/mem/intune/protect/windows-update-for-business-configure)
+- [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
 If you’d like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](/mem/configmgr/comanage/overview).
 
@@ -519,9 +524,9 @@ The settings catalog is a single location where all configurable Windows setting
 >
 > - While the settings catalog is in preview, some settings might not be available in the catalog but are available in Templates for Intune device configuration profiles.
 >
-> - Many of the settings you're familiar with from group policy are already available in the settings catalog, with many more being added soon. For more information, see [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
+> - Many of the settings you're familiar with from group policy are already available in the settings catalog. For more information, see [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
 >
-> - Some settings available in settings catalog only work with Windows Insider builds. This limitation is typically called out in the last line of the item description text for each setting. The intention is for these settings to be backported to Windows 10 2004 and later versions in the future.
+> - Some settings available in settings catalog only work with Windows Insider builds. This limitation is typically called out in the last line of the item description text for each setting.
 
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
@@ -551,16 +556,15 @@ Following are some settings available in the settings catalog that might be rele
 
 ### Device Restrictions
 
-Windows Device Restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, see [Device Restrictions](/mem/intune/configuration/device-restrictions-configure).
+Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, see [Device Restrictions](/mem/intune/configuration/device-restrictions-configure).
 
-Following are some device restrictions that might be relevant to your organization:
+To create a profile that uses the Device restrictions template, in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com) go to **Devices** > **Configuration profile** > **Create  profile** > Select **Windows 10 and later** for or *Platform* and **Temlates** for *Profile type* > **Device restrictions**.
 
-- **Wallpaper**  
-  You can set a wallpaper on Windows Enterprise or Windows Education SKUs. You’ll either host the file online or reference a file that has been copied locally. In Intune you can set a wallpaper using the option **Desktop background picture**, by going to **Device Configuration** > **Profile** > **Device Restrictions** > **Personalization** > **Desktop background picture**.
+- **Desktop background picture URL (Desktop only)**  
+  Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You’ll either host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
 
 - **Require users to connect to a network during device setup**  
-  This setting reduces the risk that a device can skip Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase.
-  - Device Configuration Profiles > Device Restrictions > General > Require users to connect to network during device setup
+  This setting reduces the risk that a device can skip Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General* and configure **Require users to connect to network during device setup**.
 
   > [!NOTE]
   > The setting becomes effective the next time the device is wiped or reset.
@@ -594,9 +598,9 @@ For more information, see [How to manage the local administrators group on Azure
 
 There are several options for creating your device configuration when considering a migration from Group Policy to cloud native device management:
 
-1. Start fresh and apply custom settings as required.
-2. Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics).
-3. Use Group Policy Analytics to create Device Configuration profiles directly for supported settings.
+- Start fresh and apply custom settings as required.
+- Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics).
+- Use Group Policy Analytics to create Device Configuration profiles directly for supported settings.
 
 The transition to a cloud native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Try to avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP.
 
@@ -612,7 +616,7 @@ You can use PowerShell scripts for any settings or customizations that you need 
 
 ### Mapping Network Drives and Printers
 
-Cloud native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary. 
+Cloud native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary.
 
 For personal storage, in [Step 8 - Configure settings for an optimal Microsoft 365 experience](#step-8---configure-settings-for-an-optimal-microsoft-365-experience), we configured OneDrive Known Folder move. For more information, see [Redirect Known Folders](/onedrive/redirect-known-folders).
 
@@ -653,7 +657,7 @@ Now that you’ve configured your cloud native Windows endpoint and provisioned 
 
 If for some reason Autopilot isn’t the right option for you, there are other enrollment methods for Windows detailed here – [Intune enrollment methods for Windows devices](/mem/intune/enrollment/windows-enrollment-methods).
 
-## Next Steps
+## Next steps
 
 Learn more about the following subjects:
 
@@ -664,5 +668,5 @@ Learn more about the following subjects:
 - Add [Win32 apps](/mem/intune/apps/apps-win32-app-management)
 - [Use certificates for authentication in Intune](/mem/intune/protect/certificates-configure)
 - Deploy network profiles, including [VPN](/mem/intune/configuration/vpn-settings-windows-10) and [Wi-Fi](/mem/intune/configuration/wi-fi-settings-windows)
-- Deploy [Multi-factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
+- Deploy [Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 - Security baseline for [Edge](/mem/intune/protect/security-baseline-settings-edge)
