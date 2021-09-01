@@ -43,7 +43,7 @@ To use Cloud PCs, you must meet the following requirements:
 ## Azure Active Directory and Intune requirements
 
 - A valid and working Intune and Azure Active Directory tenant.
-- No enrollment restrictions in place for Windows.
+- Ensure that Intune device type enrollment restrictions are set to Allow Windows (MDM) platform for corporate enrollment.
 - Infrastructure configuration: You must configure your infrastructure to automatically hybrid Azure AD join any devices that domain join to the on-premises Active Directory. This [configuration lets them be recognized and managed in the cloud](/azure/active-directory/devices/overview).
 
 ## Domain requirements

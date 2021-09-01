@@ -5,8 +5,8 @@ title: Shared iOS and iPadOS devices
 titleSuffix: Microsoft Intune
 description: Learn about Shared iOS and iPadOS devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/17/2021
 ms.topic: overview

@@ -5,8 +5,8 @@ title: Intune actions and options supported with Apple User Enrollment
 titleSuffix: Microsoft Intune
 description: Learn which Intune actions and options are supported with Apple User Enrollment
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 2/14/2020
 ms.topic: conceptual

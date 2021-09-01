@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2021
+ms.date: 09/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -92,9 +92,16 @@ When working with the csv file with the activation codes, be sure you or your mo
 
         :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
 
-3. The csv file name becomes the cellular subscription pool name in the Endpoint Manager admin center. In the previous image, the file name is `UnlimitedDataSkynet.csv`. So, Intune names the subscription pool `UnlimitedDataSkynet.csv`:
+3. The cellular subscription becomes the first part of the SMDP of your mobile operator. For example, in the previous image, the first row includes the `smdp.skynet.mobile` URL of the mobile operator. Intune names the cellular subscription pool name as `smdp`:
 
     :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
+
+> [!IMPORTANT]
+> You can't have two lists with the same provider. If you try to upload two lists with the same provider, you may get a `The request is invalid` error message. 
+> 
+> To add more devices with the same provider or carrier, then you must:
+> - Remove the current `.csv`.
+> - Upload a new `.csv` that has all the old device/ICCID pairs and has the new devices you want to add.
 
 ## Step 2: Create an Azure AD device group
 
@@ -152,7 +159,7 @@ After you create your device profile, Intune provides graphical charts. These ch
 You can monitor and view a detailed list of devices you can view in Device Status.**
 
 1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
-2. Select **Device Status**. Intune shows additional details about the device:
+2. Select **Device Status**. Intune shows more details about the device:
 
     - **Device Name**: Name of the device that is targeted
     - **User**: User of the enrolled device
@@ -184,9 +191,9 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
 
 ## Best practices & troubleshooting
 
-- Be sure your csv file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
+- Be sure your `.csv` file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
 - Create a static device Azure AD group that only includes the eSIM devices that are targeted.
-- If there's an issue with the deployment status, check the following:
+- If there's an issue with the deployment status, check the following settings:
   - **File format not proper**: See **Step 1: Add cellular activation codes** (in this article) on how to properly format your file.
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 

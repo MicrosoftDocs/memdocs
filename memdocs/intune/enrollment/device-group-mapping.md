@@ -5,8 +5,8 @@ title: Categorize devices into groups in Intune
 titleSuffix: Microsoft Intune
 description: Learn how to categorize devices into groups for easier management.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: how-to

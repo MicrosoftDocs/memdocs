@@ -5,8 +5,8 @@ title: Set up enrollment for macOS devices
 titleSuffix: Microsoft Intune
 description: Learn how to set up enrollment for macOS devices in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 06/12/2020
 ms.topic: overview

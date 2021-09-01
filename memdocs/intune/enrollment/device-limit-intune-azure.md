@@ -5,8 +5,8 @@ title: Understand between Intune and Azure device limit restrictions
 titleSuffix:
 description: Understand the differences between Intune's device limit restrictions and Azure AD's delimit restrictions. 
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/12/2020
 ms.topic: conceptual
