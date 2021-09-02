@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: End grace period
+title: End grace period for Cloud PCs in Windows 365
 titleSuffix:
 description: Learn how to end the grace period for Cloud PCs in Windows 365.
 keywords:
