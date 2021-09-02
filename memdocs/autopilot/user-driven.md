@@ -43,7 +43,7 @@ The rest of the process is automated. The device will:
 Any additional prompts during the Out-of-Box Experience (OOBE) can be suppressed; see [Configuring Autopilot Profiles](profiles.md) for options that are available.
 
 > [!IMPORTANT]
-> In a Windows Autopilot user-driven Azure Active Directory (Azure AD) joined environment, administrators can pre-assign a user to a device.  If the user is a cloud-native Azure AD account, they are taken directly to an OOBE page that asks for their password; there is no way to log in with another user ID. However, when using Active Directory Federation Services (ADFS), the User Principal Name (UPN) is passed to the web sign-in page, and the user is able to change it and sign in as a different user from the tenant.
+> If you are using Active Directory Federation Services (ADFS), there is a [known issue](known-issues.md) that can enable the end user to sign in with a different account than the one that is assigned to that device.
 
 Windows Autopilot user-driven mode supports Azure AD and Hybrid Azure AD joined devices. For more information about these two join options, see [What is a device identity](/azure/active-directory/devices/overview).
 
