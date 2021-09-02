@@ -40,13 +40,16 @@ There may be situations where you don't want to wait seven days for the grace pe
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **All Cloud PCs**.
 ![Screenshot of all Cloud PCs](./media/end-grace-period/all-cloud-pcs.png)
 3. In the **Status** column of the list, select **In grace period** > **End grace period** > **Yes**.
-![Screenshot of End grace period](./media/end-grace-period/end-grace-period.png)
+    > [!Important]
+    > This is a destructive act. It will delete the operating system and data. The Cloud PC will no longer be available.
+
+    ![Screenshot of End grace period](./media/end-grace-period/end-grace-period.png)
 
 After you select **Yes**, the following steps will happen automatically:
 
 1. The Cloud PC will start deprovisioning.
 2. The user loses access to the Cloud PC.
-3. The Cloud PC won't be available.
+3. The operating system and data are deleted from the Cloud PC. The Cloud PC is no longer available.
 4. If the original provisioning policy was replaced with a different policy, the Cloud PC will be reprovisioned with the settings in the new policy.
 
 <!-- ########################## -->
