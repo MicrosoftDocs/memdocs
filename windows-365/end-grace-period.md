@@ -52,4 +52,4 @@ After you select **Yes**, the following steps will happen automatically:
 <!-- ########################## -->
 ## Next steps
 
-For more information on grace periods, see [Device management overview for Cloud PCs](device-management-overview.md#column-details).
+For more information on grace periods, see [Device management overview for Cloud PCs](device-management-overview.md).
