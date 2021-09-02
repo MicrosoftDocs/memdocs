@@ -23,6 +23,7 @@ ms.topic: troubleshooting
 **Applies to**
 
 - Windows 10
+- Windows 11
 
 The following table describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
