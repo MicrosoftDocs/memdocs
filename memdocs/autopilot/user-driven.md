@@ -160,7 +160,7 @@ To validate the process, ensure the needed Windows 10 cumulative update has been
 
 1. Press Shift-F10 to open a command prompt.
 2. Insert a USB key containing the downloaded update.
-3. Install the update using the command (substituting the real file name): WUSA.EXE <filename>.msu /quiet
+3. Install the update using the command (substituting the real file name): WUSA.EXE <i>filename</i>.msu /quiet
 4. Reboot the computer using the command: shutdown.exe /r /t 0
 
 Or, you can start Windows Update to install the latest updates:
