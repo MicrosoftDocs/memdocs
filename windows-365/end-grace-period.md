@@ -46,7 +46,7 @@ After you select **Yes**, the following steps will happen automatically:
 
 1. The Cloud PC will start deprovisioning.
 2. The user loses access to the Cloud PC.
-3. The Cloud PC won't be available.
+3. The operating system and data are deleted from the Cloud PC. The Cloud PC is no longer available.
 4. If the original provisioning policy was replaced with a different policy, the Cloud PC will be reprovisioned with the settings in the new policy.
 
 <!-- ########################## -->
