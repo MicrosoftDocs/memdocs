@@ -30,9 +30,9 @@ ms.collection: M365-identity-device-management
 
 # End grace period for Cloud PCs
 
-When a Cloud PC is in a grace period, the user can continue using the Cloud PC for seven days. After the seven day grace period expires, the user will be logged off the Cloud PC, they’ll lose access, and the Cloud PC will be [deprovisioned](lifecycle.md#deprovision).
+When a Cloud PC is in a grace period, the user can continue using the Cloud PC for seven days. After the seven-day grace period expires, the user is logged off the Cloud PC. They’ll lose access and the Cloud PC will be [deprovisioned](lifecycle.md#deprovision).
 
-There may be instances where you as the admin don't want to wait seven days for the grace period to end normally. In this case, you can use the **End grace period** option to immediately end the grace period.
+There may be situations where you don't want to wait seven days for the grace period to end normally. In this case, you can use the **End grace period** option to immediately end the grace period.
 
 ## End grace period
 
