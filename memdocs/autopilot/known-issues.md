@@ -30,8 +30,8 @@ The following table describes known issues that can often be resolved by configu
 <table>
 <th>Issue</th><th>More information</th>
 
-<tr><td>User ID can be changed in user-driven mode when using Active Directory Federation Services (ADFS).</td>
-<td>In a Windows Autopilot user-driven Azure Active Directory (Azure AD) joined environment, administrators can pre-assign a user to a device. If the user is a cloud-native Azure AD account, they are taken directly to an OOBE page that asks for their password; there is no way to log in with another user ID. However, when using ADFS, the User Principal Name (UPN) is passed to the web sign-in page, and the user is able to change it and sign in as a different user from the tenant.</td></tr>
+<tr><td>A non-assigned user can sign in when using user-driven mode with using Active Directory Federation Services (ADFS).</td>
+<td>In a Windows Autopilot user-driven Azure Active Directory (Azure AD) joined environment, administrators can pre-assign a user to a device. If the user is a cloud-native Azure AD account, they are taken directly to an OOBE page that asks for their password; there is no way to sign in with another user ID. However, when ADFS is used, the user assignment is not enforced. A different user than the one assigned can sign in on the device.</td></tr>
 
 <tr><td>Intune connector is inactive but still appears in the Intune Connectors blade</td>
 <td>Inactive Intune connectors will be automatically cleaned up after 30 days of inactivity without admin interaction.</td></tr>
