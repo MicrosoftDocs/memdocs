@@ -39,7 +39,7 @@ There may be situations where you don't want to wait seven days for the grace pe
 1. Ending the grace period is a destructive action. Before ending the grace period, notify your users to be sure that they're fully aware of the impact.
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **All Cloud PCs**.
 ![Screenshot of all Cloud PCs](./media/end-grace-period/all-cloud-pcs.png)
-3. In the **Status** column of the list, select **In grace period** > **End grace period** > **Yes**.
+3. In the **Status** column of the list, select **In grace period** > **End grace period** > **Yes**. This is a destructive act. It will delete the operating system and data. The Cloud PC will no longer be available.
 ![Screenshot of End grace period](./media/end-grace-period/end-grace-period.png)
 
 After you select **Yes**, the following steps will happen automatically:
