@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 06/22/2021
+ms.date: 09/02/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -23,24 +23,29 @@ ms.topic: how-to
 **Applies to**
 
 - Windows 10, version 1809 or later
+- Windows 11
 
 Windows Autopilot user-driven mode lets you configure new Windows 10 devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
 
-The process is simple so that anyone can complete it. Devices can be shipped or distributed to the end user directly with simple instructions:
+The process is very simple. Devices can be shipped or distributed to the end user directly with the following instructions:
 
 1. Unbox the device, plug it in, and turn it on.
 2. Choose a language (only required when multiple languages are installed), locale, and keyboard.
 3. Connect it to a wireless or wired network with internet access. If using wireless, the user must establish the Wi-Fi link. 
 4. Specify your e-mail address and password for your organization account.
 
-The rest of the process is automated, as the device:
-1. Joins the organization.
-2. Enrolls in Intune (or another MDM service)
-3. Is configured as defined by the organization.
+The rest of the process is automated. The device will:
+
+1. Join the organization.
+2. Enroll in Intune (or another MDM service)
+3. Get configured as defined by the organization.
 
 Any additional prompts during the Out-of-Box Experience (OOBE) can be suppressed; see [Configuring Autopilot Profiles](profiles.md) for options that are available.
 
-Windows Autopilot user-driven mode supports Azure Active Directory and Hybrid Azure Active Directory joined devices. For more information about these two join options, see [What is a device identity](/azure/active-directory/devices/overview).
+> [!IMPORTANT]
+> In a Windows Autopilot user-driven Azure Active Directory (Azure AD) joined environment, administrators can pre-assign a user to a device.  If the user is a cloud-native Azure AD account, they are taken directly to an OOBE page that asks for their password; there is no way to log in with another user ID. However, when using Active Directory Federation Services (ADFS), the User Principal Name (UPN) is passed to the web sign-in page, and the user is able to change it and sign in as a different user from the tenant.
+
+Windows Autopilot user-driven mode supports Azure AD and Hybrid Azure AD joined devices. For more information about these two join options, see [What is a device identity](/azure/active-directory/devices/overview).
 
 The process flow completed during the user-driven process are as follows:
 
