@@ -117,6 +117,8 @@ items:
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
+      - name: End grace period
+        href: end-grace-period.md
     - name: Reports
       items:
       - name: Resource performance report
