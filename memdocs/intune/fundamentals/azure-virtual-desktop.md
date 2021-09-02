@@ -88,7 +88,7 @@ The following table provides a set of known issues along with more information a
 |---|---|
 | User policy does not sync after first login on to Hybrid Azure AD-joined single session VMs | Due to a known race condition, the user policy might not sync immediately after initial login on the VM. As a workaround, users can explicitly log off and log in the VM again. This issue will be fixed in the future. |
 | Cannot auto-enroll if tenant has more than one MDM provider | This issue will be fixed in the future. |
-| Modern apps are not working correctly if [FSLogix](/fslogix/overview) is configured | Using FSLogix and Modern apps could cause compatibility issues. We recommend that you don’t configure Modern apps when FSLogix is configured.|
+| Modern apps, such as Universal Windows Platform (UWP) apps, are not working correctly if [FSLogix](/fslogix/overview) is configured | Using FSLogix and Modern apps could cause compatibility issues. We recommend that you don’t configure Modern apps when FSLogix is configured.|
 
 ## Next steps
 
