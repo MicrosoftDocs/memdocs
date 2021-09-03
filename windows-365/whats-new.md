@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 09/03/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -58,7 +58,7 @@ Certain conditions put a Cloud PC into a seven-day grace period. At the end of t
 
 You can now immediately end the grace period for individual Cloud PCs. By ending the grace period manually, you won’t have to wait the full seven days to remove user access from the Cloud PC.
 
-For more information on grace periods, see [Device management overview for Cloud PCs](device-management-overview.md).
+For more information on grace periods, see [End grace period](end-grace-period.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
