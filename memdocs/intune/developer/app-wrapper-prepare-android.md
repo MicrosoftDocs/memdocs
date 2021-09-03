@@ -50,7 +50,7 @@ Before running the tool, review [Security considerations for running the App Wra
   - It must be written for Android 4.0 or later.
 
   > [!NOTE]
-  > If your input app is an Android App Bundle (.aab), you will need to convert it to an APK before using the Intune App Wrapping Tool. For details, see [Convert Android App Bundle (AAB) to APK](app-wrapper-prepare-android.md#Convert-Android-App-Bundle-AAB-to-APK). As of August 2021, [new private apps can still be published to the Google Play Store as APKs](https://support.google.com/googleplay/work/answer/6145139?hl=en).
+  > If your input app is an Android App Bundle (.aab), you will need to convert it to an APK before using the Intune App Wrapping Tool. For details, see [Convert Android App Bundle (AAB) to APK](#convert-android-app-bundle-aab-to-apk). As of August 2021, [new private apps can still be published to the Google Play Store as APKs](https://support.google.com/googleplay/work/answer/6145139?hl=en).
   
 - The app must be developed by or for your company. You cannot use this tool on apps downloaded from the Google Play Store.
 
