@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Privacy, customer data, and customer content in Windows 365
 
-Windows 365 is a cloud-based service that lets you provision and manage Cloud PC for your users. You manage the Cloud PCs with the rest of your devices by using Microsoft Endpoint Manager (Windows 365 Enterprise) or a self-serviced experience (Windows 365 Business). This documentation provides details on data platform and privacy compliance for Windows 365. Unless otherwise specified, the term WIndows 365 in this document refers to both Windows 365 Enterprise and the Windows 365 Business. Where the details below differ, each product is called out individually. 
+Windows 365 is a cloud-based service that lets you provision and manage Cloud PC for your users. You manage the Cloud PCs with the rest of your devices by using Microsoft Endpoint Manager (Windows 365 Enterprise) or a self-serviced experience (Windows 365 Business). This documentation provides details on data platform and privacy compliance for Windows 365. Unless otherwise specified, the term WIndows 365 in this document refers to both Windows 365 Enterprise and the Windows 365 Business. Where the details below differ, each product is called out individually.
 
 ## Windows 365 data sources and purpose
 
@@ -47,7 +47,7 @@ To protect and maintain enrolled devices, Windows 365 processes and copies data 
 
 Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is provisioned in. For Windows 365 Enterprise, the region is defined in the [on-prem network connection's (ONPC)](on-premises-network-connections.md) **Virtual network** setting.  Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
 
-Windows 365  stores service-generated metadata in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's country. This is mapped based on Microsoft Online tenant's country to the nearest region. 
+Windows 365  stores service-generated metadata in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's country. This is mapped based on Microsoft Online tenant's country to the nearest region.
 
 For more information on where your data is located, see:
 
@@ -58,7 +58,8 @@ For more information on where your data is located, see:
 
 ### How long is customer data and customer content stored?
 
-Windows 365 treats both the Cloud PC disk and the data on the VM itself as customer content. 
+Windows 365 treats both the Cloud PC disk and the data on the VM itself as customer content.
+
 When a user is removed from Windows 365, Windows 365 keeps non-alert personal data for a maximum of 90 days. In passive scenarios, data is kept for a minimum of 90 days and a maximum of 180 days. For security purposes, alert data collected by Microsoft Defender for Endpoint is stored for [180 days if the customer uses Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
 
 For more information on data retention, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
@@ -77,13 +78,13 @@ For more information about individual data retention and storage policies of all
 
 Each internal customer data subscription in Windows 365 Enterprise contains Azure Virtual Desktop (AVD) metadata, Cloud PCs, and Storage from multiple tenants. Each VM is connected to a single virtual network interface card (NIC). During provisioning of the Cloud PC, that NIC is attached to a single virtual network in a customer's Azure subscription. The virtual network is defined by the tenant administrator. Every Cloud PC is assigned to a single user by using the AVD connection brokering layer. The access control list (ACL) for the AVD layer is authenticated by Azure AD at the tenant and user level. Network access to and from a Cloud PC in Windows 365 is at the control and discretion of each tenant administrator. So, Cloud PCs in tenant A can't be accessed by users in tenant B, unless the tenant A administrator chooses to provide connectivity outside Windows 365 and AVD at the network layer in their own subscription.
 
-For Windows 365 Business, one or more dedicated virtual networks are created in a tenant. The service automatically creates additional networks as needed and doesn't guarantee that all Windows 365 Business Cloud PCs in the same tenant will have network connectivity to each other. 
+For Windows 365 Business, one or more dedicated virtual networks are created in a tenant. The service automatically creates additional networks as needed and doesn't guarantee that all Windows 365 Business Cloud PCs in the same tenant will have network connectivity to each other.
+
 All the isolation described above happens on a per user, per Cloud PC basis, since Windows 365 doesn't support multi-user scenarios.
 
 For a full description of Windows 365 architecture, see [Windows 365 architecture](architecture.md). For more information on isolation in Microsoft 365, see [Isolation and Access Control in Microsoft 365](/microsoft-365/enterprise/microsoft-365-isolation-in-microsoft-365). For more on Access Management in Microsoft 365, refer to [Identity and Access Management - Microsoft Service Assurance](/compliance/assurance/assurance-identity-and-access-management).
 
-
-## Compliance and Legal
+## Compliance and legal
 
 Audit reports for Windows 365 will be available for download at the [Microsoft Service Trust Portal](https://aka.ms/stp) when they are completed. The Microsoft Service Trust Portal serves as a central repository for Microsoft Enterprise Online Services.
 
