@@ -77,7 +77,7 @@ In a future update, Windows 365 will support Windows 11 as a Cloud PC operating 
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
 
 <!-- ***********************************************-->
-<!----># Monitor and troubleshoot
+<!--# Monitor and troubleshoot-->
 
 ## Next steps
 
