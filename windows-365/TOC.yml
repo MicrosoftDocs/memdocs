@@ -23,6 +23,8 @@ items:
     href: device-images.md
   - name: Device configuration with MEM
     href: device-configuration.md
+  - name: Privacy and personal data
+    href: privacy-personal-data.md
 - name: How-to guides
   items:
     - name: Plan
@@ -131,6 +133,8 @@ items:
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
     - name: End user experience
       items:
+      - name: End user hardware requirements
+        href: end-user-hardware-requirements.md
       - name: Access a Cloud PC
         href: end-user-access-cloud-pc.md
 - name: Troubleshoot
