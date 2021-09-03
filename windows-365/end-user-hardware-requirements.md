@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: End user hardware requirements in Windows 365
+title: End-user hardware requirements in Windows 365
 titleSuffix:
-description: Learn about the hardware requirements for end users ot access their Cloud PC.
+description: Learn about the hardware requirements for end-users ot access their Cloud PC.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# End user hardware requirements to access a Cloud PC
+# End-user hardware requirements to access a Cloud PC
 
-To access their Cloud PC, an end user's hardware must meet certain requirements. These requirements vary depending on which Microsoft Remote Desktop client the end user installs.
+To access their Cloud PC, an end-user's hardware must meet certain requirements. These requirements vary depending on which Microsoft Remote Desktop client the end-user installs.
 
 ## Microsoft Remote Desktop client for Windows
 
@@ -39,7 +39,7 @@ Downloads available for:
 - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
 - [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2098960)
 
-Requirements:
+Hardware requirements:
 
 - **Operating systems**: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 - **CPU**: 1vCPU with 1 GHz or faster processor
@@ -50,7 +50,7 @@ Requirements:
 
 If you'll be using Microsoft Teams on the Cloud PCs, the Windows device requirements increase to:
 
-- **CPU**: At least 2vCPU with Minimum 1.6 GHz or faster processor. For higher video/screen share resolution and frame rate, a 4-core processor or better is recommended.
+- **CPU**: At least 2vCPU with Minimum 1.6 GHz or faster processor. For higher video/screen share resolution and frame rate, a four-core processor or better is recommended.
 - **RAM**: 1024 MB
 - **Hard drive**: 3 GB or more
 - **.NET Framework version**: 4.6.1 or later
@@ -60,7 +60,7 @@ If you'll be using Microsoft Teams on the Cloud PCs, the Windows device requirem
 
 Download from the [Microsoft Store](https://www.microsoft.com/store/p/microsoft-remote-desktop/9wzdncrfj3ps).
 
-Requirements:
+Hardware requirements:
 
 - **Operating systems**: Windows 10 1703 or later
 - **CPU**: 1 GHz or faster processor
