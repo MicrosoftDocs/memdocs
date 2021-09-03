@@ -131,6 +131,8 @@ items:
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
     - name: End user experience
       items:
+      - name: End user hardware requirements
+        href: end-user-hardware-requirements.md
       - name: Access a Cloud PC
         href: end-user-access-cloud-pc.md
 - name: Troubleshoot
