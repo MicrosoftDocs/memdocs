@@ -36,9 +36,8 @@ Windows 365 is a cloud-based service that lets you provision and manage Cloud PC
 
 Windows 365 provides its service to customers by gathering and using data from the sources listed below. These sources provide a comprehensive view of the devices that Windows 365 manages.
 
-- [Microsoft Windows 10 Enterprise](/windows/resources/) - for managing the device setup experience, managing connections to other services, and operational support for IT pros.
+- [Microsoft Windows 10 Enterprise](https://docs.microsoft.com/windows/resources/) - for managing the device setup experience, managing connections to other services, and operational support for IT pros.
 - [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) – for device and app management, data security, and device configurations.
-- [Microsoft Azure Active Directory (Azure AD)](/azure/active-directory/) - for authentication and identification of all user accounts.
 - [Endpoint Analytics](/mem/analytics/overview) – part of Microsoft Endpoint manager, specifically for analytical insights about device and app usage.
 - [Microsoft 365 apps for enterprise](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans?rtc=1) – for management of Microsoft 365 Apps.
 
@@ -60,7 +59,7 @@ For more information on where your data is located, see:
 ### How long is customer data and customer content stored?
 
 Windows 365 treats both the Cloud PC disk and the data on the VM itself as customer content. 
-When a user is removed from Windows 365, Windows 365 keeps non-alert personal data for a maximum of 90 days. In passive scenarios, data is kept for a minimum of 90 days and a maximum of 180 days. For security purposes, alert data collected by Microsoft Defender for Endpoint is stored for [180 days if the customer uses Microsoft Defender for Endpoint](/security/defender-endpoint/data-storage-privacy).
+When a user is removed from Windows 365, Windows 365 keeps non-alert personal data for a maximum of 90 days. In passive scenarios, data is kept for a minimum of 90 days and a maximum of 180 days. For security purposes, alert data collected by Microsoft Defender for Endpoint is stored for [180 days if the customer uses Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
 
 For more information on data retention, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
