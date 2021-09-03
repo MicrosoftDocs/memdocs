@@ -60,6 +60,9 @@ You can now immediately end the grace period for individual Cloud PCs. By ending
 
 For more information on grace periods, see [End grace period](end-grace-period.md).
 
+<!-- ########################## -->
+## Week of August 30, 2021
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
