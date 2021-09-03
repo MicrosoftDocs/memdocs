@@ -89,11 +89,11 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
     
     Before hitting **F5**:
     
-    ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice hasn't been confirmed.](media/provide-localized-windows-experience/regionaloption-selected-redunderline.png)
+    ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice hasn't been confirmed.](media/provide-localized-windows-experience/regional-option-selected-red-underline.png)
 
     After hitting **F5**:
     
-    ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice has been confirmed. ](media/provide-localized-windows-experience/regionaloption-selected-greenunderline.png)
+    ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice has been confirmed. ](media/provide-localized-windows-experience/regional-option-selected-green-underline.png)
 
 14. Switch to the **Common** tab and check the following three options:
     - **Run in logged-on user's security context (user policy option).**
