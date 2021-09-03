@@ -58,7 +58,7 @@ To upload the custom image to the Windows 365 service, after you've captured the
 
 Now that the languages are installed on the image that users will receive, you must create a Group Policy to apply the correct pre-installed language as the default for your users. 
 
-The following steps configure [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11)) to set the PreferredUILanguages Registy value and the Windows Regional Options. These options are then [targeted by security group](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11)#item-level-targeting) to sets of users. Each security group and Group Policy object configures a single language as the default for those users. To cater for users with different language default requirements, you can use a single image with multiple languages and different Group Policy objects targeted to different groups of users.
+The following steps configure [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11)) to set the PreferredUILanguages Registry value and the Windows Regional Options. These options are then [targeted by security group](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11)#item-level-targeting) to sets of users. Each security group and Group Policy object configures a single language as the default for those users. To cater for users with different language default requirements, you can use a single image with multiple languages and different Group Policy objects targeted to different groups of users.
 
 1. Create a security group in your Active Directory domain that will map a specific language to a specific set of users in that group.
 2. Add all Cloud PC users who should receive that language to this new security group.
@@ -105,7 +105,7 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
 16. Select **...** next to the Group, search for the new security group, select the new security group, and select **OK**.
 17. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
 
-You can perform these steps for each language you need to provide as the default language for users. If your users have both Cloud PCs and physical devices, you may want to apply [Group Policy loopback](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy) so these settings only affect users when they sign in to ther Cloud PC.
+You can perform these steps for each language you need to provide as the default language for users. If your users have both Cloud PCs and physical devices, you may want to apply [Group Policy loopback](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy) so these settings only affect users when they sign in to their Cloud PC.
 
 > [!NOTE]
 > Step 6 above uses the "Replace" command, setting the user's preferred language to just the one language defined in the registry item. If you create multiple Group Policy objects to assign different languages to users, make sure each user is only a member of a single security group that is being targeted.
