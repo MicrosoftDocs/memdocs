@@ -61,7 +61,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 5. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
    ![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-network.png)
 
-6. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**.
+6. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.
    ![Screenshot of account management in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-account.png)
 
 7. Provide your Azure AD credentials to get a bulk token.
