@@ -58,16 +58,19 @@ The following settings can be configured to customize behavior of the Enrollment
 
 <table>
 <th align="left">Setting<th align="left">Yes<th align="left">No
-<tr><td>Show app and profile installation progress<td>The enrollment status page is displayed.<td>The enrollment status page isn't displayed.
+<tr><td>Show app and profile configuration progress<td>The enrollment status page is displayed.<td>The enrollment status page isn't displayed.
+<tr><td>Show an error when installation takes longer than specified number of minutes<td colspan="2">Specify the number of minutes to wait for installation to complete. A default value of 60 minutes is entered.
+<tr><td>Show custom message when time limit error occurs<td>A text box is provided where you can specify a custom message to display if an installation error occurs.<td>The default message is displayed: <br><b>Installation exceeded the time limit set by your organization. Try again or contact your IT support person for help.<b>
+<tr><td>Turn on log collection and diagnostics page for end users<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b>.<br>In Windows 11, the <b>Windows Autopilot diagnostics</b> page is also displayed.<td>The <b>Collect logs</b> button isn't displayed if there's an installation error.<br>The <b>Windows Autopilot diagnostics</b> page is not displayed in Windows 11.
+<tr><td>Only show page to devices provisioned by out-of-box experience (OOBE)<td>The enrollment status page is only shown to devices that go through the out-of-box experience (OOBE).<td>The enrollment status page is shown to devices that go through the out-of-box experience (OOBE) and also to subsequent users who logon to the device.
 <tr><td>Block device use until all apps and profiles are installed<td>The settings in this table are made available to customize behavior of the enrollment status page, so that the user can address potential installation issues.
-<td>The enrollment status page is displayed with no additional options to address installation failures.
 <tr><td>Allow users to reset device if installation error occurs<td>A <b>Reset device</b> button is displayed if there's an installation failure.<td>The <b>Reset device</b> button isn't displayed if there's an installation failure.
 <tr><td>Allow users to use device if installation error occurs<td>A <b>Continue anyway</b> button is displayed if there's an installation failure.<td>The <b>Continue anyway</b> button isn't displayed if there's an installation failure.
-<tr><td>Show timeout error when installation takes longer than specified number of minutes<td colspan="2">Specify the number of minutes to wait for installation to complete. A default value of 60 minutes is entered.
-<tr><td>Show custom message when an error occurs<td>A text box is provided where you can specify a custom message to display if an installation error occurs.<td>The default message is displayed: <br><b>Installation exceeded the time limit set by your organization. Try again or contact your IT support person for help.<b>
-<tr><td>Turn on log collection and diagnostics page for end users<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b>.<br>In Windows 11, the <b>Windows Autopilot diagnostics</b> page is also displayed.<td>The <b>Collect logs</b> button isn't displayed if there's an installation error.<br>The <b>Windows Autopilot diagnostics</b> page is not displayed in Windows 11.
-<tr><td>Block device use until these required apps are installed if they're assigned to the user/device<td colspan="2">Choose <b>All</b> or <b>Selected</b>. <br><br>If <b>Selected</b> is chosen, a <b>Select apps</b> button appears that lets you choose which apps must be installed before enabling the device.
+<tr><td>Block device use until these required apps are installed if they are assigned to the user/device<td colspan="2">Choose <b>All</b> or <b>Selected</b>. <br><br>If <b>Selected</b> is chosen, a <b>Select apps</b> button appears that lets you choose which apps must be installed before enabling the device.
 </table>
+
+> [!NOTE]
+> Be aware that the "Only show page to devices provisioned by out-of-box experience (OOBE)" setting above is not only applicable to Windows Autopilot devices. If set to No, the user ESP splash screen will be shown to the second and subsequent users, including on co-managed devices. For additional information, refer to the 'SkipUserStatusPage' setting referenced in the [ESP troubleshooting page](https://docs.microsoft.com/en-us/intune/windows-enrollment-status#troubleshooting).
 
 ## Turn on default Enrollment Status Page for all users
 
