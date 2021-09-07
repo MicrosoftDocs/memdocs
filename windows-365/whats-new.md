@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/30/2021
+ms.date: 09/03/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,18 +48,31 @@ Learn what new features are available in Windows 365.
 
 <!-- ########################## -->
 
+## Week of September 6, 2021 (Service release 2108)
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### End grace period option<!--34841603-->
+
+Certain conditions put a Cloud PC into a seven-day grace period. At the end of this time the Cloud PC will be deprovisioned and user will lose access.
+
+You can now immediately end the grace period for individual Cloud PCs. By ending the grace period manually, you won’t have to wait the full seven days to remove user access from the Cloud PC.
+
+For more information on grace periods, see [End grace period](end-grace-period.md).
+
+<!-- ########################## -->
 ## Week of August 30, 2021
 
-<!-- ***********************************************-->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-#### Resource performance report in Endpoint Analytics<!-- 32978343-->
+#### Resource performance report in Endpoint Analytics<!-- 32978343 -->
 
-A new report is available in Endpoint Analytics: the **Resource performance report**. This report will include metrics for CPU and RAM performance on Cloud PCs. For more information, see [Resource performance report](report-resource-performance.md).
+Endpoint analytics has a new report named **Resource performance**. The **Resource performance report** includes metrics for CPU and RAM performance on Cloud PCs. For more information, see [Resource performance report](report-resource-performance.md).
 
-#### Remoting connection report in Endpoint Analytics<!-- 33039368-->
+#### Remoting connection report in Endpoint Analytics<!-- 33039368 -->
 
-A new report will be added to Endpoint Analytics: the **Remoting connection report**. This report will include the following metrics:
+Endpoint analytics has a new report named **Remoting connection report**. This report includes the following metrics:
 
 - **Cloud PC Sign in time (sec)** provides the total time users take to connect to the cloud PC.
 - **Round Trip Time (ms)** provides insights on the speed and reliability of network connections from the user location.
