@@ -2,11 +2,10 @@
 title: Endpoint Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage antimalware policies and Windows Defender Firewall security for clients.
-ms.date: 03/18/2020
+ms.date: 09/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -38,13 +37,11 @@ Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender 
 > [!NOTE]  
 >  The Endpoint Protection client can be installed on a server that runs Hyper-V and on guest virtual machines with supported operating systems. To prevent excessive CPU usage, Endpoint Protection actions have a built-in randomized delay so that protection services do not run simultaneously.  
 
- In addition, you manage Windows Defender Firewall settings with Endpoint Protection in the Configuration Manager console.  
-
- [Example scenario: Using System Center Endpoint Protection to protect computers from malware](scenarios-endpoint-protection.md) Endpoint Protection and the Windows Defender Firewall.  
-
+In addition, you manage Windows Defender Firewall settings with Endpoint Protection in the Configuration Manager console.  
 
 ## Managing malware with Endpoint Protection  
- Endpoint Protection in Configuration Manager allows you to create antimalware policies that contain settings for Endpoint Protection client configurations. Deploy these antimalware policies to client computers. Then monitor compliance in the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace. Also use Endpoint Protection reports in the **Reporting** node.  
+
+Endpoint Protection in Configuration Manager allows you to create antimalware policies that contain settings for Endpoint Protection client configurations. Deploy these antimalware policies to client computers. Then monitor compliance in the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace. Also use Endpoint Protection reports in the **Reporting** node.  
 
  Additional information:  
 
@@ -57,8 +54,9 @@ Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender 
 -   [Log files for Endpoint Protection](../../core/plan-design/hierarchy/log-files.md#BKMK_EPLog)  
 
 
-## Managing Windows Defender Firewall with Endpoint Protection  
- Endpoint Protection in Configuration Manager provides basic management of the Windows Defender Firewall on client computers. For each network profile, you can configure the following settings:  
+## Managing Windows Defender Firewall with Endpoint Protection
+
+Endpoint Protection in Configuration Manager provides basic management of the Windows Defender Firewall on client computers. For each network profile, you can configure the following settings:  
 
 -   Enable or disable the Windows Defender Firewall.  
 
@@ -75,9 +73,14 @@ Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender 
 
 ## Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint manages and monitors Microsoft Defender for Endpoint, formerly known as Windows Defender for Endpoint. The Microsoft Defender for Endpoint service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender for Endpoints](defender-advanced-threat-protection.md).
+Configuration Manager manages and monitors Microsoft Defender for Endpoint, formerly known as Windows Defender for Endpoint. The Microsoft Defender for Endpoint service helps you detect, investigate, and respond to advanced attacks on your network. For more information, see [Microsoft Defender for Endpoints](defender-advanced-threat-protection.md).
 
-## Endpoint Protection workflow  
- Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
+## Endpoint Protection workflow
 
- ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)  
+Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
+
+![Endpoint protection workflow.](../media/Endpoint-Protection-Workflow.gif)  
+
+## Next steps
+
+[Example scenario: Using Endpoint Protection to protect computers from malware](scenarios-endpoint-protection.md)
