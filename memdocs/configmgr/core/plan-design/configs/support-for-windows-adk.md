@@ -2,7 +2,7 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 09/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -46,6 +46,8 @@ The following table lists the versions of the Windows ADK that you can use with 
 - Configuration Manager only supports x86 and amd64 components of the Windows ADK. It doesn't currently support ARM or ARM64 components.
 
 - Windows Server builds have the same Windows ADK requirement as the associated Windows client version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
+
+- If you're deploying both Windows 11 and Windows Server 2022, use the Windows ADK for Windows 11, which is the latest version. If you're deploying Windows Server 2022 and not Windows 11, you can use either Windows ADK for Windows Server 2022 or Windows 11.
 
 ## Next steps
 
