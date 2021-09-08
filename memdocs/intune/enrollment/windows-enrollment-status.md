@@ -70,7 +70,7 @@ The following settings can be configured to customize behavior of the Enrollment
 </table>
 
 > [!NOTE]
-> Be aware that the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is not *only* applicable to Windows Autopilot devices. If set to **No**, subsequent users will see the user ESP splash screen on any MDM-enrolled device, including co-managed ones. If you only want the ESP screen to appear on Autopilot devices during the initial provisioning, leave the default policy set to **No*. Then create a new ESP profile, set it to **Yes**, and target it to an Autopilot device group. For more information, refer to the 'SkipUserStatusPage' setting referenced in the [ESP troubleshooting page](https://docs.microsoft.com/intune/windows-enrollment-status#troubleshooting).
+> Be aware that the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is not *only* applicable to Windows Autopilot devices. If set to **No**, subsequent users will see the user ESP splash screen on any MDM-enrolled device, including co-managed ones. If you only want the ESP screen to appear on Autopilot devices during the initial provisioning, leave the default policy set to **No**. Then create a new ESP profile, set it to **Yes**, and target it to an Autopilot device group. For more information, refer to the 'SkipUserStatusPage' setting referenced in the [ESP troubleshooting page](https://docs.microsoft.com/intune/windows-enrollment-status#troubleshooting).
 
 ## Turn on default Enrollment Status Page for all users
 
