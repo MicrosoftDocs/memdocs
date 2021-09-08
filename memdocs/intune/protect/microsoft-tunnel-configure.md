@@ -229,6 +229,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Per-app VPN**:  
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
      - On Android, launching an app won't launch the per-app VPN. However, when the VPN has *Always-on VPN* set to *Enable*, the VPN will already be connected and app traffic will use the active VPN. If the VPN isn't set to be *Always-on*, the user must manually start the VPN before it can be used.
+     - If you are using the Defender for Endpoint app to connect to Tunnel, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
      - To enable a per-app VPN, select **Add** and then browse to custom or public apps you’ve imported to Intune.
 
    - **Always-on VPN**:  
