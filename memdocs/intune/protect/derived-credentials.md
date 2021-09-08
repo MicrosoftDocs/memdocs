@@ -90,7 +90,7 @@ For important details about using the different issuers, review guidance for tha
 Plan to deploy the relevant user facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
 
 - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
-- Android Fully Managed devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md). 
+- Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 ## Plan for derived credentials
 
@@ -131,7 +131,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer.
 - iOS and iPadOS devices that will enroll for a derived credential must install the Intune Company Portal app. Android Fully Managed and Corporate-Owned Work Profile devices must install and use the Intune app.
-- Use Intune to [deploy the DISA Purebred app](#deploy-the-disa-purebred-app) to devices that will enroll for a derived credential. This app must be deployed through Intune so that it's managed, and can then work with the Intune Company Portal app. This app is used by device users to complete the derived credential request.
+- Use Intune to [deploy the DISA Purebred app](#deploy-the-disa-purebred-app) to devices that will enroll for a derived credential. This app must be deployed through Intune so that it's managed, and can then work with the Intune Company Portal app or Intune App, which device users use to complete the derived credential request.
 - To retrieve a derived credential from the Purebred app, the device must have access to the on-premises network. Access might be through corporate Wi-Fi or VPN.
 - Device users must work with a live agent during the enrollment process. During enrollment, time-limited one-time passcodes are provided to the user as they continue through the enrollment process.
 - When changes are made to a policy that uses derived credentials, such as creation of a new Wi-Fi profile, iOS and iPadOS users are notified to open the Company Portal app.
@@ -234,7 +234,7 @@ After you save the configuration, you can make changes to all fields except for 
 
 To use **DISA Purebred** as your derived credential issuer for Intune, you must get the DISA Purebred app and then use Intune to deploy the app to devices. Then, depending on the device platform, device users use either the Company Portal App or the Intune app on their device to request the derived credential from DISA Purebred.
 
-In addition to the deploying the DISA Purebred app with Intune, the device must have access to the on-premises network. To provide this access, consider using an Intune per-app VPN for the DISA Purebred application or use Wi-Fi.
+In addition to the deploying the DISA Purebred app with Intune, the device must have access to the on-premises network. To provide this access, consider using an Intune VPN or corporate Wi-Fi.
 
 **Complete the following tasks**:
   
@@ -247,7 +247,7 @@ In addition to the deploying the DISA Purebred app with Intune, the device must 
 
    Additional settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 
-3. [Create a per-app VPN](../configuration/vpn-settings-configure.md) for the DISA Purebred application.
+3. If you choose to use a per-app VPN  for the DISA Purebred application, see [Create a per-app VPN](../configuration/vpn-settings-configure.md).
 
 ## Use derived credentials for authentication and S/MIME signing and encryption
 
