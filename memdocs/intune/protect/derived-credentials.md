@@ -164,7 +164,6 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 - [iOS and iPadOS](/intune-user-help/enroll-ios-device-intercede)
 - [Android Enterprise](../user-help/enroll-android-device-intercede.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
-
 **Key requirements include**:
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer.
@@ -186,7 +185,7 @@ Create and provide guidance to your users on how to start the derived credential
 
 We recommend you provide a URL that will host your guidance. You specify this URL when you configure the derived credential issuer for your tenant, and that URL is made available from within the Company Portal app. If you don't specify your own URL, Intune provides a link to generic details. These details can't cover all scenarios and might not be correct for your environment.
 
-### <dive id="supported-objects"> 5) Deploy Intune policies that require derived credentials
+### 5) Deploy Intune policies that require derived credentials
 
 Create new policies or edit existing policies to use derived credentials. Derived credentials replace other authentication methods for the following objects:
 
