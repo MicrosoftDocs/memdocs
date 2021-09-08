@@ -86,7 +86,7 @@ Microsoft recommends that you install the latest version of .NET version 4.8 to 
 >
 > For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
-Whether you update .NET before updating the Configuration Manager client, or CCMSetup updates it, .NET may require a restart to complete its installation. CCMSetup suppresses a restart if necessary. The user sees a **Restart required** notification in the system tray. The following scenarios are common reasons why .NET requires the computer to restart:
+Whether you update .NET before updating the Configuration Manager client, or CCMSetup updates it, .NET may require a restart to complete its installation. CCMSetup suppresses a restart if necessary. The user sees a **Restart required** notice in the Windows notification area. The following scenarios are common reasons why .NET requires the computer to restart:
 
 - .NET applications or services are running on the computer.
 
