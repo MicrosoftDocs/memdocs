@@ -232,9 +232,9 @@ After you save the configuration, you can make changes to all fields except for 
 
 *This section applies only when you use DISA Purebred*.
 
-To use **DISA Purebred** as your derived credential issuer for Intune, you must get the DISA Purebred app and then use Intune to deploy the app to devices. Then, depending on the device platform, device users use either the Company Portal App or the Intune app on their device to request the derived credential from DISA Purebred.
+To use **DISA Purebred** as your derived credential issuer for Intune, you must get the DISA Purebred app and then use Intune to deploy the app to devices. Then users request the derived credential from DISA Purebred by using the Company Portal App on their iOS/iPadOS device, or the Intune app on their Android devices.
 
-In addition to the deploying the DISA Purebred app with Intune, the device must have access to the on-premises network. To provide this access, consider using an Intune VPN or corporate Wi-Fi.
+In addition to the deploying the DISA Purebred app with Intune, the device must have access to the on-premises network. To provide this access, consider using a VPN or corporate Wi-Fi.
 
 **Complete the following tasks**:
   
