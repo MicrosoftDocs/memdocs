@@ -222,7 +222,7 @@ Before you create policies that require use of a derived credential, set up a cr
 
    - Enroll a device with an issuer to get a new derived credential.
    - Get a new derived credential when the current credential is close to expiration.
-   - Use a derived credential with a [supported object](#-5-deploy-intune-policies-that-require-derived-credentials).
+   - Use a derived credential with a [supported object](#5-deploy-intune-policies-that-require-derived-credentials).
 
 7. When ready, select **Save** to complete configuration of the derived credential issuer.
 
