@@ -105,6 +105,9 @@ from SMS_R_System inner join SMS_G_System_ExtensionData on SMS_G_System_Extensio
 where SMS_G_System_ExtensionData.PropertyName = "AssetTag" and SMS_G_System_ExtensionData.PropertyValue = "0580255"
 ```
 
+> [!NOTE]
+> Incremental collection updates don´t work with custom properties WQL statements
+
 ## Next steps
 
 [How to use the administration service](usage.md)
