@@ -2,11 +2,10 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 05/14/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 6dcef836-c0d1-40af-ad30-cd8d864b09a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -78,6 +77,8 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 - Must install using source files that match the version of the site server in active mode.
 
 - Can't have a site system role from any site installed on it before you install the site server in passive mode role.
+
+- Make sure the computer account for the site server in passive mode has the same permissions as the site server in active mode. For example, it may need permission to content source files, such as boot image source directories.<!-- memdocs#1943 -->
 
 ### Permissions for the site system installation account
 
