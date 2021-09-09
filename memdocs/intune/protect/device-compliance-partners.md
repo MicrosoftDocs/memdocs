@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/02/2021
+ms.date: 09/09/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,9 +49,11 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 The following compliance partners are supported as generally available:
 
+- BlackBerry UEM
 - Citrix Workspace device compliance
 - IBM MaaS360
 - JAMF Pro
+- MobileIron Device Compliance Cloud
 - MobileIron Device Compliance On-prem
 - VMware Workspace ONE UEM (formerly AirWatch)
 

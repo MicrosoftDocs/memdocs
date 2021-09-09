@@ -26,7 +26,7 @@ Update any older version of Company Portal staged in your environment to support
 
 #### More information
 
-- [How to update the Company Portal app](/mem/intune/user-help/install-a-new-version-of-the-company-portal-app)
+- [How to update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)
 - [Download Microsoft Intune Company Portal for Android from Official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=49140)
 
 ### Plan for Change: Safe boot and Debugging features in Android Enterprise device restrictions will be replaced
