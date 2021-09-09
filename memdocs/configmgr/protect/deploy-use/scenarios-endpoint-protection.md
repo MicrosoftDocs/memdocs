@@ -6,12 +6,9 @@ ms.date: 05/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
 author: mestew
 ms.author: mstewart
 manager: doubeby
-
-
 ---
 
 # Example scenario: Use Endpoint Protection to protect computers from malware
@@ -24,9 +21,9 @@ This article provides an example scenario for how you can implement Endpoint Pro
 
 ## Scenario overview
 
- Configuration Manager is installed and used at Woodgrove Bank. The bank currently uses System Center Endpoint Protection to protect computers against malware attacks. Additionally, the bank uses Windows Group Policy to ensure that the Windows Firewall is enabled on all computers in the company and that users are notified when Windows Firewall blocks a new program.  
+ Configuration Manager is installed and used at Woodgrove Bank. The bank currently uses Endpoint Protection to protect computers against malware attacks. Additionally, the bank uses Windows Group Policy to ensure that the Windows Firewall is enabled on all computers in the company and that users are notified when Windows Firewall blocks a new program.  
 
-The Configuration Manager administrators have been asked to upgrade the Woodgrove Bank antimalware software to System Center Endpoint Protection so that the bank can benefit from the latest antimalware features and be able to centrally manage the antimalware solution from the Configuration Manager console. 
+The Configuration Manager administrators have been asked to upgrade the Woodgrove Bank antimalware software to Endpoint Protection so that the bank can benefit from the latest antimalware features and be able to centrally manage the antimalware solution from the Configuration Manager console.
 
 
 ## Business requirements
@@ -58,7 +55,6 @@ This implementation has the following requirements:
 |Process|Reference|  
 |-------------|---------------|  
 |The admins review the available information about the basic concepts for Endpoint Protection in Configuration Manager.|For overview information about Endpoint Protection, see [Endpoint Protection](endpoint-protection.md).|  
-|The admins review and implement the required prerequisites to use Endpoint Protection.|For information about the prerequisites for Endpoint Protection, see [Planning for Endpoint Protection](../plan-design/planning-for-endpoint-protection.md).|  
 |The admins install the Endpoint Protection site system role on one site system server only, at the top of the Woodgrove Bank hierarchy.|For more information about how to install the Endpoint Protection site system role, see "Prerequisites" in [Configure Endpoint Protection](endpoint-protection-configure.md).|  
 |The admins configure Configuration Manager to use an SMTP server to send the email alerts.<br /><br /> **Note:** You must configure an SMTP server only if you want to be notified by email when an Endpoint Protection alert is generated.|For more information, see [Configure alerts in Endpoint Protection](endpoint-configure-alerts.md).|  
 |The admins create a device collection that contains all computers and servers to install the Endpoint Protection client. They name this collection **All Computers Protected by Endpoint Protection**.<br /><br /> **Tip:** You can't configure alerts for user collections.|For more information about how to create collections, see [How to create collections](../../core/clients/manage/collections/create-collections.md)|  
