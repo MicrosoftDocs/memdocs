@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients with Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Learn about the Windows 10 versions that Configuration Manager supports as a client.
+Learn about the Windows 10 versions that Configuration Manager supports as a client. For more information about support for later versions of Windows, see [Support for Windows 11](support-for-windows-11.md).
 
 For more information about support for the Windows Assessment and Deployment Kit (ADK) for Windows 10, see [Support for the Windows ADK](support-for-windows-adk.md).
 
@@ -41,12 +41,12 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
-|--------------------|----------------|----------------|----------------|----------------|----------------|
-| **1909**<br>(10.0.18363) <!--05/10/2022--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **2004**<br>(10.0.19041) <!--12/14/2021--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **20H2** <sup>[Note](#bkmk_20h2)</sup><br>(10.0.19042) <!--05/09/2023--> | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **21H1**<br>(10.0.19043) <!--12/13/2022--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| Windows 10 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
+|--------------------------------------------|----------------|----------------|----------------|----------------|
+| **1909**<br>(10.0.18363) <!--05/10/2022--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **2004**<br>(10.0.19041) <!--12/14/2021--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **20H2** <sup>[Note](#bkmk_20h2)</sup><br>(10.0.19042) <!--05/09/2023--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **21H1**<br>(10.0.19043) <!--12/13/2022--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -107,3 +107,5 @@ To work around this issue, choose one of the following options:
 ## Next steps
 
 [Support for the Windows ADK](support-for-windows-adk.md)
+
+[Support for Windows 11](support-for-windows-11.md)

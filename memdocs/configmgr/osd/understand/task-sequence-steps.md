@@ -144,7 +144,7 @@ Specify the driver package that contains the needed device drivers. Select **Bro
 
 Select this option to add the `/recurse` parameter to the DISM command line when Windows applies the driver package.
 
-When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
+When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
 
 #### Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems
 
@@ -241,7 +241,7 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
 
 > [!TIP]
-> Windows 10 media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#support-notes).
+> Windows 11 and Windows 10 media include multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-11.md#support-notes).
 >
 > Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 >
@@ -2521,14 +2521,14 @@ When you run an OS deployment task sequence on an internet-based client, that's 
 
 ## <a name="BKMK_UpgradeOS"></a> Upgrade Operating System
 
-Use this step to upgrade an older version of Windows to a newer version of Windows 10.
+Use this step to upgrade an earlier version of Windows to a later version of Windows.
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
 > [!TIP]
-> Windows 10 media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#support-notes).
+> Windows 11 and Windows 10 media include multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-11.md#support-notes).
 >
 > Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
@@ -2555,11 +2555,11 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 #### Upgrade package
 
-Select this option to specify the Windows 10 OS upgrade package to use for the upgrade.
+Select this option to specify the Windows OS upgrade package to use for the upgrade.
 
 #### Source path
 
-Specifies a local or network path to the Windows 10 media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`.
+Specifies a local or network path to the Windows media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`.
 
 You can also specify a variable, such as `%MyContentPath%` or `%DPC01%`. When you use a variable for the source path, set its value earlier in the task sequence. For example, use the [Download Package Content](#BKMK_DownloadPackageContent) step to specify a variable for the location of the OS upgrade package. Then, use that variable for the source path for this step.
 
@@ -2587,7 +2587,7 @@ The user experience with a feature update in a task sequence is the same as with
 
 #### Provide the following driver content to Windows Setup during upgrade
 
-Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
+Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10 or later. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
 Specify one of the following options:
 

@@ -2,7 +2,7 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 08/02/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -174,9 +174,13 @@ Site system servers:
 
 The following client OS versions are supported for use as a **distribution point** <sup>[Note 1](#bkmk_note1)</sup>:
 
-- Windows 10 (x86, x64): Pro and Enterprise
+- Windows 11 (_starting in Configuration Manager version 2107_)
 
-    For more information on supported build versions, see [Support for Windows 10](support-for-windows-10.md).
+    For more information on supported build versions and editions, see [Support for Windows 11](support-for-windows-11.md).
+
+- Windows 10 (x86, x64)
+
+    For more information on supported build versions and editions, see [Support for Windows 10](support-for-windows-10.md).
 
 - Windows 8.1 (x86, x64): Professional and Enterprise
 

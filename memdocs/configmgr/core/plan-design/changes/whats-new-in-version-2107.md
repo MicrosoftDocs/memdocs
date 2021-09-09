@@ -2,7 +2,7 @@
 title: What's new in version 2107
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2107 of Configuration Manager current branch.
-ms.date: 08/25/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -109,7 +109,7 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 It also supports the Windows ADK for Windows 11 and Server 2022. For more information, see [Support for Windows ADK](../configs/support-for-windows-adk.md).
 
 > [!TIP]
-> Configuration Manager supports [Windows Insider builds](../configs/support-for-windows-10.md#support-for-windows-insider), which is a great way to test the latest version of Windows 11 with Configuration Manager version 2107.
+> Configuration Manager supports [Windows Insider builds](../configs/support-for-windows-11.md#support-for-windows-insider), which is a great way to test the latest version of Windows 11 with Configuration Manager version 2107.
 
 ### Microsoft .NET requirements
 
@@ -189,6 +189,12 @@ We've made the following improvements to CMPivot:
 For more information, see [Changes to CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2107) and [CMPivot overview](../../servers/manage/cmpivot-overview.md#bkmk_onprem_only).
 
 ## Client management
+
+### Support for Windows 11
+
+<!-- 10589866 -->
+
+Starting with version 2107, Configuration Manager supports Windows 11. For more information, see [Support for Windows 11](../configs/support-for-windows-11.md).
 
 ### Custom properties for devices
 
