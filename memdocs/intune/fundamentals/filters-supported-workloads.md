@@ -71,7 +71,7 @@ You can use filters for some common app policies on the following platforms. For
 | Managed Android line-of-business app | ✔️ |
 
 > [!NOTE]
-> Filters aren't supported on Android Enterprise corporate owned work profile devices when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
+> Filters aren't supported on Android Enterprise "Personally-owned device with work profile" devices when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
 
 ### iOS/iPadOS
 
