@@ -13,7 +13,7 @@ metadata:
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart
-  ms.date: 01/10/2020
+  ms.date: 09/09/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -84,10 +84,6 @@ landingContent:
         links:
           - text: Endpoint Protection overview
             url: deploy-use/endpoint-protection.md
-      - linkListType: get-started
-        links:
-          - text: Plan for Endpoint Protection
-            url: plan-design/planning-for-endpoint-protection.md
       - linkListType: deploy
         links:
           - text: Create an Endpoint Protection point site system role
