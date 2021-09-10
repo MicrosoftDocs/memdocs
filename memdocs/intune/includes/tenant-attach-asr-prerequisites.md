@@ -13,7 +13,7 @@ ms.custom: include file
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
-Manage [attack surface reduction settings for Configuration Manager devices](../protect/endpoint-security-asr-profile-settings.md#-attack-surface-reduction-configmgr), when you use tenant attach.
+Manage [attack surface reduction settings for Configuration Manager devices](../protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr), when you use tenant attach.
 
 **Policy path**:
 
