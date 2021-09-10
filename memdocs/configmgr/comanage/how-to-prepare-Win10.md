@@ -60,8 +60,8 @@ For internet-based devices in the second path, you need to create an app in Intu
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Attach** node.
 
-  > [!TIP]
-  > For version 2103 and earlier, select the **Co-management** node.
+   > [!TIP]
+   > For version 2103 and earlier, select the **Co-management** node.
 
 1. Select the co-management object, and then choose **Properties** in the ribbon.
 
