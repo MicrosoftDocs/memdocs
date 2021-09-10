@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 09/20/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,9 +51,11 @@ You can include the following management objects in a policy set:
 - App protection policies
 - Device configuration profiles
 - Device compliance policies
-- Device type restrictions
 - Windows autopilot deployment profiles
 - Enrollment status page
+
+> [!IMPORTANT]
+> Management objects for device type restrictions can no longer be included in policy sets. Instead, to configure and manage device type restrictions, go to **Devices** > **Policy** > **Enrollment restrictions**. If you included device type restrictions in your policy set prior to September 20, 2021, we will migrate your existing configurations to an enrollment restriction policy.  
 
 When you create a policy set, you create a single unit of assignment, and manage associations between different objects. A policy set will be a reference to objects external to it. Any changes in the included objects will affect the policy set as well. After you create a policy set, you can repeatedly view and edit its objects and assignments. 
 
