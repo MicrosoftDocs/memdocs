@@ -2,7 +2,7 @@
 title: Modify a CMG
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
-ms.date: 08/02/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -27,6 +27,8 @@ After you create a CMG, you can modify some of its settings. Select the CMG in t
 
   > [!NOTE]
   > When you renew the server authentication certificate for the CMG, the FQDN that you specify for the certificate's common name (CN) is case-sensitive. For example, if the CN of the current certificate is `granitefalls.contoso.com`, create the new certificate with the same lowercase CN. The wizard won't accept a certificate with the CN `GRANITEFALLS.CONTOSO.COM`.
+  >
+  > If you make significant changes to the certificate, you may need to [Redeploy the service](#redeploy-the-service). For example, changing the organization name on the certificate.<!-- memdocs#1927 -->
 
 - **Description**: Specify an optional description to further identify this CMG in the Configuration Manager console.
 
@@ -121,6 +123,7 @@ More significant changes, such as the following configurations, require that you
 - Service name
 - Region
 - Resource group
+- Significant changes to the server authentication certificate
 
 Always keep at least one active CMG for internet-based clients to receive updated policy. Internet-based clients can't communicate with a removed CMG. Clients don't know about a new one until they refresh policy. When you create a second CMG instance to delete the first, also create another CMG connection point.
 

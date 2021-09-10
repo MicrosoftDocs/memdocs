@@ -2,7 +2,7 @@
 title: Plan for CMG
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 08/02/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -118,8 +118,10 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 > [!TIP]
 > To clarify some Azure terminology:
 >
-> - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
-> - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+> - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+>
+> For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
 
 - An **Azure subscription** to host the CMG. This subscription can be in one of the following environments:
 

@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 09/10/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -341,7 +341,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
       - **Blocked** - Block the use of startup keys.
       - **Required** *(default)* - Require BitLocker have a startup key and TPM present to enable BitLocker. For silent enable scenarios (including Autopilot) this setting can't be successful, as user interaction is required. It's recommended that startup keys be disabled where silent enablement of BitLocker is required.
       - **Allowed** - Enable BitLocker using the TPM if present, and allow a startup key (such as a USB drive) be present to unlock the drives.
-      - **Not configured** *(default)*
+      - **Not configured**
 
     - **Disable BitLocker on devices where TPM is incompatible**  
       CSP: [SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
@@ -357,7 +357,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     CSP: [EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)  
     This setting is available when *BitLocker system drive policy* is set to *Configure*.  
 
-    Configure the encryption method and cipher strength for system drives.  *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
+    Configure the encryption method and cipher strength for system drives.  
 
     - **Not configured** (*default*)
     - **AES 128bit CBC**
@@ -404,7 +404,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     CSP: [EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)  
     This setting is available when *BitLocker removable drive policy* is set to *Configure*.
 
-    Configure the encryption method and cipher strength for removable data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
+    Configure the encryption method and cipher strength for removable data-drives disks.
 
     - **Not configured**
     - **AES 128bit CBC** (*default*)
