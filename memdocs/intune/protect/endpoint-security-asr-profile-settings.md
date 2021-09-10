@@ -2,12 +2,12 @@
 # required metadata
 
 title: Intune endpoint security Attack surface reduction settings | Microsoft Docs
-description: Endpoint security Attack surface reduction policy settings in Microsoft Intune 
+description: Details about the settings in the endpoint security Attack surface reduction policies in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2021
+ms.date: 09/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,17 +33,25 @@ View the settings you can configure in profiles for *Attack surface reduction* p
 
 Supported platforms and profiles:
 
-- **Windows 10 and later**:
+- **Windows 10 and later** - Use this platform for policy you deploy to devices managed with Intune.
+
   - Profile: **App and browser isolation**
-  - Profile: **Web protection (Microsoft Edge Legacy)**
   - Profile: **Application control**
   - Profile: **Attack surface reduction rules**
   - Profile: **Device control**
   - Profile: **Exploit protection**
+  - Profile: **Web protection (Microsoft Edge Legacy)**
 
-## App and browser isolation profile
+- **Windows 10 and later (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
 
-### App and browser isolation
+  - Profile: **Exploit Protection(ConfigMgr)(preview)**
+  - Profile: **Web Protection (ConfigMgr)(preview)**
+
+## Attack surface reduction (MDM)
+
+### App and browser isolation profile
+
+#### App and browser isolation
 
 - **Turn on Application Guard**  
   CSP: [AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
@@ -164,39 +172,9 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
-## Web protection (Microsoft Edge Legacy) profile
+### Application control profile
 
-### Web Protection (Microsoft Edge Legacy)
-
-- **Enable network protection**  
-  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
-
-  - **Not configured** (*default*) - The setting returns to the Windows default, which is disabled.
-  - **User defined**
-  - **Enable** - Network protection is enabled for all users on the system.
-  - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
-
-- **Require SmartScreen for Microsoft Edge**  
-  CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
-
-  - **Yes** - Use SmartScreen to protect users from potential phishing scams and malicious software.
-  - **Not configured** (*default*)
-
-- **Block malicious site access**  
-  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)  
-
-  - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from going to the site.
-  - **Not configured** (*default*)
-
-- **Block unverified file download**  
-  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
-
-  - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
-  - **Not configured** (*default*)
-
-## Application control profile
-
-### Microsoft Defender Application Control
+#### Microsoft Defender Application Control
 
 - **App locker application control**  
   CSP: [AppLocker](/windows/client-management/mdm/applocker-csp)
@@ -206,7 +184,6 @@ Supported platforms and profiles:
   - **Audit Components and Store Apps**
   - **Enforce Components, Store Apps, and Smartlocker**
   - **Audit Components, Store Apps, and Smartlocker**
-   
 
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
@@ -220,9 +197,9 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - Return the setting to Windows default, which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
   - **Yes** - Enforce the use of SmartScreen for all users.
 
-## Attack surface reduction rules profile
+### Attack surface reduction rules profile
 
-### Attack Surface Reduction Rules
+#### Attack Surface Reduction Rules
 
 - **Block persistence through WMI event subscription**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -230,14 +207,13 @@ Supported platforms and profiles:
   This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
 
   This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
- 
+
   - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
   - **Block** – Persistence through WMI is blocked.
   - **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
-  - **Disable** - Turn this rule off. Persistence is not blocked
+  - **Disable** - Turn this rule off. Persistence is not blocked.
 
   To learn more about this setting, see [Block persistence through WMI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx#block-persistence-through-wmi-event-subscription).
-
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -400,9 +376,9 @@ Supported platforms and profiles:
 
   Expand the dropdown and then select **Add** to define a **Path** to a file or folder to exclude from your attack surface reduction rules.
 
-## Device control profile
+### Device control profile
 
-### Device Control
+#### Device Control
 
 - **Allow hardware device installation by device identifiers**  
   - **Not configured** *(default)*
@@ -553,9 +529,9 @@ Supported platforms and profiles:
   - **Block** - Prevent use of a USB connection between the device and a computer to sync files, or to use developer tools to deploy or debug applications. USB charging isn't affected.
   - **Not configured** (*default*)
 
-## Exploit protection profile
+### Exploit protection profile
 
-### Exploit protection
+#### Exploit protection
 
 - **Upload XML**  
   CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard#exploitguard-exploitprotectionsettings)
@@ -571,6 +547,89 @@ Supported platforms and profiles:
 
   - **Not configured** (*default*) - Local users can make changes in the exploit protection settings area.
   - **Yes** - Prevent users from making changes to the exploit protection settings area in the Microsoft Defender Security Center.
+
+### Web protection (Microsoft Edge Legacy) profile
+
+#### Web Protection (Microsoft Edge Legacy)
+
+- **Enable network protection**  
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is disabled.
+  - **User defined**
+  - **Enable** - Network protection is enabled for all users on the system.
+  - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
+
+- **Require SmartScreen for Microsoft Edge**  
+  CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+
+  - **Yes** - Use SmartScreen to protect users from potential phishing scams and malicious software.
+  - **Not configured** (*default*)
+
+- **Block malicious site access**  
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)  
+
+  - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from going to the site.
+  - **Not configured** (*default*)
+
+- **Block unverified file download**  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+
+  - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
+  - **Not configured** (*default*)
+
+## Attack surface reduction (ConfigMgr)
+
+### Exploit Protection (ConfigMgr)(Preview) profile
+
+#### Exploit Protection
+
+- **Upload XML**  
+  CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard#exploitguard-exploitprotectionsettings)
+
+  Enables the IT admin to push out a configuration representing the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML file. Exploit protection can help protect devices from malware that use exploits to spread and infect. You use the Windows Security app or PowerShell to create a set of mitigations (known as a configuration). You can then export this configuration as an XML file and share it with multiple machines on your network so they all have the same set of mitigation settings. You can also convert and import an existing EMET configuration XML file into an exploit protection configuration XML.
+
+  Choose **Select XML File**, specify the XML filet upload, and then click **Select**.
+
+- **Disallow Exploit Protection Override**  
+  CSP: [DisallowExploitProtectionOverride](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride)
+
+  - **Not configured** (default)
+  - **(Disable) Local users are allowed to make changes in the exploit protection settings area**.
+  - **(Enable) Local users cannot make changes to the exploit protection settings area**
+
+### Web Protection (ConfigMgr)(Preview) profile
+
+#### Web Protection
+
+- **Enable Network Protection (Device)**  
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+
+  - **Not configured** (*default*)
+  - **Disabled**
+  - **Enabled (block mode)**
+  - **Enabled (audit mode)**
+
+- **Allow Smart Screen (Device)**  
+  CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+
+  - **Not configured** (*default*)
+  - **Block**
+  - **Allow**
+
+- **Prevent Smart Screen Prompt Override For Files (Device)**  
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)  
+
+  - **Not configured** (*default*)
+  - **Disabled**
+  - **Enabled**
+
+- **Prevent Smart Screen Prompt Override (Device)**  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+
+  - **Not configured** (*default*)
+  - **Disabled**
+  - **Enabled**
 
 ## Next steps
 

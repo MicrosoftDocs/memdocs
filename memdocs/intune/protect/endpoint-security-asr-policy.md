@@ -40,10 +40,22 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
 
 ## Prerequisites for Attack surface reduction profiles
 
+**General**:
+
 - Windows 10 or later
 - Defender antivirus must be the primary antivirus on the device
 
+**Support for Configuration Manager clients**:
+
+*This scenario is in preview and requires use of Configuration Manager current branch version 2006 or later*.
+
+- **Set up tenant attach for Configuration Manager devices** - To support deploying attack surface reduction policy to devices managed by Configuration Manager, configure tenant attach. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
+
+  To set up tenant attach, see Configure tenant attach to support endpoint protection policies.
+
 ## Attack surface reduction profiles
+
+### Devices managed by Intune
 
 **Windows 10 profiles**:
 
@@ -65,7 +77,7 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
   To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
   
     > [!NOTE]
-    > If you use this setting, AppLocker CSP behaviour currently prompts end user to reboot their machine when a policy is deployed.
+    > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
 
 - **Attack surface reduction rules** – Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
   - Executable files and scripts used in Office apps or web mail that attempt to download or run files
@@ -97,6 +109,10 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
 - **Exploit protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
 
   To learn more, see [Enable exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) in the Microsoft Defender for Endpoint documentation.
+
+### Devices managed by Configuration Manager
+
+[!INCLUDE [Attack surface reduction prerequisites](../includes/tenant-attach-asr-prerequisites.md)]
 
 ## Policy merge for settings
 
