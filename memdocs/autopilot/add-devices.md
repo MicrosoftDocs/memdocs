@@ -89,6 +89,7 @@ During the OOBE you also can initate the hardware hash upload by launching a com
 
 ```PowerShell.exe -ExecutionPolicy Bypass
 Install-Script -name Get-WindowsAutopilotInfo -Force
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 Get-WindowsAutoPilotInfo -Online
 ```
 
