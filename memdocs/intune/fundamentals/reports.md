@@ -164,6 +164,20 @@ To see a generated report of device state, you can use the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > *Select an app* > **Device Install status**.
 
+## All devices report (Operational)
+
+The **All devices** report provides a list of dozens of devices details listed by column in one report.
+
+You can view details of all the devices you manage in this single report. By selecting a listed device, you can view additional details and actions for the device, such as device action status, remote lock, sync, restart, and full scan. Choose **Columns** to provide additional device details for the report. This report provides filtering, searching, paging, and sorting capabilities.
+
+> [!NOTE]
+> The **OS** column of the **All devices** report allows you to filter by specific device enrollment type for Android devices.
+
+To view the Device configuration report:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **All devices**.
+
 ## Device configuration report (Operational)
 
 The **Device configuration** report provides both device configuration and endpoint security profiles in one report.
