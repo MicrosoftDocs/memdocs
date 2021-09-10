@@ -2,7 +2,7 @@
 title: Custom properties for devices
 titleSuffix: Configuration Manager
 description: Use the administration service to set custom property data on devices, for reporting or collections.
-ms.date: 08/02/2021
+ms.date: 09/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
@@ -106,7 +106,7 @@ where SMS_G_System_ExtensionData.PropertyName = "AssetTag" and SMS_G_System_Exte
 ```
 
 > [!NOTE]
-> Incremental collection updates don´t work with custom properties WQL statements
+> Incremental collection updates don't work with custom properties WQL statements.<!--10901844-->
 
 ## Next steps
 
