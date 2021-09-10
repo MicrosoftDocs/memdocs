@@ -51,7 +51,7 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
 
 - **Set up tenant attach for Configuration Manager devices** - To support deploying attack surface reduction policy to devices managed by Configuration Manager, configure tenant attach. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
-  To set up tenant attach, see Configure tenant attach to support endpoint protection policies.
+  To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
 ## Attack surface reduction profiles
 
