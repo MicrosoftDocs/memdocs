@@ -115,9 +115,14 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   For information on configuring Enrollment Restrictions, see [Set enrollment restrictions in Microsoft Intune](./intune/enrollment/enrollment-restrictions-set.md).
 
 - **Azure AD Device MDM settings**  
-  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Autopilot to work seamlessly.
-
+  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Autopilot to work.
+  
   To check your Azure AD Device MDM settings are enabled properly, see [Quickstart - Set up automatic enrollment in Intune](./intune/enrollment/quickstart-setup-auto-enrollment.md).
+  
+- **Azure AD company branding**  
+  Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistant look-and-feel when they sign-in to Microsoft 365. This configuration is required for Autopilot to work.
+
+  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
 
 - **Licensing**  
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune will require two key capabilities.
@@ -131,7 +136,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   To assign licenses, see [Assign Microsoft Intune licenses](./intune/fundamentals/licenses-assign.md).
 
   > [!NOTE]
-  > Both types of licenses are typically included with licensing bundles like Microsoft 365 E3 (or A3) and above. View comparisons of M365 licensing [here](/microsoft-365/compare-microsoft-365-enterprise-plans).
+  > Both types of licenses are typically included with licensing bundles like Microsoft 365 E3, A3, F3 and above. View comparisons of Microsoft 365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 ### Step 3 - Import your test device
 
@@ -669,4 +674,4 @@ Learn more about the following subjects:
 - [Use certificates for authentication in Intune](./intune/protect/certificates-configure.md)
 - Deploy network profiles, including [VPN](./intune/configuration/vpn-settings-windows-10.md) and [Wi-Fi](./intune/configuration/wi-fi-settings-windows.md)
 - Deploy [Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-- Security baseline for [Edge](./intune/protect/security-baseline-settings-edge.md)
+- Security baseline for [Microsoft Edge](./intune/protect/security-baseline-settings-edge.md)
