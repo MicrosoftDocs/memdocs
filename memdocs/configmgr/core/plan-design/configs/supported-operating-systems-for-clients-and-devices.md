@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 08/02/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -46,10 +46,7 @@ The client only disables user policy when it detects this type of device during 
 
 If you require user policy in this scenario, and accept any potential performance impact, use [client settings](../../clients/deploy/configure-client-settings.md) to enable user policy. In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
 
-> [!NOTE]
-> You can't use co-management with a client running Windows 10 Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
-
-Starting in version 2006, the **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576-->
+The **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576-->
 
 > [!NOTE]
 > If you previously selected the top-level **Windows 10** platform, this action automatically selected all child platforms. This new platform isn't automatically selected. If you want to add **Windows 10 Enterprise multi-session**, manually select it in the list.

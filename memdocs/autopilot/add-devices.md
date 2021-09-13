@@ -60,9 +60,6 @@ Device enrollment can be done by an **Intune Administrator** or a **Policy and P
 
 Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows 10 devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
 
-> [!Note]
-> Before uploading the CSV file on Intune, please make sure that the first row contains the device serial number, Windows product ID, hardware hash, group tag, and assigned user. If there is header information on the top of CSV file, please delete that header information. See details at [Enroll Windows devices in Intune](/intune/enrollment/enrollment-autopilot).
-
 ## Collecting the hardware hash from existing devices using PowerShell
 
 The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
@@ -89,6 +86,7 @@ During the OOBE you also can initate the hardware hash upload by launching a com
 
 ```PowerShell.exe -ExecutionPolicy Bypass
 Install-Script -name Get-WindowsAutopilotInfo -Force
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 Get-WindowsAutoPilotInfo -Online
 ```
 

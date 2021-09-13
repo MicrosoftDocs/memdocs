@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 07/07/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -61,14 +61,22 @@ Desktop Analytics provides the following benefits:
 
 To use Desktop Analytics, make sure your environment meets the following prerequisites.
 
+> [!TIP]
+> To clarify some Azure terminology:
+>
+> - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+>
+> For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
+
 ### Technical
 
-- An active global Azure subscription, with [global administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.
+- An active global Azure subscription and an Azure Active Directory (Azure AD) tenant, with [global administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.
 
   > [!IMPORTANT]
   > Desktop Analytics is a Windows service hosted in Azure global that utilizes Windows diagnostic data. While Desktop Analytics is an Azure global service that's available to US government customers, it doesn't meet [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes. For a list of compliance offerings for Microsoft products and services, see the [Microsoft Trust Center](/compliance/regulatory/offering-home?view=o365-worldwide&preserve-view=true). Desktop Analytics isn't available for GCC High or US Department of Defense (DOD) customers. The use of Azure Government subscriptions to host Desktop Analytics workspaces isn't supported.
 
-  - **Workspace owner** permissions to **Set up your workspace**, and the following Azure Active Directory (Azure AD) roles:
+  - **Workspace owner** permissions to **Set up your workspace**, and the following Azure AD roles:
 
     - [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator)
 
@@ -130,6 +138,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 ### Licensing and costs
 
 - An active global Azure subscription.
+
+- An Azure Active Directory (Azure AD) tenant.<!-- memdocs#1939 -->
 
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).

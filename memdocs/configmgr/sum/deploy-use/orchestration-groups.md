@@ -2,21 +2,20 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 05/25/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
 ---
 
 # Orchestration groups in Configuration Manager
 <!--3098816-->
 *Applies to: Configuration Manager (current branch)*
 
-Starting in Configuration Manager version 2002, you can create orchestration groups. Create an orchestration group to better control the deployment of software updates to devices. Many server administrators need to carefully manage updates for specific workloads, and automate behaviors in between.
+Create an orchestration group to better control the deployment of software updates to devices. Many server administrators need to carefully manage updates for specific workloads, and automate behaviors in between.
 
 An orchestration group gives you the flexibility to update devices based on a percentage, a specific number, or an explicit order. You can also run a PowerShell script before and after the devices run the update deployment.
 
@@ -84,7 +83,7 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
 
    - **Specify the maintenance sequence**, then sort the selected resources in the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-1. Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart. Scripts with parameters can't be used. <!--9893550-->
+1. Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used. <!--9893550-->
 
    1. For Configuration Manager 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
       - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
@@ -130,7 +129,7 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
    - **Allow a number of the machines to be updated at the same time**, then select or enter a number for this specific count. Use this setting to always limit to a specific number of devices, whatever the overall size of the orchestration group.
    - **Specify the maintenance sequence**: Sort the selected resources to the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-- Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart. Scripts with parameters can't be used. <!--9893550-->
+- Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used. <!--9893550-->
 
    - For Configuration Manager version 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
       - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
@@ -218,6 +217,7 @@ In the **Orchestration Group** node, select an orchestration group. In the ribbo
 ## <a name="bkmk_reset"></a> Reset the orchestration state for a group member
 
 If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also select **Reset Orchestration Group Member** from the ribbon. Before resetting the state, you should check the client to see why it failed and correct any issues found.
+
    [![Reset Orchestration Group Member](./media/3098816-reset-group-member.png)](./media/3098816-reset-group-member.png#lightbox)
 
 ## Log files

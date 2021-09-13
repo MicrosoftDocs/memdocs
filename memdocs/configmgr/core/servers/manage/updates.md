@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 08/02/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -63,18 +63,21 @@ The following supported versions of Configuration Manager are currently availabl
 | [**2006**](../../plan-design/changes/whats-new-in-version-2006.md)<br /> (5.00.9012) | August 11, 2020 | February 11, 2022 | No | Yes |
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | April 1, 2020 | October 1, 2021 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 
-<a name="bkmk_note1"></a>
+> [!NOTE]
+> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2107.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
+
+##### <a name="bkmk_note1"></a> Note 1: How to get baseline media
+
+The baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
+
+- Microsoft Endpoint Configmgr (current branch)
+- System Center Datacenter
+- System Center Standard
+
+For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.
 
 > [!NOTE]
-> <sup>**Note 1:**</sup> The baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
->
-> - Microsoft Endpoint Configmgr (current branch)
-> - System Center Datacenter
-> - System Center Standard
->
-> For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.
->
-> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2107.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
+> The search string may be different on other media sites. For example, on the [Visual Studio Subscriptions Portal](https://my.visualstudio.com/), search for `Microsoft Endpoint Configuration Manager`.<!-- memdocs#1962 -->
 
 #### Historical versions
 

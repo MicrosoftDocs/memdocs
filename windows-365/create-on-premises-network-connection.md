@@ -63,7 +63,7 @@ To create a connection, you must:
 6. On the **AD domain** page, provide the following information:
     - **AD domain name**: The DNS name of the Active Directory domain that you want to use for connecting and provisioning Cloud PCs. For example, corp.contoso.com.
     - **Organizational unit**: This is optional. An organizational unit (OU) is a container within an Active Directory domain, which can hold users, groups, and computers. Make sure that this OU is enabled to sync with Azure AD Connect. Provisioning will fail if this OU is not syncing.
-    - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU. This user will also be a local administrator for the Cloud PCs that you provision.
+    - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU. 
     - AD domain password: The password for the user specified above.
     - Confirm AD domain password: The password for the user specified above.
 
