@@ -65,7 +65,7 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 
 The data in the Intune reports for Feature updates for Windows 10 and later policy is used only for these reports and doesn't surface in other Intune reports.
 
-- [Windows 10 and later feature updates (Organizational)](#use-the-windows-1-and-later-feature-updates-organizational-report)  - This report provides an overall view of compliance for devices on a per-policy basis.
+- [Windows 10 and later feature updates (Organizational)](#use-the-windows-10-and-later-feature-updates-organizational-report)  - This report provides an overall view of compliance for devices on a per-policy basis.
 - [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
