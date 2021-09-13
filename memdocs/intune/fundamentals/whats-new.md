@@ -206,7 +206,7 @@ To help you identify devices that could be impacting user experience, [Endpoint 
 
 #### Changes to settings in the settings catalog for Microsoft Defender for Endpoint on macOS<!--9817140  -->
 
-We’ve added eight new settings to manage Microsoft Defender for Endpoint on macOS to the Intune [settings catalog](../configuration/settings-catalog.md). We’ve also removed one setting.
+We’ve added eight new settings to manage Microsoft Defender for Endpoint on macOS to the Intune [settings catalog](../configuration/settings-catalog.md). 
 
 The new settings are found as follows under the following four categories in the settings catalog. For information about these settings, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the *Microsoft Defender for Endpoint on Mac* documentation.
 
