@@ -41,7 +41,7 @@ Learn more about Windows 10 [*feature* and *quality* updates](/windows/deploymen
 
 Intune provides the following policy types to manage updates, which you assign to groups of devices:
 
-- **Update rings for Windows 10 and later **: This policy is a collection of settings that configures when Windows 10 updates get installed.
+- **Update rings for Windows 10 and later**: This policy is a collection of settings that configures when Windows 10 updates get installed.
 
   Update ring policies are supported for devices that run Windows 10 version 1607 or later.
 
