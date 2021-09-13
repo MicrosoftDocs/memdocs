@@ -60,7 +60,7 @@ The actual time that a device starts to update depends on the device being onlin
 
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from a Update rings for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update rings for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
 
