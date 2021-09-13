@@ -163,6 +163,9 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation.  
 
+  This feature applies to:  
+  - iOS/iPadOS 15.0 and newer  
+
 ### Settings apply to: Automated device enrollment (supervised)
 
 - **Block camera**: **Yes** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device's camera.
