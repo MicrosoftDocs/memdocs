@@ -122,7 +122,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
 - **Azure AD company branding**  
   Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistant look-and-feel when they sign-in to Microsoft 365. This configuration is required for Autopilot to work.
 
-  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 - **Licensing**  
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune will require two key capabilities.
