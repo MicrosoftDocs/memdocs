@@ -5,8 +5,8 @@ title: Set enrollment restrictions in Microsoft Intune
 titleSuffix:
 description: Restrict enrollment by platform and set a device enrollment limit in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/11/2021
 ms.topic: how-to

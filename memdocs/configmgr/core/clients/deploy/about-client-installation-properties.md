@@ -2,11 +2,10 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 04/30/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -287,7 +286,7 @@ Example: `CCMSetup.exe /UsePKICert`
 If a device uses Azure Active Directory (Azure AD) for client authentication and also has a PKI-based client authentication certificate, if you use include this parameter the client won't be able to get Azure AD onboarding information from a cloud management gateway (CMG). For a client that uses Azure AD authentication, don't specify this parameter, but include the [AADRESOURCEURI](#aadresourceuri) and [AADCLIENTAPPID](#aadclientappid) properties.<!-- MEMDocs#1483 -->
 
 > [!NOTE]
-> In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update–based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
+> In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update-based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
 >
 > Also specify this parameter when you install a client for internet-only communication. Use `CCMALWAYSINF=1` together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
 
@@ -319,7 +318,7 @@ Example: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.co
 
 ## <a name="clientMsiProps"></a> Client.msi properties
 
-The following properties can modify the installation behavior of client.msi, which ccmsetup.exe installs. If you use the [client push installation method](plan/client-installation-methods.md#client-push-installation), specify these properties on the **Client** tab of the **Client Push Installation Properties** in the Configuration Manager console.
+The following properties can modify the installation behavior of client.msi, which ccmsetup.exe installs.
 
 ### AADCLIENTAPPID
 
@@ -496,7 +495,7 @@ This property can specify the address of a cloud management gateway (CMG). To ge
 - Run the following command:
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
 - Use the returned value as-is with the **CCMHOSTNAME** property.
@@ -797,3 +796,31 @@ Configuration Manager supports the following attribute values for the PKI certif
 |2.5.4.42|G or GN or GivenName|Given name|  
 |2.5.4.43|I or Initials|Initials|  
 |2.5.29.17|(no value)|Subject Alternative Name|
+
+## Client push installation
+
+<!-- 10105880, memdocs#1617 -->
+
+If you use the [client push installation method](plan/client-installation-methods.md#client-push-installation), use the following options on the **Client** tab of the **Client Push Installation Properties** in the Configuration Manager console:
+
+- Any of the [Client.msi properties](#clientMsiProps)
+
+- The following subset of [CCMSetup.exe command-line parameters](#ccmsetupexe-command-line-parameters) are allowed for client push:
+
+  - /AllowMetered (starting in version 2103)
+
+  - /AlwaysExcludeUpgrade
+
+  - /BITSPriority
+
+  - /downloadtimeout
+
+  - /ExcludeFeatures
+
+  - /forcereboot
+
+  - /logon
+
+  - /skipprereq
+
+  - /UsePKICert

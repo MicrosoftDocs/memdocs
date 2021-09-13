@@ -23,6 +23,8 @@ items:
     href: device-images.md
   - name: Device configuration with MEM
     href: device-configuration.md
+  - name: Privacy and personal data
+    href: privacy-personal-data.md
 - name: How-to guides
   items:
     - name: Plan
@@ -55,6 +57,8 @@ items:
           href: edit-on-premises-network-connection.md
         - name: Delete on-premises network connection
           href: delete-on-premises-network-connection.md
+      - name: Provide localized Windows experience
+        href: provide-localized-windows-experience.md
       - name: Device images
         items:
         - name: Add or delete device images
@@ -117,6 +121,14 @@ items:
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
+      - name: End grace period
+        href: end-grace-period.md
+    - name: Reports
+      items:
+      - name: Resource performance report
+        href: report-resource-performance.md
+      - name: Remoting connection report
+        href: report-remoting-connection.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
@@ -125,6 +137,8 @@ items:
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
     - name: End user experience
       items:
+      - name: End user hardware requirements
+        href: end-user-hardware-requirements.md
       - name: Access a Cloud PC
         href: end-user-access-cloud-pc.md
 - name: Troubleshoot

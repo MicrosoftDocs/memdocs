@@ -54,7 +54,9 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Require** - The device can protect data that's stored on the drive from unauthorized access when the system is off, or hibernates.
   
   [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
-
+  
+  > [!NOTE]
+  > If using a device compliance policy in Intune, be aware that the state of this setting is only measured at boot time. Therefore, even although BitLocker encryption may have completed - a reboot will be required in order for the device detect this and become compliant. For more information, see the following Microsoft support blog on [Device Health Attestation](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-device-health-attestation-settings-as-part-of/ba-p/282643).
   
 - **Require Secure Boot to be enabled on the device**:  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -183,7 +185,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
    [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level.
+  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level. However, when leveraging this setting, be aware that a reboot may be required before the device will reflect as compliant.
 
 ### Device Security  
 

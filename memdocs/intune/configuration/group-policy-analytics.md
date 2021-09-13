@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/25/2021
+ms.date: 08/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -111,6 +111,10 @@ Group Policy analytics can parse the following CSPs:
 - [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
 - [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
+
+### Known Issues
+
+Currently, the Group Policy analytics (preview) tool only supports non-ADMX settings in the English language. If you import a GPO with settings in languages other than English, then your **MDM Support %** will be inaccurate.
 
 ## Group Policy migration readiness report
 

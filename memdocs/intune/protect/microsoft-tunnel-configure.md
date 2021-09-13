@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 09/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,6 +51,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
 3. On the **Settings** tab, configure the following items:
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
+<!-- Hiding this infobox since we've fixed this, but keeping it here for historical reasons and in case the issue surfaces again
      > [!IMPORTANT]
      > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
      >
@@ -58,7 +59,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
      > - You use per-app VPN.
      >
      > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
-
+-->
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
 
    - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
@@ -229,6 +230,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Per-app VPN**:  
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
      - On Android, launching an app won't launch the per-app VPN. However, when the VPN has *Always-on VPN* set to *Enable*, the VPN will already be connected and app traffic will use the active VPN. If the VPN isn't set to be *Always-on*, the user must manually start the VPN before it can be used.
+     - If you are using the Defender for Endpoint app to connect to Tunnel, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
      - To enable a per-app VPN, select **Add** and then browse to custom or public apps you’ve imported to Intune.
 
    - **Always-on VPN**:  
@@ -237,9 +239,10 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
+<!-- Hiding warning, but keeping here for history and in case these issues come up again >
    > [!IMPORTANT]  
    > You cannot use Defender web protection side-by-side with Tunnel if you use an internal proxy with Tunnel, as this can cause connectivity issues which would prevent the device from communicating with Intune. Disable web protection by adding the **antiphishing** setting to the [custom settings](#use-custom-settings-for-microsoft-defender-for-endpoint) section in the VPN profile and setting it to **0**.
-
+-->
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]  

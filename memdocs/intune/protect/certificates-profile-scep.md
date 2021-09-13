@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2021
+ms.date: 08/31/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -84,12 +84,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
      > [!NOTE]
-     > Storage of certificates provisoned by SCEP:
+     > Storage of certificates provisioned by SCEP:
      > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
      >
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
      >
-     >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store. 
+     >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store.
 
    - **Subject name format**:
 
@@ -105,6 +105,17 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      > - ;
      > - ,
      > - =
+
+     > [!NOTE]
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     >
+     > - Serial number
+     > - IMEI
+     > - MEID
+     >
+     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     >
+     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
      - **User certificate type**
 
@@ -143,7 +154,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        Format options for the Subject name format include the following variables:
 
        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
-       - **{{DeviceId}}** - This is the Intune device ID
+       - **{{DeviceId}}** - The Intune device ID
        - **{{Device_Serial}}**
        - **{{Device_IMEI}}**
        - **{{SerialNumber}}**
@@ -173,6 +184,17 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - **Uniform Resource Identifier (URI)**
 
      Variables available for the SAN value depend on the Certificate type you selected; either **User** or **Device**.
+
+     > [!NOTE]
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     >
+     > - Serial number
+     > - IMEI
+     > - MEID
+     >
+     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     >
+     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
      - **User certificate type**
 

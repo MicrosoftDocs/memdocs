@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 9/22/2020
+ms.date: 9/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -79,6 +79,16 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 ### Retirement
 
 Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+
+### Known issues
+
+The following table provides a set of known issues along with more information about each issue.
+
+| Issue | More   information |
+|---|---|
+| User policy does not sync after first login on to Hybrid Azure AD-joined single session VMs | Due to a known race condition, the user policy might not sync immediately after initial login on the VM. As a workaround, users can explicitly log off and log in the VM again. This issue will be fixed in the future. |
+| Cannot auto-enroll if tenant has more than one MDM provider | This issue will be fixed in the future. |
+| Modern apps, such as Universal Windows Platform (UWP) apps, are not working correctly if [FSLogix](/fslogix/overview) is configured | Using FSLogix and Modern apps could cause compatibility issues. We recommend that you don’t configure Modern apps when FSLogix is configured.|
 
 ## Next steps
 

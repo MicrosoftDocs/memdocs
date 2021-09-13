@@ -5,8 +5,8 @@ title: Intune enrollment methods for Windows devices
 titleSuffix: Microsoft Intune
 description: Learn the different ways you can enroll Windows devices in Intune
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 4/14/2021
 ms.topic: conceptual

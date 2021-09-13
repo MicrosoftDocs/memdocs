@@ -5,8 +5,8 @@ title: Set up enrollment for Windows devices by using Microsoft Intune
 titleSuffix:
 description: Set up enrollment for Windows devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/12/2021
 ms.topic: how-to
@@ -136,7 +136,7 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
 
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
