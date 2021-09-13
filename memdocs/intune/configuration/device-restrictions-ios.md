@@ -104,7 +104,9 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
 
   This feature applies to:  
   - iOS 13.0 and newer
-  - iPadOS 13.0 and newer
+  - iPadOS 13.0 and newer  
+
+- **Allow copy/paste to be affected by managed open-in**: **Yes** enforces copy/paste restrictions based on how you configured **Block viewing corporate documents in unmanaged apps** and **Block viewing non-corporate documents in corporate apps**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce any copy/paste restrictions.  
 
 ## Autonomous single app mode (ASAM)
 
@@ -157,7 +159,9 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation.
 
   This feature applies to:  
-  - iOS/iPadOS 14.5 and newer
+  - iOS/iPadOS 14.5 and newer  
+
+- **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation.  
 
 ### Settings apply to: Automated device enrollment (supervised)
 
