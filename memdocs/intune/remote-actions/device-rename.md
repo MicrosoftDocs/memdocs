@@ -30,11 +30,11 @@ ms.collection: M365-identity-device-management
 
 # Rename a device in Intune
 
-You can use the **Rename device** action to rename a device that is enrolled in Intune. When you use thi action, the device's name is changed in Intune and on the device.
+You can use the **Rename device** action to rename a device that is enrolled in Intune. When you use this action, the device's name is changed in Intune and on the device.
 
 You can rename the following types of devices:
 
-- Android Enterprise dedicate devices
+- Android Enterprise dedicated devices
 - iOS/iPadOS supervised devices with iOS 9.3 and later
 - macOS 10 - Corporate-owned devices
 - Windows - Corporate-owned devices
@@ -48,7 +48,7 @@ This feature doesn't support renaming hybrid Azure AD Windows devices.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a device > **...** > **Rename device**.
-3. In the **Rename device** blade, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated devices are an exception, and don’t require a letter or hyphen.
+3. In the **Rename device** pane, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated devices are an exception, and don’t require a letter or hyphen.
 4. If you want to restart the device after renaming it, choose **Yes** next to **Restart after rename**.
 5. Choose **Rename**.
 
