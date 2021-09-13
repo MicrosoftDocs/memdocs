@@ -33,8 +33,8 @@ ms.collection: M365-identity-device-management
 With Intune, you can deploy updates to Windows 10 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)  and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
 
 - **Reports in Intune**:
-  - **Windows  and later update rings** – Use a [built-in report](#reports-for-windows-10-update-rings-policy) that's ready by default when you deploy update rings to your devices.
-  - **Windows 10 and later feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
+  - **Windows  and later update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
+  - **Windows 10 and later feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
 
 - **Update Compliance**:
 
@@ -65,7 +65,7 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 
 The data in the Intune reports for Feature updates for Windows 10 and later policy is used only for these reports and doesn't surface in other Intune reports.
 
-- [Windows 10 and later feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report)  - This report provides an overall view of compliance for devices on a per-policy basis.
+- [Windows 10 and later feature updates (Organizational)](#use-the-windows-1-and-later-feature-updates-organizational-report)  - This report provides an overall view of compliance for devices on a per-policy basis.
 - [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
@@ -77,7 +77,7 @@ Before you can use the feature updates policy reports, you must configure prereq
   - Service-based data is collected for all feature update versions and doesn't require you to configure data collection. 
   - Client-based data is collected from devices only after data collection is configured.
   
-  Service and client-based data is described in [Use the Windows 10 and later feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
+  Service and client-based data is described in [Use the Windows 10 and later feature updates (Organizational) report](#use-the-windows-10-and-later-feature-updates-organizational-report) later in this article.
 
 - **Devices**: Devices must:
 

@@ -259,4 +259,4 @@ User experience settings control the end-user experience for device restart and 
 
 Delivery Optimization is no longer configured as part of a Windows 10 Update Ring under Software Updates. Delivery Optimization is now set through device configuration. However, previous configurations remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified. 
 
-To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Update rings for Windows 10 and later](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) and then move your settings to a Delivery Optimization profile.
+To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Update rings for Windows 10 and later](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-update-rings) and then move your settings to a Delivery Optimization profile. 
