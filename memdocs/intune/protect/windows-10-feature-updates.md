@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure Windows 10 feature updates policy in Intune
-description: Create and manage Intune policy for Windows 10 feature updates. Configure and deploy policy to maintain the Windows feature version of Windows 10 devices you manage with Microsoft Intune.
+title: Configure Windows 10 and later feature updates policy in Intune
+description: Create and manage Intune policy for Windows feature updates. Configure and deploy policy to maintain the Windows feature version of Windows 10 devices you manage with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -27,15 +27,15 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 feature updates policy in Intune
+# Feature updates for Windows 10 and later policy in Intune
 
 *This feature is in public preview.*
 
-With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or version 2004. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
+With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or version 2004. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
 
-Windows 10 feature updates policies work with your *Windows 10 update ring* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
+Windows feature updates policies work with your *Update rings for Windows 10 and later* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
 
-When a device receives a Windows 10 feature updates policy:
+When a device receives a *Feature updates for Windows 10 and later* policy:
 
 - The device updates to the version of Windows specified in the policy. A device that already runs a later version of Windows remains at its current version. By freezing the version, the devices feature set remains stable for the duration of the policy.
 
@@ -47,11 +47,11 @@ When a device receives a Windows 10 feature updates policy:
   >
   >   For example, for Windows version 2004, open [Windows 10 release information](/windows/release-information/), and then from the left-hand pane, select *Version 2004* and then *Known issues and notifications*. The [resultant page](/windows/release-information/status-windows-10-2004) details known issues for that Windows version that might result in safeguard hold.
 
-- Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
+- Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
 ## Prerequisites
 
-The following are prerequisites for Intune's Windows 10 feature updates:
+The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
 - In addition to a license for Intune, your organization must have one of the following subscriptions:
   - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
@@ -80,9 +80,9 @@ The following are prerequisites for Intune's Windows 10 feature updates:
   > **Unsupported versions and editions**:  
   > *Windows 10 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 
-## Limitations for Windows 10 feature updates policy
+## Limitations for Feature updates for Windows 10 and later policy
 
-- When you deploy a *Windows 10 feature updates* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
+- When you deploy a *Feature updates for Windows 10 and later* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
@@ -91,11 +91,11 @@ The following are prerequisites for Intune's Windows 10 feature updates:
   >
   > For more information, see [Move from update ring deferrals to feature updates policy](../protect/windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
-- Windows 10 feature updates policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
+- Feature updates for Windows 10 and later policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
-  To prevent this initial delay from impacting your co-managed devices, configure a [Windows 10 feature update policy](../protect/windows-10-feature-updates.md) and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows 10 feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
+  To prevent this initial delay from impacting your co-managed devices, configure a [Windows 10 feature update policy](../protect/windows-10-feature-updates.md) and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows feature update report](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
@@ -112,21 +112,21 @@ The following are prerequisites for Intune's Windows 10 feature updates:
 
   To keep a device at its current feature update version and prevent it from being unenrolled and updated to the most recent feature update version, ensure the device remains assigned to a feature update policy that specifies the devices current Windows version. 
 
-## Create and assign Windows 10 feature updates policy
+## Create and assign Feature updates for Windows 10 and later policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create profile**.
+2. Select **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
 
 3. Under **Deployment settings**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**. Only versions of Windows that remain in support are available to select.
 
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 
-5. Under **Review + create**, review the settings. When ready to save the Windows 10 feature updates policy, select **Create**.  
+5. Under **Review + create**, review the settings. When ready to save the Feature updates policy, select **Create**.  
 
-## Manage Windows 10 feature updates policy
+## Manage Feature updates for Windows 10 and later policy
 
-In the admin center, go to **Devices** > **Windows** > **Windows 10 Feature updates** to view your profiles.
+In the admin center, go to **Devices** > **Windows** > **Feature updates for Windows 10 and later** to view your profiles.
 
 For each profile you can view:
 
@@ -153,5 +153,5 @@ There are multiple options to get in-depth reporting for Windows 10 updates with
 
 ## Next steps
 
-- [Use Windows 10 update rings in Intune](../protect/windows-10-update-rings.md)
+- [Use Windows update rings in Intune](../protect/windows-10-update-rings.md)
 - Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows 10 updates

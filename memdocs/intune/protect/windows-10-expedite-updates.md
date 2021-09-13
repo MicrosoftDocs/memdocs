@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 With *Windows 10 quality updates* policy, you can expedite the install of the most recent Windows 10 security updates as quickly as possible on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly servicing policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn’t deploy the update for some time.
 
-Not all updates can be expedited. Currently, only Windows 10 security updates that can be expedited are available to deploy with Windows 10 quality updates policy. To manage regular monthly quality updates, use [Windows 10 update rings policies](../protect/windows-10-update-rings.md).
+Not all updates can be expedited. Currently, only Windows 10 security updates that can be expedited are available to deploy with Windows 10 quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](../protect/windows-10-update-rings.md).
 
 ## How expedited updates work
 
@@ -54,13 +54,13 @@ The actual time that a device starts to update depends on the device being onlin
   > [!IMPORTANT]
   > In some scenarios, Windows Update can install an update that is more recent than the update you specify in expedite update policy. For more information about this scenario, see [About installing the latest applicable update](#identify-the-latest-applicable-update), later in this article.
 
-- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows 10 update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
+- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
 
 - When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
 
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from a Windows 10 update rings policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from a Update rings for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
 
@@ -310,6 +310,6 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [Windows 10 update rings](../protect/windows-10-update-rings.md)
-- Configure [Windows 10 feature updates](../protect/windows-10-feature-updates.md)
+- Configure [Windows 10 and later update rings](../protect/windows-10-update-rings.md)
+- Configure [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md)
 - View [Windows 10 release information](/windows/release-information/)

@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 View the Windows 10 Update settings you can [configure and manage](windows-update-for-business-configure.md) with Microsoft Intune.  
 
-When you configure settings for Windows 10 update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 version dependency, the version dependency is noted in the settings details.  
+When you configure settings for Windows update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 version dependency, the version dependency is noted in the settings details.  
 
 ## Update settings  
 
@@ -259,4 +259,4 @@ User experience settings control the end-user experience for device restart and 
 
 Delivery Optimization is no longer configured as part of a Windows 10 Update Ring under Software Updates. Delivery Optimization is now set through device configuration. However, previous configurations remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified. 
 
-To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Windows 10 Update Rings](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) and then move your settings to a Delivery Optimization profile.
+To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Update rings for Windows 10 and later](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) and then move your settings to a Delivery Optimization profile.

@@ -68,7 +68,7 @@ Profiles are created in the [Microsoft Endpoint Manager admin center](https://go
 
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
-- **By platform**: Create and view policies and profiles by your platform. This view may also show features specific to the platform. For example, select **Windows**. You'll see Windows-specific features, such as **Windows 10 Update Rings** and **PowerShell scripts**.
+- **By platform**: Create and view policies and profiles by your platform. This view may also show features specific to the platform. For example, select **Windows**. You'll see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
 - **Policy**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
 When you create a profile (**Configuration profiles** > **Create profile**), choose your platform:
