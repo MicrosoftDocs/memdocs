@@ -184,7 +184,7 @@ The **Profile configuration status** report allows you to generate a list of pro
 To view the Profile configuration status report:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > ** Device configuration** > **Reports** > **Profile configuration status**.
+2. Select **Reports** > **Device configuration** > **Reports** > **Profile configuration status**.
 
 ## Device compliance report (Organizational)
 
