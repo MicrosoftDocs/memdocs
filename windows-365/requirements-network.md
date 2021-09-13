@@ -74,9 +74,9 @@ As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to
 
 Configure your Azure Virtual Network where the Cloud PCs are provisioned as follows:
 
-- Ensure your Azure Virtual Network has network connectivity to DNS servers that can resolve your Active Directory domain.
-- From the Azure Virtual Network's Settings, select DNS Servers and then choose Custom.
-- Enter the IP address of DNS servers that environment that can resolve your AD DS domain.
+1. Make sure taht your Azure Virtual Network has network connectivity to DNS servers that can resolve your Active Directory domain.
+2. From the Azure Virtual Network's Settings, select DNS Servers and then choose Custom.
+3. Enter the IP address of DNS servers that environment that can resolve your AD DS domain.
 
 >[!TIP]
 >Adding at least two DNS servers, as you would with a physical PC, helps mitigate the risk of a single point of failure in name resolution.
