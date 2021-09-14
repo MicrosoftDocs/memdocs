@@ -87,7 +87,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 Policy sets, new to 1910, have the following known issues.
 
-- When creating a policy set, if an scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
+- When creating a policy set, if a scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
 
 - The following app types are currently supported by policy sets:
   - iOS/iPadOS store app
@@ -106,11 +106,11 @@ Policy sets, new to 1910, have the following known issues.
 - Policy sets have the following enrollment restrictions and Enrollment Status Page (ESP) issues:
   - Restrictions and ESP do not support virtual group assignments.
   - Restrictions and ESP do not strictly support exclusion group assignments. 
-  - Restrictions and ESP use priority-based conflict resolution. Restrictions and ESP might not be applied to the same users as the rest of a policy set's payloads if the Restrictions and ESP are also targeted by a higher priority Restrictions and ESP.
-  - The default Restrictions and ESP cannot be added to a policy set.
+  - Restrictions and ESP use priority-based conflict resolution. Restrictions and ESP might not be applied to the same users as the rest of a policy set's payloads if the restrictions and ESP are also targeted by a higher priority restriction and ESP.  
+  - The default restrictions and ESP cannot be added to a policy set.  
 
 - MAM policy types that support policy sets include the following: 
-  - MAM WIP( Windows) MDM targeted managed app protection 
+  - MAM WIP (Windows) MDM targeted managed app protection 
   - MAM iOS/iPadOS targeted managed app protection
   - MAM Android targeted managed app protection
   - MAM iOS/iPadOS targeted managed app configuration
@@ -125,7 +125,7 @@ Policy sets, new to 1910, have the following known issues.
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
 
-    If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
+    If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
 
 - MAM does not support deployment to **All Users** and **All Devices** virtual groups for any policy types.
 - The Device Configuration Profile of type "Administrative Templates" cannot be selected as part of a policy set.
