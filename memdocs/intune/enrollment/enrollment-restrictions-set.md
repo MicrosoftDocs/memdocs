@@ -188,7 +188,7 @@ Device enrollment includes default restrictions for both device type and device 
 
 You can change the priority of any non-default restriction.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices**.
-2. Select **Enrollment device limit restrictions** or **Enrollment device platform restrictions**.   
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment restrictions**.
+2. Select the restriction that you want to change priority **Device type restrictions** or **Device limit restrictions**.   
 4. Hover over the restriction in the priority list.  
 5. Using the three vertical dots, drag the priority to the desired position in the list.  
