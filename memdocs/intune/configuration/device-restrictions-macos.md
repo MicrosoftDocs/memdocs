@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 09/20/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -165,6 +165,11 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
   This feature applies to:  
   - macOS 10.13 and newer  
+
+- **Block users from erasing all content and settings on device**: **Yes** disables the reset option on supervised devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to erase all content and settings on their device.  
+
+  This feature applies to:  
+  - macOS 12 and newer  
 
 ## Password
 
