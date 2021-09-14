@@ -51,10 +51,12 @@ Learn what new features are available in Windows 365.
 ## Week of September 13, 2021
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
-### New PowerShell script for installing languages on custom device images<!—35726116-->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New PowerShell script for installing languages on custom device images<!—35726116-->
 
 The [Windows365LanguagesInstaller PowerShell script]( https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) can install 38 additional languages on your custom device images. For more information, see [Provide a localized Windows experience]9 provide-localized-windows-experience.md#add-languages-to-windows-using-a-script-and-capture-the-image).
-
 
 ## Week of September 6, 2021 (Service release 2108)
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
