@@ -79,7 +79,7 @@ More resources:
 
 ### Operating System Version
 
-To discover build versions for all Windows 10 Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows 10 release information](/windows/release-information). Be sure to include the 10.0. prefix before the build numbers, as the following examples illustrate.
+To discover build versions for all Windows 10 and later Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows 10 release information](/windows/release-information). Be sure to include the 10.0. prefix before the build numbers, as the following examples illustrate.
 
 - **Minimum OS version**:  
   Enter the minimum allowed version in the **major.minor.build.revision number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:

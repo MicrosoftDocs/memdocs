@@ -115,9 +115,9 @@ For information about the actions you can take with this report, see [Bulk actio
 
 ## Feature update failures report (Operational)
 
-A Windows update report, the **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting.
+A Windows update report, the **Feature update failures** operational report provides failure details for devices that are targeted with a **Feature updates for Windows 10 and later** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting.
 
-Before this report can show data, you must configure *data collection* for the Windows 10 feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows 10 feature updates policy](../protect/windows-10-feature-updates.md).
+Before this report can show data, you must configure *data collection* for the Windows feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../protect/windows-10-feature-updates.md).
 
 To view the **Feature update failures** report, use the following steps:
 
@@ -130,7 +130,7 @@ To view the **Feature update failures** report, use the following steps:
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - **[Windows 10 feature updates (Organizational)](#windows-10-feature-updates-organizational)**
+> - **[Windows 10 and later feature updates (Organizational)](#windows-10-and-later-feature-updates-organizational)**
 > - **Feature update failures report (Operational)** *(this report)*  
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
@@ -256,24 +256,24 @@ Additional reports for Microsoft Defender Antivirus include:
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
 - [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports) which are available in the Antivirus node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
-## Windows 10 feature updates (Organizational)
+## Windows 10 and later feature updates (Organizational)
 
-A Windows update report, the **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, as well as other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
+A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, as well as other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
-For information about how to use this report to resolve update failures, see [Reports for Windows 10 feature updates policy](../protect/windows-10-feature-updates.md).
+For information about how to use this report to resolve update failures, see [Reports for Windows 10 and later feature updates policy](../protect/windows-10-feature-updates.md).
 
-You can view the **Windows 10 feature updates** report using the following steps:
+You can view the **Windows 10 and later feature updates** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Windows updates** to view the summary report.
-3. Select the **Reports** tab and click the **Windows Feature Update Report** to see the **Windows 10 feature updates** report.
+3. Select the **Reports** tab and click the **Windows Feature Update Report** to see the **Windows 10 and later feature updates** report.
 4. Select the **Update aggregated status** and **Ownership** filters to refine your report.
 5. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - Windows 10 feature updates (Organizational) *(this report)*
+> - Windows 10 and later feature updates (Organizational) *(this report)*
 > - [Feature update failures report (Operational)](#feature-update-failures-report-operational)
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
