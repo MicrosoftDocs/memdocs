@@ -55,7 +55,7 @@ You can include the following management objects in a policy set:
 - Enrollment status page
 
 > [!IMPORTANT]
-> Management objects for device type restrictions can no longer be included in policy sets. Instead, to configure and manage device type restrictions, go to **Devices** > **Policy** > **Enrollment restrictions**. If you included device type restrictions in your policy set prior to September 20, 2021, we will migrate your existing configurations to an enrollment restriction policy.  
+> As of September 2021, enrollment restrictions based on device type can no longer be included in policy sets. For more information about how to create enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).  
 
 When you create a policy set, you create a single unit of assignment, and manage associations between different objects. A policy set will be a reference to objects external to it. Any changes in the included objects will affect the policy set as well. After you create a policy set, you can repeatedly view and edit its objects and assignments. 
 
