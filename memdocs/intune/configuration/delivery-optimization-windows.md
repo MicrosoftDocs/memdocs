@@ -74,7 +74,7 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 
 The next time each device checks in, the policy is applied.
 
-## Remove Delivery Optimization from Windows 10 Update Rings
+## Remove Delivery Optimization from Windows Update Rings
 
 Delivery Optimization was previously configured as part of Software Update Rings. Beginning in February of 2019, Delivery Optimization settings are configured as part of a Deliver Optimization device configuration profile, which includes additional settings that affect more than Software Update delivery to devices. If you haven't already, remove the Delivery Optimization setting from your Update Rings by setting it to *Not configured*, and then use a Delivery Optimization profile to manage the larger range of available options.
 
@@ -109,7 +109,7 @@ Delivery Optimization was previously configured as part of Software Update Rings
 
 2. Unconfigure the existing software ring:
 
-    1. In the Microsoft Endpoint Manager admin center, go to **Software updates** > Windows 10 Update Rings.
+    1. In the Microsoft Endpoint Manager admin center, go to **Devices** > **Update rings for Windows 10 and later**.
     2. In the list, select your update ring.
     3. In the settings, set **Delivery Optimization download mode** to **Not configured**.
     4. **OK** > **Save** your changes.
