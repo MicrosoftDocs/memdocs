@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/13/2021
+ms.date: 09/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -186,9 +186,8 @@ Device enrollment includes default restrictions for both device type and device 
 >Enrollment restrictions are applied to users. In enrollment scenarios that are not user-driven (e.g. Windows Autopilot self-deploying mode or white glove provisioning), only the Default priority restrictions (targeted to "All Users") will be enforced.
 
 
-You can change the priority of any non-default restriction.
+You can change the priority of any non-default restriction.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices**.
-2. Select **Enrollment device limit restrictions** or **Enrollment device platform restrictions**.   
-4. Hover over the restriction in the priority list.  
-5. Using the three vertical dots, drag the priority to the desired position in the list.  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment restrictions**.
+2. Select **Device type restrictions** or **Device limit restrictions** to view the priority list.               
+3. In the list, hover over any restriction in the **Priority** column. When you see three vertical dots appear, select and drag the priority to the desired position in the list.    
