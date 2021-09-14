@@ -51,14 +51,14 @@ Before starting the custom image process, check if your language is supported by
 
 To add a language using the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) script:
 
-1. Login to the virtual machine you are customizing for use as the custom image.
+1. Sign in to the virtual machine you're customizing for use as the custom image.
 2. Complete one of the **Installation Options** described for the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) script.
 3. Run the script and enter the number corresponding to the language you'd like to install on the custom image.
 
 > [!NOTE]
 > You can use the script to install as many languages as you'd like on the custom image. To do so, run the script one time for each language.
 
-After you are done adding the desired languages and are ready to capture the image, follow the steps to [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
+After you're done adding the desired languages and are ready to capture the image, follow the steps to [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
 
 ### Add languages to Windows manually and capture the image
 
