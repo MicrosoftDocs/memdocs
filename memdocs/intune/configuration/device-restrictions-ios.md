@@ -67,6 +67,8 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
 
   **Yes** also prevents contact export synchronization in Outlook for iOS/iPadOS. For more information, see [Support Tip: Enabling Outlook iOS/iPadOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
 
+- **Allow copy/paste to be affected by managed open-in**: **Yes** enforces copy/paste restrictions based on how you configured **Block viewing corporate documents in unmanaged apps** and **Block viewing non-corporate documents in corporate apps**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce any copy/paste restrictions.  
+
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Require iTunes Store password for all purchases**: **Yes** forces users to enter the Apple ID password for each in-app or ITunes purchase. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow purchases without prompting for a password every time.
@@ -106,7 +108,6 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer  
 
-- **Allow copy/paste to be affected by managed open-in**: **Yes** enforces copy/paste restrictions based on how you configured **Block viewing corporate documents in unmanaged apps** and **Block viewing non-corporate documents in corporate apps**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce any copy/paste restrictions.  
 
 ## Autonomous single app mode (ASAM)
 
