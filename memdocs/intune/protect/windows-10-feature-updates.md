@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or a version of Windows 11. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
 
-You can also use feature updates policy to [upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-window-11).
+You can also use feature updates policy to [upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-windows-11).
 
 Windows feature updates policies work with your *Update rings for Windows 10 and later* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
 
@@ -114,7 +114,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   - The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
   - You use the Windows Update for [Business deployment service graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
 
-  To keep a device at its current feature update version and prevent it from being unenrolled and updated to the most recent feature update version, ensure the device remains assigned to a feature update policy that specifies the devices current Windows version. 
+  To keep a device at its current feature update version and prevent it from being unenrolled and updated to the most recent feature update version, ensure the device remains assigned to a feature update policy that specifies the devices current Windows version.
 
 ## Create and assign Feature updates for Windows 10 and later policy
 
@@ -146,7 +146,7 @@ If you’re already using Endpoint analytics, navigate to the [Work from anywher
 
 ### Licensing for Windows 11 versions
 
-Windows 11 includes a new license agreement, which can be viewed at https://www.microsoft.com/en-us/useterms/. This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
+Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/en-us/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
 
 When you use configure a policy in the Microsoft Endpoint Manager admin center to deploy any Windows 11 version, the Microsoft Endpoint Manager admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won’t see or need to accept the license agreement, making the update process seamless.
 
@@ -159,7 +159,7 @@ For more information including general licensing details, see the [Windows 11 do
 To deploy Windows 11, you’ll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It’s the [same process](#create-and-assign-feature-updates-for-windows-10-and-later-policy) though instead of selecting a Windows 10 version, you’ll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
 
 - Deploying an older Windows version to a device won’t downgrade the device. Devices only install an update when it's newer than the devices current version. 
-- Policies for Windows 11 and Windows 10 can exist side by side in Microsoft Endpoint Manager. 
+- Policies for Windows 11 and Windows 10 can exist side by side in Microsoft Endpoint Manager.
 
 ## Manage Feature updates for Windows 10 and later policy
 
