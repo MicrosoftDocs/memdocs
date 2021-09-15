@@ -149,7 +149,11 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   This setting applies to:
 
-  - Android 9.0 and newer
+  - Android 9.0 and newer  
+
+#### Corporate-owned work profile devices  
+
+- **Contact sharing via Bluetooth (work profile-level)**: **Block** prevents users from sharing their work profile contacts with Bluetooth-enabled devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts via Bluetooth.  
 
 ### System security
 
