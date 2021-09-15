@@ -65,6 +65,10 @@ Before you enable synchronization in the Intune console, you must configure your
 
 1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
 2. In the Business Store, choose the **Manage** tab, select **Settings**, and choose the **Distribute** tab.
+
+![MS Store for Business](https://user-images.githubusercontent.com/73707106/133433809-904bceba-4535-4535-bb0b-952e286f2bf8.jpg)
+
+
 3. If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**. If you don't have **Microsoft Intune** activated as your mobile device management tool, click **Activate** next to **Microsoft Intune**. Note that you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
 
 > [!NOTE]
