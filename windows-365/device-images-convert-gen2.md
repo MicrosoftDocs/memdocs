@@ -37,10 +37,11 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
 1. Make sure that Hyper-V is installed on your management PC. For information on how to install Hyper-V, see [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 2. Download your existing custom image VHD file from the storage blob URL to your PC where you have Hyper-V available.
     The VHD file is the exact size of the OS disk, which can be a very large file size. Make sure to use a fast, stable internet connection to download the VHD file and prepare for long download times.
-    For information how to download a managed disk, see [Download a VHD from Azure](/azure/virtual-machines/windows/download-vhd#generate-download-url).
+    For information on how to download a managed disk, see [Download a VHD from Azure](/azure/virtual-machines/windows/download-vhd#generate-download-url).
     You can also download the VHD by using [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) directly, both as managed disk or storage blob VHDs.
 3. Switch to your local PC and open Hyper-V Manager.
 4. Under **Actions**, select **New** > **Virtual Machine**.
+    ![Screenshot of Hyper-V create vm](./media/device-images-convert-gen2.md/create-vm.png)
 5. On the **Before You Begin** page, select **Next**.
 6. On the **Specify Name and Location** page, type friendly name, like CustomFinanceImageg2, and then select **Next**.
 7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
@@ -67,7 +68,7 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
 
 ## Creating new Gen2 custom images
 
-For information on how to create a new custom image using a Gen2 gallery image from the Azure marketplace, see  
+For information on how to create a new custom image using a Gen2 gallery image from the Azure marketplace, see [NEED LOCATION](). 
 
 
 
