@@ -51,7 +51,6 @@ In addition to identifying the location a lost or stolen device on a map, some p
 
 **Lost mode sound alert** – The following platforms support this capability:
 
-- **Android Enterprise dedicated devices** – Requires the device and have Location services turned on.
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
 
 **Unsupported** - Device location capabilities aren't supported for the following platforms:
@@ -95,13 +94,9 @@ To start a lost mode sound alert:
 2. Select **Devices**, and then select **All devices**.
 3. Select the device you want to activate.
 4. On the devices *Overview* pane:
-   1. For Android: select **Play Lost mode sound**
-   2. For iOS/iPadOS: select **Play Lost mode sound (supervise only)**.
+   - For iOS/iPadOS: select **Play Lost mode sound (supervise only)**.
 
-The sound plays until:
-
-- A user disables the sound on the device.
-- for an iOS/iPadOS device, the device is removed from lost mode.
+The sound plays on an iOS/iPadOS device until the device is removed from lost mode.
 
 ## Security and privacy information for lost mode and locate device actions
 
