@@ -150,26 +150,26 @@ To use this setting, select the software update types you want to delay:
    This feature applies to:  
     - macOS 11.0 and newer  
 
-Then enter how long you want to delay each type of update, from 1-90 days. If you don't enter anything, updates will be deferred for 30 days, by default.   
+Then enter how long you want to delay each type of update, from 1-90 days.    
 
-  - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. This setting defers all software updates for the same amount of time. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually. 
+  - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default.Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually. 
 
-  - **Delay visibility of major OS software updates:**: Enter the number of days to delay all major OS software updates, from 1-90. This value overrides the value you entered in **Delay default visibility of software updates**, if applicable.   
-
-     This setting applies to:  
-    - macOS 11.3 and newer 
-
-  - **Delay visibility of minor OS software updates:**: Enter the number of days to delay all minor OS software updates, from 1-90. This value overrides the value you entered in **Delay default visibility of software updates**, if applicable.  
+  - **Delay visibility of major OS software updates:**: Enter the number of days to delay all major OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value you entered in **Delay default visibility of software updates**, if applicable.   
 
      This setting applies to:  
     - macOS 11.3 and newer 
 
-  - **Delay visibility of non-OS software updates:**: Enter the number of days to delay all non-OS software updates, from 1-90. This value overrides the value you entered in **Delay default visibility of software updates**, if applicable.  
+  - **Delay visibility of minor OS software updates:**: Enter the number of days to delay all minor OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value you entered in **Delay default visibility of software updates**, if applicable.  
+
+     This setting applies to:  
+    - macOS 11.3 and newer 
+
+  - **Delay visibility of non-OS software updates:**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value you entered in **Delay default visibility of software updates**, if applicable.  
 
      This setting applies to:  
     - macOS 11.0 and newer 
 
-When the delay expires, users get a notification to update to the earliest version available when the delay was triggered. For example, if a macOS update is available on January 1, and **Delay visibility** is set to 5 days, then the update isn't shown as an available update. On the sixth day following the release, that update becomes available, and users can install it.  
+For example, if a macOS update is available on January 1, and **Delay visibility** is set to 5 days, then the update isn't shown as an available update. On the sixth day following the release, that update becomes available, and users can install it.  When the delay expires, users get a notification to update to the earliest version available when the delay was triggered. 
 
 ### Settings apply to: Automated device enrollment  
 
