@@ -41,7 +41,7 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
     You can also download the VHD by using [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) directly, both as managed disk or storage blob VHDs.
 3. Switch to your local PC and open Hyper-V Manager.
 4. Under **Actions**, select **New** > **Virtual Machine**.
-    ![Screenshot of Hyper-V create vm](./media/device-images-convert-gen2.md/create-vm.png)
+    ![Screenshot of Hyper-V create vm](./media/device-images-convert-gen2/create-vm.png)
 5. On the **Before You Begin** page, select **Next**.
 6. On the **Specify Name and Location** page, type friendly name, like CustomFinanceImageg2, and then select **Next**.
 7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
@@ -64,7 +64,7 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
 19. Upload the converted VHD back to Azure. You can use Azure Storage Explorer. For other upload options, see [Upload a generalized Windows VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed).
 20. Create a new VM template based on gen2 and click browse to mount the VHD to the template. NEED INSTRUCTIONS ON HOW TO DO THIS.
     - Make sure that the VHD remains **VHD in fixed size**. **VHDX as format** isn’t supported on Azure. WHERE ARE THESE SETTINGS?
-21. You can now upload the converted Gen2 custom device image to Windows 365. For information on how to upload custom images, see [](device-images.md#custom-images).
+21. You can now upload the converted Gen2 custom device image to Windows 365. For information on how to upload custom images, see [Custom images](device-images.md#custom-images).
 
 ## Creating new Gen2 custom images
 
