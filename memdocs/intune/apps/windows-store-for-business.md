@@ -77,6 +77,9 @@ You can now continue, and set up synchronization in the Intune console.
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 3. Click **Enable**.
+
+   ![MS Store for Business_Enable](https://user-images.githubusercontent.com/73707106/133440021-5c5662fc-7765-42b3-a7f9-041af4b04cc5.jpg)
+ 
 4. If you haven't already done so, click the link to sign up for the Microsoft Store for Business and associate your account as detailed previously.
 5. From the **Language** drop-down list, choose the language in which apps from the Microsoft Store for Business are displayed in the portal. Regardless of the language in which they are displayed, they are installed in the end user's language when available.
 6. Click **Sync** to get the apps you've purchased from the Microsoft Store into Intune.
