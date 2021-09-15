@@ -34,7 +34,10 @@ You can use the **Rename device** action to rename a device that is enrolled in 
 
 You can rename the following types of devices:
 
-- Android Enterprise dedicated devices
+- Android Enterprise:
+  - Corporate-owned work profiles
+  - Dedicated devices
+  - Fully managed
 - iOS/iPadOS supervised devices with iOS 9.3 and later
 - macOS 10 - Corporate-owned devices
 - Windows - Corporate-owned devices
