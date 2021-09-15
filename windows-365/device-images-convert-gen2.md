@@ -48,6 +48,7 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
 7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
     ![Screenshot of Specify Generation page](./media/device-images-convert-gen2/specify-generation.png)
 8. On the **Assign Memory** page, set **Startup memory** to at least 1024000 MB, preferably 4096000 MB. Select **Next**.
+    ![Screenshot of Hyper-V assign memory](./media/device-images-convert-gen2/assign-memory.png)
 9. On the **Configure Networking** page, select **Default Switch** > **Next**.
 10. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**.
 11. For **Location**, select **Browse** and select the virtual hard disk that you downloaded earlier.
