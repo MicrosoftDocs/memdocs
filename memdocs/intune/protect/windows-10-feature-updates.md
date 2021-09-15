@@ -74,11 +74,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
-- Feature updates are supported for the following Windows 10 editions:  
-  - Windows 10 Pro
-  - Windows 10 Enterprise
-  - Windows 10 Pro Education
-  - Windows 10 Education
+- Feature updates are supported for the following Windows 10and WIndows 11 editions:  
+  - Windows Pro
+  - Windows Enterprise
+  - Windows Pro Education
+  - Windows Education
 
   > [!NOTE]
   > **Unsupported versions and editions**:  
@@ -86,7 +86,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 ## Limitations for Feature updates for Windows 10 and later policy
 
-- When you deploy *Feature updates for Windows 10 and later* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
+- When you deploy *Feature updates for Windows 10 and later* policy to a device that also receives a *Update rings for Windows 10 or later* policy, review the update ring for the following configurations:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
@@ -99,7 +99,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
-  To prevent this initial delay from impacting your co-managed devices, configure a [Windows 10 feature update policy](../protect/windows-10-feature-updates.md) and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows feature update report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
+  To prevent this initial delay from impacting your co-managed devices, configure a [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md) policy and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows feature update report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 

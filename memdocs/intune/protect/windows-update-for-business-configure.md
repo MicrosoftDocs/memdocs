@@ -47,7 +47,7 @@ Intune provides the following policy types to manage updates, which you assign t
 
 - **Feature updates for Windows 10 and later** *(public preview)*: This policy updates devices to the Windows version you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
 
-  Feature updates policies are supported for devices that run Windows 10 version 1709 or later, and for Windows 11. You can also use Feature updates policy to [upgrade your devices that run Windows 10 to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
+  Feature updates policies are supported for devices that run on supported versions of Windows 10 and Windows 11. You can also use Feature updates policy to [upgrade your devices that run Windows 10 to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
 
 ## Move from update ring deferrals to feature updates policy
 
@@ -75,7 +75,7 @@ Use the following process to ensure Windows Update has processed your feature up
 
 2. View the [Windows 10 and later feature updates (Organizational)](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed.  Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 
-3. After devices are verified to be in the **OfferReady** state, you can safely reconfigure the [Windows 10 update ring policy](../protect/windows-10-update-rings.md) for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
+3. After devices are verified to be in the **OfferReady** state, you can safely reconfigure the [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) policy for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
 
 
 ## Reporting on updates
