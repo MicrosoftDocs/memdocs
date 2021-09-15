@@ -45,7 +45,7 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
 5. On the **Before You Begin** page, select **Next**.
 6. On the **Specify Name and Location** page, type friendly name, like CustomFinanceImageg2, and then select **Next**.
 7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
-    ![Screenshot of Specify Generation page](./media/device-images-convert-gen2.md/specify-generation.png)
+    ![Screenshot of Specify Generation page](./media/device-images-convert-gen2/specify-generation.png)
 8. On the **Assign Memory** page, set **Startup memory** to at least 1024000 MB, preferably 4096000 MB. Select **Next**.
 9. On the **Configure Networking** page, select **Default Switch** > **Next**.
 10. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**.
