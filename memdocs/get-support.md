@@ -120,7 +120,7 @@ On the *Find solutions* pane, specify a few details about an issue in the provid
 
 *This support experience is currently available for Intune and Co-management.*
 
-Some keywords will lead to an enhanced support scenario. For example, if your using Microsoft Intune and enter a generic search for *Need help with Intune* the console offers several more focused scenarios you can select, to drill into the problem and find more focused results:
+Some keywords will lead to an enhanced support scenario. For example, if your're using Microsoft Intune and enter a generic search for *Need help with Intune* the console offers several more focused scenarios you can select, to drill into the problem and find more focused results:
 
 :::image type="content" source="./media/get-support/scenarios-example.png" alt-text="View of the scenario options":::
 
