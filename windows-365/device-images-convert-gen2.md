@@ -51,6 +51,7 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
     ![Screenshot of Hyper-V assign memory](./media/device-images-convert-gen2/assign-memory.png)
 9. On the **Configure Networking** page, select **Default Switch** > **Next**.
 10. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**.
+    ![Screenshot of connect virtual hard disk page](./media/device-images-convert-gen2/connect-virtual-hard-disk.png)
 11. For **Location**, select **Browse** and select the virtual hard disk that you downloaded earlier.
 12. Select **Next** and on the **Summary** page select **Finish**.
 13. Download the WinPE media from [NEED LOCATION - WE CAN'T USE A PERSONAL SHAREPOINT]().
