@@ -203,7 +203,7 @@ The following command line switches can be used in any order.
 
 
 ## Improvements for in-console search
-Based on User Voice feedback, we have added the following improvements to in-console search:
+Based on your feedback, we have added the following improvements to in-console search:
 - **Object Path:**  
   Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
 

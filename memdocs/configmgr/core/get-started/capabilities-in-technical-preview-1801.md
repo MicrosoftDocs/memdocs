@@ -96,7 +96,7 @@ If you are using the [co-management](../../comanage/overview.md) capabilities, y
 
 ## Improvements to automatic deployment rule evaluation schedule
 <!-- 1357133 -->
-Based upon your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8819518-software-update-patch-tuesday-scheduling), you can now schedule automatic deployment rule (ADR) evaluation to be offset from a base day. For example, an offset of two days after the second Tuesday of the month evaluates the rule on Thursday. 
+Based upon your feedback, you can now schedule automatic deployment rule (ADR) evaluation to be offset from a base day. For example, an offset of two days after the second Tuesday of the month evaluates the rule on Thursday. 
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked. <br/>
