@@ -6,7 +6,6 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby

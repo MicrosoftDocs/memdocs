@@ -6,7 +6,6 @@ ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

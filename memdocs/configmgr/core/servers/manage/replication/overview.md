@@ -6,7 +6,6 @@ ms.date: 02/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-ms.assetid: 71d7430e-c5aa-485b-8dc0-c80fd8f29f17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

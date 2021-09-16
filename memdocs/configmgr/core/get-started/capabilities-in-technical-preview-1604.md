@@ -6,7 +6,6 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
 author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby

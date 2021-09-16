@@ -6,7 +6,6 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 5eeb50dc-b469-49f9-bea1-9c5047f1cb66
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

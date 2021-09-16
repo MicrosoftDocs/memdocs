@@ -6,7 +6,6 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz

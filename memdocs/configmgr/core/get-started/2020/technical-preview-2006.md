@@ -6,7 +6,6 @@ ms.date: 06/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: fa0fe290-2eb7-4be2-8f42-b84751774bca
 author: mestew
 ms.author: mstewart
 manager: dougeby
