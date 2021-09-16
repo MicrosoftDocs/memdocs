@@ -149,11 +149,11 @@ You can set security scopes on folders. If you have access to an object in the f
 
 We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
 
-- Number Errors​
-- Number In Progress​
-- Number Other​
-- Number Success​
-- Number Unknown​  
+- Number Errors
+- Number In Progress
+- Number Other
+- Number Success
+- Number Unknown
 
 ### Move the warning for a large number of results
 
@@ -167,13 +167,13 @@ There's now additional blank space in between this warning and the search field.
 
 <!--1357542-->
 
-Submit product feedback from the console.  
+Submit product feedback from the console.
 
-- **Send a smile**: Send feedback on what you liked  
+- **Send a smile**: Send feedback on what you liked
 
-- **Send a frown**: Send feedback on what you didn't like  
+- **Send a frown**: Send feedback on what you didn't like
 
-- **Send a suggestion**: Takes you to UserVoice to share your idea  
+- **Send a suggestion**: Takes you to the product feedback site to share your idea
 
 For more information, see [Product Feedback](../../understand/product-feedback.md).
 

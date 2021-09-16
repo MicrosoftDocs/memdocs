@@ -8,8 +8,8 @@ metadata:
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: mtillman
-  ms.date: 03/09/2020
+  manager: johmar
+  ms.date: 09/16/2021
 
 highlightedContent:
   items:
@@ -268,10 +268,6 @@ additionalContent:
         - title: Intune technical forums
           summary: Ask technical questions in the product forums
           url: /answers/products/mem
-        # Card
-        - title: UserVoice product feedback
-          summary: Share product ideas with the engineering team
-          url: https://microsoftintune.uservoice.com/forums/291681-ideas
         # Card
         - title: Intune tech community conversations
           summary: Check out active conversations from the technical community

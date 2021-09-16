@@ -65,9 +65,9 @@ You can find the **Feedback** option:
   ![Ribbon](./media/feedback-home.png)
 
 - When you right-click on any object in the console.   
-   ![Righ-click option](./media/feedback-option.png)   
+   ![Right-click option](./media/feedback-option.png)   
 
-  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://configurationmanager.uservoice.com/forums/300492-ideas).
+  Choosing **Feedback** opens your browser to the Configuration Manager feedback website.
 
 
 ###  Changes for Updates and Servicing

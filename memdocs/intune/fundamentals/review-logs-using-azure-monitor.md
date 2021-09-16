@@ -48,7 +48,7 @@ These features are part of the **Diagnostics Settings** in Intune.
 This article shows you how to use **Diagnostics Settings** to send log data to different services, gives examples and estimates of costs, and answers some common questions. Once you enable this feature, your logs are routed to the Azure Monitor service you choose.
 
 > [!NOTE]
-> These logs use schemas that can change. To provide feedback, including information in the logs, go to [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
+> These logs use schemas that can change.<!--  To provide feedback, including information in the logs, go to [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback). -->
 
 ## Prerequisites
 
