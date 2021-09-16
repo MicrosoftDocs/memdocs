@@ -879,6 +879,10 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
 
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
 
+## Safari Web Extensions
+
+If your app has a Safari web extension and supports sending data between the extension and the parent application, then your application may need to support blocking the data depending on the scenario. This can be done by calling the `isAppSharingAllowed` API in `IntuneMAMPolicy.h` from the parent application, then blocking the web extension accordingly.
+
 ## Displaying web content within an application
 
 If your application has the ability to display websites within a webview, you might need to add logic to prevent data leaks, depending on the specific scenario.
