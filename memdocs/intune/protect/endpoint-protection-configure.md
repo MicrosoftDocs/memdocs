@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure endpoint protection settings in Microsoft Intune
-description: Create endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
+title: Configure Endpoint protection settings in Microsoft Intune
+description: Create Endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 09/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,23 +27,23 @@ ms.collection: M365-identity-device-management
 mr.reviewer: karthib
 ---
 
-# Add endpoint protection settings in Intune
+# Add Endpoint protection settings in Intune
 
-With Intune, you can use device configuration profiles to manage common endpoint protection security features on devices, including:
+With Intune, you can use device configuration profiles to manage common Endpoint protection security features on devices, including:
 
 - Firewall
 - BitLocker
 - Allowing and blocking apps
 - Microsoft Defender and encryption
 
-For example, you can create an endpoint protection profile that only allows macOS users to install apps from the Mac App Store. Or, enable Windows SmartScreen when running apps on Windows 10 devices.
+For example, you can create an Endpoint protection profile that only allows macOS users to install apps from the Mac App Store. Or, enable Windows SmartScreen when running apps on Windows 10 devices.
 
-Before you create a profile, review the following articles that detail the endpoint protection settings Intune can manage for each supported platform:
+Before you create a profile, review the following articles that detail the Endpoint protection settings Intune can manage for each supported platform:
 
 - [macOS settings](endpoint-protection-macos.md)
 - [Windows 10 settings](endpoint-protection-windows-10.md)
 
-## Create a device profile containing endpoint protection settings
+## Create a device profile containing Endpoint protection settings
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
