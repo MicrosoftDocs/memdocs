@@ -77,7 +77,11 @@ In a future update, Windows 365 will support Windows 11 as a Cloud PC operating 
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
 
 <!-- ***********************************************-->
-<!--# Monitor and troubleshoot-->
+## Role-based access control
+
+### Windows 365 Administrator role<!--5827123-->
+
+In a future update, the Windows 365 Administrator role will be available for admins by using role assignment in the Microsoft Admin Center and Azure Active Directory (AAD). With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager.
 
 ## Next steps
 
