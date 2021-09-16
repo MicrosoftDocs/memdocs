@@ -10,8 +10,7 @@ ms.assetid: 7d07bd0a-7012-47f7-8bc5-509a402915b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Content Library Transfer tool

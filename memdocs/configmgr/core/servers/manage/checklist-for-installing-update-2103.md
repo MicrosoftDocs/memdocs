@@ -10,6 +10,7 @@ ms.assetid: c012ed7d-dba6-4075-9db2-61d0939d07a8
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2103 for Configuration Manager

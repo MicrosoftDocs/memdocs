@@ -10,8 +10,7 @@ ms.assetid: 6230a6e5-a1f6-459b-84f1-07fbde0e70f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Example validation state transitions for Asset Intelligence

@@ -10,8 +10,7 @@ ms.assetid: d5ce547d-3b3b-47d3-bcd7-6ff94692c046
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Send Schedule Tool

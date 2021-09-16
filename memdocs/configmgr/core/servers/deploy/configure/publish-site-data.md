@@ -1,7 +1,7 @@
 ---
-title: "Publish site data"
-titleSuffix: "Configuration Manager"
-description: "Learn how to publish Configuration Manager sites to Active Directory Domain Services."
+title: Publish site data
+titleSuffix: Configuration Manager
+description: Learn how to publish Configuration Manager sites to Active Directory Domain Services.
 ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Publish site data for Configuration Manager
 

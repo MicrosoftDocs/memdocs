@@ -1,7 +1,7 @@
 ---
-title: "Checklist for 1710 | Configuration Manager"
-titleSuffix: "Configuration Manager"
-description: "Learn about actions to take before updating to Configuration Manager version 1710."
+title: Checklist for 1710 | Configuration Manager
+titleSuffix: Configuration Manager
+description: Learn about actions to take before updating to Configuration Manager version 1710.
 ms.date: 12/19/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -11,8 +11,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Checklist for installing update 1710 for Configuration Manager
 

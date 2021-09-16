@@ -1,7 +1,7 @@
 ---
-title: "Manage queries"
-titleSuffix: "Configuration Manager"
-description: "Learn how to manage your queries. Includes a table for detailed reference."
+title: Manage queries
+titleSuffix: Configuration Manager
+description: Learn how to manage your queries. Includes a table for detailed reference.
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # How to manage queries in Configuration Manager
 

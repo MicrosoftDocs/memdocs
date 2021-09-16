@@ -9,7 +9,8 @@ ms.topic: conceptual
 ms.assetid: eca60d1f-6970-4a2d-b170-35353d0d961c
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2010 of Configuration Manager current branch

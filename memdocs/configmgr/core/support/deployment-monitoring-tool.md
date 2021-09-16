@@ -10,8 +10,7 @@ ms.assetid: 9edc214f-f405-456d-80df-8adcc2a5428d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Deployment Monitoring Tool

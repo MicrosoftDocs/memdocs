@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 description: Links to articles to install Configuration Manager site servers and roles.
+ms.localizationpriority: medium
 ---
 
 # Deploy servers and roles

@@ -1,7 +1,7 @@
 ---
-title: "Capabilities in Technical Preview 1701"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1701."
+title: Capabilities in Technical Preview 1701
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1701.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -11,8 +11,7 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1701 for Configuration Manager
 

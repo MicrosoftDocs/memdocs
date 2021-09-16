@@ -10,6 +10,7 @@ ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Test the database upgrade when installing an update

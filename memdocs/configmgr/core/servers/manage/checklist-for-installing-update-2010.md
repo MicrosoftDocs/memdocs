@@ -10,6 +10,7 @@ ms.assetid: 7438f541-0e30-40e8-8079-8d37efaa9183
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2010 for Configuration Manager

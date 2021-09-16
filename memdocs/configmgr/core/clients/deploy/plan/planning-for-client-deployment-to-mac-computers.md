@@ -1,7 +1,7 @@
 ---
-title: "Planning client deployment to Mac computers"
-titleSuffix: "Configuration Manager"
-description: "Plan for client deployment to Mac computers in Configuration Manager."
+title: Planning client deployment to Mac computers
+titleSuffix: Configuration Manager
+description: Plan for client deployment to Mac computers in Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,8 +10,7 @@ ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Planning for client deployment to Mac computers in Configuration Manager
 

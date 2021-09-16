@@ -10,6 +10,7 @@ ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Uninstall roles, sites, and hierarchies in Configuration Manager

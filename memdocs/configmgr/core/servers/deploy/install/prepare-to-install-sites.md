@@ -1,7 +1,7 @@
 ---
-title: "Prepare to install sites"
-titleSuffix: "Configuration Manager"
-description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
+title: Prepare to install sites
+titleSuffix: Configuration Manager
+description: If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors.
 ms.date: 09/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Prepare to install Configuration Manager sites
 

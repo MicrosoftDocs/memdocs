@@ -1,7 +1,7 @@
 ---
-title: "New version 1710 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1710 of Configuration Manager."
+title: New version 1710 | Microsoft Docs
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1710 of Configuration Manager.
 ms.date: 01/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -11,8 +11,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1710 of Configuration Manager
 

@@ -1,7 +1,7 @@
 ---
-title: "Audit remote control usage"
-titleSuffix: "Configuration Manager"
-description: "Audit remote control use in Configuration Manager."
+title: Audit remote control usage
+titleSuffix: Configuration Manager
+description: Audit remote control use in Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,8 +10,7 @@ ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # How to audit remote control usage in Configuration Manager
 

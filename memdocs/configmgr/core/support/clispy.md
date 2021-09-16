@@ -10,8 +10,7 @@ ms.assetid: 60575413-44fe-43bb-bcfb-39ec5ed5055b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Client Spy

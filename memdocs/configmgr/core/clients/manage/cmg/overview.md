@@ -9,6 +9,7 @@ ms.topic: overview
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Cloud management gateway overview

@@ -9,6 +9,7 @@ ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported OS versions for Configuration Manager consoles

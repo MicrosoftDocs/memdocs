@@ -1,7 +1,7 @@
 ---
-title: "Hardware inventory security privacy"
-titleSuffix: "Configuration Manager"
-description: "Get security and privacy information for hardware inventory in Configuration Manager."
+title: Hardware inventory security privacy
+titleSuffix: Configuration Manager
+description: Get security and privacy information for hardware inventory in Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,8 +10,7 @@ ms.assetid: 62e20d86-db6d-4a1f-b14a-905a9de31698
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Security and privacy for hardware inventory in Configuration Manager
 

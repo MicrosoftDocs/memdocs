@@ -1,7 +1,7 @@
 ---
-title: "Create queries"
-titleSuffix: "Configuration Manager"
-description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
+title: Create queries
+titleSuffix: Configuration Manager
+description: Discover how to create and import queries in Configuration Manager. Includes example queries and tips.
 ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Create queries in Configuration Manager
 

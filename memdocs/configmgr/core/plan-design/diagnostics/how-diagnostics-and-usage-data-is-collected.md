@@ -10,6 +10,7 @@ ms.assetid: becfa825-b19f-448c-ab82-bb929255e4ae
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How Configuration Manager collects diagnostics and usage data

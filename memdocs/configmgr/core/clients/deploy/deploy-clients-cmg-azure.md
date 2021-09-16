@@ -10,6 +10,7 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication

@@ -1,7 +1,7 @@
 ---
-title: "Migrate content"
-titleSuffix: "Configuration Manager"
-description: "Use distribution points to manage content while you migrate data to a Configuration Manager current branch destination hierarchy."
+title: Migrate content
+titleSuffix: Configuration Manager
+description: Use distribution points to manage content while you migrate data to a Configuration Manager current branch destination hierarchy.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Plan a content deployment migration strategy in Configuration Manager
 

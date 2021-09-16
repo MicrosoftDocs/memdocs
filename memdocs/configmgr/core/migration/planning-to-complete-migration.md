@@ -1,7 +1,7 @@
 ---
-title: "Complete migration"
-titleSuffix: "Configuration Manager"
-description: "Learn how to finish migration to a Configuration Manager current branch destination hierarchy after a source hierarchy no longer has data."
+title: Complete migration
+titleSuffix: Configuration Manager
+description: Learn how to finish migration to a Configuration Manager current branch destination hierarchy after a source hierarchy no longer has data.
 ms.date: 01/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Plan to complete migration in Configuration Manager
 

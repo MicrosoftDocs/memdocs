@@ -10,8 +10,7 @@ ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 
 # Configure power management in Configuration Manager

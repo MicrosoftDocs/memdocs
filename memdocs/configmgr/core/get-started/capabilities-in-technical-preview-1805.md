@@ -11,8 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # Capabilities in Technical Preview 1805 for Configuration Manager

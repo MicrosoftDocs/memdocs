@@ -10,9 +10,8 @@ ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 # Checklist for installing update 1802 for Configuration Manager
 

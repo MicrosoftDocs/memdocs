@@ -9,7 +9,8 @@ ms.topic: conceptual
 ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2006 of Configuration Manager current branch

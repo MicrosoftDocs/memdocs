@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 description: Additional links for Configuration Manager help documentation
+ms.localizationpriority: medium
 ---
 
 # Online documentation for Configuration Manager

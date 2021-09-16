@@ -10,6 +10,7 @@ ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for collections in Configuration Manager

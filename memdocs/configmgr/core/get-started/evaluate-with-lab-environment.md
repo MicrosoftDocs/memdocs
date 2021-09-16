@@ -1,7 +1,7 @@
 ---
-title: "Evaluate in a lab environment"
-titleSuffix: "Configuration Manager"
-description: "Create a lab environment to evaluate Configuration Manager for use in your organization."
+title: Evaluate in a lab environment
+titleSuffix: Configuration Manager
+description: Create a lab environment to evaluate Configuration Manager for use in your organization.
 ms.date: 02/28/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Evaluate Configuration Manager by building your own lab environment
 

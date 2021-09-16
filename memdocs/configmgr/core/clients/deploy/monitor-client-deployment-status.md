@@ -1,7 +1,7 @@
 ---
-title: "Monitor client deployment status"
-titleSuffix: "Configuration Manager"
-description: "Monitor client deployment status in Configuration Manager."
+title: Monitor client deployment status
+titleSuffix: Configuration Manager
+description: Monitor client deployment status in Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,8 +10,7 @@ ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # How to monitor client deployment status in Configuration Manager
 

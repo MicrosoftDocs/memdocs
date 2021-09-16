@@ -1,7 +1,7 @@
 ---
-title: "Capabilities in Technical Preview 1604"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1604."
+title: Capabilities in Technical Preview 1604
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1604.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -11,8 +11,7 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1604 for Configuration Manager
 

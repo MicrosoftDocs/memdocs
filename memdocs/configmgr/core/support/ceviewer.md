@@ -10,6 +10,7 @@ ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Collection Evaluation Viewer

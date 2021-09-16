@@ -10,8 +10,7 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # About discovery methods for Configuration Manager
 

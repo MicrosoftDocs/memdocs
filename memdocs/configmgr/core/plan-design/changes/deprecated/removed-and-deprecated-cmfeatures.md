@@ -9,6 +9,7 @@ ms.date: 08/02/2021
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Removed and deprecated features for Configuration Manager

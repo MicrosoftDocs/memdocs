@@ -1,7 +1,7 @@
 ---
-title: "Maintenance tasks"
-titleSuffix: "Configuration Manager"
-description: "Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies and when to perform them."
+title: Maintenance tasks
+titleSuffix: Configuration Manager
+description: Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies and when to perform them.
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Maintenance tasks for Configuration Manager
 

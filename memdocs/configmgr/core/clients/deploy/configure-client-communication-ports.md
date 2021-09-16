@@ -10,6 +10,7 @@ ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to configure client communication ports in Configuration Manager

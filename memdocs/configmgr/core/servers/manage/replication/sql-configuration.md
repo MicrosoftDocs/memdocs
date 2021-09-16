@@ -10,6 +10,7 @@ ms.assetid: 95ab8cbd-0807-4422-823a-f5f9314ba623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # SQL Server configuration

@@ -10,8 +10,7 @@ ms.assetid: 75748377-1a45-4538-9c7c-d81852d5d3a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Flowchart - Promote site server (planned)

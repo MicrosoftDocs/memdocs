@@ -10,6 +10,7 @@ ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How Microsoft uses Configuration Manager diagnostics and usage data

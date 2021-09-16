@@ -10,8 +10,7 @@ ms.assetid: 8143e3bf-d6bd-4c69-aec1-e6989cf2ecd9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Power Viewer Tool

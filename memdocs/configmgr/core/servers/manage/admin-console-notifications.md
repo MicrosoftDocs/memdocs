@@ -10,6 +10,7 @@ ms.assetid: a0d709fa-c4f8-46e1-b432-582cc293be35
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration Manager console notifications

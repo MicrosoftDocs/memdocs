@@ -1,7 +1,7 @@
 ---
-title: "Migration operations"
-titleSuffix: "Configuration Manager"
-description: "Create and run jobs to migrate data and clients to Configuration Manager current branch."
+title: Migration operations
+titleSuffix: Configuration Manager
+description: Create and run jobs to migrate data and clients to Configuration Manager current branch.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,7 @@ ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Operations for migrating to Configuration Manager current branch
 

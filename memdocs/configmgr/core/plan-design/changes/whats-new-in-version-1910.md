@@ -9,8 +9,9 @@ ms.topic: conceptual
 ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1910 of Configuration Manager current branch

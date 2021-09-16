@@ -10,6 +10,7 @@ ms.assetid: dfda09bc-5eca-4fb6-9064-4e51705cfe58
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manage Configuration Manager console extensions

@@ -8,8 +8,9 @@ ms.technology: configmgr-core
 ms.topic: sample
 ms.assetid: 9cbf0ea8-11f3-4d8e-9afa-9b2765fb3f01
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # CMPivot sample scripts

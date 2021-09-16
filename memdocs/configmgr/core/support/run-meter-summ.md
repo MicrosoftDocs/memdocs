@@ -10,8 +10,7 @@ ms.assetid: d27f88fe-817f-4af4-b290-c16f2e46cf31
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Run Meter Summarization Tool

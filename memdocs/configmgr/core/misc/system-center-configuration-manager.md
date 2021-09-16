@@ -10,6 +10,7 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 description: Placeholder file for Configuration Manager documentation
+ms.localizationpriority: medium
 ---
 # Configuration Manager
 

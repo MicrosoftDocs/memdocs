@@ -10,6 +10,7 @@ ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Recommendations for client deployment in Configuration Manager

@@ -10,6 +10,7 @@ ms.assetid: 39a3001e-2df5-4b36-bd83-4f1d21dda335
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Reinit missing message

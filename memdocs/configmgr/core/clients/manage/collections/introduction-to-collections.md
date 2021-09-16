@@ -1,7 +1,7 @@
 ---
-title: "Collections introduction"
-titleSuffix: "Configuration Manager"
-description: "Get an introduction to using collections in Configuration Manager."
+title: Collections introduction
+titleSuffix: Configuration Manager
+description: Get an introduction to using collections in Configuration Manager.
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,8 +10,7 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Introduction to collections in Configuration Manager
 

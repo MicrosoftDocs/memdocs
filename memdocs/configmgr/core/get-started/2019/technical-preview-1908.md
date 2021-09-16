@@ -10,9 +10,8 @@ ms.assetid: d9c6163f-b365-4417-86b2-cd63c0602ec8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Features in Configuration Manager technical preview version 1908

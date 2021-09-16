@@ -10,6 +10,7 @@ ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to remotely administer a Windows client computer by using Configuration Manager
