@@ -1,5 +1,5 @@
 ---
-title: Application reliability (preview) in endpoint analytics
+title: Application reliability in endpoint analytics
 description: Get details about application reliability in endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 ms.date: 03/01/2021
@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Application reliability (preview) in endpoint analytics
+# Application reliability in endpoint analytics
 <!--IN5653073-->
 The application reliability report provides insight into potential issues for desktop applications on managed devices. You can quickly identify the top applications that are impacting end-user productivity, and see aggregate app usage along with app failure metrics for these applications. From the report, drill into specific device data and view a timeline of app reliability events to troubleshoot end-user impacting issues.
 
