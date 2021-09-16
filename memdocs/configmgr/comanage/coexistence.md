@@ -1,17 +1,16 @@
 ---
 title: Third-party MDM coexistence
 titleSuffix: Configuration Manager
-description: Learn about using a third-party MDM service with Configuration Manager 
+description: Learn about using a third-party MDM service with Configuration Manager
 ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
-
-
 ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Third-party MDM coexistence with Configuration Manager

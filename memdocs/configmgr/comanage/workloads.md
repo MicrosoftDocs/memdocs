@@ -1,7 +1,7 @@
 ---
 title: Co-management workloads
 titleSuffix: Configuration Manager
-description: Learn about the workloads that you can switch from Configuration Manager to Microsoft Intune. 
+description: Learn about the workloads that you can switch from Configuration Manager to Microsoft Intune.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
+ms.localizationpriority: medium
 ---
 
 # Co-management workloads

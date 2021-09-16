@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 07/16/2020
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
+ms.localizationpriority: medium
 ---
 
 # How to switch Configuration Manager workloads to Intune

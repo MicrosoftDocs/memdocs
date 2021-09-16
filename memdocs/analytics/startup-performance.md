@@ -6,11 +6,9 @@ ms.date: 02/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: bdf15dfd-8a09-46f4-8a09-6200a67e3fe7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
