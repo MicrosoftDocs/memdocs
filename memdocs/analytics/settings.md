@@ -6,11 +6,10 @@ ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
-ms.assetid: 266a84b2-7b8d-4b9c-919e-114c10a510e5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: medium
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
