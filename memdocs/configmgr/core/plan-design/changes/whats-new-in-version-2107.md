@@ -2,7 +2,7 @@
 title: What's new in version 2107
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2107 of Configuration Manager current branch.
-ms.date: 08/25/2021
+ms.date: 09/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -29,7 +29,6 @@ To take full advantage of new Configuration Manager features, after you update t
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2107+-+Configuration+Manager%22&locale=en-us`
 
 ## Cloud-attached management
-
 
 ### Cloud attach your environment during site update
 <!-- 9563659,7958749-->
@@ -65,6 +64,14 @@ When you deploy a CMG with a virtual machine scale set, you can now choose the v
 This control gives you greater flexibility with your CMG deployment. You can adjust the size for test labs or if you support large environments. For example, the smaller **Lab** size is ideal for testing with a smaller number of clients at less cost. For production deployments, either use the default **Standard** size or add more capacity with the **Large** size.
 
 For more information, see [Cost of CMG: Virtual machine scale set](../../clients/manage/cmg/cost.md#virtual-machine-scale-set).
+
+### Tenant attach: BitLocker recovery keys
+
+<!--6979225-->
+
+Get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center. For example, a help desk technician who doesn't have access to Configuration Manager could use the web-based admin center to help an end user get a recovery key for their device.
+
+For more information, see [Tenant attach: BitLocker recovery keys](../../../tenant-attach/bitlocker-recovery-keys.md).
 
 ### Tenant attach support for US Government cloud
 
