@@ -6,7 +6,6 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz

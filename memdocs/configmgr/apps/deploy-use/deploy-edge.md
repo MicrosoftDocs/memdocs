@@ -6,7 +6,6 @@ ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
