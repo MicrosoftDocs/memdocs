@@ -1,17 +1,15 @@
 ---
-title: "Manage network bandwidth for content"
-titleSuffix: "Configuration Manager"
-description: "Configure scheduling, throttling, and prestaged content for Configuration Manager."
+title: Manage network bandwidth for content
+titleSuffix: Configuration Manager
+description: Configure scheduling, throttling, and prestaged content for Configuration Manager.
 ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Manage network bandwidth for content

@@ -5,12 +5,10 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-
-
-ms.assetid: 68430abb-d18e-4266-aa5a-3ad3ab753f4c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What happened to System Center Configuration Manager?
