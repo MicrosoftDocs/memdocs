@@ -7,11 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
 ms.assetid: cbdd4a4a-2761-4e66-91eb-8602fb8b4926
-author: mestew  
+author: mestew
 ms.author: mstewart
 manager: dougeby
-
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
+ms.localizationpriority: medium
 ---
 
 # Quickstart: Enroll Configuration Manager devices into Endpoint analytics

@@ -10,6 +10,7 @@ ms.assetid: 4397e0bc-4a13-4cf7-bc18-8cbc86d583ef
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Get support for Endpoint analytics

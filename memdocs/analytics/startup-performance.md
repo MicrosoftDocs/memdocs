@@ -10,7 +10,7 @@ ms.assetid: bdf15dfd-8a09-46f4-8a09-6200a67e3fe7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: medium
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
