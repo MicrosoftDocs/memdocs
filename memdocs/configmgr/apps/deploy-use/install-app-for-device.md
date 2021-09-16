@@ -10,6 +10,7 @@ ms.assetid: c2a71fca-8744-4d72-abf9-9d8c5d2afb00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install applications for a device

@@ -10,8 +10,7 @@ ms.assetid: a4eb09c8-e570-4369-9adb-ded9c8ad3400
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Technical Reference for Application Deployment in Configuration Manager

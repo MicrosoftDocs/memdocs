@@ -10,6 +10,7 @@ ms.assetid: c5e06c10-567b-44c2-9bfe-264e1a429ba8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Check for running executable files

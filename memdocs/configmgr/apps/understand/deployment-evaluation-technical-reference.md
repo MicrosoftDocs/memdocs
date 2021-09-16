@@ -10,8 +10,7 @@ ms.assetid: a7035223-d7bd-47b4-896f-08de3416a4eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Application Deployment Evaluation

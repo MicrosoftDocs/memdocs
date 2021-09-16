@@ -1,7 +1,7 @@
 ---
-title: "Create App-V virtual environments"
-titleSuffix: "Configuration Manager"
-description: "Create virtual environments with Microsoft Application Virtualization so apps can share data with each other."
+title: Create App-V virtual environments
+titleSuffix: Configuration Manager
+description: Create virtual environments with Microsoft Application Virtualization so apps can share data with each other.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -10,8 +10,7 @@ ms.assetid: b6b86078-fcc4-46cf-87d6-4b52b914b712
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Create App-V virtual environments in Configuration Manager
 

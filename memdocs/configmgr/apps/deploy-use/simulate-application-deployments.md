@@ -1,7 +1,7 @@
 ---
-title: "Simulate application deployments"
-titleSuffix: "Configuration Manager"
-description: "Evaluate the detection method, requirements, and dependencies for a deployment type without installing the application."
+title: Simulate application deployments
+titleSuffix: Configuration Manager
+description: Evaluate the detection method, requirements, and dependencies for a deployment type without installing the application.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -10,8 +10,7 @@ ms.assetid: 28b240a4-d358-40ce-8006-c697b1622ece
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # Simulate application deployments with Configuration Manager
 

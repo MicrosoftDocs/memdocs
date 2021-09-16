@@ -1,7 +1,7 @@
 ---
-title: "Create global conditions"
-titleSuffix: "Configuration Manager"
-description: "Create global conditions to specify how an application is provided and deployed to client devices."
+title: Create global conditions
+titleSuffix: Configuration Manager
+description: Create global conditions to specify how an application is provided and deployed to client devices.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -10,8 +10,7 @@ ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # How to create global conditions in Configuration Manager
 

@@ -10,8 +10,7 @@ ms.assetid: 4e62b04d-fe56-42ed-87dc-e673cf061d52
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Application Deployment for Device Collections

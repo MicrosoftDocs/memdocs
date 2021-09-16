@@ -10,6 +10,7 @@ ms.assetid: 7570731f-7aee-4939-8503-b6e2c24fec78
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # User notifications

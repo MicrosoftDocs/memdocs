@@ -10,8 +10,7 @@ ms.assetid: 2de963d7-ffb9-43c3-9e1d-fc992b67bebd
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 
 # Package definition files

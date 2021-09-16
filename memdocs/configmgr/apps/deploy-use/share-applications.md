@@ -1,7 +1,7 @@
 ---
-title: "Share applications in the Software Center"
-titleSuffix: "Configuration Manager"
-description: "Share a link to an application in the Software Center in Configuration Manager."
+title: Share applications in the Software Center
+titleSuffix: Configuration Manager
+description: Share a link to an application in the Software Center in Configuration Manager.
 ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -10,8 +10,7 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Share an application from Software Center
