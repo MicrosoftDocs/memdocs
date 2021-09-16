@@ -6,7 +6,6 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart

@@ -6,7 +6,6 @@ ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: how-to
-ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 author: mestew
 manager: dougeby
 ms.author: mstewart
