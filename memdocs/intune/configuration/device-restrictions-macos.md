@@ -141,9 +141,9 @@ To use this setting, select the software updates you want to delay:
   
   - **Non-OS software updates**: Non-OS software updates, such as Safari updates, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of non OS software updates** field. Requires macOS 11.0 and later.  
 
-Then enter how long you want to delay each type of update, from 1-90 days. You can configure a default time that applies to all software updates, or you can configure indvidual times based on update type.        
+Then enter how long you want to delay each type of update, from 1-90 days. 
 
-  - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default.Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually. 
+  - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually. 
 
   - **Delay visibility of major OS software updates:**: Enter the number of days to delay all major OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value you entered in **Delay default visibility of software updates**, if applicable.   
 
@@ -223,7 +223,7 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
 
     After six failed attempts, macOS automatically forces a time delay before a passcode can be entered again. The delay increases with each attempt. Set the **Lockout duration** to add a delay before the next passcode can be entered.
 
-    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
+    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign-in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
 
       If you leave this value blank, or don't change it, then `30` minutes is used by default.
 
