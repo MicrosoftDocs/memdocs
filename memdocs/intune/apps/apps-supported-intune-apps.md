@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/16/2021
+ms.date: 09/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -93,6 +93,8 @@ The below apps support the core Intune App Protection Policy settings.
 |Dynamics 365 Remote Assist|[iOS](https://apps.apple.com/us/app/dynamics-365-remote-assist/id1470512565)|✔|No settings|
 |Dynamics 365 Sales|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone.sales)|✔|No settings|
 |Dynamics 365 Sales|[iOS](https://apps.apple.com/app/dynamics-365-sales/id1485578688)|✔|No settings|
+|Dynamics 365 for phone|[iOS](https://apps.apple.com/us/app/dynamics-365-for-phones/id1003997947)|✔|No settings|
+|Dynamics 365 for phone|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone)|✔|No settings|
 |Field Service (Dynamics 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone.fieldServices)|✔|No settings|
 |Field Service (Dynamics 365)|[iOS](https://apps.apple.com/app/field-service-dynamics-365/id1485579247?ls=1)|✔|No settings|
 |Field Service Mobile|[Android](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile)|✔|No settings|
