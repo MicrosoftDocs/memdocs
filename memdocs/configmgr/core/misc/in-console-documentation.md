@@ -10,7 +10,6 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ---
 
 <!-- 
