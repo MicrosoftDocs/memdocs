@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 10/23/2020
+ms.localizationpriority: medium
 ---
 <!--Don't apply H2 in this include file since they are context driven by article. Used in overview.md, enroll-configmgr.md and enroll-intune.md files -->
 - The following permissions are used for Endpoint analytics:
