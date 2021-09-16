@@ -136,7 +136,17 @@ To view the **Feature update failures** report, use the following steps:
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
 
 ## Assignment failures report (Operational)
-The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to the this report. Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
+The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to the this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
+
+Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security Baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
+
+| Permission | Action | Details |
+|---|---|---|
+| Security   Baseline | Read | **Yes**: Enables the ability to   view baseline/endpoint security policies in Assignment Failures   report.<p>**No**:Enables the ability to view baseline/endpoint security   policies in Assignment Failures report. |
+| Device   Configuration | Read | **Yes**: Enables the ability to   view device configuration policies in Assignment Failures   report.<p>**No**:Enables  the   ability to view device configuration policies in Assignment Failures report. |
+| Device   Compliance Policies | View Reports | **Yes**: No impact to Assignment   Failures report.<p>**No**:No impact to Assignment Failures report. |
+
+For additional information about RBAC permissions, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md) and [Permissions granted by the Endpoint Security Manager role](../protect/endpoint-security.md#permissions-granted-by-the-endpoint-security-manager-role).
 
 You can view the **Assignment failures** report using the following steps:
 
