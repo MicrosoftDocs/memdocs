@@ -13,7 +13,7 @@ ms.author: brenduns
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy Attack surface reduction policies from the admin center (preview)
-<!--5691658-->
+<!--7323386-->
 *Applies to: Configuration Manager (current branch)*
 
 > [!Important]
