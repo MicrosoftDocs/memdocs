@@ -10,6 +10,7 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 # Get started with compliance settings in Configuration Manager
 

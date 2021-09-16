@@ -1,7 +1,7 @@
 ---
-title: "Deploy configuration baselines"
-titleSuffix: "Configuration Manager"
-description: "Deploy configuration baselines to define configuration baseline deployments and to add or remove configuration baselines from deployments."
+title: Deploy configuration baselines
+titleSuffix: Configuration Manager
+description: Deploy configuration baselines to define configuration baseline deployments and to add or remove configuration baselines from deployments.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -10,8 +10,7 @@ ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # How to deploy configuration baselines in Configuration Manager
 

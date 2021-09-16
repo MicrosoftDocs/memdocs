@@ -1,7 +1,7 @@
 ---
-title: "Manage configuration data"
-titleSuffix: "Configuration Manager"
-description: "After you create configuration items and baselines in Configuration Manager, you can use other commands to perform various actions."
+title: Manage configuration data
+titleSuffix: Configuration Manager
+description: After you create configuration items and baselines in Configuration Manager, you can use other commands to perform various actions.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -10,8 +10,7 @@ ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # Manage configuration data in Configuration Manager
 

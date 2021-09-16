@@ -10,6 +10,7 @@ ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
 author: mestew
 manager: dougeby
 ms.author: mstewart
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for compliance settings in Configuration Manager

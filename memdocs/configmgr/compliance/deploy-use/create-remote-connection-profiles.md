@@ -10,8 +10,7 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
 # Remote connection profiles in Configuration Manager

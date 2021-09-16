@@ -10,8 +10,7 @@ ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client

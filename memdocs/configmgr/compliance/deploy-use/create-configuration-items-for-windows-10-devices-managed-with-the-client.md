@@ -10,8 +10,7 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
 # Create configuration items for Windows 10 devices
