@@ -9,10 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
-<<<<<<< HEAD
-=======
 ms.localizationpriority: medium
->>>>>>> c854d5d335ab96aa176a9ba8c9d68002934f5949
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
