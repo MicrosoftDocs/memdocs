@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # How to close your account

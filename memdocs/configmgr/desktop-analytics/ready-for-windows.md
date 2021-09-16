@@ -12,6 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Ready for modern desktop retirement FAQ
