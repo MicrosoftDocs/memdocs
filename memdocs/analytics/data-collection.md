@@ -10,7 +10,7 @@ ms.assetid: 8036825c-1ae5-4bbe-b3be-3c09eabca19f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: medium
 ---
 
 # Endpoint analytics data collection

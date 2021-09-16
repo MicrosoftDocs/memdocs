@@ -10,6 +10,7 @@ ms.assetid: 68d07732-421e-40ca-9ee3-f5a856407259
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Application reliability in endpoint analytics

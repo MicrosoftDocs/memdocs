@@ -10,8 +10,8 @@ ms.assetid: 1be507b8-c3bf-46fd-b010-e2f432659a63
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Intune devices into Endpoint analytics so that I can gain insights into the user experience.
+ms.localizationpriority: medium
 ---
 
 # Quickstart: Enroll Intune devices into Endpoint analytics
