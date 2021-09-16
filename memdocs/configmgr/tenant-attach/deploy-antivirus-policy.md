@@ -59,5 +59,6 @@ To use this functionality, create an antivirus policy from the [Microsoft Endpoi
 
 - [Antivirus policy settings for tenant attached devices](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 - [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
-- [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)
+- [Create and deploy endpoint security Attack surface reduction policy to tenant attached devices](deploy-asr-policy.md)
 - [Create and deploy endpoint security Endpoint Detection and Response policy to tenant attached devices](atp-onboard.md)
+- [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)

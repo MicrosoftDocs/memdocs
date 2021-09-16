@@ -42,4 +42,5 @@ ms.author: mstewart
 
 - [Settings for firewall policy for tenant attached devices](../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 - [Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
+- [Create and deploy endpoint security Attack surface reduction policy to tenant attached devices](deploy-asr-policy.md)
 - [Create and deploy endpoint security Endpoint Detection and Response policy to tenant attached devices](atp-onboard.md)

@@ -4,7 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
-ms.date: 08/27/2021
+ms.date: 09/20/2021
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
 The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
@@ -46,6 +46,28 @@ The following profiles are supported for devices you manage with Configuration M
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     - Windows 10 and later (x86, x64, ARM64)
-  
-  > [!Important] 
-  > To support firewall policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
+
+    > [!Important]
+    > To support firewall policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
+
+  - Profile: **Exploit Protection (ConfigMgr)(preview)** - Manage [Exploit Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json) as part of Attack surface reduction policy, when you use tenant attach.
+
+    This profile is supported with devices that are tenant attached and run the following platforms:
+    <!-- List of supported platforms is pending: 
+    - Windows 10 and later (x86, x64, ARM64)
+    - Windows Server 2019 and later (x64)
+    - Windows Server 2016 (x64)
+    - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010
+    - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 
+    -->
+
+  - Profile: **Web Protection (ConfigMgr)(preview)** - Manage [Web Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json) as part of Attack surface reduction policy, when you use tenant attach.
+
+    This profile is supported with devices that are tenant attached and run the following platforms:
+    <!-- List of supported platforms is pending: 
+    - Windows 10 and later (x86, x64, ARM64)
+    - Windows Server 2019 and later (x64)
+    - Windows Server 2016 (x64)
+    - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010
+    - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 
+    -->
