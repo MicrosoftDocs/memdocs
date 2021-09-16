@@ -74,7 +74,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
-- Feature updates are supported for the following Windows 10and WIndows 11 editions:  
+- Feature updates are supported for the following Windows 10 and Windows 11 editions:  
   - Windows Pro
   - Windows Enterprise
   - Windows Pro Education
@@ -146,7 +146,7 @@ If you’re already using Endpoint analytics, navigate to the [Work from anywher
 
 ### Licensing for Windows 11 versions
 
-Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/en-us/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
+Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
 
 When you use configure a policy in the Microsoft Endpoint Manager admin center to deploy any Windows 11 version, the Microsoft Endpoint Manager admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won’t see or need to accept the license agreement, making the update process seamless.
 
