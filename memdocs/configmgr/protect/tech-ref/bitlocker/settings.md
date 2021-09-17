@@ -6,7 +6,6 @@ ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
-ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

@@ -6,7 +6,6 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
 author: mestew
 ms.author: mstewart
 manager: dougeby
