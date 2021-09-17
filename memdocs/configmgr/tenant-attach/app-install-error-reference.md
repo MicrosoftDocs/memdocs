@@ -1,15 +1,15 @@
 ---
 title: Application installation error codes reference
 titleSuffix: Configuration Manager
-description: "Reference Application installation errors for tenant attach"
+description: Reference Application installation errors for tenant attach
 ms.date: 12/14/2020
 ms.topic: reference
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 221762d7-6c79-4be8-9bef-daa82571652f
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Application installation common error codes reference

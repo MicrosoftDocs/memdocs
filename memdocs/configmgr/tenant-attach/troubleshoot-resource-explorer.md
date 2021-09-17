@@ -1,15 +1,15 @@
 ---
 title: Troubleshooting resource explorer
 titleSuffix: Configuration Manager
-description: "Troubleshooting resource explorer for Configuration Manager tenant attach"
+description: Troubleshooting resource explorer for Configuration Manager tenant attach
 ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 05829d36-2cbf-4921-bf4b-cfcdef4cfcc1
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshoot resource explorer for devices uploaded to the admin center (preview)
