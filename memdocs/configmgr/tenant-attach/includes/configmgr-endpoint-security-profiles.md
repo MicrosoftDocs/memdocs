@@ -54,21 +54,12 @@ The following profiles are supported for devices you manage with Configuration M
   - Profile: **Exploit Protection (ConfigMgr)(preview)** - Manage [Exploit Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
-    <!-- List of supported platforms is pending: 
+
     - Windows 10 and later (x86, x64, ARM64)
-    - Windows Server 2019 and later (x64)
-    - Windows Server 2016 (x64)
-    - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010
-    - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 
-    -->
+
 
   - Profile: **Web Protection (ConfigMgr)(preview)** - Manage [Web Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
-    <!-- List of supported platforms is pending: 
+
     - Windows 10 and later (x86, x64, ARM64)
-    - Windows Server 2019 and later (x64)
-    - Windows Server 2016 (x64)
-    - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010
-    - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 
-    -->
