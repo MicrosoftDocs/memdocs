@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for security
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join security views to other views.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: dc2b403f-b824-47ed-a68f-f9473573e199
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Sample queries for security in Configuration Manager

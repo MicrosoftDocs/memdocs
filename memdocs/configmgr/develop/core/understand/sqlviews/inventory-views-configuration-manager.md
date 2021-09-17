@@ -1,4 +1,4 @@
-﻿---
+---
 title: Inventory views
 titleSuffix: Configuration Manager
 description: Hardware and software inventory information about the clients, files, and products, in the Configuration Manager hierarchy.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 4487dbcb-1652-454f-8c45-3f543db1ad50
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Inventory views in Configuration Manager

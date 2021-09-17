@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Advanced exercise 1: Create a new report for compliance settings'
 titleSuffix: Configuration Manager
 description: Create a Configuration Manager report that displays the name and description of the configuration baselines.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 9b87348f-21d1-40ba-9d3d-c56dd7bae60d
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Advanced exercise 1: Create a new report for compliance settings in Configuration Manager

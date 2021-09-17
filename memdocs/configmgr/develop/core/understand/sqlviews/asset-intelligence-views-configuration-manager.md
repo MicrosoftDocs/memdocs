@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: a2ab0d62-4053-4a59-8c5c-613604275909
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Asset intelligence views in Configuration Manager

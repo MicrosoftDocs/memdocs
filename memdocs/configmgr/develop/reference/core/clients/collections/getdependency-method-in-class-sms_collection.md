@@ -9,7 +9,7 @@ ms.topic: reference
 ms.assetid: 32efccb1-4a3a-4811-902d-e26dd9c9c7ba
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # GetDependency method in class SMS_Collection

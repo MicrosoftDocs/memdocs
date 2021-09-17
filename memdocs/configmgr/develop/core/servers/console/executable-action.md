@@ -8,7 +8,7 @@ ms.technology: configmgr-sdk
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Configuration Manager Executable Action

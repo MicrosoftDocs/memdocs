@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for asset intelligence
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common Asset Intelligence views to other views.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 3e00495e-9ed8-49e7-a6ad-2d67c7ecf9b0
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Sample queries for asset intelligence in Configuration Manager

@@ -8,7 +8,7 @@ ms.technology: configmgr-sdk
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Custom properties for devices

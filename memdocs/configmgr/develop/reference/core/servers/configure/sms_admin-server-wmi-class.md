@@ -9,7 +9,7 @@ ms.topic: reference
 ms.assetid: ddc3da5e-2d17-4e03-9987-d7fc5c06f25d
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_Admin server WMI class
