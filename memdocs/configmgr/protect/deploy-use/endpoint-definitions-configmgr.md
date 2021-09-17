@@ -6,10 +6,10 @@ ms.date: 04/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use Configuration Manager to deliver definition updates

@@ -6,10 +6,10 @@ ms.date: 12/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.assetid: e9e0da6d-bd5a-48d9-930a-e74b34b9286c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What happened to hybrid MDM?

@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_device"></a> Endpoint analytics scores, baselines, and insights

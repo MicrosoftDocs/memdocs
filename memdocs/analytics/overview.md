@@ -10,7 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 #Customer intent: As an Intune or Configuration Manager admin, I want to have visibility into the end-user experience so that I can improve it.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_overview"></a> What is Endpoint analytics?
