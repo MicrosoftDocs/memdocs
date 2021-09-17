@@ -9,7 +9,7 @@ ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings

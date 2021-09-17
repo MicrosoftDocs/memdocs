@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Work from anywhere (preview) report
