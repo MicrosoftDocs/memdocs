@@ -9,9 +9,7 @@ ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-
-
+ms.localizationpriority: medium
 ---
 # Best practices for software updates in Configuration Manager
 
