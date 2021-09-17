@@ -9,6 +9,7 @@ ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # List of prerequisite checks for Configuration Manager

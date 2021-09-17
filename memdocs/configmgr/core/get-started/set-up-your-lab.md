@@ -6,12 +6,10 @@ ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 
 # Set up a Configuration Manager lab

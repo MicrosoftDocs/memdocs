@@ -6,10 +6,10 @@ ms.date: 05/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
 author: mestew
 manager: dougeby
 ms.author: mstewart
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for compliance settings in Configuration Manager

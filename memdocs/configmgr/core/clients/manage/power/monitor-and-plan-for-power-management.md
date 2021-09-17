@@ -1,17 +1,15 @@
 ---
-title: "Monitor and plan for power management"
-titleSuffix: "Configuration Manager"
-description: "Learn how to monitor and plan for power management in Configuration Manager."
+title: Monitor and plan for power management
+titleSuffix: Configuration Manager
+description: Learn how to monitor and plan for power management in Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # How to monitor and plan for power management in Configuration Manager
 

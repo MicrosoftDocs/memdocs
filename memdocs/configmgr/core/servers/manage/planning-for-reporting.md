@@ -6,10 +6,10 @@ ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.localizationpriority: medium
 ---
 
 # Plan for reporting in Configuration Manager

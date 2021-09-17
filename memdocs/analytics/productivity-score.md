@@ -6,10 +6,10 @@ ms.date: 07/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: a98ec089-a85f-4b5b-bce5-ec0ffd84f318
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Endpoint analytics in Microsoft Productivity Score

@@ -1,17 +1,15 @@
 ---
-title: "Get installation media"
-titleSuffix: "Configuration Manager"
-description: "Where to find installation media for new Configuration Manager installations."
+title: Get installation media
+titleSuffix: Configuration Manager
+description: Where to find installation media for new Configuration Manager installations.
 ms.date: 01/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Where to get installation media for Configuration Manager
 

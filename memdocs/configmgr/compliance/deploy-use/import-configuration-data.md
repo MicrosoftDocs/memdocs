@@ -1,17 +1,15 @@
 ---
-title: "Import configuration data"
-titleSuffix: "Configuration Manager"
-description: "Import configuration data if it's contained in a cabinet file format and adheres to the supported Service Modeling Language schema."
+title: Import configuration data
+titleSuffix: Configuration Manager
+description: Import configuration data if it's contained in a cabinet file format and adheres to the supported Service Modeling Language schema.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # Import configuration data with Configuration Manager
 
