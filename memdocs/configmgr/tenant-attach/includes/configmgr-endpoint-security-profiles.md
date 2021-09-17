@@ -50,7 +50,7 @@ The following profiles are supported for devices you manage with Configuration M
     > [!Important]
     > To support firewall policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
 
-  - Profile: **Exploit Protection (ConfigMgr)(preview)** - Manage [Exploit Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json) as part of Attack surface reduction policy, when you use tenant attach.
+  - Profile: **Exploit Protection (ConfigMgr)(preview)** - Manage [Exploit Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     <!-- List of supported platforms is pending: 
@@ -61,7 +61,7 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 
     -->
 
-  - Profile: **Web Protection (ConfigMgr)(preview)** - Manage [Web Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json) as part of Attack surface reduction policy, when you use tenant attach.
+  - Profile: **Web Protection (ConfigMgr)(preview)** - Manage [Web Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     <!-- List of supported platforms is pending: 

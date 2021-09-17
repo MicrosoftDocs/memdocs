@@ -8,7 +8,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: dougeby
-author: mestew
+author: mestew 
 ms.author: brenduns
 ---
 
@@ -37,12 +37,12 @@ ms.author: brenduns
      - Web Protection (ConfigMgr) (preview)
 
 1. Assign a **Name** and optionally a **Description** on the **Basics** page.
-1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about available settings for both profiles, see [Attack surface reduction policy settings for tenant attached devices](../../intune/protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
+1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about available settings for both profiles, see [Attack surface reduction policy settings for tenant attached devices](../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr).
 1. Assign the policy to a Configuration Manager collection on the **Assignments** page.
 
 ## Next steps
 
-- [Attack surface reduction policy settings for tenant attached devices](../../intune/protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
+- [Attack surface reduction policy settings for tenant attached devices](../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr).
 - [Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
 - [Create and deploy endpoint security Endpoint Detection and Response policy to tenant attached devices](atp-onboard.md)
 - [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)
