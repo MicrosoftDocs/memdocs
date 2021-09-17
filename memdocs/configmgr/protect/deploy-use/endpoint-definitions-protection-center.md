@@ -6,12 +6,10 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: eb4ab74b-b605-41dd-930c-ac18d2f40319
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Use the Microsoft Malware Protection Center to download definitions
