@@ -10,8 +10,7 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Enable Endpoint Protection malware definitions to download from a network share

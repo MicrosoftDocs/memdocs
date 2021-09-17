@@ -10,6 +10,7 @@ ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to create VPN profiles in Configuration Manager

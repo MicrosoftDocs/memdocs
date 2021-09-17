@@ -1,7 +1,7 @@
 ---
-title: "Monitor Endpoint Protection status"
-titleSuffix: "Configuration Manager"
-description: "Learn how monitor Endpoint Protection in your Configuration Manager hierarchy."
+title: Monitor Endpoint Protection status
+titleSuffix: Configuration Manager
+description: Learn how monitor Endpoint Protection in your Configuration Manager hierarchy.
 ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,8 +10,7 @@ ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # How to monitor Endpoint Protection status
 

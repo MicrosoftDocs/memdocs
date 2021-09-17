@@ -10,6 +10,7 @@ ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # VPN profiles in Configuration Manager

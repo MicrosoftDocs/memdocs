@@ -10,6 +10,7 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Deploy resource access profiles in Configuration Manager

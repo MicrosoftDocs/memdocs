@@ -1,7 +1,7 @@
 ---
-title: "Endpoint Protection Client Help"
-titleSuffix: "Configuration Manager"
-description: "Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats."
+title: Endpoint Protection Client Help
+titleSuffix: Configuration Manager
+description: Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,8 +10,7 @@ ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Endpoint Protection Client Help
 

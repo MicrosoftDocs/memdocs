@@ -10,6 +10,7 @@ ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create an Endpoint Protection point site system role

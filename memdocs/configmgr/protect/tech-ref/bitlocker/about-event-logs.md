@@ -10,6 +10,7 @@ ms.assetid: a9ece9e8-37ec-441d-937c-be4941afce7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # BitLocker event logs
