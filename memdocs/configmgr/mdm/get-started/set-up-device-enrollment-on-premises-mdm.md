@@ -6,7 +6,6 @@ ms.date: 01/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
-ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
