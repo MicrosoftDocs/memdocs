@@ -6,7 +6,6 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: a2b3a3a0-7b81-4191-b1f9-c618e59347c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

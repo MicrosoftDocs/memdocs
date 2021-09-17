@@ -5,7 +5,6 @@ ms.date: 12/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: 6e32ce6d-585d-4801-a345-ff0f6f2d90ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
