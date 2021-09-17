@@ -10,6 +10,7 @@ ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Provisioning mode

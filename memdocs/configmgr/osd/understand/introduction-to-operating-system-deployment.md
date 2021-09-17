@@ -1,7 +1,7 @@
 ---
 title: Introduction to operating system deployment
-titleSuffix: "Configuration Manager"
-description: "Understand the concepts before you deploy operating systems in your Configuration Manager environment."
+titleSuffix: Configuration Manager
+description: Understand the concepts before you deploy operating systems in your Configuration Manager environment.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -10,8 +10,7 @@ ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Introduction to operating system deployment in Configuration Manager
 

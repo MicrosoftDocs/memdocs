@@ -10,6 +10,7 @@ ms.assetid: 3646d62d-355a-43fc-8569-c08dc2257ee5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # OS deployment methods with Configuration Manager

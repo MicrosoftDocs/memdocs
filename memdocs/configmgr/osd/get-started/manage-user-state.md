@@ -10,6 +10,7 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manage user state in Configuration Manager

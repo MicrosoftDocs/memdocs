@@ -10,6 +10,7 @@ ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Replace an existing computer and transfer settings with Configuration Manager

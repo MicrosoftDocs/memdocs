@@ -10,6 +10,7 @@ ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create a task sequence to install an OS

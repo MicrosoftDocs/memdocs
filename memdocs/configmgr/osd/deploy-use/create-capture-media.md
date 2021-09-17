@@ -10,6 +10,7 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create capture media

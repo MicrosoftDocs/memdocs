@@ -10,6 +10,7 @@ ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use standalone media to deploy Windows without using the network

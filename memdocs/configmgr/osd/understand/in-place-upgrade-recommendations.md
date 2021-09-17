@@ -10,6 +10,7 @@ ms.assetid: 2a1ef3aa-27ce-4bf5-8772-ad8a2aab5c8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # In-place upgrade recommendations

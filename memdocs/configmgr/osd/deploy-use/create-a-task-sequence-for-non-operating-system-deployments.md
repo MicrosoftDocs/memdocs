@@ -10,6 +10,7 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create a task sequence for non-OS deployments
