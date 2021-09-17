@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create a task sequence to upgrade an OS in Configuration Manager

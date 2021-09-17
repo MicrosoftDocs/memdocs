@@ -6,12 +6,10 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Plan for automating tasks in Configuration Manager
