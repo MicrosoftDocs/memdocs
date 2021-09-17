@@ -6,10 +6,10 @@ ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 4b305a71-9ad8-4332-9692-d51554158981
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Tenant attach data collection
