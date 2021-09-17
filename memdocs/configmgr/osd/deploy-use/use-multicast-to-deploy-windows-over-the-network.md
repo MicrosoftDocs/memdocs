@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 4cafb7fc-380b-41b1-b83e-045aebfb7131
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use multicast to deploy Windows over the network with Configuration Manager

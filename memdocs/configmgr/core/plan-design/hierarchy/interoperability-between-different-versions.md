@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Interoperability between different versions of Configuration Manager

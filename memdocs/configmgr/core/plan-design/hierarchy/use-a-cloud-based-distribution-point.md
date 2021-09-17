@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use a cloud distribution point in Configuration Manager

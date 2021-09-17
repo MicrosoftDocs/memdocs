@@ -9,6 +9,7 @@ ms.date: 08/02/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
+ms.localizationpriority: medium
 ---
 
 # Set up CMG for Configuration Manager

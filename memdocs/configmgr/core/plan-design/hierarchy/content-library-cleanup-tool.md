@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Content library cleanup tool

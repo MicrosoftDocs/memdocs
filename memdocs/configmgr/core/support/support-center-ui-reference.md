@@ -6,10 +6,10 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Support Center user interface reference

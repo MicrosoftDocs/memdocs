@@ -1,15 +1,15 @@
 ---
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
-description: "Troubleshooting application installation for Configuration Manager tenant attach"
+description: Troubleshooting application installation for Configuration Manager tenant attach
 ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshoot application installation for devices uploaded to the admin center (preview)

@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported operating systems for Configuration Manager site system servers

@@ -9,6 +9,7 @@ ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Diagnostic and usage data for version 2107

@@ -9,7 +9,7 @@ ms.date: 06/10/2020
 ms.topic: end-user-help
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
+ms.localizationpriority: medium
 ---
 
 # Software Center user guide
