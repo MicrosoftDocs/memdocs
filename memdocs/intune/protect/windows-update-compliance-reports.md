@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 09/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -229,7 +229,7 @@ To use the report:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Monitor**, and then below **Software updates** select **Feature update failures**.
+2. Select **Devices** > **Monitor**, and then below *Software updates* select **Feature update failures**.
 
    - The initial view displays a per-profile summary of how many devices have alerts for each of your profiles with the version of Windows that the profile targets:
 
@@ -242,7 +242,7 @@ To use the report:
 
      - Select an *Alert Message* to open a pane that displays more details for that alert:
        > [!div class="mx-imgBorder"]
-       > ![Alert message deails](./media/windows-update-compliance-reports/alert-message-details.png)
+       > ![Alert message details](./media/windows-update-compliance-reports/alert-message-details.png)
 
      - Select the device name to open the Device page:
        > [!div class="mx-imgBorder"]
@@ -288,7 +288,7 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **PolicyConflictPause** | Updates are paused on the device, preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PostRestartIssue** | Windows Update couldn't determine the results of installing the update. The error is usually false and the update probably succeeded. | If the update you're trying to install isn't available, no action is required. If the update is still available, retry the installation. |
 | **RollbackInitiated** | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | Run the [Setup Diagnostics Tool](/windows/deployment/upgrade/setupdiag) on the Device. Don't retry the installation until the impact is understood. |
-| **SafeguardHold**  | Update can't install because of a known [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds). | Check the Support website to see whether there are any known issues with the update. |
+| **SafeguardHold**  | Update can't install because of a known [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds).  | View the *Deployment Error Code* column of the report to see the ID of the safeguard hold. Open the Windows release health dashboard at [http://aka.ms/WindowsReleaseHealth](http://aka.ms/WindowsReleaseHealth) to view information about the active holds, including known issues with the update. |
 | **UnexpectedShutdown** | The installation was stopped because a Windows shutdown or restart was in progress. | Ensure the device remains on during Windows installation. |
 | **VersionMismatch** | Device is on a version of Windows that was not intended by Windows Update. | Confirm whether the device is on the intended version. |
 | **WindowsRepairRequired** | The current version of Windows needs to be repaired before it can be updated. | Run the Startup Repair Tool on this device. |
