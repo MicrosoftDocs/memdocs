@@ -27,15 +27,15 @@ ms.topic: how-to
 Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. Specifically, Windows Autopilot Reset:
 - Removes personal files, apps, and settings.
 - Reapplies a device’s original settings.
+- Sets the region, language, and keyboard to the original values.
 - Maintains the device's identity connection to Azure AD.
 - Maintains the device's management connection to Intune.
 
 The Windows Autopilot Reset process automatically keeps information from the existing device:
  
-- Set the region, language, and keyboard to the original values.
 - Wi-Fi connection details.
-- Provisioning packages previously applied to the device
-- A provisioning package present on a USB drive when the reset process is started 
+- Provisioning packages previously applied to the device.
+- A provisioning package present on a USB drive when the reset process is started. 
 - Azure Active Directory device membership and MDM enrollment information.
 
 Windows Autopilot Reset will block the user from accessing the desktop until this information is restored, including reapplying any provisioning packages. For devices enrolled in an MDM service, Windows Autopilot Reset will also block until an MDM sync is completed. 
