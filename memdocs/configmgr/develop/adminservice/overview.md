@@ -8,7 +8,7 @@ ms.technology: configmgr-sdk
 ms.topic: overview
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # What is the administration service in Configuration Manager?

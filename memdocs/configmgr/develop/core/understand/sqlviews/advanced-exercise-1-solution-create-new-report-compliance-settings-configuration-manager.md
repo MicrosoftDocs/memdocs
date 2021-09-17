@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: 'Advanced exercise 1 solution: Create a new report for compliance settings'
 titleSuffix: Configuration Manager
 description: Procedure to create the report in Advanced Exercise 1.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: b9ea9f33-258f-40d9-950c-4d8f06bab460
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Advanced exercise 1 solution: Create a new report for compliance settings in Configuration Manager
@@ -46,8 +46,8 @@ Use the following procedure to create the report in [Advanced exercise 1: Create
 
    ```sql    
    SELECT DISTINCT SYS.Netbios_Name0 
-   Â Â from v_R_System SYS WHERE SYS.Client0=1 
-   Â Â ORDER By SYS.Netbios_Name0
+     from v_R_System SYS WHERE SYS.Client0=1 
+     ORDER By SYS.Netbios_Name0
    ```
 
 1. Select **OK** to close the **Dataset Properties** dialog box. The new dataset, named by default **DataSet1** is now displayed in the **Datasets** node of the **Report Data** pane.

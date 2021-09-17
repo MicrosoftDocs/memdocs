@@ -10,7 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Quickstart: Enroll Configuration Manager devices into Endpoint analytics

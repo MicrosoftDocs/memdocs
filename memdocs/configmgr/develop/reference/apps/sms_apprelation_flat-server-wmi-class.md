@@ -9,7 +9,7 @@ ms.topic: reference
 ms.assetid: b6f86f0b-6593-4f58-8e6b-3934529408cd
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_AppRelation_Flat Server WMI Class

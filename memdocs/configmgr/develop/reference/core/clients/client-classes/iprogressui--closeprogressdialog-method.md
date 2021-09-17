@@ -11,7 +11,7 @@ ms.topic: reference
 ms.assetid: ab7508e4-0976-4217-b701-ca76e4a583ce
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # IProgressUI::CloseProgressDialog method

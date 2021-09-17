@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: bfb0f6a9-09c1-4065-b0e5-be06cdc1800a
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Power management views in Configuration Manager

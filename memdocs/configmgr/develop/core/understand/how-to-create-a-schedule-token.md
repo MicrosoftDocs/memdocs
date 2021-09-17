@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.assetid: 27028a26-7ec2-4f0c-842f-1c7a6255066b
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 
 
 ---

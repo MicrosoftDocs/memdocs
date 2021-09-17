@@ -1,4 +1,4 @@
-﻿---
+---
 title: Collection views
 titleSuffix: Configuration Manager
 description: Information about the collections, collection rules, and collection members.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: fbccfda5-8577-41ba-9e89-ce027e1917e2
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Collection views in Configuration Manager

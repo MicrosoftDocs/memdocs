@@ -9,7 +9,7 @@ ms.topic: reference
 ms.assetid: 78847e14-c40e-48f9-b84f-d0342e82e967
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_CollectionInfoInManualEvaluationQueue server WMI class
