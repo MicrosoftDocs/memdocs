@@ -1,7 +1,7 @@
 ---
 title: Manage software updates synchronization
-titleSuffix: "Configuration Manager"
-description: "Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization."
+titleSuffix: Configuration Manager
+description: Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization.
 ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -10,8 +10,7 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
 #  <a name="BKMK_SUMSync"></a> Synchronize software updates

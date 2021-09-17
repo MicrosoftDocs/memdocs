@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
+ms.localizationpriority: medium
 ---
 
 # Manage Surface drivers with Configuration Manager

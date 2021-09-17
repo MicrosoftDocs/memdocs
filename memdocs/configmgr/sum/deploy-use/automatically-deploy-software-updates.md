@@ -10,8 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-
-
+ms.localizationpriority: medium
 ---
 
 #  Automatically deploy software updates  

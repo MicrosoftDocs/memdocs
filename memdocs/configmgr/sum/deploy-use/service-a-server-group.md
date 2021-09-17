@@ -1,6 +1,6 @@
 ---
 title: Service a server group
-titleSuffix: "Configuration Manager"
+titleSuffix: Configuration Manager
 description: Server groups have been replaced by orchestration groups
 author: mestew
 ms.author: mstewart
@@ -10,8 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-
-
+ms.localizationpriority: medium
 ---
 # Service a server group
 

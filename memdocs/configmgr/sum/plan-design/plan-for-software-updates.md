@@ -7,11 +7,10 @@ ms.author: mstewart
 manager: dougeby
 ms.date: 06/21/2021
 ms.topic: conceptual
-ms.prod: configuration-manager 
+ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-
-
+ms.localizationpriority: medium
 ---
 
 # Plan for software updates in Configuration Manager

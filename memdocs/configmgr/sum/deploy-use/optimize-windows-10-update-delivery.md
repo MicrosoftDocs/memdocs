@@ -1,7 +1,7 @@
 ---
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
-description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
+description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.
 ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,6 +10,7 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Optimize Windows 10 update delivery with Configuration Manager

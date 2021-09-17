@@ -1,7 +1,7 @@
 ---
-title: "Certificates and security"
-titleSuffix: "Configuration Manager"
-description: "Manage certificates and security for System Center Updates Publisher"
+title: Certificates and security
+titleSuffix: Configuration Manager
+description: Manage certificates and security for System Center Updates Publisher
 ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,8 +10,7 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Manage certificates and security for Updates Publisher
 

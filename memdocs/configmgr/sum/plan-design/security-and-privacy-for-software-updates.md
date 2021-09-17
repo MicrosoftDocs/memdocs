@@ -1,7 +1,7 @@
 ---
 title: Security and privacy for software updates
-titleSuffix: "Configuration Manager"
-description: "Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information."
+titleSuffix: Configuration Manager
+description: Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information.
 manager: dougeby
 ms.date: 09/16/2020
 ms.topic: conceptual
@@ -10,8 +10,7 @@ ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # Security and privacy for software updates in Configuration Manager
 

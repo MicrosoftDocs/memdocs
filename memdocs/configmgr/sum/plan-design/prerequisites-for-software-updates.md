@@ -1,7 +1,7 @@
 ---
 title: Prerequisites for software updates
-titleSuffix: "Configuration Manager"
-description: "Learn about prerequisites for software updates in Configuration Manager."
+titleSuffix: Configuration Manager
+description: Learn about prerequisites for software updates in Configuration Manager.
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -10,8 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-
-
+ms.localizationpriority: medium
 ---
 
 # Prerequisites for software updates in Configuration Manager

@@ -10,8 +10,7 @@ ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Example scenario to deploy and monitor monthly software updates
