@@ -8,6 +8,7 @@ ms.topic: article
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Microsoft Deployment Toolkit known issues

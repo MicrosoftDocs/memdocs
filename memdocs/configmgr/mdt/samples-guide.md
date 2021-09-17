@@ -7,9 +7,10 @@ ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: 2ff0100c-b7ef-4e09-8c96-fc1898390b6d
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 

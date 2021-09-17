@@ -7,9 +7,10 @@ ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: 21bedd68-e925-46e0-a540-df8c0aba2d6c
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Quick Start Guide for Lite Touch Installation  
