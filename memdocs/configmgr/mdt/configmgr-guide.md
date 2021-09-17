@@ -6,10 +6,10 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: b12de852-a799-4c16-b51c-cc3abbd3ca3a
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager  
