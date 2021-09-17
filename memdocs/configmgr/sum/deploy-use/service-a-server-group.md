@@ -9,7 +9,6 @@ ms.date: 04/01/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 ms.localizationpriority: medium
 ---
 # Service a server group

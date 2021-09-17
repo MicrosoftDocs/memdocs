@@ -9,7 +9,6 @@ ms.date: 06/21/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ms.localizationpriority: medium
 ---
 

@@ -1,12 +1,11 @@
 ---
-title: Add updates to an update group 
+title: Add updates to an update group
 titleSuffix: Configuration Manager
 description: Manually or automatically add software updates to a software update group in your environment.
 ms.date: 08/11/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
 author: mestew
 ms.author: mstewart

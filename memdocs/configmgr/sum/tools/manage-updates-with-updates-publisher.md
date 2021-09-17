@@ -6,7 +6,6 @@ ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
 author: mestew
 ms.author: mstewart
 manager: dougeby

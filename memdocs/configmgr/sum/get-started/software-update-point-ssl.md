@@ -9,7 +9,6 @@ ms.date: 04/05/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: bd9989b8-ccaf-4d51-8262-b4a99b600d12
 # Customer intent: As a Configuration Manager admin, I want to enable my WSUS servers and software update points to use TLS/SSL to reduce the ability of a potential attacker to remotely compromise a client and elevate privileges.
 ms.localizationpriority: medium
 ---

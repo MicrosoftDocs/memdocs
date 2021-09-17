@@ -9,7 +9,6 @@ ms.date: 04/22/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.localizationpriority: medium
 ---
 
