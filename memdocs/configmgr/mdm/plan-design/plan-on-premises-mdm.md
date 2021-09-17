@@ -10,6 +10,7 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for on-premises MDM in Configuration Manager

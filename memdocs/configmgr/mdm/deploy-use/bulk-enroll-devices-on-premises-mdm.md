@@ -10,6 +10,7 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to bulk-enroll devices with on-premises MDM in Configuration Manager

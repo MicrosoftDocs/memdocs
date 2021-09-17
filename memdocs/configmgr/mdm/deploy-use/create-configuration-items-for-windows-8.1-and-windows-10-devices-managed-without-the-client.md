@@ -10,6 +10,7 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create configuration items for Windows devices with on-premises MDM in Configuration Manager

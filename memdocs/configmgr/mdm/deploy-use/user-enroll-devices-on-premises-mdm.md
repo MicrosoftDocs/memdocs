@@ -10,6 +10,7 @@ ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How users enroll devices with on-premises MDM in Configuration Manager

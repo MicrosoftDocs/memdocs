@@ -10,6 +10,7 @@ ms.assetid: e9e0da6d-bd5a-48d9-930a-e74b34b9286c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What happened to hybrid MDM?
