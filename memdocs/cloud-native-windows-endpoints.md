@@ -186,7 +186,7 @@ To limit the configurations from this guide to the test devices that you import 
 5. In the **Rule Syntax** section, select **Edit.**
 
 6. Paste the following text:
-   - `(device. devicePhysicalIds -any (_ -eq "[OrderID]:CloudNative"))`
+   - `(device.devicePhysicalIds -any (_ -eq "[OrderID]:CloudNative"))`
 
 7. Select **OK**, then **Save**, then **Create**.
 
