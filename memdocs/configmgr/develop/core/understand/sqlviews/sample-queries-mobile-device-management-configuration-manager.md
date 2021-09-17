@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: Sample queries for mobile device management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join mobile device management views to other views when the device is managed by Configuration Manager.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 03f6d6c0-6ef3-4de9-9ae4-a3ad8142ac57
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Sample queries for mobile device management in Configuration Manager
@@ -24,13 +24,13 @@ The following query retrieves all mobile device Configuration Manager clients, b
 
 ```sql
     SELECT v_R_System.Netbios_Name0, 
-    Â Â v_R_System.Operating_System_Name_and0, 
-    Â Â v_GS_DEVICE_MEMORY.Storage0, 
-    Â Â v_GS_DEVICE_MEMORY.StorageFree0 
+      v_R_System.Operating_System_Name_and0, 
+      v_GS_DEVICE_MEMORY.Storage0, 
+      v_GS_DEVICE_MEMORY.StorageFree0 
     FROM v_GS_DEVICE_COMPUTER_SYSTEM INNER JOIN v_R_System ON 
-    Â Â v_GS_DEVICE_COMPUTER_SYSTEM.ResourceID = v_R_System.ResourceID 
-    Â Â INNER JOIN v_GS_DEVICE_MEMORY ON 
-    Â Â v_GS_DEVICE_COMPUTER_SYSTEM.ResourceID = v_GS_DEVICE_MEMORY.ResourceID 
+      v_GS_DEVICE_COMPUTER_SYSTEM.ResourceID = v_R_System.ResourceID 
+      INNER JOIN v_GS_DEVICE_MEMORY ON 
+      v_GS_DEVICE_COMPUTER_SYSTEM.ResourceID = v_GS_DEVICE_MEMORY.ResourceID 
     ORDER BY v_R_System.Netbios_Name0 
 ```
 
@@ -40,13 +40,13 @@ The following query retrieves the deployment state for all mobile device Configu
 
 ```sql
     SELECT v_StateNames.StateName AS [Deployment State], 
-    Â Â v_StateNames.StateDescription AS Description, 
-    Â Â v_DeviceClientDeploymentState.DeviceNetBiosName AS [Device Name], 
-    Â Â v_DeviceClientDeploymentState.IPAddress AS [IP Address], 
-    Â Â v_DeviceClientDeploymentState.AssignedSiteCode AS [Assigned Site], 
-    Â Â v_DeviceClientDeploymentState.DeviceDeploymentTime AS [Time Deployed] 
+      v_StateNames.StateDescription AS Description, 
+      v_DeviceClientDeploymentState.DeviceNetBiosName AS [Device Name], 
+      v_DeviceClientDeploymentState.IPAddress AS [IP Address], 
+      v_DeviceClientDeploymentState.AssignedSiteCode AS [Assigned Site], 
+      v_DeviceClientDeploymentState.DeviceDeploymentTime AS [Time Deployed] 
     FROM v_DeviceClientDeploymentState INNER JOIN v_StateNames ON 
-    Â Â v_DeviceClientDeploymentState.DeviceDeploymentState = v_StateNames.StateID 
+      v_DeviceClientDeploymentState.DeviceDeploymentState = v_StateNames.StateID 
     WHERE (v_StateNames.TopicType = 800) 
     ORDER BY [Deployment State], [Device Name] 
 ```

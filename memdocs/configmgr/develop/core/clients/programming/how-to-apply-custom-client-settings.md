@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.assetid: b171d930-dd3f-4587-ad24-058448fcfa30
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # How to apply custom client settings

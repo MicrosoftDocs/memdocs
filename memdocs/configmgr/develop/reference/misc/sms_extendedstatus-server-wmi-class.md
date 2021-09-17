@@ -9,7 +9,7 @@ ms.topic: reference
 ms.assetid: ab4e741a-2a0a-4b08-aa47-42bfb9dd94ed
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_ExtendedStatus Server WMI Class

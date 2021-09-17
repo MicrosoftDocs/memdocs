@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for content management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common content management views to other views.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 07c979e1-6e57-464a-9c87-6cfe8036a39b
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Sample queries for content management in Configuration Manager
