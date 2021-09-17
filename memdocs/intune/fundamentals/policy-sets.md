@@ -53,6 +53,7 @@ You can include the following management objects in a policy set:
 - Device compliance policies
 - Windows autopilot deployment profiles
 - Enrollment status page
+- Settings catalog policies
 
 > [!IMPORTANT]
 > As of September 2021, enrollment restrictions based on device type can no longer be included in policy sets. For more information about how to create enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).  
