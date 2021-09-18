@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: Sample queries for status and alerts
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join some of the most commonly used status message views to other views.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 61c9b4be-4656-413a-8fb1-c6e72d89fbaa
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Sample queries for status and alerts in Configuration Manager
@@ -24,9 +24,9 @@ The following query lists status messages, by status message ID, the component t
 
 ```sql
     SELECT SM.Component, SM.MessageID, 
-    Â Â COUNT(*) AS 'Count', SMA.AttributeValue, SM.MachineName 
+      COUNT(*) AS 'Count', SMA.AttributeValue, SM.MachineName 
     FROM v_StatusMessage SM LEFT OUTER JOIN v_StatMsgAttributes SMA 
-    Â Â ON SM.RecordID = SMA.RecordID 
+      ON SM.RecordID = SMA.RecordID 
     GROUP BY SM.Component, SM.MessageID, SM.MachineName, SMA.AttributeValue 
     ORDER BY SM.Component, SM.MessageID 
 ```
@@ -37,9 +37,9 @@ The following query lists the distribution points that have been selected for ea
 
 ```sql
     SELECT DPS.PackageID, PCK.Name, PCK.SourceSite, 
-    Â Â DPS.ServerNALPath, DPS.InstallStatus 
+      DPS.ServerNALPath, DPS.InstallStatus 
     FROM v_PackageStatusDistPointsSumm DPS INNER JOIN v_Package PCK 
-    Â Â ON DPS.PackageID = PCK.PackageID 
+      ON DPS.PackageID = PCK.PackageID 
     ORDER BY DPS.PackageID 
 ```
 
@@ -49,11 +49,11 @@ The following query lists the clients that have been targeted for a deployment, 
 
 ```sql
     SELECT SYS.Netbios_Name0, ADV.AdvertisementID, ADV.AdvertisementName, 
-    Â Â COL.Name AS TargetedCollection, CAS.LastStatusMessageIDName 
+      COL.Name AS TargetedCollection, CAS.LastStatusMessageIDName 
     FROM v_ClientAdvertisementStatus CAS INNER JOIN v_R_System SYS 
-    Â Â ON CAS.ResourceID = SYS.ResourceID INNER JOIN v_Advertisement ADV 
-    Â Â ON CAS.AdvertisementID = ADV.AdvertisementID INNER JOIN 
-    Â Â v_Collection COL ON ADV.CollectionID = COL.CollectionID 
+      ON CAS.ResourceID = SYS.ResourceID INNER JOIN v_Advertisement ADV 
+      ON CAS.AdvertisementID = ADV.AdvertisementID INNER JOIN 
+      v_Collection COL ON ADV.CollectionID = COL.CollectionID 
     ORDER BY SYS.Netbios_Name0, ADV.AdvertisementID
 ```
 
@@ -63,10 +63,10 @@ The following query lists the software metering usage data for files defined in 
 
 ```sql
     SELECT SYS.Netbios_Name0, SF.FileName, SF.FilePath, 
-    Â Â MUS.UsageCount, MUS.LastUsage 
+      MUS.UsageCount, MUS.LastUsage 
     FROM v_MonthlyUsageSummary MUS INNER JOIN v_R_System SYS 
-    Â Â ON MUS.ResourceID = SYS.ResourceID INNER JOIN v_GS_SoftwareFile SF 
-    Â Â ON MUS.FileID = SF.FileID 
+      ON MUS.ResourceID = SYS.ResourceID INNER JOIN v_GS_SoftwareFile SF 
+      ON MUS.FileID = SF.FileID 
     ORDER BY SYS.Netbios_Name0, SF.FileName, SF.FilePath 
 ```
 
@@ -76,12 +76,12 @@ The following query lists the enforcement state reported by the VISTACLIENT1 cli
 
 ```sql
     SELECT v_UpdateInfo.ArticleID, v_UpdateInfo.BulletinID, v_UpdateInfo.Title, 
-    Â Â v_StateNames.StateName, v_UpdateComplianceStatus.LastStatusCheckTime, 
-    Â Â v_UpdateComplianceStatus.LastEnforcementMessageTime 
+      v_StateNames.StateName, v_UpdateComplianceStatus.LastStatusCheckTime, 
+      v_UpdateComplianceStatus.LastEnforcementMessageTime 
     FROM v_R_System INNER JOIN v_UpdateComplianceStatus ON 
-    Â Â v_R_System.ResourceID = v_UpdateComplianceStatus.ResourceID INNER JOIN v_UpdateInfo ON 
-    Â Â v_UpdateComplianceStatus.CI_ID = v_UpdateInfo.CI_ID INNER JOIN v_StateNames ON 
-    Â Â v_UpdateComplianceStatus.LastEnforcementMessageID = v_StateNames.StateID 
+      v_R_System.ResourceID = v_UpdateComplianceStatus.ResourceID INNER JOIN v_UpdateInfo ON 
+      v_UpdateComplianceStatus.CI_ID = v_UpdateInfo.CI_ID INNER JOIN v_StateNames ON 
+      v_UpdateComplianceStatus.LastEnforcementMessageID = v_StateNames.StateID 
     WHERE (v_StateNames.TopicType = 402) AND (v_R_System.Netbios_Name0 LIKE 'VISTACLIENT1') 
     ORDER BY v_StateNames.StateName, v_UpdateInfo.DateLastModified 
 ```

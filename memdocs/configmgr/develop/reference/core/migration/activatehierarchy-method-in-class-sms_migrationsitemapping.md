@@ -9,7 +9,7 @@ ms.topic: reference
 ms.assetid: 51a21352-8184-4f0f-9fe0-365608ab1433
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # ActivateHierarchy Method in Class SMS_MigrationSiteMapping

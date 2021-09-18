@@ -11,7 +11,7 @@ ms.topic: reference
 ms.assetid: f9c7b72d-e781-49e2-b5a7-23a3e005596f
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # IProgressUI::ShowRebootDialog method

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Client deployment views
 titleSuffix: Configuration Manager
 description: Views that contain information about the deployment state of Configuration Manager client computers and devices.
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 35e57dfe-b6b5-483d-8c6f-00363b5417f5
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Client deployment views in Configuration Manager

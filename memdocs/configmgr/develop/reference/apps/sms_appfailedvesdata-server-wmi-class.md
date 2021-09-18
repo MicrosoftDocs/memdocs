@@ -8,7 +8,7 @@ ms.topic: reference
 ms.assetid: 22eb79c4-c169-4a91-a478-78ce2cd7ba27
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_AppFailedVEsData Server WMI Class

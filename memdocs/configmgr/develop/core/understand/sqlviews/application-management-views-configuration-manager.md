@@ -1,4 +1,4 @@
-﻿---
+---
 title: Application management views
 titleSuffix: Configuration Manager
 description: Information about application management views and application management status views.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms:assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Application management views in Configuration Manager

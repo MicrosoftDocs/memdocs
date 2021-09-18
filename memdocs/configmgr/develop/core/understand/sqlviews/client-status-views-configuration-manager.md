@@ -1,4 +1,4 @@
-﻿---
+---
 title: Client status views
 titleSuffix: Configuration Manager
 description: Information about the client status components on Configuration Manager client computers.
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 9f7f8cc5-8173-4a3d-be97-02c1686a3751
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Client status views in Configuration Manager

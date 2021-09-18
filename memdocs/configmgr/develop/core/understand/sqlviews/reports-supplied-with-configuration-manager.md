@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: List of supplied reports
 titleSuffix: Configuration Manager
 description: Learn about the reports that are supplied with Configuration Manager.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: b5d4f1de-1137-425c-a196-303c3233b6c7
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # List of reports supplied with Configuration Manager
@@ -250,18 +250,18 @@ The following reports are listed under the **Endpoint Protection** category.
 |**User threat list**|Displays the list of threats found for a specified user account.|
 
 
-## Hardware â€“ CD-ROM
+## Hardware – CD-ROM
 
-The following reports are listed under the **Hardware â€“ CD-ROM** category.
+The following reports are listed under the **Hardware – CD-ROM** category.
 
 |Report name|Description|
 |--- |--- |
 |**CD-ROM information for a specific computer**|Displays information about the CD-ROM drives on a specified computer.|
 |**Computers for a specific CD-ROM manufacturer**|Displays a list of computers that contain a CD-ROM drive made by a manufacturer you specify.|
 |**Count CD-ROM drives per manufacturer**|Displays the number of CD-ROM drives inventoried per manufacturer.|
-|**History â€“ CD-ROM history for a specific computer**|Displays the inventory history for CD-ROM drives on a specified computer.|
+|**History – CD-ROM history for a specific computer**|Displays the inventory history for CD-ROM drives on a specified computer.|
 
-## Hardware â€“ Disk
+## Hardware – Disk
 
 The following reports are listed under the **Hardware - Disk** category.
 
@@ -271,13 +271,13 @@ The following reports are listed under the **Hardware - Disk** category.
 |**Computers with low free disk space (less than specified % free)**|Displays a list of computers in a specified collection that have less that the specified free disk space.|
 |**Computers with low free disk space (less that specified MB free)**|Displays a list of computers and disks where the disks are low on space. The amount of free space to check for is specified in MB.|
 |**Count physical disk configurations**|Displays the number of hard disks inventoried by disk capacity.|
-|**Disk information for a specific computer â€“ Logical disks**|Displays summary information about the logical disks on a specified computer.|
+|**Disk information for a specific computer – Logical disks**|Displays summary information about the logical disks on a specified computer.|
 |**Disk information for a specific computer - Partitions**|Displays summary information about the disk partitions on a specified computer.|
 |**Disk information for a specific computer - Physical disks**|Displays summary information about the physical disks on a specified computer.|
 |**History - Logical disk space history for a specific computer**|Displays the inventory history for logical disk drives on a specified computer.|
 
 
-## Hardware â€“ General
+## Hardware – General
 
 The following reports are listed under the **Hardware - General** category.
 
@@ -289,7 +289,7 @@ The following reports are listed under the **Hardware - General** category.
 |**Inventory classes enabled on a specific computer**|Displays the inventory classes that are enabled on a specified computer.|
 |**SQL-Based Report**|Not used.|
 
-## Hardware â€“ Memory
+## Hardware – Memory
 
 The following reports are listed under the **Hardware - Memory** category.
 
@@ -301,7 +301,7 @@ The following reports are listed under the **Hardware - Memory** category.
 |**Count memory configurations**|Displays the number of computers inventoried by amount of RAM.|
 |**Memory information for a specific computer**|Displays summary information about the memory on a specified computer.|
 
-## Hardware â€“ Modem
+## Hardware – Modem
 
 The following reports are listed under the **Hardware - Modem** category.
 
@@ -311,9 +311,9 @@ The following reports are listed under the **Hardware - Modem** category.
 |**Count modems by manufacturer**|Displays the number of modems inventoried for each modem manufacturer.|
 |**Modem information for a specific computer**|Displays summary information about the modem on a specified computer.|
 
-## Hardware â€“ Network Adapter
+## Hardware – Network Adapter
 
-The following reports are listed under the **Hardware â€“ Network Adapter** category.
+The following reports are listed under the **Hardware – Network Adapter** category.
 
 |Report name|Description|
 |--- |--- |
@@ -321,7 +321,7 @@ The following reports are listed under the **Hardware â€“ Network Adapter** cate
 |**Count network adapters by type**|Displays the number of inventoried network adapters cards of each type.|
 |**Network adapter information for a specific computer**|Displays information about the network adapters installed on a specified computer.|
 
-## Hardware â€“ Processor
+## Hardware – Processor
 
 The following reports are listed under the **Hardware - Processor** category.
 
@@ -333,7 +333,7 @@ The following reports are listed under the **Hardware - Processor** category.
 |**Count processor speeds**|Displays the number of computers inventoried by processor speed.|
 |**Processor information for a specific computer**|Displays information about the processors installed on a specified computer.|
 
-## Hardware â€“ SCSI
+## Hardware – SCSI
 
 The following reports are listed under the **Hardware - SCSI** category.
 
@@ -343,7 +343,7 @@ The following reports are listed under the **Hardware - SCSI** category.
 |**Count SCSI card types**|Displays the number of inventoried SCSI cards by card type.|
 |**SCSI card information for a specific computer**|Displays information about the SCSI cards installed on a specified computer.|
 
-## Hardware â€“ Sound Card
+## Hardware – Sound Card
 
 The following reports are listed under the **Hardware - Sound** category.
 
@@ -353,9 +353,9 @@ The following reports are listed under the **Hardware - Sound** category.
 |**Count sound cards**|Displays the number of computers inventoried by each sound card type.|
 |**Sound card information for a specific computer**|Displays summary information about the sound cards on a specified computer.|
 
-## Hardware â€“ Video Card
+## Hardware – Video Card
 
-The following reports are listed under the **Hardware â€“ Video Card** category.
+The following reports are listed under the **Hardware – Video Card** category.
 
 |Report name|Description|
 |--- |--- |
@@ -382,11 +382,11 @@ The following reports are listed under the **Network** category.
 |Report name|Description|
 |--- |--- |
 |**Count IP addresses by subnet**|Displays the number of IP addresses inventoried for each IP subnet.|
-|**IP â€“ All subnets by subnet mask**|Displays a list of IP subnets and subnet masks.|
-|**IP â€“ Computers in a specific subnet**|Displays a list of computers and IP information for a specified IP subnet.|
-|**IP â€“ Information for a specific computer**|Displays summary information about IP on a specified computer.|
-|**IP â€“ Information for a specific IP address**|Displays summary information about a specified IP address.|
-|**MAC â€“ Computers for a specific MAC address**|Displays the computer name and IP address of computers that have the specified MAC address.|
+|**IP – All subnets by subnet mask**|Displays a list of IP subnets and subnet masks.|
+|**IP – Computers in a specific subnet**|Displays a list of computers and IP information for a specified IP subnet.|
+|**IP – Information for a specific computer**|Displays summary information about IP on a specified computer.|
+|**IP – Information for a specific IP address**|Displays summary information about a specified IP address.|
+|**MAC – Computers for a specific MAC address**|Displays the computer name and IP address of computers that have the specified MAC address.|
 
 ## Operating System
 
@@ -410,24 +410,24 @@ The following reports are listed under the **Power Management** category.
 
 |Report name|Description|
 |--- |--- |
-|**Power Management â€“ Computer activity**|Displays a graph showing monitor, computer and user activity for a specified collection over a specified time period.|
-|**Power Management â€“ Computer activity by computer**|Displays a graph showing monitor, computer and user activity for a specified computer on a specified date.|
-|**Power Management â€“ Computer activity details**|Displays a list of the sleep and wake capabilities of computers in the specified collection for a specified date and time.|
-|**Power Management â€“ Computer details**|Displays detailed information about the power capabilities, power settings and power plans applied to a specified computer.|
-|**Power Management â€“ Computer not reporting details**|Displays a list of computers not reporting any power activity for a specified date and time.|
-|**Power Management â€“ Computers excluded**|Displays a list of computers excluded from the power plan.|
-|**Power Management â€“ Computers with multiple power plans**|Displays a list of computers that have multiple, conflicting power settings applied.|
-|**Power Management â€“ Energy consumption**|Displays the total monthly energy consumption (in kWh) for a specified collection over a specified time period.|
-|**Power Management â€“ Energy consumption by day**|Displays the total energy consumption (in kWh) for a specified collection in the last 31 days.|
-|**Power Management â€“ Energy cost**|Displays the total monthly energy consumption cost for a specified collection over a specified time period.|
-|**Power Management â€“ Energy cost by day**|Displays the total energy consumption cost for a specified collection over the past 31 days.|
-|**Power Management â€“ Environmental impact**|Displays a graph showing carbon dioxide (CO2) emissions generated by a specified collection over a specified time period.|
-|**Power Management â€“ Environmental impact by day**|Displays a graph showing CO2 emissions generated by a specified collection over the past 31 days.|
-|**Power Management â€“ Insomnia computer details**|Displays detailed information about computers that did not sleep or hibernate within a specified time period.|
-|**Power Management â€“ Insomnia report**|Displays a list of common causes that prevented computers from sleeping or hibernating and the number of computers that were affected by each cause over a specified time period.|
-|**Power Management â€“ Power capabilities**|Displays the power management capabilities of computers in the specified collection.|
-|**Power Management â€“ Power settings**|Displays an aggregated list of power settings used by computers in a specified collection.|
-|**Power Management â€“ Power settings details**|Used to display further information about computers that were specified in the **Power Management â€“ Power settings** report.|
+|**Power Management – Computer activity**|Displays a graph showing monitor, computer and user activity for a specified collection over a specified time period.|
+|**Power Management – Computer activity by computer**|Displays a graph showing monitor, computer and user activity for a specified computer on a specified date.|
+|**Power Management – Computer activity details**|Displays a list of the sleep and wake capabilities of computers in the specified collection for a specified date and time.|
+|**Power Management – Computer details**|Displays detailed information about the power capabilities, power settings and power plans applied to a specified computer.|
+|**Power Management – Computer not reporting details**|Displays a list of computers not reporting any power activity for a specified date and time.|
+|**Power Management – Computers excluded**|Displays a list of computers excluded from the power plan.|
+|**Power Management – Computers with multiple power plans**|Displays a list of computers that have multiple, conflicting power settings applied.|
+|**Power Management – Energy consumption**|Displays the total monthly energy consumption (in kWh) for a specified collection over a specified time period.|
+|**Power Management – Energy consumption by day**|Displays the total energy consumption (in kWh) for a specified collection in the last 31 days.|
+|**Power Management – Energy cost**|Displays the total monthly energy consumption cost for a specified collection over a specified time period.|
+|**Power Management – Energy cost by day**|Displays the total energy consumption cost for a specified collection over the past 31 days.|
+|**Power Management – Environmental impact**|Displays a graph showing carbon dioxide (CO2) emissions generated by a specified collection over a specified time period.|
+|**Power Management – Environmental impact by day**|Displays a graph showing CO2 emissions generated by a specified collection over the past 31 days.|
+|**Power Management – Insomnia computer details**|Displays detailed information about computers that did not sleep or hibernate within a specified time period.|
+|**Power Management – Insomnia report**|Displays a list of common causes that prevented computers from sleeping or hibernating and the number of computers that were affected by each cause over a specified time period.|
+|**Power Management – Power capabilities**|Displays the power management capabilities of computers in the specified collection.|
+|**Power Management – Power settings**|Displays an aggregated list of power settings used by computers in a specified collection.|
+|**Power Management – Power settings details**|Used to display further information about computers that were specified in the **Power Management – Power settings** report.|
 
 ## Replication Traffic
 
@@ -446,9 +446,9 @@ The following reports are listed under the **Replication Traffic** category.
 |**Total Hierarchy Replication Traffic (line chart)**|Displays hierarchy aggregate global and site data replication for each direction of every link for a specified number of days.|
 |**Total Hierarchy Replication Traffic (pie chart)**|Displays hierarchy aggregate global and site data replication for each direction of every link for a specified number of days.|
 
-## Site â€“ Client Information
+## Site – Client Information
 
-The following reports are listed under the **Site â€“ Client Information** category.
+The following reports are listed under the **Site – Client Information** category.
 
 |Report name|Description|
 |--- |--- |
@@ -472,9 +472,9 @@ The following reports are listed under the **Site â€“ Client Information** categ
 |**Summary of problems reported to the fallback status point**|Displays information about all the issues reported by clients if they have been assigned a fallback status point.|
 |**Summary of problems reported to the fallback status point for a specific collection**|Displays summary information for issues reported by clients in a specified collection if they have been assigned a fallback status point.|
 
-## Site â€“ Discovery and Inventory Information
+## Site – Discovery and Inventory Information
 
-The following reports are listed under the **Site â€“ Discovery and Inventory Information** category
+The following reports are listed under the **Site – Discovery and Inventory Information** category
 
 |Report name|Description|
 |--- |--- |
@@ -491,7 +491,7 @@ The following reports are listed under the **Site â€“ Discovery and Inventory In
 
 ## Site - General
 
-The following reports are listed under the **Site â€“ General** category
+The following reports are listed under the **Site – General** category
 
 |Report name|Description|
 |--- |--- |
@@ -499,17 +499,17 @@ The following reports are listed under the **Site â€“ General** category
 |**Site status for the hierarchy**|Displays the list of sites in the hierarchy with site version and site status information.|
 |**Status of Configuration Manager update within hierarchy**|Displays information about Configuration Manager site updates for the hierarchy.|
 
-## Site â€“ Server Information
+## Site – Server Information
 
-The following reports are listed under the **Site â€“ Server Information** category.
+The following reports are listed under the **Site – Server Information** category.
 
 |Report name|Description|
 |--- |--- |
 |**Site system roles and site system servers for a specific site**|Displays a list of site system server and their site system roles for a specified site.|
 
-## Software â€“ Companies and Products
+## Software – Companies and Products
 
-The following reports are listed under the **Software â€“ Companies and Products** category
+The following reports are listed under the **Software – Companies and Products** category
 
 |Report name|Description|
 |--- |--- |
@@ -530,7 +530,7 @@ The following reports are listed under the **Software â€“ Companies and Products
 
 ## Software - Files
 
-The following reports are listed under the **Software â€“ Files** category
+The following reports are listed under the **Software – Files** category
 
 |Report name|Description|
 |--- |--- |
@@ -540,9 +540,9 @@ The following reports are listed under the **Software â€“ Files** category
 |**Computers with a specific file**|Displays a list of computers that have collected software inventory for a specified file name. Notice that a computer might appear more than once in the list if it contains multiple copies of the file.|
 |**Count computers with a specific file name**|Displays the number of computers that have collected software inventory for a specified file.|
 
-## Software Distribution â€“ Application Monitoring
+## Software Distribution – Application Monitoring
 
-The following reports are listed under the **Software Distribution â€“ Application Monitoring** category.
+The following reports are listed under the **Software Distribution – Application Monitoring** category.
 
 |Report name|Description|
 |--- |--- |
@@ -557,7 +557,7 @@ The following reports are listed under the **Software Distribution â€“ Applicati
 
 ## Software Distribution - Collections
 
-The following reports are listed under the **Software Distribution â€“ Collections** category.
+The following reports are listed under the **Software Distribution – Collections** category.
 
 |Report name|Description|
 |--- |--- |
@@ -567,7 +567,7 @@ The following reports are listed under the **Software Distribution â€“ Collectio
 
 ## Software Distribution - Content
 
-The following reports are listed under the **Software Distribution â€“ Content** category.
+The following reports are listed under the **Software Distribution – Content** category.
 
 |Report name|Description|
 |--- |--- |
@@ -585,9 +585,9 @@ The following reports are listed under the **Software Distribution â€“ Content**
 |**Packages targeted to distribution point group**|Displays information about packages that target a specified distribution point group.|
 |**Packages that are out of synchronization on a specified distribution point group**|Displays packages for which associated content files have not been updated with the latest version on a specified distribution point group.|
 
-## Software Distribution â€“ Package and Program Deployment
+## Software Distribution – Package and Program Deployment
 
-The following reports are listed under the **Software Distribution â€“ Package and Program Deployment** category
+The following reports are listed under the **Software Distribution – Package and Program Deployment** category
 
 |Report name|Description|
 |--- |--- |
@@ -597,15 +597,15 @@ The following reports are listed under the **Software Distribution â€“ Package a
 |**All package and program deployments to a specified computer**|Displays all of the package and program deployments that apply to a specified computer.|
 |**All package and program deployments to a specified user**|Displays all of the package and program deployments to a specified user.|
 
-## Software Distribution â€“ Package and Program Deployment Status
+## Software Distribution – Package and Program Deployment Status
 
-The following reports are listed under the **Software Distribution â€“ Package and Program Deployment Status** category.
+The following reports are listed under the **Software Distribution – Package and Program Deployment Status** category.
 
 |Report name|Description|
 |--- |--- |
 |**All system resource package and program deployments with status**|Displays all package and program deployments for the site with a summary status of each deployment.|
 |**All system resources for a specified package and program deployment in a specified state**|Displays a list of resources that are in a specified state for a specified package and program deployment.|
-|**Chart â€“ Hourly package and program deployment completion status**|Displays the percentage of computers that have successfully installed the package for every hour since the package and program deployment was created. It can be used to track the average time for a package and program deployment.|
+|**Chart – Hourly package and program deployment completion status**|Displays the percentage of computers that have successfully installed the package for every hour since the package and program deployment was created. It can be used to track the average time for a package and program deployment.|
 |**Package and program deployment status for a specified client and deployment**|Displays the status messages reported for a specified computer and package and program deployment.|
 |**Status of a specified package and program deployment**|Displays the status summary for a specified package and program deployment.|
 
@@ -629,9 +629,9 @@ The following reports are listed under the **Software Metering** category.
 |**Total usage trend analysis for a specific metered software program on Windows Terminal Servers**|Displays the number of users who ran programs matching the specified software metering rule using Terminal Services during each month for the past year.|
 |**Users that have run a specific metered software program**|Displays a list of users who have run programs matching the specified software metering rule within the specified month and year.|
 
-## Software Updates â€“ A Compliance
+## Software Updates – A Compliance
 
-The following reports are listed under the **Software Updates â€“ A Compliance** category.
+The following reports are listed under the **Software Updates – A Compliance** category.
 
 |Report name|Description|
 |--- |--- |
@@ -644,9 +644,9 @@ The following reports are listed under the **Software Updates â€“ A Compliance**
 |**Compliance 7 - Computers in a specific compliance state for an update group (secondary)**|Displays all computers in a collection that have a specified overall compliance state against a software update group.|
 |**Compliance 8 - Computers in a specific compliance state for an update (secondary)**|Displays all computers in a collection that have a specified compliance state for a software update.|
 
-## Software Updates â€“ B Deployment Management
+## Software Updates – B Deployment Management
 
-The following reports are listed under the **Software Updates â€“ B Deployment Management** category.
+The following reports are listed under the **Software Updates – B Deployment Management** category.
 
 |Report name|Description|
 |--- |--- |
@@ -659,9 +659,9 @@ The following reports are listed under the **Software Updates â€“ B Deployment M
 |**Management 7 - Updates in a deployment missing content**|Displays the software updates in a specified deployment that do not have all of the associated content retrieved, preventing clients from installing the update and achieving 100% compliance for the deployment.|
 |**Management 8 - Computers missing content (secondary)**|Displays all computers that require a specified software update contained in a specified deployment that is not provisioned on a distribution point.|
 
-## Software Updates â€“ C Deployment States
+## Software Updates – C Deployment States
 
-The following reports are listed under the **Software Updates â€“ C Deployment States** category.
+The following reports are listed under the **Software Updates – C Deployment States** category.
 
 |Report name|Description|
 |--- |--- |
@@ -672,9 +672,9 @@ The following reports are listed under the **Software Updates â€“ C Deployment S
 |**States 5 - States for an update in a deployment (secondary)**|Displays a summary of states for a specified software update targeted by a specified deployment.|
 |**States 6 - Computers in a specific enforcement state for an update (secondary)**|Displays all computers in a specified enforcement state for a specified software update.|
 
-## Software Updates â€“ D Scan
+## Software Updates – D Scan
 
-The following reports are listed under the **Software Updates â€“ D Scan** category.
+The following reports are listed under the **Software Updates – D Scan** category.
 
 |Report name|Description|
 |--- |--- |
@@ -683,15 +683,15 @@ The following reports are listed under the **Software Updates â€“ D Scan** categ
 |**Scan 3 - Clients of a collection reporting a specific state (secondary)**|Displays all computers for a specified collection and a specified compliance scan state during their last compliance scan.|
 |**Scan 4 - Clients of a site reporting a specific state (secondary)**|Displays all computers assigned to a specified site with a specified compliance scan state during their last compliance scan.|
 
-## Software Updates â€“ E Troubleshooting
+## Software Updates – E Troubleshooting
 
-The following reports are listed under the **Software Updates â€“ E Troubleshooting** category.
+The following reports are listed under the **Software Updates – E Troubleshooting** category.
 
 |Report name|Description|
 |--- |--- |
-|**Troubleshooting 1 â€“ Scan errors**|Displays scan errors at the site and a count of computers that are experiencing each error.|
-|**Troubleshooting 2 â€“ Deployment errors**|Displays the deployment errors at the site and a count of computers that are experiencing each error.|
-|**Troubleshooting 3 â€“ Computers failing with a specific scan error (secondary)**|Displays a list of the computers that failed a scan because of a specified error.|
+|**Troubleshooting 1 – Scan errors**|Displays scan errors at the site and a count of computers that are experiencing each error.|
+|**Troubleshooting 2 – Deployment errors**|Displays the deployment errors at the site and a count of computers that are experiencing each error.|
+|**Troubleshooting 3 – Computers failing with a specific scan error (secondary)**|Displays a list of the computers that failed a scan because of a specified error.|
 |**Troubleshooting 4 - Computers failing with a specific deployment error (secondary)**|Displays a list of the computers on which the deployment of update is failing because of a specified error.|
 
 ## State Migration
@@ -725,17 +725,17 @@ The following reports are listed under the **Status Messages** category.
 
 ## Status Messages - Audit
 
-The following reports are listed under the **Status Messages â€“ Audit** category.
+The following reports are listed under the **Status Messages – Audit** category.
 
 |Report name|Description|
 |--- |--- |
 |**All audit messages for a specific user**|Displays a summary of all audit status messages for a specified user. Audit messages describe actions taken in the Configuration Manager console that add, modify, or delete objects in Configuration Manager.|
-|**Remote Control â€“ All computers remote controlled by a specific user**|Displays a summary of status messages indicating remote control of client computers by a specified user.|
-|**Remote Control â€“ All remote control information**|Displays a summary of status messages related to the remote control of client computers.|
+|**Remote Control – All computers remote controlled by a specific user**|Displays a summary of status messages indicating remote control of client computers by a specified user.|
+|**Remote Control – All remote control information**|Displays a summary of status messages related to the remote control of client computers.|
 
-## Task Sequence â€“ Deployment Status
+## Task Sequence – Deployment Status
 
-The following reports are listed under the **Task Sequence â€“ Deployment Status** category.
+The following reports are listed under the **Task Sequence – Deployment Status** category.
 
 |Report name|Description|
 |--- |--- |
@@ -753,7 +753,7 @@ The following reports are listed under the **Task Sequence â€“ Deployment Status
 
 ## Task Sequence - Deployments
 
-The following reports are listed under the **Task Sequence â€“ Deployments** category.
+The following reports are listed under the **Task Sequence – Deployments** category.
 
 |Report name|Description|
 |--- |--- |
@@ -771,11 +771,11 @@ The following reports are listed under the **Task Sequence â€“ Deployments** cat
 
 ## Task Sequence - Progress
 
-The following reports are listed under the **Task Sequence â€“ Progress** category.
+The following reports are listed under the **Task Sequence – Progress** category.
 
 |Report name|Description|
 |--- |--- |
-|**Chart â€“ Weekly progress of a task sequence**|Displays the weekly progress of a task sequence, starting from the deployment date.|
+|**Chart – Weekly progress of a task sequence**|Displays the weekly progress of a task sequence, starting from the deployment date.|
 |**Progress of a task sequence**|Displays the progress of the specified task sequence.|
 |**Progress of all task sequences**|Displays a summary of the progress of all task sequences.|
 |**Progress of task sequences for operating system deployments**|Displays the progress of all task sequences that deploy operating systems.|
@@ -807,9 +807,9 @@ The following reports are listed under the **Upgrade Assessment** category.
 |**Operating system requirement status for computers in a specific collection**|Displays the status of operating system requirements for the specified operating system for computers in a specified collection. Use this report to determine if a computer meets the specified operating system requirements for CPU processor speed, memory size, and hard disk space.|
 |**Upgrade assessment summary**|Displays the upgrade assessment summary. You can use this report to assess the overall status for upgrade compatibility.|
 
-## User â€“ Device Affinity
+## User – Device Affinity
 
-The following reports are listed under the **User â€“ Device Affinity** category.
+The following reports are listed under the **User – Device Affinity** category.
 
 |Report name|Description|
 |--- |--- |
