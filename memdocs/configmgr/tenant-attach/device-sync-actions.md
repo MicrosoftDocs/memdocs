@@ -1,14 +1,15 @@
 ---
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
-description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 09/16/2021
+description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
+ms.date: 09/20/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_attach"></a> Microsoft Endpoint Manager tenant attach: Device sync and device actions

@@ -9,7 +9,7 @@ ms.topic: reference
 ms.assetid: 92b5c389-ae47-4a77-8dbc-181926f23ba8
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_SCI_SQLTask Server WMI Class

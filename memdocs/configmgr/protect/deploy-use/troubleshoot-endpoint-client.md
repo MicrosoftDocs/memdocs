@@ -6,12 +6,10 @@ ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Troubleshoot Windows Defender or Endpoint Protection client

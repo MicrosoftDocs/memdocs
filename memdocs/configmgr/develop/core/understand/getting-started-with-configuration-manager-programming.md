@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 7dc6cb76-469e-4e4f-b79b-bb391fd4e758
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Get started with Configuration Manager programming

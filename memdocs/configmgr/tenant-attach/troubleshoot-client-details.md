@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
-description: "Troubleshoot client details for Configuration Manager tenant attach"
+description: Troubleshoot client details for Configuration Manager tenant attach
 ms.date: 09/13/2021
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshoot ConfigMgr client details in the admin center (preview)

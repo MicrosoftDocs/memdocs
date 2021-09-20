@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 0a3dea00-39c9-49f2-ba07-19b70994a2b5
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Administration service release notes

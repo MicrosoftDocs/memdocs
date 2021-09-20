@@ -1,17 +1,15 @@
 ---
-title: "Introduction to queries"
-titleSuffix: "Configuration Manager"
-description: "Create and run queries to locate objects in a Configuration Manager hierarchy that match your query criteria."
+title: Introduction to queries
+titleSuffix: Configuration Manager
+description: Create and run queries to locate objects in a Configuration Manager hierarchy that match your query criteria.
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 03d1b3a9-41db-4d3a-a70e-e05ab5dc8141
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Introduction to queries in Configuration Manager
 

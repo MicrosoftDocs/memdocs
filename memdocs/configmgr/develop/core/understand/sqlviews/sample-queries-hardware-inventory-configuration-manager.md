@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: Sample queries for hardware inventory
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join hardware inventory views to other views that contain system data.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 6326ea08-e134-4eff-bc90-80d51c2d31e1
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Sample queries for hardware inventory in Configuration Manager
@@ -25,7 +25,7 @@ The following query lists all inventoried Configuration Manager client computers
 ```sql
     SELECT SYS.Netbios_Name0, OS.Caption0, OS.CSDVersion0 
     FROM v_GS_OPERATING_SYSTEM OS INNER JOIN v_R_System SYS 
-    Â Â ON OS.ResourceID = OS.ResourceID 
+      ON OS.ResourceID = OS.ResourceID 
     ORDER BY SYS.Netbios_Name0 
 ```
 

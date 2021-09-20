@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.assetid: 97f583d0-701b-41e5-8897-4e64bec0b85b
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # How to create a deployment

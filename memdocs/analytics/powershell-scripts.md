@@ -6,10 +6,10 @@ ms.date: 10/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
-ms.assetid: a47243a9-d880-4f0b-a4a5-2975a3a314b9
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # PowerShell scripts for Proactive remediations

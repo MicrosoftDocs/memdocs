@@ -1,7 +1,7 @@
 ---
 title: Office 365 Client Management dashboard
-titleSuffix: "Configuration Manager"
-description: "Review Microsoft 365 Apps client information from the Office 365 Client Management dashboard"
+titleSuffix: Configuration Manager
+description: Review Microsoft 365 Apps client information from the Office 365 Client Management dashboard
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -9,9 +9,7 @@ ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-
-
+ms.localizationpriority: medium
 ---
 
 # Office 365 Client Management dashboard

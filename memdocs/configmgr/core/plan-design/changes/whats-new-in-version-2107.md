@@ -8,7 +8,8 @@ ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2107 of Configuration Manager current branch

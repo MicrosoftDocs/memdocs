@@ -1,17 +1,15 @@
 ---
-title: "Migration job planning"
-titleSuffix: "Configuration Manager"
-description: "Use migration jobs to configure data that you want to migrate to your Configuration Manager current branch environment."
+title: Migration job planning
+titleSuffix: Configuration Manager
+description: Use migration jobs to configure data that you want to migrate to your Configuration Manager current branch environment.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Plan a migration job strategy in Configuration Manager
 

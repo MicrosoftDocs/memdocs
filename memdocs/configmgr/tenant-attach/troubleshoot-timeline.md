@@ -1,15 +1,15 @@
 ---
 title: Troubleshooting the device timeline
 titleSuffix: Configuration Manager
-description: "Troubleshooting the device timeline for Configuration Manager tenant attach"
+description: Troubleshooting the device timeline for Configuration Manager tenant attach
 ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 54a58548-45f3-4f75-93d6-d2fd96227e6a
 manager: dougeby
-author: mestew 
+author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_timeline"></a> Troubleshoot the timeline for devices uploaded to the admin center (preview)
