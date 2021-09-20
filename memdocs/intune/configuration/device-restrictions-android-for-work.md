@@ -327,6 +327,19 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - **Number of seconds the device is inactive before showing screen saver**: Choose how long the device is idle before showing the screensaver. Enter a value between 1-9999999 seconds. Default is `30` seconds. You must enter a number greater than zero (`0`).
         - **Detect media before starting screen saver**: **Enable** (default) doesn't show the screen saver if audio or video is playing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the screen saver, even if audio or video is playing.
 
+      - **Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with AAD Shared device mode.
+
+        When enabled, also configure:
+
+        - **Set custom URL background for sign-in screen​**: Enter the URL of the URL background for the sign-in screen. The sign-in screen must be enabled to configure this setting.
+        - **Set custom URL branding logo for sign-in screen and session pin page​**: Enter the URL branding logo for the sign-in screen and session pin page. ​
+        - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't rquired to set a PIN. This setting must be enabled to show the sub-settings.
+          - **Choose complexity of PIN for sign-in session**: Choose the complexity of the session PIN. Options include **Not configured**, **Complex**, or **Simple**. Complex requires alphanumerical characters and simple only requires numbers. ​
+          - **Require user to enter session PIN if screensaver has appeared​**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver has appeared. 
+        - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign-out of the Managed Home Screen based on inactivity. This setting must be enabled to show the sub-settings.
+          - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
+          - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
+
 - **Fully managed**: Configures the Microsoft Launcher app on fully managed devices.
 
   - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
