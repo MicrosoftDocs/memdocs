@@ -36,14 +36,14 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
 
 1. Make sure that Hyper-V is installed on your management PC. For information on how to install Hyper-V, see [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 2. Download your existing custom image virtual hard drive (VHD) file from the Azure storage blob URL to your PC where you have Hyper-V available.
-    The VHD file is the exact size of the OS disk, which can be a very large file size. Make sure to use a fast, stable internet connection to download the VHD file and prepare for long download times.
+    The VHD file is the exact size of the OS disk, which can be a large file size. Make sure to use a fast, stable internet connection to download the VHD file, and prepare for long download times.
     For information on how to download a managed disk, see [Download a VHD from Azure](/azure/virtual-machines/windows/download-vhd#generate-download-url).
     You can also download the VHD by using [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) directly, both as managed disk or storage blob VHDs.
 3. Switch to your local PC and open Hyper-V Manager.
 4. Under **Actions**, select **New** > **Virtual Machine**.
     ![Screenshot of Hyper-V create vm](./media/device-images-convert-gen2/create-vm.png)
 5. On the **Before You Begin** page, select **Next**.
-6. On the **Specify Name and Location** page, type friendly name, like CustomFinanceImageg2, and then select **Next**.
+6. On the **Specify Name and Location** page, type a friendly name, like CustomFinanceImageg2, and then select **Next**.
     ![Screenshot of Hyper-V specify name](./media/device-images-convert-gen2/specify-name.png)
 7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
     ![Screenshot of Specify Generation page](./media/device-images-convert-gen2/specify-generation.png)
@@ -54,11 +54,11 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
     ![Screenshot of connect virtual hard disk page](./media/device-images-convert-gen2/connect-virtual-hard-disk.png)
 11. For **Location**, select **Browse** and select the VHD that you downloaded earlier.
 12. Select **Next** and on the **Summary** page select **Finish**.
-13. Create a WinPE media ISO. For instructions on how to do this, see [Create bootable WinPE media](/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive).
+13. Create a WinPE media ISO. For instructions on how to create an ISO, see [Create bootable WinPE media](/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive).
 14. In Hyper-V Manager, under **Virtual Machines**, select the new VM, and then under **Actions** select **Settings**.
 15. In the left navigation pane, under **IDE Controller 1**, select **DVD Drive**.
 16. Under **DVD Drive**, under **Controller**, select **IDE Controller 1**.
-17. Select **Image file** and browse to the new ISO file you just created.
+17. Select **Image file** and browse to the new ISO file you created.
 18. Select **OK**.
 19. Under **Actions**, select **Start**.
 20. Wait for the wpeinit command prompt to open.
