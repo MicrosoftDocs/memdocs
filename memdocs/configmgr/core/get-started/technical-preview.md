@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/30/2021
+ms.date: 09/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,12 +119,21 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2108
+### Technical preview version 2109
 
-- [Export to CSV](2021/technical-preview-2108.md#bkmk_csv) <!--9663857-->
-- [Custom properties for devices in the console](2021/technical-preview-2108.md#bkmk_custom) <!--10642650-->
-- [Improvements to Software Center notifications with logos](2021/technical-preview-2108.md#bkmk_notify) <!--4993167-->
-- [PowerShell release notes preview](2021/technical-preview-2108.md#bkmk_powershell) <!--10326535-->
+- [2711343](2021/technical-preview-2109.md) <!--2711343-->
+- [10393847](2021/technical-preview-2109.md) <!--10393847-->
+- [10615989](2021/technical-preview-2109.md) <!--10615989-->
+- [10486584](2021/technical-preview-2109.md) <!--10486584-->
+- [9741121](2021/technical-preview-2109.md) <!--9741121-->
+- [7033309](2021/technical-preview-2109.md) <!--7033309-->
+- [7822886](2021/technical-preview-2109.md) <!--7822886-->
+- [9947307](2021/technical-preview-2109.md) <!--9947307-->
+- [10915091](2021/technical-preview-2109.md) <!--10915091-->
+- [10644702](2021/technical-preview-2109.md) <!--10644702-->
+- [10529267](2021/technical-preview-2109.md) <!--10529267-->
+- [2842082](2021/technical-preview-2109.md) <!--2842082-->
+- [10654429](2021/technical-preview-2109.md) <!--10654429-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -141,6 +150,13 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2108
+
+- [Export to CSV](2021/technical-preview-2108.md#bkmk_csv) <!--9663857-->
+- [Custom properties for devices in the console](2021/technical-preview-2108.md#bkmk_custom) <!--10642650-->
+- [Improvements to Software Center notifications with logos](2021/technical-preview-2108.md#bkmk_notify) <!--4993167-->
+- [PowerShell release notes preview](2021/technical-preview-2108.md#bkmk_powershell) <!--10326535-->
 
 ### Technical preview version 2107
 
