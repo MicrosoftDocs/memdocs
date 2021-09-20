@@ -333,7 +333,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         - **Set custom URL background for sign-in screen​**: Enter the URL of the URL background for the sign-in screen. The sign-in screen must be enabled to configure this setting.
         - **Set custom URL branding logo for sign-in screen and session pin page​**: Enter the URL branding logo for the sign-in screen and session pin page. ​
-        - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't rquired to set a PIN. This setting must be enabled to show the sub-settings.
+        - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't required to set a PIN. This setting must be enabled to show the sub-settings.
           - **Choose complexity of PIN for sign-in session**: Choose the complexity of the session PIN. Options include **Not configured**, **Complex**, or **Simple**. Complex requires alphanumerical characters and simple only requires numbers. ​
           - **Require user to enter session PIN if screensaver has appeared​**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver has appeared. 
         - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign-out of the Managed Home Screen based on inactivity. This setting must be enabled to show the sub-settings.
