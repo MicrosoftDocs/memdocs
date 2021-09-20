@@ -41,17 +41,17 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
     You can also download the VHD by using [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) directly, both as managed disk or storage blob VHDs.
 3. Switch to your local PC and open Hyper-V Manager.
 4. Under **Actions**, select **New** > **Virtual Machine**.
-    ![Screenshot of Hyper-V create vm](./media/device-images-convert-gen2/create-vm.png)
+    ![Screenshot of Hyper-V create vm](./media/device-images-convert-generation-2/create-vm.png)
 5. On the **Before You Begin** page, select **Next**.
 6. On the **Specify Name and Location** page, type a friendly name, like CustomFinanceImageg2, and then select **Next**.
-    ![Screenshot of Hyper-V specify name](./media/device-images-convert-gen2/specify-name.png)
+    ![Screenshot of Hyper-V specify name](./media/device-images-convert-generation-2/specify-name.png)
 7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
-    ![Screenshot of Specify Generation page](./media/device-images-convert-gen2/specify-generation.png)
+    ![Screenshot of Specify Generation page](./media/device-images-convert-generation-2/specify-generation.png)
 8. On the **Assign Memory** page, set **Startup memory** to at least 1024000 MB, preferably 4096000 MB. Select **Next**.
-    ![Screenshot of Hyper-V assign memory](./media/device-images-convert-gen2/assign-memory.png)
+    ![Screenshot of Hyper-V assign memory](./media/device-images-convert-generation-2/assign-memory.png)
 9. On the **Configure Networking** page, select **Default Switch** > **Next**.
 10. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**.
-    ![Screenshot of connect virtual hard disk page](./media/device-images-convert-gen2/connect-virtual-hard-disk.png)
+    ![Screenshot of connect virtual hard disk page](./media/device-images-convert-generation-2/connect-virtual-hard-disk.png)
 11. For **Location**, select **Browse** and select the VHD that you downloaded earlier.
 12. Select **Next** and on the **Summary** page select **Finish**.
 13. Create a WinPE media ISO. For instructions on how to create an ISO, see [Create bootable WinPE media](/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive).
