@@ -9,6 +9,7 @@ ms.date: 08/02/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for the cloud management gateway

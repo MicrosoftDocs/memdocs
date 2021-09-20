@@ -1,17 +1,16 @@
 ---
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
-description: A tutorial on using Proactive remediations to enhance the user 
+description: A tutorial on using Proactive remediations to enhance the user
 ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
-ms.assetid: 1426b6e4-fd29-4a59-b6be-2302281118b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
+ms.localizationpriority: high
 ---
 
 # Tutorial: Proactive remediations

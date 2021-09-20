@@ -6,10 +6,10 @@ ms.date: 05/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use a command line to install Configuration Manager sites

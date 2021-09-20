@@ -6,12 +6,10 @@ ms.date: 01/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
 # Remote connection profiles in Configuration Manager

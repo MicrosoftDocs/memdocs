@@ -8,7 +8,7 @@ ms.topic: reference
 ms.assetid: 4a5f6ade-6ab5-4324-ac0e-6348b9488712
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_TaskSequence_UpgradeOperatingSystemAction server WMI class

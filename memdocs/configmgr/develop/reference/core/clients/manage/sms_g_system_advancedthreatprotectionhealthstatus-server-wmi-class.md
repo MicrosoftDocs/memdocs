@@ -8,7 +8,7 @@ ms.topic: reference
 ms.assetid: 677fcbd0-9b4d-4e44-8601-3975dc59c9b9
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 description: An overview of SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
 
 

@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Release notes for Configuration Manager

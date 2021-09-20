@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Exercise 3: Create a new report'
 titleSuffix: Configuration Manager
 description: Create a simple report and configure the report properties.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 16e62994-a1e2-4ee9-bf62-3985ecb1c745
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Exercise 3: Create a new Configuration Manager report
@@ -28,7 +28,7 @@ The report displays all collections that administrative users have created and e
 1. On the **Information** page of the Create Report Wizard, select **SQL-based Report**, and then configure the following properties:
    - **Name:** Enter **All collections created by administrative users**.
    - **Description:** Enter **Displays all collections that were created by an administrative user (excludes built-in collections).**
-   - **Path:** Select **Browse**, and then select the **Site – General** folder to store the report.
+   - **Path:** Select **Browse**, and then select the **Site � General** folder to store the report.
 1. Select **Next**.
 1. On the **Summary** page of the Create Report Wizard, review the actions that will be taken and then select **Next**.
 1. On the **Completion** page of the wizard, review any messages and then select **Close**.

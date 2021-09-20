@@ -1,17 +1,15 @@
 ---
-title: "Planning certificate template permissions"
-titleSuffix: "Configuration Manager"
-description: "Learn about planning for the permissions that you need to configure the certificate templates that Configuration Manager uses."
+title: Planning certificate template permissions
+titleSuffix: Configuration Manager
+description: Learn about planning for the permissions that you need to configure the certificate templates that Configuration Manager uses.
 ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Planning for certificate template permissions for certificate profiles in Configuration Manager
 

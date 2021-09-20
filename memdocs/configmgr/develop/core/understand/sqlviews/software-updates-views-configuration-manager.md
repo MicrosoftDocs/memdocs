@@ -1,4 +1,4 @@
-﻿---
+---
 title: Software updates views
 titleSuffix: Configuration Manager
 description: Information about the software updates metadata, software update groups, and software update bundles.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 1e6741d2-7737-4446-b65f-e6e330c09458
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Software updates views in Configuration Manager

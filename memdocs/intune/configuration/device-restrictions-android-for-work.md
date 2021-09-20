@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/19/2021
+ms.date: 09/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -168,7 +168,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Not configured**: Intune doesn't change or update this setting.
     - **Single app**: Users can only access a single app on the device. When the device starts, only the specific app starts. Users are restricted from opening new apps or from changing the running app.
 
-      - **Select an app to use for kiosk mode**: Select the managed Google Play app from the list.
+      - **Select an app to use for kiosk mode**: Select the Managed Google Play app from the list.
 
       > [!IMPORTANT]
       > When using single-app kiosk mode, to use dialer/phone apps, then enable system notifications. This feature is available on Android devices running 9.0 and newer. To enable system notifications, see [General settings for dedicated devices](#dedicated-devices) (in this article).
@@ -428,7 +428,7 @@ End of comment -->
 
 - **App auto-updates (work profile-level)**: Devices check for app updates daily. Choose when automatic updates are installed. Your options:
   - **Not configured**: Intune doesn't change or update this setting.
-  - **User choice**: The OS might default to this option. Users can set their preferences in the managed Google Play app.
+  - **User choice**: The OS might default to this option. Users can set their preferences in the Managed Google Play app.
   - **Never**: Updates are never installed. This option isn't recommended.
   - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
   - **Always**: Updates are installed when they're available.
@@ -437,8 +437,8 @@ End of comment -->
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
   
-  - Only show apps in the managed Google Play store that are approved, or apps that are required.
-  - Uninstall apps that were installed outside of the managed Google Play store.
+  - Only show apps in the Managed Google Play store that are approved, or apps that are required.
+  - Uninstall apps that were installed outside of the Managed Google Play store.
 
 If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
 

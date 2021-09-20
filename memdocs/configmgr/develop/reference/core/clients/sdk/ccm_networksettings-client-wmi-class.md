@@ -8,7 +8,7 @@ ms.technology: configmgr-sdk
 ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # CCM_NetworkSettings Client WMI Class

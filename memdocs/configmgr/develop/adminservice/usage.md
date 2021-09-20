@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.assetid: 7491b6bb-4479-469a-8a4f-1ee139834c96
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # How to use the administration service in Configuration Manager

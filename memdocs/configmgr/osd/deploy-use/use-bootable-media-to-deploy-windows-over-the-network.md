@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use bootable media to deploy Windows over the network with Configuration Manager

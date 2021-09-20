@@ -6,10 +6,10 @@ ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
-ms.assetid: 4a877bed-f6c4-4048-9421-507dc848af5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Remote actions with co-management

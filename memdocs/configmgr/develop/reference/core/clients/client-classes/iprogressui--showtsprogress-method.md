@@ -11,7 +11,7 @@ ms.topic: reference
 ms.assetid: 3e8e24ba-615d-4e97-9411-a2bab792a264
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # IProgressUI::ShowTSProgress method

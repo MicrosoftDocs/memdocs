@@ -1,17 +1,15 @@
 ---
-title: "Monitor certificate profiles"
-titleSuffix: "Configuration Manager"
-description: "Learn how to monitor the compliance status of Configuration Manager certificate profiles."
+title: Monitor certificate profiles
+titleSuffix: Configuration Manager
+description: Learn how to monitor the compliance status of Configuration Manager certificate profiles.
 ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # How to monitor certificate profiles in Configuration Manager
 
