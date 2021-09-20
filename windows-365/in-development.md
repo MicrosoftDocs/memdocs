@@ -72,7 +72,7 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 
 In a future update, Windows 365 will support Windows 11 as a Cloud PC operating system.
 
-Windows 11 Cloud PCs require use Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
+Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
 
 ### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
 
