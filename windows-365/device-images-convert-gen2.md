@@ -54,31 +54,30 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
     ![Screenshot of connect virtual hard disk page](./media/device-images-convert-gen2/connect-virtual-hard-disk.png)
 11. For **Location**, select **Browse** and select the VHD that you downloaded earlier.
 12. Select **Next** and on the **Summary** page select **Finish**.
-13. Create a WinPE media ISO by following the steps in this article: [NEED LOCATION - WE CAN'T USE A PERSONAL SHAREPOINT]().
+13. Create a WinPE media ISO. For instructions on how to do this, see [Create bootable WinPE media](/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive).
 14. In Hyper-V Manager, under **Virtual Machines**, select the new VM, and then under **Actions** select **Settings**.
-15. Mount the ISO to your new VM in Hyper-V Manager NEED INSTRUCTIONS ON HOW TO DO THIS.
-16. In the left navigation pane, under **IDE Controller 1**, select **DVD Drive**.
-17. Under **DVD Drive**, under **Controller**, select **IDE Controller 1**.
-18. Select **Image file** and browse to the new ISO file you just created.
-19. Select **OK**.
-20. Under **Actions**, select **Start**.
+15. In the left navigation pane, under **IDE Controller 1**, select **DVD Drive**.
+16. Under **DVD Drive**, under **Controller**, select **IDE Controller 1**.
+17. Select **Image file** and browse to the new ISO file you just created.
+18. Select **OK**.
+19. Under **Actions**, select **Start**.
     - Make sure to boot from the mounted ISO. NEED INSTRUCTIONS ON HOW TO DO THIS.
     - Make sure the wpeinit command prompt is open. NEED INSTRUCTIONS ON HOW TO DO THIS.
-21. To convert the Master Boot Record (MBR) to the GUID Partition Table (GPT) partition, run the following two commands. The GPT is the new standard for gen2 based VMs. WHERE ARE THESE COMMANDS RUN? the wpeinit command prompt?
+20. To convert the Master Boot Record (MBR) to the GUID Partition Table (GPT) partition, run the following two commands. The GPT is the new standard for gen2 based VMs. WHERE ARE THESE COMMANDS RUN? the wpeinit command prompt?
     1. To determine the correct disk for conversion and validate it, run ````mbr2gpt /validate /disk:0````.
     2. To convert the disk to the GUID Partition Table (GPT), run ````mbr2gpt /convert /disk:0````
-22. After the commands run successfully, dismount the WinPE ISO by following these steps:
+21. After the commands run successfully, dismount the WinPE ISO by following these steps:
     1. In Hyper-V Manager, under **Virtual Machines**, select the new VM, and then under **Actions** select **Settings**.
     2. In the left navigation pane, select **IDE Controller 1**.
     3. Under **DVD Drive**, under **Controller**, select **IDE Controller 1**.
     4. Select **OK**.
-23. Upload the converted VHD back to Azure. You can use [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/). For other upload options, see [Upload a generalized Windows VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed).
+22. Upload the converted VHD back to Azure. You can use [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/). For other upload options, see [Upload a generalized Windows VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed).
     - Make sure that the VHD remains **VHD in fixed size**. **VHDX as format** isn’t supported on Azure. WHERE ARE THESE SETTINGS?
-24. Go to the [Azure portal](https://portal.azure.com), open **Images** > **Create**.
-25. Fill in the required fields and make sure to select **Gen 2** for **VM generation**.
-26. Select **Review + Create**.
-27. After the image is created, you can upload it to the Shared Image Gallery. For instructions on how to upload, see [Upload the custom image to a shared image gallery](/azure/lab-services/upload-custom-image-shared-image-gallery#upload-the-custom-image-to-a-shared-image-gallery).
-28. You can now add the device image to Windows 365. For information on how to upload custom images, see [Add a custom device image](add-device-images.md#add-custom-device-image).
+23. Go to the [Azure portal](https://portal.azure.com), open **Images** > **Create**.
+24. Fill in the required fields and make sure to select **Gen 2** for **VM generation**.
+25. Select **Review + Create**.
+26. After the image is created, you can upload it to the Shared Image Gallery. For instructions on how to upload, see [Upload the custom image to a shared image gallery](/azure/lab-services/upload-custom-image-shared-image-gallery#upload-the-custom-image-to-a-shared-image-gallery).
+27. You can now add the device image to Windows 365. For information on how to upload custom images, see [Add a custom device image](add-device-images.md#add-custom-device-image).
 
 <!-- ########################## -->
 ## Next steps
