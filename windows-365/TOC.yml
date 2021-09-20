@@ -63,6 +63,8 @@ items:
         items:
         - name: Add or delete device images
           href: add-device-images.md
+        - name: Convert image to Gen 2
+          href: device-images-convert-gen2.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
