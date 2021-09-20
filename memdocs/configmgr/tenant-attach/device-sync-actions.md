@@ -165,7 +165,7 @@ From the Microsoft Endpoint Manager admin center, you can review the status of y
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Endpoint Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
 > [!NOTE]
-> Some information isn't available if the hierarchy is running Configuration Manager version 2006.
+> Some information isn't available if the hierarchy is running Configuration Manager version 2006 or earlier.
 
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 
