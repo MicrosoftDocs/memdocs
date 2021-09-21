@@ -9,6 +9,8 @@ items:
     href: whats-new.md
   - name: Features in development
     href: in-development.md
+  - name: Compare Windows 365 Enterprise and Business
+    href: business-enterprise-comparison.md
 - name: Concepts
   items:
   - name: Architecture

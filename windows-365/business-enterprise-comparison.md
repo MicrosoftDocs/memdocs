@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: What is Windows 365?
+title: Differences between Windows 365 Business and Enteprise
 titleSuffix:
-description: What is Windows 365?
+description: What are the differences between Windows 365 Enterprise and Business?
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 365 Enterprise or Windows 365 Business?
+# Comparing Windows 365 Enterprise and Business
 
-Windows 365 is available in two editions: Windows 365 Enterprise and Windows 365 Business. Windows 365 Enterprise is designed for large organizations that need more Cloud PCs and management options. Windows 365 Business is for smaller organizations that support less than 300 employees and have fewer management needs.
+Windows 365 is available in two editions: Windows 365 Enterprise and Windows 365 Business.
 
 **Windows 365 Enterprise** is for larger organizations that want to:
 
@@ -55,7 +55,7 @@ Windows 365 Business doesn't have any mobile device management enrollment requir
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Domain Join | Azure AD without Azure Virtual Network (VNet) support. | Hybrid Azure AD with VNet support.<br>Azure AD with VNet support. |
+| Domain Join | Azure AD without Azure Virtual Network (VNet) support. | Hybrid Azure AD with VNet support.<br>For other domain support, see [In development for Windows 365 Enterprise](in-development.md). |
 
 ## Purchasing and licensing comparisons
 
@@ -64,7 +64,7 @@ Windows 365 Business doesn't have any mobile device management enrollment requir
 | Purchase channels | Web direct, self-service, Cloud Service Provider (CSP). | Web direct, Enterprise Agreements (EA), CSP. |
 | License assignment | Microsoft 365 Admin Center or the Azure AD portal. | Microsoft 365 Admin Center. |
 | Licensing requirements | No licensing pre-requirements to buy and deploy Windows 365 Business. Other features (like device management) can be used if users are licensed for Microsoft Endpoint Management.| Each user must be licensed for Windows 10 or 11 Enterprise (when avialable), Microsoft Endpoint Manager, and Azure AD P1. |
-| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>2 GB RAM = 12 GB<br>4 or 8 GB RAM outbound data = 20 GB outbound data<br>16 GB RAM = 40 GB outbound data<br>32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. |
+| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>2 GB RAM = 12 GB outbound data<br>4 or 8 GB RAM = 20 GB outbound data<br>16 GB RAM = 40 GB outbound data<br>32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. |
 
 ## Support comparisons
 
