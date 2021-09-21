@@ -4,6 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 05/04/2021
+ms.localizationpriority: medium
 ---
 
 <!--## Enable Transport layer security (TLS) 1.2 protocol as a security provider Note: the heading in in the 2 articles (enable-tls-1-2-client & enable-tls-1-2-server) to better facilitate linking. -->

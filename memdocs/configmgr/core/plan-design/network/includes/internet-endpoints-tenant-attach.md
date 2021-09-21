@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 08/02/2021
+ms.localizationpriority: medium
 ---
 
 - `https://aka.ms/configmgrgateway`
