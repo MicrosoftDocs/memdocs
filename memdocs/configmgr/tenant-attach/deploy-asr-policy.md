@@ -2,7 +2,7 @@
 title: Tenant attach - Create and deploy Attack surface reduction policies from the admin center (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy Attack surface reduction policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 09/27/2021
+ms.date: 09/29/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -39,6 +39,8 @@ ms.author: brenduns
 1. Assign a **Name** and optionally a **Description** on the **Basics** page.
 1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about available settings for both profiles, see [Attack surface reduction policy settings for tenant attached devices](../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr).
 1. Assign the policy to a Configuration Manager collection on the **Assignments** page.
+
+[!INCLUDE [Device status for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-device-status.md)]
 
 ## Next steps
 
