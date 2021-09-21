@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 05/18/2021
+ms.localizationpriority: high
 ---
 
 <!---This include file is shared by atp-onboard.md, deploy-antivirus-policy.md, deploy-firewall-policy.md,endpoint-security-get-started.md. -->
