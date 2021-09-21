@@ -33,7 +33,8 @@ ms.collection: M365-identity-device-management
 If you want to use a custom device image, you can add it into your Azure subscription and then use it for provisioning Cloud PCs. You can use standard Azure Marketplace gallery images or [create your own custom managed image](/azure/virtual-machines/windows/capture-image-resource). If you currently use a Shared Image Gallery in Microsoft Azure, you can convert one of those images into a managed imaged using the steps to [export an image version to a managed disk](/azure/virtual-machines/managed-disk-from-image-version) and then [create an image from a managed disk](/azure/virtual-machines/windows/capture-image-resource#create-an-image-from-a-snapshot-using-powershell).
 
 > [!NOTE]
-> Windows 10 images should not contain Azure Virtual Desktop client components. Additionally, you cannot import Windows 10 Multisession images into Windows 365.
+> - Windows 10 images should not contain Azure Virtual Desktop client components. Additionally, you cannot import Windows 10 Multisession images into Windows 365.
+> - For information about support for Windows 11 custom device images, see [In development for Windows 365 Enterprise](in-development.md#support-for-windows-11).
 
 ## Add a custom device image
 

@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 11/30/2020
+ms.localizationpriority: medium
 ---
 
 On the computer where you run the console, allow it to access the following internet endpoints to send diagnostic data to Microsoft:
