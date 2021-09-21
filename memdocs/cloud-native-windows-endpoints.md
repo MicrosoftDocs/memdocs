@@ -136,7 +136,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   To assign licenses, see [Assign Microsoft Intune licenses](./intune/fundamentals/licenses-assign.md).
 
   > [!NOTE]
-  > Both types of licenses are typically included with licensing bundles like Microsoft 365 E3, A3, F3 and above. View comparisons of Microsoft 365 licensing [here](/microsoft-365/compare-microsoft-365-enterprise-plans).
+  > Both types of licenses are typically included with licensing bundles like Microsoft 365 E3 (or A3) and above. View comparisons of M365 licensing [here](/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 ### Step 3 - Import your test device
 
@@ -674,4 +674,4 @@ Learn more about the following subjects:
 - [Use certificates for authentication in Intune](./intune/protect/certificates-configure.md)
 - Deploy network profiles, including [VPN](./intune/configuration/vpn-settings-windows-10.md) and [Wi-Fi](./intune/configuration/wi-fi-settings-windows.md)
 - Deploy [Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-- Security baseline for [Microsoft Edge](./intune/protect/security-baseline-settings-edge.md)
+- Security baseline for [Edge](./intune/protect/security-baseline-settings-edge.md)
