@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/11/2020
+ms.localizationpriority: medium
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 
