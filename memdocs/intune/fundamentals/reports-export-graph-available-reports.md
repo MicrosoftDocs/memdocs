@@ -149,7 +149,7 @@ The following table contains the possible output when calling the `DeviceInstall
 | AppInstallStateDetails_loc |
 | HexErrorCode    |
 
-You can choose to filter the `AppInstallStatusAggregate` report's output based on the following columns:
+You can choose to filter the `DeviceInstallStatusByApp` report's output based on the following columns:
 - `ApplicationId`
 - `AppInstallState`
 - `HexErrorCode` (Used as ErrorCode)
@@ -502,7 +502,7 @@ You can choose to filter the `ActiveMalware` and `Malware` report's output based
 
 ## ComanagedDeviceWorkloads 
 
-The following table contains the possible output when calling the `ABC` report:
+The following table contains the possible output when calling the `ComanagedDeviceWorkloads` report:
 
 | Available   properties |
 |-|
@@ -527,7 +527,7 @@ You can choose to filter the `ComanagedDeviceWorkloads` report's output based on
 
 ## ComanagementEligibilityTenantAttachedDevices 
 
-The following table contains the possible output when calling the `ABC` report:
+The following table contains the possible output when calling the `ComanagementEligibilityTenantAttachedDevices` report:
 
 | Available   properties |
 |-|
