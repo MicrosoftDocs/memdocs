@@ -12,11 +12,15 @@ ms.date: 09/29/2021
 ## Device Status
 <!--IN9264837-->
 
-You can review the status of endpoint security policies for **ConfigManager** devices
-
-The **Device Status** can be accessed for the following polices:
+You can review the status of endpoint security policies for tenant attached devices. The **Device Status** page can be accessed for the following endpoint security policy types:
 
 - Antivirus
 - Firewall
 - Endpoint detection and response
 - Attack surface reduction
+
+To display the **Device Status** page:
+
+1. Select a policy that's targeted to **ConfigManager** devices to display the **Overview** page for the policy.
+1. Select **Device Status** to display a list of devices targeted by the policy.
+1. The **Device Name**, **Compliance State**, and **SMS ID** are displayed for each of the devices on the  **Device Status** page.
