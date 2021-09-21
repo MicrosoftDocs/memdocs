@@ -1,8 +1,8 @@
 ---
-title: Tenant attach - BitLocker recovery keys
+title: Tenant attach - BitLocker recovery keys (preview)
 titleSuffix: Configuration Manager
 description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Endpoint Manager admin center.
-ms.date: 09/24/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -11,11 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 ---
 
-# Tenant attach: BitLocker recovery keys
+# Tenant attach: BitLocker recovery keys (preview)
 
 *Applies to: Configuration Manager (current branch)*
 
 <!--6979225-->
+
+> [!IMPORTANT]
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 You can get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center. For example, a help desk technician who doesn't have access to Configuration Manager could use the web-based admin center to help an end user get a recovery key for their device.
 
