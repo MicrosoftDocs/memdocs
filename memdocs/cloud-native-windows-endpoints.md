@@ -115,9 +115,14 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   For information on configuring Enrollment Restrictions, see [Set enrollment restrictions in Microsoft Intune](./intune/enrollment/enrollment-restrictions-set.md).
 
 - **Azure AD Device MDM settings**  
-  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Autopilot to work seamlessly.
-
+  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Autopilot to work.
+  
   To check your Azure AD Device MDM settings are enabled properly, see [Quickstart - Set up automatic enrollment in Intune](./intune/enrollment/quickstart-setup-auto-enrollment.md).
+  
+- **Azure AD company branding**  
+  Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistant look-and-feel when they sign-in to Microsoft 365. This configuration is required for Autopilot to work.
+
+  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 - **Licensing**  
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune will require two key capabilities.
@@ -252,7 +257,7 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
     - Force synchronization of browser data and do not show the sync consent prompt - **Enabled**
 
 - **Microsoft OneDrive**  
-  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive.
+  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended, however as it's enabled by default, it's not included in the list below. For more information on the recommended configuration for the Onedrive sync app, see [here](/onedrive/ideal-state-configuration).
 
   - OneDrive
     - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
@@ -526,7 +531,7 @@ The settings catalog is a single location where all configurable Windows setting
 >
 > - Many of the settings you're familiar with from group policy are already available in the settings catalog. For more information, see [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
 >
-> - Some settings available in settings catalog only work with Windows Insider builds. This limitation is typically called out in the last line of the item description text for each setting.
+> - If you intend to leverage either ADMX templates or settings catalog (recommended), be sure to update your devices with the September 2021 ‘patch Tuesday’ update ([KB5005565](https://support.microsoft.com/topic/september-14-2021-kb5005565-os-builds-19041-1237-19042-1237-and-19043-1237-292cf8ed-f97b-4cd8-9883-32b71e3e6b44)) for Windows 10 versions 2004 and later. This monthly update includes [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1) which which brings [1,400+ group policy settings to MDM](https://blogs.windows.com/windows-insider/2021/08/18/releasing-windows-10-build-19043-1198-21h1-to-release-preview-channel/#:~:text=We%20enabled%20over,new%20MDM%20policies.). Failure to apply this update will result in a 'Not Applicable' message alongside the setting in the MEM portal. These policies only work on Windows Enterprise and Education versions. Windows 11 includes the necessary updates to make these policies work.
 
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
