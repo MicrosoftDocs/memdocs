@@ -252,7 +252,7 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
     - Force synchronization of browser data and do not show the sync consent prompt - **Enabled**
 
 - **Microsoft OneDrive**  
-  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended, however as it's enabled by default, it's not included in the list below. For more information on the recommended configuration for the Onedrive sync app, see [here](https://docs.microsoft.com/onedrive/ideal-state-configuration).
+  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended, however as it's enabled by default, it's not included in the list below. For more information on the recommended configuration for the Onedrive sync app, see [here](/onedrive/ideal-state-configuration).
 
   - OneDrive
     - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
