@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,16 @@ The following table contains the possible values for the `reportName` parameter.
 |         AppInstallStatusAggregate  |             Under **Apps** > **Monitor** > **App install status**         |
 |         DeviceInstallStatusByApp  |            Under **Apps** > **All Apps** > *Select an individual app*       |
 |         UserInstallStatusAggregateByApp  |            Under **Apps** > **All Apps** > *Select an individual app*         |
+|         ComanagedDeviceWorkloads  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Managed Workloads**        |
+|         ComanagementEligibilityTenantAttachedDevices  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Management Eligibility**        |
+|         DeviceRunStatesByProactiveRemediation  |            Under **Reports** > **Endpoint Analytics** > **Proactive remediations** > *Select a remediation* > **Device status**        |
+|         DevicesWithInventory  |            Under **Devices** > **All Devices** > **Export** > **Include all inventory data in the exported file**        |
+|         FirewallStatus  |            Under **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later**        |
+|         GPAnalyticsSettingMigrationReadiness  |            Under **Reports** > **Group policy analytics** > **Reports** > **Group policy migration readiness**        |
+|         QualityUpdateDeviceErrorsByPolicy  |            Under **Devices** > **Monitor** > **Windows Expedited update failures** > *Select a profile*        |
+|         QualityUpdateDeviceStatusByPolicy  |            Under **Reports** > **Windows updates** > **Reports** > **Windows Expedited Update Report**        |
+|         MAMAppProtectionStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App protection report: iOS, Android**       |
+|         MAMAppConfigurationStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App configuration report**        |
 
 Each of the listed reports is described below.
 
@@ -489,6 +499,309 @@ You can choose to filter the `ActiveMalware` and `Malware` report's output based
 - `Severity` 
 - `ExecutionState` 
 - `State` 
+
+## ComanagedDeviceWorkloads 
+
+The following table contains the possible output when calling the `ABC` report:
+
+| Available   properties |
+|-|
+|   DeviceName  |
+|   DeviceId    | 
+|   CompliancePolicy    | 
+|   ResourceAccess   |
+|   DeviceConfiguration  |
+|   WindowsUpdateforBusiness     |
+|   EndpointProtection   |
+|   ModernApps   |
+|   OfficeApps   |
+
+You can choose to filter the `ComanagedDeviceWorkloads` report's output based on the following columns:
+- `CompliancePolicy`
+- `ResourceAccess`
+- `DeviceConfiguration`
+- `WindowsUpdateforBusiness`
+- `EndpointProtection`
+- `ModernApps`
+- `OfficeApps`
+
+## ComanagementEligibilityTenantAttachedDevices 
+
+The following table contains the possible output when calling the `ABC` report:
+
+| Available   properties |
+|-|
+|   DeviceName   |
+|   DeviceId   |
+|   Status   |
+|   OSDescription   |
+|   OSVersion   |
+
+You can choose to filter the `ComanagementEligibilityTenantAttachedDevices` report's output based on the following columns:
+- `Status` 
+
+## DeviceRunStatesByProactiveRemediation 
+
+The following table contains the possible output when calling the `DeviceRunStatesByProactiveRemediation` report:
+
+| Available   properties |
+|-|
+|   PolicyId   | 
+|   DeviceId   | 
+|   UserId   | 
+|   InternalVersion   | 
+|   ModifiedTime   | 
+|   PostRemediationDetectionScriptError   | 
+|   PostRemediationDetectionScriptOutput   | 
+|   PreRemediationDetectionScriptError   | 
+|   PreRemediationDetectionScriptOutput   | 
+|   RemediationScriptErrorDetails   | 
+|   RemediationStatus   | 
+|   DeviceName   | 
+|   OSVersion   | 
+|   UPN   | 
+|   UserEmail   | 
+|   UserName   | 
+|   DetectionStatus   | 
+|   UniqueKustoKey   | 
+|   DetectionScriptStatus   | 
+|   RemediationScriptStatus   | 
+|   PolicyId   | 
+
+You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's output based on the following columns:
+- `PolicyId` **(required)**
+- `RemediationStatus`
+- `DetectionStatus`
+
+## DevicesWithInventory 
+
+The following table contains the possible output when calling the `DevicesWithInventory` report:
+
+| Requestable Columns  | Columns received  |
+|---|---|
+| DeviceId  | Device ID  |
+| DeviceName  | Device name  |
+| CreatedDate  | Enrollment date  |
+| LastContact  | Last check-in  |
+| ReferenceId  | Azure AD Device ID  |
+| OSVersion  | OS version  |
+| GraphDeviceIsManaged  | Azure AD registered  |
+| EasID  | EAS activation ID  |
+| SerialNumber  | Serial number  |
+| Manufacturer  | Manufacturer  |
+| Model  | Model  |
+| EasActivationStatus  | EAS activated  |
+| IMEI  | IMEI  |
+| EasLastSyncSuccessUtc  | Last EAS sync time  |
+| EasStateReason  | EAS reason  |
+| EasAccessState  | EAS status  |
+| InGracePeriodUntil  | Compliance grace period expiration  |
+| AndroidPatchLevel  | Security patch level  |
+| WifiMacAddress  | Wi-Fi MAC  |
+| MEID  | MEID  |
+| SubscriberCarrierNetwork  | Subscriber carrier  |
+| StorageTotal  | Total storage  |
+| StorageFree  | Free storage  |
+| ManagedDeviceName  | Management name  |
+| CategoryName  | Category  |
+| UserId  | UserId  |
+| UPN  | Primary user UPN  |
+| UserEmail  | Primary user email address  |
+| UserName  | Primary user display name  |
+| WiFiIPv4Address  | WiFiIPv4Address  |
+| WiFiSubnetID  | WiFiSubnetID  |
+| ComplianceState  | Compliance  |
+| ManagementAgent  | Managed by  |
+| OwnerType  | Ownership  |
+| ManagementState  | Device state  |
+| DeviceRegistrationState  | Intune registered  |
+| IsSupervised  | Supervised  |
+| IsEncrypted  | Encrypted  |
+| OS  | OS  |
+| SkuFamily  | SkuFamily  |
+| JoinType  | JoinType  |
+| PhoneNumber  | Phone number  |
+| Jailbroken  | Jailbroken  |
+| ICCID  | ICCID  |
+| EthernetMAC  | EthernetMAC  |
+| CellularTechnology  | CellularTechnology  |
+| ProcessorArchitecture  | ProcessorArchitecture  |
+| EID  | EID  |
+| EnrollmentType  | EnrollmentType  |
+| PartnerFeaturesBitmask  | PartnerFeaturesBitmask  |
+| ClientRegistrationStatus  | ClientRegistrationStatus  |
+| ManagementAgents  | ManagementAgents  |
+| CategoryId  | CategoryId  |
+| CertExpirationDate  | CertExpirationDate  |
+| MDMStatus  | MDMStatus  |
+| EnrolledByUser  | EnrolledByUser  |
+| IsManaged  | IsManaged  |
+| EncryptionStatus  | EncryptionStatus  |
+| SupervisedStatus  | SupervisedStatus  |
+| PhoneNumberE164Format  | Phone number  |
+| SCCMCoManagementFeatures  | SCCMCoManagementFeatures  |
+| LastLoggedOnUserUPN  | LastLoggedOnUserUPN  |
+| MDMWinsOverGPStartTime  | MDMWinsOverGPStartTime  |
+| StagedDeviceType  | StagedDeviceType  |
+| UserApprovedEnrollment  | UserApprovedEnrollment  |
+| ExtendedProperties  | ExtendedProperties  |
+| EntitySource  | EntitySource  |
+| PrimaryUser  | PrimaryUser  |
+| RetireAfterDatetime  | RetireAfterDatetime  |
+| PartnerDeviceId  | PartnerDeviceId  |
+| HasUnlockToken  | HasUnlockToken  |
+
+You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
+- `CreatedDate`
+- `LastContact`
+- `CategoryName` 
+- `ComplianceState` 
+- `ManagementAgent` 
+- `OwnerType`
+- `ManagementState`
+- `OS`
+- `Jailbroken` 
+- `EnrollmentType` 
+- `PartnerFeaturesBitmask` 
+
+## FirewallStatus  
+
+The following table contains the possible output when calling the `FirewallStatus` report:
+
+| Available   properties |
+|-|
+| DeviceName  | 
+| FirewallStatus  | 
+| FirewallStatus_loc   |
+| _ManagedBy   |
+| _ManagedBy_loc   |
+| UPN   |
+
+You can choose to filter the `FirewallStatus` report's output based on the following columns:
+- `FirewallStatus` 
+
+## GPAnalyticsSettingMigrationReadiness
+
+The following table contains the possible output when calling the `GPAnalyticsSettingMigrationReadiness` report:
+
+| Available   properties |
+|-|
+| SettingName   | 
+| SettingCategory   | 
+| MigrationReadiness   | 
+| OSVersion   | 
+| Scope   | 
+| ProfileType   | 
+| CSPName   | 
+
+You can choose to filter the `GPAnalyticsSettingMigrationReadiness` report's output based on the following columns:
+- `MigrationReadiness` 
+- `ProfileType` 
+- `CSPName` 
+
+## QualityUpdateDeviceErrorsByPolicy 
+
+The following table contains the possible output when calling the `QualityUpdateDeviceErrorsByPolicy` report:
+
+| Available   properties |
+|-|
+| PolicyId   | 
+| DeviceName   |  
+| AlertMessage   |  
+| AlertMessage_loc   |  
+| Win32ErrorCode   |  
+| UPN   |  
+| ExpediteQUReleaseDate   |  
+| DeviceId   |  
+
+You can choose to filter the `QualityUpdateDeviceErrorsByPolicy` report's output based on the following columns:
+- `PolicyId` **(required)** 
+- `AlertMessage` 
+
+## QualityUpdateDeviceStatusByPolicy 
+
+The following table contains the possible output when calling the `QualityUpdateDeviceStatusByPolicy` report:
+
+| Available   properties |
+|-|
+| PolicyId   |  
+| DeviceName   |  
+| UPN   |  
+| DeviceId   |  
+| AADDeviceId   |  
+| EventDateTimeUTC   |  
+| CurrentDeviceUpdateStatus   |  
+| CurrentDeviceUpdateStatus_loc   |  
+| CurrentDeviceUpdateSubstatus   |  
+| CurrentDeviceUpdateSubstatus_loc   |  
+| AggregateState   |  
+| AggregateState_loc   |  
+| LatestAlertMessage   |  
+| LatestAlertMessage_loc   |  
+| LastWUScanTimeUTC   |  
+| OwnerType   |  
+
+You can choose to filter the `QualityUpdateDeviceStatusByPolicy` report's output based on the following columns:
+- `PolicyId` **(required)** 
+- `AggregateState`
+- `OwnerType`
+
+## MAMAppProtectionStatus 
+
+The following table contains the possible output when calling the `MAMAppProtectionStatus` report:
+
+| Available   properties |
+|-|
+| User   | 
+| Email   | 
+| App   | 
+| AppVersion   | 
+| SdkVersion   | 
+| AppInstanceId   | 
+| DeviceName   | 
+| DeviceHealth   | 
+| DeviceType   | 
+| DeviceManufacturer   | 
+| DeviceModel   | 
+| AndroidPatchVersion   | 
+| AADDeviceID   | 
+| MDMDeviceID   | 
+| Platform   | 
+| PlatformVersion   | 
+| ManagementType   |
+| AppProtectionStatus   | 
+| Policy   | 
+| LastSync   |
+| ComplianceState   | 
+
+There are no filters for this report.
+
+## MAMAppConfigurationStatus 
+
+The following table contains the possible output when calling the `MAMAppConfigurationStatus` report:
+
+| Available   properties |
+|-|
+| User   | 
+| Email   | 
+| App   | 
+| AppVersion   | 
+| SdkVersion   | 
+| AppInstanceId   | 
+| DeviceName   | 
+| DeviceHealth   | 
+| DeviceType   | 
+| DeviceManufacturer   | 
+| DeviceModel   | 
+| AndroidPatchVersion   | 
+| AADDeviceID   | 
+| MDMDeviceID    |
+| Platform   | 
+| PlatformVersion   | 
+| Policy   | 
+| LastSync   | 
+
+There are no filters for this report.
 
 ## Next steps
 
