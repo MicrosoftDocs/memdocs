@@ -291,6 +291,10 @@ If a device uses Azure Active Directory (Azure AD) for client authentication and
 >
 > Also specify this parameter when you install a client for internet-only communication. Use `CCMALWAYSINF=1` together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
 
+## /IgnoreSkipUpgrade
+
+Specify this parameter to manually upgrade an excluded client
+
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
 The CCMSetup.exe command provides the following return codes. To troubleshoot, review `%WinDir%\ccmsetup\Logs\ccmsetup.log` on the client for context and additional detail about return codes.
