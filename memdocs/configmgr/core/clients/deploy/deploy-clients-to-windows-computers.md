@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to deploy clients to Windows computers in Configuration Manager

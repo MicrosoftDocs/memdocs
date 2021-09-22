@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Fundamental concepts for content management in Configuration Manager

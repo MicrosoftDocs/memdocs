@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 08/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: davidmeb; bryanke; davguy
+ms.reviewer: davidmeb; bryanke 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,15 +31,13 @@ ms.collection: M365-identity-device-management
 
 *This feature is in public preview.*
 
-With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or a version of Windows 11. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
-
-You can also use feature updates policy to [upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-windows-11).
+With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or version 2004. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
 
 Windows feature updates policies work with your *Update rings for Windows 10 and later* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
 
-When a device receives a policy for Feature updates:
+When a device receives a *Feature updates for Windows 10 and later* policy:
 
-- The device updates to the version of Windows specified in the policy. A device that already runs a later version of Windows remains at its current version. By freezing the version, the devices feature set remains stable during the duration of the policy.
+- The device updates to the version of Windows specified in the policy. A device that already runs a later version of Windows remains at its current version. By freezing the version, the devices feature set remains stable for the duration of the policy.
 
   > [!NOTE]
   > A device won't install an update when it has a *safeguard hold* for that Windows version. When a device evaluates applicability of an update version, Windows creates the temporary safeguard hold if an unresolved known issue exists. Once the issue is resolved, the hold is removed and the device can then update.
@@ -61,8 +59,6 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   - Windows 10 Virtual Desktop Access (VDA) per user
   - Microsoft 365 Business Premium
 
-  *Review your subscription details for applicability to Windows 11.*
-
 - Devices must:  
   - Run a version of Windows 10 that remains in support.
   - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
@@ -74,11 +70,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
-- Feature updates are supported for the following Windows 10 and Windows 11 editions:  
-  - Windows Pro
-  - Windows Enterprise
-  - Windows Pro Education
-  - Windows Education
+- Feature updates are supported for the following Windows 10 editions:  
+  - Windows 10 Pro
+  - Windows 10 Enterprise
+  - Windows 10 Pro Education
+  - Windows 10 Education
 
   > [!NOTE]
   > **Unsupported versions and editions**:  
@@ -86,7 +82,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 ## Limitations for Feature updates for Windows 10 and later policy
 
-- When you deploy *Feature updates for Windows 10 and later* policy to a device that also receives a *Update rings for Windows 10 or later* policy, review the update ring for the following configurations:
+- When you deploy a *Feature updates for Windows 10 and later* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
@@ -99,7 +95,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
-  To prevent this initial delay from impacting your co-managed devices, configure a [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md) policy and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows feature update report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
+  To prevent this initial delay from impacting your co-managed devices, configure a [Windows 10 feature update policy](../protect/windows-10-feature-updates.md) and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows feature update report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
@@ -114,7 +110,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   - The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
   - You use the Windows Update for [Business deployment service graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
 
-  To keep a device at its current feature update version and prevent it from being unenrolled and updated to the most recent feature update version, ensure the device remains assigned to a feature update policy that specifies the devices current Windows version.
+  To keep a device at its current feature update version and prevent it from being unenrolled and updated to the most recent feature update version, ensure the device remains assigned to a feature update policy that specifies the devices current Windows version. 
 
 ## Create and assign Feature updates for Windows 10 and later policy
 
@@ -127,39 +123,6 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 
 5. Under **Review + create**, review the settings. When ready to save the Feature updates policy, select **Create**.  
-
-## Upgrade devices to Windows 11
-
-You can use policy for *Feature updates for Windows 10 and later* to upgrade devices that run Windows 10 to Windows 11.
-
-When you use feature updates policy to deploy Windows 11, you can target the policy to any of your Windows 10 devices and only devices that meet the Windows 11 minimum requirements will upgrade. Devices that don’t meet the requirements for Windows 11 won’t receive the update and remain at their current Windows 10 version.
-
-When there are multiple versions of Windows 11 available, you can choose to deploy the latest build. When you deploy the latest build to a group of devices, those devices that already run Windows 11 will update while devices that still run Windows 10 will upgrade to that version of Windows 11 if they meet the upgrade requirements. In this way, you can always upgrade supported Windows 10 devices to the latest Windows 11 version  even if you choose to delay the upgrade of some devices until a future time.
-
-### Prepare to upgrade to Windows 11
-
-The first step in preparing for a Windows 11 upgrade is to ensure your devices meet the [minimum system requirements for Windows 11](/windows/whats-new/windows-11-requirements#hardware-requirements).
-
-You can use [Endpoint analytics in Microsoft Endpoint Manager](/mem/analytics/overview) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune-managed, co-managed, or have the Configuration Manager client version 2107 or newer with tenant attach enabled.
-
-If you’re already using Endpoint analytics, navigate to the [Work from anywhere report](/mem/analytics/work-from-anywhere), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you’ll see device-by-device readiness information.
-
-### Licensing for Windows 11 versions
-
-Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
-
-When you use configure a policy in the Microsoft Endpoint Manager admin center to deploy any Windows 11 version, the Microsoft Endpoint Manager admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won’t see or need to accept the license agreement, making the update process seamless.
-
-This license reminder appears each time you select a Windows 11 build, even if all your Windows devices already run Windows 11. This prompt is provided because Intune doesn’t track which devices will receive the policy, and its possible new devices that run Windows 10 might later enroll and be targeted by the policy.
-
-For more information including general licensing details, see the [Windows 11 documentation](/windows/whats-new/windows-11).
-
-### Create policy for Windows 11
-
-To deploy Windows 11, you’ll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It’s the [same process](#create-and-assign-feature-updates-for-windows-10-and-later-policy) though instead of selecting a Windows 10 version, you’ll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
-
-- Deploying an older Windows version to a device won’t downgrade the device. Devices only install an update when it's newer than the devices current version. 
-- Policies for Windows 11 and Windows 10 can exist side by side in Microsoft Endpoint Manager.
 
 ## Manage Feature updates for Windows 10 and later policy
 
@@ -186,11 +149,9 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows updates with Intune. Windows update reports show details about your Windows 10 and Windows 11 devices side by side in the same report.
-
-To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
+There are multiple options to get in-depth reporting for Windows 10 updates with Intune. To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
 
 ## Next steps
 
 - [Use Windows update rings in Intune](../protect/windows-10-update-rings.md)
-- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows updates
+- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows 10 updates

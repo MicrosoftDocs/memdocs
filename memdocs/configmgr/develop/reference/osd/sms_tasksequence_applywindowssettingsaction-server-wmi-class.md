@@ -8,7 +8,7 @@ ms.topic: reference
 ms.assetid: 62494ccd-da4c-430d-bad5-ed18c3067240
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # SMS_TaskSequence_ApplyWindowsSettingsAction server WMI class

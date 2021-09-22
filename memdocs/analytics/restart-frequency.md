@@ -6,10 +6,10 @@ ms.date: 03/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 9fe09e0a-f8ff-4714-8cf9-453e3197760d
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Restart frequency in endpoint analytics

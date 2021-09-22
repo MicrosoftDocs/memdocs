@@ -6,12 +6,10 @@ ms.date: 09/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Additional information about privacy for Configuration Manager

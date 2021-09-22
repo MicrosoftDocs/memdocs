@@ -1,18 +1,16 @@
 ---
-title: "New in version 1606"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1606 of Configuration Manager."
+title: New in version 1606
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1606 of Configuration Manager.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1606 of Configuration Manager
 

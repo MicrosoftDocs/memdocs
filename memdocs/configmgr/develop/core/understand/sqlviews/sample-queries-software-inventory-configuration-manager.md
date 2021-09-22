@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: Sample queries for software inventory
 titleSuffix: Configuration Manager
 description: Sample queries that show how software inventory views can be joined to other views to retrieve specific data.
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: baffc7d9-86a8-4e36-8230-ea4da8cf1f87
 author: aczechowski
 ms.author: aaroncz
-manager: dougeby
+manager: dougebyms.localizationpriority: low
 ---
 
 # Sample queries for software inventory in Configuration Manager
@@ -25,7 +25,7 @@ The following query lists all software files for the Configuration Manager produ
 ```sql
     SELECT DISTINCT SF.FileName, SF.FileDescription, SF.FileVersion 
     FROM v_GS_SoftwareProduct SP INNER JOIN v_GS_SoftwareFile SF 
-    Â Â ON SP.ProductID = SF.ProductId 
+      ON SP.ProductID = SF.ProductId 
     WHERE SP.ProductName = 'Configuration Manager' 
     ORDER BY SF.FileName 
 ```
@@ -37,8 +37,8 @@ The following query lists all inventoried products and the associated files for 
 ```sql
     SELECT DISTINCT SP.ProductName, SF.FileName 
     FROM v_R_System SYS INNER JOIN v_GS_SoftwareProduct SP 
-    Â Â ON SYS.ResourceID = SP.ResourceID INNER JOIN v_GS_SoftwareFile SF 
-    Â Â ON SP.ProductID = SF.ProductId 
+      ON SYS.ResourceID = SP.ResourceID INNER JOIN v_GS_SoftwareFile SF 
+      ON SP.ProductID = SF.ProductId 
     WHERE SYS.Netbios_Name0 = 'COMPUTER1' 
     ORDER BY SP.ProductName 
 ```
@@ -50,15 +50,15 @@ The following query lists all computers that have Microsoft Office installed and
 ```sql
     SELECT DISTINCT SYS.Netbios_Name0, SYS.User_Domain0, LD.FreeSpace0 
     FROM v_GS_SoftwareFile SF INNER JOIN v_SoftwareProduct SP 
-    Â Â ON SF.ProductId = SP.ProductID 
-    Â Â INNER JOIN v_GS_LOGICAL_DISK LD 
-    Â Â ON SF.ResourceID = LD.ResourceID 
-    Â Â INNER JOIN v_R_System SYS 
-    Â Â ON SF.ResourceID = SYS.ResourceID 
+      ON SF.ProductId = SP.ProductID 
+      INNER JOIN v_GS_LOGICAL_DISK LD 
+      ON SF.ResourceID = LD.ResourceID 
+      INNER JOIN v_R_System SYS 
+      ON SF.ResourceID = SYS.ResourceID 
     WHERE (LD.Description0 = 'local Fixed Disk') 
-    Â Â AND (SP.ProductName LIKE 'Microsoft Office%') 
-    Â Â AND (LD.FreeSpace0 < 1000) 
-    Â Â AND (LD.DeviceID0 = 'C:') 
+      AND (SP.ProductName LIKE 'Microsoft Office%') 
+      AND (LD.FreeSpace0 < 1000) 
+      AND (LD.DeviceID0 = 'C:') 
 ```
 
 ## Joining software inventory, discovery, and software metering views
@@ -67,10 +67,10 @@ The following query lists all files that have been metered through software mete
 
 ```sql
     SELECT SYS.Netbios_Name0, SP.ProductName, SP.ProductVersion, 
-    Â Â MF.FileName, MF.MeteredFileVersion 
+      MF.FileName, MF.MeteredFileVersion 
     FROM v_GS_SoftwareProduct SP INNER JOIN v_MeteredFiles MF 
-    Â Â ON SP.ProductID = MF.MeteredProductID INNER JOIN v_R_System SYS 
-    Â Â ON SP.ResourceID = SYS.ResourceID 
+      ON SP.ProductID = MF.MeteredProductID INNER JOIN v_R_System SYS 
+      ON SP.ResourceID = SYS.ResourceID 
     ORDER BY SYS.Netbios_Name0, SP.ProductName, MF.FileName 
 ```
 

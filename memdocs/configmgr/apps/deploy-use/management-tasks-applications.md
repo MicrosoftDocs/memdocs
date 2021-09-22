@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.localizationpriority: medium
 ---
 
 # Management tasks for Configuration Manager applications

@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for security in Configuration Manager

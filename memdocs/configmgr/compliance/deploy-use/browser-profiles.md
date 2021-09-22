@@ -9,7 +9,7 @@ ms.date: 03/02/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
-ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
+ms.localizationpriority: medium
 ---
 
 # Configure Microsoft Edge Legacy settings in Configuration Manager

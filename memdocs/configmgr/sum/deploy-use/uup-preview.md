@@ -6,13 +6,11 @@ ms.date: 11/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: f06955ac-70ed-424d-a3e7-6b80ff2e114f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # UUP private preview instructions

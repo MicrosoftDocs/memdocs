@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 9/1/2021
+ms.date: 9/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -228,10 +228,6 @@ For more information about macOS device restriction profiles in Intune, see [mac
 ### Intune management agent for macOS devices will be a universal app<!-- 9294405  -->
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
-
-### Syncing the iOS/iPadOS/macOS Company Portal version<!-- 10535709  -->
-
-The version of the iOS/iPadOS Company Portal and the macOS Company Portal syncing to version 5.2019 for the next release. Going forward, the iOS/iPadOS and macOS Company Portal apps will have the same version number. For related information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 ### Improved flow when saving logs in Android Company Portal app<!-- 10414688  -->
 

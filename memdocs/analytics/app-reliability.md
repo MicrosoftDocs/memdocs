@@ -6,10 +6,10 @@ ms.date: 03/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 68d07732-421e-40ca-9ee3-f5a856407259
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Application reliability in endpoint analytics

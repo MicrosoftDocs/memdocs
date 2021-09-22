@@ -6,10 +6,10 @@ ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.localizationpriority: medium
 ---
 
 # Packages and programs in Configuration Manager

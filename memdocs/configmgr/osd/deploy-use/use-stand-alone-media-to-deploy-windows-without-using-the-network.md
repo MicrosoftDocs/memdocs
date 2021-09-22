@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use standalone media to deploy Windows without using the network

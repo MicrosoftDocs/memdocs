@@ -1,15 +1,15 @@
 ---
 title: Tenant attach - Run Scripts (preview) from the admin center
 titleSuffix: Configuration Manager
-description: "Run scripts for Configuration Manager devices from the admin center."
+description: Run scripts for Configuration Manager devices from the admin center.
 ms.date: 12/03/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 6b6c0a9b-01c6-4e3f-9ae4-45c780b46f8b
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_scripts"></a> Tenant attach: Run Scripts (preview) from the admin center

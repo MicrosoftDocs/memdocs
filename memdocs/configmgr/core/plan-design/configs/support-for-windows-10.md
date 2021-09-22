@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Support for Windows 10 in Configuration Manager  
