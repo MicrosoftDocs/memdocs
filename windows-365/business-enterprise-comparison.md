@@ -2,7 +2,7 @@
 # required metadata
 title: Compare Windows 365 Business and Enterprise
 titleSuffix:
-description: What are the differences between Windows 365 Enterprise and Business?
+description: What are the differences between Windows 365 Business and Enterprise?
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Compare Windows 365 Enterprise and Business
+# Compare Windows 365 Business and Enterprise
 
-Windows 365 is available in two editions: [Windows 365 Enterprise](https://www.microsoft.com/windows-365/enterprise) and [Windows 365 Business](https://www.microsoft.com/windows-365/business).
+Windows 365 is available in two editions: [Windows 365 Business](https://www.microsoft.com/windows-365/business) and [Windows 365 Enterprise](https://www.microsoft.com/windows-365/enterprise).
 
 ## General comparisons
 
