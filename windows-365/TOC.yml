@@ -5,12 +5,12 @@ items:
   items:
   - name: Windows 365 overview
     href: overview.md
+  - name: Compare Windows 365 Business and Enterprise
+    href: business-enterprise-comparison.md
   - name: What's new
     href: whats-new.md
   - name: Features in development
     href: in-development.md
-  - name: Compare Windows 365 Enterprise and Business
-    href: business-enterprise-comparison.md
 - name: Concepts
   items:
   - name: Architecture
