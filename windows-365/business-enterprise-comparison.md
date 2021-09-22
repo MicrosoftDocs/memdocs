@@ -30,26 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Compare Windows 365 Enterprise and Business
 
-Windows 365 is available in two editions: Windows 365 Enterprise and Windows 365 Business.
-
-**Windows 365 Enterprise** is for larger organizations that want to:
-
-- Deploy an unlimited number of Cloud PCs.
-- Manage their Cloud PCs with Microsoft Endpoint Manager.
-- Use custom device images to create Cloud PCs.
-- Have advanced troubleshooting options.
-- Take advantage of integrations with other Microsoft services, like:
-  - Azure Active Directory (Azure AD)
-  - Microsoft Defender for Endpoint
-  - Universal Print
-  - Endpoint Analytics
-
-**Windows 365 Business** is for small- to medium-sized organizations that want to:
-
-- Support up to 300 employees with Cloud PCs.
-- Have a simple way to buy, deploy, and manage Cloud PCs.
-
-Windows 365 Business doesn't have any mobile device management enrollment requirement. When enrolled into Intune, Windows 365 Business doesn't have the same functionality as Windows 365 Enterprise.
+Windows 365 is available in two editions: [Windows 365 Enterprise](https://www.microsoft.com/windows-365/enterprise) and [Windows 365 Business](https://www.microsoft.com/windows-365/business).
 
 ## General comparisons
 
@@ -86,7 +67,7 @@ Windows 365 Business doesn't have any mobile device management enrollment requir
 | Management | Users can [restart, reset, rename, and troubleshoot](/microsoft-365/admin/setup/get-started-windows-365-business#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](end-user-access-cloud-pc.md) their Cloud PCs on the Windows 365 homepage. |
 | Role | By default, each user is assigned the Local Administrator role on their Cloud PC. This supports the native installation of Win32 apps. This can't be changed by the Global Administrator. | By default, each user i assigned a standard user role on their Cloud PC. This can be changed by the admin in the Microsoft Endpoint Manager admin center.|
 | Access | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. |
-| Platform | Any platform that supports Microsoft Remote Desktop clients.  | Any platform that supports Microsoft Remote Desktop clients.  |
+| Platform | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  |
 
 ## Security comparisons
 
