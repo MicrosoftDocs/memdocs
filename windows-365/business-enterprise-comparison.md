@@ -45,7 +45,11 @@ Windows 365 is available in two editions: [Windows 365 Enterprise](https://www.m
 | Purchase channels | Web direct, self-service, Cloud Solution Provider (CSP). | Web direct, Enterprise Agreements (EA), CSP. |
 | License assignment | Microsoft 365 Admin Center or the Azure AD portal. | Microsoft 365 Admin Center. |
 | Licensing requirements | No licensing pre-requirements to buy and deploy Windows 365 Business. Other features (like device management) can be used if users are licensed for Microsoft Endpoint Management.| Each user must be licensed for Windows 10 or 11 Enterprise (when available), Microsoft Endpoint Manager, and Azure AD P1. |
-| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>2 GB RAM = 12 GB outbound data<br>4 or 8 GB RAM = 20 GB outbound data<br>16 GB RAM = 40 GB outbound data<br>32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. |
+| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:
+- 2 GB RAM = 12 GB outbound data
+- 4 or 8 GB RAM = 20 GB outbound data
+- 16 GB RAM = 40 GB outbound data
+- 32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. |
 
 ## Administrative comparisons
 
