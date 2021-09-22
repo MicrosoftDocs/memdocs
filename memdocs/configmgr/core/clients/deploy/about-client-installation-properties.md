@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 09/09/2021
+ms.date: 09/22/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -291,9 +291,9 @@ If a device uses Azure Active Directory (Azure AD) for client authentication and
 >
 > Also specify this parameter when you install a client for internet-only communication. Use `CCMALWAYSINF=1` together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
 
-## /IgnoreSkipUpgrade
+### /IgnoreSkipUpgrade
 
-Specify this parameter to manually upgrade an excluded client
+Specify this parameter to manually upgrade an excluded client. For more information, see [How to exclude clients from upgrade](../manage/upgrade/exclude-clients-windows.md).<!-- MEMDocs#1996 -->
 
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
