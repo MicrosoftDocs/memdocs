@@ -67,7 +67,7 @@ Windows 365 is available in two editions: [Windows 365 Enterprise](https://www.m
 | Management | Users can [restart, reset, rename, and troubleshoot](/microsoft-365/admin/setup/get-started-windows-365-business#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](end-user-access-cloud-pc.md) their Cloud PCs on the Windows 365 homepage. |
 | Role | By default, each user is assigned the Local Administrator role on their Cloud PC. This supports the native installation of Win32 apps. This can't be changed by the Global Administrator. | By default, each user i assigned a standard user role on their Cloud PC. This can be changed by the admin in the Microsoft Endpoint Manager admin center.|
 | Access | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. |
-| Platform | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  |
+| Platform | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  |
 
 ## Security comparisons
 
