@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/08/2021
+ms.date: 09/13/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -286,6 +286,8 @@ If you are using Azure Government, app logs are offered to the end user to decid
 ## Company Portal app notifications
 
 The Company Portal app can store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
+
+Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
 
 ## Next steps
 
