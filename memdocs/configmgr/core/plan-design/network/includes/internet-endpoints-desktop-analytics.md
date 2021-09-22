@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 08/11/2020
+ms.localizationpriority: medium
 ---
 
 ### Server connectivity endpoints

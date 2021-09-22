@@ -2,7 +2,7 @@
 title: Plan for CMG
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 09/09/2021
+ms.date: 09/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -76,6 +76,8 @@ You create the CMG using an **Azure Resource Manager deployment**. [Azure Resour
 
 > [!NOTE]
 > CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
+>
+> The option to deploy a CMG as a **cloud service (classic)** is deprecated. All CMG deployments should use a [virtual machine scale set](#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
 ## Virtual machine scale sets
 
