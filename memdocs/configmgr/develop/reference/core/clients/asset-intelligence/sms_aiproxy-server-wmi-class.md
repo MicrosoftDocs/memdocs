@@ -9,7 +9,8 @@ ms.topic: reference
 ms.assetid: dbd4b08e-979f-426e-979b-4dce5dce48dc
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_AIProxy server WMI class

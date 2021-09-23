@@ -11,7 +11,8 @@ ms.topic: how-to
 ms.assetid: e596b1be-c09e-4e44-a400-43345ab0f71b
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # How to view the SQL statement for Configuration Manager reports

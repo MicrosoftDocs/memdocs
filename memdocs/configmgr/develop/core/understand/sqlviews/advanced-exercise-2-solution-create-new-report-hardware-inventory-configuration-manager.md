@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: d1b574f9-d765-4f37-a552-bd018ce86224
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Advanced exercise 2 solution: Create a new report for hardware inventory in Configuration Manager
@@ -44,8 +45,8 @@ The following procedure can be used to create the report for [Advanced exercise 
 
    ```sql 
    SELECT DISTINCT SYS.Netbios_Name0 
-     from v_R_System SYS WHERE SYS.Client0=1 
-     ORDER By SYS.Netbios_Name0
+   ï¿½ï¿½from v_R_System SYS WHERE SYS.Client0=1 
+   ï¿½ï¿½ORDER By SYS.Netbios_Name0
    ```    
 1. Select **OK** to close the **Dataset Properties** dialog box. The new dataset, named by default **DataSet1** is now displayed in the **Datasets** node of the **Report Data** pane.
  
@@ -76,13 +77,13 @@ The following procedure can be used to create the report for [Advanced exercise 
 
    ```sql 
    SELECT v_R_System.Netbios_Name0 AS [Computer Name], 
-     v_RA_System_SMSInstalledSites.SMS_Installed_Sites0 AS [Site Code], 
-     v_GS_WORKSTATION_STATUS.LastHWScan AS [Last HWScan], 
-     DATEDIFF(day, v_GS_WORKSTATION_STATUS.LastHWScan, GETDATE()) AS [Days Since Last HWScan] 
+   ï¿½ï¿½v_RA_System_SMSInstalledSites.SMS_Installed_Sites0 AS [Site Code], 
+   ï¿½ï¿½v_GS_WORKSTATION_STATUS.LastHWScan AS [Last HWScan], 
+   ï¿½ï¿½DATEDIFF(day, v_GS_WORKSTATION_STATUS.LastHWScan, GETDATE()) AS [Days Since Last HWScan] 
    FROM v_GS_WORKSTATION_STATUS INNER JOIN v_R_System ON 
-     v_GS_WORKSTATION_STATUS.ResourceID = v_R_System.ResourceID 
-     INNER JOIN v_RA_System_SMSInstalledSites ON 
-     v_R_System.ResourceID = v_RA_System_SMSInstalledSites.ResourceID 
+   ï¿½ï¿½v_GS_WORKSTATION_STATUS.ResourceID = v_R_System.ResourceID 
+   ï¿½ï¿½INNER JOIN v_RA_System_SMSInstalledSites ON 
+   ï¿½ï¿½v_R_System.ResourceID = v_RA_System_SMSInstalledSites.ResourceID 
    ORDER BY [Last HWScan] DESC 
    ```
 

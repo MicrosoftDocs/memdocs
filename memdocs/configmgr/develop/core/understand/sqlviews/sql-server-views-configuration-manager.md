@@ -9,7 +9,8 @@ ms.topic: conceptual
 ms:assetid: a1924bed-b5fc-49a8-80ee-30b4e96defaa
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SQL Server views in Configuration Manager

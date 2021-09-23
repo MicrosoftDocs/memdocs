@@ -9,7 +9,8 @@ ms.topic: reference
 ms.assetid: 7283c9dc-4098-4bce-9c72-56a30f263c58
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_NetworkAdapterSettings server WMI class
