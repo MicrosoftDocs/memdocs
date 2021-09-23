@@ -88,7 +88,7 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
     - Key Path: Control Panel\Desktop
     - Value name: PreferredUILanguages
     - Value type: REG_SZ
-    - Value data: [Language code].
+    - Value data: [Language/region tag]. For example, **ar-SA** for Arabic (Saudi Arabia).
     > [!Note]
     > To find the language code for your desired language and region combination, see the [language pack list](/windows-hardware/manufacture/desktop/available-language-packs-for-windows#language-packs).
 7. Switch to the **Common** tab and check the following three options:
