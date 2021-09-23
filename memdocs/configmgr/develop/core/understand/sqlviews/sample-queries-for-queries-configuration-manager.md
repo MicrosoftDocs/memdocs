@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: f03a4839-c731-44c3-99e7-fffc4885cae9
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for the query view in Configuration Manager

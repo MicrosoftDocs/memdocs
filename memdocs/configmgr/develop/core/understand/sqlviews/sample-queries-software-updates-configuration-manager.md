@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 583e373f-1619-4385-8c86-0484820c6b02
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for software updates in Configuration Manager
@@ -24,12 +25,12 @@ The following query retrieves the article ID, bulletin ID, software update title
 
 ```sql
     SELECT v_UpdateInfo.ArticleID, v_UpdateInfo.BulletinID, v_UpdateInfo.Title, 
-      v_StateNames.StateName, v_UpdateComplianceStatus.LastStatusCheckTime, 
-      v_UpdateComplianceStatus.LastEnforcementMessageTime 
+    ï¿½ï¿½v_StateNames.StateName, v_UpdateComplianceStatus.LastStatusCheckTime, 
+    ï¿½ï¿½v_UpdateComplianceStatus.LastEnforcementMessageTime 
     FROM v_R_System INNER JOIN v_UpdateComplianceStatus ON 
-      v_R_System.ResourceID = v_UpdateComplianceStatus.ResourceID INNER JOIN v_UpdateInfo ON 
-      v_UpdateComplianceStatus.CI_ID = v_UpdateInfo.CI_ID INNER JOIN v_StateNames ON 
-      v_UpdateComplianceStatus.LastEnforcementMessageID = v_StateNames.StateID 
+    ï¿½ï¿½v_R_System.ResourceID = v_UpdateComplianceStatus.ResourceID INNER JOIN v_UpdateInfo ON 
+    ï¿½ï¿½v_UpdateComplianceStatus.CI_ID = v_UpdateInfo.CI_ID INNER JOIN v_StateNames ON 
+    ï¿½ï¿½v_UpdateComplianceStatus.LastEnforcementMessageID = v_StateNames.StateID 
     WHERE (v_StateNames.TopicType = 402) AND (v_R_System.Netbios_Name0 LIKE 'Computer1') 
     ORDER BY v_StateNames.StateName, v_UpdateInfo.DateLastModified 
 ```
@@ -40,11 +41,11 @@ The following query retrieves the software update deployments, by assignment ID 
 
 ```sql
     SELECT v_CIAssignment.AssignmentID, v_CIAssignment.AssignmentName, 
-      v_UpdateInfo.ArticleID, v_UpdateInfo.BulletinID, v_UpdateInfo.Title, 
-      v_CIAssignment.CollectionName, v_CIAssignment.CollectionID 
+    ï¿½ï¿½v_UpdateInfo.ArticleID, v_UpdateInfo.BulletinID, v_UpdateInfo.Title, 
+    ï¿½ï¿½v_CIAssignment.CollectionName, v_CIAssignment.CollectionID 
     FROM v_UpdateInfo INNER JOIN v_CIAssignmentToCI ON 
-      v_UpdateInfo.CI_ID = v_CIAssignmentToCI.CI_ID INNER JOIN v_CIAssignment ON 
-      v_CIAssignmentToCI.AssignmentID = v_CIAssignment.AssignmentID 
+    ï¿½ï¿½v_UpdateInfo.CI_ID = v_CIAssignmentToCI.CI_ID INNER JOIN v_CIAssignment ON 
+    ï¿½ï¿½v_CIAssignmentToCI.AssignmentID = v_CIAssignment.AssignmentID 
     ORDER BY v_CIAssignment.AssignmentID, v_UpdateInfo.ArticleID 
 ```
 

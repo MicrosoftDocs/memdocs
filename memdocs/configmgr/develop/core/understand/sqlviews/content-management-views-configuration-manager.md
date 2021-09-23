@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 80e86983-2e3b-4a10-9755-5f0d98688462
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Content management views in Configuration Manager
