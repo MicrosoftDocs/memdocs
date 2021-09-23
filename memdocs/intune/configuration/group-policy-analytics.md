@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/30/2021
+ms.date: 09/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -71,6 +71,7 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
     - **Group Policy name**: The name is automatically generated using information in the GPO.
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
     - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.
+    - **Unknown Settings**: Shows GPO settings that fall outside of the list of the Configuration Service Providers (CSPs) that this tool can parse.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
 
@@ -111,6 +112,8 @@ Group Policy analytics can parse the following CSPs:
 - [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
 - [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
+
+If your imported GPO has settings that fall outside of the above supported CSPs, they may be included the **Unknown Settings** column to acknowledge that were identified in your GPO.
 
 ### Known Issues
 
