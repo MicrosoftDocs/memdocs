@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 09/23/2021
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -78,7 +78,7 @@ You now have assigned the app to an additional group.
 
 ## Install the app on the enrolled device
 
-You must install and use the Company Portal app to install the **Contoso's To-Do** app made available by Intune. Use the following steps to verify that the app is available to the user of the enrolled device.
+End users must install and use the Company Portal app to install an app made available by Intune. You, acting as an end user, can use the following steps to verify that the app is available to the user of the enrolled device.
 
 1. Log in to your enrolled Windows 10 Desktop device.
 
