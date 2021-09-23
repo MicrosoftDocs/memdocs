@@ -58,7 +58,7 @@ To support SCEP, the following on-premises infrastructure must run on servers th
   - [Installation and configuration](certificate-connector-install.md).
 
   > [!TIP]
-  > Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the [previous connectors remain in support](../protect/certificate-connectors.md), they are no longer available for download.  If you need to install a new connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune.
+  > Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.48.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
 
 - **Certification Authority** – Use a Microsoft Active Directory Certificate Services Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 with service pack 1, or later. The version of Windows Server you use must remain in support by Microsoft. A Standalone CA isn't supported. For more information, see [Install the Certification Authority](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)).
 
