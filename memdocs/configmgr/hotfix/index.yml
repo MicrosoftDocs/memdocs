@@ -12,7 +12,9 @@ metadata:
   ms.topic: landing-page
   author: bhuney
   ms.author: brianhun
-  ms.date: 06/10/2021
+  ms.manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 landingContent:
   - title: Configuration Manager 2107

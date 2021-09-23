@@ -5,8 +5,8 @@ description:
 ms.date: mm/dd/yyyy
 ms.prod: configuration-manager
 ms.technology: configmgr-other #analytics app client comanage compliance core mdm mdt osd other protect sdk sum
-ms.topic: conceptual
-ms.assetid: [PowerShell New-Guid cmdlet]
+ms.topic: conceptual #reference troubleshooting how-to end-user-help overview
+ms.localizationpriority: medium #high null
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

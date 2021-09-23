@@ -3,15 +3,14 @@
 
 title: [ARTICLE TITLE | SERVICE NAME]
 description:
-keywords:
 author: [GITHUB USERNAME]
 manager: [ALIAS]
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: conceptual #reference troubleshooting how-to end-user-help overview
 ms.prod:
 ms.service:
 ms.technology:
-ms.assetid: [GET ONE FROM guidgenerator.com]
+ms.localizationpriority: medium #high null
 
 # optional metadata
 
