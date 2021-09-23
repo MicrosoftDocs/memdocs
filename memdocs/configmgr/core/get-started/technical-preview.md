@@ -129,7 +129,6 @@ The following features are available with the most recent Configuration Manager 
 - [7033309](2021/technical-preview-2109.md) <!--7033309-->
 - [7822886](2021/technical-preview-2109.md) <!--7822886-->
 - [9947307](2021/technical-preview-2109.md) <!--9947307-->
-- [10915091](2021/technical-preview-2109.md) <!--10915091-->
 - [9348231](2021/technical-preview-2109.md) <!--9348231-->
 - [10644702](2021/technical-preview-2109.md) <!--10644702-->
 - [10529267](2021/technical-preview-2109.md) <!--10529267-->
