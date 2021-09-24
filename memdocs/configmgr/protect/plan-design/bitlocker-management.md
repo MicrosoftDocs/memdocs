@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 04/14/2021
+ms.date: 09/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -62,6 +62,9 @@ Built-in reports for:
 ### Administration and monitoring website
 
 Allow other personas in your organization outside of the Configuration Manager console to help with key recovery, including key rotation and other BitLocker-related support. For example, help desk administrators can help users with key recovery.
+
+> [!TIP]
+> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../tenant-attach/bitlocker-recovery-keys.md).
 
 ### User self-service portal
 

@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 09/24/2024
+ms.date: 09/24/2021
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ---

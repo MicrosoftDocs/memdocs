@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/30/2021
+ms.date: 09/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -162,7 +162,6 @@ The following features were released with previous versions of the Configuration
 | Intune role-based access control for tenant attach <!--8126836--> | [Tech preview 2106](2021/technical-preview-2106.md#bkmk_rbac) |
 | Windows Update native experience for software updates <!--4316341--> | [Tech preview 2105.2](2021/technical-preview-2105-2.md#bkmk_wu) |
 | Support Center dark and light themes <!--8218853--> | [Tech preview 2105](2021/technical-preview-2105.md#bkmk_dark) |
-| Tenant attach: BitLocker recovery keys <!--6979225--> | [Tech preview 2104](2021/technical-preview-2104.md#bkmk_bitlocker) |
 | Manage aged distribution point messages <!--8561493,9388277--> | [Tech preview 2101](2021/technical-preview-2101.md#bkmk_distmsg) |
 | Community hub support for application content <!--7983035--> | [Tech preview 2012](2020/technical-preview-2012.md#bkmk_hubapp) |
 | Software Center notifications display with logo <!--4993167--> | [Tech preview 2011](2020/technical-preview-2011.md#bkmk_notify) |
