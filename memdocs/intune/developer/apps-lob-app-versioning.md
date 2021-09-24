@@ -120,8 +120,8 @@ To manually extract the attributes of an .apk file in Windows, follow these step
 
 ## Next steps
 
-To learn more about app protection policies and Intune, see the following topics:
+To learn more about LOB apps, see the following topics:
 
-- [Android app wrapping tool](app-wrapper-prepare-android.md)<br>
-- [iOS app wrapping tool](app-wrapper-prepare-ios.md)<br>
-- [Use the SDK to enable apps for mobile application management](app-sdk.md)
+- [Add apps to Microsoft Intune](../apps/apps-add.md)<br>
+- [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md)<br>
+
