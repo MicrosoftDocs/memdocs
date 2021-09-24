@@ -25,7 +25,7 @@ ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: 
+ms.custom: OS=Android;
 ms.collection: M365-identity-device-management
 ---
 
