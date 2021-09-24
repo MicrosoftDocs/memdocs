@@ -51,7 +51,7 @@ See the following figure.
 - Windows 10, version 1809 or later and a supported UEFI is required.
 - The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update that you install. Work with your device vendors to determine the [manufacturers that support DFCI](#oems-that-support-dfci), or the firmware version needed to use DFCI.
 - The device must be managed with Microsoft Intune. For more information, see [Enroll Windows devices in Intune using Windows Autopilot](/intune/enrollment/enrollment-autopilot).
-- The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/membership/cloud-solution-provider), or registered directly by the OEM. 
+- The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/membership/cloud-solution-provider), registered directly by the OEM, or [Surface Registration Support for Windows Autopilot](https://prod.support.services.microsoft.com/supportrequestform/0d8bf192-cab7-6d39-143d-5a17840b9f5f). 
 
 >[!IMPORTANT]
 >Devices manually registered for Autopilot (such as by [importing from a csv file](/intune/enrollment/enrollment-autopilot#add-devices)) are not allowed to use DFCI. By design, DFCI management requires external attestation of the device’s commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When your device is registered, its serial number is displayed in the list of Windows Autopilot devices.
