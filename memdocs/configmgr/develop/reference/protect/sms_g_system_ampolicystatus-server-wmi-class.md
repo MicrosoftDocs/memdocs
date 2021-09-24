@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: 80356bbf-d4d3-420f-b1ec-305e25257ae2
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_G_SYSTEM_AmPolicyStatus Server WMI Class

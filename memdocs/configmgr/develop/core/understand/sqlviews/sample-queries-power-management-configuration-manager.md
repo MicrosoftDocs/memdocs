@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 4a68faf9-29c7-458b-b3ef-fb99aad5ee7d
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for power management in Configuration Manager

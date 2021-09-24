@@ -11,7 +11,8 @@ ms.topic: reference
 ms.assetid: e78bdee8-4e80-461a-8a0d-1db6a49a73db
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # IProgressUI::ShowSwapMediaDialog method

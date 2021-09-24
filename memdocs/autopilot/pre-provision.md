@@ -5,7 +5,7 @@ keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd,
 ms.prod: w10
 ms.technology: windows
 ms.mktglfcycl: deploy
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itproF

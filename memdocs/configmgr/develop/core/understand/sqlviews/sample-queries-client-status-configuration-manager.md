@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: fe4dafee-8ea7-4829-884b-960cc09f6444
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for client status in Configuration Manager
