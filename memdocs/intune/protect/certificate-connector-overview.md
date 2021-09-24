@@ -36,7 +36,7 @@ For Microsoft Intune to support use of certificates for authentication and the s
 This article introduces the Certificate Connector for Microsoft Intune, its lifecycle, and how to keep it up to date.
 
 > [!TIP]
-> Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.48.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
+> Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.51.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
 
 ## Connector overview
 
@@ -224,7 +224,7 @@ New updates for the connector can take several days to become available for each
 
 ### September , 2021
 
-Version **6.2109.48.0**. - With the release of this update, support ends for the two previous certificate connectors, *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*.
+Version **6.2109.51.0**. - With the release of this update, support ends for the two previous certificate connectors, *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*.
 
 This update includes:
 
