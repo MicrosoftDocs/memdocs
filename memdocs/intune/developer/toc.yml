@@ -12,6 +12,8 @@ items:
       href: app-sdk-get-started.md
     - name: Prepare LOB apps for app protection
       href: apps-prepare-mobile-application-management.md
+    - name: LOB app versioning
+      href: apps-lob-app-versioning.md      
     - name: App Wrapping Tool for iOS
       href: app-wrapper-prepare-ios.md
     - name: Intune App SDK for iOS
