@@ -222,7 +222,7 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
 
-### September , 2021
+### September 23, 2021
 
 Version **6.2109.51.0**. - With the release of this update, support ends for the two previous certificate connectors, *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*.
 
