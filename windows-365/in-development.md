@@ -85,6 +85,12 @@ New Windows 365 licenses will be available that include virtual graphics process
 
 In a future update, the Windows 365 Administrator role will be available for admins by using role assignment in the Microsoft Admin Center and Azure Active Directory (AAD). With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager.
 
+## Security
+
+### Conditional Access 
+
+We are currently working on a feature to group the Windows 365 and Azure Virtual Desktop first party apps. Currently, conditional access policies applied to the Windows 365 first party app through Microsoft Endpoint Manager or in Azure Active Directory only apply to login experiences through the Windows 365 web portal. In order for Conditional Access policies to be enforced when the user logs on through RDWeb or the native client, admins must target both Windows 365 and Azure Virtual Desktop apps. This grouping will relieve that concern, providing the correct conditional access experience to Windows 365 from all platforms and clients. 
+
 ## Next steps
 
 For details about recent developments, see [What's new in Windows 365](whats-new.md).
