@@ -113,7 +113,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Compliance|The device's compliance state.|Windows, iOS/iPadOS, Android|
 |EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, iOS/iPadOS, Android|
 |EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, iOS/iPadOS, Android|
-|Supervised|If **Yes**, administrators have enhanced control over the device.|iOS/iPadOS Only|
+|Supervised|If **Yes**, administrators have enhanced control over the device.|iOS/iPadOS|
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
