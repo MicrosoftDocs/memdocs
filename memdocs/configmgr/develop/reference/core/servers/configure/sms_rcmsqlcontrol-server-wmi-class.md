@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: 10c827dc-7be9-443d-9e79-60a603a38b85
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_RcmSqlControl Server WMI Class

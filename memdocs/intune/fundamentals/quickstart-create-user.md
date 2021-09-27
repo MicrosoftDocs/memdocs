@@ -11,7 +11,7 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 01/17/2020
 ms.author: erikje
-ms.manager: dougeby
+manager: dougeby
 ms.assetid: 820fcb18-0927-4ebd-be79-dce92b51c261
 
 # optional metadata

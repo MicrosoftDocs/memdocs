@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: b0f7d2c6-ca63-4f73-82d9-1f7f3efbca25
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_RunCommandLineAction server WMI class

@@ -9,7 +9,7 @@ ms.topic: article
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: null
 ---
 
 # Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager  

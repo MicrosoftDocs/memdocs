@@ -9,7 +9,8 @@ ms.topic: reference
 ms.assetid: 2f13a639-a138-4894-bc50-59f6d6abc2b7
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_CollectionEvaluationIncremental server WMI class

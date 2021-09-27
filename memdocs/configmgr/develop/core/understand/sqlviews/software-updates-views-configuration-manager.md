@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 1e6741d2-7737-4446-b65f-e6e330c09458
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Software updates views in Configuration Manager

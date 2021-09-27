@@ -8,7 +8,7 @@ ms.topic: article
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: null
 ---
 
 # Microsoft Deployment Toolkit release notes  
