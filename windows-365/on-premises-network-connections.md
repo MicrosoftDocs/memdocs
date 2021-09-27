@@ -76,9 +76,9 @@ To manually trigger a full health check, sign in to the [Microsoft Endpoint Mana
 The OPNC wizard requires access to Azure and on-premises domain resources. The following permissions are required for the OPNC:
 
 - Azure
-  - Sufficient permissions to grant Windows 365 reader role on the selected subscription.
-  - Sufficient permissions to grant Windows 365 owner role on the selected resource group.
-  - Sufficient permissions to grant Windows 365 contributor role on the selected vNet.
+  - Sufficient permissions to grant Windows 365 reader permissions on the selected subscription.
+  - Sufficient permissions to grant Windows 365 network contributor permissions on the selected resource group.
+  - Sufficient permissions to grant Windows 365 network contributor permissions on the selected virtual net.
 - Active directory
   - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit.
 
