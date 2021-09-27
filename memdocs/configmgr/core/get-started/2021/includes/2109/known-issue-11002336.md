@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 <!--11002336-->
 
-If you use Configuration Manager technical preview branch with SQL Server version 2012 or version 2014, when you update to Configuration Manager version 2109, reports will fail to run. You'll see an error similar to the following string in the **srsrp.log**:
+If you use Configuration Manager technical preview branch with SQL Server version 2012 or version 2014, when you update to Configuration Manager version 2109, reports aren't shown in the console. You'll see an error similar to the following string in the **srsrp.log**:
 
 `System.Web.Services.Protocols.SoapException: Error while loading code module: ...SrsResources, culture=neutral.... Details: Could not load file or assembly 'SrsResources, Culture=neutral' or one of its dependencies. This assembly is built by a runtime newer than the currently loaded runtime and cannot be loaded.`
 
