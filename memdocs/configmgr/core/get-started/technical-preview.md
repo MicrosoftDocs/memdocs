@@ -121,14 +121,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2109
 
+- [Improvements to Support Center OneTrace](2021/technical-preview-2109.md#bkmk_onetrace) <!--9348231-->
+- [Options for Support Center Data Collector and Client Tools](2021/technical-preview-2109.md#bkmk_support) <!--9947307-->
 - [Send product feedback from wizard and property dialogs](2021/technical-preview-2109.md#bkmk_feedback) <!--2711343-->   
 - [Implicit uninstall for user collections](2021/technical-preview-2109.md#bkmk_uninstall) <!--10393847-->
 - [Require installation of a console extension](2021/technical-preview-2109.md#bkmk_extensions) <!--10486584-->
 - [Import console extensions wizard](2021/technical-preview-2109.md#bkmk_import) <!--9741121-->
 - [Improvements to ADR search criteria](2021/technical-preview-2109.md#bkmk_adr) <!--7033309-->
 - [Improvements to VPN boundary types](2021/technical-preview-2109.md#bkmk_vpn) <!--7822886-->
-- [Options for Support Center Data Collector and Client Tools](2021/technical-preview-2109.md#bkmk_support) <!--9947307-->
-- [Improvements to Support Center OneTrace](2021/technical-preview-2109.md#bkmk_onetrace) <!--9348231-->
 - [.NET version 4.6.2 prerequisite check is an error](2021/technical-preview-2109.md#bkmk_dotnetprereq) <!--10644702-->   
 - [External dependencies require .NET 4.6.2](2021/technical-preview-2109.md#bkmk_dotnetsdk) <!--10529267-->
 - [Copy GUID for ISV proxy certificate](2021/technical-preview-2109.md#bkmk_isvproxy) <!--2842082-->

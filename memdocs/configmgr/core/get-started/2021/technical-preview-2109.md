@@ -23,15 +23,14 @@ Review the [technical preview](../technical-preview.md) article before installin
 The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2109/1234567.md)] -->
-
+[!INCLUDE [Improvements to Support Center OneTrace](includes/2109/9348231.md)]
+[!INCLUDE [Options for Support Center Data Collector and Client Tools](includes/2109/9947307.md)]
 [!INCLUDE [Send product feedback from wizard and property dialogs](includes/2109/2711343.md)]
 [!INCLUDE [Implicit uninstall for user collections](includes/2109/10393847.md)]
 [!INCLUDE [Require installation of a console extension](includes/2109/10486584.md)]
 [!INCLUDE [Import console extensions wizard](includes/2109/9741121.md)]
 [!INCLUDE [Improvements to ADR search criteria](includes/2109/7033309.md)]
 [!INCLUDE [Improvements to VPN boundary types](includes/2109/7822886.md)]
-[!INCLUDE [Options for Support Center Data Collector and Client Tools](includes/2109/9947307.md)]
-[!INCLUDE [Improvements to Support Center OneTrace](includes/2109/9348231.md)]
 [!INCLUDE [.NET version 4.6.2 prerequisite check is an error](includes/2109/10644702.md)]
 [!INCLUDE [External dependencies require .NET 4.6.2](includes/2109/10529267.md)]
 [!INCLUDE [Copy GUID for ISV proxy certificate](includes/2109/2842082.md)]
