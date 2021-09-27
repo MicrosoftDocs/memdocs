@@ -39,10 +39,10 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [2842082](includes/2109/2842082.md)]
 [!INCLUDE [10654429](includes/2109/10654429.md)]
 
-<!-- ## General known issues
+## General known issues
 
-[!INCLUDE [10210000](includes/2109/known-issue-10210000.md)]
- -->
+[!INCLUDE [11018755](includes/2109/known-issue-11018755.md)]
+[!INCLUDE [11002336](includes/2109/known-issue-11002336.md)]
 
 ## Next steps
 
