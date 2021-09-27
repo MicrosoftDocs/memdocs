@@ -26,7 +26,6 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Send product feedback from wizard and property dialogs](includes/2109/2711343.md)]
 [!INCLUDE [Implicit uninstall for user collections](includes/2109/10393847.md)]
-[!INCLUDE [Improvements to orchestration groups](includes/2109/9957939.md)]
 [!INCLUDE [Require installation of a console extension](includes/2109/10486584.md)]
 [!INCLUDE [Import console extensions wizard](includes/2109/9741121.md)]
 [!INCLUDE [Improvements to ADR search criteria](includes/2109/7033309.md)]

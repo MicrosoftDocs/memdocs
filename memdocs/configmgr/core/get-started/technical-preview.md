@@ -123,7 +123,6 @@ The following features are available with the most recent Configuration Manager 
 
 - [Send product feedback from wizard and property dialogs](2021/technical-preview-2109.md#bkmk_feedback) <!--2711343-->   
 - [Implicit uninstall for user collections](2021/technical-preview-2109.md#bkmk_uninstall) <!--10393847-->
-- [Improvements to orchestration groups](2021/technical-preview-2109.md#bkmk_orchestration) <!--9957939-->
 - [Require installation of a console extension](2021/technical-preview-2109.md#bkmk_extensions) <!--10486584-->
 - [Import console extensions wizard](2021/technical-preview-2109.md#bkmk_import) <!--9741121-->
 - [Improvements to ADR search criteria](2021/technical-preview-2109.md#bkmk_adr) <!--7033309-->
