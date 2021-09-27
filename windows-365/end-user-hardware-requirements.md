@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/03/2021
+ms.date: 09/28/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -75,6 +75,18 @@ You can install the client and find requirements for other platforms here:
 - [macOS](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12)
 - [iOS/iPadOS](https://aka.ms/rdios)
 - [Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)
+
+## Linux
+
+You can access Windows 365 Cloud PCs from your Linux OS devices by using:
+
+- The windows365-microsoft.com web client.
+- Third-party clients to connect to Azure Virtual Desktop, including:
+  - [Dell](https://www.delltechnologies.com/collaterals/unauth/data-sheets/products/thin-clients/dell-thinos-9-for-microsoft-wvd.pdf)
+  - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
+  - [IGEL](https://www.igel.com/igel-solution-family/windows-virtual-desktop/)
+
+  Third-party Linux client solutions can't be managed by using Microsoft Endpoint Manager. The partner provides a separate management tool for Linux devices.
 
 <!-- ########################## -->
 ## Next steps
