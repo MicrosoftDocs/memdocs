@@ -51,12 +51,10 @@ You can include the following management objects in a policy set:
 - App protection policies
 - Device configuration profiles
 - Device compliance policies
+- Device type restrictions  
 - Windows autopilot deployment profiles
 - Enrollment status page
 - Settings catalog policies
-
-> [!IMPORTANT]
-> As of September 2021, enrollment restrictions based on device type can no longer be included in policy sets. For more information about how to create enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).  
 
 When you create a policy set, you create a single unit of assignment, and manage associations between different objects. A policy set will be a reference to objects external to it. Any changes in the included objects will affect the policy set as well. After you create a policy set, you can repeatedly view and edit its objects and assignments. 
 
