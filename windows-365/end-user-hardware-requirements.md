@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/03/2021
+ms.date: 09/27/2021
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -76,18 +76,19 @@ You can install the client and find requirements for other platforms here:
 - [iOS/iPadOS](https://aka.ms/rdios)
 - [Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)
 
-## Linux based thin client support
+## Linux
 
-You can access Windows 365 Cloud PCs from your Linux OS based devices via the web client and via several partners that build clients that support connecting directly to Azure Virtual Desktop. 
+You can access Windows 365 Cloud PCs from your Linux OS devices by using:
 
-You can find the list of partners we support that have supported Linux endpoint clients below:
+- the web client.
+- Third-party clients to connect to Azure Virtual Desktop, including: 
+  - [Dell](https://www.delltechnologies.com/en-us/collaterals/unauth/data-sheets/products/thin-clients/dell-thinos-9-for-microsoft-wvd.pdf)
+  - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
+  - [IGEL](https://www.igel.com/igel-solution-family/windows-virtual-desktop/)
 
   > [!Note]
-    > Partners solutions based on Linux will not be manageable via Microsoft Endpoint Manager. The partner will provide a separate management solution to control the Linux-based endpoints.
+  > Third-party Linux client solutions can't be managed by using Microsoft Endpoint Manager. The partner provides a separate management tool for Linux devices.
   
-- [Dell](https://www.delltechnologies.com/en-us/collaterals/unauth/data-sheets/products/thin-clients/dell-thinos-9-for-microsoft-wvd.pdf)
-- [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
-- [IGEL](https://www.igel.com/igel-solution-family/windows-virtual-desktop/)
 
 <!-- ########################## -->
 ## Next steps
