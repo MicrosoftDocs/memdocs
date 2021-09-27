@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/25/2018
+ms.date: 09/27/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -52,7 +52,6 @@ To share your diagnostic logs with Microsoft:
 
 1. Open the Company Portal app.
 2. Click the **Help** menu > **Send Diagnostic Report**.  After the logs are uploaded, you'll receive an incident ID. Copy and save the ID.
-3. Select **Email details** or email Microsoft using <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">this template</a>.
-4. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
+3. Select **Email details**. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
