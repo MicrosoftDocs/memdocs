@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 06/03/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -153,18 +153,9 @@ Scripts configured to run in the system context are supported on Windows 10 Ente
 
 ## Windows Update for Business
 
-You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows 10 Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
+Windows Update for Business policies are not currently supported for Windows 10 Enterprise multi-session.  
 
-The following settings are available in the catalog, with the links opening the Windows CSP documentation:
-
-- [Active Hours End](/windows/client-management/mdm/policy-csp-Update#update-activehoursend)
-- [Active Hours Max Range](/windows/client-management/mdm/policy-csp-Update?#update-activehoursmaxrange)
-- [Active Hours Start](/windows/client-management/mdm/policy-csp-Update#update-activehoursstart)
-- [Block "Pause Updates" ability](/windows/client-management/mdm/policy-csp-Update#update-setdisablepauseuxaccess)
-- [Configure Deadline Grace Period](/windows/client-management/mdm/policy-csp-Update#update-configuredeadlinegraceperiod)
-- [Defer Quality Updates Period (Days)](/windows/client-management/mdm/policy-csp-Update#update-deferqualityupdatesperiodindays)
-- [Pause Quality Updates Start Time](/windows/client-management/mdm/policy-csp-Update#update-pausequalityupdatesstarttime)
-- [Quality Update Deadline Period (Days)](/windows/client-management/mdm/policy-csp-Update?#update-configuredeadlineforqualityupdates)
+We recommend that you swap the OS image in Azure if you need the latest security updates. If you use the Azure Gallery image, you always get the latest security updates and can make sure all VMs are up-to-date and secured.
 
 ## Remote actions
 
