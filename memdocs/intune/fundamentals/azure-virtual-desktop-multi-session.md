@@ -154,6 +154,7 @@ Scripts configured to run in the system context are supported on Windows 10 Ente
 ## Windows Update for Business
 
 Windows Update for Business policies are not currently supported for Windows 10 Enterprise multi-session.  
+
 We recommend that you swap the OS image in Azure if you need the latest security updates. If you use the Azure Gallery image, you always get the latest security updates and can make sure all VMs are up-to-date and secured.
 
 ## Remote actions
