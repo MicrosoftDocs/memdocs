@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 09/27/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -56,7 +56,7 @@ Your organization cannot see your personal information when you enroll a device 
 - IMEI
 
  > [!NOTE]
- > For Android Enterprise fully managed, corporate-owned work profile, and dedicated devices, you will not be able see all app inventory.
+ > Organizations cannot see all app inventory on Android Enterprise fully managed devices, corporate-owned work profile devices, and dedicated devices.  
  
  > [!NOTE]
  > An app is considered **managed app** when installed in one of the following ways:
