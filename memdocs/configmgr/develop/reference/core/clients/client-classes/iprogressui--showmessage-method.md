@@ -9,7 +9,8 @@ ms.topic: reference
 ms.assetid: 2b79dafd-c4ba-4832-88f7-62d2e6b4caf0
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # IProgressUI::ShowMessage method

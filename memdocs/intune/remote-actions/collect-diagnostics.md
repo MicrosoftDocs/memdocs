@@ -5,10 +5,10 @@ title: Collect diagnostics from a Windows device
 titleSuffix: Microsoft Intune
 description: Learn how to collect diagnostics from a Windows device.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 08/17/2021
+ms.date: 09/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -35,9 +35,12 @@ The **Collect diagnostics** remote action lets you collect and download Windows 
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
+*Collect diagnostics* is also available as a [Bulk device action](../remote-actions/bulk-device-actions.md) that collects diagnostic logs from up to 25 Windows devices at a time.
+
 ## Requirements
 
-The **Collect diagnostics** remote action is supported for:
+The *Collect diagnostics* remote action is supported for:
+
 - Intune or co-managed devices.
 - Windows 10 version 1909 and later.
 - Microsoft HoloLens 2 2004 and later.
@@ -46,6 +49,8 @@ The **Collect diagnostics** remote action is supported for:
 - Devices that are online and able to communicate with the service during diagnostics.
 
 ## Collect diagnostics
+
+To use the *Collect diagnostics* action:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows** > select a supported device.
 2. On the device’s **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device’s **Overview** page.
@@ -124,8 +129,8 @@ Files:
 
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
-2.	Change the control to **Disabled**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
+2. Change the control to **Disabled**.
 
      :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control set to Disabled.":::
 
@@ -133,5 +138,5 @@ You can disable the **Collect diagnostics** remote action for all devices by fol
 
 Currently there are the two main issues that may cause device diagnostics to fail:
 
-1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP that prevents timeout during upload.  After installing the update please make sure to reboot your device.
-2. The device wasn't able to receive the device action within a 24-hour window.  If the device is offline or turned off this may cause a failure.
+1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP that prevents timeout during upload.  After the update installs, make sure to reboot your device.
+2. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off this may cause a failure.

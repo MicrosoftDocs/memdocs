@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 61c9b4be-4656-413a-8fb1-c6e72d89fbaa
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for status and alerts in Configuration Manager
@@ -24,9 +25,9 @@ The following query lists status messages, by status message ID, the component t
 
 ```sql
     SELECT SM.Component, SM.MessageID, 
-      COUNT(*) AS 'Count', SMA.AttributeValue, SM.MachineName 
+    ï¿½ï¿½COUNT(*) AS 'Count', SMA.AttributeValue, SM.MachineName 
     FROM v_StatusMessage SM LEFT OUTER JOIN v_StatMsgAttributes SMA 
-      ON SM.RecordID = SMA.RecordID 
+    ï¿½ï¿½ON SM.RecordID = SMA.RecordID 
     GROUP BY SM.Component, SM.MessageID, SM.MachineName, SMA.AttributeValue 
     ORDER BY SM.Component, SM.MessageID 
 ```
@@ -37,9 +38,9 @@ The following query lists the distribution points that have been selected for ea
 
 ```sql
     SELECT DPS.PackageID, PCK.Name, PCK.SourceSite, 
-      DPS.ServerNALPath, DPS.InstallStatus 
+    ï¿½ï¿½DPS.ServerNALPath, DPS.InstallStatus 
     FROM v_PackageStatusDistPointsSumm DPS INNER JOIN v_Package PCK 
-      ON DPS.PackageID = PCK.PackageID 
+    ï¿½ï¿½ON DPS.PackageID = PCK.PackageID 
     ORDER BY DPS.PackageID 
 ```
 
@@ -49,11 +50,11 @@ The following query lists the clients that have been targeted for a deployment, 
 
 ```sql
     SELECT SYS.Netbios_Name0, ADV.AdvertisementID, ADV.AdvertisementName, 
-      COL.Name AS TargetedCollection, CAS.LastStatusMessageIDName 
+    ï¿½ï¿½COL.Name AS TargetedCollection, CAS.LastStatusMessageIDName 
     FROM v_ClientAdvertisementStatus CAS INNER JOIN v_R_System SYS 
-      ON CAS.ResourceID = SYS.ResourceID INNER JOIN v_Advertisement ADV 
-      ON CAS.AdvertisementID = ADV.AdvertisementID INNER JOIN 
-      v_Collection COL ON ADV.CollectionID = COL.CollectionID 
+    ï¿½ï¿½ON CAS.ResourceID = SYS.ResourceID INNER JOIN v_Advertisement ADV 
+    ï¿½ï¿½ON CAS.AdvertisementID = ADV.AdvertisementID INNER JOIN 
+    ï¿½ï¿½v_Collection COL ON ADV.CollectionID = COL.CollectionID 
     ORDER BY SYS.Netbios_Name0, ADV.AdvertisementID
 ```
 
@@ -63,10 +64,10 @@ The following query lists the software metering usage data for files defined in 
 
 ```sql
     SELECT SYS.Netbios_Name0, SF.FileName, SF.FilePath, 
-      MUS.UsageCount, MUS.LastUsage 
+    ï¿½ï¿½MUS.UsageCount, MUS.LastUsage 
     FROM v_MonthlyUsageSummary MUS INNER JOIN v_R_System SYS 
-      ON MUS.ResourceID = SYS.ResourceID INNER JOIN v_GS_SoftwareFile SF 
-      ON MUS.FileID = SF.FileID 
+    ï¿½ï¿½ON MUS.ResourceID = SYS.ResourceID INNER JOIN v_GS_SoftwareFile SF 
+    ï¿½ï¿½ON MUS.FileID = SF.FileID 
     ORDER BY SYS.Netbios_Name0, SF.FileName, SF.FilePath 
 ```
 
@@ -76,12 +77,12 @@ The following query lists the enforcement state reported by the VISTACLIENT1 cli
 
 ```sql
     SELECT v_UpdateInfo.ArticleID, v_UpdateInfo.BulletinID, v_UpdateInfo.Title, 
-      v_StateNames.StateName, v_UpdateComplianceStatus.LastStatusCheckTime, 
-      v_UpdateComplianceStatus.LastEnforcementMessageTime 
+    ï¿½ï¿½v_StateNames.StateName, v_UpdateComplianceStatus.LastStatusCheckTime, 
+    ï¿½ï¿½v_UpdateComplianceStatus.LastEnforcementMessageTime 
     FROM v_R_System INNER JOIN v_UpdateComplianceStatus ON 
-      v_R_System.ResourceID = v_UpdateComplianceStatus.ResourceID INNER JOIN v_UpdateInfo ON 
-      v_UpdateComplianceStatus.CI_ID = v_UpdateInfo.CI_ID INNER JOIN v_StateNames ON 
-      v_UpdateComplianceStatus.LastEnforcementMessageID = v_StateNames.StateID 
+    ï¿½ï¿½v_R_System.ResourceID = v_UpdateComplianceStatus.ResourceID INNER JOIN v_UpdateInfo ON 
+    ï¿½ï¿½v_UpdateComplianceStatus.CI_ID = v_UpdateInfo.CI_ID INNER JOIN v_StateNames ON 
+    ï¿½ï¿½v_UpdateComplianceStatus.LastEnforcementMessageID = v_StateNames.StateID 
     WHERE (v_StateNames.TopicType = 402) AND (v_R_System.Netbios_Name0 LIKE 'VISTACLIENT1') 
     ORDER BY v_StateNames.StateName, v_UpdateInfo.DateLastModified 
 ```
