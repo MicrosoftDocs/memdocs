@@ -126,7 +126,9 @@ If the **Provide feedback** wizard successfully submits your feedback, but fails
 When you **Send a suggestion**, it currently opens this article. For now, use the other feedback options to [Send a smile](#send-a-smile) and [Send a frown](#send-a-frown).
 
 > [!NOTE]
-> We're moving away from the UserVoice feedback site. For more information, see [UserVoice Pages](https://support.microsoft.com/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
+> We're moving away from the UserVoice feedback site. We'll have a new community feedback experience to share soon. We'll carry over many of the top topics from UserVoice. Once our new experience is ready, if you don't see your feedback, you're welcome to resubmit it.
+>
+> For more information, see [UserVoice Pages](https://support.microsoft.com/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
 
 <!--10932544
 When you **Send a suggestion**, it opens the Configuration Manager product feedback site. The Configuration Manager product team uses the following status values:
