@@ -175,7 +175,7 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 
 - **Windows 10 Pro** (x86, x64)
 
-- **Windows 10 Pro Enterprise** (x86, x64)
+- **Windows 10 Enterprise** (x86, x64)
 
 - **Windows 10 IoT Enterprise** (x86, x64)
     This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->
