@@ -2,11 +2,11 @@
 title: How to use the docs
 titleSuffix: Microsoft Endpoint Manager
 description: Learn how to search the docs, provide doc feedback, and contribute to the docs for Microsoft Endpoint Manager. These docs include Configuration Manager, Intune, and Autopilot.
-ms.date: 12/28/2020
+ms.date: 09/23/2021
 ms.service: mem
 ms.subservice: fundamentals
 ms.topic: how-to
-ms.assetid: 54d19001-7e2b-489a-ba52-1fee3ff25bae
+ms.localizationpriority: high
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

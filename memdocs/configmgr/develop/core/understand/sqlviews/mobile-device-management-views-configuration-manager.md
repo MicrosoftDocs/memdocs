@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 3c8dc27b-0839-488d-9931-c897f136bfad
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Mobile device management views in Configuration Manager

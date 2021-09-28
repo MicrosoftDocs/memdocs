@@ -9,7 +9,8 @@ ms.topic: conceptual
 ms:assetid: 5741ada8-449c-45af-85e1-2e68abf96440
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Creating custom reports by using SQL Server views in Configuration Manager

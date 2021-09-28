@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 75e0e5a3-4bb5-421b-a9e1-b4bae4e71961
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Evaluation of the All collections report in Configuration Manager

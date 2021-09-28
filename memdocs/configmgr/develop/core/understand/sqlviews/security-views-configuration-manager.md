@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 29422d6c-2235-4365-a8b5-cde12b48d55b
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Security views in Configuration Manager

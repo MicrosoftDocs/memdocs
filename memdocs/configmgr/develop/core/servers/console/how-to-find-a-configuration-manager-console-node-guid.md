@@ -8,7 +8,8 @@ ms.topic: how-to
 ms.assetid: 80fd9154-6ec2-4586-bd9d-4cf88aa835a6
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # How to find a Configuration Manager console node GUID

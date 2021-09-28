@@ -9,7 +9,7 @@ ms.topic: article
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: null
 ---
 
 # Quick Start Guide for Lite Touch Installation  

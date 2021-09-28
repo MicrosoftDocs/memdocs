@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: a84ea8fa-ba47-4e73-a946-9eb579feadd6
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_ApplyDriverPackageAction server WMI class

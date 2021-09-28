@@ -9,7 +9,8 @@ ms.topic: reference
 ms.assetid: 17717f11-feaa-413c-aeae-948c1492c836
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # CreateRelationship method in class SMS_UserMachineRelationship

@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: 0fdecda3-7ed0-486f-a3a5-7a339979cad4
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_SetVariableAction server WMI class

@@ -9,7 +9,8 @@ ms.topic: conceptual
 ms.assetid: 3a3bee08-602d-40f8-b62b-e2ffe116d103
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Configuration Manager Schema View Mapping
