@@ -31,14 +31,7 @@ ms.collection:
 
 # What information can my organization see when I enroll my device?
 
-Your organization cannot see your personal information when you enroll a device with Microsoft Intune. When you enroll a device, you give your organization permission to view certain pieces of information on your device, such as device model and serial number. Your organization uses this information to help protect the corporate data on the device.
-
-The types of devices referred to in this article include:  
-
- * Personally-owned: A device that you bought yourself, and use at work. When you leave your workplace, you'll take your device with you. Also known as *bring-your-own-device* or *BYOD*.  
- * Corporate-owned: A device that belongs to your organization and that's only used for work purposes. On Android Enterprise devices, the term *fully managed* is used to mean the same thing.   
- * Corporate-owned, with a work profile: An Android Enterprise device that belongs to your organization but is set up for you to use as both a personal and work device. Also known as *corporate-owned-personally-enabled* or *COPE*.  
- * Corporate-owned, dedicated: A device that belongs to your organization and is used for a single purpose, such as ticket printing or checking out library books. Sometimes referred to as a *kiosk-style* device.  
+Your organization cannot see your personal information when you enroll a device with Microsoft Intune. When you enroll a device, you give your organization permission to view certain pieces of information on your device, such as device model and serial number. Your organization uses this information to help protect the corporate data on the device.  
 
 
 **What your organization does not see:**
