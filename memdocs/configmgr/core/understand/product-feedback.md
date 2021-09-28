@@ -2,7 +2,7 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 09/16/2021
+ms.date: 09/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -122,6 +122,12 @@ If the **Provide feedback** wizard successfully submits your feedback, but fails
 
 ## Send a suggestion
 
+When you **Send a suggestion**, it currently opens this article. For now, use the other feedback options to [Send a smile](#send-a-smile) and [Send a frown](#send-a-frown).
+
+> [!NOTE]
+> We're moving away from the UserVoice feedback site. For more information, see [UserVoice Pages](https://support.microsoft.com/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
+
+<!--10932544
 When you **Send a suggestion**, it opens the Configuration Manager product feedback site. The Configuration Manager product team uses the following status values:
 
 - **Noted**: We understand the request and it makes sense. We've added it to our backlog.
@@ -137,6 +143,7 @@ When you **Send a suggestion**, it opens the Configuration Manager product feedb
   - We want to give back your votes so you can use them on other items.
 
   - You can file new ideas for this feature. Help us know the next most important improvement for this feature.
+-->
 
 ## Share feedback in version 2006 and earlier
 

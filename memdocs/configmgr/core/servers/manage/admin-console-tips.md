@@ -2,11 +2,10 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 08/02/2021
+ms.date: 09/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -173,7 +172,7 @@ Submit product feedback from the console.
 
 - **Send a frown**: Send feedback on what you didn't like
 
-- **Send a suggestion**: Takes you to the product feedback site to share your idea
+- **Send a suggestion**: Takes you to the product feedback site to share your idea<!-- 10932544 -->
 
 For more information, see [Product Feedback](../../understand/product-feedback.md).
 

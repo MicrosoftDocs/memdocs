@@ -99,7 +99,7 @@ Download a baseline version from the [Evaluation Center](https://www.microsoft.c
 
 We love to hear your feedback about the new features in the technical preview. For more information, see [Product feedback](../understand/product-feedback.md).
 
-<!-- If you have ideas about new features you would like to see, let us know! Submit new ideas and vote on the ideas by others: [Configuration Manager UserVoice](https://configurationmanager.uservoice.com). -->
+<!--10932544 If you have ideas about new features you would like to see, let us know! Submit new ideas and vote on the ideas by others: [Configuration Manager UserVoice](https://configurationmanager.uservoice.com). -->
 
 <!--
 ## <a name="bdmk_tpknownissues"></a> General changes introduced in technical preview branch

@@ -2,7 +2,7 @@
 title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
-ms.date: 09/16/2021
+ms.date: 09/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -39,7 +39,7 @@ From the Configuration Manager console, you can share feedback directly to the M
 
 - **Send a frown**: Send feedback on what you didn't like, and how Microsoft can improve it.
 
-- **Send a suggestion**: Open the Configuration Manager product feedback site to share your idea.
+- **Send a suggestion**: Open the Configuration Manager product feedback site to share your idea.<!-- 10932544 -->
 
 For more information, see [Product feedback](product-feedback.md).
 

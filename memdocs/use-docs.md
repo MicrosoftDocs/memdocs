@@ -2,7 +2,7 @@
 title: How to use the docs
 titleSuffix: Microsoft Endpoint Manager
 description: Learn how to search the docs, provide doc feedback, and contribute to the docs for Microsoft Endpoint Manager. These docs include Configuration Manager, Intune, and Autopilot.
-ms.date: 09/16/2021
+ms.date: 09/30/2021
 ms.service: mem
 ms.subservice: fundamentals
 ms.topic: how-to
@@ -93,7 +93,7 @@ Select the **Feedback** link in the upper right of any article to go to the Feed
 
 :::image type="content" source="media/docs-feedback.png" alt-text="Screenshot of the feedback section on a docs article.":::
 
-To share non-docs feedback about the product itself, select **This product**. This action opens the product's feedback site.
+<!-- To share non-docs feedback about the product itself, select **This product**. This action opens the product's feedback site. 10932544-->
 
 To share docs feedback about the current article, select **This page**. A [GitHub account](https://github.com/join) is a prerequisite for providing documentation feedback. Once you sign in, there's a one-time authorization for the MicrosoftDocs organization. It then opens the GitHub new issue form. Add a descriptive title and detailed feedback in the body, but don't modify the document details section. Then select **Submit new issue** to file a new issue for the target article in the [MEMDocs GitHub repository](https://github.com/MicrosoftDocs/memdocs/issues).
 

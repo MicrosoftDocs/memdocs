@@ -44,7 +44,7 @@ Choose one of the following options:
 - I have a suggestion
 - Contact support
 
-The first three options currently take you to the product feedback site for Desktop Analytics.
+The first three options currently take you to the product feedback site for Desktop Analytics.<!-- 10932544 -->
 
 The fourth option opens the **Help and Support** option in the portal.
 
