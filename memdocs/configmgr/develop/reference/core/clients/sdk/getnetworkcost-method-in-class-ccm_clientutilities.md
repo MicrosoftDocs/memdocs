@@ -9,6 +9,7 @@ ms.assetid: de103be8-9c09-4014-949b-57372690d704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # GetNetworkCost Method in Class CCM_ClientUtilities

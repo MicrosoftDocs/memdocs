@@ -23,7 +23,7 @@ ms.topic: article
 
 **Applies to**
 
-- Windows 10
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 After you have [created a device group](enrollment-autopilot.md), you can apply a Windows Autopilot deployment profile to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for your end users.
@@ -34,7 +34,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
-    ![Screenshot of Basics page](images/create-profile-basics.png)
+    ![Screenshot of Basics page.](images/create-profile-basics.png)
 
 3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 4. Select **Next**.
@@ -42,7 +42,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
     - **Self-deploying (preview)**: (requires Windows 10, version 1809 or later) Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When using self-deploying mode, only compliance policies targeting the device will be applied.
 
-    ![Screenshot of OOBE page](images/create-profile-out-of-box.png)
+    ![Screenshot of OOBE page.](images/create-profile-out-of-box.png)
 
     > [!NOTE]
     > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
@@ -59,21 +59,26 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     - **Allow White Glove OOBE** (requires Windows 10, version 1903 or later; [additional physical requirements](pre-provision.md#prerequisites)): Choose **Yes** to allow pre-provisioning support.
       > [!NOTE]
       > The **white glove** feature has been renamed to **pre-provision**. References to **White Glove OOBE** in Intune refer to the Autopilot [pre-provisioning](pre-provision.md) process. <br><br>When setting this to **No** (blocking pre-provisioning), be aware that it will still be possible to press the Windows key five times during OOBE to invoke pre-provisioning and progress down that path. However, Intune will subsequently enforce this setting and you will encounter a red screen indicating pre-provisioning failure with error code 0x80180005.
-
-    - **Apply device name template** (requires Windows 10, version 1809 or later, and Azure AD join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a pre-fix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
+      > 
     - **Language (Region)**\*: Choose the language to use for the device. This option is available in all Deployment modes starting with Windows 10 2004.
     - **Automatically configure keyboard**\*: If a **Language (Region)** is selected, choose **Yes** to skip the keyboard selection page. This option is available in all Deployment modes starting with Windows 10 2004.
+
+        > [!NOTE]
+        > Language and keyboard settings requires ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection.
+
+    - **Apply device name template** (requires Windows 10, version 1809 or later, and Azure AD join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a pre-fix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
+  
 8. Select **Next**.
 9. On the **Assignments** page, choose **Selected groups** for **Assign to**.
 
-    ![Screenshot of Assignments page](images/create-profile-assignments.png)
+    ![Screenshot of Assignments page.](images/create-profile-assignments.png)
 
 10. Choose **Select groups to include**, and choose the groups you want to include in this profile.
 11. If you want to exclude any groups, choose **Select groups to exclude**, and choose the groups you want to exclude.
 12. Select **Next**.
 13. On the **Review + Create** page, choose **Create** to create the profile.
 
-    ![Screenshot of Review page](images/create-profile-review.png)
+    ![Screenshot of Review page.](images/create-profile-review.png)
 
 > [!NOTE]
 > Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. This process can take several minutes to complete. Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
@@ -106,5 +111,6 @@ This report is in preview. Device deployment records are currently triggered onl
 
 ## Related topics
 
-[Profile download](troubleshooting.md#profile-download)<br>
+[Profile download](troubleshooting.md#profile-download)
+
 [Registering devices](add-devices.md)

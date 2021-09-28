@@ -5,10 +5,11 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.date: 08/02/2021
+ms.date: 09/27/2021
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Removed and deprecated features for Configuration Manager
@@ -25,6 +26,8 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Support&nbsp;removed|
 |-----------|---|--------------|
+|Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../get-started/2021/technical-preview-2109.md#bkmk_dotnetsdk)<!--10529267-->. | September 2021 | The first release after November 1, 2021 |
+|The ability to deploy a cloud management gateway (CMG) as a **cloud service (classic)**. All CMG deployments should use a [virtual machine scale set](../../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586-->| September 2021 | The first release after March 1, 2022 |
 | Azure Active Directory (Azure AD) Graph API and Azure AD Authentication Library (ADAL), which is used by Configuration Manager for some cloud-attached scenarios. If you use cloud-attached features such as co-management, tenant attach, or Azure AD discovery, starting June 30, 2022, these features may not work correctly in Configuration Manager version 2103 or earlier. Stay current with Configuration Manager to make sure these features continue to work. For more information, see [CMG FAQ](../../../clients/manage/cmg/cloud-management-gateway-faq.yml#do-i-need-to-do-anything-with-the-deprecation-of-the-azure-ad-graph-api-and-azure-ad-authentication-library--adal--).<!--10488538-->|July 2021|June 30, 2022|
 | The BitLocker management implementation for the [recovery service](../../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service) has changed. The legacy MBAM-based service is replaced by the messaging processing engine on the management point. | March 2021 | The first release after May 2022 |
 |Desktop Analytics data for Windows 7, Windows 8, and earlier versions of Windows 10 that don't support the [Windows diagnostic data processor configuration](../../../../desktop-analytics/whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->|July 2021|January 31, 2022|

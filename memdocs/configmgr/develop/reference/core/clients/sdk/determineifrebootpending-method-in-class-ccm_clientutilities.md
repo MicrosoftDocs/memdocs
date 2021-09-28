@@ -9,6 +9,7 @@ ms.assetid: 3a3d65ac-be3c-471c-9819-2bbb28be3b15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # DetermineIfRebootPending Method in Class CCM_ClientUtilities

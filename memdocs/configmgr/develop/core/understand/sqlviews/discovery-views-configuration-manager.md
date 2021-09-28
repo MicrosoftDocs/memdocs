@@ -1,4 +1,4 @@
-﻿---
+---
 title: Discovery views
 titleSuffix: Configuration Manager
 description: System resource objects, which include any resources that were discovered on the network.
@@ -12,6 +12,7 @@ ms.assetid: 3692e025-4c24-4b5e-a4b0-a55039c92b21
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Discovery views in Configuration Manager

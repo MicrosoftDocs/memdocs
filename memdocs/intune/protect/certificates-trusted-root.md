@@ -146,5 +146,3 @@ Create certificate profiles:
 - [Configure infrastructure to support SCEP certificates with Intune](../protect/certificates-scep-configure.md)
 - [Configure and manage PKCS certificates with Intune](../protect/certificates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](../protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
-
-Learn about [Certificate connectors](../protect/certificate-connectors.md)

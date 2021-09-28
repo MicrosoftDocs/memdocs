@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 9/16/2021
+ms.date: 9/28/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -59,6 +59,15 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
+## App management
+
+### Use conditional access to group Windows 365 and Azure Virtual Desktop app policies together <!-- 36360788 -->
+
+In a future update, you’ll be able to target CA policies to a single application that applies to both the Windows 365 and Azure Virtual Desktop apps.
+
+Currently, Windows 365 and Azure Virtual Desktop share a common framework for identity access by using Azure Active Directory (Azure AD) and security controls with Conditional Access (CA) policies. You can target CA policies to the Windows 365 app and this applies only to windows365.microsoft.com web client. To apply CA policies to the full Windows client and non-windows clients, you must assign CA policies to both the Windows 365 and Azure Virtual Desktop apps.  For more information, see [Assign a Conditional Access policy for Cloud PCs](set-conditional-access-policies.md).
+
+<!-- ***********************************************-->
 ## Device management
 
 ### Support for Azure AD joined Cloud PCs<!-- 35060203-->
@@ -71,6 +80,8 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 ### Support for Windows 11<!--35091970 -->
 
 In a future update, Windows 365 will support Windows 11 as a Cloud PC operating system.
+
+Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
 
 ### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
 

@@ -1,14 +1,15 @@
 ---
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
-description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 08/10/2021
+description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
+ms.date: 09/20/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_attach"></a> Microsoft Endpoint Manager tenant attach: Device sync and device actions
@@ -159,12 +160,12 @@ Using a previously created application during onboarding to tenant attach requir
 
 ## Display the Configuration Manager connector status from the admin console
  <!--IN9229333, CM7138634-->
-From the Microsoft Endpoint Manager admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
+From the Microsoft Endpoint Manager admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy to display additional information about it.
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Endpoint Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
 > [!NOTE]
-> Some information isn't available if the hierarchy is running Configuration Manager version 2006.
+> Some information isn't available if the hierarchy is running Configuration Manager version 2006 or earlier.
 
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 
@@ -181,13 +182,13 @@ When tenant attach is already enabled, edit the co-management properties to disa
 
 ### Offboard from the Microsoft Endpoint Manager admin center
 <!-- CMADO7043245 INADO9412904 -->
-If needed, you can offboard a Configuration Manager version 2006 or later hierarchy from the Microsoft Endpoint Manager admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center:
+If needed, you can offboard a Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Tenant administration** then **Connectors and tokens**.
 1. Select **Microsoft Endpoint Configuration Manager**.
 1. Choose the name of the site you would like to offboard, then select **Delete**.
-   - This option is only visible for sites running Configuration Manager version 2006 or later.
+   - The connector may be listed as **Unknown** for version 2002 sites or if site information is lacking. <!--10569820, 10944009-->
 
 When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Endpoint Manager admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
 

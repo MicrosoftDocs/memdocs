@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 9/1/2021
+ms.date: 9/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -96,21 +96,6 @@ Applies to:
 ### Settings catalog policies for policy sets<!-- 8683467  -->
 
 In addition to profiles based on templates, you'll be able to add a profile based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
-
-
-### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint Security policies in Endpoint Manager admin center - public preview<!-- 7566953 7591178  -->
-
-In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
-
-- [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
-- [Endpoint Security policies](../protect/endpoint-security-policy.md), including Account protection, Antivirus, Attack surface reduction, and more.
-
-For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-
-Applies to:
-
-- macOS
-- Windows 10 and newer
 
 ### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461  -->
 
@@ -228,10 +213,6 @@ For more information about macOS device restriction profiles in Intune, see [mac
 ### Intune management agent for macOS devices will be a universal app<!-- 9294405  -->
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
-
-### Syncing the iOS/iPadOS/macOS Company Portal version<!-- 10535709  -->
-
-The version of the iOS/iPadOS Company Portal and the macOS Company Portal syncing to version 5.2019 for the next release. Going forward, the iOS/iPadOS and macOS Company Portal apps will have the same version number. For related information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 ### Improved flow when saving logs in Android Company Portal app<!-- 10414688  -->
 

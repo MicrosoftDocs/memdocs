@@ -6,10 +6,10 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
-ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Task sequence variables

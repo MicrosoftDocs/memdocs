@@ -9,6 +9,7 @@ ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration Manager console changes and tips

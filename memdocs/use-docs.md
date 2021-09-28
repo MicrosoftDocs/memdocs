@@ -6,6 +6,7 @@ ms.date: 09/30/2021
 ms.service: mem
 ms.subservice: fundamentals
 ms.topic: how-to
+ms.localizationpriority: high
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

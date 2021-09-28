@@ -6,12 +6,10 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Troubleshoot CMPivot

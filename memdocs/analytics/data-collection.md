@@ -6,11 +6,10 @@ ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
-ms.assetid: 8036825c-1ae5-4bbe-b3be-3c09eabca19f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Endpoint analytics data collection

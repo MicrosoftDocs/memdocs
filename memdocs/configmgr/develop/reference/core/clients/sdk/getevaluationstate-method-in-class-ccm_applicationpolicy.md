@@ -9,6 +9,7 @@ ms.assetid: abe568e3-3859-44a1-a97b-e9127055480b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # GetEvaluationState Method in Class CCM_ApplicationPolicy

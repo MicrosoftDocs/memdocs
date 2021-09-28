@@ -9,6 +9,7 @@ ms.technology: configmgr-client
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manage clients over the internet with Configuration Manager

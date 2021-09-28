@@ -9,6 +9,7 @@ ms.topic: overview
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # What is the administration service in Configuration Manager?

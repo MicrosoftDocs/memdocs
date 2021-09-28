@@ -6,10 +6,10 @@ ms.date: 11/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.localizationpriority: medium
 ---
 
 # Revise and supersede applications in Configuration Manager

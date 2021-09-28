@@ -9,6 +9,7 @@ ms.assetid: 2c84a3bd-f8d8-46a4-9591-07186ca5fe65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # IProgressUI interface

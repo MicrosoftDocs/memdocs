@@ -6,10 +6,10 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.assetid: 3fd401c9-4646-452d-beb4-1cc42d12caf3
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Contribute to the Community hub

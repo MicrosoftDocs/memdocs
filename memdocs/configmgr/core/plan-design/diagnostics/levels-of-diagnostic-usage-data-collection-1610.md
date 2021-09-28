@@ -1,16 +1,16 @@
 ---
-title: "Diagnostic data for 1610"
-titleSuffix: "Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1610 collects."
+title: Diagnostic data for 1610
+titleSuffix: Configuration Manager
+description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1610 collects.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Levels of diagnostic usage data collection for version 1610 of Configuration Manager

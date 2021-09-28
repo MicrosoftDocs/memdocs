@@ -6,12 +6,10 @@ ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # OneDrive for Business Profiles

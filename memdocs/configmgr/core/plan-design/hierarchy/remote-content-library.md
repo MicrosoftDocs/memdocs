@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure a remote content library for the site server

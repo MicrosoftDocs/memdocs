@@ -6,10 +6,10 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
-ms.assetid: c3279b7d-654d-444b-bd17-1262894590c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Server event logs

@@ -10,6 +10,7 @@ ms.assetid: b375eea9-ff01-4b23-913a-4d023715dbe6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # About Configuration Manager Custom Action Client Applications

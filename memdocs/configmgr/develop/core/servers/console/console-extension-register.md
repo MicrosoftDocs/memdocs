@@ -10,6 +10,7 @@ ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Console extension registration though community hub

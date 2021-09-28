@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: include
 ms.date: 09/17/2020
+ms.localizationpriority: medium
 ---
 
 The following table lists the log files that contain information related to the cloud management gateway.

@@ -6,12 +6,10 @@ ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 6f0e08f8-f2e1-4823-90f6-7b1f4341eb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Site failure impacts in Configuration Manager

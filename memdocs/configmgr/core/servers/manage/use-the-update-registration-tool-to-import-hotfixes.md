@@ -9,6 +9,7 @@ ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use the update registration tool to import hotfixes

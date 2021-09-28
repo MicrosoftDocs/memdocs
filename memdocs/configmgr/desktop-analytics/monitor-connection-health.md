@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # Monitor connection health

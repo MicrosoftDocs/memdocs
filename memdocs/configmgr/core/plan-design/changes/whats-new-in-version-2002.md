@@ -6,10 +6,10 @@ ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2002 of Configuration Manager current branch
