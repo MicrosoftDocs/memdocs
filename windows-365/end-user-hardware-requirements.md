@@ -80,9 +80,9 @@ You can install the client and find requirements for other platforms here:
 
 You can access Windows 365 Cloud PCs from your Linux OS devices by using:
 
-- The windows365-microsoft.com web client.
+- The web client via windows365.microsoft.com .
 - Third-party clients to connect to Azure Virtual Desktop, including:
-  - [Dell](https://www.delltechnologies.com/collaterals/unauth/data-sheets/products/thin-clients/dell-thinos-9-for-microsoft-wvd.pdf)
+  - [Dell](https://www.delltechnologies.com/asset/en-us/products/thin-clients/technical-support/dell-thinos-9-for-microsoft-wvd.pdf)
   - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
   - [IGEL](https://www.igel.com/igel-solution-family/windows-virtual-desktop/)
 
