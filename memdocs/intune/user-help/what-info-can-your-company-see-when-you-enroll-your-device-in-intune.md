@@ -37,8 +37,9 @@ The types of devices referred to in this article include:
 
  * Personally-owned: A device that you bought yourself, and use at work. When you leave your workplace, you'll take your device with you. Also known as *bring-your-own-device* or *BYOD*.  
  * Corporate-owned, fully managed: A device that belongs to your organization and that's only used for work purposes.  
- * Corporate-owned, dedicated: A device that belongs to your organization and is used for a single purpose, such as ticket printing or checking out library books. Sometimes referred to as a *kiosk-style* device.  
  * Corporate-owned, with a work profile: A device that belongs to your organization but is set up for you to use as both a personal and work device. Also known as *corporate-owned-personally-enabled* or *COPE*.  
+ * Corporate-owned, dedicated: A device that belongs to your organization and is used for a single purpose, such as ticket printing or checking out library books. Sometimes referred to as a *kiosk-style* device.  
+
 
 **What your organization does not see:**
 
