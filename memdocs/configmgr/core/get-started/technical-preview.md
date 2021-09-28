@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/21/2021
+ms.date: 09/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,12 +119,20 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2108
+### Technical preview version 2109
 
-- [Export to CSV](2021/technical-preview-2108.md#bkmk_csv) <!--9663857-->
-- [Custom properties for devices in the console](2021/technical-preview-2108.md#bkmk_custom) <!--10642650-->
-- [Improvements to Software Center notifications with logos](2021/technical-preview-2108.md#bkmk_notify) <!--4993167-->
-- [PowerShell release notes preview](2021/technical-preview-2108.md#bkmk_powershell) <!--10326535-->
+- [Improvements to Support Center OneTrace](2021/technical-preview-2109.md#bkmk_onetrace) <!--9348231-->
+- [Options for Support Center Data Collector and Client Tools](2021/technical-preview-2109.md#bkmk_support) <!--9947307-->
+- [Send product feedback from wizard and property dialogs](2021/technical-preview-2109.md#bkmk_feedback) <!--2711343-->   
+- [Implicit uninstall for user collections](2021/technical-preview-2109.md#bkmk_uninstall) <!--10393847-->
+- [Require installation of a console extension](2021/technical-preview-2109.md#bkmk_extensions) <!--10486584-->
+- [Import console extensions wizard](2021/technical-preview-2109.md#bkmk_import) <!--9741121-->
+- [Improvements to ADR search criteria](2021/technical-preview-2109.md#bkmk_adr) <!--7033309-->
+- [Improvements to VPN boundary types](2021/technical-preview-2109.md#bkmk_vpn) <!--7822886-->
+- [.NET version 4.6.2 prerequisite check is an error](2021/technical-preview-2109.md#bkmk_dotnetprereq) <!--10644702-->   
+- [External dependencies require .NET 4.6.2](2021/technical-preview-2109.md#bkmk_dotnetsdk) <!--10529267-->
+- [Copy GUID for ISV proxy certificate](2021/technical-preview-2109.md#bkmk_isvproxy) <!--2842082-->
+- [PowerShell release notes preview](2021/technical-preview-2109.md#bkmk_powershell) <!--10654429-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -141,6 +149,13 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2108
+
+- [Export to CSV](2021/technical-preview-2108.md#bkmk_csv) <!--9663857-->
+- [Custom properties for devices in the console](2021/technical-preview-2108.md#bkmk_custom) <!--10642650-->
+- [Improvements to Software Center notifications with logos](2021/technical-preview-2108.md#bkmk_notify) <!--4993167-->
+- [PowerShell release notes preview](2021/technical-preview-2108.md#bkmk_powershell) <!--10326535-->
 
 ### Technical preview version 2107
 
