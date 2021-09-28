@@ -4,6 +4,8 @@ summary: "Official product documentation for the following components of Microso
 metadata:
    ms.topic: hub-page
    ms.prod: configuration-manager
+   ms.localizationpriority: high
+   ms.date: 09/23/2021
 
 highlightedContent: 
   items: 

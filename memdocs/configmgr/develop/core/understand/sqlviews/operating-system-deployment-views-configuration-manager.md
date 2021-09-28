@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: fee8d7b0-b4c2-4c70-83ff-bc285551ee68
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Operating system deployment views in Configuration Manager

@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 9/16/2021
+ms.date: 9/28/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -57,6 +57,15 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 ## Security
 
 -->
+
+<!-- ***********************************************-->
+## App management
+
+### Use conditional access to group Windows 365 and Azure Virtual Desktop app policies together <!-- 36360788 -->
+
+In a future update, you’ll be able to target CA policies to a single application that applies to both the Windows 365 and Azure Virtual Desktop apps.
+
+Currently, Windows 365 and Azure Virtual Desktop share a common framework for identity access by using Azure Active Directory (Azure AD) and security controls with Conditional Access (CA) policies. You can target CA policies to the Windows 365 app and this applies only to windows365.microsoft.com web client. To apply CA policies to the full Windows client and non-windows clients, you must assign CA policies to both the Windows 365 and Azure Virtual Desktop apps.  For more information, see [Assign a Conditional Access policy for Cloud PCs](set-conditional-access-policies.md).
 
 <!-- ***********************************************-->
 ## Device management

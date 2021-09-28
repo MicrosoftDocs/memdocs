@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: a22fb031-891f-44ef-86d2-32291a2c64fd
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_InstallApplicationAction server WMI class

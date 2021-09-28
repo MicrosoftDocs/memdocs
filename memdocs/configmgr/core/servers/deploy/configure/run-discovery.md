@@ -28,6 +28,10 @@ You use one or more discovery methods in Configuration Manager to find device an
 
 -   Active Directory User Discovery  
 
+-   Azure Active Directory User Discovery  
+
+-   Azure Active Directory User Group Discovery  
+
 -   Heartbeat Discovery  
 
 -   Network Discovery  

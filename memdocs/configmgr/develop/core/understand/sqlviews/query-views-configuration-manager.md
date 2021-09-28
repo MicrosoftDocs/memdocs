@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 87b3f582-449b-4659-be0b-265fecdda6dd
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Query views in Configuration Manager

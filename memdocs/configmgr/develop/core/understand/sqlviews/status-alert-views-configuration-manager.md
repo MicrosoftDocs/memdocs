@@ -11,12 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40851148-f8ff-4959-b884-164fec0563e7
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Status and alert views in Configuration Manager
 
-Configuration Manager status messages report information about Configuration Manager component behavior and data flow and are categorized by severity and type. State messages are sent by Configuration Manager clients to site systems based on important changes of state, providing a snapshot of the state of a process at a specific time. Status summarizers produce summaries of the status and state messages and provide a snapshot of the status and health of site systems, components, software updates compliance, and so on.
+Configurationï¿½Manager status messages report information about Configuration Manager component behavior and data flow and are categorized by severity and type. State messages are sent by Configuration Manager clients to site systems based on important changes of state, providing a snapshot of the state of a process at a specific time. Status summarizers produce summaries of the status and state messages and provide a snapshot of the status and health of site systems, components, software updates compliance, and so on.
 
 Status message instances consist of properties that are stored in the database, which are represented primarily by the **v_StatusMessage** view, and message strings stored in dynamic-link library (DLL) files. When you view a message by using the Configuration Manager console, **Status Message Viewer**, and the **Status Message Details** page in **Report Viewer**, Configuration Manager creates the instance of status messages by combining the various parts.
 

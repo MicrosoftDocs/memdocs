@@ -9,7 +9,8 @@ ms.topic: reference
 ms.assetid: ac9084b4-13fd-4c95-a183-86508a2e1e07
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_MigrationSiteMapping server WMI class
