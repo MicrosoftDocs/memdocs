@@ -35,8 +35,6 @@ Each application on the **App performance** tab is assigned an **App reliability
 - **Crash frequency**: For each of app, the total number of crashes and the total usage duration over a 14 day rolling window is used to calculate the **Mean time to failure** value. This calculation normalizes the crash rate allowing for direct comparison of the relative frequency of crash events across different applications. This value is the primary contributor to an app's reliability score.
 - **Total usage duration**: Factoring in the usage duration across all enrolled devices helps ensure the most disruptive application issues are prioritized.
 
-> [!NOTE]
-> The **Application reliability** report is currently in preview. While this report is in preview, you'll see your **App reliability score** on the **Overview** page. However, the score won't contribute to your overall endpoint analytics score.
 ## App performance tab
 
 The **App performance** tab uses data from the past 14 days to show reliability insights for each desktop application in your organization. The following applications are included in the report:
