@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 09/28/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -33,6 +33,13 @@ ms.collection:
 
 Your organization cannot see your personal information when you enroll a device with Microsoft Intune. When you enroll a device, you give your organization permission to view certain pieces of information on your device, such as device model and serial number. Your organization uses this information to help protect the corporate data on the device.
 
+The types of devices referred to in this article include:  
+
+ * Personally-owned: A device that you bought yourself, and use at work. When you leave your workplace, you'll take your device with you. Also known as *bring-your-own-device* or *BYOD*.  
+ * Corporate-owned, fully managed: A device that belongs to your organization and that's only used for work purposes.  
+ * Corporate-owned, dedicated: A device that belongs to your organization and is used for a single purpose, such as ticket printing or checking out library books. Sometimes referred to as a *kiosk-style* device.  
+ * Corporate-owned, with a work profile: A device that belongs to your organization but is set up for you to use as both a personal and work device. Also known as *corporate-owned-personally-enabled* or *COPE*.  
+
 **What your organization does not see:**
 
 - Calling and web browsing history
@@ -42,7 +49,9 @@ Your organization cannot see your personal information when you enroll a device 
 - Passwords
 - Pictures, including what's in the photos app or camera roll
 - Files
-- For corporate-owned devices with a work profile, the applications and data in your personal profile. 
+- Additionally, for corporate-owned devices with a work profile:  
+  - Apps and data in your personal profile
+  - Phone number 
 
 **What your organization can always see:**
 
@@ -65,7 +74,7 @@ Your organization cannot see your personal information when you enroll a device 
 
 **What your organization might be able to see:**
 
-- Phone number: For corporate-owned devices, your full phone number can be seen. For personal-owned devices, just the last four digits of your phone number are visible to your organization. You can see the ownership type for each individual device on its **Device Details** page.
+- Phone number: If you're using a corporate-owned, fully managed device, your full phone number is visible to your organization. If you're using a personal-owned device, just the last four digits of your phone number are visible. You can see the ownership type for each individual device on the Intune Company Portal > **Device Details** page.  
 - Device storage space: If you can't install a required app, your organization might look at your device's storage space to figure out if space is too low.  
 - Location: For corporate-owned devices, your organization can see the location of a lost device. For personal-owned devices, your organization does not see the device location. Visit the [Apple iOS documentation](https://go.microsoft.com/fwlink/?linkid=853816) to learn more about supervised devices.  
 - App inventory details: If your organization uses Mobile Threat Defense, they will be able to view details about the apps that are on your iOS device. Find out more about [Mobile Threat Defense](set-up-mobile-threat-defense.md). Otherwise, for personal-owned devices, your organization can only see your managed app inventory. For corporate-owned devices, your organization can see all of your app inventory.
