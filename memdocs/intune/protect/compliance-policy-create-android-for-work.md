@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 09/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Device compliance settings for Android Enterprise in Intune
 
-This article lists and describes the different compliance settings you can configure on Android Enterprise devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
+This article lists and describes the different compliance settings you can configure on Android Enterprise devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
 This feature applies to:
 
@@ -81,6 +81,9 @@ As an Intune administrator, use these compliance settings to help protect your o
 > All the Mobile Threat Defense (MTD) providers are supported on Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile deployments using app configuration. Check with your MTD provider for the exact configuration needed to support Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile platforms on Intune.
 
 #### Google Play Protect
+
+> [!IMPORTANT]
+> Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
 - **SafetyNet device attestation**  
   Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
@@ -184,7 +187,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Block** - Mark rooted (jailbroken) devices as not compliant.
+  - **Block** - Mark rooted devices as not compliant.
 
 - **Require the device to be at or under the Device Threat Level**  
   Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:

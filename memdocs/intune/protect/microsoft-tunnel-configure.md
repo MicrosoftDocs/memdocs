@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/08/2021
+ms.date: 09/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,6 +51,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
 3. On the **Settings** tab, configure the following items:
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
+<!-- Hiding this infobox since we've fixed this, but keeping it here for historical reasons and in case the issue surfaces again
      > [!IMPORTANT]
      > To support Android Enterprise in your environment when you also meet the following conditions, you must include the IP address of a publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway server configurations. The conditions:
      >
@@ -58,7 +59,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
      > - You use per-app VPN.
      >
      > This addition of a publicly accessible DNS server prevents connection issues back to Intune and for apps not enabled for per-app VPN.
-
+-->
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
 
    - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.

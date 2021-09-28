@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager
@@ -51,9 +52,6 @@ Similar to a terminal server, some of these virtual devices allow multiple concu
 The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to this version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
 If you require user policy in this scenario, and accept any potential performance impact, use [client settings](../../clients/deploy/configure-client-settings.md) to enable user policy. In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
-
-> [!NOTE]
-> You can't use co-management with a client running Windows Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
 
 Starting in version 2006, the **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576--> Starting in version 2107, the **Windows 11 Enterprise multi-session** platform is available.
 

@@ -1,17 +1,15 @@
 ---
-title: "View software inventory with Resource Explorer"
-titleSuffix: "Configuration Manager"
-description: "Use Resource Explorer to view software inventory in Configuration Manager."
+title: View software inventory with Resource Explorer
+titleSuffix: Configuration Manager
+description: Use Resource Explorer to view software inventory in Configuration Manager.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 4b7aa5f6-5ebd-49be-b7f3-4206caadc187
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # How to use Resource Explorer to view software inventory in Configuration Manager
 

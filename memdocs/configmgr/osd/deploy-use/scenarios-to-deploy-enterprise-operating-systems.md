@@ -6,12 +6,10 @@ ms.date: 07/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Scenarios to deploy enterprise operating systems with Configuration Manager

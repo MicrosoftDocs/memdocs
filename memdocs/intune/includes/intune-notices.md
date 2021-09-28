@@ -12,7 +12,7 @@ ms.custom: include file
 These notices provide important information that can help you prepare for future Intune changes and features.
 ### Take Action: Update to the latest version of the Android Company Portal app<!--10488117-->
 
-Due to a change in our integration with Samsung devices, we will no longer be able to support new Android device administrator enrollments using Company Portal version of 5.04993.0 or below.
+Due to a change in our integration with Samsung devices, with Intune's October (2110) service release we will no longer be able to support new Android device administrator enrollments using Company Portal version of 5.04993.0 or below.
 
 #### How this will affect my organization
 
@@ -22,11 +22,11 @@ User impact: Users who need to enroll Samsung devices into Android device admini
 
 #### What do I need to do to prepare
 
-Update any older version of Company Portal staged in your environment to support Android device administrator enrollments. Inform your users that they will need to update to the latest version of the Android Company Portal to enroll their Samsung device. If applicable, inform your help desk in case users do not update the app prior to enrolling. We also recommend that you keep the Company Portal app updated to ensure that the latest fixes are available on your devices.
+Update any older version of Company Portal staged in your environment to support Android device administrator enrollments before Intune's October (2110) service release. Inform your users that they will need to update to the latest version of the Android Company Portal to enroll their Samsung device. If applicable, inform your help desk in case users do not update the app prior to enrolling. We also recommend that you keep the Company Portal app updated to ensure that the latest fixes are available on your devices.
 
 #### More information
 
-- [How to update the Company Portal app](/mem/intune/user-help/install-a-new-version-of-the-company-portal-app)
+- [How to update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)
 - [Download Microsoft Intune Company Portal for Android from Official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=49140)
 
 ### Plan for Change: Safe boot and Debugging features in Android Enterprise device restrictions will be replaced

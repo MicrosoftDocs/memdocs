@@ -5,11 +5,11 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew
 ms.author: mstewart
 manager: dougeby
 description: Links to articles to install Configuration Manager site servers and roles.
+ms.localizationpriority: medium
 ---
 
 # Deploy servers and roles

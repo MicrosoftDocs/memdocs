@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# What is Windows 365?
+# What is Windows 365 Enterprise?
 
-Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. It provides the productivity, security, and collaboration benefits of Microsoft 365. Windows 365 uses:
+Windows 365 Enterprise is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. It provides the productivity, security, and collaboration benefits of Microsoft 365. Windows 365 Enterprise uses:
 
 - [Microsoft Endpoint Manager](/mem/) to manage the Cloud PCs.
 - Azure Active Directory (Azure AD) for identity and access control.
@@ -47,6 +47,10 @@ With the Windows 365 service, you can:
 - [Configure provisioning policies](create-provisioning-policy.md) to create custom Cloud PC configurations.
 - Use device groups, policies, and security baselines to customize your Cloud PC configurations to support different user needs.
 - Pre-install [apps](app-overview.md) in your custom Cloud PC image and push additional apps to them through Microsoft Endpoint Manager.
+
+### Windows 365 Business
+
+Windows 365 Business is a version of Windows 365 that is made specifically for use in smaller companies (up to 300 seats). For more information, see [Getting started with Windows 365 Business and Cloud PCs](/en-us/microsoft-365/admin/setup/get-started-windows-365-business).
 
 ## What is a Cloud PC?
 

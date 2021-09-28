@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot scripts for devices uploaded to the admin center
 titleSuffix: Configuration Manager
-description: "Troubleshooting scripts for Configuration Manager tenant attach"
+description: Troubleshooting scripts for Configuration Manager tenant attach
 ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: a0eb1e8f-2c85-4f48-a0b5-945b3e5f63f3
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshoot Scripts (preview) for devices uploaded to the admin center

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/19/2021
+ms.date: 09/20/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -82,7 +82,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **Tethering and access to hotspots**: **Block** prevents tethering and access to portable hotspots. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow tethering and access to portable hotspots.
 - **USB file transfer**: **Block** prevents transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow transferring files.
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
-- **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.
+- **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.  
+- **Developer settings​**: Choose **Allow** to let users access developer settings on the device.​ When set to **Not configured** (default), Intune doesn’t change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.  
 - **Debugging features**: Choose **Allow** to let users use debugging features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from using the debugging features on the device.
 - **Microphone adjustment**: **Block** prevents users from unmuting the microphone and adjusting the microphone volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device.
 - **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. If an email isn't entered, anyone can unlock the device after it's restored to the factory settings. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
@@ -148,7 +149,11 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   This setting applies to:
 
-  - Android 9.0 and newer
+  - Android 9.0 and newer  
+
+#### Corporate-owned work profile devices  
+
+- **Contact sharing via Bluetooth (work profile-level)**: **Block** prevents users from sharing their work profile contacts with devices over Bluetooth. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts via Bluetooth.  
 
 ### System security
 
@@ -168,7 +173,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Not configured**: Intune doesn't change or update this setting.
     - **Single app**: Users can only access a single app on the device. When the device starts, only the specific app starts. Users are restricted from opening new apps or from changing the running app.
 
-      - **Select an app to use for kiosk mode**: Select the managed Google Play app from the list.
+      - **Select an app to use for kiosk mode**: Select the Managed Google Play app from the list.
 
       > [!IMPORTANT]
       > When using single-app kiosk mode, to use dialer/phone apps, then enable system notifications. This feature is available on Android devices running 9.0 and newer. To enable system notifications, see [General settings for dedicated devices](#dedicated-devices) (in this article).
@@ -322,6 +327,19 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - **Number of seconds the device is inactive before showing screen saver**: Choose how long the device is idle before showing the screensaver. Enter a value between 1-9999999 seconds. Default is `30` seconds. You must enter a number greater than zero (`0`).
         - **Detect media before starting screen saver**: **Enable** (default) doesn't show the screen saver if audio or video is playing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the screen saver, even if audio or video is playing.
 
+      - **Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with AAD Shared device mode.
+
+        When enabled, also configure:
+
+        - **Set custom URL background for sign-in screen​**: Enter the URL of the URL background for the sign-in screen. The sign-in screen must be enabled to configure this setting.
+        - **Set custom URL branding logo for sign-in screen and session pin page​**: Enter the URL branding logo for the sign-in screen and session pin page. ​
+        - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't required to set a PIN. This setting must be enabled to show the sub-settings.
+          - **Choose complexity of PIN for sign-in session**: Choose the complexity of the session PIN. Options include **Not configured**, **Complex**, or **Simple**. Complex requires alphanumerical characters and simple only requires numbers. ​
+          - **Require user to enter session PIN if screensaver has appeared​**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver has appeared. 
+        - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign-out of the Managed Home Screen based on inactivity. This setting must be enabled to show the sub-settings.
+          - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
+          - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
+
 - **Fully managed**: Configures the Microsoft Launcher app on fully managed devices.
 
   - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
@@ -428,7 +446,7 @@ End of comment -->
 
 - **App auto-updates (work profile-level)**: Devices check for app updates daily. Choose when automatic updates are installed. Your options:
   - **Not configured**: Intune doesn't change or update this setting.
-  - **User choice**: The OS might default to this option. Users can set their preferences in the managed Google Play app.
+  - **User choice**: The OS might default to this option. Users can set their preferences in the Managed Google Play app.
   - **Never**: Updates are never installed. This option isn't recommended.
   - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
   - **Always**: Updates are installed when they're available.
@@ -437,8 +455,8 @@ End of comment -->
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
   
-  - Only show apps in the managed Google Play store that are approved, or apps that are required.
-  - Uninstall apps that were installed outside of the managed Google Play store.
+  - Only show apps in the Managed Google Play store that are approved, or apps that are required.
+  - Uninstall apps that were installed outside of the Managed Google Play store.
 
 If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
 

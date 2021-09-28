@@ -10,6 +10,7 @@ ms.assetid: 7180bd80-e003-4258-b21f-bf4d6964ac9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_CaptureNetworkSettingsAction server WMI class

@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Removed and deprecated items for Configuration Manager clients

@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 02/05/2021
+ms.localizationpriority: medium
 ---
 
 These configurations apply to the server that hosts the service connection point and any firewalls between that server and the internet. Allow communication through outgoing HTTPS port **TCP 443** to the internet locations.

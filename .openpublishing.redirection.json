@@ -739,6 +739,11 @@
             "source_path": "memdocs/intune/fundamentals/windows-virtual-desktop-multi-session.md",
             "redirect_url": "/mem/intune/fundamentals/azure-virtual-desktop-multi-session",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/protect/plan-design/planning-for-endpoint-protection.md",
+            "redirect_url": "/mem/configmgr/protect/deploy-use/endpoint-protection",
+            "redirect_document_id": false
         }
     ]
 }

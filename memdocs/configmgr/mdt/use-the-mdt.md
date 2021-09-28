@@ -6,10 +6,10 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: 10a846c2-e63c-4c2b-8210-7485bfe7e47f
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Using the Microsoft Deployment Toolkit  
