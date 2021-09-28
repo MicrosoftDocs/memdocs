@@ -73,7 +73,7 @@ For each application in the report, the following data is provided:
 
 Selecting an app name in the table from **App performance** opens **App performance details**. **App performance details** contain two tabs:
 
-- **App versions**: This tab allows you to compare the **Mean time to failure** across different versions of the application. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You may also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
+- **App versions**: This tab allows you to compare the number of **App crashes** and number of unique **Devices with crashes** across different versions of the application over the past 14 days. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You may also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
 - **OS versions**: This tab compares the **Mean time to failure** for the application across different versions of Windows. This information can be helpful for identifying potential correlations between OS version and application issues.
 
 :::image type="content" source="media/5659073-app-performance-details.png" alt-text="Application performance details in endpoint analytics" lightbox="media/5659073-app-performance-details.png":::
@@ -85,19 +85,19 @@ The **Device performance** tab displays application reliability insights for eac
 > [!IMPORTANT]
 > App crash events are limited to 10 app crash events per application, per device, per day.
 
-Selecting a device name opens the **Application reliability (preview)** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
+Selecting a device name opens the **Application reliability** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
 ## Known issues
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 
-**Scenario**: In certain uncommon situations, devices may be missing from the **Application reliability (preview)** report. You can determine how many devices are reporting application reliability data by looking at the number of records in the table on the **Device performance** tab of the **Application reliability (preview)** report.
+**Scenario**: In certain uncommon situations, devices may be missing from the **Application reliability** report. You can determine how many devices are reporting application reliability data by looking at the number of records in the table on the **Device performance** tab of the **Application reliability** report.
 
 **Impacted devices**: This issue affects devices enrolled in endpoint analytics from Configuration Manager that are unable to download a required ServiceCertificate policy. Without this policy, devices can't report application reliability data to endpoint analytics.
 
 > [!IMPORTANT]
 > This isn't a common issue. Before proceeding the mitigation, verify that your missing devices:
-> - Meet the [prerequisites](#prerequisites) for the **Application reliability (preview)** report
+> - Meet the [prerequisites](#prerequisites) for the **Application reliability** report
 > - Are actively being used
 > - Have had sufficient time to start reporting data
 
