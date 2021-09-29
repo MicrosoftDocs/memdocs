@@ -7,22 +7,24 @@ author: ErikjeMS
 manager: dougeby
 ms.date: 09/29/2021
 audience: Admin
-ms.topic: article
-ms.service: o365-administration
-localization_priority: Normal
-monikerRange: 'o365-worldwide'
-ms.collection: 
-- M365-subscription-management
-- Adm_O365
-- Adm_TOC
-- Adm_O365_Setup
-ms.custom: 
-- AdminSurgePortfolio
-- okr_smb
-search.appverid:
-- MET150
-- MOE150
-description: Learn how to buy Windows 365 Business for your organization, and help users start using their Cloud PCs.
+ms.topic: how-to
+ms.service: cloudpc
+ms.subservice:
+ms.localizationpriority: high
+ms.technology:
+ms.assetid: 
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: ivivano
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: intune-azure; get-started
+ms.collection: M365-identity-device-management
 ---
 
 # Get started with Windows 365 Business and Cloud PCs
