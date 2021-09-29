@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 965581db-786b-413e-a444-26533a339642
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for site administration in Configuration Manager
@@ -24,15 +25,15 @@ The following sample query demonstrates how to join a site view to another site 
 
 ```sql
     SELECT v_Site.SiteCode, v_Site.ServerName, 
-      CASE v_BoundaryInfo.BoundaryType 
-        WHEN 0 THEN 'IP subnet' 
-        WHEN 1 THEN 'Active Directory site' 
-        WHEN 2 THEN 'IPv6 Prefix' 
-        WHEN 3 THEN 'IP address range' 
-      END AS [Boundary Type], v_BoundaryInfo.Value, 
-      CASE v_BoundaryInfo.BoundaryFlags 
-        WHEN 0 THEN 'Fast' 
-        WHEN 1 THEN 'Slow' 
+    ï¿½ï¿½CASE v_BoundaryInfo.BoundaryType 
+    ï¿½ï¿½ï¿½ï¿½WHEN 0 THEN 'IP subnet' 
+    ï¿½ï¿½ï¿½ï¿½WHEN 1 THEN 'Active Directory site' 
+    ï¿½ï¿½ï¿½ï¿½WHEN 2 THEN 'IPv6 Prefix' 
+    ï¿½ï¿½ï¿½ï¿½WHEN 3 THEN 'IP address range' 
+    ï¿½ï¿½END AS [Boundary Type], v_BoundaryInfo.Value, 
+    ï¿½ï¿½CASE v_BoundaryInfo.BoundaryFlags 
+    ï¿½ï¿½ï¿½ï¿½WHEN 0 THEN 'Fast' 
+    ï¿½ï¿½ï¿½ï¿½WHEN 1 THEN 'Slow' 
     END AS Connection, v_BoundaryInfo.DisplayName AS Description 
     FROM v_BoundaryInfo INNER JOIN v_Site ON v_BoundaryInfo.SiteCode = v_Site.SiteCode 
     ORDER BY v_Site.SiteCode, [Boundary Type], v_BoundaryInfo.Value

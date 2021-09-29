@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: 6d4bf98c-7a2b-4747-9d7d-6b92b3af4fbc
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_PrestartCheckAction server WMI class

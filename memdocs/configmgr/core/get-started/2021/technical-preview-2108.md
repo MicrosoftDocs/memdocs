@@ -29,10 +29,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to Software Center notifications with logos](includes/2108/4993167.md)]
 [!INCLUDE [PowerShell release notes preview](includes/2108/10326535.md)]
 
-<!-- ## General known issues
+## General known issues
 
-[!INCLUDE [10210000](includes/2108/known-issue-10210000.md)]
- -->
+[!INCLUDE [11018755](includes/2109/known-issue-11018755.md)]
 
 ## Next steps
 

@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: c639ace8-52dd-4e91-92fa-e11e56878bd7
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for endpoint protection in Configuration Manager

@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 3e00495e-9ed8-49e7-a6ad-2d67c7ecf9b0
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for asset intelligence in Configuration Manager

@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: e88c5f27-7ce1-48b3-bf3d-e4e6f5100b19
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Software metering views in Configuration Manager

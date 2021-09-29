@@ -45,7 +45,7 @@ In these steps, you’ll use the Device Model device property to create a dynami
 6. On the **Dynamic membership rules** page, enter the following:
     1. **Property** = "deviceModel"
     2. **Operator** = "Contains"
-    3. **Value** = "CloudPC"
+    3. **Value** = "Cloud PC"
 7. To validate that it works, select **Validate Rules (Preview)** > **+Add devices** > select some Cloud PCs and non-Cloud PC devices.
 8. After the validation completes, select **Save** > **Create**.
 

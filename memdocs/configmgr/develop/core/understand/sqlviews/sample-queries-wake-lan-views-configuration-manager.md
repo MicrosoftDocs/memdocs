@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 8a1dcdff-9578-447c-b3cf-3c72166bf7cc
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for Wake On LAN in Configuration Manager
@@ -25,13 +26,13 @@ The following query retrieves the Configuration Manager object type, the deploym
 ```sql
     SELECT v_WOLGetSupportedObjects.Name AS [Object Type], 
     v_CIAssignment.AssignmentID AS DeploymentID, v_Advertisement.AdvertisementID 
-      v_WOLEnabledObjects.ObjectName AS Name 
+    ï¿½ï¿½v_WOLEnabledObjects.ObjectName AS Name 
     FROM v_WOLGetSupportedObjects INNER JOIN v_WOLEnabledObjects ON 
-      v_WOLGetSupportedObjects.ObjectType = v_WOLEnabledObjects.ObjectType 
-      LEFT OUTER JOIN v_Advertisement ON 
-      v_WOLEnabledObjects.ObjectID = v_Advertisement.AdvertisementID 
-      LEFT OUTER JOIN v_CIAssignment ON 
-      v_WOLEnabledObjects.ObjectID = v_CIAssignment.Assignment_UniqueID 
+    ï¿½ï¿½v_WOLGetSupportedObjects.ObjectType = v_WOLEnabledObjects.ObjectType 
+    ï¿½ï¿½LEFT OUTER JOIN v_Advertisement ON 
+    ï¿½ï¿½v_WOLEnabledObjects.ObjectID = v_Advertisement.AdvertisementID 
+    ï¿½ï¿½LEFT OUTER JOIN v_CIAssignment ON 
+    ï¿½ï¿½v_WOLEnabledObjects.ObjectID = v_CIAssignment.Assignment_UniqueID 
     ORDER BY [Object Type], Name 
 ```
 
@@ -41,11 +42,11 @@ The following query retrieves client computers, by NetBIOS name, that have been 
 
 ```sql
     SELECT v_R_System.Netbios_Name0 AS Computer, v_WOLEnabledObjects.ObjectName, 
-      v_WOLGetSupportedObjects.Name AS ObjectType, v_WOLEnabledObjects.ObjectID 
+    ï¿½ï¿½v_WOLGetSupportedObjects.Name AS ObjectType, v_WOLEnabledObjects.ObjectID 
     FROM v_WOLTargetedClients INNER JOIN v_R_System ON 
-      v_WOLTargetedClients.ResourceID = v_R_System.ResourceID INNER JOIN v_WOLEnabledObjects ON 
-      v_WOLTargetedClients.ObjectID = v_WOLEnabledObjects.ObjectID INNER JOIN v_WOLGetSupportedObjects ON 
-      v_WOLEnabledObjects.ObjectType = v_WOLGetSupportedObjects.ObjectType 
+    ï¿½ï¿½v_WOLTargetedClients.ResourceID = v_R_System.ResourceID INNER JOIN v_WOLEnabledObjects ON 
+    ï¿½ï¿½v_WOLTargetedClients.ObjectID = v_WOLEnabledObjects.ObjectID INNER JOIN v_WOLGetSupportedObjects ON 
+    ï¿½ï¿½v_WOLEnabledObjects.ObjectType = v_WOLGetSupportedObjects.ObjectType 
     ORDER BY Computer, v_WOLGetSupportedObjects.ObjectType, v_WOLEnabledObjects.ObjectID 
 ```
 

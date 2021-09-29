@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: 1db52c17-0665-45b4-963a-5c2d19e0b9b4
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_EndpointProtectionDashboardBucket Server WMI Class

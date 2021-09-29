@@ -8,7 +8,8 @@ ms.technology: configmgr-sdk
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ms.collection: M365-identity-device-management
 ---
 

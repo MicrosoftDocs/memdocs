@@ -45,7 +45,6 @@ Use one of the following policy types to configure BitLocker on your managed dev
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 >
 > You can also access important information for BitLocker from your devices, as found in Azure Active Directory (Azure AD).
-[encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.
 
 ## Permissions to manage BitLocker
 
@@ -141,8 +140,8 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 
 - **Compatible TPM startup** must be set to *Allowed* or *Required*
 - **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
-- **Compatible TPM startup key** must not set to *Require startup key with TPM*
-- **Compatible TPM startup key and PIN** must not set to *Require startup key and PIN with TPM*
+- **Compatible TPM startup key** must not be set to *Require startup key with TPM*
+- **Compatible TPM startup key and PIN** must not be set to *Require startup key and PIN with TPM*
 
 > [!NOTE]
 > Silent enablement of BitLocker will encrypt used disk space only.
@@ -171,7 +170,7 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
 
-IT admins need to have a specific permission within Azure Active Directory to be able to see device BitLocker recovery keys: `microsoft.directory/bitlockerKeys/key/read`. There are some roles within Azure AD that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Azure AD roles have which permissions, see [Azure AD role descriptions](/azure/active-directory/roles/permissions-reference). 
+IT admins need to have a specific permission within Azure Active Directory to be able to see device BitLocker recovery keys: `microsoft.directory/bitlockerKeys/key/read`. There are some roles within Azure AD that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Azure AD roles have which permissions, see [Azure AD role descriptions](/azure/active-directory/roles/permissions-reference).
 
 All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
@@ -201,7 +200,7 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 3. In the list of devices that you manage, select a device, select **More**, and then select the **BitLocker key rotation** device remote action.
 
-4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don’t see this option, select the ellipsis (**…**) to show additional options, and then select the **BitLocker key rotation** device remote action.
+4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don't see this option, select the ellipsis (**…**) to show additional options, and then select the **BitLocker key rotation** device remote action.
 
    ![Select the ellipsis to view more options](./media/encrypt-devices/select-more.png)
 
@@ -211,4 +210,3 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 - [Monitor disk encryption](../protect/encryption-monitor.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
-
