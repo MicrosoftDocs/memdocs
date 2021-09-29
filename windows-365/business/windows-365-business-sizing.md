@@ -1,5 +1,6 @@
 ---
-title: "Windows 365 Business sizing options"
+title: Windows 365 Business sizing options
+description: Learn about the different Cloud PC sizes that are available with Windows 365 Business.
 f1.keywords:
 - NOCSH
 ms.author: erikje

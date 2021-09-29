@@ -1,5 +1,6 @@
 ---
-title: "Get started with Windows 365 Business and Cloud PCs"
+title: Get started with Windows 365 Business and Cloud PCs
+description: Learn about getting started with Windows 365 Business.
 f1.keywords:
 - NOCSH
 ms.author: erikje

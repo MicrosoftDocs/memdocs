@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot Windows 365 Business Cloud PC setup issues"
+description: Troubleshoot issues in Windows 365 Business.
 f1.keywords:
 - NOCSH
 ms.author: erikje
