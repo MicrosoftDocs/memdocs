@@ -20,7 +20,7 @@ highlightedContent:
       itemType: how-to-guide
       url: windows-365-business-sizing.md
     - title: Troubleshooting
-      itemType: Troubleshooting
+      itemType: concept
       url: troubleshoot-windows-365-business.md
 additionalContent:
   sections:
