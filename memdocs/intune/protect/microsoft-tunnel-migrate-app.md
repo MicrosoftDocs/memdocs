@@ -103,7 +103,7 @@ The Microsoft Defender for Endpoint app that you use as the tunnel client app in
 
 ## Functionality in the Defender for Endpoint app
 
-The Microsoft Defender for Endpoint app combines functionality of Microsoft Defender for Endpoint with the functionality of the Microsoft Tunnel app. Use of the new Defender app with support for Microsoft Tunnel doesn’t require a change to your existing licenses or the addition of a license for Defender for Endpoint.
+The Microsoft Defender for Endpoint app combines functionality of Microsoft Defender for Endpoint with the functionality of the Microsoft Tunnel app. You can use the new Defender app with Microsoft Tunnel even if you don't otherwise use or have a license for Microsoft Defender for Endpoint.
 
 The functionality that’s available in the Microsoft Defender for Endpoint app depends on the policy settings you deploy to manage the app on a device. The following tabs are available:
 
