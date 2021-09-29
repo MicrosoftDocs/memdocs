@@ -32,7 +32,8 @@ To manage the following Windows OS versions, use the client that's included with
 
 - **Windows 11** (_starting in Configuration Manager version 2107_)
 
-    For more information, see [Support for Windows 11](support-for-windows-11.md).
+    > [!NOTE]
+    > You can continue to use Microsoft Endpoint Manager to manage devices running Windows 11 the same as with Windows 10. For more information, including some known issues, see [Support for Windows 11](support-for-windows-11.md).
 
 - **Windows 10**
 

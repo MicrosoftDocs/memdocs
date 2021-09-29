@@ -2,7 +2,7 @@
 title: User notifications
 titleSuffix: Configuration Manager
 description: Learn about the configurations to manage notifications to users about application deployments.
-ms.date: 04/05/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -17,6 +17,9 @@ ms.localizationpriority: medium
 *Applies to: Configuration Manager (current branch)*
 
 The Configuration Manager client and Software Center can display notifications to users that are signed-in to Windows. You can control many of these behaviors through client settings and the deployment settings.
+
+> [!NOTE]
+> By default, Windows 11 enables **focus assist** for the first hour after a user signs on. Software Center notifications are currently suppressed during this time. For more information on this Windows 11 feature, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).<!-- 10610910 -->
 
 ## Required deployments
 

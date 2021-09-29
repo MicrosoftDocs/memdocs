@@ -2,7 +2,7 @@
 title: Device restart notifications
 titleSuffix: Configuration Manager
 description: Restart notification behavior for various client settings in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -17,6 +17,9 @@ ms.localizationpriority: medium
 *Applies to: Configuration Manager (current branch)*
 
 The notifications a user receives for a pending device restart can vary depending on the [Computer restart client settings](#client-settings) and which version of Configuration Manager you use. This article helps you configure the user experience for pending device restart notifications.
+
+> [!NOTE]
+> By default, Windows 11 enables **focus assist** for the first hour after a user signs on. Software Center notifications are currently suppressed during this time. For more information on this Windows 11 feature, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).<!-- 10610910 -->
 
 ## Deployment types for restart notifications
 
