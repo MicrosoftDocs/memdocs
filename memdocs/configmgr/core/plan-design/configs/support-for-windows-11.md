@@ -41,7 +41,7 @@ The following table lists the versions of Windows 11 that you can use as a clien
 
 | Windows 11 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|
-| **21H2**<br>(10.1.222xx) <!--mm/dd/yyyy--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
+| **21H2**<br>(10.0.22000) <!--mm/dd/yyyy--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
@@ -49,7 +49,7 @@ All currently supported versions of Configuration Manager current branch support
 - **Enterprise LTSC xxxx** <!--mm/dd/yyyy
 -->
 
-For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows)<!-- and [Windows release information](/windows/release-health/release-information)need to revise this link? -->.
+For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows release information](/windows/release-health/)<!--need to revise this link? -->.
 
 | Key |
 |--|
@@ -59,8 +59,6 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 ## Support notes
 
 - Support for Windows 11 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
-
-<!-- - For Windows 11, version 21H2, OS deployment media shows the version as 10.1.222xx.xxx. --><!-- 9504158 -->
 
 ## Support for Windows Insider
 
