@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 09/29/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -34,19 +34,15 @@ ms.collection:
 
 You'll receive a message from Company Portal if your device password doesn't meet your organization's security requirements. Password requirements are put in place to protect you and your org's data from unauthorized access. Until you create a more secure password, you may be blocked from accessing your org's network.  
 
-Company Portal sends one message per password requirement, so you may receive more than one message at a time. Tap any message to see more details (if provided).  
-
-This article lists all of the password-related messages you could receive, and provides additional details about each requirement, by OS platform.     
+Company Portal sends one message per password requirement, so you may receive more than one message at a time. This article lists all of the password-related messages you could receive, by OS platform.     
 
 ## Change password, passcode, PIN  
 
-Generally, to access password settings, you can open the settings app on your device and search for *lock screen* or *security settings*.  
+The following articles describe how to update the device password, by OS platform. For steps specific to your device, refer to the device manufacturer's website.  
 
-The following articles describe how to update the device password, by OS platform. To get the most up-to-date instructions for your specific device, refer to the help documentation from the device manufacturer.  
-
-- [Set Windows 10 device password](set-or-change-your-password-windows.md)  
-- [Set iOS device passcode](set-or-change-your-passcode-ios.md)  
-- [Set Android device PIN or password](set-your-pin-or-password-android.md)  
+- [Set Windows 10 device password](https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf)  
+- [Set iOS device passcode](https://support.apple.com/HT204060#:~:text=%20Set%20up%20a%20passcode%20%201%20On,to%20confirm%20it%20and%20activate%20it.%20More%20)(opens Apple support docs)  
+- [Set screen lock on Android device](https://support.google.com/android/answer/9079129)(opens Android Help documentation)
 
 
 > [!IMPORTANT]
