@@ -63,7 +63,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 ## Support notes
 
-- Support for Windows 11 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
+- Support for Windows 11 versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
 
 ## Support for Windows Insider
 
@@ -80,6 +80,12 @@ To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-
 [Desktop Analytics](../../../desktop-analytics/overview.md) doesn't support Windows 11. For devices running Windows 11, you can't enroll them to Desktop Analytics. Windows 11 won't be available as a target version.
 
 Microsoft recommends that you enable tenant attach and then enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager. For more information, see [Endpoint analytics](../../../../analytics/overview.md).
+
+### Windows servicing dashboard
+
+<!-- 10732387 -->
+
+The **Windows Servicing** dashboard currently includes Windows 11 devices with the latest version of Windows 10. It doesn't yet distinguish a version for Windows 11. For more information on this dashboard, see [Manage Windows as a service using Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).
 
 ## Next steps
 
