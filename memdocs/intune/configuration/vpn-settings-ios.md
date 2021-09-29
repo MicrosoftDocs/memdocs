@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2021
+ms.date: 10/01/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -61,7 +61,8 @@ Select the VPN connection type from the following list of vendors:
 - **Zscaler**: To use Conditional Access, or allow users to bypass the Zscaler sign in screen, then you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **NetMotion Mobility**
 - **IKEv2**: [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
-- **Microsoft Tunnel**
+- **Microsoft Tunnel (standalone client)(preview)**: Applicable to the Microsoft Tunnel client app. 
+- **Microsoft Tunnel (preview)** - Applicable to the preview version of the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
 - **Custom VPN**
 
 > [!NOTE]
@@ -305,10 +306,7 @@ These settings apply when you choose **Connection type** > **Microsoft Tunnel (s
 
 - **Per-app VPN**: **Enable** associates a specific to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
 
-  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).  
-
-> [!Important]
-> In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
+  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
 
 ## Proxy
 
