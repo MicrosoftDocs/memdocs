@@ -69,7 +69,7 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 - If a device is used by more than one user, each requires a device software license or all users require a user software license.
 - If you are removing a license from a user that has managed devices, it may affect the compliance or management of those devices.  
 
-## How user and device licenses affect access to services
+## How to restore users accidentally unlicensed
 
 - If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](../fundamentals/licenses-assign.md#assign-an-intune-license-microsoft-endpoint-manager-admin-center).
 
