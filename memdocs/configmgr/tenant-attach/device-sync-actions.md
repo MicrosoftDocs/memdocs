@@ -191,7 +191,8 @@ If needed, you can offboard a Configuration Manager version 2006 or later hierar
 
 When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Endpoint Manager admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
 
-If you are using custom RBAC roles, you will need to grant Organization -> Delete permissions to perform this action.
+> [!NOTE]
+> If you are using custom [RBAC roles with Intune](../../intune/fundamentals/role-based-access-control.md#roles), you will need to grant the **Organization** > **Delete** permission to offboard a hierarchy.
 
 ## Next steps
 
