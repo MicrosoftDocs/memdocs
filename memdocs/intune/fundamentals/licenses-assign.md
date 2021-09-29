@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 09/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -64,9 +64,14 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 
 ## How user and device licenses affect access to services
 
-* Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices.
-* You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license.
-* If a device is used by more than one user, each requires a device software license or all users require a user software license.
+- Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices.
+- You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license.
+- If a device is used by more than one user, each requires a device software license or all users require a user software license.
+- If you are removing a license from a user that has managed devices, it may affect the compliance or management of those devices.  
+
+## How user and device licenses affect access to services
+
+- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](../fundamentals/licenses-assign.md#assign-an-intune-license-microsoft-endpoint-manager-admin-center).
 
 ## Understanding the type of licenses you have purchased
 
