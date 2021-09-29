@@ -19,10 +19,15 @@ Learn about the Windows 11 versions that Configuration Manager supports as a cli
 
 For more information about support for the Windows Assessment and Deployment Kit (ADK) for Windows 11, see [Support for the Windows ADK](support-for-windows-adk.md).
 
+> [!NOTE]
+> You can continue to use Microsoft Endpoint Manager to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11. This article lists some [known issues](#known-issues).
+
+<!--
 > [!TIP]
-> Windows Server builds as a client are supported the same as the associated Windows 11 version.<!--  For example, Windows Server 2022 is the same build version as Windows 11 ..., and Windows Server version ... is the same build version as Windows 11, version .... -->
+> Windows Server builds as a client are supported the same as the associated Windows 11 version. For example, Windows Server 2022 is the same build version as Windows 11 ..., and Windows Server version ... is the same build version as Windows 11, version .... 
 >
 > For more information on Windows Server as a site system, see [Supported operating systems for Configuration Manager site system servers](supported-operating-systems-for-site-system-servers.md).
+-->
 
 ## Windows 11 versions
 
