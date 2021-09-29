@@ -38,6 +38,8 @@ Both marketplace and custom images must meet the following requirements:
 
 - Windows 10 Enterprise version 1909 or later.
 - Hyper-V Gen 1 images.
+    > [!Note]
+    > We're currently rolling out changes to support **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - Default 64 GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
