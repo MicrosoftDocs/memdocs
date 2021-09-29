@@ -2,7 +2,7 @@ items:
 - name: Windows 365 Business docs
   href: index.yml
 - name: Getting started 
-  href: getting-started-windows-365-business.md
+  href: get-started-windows-365-business.md
 - name: Cloud PC sizes 
   href: windows-365-business-sizing.md
 - name: Troubleshooting 

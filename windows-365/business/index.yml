@@ -1,0 +1,43 @@
+### YamlMime:Hub
+title: Windows 365 Business documentation
+summary: Official product documentation for Windows 365 Business
+
+metadata:
+  services: service
+  ms.service: cloudpc
+  ms.topic: hub-page
+  author: erikjeMS
+  ms.author: erikje
+  manager: dougeby
+  ms.date: 09/29/2021
+
+additionalContent:
+  sections:
+    - title: Additional resources related to Windows 365
+      items:
+      - title: Microsoft Endpoint Manager
+        links: 
+        - text: Microsoft Endpoint Manager overview
+          url: /mem/endpoint-manager-overview
+        - text: Explore Microsoft Intune, a complete MDM tool
+          url: /mem/intune/
+      - title: Microsoft 365
+        links: 
+        - text: Explore Microsoft 365, a complete solution that includes Intune
+          url: /microsoft-365/
+        - text: Microsoft 365 Enterprise documentation
+          url: /microsoft-365/enterprise/
+        - text: Microsoft 365 Enterprise foundation infrastructure
+          url: /microsoft-365/enterprise/deploy-foundation-infrastructure
+        - text: For MSPs, Microsoft 365 Lighthouse Cloud PC management
+          url: /microsoft-365/lighthouse/m365-lighthouse-win365-page-overview
+      - title: Azure Active Directory
+        links: 
+        - text: User management documentation
+          url: /azure/active-directory/fundamentals/active-directory-manage-groups
+        - text: Authentication documentation
+          url: /azure/active-directory/authentication/
+        - text: Device identity documentation
+          url: /azure/active-directory/devices/
+        - text: Hybrid identity documentation
+          url: /azure/active-directory/hybrid/
