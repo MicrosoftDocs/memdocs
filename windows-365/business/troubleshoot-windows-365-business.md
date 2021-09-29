@@ -2,9 +2,10 @@
 title: "Troubleshoot Windows 365 Business Cloud PC setup issues"
 f1.keywords:
 - NOCSH
-ms.author: efrene
-author: efrene
-manager: scotv
+ms.author: erikje
+author: ErikjeMS
+manager: dougeby
+ms.date: 09/29/2021
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -44,7 +45,7 @@ Make sure **Users may join devices to Azure AD** is set to **All**.
 
 Make sure that **Maximum number of devices per user** is high enough so that the Cloud PCs you are trying to setup can be assigned to the designated users.
 
-1. Sign in to the Microsoft Azure portal at https://portal.azure.com/.
+1. Sign in to the Microsoft Azure portal at [https://portal.azure.com/](https://portal.azure.com/).
 2. Under **Manage Azure Active Directory**, select **View**.
 3. In the left nav, under **Manage**, select **Devices**, then select **Device settings**.
 4. For **Maximum number of devices per user**, enter the value.
@@ -52,12 +53,13 @@ Make sure that **Maximum number of devices per user** is high enough so that the
 
 ## Step 2. Verify that the Windows 365 BPRT Permanent User system account is active
 
-The first time a Windows 365 license is assigned in your organization, a system account called **Windows 365 BPRT Permanent User** is automatically created in Azure AD. 
+The first time a Windows 365 license is assigned in your organization, a system account called **Windows 365 BPRT Permanent User** is automatically created in Azure AD.
+
 Do not delete this account or make any changes to it (such as changing the name or UPN). If the system account is modified or deleted, the setup will fail. This system account ensures a smooth setup process and doesn't have any write capabilities or access to your organization beyond the scoped service capabilities of Windows 365 Business. If you delete or modify this system account you must login to windows365.microsoft.com with any account that has a Windows 365 Business license and wait 12 hours for the token to refresh.
 
 To make sure the Windows 365 BPRT Permanent User system account is active in Azure AD, use the following steps.
 
-1. In the Azure portal, go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=516942" target="_blank">Azure Active Directory Overview</a> page.
+1. In the Azure portal, go to the [Azure Active Directory Overview](https://go.microsoft.com/fwlink/p/?linkid=516942) page.
 2. In the left nav, under **Manage**, select **Users**.
 3. In the search box, type **Windows 365 BPRT Permanent User**, then press **Enter**.
 4. If the Windows 365 BPRT Permanent User system account is present, go to [Step 3. Verify that device-based MFA is turned off](#step-3-verify-that-device-based-mfa-is-turned-off).
@@ -67,7 +69,7 @@ To make sure the Windows 365 BPRT Permanent User system account is active in Azu
 
 It’s possible that your organization is configured so that Multi-Factor Authentication (MFA) is required to join devices with Azure AD. If so, you must turn off this setting. To make sure that **Require Multi-Factor Authentication to register or join devices with Azure AD** is set to **No**, use the following steps.
 
-1. In the Azure portal, go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=516942" target="_blank">Azure Active Directory Overview</a> page.
+1. In the Azure portal, go to the [Azure Active Directory Overview](https://go.microsoft.com/fwlink/p/?linkid=516942) page.
 2. In the left nav, under **Manage**, select **Devices**, then select **Device settings**.
 3. If **Require Multi-factor Authentication to register or join devices with Azure AD** is set to **Yes**, select **No**, then select **Save**.
 4. Go to [Step 4. Make sure that MFA doesn't block setup](#step-4-make-sure-that-mfa-doesnt-block-setup).
@@ -80,7 +82,7 @@ If you have an Azure AD Premium P1 license that includes conditional access, sel
 
 To check for conditional access policies, use the following steps.
 
-1. In the Azure portal, go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2169290" target="_blank">Conditional Access Policies</a> page.
+1. In the Azure portal, go to the [Conditional Access Policies](https://go.microsoft.com/fwlink/p/?linkid=2169290) page.
 2. If there aren’t any policies listed, continue to [Step 5. Make sure MDM authority configuration is set up correctly](#step-5-make-sure-mdm-authority-configuration-is-set-up-correctly).
 3. If any policies are listed on the page, select a policy name.
 4. In the **Access controls** section, under **Grant**, if it says "0 controls selected", return to the policies list and select the next policy. Otherwise, continue to step 5.
@@ -104,7 +106,7 @@ If you didn’t make any changes for Steps 1-4, it’s possible that the setup f
 
 If you already use Microsoft Intune, or plan to use it to manage your Windows 365 Cloud PCs, make sure that your **Mobility (MDM and MAM)** settings in Azure AD are correctly configured.
 
-1. In the Azure portal, go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=516942" target="_blank">Azure Active Directory Overview</a> page.
+1. In the Azure portal, go to the [Azure Active Directory Overview](https://go.microsoft.com/fwlink/p/?linkid=516942) page.
 2. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, then select **Microsoft Intune**.
 3. On the **Configure** page, next to **MDM user scope**, select **Some** or **All**, then select **Save**.
 4. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, select **Microsoft Intune Enrollment**, then repeat step 3.
@@ -130,16 +132,15 @@ If you don’t plan to use Microsoft Intune for your Cloud PC management, you mu
 
 #### Use the Azure AD portal to turn off automatic Intune enrollment
 
-1. In the Azure portal, go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=516942" target="_blank">Azure Active Directory Overview</a> page.
+1. In the Azure portal, go to the [Azure Active Directory Overview](https://go.microsoft.com/fwlink/p/?linkid=516942) page.
 2. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, then select **Microsoft Intune**.
 3. On the **Configure** page, you will see one of two things. If you have an Azure AD Premium subscription, select **None** next to MDM user scope, then select **Save**. If you do not have an Azure AD Premium subscription, select **Disable**.
 4. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, select **Microsoft Intune Enrollment**, then repeat step 3.
 5. Go to [Step 6. Reset your Cloud PCs](#step-6-reset-your-cloud-pcs).
 
-
 ## Step 6. Reset your Cloud PCs
 
-After you complete the troubleshooting steps in this article, your users must restart their Cloud PC setup. 
+After you complete the troubleshooting steps in this article, your users must restart their Cloud PC setup.
 
 If you just completed [Step 3. Verify that device-based MFA is turned off](#step-3-verify-that-device-based-mfa-is-turned-off), wait at least ten minutes for the changes to take effect before you continue. Make sure that the user you excluded from MFA is the first users to sign in to the [Windows 365 home page](https://windows365.microsoft.com).
 

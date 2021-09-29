@@ -5,6 +5,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
+ms.date: 09/29/2021
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -34,10 +35,12 @@ This article is for people who plan to buy and set up Windows 365 Business for t
 > Before starting, make sure that your [Azure AD device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for **Users may join devices to Azure AD** are set to **All**.
 
    ![Users may join devices to Azure AD settings.](./media/get-started-windows-365-business/azure-device-settings.png)
+
 ## Prerequisites
+
 There are no licensing prerequisites to set up Windows 365 Business.
 
-For the best onboarding experience, please refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md) to make sure your environment preferences are optimized for Windows 365 Business. 
+For the best onboarding experience, please refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md) to make sure your environment preferences are optimized for Windows 365 Business.
 
 ## Buy subscriptions
 
@@ -88,12 +91,12 @@ You can assign different Windows 365 Business license types to a user, based on 
 
 After licenses are assigned, let your users know that there are two different ways in which they can access their Cloud PCs:
 
-- Via the Windows 365 home page (https://windows365.microsoft.com)
-- By using a Microsoft Remote Desktop client
+- Windows 365 home page (https://windows365.microsoft.com)
+- Microsoft Remote Desktop client
 
 ### Windows 365 home page
 
-Users can navigate to **https://windows365.microsoft.com** to access their Cloud PCs.  
+Users can navigate to **https://windows365.microsoft.com** to access their Cloud PCs.
 
 On their Windows 365 home page, users see the Cloud PCs they have access to in the **Your Cloud PCs** section.
 
@@ -113,11 +116,10 @@ While on the Windows 365 home page, users can perform actions on their Cloud PCs
 - **Restart**: Restarts the Cloud PC.
 
 - **Reset**:  Reset does the following:
-
-    - Reinstalls Windows 10.
-    - Removes your personal files.
-    - Removes any changes you made to settings.
-    - Removes your apps.
+  - Reinstalls Windows 10.
+  - Removes your personal files.
+  - Removes any changes you made to settings.
+  - Removes your apps.
 
     > [!IMPORTANT]  
     > Before resetting your Cloud PC, make sure to back up any important files you need to keep to a cloud storage service or external storage. Resetting your Cloud PC will delete these files.
@@ -169,10 +171,14 @@ Sending outbound email messages directly on port 25 from a Windows 365 Business 
 
 If you need to get help while setting up Windows 365 Business in the Microsoft 365 admin center, see [Get help or support](/microsoft-365/business-video/get-help-support).
 
-## Related content
+## Next steps
 
-[Windows 365 Business](https://www.microsoft.com/windows-365/business) <br/>
-[Windows 365 Business sizing options](windows-365-business-sizing.md) <br/>
-[Windows 365 Business plan comparison](https://www.microsoft.com/windows-365/business/compare-plans-pricing) <br/>
-[Remote Desktop client app comparison](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare)<br/>
+[Windows 365 Business](https://www.microsoft.com/windows-365/business)
+
+[Windows 365 Business sizing options](windows-365-business-sizing.md)
+
+[Windows 365 Business plan comparison](https://www.microsoft.com/windows-365/business/compare-plans-pricing)
+
+[Remote Desktop client app comparison](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare)
+
 [Set up Microsoft Teams in your small business](/microsoftteams/deploy-small-business)

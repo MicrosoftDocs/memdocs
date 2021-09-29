@@ -2,9 +2,10 @@
 title: "Windows 365 Business sizing options"
 f1.keywords:
 - NOCSH
-ms.author: efrene
-author: efrene
-manager: scotv
+ms.author: erikje
+author: ErikjeMS
+manager: dougeby
+ms.date: 09/29/2021
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -27,13 +28,12 @@ description: Learn about recommended Cloud PC sizing options for your Windows 36
 
 # Windows 365 Business sizing options
 
-Windows 365 Business offers fixed-price licensing (through Microsoft 365) for different Cloud PC sizes. When you assign a license to a user, you need to select one of several size options. Each has a different number of CPUs, RAM, and storage, and is intended to support different usage scenarios. Assess your business requirements to determine which sizes make sense for your users. 
+Windows 365 Business offers fixed-price licensing (through Microsoft 365) for different Cloud PC sizes. When you assign a license to a user, you need to select one of several size options. Each has a different number of CPUs, RAM, and storage, and is intended to support different usage scenarios. Assess your business requirements to determine which sizes make sense for your users.
 
 This table shows examples of the different sizes available for a Cloud PC.
 
 > [!NOTE]  
-> If Microsoft 365 Apps and Microsoft Teams are included in the **Supported apps** column, they are pre-installed for those Cloud PC options. 
-
+> If Microsoft 365 Apps and Microsoft Teams are included in the **Supported apps** column, they are pre-installed for those Cloud PC options.
 
 |CPUs, RAM, and storage|Example scenarios|Supported apps|
 |:-------------------------------------------------------------------------------|:----------------------------------|:----------------------------------|
@@ -43,9 +43,10 @@ This table shows examples of the different sizes available for a Cloud PC.
 |4vCPU/16GB/512GB<br/>4vCPU/16GB/256GB<br/> 4vCPU/16GB/128GB|Finance, government, consultants, healthcare services, bring-your-own-PC, work-from-home. |Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, Power BI, Dynamics 365, OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support. |
 |8vCPU/32GB/512GB<br/>8vCPU/32GB/256GB<br/>8vCPU/32GB/128GB |Software developers, engineers, content creators, design, and engineering workstations. |Microsoft 365 Apps, Microsoft Teams, Outlook, Access, OneDrive, Adobe Reader, Microsoft Edge, Power BI, Visual Studio Code, line-of-business apps, Defender support.  |
 
+## Next steps
 
-## Related content
+[Get started with Windows 365 Business](get-started-windows-365-business.md)
 
-[Get started with Windows 365 Business](get-started-windows-365-business.md) <br/>
-[Windows 365 Business plan comparison](https://www.microsoft.com/windows-365/business/compare-plans-pricing) <br/>
-[Windows 365 Business](https://www.microsoft.com/windows-365/business) <br/>
+[Windows 365 Business plan comparison](https://www.microsoft.com/windows-365/business/compare-plans-pricing)
+
+[Windows 365 Business](https://www.microsoft.com/windows-365/business)
