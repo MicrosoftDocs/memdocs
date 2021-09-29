@@ -249,7 +249,7 @@ When a device is using an OS version later than the version in the rule, access 
 
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
-  - **Device Default**
+  - **Device Default**: Since Device Default varies by device model, use one of the other values for more control and consistency across all devices.
   - **Low security biometric**
   - **At least numeric** (*default*): Enter the **minimum password length** a user must enter, between 4 and 16 characters.
   - **Numeric complex**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
