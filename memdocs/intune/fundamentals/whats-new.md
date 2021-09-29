@@ -148,8 +148,6 @@ You can now configure Managed Home Screen sign-in settings in device configurati
 
 You can use *Feature updates for Windows 10 and later* policy to upgrade devices that meet the Windows 11 minimum requirements to Windows 11. It's as easy as configuring a new feature updates policy that specifies the available Windows 11 version as the feature update you want to deploy.
 
-For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
-
 #### Use the Collect diagnostics remote action as a bulk device action for Windows devices<!-- 7554090    -->
 
 We’ve added the **Collect diagnostics** [remote action](../remote-actions/collect-diagnostics.md#collect-diagnostics) as a *Bulk device action* that you can run for Windows devices.
