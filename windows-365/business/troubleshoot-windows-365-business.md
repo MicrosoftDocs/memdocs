@@ -23,7 +23,7 @@ search.appverid:
 - MET150
 - MOE150
 description: Learn how to troubleshoot setup issues for Windows 365 Business Cloud PCs.
-ms.date: 08/13/2021
+
 ---
 
 # Troubleshoot Windows 365 Business Cloud PC setup issues
@@ -76,7 +76,7 @@ It’s possible that your organization is configured so that Multi-Factor Authen
 
 ## Step 4. Make sure that MFA doesn't block setup
 
-If you don’t have an Azure AD Premium P1 license that includes conditional access, go to [Step 5. Make sure MDM authority configuration is set up correctly](#step-5-make-sure-mdm-authority-configuration-is-set-up-correctly). If you don’t know whether your subscription includes Azure AD Premium P1, see [What subscription do I have?](../admin-overview/what-subscription-do-i-have.md)
+If you don’t have an Azure AD Premium P1 license that includes conditional access, go to [Step 5. Make sure MDM authority configuration is set up correctly](#step-5-make-sure-mdm-authority-configuration-is-set-up-correctly). If you don’t know whether your subscription includes Azure AD Premium P1, see [What subscription do I have?](/microsoft-365/admin/admin-overview/what-subscription-do-i-have).
 
 If you have an Azure AD Premium P1 license that includes conditional access, select one user to be the first user to sign in to the Windows 365 home page at [https://windows365.microsoft.com](https://windows365.microsoft.com) after you complete the remaining steps in this article. Make sure there are no MFA conditional access policies for that first user. MFA must remain turned off during any setup attempts. After all Cloud PCs are successfully set up across your organization, you may turn on MFA for this user. To learn more about conditional access policies, see [What is Conditional Access in Azure Active Directory?](/azure/active-directory/conditional-access/overview).
 

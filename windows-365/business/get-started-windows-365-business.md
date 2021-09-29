@@ -66,7 +66,7 @@ Users without the Global or Billing admin roles can use self-service purchase to
 > [!NOTE]
 > Self-service purchase isn’t available in India or for government or education customers.
 
-To learn more about self-service purchase, see the [Self-service purchase FAQ](../../commerce/subscriptions/self-service-purchase-faq.yml).
+To learn more about self-service purchase, see the [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
 
 ### Buy a subscription through the Microsoft admin center
 
