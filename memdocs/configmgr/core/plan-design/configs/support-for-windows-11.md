@@ -49,7 +49,7 @@ All currently supported versions of Configuration Manager current branch support
 - **Enterprise LTSC xxxx** <!--mm/dd/yyyy
 -->
 
-For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows release information](/windows/release-health/release-information)<!-- need to revise this link? -->.
+For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows)<!-- and [Windows release information](/windows/release-health/release-information)need to revise this link? -->.
 
 | Key |
 |--|
@@ -67,24 +67,6 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, its support is best effort. Configuration Manager might not issue a hotfix for this functionality if it doesn't work.
 
 To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-insider/business/feedback).
-
-## Known issues
-
-### Desktop Analytics
-
-<!-- 10797955 -->
-
-### Support for ARM64 devices
-
-<!-- 10589908 -->
-
-### Windows servicing dashboard
-
-<!-- 10732387 -->
-
-### Microsoft Store for Business and Education
-
-<!-- TBD -->
 
 ## Next steps
 
