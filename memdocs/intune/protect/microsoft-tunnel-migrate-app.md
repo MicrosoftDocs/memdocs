@@ -187,7 +187,7 @@ To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft
 
 2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel**.
 
-   If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure#use-custom-settings-for-microsoft-defender-for-endpoint) of **defendertoggle** that is set to **0**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
+   If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **defendertoggle** that is set to **0**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
 
 > [!NOTE]
 > If you are using the Microsoft Defender for Endpoint app for Android, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
@@ -256,7 +256,7 @@ Before you begin your migration to Defender for Endpoint, use the [Microsoft End
 
 To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft Tunnel Gateway, deploy new VPN profiles with the **Microsoft Tunnel (preview)** connection type. Editing the connection type of an existing profile isn’t supported.
 
-1. Use the information from [Create a VPN Profile](../protect/microsoft-tunnel-configure.d#create-a-vpn-profile) to create and deploy new VPN profiles for your iOS/iPadOS devices.
+1. Use the information from [Create a VPN Profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) to create and deploy new VPN profiles for your iOS/iPadOS devices.
 
 2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel (preview)**.
 If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **TunnelOnly** that is set to **True**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
