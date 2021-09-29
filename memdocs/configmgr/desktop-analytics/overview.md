@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 09/09/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -107,6 +107,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     > [!IMPORTANT]
     > Starting in July 2021, Desktop Analytics supports the Windows diagnostic data processor configuration. This configuration is only for supported versions of Windows 10. Data for Windows 7, Windows 8, and earlier versions of Windows 10 will only show in Desktop Analytics until January 31, 2022. For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->
+    >
+    > Desktop Analytics doesn't support Windows 11.<!-- 10797955 --> For devices running Windows 11, you can't enroll them to Desktop Analytics. Windows 11 won't be available as a target version. Microsoft recommends that you enable tenant attach and then enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager. For more information, see [Endpoint analytics](../../analytics/overview.md).
 
   - Install the latest updates. For more information, see [Update devices](enroll-devices.md#update-devices).
 

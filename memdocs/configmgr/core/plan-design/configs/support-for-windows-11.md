@@ -71,6 +71,16 @@ You can [update and service Windows Insider](../../../sum/get-started/configure-
 
 To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-insider/business/feedback).
 
+## Known issues
+
+### Desktop Analytics
+
+<!-- 10797955 -->
+
+[Desktop Analytics](../../../desktop-analytics/overview.md) doesn't support Windows 11. For devices running Windows 11, you can't enroll them to Desktop Analytics. Windows 11 won't be available as a target version.
+
+Microsoft recommends that you enable tenant attach and then enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager. For more information, see [Endpoint analytics](../../../../analytics/overview.md).
+
 ## Next steps
 
 [Support for the Windows ADK](support-for-windows-adk.md)
