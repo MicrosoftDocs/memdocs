@@ -45,6 +45,8 @@ To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Window
 
 Resizing isn’t supported for group-based licenses.
 
+Resizing is only supported for paid licenses. Resizing will be supported for trial licenses starting on October 11th, 2021. 
+
 ## Resize a Cloud PC
 
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
