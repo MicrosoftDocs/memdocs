@@ -6,13 +6,11 @@ ms.date: 10/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 # What's new in version 1802 of Configuration Manager
 

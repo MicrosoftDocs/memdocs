@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot CMPivot for devices uploaded to the admin center
 titleSuffix: Configuration Manager
-description: "Troubleshooting CMPivot for Configuration Manager tenant attach"
+description: Troubleshooting CMPivot for Configuration Manager tenant attach
 ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 86f97154-c9fc-4efd-9d49-4a253cef5953
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshoot CMPivot (preview) for devices uploaded to the admin center

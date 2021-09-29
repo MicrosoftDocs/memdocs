@@ -1,18 +1,16 @@
 ---
-title: "Capabilities in Technical Preview 1612"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1612."
+title: Capabilities in Technical Preview 1612
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1612.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1612 for Configuration Manager
 
@@ -203,7 +201,7 @@ The following command line switches can be used in any order.
 
 
 ## Improvements for in-console search
-Based on User Voice feedback, we have added the following improvements to in-console search:
+Based on your feedback, we have added the following improvements to in-console search:
 - **Object Path:**  
   Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
 

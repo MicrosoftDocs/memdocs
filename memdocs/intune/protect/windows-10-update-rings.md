@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure Windows 10 update rings policy in Intune
-description: Create and manage Intune policy for Windows 10 update rings. You can configure, deploy, and pause update installation with Windows Update for Business settings using Microsoft Intune.
+title: Configure Update rings for Windows 10 and later policy in Intune
+description: Create and manage Intune policy for Windows update rings. You can configure, deploy, and pause update installation with Windows Update for Business settings using Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -27,11 +27,11 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 update rings policy in Intune
+# Update rings for Windows 10 and later policy in Intune
 
 Create update rings that specify how and when Windows as a Service updates your Windows 10 devices with [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates). With Windows 10, new feature and quality updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows 10 devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
 
-Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
+Windows update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create profile**.
+2. Select **Devices** > **Windows** > **Update rings for Windows 10 and later** > **Create profile**.
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
   ![Create an update ring](./media/windows-10-update-rings/basics-tab.png)
@@ -78,13 +78,13 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue. 
 
-   While update rings can deploy to both device and user groups, consider using only device groups [when you also use feature updates](../protect/windows-10-feature-updates.md#limitations-for-windows-10-feature-updates-policy).
+   While update rings can deploy to both device and user groups, consider using only device groups [when you also use feature updates](../protect/windows-10-feature-updates.md#limitations-for-feature-updates-for-windows-10-and-later-policy).
 
 7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
 
-## Manage your Windows 10 Update rings
+## Manage your Windows Update rings
 
-In the portal, navigate to **Devices** > **Windows** > **Windows 10 Update Rings** and select the policy that you want to manage.  The policy opens to its **Overview** page.
+In the portal, navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later** and select the policy that you want to manage.  The policy opens to its **Overview** page.
 
 From this page, you can view the rings assignment status and select the following actions from the top of the Overview pane to manage the update ring:
 
@@ -189,5 +189,5 @@ There are multiple options to get in-depth reporting for Windows 10 updates with
 
 ## Next steps
 
-- [Use Windows 10 feature updates in Intune](../protect/windows-10-feature-updates.md)
+- [Use Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
 - Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows 10 updates  

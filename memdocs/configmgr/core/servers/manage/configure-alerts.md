@@ -9,6 +9,7 @@ ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure alerts in Configuration Manager

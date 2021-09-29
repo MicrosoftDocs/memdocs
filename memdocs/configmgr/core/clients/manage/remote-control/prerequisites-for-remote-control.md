@@ -1,17 +1,15 @@
 ---
-title: "Remote control prerequisites"
-titleSuffix: "Configuration Manager"
-description: "Get the prerequisites for remote control in Configuration Manager."
+title: Remote control prerequisites
+titleSuffix: Configuration Manager
+description: Get the prerequisites for remote control in Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Prerequisites for remote control in Configuration Manager
 

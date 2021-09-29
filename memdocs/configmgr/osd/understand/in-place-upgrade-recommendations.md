@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
-ms.assetid: 2a1ef3aa-27ce-4bf5-8772-ad8a2aab5c8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # In-place upgrade recommendations

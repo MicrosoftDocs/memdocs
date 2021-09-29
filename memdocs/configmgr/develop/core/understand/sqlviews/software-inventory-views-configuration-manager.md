@@ -1,4 +1,4 @@
-﻿---
+---
 title: Software inventory views
 titleSuffix: Configuration Manager
 description: Information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning.
@@ -12,6 +12,7 @@ ms.assetid: 65066949-cce6-4202-b8e7-f4e1014ee470
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Software inventory views in Configuration Manager

@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: bmoran
+ms.localizationpriority: medium
 ---
 
 # Azure AD authentication workflow

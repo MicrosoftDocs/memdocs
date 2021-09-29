@@ -10,6 +10,7 @@ ms.assetid: a894f86c-e983-4820-9ccb-60b93e72d100
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_CollectionInfoInFullEvaluationQueue server WMI class

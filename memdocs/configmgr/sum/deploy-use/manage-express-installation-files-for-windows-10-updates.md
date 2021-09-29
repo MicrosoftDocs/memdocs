@@ -9,9 +9,7 @@ ms.date: 11/02/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-
-
+ms.localizationpriority: medium
 ---
 
 # Manage express installation files for Windows 10 updates

@@ -47,7 +47,7 @@ Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.m
 Select the VPN connection type from the following list of vendors:
 
 - **Check Point Capsule VPN**
-- **Cisco Legacy AnyConnect**: Applicable to [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) app version 4.0.5x and earlier.
+- **Cisco Legacy AnyConnect**: Applicable to Cisco Legacy AnyConnect app version 4.0.5x and earlier.
 - **Cisco AnyConnect**: Applicable to [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) app version 4.0.7x and later.
 - **SonicWall Mobile Connect**
 - **F5 Access Legacy**: Applicable to F5 Access app version 2.1 and earlier.

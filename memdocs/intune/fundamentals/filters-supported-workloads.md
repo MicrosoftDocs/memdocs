@@ -250,7 +250,7 @@ You can use filters for some common device configuration policies on the followi
 
 | Profile type | Supported |
 | --- | --- |
-| Windows 10 update rings | ✔️ |
+| Update rings for Windows 10 and later | ✔️ |
 | **Device configuration profile** | &nbsp; |
 | Administrative Templates | ✔️ |
 | Custom | ✔️ |
@@ -304,7 +304,7 @@ The following features don't support using filters:
 - Shell scripts for macOS
 - Terms and conditions
 - Update policies for iOS/iPadOS
-- Windows 10 feature updates
+- Feature updates for Windows 10 and later
 
 ## Next steps
 

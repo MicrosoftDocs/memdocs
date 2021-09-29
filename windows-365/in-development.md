@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 8/11/2021
+ms.date: 9/28/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -59,6 +59,15 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
+## App management
+
+### Use conditional access to group Windows 365 and Azure Virtual Desktop app policies together <!-- 36360788 -->
+
+In a future update, you’ll be able to target Conditional Access (CA) policies to a single application that applies to both the Windows 365 and Azure Virtual Desktop apps.
+
+Currently, Windows 365 and Azure Virtual Desktop share a common framework for identity access by using Azure Active Directory (Azure AD) and security controls with CA policies. You can target CA policies to the Windows 365 app and this applies only to windows365.microsoft.com web client. To apply CA policies to the full Windows client and non-windows clients, you must assign CA policies to both the Windows 365 and Azure Virtual Desktop apps.  For more information, see [Assign a Conditional Access policy for Cloud PCs](set-conditional-access-policies.md).
+
+<!-- ***********************************************-->
 ## Device management
 
 ### Support for Azure AD joined Cloud PCs<!-- 35060203-->
@@ -72,12 +81,18 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 
 In a future update, Windows 365 will support Windows 11 as a Cloud PC operating system.
 
+Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
+
 ### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
 
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
 
 <!-- ***********************************************-->
-<!--# Monitor and troubleshoot-->
+## Role-based access control
+
+### Windows 365 Administrator role<!--5827123-->
+
+In a future update, the Windows 365 Administrator role will be available for admins by using role assignment in the Microsoft Admin Center and Azure Active Directory (AAD). With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager.
 
 ## Next steps
 

@@ -6,10 +6,10 @@ ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manage drivers in Configuration Manager

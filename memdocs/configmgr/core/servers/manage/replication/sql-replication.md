@@ -6,10 +6,10 @@ ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: adb198c4-da3c-49c3-8fbd-6d1361272869
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # SQL Server replication

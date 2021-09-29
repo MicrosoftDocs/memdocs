@@ -9,6 +9,7 @@ ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Ports used in Configuration Manager
@@ -704,7 +705,7 @@ Configure the following ports:
 - RPC Endpoint Mapper: TCP 135
 
 > [!WARNING]
-> Configuration Manager doesn't support dynamic ports. by default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.
+> Configuration Manager doesn't support dynamic ports. By default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.
 
 The following site system roles communicate directly with the SQL Server database:
 

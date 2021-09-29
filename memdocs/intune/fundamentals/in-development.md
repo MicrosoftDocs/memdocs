@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 9/1/2021
+ms.date: 9/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -96,31 +96,6 @@ Applies to:
 ### Settings catalog policies for policy sets<!-- 8683467  -->
 
 In addition to profiles based on templates, you'll be able to add a profile based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
-
-### Use filters on DFCI configuration profiles on Windows 10 RS5 (1809) and newer devices<!-- 8817773  -->
-
-In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
-
-- For more information about filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-- For more information about the DFCI profile, see [Use Device Firmware Configuration Interface profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md).
-
-Applies to:
-
-- Windows 10 RS5 (1809) and newer on supported UEFI
-
-### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint Security policies in Endpoint Manager admin center - public preview<!-- 7566953 7591178  -->
-
-In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
-
-- [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
-- [Endpoint Security policies](../protect/endpoint-security-policy.md), including Account protection, Antivirus, Attack surface reduction, and more.
-
-For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-
-Applies to:
-
-- macOS
-- Windows 10 and newer
 
 ### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461  -->
 
@@ -239,10 +214,6 @@ For more information about macOS device restriction profiles in Intune, see [mac
 
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 
-### Syncing the iOS/iPadOS/macOS Company Portal version<!-- 10535709  -->
-
-The version of the iOS/iPadOS Company Portal and the macOS Company Portal syncing to version 5.2019 for the next release. Going forward, the iOS/iPadOS and macOS Company Portal apps will have the same version number. For related information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
-
 ### Improved flow when saving logs in Android Company Portal app<!-- 10414688  -->
 
 In the Android Company Portal app, when users need to download a copy of the Android Company Portal logs they will be prompted to choose a folder location. In the Android Company Portal app, users will select **Settings** > **Diagnostic logs** > **SAVE LOGS** to choose the folder location.
@@ -260,24 +231,6 @@ We’re reworking the endpoint security Account protection policy to use the new
 
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-### Filter evaluation report will be improved<!-- 9974516   -->
-
-The **Filter evaluation** page, which shows every app or policy that was filtered, will be improved to include results for available app assignments. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices** > *select a device* > **Filter evaluation**.
-
-### Device filter evaluation reports now include filter results for assigned apps<!-- 9974516   -->
-
-If you’re using filters for assigning apps as available, you can now use the filter evaluation report on a device to determine if an app has been made available for install. You can see this report per device, under **Devices > All Devices > select a device > Filter evaluation (preview)**.
-
-- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
-- For more information on filter reports, see [Filter reports and troubleshooting in Microsoft Endpoint Manager](filters-reports-troubleshoot.md).
-
-Applies to:
-
-- Android device administrator
-- Android Enterprise
-- iOS/iPadOS
-- macOS
-- Windows 10 and newer
 
 ### Update to the Assignment failures operational report<!-- 6473096  -->
 

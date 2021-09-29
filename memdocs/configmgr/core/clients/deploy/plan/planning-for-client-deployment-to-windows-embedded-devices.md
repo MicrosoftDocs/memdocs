@@ -1,17 +1,15 @@
 ---
-title: "Planning client deployment to Windows Embedded devices"
-titleSuffix: "Configuration Manager"
-description: "Plan for client deployment to Windows Embedded devices in Configuration Manager."
+title: Planning client deployment to Windows Embedded devices
+titleSuffix: Configuration Manager
+description: Plan for client deployment to Windows Embedded devices in Configuration Manager.
 ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Planning for client deployment to Windows Embedded devices in Configuration Manager
 

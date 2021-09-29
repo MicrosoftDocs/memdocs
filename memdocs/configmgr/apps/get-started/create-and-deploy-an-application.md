@@ -1,17 +1,15 @@
 ---
-title: "Create and deploy an application"
-titleSuffix: "Configuration Manager"
-description: "Create and deploy an application containing a line-of-business app and learn how to manage apps effectively."
+title: Create and deploy an application
+titleSuffix: Configuration Manager
+description: Create and deploy an application containing a line-of-business app and learn how to manage apps effectively.
 ms.date: 07/19/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # Create and deploy an application with Configuration Manager
 

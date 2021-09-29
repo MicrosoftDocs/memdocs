@@ -6,12 +6,10 @@ ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: troubleshooting
-ms.assetid: a7035223-d7bd-47b4-896f-08de3416a4eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Application Deployment Evaluation

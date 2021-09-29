@@ -5,10 +5,11 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 09/20/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
+ms.localizationpriority: medium
 ---
 
 # Set up CMG for Configuration Manager
@@ -57,6 +58,9 @@ Do this procedure on the top-level site. That site is either a standalone primar
         - In versions 2010 and 2103, most customers should use this deployment method. Use this option.
 
         - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set because of one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107).
+
+        > [!IMPORTANT]
+        > The option to deploy a CMG as a **cloud service (classic)** is deprecated. All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
 1. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 

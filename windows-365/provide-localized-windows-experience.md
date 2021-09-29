@@ -43,9 +43,26 @@ Cloud PCs provisioned from this image will be fully configured to work in any of
 
 Creating a custom image with the languages installed is the best way to make sure that the desired languages are available on the Cloud PC when the user signs in.
 
-### Add languages to Windows and capture the image
+Before starting the custom image process, check if your language is supported by the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller) script. If:
+- The language you want to provide for your users is supported by the PowerShell script, follow the steps to [Add languages to Windows using a script and capture the image](#add-languages-to-windows-using-a-script-and-capture-the-image).
+- The language you want to provide for your users isn't supported by the PowerShell script, follow the steps to [Add languages to Windows manually and capture the image](#add-languages-to-windows-manually-and-capture-the-image).
 
-To install the desired languages to your Windows 10 Enterprise custom image, follow the steps in [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs) up to and including [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
+### Add languages to Windows using a script and capture the image
+
+To add a language using the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) script:
+
+1. Sign in to the virtual machine you're customizing for use as the custom image.
+2. Complete one of the **Installation Options** described for the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) script.
+3. Run the script and enter the number corresponding to the language you'd like to install on the custom image.
+
+> [!NOTE]
+> You can use the script to install as many languages as you'd like on the custom image. To do so, run the script one time for each language.
+
+After you're done adding the desired languages and are ready to capture the image, follow the steps to [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
+
+### Add languages to Windows manually and capture the image
+
+To manually install the desired languages to your Windows 10 Enterprise custom image, follow the steps in [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs) up to and including [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
 
 > [!NOTE]
 > Though these instructions are written specifically for Windows 10 Enterprise multi-session, these same steps apply to Windows 10 Enterprise.
@@ -71,7 +88,7 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
     - Key Path: Control Panel\Desktop
     - Value name: PreferredUILanguages
     - Value type: REG_SZ
-    - Value data: [Language code].
+    - Value data: [Language/region tag]. For example, **ar-SA** for Arabic (Saudi Arabia).
     > [!Note]
     > To find the language code for your desired language and region combination, see the [language pack list](/windows-hardware/manufacture/desktop/available-language-packs-for-windows#language-packs).
 7. Switch to the **Common** tab and check the following three options:
@@ -83,7 +100,7 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
 8. Select **Targeting...**, **New Item**, and **Security Group**.
 9. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
 10. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
-11. In the "Group Policy Management Editor", navigate to **User Configuration** > **Preferences** > **Windows Settings**, right-click **Regional Options**, and select **New** > **Regional Options**.
+11. In the "Group Policy Management Editor", navigate to **User Configuration** > **Preferences** > **Control Panel Settings**, right-click **Regional Options**, and select **New** > **Regional Options**.
 12. Under **User Locale**, select the language and region combination that matches the registry key you created above.
 13. After selecting your desired language and region combination from the dropdown, the dropdown menu may be underlined in red. This indicates that the selection isn't confirmed. Press the **F5** function key on your keyboard to confirm the selection, resulting in a green underlined dropdown menu.
     

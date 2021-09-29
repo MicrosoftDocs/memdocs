@@ -6,12 +6,10 @@ ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Associate users with a destination computer in Configuration Manager

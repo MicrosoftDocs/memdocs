@@ -5,15 +5,15 @@ keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd,
 ms.prod: w10
 ms.technology: windows
 ms.mktglfcycl: deploy
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itproF
-manager: laurawi
+manager: dougeby
 ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 09/01/2021
+ms.date: 09/24/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -68,7 +68,8 @@ The Windows Autopilot for pre-provisioned deployment pre-provisioning process wi
 - configured to install in the device context.
 - targeted to the user pre-assigned to the Autopilot device.
 
-Make sure not to target both win32 and LOB apps to the same device. 
+> [!IMPORTANT]
+> Make sure not to target both win32 and LOB apps to the same device. 
 
 > [!NOTE]
 > Select the language mode as user specified in Autopilot profiles to ensure easy access into pre-provisioning mode. The pre-provisioning technician phase will install all device-targeted apps and any user-targeted, device-context apps that are targeted to the assigned user. If there is no assigned user, then it will only install the device-targeted apps. Other user-targeted policies will not apply until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.

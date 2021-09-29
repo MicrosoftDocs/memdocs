@@ -9,6 +9,7 @@ ms.date: 09/09/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
+ms.localizationpriority: medium
 ---
 
 # How to prepare internet-based devices for co-management

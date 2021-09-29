@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: doubeby
+ms.localizationpriority: medium
 ---
 
 # Example scenario: Use Endpoint Protection to protect computers from malware

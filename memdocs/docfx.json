@@ -81,11 +81,6 @@
       ]          
     },
     "fileMetadata": {
-      "feedback_product_url": {
-        "configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
-        "configmgr/**/*.yml": "https://configurationmanager.uservoice.com/",
-        "intune/**/*.md": "https://microsoftintune.uservoice.com/"     
-      },
       "ms.date": {
         "autopilot/**/*.md": "12/16/2020"
       }, 

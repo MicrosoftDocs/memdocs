@@ -6,12 +6,10 @@ ms.date: 10/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Support for Active Directory domains in Configuration Manager
