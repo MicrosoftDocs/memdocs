@@ -87,6 +87,12 @@ Microsoft recommends that you enable tenant attach and then enable Endpoint anal
 
 The **Windows Servicing** dashboard currently includes Windows 11 devices with the latest version of Windows 10. It doesn't yet distinguish a version for Windows 11. For more information on this dashboard, see [Manage Windows as a service using Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).
 
+### Software Center notifications don't display during quiet hour
+
+<!-- 10610910 -->
+
+By default, Windows 11 enables **focus assist** for the first hour after a user signs on. Software Center notifications are currently suppressed during this time. For more information on this Windows 11 feature, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).
+
 ## Next steps
 
 [Support for the Windows ADK](support-for-windows-adk.md)
