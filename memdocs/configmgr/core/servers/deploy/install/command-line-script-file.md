@@ -9,6 +9,7 @@ ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Unattended setup script file keys

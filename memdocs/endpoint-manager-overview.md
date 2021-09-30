@@ -33,10 +33,6 @@ Microsoft Endpoint Manager helps deliver the modern workplace and modern managem
 
 Endpoint Manager combines services you may know and already be using, including Microsoft Intune, Configuration Manager, Desktop Analytics, co-management, and Windows Autopilot. These services are part of the Microsoft 365 stack to help secure access, protect data, and respond and manage risk.
 
-Start by watching the following two-minute video from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
-
-> [!VIDEO https://www.youtube.com/embed/GS7oNPInFuw]
-
 ## What you get
 
 Endpoint Manager includes the following services:

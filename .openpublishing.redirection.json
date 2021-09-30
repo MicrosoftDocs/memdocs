@@ -1,7 +1,40 @@
 {
     "redirections": [
-
-        
+        {
+            "source_path": "memdocs/intune/user-help/set-or-change-your-password-windows.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-update-your-windows-device.md",
+            "redirect_url": "https://support.microsoft.com/windows/update-windows-3c5ae7fc-9fb6-9af1-1984-b5e0412c556a",
+            "redirect_document_id": false
+        },    
+        {
+            "source_path": "memdocs/intune/user-help/update-device-outlook-ios.md",
+            "redirect_url": "/mem/intune/user-help/",
+            "redirect_document_id": true
+        },    
+        {
+            "source_path": "memdocs/intune/user-help/update-device-outlook-android.md",
+            "redirect_url": "/mem/intune/user-help/",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-turn-off-unknown-sources-android.md",
+            "redirect_url": "/mem/intune/user-help/",
+            "redirect_document_id": false
+        },         
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-enable-windows-encryption.md",
+            "redirect_url": "https://support.microsoft.com/windows/device-encryption-in-windows-ad5dcf4b-dbe0-2331-228f-7925c2a3012d",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/user-help/encrypt-your-device-windows.md",
+            "redirect_url": "https://support.microsoft.com/windows/device-encryption-in-windows-ad5dcf4b-dbe0-2331-228f-7925c2a3012d",
+            "redirect_document_id": false
+        },  
         {
             "source_path": "memdocs/intune/user-help/using-your-windows-device-with-intune.md",
             "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",
@@ -738,6 +771,11 @@
         {
             "source_path": "memdocs/intune/fundamentals/windows-virtual-desktop-multi-session.md",
             "redirect_url": "/mem/intune/fundamentals/azure-virtual-desktop-multi-session",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/protect/plan-design/planning-for-endpoint-protection.md",
+            "redirect_url": "/mem/configmgr/protect/deploy-use/endpoint-protection",
             "redirect_document_id": false
         }
     ]

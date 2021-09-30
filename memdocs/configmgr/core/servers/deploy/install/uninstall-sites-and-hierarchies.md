@@ -6,10 +6,10 @@ ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Uninstall roles, sites, and hierarchies in Configuration Manager

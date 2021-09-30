@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 07/13/2021
+ms.date: 09/02/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -23,11 +23,15 @@ ms.topic: troubleshooting
 **Applies to**
 
 - Windows 10
+- Windows 11
 
-The following table describes known issues that can often be resolved by configuration changes.  For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
+The following table describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 <table>
 <th>Issue</th><th>More information</th>
+
+<tr><td>A non-assigned user can sign in when using user-driven mode with Active Directory Federation Services (ADFS).</td>
+<td>In a Windows Autopilot user-driven Azure Active Directory (Azure AD) joined environment, administrators can pre-assign a user to a device. If the user is a cloud-native Azure AD account, the username is enforced and the user is only asked for their password; there is no way to sign in with another user ID. However, when ADFS is used, the username assignment is not enforced. A different user than the one assigned can sign in on the device.</td></tr>
 
 <tr><td>Intune connector is inactive but still appears in the Intune Connectors blade</td>
 <td>Inactive Intune connectors will be automatically cleaned up after 30 days of inactivity without admin interaction.</td></tr>

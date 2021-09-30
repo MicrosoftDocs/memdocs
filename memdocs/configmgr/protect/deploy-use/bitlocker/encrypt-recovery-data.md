@@ -6,10 +6,10 @@ ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
-ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Encrypt recovery data in the database

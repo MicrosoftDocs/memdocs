@@ -10,6 +10,7 @@ ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Hardware inventory views in Configuration Manager

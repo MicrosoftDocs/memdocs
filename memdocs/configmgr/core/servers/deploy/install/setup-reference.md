@@ -1,17 +1,15 @@
 ---
-title: "Setup reference"
-titleSuffix: "Configuration Manager"
-description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
+title: Setup reference
+titleSuffix: Configuration Manager
+description: Review this reference to help you prepare to install a Configuration Manager site or hierarchy.
 ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Reference for Configuration Manager Setup
 

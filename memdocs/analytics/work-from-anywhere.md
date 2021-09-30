@@ -2,14 +2,14 @@
 title: Work from anywhere (preview) report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: The Work from anywhere (preview) report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 08/26/2021
+ms.date: 09/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 2a77cfd2-7fa1-4b00-96b2-ff3baa7f5c77
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Work from anywhere (preview) report
@@ -34,9 +34,6 @@ Newer versions of Windows provide a better user experience than older versions o
 
 For information about the cost savings and benefits enabled by Windows, download the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
 
-> [!NOTE] 
-> Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
-
 :::image type="content" source="media/8668496-windows.png" alt-text="Screenshot of the Windows fly out showing graph and insights" lightbox="media/8668496-windows.png":::
 
 ## <a name="bkmk_management"></a> Cloud management
@@ -45,8 +42,6 @@ Configuration Manager and Intune provide integrated cloud-powered management too
 
 The **Cloud management** metric measures the percent of PCs that have attached to the Microsoft 365 cloud to unlock additional capabilities. There are multiple recommended actions for co-managed devices and their workloads, CMG, and tenant attached devices. See how [Microsoft is enabling modern management for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
 
-> [!NOTE] 
-> Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
 
 Benefits of each cloud management types:
 
@@ -61,8 +56,6 @@ Benefits of each cloud management types:
 
 Cloud identity provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming. The **Cloud identity** metric measures the percent of devices enrolled in Azure Active Directory (AD) or hybrid Azure AD. Your Intune and co-managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to [enroll them in hybrid Azure AD](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
-> [!NOTE] 
-> Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
 
 :::image type="content" source="media/8668496-cloud-identity.png" alt-text="Screenshot of the Cloud identity fly out showing insights for the metric" lightbox="media/8668496-cloud-identity.png":::
 
@@ -70,11 +63,22 @@ Cloud identity provides users with many productivity benefits including device-w
 
 Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of Windows Intune devices that are both registered and have a deployment profile created for Autopilot. The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](../autopilot/enrollment-autopilot.md).
 
-> [!NOTE] 
-> - Currently, only devices that didn't receive a score of 100 are shown in the metric's device list. <!--10155338-->
-> - You can export a device list as a `.csv` file from **Cloud provisioning** and use it to [Manually register devices with Windows Autopilot](../autopilot/add-devices.md#add-devices).
+> [!NOTE]
+> You can export a device list as a `.csv` file from **Cloud provisioning** and use it to [Manually register devices with Windows Autopilot](../autopilot/add-devices.md#add-devices).
 
 :::image type="content" source="media/8668496-cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list" lightbox="media/8668496-cloud-provisioning.png":::
+
+## <a name="bkmk_windows11"></a> Windows 11 hardware readiness
+<!--IN9740163-->
+The **Windows** metric provides Windows 11 hardware readiness insights for devices that are enrolled via Intune, co-management, or Configuration Manager version 2107 or newer with tenant attach enabled. To determine how many of your enrolled devices meet the [minimum system requirements](/windows/whats-new/windows-11-requirements#hardware-requirements) for Windows 11, select **Windows** to open the flyout on the **Overview** page in **Work from anywhere**. A chart is displayed showing which specific hardware requirements are the top blockers in your organization.
+
+:::image type="content" source="media/windows-hardware.png" alt-text="Screenshot of the Windows flyout that displays a chart showing top hardware blockers in your organization." lightbox="media/windows-hardware.png":::
+
+In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness is displayed. The **Windows 11 readiness status** column indicates whether a device is **Capable** or **Not capable** of upgrading to Windows 11 based on the minimum system requirements. The column also lists if a device is already **Upgraded** or if the status is **Unknown** for a device. The **Windows 11 readiness reason** column outlines the specific hardware requirements that aren't met for devices that have a readiness status of **Not capable**.
+
+> [!NOTE]
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune/remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment. 
+> - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
 ## <a name="bkmk_np"></a> No commercial median
 

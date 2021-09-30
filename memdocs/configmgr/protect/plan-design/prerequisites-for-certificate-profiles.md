@@ -1,17 +1,15 @@
 ---
-title: "Certificate profile prerequisites"
-titleSuffix: "Configuration Manager"
-description: "Learn about certificate profiles in Configuration Manager and their external dependencies and dependencies in the product."
+title: Certificate profile prerequisites
+titleSuffix: Configuration Manager
+description: Learn about certificate profiles in Configuration Manager and their external dependencies and dependencies in the product.
 ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Prerequisites for certificate profiles in Configuration Manager
 

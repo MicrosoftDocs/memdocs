@@ -80,6 +80,8 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
 
   If the grace period was triggered in error, you have seven days to resolve the breaking change to get the Cloud PC switched back to **Provisioned**.
 
+  You can manually end the grace period by using the [End grace period](end-grace-period.md) option.
+
 **User**: The user assigned to the Cloud PC.  
 
 **Date modified**: The timestamp of the last change of state of the Cloud PC.  

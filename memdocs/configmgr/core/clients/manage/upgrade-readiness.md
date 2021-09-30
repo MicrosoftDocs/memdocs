@@ -9,7 +9,7 @@ ms.date: 01/31/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
+ms.localizationpriority: medium
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager

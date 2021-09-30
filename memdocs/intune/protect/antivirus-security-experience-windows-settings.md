@@ -115,7 +115,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
 
   For this setting to take effect, the user needs to either sign out and back in, or reboot the computer.
   - **Not configured** (*default*) - The setting returns the client to the default, which is to show the icon.
-  - **Yes** - Hide the Windows Security icon from the users system tray.
+  - **Yes** - Hide the Windows Security icon from the notification area.
   - **No** - Behavior is the same as *Not configured*.
   
 - **Disable the Clear TPM option in the Windows Security app**  

@@ -9,6 +9,7 @@ ms.date: 08/24/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
+ms.localizationpriority: medium
 ---
 
 # Tutorial: Enable co-management for new internet-based devices

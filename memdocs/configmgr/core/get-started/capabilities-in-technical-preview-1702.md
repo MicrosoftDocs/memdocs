@@ -1,18 +1,16 @@
 ---
-title: "Capabilities in Technical Preview 1702"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1702."
+title: Capabilities in Technical Preview 1702
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1702.
 ms.date: 02/24/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1702 for Configuration Manager
 
@@ -25,7 +23,7 @@ This article introduces the features that are available in the Technical Preview
 
 ##  Send feedback from the Configuration Manager console
 
-This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager UserVoice feedback website.  
+This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager product feedback website.  
 
 > You can find the **Feedback** option:
 > -  In the ribbon, at the far left of the Home tab of each node.  
@@ -34,7 +32,8 @@ This preview introduces new feedback options in the Configuration Manager consol
 -  When you right-click on any object in the console.   
     ![Righ-click option](./media/feedback-option.png)   
 
-Choosing **Feedback** opens your browser to the Configuration Manager UserVoice feedback website, at https://configurationmanager.uservoice.com/forums/300492-ideas.
+Choosing **Feedback** opens your browser to the Configuration Manager product feedback website.
+
 ##  Changes for Updates and Servicing
 The following are introduced with this preview.
 

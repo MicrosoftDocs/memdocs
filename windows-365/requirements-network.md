@@ -40,8 +40,8 @@ To use Cloud PCs, you must meet the following requirements:
 
 - Azure virtual network: You must have a virtual network (vNET) in your Azure subscription in the same region as where the Windows 365 desktops are created.
 - The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this is, define your AD DS DNS servers as the DNS servers for the virtual network.
-- The Azure vNet must have access to an enterprise domain controller, either in Azure or on-premises.
-- Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance.md).
+- The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
+- Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
 ## Allow network connectivity
@@ -65,16 +65,36 @@ You must allow traffic in your Azure network configuration to the following serv
   - cpcstprovprodprna02.blob.core.windows.net
   - cpcstprovprodprap01.blob.core.windows.net
   - cpcstprovprodprau01.blob.core.windows.net
+  - prna01.prod.cpcgateway.trafficmanager.net
+  - prna02.prod.cpcgateway.trafficmanager.net
+  - preu01.prod.cpcgateway.trafficmanager.net
+  - preu02.prod.cpcgateway.trafficmanager.net
+  - prap01.prod.cpcgateway.trafficmanager.net
+  - prau01.prod.cpcgateway.trafficmanager.net
+  - endpointdiscovery.cmdagent.trafficmanager.net
+  - registration.prna01.cmdagent.trafficmanager.net
+  - registration.preu01.cmdagent.trafficmanager.net
+  - registration.prap01.cmdagent.trafficmanager.net
+  - registration.prau01.cmdagent.trafficmanager.net
 
-All endpoints connect over  port 443.
+
+
+All endpoints connect over port 443.
 
 ## DNS requirements
 
-As part of the hybrid Azure AD join requirements, you must:
+As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to join on-prem Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-prem AD environment. 
 
-- Have a line-of-sight connection to one of your DNS servers that can talk with your Active Directory domain.
-- Change your DNS to custom.
-- Enter the IP address of your own DNS service environment that can resolve your AD DS domain.
+Configure your Azure Virtual Network where the Cloud PCs are provisioned as follows:
+
+1. Make sure taht your Azure Virtual Network has network connectivity to DNS servers that can resolve your Active Directory domain.
+2. From the Azure Virtual Network's Settings, select DNS Servers and then choose Custom.
+3. Enter the IP address of DNS servers that environment that can resolve your AD DS domain.
+
+>[!TIP]
+>Adding at least two DNS servers, as you would with a physical PC, helps mitigate the risk of a single point of failure in name resolution.
+
+See the Azure docs for more information on [configuring Azure Virtual Networks settings](/azure/virtual-network/manage-virtual-network#change-dns-servers). 
 
 ## Remote Desktop Protocol requirements
 

@@ -6,12 +6,10 @@ ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: troubleshooting
-ms.assetid: 2af4f9c3-16b8-4691-a59d-aea6241d288e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Application Installation

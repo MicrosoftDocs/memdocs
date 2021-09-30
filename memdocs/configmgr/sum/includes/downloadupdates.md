@@ -1,3 +1,12 @@
+---
+author: mestew
+ms.author: mstewart
+ms.prod: configuration-manager
+ms.topic: include
+ms.date: 08/10/2021
+ms.localizationpriority: medium
+---
+
 1.  In the Configuration Manager console, go to the **Software Library** workspace, and select the **Software Updates** node.  
 
 2.  Choose the software update to download by using one of the following methods:  

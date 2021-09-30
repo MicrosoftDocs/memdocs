@@ -6,10 +6,10 @@ ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: how-to
-ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: mestew
 manager: dougeby
 ms.author: mstewart
+ms.localizationpriority: medium
 ---
 
 # Create user data and profiles configuration items in Configuration Manager

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/11/2021
+ms.date: 09/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -180,16 +180,14 @@ Priority is used when a user exists in multiple groups that are assigned restric
 
 When you create a restriction, it's added to the list just above the default.
 
-Device enrollment includes default restrictions for both device type and device limit restrictions. These two restrictions apply to all users unless they're overridden by higher-priority restrictions.
+Device enrollment includes default restrictions for both device type and device limit restrictions. These two restrictions apply to all users unless they're overridden by higher-priority restrictions.  
 
 >[!NOTE]
 >Enrollment restrictions are applied to users. In enrollment scenarios that are not user-driven (e.g. Windows Autopilot self-deploying mode or white glove provisioning), only the Default priority restrictions (targeted to "All Users") will be enforced.
 
 
-You can change the priority of any non-default restriction.
+You can change the priority of any non-default restriction.  
 
-1. Sign in to the Azure portal.
-2. Select **More Services**, search for **Intune**, and then choose **Intune**.
-3. Select **Device enrollment** > **Enrollment restrictions**.
-4. Hover over the restriction in the priority list.
-5. Using the three vertical dots, drag the priority to the desired position in the list.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment restrictions**.
+2. Select **Device type restrictions** or **Device limit restrictions** to view the priority list.               
+3. In the list, hover over any restriction in the **Priority** column. When you see three vertical dots appear, select and drag the priority to the desired position in the list.    

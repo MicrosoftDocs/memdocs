@@ -13,7 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 8/31/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -33,6 +33,7 @@ Some policy settings can cause issues in some Windows Autopilot scenarios. These
 
 | Policy | More information |
 |-------|---------------|
+| <a href="/windows/client-management/mdm/applocker-csp">AppLocker CSP</a> | The AppLocker CSP is not supported in the Enrollment Status Page as it triggers a reboot when a policy is applied or a deletion occurs. |
 |Device restriction / <a href="/windows/client-management/mdm/devicelock-csp">Password Policy</a> | The out-of-box experience (OOBE) or user desktop autologon can fail when a device reboots during the device Enrollment Status Page (ESP). This failure can occur when certain <a href="/windows/client-management/mdm/policy-csp-devicelock">DeviceLock policies</a> are applied to a device. Such policies can include:<ul><li>Minimum password length and password complexity</li><li>Any similar group policy settings (including any that disable autologon)</li></ul>This possible failure is especially true for kiosk scenarios where passwords are automatically generated. |
 | Windows 10 Security Baseline / <a href="/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">Administrator elevation prompt behavior</a><br><br>Windows 10 Security Baseline / <a href="/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">Require admin approval mode for administrators</a> | More prompts may appear when modifying user account control (UAC) settings during the OOBE using the device Enrollment Status Page (ESP). Increased prompts are more likely if the device reboots after policies are applied. To work around this issue, the policies can be targeted to users instead of devices so that they apply later in the process. |
 | Device restrictions / Cloud and Storage / <a href="/mem/intune/configuration/device-restrictions-windows-10#cloud-and-storage">Microsoft Account sign-in assistant</a> | Setting this policy to "disabled" will disable the Microsoft Sign-in Assistant service (wlidsvc). This service is required by Windows Autopilot to obtain the Windows Autopilot profile. |

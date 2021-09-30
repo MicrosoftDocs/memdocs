@@ -2,14 +2,14 @@
 title: Tenant attach - Create and deploy Antivirus policies from the admin center (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy Antivirus policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 08/27/2021
+ms.date: 09/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy Antivirus policies from the admin center (preview)
@@ -55,9 +55,12 @@ Starting in Configuration Manager 2103, When a tenant attached device is targete
 
 To use this functionality, create an antivirus policy from the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) that includes some [antivirus exclusions](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#microsoft-defender-antivirus-exclusions). Create a second antivirus policy including only antivirus exclusions that are different from the first policy. Apply both antivirus policies to the same collection. Antivirus exclusions from both policies are applied on clients in the targeted collection.
 
+[!INCLUDE [Device status for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-device-status.md)]
+
 ## Next steps
 
 - [Antivirus policy settings for tenant attached devices](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 - [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
-- [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)
+- [Create and deploy endpoint security Attack surface reduction policy to tenant attached devices](deploy-asr-policy.md)
 - [Create and deploy endpoint security Endpoint Detection and Response policy to tenant attached devices](atp-onboard.md)
+- [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)

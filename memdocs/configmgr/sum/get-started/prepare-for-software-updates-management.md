@@ -1,17 +1,15 @@
 ---
 title: Prepare for software updates management
-titleSuffix: "Configuration Manager"
-description: "To prepare to manage updates, complete these tasks to display compliance assessment data in the Configuration Manager console."
+titleSuffix: Configuration Manager
+description: To prepare to manage updates, complete these tasks to display compliance assessment data in the Configuration Manager console.
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
 manager: dougeby
 author: mestew
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
 # Prepare for software updates management

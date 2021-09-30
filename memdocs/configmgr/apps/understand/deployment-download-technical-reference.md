@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Application download in Configuration Manager
