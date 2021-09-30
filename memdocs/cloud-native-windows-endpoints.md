@@ -281,7 +281,7 @@ Before you enable synchronization in the Intune console, you must configure your
     - If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**.
     - If you don't have **Microsoft Intune** activated as your mobile device management tool, click **Activate** next to **Microsoft Intune**. 
       
-        > [!NOTE]**
+        > **[!NOTE]**
         > Pay careful attention to the exact names used - you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
 
 ### Step 10 - Create and assign some applications
