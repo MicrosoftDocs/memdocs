@@ -2,7 +2,7 @@
 title: Supported Configurations for the LTSB
 titleSuffix: Configuration Manager
 description: Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager.
-ms.date: 05/10/2017
+ms.date: 09/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -92,9 +92,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 -   Windows Embedded 8.1 Industry (x86, x64)    
 -   Windows Thin PC (x86, x64)    
 -   Windows Embedded POSReady 7 (x86, x64)    
--   Windows Embedded Standard 7 with SP1 (x86, x64)    
--   Windows Embedded POSReady 2009 (x86)   
--   Windows Embedded Standard 2009 (x86)  
+
 
 ### Windows CE  
  You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  

@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 09/09/2021
+ms.date: 09/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -133,8 +133,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 - **Windows Thin PC** (x86, x64)
 
 - **Windows Embedded POSReady 7** (x86, x64)
-
-- **Windows Embedded Standard 7 with SP1** (x86, x64)
 
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
