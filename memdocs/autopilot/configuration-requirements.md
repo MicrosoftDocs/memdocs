@@ -47,9 +47,7 @@ For more information, see [Windows Autopilot Scenarios](windows-Autopilot-scenar
 
 For a walkthrough for some of these and related steps, see this video:
 
-</br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KYVptkpsOqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media" gyroscope; picture-in-picture" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/KYVptkpsOqs]
 
 There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications) or [Windows 10](https://www.microsoft.com/windows/windows-10-specifications).
 
