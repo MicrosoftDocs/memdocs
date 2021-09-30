@@ -32,7 +32,7 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
 - When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
-- This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
+- This page is updated periodically. Check back for more updates.
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 - Similar features may be announced at different times for Windows 365 Enterprise.
 
@@ -52,7 +52,6 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 ## Security
 
 -->
-
 
 <!-- ***********************************************-->
 ## Device management
