@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot networking requirements
-ms.reviewer: 
-manager: laurawi
 description: Inform yourself about networking requirements for Windows Autopilot deployment.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, Autopilot, ztd, zero-touch, partner, msfb, intune
 ms.technology: windows
@@ -13,6 +11,8 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 08/23/2021
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
@@ -21,12 +21,12 @@ ms.custom:
 - CSSTroubleshooting
 ---
 
-
 # Windows Autopilot networking requirements
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 Windows Autopilot depends on a variety of internet-based services. Access to these services must be provided for Autopilot to function properly. In the simplest case, enabling proper functionality can be achieved by ensuring the following conditions:
@@ -44,13 +44,13 @@ Additional configuration may be required to grant access to required services in
 For additional details about each of these services and their specific requirements, review the following details:
 
 <table><th>Service<th>Information
-<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows 10 device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used: https://ztd.dds.microsoft.com, https://cs.dds.microsoft.com, and https://login.live.com.<br>
+<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used: `https://ztd.dds.microsoft.com`, `https://cs.dds.microsoft.com`, and `https://login.live.com`.<br>
 
 <tr><td><b>Windows Activation<b><td>Windows Autopilot requires Windows Activation services. For details about the URLs that need to be accessible for the activation services, see <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">Windows activation or validation fails with error code 0x8004FE33</a>.<br>
 
 <tr><td><b>Azure Active Directory<b><td>User credentials are validated by Azure Active Directory, and the device can also be joined to Azure Active Directory. For more information, see <a href="/office365/enterprise/office-365-ip-web-service">Office 365 IP Address and URL Web service</a>.
 <tr><td><b>Intune<b><td>Once authenticated, Azure Active Directory will trigger enrollment of the device into the Intune mobile device management (MDM) service. See the following link for details about network communication requirements: <a href="/intune/network-bandwidth-use#network-communication-requirements">Intune network configuration requirements and bandwidth</a>.
-<tr><td><b>Windows Update<b><td>During the OOBE process and after the Windows 10 OS configuration, the Windows Update service retrieves needed updates. If there are problems connecting to Windows Update, see <a href="https://support.microsoft.com/help/818018/how-to-solve-connection-problems-concerning-windows-update-or-microsof">How to solve connection problems concerning Windows Update or Microsoft Update</a>.<br>
+<tr><td><b>Windows Update<b><td>During the OOBE process and after the Windows OS configuration, the Windows Update service retrieves needed updates. If there are problems connecting to Windows Update, see <a href="https://support.microsoft.com/help/818018/how-to-solve-connection-problems-concerning-windows-update-or-microsof">How to solve connection problems concerning Windows Update or Microsoft Update</a>.<br>
 
 If Windows Update is inaccessible, the Autopilot process will still continue but critical updates won't be available.
 

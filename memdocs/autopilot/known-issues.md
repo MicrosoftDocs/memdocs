@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot known issues
-ms.reviewer: 
-manager: laurawi
 description: Inform yourself about known issues that may occur during Windows Autopilot deployment.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -12,6 +10,8 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 09/02/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
@@ -22,8 +22,8 @@ ms.topic: troubleshooting
 
 **Applies to**
 
-- Windows 10
 - Windows 11
+- Windows 10
 
 The following table describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 

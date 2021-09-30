@@ -11,15 +11,18 @@ audience: itpro
 author: greg-lindsay
 ms.author: greglin
 ms.date: 12/16/2020
-ms.reviewer: 
-manager: laurawi
+ms.reviewer: jubaptis
+manager: dougeby
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
 
 # Windows Autopilot support information
 
-**Applies to: Windows 10**
+**Applies to**
+
+- Windows 11
+- Windows 10
 
 The following table displays support information for the Windows Autopilot program.  
 

@@ -1,7 +1,5 @@
 ---
 title: Manually register devices with Windows Autopilot
-ms.reviewer: 
-manager: laurawi
 description: How to manually add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -12,6 +10,8 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 08/05/2021
 ms.topic: how-to
 ms.collection: 
@@ -19,15 +19,15 @@ ms.collection:
 - m365initiative-coredeploy
 ---
 
-
 # Manually register devices with Windows Autopilot
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
-Windows Autopilot device registration can be done within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-value (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows 10. Therefore, this process is intended primarily for testing and evaluation scenarios.
+Windows Autopilot device registration can be done within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-value (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. Therefore, this process is intended primarily for testing and evaluation scenarios.
 
 Device owners can only register their devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
 
@@ -38,8 +38,9 @@ This article provides step by step guidance to perform manual registration. For 
 For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
 > [!IMPORTANT]
-> In Windows 10, version 1809 and earlier, it is important to not connect devices to the Internet prior to capturing the hardware hash and creating an Autopilot device profile. This includes collecting the hardware hash, uploading the .CSV into MSfB or Intune, assigning the profile, and confirming the profile assignment. Connecting the device to the Internet before this process is complete will result in the device downloading a blank profile that is stored on the device until it's explicity removed. In Windows 10 version 1809, you can clear the cached profile by restarting OOBE. In previous versions, the only way to clear the stored profile is to re-install the OS, reimage the PC, or run **sysprep /generalize /oobe**. <br>
-> <br>After Intune reports the profile ready to go, only then should the device be connected to the Internet.
+> In Windows 10, version 1809 and earlier, it is important to not connect devices to the Internet prior to capturing the hardware hash and creating an Autopilot device profile. This includes collecting the hardware hash, uploading the .CSV into MSfB or Intune, assigning the profile, and confirming the profile assignment. Connecting the device to the Internet before this process is complete will result in the device downloading a blank profile that is stored on the device until it's explicity removed. In Windows 10 version 1809, you can clear the cached profile by restarting OOBE. In previous versions, the only way to clear the stored profile is to re-install the OS, reimage the PC, or run **sysprep /generalize /oobe**.
+>
+> After Intune reports the profile ready to go, only then should the device be connected to the Internet.
 
 > [!NOTE]
 > If OOBE is restarted too many times it can enter a recovery mode and fail to run the Autopilot configuration. You can identify this scenario if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE displays each of these on a separate page. The following value key tracks the count of OOBE retries: <br>
@@ -58,11 +59,11 @@ Device enrollment can be done by an **Intune Administrator** or a **Policy and P
 
 ## Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
 
-Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows 10 devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
+Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
 
 ## Collecting the hardware hash from existing devices using PowerShell
 
-The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
+The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
 
 To use this script, you can use either of the following methods:
 - Download the script file from the PowerShell Gallery and run it on each computer.
@@ -90,11 +91,11 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 Get-WindowsAutoPilotInfo -Online
 ```
 
-At this point you will be prompted to sign in, an account with the Intune Administrator role is sufficient, and the device hash will then be uploaded automatically. Upon confirmation of the uploaded device hash details, run a sync in the Microsoft Endpoint Manager Admin Center and wait for your new device to appear. Once the device is shown in your device list, and an autopilot profile is assigned, restarting the device will result in OOBE running through Windows Autopilot provisioning process. 
+At this point you will be prompted to sign in, an account with the Intune Administrator role is sufficient, and the device hash will then be uploaded automatically. Upon confirmation of the uploaded device hash details, run a sync in the Microsoft Endpoint Manager Admin Center and wait for your new device to appear. Once the device is shown in your device list, and an autopilot profile is assigned, restarting the device will result in OOBE running through Windows Autopilot provisioning process.
 
 Note: On first run you will be prompted to approve the required app registration permissions.
 
-For more information about running the script, see the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) script’s help by using “Get-Help Get-WindowsAutoPilotInfo”.
+For more information about running the script, see the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) script's help by using `Get-Help Get-WindowsAutoPilotInfo`.
 
 ## Add devices
 
@@ -102,7 +103,7 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
 
-    ![Screenshot of Windows Autopilot devices](images/autopilot-import-device.png)
+    ![Screenshot of Windows Autopilot devices.](images/autopilot-import-device.png)
 
 2. Under **Add Windows Autopilot devices**, browse to a CSV file listing the devices that you want to add. The CSV file should list:
     - Serial numbers.
@@ -116,7 +117,7 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
    `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
-   ![Screenshot of Adding Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device-2.png)
+   ![Screenshot of Adding Windows Autopilot devices.](media/enrollment-autopilot/autopilot-import-device-2.png)
 
    >[!IMPORTANT]
    > When you use CSV upload to assign a user, make sure that you assign valid UPNs. If you assign an invalid UPN (incorrect username), your device may be inaccessible until you remove the invalid assignment. During CSV upload the only validation we perform on the **Assigned User** column is to check that the domain name is valid. We're unable to perform individual UPN validation to ensure that you're assigning an existing or correct user.

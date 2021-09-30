@@ -1,9 +1,7 @@
 ---
 title: Windows Autopilot Deployment for existing devices
-description: Modern desktop deployment with Windows Autopilot enables you to easily deploy the latest version of Windows 10 to your existing devices.
+description: Modern desktop deployment with Windows Autopilot enables you to easily deploy the latest version of Windows to your existing devices.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.reviewer: mniehaus
-manager: laurawi
 ms.prod: w10
 ms.technology: windows
 ms.mktglfcycl: deploy
@@ -13,6 +11,8 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 01/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
@@ -20,24 +20,29 @@ ms.topic: how-to
 
 # Windows Autopilot Deployment for existing devices
 
-**Applies to: Windows 10**
+**Applies to**
 
-Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows 10 to your existing devices. The apps you need for work can be automatically installed. Your work profile is synchronized, so you can resume working right away.
+- Windows 11
+- Windows 10
 
-This topic describes how to convert Windows 7 or Windows 8.1 domain-joined computers to Windows 10 devices joined to either Azure Active Directory or Active Directory (Hybrid Azure AD Join) by using Windows Autopilot.
+Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows to your existing devices. The apps you need for work can be automatically installed. Your work profile is synchronized, so you can resume working right away.
 
->[!NOTE]
->Windows Autopilot for existing devices only supports user-driven Azure Active Directory and Hybrid Azure AD profiles. Self-deploying profiles are not supported.
+This topic describes how to convert Windows 7 or Windows 8.1 domain-joined computers to Windows 10 or Windows 11 devices joined to either Azure Active Directory or Active Directory (Hybrid Azure AD Join) by using Windows Autopilot.
+
+> [!NOTE]
+> Windows Autopilot for existing devices only supports user-driven Azure Active Directory and Hybrid Azure AD profiles. Self-deploying profiles are not supported.
 
 ## Prerequisites
 
-- A currently supported version of Microsoft Endpoint Configuration Manager current branch or technical preview branch. 
-- The [Windows ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) 1803 or later
-    - For more information on Configuration Manager support, see [Support for Windows 10 ADK](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+- A currently supported version of Microsoft Endpoint Configuration Manager current branch.
+- The [Windows ADK](/windows-hardware/get-started/adk-install)
+    - For more information on Configuration Manager support, see [Support for the Windows ADK in Configuration Manager](../configmgr/core/plan-design/configs/support-for-windows-adk.md).
 - Assigned Microsoft Intune Licenses
 - Azure Active Directory Premium
-- Windows 10 version 1809 or later imported into Configuration Manager as an Operating System Image
-  - **Important**: See [Known issues](known-issues.md) if you're using Windows 10 1903 with Configuration Manager’s built-in **Windows Autopilot existing device** task sequence template. Currently, one of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
+- A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an OS image
+
+  > [!IMPORTANT]
+  > If you're using Windows 10 version 1903 with Configuration Manager's built-in **Windows Autopilot existing device** task sequence template, see the [Known issues](known-issues.md). One of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
 
 ## Procedures
 
@@ -313,7 +318,7 @@ The Task Sequence will:
 1. Download content
 2. Reboot the device
 3. Format the drives
-4. Install Windows 10
+4. Install Windows
 5. Prepare for Autopilot
 
 After the task sequence has completed, the device will boot into OOBE and provide an Autopilot experience.
@@ -328,7 +333,7 @@ After the task sequence has completed, the device will boot into OOBE and provid
 ### Register the device for Windows Autopilot
 
 Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot. 
-After updating to Windows 10, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
+After updating Windows, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 
