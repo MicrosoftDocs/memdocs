@@ -9,16 +9,13 @@ metadata:
   author: erikjeMS
   ms.author: erikje
   manager: dougeby
-  ms.date: 09/22/2021
+  ms.date: 09/29/2021
 
 highlightedContent:
   items:
-    - title: What is Windows 365?
-      itemType: overview
-      url: overview.md
-    - title: Planning your Windows 365 deployment
-      itemType: get-started
-      url: planning-guide.md
+    - title: Compare Windows 365 Business and Enterprise
+      itemType: 
+      url: business-enterprise-comparison.md
 
 # productDirectory section (optional)
 productDirectory:
