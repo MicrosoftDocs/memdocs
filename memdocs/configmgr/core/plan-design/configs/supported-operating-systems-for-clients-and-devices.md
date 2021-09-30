@@ -144,8 +144,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 - **Windows Embedded POSReady 7** (x86, x64)
 
-- **Windows Embedded Standard 7 with SP1** (x86, x64)
-
 #### <a name="bkmk_note4"></a> Note 4: Windows IoT Enterprise
 
 This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot/iot-enterprise/getting_started).<!--SCCMDocs issue 560-->
@@ -189,7 +187,7 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 
 - **Windows 10 Pro** (x86, x64)
 
-- **Windows 10 Pro Enterprise** (x86, x64)
+- **Windows 10 Enterprise** (x86, x64)
 
 - **Windows 10 IoT Enterprise** (x86, x64)
     This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->
