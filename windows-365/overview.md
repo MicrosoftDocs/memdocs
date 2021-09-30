@@ -35,7 +35,7 @@ Windows 365 Enterprise is a cloud-based service that automatically creates a new
 Windows 365 is available in two editions:
 
 - **Windows 365 Business** is made specifically for use in smaller companies (up to 300 seats) who want ready-to-use Cloud PCs with simple management options. For more information, see [Getting started with Windows 365 Business and Cloud PCs](business/get-started-windows-365-business.md).
-- **Windows 365 Enterprise** is for larger companies who want unlimited seats for creating Cloud PCs. It includes options to create custom Cloud PCs based on device images that you create, more management options, and full integration with Microsoft Endpoint Manager. For more information, see [What is Windows 365 Enterprise?](/enterprise/overview.md).
+- **Windows 365 Enterprise** is for larger companies who want unlimited seats for creating Cloud PCs. It includes options to create custom Cloud PCs based on device images that you create, more management options, and full integration with Microsoft Endpoint Manager. For more information, see [What is Windows 365 Enterprise?](enterprise/overview.md).
 
 To learn about the differences between the two versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
 
