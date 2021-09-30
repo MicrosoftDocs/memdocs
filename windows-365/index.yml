@@ -14,7 +14,7 @@ metadata:
 highlightedContent:
   items:
     - title: Compare Windows 365 Business and Enterprise
-      itemType: getting-started
+      itemType: overview
       url: business-enterprise-comparison.md
 
 # productDirectory section (optional)
