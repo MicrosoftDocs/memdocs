@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: What is Windows 365?
+title: What is Windows 365 Enterprise?
 titleSuffix:
-description: What is Windows 365?
+description: What is Windows 365 Enterprise?
 keywords:
 author: ErikjeMS  
 ms.author: erikje
