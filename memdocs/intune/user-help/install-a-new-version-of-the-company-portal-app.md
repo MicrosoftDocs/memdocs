@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,6 +31,14 @@ ms.collection:
 ---
 
 # Update the Company Portal app  
+
+**Applies to**  
+- Android  
+- iOS  
+- macOS  
+- Windows 10  
+- Windows 11  
+
  
 Get the latest version of the Company Portal app on your Android, iOS, macOS, or Windows device. Your organization may require you to update the app on your device when:  
 
@@ -73,7 +81,7 @@ To turn on automatic app updates:
 3. On the Microsoft AutoUpdate screen, select **Automatically download and install**.  
 
 
-## Update on Windows 10 device  
+## Update on Windows 10/11 device  
 
 To install the latest version of Company Portal: 
 1. Open Microsoft Store.
@@ -87,7 +95,7 @@ To turn on automatic updates:
 2. Turn on **App updates**.  
 3. To see a list of all updates and apps that are waiting to download, go to **Downloads and updates**.  
 
-Some organization may disable app updates. If this option is unavailable on your device, use the first set of Windows 10 instructions to update your app. 
+Organizations may disable app updates. If this option is unavailable on your device, use the first set of Windows 10/11 instructions to update your app. 
 
 ## Next steps  
 
