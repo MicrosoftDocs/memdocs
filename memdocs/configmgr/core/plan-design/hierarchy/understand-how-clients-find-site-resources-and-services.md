@@ -26,7 +26,7 @@ Some examples of site system roles that provide services include:
 
 ## Fundamentals of service location
 
-When a client uses service location to find a management to communicate with, it evaluates the following aspects:
+When a client uses service location to find a management point to communicate with, it evaluates the following aspects:
 
 - Current network location
 - Communication protocol preference
