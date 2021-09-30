@@ -41,12 +41,6 @@ To learn about the differences between the two versions, see [Compare Windows 36
 
 [!INCLUDE [What is a Cloud PC?](./includes/what-is-cloud-pc.md)]
 
-### Creating a Cloud PC
-
-Cloud PCs are created automatically by the Windows 365 service when an end user in an appropriate Azure AD user group is assigned a Windows 365 license.
-
-Admins don't manually create Cloud PCs.
-
 ## Billing
 
 Cloud PCs are billed in a per-user per-month cost model. This model means your organization doesn’t have to manage the variability of compute and storage costs of a traditional hosted desktop model.
