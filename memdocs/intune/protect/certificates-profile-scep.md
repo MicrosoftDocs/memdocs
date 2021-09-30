@@ -74,7 +74,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Certificate type**:
 
-     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1 and later, and Windows 10 and later.)*
+     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
 
      Select a type depending on how you'll use the certificate profile:
 
@@ -230,7 +230,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Key storage provider (KSP)**:
 
-     *(Applies to:  Windows 8.1 and later, and Windows 10 and later)*
+     *(Applies to:  Windows 8.1, and Windows 10/11)*
 
      Specify where the key to the certificate is stored. Choose from the following values:
 
@@ -256,7 +256,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android enterprise, Windows 8.1 and later, and Windows 10 and later)*
+     *(Applies to Android, Android enterprise, Windows 8.1, and Windows 10/11)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
 
@@ -361,7 +361,7 @@ Consider the following before you continue:
 
 - To publish a certificate to a device quickly after the device enrolls, assign the certificate profile to a user group rather than to a device group. If you assign to a device group, a full device registration is required before the device receives policies.
 
-- If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10 clients to start the process of requesting the certificate.
+- If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10/11 clients to start the process of requesting the certificate.
 
 > [!NOTE]
 > - On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request.
