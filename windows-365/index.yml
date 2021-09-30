@@ -13,6 +13,9 @@ metadata:
 
 highlightedContent:
   items:
+    - title: What is Windows 365?
+      itemType: overview
+      url: overview.md
     - title: Compare Windows 365 Business and Enterprise
       itemType: overview
       url: business-enterprise-comparison.md
