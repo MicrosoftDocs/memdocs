@@ -9,16 +9,13 @@ metadata:
   author: erikjeMS
   ms.author: erikje
   manager: dougeby
-  ms.date: 09/22/2021
+  ms.date: 09/29/2021
 
 highlightedContent:
   items:
-    - title: What is Windows 365?
+    - title: Compare Windows 365 Business and Enterprise
       itemType: overview
-      url: overview.md
-    - title: Planning your Windows 365 deployment
-      itemType: get-started
-      url: planning-guide.md
+      url: business-enterprise-comparison.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -28,12 +25,12 @@ productDirectory:
     # Card
     - title: Windows 365 Enterprise
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./media/winlogo.png
+      imageSrc: ./media/winlogo.svg
       summary: Summary for Enterprise
       url: ./enterprise/index.yml
     # Card
     - title: Windows 365 Business
-      imageSrc: ./media/winlogo.png
+      imageSrc: ./media/winlogo.svg
       summary: Summary for Business
       url: ./business/index.yml
 

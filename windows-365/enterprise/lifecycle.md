@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Cloud PC lifecycle
 
-Windows 365 coordinates and manages the lifecycles of all your Cloud PCs. Because Cloud PCs exist only in the cloud, managing Cloud PC lifecycles is easier than [managing physical Windows device lifecycles](/mem/intune/fundamentals/device-lifecycle.md). Cloud PCs never leave the manageability and security inherently provided by the cloud.
+Windows 365 coordinates and manages the lifecycles of all your Cloud PCs. Because Cloud PCs exist only in the cloud, managing Cloud PC lifecycles is easier than [managing physical Windows device lifecycles](/mem/intune/fundamentals/device-lifecycle). Cloud PCs never leave the manageability and security inherently provided by the cloud.
 
 The Cloud PC lifecycle has five stages:
 
