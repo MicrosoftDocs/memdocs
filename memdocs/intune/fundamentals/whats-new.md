@@ -59,6 +59,22 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+## Week of October  4, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+##### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623  -->
+
+You can use *Feature updates for Windows 10 and later*
+policy to upgrade devices that meet the Windows 11 minimum requirements to
+Windows 11. It's as easy as configuring a new feature updates policy that
+specifies the available Windows 11 version as the feature update you want to
+deploy. 
+
+For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feture-updates.md#upgrade-devices-to-windows-11).
+
+<!-- ########################## -->
 ## Week of September 20, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
