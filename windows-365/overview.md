@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # What is Windows 365?
 
-Windows 365 Enterprise is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. Each Cloud PC is assigned to an individual user and is their dedicated Windows device. Windows 365 provides the productivity, security, and collaboration benefits of Microsoft 365.
+Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. Each Cloud PC is assigned to an individual user and is their dedicated Windows device. Windows 365 provides the productivity, security, and collaboration benefits of Microsoft 365.
 
 Windows 365 is available in two editions:
 
@@ -39,17 +39,7 @@ Windows 365 is available in two editions:
 
 To learn about the differences between the two versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
 
-## What is a Cloud PC?
-
-A Cloud PC is a highly available, optimized, and scalable virtual machine providing end users with a rich Windows desktop experience. It’s hosted in the Windows 365 service and is accessible from anywhere, on any device.
-
-End users have a 1:1 relationship with their Cloud PC. It’s their own personal PC in the cloud. Users can connect to their Cloud PC by using [windows365.microsoft.com](https://windows365.microsoft.com/). [Browser and app-based access](./enterprise/end-user-access-cloud-pc.md) is available for Windows, Mac, iOS, and Android devices.
-
-### Creating a Cloud PC
-
-Cloud PCs are created automatically by the Windows 365 service when an end user in an appropriate Azure AD user group is assigned a Windows 365 license.
-
-Admins don't manually create Cloud PCs.
+[!INCLUDE [What is a Cloud PC?](./includes/what-is-cloud-pc.md)]
 
 ## Billing
 
