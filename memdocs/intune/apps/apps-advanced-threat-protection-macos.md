@@ -25,7 +25,7 @@ ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: 
+ms.custom: OS=macOS;
 ms.collection: M365-identity-device-management
 ---
 
