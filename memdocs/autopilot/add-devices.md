@@ -83,7 +83,7 @@ You can run the commands remotely if both of the following are true:
 - WMI permissions are in place
 - WMI is accessible through the Windows Firewall on the remote computer.
 
-During the OOBE you also can initate the hardware hash upload by launching a command prompt (Shift+F10 at the sign in prompt), and using the following commands;
+During the OOBE you also can initiate the hardware hash upload by launching a command prompt (Shift+F10 at the sign in prompt), and using the following commands;
 
 ```PowerShell.exe -ExecutionPolicy Bypass
 Install-Script -name Get-WindowsAutopilotInfo -Force
