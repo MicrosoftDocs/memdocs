@@ -73,7 +73,7 @@ Windows 11. It's as easy as configuring a new feature updates policy that
 specifies the available Windows 11 version as the feature update you want to
 deploy. 
 
-For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feture-updates.md#upgrade-devices-to-windows-11).
+For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
 
 ## Week of September 27, 2021 (Service release 2109)
 
