@@ -531,15 +531,15 @@ You can also set other settings for Microsoft Edge using settings catalog profil
 
 You can customize and set a standard start and taskbar layout using Intune.
 
- - **For Windows 10**:
+- **For Windows 10**:
   - For more information about start and taskbar customization, see [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
-	- To create a start and taskbar layout, see [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
+  - To create a start and taskbar layout, see [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
 
-	After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+  After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
 
- - **For Windows 11**:
-	- To create and apply a Start menu layout, see [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11) for more information.
-	- To create and apply a Taskbar layout, see [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11) for more information.
+- **For Windows 11**:
+  - To create and apply a Start menu layout, see [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11) for more information.
+  - To create and apply a Taskbar layout, see [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11) for more information.
 
 ### Settings catalog
 
