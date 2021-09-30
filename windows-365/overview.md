@@ -37,6 +37,8 @@ Windows 365 is available in two editions:
 - Windows 365 Business is made specifically for use in smaller companies (up to 300 seats) who want ready-to-use Cloud PCs with simple management options. For more information, see [Getting started with Windows 365 Business and Cloud PCs](/business/get-started-windows-365-business).
 - Windows 365 Enterprise
 
+To learn about the differences between the two versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
+
 ## What is a Cloud PC?
 
 A Cloud PC is a highly available, optimized, and scalable virtual machine providing end users with a rich Windows desktop experience. It’s hosted in the Windows 365 service and is accessible from anywhere, on any endpoint.
