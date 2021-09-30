@@ -39,11 +39,7 @@ Windows 365 is available in two editions:
 
 To learn about the differences between the two versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
 
-## What is a Cloud PC?
-
-A Cloud PC is a highly available, optimized, and scalable virtual machine providing end users with a rich Windows desktop experience. It’s hosted in the Windows 365 service and is accessible from anywhere, on any device.
-
-End users have a 1:1 relationship with their Cloud PC. It’s their own personal PC in the cloud. Users can connect to their Cloud PC by using [windows365.microsoft.com](https://windows365.microsoft.com/). [Browser and app-based access](./enterprise/end-user-access-cloud-pc.md) is available for Windows, Mac, iOS, and Android devices.
+[!INCLUDE [What is a Cloud PC?](./includes/what-is-cloud-pc.md)]
 
 ### Creating a Cloud PC
 
