@@ -24,7 +24,7 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: has-adal-ref
+ms.custom: OS=iOS;has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 

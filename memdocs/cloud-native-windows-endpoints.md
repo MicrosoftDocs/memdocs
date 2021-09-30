@@ -269,7 +269,22 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 :::image type="content" source="./media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Example of a settings catalog profile.":::
 
-### Step 9 - Create and assign some applications
+### Step 9 - Set up Microsoft Store for Business (or Education)
+
+Before you enable synchronization in the Intune console, you must configure your store account to use Intune as a management tool.
+
+1. Ensure that you sign into the [**Microsoft Store for Business (or Education)**](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
+
+2. In the [**Business Store**](https://www.microsoft.com/business-store), choose the **Manage** tab, select **Settings**, and choose the **Distribute** tab.
+
+3. Activate **Microsoft Intune**
+    - If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**.
+    - If you don't have **Microsoft Intune** activated as your mobile device management tool, click **Activate** next to **Microsoft Intune**. 
+      
+        > **[!NOTE]**
+        > Pay careful attention to the exact names used - you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
+
+### Step 10 - Create and assign some applications
 
 Your cloud native endpoint will need some applications. To get started, we recommend configuring the following applications and targeting them at the **Autopilot Cloud Native Windows Endpoints** group created previously.
 
@@ -298,7 +313,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
 - **Company Portal**  
   Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the portal to sync their device with Intune, check compliance status, and so on.
 
-  You can set up a relationship between Intune and the Microsoft Store for Business (MSfB) and get the Company Portal app as an offline app  that can be synched to Intune and targeted at devices. For more information, see [Add and assign the Windows Company Portal app for Autopilot provisioned devices](./intune/apps/store-apps-company-portal-autopilot.md).
+  You can set up a relationship between Intune and the Microsoft Store for Business (MSfB) and get the Company Portal app as an offline app that can be synched to Intune and targeted at devices. For more information, see [Add and assign the Windows Company Portal app for Autopilot provisioned devices](./intune/apps/store-apps-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)  
   While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps from [Get the offline Company Portal app from the store](./intune/apps/store-apps-company-portal-autopilot.md#get-the-offline-company-portal-app-from-the-store) but select *Microsoft Whiteboard* as the app. Then, set the app to be *Online* and deploy it as *available* instead of as a required app. The app should later appear within Company Portal for manual installation by the user.
@@ -516,10 +531,15 @@ You can also set other settings for Microsoft Edge using settings catalog profil
 
 You can customize and set a standard start and taskbar layout using Intune.
 
-- For more information about start and taskbar customization, see [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
-- To create a start and taskbar layout, see [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
+- **For Windows 10**:
+  - For more information about start and taskbar customization, see [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
+  - To create a start and taskbar layout, see [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
 
-After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+  After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+
+- **For Windows 11**:
+  - To create and apply a Start menu layout, see [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11) for more information.
+  - To create and apply a Taskbar layout, see [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11) for more information.
 
 ### Settings catalog
 
