@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: cee8005f-1db4-4978-ae16-51901fd0ff1c
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # CCM_EvaluationState Client WMI Class

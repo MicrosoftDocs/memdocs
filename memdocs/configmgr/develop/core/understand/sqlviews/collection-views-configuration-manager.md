@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: fbccfda5-8577-41ba-9e89-ce027e1917e2
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Collection views in Configuration Manager

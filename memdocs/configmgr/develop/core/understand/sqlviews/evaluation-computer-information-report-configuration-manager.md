@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 3c4286f0-b210-4ea3-a58e-342b2f9a98f2
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Evaluation of the Computer information for a specific computer report in Configuration Manager

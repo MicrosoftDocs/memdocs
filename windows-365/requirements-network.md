@@ -41,7 +41,7 @@ To use Cloud PCs, you must meet the following requirements:
 - Azure virtual network: You must have a virtual network (vNET) in your Azure subscription in the same region as where the Windows 365 desktops are created.
 - The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this is, define your AD DS DNS servers as the DNS servers for the virtual network.
 - The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
-- Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance.md).
+- Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
 ## Allow network connectivity
@@ -65,6 +65,19 @@ You must allow traffic in your Azure network configuration to the following serv
   - cpcstprovprodprna02.blob.core.windows.net
   - cpcstprovprodprap01.blob.core.windows.net
   - cpcstprovprodprau01.blob.core.windows.net
+  - prna01.prod.cpcgateway.trafficmanager.net
+  - prna02.prod.cpcgateway.trafficmanager.net
+  - preu01.prod.cpcgateway.trafficmanager.net
+  - preu02.prod.cpcgateway.trafficmanager.net
+  - prap01.prod.cpcgateway.trafficmanager.net
+  - prau01.prod.cpcgateway.trafficmanager.net
+  - endpointdiscovery.cmdagent.trafficmanager.net
+  - registration.prna01.cmdagent.trafficmanager.net
+  - registration.preu01.cmdagent.trafficmanager.net
+  - registration.prap01.cmdagent.trafficmanager.net
+  - registration.prau01.cmdagent.trafficmanager.net
+
+
 
 All endpoints connect over port 443.
 

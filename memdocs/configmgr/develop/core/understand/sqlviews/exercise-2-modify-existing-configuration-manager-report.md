@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 24bde9a6-d05d-428d-b26e-cd8dc1ffe9ba
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Exercise 2: Modify an existing report in Configuration Manager
