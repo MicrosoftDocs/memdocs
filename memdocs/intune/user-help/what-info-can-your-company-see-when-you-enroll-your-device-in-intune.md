@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 09/28/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,7 +31,8 @@ ms.collection:
 
 # What information can my organization see when I enroll my device?
 
-Your organization cannot see your personal information when you enroll a device with Microsoft Intune. When you enroll a device, you give your organization permission to view certain pieces of information on your device, such as device model and serial number. Your organization uses this information to help protect the corporate data on the device.
+Your organization cannot see your personal information when you enroll a device with Microsoft Intune. When you enroll a device, you give your organization permission to view certain pieces of information on your device, such as device model and serial number. Your organization uses this information to help protect the corporate data on the device.  
+
 
 **What your organization does not see:**
 
@@ -42,7 +43,9 @@ Your organization cannot see your personal information when you enroll a device 
 - Passwords
 - Pictures, including what's in the photos app or camera roll
 - Files
-- For corporate-owned devices with a work profile, the applications and data in your personal profile. 
+- Additionally, for corporate-owned devices with a work profile:  
+  - Apps and data in your personal profile
+  - Phone number 
 
 **What your organization can always see:**
 
@@ -65,8 +68,8 @@ Your organization cannot see your personal information when you enroll a device 
 
 **What your organization might be able to see:**
 
-- Phone number: For corporate-owned devices, your full phone number can be seen. For personal-owned devices, just the last four digits of your phone number are visible to your organization. You can see the ownership type for each individual device on its **Device Details** page.
+- Phone number: If you're using a corporate-owned device (excluding corporate-owned work profile), your full phone number is visible to your organization. If you're using a personal device, the last four digits of your phone number are visible. You can see the ownership type for each individual device on the Intune Company Portal > **Device Details** page.  
 - Device storage space: If you can't install a required app, your organization might look at your device's storage space to figure out if space is too low.  
-- Location: For corporate-owned devices, your organization can see the location of a lost device. For personal-owned devices, your organization does not see the device location. Visit the [Apple iOS documentation](https://go.microsoft.com/fwlink/?linkid=853816) to learn more about supervised devices.  
+- Location: For corporate-owned devices, your organization can see the location of a lost device. For personal devices, your organization does not see the device location. Visit the [Apple iOS documentation](https://go.microsoft.com/fwlink/?linkid=853816) to learn more about supervised devices.  
 - App inventory details: If your organization uses Mobile Threat Defense, they will be able to view details about the apps that are on your iOS device. Find out more about [Mobile Threat Defense](set-up-mobile-threat-defense.md). Otherwise, for personal-owned devices, your organization can only see your managed app inventory. For corporate-owned devices, your organization can see all of your app inventory.
 - Network information: Some information about network connections for Android devices may be available to your organization support. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected. 
