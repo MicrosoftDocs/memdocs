@@ -2,7 +2,7 @@
 title: Use Azure AD for co-management
 titleSuffix: Configuration Manager
 description: With Azure AD you can take advantage of improved productivity for your users and security for your resources, across both cloud and on-prem environments
-ms.date: 01/14/2019
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -24,9 +24,9 @@ In the following video, senior program manager Sandeep Deo and product marketing
 
 Azure AD provides two options for company-owned devices to suit your organization's needs:  
 
-- **Azure AD-joined device**: Join your Windows 10 devices to Azure AD without needing to join them to your on-premises Active Directory  
+- **Azure AD-joined device**: Join your Windows 10 or later devices to Azure AD without needing to join them to your on-premises Active Directory  
 
-  - Supports Windows 10
+  - Supports Windows 10 or later
 
   - Set up without requiring any additional configuration to your on-premises environments  
 
@@ -36,11 +36,11 @@ Azure AD provides two options for company-owned devices to suit your organizatio
 
 - **Hybrid Azure AD-joined device**: Join your existing domain-joined devices to Azure AD  
 
-  - Supports Windows 10, Windows 8.1, and Windows 7
+  - Supports Windows 10 or later, Windows 8.1, and Windows 7
 
   - Set up using AD FS claims or Azure AD Connect  
 
-  - For Windows 10 the join happens in the machine context, so users don't have to take extra steps  
+  - For Windows 10 or later, the join happens in the machine context, so users don't have to take extra steps  
 
   - For more information, see [How to plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)  
 
@@ -60,7 +60,7 @@ On devices joined to Azure AD, you get an integrated experience accessing any cl
 
 ### Windows Hello for Business
 
-Windows Hello for Business brings strong password-less authentication to Windows 10. By joining your devices to Azure AD, you can enable Windows Hello for Business across your user base for both cloud and on-premises resources. Windows Hello for Business eliminates the problem of remembering complex passwords or inadvertently exposing them. Its sign-in process is both simple and secure.
+Windows Hello for Business brings strong password-less authentication to Windows. By joining your devices to Azure AD, you can enable Windows Hello for Business across your user base for both cloud and on-premises resources. Windows Hello for Business eliminates the problem of remembering complex passwords or inadvertently exposing them. Its sign-in process is both simple and secure.
 
 For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
@@ -72,7 +72,7 @@ For more information on device-based conditional access, see [How To: Require ma
 
 ### Automatic device licensing
 
-All Windows 10 devices joined to Azure AD go through license checks. These checks enable you to automatically upgrade them from Pro to Enterprise through the Microsoft cloud. When you remove the relevant subscription from the user, the device automatically downgrades its license. This feature provides a single pane of control for managing Windows licenses, without any complicated processes or on-premises systems.
+All Windows devices joined to Azure AD go through license checks. These checks enable you to automatically upgrade them from Pro to Enterprise through the Microsoft cloud. When you remove the relevant subscription from the user, the device automatically downgrades its license. This feature provides a single pane of control for managing Windows licenses, without any complicated processes or on-premises systems.
 
 ### Self-service functionality
 
@@ -92,13 +92,13 @@ Azure AD provides several options to ease your work load, for example:
 
 - Manage all the device identities in your organization from a single place  
 
-- Lower your helpdesk costs by enabling self-service password reset. Then you users can reset your password from the Windows 10 lock screen on your device at any time.  
+- Lower your helpdesk costs by enabling self-service password reset. Then you users can reset your password from the Windows lock screen on your device at any time.  
 
 ## Configure
 
 If you already have an on-premises Active Directory environment, and you want to join your domain-joined devices to Azure AD, configure hybrid Azure AD-joined devices. For more information, [How To: Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-Configuration Manager has a client setting to [Automatically register new Windows 10 domain-joined devices with Azure AD](../core/clients/deploy/about-client-settings.md#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory). For more information on configuring client settings, see [How to configure client settings](../core/clients/deploy/configure-client-settings.md).
+Configuration Manager has a client setting to [Automatically register new Windows 10 or later domain-joined devices with Azure AD](../core/clients/deploy/about-client-settings.md#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory). For more information on configuring client settings, see [How to configure client settings](../core/clients/deploy/configure-client-settings.md).
 
 If you want to configure Azure AD-join for your devices without also joining them to your on-premises domain, review the considerations for Azure AD-join in your environment. Once you decided to go with Azure AD join, you have many options to deploy it based on your organization's needs. For more information, see the following articles:
 
