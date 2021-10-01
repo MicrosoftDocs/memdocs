@@ -72,7 +72,7 @@ Co-management has these prerequisites in the following areas:
 - [Configuration Manager](#configuration-manager)  
 - [Azure Active Directory](#azure-ad) (Azure AD)  
 - [Microsoft Intune](#intune)  
-- [Windows 10 or later](#windows-10)  
+- [Windows](#windows)  
 - [Permissions and roles](#permissions-and-roles)  
 
 ### Licensing
