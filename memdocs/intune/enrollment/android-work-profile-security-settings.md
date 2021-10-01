@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 4/1/2021
+ms.date: 10/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -51,22 +51,19 @@ Level 1 is the recommended minimum security configuration for personal devices w
 
 ### Device compliance
 
+To simplify the table below, only configured settings are listed. Undocumented device restrictions are not configured.
+
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Not configured ||
 | Device Health | Rooted devices | Block ||
-| Device Health | Require the device to be at or under the Device Threat Level | Not configured||
 | Device Health | Google Play Services is configured | Require ||
 | Device Health | Up-to-date security provider | Require ||
 | Device Health | SafetyNet device attestation | Check basic integrity & certified devices | This setting configures Google's SafetyNet Attestation on end-user devices. Basic integrity validates the integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity.<p>Basic integrity and certified devices validates the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. |
-| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 6.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. For Android's latest recommendations, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). |
-| Device Properties | Maximum OS version | Not configured ||
+| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 9.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. For Android's latest recommendations, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). |
 | System Security | Require a password to unlock mobile devices | Require ||
 | System Security | Required password type | Numeric Complex | Organizations may need to update this setting to match their password policy. |
 | System Security | Minimum password length | 6 | Organizations may need to update this setting to match their password policy. |
 | System Security | Maximum minutes of inactivity before password is required| 5 | Organizations may need to update this setting to match their password policy.|
-| System Security | Number of days until password expires| Not configured | Organizations may need to update this setting to match their password policy. |
-| System Security | Number of previous passwords to prevent use | Not configured | Organizations may need to update this setting to match their password policy. |
 | System Security | Encryption of data storage on device | Require ||
 | System Security | Block apps from unknown sources | Block ||
 | System Security | Company Portal app runtime integrity | Require ||
@@ -75,6 +72,8 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md).|
 
 ### Device restrictions
+
+To simplify the table below, only configured settings are listed. Undocumented device restrictions are not configured.
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
@@ -85,9 +84,7 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | Work profile settings | Add and remove accounts | Block ||
 | Work profile settings | Contact sharing via Bluetooth | Enable | By default, access to work contacts is not available on other devices, like automobiles via Bluetooth integration. Enabling this setting improves hands free user experiences. However, the Bluetooth device may cache the contacts upon first connection. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
 | Work profile settings | Screen capture | Block ||
-| Work profile settings | Display work contact caller-id in personal profile | Not configured ||
 | Work profile settings | Search work contacts from personal profile | Not configured | Blocking users from accessing work contacts from the personal profile may impact certain usability scenarios like text messaging and dialer experiences within the personal profile. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
-| Work profile settings | Camera | Not configured ||
 | Work profile settings | Allow widgets from work profile apps | Enable ||
 | Work profile settings | Require Work Profile Password | Require ||
 | Work profile settings | Minimum password length | 6 | Organizations may need to update this setting to match their password policy. |
@@ -96,18 +93,12 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | Work profile settings | Password expiration (days) | Not configured | Organizations may need to update this setting to match their password policy. |
 | Work profile settings | Required password type | Numeric complex ||
 | Work profile settings | Prevent reuse of previous passwords | Not configured | Organizations may need to update this setting to match their password policy.|
-| Work profile settings | Face unlock | Not configured ||
-| Work profile settings | Fingerprint unlock | Not configured ||
-| Work profile settings | Iris unlock | Not configured ||
-| Work profile settings | Smart Lock and other trust agents | Not configured ||
 | Device password | Minimum password length | 6 | Organizations may need to update this setting to match their password policy. |
 | Device password | Maximum minutes of inactivity until screen locks | 5 | Organizations may need to update this setting to match their password policy. |
 | Device password | Number of sign-in failures before wiping device | 10 | This setting triggers a work profile wipe, and not a wipe of the device. |
 | Device password | Password expiration (days) | Not configured | Organizations may need to update this setting to match their password policy. |
 | Device password | Required password type | Numeric complex ||
 | Device password | Prevent reuse of previous passwords | Not configured | Organizations may need to update this setting to match their password policy. |
-| Device password | Fingerprint unlock | Not configured ||
-| Device password | Smart Lock and other trust agents | Not configured ||
 | System Security | Threat scan on apps | Require | This setting ensures that Google's Verify Apps scan is turned on for end user devices. If configured, the end user will be blocked from access until they turn on Google's app scanning on their Android device. |
 | System Security | Prevent app installations from unknown sources in the personal profile | Block ||
 
@@ -129,7 +120,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | ----- | ----- | ----- | ----- |
 | Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both. |
 | Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both.|
-| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 9.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
+| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 11.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
 | System Security | Number of days until password expires | 365 | Organizations may need to update this setting to match their password policy. |
 | System Security | Number of previous passwords to prevent use | 5 | Organizations may need to update this setting to match their password policy. |
 
