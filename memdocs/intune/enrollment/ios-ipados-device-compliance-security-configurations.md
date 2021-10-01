@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 6/01/2021
+ms.date: 10/01/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -44,25 +44,18 @@ Administrators can incorporate the below configuration levels within their ring 
 
 Level 1 is the recommended minimum security configuration for iOS/iPadOS devices where users access work or school data. This configuration is applicable to most mobile users accessing work or school data on a device.
 
+To simplify the table below, only configured settings are listed. Undocumented device restrictions are not configured.
+
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Email | Unable to set up email on the device | Not configured ||
 | Device Health | Jailbroken devices | Block |  |
-| Device Health | Require the device to be at or under the Device Threat Level | Not configured||
-| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 13.7| Microsoft recommends configuring the minimum iOS major version to match the supported iOS versions for Microsoft apps. Microsoft apps support a N-1 approach where N is the current iOS major release version. For minor and build version values, Microsoft recommends ensuring devices are up to date with the respective security updates. For Apple's latest recommendations, see [Apple security updates](https://support.apple.com/HT201222).|
-| Device Properties | Maximum OS version | Not configured |  |
-| Device Properties | Minimum OS build version  | Not configured |  |
-| Device Properties | Maximum OS build version  | Not configured |  |
-| Microsoft Defender for Endpoint | Require the device to be at or under the Device Threat Level | Not configured |  |
+| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 14.8| Microsoft recommends configuring the minimum iOS major version to match the supported iOS versions for Microsoft apps. Microsoft apps support a N-1 approach where N is the current iOS major release version. For minor and build version values, Microsoft recommends ensuring devices are up to date with the respective security updates. For Apple's latest recommendations, see [Apple security updates](https://support.apple.com/HT201222).|
 | System Security | Require a password to unlock mobile devices | Require |  |
 | System Security | Simple passwords | Block |  |
 | System Security | Minimum password length | 6 | Organizations may need to update this setting to match their password policy. |
 | System Security | Required password type | Numeric | Organizations may need to update this setting to match their password policy. |
-| System Security | Number of non-alphanumeric characters in password | Not configured |  |
 | System Security | Maximum minutes after screen lock before password is required | 5 | Organizations may need to update this setting to match their password policy. |
 | System Security | Maximum minutes of inactivity until screen locks | 5 | Organizations may need to update this setting to match their password policy. |
-| System Security | Password expiration (days) | Not configured |  |
-| System Security | Restricted apps | Not configured |  |
 | Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md). |
 
 ## High security (Level 3)
@@ -83,7 +76,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
 | Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<br>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both.|
-| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 14.6| Microsoft recommends configuring the minimum iOS major version to match the supported iOS versions for Microsoft apps. Microsoft apps support a N-1 approach where N is the current iOS major release version. For minor and build version values, Microsoft recommends ensuring devices are up to date with the respective security updates. For Apple's latest recommendations, see [Apple security updates](https://support.apple.com/HT201222).|
+| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 15.0| Microsoft recommends configuring the minimum iOS major version to match the supported iOS versions for Microsoft apps. Microsoft apps support a N-1 approach where N is the current iOS major release version. For minor and build version values, Microsoft recommends ensuring devices are up to date with the respective security updates. For Apple's latest recommendations, see [Apple security updates](https://support.apple.com/HT201222).|
 | Microsoft Defender for Endpoint | Require the device to be at or under the Device Threat Level | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).<br>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both. |
 | System Security | Password expiration (days) | 365 |  |
 | Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md). |
