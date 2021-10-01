@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 09/09/2021
+ms.date: 09/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -134,8 +134,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 - **Windows Embedded POSReady 7** (x86, x64)
 
-- **Windows Embedded Standard 7 with SP1** (x86, x64)
-
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
 The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product's End of Extended Support date.
@@ -175,7 +173,7 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 
 - **Windows 10 Pro** (x86, x64)
 
-- **Windows 10 Pro Enterprise** (x86, x64)
+- **Windows 10 Enterprise** (x86, x64)
 
 - **Windows 10 IoT Enterprise** (x86, x64)
     This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->
