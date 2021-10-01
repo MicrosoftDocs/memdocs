@@ -41,7 +41,7 @@ The User experience blade is available for all devices, including co-managed dev
 
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
-Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
+Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running Windows 10 version 1903 or later Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
   - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
   - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 
