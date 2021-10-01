@@ -134,7 +134,7 @@ To optimize your OS deployments by using multicast, configure a distribution poi
 
 When you capture and restore user state data for side-by-side and refresh deployments, configure a state migration point to store the user state data on another computer.
 
-For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).
+For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point).
 
 For more information about how to capture and restore user state, see [Manage user state](../get-started/manage-user-state.md).
 

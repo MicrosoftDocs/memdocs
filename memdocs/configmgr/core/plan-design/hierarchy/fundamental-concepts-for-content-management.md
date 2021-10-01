@@ -252,7 +252,7 @@ Standard distribution points support a range of configurations and features:
 
 - **BranchCache**, **peer cache**, and **Delivery Optimization** are peer-to-peer technologies to reduce the network bandwidth that's used when you deploy content.  
 
-- There are different configurations for OS deployments, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)**  
+- There are different configurations for OS deployments, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#configuring-distribution-points-to-accept-pxe-requests)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#configure-distribution-points-to-support-multicast)**  
 
 - Options for **mobile devices**  
   
