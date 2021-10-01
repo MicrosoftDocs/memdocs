@@ -35,7 +35,7 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-Whenever an an error or event occurs on your device, it's saved to a document called a _diagnostic log_. These logs contain additional details, and when exported, they can provide your support team with enough information about the event or error to diagnose why it happened. 
+Whenever an an error or event occurs on your device, the details of such events are recorded and saved to a document called a _diagnostic log_. Diagnostic logs can provide your support team with enough information to diagnose and fix problems on your device.  
 
 1. Open the **Settings** app on your device.  
 2. Go to **Accounts** > **Access work or school**.  
@@ -43,8 +43,8 @@ Whenever an an error or event occurs on your device, it's saved to a document ca
 
    ![The "Access work or school screen", which presents the Export option underneath the "Related settings" heading.](./media/w10-export-logs.png)
 
-4. The logs will be saved in **C:\Users\Public\Public Documents\MDMDiagnostics**. Two files will be created: one is the log itself, and the other is a document that allows your admin to review the logs in different programs, like Microsoft Excel. Attach both of these files to an email and send that email to your admin. If you do this more than once, simply choose the files from the day you created the logs. 
+4. Email the logs to your support person. Logs are saved in **C:\Users\Public\Public Documents\MDMDiagnostics**. Two files are created for each log: one is the log itself, and the other is a document that allows your admin to review the logs in different programs, such as Microsoft Excel. Include both files in your email to your support person. 
 
-You may also need to send [logs from the Company Portal app](send-logs-to-your-it-admin-cp-windows.md) to give your company support more help in trying to troubleshoot any issues they may find. 
+You can also [send Company Portal app logs](send-logs-to-your-it-admin-cp-windows.md) to your support person. 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
