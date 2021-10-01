@@ -9,7 +9,7 @@ metadata:
   author: erikjeMS
   ms.author: erikje
   manager: dougeby
-  ms.date: 09/29/2021
+  ms.date: 10/01/2021
 
 highlightedContent:
   items:
@@ -28,12 +28,12 @@ productDirectory:
     # Card
     - title: Windows 365 Enterprise
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./media/winlogo.svg
+      imageSrc: ./media/win365icon.png
       summary: Summary for Enterprise
       url: ./enterprise/index.yml
     # Card
     - title: Windows 365 Business
-      imageSrc: ./media/winlogo.svg
+      imageSrc: ./media/win365icon.png
       summary: Summary for Business
       url: ./business/index.yml
 
