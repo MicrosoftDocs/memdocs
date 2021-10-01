@@ -52,7 +52,7 @@ You must allow traffic in your Azure network configuration to the following serv
 - [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list)
 - rdweb.wvd.microsoft.com
 - rdbroker.wvd.microsoft.com
-- Windows 365 endpoints:
+- Provisioning and on-premises network connection endpoints:
   - cpcsacnrysa1prodprna02.blob.core.windows.net
   - cpcsacnrysa1prodprap01.blob.core.windows.net
   - cpcsacnrysa1prodprau01.blob.core.windows.net
@@ -71,11 +71,18 @@ You must allow traffic in your Azure network configuration to the following serv
   - preu02.prod.cpcgateway.trafficmanager.net
   - prap01.prod.cpcgateway.trafficmanager.net
   - prau01.prod.cpcgateway.trafficmanager.net
+- Cloud PC communication endpoints
   - endpointdiscovery.cmdagent.trafficmanager.net
   - registration.prna01.cmdagent.trafficmanager.net
   - registration.preu01.cmdagent.trafficmanager.net
   - registration.prap01.cmdagent.trafficmanager.net
   - registration.prau01.cmdagent.trafficmanager.net
+- Registration endpoints
+  - login.microsoftonline.com
+  - login.live.com
+  - enterpriseregistration.windows.net
+  - global.azure-devices-provisioning.net (443 & 5671 outbound)
+  - hm-iot-in-*._azure-devices.net (443 & 5671 outbound)
 
 
 
