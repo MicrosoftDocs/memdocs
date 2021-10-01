@@ -32,7 +32,7 @@ ms.reviewer: mattcall
 
 Intune Endpoint security Antivirus policies can help security admins focus on managing the discrete group of antivirus settings for managed devices. To use Antivirus policy, integrate Intune with Microsoft Defender for Endpoint as a Mobile Threat Defense solution.
 
-Antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender for Endpoint antivirus for macOS, Windows 10, or for the user experience in the Windows Security app on Windows 10 devices.
+Antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender for Endpoint antivirus for macOS, Windows 10/11, or for the user experience in the Windows Security app on Windows 10/11 devices.
 
 You'll find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -105,7 +105,7 @@ The following profiles are supported for devices you manage with Intune:
 
 - Platform: **Windows 10 profiles**
 
-  - Profile: **Microsoft Defender Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10.
+  - Profile: **Microsoft Defender Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10/11.
 
     Defender Antivirus is the next-generation protection component of Microsoft Defender for Endpoint. Next-generation protection brings together technologies like machine learning and cloud infrastructure to protect devices in your enterprise organization.
 
@@ -176,9 +176,9 @@ When you select a policy from the list, the *Overview* page for that policy inst
 
 ![Overview page of antivirus policy](./media/endpoint-security-antivirus-policy/policy-overview.png)
 
-### Windows 10 unhealthy endpoints
+### Unhealthy endpoints
 
-On the **Windows 10 unhealthy endpoints** page, you can view information about the antivirus status of your MDM-managed Windows 10 devices. This information is returned from Windows Defender Antivirus that runs on the device, as *Threat agent status*. On this page, select **Columns** to view the full list of details that are available in the report.
+On the **Unhealthy endpoints** page, you can view information about the antivirus status of your MDM-managed Windows devices. This information is returned from Windows Defender Antivirus that runs on the device, as *Threat agent status*. On this page, select **Columns** to view the full list of details that are available in the report.
 
 Only devices with detected issues appear in this view. This view doesn't display details for devices that are identified as clean.
 
