@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 10/01/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
