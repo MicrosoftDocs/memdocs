@@ -153,7 +153,7 @@ For details, see [Task sequence built-in variables](../../../osd/understand/task
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
 You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you are using PXE to meet your specific network requirements.
 
-For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#customize-the-ram-disk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points).
+For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points).
 
 ## Compliance settings
 

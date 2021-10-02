@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-In this article, you'll learn how to create an application with Configuration Manager. In this example, you'll create and deploy the [CMPivot standalone](../../core/servers/manage/includes/cmpivot-standalone.md) installer. For the purposes of this exercise, you'll configure it to only install on devices that are running Windows 11. Along the way, you'll learn about many of the things you can do to manage applications effectively.
+In this article, you'll learn how to create an application with Configuration Manager. In this example, you'll create and deploy the [CMPivot standalone](../../core/servers/manage/cmpivot.md#bkmk_standalone) installer. For the purposes of this exercise, you'll configure it to only install on devices that are running Windows 11. Along the way, you'll learn about many of the things you can do to manage applications effectively.
 
 > [!TIP]
 > The CMPivot standalone source file is in the Configuration Manager installation media or on the site server in the CD.Latest folder. Find it in the following folder: `\SMSSETUP\TOOLS\CMPivot\CMPivot.msi`
