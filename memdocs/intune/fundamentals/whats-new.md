@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 10/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,22 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+
+## Week of October  4, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+##### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623  -->
+
+You can use *Feature updates for Windows 10 and later*
+policy to upgrade devices that meet the Windows 11 minimum requirements to
+Windows 11. It's as easy as configuring a new feature updates policy that
+specifies the available Windows 11 version as the feature update you want to
+deploy. 
+
+For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
+
 ## Week of September 27, 2021 (Service release 2109)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -121,8 +137,13 @@ A new device restrictions setting for corporate-owned work profile devices preve
 - **Block**: Blocks users from sharing work profile contacts via Bluetooth.
 - **Not configured**:  Doesn't enforce any restrictions on the device, so users might be able to share their work profile contacts via Bluetooth.
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
+
+#### Intune now supports iOS/iPadOS 13 and higher<!-- 9964998 -->
+Microsoft Intune, including the Intune Company Portal and Intune app protection policies now requires [iOS/iPadOS 13 and higher](../fundamentals/supported-devices-browsers.md).
+
+#### Intune now supports macOS 10.15 and later<!-- 10154527 -->
+Intune enrollment and the Company Portal now supports [macOS 10.15 and later](../fundamentals/supported-devices-browsers.md). Older versions are not supported.
 
 #### New Android device filtering options<!--7479654  -->
 
@@ -226,6 +247,7 @@ To learn more about active safeguard holds and expectations for their resolution
 #### Update to the Assignment failures operational report<!-- 6473096  -->
 
 [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to the existing **Assignment failures** report. The profile types are differentiated using the **Policy type** column with the ability to filter. Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security Baseline permission, the Device Configuration permission, and the Device Compliance Policies permission. The report shows the number of devices in a state of error and conflict for a given profile, with the ability to drill down into a detailed list of those devices or users and further into the setting details. You can find the **Assignment failures** report in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**, or by selecting **Endpoint Security** > **Monitor**. For more information, see [Assignment failures report (Operational)](../fundamentals/reports.md#assignment-failures-report-operational).
+
 
 <!-- ########################## -->
 ## Week of September 20, 2021

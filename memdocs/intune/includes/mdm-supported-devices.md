@@ -10,9 +10,9 @@ ms.localizationpriority: high
 
 ### Apple
 
-- Apple iOS 12.0 and later
+- Apple iOS 13.0 and later
 - Apple iPadOS 13.0 and later
-- macOS 10.13 and later
+- macOS 10.15 and later
 
 ### Google
 
