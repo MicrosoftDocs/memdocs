@@ -22,7 +22,7 @@ Administrators use the Configuration Manager console to manage the Configuration
 
 The Configuration Manager console is always installed on every site server. You can also install it on other computers. For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md).
 
-The simplest method to open the console on a Windows 10 computer, press **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
+The simplest method to open the console on a Windows computer is to go to **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
 
 If you browse the Start menu, look for the **Configuration Manager console** icon in the **Microsoft Endpoint Manager** group.
 

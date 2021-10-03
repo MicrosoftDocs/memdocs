@@ -28,7 +28,7 @@ There are several infrastructure requirements that must be in place before you c
 
 ### Install a state migration point
 
-If you want to capture settings from an existing computer, and then restore the settings to the new OS, consider using a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+If you want to capture settings from an existing computer, and then restore the settings to the new OS, consider using a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point).  
 
 ## <a name="BKMK_Configure"></a> Configure  
 
