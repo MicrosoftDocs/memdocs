@@ -1,0 +1,18 @@
+items:
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Windows 365
+    tocHref: /windows-365/
+    topicHref: /windows-365/
+    items:
+    - name: Windows 365 Enterprise
+      tocHref: /windows-365/enterprise/
+      topicHref: /windows-365/enterprise/index
+    - name: Windows 365 Enterprise
+      tocHref: /mem/intune/
+      topicHref: /windows-365/enterprise/index
+    - name: Windows 365
+      tocHref: /azure/virtual-desktop/
+      topicHref: /windows-365/index
