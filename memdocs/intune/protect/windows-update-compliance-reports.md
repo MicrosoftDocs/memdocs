@@ -30,33 +30,31 @@ ms.collection: M365-identity-device-management
 
 # Intune compliance reports for updates
 
-With Intune, you can deploy updates to Windows 10 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)  and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
+With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)  and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
 
 - **Reports in Intune**:
-  - **Windows  and later update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
+  - **Windows 10 and later update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
   - **Windows 10 and later feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
 
 - **Update Compliance**:
 
-  [Use Update Compliance with Intune](#use-update-compliance) to monitor Windows 10 update rollouts. Update Compliance is a free service built on Azure Monitor and Log Analytics.
+  [Use Update Compliance with Intune](#use-update-compliance) to monitor Windows update rollouts. Update Compliance is a free service built on Azure Monitor and Log Analytics.
 
 For more information, see [Monitor Windows Updates with Update Compliance](/windows/deployment/update/update-compliance-monitor) in the Windows documentation.
 
 ## Reports for Update rings for Windows 10 and later policy
 
-Intune offers integrated report views for the Windows 10 update ring policies you deploy. These views display details about the update ring deployment and status:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status:
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Overview** > **Software update status**. You can see general information about the status of any update rings you assigned.
-
-3. To view more details, select **Monitor**. Then below **Software updates**, select **Per update ring deployment state** and choose the deployment ring to review.
-
+2. Select **Devices** > **Monitor**. Then under **Software updates** select **Per update ring deployment state** and choose the deployment ring to review. 
+   <!--  Recent update has muddled the locatio of the following 
    In the **Monitor** section, choose from the following reports to view more detailed information about the update ring:
    - **Device status** – View the device configuration status. See [Update deviceConfigurationDeviceStatus](/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0&preserve-view=true).
    - **User status** – View the user name, status, and last report date. See [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0&preserve-view=true).
    - **End-user update status** – View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
-
+    --> 
 ## Reports for Windows 10 and later feature updates policy
 
 *This feature is in preview.*
@@ -83,11 +81,11 @@ Before you can use the feature updates policy reports, you must configure prereq
 
   - Meet the [prerequisites for Windows 10 and later feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Windows 10 and later feature updates with Intune**.
   - Be Azure Active Directory Joined, or Hybrid Azure Active Directory Joined to support submitting of data for  reporting.
-  - Run Windows 10 1903 or later. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
+  - Run Windows 10 1903 or later, or Windows 11. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
 
 ### Configure data collection
 
-The data that powers Intune's Windows feature updates reports isn't collected by the typical device sync with Intune, but through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
+The data that powers Intune's Windows feature updates reports isn't collected by the typical device sync with Intune, but through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10/11 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
 #### Enable data collection
 
@@ -103,11 +101,11 @@ To Configure this setting for your devices, [Create a profile](../configuration/
     
   - In **Configuration Settings**:
    
-       - **Health Monitoring**: Select *Enable* to collect event information from supported Windows 10 devices
+       - **Health Monitoring**: Select *Enable* to collect event information from supported Windows 10/11 devices
     
        - **Scope**: Select *Windows Updates*.
 
-  - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later is supported for these reports.
+  - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later and Windows 11 are supported for these reports.
 
     > [!div class="mx-imgBorder"]
     > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
@@ -301,11 +299,11 @@ The following list identifies Alert Messages, and suggested remediation actions:
 
 ## Use Update Compliance
 
-You can monitor Windows 10 update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-get-started). Update Compliance is offered through the Azure portal and is included as part of Windows 10 licenses listed in the [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Update Compliance data.
+You can monitor Windows update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-get-started). Update Compliance is offered through the Azure portal and is included as part of Windows 10/11 licenses listed in the [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Update Compliance data.
 
 To use this solution, you'll:
 
-- Use an Intune device configuration profile to deploy your [CommercialID](/windows/deployment/update/update-compliance-get-started#get-your-commercialid) to your Windows 10 devices. The CommericalID associates the devices with your Log Analytics workspace.
+- Use an Intune device configuration profile to deploy your [CommercialID](/windows/deployment/update/update-compliance-get-started#get-your-commercialid) to your Windows 10/11 devices. The CommericalID associates the devices with your Log Analytics workspace.
 
 - Optionally deploy a configuration script as a Win32 app to those same devices to validate their configuration for Update Compliance.
 

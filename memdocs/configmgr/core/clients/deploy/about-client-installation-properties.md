@@ -218,7 +218,7 @@ Example: `ccmsetup.exe /noservice`
 
 <!--5686290-->
 
-Starting in version 2002, use this parameter to provide a bulk registration token. An internet-based device uses this token in the registration process through a cloud management gateway (CMG). For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
+Use this parameter to provide a bulk registration token. An internet-based device uses this token in the registration process through a cloud management gateway (CMG). For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
 
 When you use this parameter, also include the following parameters and properties:
 
@@ -343,7 +343,7 @@ Example: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
 
 Specifies the Azure AD tenant identifier. Configuration Manager links to this tenant when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. To get the value for this property, use the following steps:
 
-- On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
+- On a device that runs Windows 10 or later and is joined to the same Azure AD tenant, open a command prompt.
 - Run the following command: `dsregcmd.exe /status`
 - In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -615,12 +615,12 @@ For more information, see [How to configure client status](configure-client-stat
 
 <!--5526972-->
 
-Starting in version 2002, use this property to start a task sequence on a client after it successfully registers with the site.
+Use this property to start a task sequence on a client after it successfully registers with the site.
 
 > [!NOTE]
 > If the task sequence installs software updates or applications, clients need a valid client authentication certificate. Token authentication alone doesn't work. For more information, see [Release notes - OS deployment](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
 
-For example, you provision a new Windows 10 device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
+For example, you provision a new Windows device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
 
 Use the following process:
 

@@ -75,7 +75,7 @@ To store the user state data locally, [create a task sequence to capture and res
 
 The state migration point stores user state data. The task sequence captures it from one computer and then restores it on another computer. When you capture user settings for an OS deployment on the same computer, you can store the data on the same computer by using hard-links or you can use a state migration point. For some deployments, when you create the state store, Configuration Manager automatically creates an association between the state store and the destination computer.
 
-For more information about the state migration point and the steps to configure it, see [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).
+For more information about the state migration point and the steps to configure it, see [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point).
 
 ## Computer associations
 
@@ -112,6 +112,6 @@ If the OS deployment fails, use the USMT 10.0 LoadState tool to manually get the
 
 ## Next steps
 
-[State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)
+[State migration point](prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point)
 
 [Create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)

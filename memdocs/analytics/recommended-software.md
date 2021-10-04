@@ -2,7 +2,7 @@
 title: Recommended software in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about recommended software in Endpoint Analytics
-ms.date: 09/22/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -14,26 +14,26 @@ ms.localizationpriority: high
 
 # <a name="bkmk_rs"></a> Recommended software
 
-Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
+Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, currently supported versions of Windows have a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
 [![Endpoint analytics Recommended software page](media/recommended-software.png)](media/recommended-software.png#lightbox)
 
 > [!Important]  
 > Endpoint Analytics computes the **Software adoption** score for all your Intune and co-managed devices, regardless of whether they've been configured with the [Intune data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr.md#bkmk_cm_enroll).
 
-## <a name="bkmk_win10"></a> Windows 10
+## <a name="bkmk_win10"></a> Windows 10 and later
 
-Windows 10 provides a better user experience than older versions of Windows. For more information, see the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
+Supported versions of Windows provide a better user experience than older versions of Windows. For more information, see the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
 
-This metric measures the percent of devices on Windows 10 versus an older version of Windows.
+This metric measures the percent of devices on Windows 10 or later versus an older version of Windows.
 
 The recommended remediation action for moving devices from older versions of Windows is to create a deployment plan using [Desktop Analytics](../configmgr/desktop-analytics/overview.md).
 
 ## <a name="bkmk_ap"></a> Autopilot
 
-Microsoft Autopilot provides a simpler initial provisioning experience for Windows 10 PCs than the native experience by reducing the number of screens in the Out Of Box Experience (OOBE) and providing defaults, to ensure the employees device is correctly provisioning from the factory or on reset.
+Microsoft Autopilot provides a simpler initial provisioning experience for Windows PCs than the native experience by reducing the number of screens in the Out Of Box Experience (OOBE) and providing defaults, to ensure the employees device is correctly provisioning from the factory or on reset.
 
-This metric measures the percent of Windows 10 devices that are registered for Autopilot.
+This metric measures the percent of Windows 10 or later devices that are registered for Autopilot.
 
 The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](../autopilot/enrollment-autopilot.md).
 

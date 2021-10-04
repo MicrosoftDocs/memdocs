@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/14/2021
+ms.date: 10/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -71,7 +71,7 @@ Default restrictions are automatically provided for both device type and device 
      Supported version formats include:
     - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
     - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
-    - Windows supports major.minor.build.rev for Windows 10 only.
+    - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
     
     > [!IMPORTANT]
     > Android Enterprise work profile and Android device administrator platforms have the following behavior:
@@ -82,7 +82,7 @@ Default restrictions are automatically provided for both device type and device 
     > Worth noting that neither work profile or device administrator enrollment will work unless the appropriate prequisites have been completed in Android Enrollment. 
     
    > [!Note]
-   > Windows 10 does not provide the rev number during enrollment so for instance if you enter in 10.0.17134.100 and the device is 10.0.17134.174 it will be blocked during enrollment.
+   > Windows 10 and Windows 11 do not provide the rev number during enrollment, so for example, if you enter in 10.0.17134.100, and the device is 10.0.17134.174, it will be blocked during enrollment.  
 
 6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.

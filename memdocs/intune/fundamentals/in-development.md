@@ -5,8 +5,8 @@ title: In development - Microsoft Intune
 titleSuffix: 
 description: Microsoft Intune features in development
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: dougeby 
+ms.author: dougeby
 manager: dougeby
 ms.date: 10/1/2021
 ms.topic: conceptual

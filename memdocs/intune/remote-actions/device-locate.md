@@ -48,6 +48,7 @@ In addition to identifying the location a lost or stolen device on a map, some p
   - Version 2004 (10.0.19041.789) or later
   - Version 1909 (10.0.18363.1350) or later
   - Version 1809 (10.0.17763.1728) or later
+- **Windows 11**
 
 **Lost mode sound alert** – The following platforms support this capability:
 

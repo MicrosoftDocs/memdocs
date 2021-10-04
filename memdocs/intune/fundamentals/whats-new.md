@@ -4,8 +4,8 @@ title: What's new in Microsoft Intune
 titleSuffix:
 description: Find out what's new in the Intune Azure portal
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 10/04/2021
 ms.topic: reference
@@ -68,6 +68,16 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 Intune will no longer display a Wi-Fi MAC address for Android Enterprise newly enrolled personally-owned work profile devices and devices managed with device administrator running Android 9 and above. Google is requiring all app updates to target [API 30 by November 2021](https://developer.android.com/distribute/play-policies#APILevel30). With this change, Android prevents apps from collecting the MAC address used by the device. For related information, see [Hardware device details](../remote-actions/device-inventory.md#hardware-device-details).
 
 <!-- ########################## -->
+#### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623  -->
+
+You can use *Feature updates for Windows 10 and later*
+policy to upgrade devices that meet the Windows 11 minimum requirements to
+Windows 11. It's as easy as configuring a new feature updates policy that
+specifies the available Windows 11 version as the feature update you want to
+deploy. 
+
+For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
+
 ## Week of September 27, 2021 (Service release 2109)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -130,7 +140,6 @@ A new device restrictions setting for corporate-owned work profile devices preve
 - **Block**: Blocks users from sharing work profile contacts via Bluetooth.
 - **Not configured**:  Doesn't enforce any restrictions on the device, so users might be able to share their work profile contacts via Bluetooth.
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Intune now supports iOS/iPadOS 13 and higher<!-- 9964998 -->
@@ -241,6 +250,7 @@ To learn more about active safeguard holds and expectations for their resolution
 #### Update to the Assignment failures operational report<!-- 6473096  -->
 
 [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to the existing **Assignment failures** report. The profile types are differentiated using the **Policy type** column with the ability to filter. Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security Baseline permission, the Device Configuration permission, and the Device Compliance Policies permission. The report shows the number of devices in a state of error and conflict for a given profile, with the ability to drill down into a detailed list of those devices or users and further into the setting details. You can find the **Assignment failures** report in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**, or by selecting **Endpoint Security** > **Monitor**. For more information, see [Assignment failures report (Operational)](../fundamentals/reports.md#assignment-failures-report-operational).
+
 
 <!-- ########################## -->
 ## Week of September 20, 2021
@@ -475,7 +485,7 @@ All device configuration and endpoint security profiles are now merged into one 
 
 #### New details for the Intune antivirus reports<!-- 8504648   -->
 
-We've added two new columns of detail to both the [Windows 10 unhealthy endpoints](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints) report and the [Antivirus agent status](../fundamentals/reports.md#antivirus-agent-status-report-organizational) report.
+We've added two new columns of detail to both the [Windows 10 unhealthy endpoints](../protect/endpoint-security-antivirus-policy.md#unhealthy-endpoints) report and the [Antivirus agent status](../fundamentals/reports.md#antivirus-agent-status-report-organizational) report.
 
 The new details include:
 
