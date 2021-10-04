@@ -116,12 +116,26 @@ additionalContent:
   sections:
     - title: Additional resources related to Windows 365
       items:
+      - title: Windows client for IT Pros
+        links:
+          - text: Windows client for IT Pros documentation
+            url: /windows/resources/
+          - text: Deploy and update Windows client
+            url: /windows/deployment/
+          - text: Configure Windows client
+            url: /windows/configuration            
+          - text: Windows blogs
+            url: https://blogs.windows.com/  
       - title: Microsoft Endpoint Manager
-        links: 
-        - text: Microsoft Endpoint Manager overview
-          url: /mem/endpoint-manager-overview
-        - text: Explore Microsoft Intune, a complete MDM tool
-          url: /mem/intune/
+        links:
+          - text: Microsoft Endpoint Manager documentation
+            url: /mem/index
+          - text: Overview of Microsoft Endpoint Manager
+            url: /mem/endpoint-manager-overview
+          - text: Getting started with Microsoft Endpoint Manager
+            url: /mem/endpoint-manager-getting-started
+          - text: Microsoft Endpoint Manager blog
+            url: https://aka.ms/memblog
       - title: Microsoft 365
         links: 
         - text: Explore Microsoft 365, a complete solution that includes Intune
