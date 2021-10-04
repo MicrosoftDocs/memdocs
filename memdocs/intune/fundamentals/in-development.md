@@ -12,7 +12,6 @@ ms.date: 10/1/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.assetid:
 
 # optional metadata
 
