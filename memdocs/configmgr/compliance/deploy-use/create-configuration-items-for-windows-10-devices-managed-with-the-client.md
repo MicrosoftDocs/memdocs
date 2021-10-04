@@ -14,12 +14,12 @@ ms.localizationpriority: medium
 
 # Create configuration items for Windows 10 or later devices
 
-Use the Configuration Manager **Windows 10** configuration item to manage settings for Windows 10 or later computers that are managed by the Configuration Manager client.  
+Use the Configuration Manager **Windows 10 or later** configuration item to manage settings for Windows 10 or later computers that are managed by the Configuration Manager client.  
   
 > [!IMPORTANT]  
->  In this release, if you created a **Password** setting as part of a configuration item of the type **Windows 10** (for a device managed with the Configuration Manager client), be aware of the following problem. If the setting doesn't already exist, or hasn't been configured on the Windows 10 device, it will incorrectly evaluate as compliant.  
+>  In this release, if you created a **Password** setting as part of a configuration item of the type **Windows 10 or later** (for a device managed with the Configuration Manager client), be aware of the following problem. If the setting doesn't already exist, or hasn't been configured on the Windows 10 or later device, it will incorrectly evaluate as compliant.  
 >   
->  As a workaround, when you create a setting for these devices, ensure that **Remediate noncompliant settings** is selected on the settings pages of the Create Configuration Item wizard. In addition, when you deploy a configuration baseline containing a Windows 10 configuration item containing password settings, select **Remediate noncompliant rules when supported**. You make this selection in the Deploy Configuration Baselines dialog box. By using this workaround, the setting is monitored, and remediated if it's found to be noncompliant. After remediation, the setting is correctly reported as **Compliant** (unless a problem is encountered, in which case it will report **Error**).  
+>  As a workaround, when you create a setting for these devices, ensure that **Remediate noncompliant settings** is selected on the settings pages of the Create Configuration Item wizard. In addition, when you deploy a configuration baseline containing a Windows 10 or later configuration item containing password settings, select **Remediate noncompliant rules when supported**. You make this selection in the Deploy Configuration Baselines dialog box. By using this workaround, the setting is monitored, and remediated if it's found to be noncompliant. After remediation, the setting is correctly reported as **Compliant** (unless a problem is encountered, in which case it will report **Error**).  
   
 ### To create a Windows 10 or later configuration item  
   
@@ -31,7 +31,7 @@ Use the Configuration Manager **Windows 10** configuration item to manage settin
   
 4. On the **General** page of the **Create Configuration Item** wizard, specify a name and optional description for the configuration item.  
   
-5. Under **Specify the type of configuration item that you want to create**, select **Windows 10**.  
+5. Under **Specify the type of configuration item that you want to create**, select **Windows 10 or later**.  
   
 6. If you create and assign categories to help you search and filter configuration items in the Configuration Manager console, select **Categories**.  
   
@@ -65,7 +65,7 @@ Use the Configuration Manager **Windows 10** configuration item to manage settin
   
     You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-## <a name="BKMK_Ref"></a> Windows 10 and later configuration item settings reference  
+## <a name="BKMK_Ref"></a> Windows 10 or later configuration item settings reference  
   
 ### Password  
   
