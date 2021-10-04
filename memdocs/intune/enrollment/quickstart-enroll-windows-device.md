@@ -28,13 +28,13 @@ ms.custom: intune
 ms.collection: M365-identity-device-management
 ---
 
-# Quickstart: Enroll your Windows 10/11 device  
+# Quickstart: Enroll your Windows device  
 
 **Applies to**
 - Windows 10 
 - Windows 11 
 
-In this quickstart, you'll first take the role of an Intune user and enroll your Windows 10/11 device into Microsoft Intune. Then, you'll return to Intune and confirm the device enrolled.
+In this quickstart, you'll first take the role of an Intune user and enroll a device running Windows 10/11 into Microsoft Intune. Then you'll return to Intune and confirm that the device enrolled.  
 
 Enrolling your devices into Microsoft Intune allows you to access your organization's secure data, including email, files, and other resources, from your Windows device. This is true for both devices running Windows 10/11 devices (including desktop) and Windows 10 Mobile devices. Enrolling your devices helps secure this access for both you and your organization, and helps keep your work data separate from your personal data. 
 
@@ -50,7 +50,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Confirm Windows version  
 
-Before enrolling your Windows 10/11 desktop, you must confirm the version of Windows that you have installed.
+Before enrolling your Windows device, you must confirm the version of Windows that you have installed.
 
 1. Right-click the Windows **Start** icon and select **Settings** to display Windows Settings options.
 
@@ -68,7 +68,7 @@ Before enrolling your Windows 10/11 desktop, you must confirm the version of Win
 4. Confirm that the Windows **Version** is Windows 10 (version 1607 or later) or Windows 11 (version 21H2 or later). 
 
     > [!IMPORTANT]
-    > The steps presented in this quickstart are for Windows 10 (version 1607 or higher) or Windows 11 (version 21H2 or later). If your version is 1511 or earlier, continue with [these steps](../user-help/enroll-windows-10-device.md).  
+    > The steps presented in this quickstart are for Windows 10 (version 1607 or higher) or Windows 11 (version 21H2 or later). If your version is 1511 or earlier, see [Enroll device running Windows 10, version 1511 and earlier](../user-help/enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## Enroll Windows 10/11 desktop
 
