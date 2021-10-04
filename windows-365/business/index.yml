@@ -26,22 +26,14 @@ additionalContent:
   sections:
     - title: Additional resources related to Windows 365
       items:
-      - title: Microsoft Endpoint Manager
-        links: 
-        - text: Microsoft Endpoint Manager overview
-          url: /mem/endpoint-manager-overview
-        - text: Explore Microsoft Intune, a complete MDM tool
-          url: /mem/intune/
       - title: Microsoft 365
         links: 
         - text: Explore Microsoft 365, a complete solution that includes Intune
           url: /microsoft-365/
-        - text: Microsoft 365 Enterprise documentation
-          url: /microsoft-365/enterprise/
-        - text: Microsoft 365 Enterprise foundation infrastructure
-          url: /microsoft-365/enterprise/deploy-foundation-infrastructure
-        - text: For MSPs, Microsoft 365 Lighthouse Cloud PC management
-          url: /microsoft-365/lighthouse/m365-lighthouse-win365-page-overview
+        - text: Set up Microsoft Business Standard
+          url: /microsoft-365/admin/setup/setup-business-standard
+        - text: Set up Microsoft Business Premium
+          url: /microsoft-365/admin/setup/setup-business-standard
       - title: Azure Active Directory
         links: 
         - text: User management documentation

@@ -13,7 +13,7 @@ metadata:
 
 highlightedContent:
   items:
-    - title: What is Windows 365?
+    - title: What is Windows 365 Enterprise?
       itemType: overview
       url: overview.md
     - title: Planning your Windows 365 deployment
