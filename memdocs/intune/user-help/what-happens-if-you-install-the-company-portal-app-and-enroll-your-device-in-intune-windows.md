@@ -2,12 +2,12 @@
 # required metadata
 
 title: About Windows device enrollment - Microsoft Intune  | Microsoft Docs
-description: Describes what happens to your device and access after you've enrolled your device in Intune. 
+description: Describes what happens after you enroll your device in Intune.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/04/2021
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,6 +31,12 @@ ms.collection:
 
 
 # About Windows device enrollment with Intune Company Portal  
+
+**Applies to**
+- Windows 10  
+- Windows 11  
+- Windows 8.1  
+- Windows 8.1 RT  
 
 By enrolling your device in Intune, you get secure access to work or school apps on your mobile device, and access to apps in Intune Company Portal. The Company Portal app also monitors your device settings to make sure they meet your organization's requirements and syncs things (like apps, policies, and updates) from your organization to your device. 
 
@@ -90,6 +96,6 @@ Every eight hours, enrolled devices will sync with Intune to get the latest upda
 
 ## Next steps  
 
-* When you're ready to install Company Portal and enroll your device, see [Enroll Windows 10 device](enroll-windows-10-device.md) or [Enroll Windows 8.1 or Windows RT 8.1 device](enroll-your-w81-or-rt81-windows.md). 
+* When you're ready to install Company Portal and enroll your device, see [Enroll Windows 10/11 device](enroll-windows-10-device.md) or [Enroll Windows 8.1 or Windows RT 8.1 device](enroll-your-w81-or-rt81-windows.md). 
 
 * Need additional support? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

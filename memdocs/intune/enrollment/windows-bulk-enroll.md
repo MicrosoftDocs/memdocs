@@ -1,12 +1,12 @@
 ---
-title: Bulk enrollment for Windows 10
+title: Bulk enrollment for Windows devices  
 titleSuffix: Microsoft Intune
 description: Create a bulk enrollment package for Microsoft Intune
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 10/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,7 +26,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
-# Bulk enrollment for Windows devices
+# Bulk enrollment for Windows devices  
+
+**Applies to**  
+- Windows 10  
+- Windows 11  
 
 As an administrator, you can join large numbers of new Windows devices to Azure Active Directory and Intune. To bulk enroll devices for your Azure AD tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Azure AD tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Azure AD users to sign in.
 
@@ -37,7 +41,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 
 ## Prerequisites for Windows devices bulk enrollment
 
-- Devices running Windows 10 Creator update (build 1709) or later
+- Devices running Windows 11 or Windows 10 Creator update (build 1709) or later  
 - [Windows automatic enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## Create a provisioning package
@@ -105,6 +109,6 @@ You can check for success/failure of the settings in your package in the **Provi
 
 When not using an open network, you must use [device-level certificates](../protect/certificates-configure.md) to initiate connections. Bulk enrolled devices are unable to use to user-targeted certificates for network access. 
 
-### Conditional Access
+### Conditional access
 
-Conditional Access is available for Windows 10 1803+ devices enrolled using bulk enrollment.
+Conditional access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.  
