@@ -145,9 +145,9 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
 
-## Windows 10/11 auto enrollment and device registration
+## Windows auto enrollment and device registration  
 
-This section applies to US government cloud customers.
+This section applies to US government cloud customers on devices running Windows 10 or Windows 11.  
 
 Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.us.
 
