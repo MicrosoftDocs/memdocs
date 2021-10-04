@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/22/2021
+ms.date: 10/04/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -30,13 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Compare Windows 365 Business and Enterprise
 
-Windows 365 is available in two editions: [Windows 365 Business](https://www.microsoft.com/windows-365/business) and [Windows 365 Enterprise](https://www.microsoft.com/windows-365/enterprise).
+Windows 365 is available in two editions: [Windows 365 Business](/windows-365/business) and [Windows 365 Enterprise](/windows-365/enterprise).
 
 ## General comparisons
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Domain Join | Azure AD without Azure Virtual Network (VNet) support. | Hybrid Azure AD with VNet support.<br>For other domain support, see [In development for Windows 365 Enterprise](in-development.md). |
+| Domain Join | Azure AD without Azure Virtual Network (VNet) support. | Hybrid Azure AD with VNet support.<br>For other domain support, see [In development for Windows 365 Enterprise](/windows-365/enterprise/in-development). |
 
 ## Purchasing and licensing comparisons
 
@@ -45,7 +45,7 @@ Windows 365 is available in two editions: [Windows 365 Business](https://www.mic
 | Purchase channels | Web direct, self-service, Cloud Solution Provider (CSP). | Web direct, Enterprise Agreements (EA), CSP. |
 | License assignment | Microsoft 365 Admin Center or the Azure AD portal. | Microsoft 365 Admin Center. |
 | Licensing requirements | No licensing pre-requirements to buy and deploy Windows 365 Business. Other features (like device management) can be used if users are licensed for Microsoft Endpoint Management.| Each user must be licensed for Windows 10 or 11 Enterprise (when available), Microsoft Endpoint Manager, and Azure AD P1. |
-| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>- 2 GB RAM = 12 GB outbound data<br>- 4 or 8 GB RAM = 20 GB outbound data<br>- 16 GB RAM = 40 GB outbound data<br>- 32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. 
+| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>- 2 GB RAM = 12 GB outbound data<br>- 4 or 8 GB RAM = 20 GB outbound data<br>- 16 GB RAM = 40 GB outbound data<br>- 32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs.
 | Seat limits | Capped to 300 seats per tenant. [Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/Windows365/MOSA) | No seat cap per tenant. [Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/Windows365/MOSA) |
 
 ## Administrative comparisons
@@ -65,7 +65,7 @@ Windows 365 is available in two editions: [Windows 365 Business](https://www.mic
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Management | Users can [restart, reset, rename, and troubleshoot](/microsoft-365/admin/setup/get-started-windows-365-business#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](end-user-access-cloud-pc.md) their Cloud PCs on the Windows 365 homepage. |
+| Management | Users can [restart, reset, rename, and troubleshoot](/windows-365/business/get-started-windows-365-business#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](end-user-access-cloud-pc.md) their Cloud PCs on the Windows 365 homepage. |
 | Role | By default, each user is assigned the Local Administrator role on their Cloud PC. This supports the native installation of Win32 apps. This can't be changed by the Global Administrator. | By default, each user i assigned a standard user role on their Cloud PC. This can be changed by the admin in the Microsoft Endpoint Manager admin center.|
 | Access | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. |
 | Platform | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  |
@@ -88,6 +88,6 @@ Windows 365 is available in two editions: [Windows 365 Business](https://www.mic
 <!-- ########################## -->
 ## Next steps
 
-For more information about Windows 365 Enterprise, see [What is Windows 365 Enterprise?](overview.md).
+For more information about Windows 365 Enterprise, see [What is Windows 365 Enterprise?](/windows-365/enterprise/overview).
 
-For more information about Windows 365 Business, see [Getting started with Windows 365 Business and Cloud PCs](/en-us/microsoft-365/admin/setup/get-started-windows-365-business).
+For more information about Windows 365 Business, see [Getting started with Windows 365 Business and Cloud PCs](/windows-365/business/get-started-windows-365-business).
