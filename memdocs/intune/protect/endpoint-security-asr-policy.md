@@ -30,11 +30,11 @@ ms.reviewer: mattcall
 
 # Attack surface reduction policy for endpoint security in Intune
 
-When Defender antivirus is in use on your Windows 10 devices, you can use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
+When Defender antivirus is in use on your Windows 10/11 devices, you can use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 
 Attack surface reduction policies help reduce your attack surfaces, by minimizing the places where your organization is vulnerable to cyberthreats and attacks. For more information, see [Overview of attack surface reduction]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
-Find the endpoint security policies for attack surface reduction under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each attack surface reduction *profile* manages settings for a specific area of a Windows 10 device.
+Find the endpoint security policies for attack surface reduction under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each attack surface reduction *profile* manages settings for a specific area of a Windows 10/11 device.
 
 View [settings for Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).
 
@@ -42,7 +42,7 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
 
 **General**:
 
-- Windows 10 or later
+- Windows 10 or Windows 11
 - Defender antivirus must be the primary antivirus on the device
 
 **Support for Configuration Manager clients**:
@@ -57,7 +57,7 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
 
 ### Devices managed by Intune
 
-**Windows 10 profiles**:
+**Windows 10/11 profiles**:
 
 - **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
 
