@@ -1,11 +1,11 @@
 ---
-title: Install and configure the Microsoft Tunnel VPN solution for Microsoft Intune
-description: Install and configure the Microsoft Tunnel Gateway, a VPN server that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
+title: Install and configure Microsoft Tunnel VPN solution for Microsoft Intune
+description: Install and configure Microsoft Tunnel Gateway, a VPN server that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 10/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-Configuration of the Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process. The process includes use of the Microsoft Endpoint Manager admin center, and running a script to install the tunnel software on a Linux server, which must run Docker. While this article walks you through the steps to configure the Microsoft Tunnel for use, configuration of Linux and Docker is beyond the scope of this content.
+Configuration of Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process. The process includes use of the Microsoft Endpoint Manager admin center, and running a script to install the tunnel software on a Linux server, which must run Docker. While this article walks you through the steps to configure the Microsoft Tunnel for use, configuration of Linux and Docker is beyond the scope of this content.
 
 When installing the Microsoft Tunnel, you’ll start in the Microsoft Endpoint Manager admin center to define both Servers and Sites. Then, you run the tunnel installation script on a Linux server that has Docker installed. The script installs containers to support the tunnel server, pulls information from Intune about the tunnel Sites you’ve defined for your tenant, and then installs the Tunnel server. The Linux server can run on-premises or in the cloud. Depending on your environment and infrastructure, extra configurations and software, like Azure ExpressRoute, might be needed.
 
@@ -197,9 +197,9 @@ To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client ap
 
   - **Microsoft Tunnel** client app -  For iOS/iPadOS, download the **Microsoft Tunnel** client app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
 
-  - A preview version of **Microsoft Defender for Endpoint** that supports Microsoft Tunnel capabilities – Available through an opt-in public preview, you can use a preview version of Microsoft Defender for Endpoint as the Tunnel client app on iOS/iPadOS devices.
+  - A preview version of **Microsoft Defender for Endpoint** that supports Microsoft Tunnel capabilities – Available through a public preview, you can use a preview version of Microsoft Defender for Endpoint as the Tunnel client app on iOS/iPadOS devices.
 
-    For this preview, after a tenant administrator opts in, each device user must download and install the Defender for Endpoint app from the Apple TestFlight website, which requires use of their Apple ID. Eventually, Defender for Endpoint will replace the Microsoft Tunnel client app as the Tunnel client app. You can add new devices to the preview, or [migrate](../protect/microsoft-tunnel-migrate-app.md) devices from the current client app to the preview version of Defender for Endpoint.
+    For this preview, each device user must download and install the Defender for Endpoint app from the Apple TestFlight website, which requires use of their Apple ID. Eventually, Defender for Endpoint will replace the Microsoft Tunnel client app as the Tunnel client app. You can add new devices to the preview, or [migrate](../protect/microsoft-tunnel-migrate-app.md) devices from the current client app to the preview version of Defender for Endpoint.
 
     For more information about the opt-in preview, see [BLOG](url).
 
@@ -217,11 +217,12 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
     > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
 
   The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
+
 - **iOS/iPadOS**:
 
   - **Microsoft Tunnel (standalone client)** – Use this connection type when you use the standalone Microsoft Tunnel client app. This connection type doesn’t support Microsoft Defender for Endpoint as the client Tunnel app.
   
-  - **Microsoft Tunnel (preview)** – Use this connection type when you use the preview version of Microsoft Defender for Endpoint as part of the opt-in public preview. This connection type doesn’t support the standalone Microsoft Tunnel client app.
+  - **Microsoft Tunnel (preview)** – Use this connection type when you use the preview version of Microsoft Defender for Endpoint as part of the public preview. This connection type doesn’t support the standalone Microsoft Tunnel client app.
 
   The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you enable a per-app VPN for iOS, your split tunneling rules are ignored.
 
@@ -240,7 +241,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
-     - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
+     - For *Microsoft Tunnel Site*, select the Tunnel site that this VPN profile will use.
 
    - **Per-app VPN**:  
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
@@ -275,7 +276,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For Connection type,* select **Microsoft Tunnel (standalone client)** if you use the standalone client app, or select **Microsoft Tunnel (preview)** if you’ve opted into the public preview and use a preview version of Defender for Endpoint as the tunnel client app.
+4. For Connection type,* select **Microsoft Tunnel (standalone client)** if you use the standalone client app, or select **Microsoft Tunnel (preview)** if you use a preview version of Defender for Endpoint as the tunnel client app.
 
 5. Configure the following items:
 

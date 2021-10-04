@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 10/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -117,20 +117,20 @@ You can create VPN profiles using the following connection types:
 - L2TP
   - Windows 10
 
-- Microsoft Tunnel (standalone client)
+- Microsoft Tunnel (standalone client)(preview)
   - iOS/iPadOS  
 
 - Microsoft Tunnel  
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
-  - iOS/iPadOS – As part of a public preview, iOS/iPadOS supports a connection type of *Microsoft Tunnel (preview)*. To use this connection type, you must opt-in to the public preview to gain access to the preview version of Microsoft Defender for Endpoint that supports Tunnel on this platform.
+  - Android Enterprise personally owned devices with a work profile.
+  - Android Enterprise fully managed and corporate-owned work profile.
+  - iOS/iPadOS – As part of a public preview, iOS/iPadOS supports a connection type of *Microsoft Tunnel (preview)*. To use this connection type, you must use the preview version of Microsoft Defender for Endpoint that supports Tunnel on this platform.
 
   > [!Important]
   > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, Microsoft Tunnel used a standalone tunnel client app and a connection type of **Microsoft Tunnel (standalone client)**.
   >
   > For Android, as of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
   >
-  > For iOS/iPadOS, the standalone client app and connection type remain in support while use of Microsoft Defender for Endpoint as the client app with the Microsoft Tunnel connection type are in public preview. 
+  > For iOS/iPadOS, the standalone client app and connection type remain in support while use of Microsoft Defender for Endpoint as the client app with the Microsoft Tunnel connection type are in public preview.
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile
