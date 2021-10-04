@@ -31,7 +31,7 @@ items:
       href: deploy-use/create-configuration-items.md
     - name: Devices managed with the Configuration Manager client
       items:
-      - name: Windows 10
+      - name: Windows 10 and later
         href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
       - name: macOS X
         href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md

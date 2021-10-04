@@ -42,7 +42,7 @@ landingContent:
         links:
           - text: Common tasks for managing compliance
             url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
-          - text: Create configuration items for Windows 10 devices
+          - text: Create configuration items for Windows 10 and later devices
             url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
           - text: Create configuration baselines
             url: deploy-use/create-configuration-baselines.md
