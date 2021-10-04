@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Settings for the Windows Security experience profile in Microsoft Intune
 
-View the Antivirus policy settings you can configure for the **Windows Security Experience** profile for /11 in Microsoft Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+View the Antivirus policy settings you can configure for the **Windows Security Experience** profile for Windows 10/11 in Microsoft Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
 **Windows Security**
 
