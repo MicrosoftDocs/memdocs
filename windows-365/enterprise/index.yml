@@ -122,17 +122,16 @@ additionalContent:
             url: /windows/resources/
           - text: Deploy and update Windows client
             url: /windows/deployment/
+          - text: Configure Windows client
+            url: /windows/configuration            
           - text: Windows blogs
             url: https://blogs.windows.com/  
-          - 
       - title: Microsoft Endpoint Manager
         links:
           - text: Microsoft Endpoint Manager documentation
             url: /mem/index
           - text: Overview of Microsoft Endpoint Manager
             url: /mem/endpoint-manager-overview
-          - text: Configure Windows client
-            url: /windows/configuration/
           - text: Getting started with Microsoft Endpoint Manager
             url: /mem/endpoint-manager-getting-started
           - text: Microsoft Endpoint Manager blog
