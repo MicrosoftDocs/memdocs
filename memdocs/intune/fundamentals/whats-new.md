@@ -460,7 +460,7 @@ All device configuration and endpoint security profiles are now merged into one 
 
 #### New details for the Intune antivirus reports<!-- 8504648   -->
 
-We've added two new columns of detail to both the [Windows 10 unhealthy endpoints](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints) report and the [Antivirus agent status](../fundamentals/reports.md#antivirus-agent-status-report-organizational) report.
+We've added two new columns of detail to both the [Windows 10 unhealthy endpoints](../protect/endpoint-security-antivirus-policy.md#windows-unhealthy-endpoints) report and the [Antivirus agent status](../fundamentals/reports.md#antivirus-agent-status-report-organizational) report.
 
 The new details include:
 
