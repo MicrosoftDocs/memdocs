@@ -26,7 +26,7 @@ In the following video, Microsoft corporate vice president Brad Anderson introdu
 
 | Immediate value | Getting started |
 |-----------------|-----------------|
-| - [Conditional access](#bkmk_ca)<br> - [Remote actions from Intune](#bkmk_remote)<br> - [Client health](#bkmk_client-health)<br> - [Hybrid Azure AD](#bkmk_hybrid-aad)<br> - [Windows Autopilot](#bkmk_autopilot) | - [Paths to co-management](#bkmk_paths)<br> - [Set up hybrid Azure AD](#bkmk_setup-hybrid-aad)<br> - [Upgrade to Windows 10](#bkmk_upgrade-win10)<br> - [Get help from FastTrack](#bkmk_fasttrack) |
+| - [Conditional access](#bkmk_ca)<br> - [Remote actions from Intune](#bkmk_remote)<br> - [Client health](#bkmk_client-health)<br> - [Hybrid Azure AD](#bkmk_hybrid-aad)<br> - [Windows Autopilot](#bkmk_autopilot) | - [Paths to co-management](#bkmk_paths)<br> - [Set up hybrid Azure AD](#bkmk_setup-hybrid-aad)<br> - [Upgrade Windows](#bkmk_upgrade-win10)<br> - [Get help from FastTrack](#bkmk_fasttrack) |
 
 ## Immediate value
 
@@ -45,6 +45,6 @@ If you want to enable co-management, start here to unblock the technical concern
 |Title |Description |Link |
 |-|-|-|
 | <a name="bkmk_paths"></a>**Paths to co-management** | There are two primary ways for you to set up co-management, and it's important to understand the prerequisites for each path.  Each path requires some combination of Azure AD, ConfigMgr, Intune, and Windows client. | [Learn more about paths to co-management](quickstart-paths.md) |
-| <a name="bkmk_setup-hybrid-aad"></a>**Set up hybrid Azure AD** | If your environment currently has domain-joined Windows 10 devices, set up hybrid Azure AD before you can enable co-management | [![Thumbnail of hybrid Azure AD set up video](media/thumbnail-setup-azure-ad.png)](quickstart-setup-hybrid-aad.md) |
-| <a name="bkmk_upgrade-win10"></a>**Upgrade to Windows 10** | Windows 10 version 1709 or later is required for co-management | [![Thumbnail of upgrade Windows 10 video](media/thumbnail-upgrade-win10.png)](quickstart-upgrade-win10.md) |
+| <a name="bkmk_setup-hybrid-aad"></a>**Set up hybrid Azure AD** | If your environment currently has domain-joined Windows 10 or later devices, set up hybrid Azure AD before you can enable co-management | [![Thumbnail of hybrid Azure AD set up video](media/thumbnail-setup-azure-ad.png)](quickstart-setup-hybrid-aad.md) |
+| <a name="bkmk_upgrade-win10"></a>**Upgrade Windows** | Windows 10 version 1709 or later is required for co-management | [![Thumbnail of upgrade Windows 10 video](media/thumbnail-upgrade-win10.png)](quickstart-upgrade-win10.md) |
 | <a name="bkmk_fasttrack"></a>**Get help from FastTrack** | The FastTrack organization is a large group of Microsoft engineers who specialize in helping all types of organizations deploy Microsoft 365 apps, including setting up co-management. | [![Thumbnail of FastTrack video](media/thumbnail-fasttrack.png)](quickstart-fasttrack.md) |

@@ -227,12 +227,12 @@ You create a task sequence that only has several **Install Package** steps for t
 
 :::image type="content" source="media/deploy-option-3.png" alt-text="Deploy task sequence, three deployment options":::
 
-## Deploy Windows 10 in-place upgrade via CMG
+## Deploy Windows in-place upgrade via CMG
 
 <!-- 1357149 -->
-The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
+The Windows in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade Windows without needing to connect to the intranet.
 
-For more information, see [Deploy a task sequence over the internet](deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy a task sequence over the internet](deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg).
 
 ## <a name="bkmk_high-risk"></a> High-risk deployments
 

@@ -1,11 +1,11 @@
 ---
 title: Co-manage internet-based devices
 titleSuffix: Configuration Manager
-description: Learn how to prepare your Windows 10 internet-based devices for co-management.
+description: Learn how to prepare your Windows internet-based devices for co-management.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/09/2021
+ms.date: 10/05/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -14,11 +14,11 @@ ms.localizationpriority: medium
 
 # How to prepare internet-based devices for co-management
 
-This article focuses on the second path to co-management, for new internet-based devices. This scenario is when you have new Windows 10 devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.
+This article focuses on the second path to co-management, for new internet-based devices. This scenario is when you have new Windows 10 or later devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.
 
 ## Windows Autopilot
 
-For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD and enrolling the device in Intune.
+For new Windows devices, you can use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD and enrolling the device in Intune.
 
 For more information, see [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md).
 
@@ -52,7 +52,7 @@ For more information, see [Windows Autopilot for existing devices task sequence]
 
 ## Install the Configuration Manager client
 
-For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 devices that aren't already Configuration Manager clients.
+For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 or later devices that aren't already Configuration Manager clients.
 
 > [!NOTE]
 > Before you assign this app to devices in Intune, make sure that the devices trust the CMG server authentication certificate. For more information, see [CMG server authentication certificate](../core/clients/manage/cmg/server-auth-cert.md). If a device doesn't trust the CMG server authentication certificate, you'll see a WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
