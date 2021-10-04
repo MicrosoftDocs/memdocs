@@ -30,11 +30,15 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-**Applies to**
-- Windows 10
-- Windows 11
 
-# Troubleshoot Windows 10/11 device access
+
+# Troubleshoot Windows device access  
+
+**Applies to**  
+- Windows 10  
+- Windows 11  
+-
+
 This article describes how to resolve access issues for an enrolled Windows 10/11 device. 
 
 ## Check Wi-Fi connection  
