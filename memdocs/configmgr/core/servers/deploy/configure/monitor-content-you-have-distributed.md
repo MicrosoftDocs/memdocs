@@ -191,9 +191,9 @@ Displays the sources from which clients got content:
 >
 > - Configure the client setting, **Enable installation of Express Updates on clients** in the Software Updates group
 >
-> - Deploy Windows 10 express updates
+> - Deploy Windows express updates
 >
-> For more information, see [Manage Express installation files for Windows 10 updates](../../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+> For more information, see [Manage Express installation files for Windows updates](../../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
 #### Content downloads using fallback source
 

@@ -21,7 +21,7 @@ This article provides advice for common issues that occur when you enable TLS 1.
 The following client platforms are supported by Configuration Manager but aren't supported in a TLS 1.2 environment:
 
 - Apple OS X
-- Windows 10 devices managed with on-premises MDM
+- Windows devices managed with on-premises MDM
 
 ## Reports don't show in the console
 

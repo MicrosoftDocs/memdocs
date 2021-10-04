@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot with co-management
 titleSuffix: Configuration Manager
-description: Use Windows Autopilot with co-management in Configuration Manager to simplify the set up of new Windows 10 devices.
-ms.date: 07/06/2020
+description: Use Windows Autopilot with co-management in Configuration Manager to simplify the set up of new Windows devices.
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -14,10 +14,10 @@ ms.localizationpriority: medium
 
 # Windows Autopilot with co-management
 
-Receiving a new Windows 10 device is exciting. However, it can take time to configure all your settings and apps so that you can be productive. Co-management solves this device provisioning problem with Windows Autopilot.
+Receiving a new Windows device is exciting. However, it can take time to configure all your settings and apps so that you can be productive. Co-management solves this device provisioning problem with Windows Autopilot.
 
 Autopilot provides a simplified experience for both you and your users in the following situations:
-- Set up and preconfigure new Windows 10 devices  
+- Set up and preconfigure new Windows 10 or later devices  
 - Reset, recycle, and recover existing devices  
 
 Autopilot reduces the time, resources, and complexity associated with deploying, managing, and retiring devices. At the same time, the experience for your users is streamlined and easy from first boot.
@@ -28,7 +28,7 @@ Windows Autopilot supports several scenarios, all of which are maximized with co
 
 - You can set up self-deploying new device deployments into Azure AD for shared devices and kiosks  
 
-- With Windows Autopilot for existing devices, use Configuration Manager to migrate an existing device from Windows 7 and Active Directory to Windows 10 and Azure AD  
+- With Windows Autopilot for existing devices, use Configuration Manager to migrate an existing device from earlier versions of Windows and Active Directory to later versions of Windows and Azure AD  
 
 In the following video, senior program manager Danny Guillory and principal program manager Andrew McMurray discuss and demo Windows Autopilot with co-management:
 
@@ -38,7 +38,7 @@ In the following video, senior program manager Danny Guillory and principal prog
 
 ## Benefits
 
-When you use co-management and Autopilot together, you make sure that new devices entering your network end up in the same state of management. In this setup, devices are enrolled in Intune and have a Configuration Manager client.  It allows you to use the new Windows 10 provisioning model, and helps you eliminate the need to create, maintain, and update custom OS images. 
+When you use co-management and Autopilot together, you make sure that new devices entering your network end up in the same state of management. In this setup, devices are enrolled in Intune and have a Configuration Manager client.  It allows you to use the new Windows provisioning model, and helps you eliminate the need to create, maintain, and update custom OS images. 
 
 In all of these scenarios, you can automatically [enable co-management](how-to-prepare-Win10.md) by Intune. This automation assists with the provisioning process, and for ongoing management of the device.
 
@@ -48,13 +48,13 @@ With Autopilot, you don't need to worry about images and drivers. Focus on provi
 Here's how using co-management and Autopilot together can help you right now:
 
 #### Reduce time, costs, and complexity
-Windows Autopilot uses the OEM-optimized version of Windows 10 that's preinstalled on the device. This configuration saves organizations the effort of having to maintain custom images and drivers for every model of device in use. Instead of reimaging the device, transform the existing Windows 10 installation into a "business-ready" state. It applies settings and policies, installs apps, and changes the edition of Windows 10. For example, upgrading from Windows 10 Pro to Windows 10 Enterprise so that you can support advanced features.
+Windows Autopilot uses the OEM-optimized version of Windows that's preinstalled on the device. This configuration saves organizations the effort of having to maintain custom images and drivers for every model of device in use. Instead of reimaging the device, transform the existing Windows installation into a "business-ready" state. It applies settings and policies, installs apps, and changes the edition of Windows. For example, upgrading from Windows 10 Pro to Windows 10 Enterprise so that you can support advanced features.
 
 #### Improve the user experience
 The best user experience causes the least disruption and helps them get back to focusing on their work. Windows Autopilot offers a simple approach to help your users get set up quickly with a few simple clicks and their Azure AD credentials. For many organizations with a large field of remote employees, use Windows Autopilot to ship new devices straight from the manufacturer.
 
-#### Use Autopilot and Configuration Manager to migrate existing Windows 7 devices to Windows 10
-With Windows Autopilot for existing devices, you create a configuration file and deploy it with a Configuration Manager task sequence. This process easily migrates existing devices from Windows 7 to Windows 10. You use a signature Windows 10 image in Configuration Manager, and then apply it to the existing Windows 7 device with the Autopilot configuration. When the user starts the device, they use the Autopilot user-driven onboarding process.
+#### Use Autopilot and Configuration Manager to migrate existing Windows devices to Windows 10 or later
+With Windows Autopilot for existing devices, you create a configuration file and deploy it with a Configuration Manager task sequence. This process easily migrates existing devices from earlier versions of Windows to Windows 10 or later. You use a signature Windows 10 image in Configuration Manager, and then apply it to the existing Windows device with the Autopilot configuration. When the user starts the device, they use the Autopilot user-driven onboarding process.
 
 Here are the steps for Autopilot for existing devices:
 
@@ -62,8 +62,8 @@ Here are the steps for Autopilot for existing devices:
 
 1. Deploy group policy to redirect known folders to OneDrive
 2. Generate Autopilot configuration file
-3. Deploy task sequence to upgrade to Windows 10
-4. Windows 10 machine goes through Autopilot on first boot
+3. Deploy task sequence to upgrade to Windows 10 or later
+4. The Windows machine goes through Autopilot on first boot
 
 #### Modernizing device provisioning for all types of workers
 With Autopilot, you can now provide a hands-free OS deployment to unmanned devices or shared devices using the self-deploying mode. This setup meets the needs of all your different types of workers. Also, the Windows Autopilot Reset function makes sure that reprovisioning of a device to a new user is simple and easy. This process simplifies what has traditionally been a difficult task when you have seasonal or contract workers. 

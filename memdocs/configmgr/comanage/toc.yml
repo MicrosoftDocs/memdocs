@@ -29,7 +29,7 @@ items:
       href: quickstart-paths.md
     - name: Set up hybrid Azure AD
       href: quickstart-setup-hybrid-aad.md
-    - name: Upgrade to Windows 10
+    - name: Upgrade Windows 10
       href: quickstart-upgrade-win10.md
     - name: Get help from FastTrack
       href: quickstart-fasttrack.md
