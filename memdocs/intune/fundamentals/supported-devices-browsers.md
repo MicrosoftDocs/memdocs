@@ -5,10 +5,10 @@ title: Operating systems and browsers supported by Microsoft Intune
 titleSuffix: 
 description: Lists supported device platforms and browsers for Intune device management
 keywords:
-author: ErikjeMS  
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,9 +45,6 @@ For more information on configuration service provider support, visit the [Confi
 You can manage devices running the following operating systems:
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
-
-> [!NOTE]
-> Intune does not currently support managing UWF enabled devices. See [Unified Write Filter (UWF) feature](/windows-hardware/customize/enterprise/unified-write-filter) for more information.
 
 ### Supported Samsung Knox Standard devices
 

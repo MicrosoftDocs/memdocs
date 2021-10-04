@@ -45,7 +45,7 @@ For more information, see [Task sequence variables](../understand/task-sequence-
 
 The distribution point or media supports associating users with the destination computer where the OS is deployed. Use one of the following methods: 
 
-- [Configure a distribution point to accept PXE boot requests](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)  
+- [Configure a distribution point to accept PXE boot requests](prepare-site-system-roles-for-operating-system-deployments.md#configuring-distribution-points-to-accept-pxe-requests)  
 - [Create bootable media](../deploy-use/create-bootable-media.md)  
 - [Create pre-staged media](../deploy-use/create-prestaged-media.md)  
 

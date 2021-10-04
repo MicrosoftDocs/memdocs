@@ -102,7 +102,7 @@ The LTSB is based on the current branch version 1606 and has the following limit
 - Doesn't support the following capabilities:
   - Cloud-attached features like co-management or Desktop Analytics
   - On-premises MDM
-  - The Windows 10 servicing dashboard, servicing plans, or Windows 10 semi-annual channel
+  - The Windows servicing dashboard, servicing plans, or Windows release channels
   - Future releases of Windows 10 LTSB and Windows Server
   - Asset intelligence
   - Any pre-release features

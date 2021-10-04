@@ -2,12 +2,12 @@
 # required metadata
 
 title: How to sign in to Company Portal app | Microsoft Docs
-description: Learn where to get the Company Portal app and the three different ways to sign in.
+description: Learn where to get the Company Portal app and how to sign in.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,7 +31,11 @@ ms.collection:
 
 # How to sign in to Company Portal  
 
-Company Portal is available for Windows 10, Android, iOS, and macOS devices from the following locations (respectively): 
+**Applies to**  
+- Windows 10  
+- Windows 11  
+
+Company Portal is available for Windows 10/11, Android, iOS, and macOS devices from the following locations (respectively): 
 
 * [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  

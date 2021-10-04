@@ -7,7 +7,8 @@ description: Learn how to create device groups for Windows Autopilot.
 keywords:
 author: greg-lindsay
 ms.author: greglin
-manager: laurawi
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 03/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -21,7 +22,6 @@ ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,7 +36,8 @@ ms.collection:
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
