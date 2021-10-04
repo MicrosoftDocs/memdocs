@@ -36,8 +36,7 @@ ms.collection:
 
 **Applies to**  
 - Windows 10  
-- Windows 11  
--
+- Windows 11
 
 This article describes how to resolve access issues for an enrolled Windows 10/11 device. 
 
