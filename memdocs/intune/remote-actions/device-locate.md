@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 10/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -41,7 +41,7 @@ In addition to identifying the location a lost or stolen device on a map, some p
 
 **Locate device** - The following platforms support this capability:
 
-- **Android Enterprise dedicated devices** – Requires the device run *Google Play* version **20.06.16** or later and have Location services turned on.  
+- **Android Enterprise dedicated devices** – Requires the device run *Google Play Services* version **20.06.16** or later and have Location services turned on.  
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
 - **Windows 10**:
   - Version 20H2 (10.0.19042.789) or later
@@ -69,7 +69,9 @@ In addition to identifying the location a lost or stolen device on a map, some p
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**, and then select **All devices**.
-3. From the list of devices you manage, choose a Windows or iOS/iPadOS device, and choose **...**. Then choose the **Locate device** remote action.
+3. From the list of devices you manage, select a supported device, and choose **...**. Then choose the **Locate device** remote action.
+   
+   
 4. After the device is located, its location is shown in **Locate device**.  
 
    - You can select the location pin on the map to view a location address and coordinates.
@@ -83,6 +85,18 @@ In addition to identifying the location a lost or stolen device on a map, some p
 When you use the *Locate device* action for an Android Enterprise dedicated device that is off-line and unable to respond with its current location, Intune attempts to display its last known location. This capability uses data submitted by the device when it checks in with Intune.
 
 Intune collects information about the last known location of a device every eight hours or when the device checks in with Intune. Intune keeps this information for up to seven days. The last known location of a device that hasn’t checked in with Intune for more than seven days can't be displayed.
+
+**About initialization of last known location**:
+
+To support the *last know location* capability for Android dedicated devices, each device receives an initial default entry for **Locate device** which shows a status of **Complete**. This status appears under *Device actions status* when you view the devices Overview page. This default status is a result of the capability being initialized by Intune and doesn’t indicate that a locate device action has run.
+
+The date and time of this default status varies:
+
+- Devices enrolled before this capability becomes available will reflect the day this capability was enabled for your tenant.
+- Devices you enroll after this capability is available, reflect the time of device enrollment.
+
+Later, this default status updates to reflect the actual date and time that an admin runs the Locate device action for that device.
+
 
 ## Activate lost mode sound alert
 

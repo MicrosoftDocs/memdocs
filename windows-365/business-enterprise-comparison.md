@@ -45,7 +45,8 @@ Windows 365 is available in two editions: [Windows 365 Business](https://www.mic
 | Purchase channels | Web direct, self-service, Cloud Solution Provider (CSP). | Web direct, Enterprise Agreements (EA), CSP. |
 | License assignment | Microsoft 365 Admin Center or the Azure AD portal. | Microsoft 365 Admin Center. |
 | Licensing requirements | No licensing pre-requirements to buy and deploy Windows 365 Business. Other features (like device management) can be used if users are licensed for Microsoft Endpoint Management.| Each user must be licensed for Windows 10 or 11 Enterprise (when available), Microsoft Endpoint Manager, and Azure AD P1. |
-| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>- 2 GB RAM = 12 GB outbound data<br>- 4 or 8 GB RAM = 20 GB outbound data<br>- 16 GB RAM = 40 GB outbound data<br>- 32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. |
+| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>- 2 GB RAM = 12 GB outbound data<br>- 4 or 8 GB RAM = 20 GB outbound data<br>- 16 GB RAM = 40 GB outbound data<br>- 32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. 
+| Seat limits | Capped to 300 seats per tenant. [Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/Windows365/MOSA) | No seat cap per tenant. [Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/Windows365/MOSA) |
 
 ## Administrative comparisons
 
@@ -55,7 +56,7 @@ Windows 365 is available in two editions: [Windows 365 Business](https://www.mic
 | Policy management | Not Supported. | Group Policy Objects (GPO) and Intune MDM are supported. |
 | Application deployment | Supported only if you have Intune license. | Supported. |
 | Windows updates | Default Windows Update for Business settings are configured for users. With an Intune license these can be edited. | Can be managed by using Microsoft Endpoint Manager. |
-| Device management | Only assigning and unassigning Cloud PC licenses is supported. | Microsoft Endpoint Manager admin center options, including image management, link and access on-premises resources, granular targeting of policies, resizing Cloud PCs, other user experience settings, and all the policy-based management options available to physical devices. |
+| Device management | Device management is limited to assigning and unassigning of Cloud PC licenses in the Microsoft Admin Center. Some device management is possible in Microsoft Endpoint Manager if you have an Intune license but Cloud PCs will not be visible in the Windows 365 blade. | Microsoft Endpoint Manager admin center options, including image management, link and access on-premises resources, granular targeting of policies, resizing Cloud PCs, other user experience settings, and all the policy-based management options available to physical devices. |
 | Monitoring | Not supported. | Endpoint Analytics reporting and monitoring, service health, and operational health alerts. |
 | Troubleshooting | Not supported | Microsoft Endpoint Manager troubleshooting including the Troubleshooting blade, device management actions, and reprovisioning of Cloud PCs to their initial state. |
 | Partner/programmatic access | Not supported | Partners can manage Cloud PCs through Microsoft 365 Lighthouse or restful web APIs (Graph) to support Managed Service Provider tooling for up to 300 seats.  |
@@ -74,7 +75,7 @@ Windows 365 is available in two editions: [Windows 365 Business](https://www.mic
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Conditional Access | Conditional Access policies can be deployed only by using Azure AD with an Azure AD P1 license. | Conditional Access policies can be deployed by using the Microsoft Endpoint Manager admin center or Azure AD. |
-| Per-user multi-factor authentication (MFA) | Not supported. | Supported. |
+| Per-user multi-factor authentication (MFA) | Supported only if you have Azure AD Premium license. | Supported. |
 | Security baselines | Not supported. | Dedicated Security Baselines can be edited and deployed by using Microsoft Endpoint Manager. |
 | Microsoft Defender for Endpoint | Supported if the customer separately has the requisite E5 license. | Integration with Defender for Endpoint. If the customer has an E5 license, all Cloud PCs will respond to Defender for Endpoint policies and show up in MDE dashboards. |
 
