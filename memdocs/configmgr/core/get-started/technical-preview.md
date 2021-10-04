@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/27/2021
+ms.date: 10/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,20 +119,19 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2109
+### Technical preview version 2110
 
-- [Improvements to Support Center OneTrace](2021/technical-preview-2109.md#bkmk_onetrace) <!--9348231-->
-- [Options for Support Center Data Collector and Client Tools](2021/technical-preview-2109.md#bkmk_support) <!--9947307-->
-- [Send product feedback from wizard and property dialogs](2021/technical-preview-2109.md#bkmk_feedback) <!--2711343-->   
-- [Implicit uninstall for user collections](2021/technical-preview-2109.md#bkmk_uninstall) <!--10393847-->
-- [Require installation of a console extension](2021/technical-preview-2109.md#bkmk_extensions) <!--10486584-->
-- [Import console extensions wizard](2021/technical-preview-2109.md#bkmk_import) <!--9741121-->
-- [Improvements to ADR search criteria](2021/technical-preview-2109.md#bkmk_adr) <!--7033309-->
-- [Improvements to VPN boundary types](2021/technical-preview-2109.md#bkmk_vpn) <!--7822886-->
-- [.NET version 4.6.2 prerequisite check is an error](2021/technical-preview-2109.md#bkmk_dotnetprereq) <!--10644702-->   
-- [External dependencies require .NET 4.6.2](2021/technical-preview-2109.md#bkmk_dotnetsdk) <!--10529267-->
-- [Copy GUID for ISV proxy certificate](2021/technical-preview-2109.md#bkmk_isvproxy) <!--2842082-->
-- [PowerShell release notes preview](2021/technical-preview-2109.md#bkmk_powershell) <!--10654429-->
+- [3601042](2021/technical-preview-2110.md) <!--3601042-->
+- [5728069](2021/technical-preview-2110.md) <!--5728069-->
+- [9957939](2021/technical-preview-2110.md) <!--9957939-->
+- [10340595](2021/technical-preview-2110.md) <!--10340595-->
+- [10393794](2021/technical-preview-2110.md) <!--10393794-->
+- [10479618](2021/technical-preview-2110.md) <!--10479618-->
+- [10543514](2021/technical-preview-2110.md) <!--10543514-->
+- [10579996](2021/technical-preview-2110.md) <!--10579996-->
+- [10615989](2021/technical-preview-2110.md) <!--10615989-->
+- [10628998](2021/technical-preview-2110.md) <!--10628998-->
+- [10992210](2021/technical-preview-2110.md) <!--10992210-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -149,6 +148,21 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2109
+
+- [Improvements to Support Center OneTrace](2021/technical-preview-2109.md#bkmk_onetrace) <!--9348231-->
+- [Options for Support Center Data Collector and Client Tools](2021/technical-preview-2109.md#bkmk_support) <!--9947307-->
+- [Send product feedback from wizard and property dialogs](2021/technical-preview-2109.md#bkmk_feedback) <!--2711343-->
+- [Implicit uninstall for user collections](2021/technical-preview-2109.md#bkmk_uninstall) <!--10393847-->
+- [Require installation of a console extension](2021/technical-preview-2109.md#bkmk_extensions) <!--10486584-->
+- [Import console extensions wizard](2021/technical-preview-2109.md#bkmk_import) <!--9741121-->
+- [Improvements to ADR search criteria](2021/technical-preview-2109.md#bkmk_adr) <!--7033309-->
+- [Improvements to VPN boundary types](2021/technical-preview-2109.md#bkmk_vpn) <!--7822886-->
+- [.NET version 4.6.2 prerequisite check is an error](2021/technical-preview-2109.md#bkmk_dotnetprereq) <!--10644702-->
+- [External dependencies require .NET 4.6.2](2021/technical-preview-2109.md#bkmk_dotnetsdk) <!--10529267-->
+- [Copy GUID for ISV proxy certificate](2021/technical-preview-2109.md#bkmk_isvproxy) <!--2842082-->
+- [PowerShell release notes preview](2021/technical-preview-2109.md#bkmk_powershell) <!--10654429-->
 
 ### Technical preview version 2108
 
