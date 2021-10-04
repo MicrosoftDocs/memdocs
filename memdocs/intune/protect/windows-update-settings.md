@@ -2,7 +2,7 @@
 # required metadata
 
 title:  Windows for Business Update settings for  Microsoft Intune
-description: WUfB settings for Windows 10 devices that you can deploy using Intune.
+description: WUfB settings for Windows 10 and Windows 11 devices that you can deploy using Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -30,9 +30,9 @@ ms.collection: M365-identity-device-management
 
 # Windows update settings for Intune  
 
-View the Windows 10 Update settings you can [configure and manage](windows-update-for-business-configure.md) with Microsoft Intune.  
+View the Windows 10 and Windows 11 Update settings that you can [configure and manage](windows-update-for-business-configure.md) with Microsoft Intune.  
 
-When you configure settings for Windows update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 version dependency, the version dependency is noted in the settings details.  
+When you configure settings for Windows update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 or Windows 11 version dependency, the version dependency is noted in the settings details.  
 
 ## Update settings  
 
@@ -42,9 +42,9 @@ Update settings control what bits a device will download, and when. For more inf
   **Default**: Semi-Annual Channel  
   Windows Update CSP: [Update/BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
-  Set the channel (branch) from which the device receives Windows updates. Different [Windows 10 servicing channels](/windows/deployment/update/get-started-updates-channels-tools#servicing-channels) can use different deferral periods before updates are delivered. 
+  Set the channel (branch) from which the device receives Windows updates. Different [Windows servicing channels](/windows/deployment/update/get-started-updates-channels-tools#servicing-channels) can use different deferral periods before updates are delivered. 
 
-  Intune supports the following Windows 10 Servicing channels:
+  Intune supports the following Windows Servicing channels:
 
   - Semi-Annual Channel  
   - Semi-Annual Channel (targeted) for 1809 and below 
@@ -161,7 +161,7 @@ User experience settings control the end-user experience for device restart and 
 
   - **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.  
 
-  - **Reset to default** - Restore the original auto update settings on Windows 10 machines that run the October 2018 Update or later.  These original auto update settings allow Windows to use automatically determined active hours to schedule the best time to install updates and restart the system after it installs the updates.
+  - **Reset to default** - Restore the original auto update settings on machines that run the Windows 10 October 2018 Update or later, and that run Windows 11.  These original auto update settings allow Windows to use automatically determined active hours to schedule the best time to install updates and restart the system after it installs the updates.
 
 
 - **Restart checks**  
@@ -257,6 +257,6 @@ User experience settings control the end-user experience for device restart and 
 
 ### Delivery Optimization download mode  
 
-Delivery Optimization is no longer configured as part of a Windows 10 Update Ring under Software Updates. Delivery Optimization is now set through device configuration. However, previous configurations remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified. 
+Delivery Optimization is no longer configured as part of a a Windows update . Delivery Optimization is now set through device configuration. However, previous configurations remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified.
 
 To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Update rings for Windows 10 and later](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-update-rings) and then move your settings to a Delivery Optimization profile. 
