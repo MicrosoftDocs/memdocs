@@ -4,8 +4,8 @@
 title: What's new in Microsoft Intune classic portal archive
 description: Archived What's New announcements for Microsoft Intune
 keywords:
-author: ErikjeMS  
-ms.author: erikje
+author: dougeby  
+ms.author: dougeby
 manager: dougeby
 ms.date: 06/08/2017
 ms.topic: archived

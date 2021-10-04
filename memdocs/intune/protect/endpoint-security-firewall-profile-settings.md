@@ -31,6 +31,12 @@ ms.reviewer: aanavath
 
 View the settings you can configure in profiles for *Firewall* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
+Applies to:
+
+- macOS
+- Windows 10
+- Windows 11
+
 Supported platforms and profiles:
 
 - **macOS**:
@@ -75,7 +81,7 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 
 ### Microsoft Defender Firewall
 
-The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-firewall-policy.md).
+The following settings are configured as [Endpoint Security policy for Windows Firewalls](../protect/endpoint-security-firewall-policy.md).
 
 - **Stateful File Transfer Protocol (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
@@ -407,7 +413,7 @@ The following settings are configured as [Endpoint Security policy for Windows 1
 
 *This profile is in Preview*.
 
-The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-firewall-policy.md).
+The following settings are configured as [Endpoint Security policy for Windows Firewalls](../protect/endpoint-security-firewall-policy.md).
 
 #### Windows Firewall Rule
 

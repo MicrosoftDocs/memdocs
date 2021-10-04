@@ -305,6 +305,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
   > [!NOTE]
   > Microsoft Edge is included on devices that run:
   >
+  > - Windows 11
   > - Windows 10 20H2 or later.
   > - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update.
 
@@ -411,7 +412,7 @@ Use Endpoint Security in Microsoft Endpoint Manager to configure the firewall an
 
 Use Endpoint Security in Microsoft Endpoint Manager to configure encryption with BitLocker.
 
-- For more information about managing BitLocker, see [Encrypt Windows 10 devices with BitLocker in Intune](./intune/protect/encrypt-devices.md).
+- For more information about managing BitLocker, see [Encrypt Windows 10/11 devices with BitLocker in Intune](./intune/protect/encrypt-devices.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com)  by going to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
@@ -596,7 +597,7 @@ To create a profile that uses the Device restrictions template, in the [Microsof
 
 ### Delivery Optimization
 
-Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization).
+Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows updates](/windows/deployment/update/waas-delivery-optimization).
 
 To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](./intune/configuration/delivery-optimization-settings.md) or a settings catalog profile.
 
@@ -613,7 +614,7 @@ If you have only one group of people that need local administrator access to all
 
 You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
 
-- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 10 20H2.
+- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 10 20H2 or later.
 - If you have Windows 10 20H1 (2004) use the [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace).
 - Windows versions prior to Windows 10 20H1 (2004) can't use groups, only individual accounts.
 

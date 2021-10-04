@@ -43,6 +43,7 @@ The *Collect diagnostics* remote action is supported for:
 
 - Intune or co-managed devices.
 - Windows 10 version 1909 and later.
+- Windows 11
 - Microsoft HoloLens 2 2004 and later.
 - Global Admins, Intune Admins, or a role with **Collect diagnostics** permissions (under **Remote tasks**).
 - Corporate-owned devices.
