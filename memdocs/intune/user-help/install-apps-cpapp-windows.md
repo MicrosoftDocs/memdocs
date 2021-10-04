@@ -71,7 +71,7 @@ Share and recommend apps to your work or school contacts. The following steps de
 2. Select **Share**.
 3. Choose from individual contacts or select another program, such as OneNote, to send to a group. If you don't see an app you want to use, select **Get apps in Store** to see other available apps.  
 
-    ![An example screenshot of the Company Portal app for Windows, Share pop-up page. Page says "Learn about <example app name> in the Company Portal app." It shows one contact and 2 apps to choose from to send the link, and a "Get apps in Store" link. ](./media/1808_ShareApps_CP_Windows.png) 
+    ![Image of the Company Portal app for Windows, Share apps pop-up page. highlighting contacts and apps. ](./media/1808_ShareApps_CP_Windows.png) 
 
 After you share, the recipient will receive a link and a message to view the app's details. The link opens the Company Portal **App details** page. 
 
