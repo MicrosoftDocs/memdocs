@@ -4,10 +4,10 @@ title: What's new in Microsoft Intune
 titleSuffix:
 description: Find out what's new in the Intune Azure portal
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 10/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -123,6 +123,12 @@ A new device restrictions setting for corporate-owned work profile devices preve
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
+
+#### Intune now supports iOS/iPadOS 13 and higher<!-- 9964998 -->
+Microsoft Intune, including the Intune Company Portal and Intune app protection policies now requires [iOS/iPadOS 13 and higher](../fundamentals/supported-devices-browsers.md).
+
+#### Intune now supports macOS 10.15 and later<!-- 10154527 -->
+Intune enrollment and the Company Portal now supports [macOS 10.15 and later](../fundamentals/supported-devices-browsers.md). Older versions are not supported.
 
 #### New Android device filtering options<!--7479654  -->
 
