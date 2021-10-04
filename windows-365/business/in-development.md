@@ -31,7 +31,6 @@ ms.collection: M365-identity-device-management
 To help in your readiness and planning, this page lists Windows 365 Business updates and features that are in development but not yet released. In addition to the information on this page:
 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
-- When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
 - This page is updated periodically. Check back for more updates.
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 - Similar features may be announced at different times for Windows 365 Enterprise.
@@ -62,4 +61,4 @@ In a future update, Windows 365 Business will support Windows 11 as a Cloud PC o
 
 ## Next steps
 
-For details about recent developments, see [What's new in Windows 365 Business](whats-new.md).
+[Get started with Windows 365 Business](get-started-windows-365-business.md).
