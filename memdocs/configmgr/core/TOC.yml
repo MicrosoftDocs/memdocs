@@ -117,7 +117,9 @@ items:
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
     - name: Supported operating systems for clients and devices
       href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
-    - name: Support for Windows 10 as a client
+    - name: Support for Windows 11
+      href: plan-design/configs/support-for-windows-11.md
+    - name: Support for Windows 10
       href: plan-design/configs/support-for-windows-10.md
     - name: Support for the Windows ADK
       href: plan-design/configs/support-for-windows-adk.md

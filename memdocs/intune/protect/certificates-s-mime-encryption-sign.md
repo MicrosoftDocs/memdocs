@@ -33,7 +33,7 @@ Email certificates, also known as S/MIME certificate, provide extra security to 
 - Android
 - iOS/iPadOS
 - macOS
-- Windows 10 and later
+- Windows 10/11
 
 Intune can automatically deliver S/MIME encryption certificates to all platforms. S/MIME certificates are automatically associated with mail profiles that use the native mail client on iOS, and with Outlook on iOS and Android devices. For the Windows and macOS platforms, and for other mail clients on iOS and Android, Intune delivers the certificates but users must manually enable S/MIME in their mail app and choose their S/MIME certificates.
 

@@ -2,7 +2,7 @@
 title: Remote actions with co-management
 titleSuffix: Configuration Manager
 description: Run remote actions from Intune for co-managed devices
-ms.date: 01/14/2019
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -31,7 +31,7 @@ Remote device actions give you management controls on the device without interfe
 - Review device inventory  
 - Remotely control a device  
 - Wipe out pre-installed OEM apps with a Fresh Start reboot  
-- Do a factory reset on any Windows 10 device  
+- Do a factory reset on any Windows 10 or later device  
 
 These functions are an important and simple way to protect corporate data stored on these devices, whether in e-mail or OneDrive.
 
@@ -96,7 +96,7 @@ If you choose not to retain user data, the device restores to its out-of-box sta
 
 If you have predetermined standards regarding what apps should be on the device, then this action eliminates the ones that don't meet your criteria.
 
-For more information, see [Use Fresh Start to reset Windows 10 devices with Intune](../../intune/remote-actions/device-fresh-start.md). 
+For more information, see [Use Fresh Start to reset Windows devices with Intune](../../intune/remote-actions/device-fresh-start.md). 
 
 #### Remote control
 Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com/). TeamViewer is a third-party program that you acquire separately.

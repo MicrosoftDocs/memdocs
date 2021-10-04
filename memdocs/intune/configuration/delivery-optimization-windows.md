@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Delivery Optimization settings for Windows 10 in Microsoft Intune
-description: Configure how Windows 10 devices you manage with Intune use Delivery Optimization. In Intune, create a device configuration profile to install updates from the internet. Also see how to replace existing update rings with a Delivery Optimization profile.
+title: Delivery Optimization settings for Windows devices in Microsoft Intune
+description: Configure how Windows devices you manage with Intune use Delivery Optimization. In Intune, create a device configuration profile to install updates from the internet. Also see how to replace existing update rings with a Delivery Optimization profile.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 10/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,13 +28,18 @@ ms.reviewer: kerimh
 
 # Delivery Optimization settings in Microsoft Intune
 
-With Intune, use Delivery Optimization settings for your Windows 10 devices to reduce bandwidth consumption when those devices download applications and updates. Configure Delivery Optimization as part of your device configuration profiles.  
+Applies to:
 
-This article describes how to configure Delivery Optimization settings as part of a device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows 10 devices.
+- Windows 10
+- Windows 11
+
+With Intune, use Delivery Optimization settings for your Windows devices to reduce bandwidth consumption when those devices download applications and updates. Configure Delivery Optimization as part of your device configuration profiles.  
+
+This article describes how to configure Delivery Optimization settings as part of a device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows devices.
 
 To view a list of the Delivery Optimization settings that Intune supports, see [Delivery Optimization settings for Intune](delivery-optimization-settings.md).  
 
-To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
+To learn about Delivery Optimization on Windows 10 and Window 11, see [Delivery Optimization updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
 
 ## Create the profile
 

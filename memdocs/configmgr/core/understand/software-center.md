@@ -32,7 +32,7 @@ General notes about Software Center functionality:
 
 ## <a name="bkmk_open"></a> How to open Software Center
 
-Software Center is installed automatically on Windows devices that your IT organization manages. For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
+Software Center is installed automatically on Windows devices that your IT organization manages. For the simplest method to start Software Center, go to **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
 
 :::image type="content" source="media/start-menu-software-center.png" alt-text="Software Center best match in Start menu":::
 

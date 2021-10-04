@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows 10 Antivirus policy settings from Windows security settings for tenant attached devices | Microsoft Docs
+title: Windows Antivirus policy settings from Windows security settings for tenant attached devices in Microsoft Intune | Microsoft Docs
 description: Review the settings in the *Windows Security experience* profile for tenant attached devices. To use this Endpoint security Antivirus policy, you must first configure tenant attach for Configuration Manager for Microsoft Intune.
 keywords:
 author: brenduns

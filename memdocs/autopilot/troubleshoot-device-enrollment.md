@@ -2,8 +2,6 @@
 title: Troubleshoot Autopilot device import and enrollment
 description: Troubleshoot issues that can occur during Autopilot device import and enrollment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.reviewer: mniehaus
-manager: laurawi
 ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -13,6 +11,8 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/17/2020
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
@@ -21,7 +21,10 @@ ms.topic: troubleshooting
 
 # Troubleshoot Autopilot device import and enrollment
 
-**Applies to: Windows 10**
+**Applies to**
+
+- Windows 11
+- Windows 10
 
 See the following topics for information about issues that can occur when importing and enrolling devices into Intune.
 

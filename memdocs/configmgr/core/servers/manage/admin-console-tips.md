@@ -345,7 +345,7 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 1. Go to one of the following places in the Configuration Manager console:
 
    - **Software Library** > **Software Updates** > **All Software Updates**
-   - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
+   - **Software Library** > **Windows Servicing** > **All Windows Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
 1. Select any update that is required by at least one device.
