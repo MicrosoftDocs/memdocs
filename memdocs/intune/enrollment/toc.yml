@@ -15,7 +15,7 @@ items:
   items:
   - name: Set up automatic enrollment
     href: quickstart-setup-auto-enrollment.md
-  - name: Enroll your Windows 10 device
+  - name: Enroll your Windows 10/11 device
     href: quickstart-enroll-windows-device.md
 - name: Tutorials
   items:
