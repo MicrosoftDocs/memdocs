@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot motherboard replacement
-ms.reviewer: 
-manager: laurawi
 description: Windows Autopilot deployment Motherboard Replacement (MBR) scenarios
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -12,17 +10,19 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-
 # Windows Autopilot motherboard replacement scenario guidance
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 
 This document offers guidance for Windows Autopilot device repair scenarios that Microsoft partners can use in Motherboard Replacement (MBR) situations, and other servicing scenarios.
 

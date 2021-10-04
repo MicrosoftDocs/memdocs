@@ -68,7 +68,7 @@ Intune supports derived credentials on the following platforms:
 - Android Enterprise:
   - Fully Managed devices (version 7.0 and above)
   - Corporate-Owned Work Profile
-- Windows 10 and later
+- Windows 10/11
 
 ### Supported issuers
 

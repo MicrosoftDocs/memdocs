@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Encrypt Windows 10 devices with BitLocker in Intune 
+title: Encrypt Windows devices with BitLocker in Intune 
 titleSuffix: Microsoft Intune
-description: Encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices from within the Microsoft Endpoint Manager admin center.
+description: Use policy from Microsoft Endpoint Manager admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -25,24 +25,24 @@ ms.custom: intune-azure
 
 ---
 
-# Manage BitLocker policy for Windows 10 in Intune
+# Manage BitLocker policy for Windows devices with Intune
 
-Use Intune to configure BitLocker Drive Encryption on devices that run Windows 10.
+Use Intune to configure BitLocker Drive Encryption on devices that run Windows 10/11.
 
-BitLocker is available on devices that run Windows 10 or later. Some settings for BitLocker require the device have a supported TPM.
+BitLocker is available on devices that run Windows 10/11. Some settings for BitLocker require the device have a supported TPM.
 
 Use one of the following policy types to configure BitLocker on your managed devices
 
-- **[Endpoint security disk encryption policy for Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
+- **[Endpoint security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
 
   View the BitLocker settings that are available in [BitLocker profiles from disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
-- **[Device configuration profile for endpoint protection for Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10 endpoint protection.
+- **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10/11 endpoint protection.
 
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles form device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
 > [!TIP]
-> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
+> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 >
 > You can also access important information for BitLocker from your devices, as found in Azure Active Directory (Azure AD).
 
@@ -66,7 +66,7 @@ Use one of the following procedures to create the policy type you prefer.
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
 3. Set the following options:
-   1. **Platform**: Windows 10 or later
+   1. **Platform**: Windows 10/11
    2. **Profile**: BitLocker
 
    ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-es.png)
@@ -94,7 +94,7 @@ Use one of the following procedures to create the policy type you prefer.
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
 3. Set the following options:
-   1. **Platform**: Windows 10 and later
+   1. **Platform**: Windows 10/11
    2. **Profile type**: Endpoint protection
 
    ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
@@ -123,8 +123,8 @@ You can configure a BitLocker policy that automatically and silently enables Bit
 
 A device must meet the following conditions to be eligible for silently enabling BitLocker:
 
-- If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
-- If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
+- If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later, or Windows 11.
+- If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later, or Windows 11.
 - The device must be Azure AD Joined or Hybrid Azure AD Joined.
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only. 
@@ -148,7 +148,7 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Microsoft Endpoint Manager admin center. To be accessible, the device must have its keys escrowed to Azure AD.
+Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Endpoint Manager admin center. To be accessible, the device must have its keys escrowed to Azure AD.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -168,7 +168,7 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 > [!NOTE]
 > Currently, Azure AD supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption will fail due to the failing backup of recovery keys before starting encryption on the device.
 
-Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
+Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, Windows 10 Pro version 1809 and later, and Windows 11.
 
 IT admins need to have a specific permission within Azure Active Directory to be able to see device BitLocker recovery keys: `microsoft.directory/bitlockerKeys/key/read`. There are some roles within Azure AD that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Azure AD roles have which permissions, see [Azure AD role descriptions](/azure/active-directory/roles/permissions-reference).
 
@@ -176,13 +176,13 @@ All BitLocker recovery key accesses are audited. For more information on Audit L
 
 ### Rotate BitLocker recovery keys
 
-You can use an Intune device action to remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later.
+You can use an Intune device action to remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later, and Windows 11.
 
 #### Prerequisites
 
 Devices must meet the following prerequisites to support rotation of the BitLocker recovery key:
 
-- Devices must run Windows 10 version 1909 or later
+- Devices must run Windows 10 version 1909 or later, or Windows 11
 
 - Azure AD-joined and Hybrid-joined devices must have support for key rotation enabled via BitLocker policy configuration:
 
