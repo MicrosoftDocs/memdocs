@@ -52,7 +52,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-## Device management
+### Device management
 
 #### Support for Windows 11<!--35091970 -->
 
