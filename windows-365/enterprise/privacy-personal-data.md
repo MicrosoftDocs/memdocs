@@ -36,7 +36,7 @@ Windows 365 is a cloud-based service that lets you provision and manage Cloud PC
 
 Windows 365 provides its service to customers by gathering and using data from the sources listed below. These sources provide a comprehensive view of the devices that Windows 365 manages.
 
-- [Microsoft Windows 10 Enterprise](/windows/resources/) - for managing the device setup experience, managing connections to other services, and operational support for IT pros.
+- [Microsoft Windows Enterprise](/windows/resources/) - for managing the device setup experience, managing connections to other services, and operational support for IT pros.
 - [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) – for device and app management, data security, and device configurations.
 - [Endpoint Analytics](/mem/analytics/overview) – part of Microsoft Endpoint manager, specifically for analytical insights about device and app usage.
 - [Microsoft 365 apps for enterprise](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans?rtc=1) – for management of Microsoft 365 Apps.
