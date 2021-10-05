@@ -86,10 +86,10 @@ Devices must have access to the following endpoints:
 
 ### Supported platforms
 
-<!-- Owned by MDE?  possibly and Include?     What' about Windows 10? -->
+<!-- Owned by MDE?  possibly and Include?  -->
 Security management for MDE policies are supported for the following device platforms:
 
-- Windows 11
+- Windows 10/11
 - Windows Server 2012 R2
 - Windows Server 2016
 
@@ -120,15 +120,49 @@ FLIP TOGGLES:
 
 ## Onboard devices
 
-<!-- Owned by MDE?  possibly and Include?  -->
+<!-- Owned by MDE?  possibly an Include?  -->
 
 ## Deploy policy
 
-Use the following endpoint security policies and profiles for security configuration management:
+To deploy policy, you'll need an Azure AD group that contains the devices you wan't to deploy policy to. If you haven't created a group with the applicable devices, see []().
 
-- Antivirus
-- Firewall
+Security configuration management supports Antivirus and Firewall policies. 
 
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Go to **Endpoint security** and then select the type of policy you want to configure, either Antivirus or Firewall, and then then select **Create Policy**.  
+
+3. Enter the following properties or the policy type you selected:
+
+   - For Antivirus policy, select:
+     - Platform: **Windows 10, Windows 11, and WIndows Server (Preview)**
+     - Profile: **Microsoft Defender Antivirus (Preview)**
+
+   - For Firewall policy, select:
+     - Platform: **Windows 10, Windows 11, and WIndows Server (Preview)**
+     - Profile: **Microsoft Defender Firewall (Preview)**
+
+4. Select **Create**.
+
+5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+
+6. On the **Configuration settings** page, expand each group of settings, and configure the settings you want to manage with this profile. To learn more about a setting, expand its information dialog and select the *Learn more* link to view the settings CSP information in the on-line documentation.
+
+   When your done configuring settings, select **Next**.
+
+7. On the **Assignments** page, select the Azure AD groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   Select **Next** to continue.
+
+   > [!TIP]
+   > Assignment filters are not supported for Security Configuration Management profiles.
+
+8. Complete the policy creation process and then on the **Review + create** page, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+9. Wait for the policy to be assigned and view a success indication that policy was applied.
+
+10. Validate settings are applied locally on the client by using the [Get-MpPreference](/powershell/module/defender/get-mppreference?view=windowsserver2019-ps#examples) command utility.
 
 ## Monitor status
 
