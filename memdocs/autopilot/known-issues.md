@@ -46,7 +46,7 @@ Inactive Intune connectors will be automatically cleaned up after 30 days of ina
 
 When [customizations are applied to the company branding settings](/azure/active-directory/fundamentals/customize-branding#to-customize-your-branding) the HTML tags may be visible and not rendered correctly on the update password page. This issue should be fixed in future versions of Windows.
 
-## TPM attestation is not working on Intel Tiger Lake platforms
+### TPM attestation is not working on Intel Tiger Lake platforms
 
 TPM attestation support for Intel TPM Tiger Lake platforms are only supported on devices with Windows 10 version 21H2 or higher.
 
