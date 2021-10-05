@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create a Cloud PC custom image that supports Microsoft Teams
 
-During the initial setup of your tenant, we recommend that you provision your Cloud PCs with the Windows 10 Enterprise + Microsoft 365 images available in the image gallery. This gives you the benefit of having all the Office applications optimized and pre-installed without the need for any extra level of configuration.
+During the initial setup of your tenant, we recommend that you provision your Cloud PCs with the Windows 10/11 Enterprise + Microsoft 365 images available in the image gallery. This gives you the benefit of having all the Office applications optimized and pre-installed without the need for any extra level of configuration.
 
 If you want to create custom images that don’t include the optimizations for Microsoft Teams, you'll need you perform the following steps in your custom image. These steps make sure your image has the correct registry settings and policies to support Teams.
 

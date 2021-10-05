@@ -57,7 +57,7 @@ You can optionally apply Windows 365 security baselines to the Azure AD groups c
 
 As soon as you create the profile, it's pushed to the assigned group and will apply immediately.
 
-For more information, see [Use security baselines to configure Windows 10 devices in Intune](/mem/intune/protect/security-baselines).
+For more information, see [Use security baselines to configure Windows devices in Intune](/mem/intune/protect/security-baselines).
 
 <!-- ########################## -->
 ## Next steps
