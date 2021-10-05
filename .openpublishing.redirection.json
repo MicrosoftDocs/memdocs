@@ -1029,23 +1029,23 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/role-based-access.md",
-            "redirect_url": "/mem/windows-365/enterprise/role-based-access",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "memdocs/windows-365/security-guidelines.md",
-            "redirect_url": "/mem/windows-365/enterprise/security-guidelines",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "memdocs/windows-365/set-conditional-access-policies.md",
-            "redirect_url": "/mem/windows-365/enterprise/set-conditional-access-policies",
+            "source_path": "memdocs/windows-365/role-based-access.md",
+            "redirect_url": "/mem/windows-365/enterprise/role-based-access",
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/teams-on-cloud-pc.md",
-            "redirect_url": "/mem/windows-365/enterprise/teams-on-cloud-pc",
+            "source_path": "memdocs/windows-365/security-guidelines.md",
+            "redirect_url": "/mem/windows-365/enterprise/security-guidelines",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/windows-365/set-conditional-access-policies.md",
+            "redirect_url": "/mem/windows-365/enterprise/set-conditional-access-policies",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/windows-365/teams-on-cloud-pc.md",
+            "redirect_url": "/mem/windows-365/enterprise/teams-on-cloud-pc",
             "redirect_document_id": false
         },
         {
