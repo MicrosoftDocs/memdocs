@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 10/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -180,7 +180,9 @@ To use the report:
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
      - **Canceled**:
        - **Admin Cancelled** – The update offer was cancelled by explicit Administrator action.
-       - **Service Cancelled** – The update was cancelled because of an automatic action by Windows Update.
+       - **Service Cancelled** – The update was cancelled by Windows Update for one of the following reasons:  
+           - The *end of service* date for the content was reached. For example, the device might have been added to a deployment with expired content, or the content has reached its end of service date before being installed on the device.
+           - The deployment content has been superseded for the device. This can happen when the device is targeted by another deployment that deploys newer content. For example, one deployment targets the Windows 10 device to install version 2004 and a second deployment targets that same device with version 21H1. In this event, 2004 is superseded by the 21H1 deployment and Windows Update cancels the 2004 deployment to the device.
        - **Removed from Deployment** – The update offer was cancelled because it was removed from the Deployment by explicit Administrator action.
      - **Offering**:
        - **OfferReady** – The update is currently being offered to the device by Windows Update.
