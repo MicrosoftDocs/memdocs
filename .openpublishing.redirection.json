@@ -799,54 +799,54 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/assign-apps.md",
-            "redirect_url": "/mem/windows-365/enterprise/assign-apps",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/assign-apps.md",
+            "redirect_url": "/mem/windows-365/enterprise/assign-apps",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/assign-licenses.md",
-            "redirect_url": "/mem/windows-365/enterprise/assign-licenses",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/assign-licenses.md",
+            "redirect_url": "/mem/windows-365/enterprise/assign-licenses",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/assign-users-as-local-admin.md",
-            "redirect_url": "/mem/windows-365/enterprise/assign-users-as-local-admin",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/assign-users-as-local-admin.md",
+            "redirect_url": "/mem/windows-365/enterprise/assign-users-as-local-admin",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/automated-provisioning-steps.md",
-            "redirect_url": "/mem/windows-365/enterprise/automated-provisioning-steps",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/automated-provisioning-steps.md",
+            "redirect_url": "/mem/windows-365/enterprise/automated-provisioning-steps",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/business-continuity-disaster-recovery.md",
-            "redirect_url": "/mem/windows-365/enterprise/business-continuity-disaster-recovery",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/business-continuity-disaster-recovery.md",
+            "redirect_url": "/mem/windows-365/enterprise/business-continuity-disaster-recovery",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/cloud-pc-size-recommendations.md",
-            "redirect_url": "/mem/windows-365/enterprise/cloud-pc-size-recommendations",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/cloud-pc-size-recommendations.md",
+            "redirect_url": "/mem/windows-365/enterprise/cloud-pc-size-recommendations",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/create-custom-image-support-teams.md",
-            "redirect_url": "/mem/windows-365/enterprise/create-custom-image-support-teams",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/create-custom-image-support-teams.md",
+            "redirect_url": "/mem/windows-365/enterprise/create-custom-image-support-teams",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/create-device-configuration-profile.md",
-            "redirect_url": "/mem/windows-365/enterprise/create-device-configuration-profile",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/create-device-configuration-profile.md",
+            "redirect_url": "/mem/windows-365/enterprise/create-device-configuration-profile",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/create-dynamic-device-group-all-cloudpcs.md",
-            "redirect_url": "/mem/windows-365/enterprise/create-dynamic-device-group-all-cloudpcs",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/create-dynamic-device-group-all-cloudpcs.md",
+            "redirect_url": "/mem/windows-365/enterprise/create-dynamic-device-group-all-cloudpcs",
+            "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/windows-365/create-dynamic-device-group-for-specific-configuration.md",
-            "redirect_url": "/mem/windows-365/enterprise/create-dynamic-device-group-for-specific-configuration",
-            "redirect_document_id": false
+            "source_path": "memdocs/windows-365/create-dynamic-device-group-for-specific-configuration.md",
+            "redirect_url": "/mem/windows-365/enterprise/create-dynamic-device-group-for-specific-configuration",
+            "redirect_document_id": false
         },
         {
             "source_path": "memdocs/windows-365/create-dynamic-device-group-from-specific-policy.md",
