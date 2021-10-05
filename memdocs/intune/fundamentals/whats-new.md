@@ -90,6 +90,10 @@ deploy.
 
 For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
 
+#### Windows 11 hardware readiness insights<!--9740163-->
+
+The **Work from anywhere** report in [Endpoint analytics](../../analytics/overview.md) now provides [Windows 11 hardware readiness](../../analytics/work-from-anywhere.md#bkmk_windows11) insights. You can quickly determine how many of your enrolled devices meet the minimum system requirements for Windows 11 and which requirements are the top blockers within your organization. Drill in for a device-level view for Windows 11 hardware readiness status. For more information, see [Windows 11 hardware readiness](../../analytics/work-from-anywhere.md#bkmk_windows11).
+
 ## Week of September 27, 2021 (Service release 2109)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
