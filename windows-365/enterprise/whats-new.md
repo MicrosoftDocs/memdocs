@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: What's new in Windows 365
+title: What's new in Windows 365 Enterprise
 titleSuffix:
-description: Find out what's new in Windows 365
+description: Find out what's new in Windows 365 Enterprise
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/14/2021
+ms.date: 10/05/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# What's new in Windows 365
+# What's new in Windows 365 Enterprise
 
-Learn what new features are available in Windows 365.
+Learn what new features are available in Windows 365 Enterprise.
 
 > [!Note]
 > Each monthly update may take up to a week to rollout to all customers.
@@ -47,6 +47,19 @@ Learn what new features are available in Windows 365.
 ### Scripts
 
 <!-- ########################## -->
+
+## Week of October 4, 2021
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### Support for Windows 11<!--35091970 -->
+
+Windows 365 Enterprise now supports Windows 11 as a Cloud PC operating system.
+
+Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
+
 
 ## Week of September 13, 2021
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
