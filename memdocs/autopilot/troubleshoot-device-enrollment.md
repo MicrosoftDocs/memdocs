@@ -36,15 +36,9 @@ After the first Autopilot deployment, devices with a targeted Autopilot self-dep
 
 :::image type="content" source="./images/troubleshoot-device-enrollment/0x80180014-error-code-pre-provisioning-page.png" alt-text="Pre-provisioning page shows 0x80180014 error code on devices using self-deployment mode or pre-provisioning mode.":::
 
-The ETW logs show the following error:
+The ETW logs may show the following error:
 
 `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
-
-To get the logs:
-
-1. Get the diag.cab logs.
-2. Open the file in Udiag.
-3. In the ETW tab, search for the error message.
 
 ### Cause
 
