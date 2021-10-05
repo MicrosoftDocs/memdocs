@@ -34,17 +34,12 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 - When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
+- Similar features may be announced at different times for Windows 365 Business.
 
 > [!NOTE]
 > This page reflects our current expectations about Windows 365 capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
 
 **This article was last updated on the date listed under the title above.**
-
-<!--
-## What's coming to Intune in the Azure portal 
-## What's coming to Intune apps
-## Notices
--->
 
 <!-- Common categories:  
 ## App management
