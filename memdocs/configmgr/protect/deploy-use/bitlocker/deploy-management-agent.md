@@ -2,7 +2,7 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 04/05/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -60,7 +60,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**. Then select the encryption method.
 
-    - For Windows 10 devices, enable the option for **Drive encryption method and cipher strength (Windows 10)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
+    - For Windows 10 or later devices, enable the option for **Drive encryption method and cipher strength (Windows 10 or later)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
 
     For more information on these and other settings on this page, see [Settings reference - Setup](../../tech-ref/bitlocker/settings.md#setup).
 
@@ -210,7 +210,7 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 - If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it uploads the new TPM password hash to the recovery service.
 
 > [!NOTE]
-> Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
+> Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 or later by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
 
 ### Re-encryption
 
