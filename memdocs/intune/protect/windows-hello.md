@@ -70,9 +70,9 @@ The remainder of this article focuses on creating a default Windows Hello for Bu
 
    - **Disabled**. If you don't want to enable Windows Hello for Business during device enrollment, select this option. When disabled, users can't provision Windows Hello for Business. When set to *Disabled*, you can still configure the subsequent settings for Windows Hello for Business even though this policy won't enable Windows Hello for Business.
 
-   - **Not configured**. Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on Windows 10 devices isn't changed. All other settings on the pane are unavailable.
+   - **Not configured**. Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on 10/11 devices isn't changed. All other settings on the pane are unavailable.
 
-4. If you selected **Enabled** in the previous step, configure the required settings that are applied to all enrolled Windows 10 devices. After you configure these settings, select **Save**.
+4. If you selected **Enabled** in the previous step, configure the required settings that are applied to all enrolled Windows 10/11 devices. After you configure these settings, select **Save**.
 
    - **Use a Trusted Platform Module (TPM)**:
 
@@ -141,4 +141,4 @@ Windows Holographic for Business supports the following settings for Windows Hel
 
 ## Next steps
 
-For more information about Windows Hello for Business, see [the guide](/windows/security/identity-protection/hello-for-business/hello-identity-verification) in the Windows 10 documentation.
+For more information about Windows Hello for Business, see [the guide](/windows/security/identity-protection/hello-for-business/hello-identity-verification) in the Windows documentation.

@@ -805,7 +805,7 @@ Specifies additional options to add to the DISM command line when applying a dri
 
 To use this variable, enable the setting, **Install driver package via running DISM with recurse option**, on the **Apply Driver Package** step.
 
-For more information, see [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+For more information, see [DISM command-line options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
 
 ### <a name="OSDJoinAccount"></a> OSDJoinAccount
 
@@ -1265,7 +1265,7 @@ Specifies the Windows Server license mode that's used.
 
 (input)
 
-Specifies the additional command-line options that are added to Windows Setup during a Windows 10 upgrade. The task sequence doesn't verify the command-line options.
+Specifies the additional command-line options that are added to Windows Setup during an upgrade. The task sequence doesn't verify the command-line options.
 
 For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
@@ -1695,7 +1695,7 @@ Use this variable with the existing [SMSTSRebootDelay](task-sequence-variables.m
 
 #### Example
 
-You want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+You want to give users a 60-minute reboot notification at the start of a Windows in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
 
 
 ### <a name="SMSTSRebootMessage"></a> SMSTSRebootMessage

@@ -1,11 +1,11 @@
 ---
 title: SMS_TaskSequence_UpgradeOperatingSystemAction class
 titleSuffix: Configuration Manager
-ms.date: 08/11/2020
+description: Details of the SMS_TaskSequence_UpgradeOperatingSystemAction server WMI class.
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
-ms.assetid: 4a5f6ade-6ab5-4324-ac0e-6348b9488712
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -14,7 +14,7 @@ ms.localizationpriority: null
 
 # SMS_TaskSequence_UpgradeOperatingSystemAction server WMI class
 
-The `SMS_TaskSequence_UpgradeOperatingSystemAction` WMI class is an SMS provider server class in Configuration Manager. It represents a task sequence action that upgrades the OS. This step is only supported for Windows 10.
+The `SMS_TaskSequence_UpgradeOperatingSystemAction` WMI class is an SMS provider server class in Configuration Manager. It represents a task sequence action that upgrades the OS. This step is only supported for Windows 10 and Windows 11.
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
@@ -29,6 +29,8 @@ Class SMS_TaskSequence_UpgradeOperatingSystemAction : SMS_TaskSequence_Action
     String DriverPackageID;
     String DynamicUpdateSettings;
     Boolean Enabled;
+    String FeatureUpdateAssignmentId;
+    String FeatureUpdateName
     Boolean IgnoreMessages;
     UInt32 InstallEditionIndex;
     String InstallPackageID;
@@ -58,7 +60,7 @@ Access type: Read/Write
 
 Qualifiers: None
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md).  
 
 ### `ContinueOnError`
 
@@ -68,7 +70,7 @@ Access type: Read/Write
 
 Qualifiers: None
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+For more information, see [SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md).
 
 ### `Description`
 
@@ -78,7 +80,7 @@ Access type: Read/Write
 
 Qualifiers: `[AllowedLen("0-255")]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+For more information, see [SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md).
 
 ### `DriverPackageID`
 
@@ -113,7 +115,27 @@ Access type: Read/Write
 
 Qualifiers: None
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+For more information, see [SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md).
+
+### `FeatureUpdateAssignmentId`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+The deployment ID of a feature update used to upgrade the Window OS.
+
+### `FeatureUpdateName`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+The name of a feature update used to upgrade the Window OS.
 
 ### `IgnoreMessages`
 
@@ -123,7 +145,7 @@ Access type: Read/Write
 
 Qualifiers: None
 
-Ignores dismissible compatibility messages. The default value is `false`.
+Ignores compatibility messages that can be dismissed. The default value is `false`.
 
 ### `InstallEditionIndex`
 
@@ -163,7 +185,7 @@ Access type: Read/Write
 
 Qualifiers: `[AllowedLen("1-100")]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+For more information, see [SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md).
 
 ### `OsProductKey`
 
@@ -223,7 +245,7 @@ Access type: Read/Write
 
 Qualifiers: None
 
-The default value is `FullOS`. For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+The default value is `FullOS`. For more information, see [SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md).
 
 ### `Timeout`
 
@@ -233,14 +255,14 @@ Access type: Read/Write
 
 Qualifiers: None
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+For more information, see [SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md).
 
 ## Requirements
 
 ### Runtime requirements
 
-For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+For more information, see [Configuration Manager server runtime requirements](../../core/reqs/server-runtime-requirements.md).
 
 ### Development requirements
 
-For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).
+For more information, see [Configuration Manager server development requirements](../../core/reqs/server-development-requirements.md).

@@ -1,8 +1,8 @@
 ---
 title: Install the client with Azure AD
 titleSuffix: Configuration Manager
-description: Install and assign the Configuration Manager client on Windows 10 devices using Azure Active Directory for authentication
-ms.date: 06/03/2020
+description: Install and assign the Configuration Manager client on Windows devices using Azure Active Directory for authentication
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -12,9 +12,9 @@ manager: dougeby
 ms.localizationpriority: medium
 ---
 
-# Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication
+# Install and assign Configuration Manager clients using Azure AD for authentication
 
-To install the Configuration Manager client on Windows 10 devices using Azure AD authentication, integrate Configuration Manager with Azure Active Directory (Azure AD). Clients can be on the intranet communicating directly with an HTTPS-enabled management point or any management point in a site enabled for Enhanced HTTP. They can also be internet-based communicating through the CMG or with an Internet-based management point. This process uses Azure AD to authenticate clients to the Configuration Manager site. Azure AD replaces the need to configure and use client authentication certificates.
+To install the Configuration Manager client on Windows devices using Azure Active Directory (Azure AD) authentication, integrate Configuration Manager with Azure AD. Clients can be on the intranet communicating directly with an HTTPS-enabled management point or any management point in a site enabled for Enhanced HTTP. They can also be internet-based communicating through the CMG or with an Internet-based management point. This process uses Azure AD to authenticate clients to the Configuration Manager site. Azure AD replaces the need to configure and use client authentication certificates.
 
 Setting up Azure AD may be easier for some customers than setting up a public key infrastructure for certificate-based authentication. There are features that require you onboard the site to Azure AD, but don't necessarily require the clients to be Azure AD-joined.<!-- SCCMDocs issue 1259 --> For more information, see the following articles:
 
@@ -27,7 +27,7 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 
 - Device requirements:  
 
-  - Windows 10  
+  - A supported version of Windows 10 or later
 
   - Joined to Azure AD, either pure cloud domain-joined, or hybrid Azure AD-joined  
 
@@ -44,7 +44,7 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 - Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
 
 > [!TIP]
-> Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
+> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).<!--5686290-->
 
 ## Configure Azure Services for Cloud Management
 
@@ -59,13 +59,13 @@ After you complete these actions, your Configuration Manager site is connected t
 
 ## Configure client settings
 
-These client settings help configure Windows 10 devices to be hybrid-joined. They also enable internet-based clients to use the CMG.
+These client settings help configure Windows devices to be hybrid-joined. They also enable internet-based clients to use the CMG.
 
 1. Configure the following client settings in the **Cloud Services** group. For more information, see [How to configure client settings](configure-client-settings.md).
 
     - **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. Devices can get the content from the CMG.<!--495533-->  
 
-    - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows 10, version 1709.
+    - **Automatically register new Windows 10 or later domain joined devices with Azure Active Directory**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows.
 
         > [!TIP]
         > Hybrid-joined devices are joined to an on-premises Active Directory domain and registered with Azure AD. For more information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->

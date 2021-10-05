@@ -4,10 +4,10 @@ title: What's new in Microsoft Intune
 titleSuffix:
 description: Find out what's new in the Intune Azure portal
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 10/05/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,41 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+## Week of October 4, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Newly available protected apps for Intune<!-- 10489496, 10436733, 10494599, 10587268 -->
+The following protected apps are now available for Microsoft Intune:
+
+- iAnnotate for Intune/O365 by Branchfire, Inc.
+- Dashflow for Intune by Intellect Automation International Pty Limited
+- HowNow by Wonderush Limited
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Removal of Wi-Fi MAC address on specific Android Enterprise devices<!-- 11004658 -->
+Intune will no longer display a Wi-Fi MAC address for newly enrolled personally-owned work profile devices and devices managed with device administrator running Android 9 and above. Google is requiring all app updates to target [API 30 by November 2021](https://developer.android.com/distribute/play-policies#APILevel30). With this change, Android prevents apps from collecting the MAC address used by the device. For related information, see [Hardware device details](../remote-actions/device-inventory.md#hardware-device-details).
+
+<!-- ########################## -->
+#### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623  -->
+
+You can use *Feature updates for Windows 10 and later*
+policy to upgrade devices that meet the Windows 11 minimum requirements to
+Windows 11. It's as easy as configuring a new feature updates policy that
+specifies the available Windows 11 version as the feature update you want to
+deploy. 
+
+For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
+
+#### Windows 11 hardware readiness insights<!--9740163-->
+
+The **Work from anywhere** report in [Endpoint analytics](../../analytics/overview.md) now provides [Windows 11 hardware readiness](../../analytics/work-from-anywhere.md#bkmk_windows11) insights. You can quickly determine how many of your enrolled devices meet the minimum system requirements for Windows 11 and which requirements are the top blockers within your organization. Drill in for a device-level view for Windows 11 hardware readiness status. For more information, see [Windows 11 hardware readiness](../../analytics/work-from-anywhere.md#bkmk_windows11).
+
 ## Week of September 27, 2021 (Service release 2109)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -121,8 +156,13 @@ A new device restrictions setting for corporate-owned work profile devices preve
 - **Block**: Blocks users from sharing work profile contacts via Bluetooth.
 - **Not configured**:  Doesn't enforce any restrictions on the device, so users might be able to share their work profile contacts via Bluetooth.
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
+
+#### Intune now supports iOS/iPadOS 13 and higher<!-- 9964998 -->
+Microsoft Intune, including the Intune Company Portal and Intune app protection policies now requires [iOS/iPadOS 13 and higher](../fundamentals/supported-devices-browsers.md).
+
+#### Intune now supports macOS 10.15 and later<!-- 10154527 -->
+Intune enrollment and the Company Portal now supports [macOS 10.15 and later](../fundamentals/supported-devices-browsers.md). Older versions are not supported.
 
 #### New Android device filtering options<!--7479654  -->
 
@@ -226,6 +266,7 @@ To learn more about active safeguard holds and expectations for their resolution
 #### Update to the Assignment failures operational report<!-- 6473096  -->
 
 [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to the existing **Assignment failures** report. The profile types are differentiated using the **Policy type** column with the ability to filter. Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security Baseline permission, the Device Configuration permission, and the Device Compliance Policies permission. The report shows the number of devices in a state of error and conflict for a given profile, with the ability to drill down into a detailed list of those devices or users and further into the setting details. You can find the **Assignment failures** report in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**, or by selecting **Endpoint Security** > **Monitor**. For more information, see [Assignment failures report (Operational)](../fundamentals/reports.md#assignment-failures-report-operational).
+
 
 <!-- ########################## -->
 ## Week of September 20, 2021
@@ -460,7 +501,7 @@ All device configuration and endpoint security profiles are now merged into one 
 
 #### New details for the Intune antivirus reports<!-- 8504648   -->
 
-We've added two new columns of detail to both the [Windows 10 unhealthy endpoints](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints) report and the [Antivirus agent status](../fundamentals/reports.md#antivirus-agent-status-report-organizational) report.
+We've added two new columns of detail to both the [Windows 10 unhealthy endpoints](../protect/endpoint-security-antivirus-policy.md#unhealthy-endpoints) report and the [Antivirus agent status](../fundamentals/reports.md#antivirus-agent-status-report-organizational) report.
 
 The new details include:
 
@@ -681,7 +722,7 @@ When you create a new assignment for a Apple Volume Purchase Program (VPP) app, 
 
 The following protected apps are now available for Microsoft Intune:
 
-- Secrets Confidential File Viewer by Hitachi Solutions, Ltd.
+- Confidential File Viewer by Hitachi Solutions, Ltd.
 - AventX Mobile Work Orders by STR Software
 - Slack for Intune by Slack Technologies, Inc.
 - Dynamics 365 Sales by Microsoft

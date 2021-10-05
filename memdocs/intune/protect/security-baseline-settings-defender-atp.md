@@ -935,7 +935,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
   - **Not configured**  - The setting is restored to the system default.
@@ -1128,7 +1128,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
   - **Not configured**  - The setting is restored to the system default.
@@ -1261,7 +1261,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Not configured**
 
 - **Configure Microsoft Defender SmartScreen**  
-  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain; or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain; or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.
 
   Microsoft Defender SmartScreen provides warning messages to help protect your users from potential phishing scams and malicious software. By default, Microsoft Defender SmartScreen is turned on.
 
@@ -1284,7 +1284,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Not configured** - Same behavior as *Disabled*.
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
-  This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain; or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+  This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain; or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.
 
   This policy setting lets you configure whether to turn on blocking for potentially unwanted apps in Microsoft Defender SmartScreen. Potentially unwanted app blocking in Microsoft Defender SmartScreen provides warning messages to help protect users from adware, coin miners, bundleware, and other low-reputation apps that are hosted by websites. Potentially unwanted app blocking in Microsoft Defender SmartScreen is turned off by default.
 

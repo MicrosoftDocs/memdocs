@@ -734,6 +734,9 @@ These settings use the [search policy CSP](/windows/client-management/mdm/policy
 
 These settings use the [start policy CSP](/windows/client-management/mdm/policy-csp-start), which also lists the supported Windows editions.  
 
+> [!NOTE]
+> Management capabilities to deliver customized Start and Taskbar experiences are currently limited on Windows 11. For more information, see [Supported configuration service provider (CSP) policies for Windows 11 Start menu](/windows/configuration/supported-csp-start-menu-layout-windows).
+
 - **Start menu layout**: Upload an XML file that includes your customizations, including the order the apps are listed, and more. The XML file overrides the default start layout. Users can't change the start menu layout you enter.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.

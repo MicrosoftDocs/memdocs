@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: In development - Windows 365
+title: In development - Windows 365 Enterprise
 titleSuffix: 
-description: Windows 365 features in development
+description: Windows 365 Enterprise features in development
 keywords:
 author: ErikjeMS 
 ms.author: erikje
@@ -34,17 +34,12 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 - When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
+- Similar features may be announced at different times for Windows 365 Business.
 
 > [!NOTE]
 > This page reflects our current expectations about Windows 365 capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
 
 **This article was last updated on the date listed under the title above.**
-
-<!--
-## What's coming to Intune in the Azure portal 
-## What's coming to Intune apps
-## Notices
--->
 
 <!-- Common categories:  
 ## App management
@@ -76,12 +71,6 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 
 - Don’t need their own Azure infrastructure
 - Don’t need to create an on-premises network connection.
-
-### Support for Windows 11<!--35091970 -->
-
-In a future update, Windows 365 will support Windows 11 as a Cloud PC operating system.
-
-Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
 
 ### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
 

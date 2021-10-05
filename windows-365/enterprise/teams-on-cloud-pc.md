@@ -37,7 +37,6 @@ Using Teams on a Cloud PC is different from using Teams on a physical PC environ
 > [!NOTE]
 > Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You can also sign out and in again to your Cloud PC to gain the same result.
 
-
 ## Teams optimizations
 
 The image gallery provides Windows 10 Enterprise images pre-configured with all the software that’s needed for an optimized Teams experience on Cloud PCs. As an IT admin or user, you need only install and configure the Microsoft Teams application and then you are ready to use it.
@@ -48,7 +47,7 @@ Some of the key benefits of the optimizations are:
 
 - High-performance peer-to-peer streaming facilitated by WebRTC.Traffic flows peer-to-peer and is rendered by the endpoint.
 - Devices are redirected as the same hardware device, resulting in better hardware redirection support.
-- Windows 10 clients get all the benefits of the modern media stack, including HW video decoding.
+- Windows clients get all the benefits of the modern media stack, including HW video decoding.
 
 ### Teams optimization support
 

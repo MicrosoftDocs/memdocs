@@ -55,7 +55,7 @@ To use device compliance policies, be sure you:
   - Android Enterprise
   - iOS
   - macOS
-  - Windows 10
+  - Windows 10/11
   - Windows 8.1
 
 - Enroll devices in Intune (required to see the compliance status)
@@ -94,7 +94,7 @@ To use device compliance policies, be sure you:
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
-   - [Windows 10 and later](compliance-policy-create-windows.md)  
+   - [Windows 10/11](compliance-policy-create-windows.md)  
 
 6. On the **Locations** tab, you can force compliance based on the location of the device. Choose from existing locations. If you don't have an available location yet, see [Use Locations (network fence)](use-network-locations.md) for guidance.
    > [!TIP]

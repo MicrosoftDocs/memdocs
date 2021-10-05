@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot motherboard replacement
-ms.reviewer: 
-manager: laurawi
 description: Windows Autopilot deployment Motherboard Replacement (MBR) scenarios
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -12,17 +10,19 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-
 # Windows Autopilot motherboard replacement scenario guidance
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 
 This document offers guidance for Windows Autopilot device repair scenarios that Microsoft partners can use in Motherboard Replacement (MBR) situations, and other servicing scenarios.
 
@@ -436,6 +436,7 @@ Other repair scenarios not yet tested and verified include:
 
 | Question | Answer |
 | --- | --- |
+| What to do if you see another customer’s welcome page? | If you continue seeing another customer’s welcome page on a refurbished motherboard, a ticket needs to be raised to Microsoft to fix the device ownership. You can open a ticket through the Microsoft Endpoint Manager portal by selecting the Help and Support option outlined [here](https://docs.microsoft.com/mem/get-support). If you do not have access to Microsoft Endpoint Manager, you can submit a ticket through Microsoft Store for Business by selecting Manage > Support and selecting Technical Support. You can also submit a ticket through your Microsoft Volume Licensing Center agreement, instructions outlined [here](https://support.microsoft.com/topic/microsoft-software-assurance-support-incident-submission-74a9a148-9a75-ecc8-4420-14191e634d65). Please title all tickets “Autopilot Deregistration Request” to streamline requests. |
 | We have a tool that programs product information into the BIOS after the MBR. Do we still need to submit a CBR report for the device to be Autopilot-capable? | No. Not if the in-house tool writes the minimum necessary information into the BIOS that the Autopilot program looks for to identify the device, as described earlier in this document. |
 | What if only some components are replaced rather than the full motherboard? | It’s true that some limited repairs don't prevent the Autopilot algorithm from successfully matching the post-repair device with the pre-repair device. Even so, it's best to ensure 100% success by going through the MBR steps above even for devices that only needed limited repairs. |
 | How does a repair technician gain access to a broken device if they don’t have the customer’s login credentials? | The technician will have to reimage the device and use their own credentials during the repair process. |

@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot what's new
-ms.reviewer: 
-manager: laurawi
 description: Read news and resources about the latest updates and past versions of Windows Autopilot.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens, diagnostics
 ms.technology: windows
@@ -13,18 +11,19 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+manager: dougeby
+ms.reviewer: jubaptis
 ms.date: 07/30/2021
 ms.collection: M365-modern-desktop
 ms.topic: article
 ---
 
-
 # Windows Autopilot: What's new
 
 **Applies to**
 
-- Windows 10
 - Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
 ## [Preview] Windows Autopilot diagnostics page

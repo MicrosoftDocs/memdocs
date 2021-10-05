@@ -40,7 +40,7 @@ OS images are large in size. For example, the image size for Windows 7 is 3 GB o
 
 Also make sure that you plan for sufficient disk storage space on the distribution points that host the OS images.  
 
-For more information, see [Additional planning considerations for distribution points](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_AdditionalPlanning).
+For more information, see [Additional planning considerations for distribution points](prepare-site-system-roles-for-operating-system-deployments.md#additional-planning-considerations-for-distribution-points).
 
 
 ### Client cache size  
