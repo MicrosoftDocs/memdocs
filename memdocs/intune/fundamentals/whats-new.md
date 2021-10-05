@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 10/05/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,13 +59,28 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 <!-- ########################## -->
+## Week of October 4, 2021
 
-## Week of October  4, 2021
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Newly available protected apps for Intune<!-- 10489496, 10436733, 10494599, 10587268 -->
+The following protected apps are now available for Microsoft Intune:
+
+- iAnnotate for Intune/O365 by Branchfire, Inc.
+- Dashflow for Intune by Intellect Automation International Pty Limited
+- HowNow by Wonderush Limited
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-##### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623  -->
+#### Removal of Wi-Fi MAC address on specific Android Enterprise devices<!-- 11004658 -->
+Intune will no longer display a Wi-Fi MAC address for newly enrolled personally-owned work profile devices and devices managed with device administrator running Android 9 and above. Google is requiring all app updates to target [API 30 by November 2021](https://developer.android.com/distribute/play-policies#APILevel30). With this change, Android prevents apps from collecting the MAC address used by the device. For related information, see [Hardware device details](../remote-actions/device-inventory.md#hardware-device-details).
+
+<!-- ########################## -->
+#### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623  -->
 
 You can use *Feature updates for Windows 10 and later*
 policy to upgrade devices that meet the Windows 11 minimum requirements to
@@ -74,6 +89,10 @@ specifies the available Windows 11 version as the feature update you want to
 deploy. 
 
 For more information, see [Upgrade devices to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
+
+#### Windows 11 hardware readiness insights<!--9740163-->
+
+The **Work from anywhere** report in [Endpoint analytics](../../analytics/overview.md) now provides [Windows 11 hardware readiness](../../analytics/work-from-anywhere.md#bkmk_windows11) insights. You can quickly determine how many of your enrolled devices meet the minimum system requirements for Windows 11 and which requirements are the top blockers within your organization. Drill in for a device-level view for Windows 11 hardware readiness status. For more information, see [Windows 11 hardware readiness](../../analytics/work-from-anywhere.md#bkmk_windows11).
 
 ## Week of September 27, 2021 (Service release 2109)
 
@@ -703,7 +722,7 @@ When you create a new assignment for a Apple Volume Purchase Program (VPP) app, 
 
 The following protected apps are now available for Microsoft Intune:
 
-- Secrets Confidential File Viewer by Hitachi Solutions, Ltd.
+- Confidential File Viewer by Hitachi Solutions, Ltd.
 - AventX Mobile Work Orders by STR Software
 - Slack for Intune by Slack Technologies, Inc.
 - Dynamics 365 Sales by Microsoft
