@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 10/05/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,18 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- ########################## -->
 
 ## Week of October  4, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Newly available protected apps for Intune<!-- 10489496, 10436733, 10494599, 10587268 -->
+The following protected apps are now available for Microsoft Intune:
+
+- iAnnotate for Intune/O365 by Branchfire, Inc.
+- Dashflow for Intune by Intellect Automation International Pty Limited
+- HowNow by Wonderush Limited
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -703,7 +715,7 @@ When you create a new assignment for a Apple Volume Purchase Program (VPP) app, 
 
 The following protected apps are now available for Microsoft Intune:
 
-- Secrets Confidential File Viewer by Hitachi Solutions, Ltd.
+- Confidential File Viewer by Hitachi Solutions, Ltd.
 - AventX Mobile Work Orders by STR Software
 - Slack for Intune by Slack Technologies, Inc.
 - Dynamics 365 Sales by Microsoft
