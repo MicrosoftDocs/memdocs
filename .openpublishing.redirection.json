@@ -959,11 +959,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "windows-365/overview.md",
-            "redirect_url":"/windows-365/enterprise/overview",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "windows-365/permission-scopes.md",
             "redirect_url":"/windows-365/enterprise/permission-scopes",
             "redirect_document_id": false
