@@ -12,7 +12,7 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 09/02/2021
+ms.date: 10/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -28,11 +28,17 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Delete device record in Intune before reusing devices in self-deployment mode or Pre-Provisioning mode
+
+You have devices enrolled using Autopilot self-deployment mode or pre-provisioning mode. If you redeploy an Autopilot profile, it fails with a `0x80180014` error code. To resolve this error, delete the device record in Intune, and then redeploy the profile.
+
+For more information on this issue, see [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md).
+
 ### A non-assigned user can sign in when using user-driven mode with Active Directory Federation Services (ADFS)
 
 In a Windows Autopilot user-driven Azure Active Directory (Azure AD) joined environment, administrators can pre-assign a user to a device. If the user is a cloud-native Azure AD account, the username is enforced and the user is only asked for their password; there is no way to sign in with another user ID. However, when ADFS is used, the username assignment is not enforced. A different user than the one assigned can sign in on the device.
 
-### Intune connector is inactive but still appears in the Intune Connectors blade
+### Intune connector is inactive but still appears in the Intune Connectors
 
 Inactive Intune connectors will be automatically cleaned up after 30 days of inactivity without admin interaction.
 
@@ -40,7 +46,7 @@ Inactive Intune connectors will be automatically cleaned up after 30 days of ina
 
 When [customizations are applied to the company branding settings](/azure/active-directory/fundamentals/customize-branding#to-customize-your-branding) the HTML tags may be visible and not rendered correctly on the update password page. This issue should be fixed in future versions of Windows.
 
-### TPM attestation is not working on Intel Tiger Lake platforms
+## TPM attestation is not working on Intel Tiger Lake platforms
 
 TPM attestation support for Intel TPM Tiger Lake platforms are only supported on devices with Windows 10 version 21H2 or higher.
 

@@ -48,9 +48,9 @@ To get the logs:
 
 ### Cause
 
-Microsoft Endpoint Manager changed the Windows Autopilot self-deployment mode (Public Preview) and Pre-Provisioning mode (formerly known as white glove, also in Public Preview) experience.
+Microsoft Endpoint Manager changed the Windows Autopilot self-deployment mode (Public Preview) and Pre-Provisioning mode (formerly known as white glove, in Public Preview) experience.
 
-To reuse a device, you must delete the device record created by Intune. 
+To reuse a device, you must delete the device record created by Intune.
 
 This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
 

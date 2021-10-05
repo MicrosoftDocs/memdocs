@@ -14,7 +14,7 @@ manager: dougeby
 ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 09/24/2021
+ms.date: 10/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -51,8 +51,11 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
 - Physical devices with Ethernet connectivity are required to perform pre-provisioning. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection. Enforcing this requirement in a pre-provisioning process could prevent the user from choosing their own language, locale, and keyboard when they receive the device. For more information, see [Using a wireless network connection with Windows Autopilot white glove](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
 
->[!IMPORTANT]
->Because the OEM or vendor performs the pre-provisioning process, this <u>doesn't require access to an end-user's on-prem domain infrastructure</u>. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
+> [!IMPORTANT]
+> 
+> - Because the OEM or vendor performs the pre-provisioning process, this <u>doesn't require access to an end-user's on-prem domain infrastructure</u>. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
+> 
+> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known errors and solutions.
 
 ## Preparation
 
@@ -127,7 +130,7 @@ If the pre-provisioning process completes successfully:
 
 If the pre-provisioning process fails:
 
-- A red status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code.The elapsed time for the pre-provisioning steps is also provided.
+- A red status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
 - Diagnostic logs can be gathered from the device, and then it can be reset to start the process over again.
 
 ### User flow
@@ -139,7 +142,7 @@ If the pre-provisioning process completed successfully and the device was reseal
 - Connect to a network (if using Wi-Fi). Internet access is always required. If using Hybrid Azure AD Join, there must also be connectivity to a domain controller.
 - On the branded sign-on screen, enter the user's Azure Active Directory credentials.
 - If using Hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
-- Additional policies and apps will be delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user will can access the desktop.
+- Additional policies and apps will be delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
 > [!NOTE]
 > If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
