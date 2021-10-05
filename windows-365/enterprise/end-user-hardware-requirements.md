@@ -41,7 +41,7 @@ Downloads available for:
 
 Hardware requirements:
 
-- **Operating systems**: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+- **Operating systems**: Windows 10/11, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 - **CPU**: 1vCPU with 1 GHz or faster processor
 - **RAM**: 1024 MB
 - **Hard drive**: 100 MB or more
@@ -54,7 +54,7 @@ If you'll be using Microsoft Teams on the Cloud PCs, the Windows device requirem
 - **RAM**: 1024 MB
 - **Hard drive**: 3 GB or more
 - **.NET Framework version**: 4.6.1 or later
-- **Video**: DirectX 9 or later with WDDM 1.0 driver. Background video effects require Windows 10 or a processor with AVX2 instruction set. Also, Teams audio and video offloading on a Cloud PC benefits from a dedicated Graphics Processing Unit (GPU) within the device.
+- **Video**: DirectX 9 or later with WDDM 1.0 driver. Background video effects require Windows 10/11 or a processor with AVX2 instruction set. Also, Teams audio and video offloading on a Cloud PC benefits from a dedicated Graphics Processing Unit (GPU) within the device.
 
 ## Microsoft Remote Desktop client for Windows from the Microsoft Store
 
