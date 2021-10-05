@@ -80,7 +80,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Management name|The device name used only in the console. Changing this name won't change the name on the device.|Windows, iOS, Android|
 |UDID|The device's Unique Device identifier.|Windows, iOS|
 |Intune Device ID|A GUID that uniquely identifies the device.|Windows, iOS, Android|
-|Serial number|The device's serial number from the manufacturer.|Windows, iOS, Android|
+|Serial number|The device's serial number from the manufacturer.|Windows, iOS, Android <br/><br/> NOTE: Intune doesn't display serial number for Android personally-owned work profile devices running Android 12 and newer|
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
 |User approved enrollment|If **Yes**, then the device has user approved enrollment that lets admins manage certain security settings on the device.|Windows, iOS|
 |Operating system|The operating system used on the device.|Windows, iOS, Android|
@@ -94,8 +94,8 @@ Depending on the carrier used by the devices, not all details might be collected
 | PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
 | Last Battery Check-in | Date of last check-in for battery last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 | Battery Serial Number | Serial number of the battery pack last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
-|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android|
-|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
+|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display IMEI for Android personally-owned work profile devices running Android 12 and newer|
+|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display MEID for Android personally-owned work profile devices running Android 12 and newer|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, iOS/iPadOS, Android|
 |Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android|
