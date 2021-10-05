@@ -75,7 +75,7 @@ Windows 365 is available in two editions: [Windows 365 Business](https://www.mic
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Conditional Access | Conditional Access policies can be deployed only by using Azure AD with an Azure AD P1 license. | Conditional Access policies can be deployed by using the Microsoft Endpoint Manager admin center or Azure AD. |
-| [Per-user multi-factor authentication (MFA)](/active-directory/authentication/howto-mfa-userstates) | Not supported. To enable MFA, use [Azure AD Conditional Access](/azure/active-directory/authentication/tutorial-enable-azure-mfa). | Supported. |
+| [Per-user multi-factor authentication (MFA)](/active-directory/authentication/howto-mfa-userstates) | only MFA using [Azure AD Conditional Access](/azure/active-directory/authentication/tutorial-enable-azure-mfa), legacy per-user MFA not supported. | Supported. |
 | Security baselines | Not supported. | Dedicated Security Baselines can be edited and deployed by using Microsoft Endpoint Manager. |
 | Microsoft Defender for Endpoint | Supported if the customer separately has the requisite E5 license. | Integration with Defender for Endpoint. If the customer has an E5 license, all Cloud PCs will respond to Defender for Endpoint policies and show up in MDE dashboards. |
 
