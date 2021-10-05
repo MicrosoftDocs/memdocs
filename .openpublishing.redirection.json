@@ -1036,33 +1036,33 @@
         {
               "source_path": "memdocs/windows-365/security-guidelines.md",
               "redirect_url": "/mem/windows-365/enterprise/security-guidelines",
-              "redirect_document_id": false
+              "redirect_document_id": false
         },
         {
-              "source_path": "memdocs/windows-365/set-conditional-access-policies.md",
-              "redirect_url": "/mem/windows-365/enterprise/set-conditional-access-policies",
-              "redirect_document_id": false
+            "source_path": "memdocs/windows-365/set-conditional-access-policies.md",
+            "redirect_url": "/mem/windows-365/enterprise/set-conditional-access-policies",
+            "redirect_document_id": false
         },
         {
-              "source_path": "memdocs/windows-365/teams-on-cloud-pc.md",
-              "redirect_url": "/mem/windows-365/enterprise/teams-on-cloud-pc",
-              "redirect_document_id": false
+            "source_path": "memdocs/windows-365/teams-on-cloud-pc.md",
+            "redirect_url": "/mem/windows-365/enterprise/teams-on-cloud-pc",
+            "redirect_document_id": false
         },
         {
-              "source_path": "memdocs/windows-365/troubleshoot-on-premises-network-connection.md",
-              "redirect_url": "/mem/windows-365/enterprise/troubleshoot-on-premises-network-connection",
-              "redirect_document_id": false
+            "source_path": "memdocs/windows-365/troubleshoot-on-premises-network-connection.md",
+            "redirect_url": "/mem/windows-365/enterprise/troubleshoot-on-premises-network-connection",
+            "redirect_document_id": false
         },
         {
-              "source_path": "memdocs/windows-365/troubleshooting.md",
-              "redirect_url": "/mem/windows-365/enterprise/troubleshooting",
-              "redirect_document_id": false
+            "source_path": "memdocs/windows-365/troubleshooting.md",
+            "redirect_url": "/mem/windows-365/enterprise/troubleshooting",
+            "redirect_document_id": false
         },
         {
-              "source_path": "memdocs/windows-365/whats-new.md",
-              "redirect_url": "/mem/windows-365/enterprise/whats-new",
-              "redirect_document_id": false
-        }   
+            "source_path": "memdocs/windows-365/whats-new.md",
+            "redirect_url": "/mem/windows-365/enterprise/whats-new",
+            "redirect_document_id": false
+        }
 
     ]
 }
