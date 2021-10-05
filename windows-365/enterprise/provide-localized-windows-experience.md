@@ -45,7 +45,7 @@ Creating a custom image with the languages installed is the best way to make sur
 
 Before starting the custom image process, check if your language is supported by the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller) script. If:
 
-- The language you want to provide for your users is supported by the PowerShell script, follow the steps to [Add languages to Windows using a script and capture the image](#add-languages-to-windows-using-a-script-and-capture-the-image).
+- The language you want to provide for your users is supported by the PowerShell script, follow the steps to [Add languages to Windows using a script and capture the image](#add-languages-to-windows-using-a-script-and-capture-the-image). Windows 10 custom images only.
 - The language you want to provide for your users isn't supported by the PowerShell script, follow the steps to [Add languages to Windows manually and capture the image](#add-languages-to-windows-manually-and-capture-the-image).
 
 ### Add languages to Windows using a script and capture the image
