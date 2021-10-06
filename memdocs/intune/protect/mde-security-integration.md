@@ -124,7 +124,7 @@ FLIP TOGGLES:
 
 ## Deploy policy
 
-To deploy policy, you'll need an Azure AD group that contains the devices you wan't to deploy policy to. If you haven't created a group with the applicable devices, see []().
+To deploy policy, you'll need an Azure AD group that contains the devices you wan't to deploy policy to. If you haven't created a group with the applicable devices, see `link pending []()`.
 
 Security configuration management supports Antivirus and Firewall policies. 
 
@@ -162,7 +162,7 @@ Security configuration management supports Antivirus and Firewall policies.
 
 9. Wait for the policy to be assigned and view a success indication that policy was applied.
 
-10. Validate settings are applied locally on the client by using the [Get-MpPreference](/powershell/module/defender/get-mppreference?view=windowsserver2019-ps#examples) command utility.
+10. Validate settings are applied locally on the client by using the [Get-MpPreference](/powershell/module/defender/get-mppreference?view=windowsserver2019-psreserve-view=true#examples) command utility.
 
 ## Monitor status
 
