@@ -29,12 +29,12 @@ productDirectory:
     - title: Windows 365 Enterprise
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./media/win365icon.png
-      summary: Summary for Enterprise
+      summary: Learn more about Windows 365 Enterprise
       url: ./enterprise/index.yml
     # Card
     - title: Windows 365 Business
       imageSrc: ./media/win365icon.png
-      summary: Summary for Business
+      summary: Learn more about Windows 365 Business
       url: ./business/index.yml
 
 additionalContent:

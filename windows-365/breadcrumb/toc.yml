@@ -13,9 +13,9 @@ items:
     - name: Windows 365 Enterprise
       tocHref: /windows-365/enterprise/
       topicHref: /windows-365/enterprise/index
-  - name: Windows 365
-    tocHref: /mem/intune/
-    topicHref: /windows-365/index
-  - name: Windows 365
-    tocHref: /azure/virtual-desktop/
-    topicHref: /windows-365/index
+    - name: Windows 365 Enterprise
+      tocHref: /mem/intune/
+      topicHref: /windows-365/enterprise/index
+    - name: Windows 365
+      tocHref: /azure/virtual-desktop/
+      topicHref: /windows-365/index
