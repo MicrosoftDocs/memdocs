@@ -124,10 +124,10 @@ FLIP TOGGLES:
 *** Any supported device not managed by Microsoft Endpoint Manager, will be queued up to onboard!
 -->
 
-## Onboard devices
+## Onboard devicesg
 <!-- use MDE include if availalbe -->
 
-Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](microsoft-365/security/defender-endpoint/configure-endpoints?view=o365-worldwide) in the Defender for Endpoint documentation. 
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/configure-endpoints?view=o365-worldwide) in the Defender for Endpoint documentation. 
 
 Devices that you manage with Intune or Configuration Manager are not supported for this scenario. 
 
