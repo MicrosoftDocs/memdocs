@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/05/2021
+ms.date: 10/06/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -66,6 +66,8 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 - Support for Windows 11 versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
 
 - Windows 11 reports the **Operating System** property as `Microsoft Windows NT Workstation 10.0`, which is identical to Windows 10. To distinguish devices running Windows 11, use the **Operating System Build** device property for build number `10.0.22000` or later.<!-- 11059508 -->
+
+- OS deployment images and upgrade packages for Windows 11 show the image name as Windows 10. For more information, see [Using deployment tools with Windows 11 images](/windows-hardware/manufacture/desktop/using-deployment-tools-with-windows-11).<!--11128713-->
 
 ## Support for Windows Insider
 
