@@ -13,7 +13,7 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 01/05/2021
+ms.date: 10/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---

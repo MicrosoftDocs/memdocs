@@ -26,51 +26,54 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattcall
 
-
 ---
-<!-- Release branch: release-mde-integration. Draft and scope in progress. Place images in ./media/mde-security-integration folder.  -->
-
 
 # Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager
 
-With Security configuration management for Microsoft Defender for Endpoint (MDE), you use the Microsoft Endpoint Manager admin center to configure and monitor MDE security configurations on devices that aren’t’ managed by an MDM solution. This scenario isn’t about device management, but security management. Security management for MDE assists you on your journey towards Zero Trust by helping you secure the devices that aren’t managed through dedicated device management like Intune or Configuration Manager.
+When you use Microsoft Endpoint Manager (MEM) and Microsoft Defender for Endpoint (MDE) in the same Azure Active Directory (Azure AD) tenant, you can use the Microsoft Endpoint Manager to deploy security configurations of devices in your environment. This capability is known as Security Management for Microsoft Defender for Endpoint. With this capability, devices that aren’t managed by a Mobile Device Management (MDM) solution can receive security configurations directly from Microsoft Endpoint Manager.
 
-You configure security management within the Microsoft Endpoint Manager admin center using the same policies you use to configure security for enrolled and managed devices. On supported devices, the MDE Sense agent reads the security configuration policy, configures the device, and then reports back on its status and security configuration. Then, within the Microsoft Endpoint Manager you can view the security status of all your devices in one location.
+When devices are managed through this capability:
 
-This scenario supports devices that aren’t enrolled with a product like Intune or Configuration Manager. If a device is managed through Intune or Configuration Manager, you use those channels to manage MDE on the device instead.
+- You use the Microsoft Endpoint Manager admin center to configure endpoint security policies for MDE and assign those policies to Azure AD groups of devices.
+- Devices get the policies based on their Azure Active Directory device registration. A device that isn’t already registered in Azure AD does so when it onboards to MDE.
+- When a device receives the policy, the Defender for Endpoint components on the device enforce the policy and report on the devices status. The device status is available in the Microsoft Endpoint Manager admin center.
 
-<!-- Placeholder image follows -->
-:::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution.":::
+This scenario supports devices that don't enroll with a product like Intune or Configuration Manager. If a device is managed through Intune or Configuration Manager, you use those channels to manage MDE on the device instead.
 
-## Overview
+:::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
-To use Security management for MDE, you connect your MDE subscription to MEM. After they’re connected you can enroll devices with MDE. Enrollment installs the MDE Sense agent on the device and registers it with your Azure AD if the device doesn’t already have a registration. It’s through the Azure AD registration that the Sense agent receives policies for the MDE configuration and reports back the device status.
-
-The broad strokes to use Security management for MDE include:
-
-- In a single Azure tenant, connect Microsoft Defender for Endpoint to Microsoft Endpoint Manager.
-- Identify supported devices that aren’t enrolled with Intune or managed by Configuration Manager, and onboard them to MDE. Onboarding also ensures the device is registered in Azure AD.
-- Use the Endpoint security node in the Microsoft Endpoint Manager admin center to create and deploy policy to manage MDE and view reports.
+<!-- Pending confirmation of applicability:
 
 > [!TIP]
-> You can use Security management for MDE to manage MDE on devices that are enrolled with a third-party non-Microsoft MDM.  
+> You can use Security management for MDE to manage MDE on devices that are enrolled with a third-party non-Microsoft MDM.
 
+-->
 ## Architecture
 
-<!-- Placeholder image follows. Use of AAD and MEM for Azure AD and Microsoft Endpoint Manager must be fixed for use in docs -->
-:::image type="content" source="./media/mde-security-integration/pending-mde-attach-architecture.png" alt-text="Conceptual representation of the MDE-Attach solution.":::
+The following is a conceptual representation of the MDE security configuration management solution. 
 
-1. Blah
-2. Blah
-<!-- for Localization, the more text we can add outside the image, the better -->
+:::image type="content" source="./media/mde-security-integration/mde-architecture.png" alt-text="Conceptual representation of the MDE security configuration management solution.":::
+
+1. Devices onboard to MDE.
+
+2. A trust is established between each device and Azure AD. When a device has an existing registration, that is used. When devices haven't registered, a new registration is created.
+
+3. Devices enroll with Microsoft Endpoint Manager. This enrollment enables devices to be managed through the Microsoft Endpoint Manager admin center and is distinct from the act of enrolling a device with a MDM authority like Intune or Configuration Manager.
+
+4. Microsoft Endpoint Management policies for MDE are deployed to devices based on the Azure AD registration of devices, and devices report their MDE status back to the admin center.
 
 ## Which solution should I use?
 
+Use the information in the following table to understand which solution to use to manage Defender for Endpoint on your devices:
 
+***Table pending***
 
 ## Prerequisites
-Review the following sections for requirements and configurations you'll need to successfully use security configuration managmenet for MDE. 
+
+Review the following sections for requirements and configurations you'll need to successfully use security configuration management for MDE.
+
 ### Environment
+<!-- Use MDE include if available -->
 
 Your environment must use Azure AD or Hybrid Azure AD. When a device enrolls with MDE, the device is registered automatically:
 
@@ -82,16 +85,18 @@ Devices must have access to the following endpoints:
 
 - `enterpriseregistration.windows.net` – For Azure AD registration.
 - `login.microsoftonline.com` – For Azure AD registration.
-- `*.dm.microsoft.com` -  The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting,and which can change as the service scales.
+- `*.dm.microsoft.com` -  The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
 ### Supported platforms
+<!-- Use MDE include if available -->
 
-<!-- Owned by MDE?  possibly and Include?  -->
-Security management for MDE policies are supported for the following device platforms:
+Policies for MDE security management are supported for the following device platforms:
 
-- Windows 10/11
-- Windows Server 2012 R2
-- Windows Server 2016
+- Windows 10 Professional/Enterprise (With KB999999)
+- Windows 11 Professional/Enterprise (With KB999999)
+- Windows Server 2012 R2 with Microsoft Defender for Down-Level Devices
+- Windows Server 2019 with Microsoft Defender for Down-Level Devices
+- Windows Server 2022 (with KB999999)
 
 ### Licensing and subscriptions
 
@@ -100,7 +105,8 @@ To use security management for MDE, you need only a subscription for Microsoft D
 *Any subscription* that grants MDE licenses also grants your tenant access to the Endpoint security node of the Microsoft Endpoint Manager admin center. The Endpoint security node is where you’ll configure and deploy policies to manage MDE for your devices and monitor device status.
 
 ## Configure your tenant
-
+<!-- Use MDE include if available -->
+***content pending*** 
 <!--  Rough notes:
 
 1.	Configure your Tenant.
@@ -119,8 +125,13 @@ FLIP TOGGLES:
 -->
 
 ## Onboard devices
+<!-- use MDE include if availalbe -->
 
-<!-- Owned by MDE?  possibly an Include?  -->
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](microsoft-365/security/defender-endpoint/configure-endpoints?view=o365-worldwide) in the Defender for Endpoint documentation. 
+
+Devices that you manage with Intune or Configuration Manager are not supported for this scenario. 
+
+After devices onboard and they're visible in the Microsoft Endpoint Management admin center, create Azure AD groups for these devices to support deployment of MDE policies.
 
 ## Deploy policy
 
@@ -131,7 +142,7 @@ Security configuration management supports Antivirus and Firewall policies.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Endpoint security** and then select the type of policy you want to configure, either Antivirus or Firewall, and then then select **Create Policy**.  
+2. Go to **Endpoint security** and then select the type of policy you want to configure, either Antivirus or Firewall, and then select **Create Policy**.  
 
 3. Enter the following properties or the policy type you selected:
 
@@ -166,7 +177,7 @@ Security configuration management supports Antivirus and Firewall policies.
 
 ## Monitor status
 
-To monitor security configuraiton for devices, see protect/advanced-threat-protection-monitor
+To monitor security configuration for devices, *pending details*. 
 
 ## Next steps
 
