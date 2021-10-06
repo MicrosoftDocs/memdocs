@@ -1,11 +1,11 @@
 ---
 title: Remove your Windows device from Intune management
-description: Describes how to remove a Windows device from Intune management
+description: Describes how to remove a Windows device from Intune management.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -28,23 +28,26 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Remove your Windows device from management
+# Remove your Windows device from management  
+
+**Applies to**  
+- Windows 10  
+- Windows 11  
+- Windows 8.1
+- Windows 8.1 RT 
 
 Remove a registered, Windows device from management when you no longer want or need to:  
 * Use your device for work or school. 
 * Access work or school email, apps, or other resources.
 
-After you unregister the device, you'll lose device access to school or work resources. You can remove the following Windows devices from management:  
-* Windows 10 devices 
-* Windows 8.1 devices
-* Windows 8.1 RT devices 
+After you unregister the device, you'll lose device access to school or work resources.  
  
 Make sure to read [What happens if you remove device from Intune](unenroll-your-device-from-intune-windows.md#what-happens-if-you-remove-device-from-intune) before unenrolling your device.  
 
 ## What happens if you remove device from Intune  
 This section describes how your device and access to work or school will change after you remove your device from Intune. 
 
-After you unenroll a device running Windows 10 or Windows 8.1: 
+After you unenroll a device running Windows 11, Windows 10, or Windows 8.1: 
 
 - Your device is removed from Company Portal.  
 - You can't install apps from the Company Portal.  
@@ -72,21 +75,21 @@ After you unenroll a device running Windows 8.1 RT:
 - Email apps, such as Windows Mail, can't open work email that's stored on your device.   
 
 
-## Remove Windows 10 devices  
-This section describes how to remove a Windows 10 device from Intune. If one set of instructions doesn't work for you, try the next set.    
+## Remove Windows 10/11 devices  
+This section describes how to remove a Windows 10/11 device from Intune. If one set of instructions doesn't work for you, try the next set.    
 
-### Remove in Company Portal, **Home** page    
+### Remove in Company Portal, homepage    
 
-1. Open the Company Portal app.
-2. On the **Home page**, go down to the **My Devices** section.
-3. Select the device you want to remove.
-3. In the top, right-corner of the app, select the **See more** icon.
-4. Select **Remove**. 
+1. Open the Company Portal app.  
+2. On the **Home** page, scroll down to **My Devices**.  
+3. Select the device you want to remove.  
+3. In the top, right-corner of the app, select the **See more** icon.  
+4. Select **Remove**.  
 5. To confirm device removal, select **Remove**.  
 
 ### Remove in Company Portal, device context menu  
 
-1. Open the Company Portal app and go to **My Devices**.
+1. Open the Company Portal app and go to **My Devices**.  
 
     ![Example screenshot of the Company Portal app for Windows, Home page, highlighting the My Devices section.](./media/1809_CheckAccess_Context_Select_Device.png)
 

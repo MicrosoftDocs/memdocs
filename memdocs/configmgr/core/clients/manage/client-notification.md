@@ -116,7 +116,7 @@ Trigger clients to switch to the next available software update point. For more 
 
 ### Evaluate device health attestation
 
-Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
+Trigger Windows 10 or later clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
 
 ### Check conditional access compliance
 

@@ -111,7 +111,7 @@ When you have a choice of which type of write filter to enable, choose file-base
 For more information about the maximum number of Windows Embedded clients that a primary site can support, see [Supported operating systems for clients and devices](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 > [!IMPORTANT]
-> For Windows 10 computers that you plan to protect with a unified write filter (UWF), configure the device for UWF before you install the client. This configuration enables Configuration Manager to install the client with a custom credential provider that locks out low-rights users from signing in to the device during maintenance mode.
+> For Windows computers that you plan to protect with a unified write filter (UWF), configure the device for UWF before you install the client. This configuration enables Configuration Manager to install the client with a custom credential provider that locks out low-rights users from signing in to the device during maintenance mode.
 
 ## Next steps
 

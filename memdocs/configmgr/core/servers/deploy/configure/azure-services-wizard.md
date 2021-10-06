@@ -24,7 +24,7 @@ Configure the following Azure services using this wizard:
 
 - **Cloud Management**: This service enables the site and clients to authenticate by using Azure AD. This authentication enables other scenarios, such as:  
 
-  - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
+  - [Install and assign Configuration Manager clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
   - [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
