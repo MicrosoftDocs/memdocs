@@ -2,7 +2,7 @@
 title: Tenant attach - BitLocker recovery keys (preview)
 titleSuffix: Configuration Manager
 description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Endpoint Manager admin center.
-ms.date: 09/21/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
