@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use MDE Security Configuration Management in Microsoft Endpoint manager
+title: Use Microsoft Defender for Endpoint Security Configuration Management in Microsoft Endpoint manager
 description: Use Intune profiles to manage security settings for Microsoft Defender for Endpoint on devices that register in your Azure Active Directory. 
 keywords:
 author: brenduns
@@ -69,7 +69,7 @@ The broad strokes to use Security management for MDE include:
 
 
 ## Prerequisites
-
+Review the following sections for requirements and configurations you'll need to successfully use security configuration managmenet for MDE. 
 ### Environment
 
 Your environment must use Azure AD or Hybrid Azure AD. When a device enrolls with MDE, the device is registered automatically:
@@ -136,11 +136,11 @@ Security configuration management supports Antivirus and Firewall policies.
 3. Enter the following properties or the policy type you selected:
 
    - For Antivirus policy, select:
-     - Platform: **Windows 10, Windows 11, and WIndows Server (Preview)**
+     - Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
      - Profile: **Microsoft Defender Antivirus (Preview)**
 
    - For Firewall policy, select:
-     - Platform: **Windows 10, Windows 11, and WIndows Server (Preview)**
+     - Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
      - Profile: **Microsoft Defender Firewall (Preview)**
 
 4. Select **Create**.
@@ -166,5 +166,8 @@ Security configuration management supports Antivirus and Firewall policies.
 
 ## Monitor status
 
+To monitor security configuraiton for devices, see protect/advanced-threat-protection-monitor
 
 ## Next steps
+
+[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)
