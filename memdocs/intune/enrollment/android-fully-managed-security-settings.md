@@ -51,7 +51,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 
 ### Device compliance
 
-To simplify the table below, only configured settings are listed. Undocumented device restrictions are not configured.
+To simplify the table below, only configured settings are listed. Undocumented device compliance settings are not configured.
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |

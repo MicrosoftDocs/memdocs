@@ -44,7 +44,7 @@ Administrators can incorporate the below configuration levels within their ring 
 
 Level 2 is the recommended minimum security configuration for iOS/iPadOS devices where users access work or school data. This configuration is applicable to most mobile users accessing work or school data on a device.
 
-To simplify the table below, only configured settings are listed. Undocumented device restrictions are not configured.
+To simplify the table below, only configured settings are listed. Undocumented device compliance settings are not configured.
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
