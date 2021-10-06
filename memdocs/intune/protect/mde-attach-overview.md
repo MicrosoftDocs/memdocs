@@ -35,41 +35,40 @@ ms.reviewer: mattcall
 
 <!-- alternate title ideas?  Maybe:  # Manage Microsoft Defender for Endpoint on devices with or without MDM enrollment -->
 
-When you use Microsoft Intune and Microsoft Defender for Endpoint (MDE) in the same Azure Active Directory (Azure AD) tenant, you can use the Microsoft Endpoint Manager admin center to manage and report on the MDE configurations of devices in your environment. This capability is known as *MDE-Attach*. With MDE-Attach, you manage the settings for Microsoft Defender for Endpoint directly on devices, and not the device itself.
+When you use Microsoft Endpoint Manager (MEM) and Microsoft Defender for Endpoint (MDE) in the same Azure Active Directory (Azure AD) tenant, you can use the Microsoft Endpoint Manager to deploy security configurations of devices in your environment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this functionality, devices receive security configurations directly from Endpoint Manager without requiring the device to be fully enrolled.
 
-To manage a device through MDE-Attach, the Intune policies for MDE settings are sent directly to devices through their Azure AD membership. On each device, it’s the MDE Sense agent that reads the policy and then configures security settings. The agent then reports on the device status, which is available in the Microsoft Endpoint Manager admin center.
+When devices are managed through this capability, endpoint security policies are sent directly to devices. Devices are targeted with policy using their Azure Active Directory device object, in the same way that all other Intune devices are targeted. Once policy is deployed to the device, the *Defender for Endpoint* components on the device enforce the policy. The device (through the Defender for Endpoint component) then reports the policy status, which is available in the Microsoft Endpoint Manager admin center.
 
-<!-- Placeholder image follows -->
-:::image type="content" source="./media/mde-attach-overview/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution.":::
+<!-- Placeholder image follows :: Updated by MC on 10/06 -->
+:::image type="content" source="./media/mde-overview/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution.":::
 
-Because the MDE Sense agent receives and acts on the policy, the MDE-Attach solutions primary requirements are:
+## Prerequisites
 
-- You have subscriptions for both Intune and Microsoft Defender for Endpoint
-- Supported devices run the MDE agent
-- Devices register in the same Azure AD environment as your Intune and Defender subscriptions
+The security management functionality for Microsoft Defender for Endpoint clients has the following requirements:
 
-That's it! Your devices don't need to enroll with Intune or Configuration manager. Instead, they can enroll with a third-party MDM, or not enroll with any MDM service.
+- Microsoft Defender for Endpoint license
+- The platform is in the list of supported platforms
+- The devices meets the minimum requirements for the platform
+- (Active Directory Devices) Hybrid Azure Active Directory join is configured
+- The required endpoints are accessible from the endpoint
+
 
 ## Supported platforms
 
 MDE-Attach policies are supported for the following device platforms:
 
-- Linux
-- macOS
-- Windows 10
-- Windows 11
-- Windows Server
+- Windows 10 Professional/Enterprise (With KB999999)
+- Windows 11 Professional/Enterprise (With KB999999)
+- Windows Server 2012 R2 with Microsoft Defender for Down-Level Devices
+- Windows Server 2019 with Microsoft Defender for Down-Level Devices
+- Windows Server 2022 (with KB999999)
 
 > [!TIP]
-> Support for MDE on devices that run Android and iOS/iPadOS are not supported through MDM-Attach but remain supported through existing solutions like mobile application management.
-
-## How MDE-Attach works
-
-With a subscription for both Intune and MDE in the same Azure AD environment, you can use MDE-Attach. When you use MDE-Attach, Microsoft Endpoint Manager becomes the umbrella for policy management and reporting on your devices that use MDE for security.
+> Mobile devices (iOS/Android) that are not enrolled in Endpoint Manager can leverage Mobile Application Management for security configurations. Learn more on securing your corporate data with Mobile Application Management [here](Link to MAM Docs))
 
 ## Architecture
 <!-- Placeholder image follows. Use of AAD and MEM for Azure AD and Microsoft Endpoint Manager must be fixed for use in docs -->
-:::image type="content" source="./media/mde-attach-overview/pending-mde-attach-architecture.png" alt-text="Conceptual representation of the MDE-Attach solution.":::
+:::image type="content" source="./media/mde-overview/mde-architecture.png" alt-text="Conceptual representation of the MDE-Attach solution.":::
 
 1. Blah
 2. Blah
