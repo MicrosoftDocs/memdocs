@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 10/06/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -38,11 +38,11 @@ When choosing your settings, be sure to review and categorize usage scenarios. T
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 > [!Note]
-> Due to the limited number of settings available for device compliance, there is no enhanced security (level 2) offering.
+> Due to the limited number of settings available for device compliance, there is no basic security (level 1) offering.
 
-## Basic security (Level 1)
+## Enhanced security (Level 2)
 
-Level 1 is the recommended minimum security configuration for iOS/iPadOS devices where users access work or school data. This configuration is applicable to most mobile users accessing work or school data on a device.
+Level 2 is the recommended minimum security configuration for iOS/iPadOS devices where users access work or school data. This configuration is applicable to most mobile users accessing work or school data on a device.
 
 To simplify the table below, only configured settings are listed. Undocumented device restrictions are not configured.
 
@@ -65,7 +65,7 @@ Level 3 is the recommended configuration for both:
 - Organizations with large and sophisticated security organizations.
 - Specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries.
 
-This configuration expands upon Level 1 by:
+This configuration expands upon Level 2 by:
 
 - Increasing the minimum operating system version.
 - Ensuring that the device is compliant by enforcing the most secure Microsoft Defender for Endpoint or mobile threat defense level.

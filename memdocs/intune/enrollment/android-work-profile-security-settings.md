@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 10/06/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -37,17 +37,17 @@ When choosing your settings, be sure to review and categorize usage scenarios. T
 
 For personally-owned work profile devices, there are two recommended security configuration frameworks:
 
-- [Personally-owned work profile basic security (level 1)](#personally-owned-work-profile-basic-security) 
-- [Personally-owned work profile high security (level 3)](#personally-owned-work-profile-high-security) 
+- [Personally-owned work profile enhanced security (level 2)](#personally-owned-work-profile-enhanced-security)
+- [Personally-owned work profile high security (level 3)](#personally-owned-work-profile-high-security)
 
 > [!Note]
-> Because of the settings available for personally-owned work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
+> Because of the settings available for personally-owned work profile devices, there is no basic security (level 1) offering. The available settings don't justify a difference between level 1 and level 2.
 
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
-## Personally-owned work profile basic security
+## Personally-owned work profile enhanced security
 
-Level 1 is the recommended minimum security configuration for personal devices where users access work or school data. This configuration can apply to most mobile users. Some of the controls may impact user experience.
+Level 2 is the recommended minimum security configuration for personal devices where users access work or school data. This configuration can apply to most mobile users. Some of the controls may impact user experience.
 
 ### Device compliance
 
@@ -108,7 +108,8 @@ To simplify the table below, only configured settings are listed. Undocumented d
 
 ## Personally-owned work profile high security
 
-Level 3 is the recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries merit the additional constraints described below. This configuration expands upon the configuration in Level 1 by:
+Level 3 is the recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries merit the additional constraints described below. This configuration expands upon the configuration in Level 2 by:
+
 - implementing mobile threat defense or Microsoft Defender for Endpoint.
 - restricting personally-owned work profile data scenarios.
 - enacting stronger password policies.
