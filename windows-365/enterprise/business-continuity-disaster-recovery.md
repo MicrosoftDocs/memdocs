@@ -80,7 +80,7 @@ For more information on deploying and managing OneDrive for Small business, Medi
 
 ## Windows Sync Your Settings and Enterprise State Roaming
 
-Both Windows base [Sync your Settings](https://support.microsoft.com/windows/about-sync-settings-on-windows-10-devices-deebcba2-5bc0-4e63-279a-329926955708) and [Enterprise State Roaming](/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference) retain Windows 10 user settings for portability and/or resilience (back up). To understand the differences between Sync your Settings and Enterprise State Roaming, see [What is enterprise state roaming?](/azure/active-directory/devices/enterprise-state-roaming-overview)
+Both Windows base [Sync your Settings](https://support.microsoft.com/windows/about-sync-settings-on-windows-10-devices-deebcba2-5bc0-4e63-279a-329926955708) and [Enterprise State Roaming](/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference) retain Windows client user settings for portability and/or resilience (back up). To understand the differences between Sync your Settings and Enterprise State Roaming, see [What is enterprise state roaming?](/azure/active-directory/devices/enterprise-state-roaming-overview)
 
 For an overview of Windows Settings, see [Windows Settings overview](/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference#windows-settings-overview) section of the Enterprise State Roaming document. To understand setting details such as grouping and applicability, see [Windows Settings details](/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference#windows-settings-details) in the Enterprise State Roaming document.
 

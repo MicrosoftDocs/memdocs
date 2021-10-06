@@ -83,7 +83,9 @@ You can assign a licensed Intune user to a specific Autopilot device. This assig
 - Lets you set a custom greeting name.
 - Doesn't pre-fill or modify Windows sign-in.
 
-Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
+Prerequisites: 
+- Azure Active Directory Company Branding has been configured.
+- Windows 10, version 1809 or later.
 
 > [!NOTE]
 > Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
