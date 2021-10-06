@@ -38,16 +38,30 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- Common categories:  
 ### App management
 ### Device configuration
-### Device enrollment
+### Device provisioning
 ### Device management
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+-->
 
 <!-- ########################## -->
+## Week of October 6, 2021 (Service release 2109)
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Health check improvement<!--36461502 wnready-->
+
+The **DNS can resolve Active Directory domain** health check has been improved. A new step has been added to look for the following Azure Active Directory DNS record. If it can’t be found, the check fails.
+
+_ldap._tcp.yourDomain.com -type SRV
+
+
+
+<!-- ########################## -->
 ## Week of October 4, 2021
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
@@ -60,7 +74,6 @@ Windows 365 Enterprise now supports Windows 11 as a Cloud PC operating system.
 
 Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
 
-
 ## Week of September 13, 2021
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
@@ -71,7 +84,9 @@ Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For informati
 
 The [Windows365LanguagesInstaller PowerShell script]( https://www.powershellgallery.com/packages/Windows365LanguagesInstaller) can install 38 additional languages on your custom device images. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md#add-languages-to-windows-using-a-script-and-capture-the-image).
 
+<!-- ########################## -->
 ## Week of September 6, 2021 (Service release 2108)
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
