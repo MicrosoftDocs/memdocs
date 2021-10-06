@@ -106,6 +106,8 @@ items:
         href: advanced-threat-protection-manage-android.md
       - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
+      - name: MDE Security Configuration Management
+        href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
     - name: Tenant attach
