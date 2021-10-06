@@ -13,7 +13,7 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 12/16/2020
+ms.date: 10/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -63,10 +63,12 @@ Optionally, you can use a [device-only subscription](https://techcommunity.micro
 Self-deploying mode uses a device's TPM 2.0 hardware to authenticate the device into an organization's Azure AD tenant. Therefore, devices without TPM 2.0 can't be used with this mode. Devices must also support TPM device attestation. All new Windows devices should meet these requirements. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
 
 > [!NOTE]
-> For Windows Autopilot software requirments, see [Windows Autopilot software requirements](./software-requirements.md).
+> For Windows Autopilot software requirements, see [Windows Autopilot software requirements](./software-requirements.md).
 
 > [!IMPORTANT]
-> If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Windows 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. Since Windows 10 Enterprise 2019 LTSC is based on Windows 10 version 1809, self-deploying mode is also not supported on Windows 10 Enterprise 2019 LTSC. See [Windows Autopilot known issues](known-issues.md) to review other known errors and solutions.
+> If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Windows 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. Since Windows 10 Enterprise 2019 LTSC is based on Windows 10 version 1809, self-deploying mode is also not supported on Windows 10 Enterprise 2019 LTSC.
+>
+> See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review other known errors and solutions.
 
 You can display an organization-specific logo and organization name during the Autopilot process. To do so, Azure AD Company Branding must be configured with the images and text you want displayed. See [Quickstart: Add company branding to your sign-in page in Azure AD](/azure/active-directory/fundamentals/customize-branding) for more details. 
 

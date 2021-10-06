@@ -56,7 +56,7 @@ Storing a managed image on Azure incurs storage costs. However customers can del
 
 Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They are replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
 
-There are two sets of images available to choose from across the different versions of Windows 10 Enterprise:
+There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
 - **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
   - IsAVDEnvironment reg key (Teams).
@@ -76,7 +76,7 @@ You can choose any image for any Windows 365 license. However, for optimal perfo
 
 | Windows 365 license | Recommended gallery image |
 | --- | --- |
-| 2vCPU/4GB/64GB and above | Windows 10 Enterprise + Microsoft 365 Apps |
+| 2vCPU/4GB/64GB and above | Windows 10/11 Enterprise + Microsoft 365 Apps |
 | 1vCPU/2GB/64GB | Windows 10 Enterprise + OS Optimizations |
 
 ## Custom images

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Teams on a Cloud PC
 
-Microsoft Teams is one of the core Microsoft 365 applications used with Windows 365. The Microsoft 365 optimized Windows 10 image available in the Windows 365 image gallery supports Teams chat, presence, calling, and meeting optimizations.
+Microsoft Teams is one of the core Microsoft 365 applications used with Windows 365. The Microsoft 365 optimized Windows 10/11 image available in the Windows 365 image gallery supports Teams chat, presence, calling, and meeting optimizations.
 
 Using Teams on a Cloud PC is different from using Teams on a physical PC environment. For more information about the limitations of Teams in virtualized environments, see [Teams for Virtualized Desktop Infrastructure](/microsoftteams/teams-for-vdi#known-issues-and-limitations).
 
@@ -39,7 +39,7 @@ Using Teams on a Cloud PC is different from using Teams on a physical PC environ
 
 ## Teams optimizations
 
-The image gallery provides Windows 10 Enterprise images pre-configured with all the software that’s needed for an optimized Teams experience on Cloud PCs. As an IT admin or user, you need only install and configure the Microsoft Teams application and then you are ready to use it.
+The image gallery provides Windows 10/11 Enterprise images pre-configured with all the software that’s needed for an optimized Teams experience on Cloud PCs. As an IT admin or user, you need only install and configure the Microsoft Teams application and then you are ready to use it.
 
 The main benefit of this approach is that you setup the Teams audio and video call directly peer-to-peer from your physical endpoint to the other person. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
 
@@ -47,13 +47,13 @@ Some of the key benefits of the optimizations are:
 
 - High-performance peer-to-peer streaming facilitated by WebRTC.Traffic flows peer-to-peer and is rendered by the endpoint.
 - Devices are redirected as the same hardware device, resulting in better hardware redirection support.
-- Windows clients get all the benefits of the modern media stack, including HW video decoding.
+- Windows 10/11 clients get all the benefits of the modern media stack, including HW video decoding.
 
 ### Teams optimization support
 
 In Windows 365, optimization for Microsoft Teams is only available for:
 
-- Windows Remote Desktop client on Windows 10 physical endpoints.
+- Windows Remote Desktop client on Windows 10/11 physical endpoints.
 - Microsoft Teams client version 1.2.1026.0 and later.
 
 ## Known Teams issues and limitations
