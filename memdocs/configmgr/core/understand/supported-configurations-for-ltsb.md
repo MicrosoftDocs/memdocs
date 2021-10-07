@@ -123,7 +123,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 
 You can use the LTSB to manage macOS X computers with the Configuration Manager client for Mac.
 
-The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
+The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the **Microsoft Download Center**.  
 
 Support for Mac operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
 
@@ -139,7 +139,7 @@ For more information, see [How to deploy clients to Macs](../clients/deploy/depl
 ## Linux and UNIX servers
 You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
 
-The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
+The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the **Microsoft Download Center**. In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
 
 Support for Linux and UNIX operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Linux and UNIX client packages for Current Branch.
 
