@@ -60,7 +60,7 @@ docs.microsoft.com/**en-us**/microsoft-365/admin/setup/get-started-windows-365-b
 
 docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-business
 
-#### Set browser location
+#### Set search engine location
 
 Users can manually set their internet search engine's location. For example, on Bing.com users can visit the **Settings** menu (in the top-right corner of the site) to manually set the Language, Country/Region, and Location.
 
