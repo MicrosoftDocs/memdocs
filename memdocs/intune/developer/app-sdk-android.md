@@ -567,7 +567,7 @@ will be passed to a custom handler if set.
 
 Suppression can be done globally, but temporarily disabling per-thread at the
 specific call site is preferred. The following examples show various
-ways to disable **MAMStrictCheck.IDENTITY_NO_SUCH_FILE**[MAMStrictCheck] (raised if an
+ways to disable **MAMStrictCheck.IDENTITY_NO_SUCH_FILE MAMStrictCheck** (raised if an
 attempt is made to protect a file which doesn't exist).
 
 
@@ -626,7 +626,7 @@ MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
 
 ### Example: Determine the primary Intune user
 
-In addition to the APIs exposed in AppPolicy, the user principal name (**UPN**) is also exposed by the **getPrimaryUser()****SaveLocation** API defined inside the **MAMUserInfo** interface. To get the UPN, call the following:
+In addition to the APIs exposed in AppPolicy, the user principal name (**UPN**) is also exposed by the **getPrimaryUser()SaveLocation** API defined inside the **MAMUserInfo** interface. To get the UPN, call the following:
 
 ```java
 MAMComponents.get(MAMUserInfo.class).getPrimaryUser();
@@ -824,7 +824,7 @@ The **MAMNotificationReceiver** interface simply receives notifications from the
 
 ### Types of notifications
 
-The following **notifications**[MAMNotificationType] are sent to the app and some of them may require app participation:
+The following **notifications MAMNotificationType** are sent to the app and some of them may require app participation:
 
 * **WIPE_USER_DATA**: This notification is sent in a
   **MAMUserNotification**. When this notification is received, the
@@ -1279,7 +1279,7 @@ With App Protection CA (Conditional Access), access to resources is conditionali
 > Support for App Protection CA requires version 1.0.0 (or greater) of the MSAL library.
 
 ### Handle non-compliance with MSAL
-When acquiring a token for a user, the MSAL library may return or throw an `MsalIntuneAppProtectionPolicyRequiredException` to indicate non-compliance with APP management. Additional parameters can be extracted from the exception for use in remediating compliance (see **MAMComplianceManager**(#mamcompliancemanager)). Once the remediation is successful, the app can re-attempt the token acquisition through MSAL.
+When acquiring a token for a user, the MSAL library may return or throw an `MsalIntuneAppProtectionPolicyRequiredException` to indicate non-compliance with APP management. Additional parameters can be extracted from the exception for use in remediating compliance (see **MAMComplianceManager**). Once the remediation is successful, the app can re-attempt the token acquisition through MSAL.
 
 ### MAMComplianceManager
 
@@ -1789,7 +1789,7 @@ In addition to the app's ability to set the identity, a thread, or a context's i
           final AppIdentitySwitchResultCallback callback);
   ```
 
-  * The [AppIdentitySwitchReason] captures the source of the implicit switch, and can accept the values `CREATE`, `RESUME_CANCELLED`, and `NEW_INTENT`.  The `RESUME_CANCELLED` reason is used when activity resume causes PIN, authentication, or other compliance UI to be displayed and the user attempts to cancel out of that UI, generally though use of the back button.
+  * The **AppIdentitySwitchReason** captures the source of the implicit switch, and can accept the values `CREATE`, `RESUME_CANCELLED`, and `NEW_INTENT`.  The `RESUME_CANCELLED` reason is used when activity resume causes PIN, authentication, or other compliance UI to be displayed and the user attempts to cancel out of that UI, generally though use of the back button.
 
 
     * The **AppIdentitySwitchResultCallback** is as follows:
@@ -1976,7 +1976,7 @@ static version of the same method:
 
 ### Selective Wipe
 
-If a multi-identity app registers for the **WIPE_USER_DATA**[MAMNotificationType]
+If a multi-identity app registers for the **WIPE_USER_DATA MAMNotificationType**
 notification, it is the app's responsibility to remove all data for
 the user being wiped, including all files that have been
 identity-tagged as belonging to that user. If the app removes user
@@ -1993,7 +1993,7 @@ apps, this loss may be more significant since MAM default selective
 wipe will wipe only files whose identity is targeted by a wipe. If a
 multi-identity aware application wishes MAM default selective wipe to
 be done _**and**_ wishes to perform its own actions on wipe, it should
-register for **WIPE_USER_AUXILIARY_DATA**[MAMNotificationType] notifications. This
+register for **WIPE_USER_AUXILIARY_DATA MAMNotificationType** notifications. This
 notification will be sent immediately by the SDK before it performs
 the MAM default selective wipe. An app should never register for both
 `WIPE_USER_DATA` and `WIPE_USER_AUXILIARY_DATA`.
@@ -2274,7 +2274,6 @@ See the [Testing Guide](app-sdk-android-testing-guide.md).
 <!-- Method links -->
 [acquireToken]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
 [getIsIdentityManaged]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityManaged(java.lang.String)
-html#getRegisteredAccountStatus(java.lang.String)
 [protect]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protect(android.os.ParcelFileDescriptor,%20java.lang.String)
 [setUIPolicyIdentity]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context,%20java.lang.String,%20com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
 [switchMAMIdentity]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#switchMAMIdentity(java.lang.String,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
