@@ -141,7 +141,7 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
   - When you integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Administrator**.
 
-  - When you create the CMG, you need a **Subscription Owner**.
+  - When you create the CMG, you need an account that is an Azure **Subscription Owner** and an Azure AD **Global Administrator**.
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 

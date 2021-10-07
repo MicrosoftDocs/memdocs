@@ -481,7 +481,7 @@ in the AndroidX libraries with the appropriate MAM equivalents at compile-time.
 
 Logging should be initialized early to get the most value out of logged data. `Application.onMAMCreate()` is typically the best place to initialize logging.
 
-To receive MAM logs in your app, create a [Java Handler](https://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) and add it to the [MAMLogHandlerWrapper]. This will invoke `publish()` on the application handler for every log message.
+To receive MAM logs in your app, create a [Java Handler](https://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) and add it to the **MAMLogHandlerWrapper**. This will invoke `publish()` on the application handler for every log message.
 
 ```java
 /**
@@ -544,7 +544,7 @@ for future releases. To suppress false positives, disable the failing
 check (more info below).
 
 ### Handling Violations
-When a check fails, it runs a [MAMStrictViolationHandler]. The default
+When a check fails, it runs a **MAMStrictViolationHandler**. The default
 handler throws an `Error`, which is expected to crash the app. This is
 to make failures as noisy as possible, and fits with the intention
 that strict mode should not be enabled in production builds.
@@ -567,7 +567,7 @@ will be passed to a custom handler if set.
 
 Suppression can be done globally, but temporarily disabling per-thread at the
 specific call site is preferred. The following examples show various
-ways to disable [MAMStrictCheck.IDENTITY_NO_SUCH_FILE][MAMStrictCheck] (raised if an
+ways to disable **MAMStrictCheck.IDENTITY_NO_SUCH_FILE**[MAMStrictCheck] (raised if an
 attempt is made to protect a file which doesn't exist).
 
 
@@ -599,15 +599,15 @@ There are some app protection policies the SDK cannot enforce on its own:
 * Enforce restrictions on opening files from local or cloud storage.
 * Enforce restrictions on content in notifications.
 
-Your app should use the methods in the [AppPolicy] interface to ask whether these actions
+Your app should use the methods in the **AppPolicy** interface to ask whether these actions
 are allowed. To test if saving or opening a file/document is allowed, use
-[getIsSaveToLocationAllowed] and [getIsOpenFromLocationAllowed]. To determine restrictions
+**getIsSaveToLocationAllowed** and **getIsOpenFromLocationAllowed**. To determine restrictions
 on notification content, use `getNotificationRestriction`. Expanded examples for all these
 scenarios are given later in this section.
 
-Note that methods in [AppPolicy] which do not pertain to the above policies provide
+Note that methods in **AppPolicy** which do not pertain to the above policies provide
 information which your app may use to present a better user experience but are not
-required for policy enforcement. For example, [AppPolicy] exposes information on PIN and
+required for policy enforcement. For example, **AppPolicy** exposes information on PIN and
 screenshot policies, but these are enforced automatically.
 
 To retrieve an `AppPolicy` instance, use one of the [MAMPolicyManager] methods. 
@@ -626,7 +626,7 @@ MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
 
 ### Example: Determine the primary Intune user
 
-In addition to the APIs exposed in AppPolicy, the user principal name (**UPN**) is also exposed by the [getPrimaryUser()][SaveLocation] API defined inside the [MAMUserInfo] interface. To get the UPN, call the following:
+In addition to the APIs exposed in AppPolicy, the user principal name (**UPN**) is also exposed by the **getPrimaryUser()****SaveLocation** API defined inside the **MAMUserInfo** interface. To get the UPN, call the following:
 
 ```java
 MAMComponents.get(MAMUserInfo.class).getPrimaryUser();
@@ -656,7 +656,7 @@ MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(
 SaveLocation service, String username);
 ```
 
-The `service` parameter must be one of the following [SaveLocation] values:
+The `service` parameter must be one of the following **SaveLocation** values:
 
 * `SaveLocation.ONEDRIVE_FOR_BUSINESS`
 * `SaveLocation.SHAREPOINT`
@@ -689,7 +689,7 @@ MAMPolicyManager.getPolicy(currentActivity).getIsOpenFromLocationAllowed(
 OpenLocation location, String username);
 ```
 
-The `location` parameter must be one of the following [OpenLocation] values:
+The `location` parameter must be one of the following **OpenLocation** values:
 
 * `OpenLocation.ONEDRIVE_FOR_BUSINESS`
 * `OpenLocation.SHAREPOINT`
@@ -799,7 +799,7 @@ This method must be called before `onMAMCreate()` is called, in order to effecti
 ### Overview
 The Intune App SDK allows your app to control the behavior of certain policies, such as selective wipe, when they are deployed by the IT administrator. When an IT administrator deploys such a policy, the Intune service sends down a notification to the SDK.
 
-Your app must register for notifications from the SDK by creating a [MAMNotificationReceiver] and  registering it with [MAMNotificationReceiverRegistry]. This is done by providing the receiver and the type of notification desired in  `App.onCreate`, as the example below illustrates:
+Your app must register for notifications from the SDK by creating a **MAMNotificationReceiver** and  registering it with **MAMNotificationReceiverRegistry**. This is done by providing the receiver and the type of notification desired in  `App.onCreate`, as the example below illustrates:
 
 ```java
 @Override
@@ -814,7 +814,7 @@ public void onCreate() {
 
 ### MAMNotificationReceiver
 
-The [MAMNotificationReceiver] interface simply receives notifications from the Intune service. Some notifications are handled by the SDK directly, while others require the app's participation. An app **must** return either true or false from a notification. It must always return true unless some action it tried to take as a result of the notification failed.
+The **MAMNotificationReceiver** interface simply receives notifications from the Intune service. Some notifications are handled by the SDK directly, while others require the app's participation. An app **must** return either true or false from a notification. It must always return true unless some action it tried to take as a result of the notification failed.
 
 * This failure may be reported to the Intune service. An example of a scenario to report is if the app fails to wipe user data after the IT administrator initiates a wipe.
 
@@ -824,14 +824,14 @@ The [MAMNotificationReceiver] interface simply receives notifications from the I
 
 ### Types of notifications
 
-The following [notifications][MAMNotificationType] are sent to the app and some of them may require app participation:
+The following **notifications**[MAMNotificationType] are sent to the app and some of them may require app participation:
 
 * **WIPE_USER_DATA**: This notification is sent in a
-  [MAMUserNotification]. When this notification is received, the
+  **MAMUserNotification**. When this notification is received, the
   app *must* delete all data associated with the managed identity
   (from `MAMUserNotification.getUserIdentity()`). The notification may
   occur for diverse reasons, including when your app calls
-  [unregisterAccountForMAM], when an IT admin initiates a wipe, or
+  **unregisterAccountForMAM**, when an IT admin initiates a wipe, or
   when admin-required conditional access policies are not
   satisfied. If your app does not register for this notification,
   default wipe behavior will be performed. The default behavior will
@@ -848,20 +848,20 @@ The following [notifications][MAMNotificationType] are sent to the app and some 
   thread.
 
 * **REFRESH_POLICY**: This notification is sent in a
-  [MAMUserNotification]. When this notification is received, any
+  **MAMUserNotification**. When this notification is received, any
   Intune policy decisions cached by your app must be invalidated and
   updated. If your app does not store any policy assumptions, it need
   not register for this notification. No guarantees are made as to
   what thread this notification will be sent on.
 
 * **REFRESH_APP_CONFIG**: This notification is sent in a
-  [MAMUserNotification]. When this notification is received, any
+  **MAMUserNotification**. When this notification is received, any
   cached Application Configuration data must be invalidated and
   updated. No guarantees are made as to what thread this notification
   will be sent on.
 
 * **MANAGEMENT_REMOVED**: This notification is sent in a
-  [MAMUserNotification] and informs the app that it is about to become
+  **MAMUserNotification** and informs the app that it is about to become
   unmanaged. Once unmanaged, it will no longer be able to read
   encrypted files, read data encrypted with MAMDataProtectionManager,
   interact with the encrypted clipboard, or otherwise participate in
@@ -869,13 +869,13 @@ The following [notifications][MAMNotificationType] are sent to the app and some 
   notification will never be sent on the UI thread.
 
 * **MAM_ENROLLMENT_RESULT**: This notification is sent in a
-  [MAMEnrollmentNotification] to inform the app that an APP-WE
+  **MAMEnrollmentNotification** to inform the app that an APP-WE
   enrollment attempt has completed and to provide the status of that
   attempt. No guarantees are made as to what thread this notification
   will be sent on.
 
 * **COMPLIANCE_STATUS**: This notification is sent in a
-  [MAMComplianceNotification] to inform the app of the result of a
+  **MAMComplianceNotification** to inform the app of the result of a
   compliance remediation attempt. No guarantees are made as to what
   thread this notification will be sent on.
 
@@ -1023,9 +1023,9 @@ To implement APP-WE integration, your app must register the user account with th
 
 1. The app _must_ implement and register an instance of the [MAMServiceAuthenticationCallback] interface. The callback instance must be registered in the `onCreate()` (or `onMAMCreate()`) method of the Application subclass.
 
-2. When a user account is created and the user successfully signs in with MSAL, the app _must_ call [registerAccountForMAM].
+2. When a user account is created and the user successfully signs in with MSAL, the app _must_ call **registerAccountForMAM**.
 
-3. When a user account is removed, the app should call [unregisterAccountForMAM] to remove the account from Intune management.
+3. When a user account is removed, the app should call **unregisterAccountForMAM** to remove the account from Intune management.
 
     > [!NOTE]
     > The call may initiate a wipe to completely remove corporate data for the user.
@@ -1033,7 +1033,7 @@ To implement APP-WE integration, your app must register the user account with th
 
 ### MAMEnrollmentManager
 
-All the necessary authentication and registration APIs can be found in the [MAMEnrollmentManager] interface. A reference to the `MAMEnrollmentManager` can be obtained as follows:
+All the necessary authentication and registration APIs can be found in the **MAMEnrollmentManager** interface. A reference to the `MAMEnrollmentManager` can be obtained as follows:
 
 ```java
 MAMEnrollmentManager mgr = MAMComponents.get(MAMEnrollmentManager.class);
@@ -1055,7 +1055,7 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its [registerAuthenticationCallback] method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's Application subclass.
+1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its registerAuthenticationCallback method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's Application subclass.
 
 2. The [acquireToken] method should acquire the access token for the requested resource ID for the given user. If it can't acquire the requested token, it should return null.
 
@@ -1113,7 +1113,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     }
     ```
 
-3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it is an inconvenient time to show a UI -- the app can provide a token at a later time by calling the [updateToken] method. The same UPN, AAD ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The app should call this method as soon as possible after returning null from the provided callback.
+3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it is an inconvenient time to show a UI -- the app can provide a token at a later time by calling the **updateToken** method. The same UPN, AAD ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The app should call this method as soon as possible after returning null from the provided callback.
 
     > [!NOTE]
     > Do not call `updateToken()` from within your implementation of `acquireToken()`. `updateToken()` should be used in the case where `acquireToken()` is unable to acquire a token.
@@ -1124,7 +1124,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 ### Account Registration
 
-This section describes the account registration API methods in [MAMEnrollmentManager] and how to use them.
+This section describes the account registration API methods in **MAMEnrollmentManager** and how to use them.
 
 ```java
 void registerAccountForMAM(String upn, String aadId, String tenantId);
@@ -1200,7 +1200,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 * When the app calls [registerAccountForMAM], it may receive a callback on its [MAMServiceAuthenticationCallback] interface shortly thereafter, on a different thread. Ideally, the app acquired its own AAD token prior to registering the account to expedite the acquisition of the requested token. If the app returns a valid token from the callback, enrollment will proceed and the app will get the final result via a notification.
 
-* If the app doesn't return a valid AAD token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`. If the app receives this Result via notification, it is strongly recommended to expedite the enrollment process by acquiring the token for the user and resource previously requested from [acquireToken] and calling the [updateToken] method to initiate the enrollment process again.
+* If the app doesn't return a valid AAD token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`. If the app receives this Result via notification, it is strongly recommended to expedite the enrollment process by acquiring the token for the user and resource previously requested from [acquireToken] and calling the **updateToken** method to initiate the enrollment process again.
 
 * The app's registered `MAMServiceAuthenticationCallback` will also be called to acquire a token for periodic app protection policy refresh check-ins. If the app is unable to provide a token when requested, it will not get a notification, but it should attempt to acquire a token and call `updateToken()` at the next convenient time to expedite the check-in process. If a token is not provided, the callback will still be called at the next check-in attempt.
 
@@ -1208,19 +1208,19 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 #### Registration
 
-* For your convenience, the registration methods are idempotent; for example, [registerAccountForMAM] will only register an account and attempt to enroll the app if the account is not already registered, and [unregisterAccountForMAM] will only unregister an account if it is currently registered. Subsequent calls are no-ops, so there is no harm in calling these methods more than once. Additionally, correspondence between calls to these methods and notifications of results are not guaranteed: i.e. if `registerAccountForMAM()` is called for an identity that is already registered, the notification may not be sent again for that identity. It is possible that notifications are sent that don't correspond to any calls to these methods, since the SDK may periodically try enrollments in the background, and unenrollments may be triggered by wipe requests received from the Intune service.
+* For your convenience, the registration methods are idempotent; for example, [registerAccountForMAM] will only register an account and attempt to enroll the app if the account is not already registered, and **unregisterAccountForMAM** will only unregister an account if it is currently registered. Subsequent calls are no-ops, so there is no harm in calling these methods more than once. Additionally, correspondence between calls to these methods and notifications of results are not guaranteed: i.e. if `registerAccountForMAM()` is called for an identity that is already registered, the notification may not be sent again for that identity. It is possible that notifications are sent that don't correspond to any calls to these methods, since the SDK may periodically try enrollments in the background, and unenrollments may be triggered by wipe requests received from the Intune service.
 
 * The registration methods can be called for any number of different identities, but currently only one user account can become successfully enrolled. If multiple user accounts that are licensed for Intune and targeted by app protection policy are registered at or near the same time, there is no guarantee on which one will win the race.
 
-* Finally, you can query the [MAMEnrollmentManager] to see if a particular account is registered and to get its current status using the [getRegisteredAccountStatus] method. If the provided account is not registered, this method will return **null**. If the account is registered, this method will return the account's status as one of the members of the [MAMEnrollmentManager.Result] enumeration.
+* Finally, you can query the **MAMEnrollmentManager** to see if a particular account is registered and to get its current status using the **getRegisteredAccountStatus** method. If the provided account is not registered, this method will return **null**. If the account is registered, this method will return the account's status as one of the members of the **MAMEnrollmentManager.Result** enumeration.
 
 ### Result and status codes
 
-When an account is first registered, it begins in the `PENDING` state, indicating that the initial MAM service enrollment attempt is incomplete. After the enrollment attempt finishes, a notification will be sent with one of the Result codes in the table below. In addition, the [getRegisteredAccountStatus] method will return the account's status so the app can always determine if access to corporate content is blocked for that user. If the enrollment attempt fails, the account's status may change over time as the SDK retries enrollment in the background.
+When an account is first registered, it begins in the `PENDING` state, indicating that the initial MAM service enrollment attempt is incomplete. After the enrollment attempt finishes, a notification will be sent with one of the Result codes in the table below. In addition, the **getRegisteredAccountStatus** method will return the account's status so the app can always determine if access to corporate content is blocked for that user. If the enrollment attempt fails, the account's status may change over time as the SDK retries enrollment in the background.
 
 |Result code | Explanation |
 | -- | -- |
-| `AUTHORIZATION_NEEDED` | This result indicates that a token was not provided by the app's registered [MAMServiceAuthenticationCallback] instance, or the provided token was invalid.  The app should acquire a valid token and call [updateToken] if possible. |
+| `AUTHORIZATION_NEEDED` | This result indicates that a token was not provided by the app's registered [MAMServiceAuthenticationCallback] instance, or the provided token was invalid.  The app should acquire a valid token and call **updateToken** if possible. |
 | `NOT_LICENSED` | The user is not licensed for Intune, or the attempt to contact the Intune MAM service failed.  The app should continue in an unmanaged (normal) state and the user should not be blocked.  Enrollments will be retried periodically in case the user becomes licensed in the future. |
 | `ENROLLMENT_SUCCEEDED` | The enrollment attempt succeeded, or the user is already enrolled.  In the case of a successful enrollment, corresponding `REFRESH_POLICY` and `REFRESH_APP_CONFIG` notifications are sent before this notification.  Access to corporate data should be allowed. |
 | `ENROLLMENT_FAILED` | The enrollment attempt failed.  Further details can be found in the device logs.  The app should not allow access to corporate data in this state, since it was previously determined that the user is licensed for Intune. All apps should ensure that corporate data access is unauthorized, until `ENROLLMENT_SUCCEEDED` is obtained by your app.|
@@ -1239,11 +1239,11 @@ This method is called before the SDK displays its default blocking UI. If the ap
 
 If you do not explicitly inherit [MAMActivity] (because the build tooling
 will make that change), but still need to handle this notification you
-may instead implement [MAMActivityBlockingListener].
+may instead implement **MAMActivityBlockingListener**.
 
 ### Notifications
 
-If the app registers for notifications of type **MAM_ENROLLMENT_RESULT**, a [MAMEnrollmentNotification] will be sent in order to inform the app that the enrollment request has completed. The `MAMEnrollmentNotification` will be received through the [MAMNotificationReceiver] interface as described in the [Register for notifications from the SDK](#register-for-notifications-from-the-sdk) section.
+If the app registers for notifications of type **MAM_ENROLLMENT_RESULT**, a **MAMEnrollmentNotification** will be sent in order to inform the app that the enrollment request has completed. The `MAMEnrollmentNotification` will be received through the **MAMNotificationReceiver** interface as described in the [Register for notifications from the SDK](#register-for-notifications-from-the-sdk) section.
 
 ```java
 public interface MAMEnrollmentNotification extends MAMUserNotification {
@@ -1251,7 +1251,7 @@ public interface MAMEnrollmentNotification extends MAMUserNotification {
 }
 ```
 
-The [getEnrollmentResult] method returns the result of the enrollment request.  Since `MAMEnrollmentNotification` extends `MAMUserNotification`, the identity of the user for whom the enrollment was attempted is also available. The app must implement the `MAMNotificationReceiver` interface to receive these notifications, detailed in the [Register for notifications from the SDK](#register-for-notifications-from-the-sdk) section.
+The **getEnrollmentResult** method returns the result of the enrollment request.  Since `MAMEnrollmentNotification` extends `MAMUserNotification`, the identity of the user for whom the enrollment was attempted is also available. The app must implement the `MAMNotificationReceiver` interface to receive these notifications, detailed in the [Register for notifications from the SDK](#register-for-notifications-from-the-sdk) section.
 
 The registered user account's status may change when an enrollment notification is received, but it will not change in all cases (for example, if `AUTHORIZATION_NEEDED` notification is received after a more informative result such as `WRONG_USER`, the more informative result will be maintained as the account's status).  Once the account is successfully enrolled, the status will remain as `ENROLLMENT_SUCCEEDED` until the account is unenrolled or wiped.
 
@@ -1279,11 +1279,11 @@ With App Protection CA (Conditional Access), access to resources is conditionali
 > Support for App Protection CA requires version 1.0.0 (or greater) of the MSAL library.
 
 ### Handle non-compliance with MSAL
-When acquiring a token for a user, the MSAL library may return or throw an `MsalIntuneAppProtectionPolicyRequiredException` to indicate non-compliance with APP management. Additional parameters can be extracted from the exception for use in remediating compliance (see [MAMComplianceManager](#mamcompliancemanager)). Once the remediation is successful, the app can re-attempt the token acquisition through MSAL.
+When acquiring a token for a user, the MSAL library may return or throw an `MsalIntuneAppProtectionPolicyRequiredException` to indicate non-compliance with APP management. Additional parameters can be extracted from the exception for use in remediating compliance (see **MAMComplianceManager**(#mamcompliancemanager)). Once the remediation is successful, the app can re-attempt the token acquisition through MSAL.
 
 ### MAMComplianceManager
 
-The [MAMComplianceManager] interface is used when the policy-required error is received from MSAL.  It contains the [remediateCompliance] method that should be called to attempt to put the app into a compliant state. A reference to the `MAMComplianceManager` can be obtained as follows:
+The **MAMComplianceManager** interface is used when the policy-required error is received from MSAL.  It contains the **remediateCompliance** method that should be called to attempt to put the app into a compliant state. A reference to the `MAMComplianceManager` can be obtained as follows:
 
 ```java
 MAMComplianceManager mgr = MAMComponents.get(MAMComplianceManager.class);
@@ -1308,14 +1308,14 @@ This is a simple blocking progress style interface provided as a default for app
 It will only block while the compliance remediation is in progress and will not display the final result.
 The app should register a notification receiver to handle the success or failure of the compliance remediation attempt (see below).
 
-The `remediateCompliance()` method may do a MAM enrollment as part of establishing compliance.  The app may receive an enrollment notification if it has registered a notification receiver for enrollment notifications.  The app's registered [MAMServiceAuthenticationCallback] will have its [acquireToken] method called to get a token for the MAM enrollment. `acquireToken()` will be called before the app has acquired its own token, so any bookkeeping or account creation tasks that the app does after a successful token acquisition may not have been done yet.  The callback must be able to acquire a token in this case.  If you can't return a token from `acquireToken()`, the compliance remediation attempt will fail.  If you call [updateToken] later with a valid token for the requested resource, the compliance remediation will be retried immediately with the given token.
+The `remediateCompliance()` method may do a MAM enrollment as part of establishing compliance.  The app may receive an enrollment notification if it has registered a notification receiver for enrollment notifications.  The app's registered [MAMServiceAuthenticationCallback] will have its [acquireToken] method called to get a token for the MAM enrollment. `acquireToken()` will be called before the app has acquired its own token, so any bookkeeping or account creation tasks that the app does after a successful token acquisition may not have been done yet.  The callback must be able to acquire a token in this case.  If you can't return a token from `acquireToken()`, the compliance remediation attempt will fail.  If you call **updateToken** later with a valid token for the requested resource, the compliance remediation will be retried immediately with the given token.
 
 > [!NOTE]
 > Silent token acquisition will still be possible in `acquireToken()` because the user will have already been guided to install the broker and register the device
 > before the `MsalIntuneAppProtectionPolicyRequiredException` exception is received.
 > This results in the broker having a valid refresh token in its cache, allowing silent acquisition of the requested token to succeed.
 
-Here is a sample of receiving the policy-required error in the `AuthenticationCallback.onError()` method, and calling the [MAMComplianceManager] to handle the error.
+Here is a sample of receiving the policy-required error in the `AuthenticationCallback.onError()` method, and calling the **MAMComplianceManager** to handle the error.
 
 ```java
 public void onError(@Nullable MsalException exc) {
@@ -1337,7 +1337,7 @@ public void onError(@Nullable MsalException exc) {
 
 ### Status Notifications
 
-If the app registers for notifications of type **COMPLIANCE_STATUS**, a [MAMComplianceNotification] will be sent in order to inform the app of the final status of the compliance remediation attempt. The `MAMComplianceNotification` will be received through the [MAMNotificationReceiver] interface as described in the [Register for notifications from the SDK](#register-for-notifications-from-the-sdk) section.
+If the app registers for notifications of type **COMPLIANCE_STATUS**, a **MAMComplianceNotification** will be sent in order to inform the app of the final status of the compliance remediation attempt. The `MAMComplianceNotification` will be received through the **MAMNotificationReceiver** interface as described in the [Register for notifications from the SDK](#register-for-notifications-from-the-sdk) section.
 
 ```java
 public interface MAMComplianceNotification extends MAMUserNotification {
@@ -1347,7 +1347,7 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 }
 ```
 
-The `getComplianceStatus()` method returns the result of the compliance remediation attempt as a value from the [MAMCAComplianceStatus] enum.
+The `getComplianceStatus()` method returns the result of the compliance remediation attempt as a value from the **MAMCAComplianceStatus** enum.
 
 |Status code | Explanation |
 | -- | -- |
@@ -1583,7 +1583,7 @@ The Data Backup guide specifies a general algorithm for restoring your applicati
 
 3. Avoid returning while consuming backup entities in the `while(data.readNextHeader())`* construct, as the entities we automatically write will be lost.
 
-* Where `data` is the local variable name for the [MAMBackupDataInput] that is passed to your app upon restore.
+* Where `data` is the local variable name for the **MAMBackupDataInput** that is passed to your app upon restore.
 
 ## Multi-Identity (optional)
 
@@ -1644,7 +1644,7 @@ If your app uses a `Service` context to launch intents, use content resolvers, o
 to set the identity on the `Service` context.
 
 To handle special cases when updating the UI identity with [setUIPolicyIdentity] or [switchMAMIdentity], both methods can be passed
-a set of [IdentitySwitchOption] values.
+a set of **IdentitySwitchOption** values.
 
 * `IGNORE_INTENT`: Use if requesting an identity switch that should ignore the intent associated with the current activity.
   For example:
@@ -1714,7 +1714,7 @@ public static boolean getIsIdentityManaged(final String identity);
 > The empty string may be used as an identity that will never have app protection policy.
 
 #### Results
-All the methods used to set the identity report back result values via [MAMIdentitySwitchResult]. There are four values that can be returned:
+All the methods used to set the identity report back result values via **MAMIdentitySwitchResult**. There are four values that can be returned:
 
 | Return value | Scenario |
 |--            |--        |
@@ -1734,7 +1734,7 @@ screen). The default behavior for a failed UI identity switch on an
 activity is to finish the activity (see `onSwitchMAMIdentityComplete`
 below).
 
-In the case of setting a `Context` identity via [setUIPolicyIdentity], the result is reported asynchronously. If the `Context` is an `Activity`, the SDK doesn't know if the identity change succeeded until after conditional launch is performed -- which may require the user to enter a PIN or corporate credentials. The app may implement a [MAMSetUIIdentityCallback] to receive this result, or may pass null for the callback object. Note that if a call is made to `setUIPolicyIdentity` while the result from a previous call to `setUIPolicyIdentity` *on the same context* has not yet been delivered, the new callback will supersede the old one and the original callback will never receive a result.
+In the case of setting a `Context` identity via [setUIPolicyIdentity], the result is reported asynchronously. If the `Context` is an `Activity`, the SDK doesn't know if the identity change succeeded until after conditional launch is performed -- which may require the user to enter a PIN or corporate credentials. The app may implement a **MAMSetUIIdentityCallback** to receive this result, or may pass null for the callback object. Note that if a call is made to `setUIPolicyIdentity` while the result from a previous call to `setUIPolicyIdentity` *on the same context* has not yet been delivered, the new callback will supersede the old one and the original callback will never receive a result.
 
 You can also set the identity of an activity directly through a method in [MAMActivity] instead of calling `MAMPolicyManager.setUIPolicyIdentity`. Use following method to do so:
 
@@ -1792,7 +1792,7 @@ In addition to the app's ability to set the identity, a thread, or a context's i
   * The [AppIdentitySwitchReason] captures the source of the implicit switch, and can accept the values `CREATE`, `RESUME_CANCELLED`, and `NEW_INTENT`.  The `RESUME_CANCELLED` reason is used when activity resume causes PIN, authentication, or other compliance UI to be displayed and the user attempts to cancel out of that UI, generally though use of the back button.
 
 
-    * The [AppIdentitySwitchResultCallback] is as follows:
+    * The **AppIdentitySwitchResultCallback** is as follows:
 
       ```java
       public interface AppIdentitySwitchResultCallback {
@@ -1804,7 +1804,7 @@ In addition to the app's ability to set the identity, a thread, or a context's i
         }
         ```
 
-      Where [AppIdentitySwitchResult] is either `SUCCESS` or `FAILURE`.
+      Where **AppIdentitySwitchResult** is either `SUCCESS` or `FAILURE`.
 
 The method `onMAMIdentitySwitchRequired` is called for all implicit identity changes except for those made through a Binder returned from `MAMService.onMAMBind`. The default implementations of `onMAMIdentitySwitchRequired` immediately call:
 
@@ -1818,7 +1818,7 @@ The method `onMAMIdentitySwitchRequired` is called for all implicit identity cha
 
   * If a Service is running on the main thread, `reportIdentitySwitchResult` **must** be called synchronously or the UI thread stops responding.
 
-  * For `Activity` creation, [onMAMIdentitySwitchRequired] will be called before `onMAMCreate`. If the app must show UI to determine whether to allow the identity switch, that UI must be shown using a *different* activity.
+  * For `Activity` creation, **onMAMIdentitySwitchRequired** will be called before `onMAMCreate`. If the app must show UI to determine whether to allow the identity switch, that UI must be shown using a *different* activity.
 
   * In an `Activity`, when a switch to the empty identity is requested with the reason as `RESUME_CANCELLED`, the app must modify the resumed activity to display data consistent with that identity switch.  If this is not possible, the app should refuse the switch, and the user will be asked again to comply with policy for the resuming identity (for example, by being presented with the app PIN entry screen).
 
@@ -1831,8 +1831,8 @@ The method `onMAMIdentitySwitchRequired` is called for all implicit identity cha
 If you do not explicitly inherit from [MAMActivity], [MAMService], or
 [MAMContentProvider] (because you allow the build tooling to make that
 change), but still need to process identity switches, you may instead
-implement [MAMActivityIdentityRequirementListener] for an `Activity` or
-[MAMIdentityRequirementListener] for a `Service` or `ContentProviders`.
+implement **MAMActivityIdentityRequirementListener** for an `Activity` or
+**MAMIdentityRequirementListener** for a `Service` or `ContentProviders`.
 The default behavior for `MAMActivity.onMAMIdentitySwitchRequired` can be
 accessed by calling the static method
 `MAMActivity.defaultOnMAMIdentitySwitchRequired(activity, identity,
@@ -1976,7 +1976,7 @@ static version of the same method:
 
 ### Selective Wipe
 
-If a multi-identity app registers for the [WIPE_USER_DATA][MAMNotificationType]
+If a multi-identity app registers for the **WIPE_USER_DATA**[MAMNotificationType]
 notification, it is the app's responsibility to remove all data for
 the user being wiped, including all files that have been
 identity-tagged as belonging to that user. If the app removes user
@@ -1993,7 +1993,7 @@ apps, this loss may be more significant since MAM default selective
 wipe will wipe only files whose identity is targeted by a wipe. If a
 multi-identity aware application wishes MAM default selective wipe to
 be done _**and**_ wishes to perform its own actions on wipe, it should
-register for [WIPE_USER_AUXILIARY_DATA][MAMNotificationType] notifications. This
+register for **WIPE_USER_AUXILIARY_DATA**[MAMNotificationType] notifications. This
 notification will be sent immediately by the SDK before it performs
 the MAM default selective wipe. An app should never register for both
 `WIPE_USER_DATA` and `WIPE_USER_AUXILIARY_DATA`.
@@ -2009,8 +2009,8 @@ console for [MAM-WE](../apps/app-configuration-policies-managed-app.md)
 and [Android Enterprise](../apps/app-configuration-policies-use-android.md).
 These key-value pairs are not interpreted by Intune at all,
 but are passed on to the app. Applications that want to
-receive such configuration can use the [MAMAppConfigManager] and
-[MAMAppConfig] classes to do so. If multiple policies are targeted at
+receive such configuration can use the **MAMAppConfigManager** and
+**MAMAppConfig** classes to do so. If multiple policies are targeted at
 the same app, there may be multiple conflicting values available for
 the same key.
 
@@ -2039,7 +2039,7 @@ groups containing the same user), Intune does not have any way of
 resolving this conflict automatically and will make all values
 available to your app. 
 
-Your app can request all values for a given key from a [MAMAppConfig] object:
+Your app can request all values for a given key from a **MAMAppConfig** object:
 ```java
 List<Boolean> getAllBooleansForKey(String key)
 List<Long> getAllIntegersForKey(final String key)
@@ -2079,7 +2079,7 @@ Long barValue = appConfig.getIntegerForKey("bar", MAMAppConfig.NumberQueryType.M
 
 ### Notification
 App config adds a new notification type:
-* **REFRESH_APP_CONFIG**: This notification is sent in a [MAMUserNotification] and informs the app that new app config data is available.
+* **REFRESH_APP_CONFIG**: This notification is sent in a **MAMUserNotification** and informs the app that new app config data is available.
 
 ### Further Reading
 For more information about how to create a MAM targeted app configuration policy in Android, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-managed-app.md).
@@ -2253,70 +2253,31 @@ The Intune App SDK for Android does not control data collection from your app. T
 See the [Testing Guide](app-sdk-android-testing-guide.md).
 
 <!-- Class links -->
-[AppIdentitySwitchReason]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html
-[AppIdentitySwitchResult]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchResult.html
-[AppIdentitySwitchResultCallback]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html
-[AppPolicy]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/AppPolicy.html
 [BackupAgent]: https://developer.android.com/reference/android/app/backup/BackupAgent
 [BackupAgentHelper]: https://developer.android.com/reference/android/app/backup/BackupAgentHelper
-[IdentitySwitchOption]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/IdentitySwitchOption.html
 [MAMActivity]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
-[MAMActivityIdentityRequirementListener]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html
 [MAMActivityIdentitySwitchListener]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentitySwitchListener.html
-[MAMActivityBlockingListener]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html
-[MAMAppConfig]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html
-[MAMAppConfigManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html
 [MAMApplication]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMApplication.html
 [MAMAsyncTask]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMAsyncTask.html
 [MAMBackupAgent]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgent.html
 [MAMBackupAgentHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgentHelper.html
-[MAMBackupDataInput]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupDataInput.html
-[MAMCAComplianceStatus]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMCAComplianceStatus.html
-[MAMComplianceManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMComplianceManager.html
-[MAMComplianceNotification]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMComplianceNotification.html
 [MAMContentProvider]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/content/MAMContentProvider.html
 [MAMDataProtectionManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
 [MAMDefaultBackupAgent]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMDefaultBackupAgent.html
-[MAMEnrollmentManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html
-[MAMEnrollmentManager.Result]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
-[MAMEnrollmentNotification]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMEnrollmentNotification.html
 [MAMFileBackupHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMFileBackupHelper.html
 [MAMFileProtectionManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
 [MAMIdentityExecutors]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html
-[MAMIdentityRequirementListener]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html
-[MAMIdentitySwitchResult]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html
-[MAMLogHandlerWrapper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/log/MAMLogHandlerWrapper.html
-[MAMNotificationType]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
-[MAMNotificationReceiver]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiver.html
-[MAMNotificationReceiverRegistry]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiverRegistry.html
 [MAMPolicyManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
-[MAMServiceAuthenticationCallback]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html
-[MAMSetUIIdentityCallback]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html
 [MAMService]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMService.html
 [MAMSharedPreferencesBackupHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMSharedPreferencesBackupHelper.html
-[MAMStrictCheck]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictCheck.html
-[MAMStrictViolationHandler]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictViolationHandler.html
-[MAMUserInfo]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMUserInfo.html
-[MAMUserNotification]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMUserNotification.html
-[OpenLocation]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/OpenLocation.html
-[SaveLocation]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/SaveLocation.html
 
 <!-- Method links -->
 [acquireToken]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
-[getEnrollmentResult]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMEnrollmentNotification.html#getEnrollmentResult()
 [getIsIdentityManaged]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityManaged(java.lang.String)
-[getIsOpenFromLocationAllowed]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/AppPolicy.html#getIsOpenFromLocationAllowed(com.microsoft.intune.mam.policy.OpenLocation,%20java.lang.String)
-[getIsSaveToLocationAllowed]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/AppPolicy.html#getIsSaveToLocationAllowed(com.microsoft.intune.mam.policy.SaveLocation,%20java.lang.String)
-[getRegisteredAccountStatus]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String)
+html#getRegisteredAccountStatus(java.lang.String)
 [protect]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protect(android.os.ParcelFileDescriptor,%20java.lang.String)
-[onMAMIdentitySwitchRequired]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchReason,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)
-[registerAccountForMAM]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
-[registerAuthenticationCallback]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAuthenticationCallback(com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback)
-[remediateCompliance]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMComplianceManager.html#remediateCompliance(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20boolean)
 [setUIPolicyIdentity]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context,%20java.lang.String,%20com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
 [switchMAMIdentity]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#switchMAMIdentity(java.lang.String,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
-[unregisterAccountForMAM]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String)
-[updateToken]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#updateToken(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
 [MAMActivity.onMAMCompanyPortalRequired]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#onMAMCompanyPortalRequired(java.lang.String)
 
 <!-- Intune -->
