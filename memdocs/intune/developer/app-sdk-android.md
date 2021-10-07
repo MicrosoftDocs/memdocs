@@ -1976,7 +1976,7 @@ static version of the same method:
 
 ### Selective Wipe
 
-If a multi-identity app registers for the **WIPE_USER_DATA MAMNotificationType**
+If a multi-identity app registers for the **WIPE_USER_DATA**
 notification, it is the app's responsibility to remove all data for
 the user being wiped, including all files that have been
 identity-tagged as belonging to that user. If the app removes user
