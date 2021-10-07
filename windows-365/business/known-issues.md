@@ -56,9 +56,9 @@ Users can manually change their language/locale in the URL for most websites.
 
 For example, in the following URL, change the language/locale from "en-us" to "fr-fr" to get the French version:
 
-``https://docs.microsoft.com/**en-us**/microsoft-365/admin/setup/get-started-windows-365-business``  
+docs.microsoft.com/**en-us**/microsoft-365/admin/setup/get-started-windows-365-business
 
-``https://docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-business``
+docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-business
 
 ### Set browser location
 

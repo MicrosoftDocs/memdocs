@@ -9,7 +9,7 @@ items:
   href: windows-365-business-sizing.md
 - name: Troubleshoot
   items:
-    - name: Troubleshooting
-      href: troubleshoot-windows-365-business.md
-    - name: Known issues 
-      href: known-issues.md
+  - name: Troubleshooting
+    href: troubleshoot-windows-365-business.md
+  - name: Known issues 
+    href: known-issues.md
