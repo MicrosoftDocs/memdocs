@@ -1057,7 +1057,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its registerAuthenticationCallback method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's Application subclass.
 
-2. The [acquireToken] method should acquire the access token for the requested resource ID for the given user. If it can't acquire the requested token, it should return null.
+2. The **acquireToken** method should acquire the access token for the requested resource ID for the given user. If it can't acquire the requested token, it should return null.
 
     > [!NOTE]
     > Ensure that your app utilizes the `resourceId` and the `aadId` parameters passed to `acquireToken()`
@@ -1200,7 +1200,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 * When the app calls [registerAccountForMAM], it may receive a callback on its [MAMServiceAuthenticationCallback] interface shortly thereafter, on a different thread. Ideally, the app acquired its own AAD token prior to registering the account to expedite the acquisition of the requested token. If the app returns a valid token from the callback, enrollment will proceed and the app will get the final result via a notification.
 
-* If the app doesn't return a valid AAD token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`. If the app receives this Result via notification, it is strongly recommended to expedite the enrollment process by acquiring the token for the user and resource previously requested from [acquireToken] and calling the **updateToken** method to initiate the enrollment process again.
+* If the app doesn't return a valid AAD token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`. If the app receives this Result via notification, it is strongly recommended to expedite the enrollment process by acquiring the token for the user and resource previously requested from **acquireToken** and calling the **updateToken** method to initiate the enrollment process again.
 
 * The app's registered `MAMServiceAuthenticationCallback` will also be called to acquire a token for periodic app protection policy refresh check-ins. If the app is unable to provide a token when requested, it will not get a notification, but it should attempt to acquire a token and call `updateToken()` at the next convenient time to expedite the check-in process. If a token is not provided, the callback will still be called at the next check-in attempt.
 
@@ -1308,7 +1308,7 @@ This is a simple blocking progress style interface provided as a default for app
 It will only block while the compliance remediation is in progress and will not display the final result.
 The app should register a notification receiver to handle the success or failure of the compliance remediation attempt (see below).
 
-The `remediateCompliance()` method may do a MAM enrollment as part of establishing compliance.  The app may receive an enrollment notification if it has registered a notification receiver for enrollment notifications.  The app's registered [MAMServiceAuthenticationCallback] will have its [acquireToken] method called to get a token for the MAM enrollment. `acquireToken()` will be called before the app has acquired its own token, so any bookkeeping or account creation tasks that the app does after a successful token acquisition may not have been done yet.  The callback must be able to acquire a token in this case.  If you can't return a token from `acquireToken()`, the compliance remediation attempt will fail.  If you call **updateToken** later with a valid token for the requested resource, the compliance remediation will be retried immediately with the given token.
+The `remediateCompliance()` method may do a MAM enrollment as part of establishing compliance.  The app may receive an enrollment notification if it has registered a notification receiver for enrollment notifications.  The app's registered [MAMServiceAuthenticationCallback] will have its **acquireToken** method called to get a token for the MAM enrollment. `acquireToken()` will be called before the app has acquired its own token, so any bookkeeping or account creation tasks that the app does after a successful token acquisition may not have been done yet.  The callback must be able to acquire a token in this case.  If you can't return a token from `acquireToken()`, the compliance remediation attempt will fail.  If you call **updateToken** later with a valid token for the requested resource, the compliance remediation will be retried immediately with the given token.
 
 > [!NOTE]
 > Silent token acquisition will still be possible in `acquireToken()` because the user will have already been guided to install the broker and register the device
@@ -2272,7 +2272,6 @@ See the [Testing Guide](app-sdk-android-testing-guide.md).
 [MAMSharedPreferencesBackupHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMSharedPreferencesBackupHelper.html
 
 <!-- Method links -->
-[acquireToken]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
 [getIsIdentityManaged]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityManaged(java.lang.String)
 [protect]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protect(android.os.ParcelFileDescriptor,%20java.lang.String)
 [setUIPolicyIdentity]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context,%20java.lang.String,%20com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
