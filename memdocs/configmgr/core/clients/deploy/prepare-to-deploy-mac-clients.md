@@ -2,7 +2,7 @@
 title: Prepare to deploy the client to Macs
 titleSuffix: Configuration Manager
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
-ms.date: 11/27/2018
+ms.date: 10/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -22,7 +22,7 @@ Follow these steps to make sure that you're ready to [deploy the Configuration M
 
 ## Mac prerequisites
 
-The Mac client installation package isn't supplied with the Configuration Manager media. Download the **Clients for additional operating systems** from the **Microsoft Download Center**.  
+The Mac client installation package isn't supplied with the Configuration Manager media. Download it from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=100850).
 
 For the list of supported versions, see [Supported operating systems for clients and devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
