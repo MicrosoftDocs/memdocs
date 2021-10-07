@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 10/07/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,6 +63,9 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
+
+#### Improved flow when saving logs in Android Company Portal app<!-- 10414688 -->
+In the Android Company Portal app, when users need to download a copy of the Android Company Portal logs they will be prompted to choose a folder location. In the Android Company Portal app, users can select **Settings** > **Diagnostic logs** > **SAVE LOGS** to choose the folder location.
 
 #### Newly available protected apps for Intune<!-- 10489496, 10436733, 10494599, 10587268 -->
 The following protected apps are now available for Microsoft Intune:
