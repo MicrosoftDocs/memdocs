@@ -50,7 +50,7 @@ Some websites that are accessed from a Cloud PC use its IP address to determine 
 
 There are two workarounds for this issue:
 
-### Change language/locale in URLs
+#### Change language/locale in URLs
 
 Users can manually change their language/locale in the URL for most websites.
 
@@ -60,7 +60,7 @@ docs.microsoft.com/**en-us**/microsoft-365/admin/setup/get-started-windows-365-b
 
 docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-business
 
-### Set browser location
+#### Set browser location
 
 Users can manually set their internet search engine's location. For example, on Bing.com users can visit the **Settings** menu (in the top-right corner of the site) to manually set the Language, Country/Region, and Location.
 
