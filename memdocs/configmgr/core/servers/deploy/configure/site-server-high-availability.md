@@ -260,7 +260,7 @@ The following steps may be required if necessary in your environment:
 
 - If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).  
 
-- Recreate bootable media and prestaged media in non-PKI environments.  
+- Recreate OSD bootable media and prestaged media in non-PKI environments.  
 
 ## Daily monitoring
 
