@@ -42,7 +42,7 @@ For each action you set, you can configure a schedule that determines when that 
 Not all actions are available for all platforms.
 
    > [!NOTE]
-   > The Intune portal displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), etc. While other values are possible, they can only be configured using [Microsoft Graph](https://docs.microsoft.com/graph/overview) and not via the Intune portal. Attempting to use other values in the portal, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
+   > The Microsoft Endpoint Manager admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](https://docs.microsoft.com/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
 
 ## Available actions for noncompliance
 
