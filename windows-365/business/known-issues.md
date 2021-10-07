@@ -44,7 +44,7 @@ The user should uninstall the version of Office installed on their Cloud PC and 
 
 ## Some websites might display the wrong language
 
-Some websites that are accessed from a Cloud PC use its IP address to determine how content is displayed. This means that users might see content based on where the Cloud PC was created, instead of content based on where the user is located.  
+Some websites that are accessed from a Cloud PC use its IP address to determine how content is displayed. Therefore, users might see content based on where the Cloud PC was created, instead of content based on where the user is located.  
 
 ### Troubleshooting steps
 
