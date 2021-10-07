@@ -82,10 +82,6 @@ In device configuration, you'll be able to create a list of personal apps that w
 
 You'll be able to allow users to turn on Connected apps experiences for supported apps. This app configuration setting will enable users to connect the app information across the work and personal app instances. For example, connecting a calendar app can show work and personal events together. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 
-### New app configuration permission for Android Enterprise devices<!-- 10751622  -->
-
-You will be able to configure the MANAGE_EXTERNAL_STORAGE permission for apps via an app configuration policy for Android Enterprise devices. When this setting is available, you will find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices**. On the **Settings** page, select **Add** to find and add the related permission.
-
 <!-- ***********************************************-->
 ## Device configuration
 
