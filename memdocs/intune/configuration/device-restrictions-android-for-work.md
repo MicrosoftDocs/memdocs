@@ -54,6 +54,9 @@ The security configuration framework is organized into three distinct configurat
 
 For Android Enterprise personally-owned work profile devices:
 
+> [!Note]
+> Due to the limited number of settings available for personally-owned work profile devices, there is no basic security (level 1) offering.
+
 - **Work profile enhanced security (Level 2)** is the minimum security configuration for a personal device that introduces password requirements, separates work and personal data, sets the minimum Android version, and validates Android device attestation. This configuration is applicable to most personal devices where users access work or school data.
 - **Work profile high security (Level 3)** introduces mobile threat defense or Microsoft Defender for Endpoint, increases the minimum Android version, enacts stronger password policies, and further restricts work and personal separation. This configuration is desirable for users that are accessing high risk data.  
 
