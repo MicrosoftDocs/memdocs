@@ -272,7 +272,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     >
     > If a BYOD device is converted to an Apple ADE device and enrolled with a profile that has locked enrollment enabled, the user will be allowed to use **Remove Device** and **Factory Reset** for 30 days. After 30 days, the options will be disabled or unavailable. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859).
 
-12. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). If you select **Yes** for **Shared iPad**, multiple users will be able to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later.
+12. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). If you select **Yes** for **Shared iPad**, multiple users will be able to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later. With Shared iPad, all Setup Assistant panes after activation are automatically skipped.
 
     > [!NOTE]
     > A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models,  and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.
@@ -310,6 +310,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     You can choose to hide Setup Assistant screens on the device during user setup.
     - If you select **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
     - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
+    - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration. 
 
     | Setup Assistant Screens setting | If you select Show, during setup the device will... |
     |------------------------------------------|------------------------------------------|
