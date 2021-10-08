@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2021
+ms.date: 10/04/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -190,8 +190,9 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
-  3. The Company Portal app automatically installs, which takes some time. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`) again.
+  2.  Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete, the device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices. At this point, however, the device is not yet fully registered with Azure AD. 
+  3. The Company Portal app automatically installs. Users open Company Portal and sign in with their work or school account (`user@contoso.com`) again. 
+  4. Users complete registration in Company Portal, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies. 
 
 - **Enroll with user affinity + Setup Assistant with modern authentication - Company Portal app**:
 
