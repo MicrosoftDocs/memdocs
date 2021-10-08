@@ -10,7 +10,7 @@ ms.date: 03/22/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 
 ms.reviewer: dagerrit
