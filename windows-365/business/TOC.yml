@@ -7,6 +7,10 @@ items:
   href: in-development.md
 - name: Cloud PC sizes 
   href: windows-365-business-sizing.md
-- name: Troubleshooting 
-  href: troubleshoot-windows-365-business.md
+- name: Troubleshoot
+  items:
+  - name: Troubleshooting
+    href: troubleshoot-windows-365-business.md
+  - name: Known issues 
+    href: known-issues.md
   

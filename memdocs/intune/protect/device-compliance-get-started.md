@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2021
+ms.date: 10/07/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -115,7 +115,7 @@ The following subjects link to dedicated articles for different aspects of devic
 
   - **Sending email alerts** to users and groups with details about the noncompliant device. You might configure the policy to send an email immediately upon being marked as noncompliant, and then again, periodically, until the device becomes compliant.
   - **Remotely lock devices** that have been noncompliant for some time.
-  - **Retire devices** after they’ve been noncompliant for some time. This action removes the device from Intune management and removes all company data from the device.
+  - **Retire devices** after they’ve been noncompliant for some time. This action marks a qualifying device as ready to be retired. An admin can then view a list of devices marked for retirement and must take an explicit action to retire one or more devices. Retiring a device removes the device from Intune management and removes all company data from the device. For more information about this action, see [Available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).
 
 - [**Configure network locations**](use-network-locations.md) - Supported by Android devices, you can configure *network locations* and then use those locations as a device compliance rule. This type of rule can flag a device as noncompliant when it’s outside of or leaves a specified network. Before you can specify a Location rule, you must configure the network locations.
 
