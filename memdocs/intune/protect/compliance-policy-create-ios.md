@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 12/15/2020
+ms.date: 10/08/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,19 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Before you begin
 
-[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **iOS/iPadOS**.
+When configuring device compliance and configuration policies, the number of various settings and options enable organizations to tailor protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings is required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its iOS/iPadOS security configuration framework.
+
+The security configuration framework is organized into distinct configuration levels providing guidance for personally owned and supervised devices, with each level building off the previous level. For compliance policies, this framework includes two levels:
+
+> [!Note]
+> Due to the limited number of settings available for device compliance, there is no basic security (level 1) offering.
+
+- **Enhanced security (Level 2)** is the minimum security configuration for a device that introduces password policies and sets the minimum iOS/iPadOS version. This configuration is applicable to most personal devices where users access work or school data.
+- **High security (Level 3)** introduces mobile threat defense or Microsoft Defender for Endpoint, increases the minimum iOS/iPadOS version and enacts stronger password policies. This configuration is desirable for users that are accessing sensitive and high risk data.
+
+To see the specific recommendations for each configuration level and the minimum apps that must be protected, review the [iOS/iPadOS Enterprise security configuration framework](../enrollment/ios-ipados-configuration-framework.md).
+
+To create a policy, see [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **iOS/iPadOS**.
 
 ## Email
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2021
+ms.date: 10/08/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,10 +43,27 @@ For Android device administrator, see [Android and Samsung Knox Standard device 
 
 ## Before you begin
 
-Create an [Android Enterprise device restrictions profile](device-restrictions-configure.md):
+You can create an [Android Enterprise device restrictions profile](device-restrictions-configure.md) for the following Android Enterprise scenarios:
 
 - Fully managed, dedicated, and corporate-owned work profile
-- Personally owned devices with a work profile
+- Personally-owned work profile devices
+
+When configuring device compliance and configuration policies, the number of various settings and options enable organizations to tailor protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings is required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its Android Enterprise security configuration framework.
+
+The security configuration framework is organized into three distinct configuration levels providing guidance for work profile and fully managed scenarios, with each level building off the previous level.
+
+For Android Enterprise personally-owned work profile devices:
+
+- **Work profile enhanced security (Level 2)** is the minimum security configuration for a personal device that introduces password requirements, separates work and personal data, sets the minimum Android version, and validates Android device attestation. This configuration is applicable to most personal devices where users access work or school data.
+- **Work profile high security (Level 3)** introduces mobile threat defense or Microsoft Defender for Endpoint, increases the minimum Android version, enacts stronger password policies, and further restricts work and personal separation. This configuration is desirable for users that are accessing high risk data.  
+
+For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices:
+
+- **Fully managed basic security (Level 1)** is the minimum security configuration for an enterprise device that introduces password requirements, sets the minimum Android version, and enacts certain device restrictions. This configuration is applicable to most mobile users accessing work or school data.
+- **Fully managed enhanced security (Level 2)** enacts stronger password policies and disables user/account capabilities. This configuration is applicable for users that access sensitive or confidential information.
+- **Fully managed high security (Level 3)** increases the minimum Android version, introduces mobile threat defense or Microsoft Defender for Endpoint, and enforces additional device restrictions. This configuration is desirable for users that are accessing high risk data.
+
+To see the specific recommendations for each configuration level and the minimum apps that must be protected, review the [Android Enterprise security configuration framework](../enrollment/android-configuration-framework.md).
 
 ## Fully managed, dedicated, and corporate-owned work profile
 

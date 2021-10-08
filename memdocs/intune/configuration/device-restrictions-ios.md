@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2021
+ms.date: 10/08/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,7 +38,25 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-Create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
+When configuring device compliance and configuration policies, the number of various settings and options enable organizations to tailor protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings is required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its iOS/iPadOS security configuration framework.
+
+The security configuration framework is organized into distinct configuration levels providing guidance for personally owned and supervised devices, with each level building off the previous level. 
+
+For personally owned devices:
+
+- **Basic security (Level 1)** is the minimum security configuration for personal devices where users access work or school data. This is done by enforcing password policies, device lock characteristics, and disabling certain device functions (e.g., untrusted certificates).
+- **Enhanced security (Level 2)** enacts data sharing controls. This configuration is for devices where users access sensitive or confidential information and is applicable to most mobile users accessing work or school data on a device.
+- **High security (Level 3)** enacts stronger password policies, disables certain device functions, and enforces additional data transfer restrictions. This configuration is desirable for users that are accessing high risk data.
+
+For supervised devices:
+
+- **Basic security (Level 1)** is the minimum security configuration for supervised devices where users access work or school data. This is done by enforcing password policies, device lock characteristics, and disabling certain device functions (e.g., untrusted certificates).
+- **Enhanced security (Level 2)** enacts data sharing controls and blocks access to USB devices. This configuration is for devices where users access sensitive or confidential information and is applicable to most mobile users accessing work or school data on a device.
+- **High security (Level 3)** enacts stronger password policies, disables certain device functions, enforces additional data transfer restrictions, and requires apps to be installed through Apple’s volume purchase program. This configuration is desirable for users that are accessing high risk data.
+
+To see the specific recommendations for each configuration level and the minimum apps that must be protected, review the [iOS/iPadOS Enterprise security configuration framework](../enrollment/ios-ipados-configuration-framework.md).
+
+To create a policy, see [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
