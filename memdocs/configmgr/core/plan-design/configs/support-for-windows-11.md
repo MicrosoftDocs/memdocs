@@ -97,24 +97,9 @@ By default, Windows 11 enables **focus assist** for the first hour after a user 
 
 Software Center notifications are currently suppressed during this time. For more information, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).
 
-### Pre-provisioning BitLocker during task sequence doesn't own TPM
 
 <!-- 11307733 -->
-
-When you use an OS deployment task sequence to deploy Windows 11, and it includes the [Pre-provision BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker) step, the step will fail with errors similar to the following strings in the smsts.log:
-
-```log
-'TakeOwnership' failed (2147942402)
-Failed to take ownership of TPM. Ensure that Active Directory permissions are properly configured.
-```
-
-To work around this issue, add a **Run Command Line** step to the task sequence before the **Pre-provision BitLocker** step. Run the following command:
-
-```command
-reg.exe add HKLM\SOFTWARE\Policies\Microsoft\TPM /v OSManagedAuthLevel /t REG_DWORD /d 2 /f
-```
-
-For more information on this registry key, see [Change the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password).
+[!INCLUDE [windows-adk-11-preprovision-bitlocker](includes/windows-adk-11-preprovision-bitlocker.md)]
 
 ## Next steps
 
