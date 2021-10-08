@@ -52,7 +52,7 @@ This change impacts all Autopilot deployments that use the self-deployment or pr
 
 To redeploy the device through Autopilot:
 
-1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Endpoint Manager admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal).
+1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Endpoint Manager admin center](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
 2. Redeploy the Autopilot deployment profile.
 
 ## Device import issues
