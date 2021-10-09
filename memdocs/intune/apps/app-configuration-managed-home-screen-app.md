@@ -12,7 +12,7 @@ ms.date: 09/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 865c7f03-f525-4dfa-b3a8-d088a9106502
 
