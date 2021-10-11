@@ -12,7 +12,7 @@ ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 
 # optional metadata
