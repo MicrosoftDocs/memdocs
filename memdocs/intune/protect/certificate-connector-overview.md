@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 10/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -222,7 +222,7 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
 
-### October 5, 2021
+### October 11, 2021
 
 Version **6.2110.200.0**. This update includes:
 
