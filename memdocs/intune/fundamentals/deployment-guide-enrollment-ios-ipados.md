@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 10/11/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -162,7 +162,7 @@ This task list provides an overview. For more specific information, see [Apple B
 
 ### ADE end user tasks
 
-When you create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (**Enroll with user affinity**), or have shared devices (**Enroll without user affinity**). The specific steps depend on how you configure the enrollment profile. Note that with Shared iPad, all Setup Assistant panes after activation are automatically skipped.
+When you create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (**Enroll with user affinity**), or have shared devices (**Enroll without user affinity**). The specific steps depend on how you configure the enrollment profile. With Shared iPad, after activation, all Setup Assistant panes are automatically skipped.
 
 - **Enroll with user affinity + Company Portal app**:
 
