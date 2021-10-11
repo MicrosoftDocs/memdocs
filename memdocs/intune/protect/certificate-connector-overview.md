@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/22/2021
+ms.date: 10/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -222,9 +222,15 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
 
+### October 11, 2021
+
+Version **6.2110.200.0**. This update includes:
+
+- Bug fix for reading the SCEP application pool during configuration.
+
 ### September 23, 2021
 
-Version **6.2109.51.0**. - With the release of this update, support ends for the two previous certificate connectors, *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*.
+Version **6.2109.52.0**. - With the release of this update, support ends for the two previous certificate connectors, *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*.
 
 This update includes:
 
