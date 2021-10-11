@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
-ms.date: 10/08/2021
+ms.date: 10/11/2021
 ms.localizationpriority: medium
 ---
 
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Applies to: _Windows ADK for Windows 11_
 
-When you use Windows PE 11 with an OS deployment task sequence that includes the [Pre-provision BitLocker](../../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker) step, the step will fail with errors similar to the following strings in the smsts.log:
+When you use a Windows 11-based boot image with an OS deployment task sequence that includes the [Pre-provision BitLocker](../../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker) step, the step might fail. You'll see errors similar to the following strings in the smsts.log:
 
 ```log
 'TakeOwnership' failed (2147942402)
