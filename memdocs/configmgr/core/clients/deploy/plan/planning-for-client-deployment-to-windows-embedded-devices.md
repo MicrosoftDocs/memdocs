@@ -84,20 +84,4 @@ ms.localizationpriority: medium
  For more information about how to build images for Windows Embedded devices and configure write filters, see your Windows Embedded documentation, or contact your OEM.  
 
 > [!NOTE]
->  When you select the applicable platforms for software deployments and configuration items, these display the Windows Embedded families rather than specific versions. Use the following list to map the specific version of Windows Embedded to the options in the list box:  
-> 
-> - **Embedded Operating Systems based on Windows XP (32-bit)** includes the following:  
-> 
->   -   Windows XP Embedded  
->   -   Windows Embedded for Point of Service  
->   -   Windows Embedded Standard 2009  
->   -   Windows Embedded POSReady 2009  
->   -   **Embedded operating systems based on Windows 7 (32-bit)** includes the following:  
-> 
->   -   Windows Embedded Standard 7 (32-bit)  
->   -   Windows Embedded POSReady 7 (32-bit)  
->   -   Windows ThinPC  
->   -   **Embedded operating systems based on Windows 7 (64-bit)** includes the following:  
-> 
->   -   Windows Embedded Standard 7 (64-bit)  
->   -   Windows Embedded POSReady 7 (64-bit)
+>  When you select the applicable platforms for software deployments and configuration items, these display the Windows Embedded families rather than specific versions. 

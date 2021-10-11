@@ -91,9 +91,6 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 -   Windows 10 Enterprise 2016 LTSB (x86, x64)  
 -   Windows 10 Enterprise 2015 LTSB (x86, x64)  
 -   Windows Embedded 8.1 Industry (x86, x64)    
--   Windows Thin PC (x86, x64)    
--   Windows Embedded POSReady 7 (x86, x64)    
-
 
 ### Windows CE  
  You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  

@@ -140,9 +140,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 - **Windows Embedded 8 Standard** (x86, x64)
 
-- **Windows Thin PC** (x86, x64)
-
-- **Windows Embedded POSReady 7** (x86, x64)
 
 #### <a name="bkmk_note4"></a> Note 4: Windows IoT Enterprise
 
