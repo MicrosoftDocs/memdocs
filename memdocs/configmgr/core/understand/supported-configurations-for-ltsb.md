@@ -2,7 +2,7 @@
 title: Supported Configurations for the LTSB
 titleSuffix: Configuration Manager
 description: Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager.
-ms.date: 10/07/2021
+ms.date: 10/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -91,9 +91,6 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 -   Windows 10 Enterprise 2016 LTSB (x86, x64)  
 -   Windows 10 Enterprise 2015 LTSB (x86, x64)  
 -   Windows Embedded 8.1 Industry (x86, x64)    
--   Windows Thin PC (x86, x64)    
--   Windows Embedded POSReady 7 (x86, x64)    
-
 
 ### Windows CE  
  You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  
