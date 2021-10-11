@@ -34,7 +34,7 @@ There are four options available for remotely administering devices managed by  
 - [Microsoft Teams](https://products.office.com/microsoft-teams/) is the hub for teamwork where you can chat, meet, and collaborate no matter where you are.
 - [Quick Assist](https://support.microsoft.com/help/4027243/windows-10-solve-pc-problems-with-quick-assist) is a Windows 10 application that lets two people share a device over a remote connection.
 - [TeamViewer](https://www.teamviewer.com/) is a third-party program that you purchase separately. It provides a comprehensive set of remote access and support capabilities. The Intune and [TeamViewer integration](teamviewer-support.md) enables remote support using TeamViewer and the connector is managed directly in Intune.
-- [Remote help](../protect/remote-help.md) is in public preview for Microsoft Endpoint Manager. When installed on a users device, your organizations users can provide remote assistance to other users within the same tenant, including between devices that are and arne't enrolled with Intune. 
+- [Remote help](remote-help.md) is in public preview for Microsoft Endpoint Manager. When installed on a users device, your organizations users can provide remote assistance to other users within the same tenant, including between devices that are and arne't enrolled with Intune. 
 - [Remote control](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control) is included in Microsoft Endpoint Configuration Manager. It's used to remotely administer, provide assistance, or view any workgroup computer and domain-joined computer.
 
 | Features, Platforms, Licensing | **Teams** | Quick Assist | TeamViewer (Intune) | Remote help (*preview*) | Remote control (ConfigMgr) |

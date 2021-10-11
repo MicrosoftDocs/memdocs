@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/06/2021
+ms.date: 10/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -193,4 +193,4 @@ You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
 ## Next steps
 
-[Get support in Microsoft Endpoint Manager admin center](./mem/get-support.md)
+[Get support in Microsoft Endpoint Manager admin center](../../get-support.md)
