@@ -88,7 +88,6 @@ Please note: Only security-enabled Microsoft 365 Groups are supported
 > Consider some of the other dynamic user and device groups you can create, such as:
 >
 > - All Students in Contoso high school
-> - All Android Enterprise devices
 > - All iOS 11 and older devices
 > - Marketing
 > - Human Resources
