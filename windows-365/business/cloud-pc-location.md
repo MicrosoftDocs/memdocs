@@ -41,7 +41,7 @@ To find out if Windows 365 can be purchased in your country, follow these steps:
 
 1. In your internet browser, go to [Microsoft 365 and Office 365 International Availability]( https://www.microsoft.com/microsoft-365/business/international-availability).
 2. Scroll down to the **Windows 365** section.
-3. If your country is supported if it’s listed in the **Countries and Regions** column.
+3. Your country is supported if it’s listed in the **Countries and Regions** column.
 
 ## Where is a Cloud PC created?
 
