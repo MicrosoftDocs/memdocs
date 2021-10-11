@@ -224,7 +224,7 @@ New updates for the connector can take several days to become available for each
 
 ### October 11, 2021
 
-Version **6.2110.200.0**. This update includes:
+Version **6.2110.201.0**. This update includes:
 
 - Bug fix for reading the SCEP application pool during configuration.
 
