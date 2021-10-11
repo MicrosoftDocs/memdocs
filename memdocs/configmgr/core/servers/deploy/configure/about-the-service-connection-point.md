@@ -132,13 +132,12 @@ There are several scenarios in which you may need to move the service connection
 
 After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
 
-## Log files
-
-To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](../../../plan-design/hierarchy/log-files.md#BKMK_WITLog).
-
 ## <a name="bkmk_notifications"></a> Console notifications for the service connection point
 <!--11047451-->
 Occasionally, the Configuration Manager console may give you a [notification](../../manage/admin-console-notifications.md) about your service connection point. The notification asks you to restart the SMS_EXECUTIVE service on the server that hosts the service connection point. This notification occurs  because a configuration change was made by Microsoft on the services that your service connection point connects to. Features of Configuration Manager that rely on these services may not function for your site properly until the SMS_EXECUTIVE service is restarted.
+## Log files
+
+To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](../../../plan-design/hierarchy/log-files.md#BKMK_WITLog).
 
 ## Next steps
 
