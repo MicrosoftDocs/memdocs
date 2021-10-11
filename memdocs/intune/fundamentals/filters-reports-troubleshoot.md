@@ -89,6 +89,9 @@ In the following example, you can see this information for the **Microsoft Word*
 
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="See the date, time, evaluation results, and other app filter properties in Microsoft Endpoint Manager and Microsoft Intune.":::
 
+> [!Important]
+> Apps deployed as "Available" do not appear in the **Device install status** report. To troubleshoot if a user/device is filtered in or out of an Available assignment, you should use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must have also visited the list of apps on the Company portal app or website.
+
 ## Include vs. Exclude
 
 When you create a filter, you choose to include or exclude devices based on some properties, such as `device.model -equals “Surface pro”`, or `device.model -notEquals “Surface pro”`. It can be difficult to understand the evaluation results, especially when including or excluding devices.
