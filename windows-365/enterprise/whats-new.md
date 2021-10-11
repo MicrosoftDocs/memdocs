@@ -48,12 +48,12 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of October 6, 2021 (Service release 2109)
+## Week of October 11, 2021 (Service release 2109)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
-#### Health check improvement<!--36461502 wnready-->
+#### Health check improvement<!--36461502-->
 
 The **DNS can resolve Active Directory domain** health check has been improved. A new step has been added to look for the following Azure Active Directory DNS record. If it can’t be found, the check fails.
 
