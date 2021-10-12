@@ -146,7 +146,7 @@ To identify devices that have enrolled with MDE but aren't managed by Intune or 
 
    Devices that onboard to MDE and have registered but aren't managed by Intune or Configuration Manager display **MDE** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
 
-You can create groups for these devices [in Azure AD](azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Endpoint Manager admin center](../fundamentals/groups-add.md).
+You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Endpoint Manager admin center](../fundamentals/groups-add.md).
 
 ## Deploy policy
 
