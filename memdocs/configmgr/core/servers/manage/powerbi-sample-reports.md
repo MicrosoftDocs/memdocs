@@ -87,3 +87,13 @@ To install the sample reports:
 1. Right-click on one of the reports and select **Run in Browser** to launch the report.
 
     :::image type="content" source="media/view-powerbi-report.png" alt-text="Run the sample report from the Configuration Manager console" lightbox="media/view-powerbi-report.png":::
+
+## Sample reports
+
+The following sample Power BI reports are included in the download:
+
+- Software Update Compliance Status
+- Software Update Deployment Status
+- Client Status
+- Content Status
+- Microsoft Edge Management
