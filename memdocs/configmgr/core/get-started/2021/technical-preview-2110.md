@@ -36,6 +36,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [10615989](includes/2110/10615989.md)]
 [!INCLUDE [10628998](includes/2110/10628998.md)]
 [!INCLUDE [10992210](includes/2110/10992210.md)]
+[!INCLUDE [10964629](includes/2110/10964629.md)]
 [!INCLUDE [9575077](includes/2110/9575077.md)]
 
 <!--
