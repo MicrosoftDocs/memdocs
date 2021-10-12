@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/08/2021
+ms.date: 10/18/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -68,6 +68,16 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 - Windows 11 reports the **Operating System** property as `Microsoft Windows NT Workstation 10.0`, which is identical to Windows 10. To distinguish devices running Windows 11, use the **Operating System Build** device property for build number `10.0.22000` or later.<!-- 11059508 -->
 
 - OS deployment images and upgrade packages for Windows 11 show the image name as Windows 10. For more information, see [Using deployment tools with Windows 11 images](/windows-hardware/manufacture/desktop/using-deployment-tools-with-windows-11).<!--11128713-->
+
+## Windows 11 on ARM64
+
+<!-- 10589908 -->
+
+Configuration Manager version 2107 with the update rollup <!-- NEED LINK --> supports the client on Windows 11 ARM64 devices.
+
+The **All Windows 11 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
+
+OS deployment isn't supported, except for a feature update task sequence. You can deploy a task sequence with a feature update to a Windows 11 on ARM64 device. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
 
 ## Support for Windows Insider
 
