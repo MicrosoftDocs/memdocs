@@ -51,6 +51,13 @@ Learn what new features are available in Windows 365 Enterprise.
 ## Week of October 11, 2021 (Service release 2109)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Resize support for preview and trial licenses<!--36228235-->
+
+If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
 #### Health check improvement<!--36461502-->
@@ -58,8 +65,6 @@ Learn what new features are available in Windows 365 Enterprise.
 The **DNS can resolve Active Directory domain** health check has been improved. A new step has been added to look for the following Azure Active Directory DNS record. If it can’t be found, the check fails.
 
 _ldap._tcp.yourDomain.com -type SRV
-
-
 
 <!-- ########################## -->
 ## Week of October 4, 2021
