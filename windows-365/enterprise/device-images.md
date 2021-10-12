@@ -101,3 +101,5 @@ When you upload a custom device image, Windows 365:
 ## Next steps
 
 [Learn about device configuration](device-configuration.md).
+
+[Learn about using apps, like Microsoft Teams, with your gallery and custome images](app-overview.md).
