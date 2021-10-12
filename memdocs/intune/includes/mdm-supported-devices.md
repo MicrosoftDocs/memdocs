@@ -30,6 +30,7 @@ ms.localizationpriority: high
 
 - Surface Hub
 - Windows 10 (Home, S, Pro, Education, and Enterprise versions)
+- Windows 10 and Windows 11 Cloud PC's on Windows 365
 - Windows 10 Enterprise 2019 LTSC
 
   For more information about managing devices running Windows 10 2019 LTSC, see [What's new in Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019)
