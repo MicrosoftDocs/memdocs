@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-### Resize support for preview and trial licenses<!--36228235-->
+#### Resize support for preview and trial licenses<!--36228235-->
 
 If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
