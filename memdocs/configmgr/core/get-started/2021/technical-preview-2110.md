@@ -26,15 +26,18 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [3601042](includes/2110/3601042.md)]
 [!INCLUDE [5728069](includes/2110/5728069.md)]
 [!INCLUDE [9957939](includes/2110/9957939.md)]
+[!INCLUDE [9575773](includes/2110/9575773.md)]
 [!INCLUDE [10340595](includes/2110/10340595.md)]
 [!INCLUDE [10393794](includes/2110/10393794.md)]
 [!INCLUDE [10479618](includes/2110/10479618.md)]
+[!INCLUDE [11048976](includes/2110/11048976.md)]
 [!INCLUDE [10543514](includes/2110/10543514.md)]
 [!INCLUDE [10579996](includes/2110/10579996.md)]
 [!INCLUDE [10615989](includes/2110/10615989.md)]
 [!INCLUDE [10628998](includes/2110/10628998.md)]
 [!INCLUDE [10992210](includes/2110/10992210.md)]
 [!INCLUDE [10964629](includes/2110/10964629.md)]
+[!INCLUDE [9575077](includes/2110/9575077.md)]
 
 <!--
 ## General known issues

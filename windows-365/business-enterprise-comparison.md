@@ -30,13 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Compare Windows 365 Business and Enterprise
 
-Windows 365 is available in two editions: [Windows 365 Business](/windows-365/business) and [Windows 365 Enterprise](/windows-365/enterprise).
+Windows 365 is available in two editions: [Windows 365 Business](./business/index.yml) and [Windows 365 Enterprise](./enterprise/index.yml).
 
 ## General comparisons
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Domain Join | Azure AD without Azure Virtual Network (VNet) support. | Hybrid Azure AD with VNet support.<br>For other domain support, see [In development for Windows 365 Enterprise](/windows-365/enterprise/in-development). |
+| Domain Join | Azure AD without Azure Virtual Network (VNet) support. | Hybrid Azure AD with VNet support.<br>For other domain support, see [In development for Windows 365 Enterprise](./enterprise/in-development.md). |
 
 ## Purchasing and licensing comparisons
 
@@ -65,7 +65,7 @@ Windows 365 is available in two editions: [Windows 365 Business](/windows-365/bu
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Management | Users can [restart, reset, rename, and troubleshoot](/windows-365/business/get-started-windows-365-business#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](/windows-365/enterprise/end-user-access-cloud-pc) their Cloud PCs on the Windows 365 homepage. |
+| Management | Users can [restart, reset, rename, and troubleshoot](./business/get-started-windows-365-business.md#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](./enterprise/end-user-access-cloud-pc.md) their Cloud PCs on the Windows 365 homepage. |
 | Role | By default, each user is assigned the Local Administrator role on their Cloud PC. This supports the native installation of Win32 apps. This can't be changed by the Global Administrator. | By default, each user i assigned a standard user role on their Cloud PC. This can be changed by the admin in the Microsoft Endpoint Manager admin center.|
 | Access | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. |
 | Platform | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  |
@@ -75,7 +75,7 @@ Windows 365 is available in two editions: [Windows 365 Business](/windows-365/bu
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Conditional Access | Conditional Access policies can be deployed only by using Azure AD with an Azure AD P1 license. | Conditional Access policies can be deployed by using the Microsoft Endpoint Manager admin center or Azure AD. |
-| Per-user multi-factor authentication (MFA) | Supported only if you have Azure AD Premium license. | Supported. |
+| [Per-user multi-factor authentication (MFA)](/active-directory/authentication/howto-mfa-userstates) | Only MFA using [Azure AD Conditional Access](/azure/active-directory/authentication/tutorial-enable-azure-mfa) is supported. Legacy per-user MFA is not supported. | Supported. |
 | Security baselines | Not supported. | Dedicated Security Baselines can be edited and deployed by using Microsoft Endpoint Manager. |
 | Microsoft Defender for Endpoint | Supported if the customer separately has the requisite E5 license. | Integration with Defender for Endpoint. If the customer has an E5 license, all Cloud PCs will respond to Defender for Endpoint policies and show up in MDE dashboards. |
 
@@ -88,6 +88,6 @@ Windows 365 is available in two editions: [Windows 365 Business](/windows-365/bu
 <!-- ########################## -->
 ## Next steps
 
-For more information about Windows 365 Enterprise, see [What is Windows 365 Enterprise?](/windows-365/enterprise/overview).
+For more information about Windows 365 Enterprise, see [What is Windows 365 Enterprise?](./enterprise/overview.md).
 
-For more information about Windows 365 Business, see [Getting started with Windows 365 Business and Cloud PCs](/windows-365/business/get-started-windows-365-business).
+For more information about Windows 365 Business, see [Getting started with Windows 365 Business and Cloud PCs](./business/get-started-windows-365-business.md).

@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 10/07/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,6 +63,9 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
+
+#### Improved flow when saving logs in Android Company Portal app<!-- 10414688 -->
+In the Android Company Portal app, when users download a copy of the Android Company Portal logs, they will now be able to choose which folder the logs will be saved in. To save Android Company Portal logs, users can select **Settings** > **Diagnostic logs** > **SAVE LOGS**.
 
 #### Newly available protected apps for Intune<!-- 10489496, 10436733, 10494599, 10587268 -->
 The following protected apps are now available for Microsoft Intune:
@@ -261,7 +264,7 @@ A device with a safeguard hold appears as a device with an error in the report. 
 
 Microsoft occasionally places safeguard holds to block installation of an update on a device when something detected on that device is known to result in a poor post-update experience. For example, software or drivers are common reasons to place a safeguard hold. The hold remains in place until the underlying issue is resolved, and the update is safe to install.
 
-To learn more about active safeguard holds and expectations for their resolution, go to the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](https://aka.ms/WindowsReleaseHealth).  
+To learn more about active safeguard holds and expectations for their resolution, go to the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](/windows/release-health/).  
 
 #### Update to the Assignment failures operational report<!-- 6473096  -->
 
