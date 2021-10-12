@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/11/2021
+ms.date: 10/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -92,7 +92,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2106**
+- **Technical preview version 2110**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -121,18 +121,16 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2110
 
-- [3601042](2021/technical-preview-2110.md) <!--3601042-->
-- [5728069](2021/technical-preview-2110.md) <!--5728069-->
-- [9957939](2021/technical-preview-2110.md) <!--9957939-->
-- [10340595](2021/technical-preview-2110.md) <!--10340595-->
-- [10393794](2021/technical-preview-2110.md) <!--10393794-->
-- [10479618](2021/technical-preview-2110.md) <!--10479618-->
-- [10543514](2021/technical-preview-2110.md) <!--10543514-->
-- [10579996](2021/technical-preview-2110.md) <!--10579996-->
-- [10615989](2021/technical-preview-2110.md) <!--10615989-->
-- [10628998](2021/technical-preview-2110.md) <!--10628998-->
-- [10992210](2021/technical-preview-2110.md) <!--10992210-->
-- [9575077](2021/technical-preview-2110.md) <!--9575077-->
+- [Simplified cloud attach configuration](2021/technical-preview-2110.md#bkmk_attach) <!--10964629-->
+- [Improvements to client health dashboard](2021/technical-preview-2110.md#bkmk_health) <!--5728069-->
+- [Enable update notifications from Microsoft 365 Apps](2021/technical-preview-2110.md#bkmk_365) <!--10628998-->
+- [Branding in the Windows Update native reboot experience](2021/technical-preview-2110.md#bkmk_brand) <!--10543514-->
+- [Improvements to application groups](2021/technical-preview-2110.md#bkmk_appgroups) <!--10479618-->
+- [Improvements to external notifications](2021/technical-preview-2110.md#bkmk_notify) <!--10615989-->
+- [Approvals for orchestration group scripts](2021/technical-preview-2110.md#bkmk_orchestration) <!--9957939-->
+- [Task sequence check for TPM 2.0](2021/technical-preview-2110.md#bkmk_tpm) <!--9575077-->
+- [Console improvements](2021/technical-preview-2110.md#bkmk_console) <!--9575773-->
+- [Status messages for console extensions](2021/technical-preview-2110.md#bkmk_audit) <!--11048976-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
