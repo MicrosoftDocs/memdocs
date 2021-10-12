@@ -172,7 +172,7 @@ Intune logs a small amount of session data to monitor the health of the remote h
 - Errors arising from remote help itself, such as unexpected disconnections
 - Features used inside the app such as view only, annotation, and session pause
 
-No logs are created on either the helper’s or sharer’s device. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
+Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
 
 Both helper and the sharer see details about the other, taken from their organizational profiles.
 
