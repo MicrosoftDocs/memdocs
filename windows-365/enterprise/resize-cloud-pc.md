@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 10/06/2021
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -45,6 +45,8 @@ To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Window
 
 Resizing isn’t supported for group-based licenses.
 
+The **Resize** remote action is supported for paid, preview, and trial licenses.
+
 ## Resize a Cloud PC
 
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
@@ -53,8 +55,10 @@ Resizing isn’t supported for group-based licenses.
 3. You’ll see a list with all the possible SKUs that you can upgrade to. You can only increase a Cloud PC’s storage and specifications. Options with lower storage or specifications are grayed out. Select one of the available options.
 4. Select **Resize**.
     - If there are available licenses the upgrade will take place.
+    - If you have a combination of paid and trial licenses, the resize feature will use your paid licenses first. After these run out, the resize operation will use your trial licenses.
     - If there are no licenses in your inventory, the resizing will fail. You can contact your procurement admin to request more licenses. After the license has been purchased and added to the inventory in the Microsoft Admin Center, you can retry the resize operation.
 
 <!-- ########################## -->
 ## Next steps
+
 For more information on Cloud PC sizes, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md).
