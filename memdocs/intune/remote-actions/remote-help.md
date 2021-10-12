@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2021
+ms.date: 10/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -48,6 +48,8 @@ The Remote help app supports the following capabilities:
 - **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can’t use remote help to assist users who aren’t members of your organization.
 
 - **Compliance Warnings** - Before connecting to device, a helper will see a non-compliance warning about that device if it’s not compliant to its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+
+  Unenrolled devices always report as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and therefore is unable to establish is compliance status.
 
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access, like:
   - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
@@ -93,6 +95,9 @@ The following Intune RBAC permissions manage use of the remote help app:
 
 By default, the built-in **Help Desk Operator** role sets all three permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
+> [!IMPORTANT]  
+> When a remote help session ends between a sharer and a helper that has the *Elevation* permission set to *Yes*,  both the helper and the sharer are signed out of their devices. Therefore, it is important for helpers who are granted this permission to understand the impact this action can have to a sharer. The sharer should plan to save any active work prior seeking support as any session might end early or unexpectedly, which can cause a loss of active work hasn’t been saved.  
+
 ### Task 3 – Assign user to roles
 
 After creating the custom roles that you'll use to provide different users with remote help permissions, assign users to those roles.
@@ -120,6 +125,9 @@ The use of remote help depends on whether you're requesting help or providing he
 
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on. While the remote help app can respond to an offer to help, it doesn’t support submitting a request for assistance from others. To aid in starting the session, be prepared to provide your username and device name on which assistance is needed. You're the sharer during the session.
 
+> [!TIP]  
+> Plan to save your active work before a remote help session to avoid an unexpected loss of work. This is because both you and the helper are signed out of your devices when a session ends, and the helper has the *Elevation* permission.
+
 1. When assistance is ready to help, start the remote help app on the device. The app will then be ready to respond to the helper when their remote help app attempts to make a device-to-device connection.
 
 2. After the connection is made, you and the helper see a sign-in screen. You must both sign in with your organization credentials.
@@ -139,6 +147,9 @@ To request help, you must reach out to your support staff to request assistance.
 5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app.
 
 ### Provide help  
+
+> [!TIP]  
+> Plan to save your active work before a remote help session begins to avoid an unexpected loss of work. This is because both you and the sharer are signed out of your devices when a session ends, and the helper has the *Elevation* permission.
 
 As a helper, after receiving a request from a user who wants assistance through the remote help app:
 

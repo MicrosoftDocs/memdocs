@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/18/2021
+ms.date: 10/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
