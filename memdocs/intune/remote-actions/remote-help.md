@@ -63,11 +63,15 @@ The Remote help app supports the following capabilities:
 
 ## Prerequisites
 
+- [Intune subscription](../intune/fundamentals/licenses.md)
 - Windows 10/11
-- Devices must install the remote help app. Device users can download the app from the Microsoft Store for Windows.
+- Devices must install the *remote help* app. Device users can download the app from the Microsoft Store for Windows.
   <!-- Pending app details including official name/publisher, and download or store link -->
 
   Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
+
+> [!NOTE]
+> Remote help is not supported on High GCC tenants.
 
 ## Configure remote help for your tenant
 
