@@ -101,7 +101,7 @@ Universal links allow the user to directly launch an application associated with
 
 ### Exempt Universal Links
 
-Universal links to *unmanaged* apps can launch the specified application by adding the link to the exemption list. 
+By adding Universal Links to *unmanaged* apps, you can launch the specified application. To add the app, you must add the link to the exemption list.
 
 > [!CAUTION]
 > The target applications for these universal links are unmanaged and adding an exemption may result in data security leaks.
@@ -117,7 +117,7 @@ You can also add Universal Links for third party or LOB apps.
 
 ### Managed Universal Links
 
-Universal links to *managed* apps can launch the specified application by adding the link to the managed list.  If the target application has App Protection policy applied, selecting the link will launch the app.  If the target application does not have App Protection policy applied, selecting the link will launch the protected browser.
+By adding Universal Links to *managed* apps, you can launch the specified application securely. To add the app, you must add the link to the managed list. If the target application has an App Protection policy applied, selecting the link will launch the app. If the target application does not have an App Protection policy applied, selecting the link will launch the protected browser.
 
 The default managed universal links are the following:
 
