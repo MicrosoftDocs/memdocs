@@ -2,7 +2,7 @@
 title: Tenant attach - BitLocker recovery keys (preview)
 titleSuffix: Configuration Manager
 description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Endpoint Manager admin center.
-ms.date: 10/05/2021
+ms.date: 10/18/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -25,6 +25,8 @@ You can get BitLocker recovery keys for a tenant-attached device from the Micros
 ## Prerequisites
 
 - Configuration Manager site version 2107 or later
+
+    To support devices that are joined to Azure Active Directory (Azure AD), install the update rollup<!-- NEED LINK --> for Configuration Manager version 2107.<!-- 11285470 -->
 
 - Apply a Configuration Manager [BitLocker management](../protect/deploy-use/bitlocker/deploy-management-agent.md) policy to the device.
 
