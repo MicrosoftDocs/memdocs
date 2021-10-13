@@ -303,7 +303,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     * **Maximum seconds of inactivity until temporary session logs out** (preview): The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the temporary session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
-        This setting is available when **Require Shared iPad temporarry session only** is set to **Yes**.  
+        This setting is available when **Require Shared iPad temporary session only** is set to **Yes**.  
 
 
     > [!NOTE]
