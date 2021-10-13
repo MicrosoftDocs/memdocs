@@ -204,10 +204,34 @@ The following details can help you configure an internal proxy when using RHEL 8
   3. Restart MS Tunnel server: Run `mst-cli server restart`
 
 
-  Next, because RHEL uses SELinux. If your proxy is running on one of the SELinux ports for “http_port_t”, then you can simply proceed with the MS Tunnel install process without making any SELinux configuration changes.  Use the following command to view the SELinux managed ports for http: 
+  Next, because RHEL uses SELinux and not using a SELinux port for *http_port_t* can effect your configurations, run the following command to view the SELinux managed ports for http: `sudo semanage port -l | grep “http_port_t” ` 
+  
+  Example of the results of the port check command:
 
+  :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-selinux-ports.png" alt-text="Screen shot of the port check.":::
 
+  - If your proxy runs on one of the SELinux ports for **http_port_t**, then you can proceed with the MS Tunnel install process.
+  - If your proxy does't run on a SELunux port for **http_port_t** you'll need to make additional configurations.
 
+  **If your proxy port is not listed for** ***http_port_t***, then check if the proxy port is used by another service.  Use the following command to check, and replace *your proxy port* with the port that your proxy uses: `sudo semanage port -l | grep “your proxy port”`
+  
+  Example of the results of checking for a service that might use the port:
+
+  :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-service.png" alt-text="Screen shot of the service check.":::
+
+  - In the example, port 3128 is used by *squid*, which happens to be an OSS proxy service. Squid proxy SELinux policies are part of many common distributions. Because *squid* uses port 3128 (our example port), we must modify the **http_port_t** ports and add port 3128 to be allowed via SELinux for the proxy used by Tunnel. To do this run the following command: `sudo semanage port -m -t http_port_t -p tcp “your proxy port”`
+
+    Example of the command to modify the port:
+
+    :::image type="content" source="./media/microsoft-tunnel-prerequisites/modify-port.png" alt-text="Screen shot of the port modification.":::
+
+    After changing the port, run the command to check if the port is used by another service one more time: `sudo semanage port -l | grep “your proxy port”`
+
+    Example of the command to check the port after modifying the port:
+
+    :::image type="content" source="./media/microsoft-tunnel-prerequisites/review-results-for-port.png" alt-text="Screen shot of the port modification.":::
+
+    In this example, ort 3128 is assoicated with both *http_port-t* and *squid_port_t*. That results is expected. If your proxy port is not listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but this time replace the **-m** in the semanage command with **-a**: `sudo semanage port -a -t http_port_t -p tcp “your proxy port”`
 ## Platforms
 
 Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only the following device platforms are supported:
