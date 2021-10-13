@@ -5,7 +5,7 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/20/2021
+ms.date: 10/18/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -94,7 +94,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
     1. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 
-    1. By default, the wizard enables the option to **Enforce TLS 1.2**. This setting requires the Azure VM to use the TLS 1.2 encryption protocol. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
+    1. By default, the wizard enables the option to **Enforce TLS 1.2**. This setting requires the Azure VM to use the TLS 1.2 encryption protocol. It doesn't apply to any on-premises Configuration Manager site servers or clients. Starting in version 2107 with the update rollup<!-- NEED LINK -->, this setting also applies to the CMG storage account.<!--10800237--> For more information, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
     1. By default, the wizard enables the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. If you plan on targeting deployments with content to clients, you need to configure the CMG to serve content.
 
