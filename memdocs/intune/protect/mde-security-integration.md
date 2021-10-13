@@ -114,21 +114,30 @@ To support MDE security configuration management through the Microsoft Endpoint 
 
    :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable MDE settings management in the Defender console.":::
 
-2. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager or grant them with the required permission. Go to **Settings** > **Permissions** > **Roles** > **Add item**, and select Manage **Endpoint Security settings in Microsoft Endpoint Manager**:
+2. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager or grant those permissions by configuring a role in the Defender portal. Go to **Settings** > **Roles** > **Add item**:
+
+   :::image type="content" source="./media/mde-security-integration/add-role-in-mde.png" alt-text="Create a new role in the Defender portal.":::
+
+3. When configuring the role, add users and be sure to select Manage **Endpoint Security settings in Microsoft Endpoint Manager**:
 
    :::image type="content" source="./media/mde-security-integration/add-role.png" alt-text="Grant users permissions to manage settings.":::
 
-3. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-4. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations (Preview)** to **On**.
+4. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+5. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations (Preview)** to **On**.
 
    :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable MDE settings management in the Microsoft Endpoint Manager admin center.":::
 
    When you set this option to On, all supported devices in your tenant that aren’t managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
 
+   After the connection between Microsoft Endpoint Manager and Defender for Endpoint is established, the admin console displays the connection status and last synchronization time:
+
+   :::image type="content" source="./media/mde-security-integration/mem-mde-connection-status.png" alt-text="Screen shot that shows the connection status.":::
+
 ## Onboard devices
 
-Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/configure-endpoints?view=o365-worldwide) in the Defender for Endpoint documentation. 
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/configure-endpoints?view=o365-worldwide) in the Defender for Endpoint documentation.
 
 Devices that you manage with Intune or Configuration Manager are not supported for this scenario.
 
