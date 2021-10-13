@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 10/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -398,6 +398,13 @@ This feature applies to:
   > - If you only have one realm, leave it **Not configured** (default).
 
 - **Block Autodiscover** (Kerberos only): **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name. 
+
+- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow non-managed apps to access the credential. 
+
+  This feature applies to:
+  
+  - iOS/iPadOS 14 and newer
+
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   > [!TIP]
@@ -407,6 +414,12 @@ This feature applies to:
 
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
+- **Sign in window text** (Kerberos only): Enter the text shown to users at the Kerberos sign in window.
+
+  This feature applies to:
+  
+  - iOS/iPadOS 14 and newer
+
 - **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
 
   If you use the **Microsoft Azure AD SSO app extension** type, then:
@@ -424,8 +437,6 @@ This feature applies to:
 
 - **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
-- **Sign in window text** (Kerberos only): Enter the text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later. 
-- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow non-managed apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later. 
 
 ## Wallpaper
 
