@@ -63,7 +63,7 @@ The Remote help app supports the following capabilities:
 
 ## Prerequisites
 
-- [Intune subscription](../intune/fundamentals/licenses.md)
+- [Intune subscription](../intune/fundamentals/licenses.md).
 - Windows 10/11
 - Devices must install the *remote help* app. Device users can download the app from the Microsoft Store for Windows.
   <!-- Pending app details including official name/publisher, and download or store link -->
@@ -71,7 +71,10 @@ The Remote help app supports the following capabilities:
   Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 
 > [!NOTE]
-> Remote help is not supported on High GCC tenants.
+> Remote help has the following limitations:  
+>
+> - Remote help is not supported on High GCC tenants.
+> - You cannot establish a remote help session from one tenant to a different tenant. 
 
 ## Configure remote help for your tenant
 
@@ -89,7 +92,7 @@ To configure your tenant to support remote help, review and complete the followi
 
 ### Task 2 – Configure permissions for remote help
 
-The following Intune RBAC permissions manage use of the remote help app:
+The following Intune RBAC permissions manage use of the remote help app. Set each to *Yes* to grant the permission:
 
 - Category: **Remote help app**
 - Permissions:
@@ -97,10 +100,15 @@ The following Intune RBAC permissions manage use of the remote help app:
   - **Elevation** – Yes/No
   - **View screen** – Yes/No
 
-By default, the built-in **Help Desk Operator** role sets all three permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
+A user must have the following Intune RBAC permission set to *Yes* to use the admin center to start a new remote assistance session:
+- Category: **Remote tasks**
+- Permissions:
+  - **Offer remote assistance** – No/Yes
+
+By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
 > [!IMPORTANT]  
-> When a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*,  both the helper and the sharer are signed out of their devices. Therefore, it is important for helpers who are granted these permissions to understand the impact this action can have. Both participants should plan to save any active work to prevent a loss of unsaved work in case the session ends unexpectedly.
+> When a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is automatically signed out of their device. Therefore, it is important for helpers who are granted these permissions to understand the impact this action can have. The sharer should plan to save any active work to prevent a loss of unsaved work in case the session ends unexpectedly.
 
 ### Task 3 – Assign user to roles
 
@@ -130,7 +138,7 @@ The use of remote help depends on whether you're requesting help or providing he
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on. While the remote help app can respond to an offer to help, it doesn’t support submitting a request for assistance from others. To aid in starting the session, be prepared to provide your username and device name on which assistance is needed. You're the sharer during the session.
 
 > [!TIP]  
-> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, both you and the helper are signed out of your devices.
+> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, you are signed out of your device.
 
 1. When assistance is ready to help, start the remote help app on the device. The app will then be ready to respond to the helper when their remote help app attempts to make a device-to-device connection.
 
@@ -153,7 +161,7 @@ To request help, you must reach out to your support staff to request assistance.
 ### Provide help  
 
 > [!TIP]  
-> Plan to have you and the sharer save any active work before a remote help session ends to avoid an unexpected loss of work. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, both you and the sharer are signed out of your devices.
+> Plan to have the sharer save any active work before a remote help session ends to avoid an unexpected loss of work. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is signed out of their device to ensure any elevated permissions are cleared from the device.
 
 As a helper, after receiving a request from a user who wants assistance through the remote help app:
 
