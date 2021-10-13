@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/30/2021
+ms.date: 10/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,13 +27,15 @@ ms.collection: M365-identity-device-management
 
 # Prerequisites for the Microsoft Tunnel in Intune
 
-Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs Docker to host the Tunnel server software. You'll also need to configure your network, firewalls, and proxies to support communications for the Microsoft Tunnel.
+Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs containers to host the Tunnel server software. You'll also need to configure your network, firewalls, and proxies to support communications for the Microsoft Tunnel.
 
 At a high level, you’ll need the following to use the Microsoft Tunnel:
 
 - An Azure subscription.
 - An Intune subscription.
-- Linux server that runs Docker. This server can be on-premises or in the cloud. 
+- A Linux server that runs containers. This server can be on-premises or in the cloud:
+  - Podman for Red Hat Enterprise Linux (RHEL) 8.4 or later
+  - Docker for all other Linux distributions
 - A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
 - Devices that run Android or iOS/iPadOS.
 
@@ -70,17 +72,16 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **CPU**: 64-bit AMD/Intel processor.
 
-- **Install Docker**:  Install Docker version 19.03 CE or later.
+- **Install Docker CE or Podman**: Install Podman version 3.0 on RHEL 8 or later. For all other versions of RHEL or other Linux distributions, install Docker version 19.03 CE or later.
+  Microsoft Tunnel requires Docker (or Podman on RHEL 8 or later) on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
-  Microsoft Tunnel requires Docker on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
+  For information about installing and configuring Docker or Podman, see:
 
-  For information about installing and configuring Docker, see:
-
-  - [Install Docker Engine on CentOS]( https://docs.docker.com/engine/install/centos/)
-  - [Install Docker Engine on Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
+  - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
     > [!NOTE]
-    > The current version of Docker that’s available for download for Red Hat Enterprise Linux 7 is not supported with Microsoft Tunnel. Therefore, the preceding link directs you to the CentOS download and installation instructions. The CentOS distribution and installation instructions for Docker are supported on Red Hat Enterprise Linux 7 for Microsoft Tunnel and should be used until an updated distribution for Red Hat Enterprise Linux 7 is available.
+    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7. The version installed on RHEL 7 by default is too old to support Microsoft Tunnel Gateway. Red Hat Enterprise Linux 8 does not support Docker. For RHEL 8, install and use Podman instead.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+  - [Install Podman on Red Hat Enterprise Linux 8 or later (scroll down to RHEL8)](https://podman.io/getting-started/installation)
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
@@ -141,7 +142,7 @@ By default, the Microsoft Tunnel and server use the following ports:
 
 **Outbound ports**:
 
-- TCP 443 – Required to access Intune services. Required by Docker to pull images.
+- TCP 443 – Required to access Intune services. Required by Docker or Podman to pull images.
 - TCP – 80 – Required to access Intune services.
 
 When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
@@ -156,7 +157,7 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 You can use a proxy server with Microsoft Tunnel. The following considerations can help you configure the Linux server and your environment for success:
 
-- If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and adding the following lines:
+- If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines:
 
   `http_proxy=[address]`  
   `https_proxy=[address]`
@@ -176,6 +177,36 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
   > [!NOTE]  
   > Microsoft Tunnel doesn’t support Azure AD App Proxy, or similar proxy solutions.
+
+<!-- adding new content for Podman - From here to the end of this section (Proxy)  -->
+
+### Configure an internal proxy for Podman
+
+The following details can help you configure an internal proxy when using RHEL 8.4 and Podman:
+
+- Podman reads HTTP Proxy information stored in **/etc/profile.d/http_proxy.sh**. If this file doesn't exist on your server, create it. Edit **http_proxy.sh** to add the following two lines. In the following lines, *10.10.10.1:3128* is an example address:port entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP *address:port*:
+
+  `export HTTP_PROXY=http://10.10.10.1:3128`  
+  `export HTTPS_PROXY=http://10.10.10.1:3128`
+
+  If you have access to RedHat Customer Portal, you can view the knowledge base article associated with this solution. See [Setting up HTTP Proxy variables for podman - Red Hat Customer Portal](https://access.redhat.com/solutions/3939131).
+
+- When you add those two lines to *http_proxy.sh* before you install MS Tunnel by running the mstunnel-setup, the script will automatically configure the MS Tunnel proxy environment variables in **/etc/mstunnel/env.sh**.
+
+  To configure a proxy after the MS Tunnel setup has completed, do the following actions:
+
+  1. Modify or create the file **/etc/profile.d/http_proxy.sh** and add the two lines from the previous bullet point.
+  2. Edit **/etc/mstunnel/env.sh** and add the following two lines to end of the file. Like the previous lines, replace teh example address:port value of *10.10.10.1:3128* with the values for your proxy IP *address:port*:
+
+     `HTTP_PROXY=http://10.10.10.1:3128`  
+     `HTTPS_PROXY=http://10.10.10.1:3128`
+
+  3. Restart MS Tunnel server: Run `mst-cli server restart`
+
+
+  Next, because RHEL uses SELinux. If your proxy is running on one of the SELinux ports for “http_port_t”, then you can simply proceed with the MS Tunnel install process without making any SELinux configuration changes.  Use the following command to view the SELinux managed ports for http: 
+
+
 
 ## Platforms
 

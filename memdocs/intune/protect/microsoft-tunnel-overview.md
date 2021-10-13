@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 10/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Tunnel for Microsoft Intune
 
-Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a Docker container on Linux and allows access to on-premises resources from iOS/iPadOS and Android Enterprise devices using modern authentication and Conditional Access.
+Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a container on Linux and allows access to on-premises resources from iOS/iPadOS and Android Enterprise devices using modern authentication and Conditional Access.
 
 This article introduces the tunnel, how it works, and its architecture.
 
@@ -35,7 +35,7 @@ If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Micro
 
 ## Overview of Microsoft Tunnel
 
-Microsoft Tunnel Gateway installs to a Docker container that runs on a Linux server. The Linux server can be a physical box in your on-premises environment or a virtual machine that runs on-premises or in the cloud. You'll deploy a Microsoft Tunnel client app and Intune VPN profiles to your iOS and Android devices to enable them to use the tunnel to connect to corporate resources. When the tunnel is hosted in the cloud, you’ll need to use a solution like Azure ExpressRoute to extend your on-premises network to the cloud.
+Microsoft Tunnel Gateway installs onto a container that runs on a Linux server. The Linux server can be a physical box in your on-premises environment or a virtual machine that runs on-premises or in the cloud. You'll deploy a Microsoft Tunnel client app and Intune VPN profiles to your iOS and Android devices to enable them to use the tunnel to connect to corporate resources. When the tunnel is hosted in the cloud, you’ll need to use a solution like Azure ExpressRoute to extend your on-premises network to the cloud.
 
 Through the Microsoft Endpoint Manager admin center, you’ll:
 
@@ -91,14 +91,14 @@ To use the Microsoft Tunnel, devices will need to install a Microsoft Tunnel cli
 
 ## Architecture
 
-The Microsoft Tunnel Gateway runs in Docker containers that run on Linux servers.  
+The Microsoft Tunnel Gateway runs in containers that run on Linux servers.  
 
 ![Drawing of the Microsoft Tunnel Gateway architecture](./media/microsoft-tunnel-overview/tunnel-architecture.png)
   
 **Components**:  
 - **A** – Microsoft Intune.
 - **B**- Azure Active Directory (AD).
-- **C** – Linux server with Docker.
+- **C** – Linux server with Podman (Red Hat Enterprise Linux 8.4 or later) or Docker CE (all other Linux distributions).
   - **C.1** - Microsoft Tunnel Gateway.
   - **C.2** – Management Agent.
   - **C.3** – Authentication plugin – Authorization plugin, which authenticates with Azure AD.
@@ -119,6 +119,8 @@ The Microsoft Tunnel Gateway runs in Docker containers that run on Linux servers
   - **6a** - Some traffic goes directly to the public internet.  
   - **6b** - Some traffic goes to your public facing IP address for the Tunnel.  
 - **7** - The Tunnel routes traffic to your internal proxy (optional) and your corporate network.
+
+  Note that client traffic will have the source IP address of the Linux server host. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where the multiple private IP addresses are mapped into a single public IP (many-to-one) by using ports.
 
 **Additional details**:
 
