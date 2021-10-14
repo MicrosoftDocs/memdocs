@@ -75,13 +75,6 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
 
-<!-- ***********************************************-->
-## Role-based access control
-
-### Windows 365 Administrator role<!--5827123-->
-
-In a future update, the Windows 365 Administrator role will be available for admins by using role assignment in the Microsoft Admin Center and Azure Active Directory (AAD). With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager.
-
 ## Next steps
 
 For details about recent developments, see [What's new in Windows 365](whats-new.md).
