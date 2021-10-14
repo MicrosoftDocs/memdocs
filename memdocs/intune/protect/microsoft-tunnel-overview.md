@@ -116,8 +116,8 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 - **4** - Intune administrator creates and deploys VPN profiles and the Tunnel app to devices.  
 - **5** - Device authenticates to Azure AD. Conditional Access policies are evaluated.  
 - **6** - With split tunnel:  
-  - **6a** - Some traffic goes directly to the public internet.  
-  - **6b** - Some traffic goes to your public facing IP address for the Tunnel.  
+  - **6.a** - Some traffic goes directly to the public internet.  
+  - **6.b** - Some traffic goes to your public facing IP address for the Tunnel. The VPN channel will use TCP, TLS, UDP, DTLS over port 443.
 - **7** - The Tunnel routes traffic to your internal proxy (optional) and your corporate network.
 
   Note that client traffic will have the source IP address of the Linux server host. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where the multiple private IP addresses are mapped into a single public IP (many-to-one) by using ports.

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 10/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -200,6 +200,11 @@ Following are environment variables you might want to configure when you install
 ## Docker commands
 
 The following are common commands for Docker that can be of use if you must investigate problems on a tunnel server.
+
+> [!NOTE]
+> Most Linux distributions use Docker. However, *Red Hat Enterprise Linux (RHEL) 8 and later* are not supported to use Docker. Instead, RHEL 8 and later use Podman.
+>
+> The references and command lines that are written for Docker can be used with Podman by replcing *docker* with *podman*.
 
 Command-line interface:
 
