@@ -39,7 +39,7 @@ Use the following links to download clients for the version of Configuration Man
 
 - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 
-- [Microsoft Configuration Manager clients for additional operating systems](https://www.microsoft.com/download/details.aspx?id=47719)
+- **Microsoft Configuration Manager clients for additional operating systems**
 
 ##  <a name="bkmk_usage"></a> Usage data levels and settings  
 When you install your first Configuration Manager site, Configuration Manager automatically installs and configures a new site system role, the **service connection point**,  on the site server. The service connection point has these default settings:  

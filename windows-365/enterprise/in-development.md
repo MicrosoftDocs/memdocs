@@ -33,7 +33,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
 - When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
-- Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 - Similar features may be announced at different times for Windows 365 Business.
 
 > [!NOTE]
@@ -75,13 +74,6 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 ### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
 
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
-
-<!-- ***********************************************-->
-## Role-based access control
-
-### Windows 365 Administrator role<!--5827123-->
-
-In a future update, the Windows 365 Administrator role will be available for admins by using role assignment in the Microsoft Admin Center and Azure Active Directory (AAD). With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager.
 
 ## Next steps
 

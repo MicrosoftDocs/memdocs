@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2021
+ms.date: 10/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -337,8 +337,40 @@ This setting applies to:
   > - If you only have one realm, leave it **Not configured** (default).
 
 - **Block Autodiscover** (Kerberos only): When set to **Yes**, the Kerberos extension doesn't automatically use LDAP and DNS to determine its Active Directory site name. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the extension to automatically find the Active Directory site name.
+
+- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow non-managed apps to access the credential.
+
+  This feature applies to:
+  
+  - macOS 12 and newer
+
 - **Block password changes** (Kerberos only): **Yes** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.  
 - **Enable local password sync** (Kerberos only): Choose **Yes** to sync your users' local passwords to Azure AD. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Azure AD. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
+
+- **Delay Kerberos extension setup** (Kerberos only): When set to **Yes**, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might immediately prompt the user to set up the Kerberos extension.
+
+  This feature applies to:
+  
+  - macOS 11 and newer
+
+- **Allow standard Kerberos utilities** (Kerberos only): When set to **Yes**, the Kerberos extension allows any apps entered with the app bundle ID, managed apps, and standard Kerberos utilities, such as TicketViewer and klist, to access and use the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not allow listed apps to access and use the credential.
+
+  This feature applies to:
+  
+  - macOS 12 and newer
+
+- **Request credential** (Kerberos only): When set to **Yes**, the credential is requested on the next matching Kerberos challenge or network state change. When the credential is expired or missing, a new credential is created. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not request a new credential.
+
+  This feature applies to:
+  
+  - macOS 12 and newer
+
+- **Require LDAP connections for TLS** (Kerberos only): When set to **Yes**, LDAP connections are required to use Transport Layer Security (TLS). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require LDAP connections to use TLS.
+
+  This feature applies to:
+  
+  - macOS 11 and newer
+
 - **Require Active Directory password complexity** (Kerberos only): Choose **Yes** to force user passwords to meet Active Directory's password complexity requirements. On devices, this setting shows a pop-up window with check boxes so users see they're completing the password requirements. It helps users know what they need to enter for the password. For more information, see [Password must meet complexity requirements](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to meet Active Directory's password requirement.
 - **Minimum password length** (Kerberos only): Enter the minimum number of characters that can make up users passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum password length on the users.
 - **Password reuse limit** (Kerberos only): Enter the number of new passwords, from 1-24, that are used until a previous password can be reused on the domain. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a password reuse limit.
@@ -346,6 +378,21 @@ This setting applies to:
 - **Password expiration notification (days)** (Kerberos only): Enter the number of days before a password expires that users get notified that their password will expire. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might use `15` days.
 - **Password expiration (days)** (Kerberos only): Enter the number of days before the device password must change. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might never expire passwords.
 - **Password change URL** (Kerberos only): Enter the URL that opens when users start a Kerberos password change.
+- **Custom user name** (Kerberos only): Enter the text that replaces the user name shown in the Kerberos extension. You can enter a name that matches the name of your company or organization. For example, you can enter `Contoso`.
+
+  This feature applies to:
+  
+  - macOS 11 and newer
+
+- **Kerberos extension use** (Kerberos only): Select how other processes use the Kerberos Extension credential. Your options: 
+  - **Always**: The extension credential is always used if the SPN is listed in **Domains**. It's not used if the calling app isn't listed in **App Bundle IDs**. 
+  - **When not specified**: The extension credential is only used when another credential isn’t entered by the caller, and the SPN is listed in Domains. It's not used if the calling app isn't listed in **App Bundle IDs**. 
+  - **Kerberos default**: Intune doesn't change or update this setting. By default, the OS uses the default Kerberos processes for selecting credentials. This option is the same as not configuring this setting.
+
+  This feature applies to:
+  
+  - macOS 11 and newer
+
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   > [!TIP]
@@ -354,6 +401,12 @@ This setting applies to:
   
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.  
+- **Sign in window text** (Kerberos only): Enter the text shown to users at the Kerberos sign in window.
+
+  This feature applies to:
+  
+  - macOS 11 and newer
+
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
 - **Enable shared device mode** (Microsoft Azure AD only): Select **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to macOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. 
 
@@ -364,6 +417,11 @@ This setting applies to:
 - **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
 - **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
+- **Preferred KDCs** (Kerberos only): Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery.
+
+  This feature applies to:
+  
+  - macOS 12 and newer
 
 ## Next steps
 
