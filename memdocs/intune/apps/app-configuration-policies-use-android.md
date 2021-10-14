@@ -68,14 +68,13 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
     For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data).
 
-12. If you need to enable users to connect the targeted app across both the work and personal profiles, select **Enabled** next to **Connected apps**.
-
-    > [!NOTE]
-    > This setting only works for corporate-owned work profile devices.<p>
+12. If you need to enable users to connect the targeted app across both the work and personal profiles, select **Enabled** next to **Connected apps**.<p>
 
     <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-ios/app-config-policy01a.png" width="700">
 
-    > [!IMPORTANT]
+    > [!NOTE]
+    > This setting only works for corporate-owned work profile devices.
+    > 
     > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
 13. Click **Next** to display the **Assignments** page.
@@ -162,15 +161,14 @@ When the assigned app is run on a device, it runs with the settings that you con
 Applies to:<br>
 Android 11+
 
-You can now allow users using Android personally-owned and corporate-owned work profiles to turn on **Connected apps** experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances. For example, connecting a calendar app, such as Google Calendar, can show work and personal events together. 
+You can allow users using Android personally-owned and corporate-owned work profiles to turn on **Connected apps** experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances. For example, connecting a calendar app, such as Google Calendar, can show work and personal events together.
+
+Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy. 
 
 > [!WARNING]
 > If you enable the connected apps functionality for an app, work data in personal apps will not be protected by an app protection policy. Additionally, other apps may be able to request user consent for cross-profile communication if they have been explicitly [allowed-listed by the OEM](https://developer.android.com/reference/android/app/admin/DevicePolicyManager#setCrossProfilePackages%28android.content.ComponentName%2c%20java.util.Set%3cjava.lang.String%3e%29.).
 
 For an app to provide this experience, the app needs to integrate with Goggle's connected apps SDK. Additionally, the app needs specific approval from Google. For more information, see Google's documentation - [Connected work & personal apps](https://developers.google.com/android/work/connected-apps). 
-
-> [!IMPORTANT]
-> Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy. 
 
 ## Preconfigure the permissions grant state for apps
 
