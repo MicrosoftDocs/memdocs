@@ -71,23 +71,23 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 12. If you need to enable users to connect the targeted app across both the work and personal profiles, select **Enabled** next to **Connected apps**.
 
     > [!NOTE]
-    > This setting only works for corporate-owned work profile devices. 
+    > This setting only works for corporate-owned work profile devices.<p>
 
-    <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-ios/app-config-policy01a.png" width="500">
+    <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-ios/app-config-policy01a.png" width="700">
 
     > [!IMPORTANT]
     > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
 13. Click **Next** to display the **Assignments** page.
-14. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
+14. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.<p>
 
-    <img alt="Screenshot of policy assignments - Assignments" src="./media/app-configuration-policies-use-ios/app-config-policy01.png" width="500">
+    <img alt="Screenshot of policy assignments - Assignments" src="./media/app-configuration-policies-use-ios/app-config-policy01.png" width="700">
 
-15. Select **All users** in the dropdown box.
+15. Select **All users** in the dropdown box.<p>
 
-    <img alt="Screenshot of policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-ios/app-config-policy02.png" width="500">
+    <img alt="Screenshot of policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-ios/app-config-policy02.png" width="700">
 
-16. Click **Select groups to exclude** to display the related pane.
+16. Click **Select groups to exclude** to display the related pane.<p>
 
     <img alt="Screenshot of policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-ios/app-config-policy03.png" width="400">
 
