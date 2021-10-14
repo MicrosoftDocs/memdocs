@@ -104,7 +104,7 @@ Universal links allow the user to directly launch an application associated with
 By adding Universal Links to *unmanaged* apps, you can launch the specified application. To add the app, you must add the link to the exemption list.
 
 > [!CAUTION]
-> The target applications for these universal links are unmanaged and adding an exemption may result in data security leaks.
+> The target applications for these Universal Links are unmanaged and adding an exemption may result in data security leaks.
 
 The default app Universal Link exemptions are the following:
 
@@ -113,13 +113,13 @@ The default app Universal Link exemptions are the following:
 | `http://maps.apple.com;` `https://maps.apple.com` | Maps App |
 | `http://facetime.apple.com;` `https://facetime.apple.com` | FaceTime App |
 
-You can also add Universal Links for third party or LOB apps.
+If you don't want to allow the default Universal Link exemptions, you can delete them. You can also add Universal Links for third party or LOB apps.
 
 ### Managed Universal Links
 
 By adding Universal Links to *managed* apps, you can launch the specified application securely. To add the app, you must add the link to the managed list. If the target application has an App Protection policy applied, selecting the link will launch the app. If the target application does not have an App Protection policy applied, selecting the link will launch the protected browser.
 
-The default managed universal links are the following:
+The default managed Universal Links are the following:
 
 | Managed App Universal Link | Description |
 |---|---|
@@ -134,7 +134,7 @@ The default managed universal links are the following:
 | `http://*.yammer.com/*;` `https://*.yammer.com/*;` | Yammer |
 | `http://*.zoom.us/*;` `https://*.zoom.us/*;` | Zoom |
 
-You can also add Universal Links for third party or LOB apps.
+If you don't want to allow the default managed Universal Links, you can delete them. You can also add Universal Links for third party or LOB apps.
 
 ## Access requirements
 
