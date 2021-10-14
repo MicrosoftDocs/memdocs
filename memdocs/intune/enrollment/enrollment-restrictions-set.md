@@ -142,12 +142,14 @@ You can change the settings for an enrollment restriction by following the steps
 
 You can use filters to include and exclude devices from certain group-targeted policies. For example, you could assign a policy that blocks all user-driven MDM enrollment for marketing users, and then use a filter to further exclude users who don't have Windows 10 Home edition on their devices.  
 
-Filter selection is more limited in enrollment policies than other group-targeted policies. This is because the devices are not yet enrolled, so Intune doesn't have the device info to support all filter properties. Affected policies include:  
+The filter selection is more limited in enrollment policies than other group-targeted policies. This is because the devices are not yet enrolled, so Intune doesn't have the device info to support all filter properties. You'll see a reduced selection of propeties when configuring these policies:   
 
 * Enrollment restriction policies for iOS and Windows.
 * Enrollment status page (ESP) policies for Windows.
 
-Selection is also reduced when editing a filter that's in-use in an enrollment restriction or ESP profile. The following filter properties are always available to use with enrollment policies.  
+Selection is also reduced when editing a filter that's in-use in an enrollment restriction or ESP profile. 
+
+The following filter properties are always available to use with enrollment policies:    
 
 **Windows** 
 
