@@ -118,10 +118,9 @@ To support MDE security configuration management through the Microsoft Endpoint 
 
    :::image type="content" source="./media/mde-security-integration/add-role-in-mde.png" alt-text="Create a new role in the Defender portal.":::
 
-3. When configuring the role, add users and be sure to select Manage **Endpoint Security settings in Microsoft Endpoint Manager**:
+3. When configuring the role, add users and be sure to select **Manage endpoint security settings in Microsoft Endpoint Manager**:
 
    :::image type="content" source="./media/mde-security-integration/add-role.png" alt-text="Grant users permissions to manage settings.":::
-
 
 4. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -129,9 +128,9 @@ To support MDE security configuration management through the Microsoft Endpoint 
 
    :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable MDE settings management in the Microsoft Endpoint Manager admin center.":::
 
-   When you set this option to On, all supported devices in your tenant that aren’t managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
+   When you set this option to *On*, all supported devices in your tenant that aren’t managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
 
-   After the connection between Microsoft Endpoint Manager and Defender for Endpoint is established, the admin console displays the connection status and last synchronization time:
+   After the connection between Microsoft Endpoint Manager and Defender for Endpoint is established, the admin center displays the connection status and last synchronization time:
 
    :::image type="content" source="./media/mde-security-integration/mem-mde-connection-status.png" alt-text="Screen shot that shows the connection status.":::
 
@@ -145,13 +144,13 @@ Devices that onboard are automatically registered with your Azure AD and are vis
 
 ## Create Azure AD Groups
 
-After devices onboard to Defender for Endpoint, you'll need to create groups so to support deployment of policy for MDE.
+After devices onboard to Defender for Endpoint, you'll need to create device groups to support deployment of policy for MDE.
 
 To identify devices that have enrolled with MDE but aren't managed by Intune or Configuration Manager:
 
-1. Sign in to [Microsoft 365 Defender portal](https://security.microsoft.com/).
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices**, and then select the column **Managed by** to sort the view of devices.
+2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices.
 
    Devices that onboard to MDE and have registered but aren't managed by Intune or Configuration Manager display **MDE** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
 
@@ -202,7 +201,7 @@ After creating one or more Azure AD groups that contain devices managed by MDE, 
 
 9. Wait for the policy to be assigned and view a success indication that policy was applied.
 
-10. Validate settings are applied locally on the client by using the [Get-MpPreference](/powershell/module/defender/get-mppreference#examples?view=windowsserver2019-psreserve-view=true) command utility.
+10. You can validate that settings are applied locally on the client by using the [Get-MpPreference](/powershell/module/defender/get-mppreference#examples?view=windowsserver2019-psreserve-view=true) command utility.
 
 ## Monitor status
 
