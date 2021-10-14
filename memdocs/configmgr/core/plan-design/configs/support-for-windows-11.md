@@ -46,7 +46,7 @@ The following table lists the versions of Windows 11 that you can use as a clien
 
 | Windows 11 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|
-| **21H2**<br>(10.0.22000) <!--mm/dd/yyyy--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
+| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
@@ -54,7 +54,7 @@ All currently supported versions of Configuration Manager current branch support
 - **Enterprise LTSC xxxx** <!--mm/dd/yyyy
 -->
 
-For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows release information](/windows/release-health/)<!--need to revise this link? -->.
+For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows release information](/windows/release-health/windows11-release-information).
 
 | Key |
 |--|
