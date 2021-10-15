@@ -293,7 +293,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     * **Maximum seconds of inactivity until user session logs out** (preview): The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the user session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
-    * **Require Shared iPad temporary session only** (preview): Configures the device so that users only see the guest version of the sign-in experience and must sign in as guests. They can't sign in with a Managed Apple ID. 
+    * **Require Shared iPad temporary session only** (preview): Configures the device so that users only see the guest version of the sign-in experience and must sign in as guests. They can't sign in with a Managed Apple ID. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
     
         When set to **Yes**, this setting cancels out the following shared iPad settings, because they are not applicable in temporary sessions:  
 
@@ -306,10 +306,9 @@ Now that you've installed your token, you can create an enrollment profile for A
         This setting is available when **Require Shared iPad temporary session only** is set to **Yes**.  
 
 
-    > [!NOTE]
-    >- Temporary sessions are enabled on devices by default, and allow shared iPad users without Managed Apple IDs to sign in as guests. 
-    >- All of the user's data is deleted when they sign out of the session. This means that all targeted policies and apps will come down to the user when they sign-in, and they'll be erased when the user sign outs.  
-    >- To disable temporary sessions on shared iPads, [configure iOS/iPadOS Shared iPad device restrictions](../configuration/device-restrictions-ios.md). This also requires you to reset the devices, and then create and assign new enrollment profiles. 
+    > [!NOTE] 
+    >- If temporary sessions are enabled, all of the user's data is deleted when they sign out of the session. This means that all targeted policies and apps will come down to the user when they sign-in, and they'll be erased when the user sign outs.  
+    >-  TO alter or change a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad. 
          
 
 13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**.
