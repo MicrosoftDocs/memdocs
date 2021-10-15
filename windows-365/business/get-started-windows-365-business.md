@@ -138,6 +138,8 @@ While on the Windows 365 home page, users can perform actions on their Cloud PCs
     |Can’t connect to Cloud PC. We’re working to fix it, try again later. |A Microsoft service required for connectivity is unavailable. Try connecting again later. |
     |We couldn’t fix issues with your Cloud PC. Contact your administrator. |An issue was detected but it was unable to be fixed. This could be due to an ongoing Windows update or another issue. If this error persists for an extended period of time the Cloud PC may need to be reset. |
 
+- **System Information**: Displays information about the Cloud PC specification. 
+
 ### Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC. Windows 365 users can download and install the Remote Desktop client they need from the Windows 365 home page.
