@@ -2,7 +2,7 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 10/08/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -29,12 +29,12 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 
 The following table lists the versions of the Windows ADK that you can use with different versions of Configuration Manager.
 
-| Windows ADK version            | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
-|--------------------------------|----------------|----------------|----------------|----------------|
-| **Windows 11**<br>(10.1.22000) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
-| **Windows Server 2022**<br>(10.1.20348) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
-| **Windows 10, version 2004**<br>(10.1.19041) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **Windows 10, version 1903**<br>(10.1.18362) | ![Backwards compatible](media/blue-compat.png) | ![Backwards compatible](media/blue-compat.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) |
+| Windows ADK version            | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 | ConfigMgr 2111 |
+|--------------------------------|----------------|----------------|----------------|----------------|----------------|
+| **Windows 11**<br>(10.1.22000) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **Windows Server 2022**<br>(10.1.20348) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **Windows 10, version 2004**<br>(10.1.19041) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **Windows 10, version 1903**<br>(10.1.18362) | ![Backwards compatible](media/blue-compat.png) | ![Backwards compatible](media/blue-compat.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) |
 
 |Key|
 |--|
