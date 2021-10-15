@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 010/19/2021
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration

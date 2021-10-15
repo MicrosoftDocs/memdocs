@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up Intune enrollment for Android AOSP corporate-owned single user devices
+title: Set up Intune enrollment for Android AOSP corporate-owned user-associated devices
 titleSuffix: Microsoft Intune
-description: Learn how to enroll corporate-owned single user devices built on the Android Open Source Project (AOSP). 
+description: Learn how to enroll corporate-owned user-associated devices built on the Android Open Source Project (AOSP). 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -79,12 +79,12 @@ Create an enrollment profile to enable enrollment on devices.
 ### Access enrollment token  
 After you create a profile, Intune generates a token that's needed for enrollment. To access the token:
 
-1. Go to **Corporate-owned, user assocated devices**.
+1. Go to **Corporate-owned, user-associated devices**.
 2. From the list, select your enrollment profile. 
 2. Select **Tokens**. 
 
 Another way to find the token is:
-1. Go to **Corporate-owned, user assocated devices**.
+1. Go to **Corporate-owned, user-associated devices**.
 2. Locate your profile in the list, and then select the more menu (**...**) > **View enrollment token**. 
 
 The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
@@ -113,7 +113,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
  Revoking a token does not affect devices that are already enrolled.
 
 1.	Sign in to the Microsoft Endpoint Manager admin center.
-2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user associated devices**.
+2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**.
 2.	Choose the profile that you want to work with.
 3.	Select **Token** > **Revoke token** > **Yes**.   
 
