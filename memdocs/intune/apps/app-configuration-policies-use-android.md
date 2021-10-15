@@ -161,14 +161,22 @@ When the assigned app is run on a device, it runs with the settings that you con
 Applies to:<br>
 Android 11+
 
-You can allow users using Android personally-owned and corporate-owned work profiles to turn on **Connected apps** experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances. For example, connecting a calendar app, such as Google Calendar, can show work and personal events together.
+Personally-owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
 
-Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy. 
+You can allow users using Android personally-owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances. For example, connecting a calendar app could show work and personal events together. 
+
+For an app to provide this experience, the app needs to integrate with Google's connected apps SDK, so only limited apps support it. You can turn on the connected apps setting proactively, and when apps add support, users will be able to enable the connected apps experience.
+
+Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
 > [!WARNING]
-> If you enable the connected apps functionality for an app, work data in personal apps will not be protected by an app protection policy. Additionally, other apps may be able to request user consent for cross-profile communication if they have been explicitly [allowed-listed by the OEM](https://developer.android.com/reference/android/app/admin/DevicePolicyManager#setCrossProfilePackages%28android.content.ComponentName%2c%20java.util.Set%3cjava.lang.String%3e%29.).
+> If you enable the connected apps functionality for an app, work data in personal apps will not be protected by an app protection policy.
+> 
+> Additionally, regardless of your connected apps configuration, some OEMs may automatically connect certain apps or may be able to request user approval to connect apps that you did not configure. An example of an app in this case could be the OEM's keyboard app.
 
-For an app to provide this experience, the app needs to integrate with Goggle's connected apps SDK. Additionally, the app needs specific approval from Google. For more information, see Google's documentation - [Connected work & personal apps](https://developers.google.com/android/work/connected-apps). 
+There are two ways users may be able to connect work and personal apps after you've enabled the connected apps setting:
+1. A supported app may choose to prompt a user to approve connecting it across profiles.
+2. Users can open the Settings app and go to the Connected work & personal apps section, where they will see all supported apps listed.
 
 ## Preconfigure the permissions grant state for apps
 
