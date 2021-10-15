@@ -29,7 +29,11 @@ ms.custom: intune-azure
 ms.collection: 
 ---
 
-# Intune enrollment methods for Windows devices
+# Intune enrollment methods for Windows devices  
+
+**Applies to**  
+- Windows 10
+- Windows 11  
 
 To manage devices in Intune, devices must first be enrolled in the Intune service. Both personally owned and corporate-owned devices can be enrolled for Intune management.
 
@@ -48,7 +52,7 @@ Users can self-enroll their Windows device by using any of these methods:
 If an administrator has configured Auto enrollment (available with Azure AD premium subscriptions), the user only has to enter their credentials once. Otherwise, they'll have to enroll separately through MDM only enrollment and reenter their credentials.  
 - **MDM only enrollment** lets users enroll an existing Workgroup, Active Directory, or Azure Active directory joined PC into Intune. Users enroll from Settings on the existing Windows PC. This method isn't recommended because it doesn't register the device into Azure Active Directory. It also prevents the use of features such as Conditional Access.
 - [Azure Active Directory (Azure AD) Join](/azure/active-directory/user-help/user-help-join-device-on-network) - Joins the device with Azure Active Directory and enables users to sign in to Windows with their Azure AD credentials. If Auto Enrollment is enabled, the device is automatically enrolled in Intune. The benefit of auto enrollment is a single-step process for the user. Otherwise, they'll have to enroll separately through MDM only enrollment and reenter their credentials. Users enroll this way either during initial Windows OOBE or from Settings. The device is marked as a corporate owned device in Intune.
-- [Autopilot](../../autopilot/enrollment-autopilot.md) - Automates Azure AD Join and enrolls new corporate-owned devices into Intune. This method simplifies the out-of-box experience and removes the need to apply custom operating system images onto the devices. When admins use Intune to manage Autopilot devices, they can manage policies, profiles, apps, and more after they're enrolled.  There are four types of Autopilot deployment: [Self Deploying Mode](/windows/deployment/windows-autopilot/self-deploying) (for kiosks, digital signage, or a shared device), [User Driven Mode](/windows/deployment/windows-autopilot/user-driven) (for traditional users), [Windows Autopilot for pre-provisioned deployment](/windows/deployment/windows-autopilot/white-glove) enables partners or IT staff to pre-provision a Windows 10 PC so that it is fully configured and business-ready and [Autopilot for existing devices](/windows/deployment/windows-autopilot/existing-devices) enables you to easily deploy the latest version of Windows 10 to your existing devices.
+- [Autopilot](../../autopilot/enrollment-autopilot.md) - Automates Azure AD Join and enrolls new corporate-owned devices into Intune. This method simplifies the out-of-box experience and removes the need to apply custom operating system images onto the devices. When admins use Intune to manage Autopilot devices, they can manage policies, profiles, apps, and more after they're enrolled.  There are four types of Autopilot deployment: [Self Deploying Mode](/windows/deployment/windows-autopilot/self-deploying) (for kiosks, digital signage, or a shared device), [User Driven Mode](/windows/deployment/windows-autopilot/user-driven) (for traditional users), [Windows Autopilot for pre-provisioned deployment](/windows/deployment/windows-autopilot/white-glove) enables partners or IT staff to pre-provision a PC running Windows 10 or Windows 11 so that it is fully configured and business-ready, and [Autopilot for existing devices](/windows/deployment/windows-autopilot/existing-devices) enables you to easily deploy the latest version of Windows to your existing devices.  
 
 ## Administrator-based enrollment in Intune
 

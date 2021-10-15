@@ -553,15 +553,13 @@ These settings apply to Android Enterprise personally owned devices with a work 
 ### Personally owned devices with a work profile settings
 
 - **Copy and paste between work and personal profiles**: **Block** prevents copy-and-paste between work and personal apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share data using copy-and-paste with apps in the personal profile.
-- **Data sharing between work and personal profiles**: Choose if apps in the personally owned work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:
-  - **Device default**: The default sharing behavior of the device varies depending on the Android version:
-    - On devices running Android 6.0 and newer, sharing from the personally owned work profile to the personal profile is blocked. Sharing from the personal profile to the personally owned work profile is allowed.
-    - On devices running Android 6.0 and older, sharing between the personally owned work profile and the personal profile is blocked in both directions.
-  - **Apps in work profile can handle sharing request from personal profile**: Enables the built-in Android feature that allows sharing from the personal to the personally owned work profile. When enabled, a sharing request from an app in the personal profile can share with apps in the personally owned work profile. This setting is the default behavior for Android devices running versions earlier than 6.0.
-  - **No restrictions on sharing**: Enables sharing across the personally owned work profile boundary in both directions. When you select this setting, apps in the personally owned work profile can share data with unbadged apps in the personal profile. This setting allows managed apps in the personally owned work profile to share with apps on the unmanaged side of the device. So, use this setting carefully.
+- **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:
+  - **Device default**: Sharing from the work profile to the personal profile is blocked. Sharing from the personal profile to the work profile is allowed.
+  - **Apps in work profile can handle sharing request from personal profile**: Enables the built-in Android feature that allows sharing from the personal profile to the work profile. When enabled, a sharing request from an app in the personal profile can share with apps in the work profile. 
+  - **No restrictions on sharing**: Enables sharing across the work profile boundary in both directions. When you select this setting, apps in the work profile can share data with unbadged apps in the personal profile. This setting allows managed apps in the work profile to share with apps on the unmanaged side of the device. So, use this setting carefully.
 
 - **Work profile notifications while device locked**: **Block** prevents window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors from showing on locked devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
-- **Default app permissions**: Sets the default permission policy for all apps in the personally owned work profile. Starting with Android 6, users are prompted to grant certain permissions required by apps when the app is launched. This policy setting lets you decide if users are prompted to grant permissions for all apps in the personally owned work profile. For example, you assign an app to the personally owned work profile that requires location access. Normally that app prompts users to approve or deny location access to the app. Use this policy to automatically grant permissions without a prompt, automatically deny permissions without a prompt, or let users decide. Your options:
+- **Default app permissions**: Sets the default permission policy for all apps in the work profile. Starting with Android 6, users are prompted to grant certain permissions required by apps when the app is launched. This policy setting lets you decide if users are prompted to grant permissions for all apps in the work profile. For example, you assign an app to the work profile that requires location access. Normally that app prompts users to approve or deny location access to the app. Use this policy to automatically grant permissions without a prompt, automatically deny permissions without a prompt, or let users decide. Your options:
   - **Device default**
   - **Prompt**
   - **Auto grant**
@@ -569,7 +567,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **App configuration policies**).
 
-- **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the personally owned work profile. For example, when you deploy the Gmail app into an Android personally owned work profile, you can prevent users from adding or removing accounts in this personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the personally owned work profile.  
+- **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.  
 
   > [!NOTE]
   > Google accounts can't be added to personally owned devices with a work profile.
@@ -582,7 +580,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   - Android 6.0 and newer personally owned devices with a work profile
 
-- **Screen capture**: **Block** prevents screenshots or screen captures on the device in the personally owned work profile. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
+- **Screen capture**: **Block** prevents screenshots or screen captures on the device in the work profile. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
 
 - **Display work contact caller-id in personal profile**: **Block** doesn't show the work contact caller number in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show work contact caller details.
 
@@ -596,9 +594,9 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
 - **Allow widgets from work profile apps**: **Enable** allows users to put widgets exposed by apps on the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable this feature.
 
-  For example, Outlook is installed on your users' personally owned work profiles. When set to **Enable**, users can put the agenda widget on the device home screen.
+  For example, Outlook is installed on your users' work profile. When set to **Enable**, users can put the agenda widget on the device home screen.
 
-- **Require Work Profile Password**: **Require** forces a passcode policy that only applies to apps in the personally owned work profile. By default, users can use the two separately defined PINs. Or, users can combine the PINs into the stronger of the two PINs. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use work apps without entering a password.
+- **Require Work Profile Password**: **Require** forces a passcode policy that only applies to apps in the work profile. By default, users can use the two separately defined PINs. Or, users can combine the PINs into the stronger of the two PINs. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use work apps without entering a password.
 
   This setting applies to:
 
@@ -611,7 +609,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
     On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-  - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the personally owned work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+  - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile on the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
   - **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
   - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
@@ -628,7 +626,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
   - **Face unlock**: **Block** prevents users from using the device's facial recognition to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using facial recognition.
   - **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
   - **Iris unlock**: **Block** prevents users from using the device's iris scanner to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using the iris scanner.
-  - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the personally owned work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
+  - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
 
     When set to **Not configured** (default), Intune doesn't change or update this setting.
 

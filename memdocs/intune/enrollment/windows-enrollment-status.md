@@ -3,12 +3,12 @@
 
 title: Set up the Enrollment Status Page
 titleSuffix: Microsoft Intune
-description: Set up a greeting page for users enrolling Windows 10 devices.
+description: Set up a greeting page for users enrolling Windows 10 or Windows 11 devices.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/10/2021
+ms.date: 10/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,11 @@ ms.collection: M365-identity-device-management
 
 
  
-# Set up the Enrollment Status Page
+# Set up the Enrollment Status Page  
+
+**Applies to**
+- Windows 10  
+- Windows 11  
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
@@ -138,7 +142,7 @@ The Enrollment Status Page tracks the following device setup items:
   - Per machine Line-of-business (LoB) MSI apps.
   - LoB store apps with installation context = Device.
   - Offline store and LoB store apps with installation context = Device.
-  - Win32 applications (Windows 10 version 1903 and newer only) 
+  - Win32 applications (Windows 11 and Windows 10 version 1903 and later only) 
 
   > [!NOTE]
   > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.
@@ -174,7 +178,7 @@ The following are known issues related to the Enrollment Status Page.
 
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
-- Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
+- Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions earlier than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and newer.  
 - Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes.
 
   This delay gives time for the on-prem AD connector to create the new device record to Azure AD.

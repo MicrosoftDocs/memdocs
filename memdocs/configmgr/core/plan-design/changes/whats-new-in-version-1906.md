@@ -408,7 +408,7 @@ For more information, see [Remove the application catalog](../../../apps/plan-de
 <!--3555904-->
 The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed or was redeployed.
 
-For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md#end-user-experience).
+For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md#user-experience).
 
 ### More frequent countdown notifications for restarts
 

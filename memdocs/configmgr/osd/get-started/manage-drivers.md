@@ -228,7 +228,7 @@ You can add to boot images Windows device drivers that have been imported into t
 
 - Add only storage and network drivers to boot images. Other types of drivers aren't usually required in Windows PE. Drivers that aren't required unnecessarily increase the size of the boot image.  
 
-- Add only device drivers for Windows 10 to a boot image. The required version of Windows PE is based on Windows 10.  
+- Add only device drivers to a boot image for the version of Windows PE. For example, if you're using the Windows ADK for Windows 11, only add Windows 11 drivers.
 
 - Make sure that you use the correct device driver for the architecture of the boot image. Don't add an x86 device driver to an x64 boot image.  
 

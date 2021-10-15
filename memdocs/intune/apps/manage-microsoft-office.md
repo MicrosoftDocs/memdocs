@@ -12,7 +12,7 @@ ms.date: 07/08/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 
 # optional metadata
@@ -24,7 +24,7 @@ ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure
+ms.custom: OS=iOS/iPadOS;OS=Android;intune-azure
 ms.collection: M365-identity-device-management
 ---
 

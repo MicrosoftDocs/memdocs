@@ -2,7 +2,7 @@
 title: List of reports
 titleSuffix: Configuration Manager
 description: Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories.
-ms.date: 11/27/2018
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -479,7 +479,7 @@ The following 10 reports are listed under the **Operating System** category.
 |**Services - Computers running a specific service**|Displays a list of computers running a specified service.|  
 |**Services - Computers running Remote Access Server**|Displays a list of computers running Remote Access Server.|  
 |**Services - Services information for a specific computer**|Displays summary information about the services on a specified computer.|  
-|**Windows 10 Servicing details for a specific collection**|Displays general information about Windows 10 servicing for a specific collection.|
+|**Windows Servicing details for a specific collection**|Displays general information about Windows servicing for a specific collection.|
 |**Windows Server computers**|Displays a list of computers that run Windows Server operating systems.|  
 
 

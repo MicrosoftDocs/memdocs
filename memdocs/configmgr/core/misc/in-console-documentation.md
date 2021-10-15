@@ -44,13 +44,13 @@ A curated list of important articles.
 - [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
 - [Endpoint analytics](https://docs.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)
 - [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/?WT.mc_id=configmgr-console)
-- [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)
+- [Co-management for Windows devices](https://docs.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)
 - [Plan for BitLocker management](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)
 - [Microsoft Edge management](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?WT.mc_id=configmgr-console)
 - [Manage Microsoft 365 Apps updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates?WT.mc_id=configmgr-console)
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service?WT.mc_id=configmgr-console)
-- [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
+- [Optimize Windows update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
 
 ## Troubleshooting articles
 
@@ -83,7 +83,7 @@ Hotfix related articles for version 2006 and prior are still available on suppor
 Hotfix and support articles that are new or updated between April 14 and May 20, 2021:
 
 - [Updates aren't downloaded when you run an ADR](https://docs.microsoft.com/troubleshoot/mem/configmgr/adr-updates-download-failure)
-- [The Windows 10 servicing dashboard shows no data](https://docs.microsoft.com/troubleshoot/mem/configmgr/windows-10-servicing-dashboard-empty)
+- [The Windows servicing dashboard shows no data](https://docs.microsoft.com/troubleshoot/mem/configmgr/windows-10-servicing-dashboard-empty)
 - [Configure peer cache for Configuration Manager clients](https://docs.microsoft.com/troubleshoot/mem/configmgr/configure-peer-cache)
 - [Offline servicing a WIM image with the Latest Cumulative Update fails](https://docs.microsoft.com/troubleshoot/mem/configmgr/offline-servicing-lcu-may-fail)
 - [KB 9210721 Summary of changes in Configuration Manager current branch, version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9210721)

@@ -1,13 +1,13 @@
 ### YamlMime:Landing
 
 title: Co-management documentation
-summary: Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune.
+summary: Co-management enables you to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune.
  
 
 metadata:
   title: Co-management documentation
   titleSuffix: Configuration Manager
-  description: Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune.
+  description: Co-management enables you to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune.
   ms.prod: configuration-manager
   ms.technology: configmgr-comanage
   ms.topic: landing-page
@@ -44,7 +44,7 @@ landingContent:
             url: tutorial-co-manage-new-devices.md
       - linkListType: video
         links:
-          - text: Upgrade to Windows 10 for co-management
+          - text: Upgrade Windows for co-management
             url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
 
   # Card

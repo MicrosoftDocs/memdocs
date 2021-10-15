@@ -24,7 +24,7 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: has-adal-ref
+ms.custom: OS=iOS;has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 
@@ -890,6 +890,10 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
 ## Notifications
 
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
+
+## Safari web extensions
+
+If your app has a Safari web extension and supports sending data between the extension and the parent application, in some scenarios, your application might need to support blocking the data. To block the data, in the parent application, call the `isAppSharingAllowed` API in `IntuneMAMPolicy.h`, and then block the web extension.
 
 ## Displaying web content within an application
 

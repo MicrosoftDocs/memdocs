@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 10/06/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,33 +30,31 @@ ms.collection: M365-identity-device-management
 
 # Intune compliance reports for updates
 
-With Intune, you can deploy updates to Windows 10 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)  and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
+With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)  and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
 
 - **Reports in Intune**:
-  - **Windows  and later update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
+  - **Windows 10 and later update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
   - **Windows 10 and later feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
 
 - **Update Compliance**:
 
-  [Use Update Compliance with Intune](#use-update-compliance) to monitor Windows 10 update rollouts. Update Compliance is a free service built on Azure Monitor and Log Analytics.
+  [Use Update Compliance with Intune](#use-update-compliance) to monitor Windows update rollouts. Update Compliance is a free service built on Azure Monitor and Log Analytics.
 
 For more information, see [Monitor Windows Updates with Update Compliance](/windows/deployment/update/update-compliance-monitor) in the Windows documentation.
 
 ## Reports for Update rings for Windows 10 and later policy
 
-Intune offers integrated report views for the Windows 10 update ring policies you deploy. These views display details about the update ring deployment and status:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status:
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Overview** > **Software update status**. You can see general information about the status of any update rings you assigned.
-
-3. To view more details, select **Monitor**. Then below **Software updates**, select **Per update ring deployment state** and choose the deployment ring to review.
-
+2. Select **Devices** > **Monitor**. Then under **Software updates** select **Per update ring deployment state** and choose the deployment ring to review. 
+   <!--  Recent update has muddled the locatio of the following 
    In the **Monitor** section, choose from the following reports to view more detailed information about the update ring:
    - **Device status** – View the device configuration status. See [Update deviceConfigurationDeviceStatus](/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0&preserve-view=true).
    - **User status** – View the user name, status, and last report date. See [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0&preserve-view=true).
    - **End-user update status** – View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
-
+    --> 
 ## Reports for Windows 10 and later feature updates policy
 
 *This feature is in preview.*
@@ -83,11 +81,11 @@ Before you can use the feature updates policy reports, you must configure prereq
 
   - Meet the [prerequisites for Windows 10 and later feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Windows 10 and later feature updates with Intune**.
   - Be Azure Active Directory Joined, or Hybrid Azure Active Directory Joined to support submitting of data for  reporting.
-  - Run Windows 10 1903 or later. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
+  - Run Windows 10 1903 or later, or Windows 11. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
 
 ### Configure data collection
 
-The data that powers Intune's Windows feature updates reports isn't collected by the typical device sync with Intune, but through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
+The data that powers Intune's Windows feature updates reports isn't collected by the typical device sync with Intune, but through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10/11 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
 #### Enable data collection
 
@@ -103,11 +101,11 @@ To Configure this setting for your devices, [Create a profile](../configuration/
     
   - In **Configuration Settings**:
    
-       - **Health Monitoring**: Select *Enable* to collect event information from supported Windows 10 devices
+       - **Health Monitoring**: Select *Enable* to collect event information from supported Windows 10/11 devices
     
        - **Scope**: Select *Windows Updates*.
 
-  - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later is supported for these reports.
+  - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later and Windows 11 are supported for these reports.
 
     > [!div class="mx-imgBorder"]
     > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
@@ -182,7 +180,9 @@ To use the report:
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
      - **Canceled**:
        - **Admin Cancelled** – The update offer was cancelled by explicit Administrator action.
-       - **Service Cancelled** – The update was cancelled because of an automatic action by Windows Update.
+       - **Service Cancelled** – The update was cancelled by Windows Update for one of the following reasons:  
+           - The *end of service* for the selected content was reached and it’s no longer offered by Windows Update. For example, the device might have been added to a deployment after the content’s availability expired, or the content reached its end of service date before it could install on the device.
+           - The deployment content has been superseded for the device. This can happen when the device is targeted by another deployment that deploys newer content. For example, one deployment targets the Windows 10 device to install version 2004 and a second deployment targets that same device with version 21H1. In this event, 2004 is superseded by the 21H1 deployment and Windows Update cancels the 2004 deployment to the device.
        - **Removed from Deployment** – The update offer was cancelled because it was removed from the Deployment by explicit Administrator action.
      - **Offering**:
        - **OfferReady** – The update is currently being offered to the device by Windows Update.
@@ -288,7 +288,7 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **PolicyConflictPause** | Updates are paused on the device, preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PostRestartIssue** | Windows Update couldn't determine the results of installing the update. The error is usually false and the update probably succeeded. | If the update you're trying to install isn't available, no action is required. If the update is still available, retry the installation. |
 | **RollbackInitiated** | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | Run the [Setup Diagnostics Tool](/windows/deployment/upgrade/setupdiag) on the Device. Don't retry the installation until the impact is understood. |
-| **SafeguardHold**  | Update can't install because of a known [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds).  | View the *Deployment Error Code* column of the report to see the ID of the safeguard hold. Open the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](https://aka.ms/WindowsReleaseHealth) to view information about the active holds, including known issues with the update. |
+| **SafeguardHold**  | Update can't install because of a known [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds).  | View the *Deployment Error Code* column of the report to see the ID of the safeguard hold. Open the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](/windows/release-health/) to view information about the active holds, including known issues with the update. |
 | **UnexpectedShutdown** | The installation was stopped because a Windows shutdown or restart was in progress. | Ensure the device remains on during Windows installation. |
 | **VersionMismatch** | Device is on a version of Windows that was not intended by Windows Update. | Confirm whether the device is on the intended version. |
 | **WindowsRepairRequired** | The current version of Windows needs to be repaired before it can be updated. | Run the Startup Repair Tool on this device. |
@@ -301,11 +301,11 @@ The following list identifies Alert Messages, and suggested remediation actions:
 
 ## Use Update Compliance
 
-You can monitor Windows 10 update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-get-started). Update Compliance is offered through the Azure portal and is included as part of Windows 10 licenses listed in the [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Update Compliance data.
+You can monitor Windows update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-get-started). Update Compliance is offered through the Azure portal and is included as part of Windows 10/11 licenses listed in the [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Update Compliance data.
 
 To use this solution, you'll:
 
-- Use an Intune device configuration profile to deploy your [CommercialID](/windows/deployment/update/update-compliance-get-started#get-your-commercialid) to your Windows 10 devices. The CommericalID associates the devices with your Log Analytics workspace.
+- Use an Intune device configuration profile to deploy your [CommercialID](/windows/deployment/update/update-compliance-get-started#get-your-commercialid) to your Windows 10/11 devices. The CommericalID associates the devices with your Log Analytics workspace.
 
 - Optionally deploy a configuration script as a Win32 app to those same devices to validate their configuration for Update Compliance.
 
