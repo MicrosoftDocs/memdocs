@@ -107,7 +107,7 @@ where SMS_G_System_ExtensionData.PropertyName = "AssetTag" and SMS_G_System_Exte
 ```
 
 > [!NOTE]
-> To use custom properties WQL statements with incremental collection updates, use Configuration Manager version 2107 with the update rollup<!-- NEED LINK --> or later.<!--10964944-->
+> To use custom properties WQL statements with incremental collection updates, use Configuration Manager version 2107 with the [update rollup](../../hotfix/2107/11121541.md) or later.<!--10964944-->
 
 ## Next steps
 
