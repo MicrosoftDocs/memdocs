@@ -102,7 +102,7 @@ For iPadOS 13.0 and later in Shared iPad mode:
 ### Device security
 
 #### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461 -->
-You can now use the [settings catalog](/configuration/settings-catalog) to manage Windows Update settings for quality (security) updates for Windows Enterprise [multi-session VMs](/fundamentals/azure-virtual-desktop-multi-session). To find the settings you can use with multi-session VMs in the settings catalog:
+You can now use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows Enterprise [multi-session VMs](../fundamentals/azure-virtual-desktop-multi-session.md). To find the settings you can use with multi-session VMs in the settings catalog:
 
 1. Create a device configuration policy for Windows 10 that uses the settings catalog, and configure [Settings filter](../fundamentals/azure-virtual-desktop-multi-session.md#to-configure-policies) for *Enterprise multi-session*.
 
