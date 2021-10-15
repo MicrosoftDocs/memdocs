@@ -54,7 +54,7 @@ All currently supported versions of Configuration Manager current branch support
 - **Enterprise LTSC xxxx** <!--mm/dd/yyyy
 -->
 
-For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows release information](/windows/release-health/)<!--need to revise this link? -->.
+For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows release information](/windows/release-health/windows11-release-information).
 
 | Key |
 |--|
