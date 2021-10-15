@@ -2,7 +2,7 @@
 title: Levels of diagnostic usage data
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
-ms.date: 04/05/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -46,7 +46,7 @@ Some examples of data that this level doesn't collect include:
 
 The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information. This level can also include advanced diagnostic information like system files and memory snapshots. This advanced data might include personal information exists in memory or log files at the time of capture.
 
-## <a name="bkmk_change"></a> How to change the level
+## How to change the level
 
 To change the data collection level, you need **Modify** permissions on the **Site** object class.
 
@@ -54,15 +54,15 @@ To change the data collection level, you need **Modify** permissions on the **Si
 1. Select **Hierarchy Settings** in the ribbon.
 1. Switch to the **Diagnostic and Usage Data** tab, then choose the data level.
 
-## <a name="bkmk_versions"></a> Version-specific details
+## Version-specific details
 
 The following articles detail the specific data that Configuration Manager collects at each level with each supported version:
 
+- [Diagnostic and usage data for 2111](levels-of-diagnostic-usage-data-collection-2111.md)
+- [Diagnostic and usage data for 2107](levels-of-diagnostic-usage-data-collection-2107.md)
 - [Diagnostic and usage data for 2103](levels-of-diagnostic-usage-data-collection-2103.md)
 - [Diagnostic and usage data for 2010](levels-of-diagnostic-usage-data-collection-2010.md)
 - [Diagnostic and usage data for 2006](levels-of-diagnostic-usage-data-collection-2006.md)
-- [Diagnostic and usage data for 2002](levels-of-diagnostic-usage-data-collection-2002.md)
-- [Diagnostic and usage data for 1910](levels-of-diagnostic-usage-data-collection-1910.md)
 
 ## Next steps
 

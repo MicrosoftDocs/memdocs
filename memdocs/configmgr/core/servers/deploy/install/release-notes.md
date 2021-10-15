@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/31/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a [troubleshooting article](/troubleshoot/mem/configmgr/).
 
 Feature-specific documentation includes information about known issues that affect core scenarios.
 
@@ -24,12 +24,10 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2111](../../../plan-design/changes/whats-new-in-version-2111.md)
 - [What's new in version 2107](../../../plan-design/changes/whats-new-in-version-2107.md)
 - [What's new in version 2103](../../../plan-design/changes/whats-new-in-version-2103.md)
 - [What's new in version 2010](../../../plan-design/changes/whats-new-in-version-2010.md)
-- [What's new in version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
-
-For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
@@ -172,24 +170,6 @@ where ci.CIType_ID = 10 and ci.IsLatest = 1 and ci.IsTombstoned = 0
 
 For each **CI_ID** that this query returns, create a 0-KB file named `<ci_id>.cit`. For example, `16777225.cit`. Move the file to the **policypv.box** directory on the primary site server. For example, `\\cmpri01.contoso.com\SMS_PR1\inboxes\policypv.box\`.
 
-### Task sequences can't run over CMG
-
-*Applies to: version 2002*
-
-There are two instances in which task sequences can't run on a device that communicates via a cloud management gateway (CMG):
-
-- You configure the site for Enhanced HTTP and the management point is HTTP.<!-- 6358851 -->
-
-    To work around this issue, update to version 2006. You can also configure the management point for HTTPS.
-
-- You installed and registered the client with a bulk registration token for authentication.<!-- 6377921 -->
-
-    To work around this issue, update to version 2006. You can also use one of the following authentication methods:
-
-  - Pre-register the device on the internal network
-  - Configure the device with a client authentication certificate
-  - Join the device to Azure AD
-
 ## Software updates
 
 ### Security roles are missing for phased deployments
@@ -214,17 +194,6 @@ To work around this issue, create a custom security role. Copy an existing secur
 - Read  
 
 For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#create-custom-security-roles)
-
-## Desktop Analytics
-
-### <a name="dawin7-diagtrack"></a> An extended security update for Windows 7 causes them to show as **Unable to enroll**
-
-<!-- 7283186 -->
-_Applies to: versions 2002 and earlier_
-
-The April 2020 extended security update (ESU) for Windows 7 changed the minimum required version of the diagtrack.dll from 10586 to 10240. This change causes Windows 7 devices to show as **Unable to enroll** in the Desktop Analytics **Connection Health** dashboard. When you drill down to the device view for this status, the **DiagTrack service configuration** property displays the following state: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
-
-No workaround is required for this issue. Don't uninstall the April ESU. If otherwise properly configured, the Windows 7 devices still report diagnostic data to the Desktop Analytics service, and still show in the portal.
 
 ## Configuration Manager console
 
