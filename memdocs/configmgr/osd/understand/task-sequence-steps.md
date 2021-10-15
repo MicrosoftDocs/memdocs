@@ -2603,6 +2603,9 @@ Specify one of the following options:
 >
 > - Use multiple instances of the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step. Place the content in a common location, and then use the **Staged content** option. The benefit of this method is the task sequence has a single **Upgrade OS** step.
 
+> [!NOTE]
+> This option is not compatible with feature updates.
+
 #### Time-out (minutes)
 
 Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.
