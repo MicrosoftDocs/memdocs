@@ -90,7 +90,7 @@ There are new device feature settings available when configuring the Kerberos SS
 #### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461 -->
 You can now use the [settings catalog](/configuration/settings-catalog) to manage Windows Update settings for quality (security) updates for Windows Enterprise [multi-session VMs](/fundamentals/azure-virtual-desktop-multi-session). To find the settings you can use with multi-session VMs in the settings catalog:
 
-1. Create a device configuration policy for Windows 10 that uses the settings catalog, and configure [Settings filter](../fundamentals/azure-virtual-desktop-multi-session#to-configure-policies) for *Enterprise multi-session*.
+1. Create a device configuration policy for Windows 10 that uses the settings catalog, and configure [Settings filter](../fundamentals/azure-virtual-desktop-multi-session.md#to-configure-policies) for *Enterprise multi-session*.
 
 2. Next, expand the *Windows Update for Business* category to select from the update settings that are available for multi-session VMs.
 
