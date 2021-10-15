@@ -36,8 +36,8 @@ ms.collection: M365-identity-device-management
 Set up enrollment for corporate-owned, user-associated devices built on the Android Open Source Project (AOSP) platform. These types of devices are:
 
 * Not integrated with Google Mobile Services.
-* Meant to be shared by more than one user. 
-* Used to accomplish a specific set of tasks.  
+* Used by a single user. 
+* Used exclusively for work.    
 
 This article describes how to set up Intune device management for AOSP and enroll devices for use at work. You will need to:
 
