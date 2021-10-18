@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2021
+ms.date: 10/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -220,7 +220,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 - **iOS/iPadOS**:
 
-  - **Microsoft Tunnel (standalone client)** – Use this connection type when you use the standalone Microsoft Tunnel client app. This connection type doesn’t support Microsoft Defender for Endpoint as the client Tunnel app.
+  - **Microsoft Tunnel (standalone client) (preview)** – Use this connection type when you use the standalone Microsoft Tunnel client app. This connection type doesn’t support Microsoft Defender for Endpoint as the client Tunnel app.
   
   - **Microsoft Tunnel (preview)** – Use this connection type when you use the preview version of Microsoft Defender for Endpoint as part of the public preview. This connection type doesn’t support the standalone Microsoft Tunnel client app.
 
@@ -255,10 +255,10 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
-<!-- Hiding warning, but keeping here for history and in case these issues come up again >
+     <!-- Hiding warning, but keeping here for history and in case these issues come up again >
    > [!IMPORTANT]  
-   > You cannot use Defender web protection side-by-side with Tunnel if you use an internal proxy with Tunnel, as this can cause connectivity issues which would prevent the device from communicating with Intune. Disable web protection by adding the **antiphishing** setting to the [custom settings](#use-custom-settings-for-microsoft-defender-for-endpoint) section in the VPN profile and setting it to **0**.
--->
+   > You cannot use Defender web protection side-by-side with Tunnel if you use an internal proxy with Tunnel, as this can cause connectivity issues which would prevent the device from communicating with Intune. Disable web protection by adding the **antiphishing** setting to the [custom settings](#use-custom-settings-for-microsoft-defender-for-endpoint) section in the VPN profile and setting it to **0**. -->
+
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]  
@@ -276,7 +276,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For Connection type,* select **Microsoft Tunnel (standalone client)** if you use the standalone client app, or select **Microsoft Tunnel (preview)** if you use a preview version of Defender for Endpoint as the tunnel client app.
+4. For *Connection type*, select **Microsoft Tunnel (standalone client) (preview)** if you use the standalone client app, or select **Microsoft Tunnel (preview)** if you use a preview version of Defender for Endpoint as the tunnel client app.
 
 5. Configure the following items:
 
@@ -296,6 +296,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
+
 
 ## Use custom settings for Microsoft Defender for Endpoint
 
@@ -325,7 +326,7 @@ Use the following information to configure the custom settings in a VPN profile 
 |-------------------|----------------|------------------|
 | TunnelOnly        | **True** – All Defender functionality is disabled. This setting should be used if you are using the app only for Tunnel capabilities. <br><br> **False** *(default)* - Defender functionality is enabled.   | Determines whether the Defender app is limited to only Microsoft Tunnel, or if the app also supports the full set of Defender capabilities. |
 | WebProtection     | **True** *(default)* – Web Protection is enabled, and users will see the web protection tab in the Defender for Endpoint app. <br><br> **False** – Web Protection is disabled. If a Tunnel VPN profile is deployed, users will only see the Dashboard and Tunnel tabs in the Defender for Endpoint app.  |Determines whether Defender Web Protection (anti-phishing functionality) is enabled for the app. By default, this functionality is on. |
-| AutoOnboard       | **True** *(default)* – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections and the user isn’t prompted to allow this. <br><br> **False** – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  |Determines whether Defender Web Protection is enabled without prompting the user to add a VPN connection (because a local VPN is needed for Web Protection functionality). This setting only applies if *WebProtection* is set to **True**.   |
+| AutoOnboard       | **True** – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections and the user isn’t prompted to allow this. <br><br> **False** *(default)* – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  | Determines whether Defender Web Protection is enabled without prompting the user to add a VPN connection (because a local VPN is needed for Web Protection functionality). This setting only applies if *WebProtection* is set to **True**.   |
 
 ## Upgrade Microsoft Tunnel
 
