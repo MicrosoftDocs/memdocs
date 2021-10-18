@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up Intune enrollment for Android AOSP corporate-owned user-associated devices
+title: Set up Android (AOSP) device management in Intune for corporate-owned user-associated devices  
 titleSuffix: Microsoft Intune
-description: Learn how to enroll corporate-owned user-associated devices built on the Android Open Source Project (AOSP). 
+description: Set up Intune for corporate-owned user-associated devices built on the Android Open Source Project (AOSP) platform. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -29,21 +29,17 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Set up Intune enrollment for AOSP corporate-owned user-associated devices 
+# Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices 
 
 *This feature is in public preview.*  
 
-Set up enrollment for corporate-owned, user-associated devices built on the Android Open Source Project (AOSP) platform. These types of devices are:
+Set up enrollment in Intune for corporate-owned, user-associated devices built on the Android Open Source Project (AOSP) platform. Intune offers an *Android (AOSP)* device management solution for corporate-owned devices that are:  
 
 * Not integrated with Google Mobile Services.
-* Used by a single user. 
+* Intended to be used by a single user. 
 * Used exclusively for work.    
 
-This article describes how to set up Intune device management for AOSP and enroll devices for use at work. You will need to:
-
-* Create an enrollment profile and manage enrollment tokens. 
-* Create a device group and assign the enrollment profile.
-* Enroll devices. 
+This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work. 
 
 > [!IMPORTANT]
 > This feature is in [public preview](../fundamentals/public-preview.md).   
@@ -52,7 +48,7 @@ This article describes how to set up Intune device management for AOSP and enrol
 
 To enroll and manage AOSP devices, you must have:
 
-* A Microsoft Intune standalone tenant or Microsoft Endpoint Manager tenant enabled for public preview. 
+* An active Microsoft Intune tenant. 
 * RealWear devices, updated to Firmware 11.2 or later. 
 
 You must also:  
@@ -69,7 +65,11 @@ Create an enrollment profile to enable enrollment on devices.
     - **Name**: Type a name to use when assigning the profile to the dynamic device group.
     - **Description**: Add a profile description (optional).
     - **Token expiration date**: The date when the token expires. Intune enforces a maximum of 90 days.  
-    - **SSID**: The SSID that the device will connect to. You must provide Wi-Fi details, because the RealWear device does not have a button or option that lets it connect to other devices.  
+    - **SSID**: Identifies the network that the device will connect to. 
+    
+        > [!NOTE]
+        > Wi-Fi details are required because the RealWear device does not have a button or option that lets it automatically connect to other devices.  
+
     - **Hidden network**: Choose whether this is a hidden network. By default, this setting is disabled, which means the network can broadcast its SSID. 
     - **Wi-Fi type**: Select the type of authentication needed for this network. If you select **WEP Pre-shared key** or **WPA Pre-shared key**, also enter:
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
@@ -90,9 +90,8 @@ Another way to find the token is:
 The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
 
 > [!IMPORTANT]
->- Intune also generates a token in plain text form, but that one can't be used to enroll devices. 
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
->- Because you're managing the device via Intune, you do not need to create a separate QR code via [Configure RealWear HMT](https://realwear.setupmyhmt.com/configure)(opens realware website) as well.   
+>- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR codes is the only thing you need to set up the device.  
 
 ### Replace a token  
 You can generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
@@ -143,7 +142,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
 ## Enroll devices    
 After you set up and assign the AOSP enrollment profiles, you can enroll devices via QR code. 
 
-1. Start the setup process on a new or factory-reset device.  
+1. Turn on your new or factory-reset device.    
 
 2. When the device prompts you to, scan the token's QR code. 
 
@@ -152,24 +151,21 @@ After you set up and assign the AOSP enrollment profiles, you can enroll devices
 
 3. Follow the on-screen prompts to finish enrolling and registering the device.  
 
-The Intune AOSP agent and Azure Authenticator automatically install and open on the device, which allows the device to be provisioned. You'll be locked in the provisioning process until it's complete.  
+The Microsoft Intune app and Microsoft Authenticator app automatically install and open on the device, which allows the device to be enrolled. You'll be locked in the enrollment process until it's complete.  
 
 ## After enrollment 
 
 ### Update Microsoft Intune and Microsoft Authenticator  
-The Microsoft Intune app automatically installs available updates for itself and the Microsoft Authenticator app. When an update becomes available, Microsoft Intune closes and installs the update. The app must be closed completely to install the update. 
+The Intune app automatically installs available app updates for itself and Authenticator. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
 
-> [!TIP]
-> Starting with the August 2021 service release (2108), the Intune AOSP agent and the Azure Authenticator will be automatically updated during provisioning. To allow the apps to update, all devices will need to be re-enrolled with the latest version of the apps.  
-
-### Use remote actions on AOSP devices  
+### Manage devices remotely  
 
 The following remote actions are available for AOSP devices:
 
 * Wipe  
-* Delete
+* Delete  
 
-For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md). Bulk actions are not supported for AOSP devices so you can only take action on one device at a time. 
+You can take action on one Android (AOSP) device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
 
 > [!NOTE]
 > When you wipe an AOSP device, the device remains in a **Pending** state until the device is fully restored to its factory default. It's then removed from the devices list in Intune. When you delete a device, the device is removed from the device list immediately, with no pending status. The factory reset happens the next time the device checks in. 
@@ -189,20 +185,20 @@ Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigat
 * See a list of AOSP devices enrolled by a user
 * Enable troubleshooting of AOSP devices the same way you can troubleshoot other user devices. 
 
-## Share Microsoft Intune app logs with Microsoft
-If you experience problems with enrollment or the Microsoft Intune app, you can upload your diagnostic logs in the Microsoft Intune app and send them to Microsoft. You'll receive an incident ID that you can share with your Microsoft support person to reference your logs. 
+## Share Intune app logs with Microsoft  
+If you experience problems with enrollment or the Microsoft Intune app, you can use the Intune app to upload and send app logs to Microsoft. After you submit the logs, you'll receive an incident ID to share with your Microsoft support person.   
 
 ## Known limitations  
 
 The following are known limitations when working with AOSP devices in Intune:  
 
-* Certain password types cannot be managed on AOSP devices via device compliance and device restrictions profiles. These include:  
+* You cannot enforce certain password types via device compliance and device restrictions profiles. Password types include:   
     * Password required, no restriction 
     * Alphabetic  
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-* Device compliance reporting for AOSP devices is not available in Intune.  
+* Device compliance reporting for Android (AOSP) devices is not available.   
 
 
 ## Next steps  
