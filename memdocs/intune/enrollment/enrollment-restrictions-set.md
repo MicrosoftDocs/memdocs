@@ -135,37 +135,8 @@ You can change the settings for an enrollment restriction by following the steps
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.
-3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.
+3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.  
 
-
-## Using filters in enrollment restriction and ESP policies 
-
-You can use filters to include and exclude devices from certain group-targeted policies. For example, you could assign a policy that blocks all user-driven MDM enrollment for marketing users, and then use a filter to further exclude users who don't have Windows 10 Home edition on their devices.  
-
-The filter selection is more limited in enrollment policies than other group-targeted policies. This is because the devices are not yet enrolled, so Intune doesn't have the device info to support all filter properties. You'll see a reduced selection of propeties when configuring these policies:   
-
-* Enrollment restriction policies for iOS and Windows.
-* Enrollment status page (ESP) policies for Windows.
-
-Selection is also reduced when editing a filter that's in-use in an enrollment restriction or ESP profile. 
-
-The following filter properties are always available to use with enrollment policies:    
-
-**Windows** 
-
-* osVersion 
-* operatingSystemSKU 
-* deviceOwnership 
-* enrollmentProfileName 
-
-**iOS/iPadOS and macOS**  
-* Manufacturer 
-* Model 
-* OS Version 
-* Device ownership 
-* Enrollment profile name 
-
-Android and Android Enterprise do not support using filters with enrollment restriction policies.  
 
 ## Blocking personal Android devices
 - If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
