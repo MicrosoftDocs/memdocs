@@ -255,7 +255,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
-     <!-- Hiding warning, but keeping here for history and in case these issues come up again >
+   <!-- Hiding warning, but keeping here for history and in case these issues come up again >
    > [!IMPORTANT]  
    > You cannot use Defender web protection side-by-side with Tunnel if you use an internal proxy with Tunnel, as this can cause connectivity issues which would prevent the device from communicating with Intune. Disable web protection by adding the **antiphishing** setting to the [custom settings](#use-custom-settings-for-microsoft-defender-for-endpoint) section in the VPN profile and setting it to **0**. -->
 
@@ -296,7 +296,6 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
-
 
 ## Use custom settings for Microsoft Defender for Endpoint
 
