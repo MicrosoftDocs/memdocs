@@ -13,7 +13,7 @@ author: greg-lindsay
 ms.author: greglin
 manager: dougeby
 ms.reviewer: jubaptis
-ms.date: 07/30/2021
+ms.date: 10/18/2021
 ms.collection: M365-modern-desktop
 ms.topic: article
 ---
@@ -25,6 +25,18 @@ ms.topic: article
 - Windows 11
 - Windows 10
 - Windows Holographic, version 2004
+
+## One-time self-deployment and pre-provisioning
+
+We made a change to the Windows Autopilot self-deployment mode and pre-provisioning mode experience, adding in a step to delete the device record as part of the device re-use process. This change impacts all Windows Autopilot deployments where the Autopilot profile is set to self-deployment or pre-provisioning mode. This change will only affect a device when it is re-used or when it is reset and attempts to redeploy. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452)
+
+## Update to the Windows Autopilot sign-in experience
+
+Users must enter their credentials at initial sign-in during enrollment. We no longer allow pre-population of the Azure Active Directory (Azure AD) User Principal Name (UPN). For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452)
+
+## MFA changes to Windows Autopilot enrollment flow
+
+To improve the baseline security for Azure Active Directory (Azure AD), we changed Azure AD behavior for multi-factor authentication (MFA) during device registration. Previously, if a user completed MFA as part of their device registration, the MFA claim was carried over to the user state after registration was complete. Going forward, the MFA claim is not preserved after registration and users will be prompted to redo MFA for any apps that require MFA by policy. For more information, see [Windows Autopilot MFA changes to enrollment flow](https://techcommunity.microsoft.com/t5/intune-customer-success/windows-autopilot-mfa-changes-to-enrollment-flow/ba-p/2774687).
 
 ## [Preview] Windows Autopilot diagnostics page
 

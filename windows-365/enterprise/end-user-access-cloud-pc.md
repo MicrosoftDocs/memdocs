@@ -69,7 +69,7 @@ While on windows365.microsoft.com, end users can perform actions on their Cloud 
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
 
-For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
+For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). For a comparison of features by client, see [Compare the clients: features](/windows-server/remote/remote-desktop-services/clients/remote-desktop-features#client-features).
 
 ### Install the Microsoft Remote Desktop app
 
