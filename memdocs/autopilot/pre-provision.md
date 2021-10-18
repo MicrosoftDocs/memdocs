@@ -44,7 +44,7 @@ Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and
 ## Prerequisites
 
 > [!IMPORTANT]
-> You cannot automatically re-enroll a device through Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in Microsoft Intune **All Devices** blade before re-deploying a device. User assigned policies and apps will still be deployed to the device. For more information on this change, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
@@ -55,9 +55,9 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - Physical devices with Ethernet connectivity are required to perform pre-provisioning. Wi-Fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-Fi connection. Enforcing this requirement in a pre-provisioning process could prevent the user from choosing their own language, locale, and keyboard when they receive the device. For more information, see [Using a wireless network connection with Windows Autopilot white glove](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
 
 > [!IMPORTANT]
-> 
+>
 > - Because the OEM or vendor performs the pre-provisioning process, this <u>doesn't require access to an end-user's on-prem domain infrastructure</u>. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
-> 
+>
 > - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known errors and solutions.
 
 ## Preparation
