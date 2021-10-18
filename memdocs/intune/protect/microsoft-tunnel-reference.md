@@ -204,7 +204,7 @@ The following are common commands for Docker that can be of use if you must inve
 > [!NOTE]
 > Most Linux distributions use Docker. However, *Red Hat Enterprise Linux (RHEL) 8.4 and later* are not supported to use Docker. Instead, RHEL 8.4 and later use Podman.
 >
-> The references and command lines that are written for Docker can be used with Podman by replcing *docker* with *podman*.
+> The references and command lines that are written for Docker can be used with Podman by replacing *docker* with *podman*.
 
 Command-line interface:
 
@@ -219,14 +219,15 @@ Command-line interface:
   - `docker exec –it mstunnel-server bash`
   - `docker exec –it mstunnel-agent bash`
 
-The following commands can be used for Podman:
+## Podman commands
+
+The following are commands for Podman that can be of use if you must investigate problems on a tunnel server. For additional commands you can use with Podman, see [Docker commands](#docker-commands).
 
 - `sudo podman images` - List all running containers.
 - `sudo podman stats` - Disiplay container CPU utilization, MEM usage, Network and Block IO.
 - `sudo podman port mstunnel-server` - List the port mappings from tunnel-server to the local Linux host.
 
 ## Linux commands
-
 
 The following are common Linux commands you might use with a tunnel server.
 
