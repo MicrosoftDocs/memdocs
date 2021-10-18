@@ -84,6 +84,6 @@ Create an [Android (AOSP) device restrictions profile](device-restrictions-confi
 
 - [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).   
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md).  
+- [Add actions for noncompliant devices](../protect/actions-for-noncompliance.md).  
 
 

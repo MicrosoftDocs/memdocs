@@ -42,7 +42,7 @@ These features are available in Intune, and are configurable by the administrato
 This feature applies to:
 
 - Android device administrator
-- Android (AOSP) (public preview)  
+- Android (AOSP) (preview)  
 - Android Enterprise personally-owned devices with a work profile
 - iOS/iPadOS
 - macOS
@@ -60,7 +60,7 @@ This article shows you how to create a device restrictions profile. You can also
     - **Platform**: Choose the platform of your devices. Your options:  
 
         - **Android device administrator**
-        - **Android (AOSP)** (in preview)
+        - **Android (AOSP)** (preview)  
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
