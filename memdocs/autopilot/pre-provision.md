@@ -14,7 +14,7 @@ manager: dougeby
 ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 10/05/2021
+ms.date: 10/18/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -26,8 +26,8 @@ ms.topic: how-to
 - Windows 11
 - Windows 10, version 1903 or later
 
->[!IMPORTANT]
->The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in this documentation to **white glove** have been replaced with: **pre-provisioning**.  The term **white glove** might still appear in some blogs and other articles about Windows Autopilot. These references correspond to the pre-provisioning process described in this article.
+> [!NOTE]
+> The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in this documentation to **white glove** have been replaced with: **pre-provisioning**.  The term **white glove** might still appear in some blogs and other articles about Windows Autopilot. These references correspond to the pre-provisioning process described in this article.
 
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This lets end users get their devices business-ready by using a simple process.
 
@@ -43,13 +43,16 @@ Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and
 
 ## Prerequisites
 
+> [!IMPORTANT]
+> You cannot automatically re-enroll a device through Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in Microsoft Intune **All Devices** blade before re-deploying a device. User assigned policies and apps will still be deployed to the device. For more information on this change, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+
 In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
 - Windows 10, version 1903 or later, or Windows 11
 - Windows Pro, Enterprise, or Education editions
 - An Intune subscription.
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
-- Physical devices with Ethernet connectivity are required to perform pre-provisioning. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection. Enforcing this requirement in a pre-provisioning process could prevent the user from choosing their own language, locale, and keyboard when they receive the device. For more information, see [Using a wireless network connection with Windows Autopilot white glove](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
+- Physical devices with Ethernet connectivity are required to perform pre-provisioning. Wi-Fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-Fi connection. Enforcing this requirement in a pre-provisioning process could prevent the user from choosing their own language, locale, and keyboard when they receive the device. For more information, see [Using a wireless network connection with Windows Autopilot white glove](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
 
 > [!IMPORTANT]
 > 
