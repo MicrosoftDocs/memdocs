@@ -55,7 +55,7 @@ You must also:
 
 * [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../fundamentals/mdm-authority-set.md). You only need to do this once, when you first set up Intune for mobile device management.  
 
-* Assign valid Microsoft Endpoint Manager licenses to all RealWear device users. 
+* Assign valid licenses to all RealWear device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md).  
 
 ## Create an enrollment profile   
 Create an enrollment profile to enable enrollment on devices. 
