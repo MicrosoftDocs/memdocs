@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/14/2021
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,7 +53,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   - CentOS 7.4+(CentOS 8+ isn’t supported)
   - Red Hat (RHEL) 7.4+
-  - Red Hat (RHEL) 8
+  - Red Hat (RHEL) 8.4+
   - Ubuntu 18.04
   - Ubuntu 20.04
 
@@ -72,16 +72,18 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **CPU**: 64-bit AMD/Intel processor.
 
-- **Install Docker CE or Podman**: Install Podman version 3.0 on RHEL 8 or later. For all other versions of RHEL or other Linux distributions, install Docker version 19.03 CE or later.
-  Microsoft Tunnel requires Docker (or Podman on RHEL 8 or later) on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
+- **Install Docker CE or Podman**: Install Podman version 3.0 on RHEL 8.4 or later. For all other versions of RHEL or other Linux distributions, install Docker version 19.03 CE or later.
+  Microsoft Tunnel requires Docker (or Podman on RHEL 8.4 or later) on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
   For information about installing and configuring Docker or Podman, see:
 
   - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
     > [!NOTE]
-    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7. The version installed on RHEL 7 by default is too old to support Microsoft Tunnel Gateway. Red Hat Enterprise Linux 8 does not support Docker. For RHEL 8, install and use Podman instead.
+    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7. The version installed on RHEL 7 by default is too old to support Microsoft Tunnel Gateway. Red Hat Enterprise Linux 8 does not support Docker. For RHEL 8.4 or later, install and use Podman instead.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-  - [Install Podman on Red Hat Enterprise Linux 8 or later (scroll down to RHEL8)](https://podman.io/getting-started/installation)
+  - [Install Podman on Red Hat Enterprise Linux 8.4 or later (scroll down to RHEL8)](https://podman.io/getting-started/installation).  
+    Podman is the container solution used on RHEL 8.4 and later, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
+with documentation for the application, and packages with helper utilities. For more information see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
@@ -180,22 +182,20 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
   > [!NOTE]  
   > Microsoft Tunnel doesn’t support Azure AD App Proxy, or similar proxy solutions.
 
-<!-- adding new content for Podman - From here to the end of this section (Proxy)  -->
-
 ### Configure an internal proxy for Podman
 
-The following details can help you configure an internal proxy when using RHEL 8.4 and Podman:
+The following details can help you configure an internal proxy when using RHEL 8.4 or later, and Podman:
 
 - Podman reads HTTP Proxy information stored in **/etc/profile.d/http_proxy.sh**. If this file doesn't exist on your server, create it. Edit **http_proxy.sh** to add the following two lines. In the following lines, *10.10.10.1:3128* is an example address:port entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP *address:port*:
 
   `export HTTP_PROXY=http://10.10.10.1:3128`  
   `export HTTPS_PROXY=http://10.10.10.1:3128`
 
-  If you have access to RedHat Customer Portal, you can view the knowledge base article associated with this solution. See [Setting up HTTP Proxy variables for Podman - Red Hat Customer Portal](https://access.redhat.com/solutions/3939131).
+  If you have access to Red Hat Customer Portal, you can view the knowledge base article associated with this solution. See [Setting up HTTP Proxy variables for Podman - Red Hat Customer Portal](https://access.redhat.com/solutions/3939131).
 
-- When you add those two lines to *http_proxy.sh* before you install MS Tunnel by running the mstunnel-setup, the script will automatically configure the MS Tunnel proxy environment variables in **/etc/mstunnel/env.sh**.
+- When you add those two lines to *http_proxy.sh* before you install Microsoft Tunnel Gateway by running the mstunnel-setup, the script will automatically configure the Tunnel Gateway proxy environment variables in **/etc/mstunnel/env.sh**.
 
-  To configure a proxy after the MS Tunnel setup has completed, do the following actions:
+  To configure a proxy after the Microsoft Tunnel Gateway setup has completed, do the following actions:
 
   1. Modify or create the file **/etc/profile.d/http_proxy.sh** and add the two lines from the previous bullet point.
   2. Edit **/etc/mstunnel/env.sh** and add the following two lines to end of the file. Like the previous lines, replace the example address:port value of *10.10.10.1:3128* with the values for your proxy IP *address:port*:
@@ -203,7 +203,7 @@ The following details can help you configure an internal proxy when using RHEL 8
      `HTTP_PROXY=http://10.10.10.1:3128`  
      `HTTPS_PROXY=http://10.10.10.1:3128`
 
-  3. Restart MS Tunnel server: Run `mst-cli server restart`
+  3. Restart the Tunnel Gateway server: Run `mst-cli server restart`
 
 
   Be aware that RHEL uses SELinux. Because a proxy that doesn't run on a SELinux port for *http_port_t* can require additional configuration, check on the use of SELinux managed ports for http. Run the following command to view the configurations: `sudo semanage port -l | grep “http_port_t” `
@@ -212,7 +212,7 @@ The following details can help you configure an internal proxy when using RHEL 8
 
   :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-selinux-ports.png" alt-text="Screen shot of the port check.":::
 
-  - If your proxy runs on one of the SELinux ports for **http_port_t**, then you can continue with the MS Tunnel install process.
+  - If your proxy runs on one of the SELinux ports for **http_port_t**, then you can continue with the Tunnel Gateway  install process.
   - If your proxy does't run on a SELunux port for **http_port_t** as in the preceding example, you'll need to make extra configurations.
 
     **If your proxy port is not listed for** ***http_port_t***, check if the proxy port is used by another service. Use the *semnage* command to first check the port that your proxy uses and then later if needed, to change it. To check the port your proxy uses, run: `sudo semanage port -l | grep “your proxy port”`

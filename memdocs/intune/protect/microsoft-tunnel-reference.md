@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/14/2021
+ms.date: 10/19/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -202,7 +202,7 @@ Following are environment variables you might want to configure when you install
 The following are common commands for Docker that can be of use if you must investigate problems on a tunnel server.
 
 > [!NOTE]
-> Most Linux distributions use Docker. However, *Red Hat Enterprise Linux (RHEL) 8 and later* are not supported to use Docker. Instead, RHEL 8 and later use Podman.
+> Most Linux distributions use Docker. However, *Red Hat Enterprise Linux (RHEL) 8.4 and later* are not supported to use Docker. Instead, RHEL 8.4 and later use Podman.
 >
 > The references and command lines that are written for Docker can be used with Podman by replcing *docker* with *podman*.
 
@@ -219,7 +219,14 @@ Command-line interface:
   - `docker exec –it mstunnel-server bash`
   - `docker exec –it mstunnel-agent bash`
 
+The following commands can be used for Podman:
+
+- `sudo podman images` - List all running containers.
+- `sudo podman stats` - Disiplay container CPU utilization, MEM usage, Network and Block IO.
+- `sudo podman port mstunnel-server` - List the port mappings from tunnel-server to the local Linux host.
+
 ## Linux commands
+
 
 The following are common Linux commands you might use with a tunnel server.
 

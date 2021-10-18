@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/14/2021
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,9 +27,9 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-Configuration of the Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process. The process includes use of the Microsoft Endpoint Manager admin center, and running a script to install the tunnel software on a Linux server. Most distributions of Linux server must run. If you use Red Hat Enterprise Linux 8 and later, the server must run Podman. While this article walks you through the steps to configure the Microsoft Tunnel for use, configuration of Linux and Docker or Podman is beyond the scope of this content.
+Configuration of the Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process. The process includes use of the Microsoft Endpoint Manager admin center, and running a script to install the tunnel software on a Linux server. Most distributions of Linux server must run Docker. If you use Red Hat Enterprise Linux 8 and later, the server must run Podman. While this article walks you through the steps to configure the Microsoft Tunnel for use, configuration of Linux and Docker or Podman is beyond the scope of this content.
 
-When installing the Microsoft Tunnel, you’ll start in the Microsoft Endpoint Manager admin center to define both Servers and Sites. Then, you run the tunnel installation script on a Linux server that has either Docker or Podman installed. The script installs containers to support the tunnel server, pulls information from Intune about the tunnel Sites you’ve defined for your tenant, and then installs the Tunnel server. The Linux server can run on-premises or in the cloud. Depending on your environment and infrastructure, extra configurations and software, like Azure ExpressRoute, might be needed.
+When installing the Microsoft Tunnel, you’ll start in the Microsoft Endpoint Manager admin center to define both Servers and Sites. Then, you run the tunnel installation script on your Linux server that has Docker or Podman installed, which depends on what that distribution of Linux supports. The script installs containers to support the tunnel server, pulls information from Intune about the tunnel Sites you’ve defined for your tenant, and then installs the Tunnel server. The Linux server can run on-premises or in the cloud. Depending on your environment and infrastructure, extra configurations and software, like Azure ExpressRoute, might be needed.
 
 Before you continue, be sure to complete the following tasks:
 
@@ -179,7 +179,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
-8. If you’re using RHEL 8, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
+8. If you’re using RHEL 8.4, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
 ## Deploy the Microsoft Tunnel client app
 
