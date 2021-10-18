@@ -40,10 +40,9 @@ The ETW logs may show the following error:
 
 `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
 
-### Cause
+### Cause A
 
 Microsoft Endpoint Manager changed the Windows Autopilot self-deployment mode (Public Preview) and Pre-Provisioning mode (formerly known as white glove, in Public Preview) experience.
-
 To reuse a device, you must delete the device record created by Intune.
 
 This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
@@ -54,6 +53,18 @@ To redeploy the device through Autopilot:
 
 1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Endpoint Manager admin center](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
 2. Redeploy the Autopilot deployment profile.
+
+### Cause B
+
+Windows MDM enrollment is disabled in your Intune tenant.
+
+### Resolution
+
+To fix this issue in a stand-alone Intune environment, follow these steps:
+
+In the Microsoft Endpoint Manager admin center, chooses Devices > Enrollment restrictions > choose a device type restriction.
+Choose Properties > Edit (next to Platform settings) > Allow for Windows (MDM).
+Click Review + Save.
 
 ## Device import issues
 
