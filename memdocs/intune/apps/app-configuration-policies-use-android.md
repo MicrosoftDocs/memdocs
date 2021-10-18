@@ -178,6 +178,9 @@ There are two ways users may be able to connect work and personal apps after you
 1. A supported app may choose to prompt a user to approve connecting it across profiles.
 2. Users can open the Settings app and go to the Connected work & personal apps section, where they will see all supported apps listed.
 
+> [!IMPORTANT]
+> If multiple app configuration policies are assigned for the same app targeting the same device, and one policy sets **Connected Apps** to `True` while the other policy does not, the app configuration will report a conflict and the resulting behavior applied on the device will be to disallow the connected apps.
+
 ## Preconfigure the permissions grant state for apps
 
 You can also preconfigure app permissions to access Android device features. By default, Android apps that require device permissions, such as access to location or the device camera, prompt users to accept or deny permissions.
