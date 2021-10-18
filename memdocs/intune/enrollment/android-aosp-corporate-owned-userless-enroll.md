@@ -46,7 +46,7 @@ This article describes how to set up Android (AOSP) device management and enroll
 
 ## Prerequisites
 
-To enroll and manage devices, you must have:
+To enroll and manage AOSP devices, you must have:
 
 * An active Microsoft Intune tenant. 
 * RealWear devices, updated to Firmware 11.2 or later.  
@@ -164,7 +164,7 @@ The Intune app automatically installs available app updates for itself and Authe
 
 ### Manage devices remotely    
 
-These remote actions are available for Android (AOSP) devices:    
+The following remote actions are available for Android (AOSP) devices:     
 
 * Wipe  
 * Delete
@@ -202,7 +202,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-*  Device compliance reporting for Android (AOSP) is not available.  
+*  Device compliance reporting is not available for for Android (AOSP).   
 
 ## Next steps  
 

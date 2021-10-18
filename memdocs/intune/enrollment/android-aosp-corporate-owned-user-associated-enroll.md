@@ -121,7 +121,7 @@ You can create *assigned device groups* or *dynamic device groups* in Intune. Fo
 
 Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name. 
 
-Complete the following steps to create a dynamic Azure AD device group for devices enrolled with an AOSP corporate-owned, user-associated enrollment profile.  
+Complete the following steps to create a dynamic Azure AD device group for devices enrolled with an Android (AOSP) corporate-owned, user-associated enrollment profile.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
@@ -140,7 +140,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
 
 
 ## Enroll devices    
-After you set up and assign the AOSP enrollment profiles, you can enroll devices via QR code. 
+After you set up and assign the Android (AOSP) enrollment profiles, you can enroll devices via QR code. 
 
 1. Turn on your new or factory-reset device.    
 
@@ -160,30 +160,30 @@ The Intune app automatically installs available app updates for itself and Authe
 
 ### Manage devices remotely  
 
-The following remote actions are available for AOSP devices:
+The following remote actions are available for Android (AOSP) devices:
 
 * Wipe  
 * Delete  
 
-You can take action on one Android (AOSP) device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
+You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
 
 > [!NOTE]
-> When you wipe an AOSP device, the device remains in a **Pending** state until the device is fully restored to its factory default. It's then removed from the devices list in Intune. When you delete a device, the device is removed from the device list immediately, with no pending status. The factory reset happens the next time the device checks in. 
+> After you wipe an Android (AOSP) device, the device remains in a **Pending** state until the it's fully restored to its factory default. Then Intune removes it from the device list. When you delete a device, the device is removed from the device list immediately, with no pending status, and the factory reset happens the next time the device checks in.  
 
 ## Troubleshooting  
 
 ## View version of Microsoft Intune and Microsoft Authenticator apps
 To find out which version of the Microsoft Intune app or Microsoft Authenticator app is installed on a device:
 
-1. Go to **Devices** and select the AOSP device name.    
+1. Go to **Devices** and select the device name.    
 2. Select **Discovered apps**. 
 3. Find your app and then look in the **Application Version** column for the version number.  
 
 ## Troubleshooting + Support  
 Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigation menu to:
 
-* See a list of AOSP devices enrolled by a user
-* Enable troubleshooting of AOSP devices the same way you can troubleshoot other user devices. 
+* See a list of Android (AOSP) devices enrolled by a user
+* Enable troubleshooting of Android (AOSP) devices the same way you can troubleshoot other user devices. 
 
 ## Share Intune app logs with Microsoft  
 If you experience problems with enrollment or the Microsoft Intune app, you can use the Intune app to upload and send app logs to Microsoft. After you submit the logs, you'll receive an incident ID to share with your Microsoft support person.   
@@ -198,13 +198,14 @@ The following are known limitations when working with AOSP devices in Intune:
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-* Device compliance reporting for Android (AOSP) devices is not available.   
+* Device compliance reporting is not available for Android (AOSP).  
 
 
 ## Next steps  
-* [Create a device configuration policy](../configuration/device-restrictions-android-aosp.md) to restrict settings on AOSP devices. 
 
-* [Create a device compliance policy](../protect/compliance-policy-create-android-aosp.md) for AOSP devices.  
+* [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-aosp.md) to restrict settings on devices. 
 
-* For more information about how to get started on AOSP, see [Android source requirements](https://source.android.com/setup/build/requirements)(opens Android source documentation).   
+* [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).   
+
+* For more information about how to get started with AOSP, see [Android source requirements](https://source.android.com/setup/build/requirements)(opens Android source documentation). 
 

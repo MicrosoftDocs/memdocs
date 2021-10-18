@@ -337,7 +337,7 @@ items:
     items:
     - name: Compliance settings - Android device administrator
       href: compliance-policy-create-android.md  
-    - name: Compliance settings - Android Open Source Project (AOSP) 
+    - name: Compliance settings - Android (AOSP) 
       href: compliance-policy-create-android-aosp.md
     - name: Compliance settings - Android Enterprise
       href: compliance-policy-create-android-for-work.md

@@ -92,7 +92,7 @@ To use device compliance policies, be sure you:
   
 5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy.  The following articles describe the settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
-   - [Android AOSP](compliance-policy-create-android-aosp.md)  
+   - [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)

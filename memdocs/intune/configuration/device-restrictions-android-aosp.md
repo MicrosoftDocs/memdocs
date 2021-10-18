@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Device settings for Android Open Source Project devices in Microsoft Intune
-description: Use restriction settings to control a wide range of settings and features on AOSP devices.  
+title: Device restriction settings for Android (AOSP) platform in Microsoft Intune
+description: Use Android (AOSP) restriction settings to control a wide range of settings and features on AOSP devices.  
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -28,20 +28,20 @@ ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Android Open Source Project device settings to allow or restrict features using Intune
+# Android (AOSP) device settings to allow or restrict features using Intune
 
 *This feature is in public preview.*
 
-This article describes the different settings you can control on Android Open Source Project (AOSP) devices. You can use these restrictions to configure password requirements and allow or block features. 
+This article describes the different settings you can control on Android (AOSP) devices. You can use these restrictions to configure password requirements and access to device features. 
 
-This feature applies to these device types running on AOSP:
+This feature applies to the following Android (AOSP) device types: 
 
 - Corporate owned userless devices (shared) 
 - Corporate-owned user-associated devices (single user)  
 
 ## Before you begin
 
-Create an [Android (AOSP) device restrictions profile](device-restrictions-configure.md).  
+Create an [Android (AOSP) device restrictions profile](device-restrictions-configure.md). For **Platform**, select **Android (AOSP)**.    
 
 ## Device password  
 
@@ -82,5 +82,8 @@ Create an [Android (AOSP) device restrictions profile](device-restrictions-confi
 
 ## Next steps  
 
-* [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).  
-* [Use compliance policies to manage AOSP devices(in preview)]()
+- [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).   
+
+- [Add actions for noncompliant devices](actions-for-noncompliance.md).  
+
+

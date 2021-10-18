@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Android AOSP compliance settings in Microsoft Intune
-description: View the device compliance settings that are available for AOSP devices in Microsoft Intune.
+title: Android (AOSP) compliance settings in Microsoft Intune
+description: View the Android (AOSP) device compliance settings available in Microsoft Intune.
 keywords:
 author: brenduns    
 ms.author: brenduns
@@ -28,21 +28,24 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Device Compliance settings for Android AOSP in Intune
+# Device compliance settings for Android (AOSP) in Intune
 
 *This feature is in public preview.*
 
-This article lists the compliance settings you can configure on Android Open Source Project (AOSP) devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, require device passwords, and more. As an Intune administrator, use these compliance settings to help protect your organization's resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+This article lists the compliance settings you can configure for Android (AOSP) devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, require device passwords, and more. As an Intune administrator, use these compliance settings to help protect your organization's resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
-Android AOSP devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Endpoint Manager admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.  
+Devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Endpoint Manager admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.  
 
 This feature applies to:
 
-- Android Open Source Project  
+- Android (AOSP) 
+
+> [!IMPORTANT]
+> This feature is in [public preview](../fundamentals/public-preview.md).  
 
 ## Before you begin  
 
-[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android (AOSP)**.  
+[Create an Android (AOSP) compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android (AOSP)**.  
 
 ## Device Health  
 
@@ -89,8 +92,8 @@ This feature applies to:
 
 
      > [!NOTE]  
-     >- There is a known issue that prevents **Password required, no restriction** from working on AOSP devices.
-     >- The following password types are listed as options but are not supported on AOSP devices: Alphabetic, alphanumeric, and alphanumeric with symbols.  
+     >- There is a known issue that prevents **Password required, no restriction** from working on Android (AOSP) devices.  
+     >- The following password types are listed as options but are not supported for Android (AOSP) devices: Alphabetic, alphanumeric, and alphanumeric with symbols.  
 
 
    - **Maximum minutes of inactivity before password is required**  
@@ -108,7 +111,7 @@ This feature applies to:
     - **Require** - Encrypt data storage on your devices. Devices are encrypted when you choose the **Require a password to unlock mobile devices** setting.  
 
 ## Device compliance reporting  
-Compliance reports are currently not available for AOSP devices. This section will be updated when reporting becomes available.   
+Compliance reports are currently not available for Android (AOSP) devices. This section will be updated when reporting becomes available.   
 
 ## Next steps
 

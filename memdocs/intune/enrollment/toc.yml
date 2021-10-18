@@ -79,9 +79,9 @@ items:
       href: android-dedicated-devices-fully-managed-enroll.md
     - name: Android device administrator enrollment
       href: android-enroll-device-administrator.md
-    - name: Enroll Android AOSP corporate-owned userless devices
+    - name: Enroll Android (AOSP) corporate-owned userless devices
       href: android-aosp-corporate-owned-userless-enroll.md    
-    - name: Enroll Android AOSP corporate-owned user-associated devices
+    - name: Enroll Android (AOSP) corporate-owned user-associated devices
       href: android-aosp-corporate-owned-user-associated-enroll.md  
     - name: Manage Android Enterprise work profile devices
       href: android-enterprise-overview.md 

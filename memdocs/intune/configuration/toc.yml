@@ -161,7 +161,7 @@ items:
         href: vpn-settings-android.md
       - name: Wi-Fi
         href: wi-fi-settings-android.md
-    - name: Android AOSP 
+    - name: Android (AOSP) 
       items: 
       - name: Device restrictions
         href: device-restrictions-android-aosp.md  
