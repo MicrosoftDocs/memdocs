@@ -157,6 +157,8 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 You can use a proxy server with Microsoft Tunnel. The following considerations can help you configure the Linux server and your environment for success:
 
+### Configure an internal proxy for Docker
+
 - If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines:
 
   `http_proxy=[address]`  
