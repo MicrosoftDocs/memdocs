@@ -280,6 +280,7 @@ Plan to use a validity period of five days or greater. When the validity period 
 
 > [!IMPORTANT]
 > For iOS/iPadOS and macOS, always use a value set in the template.
+> **Warning:** This is a global setting and will configure your CA to stop enforcing certificate validity periods set in all templates assigned.
 
 #### To configure a value that can be set from within the Intune console
 
