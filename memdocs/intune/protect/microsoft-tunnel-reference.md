@@ -224,7 +224,7 @@ Command-line interface:
 The following are commands for Podman that can be of use if you must investigate problems on a tunnel server. For additional commands you can use with Podman, see [Docker commands](#docker-commands).
 
 - `sudo podman images` - List all running containers.
-- `sudo podman stats` - Disiplay container CPU utilization, MEM usage, Network and Block IO.
+- `sudo podman stats` - Display container CPU utilization, MEM usage, Network and Block IO.
 - `sudo podman port mstunnel-server` - List the port mappings from tunnel-server to the local Linux host.
 
 ## Linux commands
