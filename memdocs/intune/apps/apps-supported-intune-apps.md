@@ -6,9 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
+ms.date: 10/15/2021
+ms.topic: conceptual
+ms.service: microsoft-intune
 ms.subservice: apps
-ms.technology:
-ms.assetid: 003ce5af-7ee1-43fb-8d16-9d08c7957a85
+ms.localizationpriority: high
 ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
