@@ -115,8 +115,8 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
     > [!NOTE]
     > The CSV file being imported into the Intune portal must be formatted as described above.  Extra columns are not supported.  Quotes are not supported.  Only ANSI-format text files can be used (not Unicode).  Headers are case-sensitive.  Editing the file in Excel and saving as a CSV file will not generate a usable file due to these requirements.
 
- > [!NOTE]
-    > Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain senstive information that should maintained by device owners only, Microsoft recommends registering devices through Endpoint Manager via a 4K Hardware Hash for "test" (or limited) scenarios only.  In most cases, Autopilot device registration should be done through Microsoft Partner Center instead.
+    > [!NOTE]
+    > Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain senstive information that should be maintained by device owners only, Microsoft recommends only registering devices through Endpoint Manager via a 4K hardware hash for test or limited scenarios. In most cases, Autopilot device registration should be done through the Microsoft Partner Center instead.
    
 3. Choose **Import** to start importing the device information. Importing can take several minutes.
 
