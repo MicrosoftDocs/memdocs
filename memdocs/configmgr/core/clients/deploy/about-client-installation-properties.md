@@ -2,11 +2,10 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 07/30/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -647,6 +646,8 @@ After the client installs and properly registers with the site, it starts the re
 > - **Computer Agent** group: **PowerShell execution policy**
 > 
 > If devices don't need these client settings after the task sequence completes, deploy new custom client settings to reverse the default settings.
+>
+> For more information, see [About client settings](../../clients/deploy/about-client-settings.md).
 
 ### RESETKEYINFORMATION
 
