@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/12/2021
+ms.date: 10/19/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,10 +43,14 @@ For Android device administrator, see [Android and Samsung Knox Standard device 
 
 ## Before you begin
 
-Create an [Android Enterprise device restrictions profile](device-restrictions-configure.md):
+When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
 
-- Fully managed, dedicated, and corporate-owned work profile
-- Personally owned devices with a work profile
+The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
+
+- For Android Enterprise personally-owned work profile devices: [Android personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+- For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md)
+
+When ready to proceed, create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
 
 ## Fully managed, dedicated, and corporate-owned work profile
 
