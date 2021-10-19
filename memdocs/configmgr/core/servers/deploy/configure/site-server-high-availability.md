@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Site server high availability in Configuration Manager
@@ -258,6 +259,8 @@ The following steps may be required if necessary in your environment:
 - If you import PKI certificates for distribution points, reimport the certificate for affected servers. For more information, see [Regenerate the certificates for distribution points](../../manage/recover-sites.md#regenerate-the-certificates-for-distribution-points).  
 
 - If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).  
+
+- Recreate OSD bootable media and prestaged media in non-PKI environments.  
 
 ## Daily monitoring
 

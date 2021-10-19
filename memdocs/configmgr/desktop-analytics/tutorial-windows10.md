@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
+ms.localizationpriority: medium
 ---
 
 # Tutorial: Deploy Windows 10 to pilot

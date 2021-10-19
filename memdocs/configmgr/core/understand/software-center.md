@@ -9,7 +9,7 @@ ms.date: 06/10/2020
 ms.topic: end-user-help
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
+ms.localizationpriority: medium
 ---
 
 # Software Center user guide
@@ -32,7 +32,7 @@ General notes about Software Center functionality:
 
 ## <a name="bkmk_open"></a> How to open Software Center
 
-Software Center is installed automatically on Windows devices that your IT organization manages. For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
+Software Center is installed automatically on Windows devices that your IT organization manages. For the simplest method to start Software Center, go to **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
 
 :::image type="content" source="media/start-menu-software-center.png" alt-text="Software Center best match in Start menu":::
 

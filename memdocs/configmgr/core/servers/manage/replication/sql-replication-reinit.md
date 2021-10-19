@@ -6,10 +6,10 @@ ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: ce4a1ca8-6433-4447-819f-19dd5faa6f46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # SQL Server replication reinit

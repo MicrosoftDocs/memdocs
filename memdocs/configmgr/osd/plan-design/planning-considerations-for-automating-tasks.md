@@ -2,16 +2,14 @@
 title: Plan for automating tasks
 titleSuffix: Configuration Manager
 description: Plan before you create task sequences to automate tasks with Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Plan for automating tasks in Configuration Manager
@@ -119,7 +117,7 @@ Create task sequences by using the Create Task Sequence Wizard. The wizard can c
 
 - Build and capture an OS image of a reference computer  
 
-- Upgrade to Windows 10 from an OS upgrade package on a destination computer
+- Upgrade Windows with an OS upgrade package on a destination computer
 
 - Create a custom task sequence that does a customized task or specialized OS deployment  
 

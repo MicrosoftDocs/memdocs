@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration options for site system roles in Configuration Manager

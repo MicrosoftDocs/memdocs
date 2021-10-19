@@ -9,6 +9,7 @@ ms.topic: overview
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Features and capabilities of Configuration Manager
@@ -19,7 +20,7 @@ This article summarizes the primary management features of Configuration Manager
 
 ## Co-management
 
-Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality like conditional access. For more information, see [What is co-management](../../../comanage/overview.md)?
+Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality like conditional access. For more information, see [What is co-management](../../../comanage/overview.md)?
 
 ## Desktop Analytics
 
@@ -45,7 +46,7 @@ Helps you create, manage, deploy, and monitor applications to a range of differe
 
 ## OS deployment
 
-Deploy an in-place upgrade of Windows 10, or capture and deploy OS images. Image deployment can use PXE, multicast, or bootable media. It can also help redeploy existing devices using Windows AutoPilot. For more information, see [Introduction to OS deployment](../../../osd/understand/introduction-to-operating-system-deployment.md).  
+Deploy an in-place upgrade of Windows, or capture and deploy OS images. Image deployment can use PXE, multicast, or bootable media. It can also help redeploy existing devices using Windows AutoPilot. For more information, see [Introduction to OS deployment](../../../osd/understand/introduction-to-operating-system-deployment.md).  
 
 ## Software updates
 

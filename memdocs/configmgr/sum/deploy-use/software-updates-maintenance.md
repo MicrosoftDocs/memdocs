@@ -1,17 +1,15 @@
 ---
 title: Software updates maintenance
-titleSuffix: "Configuration Manager"
-description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
+titleSuffix: Configuration Manager
+description: To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually.
 author: mestew
 ms.date: 04/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # Software updates maintenance
 

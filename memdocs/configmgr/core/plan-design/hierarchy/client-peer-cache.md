@@ -6,12 +6,10 @@ ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Peer cache for Configuration Manager clients
@@ -179,7 +177,7 @@ Peer cache relies on the Configuration Manager client cache to share content. Co
 
 - The Configuration Manager client cache isn't like the content library on a distribution point. While you manage the content that you distribute to a distribution point, the Configuration Manager client automatically manages the content in its cache. There are settings and methods to help control what content is in the cache of a peer cache source. For more information, see [Configure the client cache](../../clients/manage/configure-client-cache.md).
 
-- Normal cache size and maintenance applies to peer cache sources. For more information, see [Configure client cache size](../../clients/deploy/about-client-settings.md#configure-client-cache-size). Consider the size of larger content such as OS upgrade packages or Windows 10 express update files. Compare your need for this content against the available disk space on peer cache sources.  
+- Normal cache size and maintenance applies to peer cache sources. For more information, see [Configure client cache size](../../clients/deploy/about-client-settings.md#configure-client-cache-size). Consider the size of larger content such as OS upgrade packages or Windows express update files. Compare your need for this content against the available disk space on peer cache sources.  
 
 - The peer cache source client updates the last referenced time of content in the cache when a peer downloads it. The client uses this timestamp when it automatically maintains its cache, removing older content first. So it should wait to remove content that peer cache clients more frequently download, if at all.  
 

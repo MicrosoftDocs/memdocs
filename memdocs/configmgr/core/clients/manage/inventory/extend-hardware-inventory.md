@@ -2,13 +2,14 @@
 title: Extend hardware inventory
 titleSuffix: Configuration Manager
 description: Learn ways to extend hardware inventory in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to extend hardware inventory in Configuration Manager
@@ -21,7 +22,7 @@ The Configuration.mof file is used to define the data classes to be inventoried 
 
 The Configuration.mof file also defines and registers the WMI providers that access device information during hardware inventory. Registering providers defines the type of provider to be used and the classes that the provider supports.
 
-When Configuration Manager clients request policy, the Configuration.mof is attached to the policy body. This file is then downloaded and compiled by clients. When you add, modify, or delete data classes from the Configuration.mof file, clients automatically compile these changes that are made to inventory-related data classes. No further action is necessary to inventory new or modified data classes on Configuration Manager clients. This file is located in the `Inboxes\clifiles.src\hinv\` folder of the Configuration Manager installation directory on the primary site server.
+When Configuration Manager clients request policy, the Configuration.mof is attached to the policy body. This file is then downloaded and compiled by clients. When you add, modify, or delete data classes from the Configuration.mof file, clients automatically compile these changes that are made to inventory-related data classes. No further action is necessary to inventory new or modified data classes on Configuration Manager clients. This file is located in the `Inboxes\clifiles.src\hinv\` folder of the Configuration Manager installation directory on the primary site server or central administration site (CAS) server.
 
 In Configuration Manager current branch, you don't edit the sms_def.mof file as with earlier versions. Instead, make these changes with client settings. Configuration Manager provides the following methods to extend hardware inventory.
 

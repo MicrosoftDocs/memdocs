@@ -4,8 +4,8 @@ title: What's new in previous months in the Microsoft Intune
 titleSuffix: 
 description: Review older announcements from the Intune what's new page
 keywords:
-author: ErikjeMS  
-ms.author: erikje
+author: dougeby  
+ms.author: dougeby
 manager: dougeby
 ms.date: 04/07/2021
 ms.topic: conceptual
@@ -1631,7 +1631,7 @@ In addition to the availability of content, the following are new for Endpoint S
 
 - You can now [**create a duplicate of a security baseline**](../protect/security-baselines-configure.md#duplicate-a-security-baseline). Duplicates keep the settings configuration of the original baseline, but get a new name. The new baseline instance doesn't include any assignments to groups until you edit the new baseline instance to add them.
 
-- A new report for endpoint security antivirus policy is available: [**Windows 10 unhealthy endpoints**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). This report is a new page you can select when your viewing your endpoint security antivirus policy. The report displays the antivirus status of your MDM-managed Windows 10 devices.  
+- A new report for endpoint security antivirus policy is available: [**Windows 10 unhealthy endpoints**](../protect/endpoint-security-antivirus-policy.md#unhealthy-endpoints). This report is a new page you can select when your viewing your endpoint security antivirus policy. The report displays the antivirus status of your MDM-managed Windows 10 devices.  
 
 #### Support for S/MIME signing and encryption certificates with Outlook on Android<!-- 7207474  -->
 
@@ -3007,7 +3007,7 @@ Use Intune to manage *Tamper Protection* for Windows Defender Antivirus. You'll 
 For more information about Tamper Protection, see [Prevent security settings changes with tamper protection](/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) in the Windows documentation.
 
 #### Advanced settings for Windows Defender Firewall are now generally available<!--  5317392       -->  
-The [Windows Defender custom firewall rules for endpoint protection](../protect/endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices), which you configure as part of a device configuration profile, are out of public preview and are generally available (GA).  You can use these rules to specify inbound and outbound behavior to applications, network addresses, and ports. These rules were released in July as a public preview. 
+The [Windows Defender custom firewall rules for endpoint protection](../protect/endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices), which you configure as part of a device configuration profile, are out of public preview and are generally available (GA).  You can use these rules to specify inbound and outbound behavior to applications, network addresses, and ports. These rules were released in July as a public preview. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -3320,7 +3320,7 @@ You can zoom in to the exact coordinates of a device using the **Locate device**
 ### Device security
 
 #### Advanced settings for Windows Defender Firewall  (public preview)<!--  1311949     -->  
-Use Intune to manage [custom firewall rules as part of a device configuration profile](../protect/endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices) for endpoint protection on Windows 10. Rules can specify inbound and outbound behavior to applications, network addresses, and ports. 
+Use Intune to manage [custom firewall rules as part of a device configuration profile](../protect/endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices) for endpoint protection on Windows 10. Rules can specify inbound and outbound behavior to applications, network addresses, and ports. 
 
 #### Updated UI for managing security baselines<!-- 4091125     -->
 We've updated the [create and edit experience](../protect/security-baselines-configure.md#create-the-profile) in the Intune console for our security baselines. Changes include:
@@ -4630,7 +4630,7 @@ For Samsung Knox Mobile Enrollment, Intune now supports enrolling devices to the
 - You can now configure a restart warning prompt for restarts that happen outside of work hours, which supports BYOD scenarios.
 
 #### Group Windows Autopilot-enrolled devices by correlator ID<!-- 2075110 -->
-Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal "OfflineAutopilotprofile-<correlator ID>". This allows arbitrary Azure AD dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](../../autopilot/enrollment-autopilot.md#windows-autopilot-for-existing-devices).
+Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal "OfflineAutopilotprofile-&#9001;correlator ID&#9002;". This allows arbitrary Azure AD dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](../../autopilot/enrollment-autopilot.md#windows-autopilot-for-existing-devices).
 
 #### Intune app protection policies<!-- 2984657 -->
 Intune app protection policies allow you to configure various data protection settings for Intune protected apps, such as Microsoft Outlook and Microsoft Word. We've change the look and feel of these settings for both [iOS](../apps/app-protection-policy-settings-ios.md) and [Android](../apps/app-protection-policy-settings-android.md) to make it easier to find individual settings. There are three categories of policy settings:
@@ -5277,7 +5277,7 @@ To see the new experience, sign in to Intune and select **Devices** > **All devi
 If you still want the wipe/retire confirmation, you can use the standard device lifecycle route by issuing a **Remove company data** and **Factory Reset** prior to **Delete**. 
 
 #### Play sounds on iOS when in Lost mode<!-- 1947769 -->
-When supervised iOS devices are in Mobile Device Management (MDM) [Lost mode](../remote-actions/device-lost-mode.md), you can [play a sound](../remote-actions/device-locate.md#activate-lost-mode-sound-alert-on-an-ios-device) (**Devices** > **All devices** > select an iOS device > **Overview** > **More**). The sound continues to play until the device is removed from Lost mode, or a user disables sound on the device. Applies to iOS devices 9.3 and newer.
+When supervised iOS devices are in Mobile Device Management (MDM) [Lost mode](../remote-actions/device-lost-mode.md), you can [play a sound](../remote-actions/device-locate.md#activate-lost-mode-sound-alert) (**Devices** > **All devices** > select an iOS device > **Overview** > **More**). The sound continues to play until the device is removed from Lost mode, or a user disables sound on the device. Applies to iOS devices 9.3 and newer.
 
 #### Block or allow web results in searches made on an Intune device<!--1972804-->
 
@@ -5380,8 +5380,8 @@ You can target compliance policies to users in user groups. With this update, yo
 
 #### New Management name column<!-- 1333586 -->
  A new column named **Management name** is available on the devices blade. This is an auto-generated, non-editable name assigned per device, based on the following formula:
-- Default name for all devices: <username><em><devicetype></em><enrollmenttimestamp>
-- For bulk added devices: <PackageId/ProfileId><em><DeviceType></em><EnrollmentTime>
+- Default name for all devices: &#9001;username&#9002;&#9001;em&#9002;&#9001;devicetype&#9002;&#9001;/em&#9002;&#9001;enrollmenttimestamp&#9002;
+- For bulk added devices: &#9001;PackageId/ProfileId&#9002;&#9001;em&#9002;&#9001;DeviceType&#9002;&#9001;/em&#9002;&#9001;EnrollmentTime&#9002;
 
 This is an optional column in the devices blade. It isn't available by default and you can only access it by using the column selector. The device name is not affected by this new column.
 
@@ -6193,7 +6193,7 @@ The Company Portal app for Android has added instruction for end users to help t
 
 #### New 'Resolve' action available for Android devices<!-- 1583480 -->
 
-The Company Portal app for Android is introducing a 'Resolve' action on the _Update device settings_ page. Selecting this option will take the end user directly to the setting that is causing their device to be noncompliant. The Company Portal app for Android currently supports this action for the [device passcode](../user-help/set-your-pin-or-password-android.md), [USB debugging](../user-help/you-need-to-turn-off-usb-debugging-android.md), and [Unknown Sources](../user-help/you-need-to-turn-off-unknown-sources-android.md) settings.
+The Company Portal app for Android is introducing a 'Resolve' action on the _Update device settings_ page. Selecting this option will take the end user directly to the setting that is causing their device to be noncompliant. The Company Portal app for Android currently supports this action for the [device passcode](../user-help/set-your-pin-or-password-android.md), [USB debugging](../user-help/you-need-to-turn-off-usb-debugging-android.md), and [Unknown Sources](../user-help/index.yml) settings.
 
 #### Device setup progress indicator in Android Company Portal<!-- 1565657 -->
 The Company Portal app for Android shows a device setup progress indicator when a user is enrolling their device. The indicator shows new statuses, beginning with "Setting up your device...", then "Registering your device...", then "Finishing registering your device...", then "Finishing setting up your device...".

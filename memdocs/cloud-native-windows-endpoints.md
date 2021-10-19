@@ -115,9 +115,14 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   For information on configuring Enrollment Restrictions, see [Set enrollment restrictions in Microsoft Intune](./intune/enrollment/enrollment-restrictions-set.md).
 
 - **Azure AD Device MDM settings**  
-  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Autopilot to work seamlessly.
-
+  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Autopilot to work.
+  
   To check your Azure AD Device MDM settings are enabled properly, see [Quickstart - Set up automatic enrollment in Intune](./intune/enrollment/quickstart-setup-auto-enrollment.md).
+  
+- **Azure AD company branding**  
+  Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistant look-and-feel when they sign-in to Microsoft 365. This configuration is required for Autopilot to work.
+
+  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 - **Licensing**  
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune will require two key capabilities.
@@ -252,7 +257,7 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
     - Force synchronization of browser data and do not show the sync consent prompt - **Enabled**
 
 - **Microsoft OneDrive**  
-  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive.
+  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended, however as it's enabled by default, it's not included in the list below. For more information on the recommended configuration for the Onedrive sync app, see [here](/onedrive/ideal-state-configuration).
 
   - OneDrive
     - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
@@ -264,7 +269,22 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 :::image type="content" source="./media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Example of a settings catalog profile.":::
 
-### Step 9 - Create and assign some applications
+### Step 9 - Set up Microsoft Store for Business (or Education)
+
+Before you enable synchronization in the Intune console, you must configure your store account to use Intune as a management tool.
+
+1. Ensure that you sign into the [**Microsoft Store for Business (or Education)**](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
+
+2. In the [**Business Store**](https://www.microsoft.com/business-store), choose the **Manage** tab, select **Settings**, and choose the **Distribute** tab.
+
+3. Activate **Microsoft Intune**
+    - If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**.
+    - If you don't have **Microsoft Intune** activated as your mobile device management tool, click **Activate** next to **Microsoft Intune**. 
+      
+        > **[!NOTE]**
+        > Pay careful attention to the exact names used - you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
+
+### Step 10 - Create and assign some applications
 
 Your cloud native endpoint will need some applications. To get started, we recommend configuring the following applications and targeting them at the **Autopilot Cloud Native Windows Endpoints** group created previously.
 
@@ -285,6 +305,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
   > [!NOTE]
   > Microsoft Edge is included on devices that run:
   >
+  > - Windows 11
   > - Windows 10 20H2 or later.
   > - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update.
 
@@ -293,7 +314,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
 - **Company Portal**  
   Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the portal to sync their device with Intune, check compliance status, and so on.
 
-  You can set up a relationship between Intune and the Microsoft Store for Business (MSfB) and get the Company Portal app as an offline app  that can be synched to Intune and targeted at devices. For more information, see [Add and assign the Windows Company Portal app for Autopilot provisioned devices](./intune/apps/store-apps-company-portal-autopilot.md).
+  You can set up a relationship between Intune and the Microsoft Store for Business (MSfB) and get the Company Portal app as an offline app that can be synched to Intune and targeted at devices. For more information, see [Add and assign the Windows Company Portal app for Autopilot provisioned devices](./intune/apps/store-apps-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)  
   While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps from [Get the offline Company Portal app from the store](./intune/apps/store-apps-company-portal-autopilot.md#get-the-offline-company-portal-app-from-the-store) but select *Microsoft Whiteboard* as the app. Then, set the app to be *Online* and deploy it as *available* instead of as a required app. The app should later appear within Company Portal for manual installation by the user.
@@ -391,7 +412,7 @@ Use Endpoint Security in Microsoft Endpoint Manager to configure the firewall an
 
 Use Endpoint Security in Microsoft Endpoint Manager to configure encryption with BitLocker.
 
-- For more information about managing BitLocker, see [Encrypt Windows 10 devices with BitLocker in Intune](./intune/protect/encrypt-devices.md).
+- For more information about managing BitLocker, see [Encrypt Windows 10/11 devices with BitLocker in Intune](./intune/protect/encrypt-devices.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com)  by going to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
@@ -511,10 +532,15 @@ You can also set other settings for Microsoft Edge using settings catalog profil
 
 You can customize and set a standard start and taskbar layout using Intune.
 
-- For more information about start and taskbar customization, see [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
-- To create a start and taskbar layout, see [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
+- **For Windows 10**:
+  - For more information about start and taskbar customization, see [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
+  - To create a start and taskbar layout, see [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
 
-After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+  After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+
+- **For Windows 11**:
+  - To create and apply a Start menu layout, see [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11) for more information.
+  - To create and apply a Taskbar layout, see [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11) for more information.
 
 ### Settings catalog
 
@@ -526,7 +552,7 @@ The settings catalog is a single location where all configurable Windows setting
 >
 > - Many of the settings you're familiar with from group policy are already available in the settings catalog. For more information, see [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
 >
-> - Some settings available in settings catalog only work with Windows Insider builds. This limitation is typically called out in the last line of the item description text for each setting.
+> - If you intend to leverage either ADMX templates or settings catalog (recommended), be sure to update your devices with the September 2021 ‘patch Tuesday’ update ([KB5005565](https://support.microsoft.com/topic/september-14-2021-kb5005565-os-builds-19041-1237-19042-1237-and-19043-1237-292cf8ed-f97b-4cd8-9883-32b71e3e6b44)) for Windows 10 versions 2004 and later. This monthly update includes [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1) which which brings [1,400+ group policy settings to MDM](https://blogs.windows.com/windows-insider/2021/08/18/releasing-windows-10-build-19043-1198-21h1-to-release-preview-channel/#:~:text=We%20enabled%20over,new%20MDM%20policies.). Failure to apply this update will result in a 'Not Applicable' message alongside the setting in the MEM portal. These policies only work on Windows Enterprise and Education versions. Windows 11 includes the necessary updates to make these policies work.
 
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
@@ -571,7 +597,7 @@ To create a profile that uses the Device restrictions template, in the [Microsof
 
 ### Delivery Optimization
 
-Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization).
+Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows updates](/windows/deployment/update/waas-delivery-optimization).
 
 To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](./intune/configuration/delivery-optimization-settings.md) or a settings catalog profile.
 
@@ -588,7 +614,7 @@ If you have only one group of people that need local administrator access to all
 
 You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
 
-- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 10 20H2.
+- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 10 20H2 or later.
 - If you have Windows 10 20H1 (2004) use the [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace).
 - Windows versions prior to Windows 10 20H1 (2004) can't use groups, only individual accounts.
 

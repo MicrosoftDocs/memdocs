@@ -6,10 +6,10 @@ ms.date: 06/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 8c65ba1a-152e-467a-ac56-c46efe2e7f0d
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2103 of Configuration Manager current branch

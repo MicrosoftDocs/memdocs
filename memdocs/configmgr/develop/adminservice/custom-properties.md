@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Custom properties for devices

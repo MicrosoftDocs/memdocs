@@ -6,10 +6,10 @@ ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 9930a8a4-4d7f-47a4-bf6b-4c36d0ed5528
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # SQL Server performance

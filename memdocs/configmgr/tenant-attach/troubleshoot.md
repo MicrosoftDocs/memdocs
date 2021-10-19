@@ -9,6 +9,7 @@ ms.technology: configmgr-core
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshooting tenant attach and device actions

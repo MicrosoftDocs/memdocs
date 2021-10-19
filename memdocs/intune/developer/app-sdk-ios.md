@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2021
+ms.date: 09/23/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -24,7 +24,7 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: has-adal-ref
+ms.custom: OS=iOS;has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 
@@ -131,6 +131,18 @@ To enable the Intune App SDK, follow these steps:
       > An entitlements file is an XML file that is unique to your mobile application. It is used to specify special permissions and capabilities in your iOS app. If your app did not previously have an entitlements file, enabling keychain sharing (step 3) should have caused Xcode to generate one for your app. Ensure the app's bundle ID is the first entry in the list.
 
 5. Include each protocol that your app passes to `UIApplication canOpenURL` in the `LSApplicationQueriesSchemes` array of your app's Info.plist file. For each protocol listed in this array, a copy of the protocol appended with `-intunemam` also needs to be added to the array. Additionally, `http-intunemam`, `https-intunemam`, `microsoft-edge-http-intunemam`, `microsoft-edge-https-intunemam`,  `smart-ns`,  `zips`,  `lacoonsecurity`,  `wandera`,  `lookoutwork-ase`,  `skycure`,  `betteractiveshield`,  `smsec`, `mvisionmobile`, and `scmx` should be added to the array. If your app uses the mailto: protocol, `ms-outlook-intunemam` should be added to the array as well. Be sure to save your changes before proceeding to the next step.
+
+If the app runs out of space in its LSApplicationQueriesSchemes list, then it can remove the "-intunemam" schemes for apps that are known to also implement the Intune MAM SDK. When the app removes  "scheme-intunemam" from the LSApplicationQueriesSchemes list, `canOpenURL()` may return incorrect responses for those schemes. To fix this, the app should instead call `[IntuneMAMPolicy isURLAllowed:url isKnownManagedAppScheme:YES]` for that scheme. This call will return `NO` if the policy will block the URL from being opened. If it returns true, then the app can call `canOpenURL()` with an empty identity to determine if the url can be opened. For example:
+
+```objc
+BOOL __block canOpen = NO;
+if([policy isURLAllowed:urlForKnownManagedApp isKnownManagedAppScheme:YES])
+{
+    [[IntuneMAMPolicyManager instance] setCurrentThreadIdentity:"" forScope:^{
+    canOpen = [[UIApplication sharedApplication] canOpenURL:urlForKnownManagedApp];
+    }];
+}
+```
 
 6. If your app does not use FaceID already, ensure the [NSFaceIDUsageDescription Info.plist key](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) is configured with a default message. This is required so iOS can let the user know how the app intends to use FaceID. An Intune app protection policy setting allows for FaceID to be used as a method for app access when configured by the IT admin.
 
@@ -878,6 +890,10 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
 ## Notifications
 
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
+
+## Safari web extensions
+
+If your app has a Safari web extension and supports sending data between the extension and the parent application, in some scenarios, your application might need to support blocking the data. To block the data, in the parent application, call the `isAppSharingAllowed` API in `IntuneMAMPolicy.h`, and then block the web extension.
 
 ## Displaying web content within an application
 

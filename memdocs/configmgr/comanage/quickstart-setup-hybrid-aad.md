@@ -1,8 +1,8 @@
 ---
 title: Set up hybrid Azure AD
 titleSuffix: Configuration Manager
-description: If your environment currently has domain-joined Windows 10 devices, set up hybrid Azure AD before you enable co-management
-ms.date: 04/14/2021
+description: If your environment currently has domain-joined Windows devices, set up hybrid Azure AD before you enable co-management
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Set up hybrid Azure AD for co-management
 
-If you have Windows 10 devices joined to on-premises Active Directory, before you enable co-management in Configuration Manager, first join these devices to Azure Active Directory (Azure AD). This process is called hybrid Azure AD join. 
+If you have Windows 10 or later devices joined to on-premises Active Directory, before you enable co-management in Configuration Manager, first join these devices to Azure Active Directory (Azure AD). This process is called hybrid Azure AD join. 
 
 In the following video, senior program manager Sandeep Deo and product marketing manager Adam Harbour discuss and demo configuring devices in Azure AD:
 
@@ -45,7 +45,7 @@ The two preceding methods provide the best experience. For more detailed informa
 - [Manually configure hybrid Azure AD joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 - [ADFS pass-through authentication for hybrid Azure AD](/windows-server/identity/ad-fs/ad-fs-overview), which includes Azure AD discovery  
 
-For troubleshooting guidance, see the [Windows 10 hybrid Azure AD join troubleshooting guide](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+For troubleshooting guidance, see the [Hybrid Azure AD join troubleshooting guide](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 
 

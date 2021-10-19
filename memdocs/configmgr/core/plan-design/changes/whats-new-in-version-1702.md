@@ -1,18 +1,16 @@
 ---
-title: "New version 1702"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1702 of Configuration Manager."
+title: New version 1702
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1702 of Configuration Manager.
 ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1702 of Configuration Manager
 
@@ -65,9 +63,9 @@ You can find the **Feedback** option:
   ![Ribbon](./media/feedback-home.png)
 
 - When you right-click on any object in the console.   
-   ![Righ-click option](./media/feedback-option.png)   
+   ![Right-click option](./media/feedback-option.png)   
 
-  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://configurationmanager.uservoice.com/forums/300492-ideas).
+  Choosing **Feedback** opens your browser to the Configuration Manager feedback website.
 
 
 ###  Changes for Updates and Servicing

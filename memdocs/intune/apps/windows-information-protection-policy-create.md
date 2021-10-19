@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2021
+ms.date: 10/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 
@@ -25,7 +25,7 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: OS=Windows;intune-azure
 ms.collection: M365-identity-device-management
 ---
 

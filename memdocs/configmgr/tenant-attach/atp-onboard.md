@@ -1,15 +1,15 @@
 ---
-title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview) 
+title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview)
 titleSuffix: Configuration Manager
 description: "Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
-ms.date: 08/27/2021
+ms.date: 09/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 50f8e206-a2af-469a-9f1b-0f7a87166f48
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)
@@ -55,6 +55,8 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 1. On the **Review + create** page, when you're done, choose **Create**.
 
    The new profile is displayed in the list when you select the policy type for the profile you created.
+
+[!INCLUDE [Device status for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-device-status.md)]
 
 ## Next steps
 

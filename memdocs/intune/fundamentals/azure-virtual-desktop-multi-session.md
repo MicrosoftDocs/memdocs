@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 09/29/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -49,7 +49,7 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
 
 - Running Windows 10 multi-session, version 1903 or later.
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
-- Running a Azure Virtual Desktop agent version of 2944.1400 or later.
+- Running a Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Microsoft Endpoint Manager using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
@@ -153,8 +153,18 @@ Scripts configured to run in the system context are supported on Windows 10 Ente
 
 ## Windows Update for Business
 
-Windows Update for Business policies are not currently supported for Windows 10 Enterprise multi-session.  
-We recommend that you swap the OS image in Azure if you need the latest security updates. If you use the Azure Gallery image, you always get the latest security updates and can make sure all VMs are up-to-date and secured.
+You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows 10 Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
+
+The following settings are available in the catalog, with the links opening the Windows CSP documentation:
+
+- [Active Hours End](/windows/client-management/mdm/policy-csp-Update#update-activehoursend)
+- [Active Hours Max Range](/windows/client-management/mdm/policy-csp-Update?#update-activehoursmaxrange)
+- [Active Hours Start](/windows/client-management/mdm/policy-csp-Update#update-activehoursstart)
+- [Block "Pause Updates" ability](/windows/client-management/mdm/policy-csp-Update#update-setdisablepauseuxaccess)
+- [Configure Deadline Grace Period](/windows/client-management/mdm/policy-csp-Update#update-configuredeadlinegraceperiod)
+- [Defer Quality Updates Period (Days)](/windows/client-management/mdm/policy-csp-Update#update-deferqualityupdatesperiodindays)
+- [Pause Quality Updates Start Time](/windows/client-management/mdm/policy-csp-Update#update-pausequalityupdatesstarttime)
+- [Quality Update Deadline Period (Days)](/windows/client-management/mdm/policy-csp-Update?#update-configuredeadlineforqualityupdates)
 
 ## Remote actions
 

@@ -9,6 +9,7 @@ ms.topic: overview
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Add site system roles for Configuration Manager

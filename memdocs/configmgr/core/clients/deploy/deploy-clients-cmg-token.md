@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Token-based authentication for cloud management gateway
@@ -85,12 +86,6 @@ On the server, review the following logs:
   - MP_RegistrationManager.log
   - ClientAuth.log
 
-### Known issues
-
-_Applies to version 2002_
-
-You can't create a bulk registration token on a site that has a site server in passive mode.<!-- 6399087 -->
-
 ### Bulk registration token tool usage
 
 The `BulkRegistrationTokenTool.exe` tool is in the `\bin\X64` folder of the Configuration Manager installation directory on the site server. Sign in to the site server, and run it as an administrator. It supports the following command-line parameters:
@@ -157,4 +152,4 @@ You can't renew a bulk registration token. Once a bulk registration token expire
 
 - [Overview of cloud management gateway](../manage/cmg/overview.md)
 
-- [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md)
+- [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md)

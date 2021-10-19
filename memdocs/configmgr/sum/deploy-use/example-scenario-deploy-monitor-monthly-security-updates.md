@@ -6,12 +6,10 @@ ms.date: 10/21/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Example scenario to deploy and monitor monthly software updates

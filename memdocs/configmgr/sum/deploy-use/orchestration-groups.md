@@ -1,7 +1,7 @@
 ---
 title: Orchestration Groups
 titleSuffix: Configuration Manager
-description: Create orchestration groups and deploy updates to them. 
+description: Create orchestration groups and deploy updates to them.
 ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Orchestration groups in Configuration Manager

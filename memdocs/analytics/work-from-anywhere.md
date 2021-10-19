@@ -2,14 +2,14 @@
 title: Work from anywhere (preview) report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: The Work from anywhere (preview) report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 09/01/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Work from anywhere (preview) report
@@ -42,15 +42,20 @@ Configuration Manager and Intune provide integrated cloud-powered management too
 
 The **Cloud management** metric measures the percent of PCs that have attached to the Microsoft 365 cloud to unlock additional capabilities. There are multiple recommended actions for co-managed devices and their workloads, CMG, and tenant attached devices. See how [Microsoft is enabling modern management for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
 
+Benefits of each cloud management type:<!--IN7207657-->
 
-Benefits of each cloud management types:
-
-|[**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md)|[**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md)|[**Co-management**](../configmgr/comanage/overview.md)|[**Intune**](../intune/fundamentals/what-is-intune.md)|
-|---|---|---|---|
-|No additional on-premises infrastructure investment required| View and take action on all PCs and mobile devices from a single console| Enhance Zero Trust with conditional access </br></br> Simplified PC and driver updating| All the benefits of **cloud management gateway**, **tenant attach**, and **co-management**.|
-|Doesn't expose on-premises infrastructure to the internet| Gain insights into PC performance with [Endpoint analytics](overview.md)|Makes device provisioning easier with [Windows Autopilot](../configmgr/comanage/quickstart-autopilot.md)| Reduce in infrastructure with always up-to-date cloud-only infrastructure|
-|Cloud virtual machines running the service are fully managed by Azure and require no maintenance| Protect PCs and servers with Microsoft Defender ATP| Gain additional remote actions with Intune </br> </br> Split PC management workloads between cloud and on-premises| |
-| Easily set up and configured from the Configuration Manager console | Modernize your directory approach with Azure Active Directory| Consistent end-user experience for managing enrolled devices and installed apps| |
+|Benefits|[**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md)|[**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md)|[**Co-management**](../configmgr/comanage/overview.md)|[**Intune**](../intune/fundamentals/what-is-intune.md)|
+|---|---|---|---|---|
+| Manage your clients anywhere | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| View and take action on all Windows PCs from Microsoft Endpoint Manager admin center| |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| Modernize your directory approach with Azure AD | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+|Enhance Zero Trust with conditional access| | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| Make device provisioning easier by enabling Windows Autopilot |  | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| Gain additional remote access with Intune | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| Split PC management workloads between cloud and on-premises | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| |
+| Simplify PC and driver updating with the cloud | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| Consistent end-user experience for managing enrolled devices and installed apps | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| Reduce complexity with always up-to-date cloud only infrastructure | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | | | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 
 ## <a name="bkmk_identity"></a> Cloud identity
 
@@ -67,6 +72,18 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 > You can export a device list as a `.csv` file from **Cloud provisioning** and use it to [Manually register devices with Windows Autopilot](../autopilot/add-devices.md#add-devices).
 
 :::image type="content" source="media/8668496-cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list" lightbox="media/8668496-cloud-provisioning.png":::
+
+## <a name="bkmk_windows11"></a> Windows 11 hardware readiness
+<!--IN9740163-->
+The **Windows** metric provides Windows 11 hardware readiness insights for devices that are enrolled via Intune, co-management, or Configuration Manager version 2107 or newer with tenant attach enabled. To determine how many of your enrolled devices meet the [minimum system requirements](/windows/whats-new/windows-11-requirements#hardware-requirements) for Windows 11, select **Windows** to open the flyout on the **Overview** page in **Work from anywhere**. A chart is displayed showing which specific hardware requirements are the top blockers in your organization.
+
+:::image type="content" source="media/windows-hardware.png" alt-text="Screenshot of the Windows flyout that displays a chart showing top hardware blockers in your organization." lightbox="media/windows-hardware.png":::
+
+In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness is displayed. The **Windows 11 readiness status** column indicates whether a device is **Capable** or **Not capable** of upgrading to Windows 11 based on the minimum system requirements. The column also lists if a device is already **Upgraded** or if the status is **Unknown** for a device. The **Windows 11 readiness reason** column outlines the specific hardware requirements that aren't met for devices that have a readiness status of **Not capable**.
+
+> [!NOTE]
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune/remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment. 
+> - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
 ## <a name="bkmk_np"></a> No commercial median
 

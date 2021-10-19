@@ -7,7 +7,8 @@ description: Learn how to create device groups for Windows Autopilot.
 keywords:
 author: greg-lindsay
 ms.author: greglin
-manager: laurawi
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 03/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -21,7 +22,6 @@ ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,7 +36,8 @@ ms.collection:
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
@@ -82,7 +83,9 @@ You can assign a licensed Intune user to a specific Autopilot device. This assig
 - Lets you set a custom greeting name.
 - Doesn't pre-fill or modify Windows sign-in.
 
-Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
+Prerequisites: 
+- Azure Active Directory Company Branding has been configured.
+- Windows 10, version 1809 or later.
 
 > [!NOTE]
 > Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.

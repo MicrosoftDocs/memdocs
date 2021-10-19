@@ -12,7 +12,7 @@ ms.date: 08/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 
@@ -25,7 +25,7 @@ ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, seoapril2019
+ms.custom: OS=Windows;intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ---
 

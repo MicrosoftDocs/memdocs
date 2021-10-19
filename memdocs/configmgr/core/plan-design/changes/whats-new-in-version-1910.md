@@ -6,11 +6,11 @@ ms.date: 01/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
@@ -196,7 +196,7 @@ You can use the task sequence to deploy a Windows 10 in-place upgrade via the cl
 
 Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
 
-For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg).
 
 ### Improvements to OS deployment
 

@@ -2,13 +2,14 @@
 title: Protect computers from malware
 titleSuffix: Configuration Manager
 description: Learn how to implement Endpoint Protection in Configuration Manager to protect computers from malware attacks.
-ms.date: 05/30/2019
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: doubeby
+ms.localizationpriority: medium
 ---
 
 # Example scenario: Use Endpoint Protection to protect computers from malware
@@ -65,7 +66,7 @@ This implementation has the following requirements:
 |The admins create a custom antimalware policy named **Woodgrove Bank Server Policy**. They add only the settings for **Scheduled scans** and make the following changes:<br /><br /> **Scan type**:  **Full**<br /><br /> **Scan day**:  **Saturday**<br /><br /> **Scan time**: **1:00 AM**<br /><br /> **Run a daily quick scan on client computers**:  **No**.|See [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).|  
 |The admins deploy the **Woodgrove Bank Server Policy** custom antimalware policy to the **Woodgrove Bank Servers** collection.|See "To deploy an antimalware policy to client computers" [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md) article.|  
 |The admins create a new set of custom client device settings for Endpoint Protection and names these **Woodgrove Bank Endpoint Protection Settings**.<br /><br /> **Note:** If you don't want to install and enable Endpoint Protection on all clients in your hierarchy, make sure that the options **Manage Endpoint Protection client on client computers** and **Install Endpoint Protection client on client computers** are both configured as **No** in the default client settings.|For more information, see [Configure Custom Client Settings for Endpoint Protection](endpoint-protection-configure-client.md).|  
-|They configure the following settings for Endpoint Protection:<br /><br /> **Manage Endpoint Protection client on client computers**:  **Yes**<br /><br /> This setting and value ensures that any existing Endpoint Protection client that is installed becomes managed by Configuration Manager.<br /><br /> **Install Endpoint Protection client on client computers**:  **Yes**.</br></br>**Note** Starting in Configuration Manager 1802, Windows 10 devices don't need to have the Endpoint Protection agent installed. If it's already installed on Windows 10 devices, Configuration Manager won't remove it. Administrators can remove the Endpoint Protection agent on Windows 10 devices that are running at least the 1802 client version.|For more information, see [Configure Custom Client Settings for Endpoint Protection](endpoint-protection-configure-client.md).|  
+|They configure the following settings for Endpoint Protection:<br /><br /> **Manage Endpoint Protection client on client computers**:  **Yes**<br /><br /> This setting and value ensures that any existing Endpoint Protection client that is installed becomes managed by Configuration Manager.<br /><br /> **Install Endpoint Protection client on client computers**:  **Yes**.|  
 |The admins deploy the **Woodgrove Bank Endpoint Protection Settings** client settings to the **All Computers Protected by Endpoint Protection** collection.|See "Configure Custom Client Settings for Endpoint Protection" in [Configuring Endpoint Protection in Configuration Manager](endpoint-antimalware-policies.md).|  
 |The admins use the Create Windows Firewall Policy Wizard to create a policy by configuring the following settings for the domain profile:<br /><br /> 1) **Enable Windows Firewall**: **Yes**<br /><br /> 2)<br />                    **Notify the user when Windows Firewall blocks a new program**: **Yes**|See [How to create and deploy Windows Firewall policies for Endpoint Protection](../../protect/deploy-use/create-windows-firewall-policies.md)|  
 |The admins deploy the new firewall policy to the collection **All Computers Protected by Endpoint Protection** that they created earlier.|See "To deploy a Windows Firewall policy" in the [How to create and deploy Windows Firewall policies for Endpoint Protection](create-windows-firewall-policies.md)|  
