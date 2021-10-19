@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,6 +52,7 @@ To use device compliance policies, be sure you:
 - Use a supported platform:
 
   - Android device administrator
+  - Android AOSP (preview)
   - Android Enterprise
   - iOS
   - macOS
@@ -70,6 +71,7 @@ To use device compliance policies, be sure you:
 
 3. Select a **Platform** for this policy from the following options:
    - *Android device administrator*
+   - *Android (AOSP)* (preview)  
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
@@ -90,6 +92,7 @@ To use device compliance policies, be sure you:
   
 5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy.  The following articles describe the settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
+   - [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
