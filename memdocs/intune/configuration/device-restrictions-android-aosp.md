@@ -57,7 +57,9 @@ To access these settings, create an [Android (AOSP) device restrictions profile]
 
     - **Minimum password length**: Enter the minimum number of digits or characters a password must have, from 4 to 16.  
 
-- **Minimum password length**: Enter the minimum number of characters required, from 4 to 16. For example, enter `6` to require at least six characters in the password length.  
+- **Number of sign-in failures before wiping device**: Enter the number of sign-in attempts allowed, from 4 to 11, before the device is wiped. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.  
+
+- **Maximum minutes of inactivity until screen locks**: Enter the maximum length of time, from 1 minute to 1 hour, that devices can be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of inactivity. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.  
 
 > [!NOTE]  
 >- RealWear devices currently only support device default, numeric, and numeric complex password types.  
