@@ -2,7 +2,7 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 10/05/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -48,6 +48,9 @@ Site system servers:
 - SMS Provider
 - Software update point
 - State migration point
+
+> [!NOTE]
+> If you're installing a new site, you can use the latest baseline version 2103 on a Windows Server 2022 site server, and then immediately update the site to version 2107.<!--MEMDocs#1971-->
 
 ## Windows Server 2019
 
