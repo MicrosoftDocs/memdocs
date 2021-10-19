@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Set up Intune for Android (AOSP) corporate-owned userless devices    
+# Set up Intune enrollment for Android (AOSP) corporate-owned userless devices    
 
 *This feature is in public preview.*  
 
