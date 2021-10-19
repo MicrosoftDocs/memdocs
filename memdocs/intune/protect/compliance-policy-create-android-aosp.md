@@ -61,7 +61,7 @@ To access these settings, [create an Android (AOSP) compliance policy](create-co
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Block** - Mark rooted devices as not compliant.  
 
-## Device Properties
+## Device properties  
 
 - **Minimum OS version**    
   When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.  
@@ -76,37 +76,37 @@ To access these settings, [create an Android (AOSP) compliance policy](create-co
 - **Minimum security patch level**  
   Enter the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
 
-  By default, no date is configured.  
+  By default, no patch level is configured.  
 
 ## System security  
- If you don't configure password requirements, the use of passwords is optional and left up to the users to configure on their devices.   
+ If you don't configure password requirements, the use of a device password is optional and left up to the users to configure.   
 
  - **Require a password to unlock mobile devices**  
     Require users to have a password-protected lock screen on their device. Your options:   
 
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Yes** - Users must enter a password on their device.  
+    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+    - **Yes** - Users must enter a password to unlock their devices.  
   
-    If you require a password, also configure:   
+  If you require a password, also configure:   
 
-    - **Required password type**  
+  - **Required password type**  
       Require users to use a certain type of password. Your options:   
 
+    - **Device default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.  
 
-      - **Device default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.  
+    - **Numeric** - Password must only be numbers, such as `123456789`.  Also enter:  
 
-      - **Numeric**(*default) - Password must only be numbers, such as `123456789`.  Also enter:  
+      - Minimum password length: The minimum number of digits required, from 4 to 16.  
 
-        - Minimum password length: The minimum number of digits required, from 4 to 16.  
+    - **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed. Also enter:  
 
-      - **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed. Also enter:  
+      - Minimum password length: The minimum number of digits required, from 4 to 16.  
+ 
 
-        - Minimum password length: The minimum number of digits required, from 4 to 16.  
-
-
-       > [!NOTE]  
-       >- There is a known issue that prevents **Password required, no restriction** from working on Android (AOSP) devices.  
-       >- The following password types are listed as options but are not supported for Android (AOSP) devices: Alphabetic, alphanumeric, and alphanumeric with symbols.  
+    > [!NOTE]  
+    >- There is a known issue that prevents **Password required, no restriction** from working on Android (AOSP) devices.  
+  
+    >- The following password types are listed as options but are not supported for Android (AOSP) devices: alphabetic, alphanumeric, and alphanumeric with symbols.  
 
 
   - **Maximum minutes of inactivity before password is required**  
@@ -115,9 +115,10 @@ To access these settings, [create an Android (AOSP) compliance policy](create-co
  ## Encryption  
 
   - **Encryption of data storage on a device**  
-    Enforces a level of encryption on the device. Your options are:  
+Your options are:  
  
-    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.  
+
     - **Require** - Encrypt data storage on your devices. Devices are encrypted when you choose the **Require a password to unlock mobile devices** setting.  
 
 ## Device compliance reporting  

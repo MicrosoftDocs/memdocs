@@ -41,7 +41,7 @@ This feature applies to the following Android (AOSP) device types:
 
 ## Before you begin
 
-Create an [Android (AOSP) device restrictions profile](device-restrictions-configure.md). For **Platform**, select **Android (AOSP)**.    
+To access these settings, create an [Android (AOSP) device restrictions profile](device-restrictions-configure.md). When prompted to select a **Platform**, choose **Android (AOSP)**.    
 
 ## Device password  
 
