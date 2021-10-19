@@ -2,14 +2,14 @@
 title: Changes to CMPivot
 titleSuffix: Configuration Manager
 description: Learn about changes made to CMPivot between Configuration Manager versions.
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Changes to CMPivot
@@ -17,6 +17,41 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 Use the following information to learn about changes made to [CMPivot](cmpivot.md) between Configuration Manager versions:
+
+## <a name="bkmk_2107"></a> CMPivot changes for version 2107
+
+### Simplified CMPivot permissions requirements
+<!--7898885-->
+We've simplified the CMPivot permissions requirements. The new permissions are applicable for CMPivot standalone and CMPivot in the on-premises console. The following changes have been made:
+
+- CMPivot no longer requires **SMS Scripts** read permission
+
+  - The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires this permission if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.
+
+- The **default scope** permission isn't required.
+
+### General improvements to CMPivot
+
+<!--9966861-->
+We've made the following improvements to CMPivot:
+
+- Added [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) and [minif](/azure/data-explorer/kusto/query/minif-aggfunction) aggregators that can be used with the [summarize operator](cmpivot-overview.md#table-operators)
+- Improvements to query autocomplete suggestions in the query editor
+- Added a Key value to the [Registry entity](cmpivot-overview.md#bkmk_onprem_only)
+- Added a new RegistryKey entity that returns all registry keys matching the given expression
+
+To review the difference between the Registry and RegistryKey entities, you can use the following samples:
+
+```kusto
+// Change the path to match your desired registry hive query
+
+Registry('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+RegistryKey('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+
+RegistryKey('hklm:\SOFTWARE\Microsoft\SMS\*')
+Registry('hklm:\SOFTWARE\Microsoft\SMS\*')
+```
+
 
 ## <a name="bkmk_2103"></a> CMPivot changes for version 2103
 <!--7137169, 9442715, 9310040, 9391017-->

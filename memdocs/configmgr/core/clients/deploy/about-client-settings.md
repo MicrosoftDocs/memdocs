@@ -2,14 +2,14 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # About client settings in Configuration Manager
@@ -134,9 +134,9 @@ If you set this option to **No**, or any of the previous requirements aren't met
 
 <!--4737447-->
 
-By default, this setting is disabled. Even if you enable user policies, the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Azure Virtual Desktop](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
+By default, this setting is disabled. Even if you enable user policies, the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows Enterprise multi-session in [Azure Virtual Desktop](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
-The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
+The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to a later client version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
 If you require user policy in this scenario, and accept any potential performance impact, enable this client setting.
 
@@ -145,11 +145,11 @@ If you require user policy in this scenario, and accept any potential performanc
 
 ### Allow access to cloud distribution point
 
-Set this option to **Yes** for clients to obtain content from a cloud distribution point. This setting doesn't require the device to be internet-based.
+Set this option to **Yes** for clients to obtain content from a content-enabled CMG. This setting doesn't require the device to be internet-based.
 
-### Automatically register new Windows 10 domain joined devices with Azure Active Directory
+### Automatically register new Windows 10 or later domain joined devices with Azure Active Directory
 
-When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+When you configure Azure Active Directory (Azure AD) to support hybrid join, Configuration Manager configures Windows 10 or later devices for this functionality. For more information, see [How to configure hybrid Azure AD joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### Enable clients to use a cloud management gateway
 
@@ -205,7 +205,7 @@ The previous version of Software Center and the application catalog are no longe
 
 ### Enable communication with Health Attestation Service
 
-Set this option to **Yes** for Windows 10 devices to use [Health attestation](../../servers/manage/health-attestation.md). When you enable this setting, the following setting is also available for configuration.
+Set this option to **Yes** for Windows 10 or later devices to use [Health attestation](../../servers/manage/health-attestation.md). When you enable this setting, the following setting is also available for configuration.
 
 ### Use on-premises Health Attestation Service
 
@@ -295,11 +295,11 @@ For more information about these settings, see [Device restart notifications](de
 ## Delivery Optimization
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
 
 > [!NOTE]
 >
-> - Delivery Optimization is only available on Windows 10 clients.
+> - Delivery Optimization is only available on Windows 10 or later clients.
 > - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
 
@@ -324,11 +324,11 @@ Choose **Yes** to allow clients to download content from an on-premises distribu
 
 Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
 
-Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Windows 10 devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
+Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Windows 10 or later devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
 
 ### Install Endpoint Protection client on client computers
 
-Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Windows 10 clients don't need to have the Endpoint Protection agent installed.  
+Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Windows 10 or later clients don't need to have the Endpoint Protection agent installed.  
 
 > [!NOTE]  
 > If the Endpoint Protection client is already installed, choosing **No** doesn't uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
@@ -364,11 +364,11 @@ Choose **Yes** if you want Configuration Manager to install only the initial def
 
 ### Polling interval for mobile device legacy clients
 
-Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, or macOS.
+Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include macOS.
 
 ### Polling interval for modern devices (minutes)
 
-Enter the number of minutes that modern devices poll for policy. This setting is for Windows 10 devices that are managed through on-premises mobile device management.
+Enter the number of minutes that modern devices poll for policy. This setting is for Windows devices that are managed through on-premises mobile device management (MDM).
 
 ### Allow users to enroll mobile devices and Mac computers
 
@@ -623,9 +623,6 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 - **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
 
-    > [!NOTE]
-    > The window displays a preview of the combination of these first four settings.
-
 - **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 
 - **Hide installed applications in Software Center**: When you enable this option, applications that are already installed no longer show in the **Applications** tab. This option is enabled by default. Installed applications are still available for review under the **Installation Status** tab.<!--1357592-->
@@ -670,7 +667,7 @@ Enable this option for Software Center to use the Microsoft Edge WebView2 browse
 If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device.
 
 > [!NOTE]
-> If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control.
+> If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
 
 If you don't enable this option, Software Center uses the Windows built-in Internet Explorer browser control.
 
@@ -873,11 +870,11 @@ This setting configures the local port for the HTTP listener to download delta c
 
 If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is 5 minutes. The following options are available:
 
-- **Yes**: For delta content, the client doesn't wait to reach the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback). Clients immediately fall back to a neighbor or the site default content distribution points when both of the following conditions are met:
+- **Yes**: For delta content, the client doesn't wait to reach the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#configure-fallback-behavior). Clients immediately fall back to a neighbor or the site default content distribution points when both of the following conditions are met:
       - Delta content is unavailable from distribution points in the current boundary group.
       - The software update deployment allows fallback.
 
-- **No** (default): The client honors the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback) when it's allowed on the software update deployment. Delta download content may fail with a timeout even if the update content is available on a neighbor or the site default distribution point group.
+- **No** (default): The client honors the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#configure-fallback-behavior) when it's allowed on the software update deployment. Delta download content may fail with a timeout even if the update content is available on a neighbor or the site default distribution point group.
 
 > [!NOTE]
 > This setting is for delta content only.
@@ -908,7 +905,7 @@ By default, the client only installs software updates during the second maintena
 ### <a name="bkmk_thread-priority"></a> Specify thread priority for feature updates
 
 <!--3734525-->
-You can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). This setting has no impact on Windows 10 in-place upgrade task sequences.
+You can adjust the priority with which supported versions of Windows 10 or later clients install a feature update through [Windows servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). This setting has no impact on Windows in-place upgrade task sequences.
 
 This client setting provides the following options:
 
@@ -928,12 +925,12 @@ When you set this option to **Yes**, it sets the policy for **Allow signed updat
 
 ### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
 <!--4062619-->
-Use this setting to configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+Use this setting to configure [Dynamic Update for Windows](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
 
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
-  - Dynamic Update is enabled by default on all supported versions of Windows 10.
-    - For Windows 10 versions 1803 and prior, Dynamic Update checks the device's WSUS server for approved dynamic updates. In Configuration Manager environments, dynamic updates are never directly approved in the WSUS server so these devices don't install them.
-    - Starting with Windows 10 version 1809, Dynamic Update uses the device's internet connection to get dynamic updates from Microsoft Update. These dynamic updates aren't published for WSUS use.
+  - Dynamic Update is enabled by default on all supported versions of Windows 10 or later.
+    - For Windows 10, version 1803 and earlier, Dynamic Update checks the device's WSUS server for approved dynamic updates. In Configuration Manager environments, dynamic updates are never directly approved in the WSUS server so these devices don't install them.
+    - Starting with Windows 10, version 1809, Dynamic Update uses the device's internet connection to get dynamic updates from Microsoft Update. These dynamic updates aren't published for WSUS use.
 - **Yes** - Enables Dynamic Update.
 - **No** - Disables Dynamic Update.
 

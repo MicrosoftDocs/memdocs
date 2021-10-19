@@ -11,7 +11,9 @@ items:
   items:
   - name: Plan for security
     href: ../core/plan-design/security/plan-for-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
-  - name: Plan for certificates
+  - name: Certificates overview
+    href: ../core/plan-design/security/certificates-overview.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+  - name: Plan for PKI certificates
     href: ../core/plan-design/security/plan-for-certificates.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
 - name: How-to guides
   items:

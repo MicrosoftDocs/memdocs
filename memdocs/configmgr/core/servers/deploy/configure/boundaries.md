@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Define network locations as boundaries for Configuration Manager
@@ -126,7 +126,7 @@ You can configure a VPN boundary in several ways:
 1. To view the site systems that are associated with this boundary, switch to the **Site Systems** tab. You can't change this configuration from the properties of a boundary.
 
     > [!TIP]
-    > For a server to be listed as a site system for a boundary, associate it as a site system server for at least one boundary group that includes this boundary. Make this configuration on the **References** tab of a boundary group. For more information, see [Configure site assignment and select site system servers](boundary-group-procedures.md#bkmk_references).
+    > For a server to be listed as a site system for a boundary, associate it as a site system server for at least one boundary group that includes this boundary. Make this configuration on the **References** tab of a boundary group. For more information, see [Configure site assignment and select site system servers](boundary-group-procedures.md#configure-site-assignment-and-select-site-system-servers).
 
 1. To modify the boundary group membership for this boundary, select the **Boundary Groups** tab:
 

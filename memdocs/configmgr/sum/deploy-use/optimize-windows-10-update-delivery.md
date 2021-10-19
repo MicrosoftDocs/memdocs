@@ -1,15 +1,15 @@
 ---
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
-description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
+description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.
 ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Optimize Windows 10 update delivery with Configuration Manager
@@ -76,7 +76,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 #### Configuration recommendations for clients downloading delta content
 <!--7913814-->
-When the **Allow clients to download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled on clients for software update content, there are limitations in the [distribution point fallback](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback) behavior. To ensure these clients can properly download software update content, we recommend the following configurations:
+When the **Allow clients to download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled on clients for software update content, there are limitations in the [distribution point fallback](../../core/servers/deploy/configure/boundary-group-procedures.md#configure-a-fallback-site-for-automatic-site-assignment) behavior. To ensure these clients can properly download software update content, we recommend the following configurations:
 
 - Ensure that clients are in a boundary group and that there's a reliable distribution point that has the needed content associated with that boundary group.
 - Deploy software updates with fallback to Microsoft Update enabled for clients that are able to download directly from the internet.

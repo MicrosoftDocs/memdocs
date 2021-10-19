@@ -6,10 +6,10 @@ ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: c2a71fca-8744-4d72-abf9-9d8c5d2afb00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install applications for a device
@@ -20,7 +20,7 @@ Starting in version 1906, from the Configuration Manager console you can install
 
 ## Prerequisites
 
-- Enable the [optional feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../../core/servers/manage/optional-features.md) **Approve application requests for users per device**.  
 
 - [Deploy the application](deploy-applications.md) as *Available* to a device collection.  
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/21/2021
+ms.date: 10/11/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,7 +61,8 @@ This report shows every app or policy with a filter that's been applied. For eac
     - The evaluation results: **Match** or **No match**
     - If the filter was using Include or Exclude mode
     - The filter name, description, and rules
-    - The properties that were evaluated, such as `deviceName`.
+    - The properties that were evaluated, such as `deviceName`.  
+    - The available apps that can be assigned to the device.  
 
     The **Filter information** section is populated with the currently configured filter name, description, and rules. The information isn't populated from log data. The filter name, syntax, and any other metadata may have changed since the last evaluation time. When troubleshooting, be sure to look at the **Evaluation time** and **Last modified** timestamps.
 
@@ -87,6 +88,9 @@ This report shows filter information for each device that was evaluated in an ap
 In the following example, you can see this information for the **Microsoft Word** store app:
 
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="See the date, time, evaluation results, and other app filter properties in Microsoft Endpoint Manager and Microsoft Intune.":::
+
+> [!IMPORTANT]
+> In the **Device install status** report, apps deployed as "Available" aren't shown. To troubleshoot if a user/device is filtered in or out of an Available assignment, use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must go to the list of apps in the Company portal app or website.
 
 ## Include vs. Exclude
 

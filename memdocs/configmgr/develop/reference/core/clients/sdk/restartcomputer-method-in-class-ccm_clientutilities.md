@@ -9,6 +9,7 @@ ms.assetid: 76b52467-5939-44be-b4d9-da88a055ad03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # RestartComputer Method in Class CCM_ClientUtilities

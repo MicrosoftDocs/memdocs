@@ -1,18 +1,16 @@
 ---
-title: "New version 1610"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1610 of Configuration Manager."
+title: New version 1610
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1610 of Configuration Manager.
 ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1610 of Configuration Manager
 
@@ -33,7 +31,7 @@ The following sections provide details about changes and new capabilities introd
 
 
 ## In-console monitoring of update installation status  
-Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_install).
+Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](../../servers/manage/install-in-console-updates.md).
 
 
 ## Exclude clients from automatic upgrade
@@ -57,7 +55,7 @@ After you deploy client settings that enable Peer Cache to a collection, members
 You can also use the new **Client Data Sources** dashboard to understand the use of Peer Cache content sources in your environment.
 
 > [!TIP]  
-> With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](../../servers/manage/install-in-console-updates.md#bkmk_prerelease).
+> With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](../../servers/manage/pre-release-features.md).
 
 For more information, see [Peer Cache for Configuration Manager clients](../hierarchy/client-peer-cache.md), and [Client Data Sources dashboard](../../servers/deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 

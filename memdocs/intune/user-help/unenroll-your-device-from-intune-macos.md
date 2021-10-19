@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 08/25/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -46,13 +46,26 @@ After you remove a device:
 
 This article describes how to remove a device from within the Company Portal app, and then how to uninstall the app.  
 
-## Remove a device 
-Follow these steps to remove a device you no longer need for work or school.    
+
+## Remove a device   
+Follow these steps to remove a device from Company Portal that you no longer need for work or school. For these steps to work, you must still have access to your work or school account.  If you no longer have access to your account, see [Remove management profile](unenroll-your-device-from-intune-macos.md#remove-management-profile) (in this article) to unenroll your device.    
 
 1. Sign in to Company Portal for macOS.
 2. Go to **Devices** and select the device you want to unenroll.
 3. From the app toolbar, select the **Devices** menu > **Remove**. 
 4. When asked to confirm the removal, select **Remove**. The device is immediately removed from Intune.  
+
+After you complete these steps, you can uninstall Company Portal from your device.  
+
+## Remove management profile  
+To remove a device after you've left your workplace or school:  
+
+1. Select the Apple menu > **System Preferences** > **Profiles**.
+2. From the list of profiles, select **Management Profile**.
+3. Go down to the bottom of the list and you'll see a **plus (+)** and **minus (-)** sign. Select the **minus (-)** sign.
+4. Follow the onscreen prompts to finish removing the management profile.  
+
+After you complete these steps, you can uninstall Company Portal from your device.  
 
 ## Uninstall Company Portal app  
 To uninstall the Company Portal app from a macOS device:
@@ -67,4 +80,4 @@ To uninstall the Company Portal app from a macOS device:
 
 If you change your mind and want your access back later, install the Company Portal app and go through device setup again. For detailed instructions, see [Enroll your Mac with Intune Company Portal](enroll-your-device-in-intune-macos-cp.md).  
 
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

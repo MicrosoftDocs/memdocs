@@ -1,18 +1,16 @@
 ---
-title: "Capabilities in Technical Preview 1704"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1704."
+title: Capabilities in Technical Preview 1704
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1704.
 ms.date: 04/21/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1704 for Configuration Manager
 
@@ -61,8 +59,8 @@ When you run **Update Distribution Points** on a selected boot image, you can no
 3. On the **General** page of the wizard, select **Reload boot image using the current version of Windows PE from the installed Windows ADK**.
 
 ## Improvements to operating system deployment
-We have made the following improvements to operating system deployment, which were the result of your user voice feedback.
+We have made the following improvements to operating system deployment, which were the result of your feedback.
 
-- [New **OS Version** column for operating system images](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): We have added a new column named **OS Version** to display the version of the operating system for the image when you view information in the **Operating System Images** and **Operating System Upgrade Packages** nodes. Only the version of the first index in the .WIM is displayed. Go to the **Details** tab for the image to review operating system versions for other indexes.
+- New **OS Version** column for operating system images: We have added a new column named **OS Version** to display the version of the operating system for the image when you view information in the **Operating System Images** and **Operating System Upgrade Packages** nodes. Only the version of the first index in the .WIM is displayed. Go to the **Details** tab for the image to review operating system versions for other indexes.
 
-- [More efficient logging in Smsts.log](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless): Beginning in this version, we are no longer writing entries to the smsts.log file for CCM_CIVersionInfo.PolicyID information. Prior to this version, there could be a lot of entries with this information, which made it hard to find more relevant information in the log file.
+- More efficient logging in Smsts.log: Beginning in this version, we are no longer writing entries to the smsts.log file for CCM_CIVersionInfo.PolicyID information. Prior to this version, there could be a lot of entries with this information, which made it hard to find more relevant information in the log file.

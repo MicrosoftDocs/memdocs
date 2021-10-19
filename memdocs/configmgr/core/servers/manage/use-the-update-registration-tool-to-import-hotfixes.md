@@ -1,64 +1,62 @@
 ---
-title: "Update Registration Tool"
-titleSuffix: "Configuration Manager"
-description: "Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console."
-ms.date: 03/27/2017
+title: Update registration tool
+titleSuffix: Configuration Manager
+description: Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console.
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
+ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
-# Use the Update Registration Tool to import hotfixes to Configuration Manager
+
+# Use the update registration tool to import hotfixes
 
 *Applies to: Configuration Manager (current branch)*
 
-Some updates for Configuration Manager are not available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.   
-When you must install an out-of-band release, and the update or hotfix file name ends with the extension **update.exe**, you use the **update registration tool** to manually import the update to the Configuration Manager console. The tool enables you to extract and transfer the update package to the site server, and register the update with the Configuration Manager console.  
+Some updates for Configuration Manager aren't available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.
 
- If the hotfix file has the **.exe** file extension (not **update.exe**), see [Use the Hotfix Installer to install updates for Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
+When you must install an out-of-band release, and the update or hotfix file name ends with the extension **update.exe**, you use the update registration tool. This tool imports the update to the Configuration Manager console. It enables you to extract and transfer the update package to the site server, and register the update with the Configuration Manager console.
 
-> [!NOTE]  
->  This topic provides general guidance about how to install hotfixes that update Configuration Manager. For details about a specific hotfix or update, refer to its corresponding Knowledge Base (KB) article at Microsoft Support.  
+If the hotfix file only has the **.exe** file extension (not **update.exe**), [use the hotfix installer to install the update](use-the-hotfix-installer-to-install-updates.md).
 
- **Prerequisites for using the update registration tool:**  
+> [!NOTE]
+> This article provides general guidance about how to install hotfixes that update Configuration Manager. For details about a specific hotfix or update, refer to the corresponding hotfix article.
 
--   Only out-of-band updates that end with the **.update.exe** extension can be installed using this tool  
+## Prerequisites
 
--   The tool is self-contained with the individual updates you get directly from Microsoft  
+- This tool only installs out-of-band updates that end with the full **.update.exe** file extension.
 
--   The tool does not have a dependency on the mode of the service connection point  
+- It is self-contained with the individual updates that you get directly from Microsoft.
 
--   The tool must be run on the computer that hosts the service connection point  
+- The service connection point can be in either online or offline mode.
 
--   The computer where the tool runs (the service connection point computer) must have the .NET Framework 4.52 installed  
+- Run it on the server with the service connection point site system role.
 
--   The account you use to run the tool must have **local administrator** permissions on the computer that hosts the service connection point (where the tool is run)  
+- Starting in version 2107, the service connection point requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5.2 or later. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
 
--   The account you use to run the tool must have **write** permissions to the following folder on the computer that hosts the service connection point:  **&lt;ConfigMgr Installation directory\>\EasySetupPayload\offline**  
+- When you run the tool on the service connection point, the account that you use needs the following configurations:
 
-### To use the update registration tool  
+  - A local **Administrator**
 
-1. On the computer that hosts the service connection point:  
+  - **Write** permissions to the following folder: `<Configuration Manager installation directory>\EasySetupPayload\offline`
 
-   -   Open a command prompt with administrative privileges, and then change directories to the location that contains **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**  
+## Process
 
-2. Run the following command to start the update registration tool:  
+1. On the computer that hosts the service connection point, open a command prompt with administrative privileges. Then change directories to the location that contains the update file. The update file name uses the following format: `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`
 
-   -   **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**  
+1. Run the following command to start the update registration tool: `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`
 
-   After the hotfix is registered, it appears as a new update in the console within 24 hours.  You can accelerate the process:
+    After the hotfix is registered, it appears as a new update in the console within 24 hours. To accelerate this process: in the Configuration Manager console, go to **Administration** workspace, and select the **Updates and Servicing** node. In the ribbon, select **Check for Updates**.
 
-   - Open  the Configuration Manager console and go to **Administration** > **Updates and Servicing**, and then click **Check for Updates**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.) 
+    The update registration tool logs its actions to a .log file on the local computer. The log file has the same name as the hotfix file and is in the `%SystemRoot%/Temp` folder.
 
-   The update registration tool logs its actions to a .log file on the local computer. The log file has the same name as the hotfix .exe file and is written to the **%SystemRoot%/Temp** folder.  
+    After the update is registered, you can close the update registration tool.
 
-    After the update is registered, you can close the update registration tool.  
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Updates and Servicing** node. Hotfixes that you've imported are now available to install.
 
-3. Open the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Hotfixes that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
+## Next steps
 
-   For information about installing updates, see [Install in-console updates for Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
+[Install in-console updates](install-in-console-updates.md)

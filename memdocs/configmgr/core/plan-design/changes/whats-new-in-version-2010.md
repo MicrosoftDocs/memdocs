@@ -6,10 +6,10 @@ ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: eca60d1f-6970-4a2d-b170-35353d0d961c
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2010 of Configuration Manager current branch
@@ -122,7 +122,7 @@ For more information, see [Monitor scenario health](../../servers/manage/scenari
 <!--5622909-->
 If the setup or update process fails to complete successfully, you can now report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. In technical previews, this button is always enabled even when the setup completes successfully.
 
-For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_report).
+For more information, see [Install in-console updates](../../servers/manage/post-in-console-updates.md#report-setup-and-upgrade-failures-to-microsoft).
 
 ### Delete Aged Collected Diagnostic Files task
 <!--6503308-->

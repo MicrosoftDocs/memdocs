@@ -6,12 +6,10 @@ ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Peer cache for Configuration Manager clients
@@ -22,7 +20,7 @@ manager: dougeby
 Use peer cache to help manage deployment of content to clients in remote locations. Peer cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.   
 
 > [!Note]  
-> In version 1906, Configuration Manager enables this feature by default. In version 1902 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+> In version 1906, Configuration Manager enables this feature by default. In version 1902 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../servers/manage/optional-features.md).<!--505213-->  
 
 
 
@@ -60,7 +58,7 @@ To enable peer cache, deploy the [client settings](#bkmk_settings) to a collecti
 
 - As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
 
-Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).<!--1356193-->
+Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-group-options.md).<!--1356193-->
 
 > [!NOTE]  
 > If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.  
@@ -179,7 +177,7 @@ Peer cache relies on the Configuration Manager client cache to share content. Co
 
 - The Configuration Manager client cache isn't like the content library on a distribution point. While you manage the content that you distribute to a distribution point, the Configuration Manager client automatically manages the content in its cache. There are settings and methods to help control what content is in the cache of a peer cache source. For more information, see [Configure the client cache](../../clients/manage/configure-client-cache.md).
 
-- Normal cache size and maintenance applies to peer cache sources. For more information, see [Configure client cache size](../../clients/deploy/about-client-settings.md#configure-client-cache-size). Consider the size of larger content such as OS upgrade packages or Windows 10 express update files. Compare your need for this content against the available disk space on peer cache sources.  
+- Normal cache size and maintenance applies to peer cache sources. For more information, see [Configure client cache size](../../clients/deploy/about-client-settings.md#configure-client-cache-size). Consider the size of larger content such as OS upgrade packages or Windows express update files. Compare your need for this content against the available disk space on peer cache sources.  
 
 - The peer cache source client updates the last referenced time of content in the cache when a peer downloads it. The client uses this timestamp when it automatically maintains its cache, removing older content first. So it should wait to remove content that peer cache clients more frequently download, if at all.  
 

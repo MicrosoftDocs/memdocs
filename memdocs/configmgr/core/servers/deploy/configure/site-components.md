@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Site components for Configuration Manager
@@ -55,7 +55,7 @@ For more information, see [Install a software update point](../../../../sum/get-
 
 ### OS deployment
 
-For more information, see [Specify the drive for offline OS image servicing](../../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive).
+For more information, see [Specify the drive for offline OS image servicing](../../../../osd/get-started/manage-operating-system-images.md#specify-the-drive-for-offline-os-image-servicing).
 
 ### Management point
 

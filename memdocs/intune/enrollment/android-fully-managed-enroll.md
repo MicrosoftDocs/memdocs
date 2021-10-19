@@ -5,8 +5,8 @@ title: Setup Intune enrollment for Android Enterprise fully managed devices
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise fully managed devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 11/9/2020
 ms.topic: how-to

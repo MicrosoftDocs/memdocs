@@ -2,14 +2,14 @@
 title: Plan for the SMS Provider
 titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
-ms.date: 05/04/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for the SMS Provider
@@ -55,12 +55,12 @@ The SMS Provider has the following prerequisites:
 
 - For the [administration service](../../../develop/adminservice/overview.md) REST API:
 
-  - .NET 4.5 or later
+  - Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
-  - Enable Windows server role **Web Server (IIS)**
+  - In version 2006 and earlier, enable the Windows server role **Web Server (IIS)**. Starting in version 2010, this role is no longer required.
 
     > [!NOTE]
-    > Every SMS Provider attempts to install the administration service, which requires a certificate. This service has a dependency on IIS to bind that certificate to HTTPS port 443. If you enable [Enhanced HTTP](enhanced-http.md), then the site binds that certificate using IIS APIs. If your site uses PKI, you need to manually bind a PKI certificate in IIS on the SMS Provider. Starting in version 2002, the site automatically uses the site's self-signed certificate.
+    > Every SMS Provider attempts to install the administration service, which requires a certificate. This service has a dependency on IIS to bind that certificate to HTTPS port 443. If you enable [Enhanced HTTP](enhanced-http.md), then the site binds that certificate using IIS APIs. If your site uses PKI, you need to manually bind a PKI certificate in IIS on the SMS Provider. Unless the server already has a PKI-based certificate, the site automatically uses the site's self-signed certificate.
 
 ## Locations
 
@@ -183,7 +183,7 @@ The Configuration Manager WMI schema defines the structure of the SMS Provider. 
 
 The computer where you install an instance of the SMS Provider requires a supported version of the Windows ADK.
 
-For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10) and [Support for Windows 10](../configs/support-for-windows-10.md).
+For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk) and [Support for the Windows ADK](../configs/support-for-windows-adk.md).
 
 When you manage OS deployments, the Windows ADK allows the SMS Provider to complete various tasks, such as:
 

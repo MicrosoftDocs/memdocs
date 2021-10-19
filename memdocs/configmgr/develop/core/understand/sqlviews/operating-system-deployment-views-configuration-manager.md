@@ -1,4 +1,4 @@
-﻿---
+---
 title: Operating system deployment views
 titleSuffix: Configuration Manager
 description: Information about boot image packages, computer association state migrations, and operating system image packages.
@@ -12,6 +12,7 @@ ms.assetid: fee8d7b0-b4c2-4c70-83ff-bc285551ee68
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Operating system deployment views in Configuration Manager

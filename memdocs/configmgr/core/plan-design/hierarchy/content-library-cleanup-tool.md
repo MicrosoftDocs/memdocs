@@ -2,14 +2,14 @@
 title: Content library cleanup tool
 titleSuffix: Configuration Manager
 description: Use the content library cleanup tool to remove orphaned content no longer associated with a Configuration Manager deployment.
-ms.date: 11/30/2020
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
+ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Content library cleanup tool
@@ -32,7 +32,7 @@ Find **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCl
 
 - The tool doesn't support removing content from the site server, which has a single content library. When the site server also has the distribution point role, if a package isn't targeted to the server, the package is still in the single content library.<!-- MEMDocs#905 -->
 
-- The tool doesn't support a content-enabled cloud management gateway or a cloud-based distribution point.
+- The tool doesn't support a content-enabled cloud management gateway.
 
 - The user account that runs the tool must have permissions the same as the **Full Administrator** security role in Configuration Manager.
 
@@ -129,8 +129,8 @@ Use these command-line parameters in any order.
 
 ### Known issue
 
-When any package or deployment has failed, or is in progress, the tool might return the following error:
+In version 2103 and earlier, when any package or deployment has failed, or is in progress, the tool might return the following error:
 
 `System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.`
 
-There's no workaround for this issue. When content is in progress or has failed to deploy, the tool can't reliably identify orphaned files. The tool won't allow you to clean up content until you resolve that issue.
+To work around this issue, update the site to version 2107.<!-- 4411374 --> The tool can't reliably identify orphaned files, but will display a warning and continue.

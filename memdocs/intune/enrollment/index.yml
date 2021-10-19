@@ -41,9 +41,9 @@ landingContent:
             url: enrollment-method-capab.md
       - linkListType: quickstart
         links:
-          - text: Set up automatic enrollment for Windows 10 devices 
+          - text: Set up automatic enrollment for Windows 10/11 devices 
             url: quickstart-setup-auto-enrollment.md
-          - text: Enroll your Windows 10 device
+          - text: Enroll your Windows 10/11 device
             url: quickstart-enroll-windows-device.md
       - linkListType: tutorial
         links:

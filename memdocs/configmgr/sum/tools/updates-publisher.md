@@ -1,17 +1,15 @@
 ---
-title: "Updates Publisher"
-titleSuffix: "Configuration Manager"
-description: "Use System Center Updates Publisher to manage custom updates"
+title: Updates Publisher
+titleSuffix: Configuration Manager
+description: Use System Center Updates Publisher to manage custom updates
 ms.date: 11/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # System Center Updates Publisher
 

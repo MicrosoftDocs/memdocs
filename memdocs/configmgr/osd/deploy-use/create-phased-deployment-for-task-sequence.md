@@ -2,14 +2,14 @@
 title: Create phased deployments
 titleSuffix: Configuration Manager
 description: Use phased deployments to automate the rollout of software to several collections.
-ms.date: 08/21/2020
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create phased deployments with Configuration Manager
@@ -46,7 +46,7 @@ Before creating a phased deployment, distribute the associated content to a dist
 
 These settings are unique to phased deployments. Configure these settings when creating or editing the phases to control the scheduling and behavior of the phased deployment process.
 
-Starting in version 2002, use the following Windows PowerShell cmdlets to manually configure phases for software update and task sequence phased deployments:
+Optionally, use the following Windows PowerShell cmdlets to manually configure phases for software update and task sequence phased deployments:
 
 - [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase)
 - [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase)
@@ -90,7 +90,7 @@ Configure this setting for the rollout in each phase to happen gradually. This b
         - Software Updates  
             - **All Software Updates**  
             - **Software Update Groups**
-        - Windows 10 Servicing, **All Windows 10 Updates**  
+        - Windows Servicing, **All Windows Updates**  
         - Office 365 Client Management, **Office 365 Updates**  
 
     - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. Select an existing task sequence, and then choose **Create Phased Deployment** in the ribbon.  
@@ -111,7 +111,7 @@ Configure this setting for the rollout in each phase to happen gradually. This b
 > [!NOTE]
 > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see the old name in the Configuration Manager product and documentation while the console is being updated.  
 
-Starting in version 2002, use the following Windows PowerShell cmdlets for this task:
+Optionally, use the following Windows PowerShell cmdlets for this task:
 
 - [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment)
 - [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment)
@@ -163,7 +163,7 @@ Create a phased deployment with manually configured phases for a task sequence. 
 
 1. Select **Next**. Review the settings on the **Summary** page, and then complete the Create Phased Deployment wizard.
 
-Starting in version 2002, use the following Windows PowerShell cmdlets for this task:
+Optionally, use the following Windows PowerShell cmdlets for this task:
 
 - [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment)
 - [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment)

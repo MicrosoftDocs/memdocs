@@ -2,14 +2,14 @@
 title: Create task sequence media
 titleSuffix: Configuration Manager
 description: Create task sequence media to deploy an OS to a destination computer in your Configuration Manager environment.
-ms.date: 08/11/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create task sequence media
@@ -42,7 +42,7 @@ When the destination computer starts, it connects to the network and retrieves t
 > [!IMPORTANT]  
 > The packages on bootable media aren't encrypted. Take appropriate security measures, such as adding a password to the media, to make sure that the package contents are secured from unauthorized users.  
 
-Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
+Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG).<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## <a name="BKMK_PlanPrestagedMedia"></a> Prestaged media
 

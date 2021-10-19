@@ -2,14 +2,14 @@
 title: Prepare Windows Servers
 titleSuffix: Configuration Manager
 description: Make sure that a computer meets prerequisites for use as a site server or a site system server for Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Prepare Windows Servers to support Configuration Manager
@@ -28,16 +28,7 @@ When you set up Windows features and roles on a computer, you might be required 
 
 The following Windows features are required on certain site system servers. Set them up before you install a site system role on that computer.
 
-- **.NET Framework**
-
-  - ASP.NET
-  - HTTP Activation
-  - Non-HTTP Activation
-  - Windows Communication Foundation (WCF) Services
-
-  Different site system roles require different versions of .NET Framework.
-
-  Because .NET Framework 4.0 and later isn't backward compatible to replace 3.5 and earlier versions, when different versions are listed as required, plan to enable each version on the same computer.
+- **.NET Framework**: Different site system roles require different versions of .NET Framework.
 
 - **Background Intelligent Transfer Services (BITS)**: Management points require BITS to support communication with managed devices. This feature includes all automatically selected options.
 
@@ -53,23 +44,7 @@ The following Windows roles are required to support specific functionality, like
 
 - **Network Device Enrollment Service** (under Active Directory Certificate Services): This Windows role is a prerequisite to use certificate profiles in Configuration Manager.
 
-- **Web server (IIS)**
-  - Common HTTP Features
-    - HTTP Redirection
-  - Application Development
-    - .NET Extensibility
-    - ASP.NET
-    - ISAPI Extensions
-    - ISAPI Filters
-  - Management Tools
-    - IIS 6 Management Compatibility
-    - IIS 6 Metabase Compatibility
-    - IIS 6 Windows Management Instrumentation (WMI) Compatibility
-  - Security
-    - Request Filtering
-    - Windows Authentication
-
-  The following site system roles use one or more of the listed IIS configurations:
+- **Web server (IIS)**: The following site system roles use IIS:
 
   - Distribution point
   - Enrollment point
@@ -80,8 +55,6 @@ The following Windows roles are required to support specific functionality, like
   - State migration point
 
   The minimum version of IIS that's required is the version that's supplied with the OS of the site server.
-
-  In addition to these IIS configurations, you might need to set up [IIS Request Filtering for distribution points](#iis-request-filtering-for-distribution-points).
 
 - **Windows Deployment Services**: This role is used with OS deployment.
 

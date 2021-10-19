@@ -1,18 +1,16 @@
 ---
-title: "Checklist for 1602"
-titleSuffix: "Configuration Manager"
-description: "Learn about actions to take before updating from Configuration Manager version 1511 to version 1602."
+title: Checklist for 1602
+titleSuffix: Configuration Manager
+description: Learn about actions to take before updating from Configuration Manager version 1511 to version 1602.
 ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Checklist for installing update 1602 for Configuration Manager
 
@@ -108,7 +106,7 @@ For more information, see [Backup and recovery for Configuration Manager](backup
 -   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.  
 
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.   
-Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](install-in-console-updates.md#bkmk_step2) from **Before you install an in-console update**.  
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable.
 
  **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.   
 

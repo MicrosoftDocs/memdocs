@@ -2,14 +2,14 @@
 title: Create user data and profiles configuration items
 titleSuffix: Configuration Manager
 description: Use data and profiles configuration items in Configuration Manager to manage folder redirection, offline files, and roaming profiles.
-ms.date: 10/12/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: how-to
-ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: mestew
 manager: dougeby
 ms.author: mstewart
+ms.localizationpriority: medium
 ---
 
 # Create user data and profiles configuration items in Configuration Manager
@@ -29,7 +29,7 @@ Unlike other configuration items in Configuration Manager, you don't add user da
 You can only deploy user data and profiles configuration items to user collections.
 
 > [!IMPORTANT]
-> If you deploy this policy, it restricts folder redirection group policy on the same devices. For more information, see [Folder Redirection group policy is not applied in Windows 8, Windows 8.1, or Windows 10](/troubleshoot/windows-server/group-policy/folder-redirection-group-policy-not-applied).<!-- SCCMDocs#2315 -->
+> If you deploy this policy, it restricts folder redirection group policy on the same devices. For more information, see [Folder Redirection group policy is not applied in Windows 8, Windows 8.1, or Windows 10 and later](/troubleshoot/windows-server/group-policy/folder-redirection-group-policy-not-applied).<!-- SCCMDocs#2315 -->
 
 ## Enable user data and profiles for compliance settings
 

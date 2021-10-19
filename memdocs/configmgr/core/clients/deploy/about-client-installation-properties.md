@@ -2,14 +2,14 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 04/30/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # About client installation parameters and properties in Configuration Manager
@@ -170,7 +170,7 @@ Example: `ccmsetup.exe /logon`
 
 Specifies a source management point for computers to connect to. Computers use this management point to find the nearest distribution point for the installation files. If there are no distribution points, or computers can't download the files from the distribution points after four hours, they download the files from the specified management point.  
 
-For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
+For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups-distribution-points.md#client-installation). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
 
 > [!IMPORTANT]  
 > This parameter specifies an initial management point for computers to find a download source, and can be any management point in any site. It doesn't *assign* the client to the specified management point.
@@ -218,7 +218,7 @@ Example: `ccmsetup.exe /noservice`
 
 <!--5686290-->
 
-Starting in version 2002, use this parameter to provide a bulk registration token. An internet-based device uses this token in the registration process through a cloud management gateway (CMG). For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
+Use this parameter to provide a bulk registration token. An internet-based device uses this token in the registration process through a cloud management gateway (CMG). For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
 
 When you use this parameter, also include the following parameters and properties:
 
@@ -265,7 +265,7 @@ For more information on client prerequisites, see [Windows client prerequisites]
 
 Specifies the file download location. Use a local or UNC path. The device downloads files using the server message block (SMB) protocol. To use  **/source**, the Windows user account for client installation needs **Read** permissions to the location.
 
-For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
+For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups-distribution-points.md#client-installation). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
 
 > [!TIP]  
 > You can use the **/source** parameter more than once in a command line to specify alternative download locations.  
@@ -287,9 +287,13 @@ Example: `CCMSetup.exe /UsePKICert`
 If a device uses Azure Active Directory (Azure AD) for client authentication and also has a PKI-based client authentication certificate, if you use include this parameter the client won't be able to get Azure AD onboarding information from a cloud management gateway (CMG). For a client that uses Azure AD authentication, don't specify this parameter, but include the [AADRESOURCEURI](#aadresourceuri) and [AADCLIENTAPPID](#aadclientappid) properties.<!-- MEMDocs#1483 -->
 
 > [!NOTE]
-> In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update–based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
+> In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update-based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
 >
 > Also specify this parameter when you install a client for internet-only communication. Use `CCMALWAYSINF=1` together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
+
+### /IgnoreSkipUpgrade
+
+Specify this parameter to manually upgrade an excluded client. For more information, see [How to exclude clients from upgrade](../manage/upgrade/exclude-clients-windows.md).<!-- MEMDocs#1996 -->
 
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
@@ -319,7 +323,7 @@ Example: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.co
 
 ## <a name="clientMsiProps"></a> Client.msi properties
 
-The following properties can modify the installation behavior of client.msi, which ccmsetup.exe installs. If you use the [client push installation method](plan/client-installation-methods.md#client-push-installation), specify these properties on the **Client** tab of the **Client Push Installation Properties** in the Configuration Manager console.
+The following properties can modify the installation behavior of client.msi, which ccmsetup.exe installs.
 
 ### AADCLIENTAPPID
 
@@ -339,7 +343,7 @@ Example: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
 
 Specifies the Azure AD tenant identifier. Configuration Manager links to this tenant when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. To get the value for this property, use the following steps:
 
-- On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
+- On a device that runs Windows 10 or later and is joined to the same Azure AD tenant, open a command prompt.
 - Run the following command: `dsregcmd.exe /status`
 - In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -496,7 +500,7 @@ This property can specify the address of a cloud management gateway (CMG). To ge
 - Run the following command:
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
 - Use the returned value as-is with the **CCMHOSTNAME** property.
@@ -611,12 +615,12 @@ For more information, see [How to configure client status](configure-client-stat
 
 <!--5526972-->
 
-Starting in version 2002, use this property to start a task sequence on a client after it successfully registers with the site.
+Use this property to start a task sequence on a client after it successfully registers with the site.
 
 > [!NOTE]
 > If the task sequence installs software updates or applications, clients need a valid client authentication certificate. Token authentication alone doesn't work. For more information, see [Release notes - OS deployment](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
 
-For example, you provision a new Windows 10 device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
+For example, you provision a new Windows device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
 
 Use the following process:
 
@@ -637,6 +641,18 @@ Use the following process:
       > Regardless the method, only use this property with **ccmsetup.msi**.<!-- 9277971 -->
 
 After the client installs and properly registers with the site, it starts the referenced task sequence. If client registration fails, the task sequence won't start.
+
+> [!NOTE]
+> The task sequence launched by **PROVISIONTS** uses the **Default Client Settings**. This task sequence starts immediately after the client registers, so it won't be part of any collection to which you've deployed custom client settings. The client doesn't process or apply custom client settings before this task sequence runs.
+> 
+> For the task sequence to work properly, you may need to change certain settings in the **Default Client Settings**. For example, 
+> 
+> - **Cloud Services** group: **Enable clients to use a cloud management gateway** and **Allow access to cloud distribution point**
+> - **Computer Agent** group: **PowerShell execution policy**
+> 
+> If devices don't need these client settings after the task sequence completes, deploy new custom client settings to reverse the default settings.
+>
+> For more information, see [About client settings](../../clients/deploy/about-client-settings.md).
 
 ### RESETKEYINFORMATION
 
@@ -797,3 +813,31 @@ Configuration Manager supports the following attribute values for the PKI certif
 |2.5.4.42|G or GN or GivenName|Given name|  
 |2.5.4.43|I or Initials|Initials|  
 |2.5.29.17|(no value)|Subject Alternative Name|
+
+## Client push installation
+
+<!-- 10105880, memdocs#1617 -->
+
+If you use the [client push installation method](plan/client-installation-methods.md#client-push-installation), use the following options on the **Client** tab of the **Client Push Installation Properties** in the Configuration Manager console:
+
+- Any of the [Client.msi properties](#clientMsiProps)
+
+- The following subset of [CCMSetup.exe command-line parameters](#ccmsetupexe-command-line-parameters) are allowed for client push:
+
+  - /AllowMetered (starting in version 2103)
+
+  - /AlwaysExcludeUpgrade
+
+  - /BITSPriority
+
+  - /downloadtimeout
+
+  - /ExcludeFeatures
+
+  - /forcereboot
+
+  - /logon
+
+  - /skipprereq
+
+  - /UsePKICert

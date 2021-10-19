@@ -5,8 +5,8 @@ title: Use Direct Enrollment for macOS devices
 titleSuffix: Microsoft Intune
 description: Learn how to enroll macOS devices using Direct Enrollment.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/04/2020
 ms.topic: how-to
@@ -48,7 +48,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 
 2. Choose **Profiles** > **Create**.
 
-3. Under **Create Enrollment Profile**, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
+3. Under **Create Enrollment Profile** on the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
 
 4. For **User Affinity**, choose **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps requiring user affiliation (including the Company Portal app used for installing line-of-business apps) won't work. Required for Direct Enrollment.
 

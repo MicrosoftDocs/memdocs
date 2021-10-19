@@ -1,17 +1,15 @@
 ---
-title: "Setup reference"
-titleSuffix: "Configuration Manager"
-description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
+title: Setup reference
+titleSuffix: Configuration Manager
+description: Review this reference to help you prepare to install a Configuration Manager site or hierarchy.
 ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Reference for Configuration Manager Setup
 
@@ -41,7 +39,7 @@ Use the following links to download clients for the version of Configuration Man
 
 - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 
-- [Microsoft Configuration Manager clients for additional operating systems](https://www.microsoft.com/download/details.aspx?id=47719)
+- **Microsoft Configuration Manager clients for additional operating systems**
 
 ##  <a name="bkmk_usage"></a> Usage data levels and settings  
 When you install your first Configuration Manager site, Configuration Manager automatically installs and configures a new site system role, the **service connection point**,  on the site server. The service connection point has these default settings:  

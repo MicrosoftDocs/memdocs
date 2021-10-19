@@ -5,8 +5,8 @@ title: Set terms and conditions in Microsoft Intune
 titleSuffix: 
 description: Set terms and conditions that users see in the Company Portal for Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/20/2018
 ms.topic: how-to

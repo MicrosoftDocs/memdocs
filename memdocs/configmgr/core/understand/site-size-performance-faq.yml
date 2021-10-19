@@ -7,7 +7,7 @@ metadata:
   ms.author: aaroncz
   ms.prod: configuration-manager
   ms.topic: conceptual
-  ms.date: 04/16/2021
+  ms.date: 08/02/2021
     
 title: Configuration Manager site sizing and performance FAQ
 summary: |
@@ -195,7 +195,7 @@ sections:
       - question: |
           What version of SQL Server should I run?
         answer: |
-          For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL Server meet required performance criteria. However, SQL Server 2012 and SQL Server 2016 or newer tend to outperform SQL Server 2014 in some aspects of the Configuration Manager workload. Also, running SQL Server 2014 at SQL Server 2012 compatibility level (110) improves performance in general. At installation time, Configuration Manager databases running on SQL Server 2012 and SQL Server 2014 are set to compatibility level 110. SQL Server 2016 or newer is set to that SQL Server version's default compatibility level, such as 130 for SQL Server 2016. Upgrading SQL Server in place doesn't update compatibility levels until you install the next major Configuration Manager current branch version.
+          For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL Server meet required performance criteria. However, SQL Server 2016 or newer tends to outperform SQL Server 2014 in some aspects of the Configuration Manager workload. Also, running SQL Server 2014 at SQL Server 2012 compatibility level (110) improves performance in general. At installation time, Configuration Manager databases running on SQL Server 2014 are set to compatibility level 110. SQL Server 2016 or newer is set to that SQL Server version's default compatibility level, such as 130 for SQL Server 2016. Upgrading SQL Server in place doesn't update compatibility levels until you install the next major Configuration Manager current branch version.
           
           If you see unusual timeouts or slowness on certain SQL queries on SQL Server 2016 or later, such as when using RBAC in the Admin Console, try changing the SQL Server compatibility level on the Configuration Manager database to 110. Running at SQL Server compatibility level 110 on SQL Server 2014 and newer versions of SQL Server is fully supported. For more information, see [SQL query times out or console slow on certain Configuration Manager database queries](https://support.microsoft.com/help/3196320/sql-query-times-out-or-console-slow-on-certain-configuration-manager-d).
           

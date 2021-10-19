@@ -2,14 +2,14 @@
 title: Integrate Windows Update for Business
 titleSuffix: Configuration Manager
 description: Use Windows Update for Business (WUfB) to keep Windows 10 up-to-date for devices connected to the Windows Update service.
-author: mestew  
+author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 08/25/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
+ms.localizationpriority: medium
 ---
 
 # Integrate with Windows Update for Business
@@ -91,7 +91,7 @@ For more information about the Windows Insider program, see [Getting started wit
 
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for up to 365 days from their release.
     - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.
-1. Choose whether to defer or pause Quality Updates. Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
+1. Choose whether to defer or pause Quality Updates. Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the second Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
     - **Deferral period (days)**: Specify the number of days for which Quality Updates will be deferred. You can defer receiving these Quality Updates for up to 30 days from their release.
     - **Pause Quality Updates starting**: Select whether to pause devices from receiving Quality Updates for up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Quality Updates by clearing the checkbox.
 1. Select **Install updates from other Microsoft Products** to enable the group policy setting that make deferral settings applicable to Microsoft Update, as well as Windows Updates.
