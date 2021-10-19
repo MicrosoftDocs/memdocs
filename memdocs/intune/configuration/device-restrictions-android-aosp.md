@@ -51,9 +51,9 @@ To access these settings, create an [Android (AOSP) device restrictions profile]
 
   - **Numeric** (default): Password must only be numbers, such as `123456789`. Also enter:  
 
-    - **Minimum password length**: Enter the minimum number of digits the password must have, from 4 to 16 characters.  
+    - **Minimum password length**: Enter the minimum number of digits the password must have, from 4 to 16.  
 
-  - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed. Also enter:  
+  - **Numeric complex**: Does not permit repeat or consecutive numbers, such as `1111` or `1234`. Also enter:  
 
     - **Minimum password length**: Enter the minimum number of digits or characters a password must have, from 4 to 16.  
 
