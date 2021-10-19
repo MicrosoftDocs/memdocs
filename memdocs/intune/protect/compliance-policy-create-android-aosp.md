@@ -32,9 +32,15 @@ ms.collection: M365-identity-device-management
 
 *This feature is in public preview.*
 
-This article lists the compliance settings you can configure for Android (AOSP) devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, require device passwords, and more. As an Intune administrator, use these compliance settings to help protect your organization's resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+This article lists the compliance settings you can configure for Android (AOSP) devices in Intune. Use these settings as part of your mobile device management (MDM) solution to define your organization's standards for:  
 
-Devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Endpoint Manager admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.  
+* Device health  
+* Device properties  
+* System security   
+
+ Devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Endpoint Manager admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.  
+
+ To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).  
 
 This feature applies to:
 
@@ -43,71 +49,76 @@ This feature applies to:
 > [!IMPORTANT]
 > This feature is in [public preview](../fundamentals/public-preview.md).  
 
-## Before you begin  
+## Before you begin    
 
-[Create an Android (AOSP) compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android (AOSP)**.  
+To access these settings, [create an Android (AOSP) compliance policy](create-compliance-policy.md#create-the-policy). When prompted to select a **Platform**, choose **Android (AOSP)**.  
 
-## Device Health  
+## Device health  
 
 - **Rooted devices**  
   Prevent rooted devices from having corporate access. 
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Block** - Mark rooted devices as not compliant.
+  - **Block** - Mark rooted devices as not compliant.  
 
-## Device Properties
+## Device properties  
+
+- **Minimum OS version**    
+  When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.  
+
+  By default, no version is configured.  
 
 - **Maximum OS version**  
   When a device is using an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
 
-  *By default, no version is configured*.
-
-- **Minimum OS version**    
-  When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
-
-  *By default, no version is configured*.  
+  By default, no version is configured.  
 
 - **Minimum security patch level**  
   Enter the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
 
-  *By default, no date is configured*.  
+  By default, no patch level is configured.  
 
-## System Security  
+## System security  
+ If you don't configure password requirements, the use of a device password is optional and left up to the users to configure.   
 
- - **Require a password on the device**  
- This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. 
+ - **Require a password to unlock mobile devices**  
+    Require users to have a password-protected lock screen on their device. Your options:   
 
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Require** - Users must enter a password on their device.  
+    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+    - **Yes** - Users must enter a password to unlock their devices.  
   
-  When set to *Require*, the following setting can be configured:  
+  If you require a password, also configure:   
 
   - **Required password type**  
-  Require a password include only numeric characters, or a mix of numerals and other characters. 
+      Require users to use a certain type of password. Your options:   
 
+    - **Device default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.  
 
-    - **Device Default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.
-    - **Numeric**(*default) - Password must only be numbers, such as 123456789. Enter the minimum password length a user must enter, between 4 and 16 characters.  
-     - **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.  
+    - **Numeric** - Password must only be numbers, such as `123456789`.  Also enter:  
 
+      - Minimum password length: The minimum number of digits required, from 4 to 16.  
 
-     > [!NOTE]  
-     >- There is a known issue that prevents **Password required, no restriction** from working on Android (AOSP) devices.  
-     >- The following password types are listed as options but are not supported for Android (AOSP) devices: Alphabetic, alphanumeric, and alphanumeric with symbols.  
+    - **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed. Also enter:  
 
-
-   - **Maximum minutes of inactivity before password is required**  
-    Enter the maximum idle time allowed, from 1 minute to 8 hours, before the user must reenter their password to get back into their device. When you choose **Not configured** (default), this setting isn't evaluated for compliance or non-compliance.  
+      - Minimum password length: The minimum number of digits required, from 4 to 16.  
  
-  - **Minimum password length**  
-    Enter the minimum number of digits or characters that the password must have. Available for numeric or numeric complex password types.  
 
- ### Encryption
+    > [!NOTE]  
+    >- There is a known issue that prevents **Password required, no restriction** from working on Android (AOSP) devices.  
+  
+    >- The following password types are listed as options but are not supported for Android (AOSP) devices: alphabetic, alphanumeric, and alphanumeric with symbols.  
+
+
+  - **Maximum minutes of inactivity before password is required**  
+      Enter the maximum idle time allowed, from 1 minute to 8 hours, before the user must re-enter their password to get back into their device. When you choose **Not configured** (default), this setting isn't evaluated for compliance or non-compliance.  
+
+ ## Encryption  
 
   - **Encryption of data storage on a device**  
-    Your options are:  
+Your options are:  
  
-    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.  
+
     - **Require** - Encrypt data storage on your devices. Devices are encrypted when you choose the **Require a password to unlock mobile devices** setting.  
 
 ## Device compliance reporting  
