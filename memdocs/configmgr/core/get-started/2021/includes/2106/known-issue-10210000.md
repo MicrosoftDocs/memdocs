@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 06/24/2021
+ms.localizationpriority: medium
 ---
 
 ### Unable to create Compliance Settings Configuration Items in the wizard

@@ -6,10 +6,10 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: troubleshooting
-ms.assetid: 134c5b50-edeb-4d60-aaca-944d26deb9ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Troubleshoot BitLocker

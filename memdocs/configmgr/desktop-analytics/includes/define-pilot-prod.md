@@ -5,6 +5,7 @@ ms.reviewer: acabello
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 06/11/2021
+ms.localizationpriority: medium
 ---
 
 Use the following definitions to differentiate between pilot and production:

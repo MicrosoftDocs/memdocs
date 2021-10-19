@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Introduction to certificate profiles in Configuration Manager
@@ -51,7 +51,7 @@ There are three types of certificate profiles:
   - [Define a certificate](../../mdm/deploy-use/create-pfx-certificate-profiles.md) authority to process requests
 
   > [!Note]  
-  > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+  > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
 
   You can use Microsoft or Entrust as certificate authorities for **Personal information exchange (.pfx)** certificates.
 

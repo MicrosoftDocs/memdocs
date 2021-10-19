@@ -5,6 +5,8 @@ items:
   items:
   - name: What is Endpoint analytics?
     href: overview.md
+  - name: Scores, baselines, and insights
+    href: scores.md
 - name: Quickstarts
   items:
   - name: Enroll Intune devices

@@ -75,7 +75,7 @@ Read the following list of tips to make your organization's Intune deployment ea
   * [How your iOS/iPadOS users get their apps](end-user-apps-ios.md)
 
 * **Windows**
-  * [Using a Windows device with Intune](../user-help/using-your-windows-device-with-intune.md)
+  * [Using a Windows device with Intune](../user-help/enroll-windows-10-device.md)
   * [How your Windows users get their apps](end-user-apps-windows.md)
 
 * __Be forthcoming.__ Be clear about what you're going to manage on user devices. Tell users what kind of data you're collecting and why you're collecting it. Inform them of how you're planning to use all data. [Microsoft believes that you have a right to as much information as possible about how we handle your customer data in the cloud](https://www.microsoft.com/trustcenter/about/transparency), and believes that this philosophy can greatly increase user satisfaction with Intune.

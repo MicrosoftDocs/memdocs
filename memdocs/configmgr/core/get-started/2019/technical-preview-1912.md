@@ -6,11 +6,11 @@ ms.date: 12/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: ef972b5f-61f6-49a9-91a9-f70bf5c325b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Features in Configuration Manager technical preview version 1912

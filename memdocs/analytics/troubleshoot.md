@@ -2,15 +2,14 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 01/08/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
-ms.assetid: d13ec899-6033-4579-9b80-c9bf755f2f98
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: high
 ---
 
 
@@ -42,7 +41,7 @@ The User experience blade is available for all devices, including co-managed dev
 
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
-Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
+Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running Windows 10 version 1903 or later Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
   - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
   - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 
@@ -103,7 +102,7 @@ If your organization uses proxy server authentication for internet access, make 
 
 ### Bypass (recommended)
 
-Configure your proxy servers to not require proxy authentication for traffic to the data sharing endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
+Configure your proxy servers to not require proxy authentication for traffic to the data sharing endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10 or later.  
 
 ### User proxy authentication
 

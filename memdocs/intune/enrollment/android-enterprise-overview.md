@@ -5,8 +5,8 @@ title: Manage Android Enterprise work profile devices in Microsoft Intune
 titleSuffix: 
 description: Microsoft Intune manages Android Enterprise personally-owned and corporate-owned work profile devices to provide additional management capabilities and privacy when people use their personal Android devices for work.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 01/22/2019
 ms.topic: overview

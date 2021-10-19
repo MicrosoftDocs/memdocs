@@ -9,9 +9,7 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-
-
+ms.localizationpriority: medium
 ---
 # Configure classifications and products to synchronize  
 
@@ -120,7 +118,7 @@ If you are using Configuration Manager 1902 with Windows 10,version 1903 clients
 <!--3556023-->
 Starting in September 2019, you can service and update devices running Windows Insider Preview builds with Configuration Manager. This change means you can manage these devices without changing your normal processes or enabling Windows Update for Business. You can download Feature Updates and Cumulative Updates for Windows Insider Preview builds into Configuration Manager just like any other Windows 10 update or upgrade. For more information, see the [Publishing pre-release Windows 10 Feature Updates to WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054) blog post.
 
-For more information about support for Windows Insider in Configuration Manager, see [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md#bkmk_WIfB-support).
+For more information about support for Windows Insider in Configuration Manager, see [Support for Windows 11](../../core/plan-design/configs/support-for-windows-11.md#support-for-windows-insider).
 
 ### Prerequisites
 

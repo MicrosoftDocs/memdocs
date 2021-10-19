@@ -2,17 +2,16 @@
 title: Design a site hierarchy
 titleSuffix: Configuration Manager
 description: Understand the available topologies and management options for Configuration Manager to plan your site hierarchy.
-ms.date: 07/30/2018
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
+
 # Design a hierarchy of sites for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -184,7 +183,7 @@ The following information can help you decide when to install a secondary site:
 
 If you have clients in remote network locations, consider using one or more content management options instead of a primary or secondary site. The following options often remove the need to install a site:  
 
-- Delivery Optimization for Windows 10  
+- Windows Delivery Optimization
 
 - Configuration Manager peer cache  
 
@@ -216,7 +215,7 @@ Along with your initial hierarchy topology, also consider the following question
 
 The following common considerations are covered in separate articles. This information is important to influence or be influenced by your hierarchy design:  
 
-- When you're preparing to [Manage computers and devices](../../clients/manage/manage-clients.md), consider whether the devices are on-premises, in the cloud, or include user-owned devices (BYOD). Additionally, consider how you'll manage devices that support multiple management options. For example, manage Windows 10 devices with Configuration Manager or though integration with Microsoft Intune. For more information, see [Choose a device management solution](../choose-a-device-management-solution.md).  
+- When you're preparing to [Manage computers and devices](../../clients/manage/manage-clients.md), consider whether the devices are on-premises, in the cloud, or include user-owned devices (BYOD). Additionally, consider how you'll manage devices that support multiple management options. For example, manage Windows devices with Configuration Manager or though integration with Microsoft Intune. For more information, see [Choose a device management solution](../choose-a-device-management-solution.md).  
 
 - Understand how your available network infrastructure might affect the flow of data between remote locations. For more information, see [Prepare your network environment](../network/configure-firewalls-ports-domains.md). Also consider the geographic location of your users and devices, and whether they access your infrastructure through your on-premises network or the internet.  
 
@@ -226,6 +225,7 @@ The following common considerations are covered in separate articles. This infor
 
 - Consider security for data and devices, including the use of a public key infrastructure (PKI). For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md).  
 
+## Next steps
 
 Review the following articles for site-specific configurations:  
 
@@ -239,7 +239,6 @@ Review the following articles for site-specific configurations:
 
 - [Managing network bandwidth](manage-network-bandwidth.md) when deploying content within a site  
 
-
 Consider configurations that span sites and hierarchies  
 
 - [High availability options](../../servers/deploy/configure/high-availability-options.md) for sites and hierarchies
@@ -251,4 +250,3 @@ Consider configurations that span sites and hierarchies
 - [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md)  
 
 - [Manage clients on the internet](../../clients/manage/manage-clients-internet.md)  
-

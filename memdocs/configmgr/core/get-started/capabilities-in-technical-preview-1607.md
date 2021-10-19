@@ -1,18 +1,16 @@
 ---
-title: "Capabilities in Technical Preview 1607"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1607."
+title: Capabilities in Technical Preview 1607
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1607.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1607 for Configuration Manager
 

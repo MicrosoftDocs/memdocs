@@ -2,21 +2,21 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 04/30/2021
+ms.date: 10/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Microsoft Edge Management
 
 *Applies to: Configuration Manager (Current Branch)*
 
-The all-new Microsoft Edge is ready for business. Starting in Configuration Manager version 1910, you can now deploy [Microsoft Edge, version 77 and later](/deployedge/) to your users. A PowerShell script is used to install the Edge build selected. The script also turns off automatic updates for Edge so they can be managed with Configuration Manager.
+The all-new Microsoft Edge is ready for business. You can deploy [Microsoft Edge, version 77 and later](/deployedge/) to your users. A PowerShell script is used to install the Edge build selected. The script also turns off automatic updates for Edge so they can be managed with Configuration Manager.
 
 ## <a name="bkmk_Microsoft_Edge"></a> Deploy Microsoft Edge
 <!--4561024-->
@@ -34,14 +34,8 @@ For clients targeted with a Microsoft Edge deployment:
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](../../core/plan-design/network/includes/internet-endpoints-deploy-microsoft-edge.md)]
 
 ### <a name="bkmk_autoupdate"></a> Verify Microsoft Edge update policies
-
-#### Configuration Manager version 1910
-
-In version 1910, when Microsoft Edge is deployed, the installation script turns off automatic updates for Microsoft Edge so they can be managed with Configuration Manager. You can change this behavior using Group Policy. For more information, see [Plan your deployment of Microsoft Edge](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) and [Microsoft Edge update policies](/DeployEdge/microsoft-edge-update-policies).
-
-#### Configuration Manager version 2002 and later
 <!--4561024-->
-Starting in version 2002, you can create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select **Allow Microsoft Edge to automatically update the version of the client on the end user's device** on the **Microsoft Edge Settings** page. If you previously used Group Policy to change this behavior, Group Policy will overwrite the setting made by Configuration Manager during installation of Microsoft Edge.
+Starting in version 2002, you can create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select **Allow Microsoft Edge to automatically update the version of the client on the end user's device** on the **Microsoft Edge Settings** page. If you previously used Group Policy to change this behavior, Group Policy will overwrite the setting made by Configuration Manager during installation of Microsoft Edge. For more information, see [Microsoft Edge update policies](/DeployEdge/microsoft-edge-update-policies).
 
 [![Microsoft Edge automatic update setting](./media/4561024-autoupdate-edge.png)](./media/4561024-autoupdate-edge.png#lightbox)
 
@@ -75,7 +69,7 @@ Create a Microsoft Edge application using the built-in application experience, w
 ## Update Microsoft Edge
 <!--4831871-->
 
-Starting in Configuration Manager version 1910, you'll see a node called **All Microsoft Edge updates** under **Microsoft Edge Management**. This node helps you manage updates for all Microsoft Edge channels.<!--initial edge updates released Jan 15,2020-->
+The **All Microsoft Edge updates** node is under **Microsoft Edge Management**. This node helps you manage updates for all Microsoft Edge channels.<!--initial edge updates released Jan 15,2020-->
 
 1. To get updates for Microsoft Edge, ensure you have the **Updates** classification and the **Microsoft Edge** product [selected for synchronization](../../sum/get-started/configure-classifications-and-products.md).
 
@@ -95,8 +89,6 @@ Starting in Configuration Manager version 1910, you'll see a node called **All M
 
 ## <a name="bkmk_edge-dash"></a> Microsoft Edge Management dashboard
 <!--3871913-->
-*(Introduced in version 2002)*
-
 Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard provides you insights on the usage of Microsoft Edge and other browsers. In this dashboard, you can:
 
 - See how many of your devices have Microsoft Edge installed
@@ -127,6 +119,9 @@ Enable the following properties in the below [hardware inventory](../../core/cli
 From the **Software Library** workspace, click **Microsoft Edge Management** to see the dashboard. Change the collection for the graph data by clicking **Browse** and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
 
 [![Microsoft Edge Management dashboard](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+> [!TIP]
+> The [Power BI sample reports](../../core/servers/manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Edge Status**. This report can also help with monitoring Edge deployment. <!--5679791, 10123832, 10131458, 10488910-->  
 
 ## Known issues
 

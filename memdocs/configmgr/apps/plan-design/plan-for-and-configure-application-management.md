@@ -2,14 +2,14 @@
 title: Plan for application management
 titleSuffix: Configuration Manager
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for and configure application management in Configuration Manager
@@ -97,11 +97,13 @@ To create virtual applications in Configuration Manager, install App-V 4.6 SP1 o
 
 App-V is included with all supported versions of Windows 10 Enterprise edition. For more information, see [Getting started with App-V for Windows 10](/windows/application-management/app-v/appv-getting-started).
 
-## <a name="bkmk_remove-appcat"></a> Remove the application catalog
+## Remove the application catalog
 
 <!-- SCCMDocs-pr issue 3051 -->
 
 Support ended for the application catalog roles with version 1910. Software Center can deliver all app deployments without the application catalog. For more information, see [Removed and deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
+
+Starting in version 2107, you can't update the site if it has either of the application catalog site system roles. Remove these roles before you update to version 2107.<!-- 10158844 -->
 
 If your site still has an application catalog, use the following process to remove it:
 
@@ -116,6 +118,9 @@ If your site still has an application catalog, use the following process to remo
 After you remove the application catalog roles, Software Center starts using the management point for user-targeted, available deployments. To verify this behavior on a specific client, review the `SCClient_<username>.log`, and look for an entry similar to the following line:
 
 `Using endpoint Url: https://mp.contoso.com/CMUserService_WindowsAuth, Windows authentication`
+
+> [!NOTE]
+> If you have any tools or automation that used the ApplicationViewService.asmx SOAP endpoint on the application catalog website point, you need to change it. Update the URL in your tool to use the management point user service endpoint. For example, `https://mp.contoso.com/CMUserService_WindowsAuth`<!-- 10158844 -->
 
 ## Next steps
 

@@ -2,14 +2,14 @@
 title: Configure alerts
 titleSuffix: Configuration Manager
 description: Configure alerts to understand the state of your Configuration Manager environment.
-ms.date: 11/30/2020
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 8821e138-3f12-4997-a5d1-e6a04835ac84
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure alerts in Configuration Manager
@@ -151,6 +151,10 @@ When Configuration Manager generates an alert, you can take one of the following
    You can only postpone an alert when it's active.
 
 - Edit the **Comment** of an alert. This action informs other administrators that you're aware of the alert. For example, in the comment you can identify how to resolve the condition, provide information about the current status of the condition, or explain why you postponed the alert.
+
+## External notifications
+
+Starting in version 2107, you can enable the site to send notifications to an external system or application.<!--9504414--> This capability simplifies the process by using a web service-based method. You configure subscriptions to send these notifications. These notifications are in response to specific, defined events as they occur. For example, status message filter rules. For more information, see [External notifications](external-notifications.md).
 
 ## Next steps
 

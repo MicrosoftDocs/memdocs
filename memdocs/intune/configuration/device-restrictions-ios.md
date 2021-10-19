@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2021
-ms.topic: reference
+ms.date: 09/20/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -67,6 +67,8 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
 
   **Yes** also prevents contact export synchronization in Outlook for iOS/iPadOS. For more information, see [Support Tip: Enabling Outlook iOS/iPadOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
 
+- **Allow copy/paste to be affected by managed open-in**: **Yes** enforces copy/paste restrictions based on how you configured **Block viewing corporate documents in unmanaged apps** and **Block viewing non-corporate documents in corporate apps**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce any copy/paste restrictions.  
+
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Require iTunes Store password for all purchases**: **Yes** forces users to enter the Apple ID password for each in-app or ITunes purchase. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow purchases without prompting for a password every time.
@@ -96,7 +98,7 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Block Game Center**: **Yes** prevents using the Game Center app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the Game Center app on devices.
-- **Block multiplayer gaming**: **Yes** prevents multiplayer gaming. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games on devices.
+- **Block multiplayer gaming in Game Center**: **Yes** prevents multiplayer gaming. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games on devices.
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
@@ -104,7 +106,8 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
 
   This feature applies to:  
   - iOS 13.0 and newer
-  - iPadOS 13.0 and newer
+  - iPadOS 13.0 and newer  
+
 
 ## Autonomous single app mode (ASAM)
 
@@ -157,7 +160,12 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation.
 
   This feature applies to:  
-  - iOS/iPadOS 14.5 and newer
+  - iOS/iPadOS 14.5 and newer  
+
+- **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for translation.  
+
+  This feature applies to:  
+  - iOS/iPadOS 15.0 and newer  
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -257,7 +265,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Require AirPlay outgoing requests pairing password**: **Yes** requires a pairing password when using AirPlay to stream content to other Apple devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to stream content using AirPlay without entering a password.
-- **Block Apple Watch auto unlock**: **Yes** prevents users from unlocking their device with Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Apple Watch to auto unlock a device.
+- **Block Apple Watch auto unlock**: **Yes** prevents users from unlocking their device with Apple Watch when an obstruction, such as a mask, prevents Face ID from recognizing a user's face. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Apple Watch to auto unlock a device if an obstruction is preventing Face ID from recognizing the user.
 
   This feature applies to:  
   - iOS/iPadOS 14.5 and newer
@@ -733,16 +741,19 @@ You can also:
 
   This feature applies to:  
   - iOS 12.2 and newer
-  - iPadOS 13.0 and newer
+  - iPadOS 13.0 and newer  
 
 - **Require joining Wi-Fi networks only using configuration profiles**: **Yes** forces devices to use only Wi-Fi networks set up through Intune configuration profiles. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow devices to use other Wi-Fi networks.
 
-  - This setting is available for iOS/iPadOS 14.4 and older devices. On iOS/iPadOS 14.5 and newer devices, create a [Custom configuration profile](custom-settings-ios.md) to deploy this setting.
-  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.
-  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
+  - This setting is available for iOS/iPadOS 14.4 and older devices. On iOS/iPadOS 14.5 and newer devices, use the **Require devices to use Wi-Fi networks set up via configuration profiles** setting.  
 
-  This feature applies to:  
-  - iOS/iPadOS 14.4 and older
+  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.  
+
+  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.  
+
+
+    This feature applies to:  
+    - iOS/iPadOS 14.4 and older  
 
 - **Require Wi-Fi always on**: **Yes** keeps Wi-Fi on in the Settings app. It can't be turned off in Settings or in the Control Center, even when the device is in airplane mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to turn on or turn off Wi-Fi.
 
@@ -750,7 +761,19 @@ You can also:
 
   This feature applies to:  
   - iOS 13.0 and newer
-  - iPadOS 13.0 and newer
+  - iPadOS 13.0 and newer  
+
+- **Require devices to use Wi-Fi networks set up via configuration profiles**: **Yes** forces the device to use Wi-Fi networks set up through configuration profiles. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow devices to use other Wi-Fi networks.
+
+  - On iOS/iPadOS 14.5 and newer devices, use this setting. Don't use the **Require joining Wi-Fi networks only using configuration profiles** setting.  
+
+  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.  
+
+  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.  
+
+
+    This feature applies to:  
+    - iOS/iPadOS 14.5 and newer  
 
 ## Settings that require supervised mode
 

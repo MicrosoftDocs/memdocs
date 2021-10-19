@@ -1,15 +1,15 @@
 ---
 title: Troubleshooting resource explorer
 titleSuffix: Configuration Manager
-description: "Troubleshooting resource explorer for Configuration Manager tenant attach"
+description: Troubleshooting resource explorer for Configuration Manager tenant attach
 ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 05829d36-2cbf-4921-bf4b-cfcdef4cfcc1
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshoot resource explorer for devices uploaded to the admin center (preview)
@@ -63,7 +63,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 **Possible causes:**
 
 - The list of entities may not have been uploaded from on-premises. Wait an hour then see if the error persists.
-- An invalid **Tenant ID** or **Hierarchy ID** may have been specified. Check the service connection point and make sure it's functioning.
+- An invalid **Tenant ID** or **Support ID** may have been specified. Check the service connection point and make sure it's functioning.
 - Unable to successfully execute query to get classes. Wait 15 minutes to see if the error persists.
 
 ### <a name="bkmk_get"></a> Failed to get inventory classes with data

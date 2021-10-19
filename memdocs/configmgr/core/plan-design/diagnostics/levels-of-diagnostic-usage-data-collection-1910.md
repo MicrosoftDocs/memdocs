@@ -6,10 +6,11 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Diagnostic and usage data for version 1910

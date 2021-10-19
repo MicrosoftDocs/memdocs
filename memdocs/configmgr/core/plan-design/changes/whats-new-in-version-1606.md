@@ -1,18 +1,16 @@
 ---
-title: "New in version 1606"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1606 of Configuration Manager."
+title: New in version 1606
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1606 of Configuration Manager.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1606 of Configuration Manager
 
@@ -66,7 +64,7 @@ The following are changes to the Updates and Servicing node in the Configuration
 
 
 ###  Pre-release features
-Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### New distribution point update behavior
 Update 1606 introduces changes that improve the availability of distribution points when you install future updates.
@@ -84,7 +82,7 @@ The following are changes to Administration in the Configuration Manager console
 
 You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](/azure/azure-monitor/platform/collect-sccm).
 
-The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### Support for cache size in Client Settings
 
@@ -155,7 +153,7 @@ For details, see [Task sequence built-in variables](../../../osd/understand/task
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
 You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you are using PXE to meet your specific network requirements.
 
-For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points).
 
 ## Compliance settings
 

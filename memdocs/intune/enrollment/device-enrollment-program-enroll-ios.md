@@ -5,10 +5,10 @@ title: Enroll iOS/iPadOS devices by using ADE
 titleSuffix: Microsoft Intune
 description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE), previously known as Device Enrollment Program (DEP).
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 08/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -52,7 +52,7 @@ ADE enrollments aren't compatible with the App Store version of the Company Port
 
 To enable modern authentication during enrollment, push the app to the device by using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
-To enable Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required VPP app with an [application configuration policy](../apps/app-configuration-policies-use-ios.md) applied. Deploy the Company Portal app in this way to enable Device Staging. With Device Staging, a device is fully enrolled and receives device policies before the addition of a user affinity.
+To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required VPP app with an [application configuration policy](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) applied. Deploy the Company Portal app in this way to enable Device Staging for devices only without user affinity. With Device Staging, a device is fully enrolled and receives device policies before the addition of a user affinity. Device Staging can also be used to transition a device without user affinity, to a device with user affinity.
 
 ## What is supervised mode?
 
@@ -202,8 +202,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         These features aren't supported when you authenticate by using Apple Setup Assistant.
     - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
-    - **Setup Assistant with modern authentication**: This option is in [Public Preview](../fundamentals/public-preview.md). Devices running iOS/iPadOS 13.0 and later can use this method (older iOS/iPadOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process) 
-    - 
+    - **Setup Assistant with modern authentication**: Devices running iOS/iPadOS 13.0 and later can use this method (older iOS/iPadOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process).
+
         > [!NOTE]
         > Right now, MFA will not work for Setup Assistant with modern authentication if you are using a 3rd party MFA provider to present the MFA screen during enrollment. Only the AAD MFA screen will work during this enrollment.
 
@@ -222,7 +222,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or during Company Portal sign in, then MFA is required. However, MFA is optional based on the AAD settings in the targeted Conditional Access policy.
 
-        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials and taps "Begin" at the "Setup <Company> access" screen, the device:
+        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials and taps "Begin" at the "Setup *Company* access" screen, the device:
 
         - Won’t be fully registered with Azure AD.
         - Won’t show up in the user’s device list in the Azure AD portal.
@@ -244,7 +244,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 9. If you select a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Select **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in with Company Portal.
 
-    Multifactor authentication isn't supported on a single device locked in Single App Mode. This limitation exists because the device can't switch to a different app to complete the second factor of authentication. If you want multifactor authentication on a Single App Mode device, the second factor must be on a different device.
+    > [!NOTE]
+    > Multifactor authentication isn't supported on a single device locked in Single App Mode. This limitation exists because the device can't switch to a different app to complete the second factor of authentication. If you want multifactor authentication on a Single App Mode device, the second factor must be on a different device.
 
     This feature is supported only for iOS/iPadOS 11.3.1 and later.
 
@@ -271,7 +272,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     >
     > If a BYOD device is converted to an Apple ADE device and enrolled with a profile that has locked enrollment enabled, the user will be allowed to use **Remove Device** and **Factory Reset** for 30 days. After 30 days, the options will be disabled or unavailable. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859).
 
-12. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). If you select **Yes** for **Shared iPad**, multiple users will be able to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later.
+12. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). If you select **Yes** for **Shared iPad**, multiple users will be able to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later. With Shared iPad, all Setup Assistant panes after activation are automatically skipped.
 
     > [!NOTE]
     > A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models,  and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.
@@ -309,6 +310,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     You can choose to hide Setup Assistant screens on the device during user setup.
     - If you select **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
     - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
+    - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration. 
 
     | Setup Assistant Screens setting | If you select Show, during setup the device will... |
     |------------------------------------------|------------------------------------------|

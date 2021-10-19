@@ -1,18 +1,16 @@
 ---
-title: "New version 1702"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1702 of Configuration Manager."
+title: New version 1702
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1702 of Configuration Manager.
 ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1702 of Configuration Manager
 
@@ -65,9 +63,9 @@ You can find the **Feedback** option:
   ![Ribbon](./media/feedback-home.png)
 
 - When you right-click on any object in the console.   
-   ![Righ-click option](./media/feedback-option.png)   
+   ![Right-click option](./media/feedback-option.png)   
 
-  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://configurationmanager.uservoice.com/forums/300492-ideas).
+  Choosing **Feedback** opens your browser to the Configuration Manager feedback website.
 
 
 ###  Changes for Updates and Servicing
@@ -117,7 +115,7 @@ Use the [content library cleanup tool](../hierarchy/content-library-cleanup-tool
 You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/azure/azure-monitor/platform/collect-sccm).
 
 ### Software update points are added to boundary groups
-Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) in the [configuring boundary groups](../../servers/deploy/configure/boundary-groups.md) topic.
+Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](../../servers/deploy/configure/boundary-groups-software-update-points.md) in the [configuring boundary groups](../../servers/deploy/configure/boundary-groups.md) topic.
 
 
 <!-- ## Migration  -->

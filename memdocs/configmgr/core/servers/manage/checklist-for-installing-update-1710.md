@@ -1,18 +1,16 @@
 ---
-title: "Checklist for 1710 | Configuration Manager"
-titleSuffix: "Configuration Manager"
-description: "Learn about actions to take before updating to Configuration Manager version 1710."
+title: Checklist for 1710 | Configuration Manager
+titleSuffix: Configuration Manager
+description: Learn about actions to take before updating to Configuration Manager version 1710.
 ms.date: 12/19/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Checklist for installing update 1710 for Configuration Manager
 
@@ -81,7 +79,7 @@ This installation can put the site system server into a reboot pending state and
 For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 **Review the version of the Windows Assessment and Deployment Kit (ADK) for Windows 10**
-The Windows 10 ADK should be version 1703 or later. (For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-10.md#windows-10-adk).) If you must update the Windows ADK, do so before you begin the update of Configuration Manager. This ensures the default boot images are automatically updated to the latest version of Windows PE. (Custom boot images must be updated manually.)
+The Windows 10 ADK should be version 1703 or later. (For more information on supported Windows ADK versions, see [Windows ADK](../../plan-design/configs/support-for-windows-adk.md).) If you must update the Windows ADK, do so before you begin the update of Configuration Manager. This ensures the default boot images are automatically updated to the latest version of Windows PE. (Custom boot images must be updated manually.)
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image) for improvements to this process in Configuration Manager version 1710.
 
@@ -156,7 +154,7 @@ For more information about starting and then monitoring the prerequisite check, 
 > When the prerequisite checker runs independently or as part of an update installation, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 **Update sites:**   
-You are now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates.](install-in-console-updates.md#bkmk_install).
+You are now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates.](install-in-console-updates.md).
 
 We recommend that you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
 

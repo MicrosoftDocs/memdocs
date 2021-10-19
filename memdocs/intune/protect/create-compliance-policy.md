@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,10 +52,11 @@ To use device compliance policies, be sure you:
 - Use a supported platform:
 
   - Android device administrator
+  - Android AOSP (preview)
   - Android Enterprise
   - iOS
   - macOS
-  - Windows 10
+  - Windows 10/11
   - Windows 8.1
 
 - Enroll devices in Intune (required to see the compliance status)
@@ -70,6 +71,7 @@ To use device compliance policies, be sure you:
 
 3. Select a **Platform** for this policy from the following options:
    - *Android device administrator*
+   - *Android (AOSP)* (preview)  
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
@@ -90,11 +92,12 @@ To use device compliance policies, be sure you:
   
 5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy.  The following articles describe the settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
+   - [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
-   - [Windows 10 and later](compliance-policy-create-windows.md)  
+   - [Windows 10/11](compliance-policy-create-windows.md)  
 
 6. On the **Locations** tab, you can force compliance based on the location of the device. Choose from existing locations. If you don't have an available location yet, see [Use Locations (network fence)](use-network-locations.md) for guidance.
    > [!TIP]

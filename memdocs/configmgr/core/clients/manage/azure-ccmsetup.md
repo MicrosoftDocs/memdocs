@@ -1,30 +1,30 @@
 ---
 title: Azure AD authentication workflow
 titleSuffix: Configuration Manager
-description: Details of the Configuration Manager client installation process on a Windows 10 device with Azure Active Directory authentication
-ms.date: 10/07/2020
+description: Details of the Configuration Manager client installation process on a Windows device with Azure Active Directory (Azure AD) authentication.
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-ms.assetid: 9aaf466a-3f40-4468-b3cd-f0010f21f05a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: bmoran
+ms.localizationpriority: medium
 ---
 
 # Azure AD authentication workflow
 
 *Applies to: Configuration Manager (current branch)*
 
-This article is a technical reference for the Configuration Manager client installation and registration process on a Windows 10 device that is joined to Azure Active Directory (Azure AD). It details the workflow process for the device authentication.
+This article is a technical reference for the Configuration Manager client installation and registration process on a Windows device that is joined to Azure Active Directory (Azure AD). It details the workflow process for the device authentication.
 
 > [!NOTE]
-> Windows 10 clients get a workplace join (WPJ) certificate when they join an Azure AD tenant. If the certificate isn't found, the Configuration Manager client can't request Azure AD tokens. Without a token, the client can't use the Configuration Manager security token service (CCM_STS) communication channel for Azure AD authentication with Configuration Manager site systems.
+> Windows clients get a workplace join (WPJ) certificate when they join an Azure AD tenant. If the certificate isn't found, the Configuration Manager client can't request Azure AD tokens. Without a token, the client can't use the Configuration Manager security token service (CCM_STS) communication channel for Azure AD authentication with Configuration Manager site systems.
 
 ## Client installation
 
-In this workflow sample, you installed the Configuration Manager client on a Windows 10 device over the internet with the following ccmsetup command-line properties:
+In this workflow sample, you installed the Configuration Manager client on a Windows device over the internet with the following ccmsetup command-line properties:
 
 `CCMHOSTNAME="CMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500" SMSSITECODE="MEM"`
 
@@ -50,7 +50,7 @@ Enabled SSL revocation check.
 
 ### 2. Azure AD token request
 
-On a Windows 10 Azure AD domain-joined device, ccmsetup uses the Azure AD properties to request an Azure AD token calling the ADALOperation provider. The following entries are logged in **ccmsetup.log** on the client:
+On a Windows Azure AD domain-joined device, ccmsetup uses the Azure AD properties to request an Azure AD token calling the ADALOperation provider. The following entries are logged in **ccmsetup.log** on the client:
 
 ``` Log
 Getting AAD (device) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8b, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
@@ -144,7 +144,7 @@ Package:     C:\WINDOWS\ccmsetup\{E6F27809-FF66-4BAA-B0FB-E4A154A6A388}\client.m
 ```
 
 > [!NOTE]
-> If the client finds the content from a content-enabled CMG or cloud-based distribution point, ccmsetup downloads the content from the cloud storage. If the latest client version isn't available on the cloud, it downloads the content from the management point via a CMG request.
+> If the client finds the content from a content-enabled CMG, ccmsetup downloads the content from the cloud storage. If the latest client version isn't available on the cloud, it downloads the content from the management point via a CMG request.
 
 ## Client registration
 

@@ -1,15 +1,15 @@
 ---
 title: Tenant attach - Device timeline (preview)
 titleSuffix: Configuration Manager
-description: "View the timeline for Configuration Manager devices from the admin center."
+description: View the timeline for Configuration Manager devices from the admin center.
 ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: b2d914d8-6714-4fa1-9e14-0046b77e6b40
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center (preview)

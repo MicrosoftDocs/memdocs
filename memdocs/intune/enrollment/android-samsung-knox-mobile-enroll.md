@@ -5,8 +5,8 @@ title: Automatically enroll Android devices using Samsung's Knox Mobile Enrollme
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android devices using Samsung KME
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager:
 ms.date: 03/03/2020
 ms.topic: how-to

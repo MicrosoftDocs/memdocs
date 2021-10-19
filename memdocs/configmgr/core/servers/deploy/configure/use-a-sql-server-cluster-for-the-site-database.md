@@ -6,10 +6,10 @@ ms.date: 10/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use a SQL Server Always On failover cluster instance for the site database
@@ -54,7 +54,7 @@ Configuration Manager supports the following options for failover cluster instan
 
   - [Install a certificate in an Always On failover cluster instance configuration](/sql/database-engine/configure-windows/manage-certificates#provision-failover-cluster-cert)
 
-  - [PKI certificate requirements for Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
+  - [PKI certificate requirements for Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#pki-certificates-for-servers)
 
   > [!NOTE]
   > If you don't pre-provision a certificate in SQL Server, Configuration Manager creates and provisions a self-signed certificate for SQL Server.<!-- 7099499 -->

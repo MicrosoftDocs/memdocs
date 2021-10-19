@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/29/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -30,7 +30,7 @@ ms.reviewer: aanavath
 
 # Firewall policy for endpoint security in Intune
 
-Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10.
+Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and /11.
 
 While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
 
@@ -40,7 +40,8 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 ## Prerequisites for Firewall profiles
 
-- Windows 10 or later
+- Windows 10
+- Windows 11
 - Any supported version of macOS
 
 ## Firewall profiles
@@ -51,7 +52,7 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
 
-**Windows 10 profiles**:
+**Windows profiles**:
 
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
@@ -83,7 +84,7 @@ When rules from multiple rules profiles don't conflict with each other, devices 
 
 The reports for Firewall policy display status details about the firewall status for your managed devices.  Firewall reports support managed devices that run the following operating systems.
 
-- Windows 10 or later
+- Windows 10/11
 
 ### Summary
 
@@ -94,9 +95,9 @@ This view provides:
 - An aggregate count of devices that have the firewall turned off.
 - A list of your Firewall policies, including the name, type, if it's assigned, and when it was last modified.
 
-### Windows 10 MDM devices with firewall off
+### MDM devices running Windows 10 or later with firewall off
 
-This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **Windows 10 MDM devices with firewall off**.
+This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **MDM devices running Windows 10 or later with firewall off**.
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
 
@@ -109,11 +110,11 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
 
-### Windows 10 MDM Firewall status
+### MDM Firewall status for Windows 10 and later
 
 *This organizational report is also described in [Intune Reports](../fundamentals/reports.md#windows-10-mdm-firewall-status-organizational)*.
 
-As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
+As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)

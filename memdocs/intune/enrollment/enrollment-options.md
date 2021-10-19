@@ -5,8 +5,8 @@ title: Enrollment options for devices managed by Microsoft Intune
 titleSuffix: 
 description: A list of enrollment options that admins can set for devices managed by Microsoft Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: overview

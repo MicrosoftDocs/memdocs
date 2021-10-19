@@ -1,17 +1,15 @@
 ---
-title: "Configure remote control"
-titleSuffix: "Configuration Manager"
-description: "Set up remote control in Configuration Manager."
+title: Configure remote control
+titleSuffix: Configuration Manager
+description: Set up remote control in Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Configuring remote control in Configuration Manager
 

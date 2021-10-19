@@ -12,9 +12,19 @@ metadata:
   ms.topic: landing-page
   author: bhuney
   ms.author: brianhun
-  ms.date: 06/10/2021
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2107
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 10096997 Summary of changes in 2107
+            url: 2107/10096997.md
+          - text: KB 10503003 Early update ring
+            url: 2107/10503003.md
   - title: Configuration Manager 2103
     linkLists:
       - linkListType: overview

@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 08/11/2020
+ms.localizationpriority: medium
 ---
 
 ### Endpoints required for Configuration Manager-managed devices
@@ -18,7 +19,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ### Endpoints required for Intune-managed devices
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows client and Windows Server **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices. Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
 
 | Endpoint  | Function  |
 |-----------|-----------|

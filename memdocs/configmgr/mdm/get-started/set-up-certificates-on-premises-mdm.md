@@ -6,10 +6,10 @@ ms.date: 01/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
-ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Set up certificates for trusted communications with on-premises MDM
@@ -26,7 +26,7 @@ For domain-joined devices, if you use Active Directory Certificate Services, it 
 
 For bulk-enrolled devices, you can include the certificate in the enrollment package. For user-enrolled devices, you need to add the certificate through email, web download, or some other method.
 
-If you use a well-known public CA like Verisign or GoDaddy to issue the server certificates, you can avoid having to manually install the trusted root certificate on each device. Most devices natively trust these public authorities. This method is a useful alternative for user-enrolled devices, instead of installing the certificate through other means.
+If you use a public and globally trusted certificate provider to issue the server certificates, you can avoid having to manually install the trusted root certificate on each device. Most devices natively trust these public authorities. This method is a useful alternative for user-enrolled devices, instead of installing the certificate through other means.
 
 > [!IMPORTANT]  
 > There are many ways to set up the certificates for trusted communications between devices and the site system servers for on-premises MDM. The information in this article is an example of one way to do it. This method requires Active Directory Certificate Services, with a certification authority and the certification authority web enrollment role. For more information, see [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).

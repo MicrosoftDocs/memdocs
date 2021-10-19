@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2021
+ms.date: 08/06/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -83,7 +83,7 @@ To learn more about the SDK, see the [Overview](app-sdk.md). To get started with
 
 ## Not using an app development platform listed above?
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms. 
+The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. Guidance is not provided for other platforms, but it is possible to use the native SDK to create your own plug-ins.
 
 ## Feature comparison
 

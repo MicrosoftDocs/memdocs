@@ -2,14 +2,14 @@
 title: Security and privacy for apps
 titleSuffix: Configuration Manager
 description: Guidance and recommendations for security and privacy when managing applications in Configuration Manager.
-ms.date: 05/05/2021
+ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for application management in Configuration Manager
@@ -38,6 +38,9 @@ If you enable the options to **Run with administrative rights** or **Install for
 
 Use programs that use Windows Installer for setup and per-user elevated privileges for software deployments that require administrative credentials. Setup must be run in the context of a user who doesn't have administrative credentials. Windows Installer per-user elevated privileges provide the most secure way to deploy applications that have this requirement.
 
+> [!NOTE]
+> When the user starts the application installation process from Software Center, the option to **Allow users to view and interact with the program installation** can't control user interactions with any other processes created by the application installer. Because of this behavior, even if you don't select this option, the user may still be able to interact with an elevated process. To avoid this issue, don't deploy applications that create other processes with user interactions. If you have to install this type of application, deploy it as **Required** and configure the user notification experience to **Hide in Software Center and all notifications**.<!-- 10303284 -->
+
 ### Restrict whether users can install software interactively
 
 Configure the **Install permissions** client setting in the **Computer Agent** group. This setting restricts the types of users who can install software in Software Center.
@@ -52,7 +55,7 @@ Deploy mobile device applications only if they're code-signed by a certification
 
 For example:
 
-- An application from a vendor, which is signed by a well-known CA like VeriSign.
+- An application from a vendor, which is signed by a public and globally trusted certificate provider.
 
 - An internal application that you sign independent from Configuration Manager by using your internal CA.
 

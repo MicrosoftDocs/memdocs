@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 08/17/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,13 +44,16 @@ On this tab, you'll also find basic information about your available licenses an
 ## Connector status
 Connector status is a one-stop location to review the status of all available connectors for Intune.  
 
-Connectors are:
+Connectors are:  
 - **Connections you configure to external services**. For example, the *Apple Volume Purchase Program* service or the *Windows Autopilot* service.  Status for this type of connector is based on the last successful synchronization time.
 - **Certificates or credentials that are required to connect to an external unmanaged service**, like *Apple Push Notification Services* (APNS) certificates. Status for this type of connector is based on the expiry timestamp of the certificate or credential.  
 
 When you open the *Connector status* tab, any unhealthy connectors display at the top of the list. Next are connectors with warnings, and then the list of healthy connectors. Connectors you haven't yet configured appear last as *Not Enabled*.
 
 When there's more than a single connector of any one type, the status is a summary for all of those same connectors. The least healthy status of any single connector is used as the health for the group.  
+
+> [!IMPORTANT]
+> Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review the any applicable connector logs or open a case with [support](../../get-support.md) to investigate further.
 
 **Connector status:**
 - **Unhealthy:**

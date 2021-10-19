@@ -12,7 +12,7 @@ ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.reviewer: chrisbal
 
@@ -24,7 +24,7 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;workProfilesUpdate
+ms.custom: OS=Android;intune-azure;workProfilesUpdate
 
 ---
 
@@ -32,8 +32,8 @@ ms.custom: intune-azure;workProfilesUpdate
 
 In many organizations, administrators are challenged to protect resources and data on different devices. One challenge is protecting resources for users with personal Android Enterprise devices, also known as bring-your-own-device (BYOD). Microsoft Intune supports two Android deployment scenarios for bring-your-own-device (BYOD):
 
-- App protection policies without enrollment (APP-WE)
-- Android Enterprise personally-owned work profiles
+- [App protection policies without enrollment (APP-WE)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#app-we)
+- [Android Enterprise personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles)
 
 The APP-WE and the Android Enterprise personally-owned work profile deployment scenarios include the following key features important for BYOD environments:
 

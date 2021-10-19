@@ -96,11 +96,6 @@ After you report the problem to Microsoft, you can send the details of your expe
 
 Additionally, the Microsoft Intune Company Portal team would love to hear your feedback. Go to **Help** > **Send Feedback** to share your thoughts and ideas.  
 
-## Unverified profiles  
-When you view the installed mobile device management (MDM) profiles in **System Preferences** > **Profiles**, some profiles might show an unverified status. As long as the management profile shows a verified status, you don't need to be concerned.  
-
-The management profile is what defines the MDM channel connection. As long as the management profile is verified, any other profiles delivered to the machine via that channel inherit the security traits of the management profile.  
-
 ## Updating the Company Portal app
 
 Updating the Company Portal app is done the same way as any other Office app, through Microsoft AutoUpdate for macOS. Find out more about [updating Microsoft apps for macOS](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  

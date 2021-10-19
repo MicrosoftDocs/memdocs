@@ -6,13 +6,11 @@ ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # Capabilities in Technical Preview 1804 for Configuration Manager
@@ -102,7 +100,7 @@ Send a smile! You can now directly tell the Configuration Manager team about you
 
    - **Send a frown**: You encountered a problem in the console, or something didn't work as expected. For this option, enter the details of the potential product issue. Then optionally include a screenshot, your email address, and diagnostic data.  
 
-   - **Send a suggestion**: You have an idea to change and improve Configuration Manager. This option opens our [UserVoice](https://configurationmanager.uservoice.com) site in your web browser.  
+   - **Send a suggestion**: You have an idea to change and improve Configuration Manager. This option opens the Configuration Manager product feedback site in your web browser.
 
 This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
@@ -216,7 +214,7 @@ The behavior has changed when you revoke approval for an application. Now when y
 
 ## Exclude Active Directory containers from discovery
 <!--1358143-->
-To reduce the number of discovered objects, you can now exclude specific containers from Active Directory system discovery. This feature is a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery).
+To reduce the number of discovered objects, you can now exclude specific containers from Active Directory system discovery. This feature is a result of your feedback.
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
@@ -287,19 +285,19 @@ After adding the architecture criteria, the automatic deployment rule properties
 
 
 ## Improvements to OS deployment
-We made the following improvements to OS deployment, some of which were the result of your user voice feedback.  
 
-- [Mask sensitive data stored in task sequence variables](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): In the [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330--> The following behaviors apply when you enable this option:
+We made the following improvements to OS deployment, some of which were the result of your feedback.
+
+- Mask sensitive data stored in task sequence variables: In the [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330--> The following behaviors apply when you enable this option:
   - The value of the variable isn't displayed in smsts.log.
   - The Configuration Manager console and SMS Provider handle this value the same as other secrets such as passwords.
   - The value isn't included when you export the task sequence.
   - The task sequence editor doesn't read this value when you edit the step. Retype the entire value to make changes.
 
   > [!Important]  
-  > Variables and their values are saved with the task sequence as XML, and obfuscated in the database. When the client requests a task sequence policy from the management point, it is encrypted in transit and when stored on the client. However, all variable values are plain text in the task sequence environment in memory during runtime on the client. If the task sequence includes a step to output the value of the variable, this output is in plain text. This behavior requires an explicit action by the administrator to include such a step in the task sequence. 
+  > Variables and their values are saved with the task sequence as XML, and obfuscated in the database. When the client requests a task sequence policy from the management point, it is encrypted in transit and when stored on the client. However, all variable values are plain text in the task sequence environment in memory during runtime on the client. If the task sequence includes a step to output the value of the variable, this output is in plain text. This behavior requires an explicit action by the administrator to include such a step in the task sequence.
 
-
-- [Mask program name during Run Command Step of a task sequence](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
+- Mask program name during Run Command Step of a task sequence: To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
 
 
 

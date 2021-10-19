@@ -15,6 +15,8 @@ items:
     href: resource-explorer.md
   - name: Run scripts (preview)
     href: scripts.md
+  - name: BitLocker recovery keys (preview)
+    href: bitlocker-recovery-keys.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: Launch CMPivot (preview)
@@ -32,7 +34,9 @@ items:
   - name: Create and deploy antivirus policy
     href: deploy-antivirus-policy.md  
   - name: Create and deploy firewall policy
-    href: deploy-firewall-policy.md  
+    href: deploy-firewall-policy.md
+  - name: Create and deploy attack surface reduction policy
+    href: deploy-asr-policy.md     
 - name: Reference
   items:
   - name: Tenant attach data collection
@@ -44,7 +48,9 @@ items:
   - name: Firewall policy settings
     href: ../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
   - name: Endpoint Detection and Response policy settings
-    href: ../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
+    href: ../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Attack surface reduction policy settings
+    href: ../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
 - name: Troubleshoot
   items:
   - name: Tenant attach and device actions

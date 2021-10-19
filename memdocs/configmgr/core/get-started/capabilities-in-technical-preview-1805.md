@@ -6,13 +6,11 @@ ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # Capabilities in Technical Preview 1805 for Configuration Manager
@@ -282,7 +280,7 @@ The following scenarios benefit from these improvements:
 [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/configure-authentication.md#enable-management-point-for-https).  
 
 #### <a name="bkmk_token2"></a> Scenario 2: Client to distribution point
 <!--1358228-->
@@ -334,7 +332,7 @@ You can see these certificates in the Configuration Manager console. Go to the *
 
 ## Improvements for enabling third-party software update support
 <!--1357605-->
-As a result of your UserVoice feedback on [third-party software update support](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), this release further iterates on the integration with System Center Updates Publisher (SCUP). Configuration Manager technical preview [version 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) added the ability to read the certificate from WSUS for third-party updates, and then deploy that certificate to clients. But you still needed to use the SCUP tool to create and manage the certificate for signing third-party software updates.
+As a result of your feedback on third-party software update support, this release further iterates on the integration with System Center Updates Publisher (SCUP). Configuration Manager technical preview [version 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) added the ability to read the certificate from WSUS for third-party updates, and then deploy that certificate to clients. But you still needed to use the SCUP tool to create and manage the certificate for signing third-party software updates.
 
 In this release, you can enable the Configuration Manager site to automatically configure the certificate. The site communicates with WSUS to generate a certificate for this purpose. Configuration Manager then continues to deploy that certificate to clients. This iteration removes the need to use the SCUP tool to create and manage the certificate. 
 

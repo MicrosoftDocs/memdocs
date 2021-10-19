@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/08/2021
+ms.date: 09/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Device compliance settings for Android Enterprise in Intune
 
-This article lists and describes the different compliance settings you can configure on Android Enterprise devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
+This article lists and describes the different compliance settings you can configure on Android Enterprise devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
 This feature applies to:
 
@@ -56,7 +56,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **Require the device to be at or under the machine risk score**  
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -82,8 +82,12 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 #### Google Play Protect
 
+> [!IMPORTANT]
+> Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
+
 - **SafetyNet device attestation**  
   Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
@@ -172,7 +176,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 ### Microsoft Defender for Endpoint - *for Personally-Owned Work Profile*
 
 - **Require the device to be at or under the machine risk score**  
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -183,7 +187,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Block** - Mark rooted (jailbroken) devices as not compliant.
+  - **Block** - Mark rooted devices as not compliant.
 
 - **Require the device to be at or under the Device Threat Level**  
   Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
@@ -209,6 +213,15 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
 
+- **Required SafetyNet evaluation type**  
+  This setting is only available when *SafetyNet device attestation* is set to either *Check basic integrity* or *Check basic integrity & certified devices*.
+
+  Select the evaluation type you want to use to compute the SafetyNet device attestation response.
+
+  - **Not configured (defaults to basic evaluation)** – (*default*)
+  - **Hardware-backed key** – Require that hardware-backed key attestation is used for SafetyNet evaluation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
+
+  For more information about SafetyNet and which devices support hardware-backed key attestation, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafetyNet documentation for Android.
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
@@ -236,7 +249,7 @@ When a device is using an OS version later than the version in the rule, access 
 
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
-  - **Device Default**
+  - **Device Default**: Because the Device Default varies by device model, use one of the other values for more control and consistency across all devices.
   - **Low security biometric**
   - **At least numeric** (*default*): Enter the **minimum password length** a user must enter, between 4 and 16 characters.
   - **Numeric complex**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.

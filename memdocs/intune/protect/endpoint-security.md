@@ -57,11 +57,11 @@ For more information, see [Manage devices with endpoint security in Microsoft In
 
 ## Manage Security baselines
 
-Security baselines in Intune are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the product. Intune supports security baselines for Windows 10 device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
+Security baselines in Intune are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the product. Intune supports security baselines for Windows 10/11 device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
 
-You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later.
+You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later, and Windows 11.
 
-For more information, see [Use security baselines to configure Windows 10 devices in Intune](../protect/security-baselines.md).
+For more information, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
 Security baselines are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices so you can avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
@@ -223,7 +223,7 @@ Many of the settings you can configure for devices can be managed by different f
 - Endpoint security policies
 - Security baselines
 - Device configuration policies
-- Windows 10 enrollment policies
+- Windows enrollment policies
 
 For example, the settings found in Endpoint security policies are a subset of the settings that are found in *endpoint protection* and *device restriction* profiles in device configuration policy, and which are also managed through various security baselines.
 

@@ -6,10 +6,10 @@ ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
-ms.assetid: 15083f28-8ff2-4e23-9f5e-b5dbd0859839
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Common issues when enabling TLS 1.2
@@ -20,9 +20,8 @@ This article provides advice for common issues that occur when you enable TLS 1.
 
 The following client platforms are supported by Configuration Manager but aren't supported in a TLS 1.2 environment:
 
-- Windows CE
 - Apple OS X
-- Windows 10 devices managed with on-premises MDM
+- Windows devices managed with on-premises MDM
 
 ## Reports don't show in the console
 
@@ -73,7 +72,7 @@ When you try to create applications in Azure Active Directory (Azure AD), if the
 
 ## Configuration Manager cloud services and TLS 1.2
 
-The Azure virtual machines used by the cloud management gateway and cloud distribution points support TLS 1.2. Supported client versions automatically use TLS 1.2.
+The Azure virtual machines used by the cloud management gateway support TLS 1.2. Supported client versions automatically use TLS 1.2.
 
 The **SMSAdminui.log** may contain an error similar to the following example:
 

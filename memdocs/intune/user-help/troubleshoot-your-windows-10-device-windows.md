@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Troubleshoot Windows 10 device access to school or work | Microsoft Intune
-description: Resolve access or account connection issues for an enrolled Windows 10 device. 
+title: Troubleshoot Windows 10/11 device access for school or work | Microsoft Intune
+description: Resolve access or account connection issues for an enrolled Windows device. 
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/22/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,8 +30,15 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Troubleshoot Windows 10 device access
-This article describes how to resolve access issues for an enrolled Windows 10 device. 
+
+
+# Troubleshoot Windows device access  
+
+**Applies to**  
+- Windows 10  
+- Windows 11
+
+This article describes how to resolve access issues for an enrolled Windows 10/11 device. 
 
 ## Check Wi-Fi connection  
 
@@ -42,9 +49,9 @@ These steps are the same you'd use to enroll your device. However, if your accou
 
 1. Open the **Settings** app. 
 2. Select **Accounts**.
-3. This next step varies depending on the version of Windows 10 you're using. 
-    * Version 1607 and later: Select **Access work or school**.
-    * Version 1511 and earlier: Select **Work access**.  
+3. This next step varies depending on the version of Windows you're using. 
+    * Windows 10 (version 1607 and later) and Windows 11: Select **Access work or school**.
+    * Windows 10, version 1511 and earlier: Select **Work access**.  
 4. Check for your account. If it's not listed, select the **Connect** plus sign button to add it. 
 5. Sign in with your work or school credentials. 
 6. Follow the onscreen prompts to finish connecting.  

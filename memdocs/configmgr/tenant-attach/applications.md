@@ -1,15 +1,15 @@
 ---
 title: Tenant attach - Applications (preview) in the admin center
 titleSuffix: Configuration Manager
-description: "Install applications for uploaded Configuration Manager devices from the admin center."
+description: Install applications for uploaded Configuration Manager devices from the admin center.
 ms.date: 06/28/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_apps"></a> Tenant attach: Install an application from the admin center (preview)
@@ -37,7 +37,7 @@ For Configuration Manager versions 2010, and earlier:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
 - A minimum of [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/)
-- Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
+- Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/optional-features.md).
 - At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
    - User targeted applications or applications without the approval option set don't appear in the application list when you're using Configuration Manager version 2002.
 - A minimum of Configuration Manager version 2006 is required for installing [user targeted applications](#bkmk_user)<!--7518897-->.

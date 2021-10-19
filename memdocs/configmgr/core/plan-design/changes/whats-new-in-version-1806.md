@@ -6,11 +6,11 @@ ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
@@ -136,7 +136,7 @@ Boundary groups now include additional settings to give you more control over co
 
 - **During peer downloads, only use peers within the same subnet**: The management point only includes in the content location list peer sources that are in the same subnet as the client.  
 
-For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-group-options.md).
 
 
 ### Improvement to peer cache source location status
@@ -416,9 +416,9 @@ Two new articles are now available for understanding task sequence variables:
 
 ### Software Center infrastructure improvements
 <!--1358309-->
-Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../../servers/deploy/configure/boundary-groups.md#management-points).
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../../servers/deploy/configure/boundary-groups-management-points.md).
 
-For more information, see [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)  
+For more information, see [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#configure-software-center)
 
 > [!Note]  
 > The application catalog website point and web service point roles are no longer *required* in 1806, but still *supported* roles. 

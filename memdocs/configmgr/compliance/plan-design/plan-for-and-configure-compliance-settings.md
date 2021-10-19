@@ -1,17 +1,15 @@
 ---
-title: "Plan for and configure compliance settings"
-titleSuffix: "Configuration Manager"
-description: "Learn about the prerequisites and configuration tasks for working with compliance settings in Configuration Manager."
+title: Plan for and configure compliance settings
+titleSuffix: Configuration Manager
+description: Learn about the prerequisites and configuration tasks for working with compliance settings in Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # Plan for and configure compliance settings in Configuration Manager
 
