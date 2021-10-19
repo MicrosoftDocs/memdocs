@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 *This feature is in public preview.*  
 
-Set up enrollment in Microsoft Intune for corporate-owned, userless devices built on the Android Open Source Project (AOSP) platform. Intune offers an *Android (AOSP)* device management solution for corporate-owned devices that are:   
+Set up enrollment in Microsoft Intune for corporate-owned, userless devices built on the Android Open Source Project (AOSP) platform. Intune offers an *Android (AOSP)* device management solution for corporate-owned Android devices that are:   
 
 * Not integrated with Google Mobile Services.
 * Intended to be shared by more than one user. 
@@ -64,7 +64,7 @@ Create an enrollment profile to enable enrollment on devices.
 > [!TIP]
 > Intune also generates a token in plain text form, but that one can't be used to enroll devices.   
 
-1.	Sign in to the Microsoft Endpoint Manager admin center and select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
+1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
 2.	Select **Create** and fill out the required fields.
     - **Name**: Type a name to use when assigning the profile to the dynamic device group.  
     - **Description**: Add a profile description (optional).  
@@ -75,8 +75,12 @@ Create an enrollment profile to enable enrollment on devices.
         > Wi-Fi details are required because the RealWear device does not have a button or option that lets it automatically connect to other devices.  
 
     - **Hidden Network**: Choose whether this is a hidden network. By default, this setting is disabled. 
-    - **Wi-Fi Type**: Select the type of authentication needed for this network. If you select **WEP Pre-Shared Key** or **WPA Pre-Shared Key**, also enter:   
-        - **Pre-shared key**: The pre-shared key that's used to authenticate with the network. 
+    - **Wi-Fi Type**: Select the type of authentication needed for this network.  
+
+        If you select **WEP Pre-Shared Key** or **WPA Pre-Shared Key**, also enter:   
+
+        - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
+
 3. Select **Next** and optionally, select scope tags. 
 4. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
 
@@ -89,7 +93,8 @@ After you create a profile, Intune generates a token that's needed for enrollmen
 
 Another way to find the token is:
 1. Go to **Corporate-owned, userless devices**.
-2. Locate your profile in the list, and then select the more menu (**...**) > **View enrollment token**. 
+2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
+3. Select **View enrollment token**.  
 
 The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
 
@@ -100,7 +105,7 @@ The token appears as a QR code. During device setup, when prompted to, scan the 
 ### Replace token  
 Generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
 
-1. Sign in to the Microsoft Endpoint Manager admin center.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
 3. Choose the profile that you want to work with.
 4. Select **Token** > **Replace token**.
@@ -115,7 +120,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 
  Revoking a token does not affect devices that are already enrolled.
 
-1.	Sign in to the Microsoft Endpoint Manager admin center.
+1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.
 2.	Choose the profile that you want to work with.
 3.	Select **Token** > **Revoke token** > **Yes**.   
@@ -172,24 +177,24 @@ The following remote actions are available for Android (AOSP) devices:
 You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
 
 > [!NOTE]
-> After you wipe an Android (AOSP) device, the device remains in a **Pending** state until the it's fully restored to its factory default. Then Intune removes it from the device list. When you delete a device, the device is removed from the device list immediately, with no pending status, and the factory reset happens the next time the device checks in. 
+> After you wipe an Android (AOSP) device, the device remains in a **Pending** state until it's fully restored to its factory default settings. Then Intune removes it from the device list. When you delete a device, the device is removed from the device list immediately, with no pending status, and the factory reset happens the next time the device checks in. 
 
 ## Troubleshooting  
 
-## View version of Microsoft Intune and Microsoft Authenticator apps
+### View version of Microsoft Intune and Microsoft Authenticator apps
 To find out which version of the Microsoft Intune app or Microsoft Authenticator app is installed on a device:
 
 1. Go to **Devices** and select the device name.    
 2. Select **Discovered apps**. 
 3. Find your app and then look in the **Application Version** column for the version number.  
 
-## Troubleshooting + Support  
+### Troubleshooting + Support     
 Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigation menu to:
 
 * See a list of Android (AOSP) devices enrolled by a user
 * Enable troubleshooting of Android (AOSP) devices the same way you can troubleshoot other user devices. 
 
-## Share Intune app logs with Microsoft  
+### Share app logs with Microsoft  
 If you experience problems with enrollment or the Microsoft Intune app, you can use the Intune app to upload and send app logs to Microsoft. After you submit the logs, you'll receive an incident ID to share with your Microsoft support person.   
 
 ## Known limitations  
