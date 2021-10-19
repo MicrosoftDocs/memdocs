@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows 10 Antivirus policy settings for Windows Security experience for Intune | Microsoft Docs
+title: Antivirus policy settings for Windows Security experience policy for Microsoft Intune | Microsoft Docs
 description: Endpoint security Antivirus policy settings for the Windows Security app in Microsoft Intune 
 keywords:
 author: brenduns
@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Settings for the Windows Security experience profile in Microsoft Intune
 
-View the Antivirus policy settings you can configure for the **Windows Security Experience** profile for Windows 10 in Microsoft Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+View the Antivirus policy settings you can configure for the **Windows Security Experience** profile for Windows 10 and Windows 11 devices as part of a Microsoft Intune [Endpoint security policy](../protect/endpoint-security-policy.md).
 
 **Windows Security**
 
@@ -115,7 +115,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
 
   For this setting to take effect, the user needs to either sign out and back in, or reboot the computer.
   - **Not configured** (*default*) - The setting returns the client to the default, which is to show the icon.
-  - **Yes** - Hide the Windows Security icon from the users system tray.
+  - **Yes** - Hide the Windows Security icon from the notification area.
   - **No** - Behavior is the same as *Not configured*.
   
 - **Disable the Clear TPM option in the Windows Security app**  

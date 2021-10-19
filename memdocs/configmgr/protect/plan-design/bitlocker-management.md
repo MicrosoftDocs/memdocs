@@ -2,14 +2,14 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 04/14/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for BitLocker management
@@ -26,7 +26,7 @@ Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-prem
 For more general information about BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview). For a comparison of BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 > [!TIP]
-> To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
+> To manage encryption on co-managed Windows 10 or later devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
 
 ## Features
 
@@ -34,7 +34,7 @@ Configuration Manager provides the following management capabilities for BitLock
 
 ### Client deployment
 
-- Deploy the BitLocker client to managed Windows devices running Windows 10 or Windows 8.1
+- Deploy the BitLocker client to managed Windows devices running Windows 8.1, Windows 10 or Windows 11.
 
 - Manage BitLocker policies and escrow recovery keys for on-premises and internet-based clients
 
@@ -62,6 +62,9 @@ Built-in reports for:
 ### Administration and monitoring website
 
 Allow other personas in your organization outside of the Configuration Manager console to help with key recovery, including key rotation and other BitLocker-related support. For example, help desk administrators can help users with key recovery.
+
+> [!TIP]
+> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../tenant-attach/bitlocker-recovery-keys.md).
 
 ### User self-service portal
 

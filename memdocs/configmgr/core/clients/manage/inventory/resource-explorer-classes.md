@@ -9,6 +9,7 @@ ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 # Resource Explorer default inventory classes
 

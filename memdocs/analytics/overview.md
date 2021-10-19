@@ -2,15 +2,15 @@
 title: What is Endpoint analytics?
 titleSuffix: Microsoft Endpoint Manager
 description: Overview for Endpoint analytics.
-ms.date: 10/28/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
-ms.assetid: b3273525-dc40-40d7-adf0-6ed8b054bd7e
 author: mestew
 ms.author: mstewart
 manager: dougeby
 #Customer intent: As an Intune or Configuration Manager admin, I want to have visibility into the end-user experience so that I can improve it.
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_overview"></a> What is Endpoint analytics?
@@ -40,11 +40,11 @@ This initial release, focuses on three things:
 You can enroll devices via Configuration Manager or Microsoft Intune.
 
 ### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune requires:
-- Intune enrolled or co-managed devices on the following Windows 10 versions:
+- Intune enrolled or co-managed devices running the following:
+   - Windows 10 version 1903 or later
+   - July 2021 cumulative update or later
    - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
-   - Version 1903 or later
-   - July 2021 cumulative update or later 
-- Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
+- Windows devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
    - After clicking **Start** for gathering data, other read-only roles can view the data.
@@ -58,7 +58,7 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 ### <a name="bkmk_prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](proactive-remediations.md#bkmk_prs) has the following requirements:
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
-  - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune.
+  - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
   - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
 
 ## Licensing Prerequisites
@@ -66,9 +66,9 @@ Whether enrolling devices via Intune or Configuration Manager, [**Proactive reme
 Devices enrolled in Endpoint analytics need a valid Microsoft Endpoint Manager license. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 Proactive remediations also require one of the following licenses for the managed devices:
-- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10 Virtual Desktop Access (VDA) per user
+- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows 10/11 Virtual Desktop Access (VDA) per user
 
 ## Permissions
 
@@ -111,7 +111,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ### Endpoints required for Intune-managed devices
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
 
 | Endpoint  | Function  |
 |-----------|-----------|

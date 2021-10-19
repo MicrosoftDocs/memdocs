@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure client authentication for cloud management gateway
@@ -17,7 +18,7 @@ manager: dougeby
 
 The next step in the setup of a cloud management gateway (CMG) is to configure how clients authenticate. Because these clients are potentially connecting to the service from the untrusted public internet, they have a higher authentication requirement. There are three options:
 
-- Azure AD
+- Azure Active Directory (Azure AD)
 - PKI certificates
 - Configuration Manager site-issued tokens
 
@@ -25,7 +26,7 @@ This article describes how to configure each of these options. For more foundati
 
 ## Azure AD
 
-If your internet-based devices are running Windows 10, you can use Azure AD modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios.
+If your internet-based devices are running Windows 10 or later, use Azure AD modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios.
 
 This authentication method requires the following configurations:
 

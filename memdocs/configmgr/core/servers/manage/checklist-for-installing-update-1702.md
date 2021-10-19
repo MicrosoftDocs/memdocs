@@ -1,18 +1,16 @@
 ---
-title: "Checklist for 1702"
-titleSuffix: "Configuration Manager"
-description: "Learn about actions to take before updating to Configuration Manager version 1702."
+title: Checklist for 1702
+titleSuffix: Configuration Manager
+description: Learn about actions to take before updating to Configuration Manager version 1702.
 ms.date: 06/06/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Checklist for installing update 1702 for Configuration Manager
 

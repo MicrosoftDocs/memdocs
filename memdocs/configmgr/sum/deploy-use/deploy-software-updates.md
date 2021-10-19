@@ -9,9 +9,7 @@ ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-
-
+ms.localizationpriority: medium
 ---
 
 # Deploy software updates  

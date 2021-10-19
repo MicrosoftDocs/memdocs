@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Support Center OneTrace
@@ -32,7 +33,7 @@ OneTrace works with many types of log files, such as:
 - Configuration Manager client logs
 - Configuration Manager server logs
 - Status messages
-- Windows Update ETW log file on Windows 10
+- Windows Update ETW log file on Windows 10 or later
 - Windows Update log file on Windows 7 & Windows 8.1
 
 ## Prerequisites

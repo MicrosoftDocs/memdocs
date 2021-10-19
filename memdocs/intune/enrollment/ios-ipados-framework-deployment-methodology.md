@@ -5,8 +5,8 @@ title: Framework deployment methodology for iOS/iPadOS devices in Intune
 titleSuffix: Microsoft Intune
 description: Learn the framework deployment methodology for iOS/iPadOS devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 4/15/2021
 ms.topic: overview

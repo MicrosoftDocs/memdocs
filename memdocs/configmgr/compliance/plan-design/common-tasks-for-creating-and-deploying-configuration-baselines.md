@@ -1,17 +1,15 @@
 ---
-title: "Common tasks for configuration baselines "
-titleSuffix: "Configuration Manager"
-description: "Learn about how to create and deploy Configuration Manager configuration baselines."
-ms.date: 07/12/2017
+title: Common tasks for configuration baselines
+titleSuffix: Configuration Manager
+description: Learn about how to create and deploy Configuration Manager configuration baselines.
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Common tasks for creating and deploying configuration baselines with Configuration Manager
 
@@ -24,9 +22,9 @@ This topic contains common scenarios to help you learn about how to create and d
  Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings, and also read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites.  
 
 ## Create a configuration baseline  
- In this example, you've created a configuration item for only Windows 10 PCs that run the Configuration Manager client.  
+ In this example, you've created a configuration item for only  or later PCs that run the Configuration Manager client.  
 
- This configuration item enforces a required password of at least 6 characters on Windows 10 PCs. The configuration item is named **Windows 10 Password Enforcement**.  
+ This configuration item enforces a required password of at least 6 characters on Windows 10 or later PCs. The configuration item is named **Windows 10 or later password enforcement**.  
 
 Use the following procedure to learn how to add this configuration item to a configuration baseline to prepare it for deployment.  
 
@@ -36,11 +34,11 @@ Use the following procedure to learn how to add this configuration item to a con
 
 3. In the **Create Configuration Baseline** dialog box, configure the following settings:  
 
-   -   **Name** - Enter **Windows 10 Passwords** (or another name of your choice)  
+   -   **Name** - Enter **Windows 10 or later passwords** (or another name of your choice)  
 
 4. Click **Add** > **Configuration Items**.  
 
-5. In the **Add Configuration Items** dialog box, select the **Windows 10 Password Enforcement** configuration item that you previously created, then click **Add**.  
+5. In the **Add Configuration Items** dialog box, select the **Windows 10 or later password enforcement** configuration item that you previously created, then click **Add**.  
 
 6. Click OK to close the **Add Configuration Items** dialog box and return to the **Create Configuration Baseline** dialog box.
 
@@ -53,20 +51,20 @@ Use the following procedure to learn how to add this configuration item to a con
 
 1. In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Baselines**.  
 
-2. From the list of configuration baselines, select **Windows 10 Passwords**.  
+2. From the list of configuration baselines, select **Windows 10 or later passwords**.  
 
 3. On the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
 4. In the **Deploy Configuration Baselines** dialog box, configure the following settings:  
 
-   -   **Selected configuration baselines** - Ensure that the **Windows 10 Passwords** configuration baseline was automatically added to this list.  
+   -   **Selected configuration baselines** - Ensure that the **Windows 10 or later passwords** configuration baseline was automatically added to this list.  
 
    -   **Remediate noncompliant rules when supported** - Check this box to ensure that if the correct settings are not present on targeted devices, then they are remediated by Configuration Manager.  
 
    -   **Collection** - Click **Browse** to choose the collection of computers on which the configuration baseline is evaluated and remediated for compliance. In this example, the configuration baseline was deployed to the built-in **All Desktop and Server Clients** collection.  
 
        > [!TIP]  
-       >  Don't worry if the collection you choose contains computers or devices that don't run Windows 10. As long as you configured supported platforms in the configuration item you created, only Windows 10 PCs are evaluated for compliance.  
+       >  Don't worry if the collection you choose contains computers or devices that don't run Windows 10 or later. As long as you configured supported platforms in the configuration item you created, only Windows 10 or later PCs are evaluated for compliance.  
 
    -   If necessary, configure the schedule by which the configuration baseline is evaluated. Otherwise, keep the default of **7 Days**.  
 

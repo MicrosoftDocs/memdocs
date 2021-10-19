@@ -6,11 +6,11 @@ ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1810 of Configuration Manager current branch
@@ -264,7 +264,7 @@ For more information, see [Manage drivers](../../../osd/get-started/manage-drive
 <!--3098809, 3113836, 3204570 -->
 Additional filters have been added to Windows 10 servicing plans. You can now filter by **Architecture**, **Product Category**, and if the upgrade is **Superseded**.
 
-For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#windows-10-servicing-plan).
+For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#windows-servicing-plan).
 
 ### New task sequence variable for last action name
 

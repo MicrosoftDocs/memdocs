@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 09/29/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -49,7 +49,7 @@ This public preview feature supports Windows 10 Enterprise multi-session VMs whi
 
 - Running Windows 10 multi-session, version 1903 or later.
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
-- Running a Azure Virtual Desktop agent version of 2944.1400 or later.
+- Running a Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Microsoft Endpoint Manager using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using  a single MDM provider.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
@@ -153,8 +153,18 @@ Scripts configured to run in the system context are supported on Windows 10 Ente
 
 ## Windows Update for Business
 
-Windows Update for Business policies are not currently supported for Windows 10 Enterprise multi-session.  
-We recommend that you swap the OS image in Azure if you need the latest security updates. If you use the Azure Gallery image, you always get the latest security updates and can make sure all VMs are up-to-date and secured.
+You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows 10 Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
+
+The following settings are available in the catalog, with the links opening the Windows CSP documentation:
+
+- [Active Hours End](/windows/client-management/mdm/policy-csp-Update#update-activehoursend)
+- [Active Hours Max Range](/windows/client-management/mdm/policy-csp-Update?#update-activehoursmaxrange)
+- [Active Hours Start](/windows/client-management/mdm/policy-csp-Update#update-activehoursstart)
+- [Block "Pause Updates" ability](/windows/client-management/mdm/policy-csp-Update#update-setdisablepauseuxaccess)
+- [Configure Deadline Grace Period](/windows/client-management/mdm/policy-csp-Update#update-configuredeadlinegraceperiod)
+- [Defer Quality Updates Period (Days)](/windows/client-management/mdm/policy-csp-Update#update-deferqualityupdatesperiodindays)
+- [Pause Quality Updates Start Time](/windows/client-management/mdm/policy-csp-Update#update-pausequalityupdatesstarttime)
+- [Quality Update Deadline Period (Days)](/windows/client-management/mdm/policy-csp-Update?#update-configuredeadlineforqualityupdates)
 
 ## Remote actions
 
@@ -183,6 +193,30 @@ Out of Box Experience (OOBE) enrollment isn't supported for Window 10 Enterprise
 - Enrollment status page isn’t supported.
 
 Windows 10 Enterprise multi-session managed by Microsoft Endpoint Manager is not currently supported for US Government Community (GCC), GCC High, DoD, or China.
+
+## Troubleshooting
+
+The following sections provide troubleshooting guidance for common issues.
+
+### Enrollment issues
+
+|Issue|Detail|
+|---------------|---------------------------------|
+|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you’re using must be version 2944.1400 or later.<li>You have more than one MDM provider, which is not supported.<li>Windows 10 Enterprise multi-session VM is configured outside of a host pool. Microsoft Endpoint Manager only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool was not created through the Azure Resource Manager template.|
+|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you’re using is not updated. The agent must be version 2944.1400 or above.<li>Azure Virtual Desktop host pool was not created through the Azure Resource Manager template.|
+
+### Configuration issues
+
+|Issue|Detail|
+|--------|------------------------------|
+|Settings catalog policy fails|Confirm the VM is enrolled using device credentials. Enrollment with user credentials is not currently supported for Windows 10 Enterprise multi-session.|
+|Configuration policy did not apply|Templates (with the exception of Certificates) are not supported on Windows 10 Enterprise multi-session. All policies must be created via the settings catalog.|
+Configuration policy reports as Not applicable|Some policies are not applicable to Azure Virtual Desktop VMs. For a detailed list, review the documentation.|
+|Administrative template policy did not apply|Some ADMX settings currently require a Windows Insider Preview Build. You can hover over the information bubble next to the setting name to see if an Insider build is required for a specific setting.|
+|Microsoft Edge/Microsoft Office ADMX policy does not show up when I apply the filter for Windows 10 Enterprise multi-session edition|Applicability for these settings is not based on the Windows version or edition but on whether those apps have been installed on the device. To add these settings to your policy, you may have to remove any filters applied in the settings picker.|
+|App configured to install in system context did not apply|Confirm the app does not have a dependency or supersedence relationship on any apps configured to install in user context. User context apps are not currently supported on Windows 10 Enterprise multi-session.|
+|Update rings for Windows 10 and later policy did not apply|Confirm the app does not have a dependency or supersedence relationship on any apps configured to install in the user context. User context apps are not currently supported on Windows 10 Enterprise multi-session.|
+|Update rings for Windows 10 and later policy did not apply|Windows Update for Business policies are not currently supported.|
 
 ## Next steps
 

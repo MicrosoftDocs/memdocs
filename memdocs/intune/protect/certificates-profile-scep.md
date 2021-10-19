@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2021
+ms.date: 08/31/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,7 +40,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Create a SCEP certificate profile
 
@@ -74,7 +74,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Certificate type**:
 
-     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1 and later, and Windows 10 and later.)*
+     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
 
      Select a type depending on how you'll use the certificate profile:
 
@@ -84,12 +84,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
      > [!NOTE]
-     > Storage of certificates provisoned by SCEP:
+     > Storage of certificates provisioned by SCEP:
      > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
      >
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
      >
-     >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store. 
+     >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store.
 
    - **Subject name format**:
 
@@ -105,6 +105,17 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      > - ;
      > - ,
      > - =
+
+     > [!NOTE]
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     >
+     > - Serial number
+     > - IMEI
+     > - MEID
+     >
+     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     >
+     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
      - **User certificate type**
 
@@ -143,7 +154,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        Format options for the Subject name format include the following variables:
 
        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
-       - **{{DeviceId}}** - This is the Intune device ID
+       - **{{DeviceId}}** - The Intune device ID
        - **{{Device_Serial}}**
        - **{{Device_IMEI}}**
        - **{{SerialNumber}}**
@@ -173,6 +184,17 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - **Uniform Resource Identifier (URI)**
 
      Variables available for the SAN value depend on the Certificate type you selected; either **User** or **Device**.
+
+     > [!NOTE]
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     >
+     > - Serial number
+     > - IMEI
+     > - MEID
+     >
+     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     >
+     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
      - **User certificate type**
 
@@ -208,7 +230,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Key storage provider (KSP)**:
 
-     *(Applies to:  Windows 8.1 and later, and Windows 10 and later)*
+     *(Applies to:  Windows 8.1, and Windows 10/11)*
 
      Specify where the key to the certificate is stored. Choose from the following values:
 
@@ -234,7 +256,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android enterprise, Windows 8.1 and later, and Windows 10 and later)*
+     *(Applies to Android, Android enterprise, Windows 8.1, and Windows 10/11)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
 
@@ -278,7 +300,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    Select **Next**.
 
-10. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+10. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
    For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
@@ -339,7 +361,7 @@ Consider the following before you continue:
 
 - To publish a certificate to a device quickly after the device enrolls, assign the certificate profile to a user group rather than to a device group. If you assign to a device group, a full device registration is required before the device receives policies.
 
-- If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10 clients to start the process of requesting the certificate.
+- If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10/11 clients to start the process of requesting the certificate.
 
 > [!NOTE]
 > - On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request.

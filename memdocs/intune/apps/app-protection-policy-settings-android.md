@@ -12,7 +12,7 @@ ms.date: 08/18/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 
@@ -25,7 +25,7 @@ ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: OS=Android;intune-azure
 ms.collection: M365-identity-device-management
 ---
 # Android app protection policy settings in Microsoft Intune

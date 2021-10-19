@@ -2,13 +2,14 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 10/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Technical preview for Configuration Manager
@@ -91,7 +92,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2106**
+- **Technical preview version 2110**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -99,7 +100,7 @@ Download a baseline version from the [Evaluation Center](https://www.microsoft.c
 
 We love to hear your feedback about the new features in the technical preview. For more information, see [Product feedback](../understand/product-feedback.md).
 
-If you have ideas about new features you would like to see, let us know! Submit new ideas and vote on the ideas by others: [Configuration Manager UserVoice](https://configurationmanager.uservoice.com).
+<!--10932544 If you have ideas about new features you would like to see, let us know! Submit new ideas and vote on the ideas by others: [Configuration Manager UserVoice](https://configurationmanager.uservoice.com). -->
 
 <!--
 ## <a name="bdmk_tpknownissues"></a> General changes introduced in technical preview branch
@@ -118,10 +119,18 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2107
+### Technical preview version 2110
 
-- [Tenant attach: Software updates information](2021/technical-preview-2107.md#bkmk_sum) <!--6024419-->
-- [Publish query to Community hub from CMPivot](2021/technical-preview-2107.md#bkmk_hub) <!--9965423-->
+- [Simplified cloud attach configuration](2021/technical-preview-2110.md#bkmk_attach) <!--10964629-->
+- [Improvements to client health dashboard](2021/technical-preview-2110.md#bkmk_health) <!--5728069-->
+- [Enable update notifications from Microsoft 365 Apps](2021/technical-preview-2110.md#bkmk_365) <!--10628998-->
+- [Branding in the Windows Update native reboot experience](2021/technical-preview-2110.md#bkmk_brand) <!--10543514-->
+- [Improvements to application groups](2021/technical-preview-2110.md#bkmk_appgroups) <!--10479618-->
+- [Improvements to external notifications](2021/technical-preview-2110.md#bkmk_notify) <!--10615989-->
+- [Approvals for orchestration group scripts](2021/technical-preview-2110.md#bkmk_orchestration) <!--9957939-->
+- [Task sequence check for TPM 2.0](2021/technical-preview-2110.md#bkmk_tpm) <!--9575077-->
+- [Console improvements](2021/technical-preview-2110.md#bkmk_console) <!--9575773-->
+- [Status messages for console extensions](2021/technical-preview-2110.md#bkmk_audit) <!--11048976-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -139,7 +148,32 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-<!-- ### Technical preview version 2106 -->
+### Technical preview version 2109
+
+- [Improvements to Support Center OneTrace](2021/technical-preview-2109.md#bkmk_onetrace) <!--9348231-->
+- [Options for Support Center Data Collector and Client Tools](2021/technical-preview-2109.md#bkmk_support) <!--9947307-->
+- [Send product feedback from wizard and property dialogs](2021/technical-preview-2109.md#bkmk_feedback) <!--2711343-->
+- [Implicit uninstall for user collections](2021/technical-preview-2109.md#bkmk_uninstall) <!--10393847-->
+- [Require installation of a console extension](2021/technical-preview-2109.md#bkmk_extensions) <!--10486584-->
+- [Import console extensions wizard](2021/technical-preview-2109.md#bkmk_import) <!--9741121-->
+- [Improvements to ADR search criteria](2021/technical-preview-2109.md#bkmk_adr) <!--7033309-->
+- [Improvements to VPN boundary types](2021/technical-preview-2109.md#bkmk_vpn) <!--7822886-->
+- [.NET version 4.6.2 prerequisite check is an error](2021/technical-preview-2109.md#bkmk_dotnetprereq) <!--10644702-->
+- [External dependencies require .NET 4.6.2](2021/technical-preview-2109.md#bkmk_dotnetsdk) <!--10529267-->
+- [Copy GUID for ISV proxy certificate](2021/technical-preview-2109.md#bkmk_isvproxy) <!--2842082-->
+- [PowerShell release notes preview](2021/technical-preview-2109.md#bkmk_powershell) <!--10654429-->
+
+### Technical preview version 2108
+
+- [Export to CSV](2021/technical-preview-2108.md#bkmk_csv) <!--9663857-->
+- [Custom properties for devices in the console](2021/technical-preview-2108.md#bkmk_custom) <!--10642650-->
+- [Improvements to Software Center notifications with logos](2021/technical-preview-2108.md#bkmk_notify) <!--4993167-->
+- [PowerShell release notes preview](2021/technical-preview-2108.md#bkmk_powershell) <!--10326535-->
+
+### Technical preview version 2107
+
+- [Tenant attach: Software updates information](2021/technical-preview-2107.md#bkmk_sum) <!--6024419-->
+- [Publish query to Community hub from CMPivot](2021/technical-preview-2107.md#bkmk_hub) <!--9965423-->
 
 ## Features in previous technical previews
 
@@ -156,7 +190,6 @@ The following features were released with previous versions of the Configuration
 | Intune role-based access control for tenant attach <!--8126836--> | [Tech preview 2106](2021/technical-preview-2106.md#bkmk_rbac) |
 | Windows Update native experience for software updates <!--4316341--> | [Tech preview 2105.2](2021/technical-preview-2105-2.md#bkmk_wu) |
 | Support Center dark and light themes <!--8218853--> | [Tech preview 2105](2021/technical-preview-2105.md#bkmk_dark) |
-| Tenant attach: BitLocker recovery keys <!--6979225--> | [Tech preview 2104](2021/technical-preview-2104.md#bkmk_bitlocker) |
 | Manage aged distribution point messages <!--8561493,9388277--> | [Tech preview 2101](2021/technical-preview-2101.md#bkmk_distmsg) |
 | Community hub support for application content <!--7983035--> | [Tech preview 2012](2020/technical-preview-2012.md#bkmk_hubapp) |
 | Software Center notifications display with logo <!--4993167--> | [Tech preview 2011](2020/technical-preview-2011.md#bkmk_notify) |

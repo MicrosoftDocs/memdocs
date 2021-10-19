@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Enhanced HTTP
@@ -65,7 +66,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 - [Cloud management gateway](../../clients/manage/cmg/overview.md)
 - [OS deployment without a network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#enhanced-http)
-- [Enable co-management for new internet-based Windows 10 devices](../../../comanage/tutorial-co-manage-new-devices.md)
+- [Enable co-management for new internet-based Windows devices](../../../comanage/tutorial-co-manage-new-devices.md)
 - [App approvals via email](../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 - [Administration service](../../../develop/adminservice/overview.md)
 - [View recently connected consoles](../../servers/manage/admin-console.md#bkmk_viewconnected)
@@ -96,7 +97,7 @@ Enhanced HTTP doesn't currently secure all communication in Configuration Manage
 
 - For scenarios that require Azure AD authentication, [onboard the site](../../clients/manage/cmg/configure-azure-ad.md) to Azure AD for cloud management. If you don't onboard the site to Azure AD, you can still enable enhanced HTTP.
 
-- *For [Scenario 3](#scenario-3-azure-ad-device-identity) only*: A client running a supported version of Windows 10 and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
+- *For [Scenario 3](#scenario-3-azure-ad-device-identity) only*: A client running a supported version of Windows 10 or later and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
 
 > [!NOTE]
 > There are no OS version requirements, other than what the [Configuration Manager client supports](../configs/supported-operating-systems-for-clients-and-devices.md).

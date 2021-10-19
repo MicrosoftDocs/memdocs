@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/04/2021
+ms.date: 09/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,15 +37,16 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
   - Fully managed
   - Corporate-owned work profile
   - Personally-owned work Profile
-  - 
+
 When using Microsoft Defender for Endpoint to connect to Tunnel, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile. If you do not intend to use any Defender functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
-     
+
+<!-- Hiding the following info box, but keeping it for historical context and in case these issues resurface in the future >
   > [!IMPORTANT]
   > If you are using per-app VPN and also have Defender web protection enabled, you may experience connectivity issues for apps outside your per-app VPN list in the following scenarios, which may prevent devices from communicating with Intune:
   > - You are using an internal proxy. In this case, you must disable web protection in the VPN profile by adding the **antiphishing** setting in the [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) section and entering a value of **0**.
   > - You are using internal DNS servers. You must include the IP address of at least one publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md#create-a-server-configuration).
   >
-
+-->
 <!-- The following is retained for future use should iOS receive the same style of preview  >
 
 Unlike most public previews for Intune, you must opt in before you can use  this preview. When you opt in, Microsoft grants your tenant access to the preview build of Microsoft Defender for Endpoint that supports the tunnel app functionality. After you opt in:
@@ -135,12 +136,14 @@ Sign up at https://aka.ms/VPNpreview where you provide your Managed Google Play 
 After you sign up, you’ll be alerted by email when your tenant has access to the preview app. The email includes instructions for deploying the preview Microsoft Defender for Endpoint app from the Managed Google Play store.
 -->
 
+<!-- No longer needed due to fix made in early September, 2021, but retaining for history and in case issues arise again >
 > [!IMPORTANT]
 >
 > If you use *Always-on VPN* with the standalone Tunnel client app today, during migration to Microsoft Defender for Endpoint:
 >
 > - Set *Always-on VPN* to **Not configured** in profiles for **Microsoft Tunnel (standalone client)**, which is the old client app.
 > - Set *Always-on VPN* to **Enable** in profiles for **Microsoft Tunnel**, which is the new Microsoft Defender for Endpoint client app.
+-->
 
 ### Review and record your current Tunnel configurations
 
@@ -184,6 +187,9 @@ To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft
 1. Use the information from [Create a VPN Profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) to create and deploy new VPN profiles for your Android Enterprise devices.
 
 2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel**.
+
+  > [!NOTE]
+  > If you are using the Microsoft Defender for Endpoint app for Android, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
 
 ### Clean up previous deployments
 

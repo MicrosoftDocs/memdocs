@@ -117,7 +117,9 @@ items:
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
     - name: Supported operating systems for clients and devices
       href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
-    - name: Support for Windows 10 as a client
+    - name: Support for Windows 11
+      href: plan-design/configs/support-for-windows-11.md
+    - name: Support for Windows 10
       href: plan-design/configs/support-for-windows-10.md
     - name: Support for the Windows ADK
       href: plan-design/configs/support-for-windows-adk.md
@@ -279,16 +281,14 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2110 features
+      href: get-started/2021/technical-preview-2110.md
+    - name: 2109 features
+      href: get-started/2021/technical-preview-2109.md
+    - name: 2108 features
+      href: get-started/2021/technical-preview-2108.md
     - name: 2107 features
       href: get-started/2021/technical-preview-2107.md
-    - name: 2106 features
-      href: get-started/2021/technical-preview-2106.md
-    - name: 2105.2 features
-      href: get-started/2021/technical-preview-2105-2.md
-    - name: 2105 features
-      href: get-started/2021/technical-preview-2105.md
-    - name: 2104 features
-      href: get-started/2021/technical-preview-2104.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview

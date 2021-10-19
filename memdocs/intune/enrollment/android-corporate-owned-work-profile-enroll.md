@@ -5,8 +5,8 @@ title: Setup Intune enrollment for Android Enterprise corporate-owned devices wi
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise corporate-owned devices with work profile in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 01/22/2021
 ms.topic: how-to

@@ -6,12 +6,10 @@ ms.date: 02/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 8d27e5ac-4f19-4b3d-85c7-fa34eb5d5e7e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Prepare for OS deployment in Configuration Manager
@@ -42,7 +40,7 @@ OS images are large in size. For example, the image size for Windows 7 is 3 GB o
 
 Also make sure that you plan for sufficient disk storage space on the distribution points that host the OS images.  
 
-For more information, see [Additional planning considerations for distribution points](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_AdditionalPlanning).
+For more information, see [Additional planning considerations for distribution points](prepare-site-system-roles-for-operating-system-deployments.md#additional-planning-considerations-for-distribution-points).
 
 
 ### Client cache size  

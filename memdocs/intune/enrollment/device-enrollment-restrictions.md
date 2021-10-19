@@ -5,8 +5,8 @@ title: Device enrollment restrictions for the Android Enterprise security config
 titleSuffix: Microsoft Intune
 description: Device enrollment restrictions for the Android Enterprise security configuration framework.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/03/2021
 ms.topic: how-to

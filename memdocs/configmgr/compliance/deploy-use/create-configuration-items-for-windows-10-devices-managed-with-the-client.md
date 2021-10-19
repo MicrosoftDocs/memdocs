@@ -1,29 +1,27 @@
 ---
-title: Create configuration items for Windows 10
+title: Create configuration items for Windows 10 or later
 titleSuffix: Configuration Manager
-description: Use the Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.
-ms.date: 01/06/2020
+description: Use a configuration item to manage settings for Windows 10 or later computers that are managed by the Configuration Manager client.
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
-# Create configuration items for Windows 10 devices
+# Create configuration items for Windows 10 or later devices
 
-Use the Configuration Manager **Windows 10** configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.  
+Use the Configuration Manager **Windows 10 or later** configuration item to manage settings for Windows 10 or later computers that are managed by the Configuration Manager client.  
   
 > [!IMPORTANT]  
->  In this release, if you created a **Password** setting as part of a configuration item of the type **Windows 10** (for a device managed with the Configuration Manager client), be aware of the following problem. If the setting doesn't already exist, or hasn't been configured on the Windows 10 device, it will incorrectly evaluate as compliant.  
+>  In this release, if you created a **Password** setting as part of a configuration item of the type **Windows 10 or later** (for a device managed with the Configuration Manager client), be aware of the following problem. If the setting doesn't already exist, or hasn't been configured on the Windows 10 or later device, it will incorrectly evaluate as compliant.  
 >   
->  As a workaround, when you create a setting for these devices, ensure that **Remediate noncompliant settings** is selected on the settings pages of the Create Configuration Item wizard. In addition, when you deploy a configuration baseline containing a Windows 10 configuration item containing password settings, select **Remediate noncompliant rules when supported**. You make this selection in the Deploy Configuration Baselines dialog box. By using this workaround, the setting is monitored, and remediated if it's found to be noncompliant. After remediation, the setting is correctly reported as **Compliant** (unless a problem is encountered, in which case it will report **Error**).  
+>  As a workaround, when you create a setting for these devices, ensure that **Remediate noncompliant settings** is selected on the settings pages of the Create Configuration Item wizard. In addition, when you deploy a configuration baseline containing a Windows 10 or later configuration item containing password settings, select **Remediate noncompliant rules when supported**. You make this selection in the Deploy Configuration Baselines dialog box. By using this workaround, the setting is monitored, and remediated if it's found to be noncompliant. After remediation, the setting is correctly reported as **Compliant** (unless a problem is encountered, in which case it will report **Error**).  
   
-### To create a Windows 10 configuration item  
+### To create a Windows 10 or later configuration item  
   
 1. In the Configuration Manager console, select **Assets and Compliance**.  
   
@@ -33,13 +31,13 @@ Use the Configuration Manager **Windows 10** configuration item to manage settin
   
 4. On the **General** page of the **Create Configuration Item** wizard, specify a name and optional description for the configuration item.  
   
-5. Under **Specify the type of configuration item that you want to create**, select **Windows 10**.  
+5. Under **Specify the type of configuration item that you want to create**, select **Windows 10 or later**.  
   
 6. If you create and assign categories to help you search and filter configuration items in the Configuration Manager console, select **Categories**.  
   
-7. On the **Supported Platforms** page of the wizard, select the specific Windows 10 platforms that will evaluate the configuration item.  
+7. On the **Supported Platforms** page of the wizard, select the specific Windows 10 or later platforms that will evaluate the configuration item.  
   
-8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. (For details, see [Windows 10 configuration item settings reference](#BKMK_Ref) in this article.) Then select **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. (For details, see [Windows configuration item settings reference](#BKMK_Ref) in this article.) Then select **Next**.  
   
    > [!TIP]  
    >  If the setting that you want isn't listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -67,7 +65,7 @@ Use the Configuration Manager **Windows 10** configuration item to manage settin
   
     You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-## <a name="BKMK_Ref"></a> Windows 10 configuration item settings reference  
+## <a name="BKMK_Ref"></a> Windows 10 or later configuration item settings reference  
   
 ### Password  
   
@@ -80,7 +78,7 @@ Use the Configuration Manager **Windows 10** configuration item to manage settin
 |**Number of failed logon attempts before a device is wiped**|Wipes the device if sign-in fails this number of times.|  
 |**Idle time before device is locked**|Specifies how many minutes the device must be inactive before it's automatically locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as '1234', or whether you must supply a strong password.|
-|**Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this setting should be set to at least **3**, which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters, such as **(%$**.<br>(Windows 10 only)  |
+|**Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this setting should be set to at least **3**, which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters, such as **(%$**.<br>(Windows 10 or later only)  |
   
 ###  Device  
   

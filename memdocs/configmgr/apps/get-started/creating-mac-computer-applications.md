@@ -1,17 +1,15 @@
 ---
-title: "Create Mac computer applications"
-titleSuffix: "Configuration Manager"
-description: "See which considerations you must take into account when you create and deploy applications for Mac computers."
+title: Create Mac computer applications
+titleSuffix: Configuration Manager
+description: See which considerations you must take into account when you create and deploy applications for Mac computers.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # Create Mac computer applications with Configuration Manager
 

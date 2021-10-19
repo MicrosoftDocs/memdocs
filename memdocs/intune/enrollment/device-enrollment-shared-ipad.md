@@ -5,8 +5,8 @@ title: Shared iPad devices
 titleSuffix: Microsoft Intune
 description: Learn about Shared iPad devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/13/2021
 ms.topic: overview

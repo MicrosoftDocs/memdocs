@@ -2,15 +2,14 @@
 title: Endpoint analytics settings
 titleSuffix: Microsoft Endpoint Manager
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
-ms.assetid: 266a84b2-7b8d-4b9c-919e-114c10a510e5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
@@ -37,7 +36,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
     
   - In **Configuration Settings**:
    
-       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
+       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 or later devices
     
        - **Scope**: Select **Endpoint analytics**. Windows updates scope is not used by endpoint analytics.
 

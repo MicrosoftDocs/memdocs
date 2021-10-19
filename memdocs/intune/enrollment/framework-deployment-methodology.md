@@ -5,8 +5,8 @@ title: Framework deployment methodology for Android Enterprise devices in Intune
 titleSuffix: Microsoft Intune
 description: Learn the framework deployment methodology for Android Enterprise devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 6/25/2020
 ms.topic: overview

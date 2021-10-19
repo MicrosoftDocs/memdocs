@@ -6,12 +6,10 @@ ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Introduction to the long-term servicing branch of Configuration Manager
@@ -32,7 +30,7 @@ The current branch of Configuration Manager supports the following functionality
 - In-console updates that add new features and improvements.
 - Support for newly released operating systems to use as site servers and clients.
 - On-premises MDM
-- The Windows 10 servicing dashboard and servicing plans, including support for recent Windows 10 versions.  
+- The Windows servicing dashboard and servicing plans, including support for recent Windows versions.  
 - Support for future releases of Windows Server and Windows 10 LTSB
 - Asset Intelligence
 - Cloud-based distribution points
