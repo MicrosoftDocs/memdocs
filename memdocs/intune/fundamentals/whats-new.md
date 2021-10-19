@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/07/2021
+ms.date: 10/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,19 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of October 18, 2021  
+
+### Device management  
+#### Introducing Android (AOSP) management for corporate devices (public preview)<!-- 8957094 -->  
+
+Now in public preview, you can use Microsoft Intune to manage corporate-owned devices that run on the Android Open Source Project (AOSP) platform. Microsoft Intune currently supports the new *Android (AOSP)* management option for RealWear devices only. Management capabilities include:  
+
+* Provision devices as user-associated devices or shared devices.  
+* Deploy device configuration and compliance profiles.  
+
+For more information about how to set up Android (AOSP) management, see [Enroll Android devices](../enrollment/android-enroll.md).  
 
 <!-- ########################## -->
 ## Week of October 4, 2021
