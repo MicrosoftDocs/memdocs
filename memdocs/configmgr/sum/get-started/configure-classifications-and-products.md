@@ -122,7 +122,7 @@ For more information about support for Windows Insider in Configuration Manager,
 
 ### Prerequisites
 
-- Configuration Manager environment thats configured for [software update management](../plan-design/plan-for-software-updates.md).
+- Configuration Manager environment that's configured for [software update management](../plan-design/plan-for-software-updates.md).
 - Windows devices running [Windows Insider Preview build](/windows-insider/business/).
 - A collection containing the Windows Insider devices.
 
