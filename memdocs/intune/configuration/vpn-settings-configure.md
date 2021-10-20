@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2021
+ms.date: 10/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -36,7 +36,24 @@ This feature applies to:
 - Android Enterprise personally-owned devices with a work profile
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 10 and newer  
+  > [!IMPORTANT]
+  > For Windows 11 devices, there is an issue between the Windows 11 client with the Windows VPNv2 CSP that results in a device with one or more Intune VPN profiles losing its VPN connectivity when the device processes multiple changes to VPN profiles for the device at the same time. The connectivity is restored when the device checks-in with Intune a second time to process those VPN profile changes.
+  >
+  > Changes that can cause loss of VPN functionality include:
+  > 
+  > - Edits to a VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile and is followed by application of the updated profile.
+  > - Two new VPN profiles apply to the device at the same time.
+  > - The removal of an active VPN profile at the same time a new VPN profile is assigned.
+  >
+  > This issue doesn’t apply to:
+  >
+  > - A Windows 11 device when it receives a single Intune VPN profile, and the device doesn’t already have a VPN profile assigned.
+  > - Windows 11 devices that have a VPN profile assigned and are then assigned an additional VPN profile with no other profile changes.
+  > - When a Windows 10 device upgrades to Windows 11, so long as there are no changes to that device's VPN profiles. However, after the upgrade to Windows 11, any changes to the devices VPN profiles or the addition of new VPN profiles will trigger the issue.
+  >
+  > This issue and warning remain in effect until Windows updates the Windows 11 client to resolve this issue.
+
 - Windows 8.1 and newer
 
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. You assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
