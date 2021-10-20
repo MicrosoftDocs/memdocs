@@ -163,7 +163,7 @@ Android 11+
 
 Personally-owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
 
-You can allow users using Android personally-owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances. For example, connecting a calendar app could show work and personal events together. 
+You can allow users using Android personally-owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances.
 
 For an app to provide this experience, the app needs to integrate with Google's connected apps SDK, so only limited apps support it. You can turn on the connected apps setting proactively, and when apps add support, users will be able to enable the connected apps experience.
 
@@ -177,6 +177,9 @@ Changing the **Connected apps** setting to **Not Configured** will not remove th
 There are two ways users may be able to connect work and personal apps after you've enabled the connected apps setting:
 1. A supported app may choose to prompt a user to approve connecting it across profiles.
 2. Users can open the Settings app and go to the Connected work & personal apps section, where they will see all supported apps listed.
+
+> [!IMPORTANT]
+> If multiple app configuration policies are assigned for the same app targeting the same device, and one policy sets **Connected Apps** to `Enabled` while the other policy does not, the app configuration will report a conflict and the resulting behavior applied on the device will be to disallow the connected apps.
 
 ## Preconfigure the permissions grant state for apps
 
