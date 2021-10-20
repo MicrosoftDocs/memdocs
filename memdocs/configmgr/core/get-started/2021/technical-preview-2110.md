@@ -37,7 +37,7 @@ The following sections describe the new features to try out in this version:
 
 ## General known issues
  
-[!INCLUDE [extensions](includes/2109/known-issue-extensions.md)]
+[!INCLUDE [11016837](includes/2109/known-issue-11016837.md)]
 <!--[!INCLUDE [11018755](includes/2110/known-issue-11018755.md)]
  -->
 
