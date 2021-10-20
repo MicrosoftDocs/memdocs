@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 10/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -135,7 +135,7 @@ You can change the settings for an enrollment restriction by following the steps
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.
-3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.
+3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.  
 
 
 ## Blocking personal Android devices
