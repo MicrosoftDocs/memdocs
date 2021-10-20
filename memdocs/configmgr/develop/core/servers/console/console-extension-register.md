@@ -204,7 +204,7 @@ Make sure you've joined the community hub and that you've accepted the invite af
 - **Privacy statement URL**: URL of your privacy statement
 
 > [!Important]
-> If you import an extension locally into the console by posting it through the administration service, the download will fail if you attempt to download the same extension from the Community hub. To test the download of your extension from Community hub, delete the imported extension and then download from Community hub. 
+> If you import an extension locally into the console by posting it through the administration service, the download will fail if you attempt to download the same extension from the Community hub. To test the download of your extension from Community hub, delete the imported extension and then download from Community hub. <!--12375723-->
 
 ## Next steps
 
