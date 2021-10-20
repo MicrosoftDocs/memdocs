@@ -35,6 +35,7 @@ You can control mobile device access to corporate resources based on risk assess
 - Operating system vulnerabilities
 - Malicious apps installed
 - Malicious network profiles
+- Mobile Phishing
 
 You can configure Conditional Access policies based on Lookout's risk assessment enabled through Intune compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
