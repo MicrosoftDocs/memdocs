@@ -179,7 +179,7 @@ There are two ways users may be able to connect work and personal apps after you
 2. Users can open the Settings app and go to the Connected work & personal apps section, where they will see all supported apps listed.
 
 > [!IMPORTANT]
-> If multiple app configuration policies are assigned for the same app targeting the same device, and one policy sets **Connected Apps** to `True` while the other policy does not, the app configuration will report a conflict and the resulting behavior applied on the device will be to disallow the connected apps.
+> If multiple app configuration policies are assigned for the same app targeting the same device, and one policy sets **Connected Apps** to `Enabled` while the other policy does not, the app configuration will report a conflict and the resulting behavior applied on the device will be to disallow the connected apps.
 
 ## Preconfigure the permissions grant state for apps
 
