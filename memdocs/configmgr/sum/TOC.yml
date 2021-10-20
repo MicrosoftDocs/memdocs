@@ -67,13 +67,13 @@ items:
     href: deploy-use/office-365-dashboard.md    
   - name: Manage Microsoft 365 Apps updates
     href: deploy-use/manage-office-365-proplus-updates.md
-  - name: Optimize Windows 10 update delivery
+  - name: Optimize Windows update delivery
     href: deploy-use/optimize-windows-10-update-delivery.md
-  - name: Manage Express installation files for Windows 10 updates
+  - name: Manage Express installation files for Windows updates
     href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
   - name: Manage Surface drivers
     href: deploy-use/surface-drivers.md   
-  - name: Integration with Windows Update for Business in Windows 10
+  - name: Integration with Windows Update for Business
     href: deploy-use/integrate-windows-update-for-business-windows-10.md
   - name: Third-party software updates
     href: deploy-use/third-party-software-updates.md
