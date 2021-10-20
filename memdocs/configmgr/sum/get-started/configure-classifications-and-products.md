@@ -87,7 +87,7 @@ When you approve feature updates for Windows 10, version 1909, there are a few d
     - A minimum servicing stack update of [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390), released September 24, 2019.
   - This update, like any other Feature Update, isn't available for import from `https:\\catalog.update.microsoft.com`.
   - The update will automatically synchronize with WSUS if you have the **Windows 10, version 1903 and later** product and **Upgrades** classification selected for synchronization.
-  - In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows 10 Servicing**, and select the **All Windows 10 Updates** node. Search for the terms "enablement" or "4517245".
+  - In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows Servicing**, and select the **All Windows 10 Updates** node. Search for the terms "enablement" or "4517245".
 
     > [!TIP]
     > Since these are feature updates, they aren't in the **All Software Updates** node.
@@ -144,7 +144,7 @@ You need to enable the products and classifications for Windows Insider upgrades
 
 ### Upgrading Windows Insider devices
 
-Once the upgrades for Windows Insiders are synchronized, you can see them from **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**.
+Once the upgrades for Windows Insiders are synchronized, you can see them from **Software Library** > **Windows Servicing** > **All Windows 10 Updates**.
 
 ![Windows Insiders feature updates for Windows 10 servicing](media/3556023-windows-insiders-pre-release-feature-update.png)
 
