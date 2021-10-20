@@ -82,7 +82,7 @@ This article shows you how to create a device restrictions profile. You can also
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
     - [Android device administrator](device-restrictions-android.md)
-    - [Android (AOSP)][device-restrictions-android-aosp.md] (in preview)  
+    - [Android (AOSP)](device-restrictions-android-aosp.md) (in preview)  
     - [Android Enterprise](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
