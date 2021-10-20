@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 09/22/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -641,6 +641,18 @@ Use the following process:
       > Regardless the method, only use this property with **ccmsetup.msi**.<!-- 9277971 -->
 
 After the client installs and properly registers with the site, it starts the referenced task sequence. If client registration fails, the task sequence won't start.
+
+> [!NOTE]
+> The task sequence launched by **PROVISIONTS** uses the **Default Client Settings**. This task sequence starts immediately after the client registers, so it won't be part of any collection to which you've deployed custom client settings. The client doesn't process or apply custom client settings before this task sequence runs.
+> 
+> For the task sequence to work properly, you may need to change certain settings in the **Default Client Settings**. For example, 
+> 
+> - **Cloud Services** group: **Enable clients to use a cloud management gateway** and **Allow access to cloud distribution point**
+> - **Computer Agent** group: **PowerShell execution policy**
+> 
+> If devices don't need these client settings after the task sequence completes, deploy new custom client settings to reverse the default settings.
+>
+> For more information, see [About client settings](../../clients/deploy/about-client-settings.md).
 
 ### RESETKEYINFORMATION
 
