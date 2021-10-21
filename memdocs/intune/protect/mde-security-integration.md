@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/16/2021
+ms.date: 10/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattcall
 
 # Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager
 
-With Microsoft Defender for Endpoint, you can now deploy security configurations from Microsoft Endpoint Manager directly to your onboarded devices without requiring a full Microsoft Endpoint Manager device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Endpoint Manager, either Microsoft Intune or Microsoft Endpoint Configuration Manager, can receive security configurations for Microsoft Defender directly from Endpoint Manager.
+With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Endpoint Manager directly to your onboarded devices without requiring a full Microsoft Endpoint Manager device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Endpoint Manager, either Microsoft Intune or Microsoft Endpoint Configuration Manager, can receive security configurations for Microsoft Defender directly from Endpoint Manager.
 
 When devices are managed through this capability:
 
@@ -38,7 +38,7 @@ When devices are managed through this capability:
 - Devices get the policies based on their Azure Active Directory device object. A device that isn’t already present in Azure Active Directory is joined as part of this solution
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the devices status. The device's status is available in the Microsoft Endpoint Manager admin center
 
-This scenario is intended to extend the Microsoft Endpoint Manager Endpoint Security surface to devices that are not capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager, either through Intune or Configuration Manager), the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead,  use Intune or Configuration Manager to deploy policy for Defender to your devices.
+This scenario extends the Microsoft Endpoint Manager Endpoint Security surface to devices that aren't capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager, either through Intune or Configuration Manager), the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune or Configuration Manager to deploy policy for Defender to your devices.
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
@@ -48,11 +48,11 @@ Review the following sections for requirements for the Security Management for M
 
 ### Environment
 
-When a device is onboards to Microsoft Defender for Endpoint:
+When a device onboards to Microsoft Defender for Endpoint:
 
-- Device is surveyed for an existing Endpoint Manager (either Configuration Manager or Intune) presence
-- Devices without Endpoint Manager enable the Security Management feature
-- Trust is created with Azure Active Directory (if one does not already exist)
+- The device is surveyed for an existing Endpoint Manager presence, either Configuration Manager or Intune
+- Devices without an Endpoint Manager presence enable the Security Management feature
+- A trust is created with Azure Active Directory if one doesn't already exist
 - Azure Active Directory trust is used to communicate with Endpoint Manager (Intune) and retrieve policies
 - Policy retrieve from Endpoint Manager is enforced on the device by Microsoft Defender for Endpoint
 
@@ -60,7 +60,7 @@ When a device is onboards to Microsoft Defender for Endpoint:
 
 When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. The Security Management for MDE fully supports this scenario with the following requirements:
 
-- Azure Active Directory Connect (AAD Connect) must be synchronized to the tenant that is used from Microsoft Defender for Endpoint 
+- Azure Active Directory Connect (AAD Connect) must be synchronized to the tenant that is used from Microsoft Defender for Endpoint
 - Hybrid Azure Active Directory Join must be configured in your environment (either through Federation or AAD Connect Sync)
 - AAD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join)
 - AAD Connect rules for sync must be modified for Server 2012 R2 (when support for Server 2012 R2 is needed)
@@ -71,7 +71,7 @@ Devices must have access to the following endpoints:
 
 - `enterpriseregistration.windows.net` – For Azure AD registration.
 - `login.microsoftonline.com` – For Azure AD registration.
-- `*.dm.microsoft.com` -  The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+- `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
 ### Supported platforms
 
@@ -93,7 +93,7 @@ To use security management for MDE, you need:
 
 ## Architecture
 
-The following diagram is a conceptual representation of the MDE security configuration management solution. 
+The following diagram is a conceptual representation of the MDE security configuration management solution.
 
 :::image type="content" source="./media/mde-security-integration/mde-architecture.png" alt-text="Conceptual representation of the MDE security configuration management solution.":::
 
@@ -101,15 +101,15 @@ The following diagram is a conceptual representation of the MDE security configu
 
 2. A trust is established between each device and Azure AD. When a device has an existing trust, that is used. When devices haven't registered, a new trust is created.
 
-3. Devices use their Azure AD Identity to communicate with Endpoint Manager. This identity enables Microsoft Endpoint Manager to distribute policies that are targeted to the devices when they check-in.
+3. Devices use their Azure AD Identity to communicate with Endpoint Manager. This identity enables Microsoft Endpoint Manager to distribute policies that are targeted to the devices when they check in.
 
-4. Defender for Endpoint reports the status of the policy back to Endpoint Manager
+4. Defender for Endpoint reports the status of the policy back to Endpoint Manager.
 
 ## Which solution should I use?
 
-Microsoft Endpoint Manager includes several methods and policy types to manage the configuration of  Defender for Endpoint on devices. The following information can help you understand which scenarios support which policy types.
+Microsoft Endpoint Manager includes several methods and policy types to manage the configuration of Defender for Endpoint on devices. The following information can help you understand which scenarios support which policy types.
 
-|Device management scenario    | Available policies and profiles     | Information   |  
+|Device management scenario    | Available policies and profiles     | Information   |
 |------------------------|------------------------|------------------------|
 |**MDM**: <br><br>- Intune <br><br>- Configuration Manager | **Device configuration**: <br><br>- *Endpoint protection* (Template) profile<br><br>- *Device restriction* (Template) profile | Device configuration template is a profile that groups related settings. Endpoint protection profiles include a range of settings from disk encryption, BitLocker,  and Defender Antivirus. Device restriction profiles can manage limited aspects of device security, how users share data, and more. <br><br>Unless you need a broad protection policy that manages settings that protect different aspects of an endpoint, consider using endpoint security profiles or security baselines, which both focus directly on the configuration of security. |
 |  | **Device configuration policy**: <br><br>- *Settings catalog profile* | A settings catalog profile is a device configuration policy you customize by selecting each setting that you want to manage. Settings are not limited to a single product or feature area. Because you must identify and add each setting you want to manage, they can exclude any settings you don't willfully intend to manage. |
@@ -129,8 +129,8 @@ To support MDE security configuration management through the Microsoft Endpoint 
 
    :::image type="content" source="./media/mde-security-integration/add-role-in-mde.png" alt-text="Create a new role in the Defender portal.":::
 
-> [!TIP]
-> You can modify existing roles and add the necessary permissions versus creating additional roles in Microsoft Defender for Endpoint
+   > [!TIP]
+   > You can modify existing roles and add the necessary permissions versus creating additional roles in Microsoft Defender for Endpoint
 
 3. When configuring the role, add users and be sure to select **Manage endpoint security settings in Microsoft Endpoint Manager**:
 
@@ -142,7 +142,7 @@ To support MDE security configuration management through the Microsoft Endpoint 
 
    :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable MDE settings management in the Microsoft Endpoint Manager admin center.":::
 
-   When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that are not managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
+   When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that aren't managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
 
 ## Onboard devices to Microsoft Defender for Endpoint
 
@@ -176,11 +176,11 @@ After creating one or more Azure AD groups that contain devices managed by MDE, 
 > [!TIP]
 > Avoid deploying multiple policies that manage the same setting to a device.
 >
-> MEM supports deploying multiple instances of each endpoint security policy type to the same device, with each policy instance being received by the device separately. Therefore, a device might receive separate configurations for the same setting from different policies, which results in a conflict. Some settings (like Antivirus Exclusions) will merge on the client and apply successfully.
+> Microsoft Endpoint Manager supports deploying multiple instances of each endpoint security policy type to the same device, with each policy instance being received by the device separately. Therefore, a device might receive separate configurations for the same setting from different policies, which results in a conflict. Some settings (like Antivirus Exclusions) will merge on the client and apply successfully.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Endpoint security** and then select the type of policy you want to configure, either Antivirus or Firewall, and then select **Create Policy**.  
+2. Go to **Endpoint security** and then select the type of policy you want to configure, either Antivirus or Firewall, and then select **Create Policy**.
 
 3. Enter the following properties or the policy type you selected:
 
@@ -191,11 +191,11 @@ After creating one or more Azure AD groups that contain devices managed by MDE, 
    - For Firewall policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
      - Profile: **Microsoft Defender Firewall (Preview)**
-   
+
    - For Firewall Rules policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
      - Profile: **Microsoft Defender Firewall Rules (Preview)**
-   
+
    - For Endpoint Detection and Response policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
      - Profile: **Endpoint detection and response (Preview)**
@@ -226,13 +226,13 @@ After creating one or more Azure AD groups that contain devices managed by MDE, 
 
 ## Monitor status
 
-Status and reports for MDE policies are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center admin center.
+Status and reports for MDE policies are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
 Drill in to the policy type, Antivirus or Firewall, and then select the policy to view its status. Policies for MDE have a *Policy type* of either *Microsoft Defender Antivirus (Preview)* or *Microsoft Defender Firewall (Preview)*.
 
 When you select a policy, you'll see information about the device check-in status, and can select:
 
-- **View report** - View a list of devices that received the policy. You can select a device to drill in and see it's per-setting status. You can then select a setting to view more information about it, including other policies that manage that same setting, which could be a source of conflict.
+- **View report** - View a list of devices that received the policy. You can select a device to drill in and see its per-setting status. You can then select a setting to view more information about it, including other policies that manage that same setting, which could be a source of conflict.
 
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
 
