@@ -79,6 +79,9 @@ There's a complete list of all configuration service providers (CSPs) that Windo
 Not all settings are compatible with all Windows 10 versions. [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) tells you which versions are supported for each CSP.
 
 Additionally, Intune doesn't support all the settings listed in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
+ 
+ >[!NOTE] For settings created with the data type of string, Base64, or Xml data, the stored value will be obfuscated unless the user accessing the value has read and create / update permissions in an Microsoft Endpoint Manager RBAC role or Intune Service Administrator / Global Administrator Azure Active Directory role.
+ 
 
 ## Next steps
 
