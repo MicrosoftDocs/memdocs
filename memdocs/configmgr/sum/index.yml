@@ -66,7 +66,7 @@ landingContent:
             url: get-started/manage-settings-for-software-updates.md
       - linkListType: concept
         links:
-          - text: Optimize Windows 10 update delivery
+          - text: Optimize Windows update delivery
             url: deploy-use/optimize-windows-10-update-delivery.md
           - text: Software updates maintenance
             url: deploy-use/software-updates-maintenance.md

@@ -78,6 +78,10 @@ For information about formatting and using a CSV file to manually add Windows Au
 
 ## Assign a user to a specific Autopilot device
 
+> [!NOTE]
+> This functionality has been removed as of September 30, 2021.
+> While the option to assign user to a device in Autopilot is still available in the GUI portal and PowerShell, it will be ignored by the device during provisioning.
+
 You can assign a licensed Intune user to a specific Autopilot device. This assignment:
 - Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
 - Lets you set a custom greeting name.
