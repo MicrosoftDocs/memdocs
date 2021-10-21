@@ -13,7 +13,7 @@ author: greg-lindsay
 ms.author: greglin
 manager: dougeby
 ms.reviewer: jubaptis
-ms.date: 10/18/2021
+ms.date: 10/20/2021
 ms.collection: M365-modern-desktop
 ms.topic: article
 ---
@@ -25,6 +25,10 @@ ms.topic: article
 - Windows 11
 - Windows 10
 - Windows Holographic, version 2004
+
+## Autopilot agility rolling out
+
+Autopilot agility is a new feature that allows updates and bug fixes to the OOBE experience. These updates occur before device enrollment, after the AADJ login page and may result in an additional reboot and authentication prompt to the user. This feature is rolling out to Windows 10 8C+ for 19H2 and 20H1 and is not yet available for Windows 11.
 
 ## One-time self-deployment and pre-provisioning
 

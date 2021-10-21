@@ -98,6 +98,8 @@ You can still deploy settings from Configuration Manager to co-managed devices e
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](../../intune/configuration/device-profile-create.md).
 
 > [!NOTE]
+> A policy created from the settings catalog is controlled by the Device Configuration workload slider regardless of the contents of the policy. 
+> 
 > When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature. Only policies from Intune will apply once the Device Configuration workload is moved to Intune.<!-- 4184095 -->
 
 ## Office Click-to-Run apps
