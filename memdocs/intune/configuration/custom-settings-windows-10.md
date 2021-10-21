@@ -81,13 +81,13 @@ Not all settings are compatible with all Windows 10 versions. [Configuration ser
 Additionally, Intune doesn't support all the settings listed in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
  
 > [!NOTE]
-> For settings created with the string, Base64, or XML data type, the stored value is unclear. If the user accessing the value has any of the following permissions or roles, then they can see the value:
+> For settings that were created by using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
 >
-> - Create, Read, and Update permissions in a Microsoft Endpoint Manager RBAC role
-> - Intune Service Administrator
-> - Global Administrator Azure Active Directory role
+> - Create, Read, and Update permissions in a Microsoft Endpoint Manager role-based access control (RBAC) role.
+> - Intune Service Administrator.
+> - Global Administrator Azure Active Directory role.
 > 
-> For more information, see [Role-based access control (RBAC) with Microsoft Intune](/fundamentals/role-based-access-control.md).
+> For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Next steps
 
