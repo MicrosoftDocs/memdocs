@@ -43,6 +43,7 @@ Both marketplace and custom images must meet the following requirements:
     > We recently made the change to **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
+- No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
 - Default 64 GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
 
 A custom image must also meet the following extra requirements:

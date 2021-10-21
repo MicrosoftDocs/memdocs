@@ -34,10 +34,11 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Console improvements](includes/2110/9575773.md)]
 [!INCLUDE [Status messages for console extensions](includes/2110/11048976.md)]
 
-<!--
-## General known issues
 
-[!INCLUDE [11018755](includes/2110/known-issue-11018755.md)]
+## General known issues
+ 
+[!INCLUDE [11016837](includes/2109/known-issue-11016837.md)]
+<!--[!INCLUDE [11018755](includes/2110/known-issue-11018755.md)]
  -->
 
 ## Next steps
