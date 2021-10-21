@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 10/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,7 +47,7 @@ The available levels and settings in each level vary by device type:
 - For personal devices, see [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
 - For supervised devices, see [iOS/iPadOS supervised device security configurations](../enrollment/ios-ipados-supervised-device-security-configurations.md)
 
-When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md). an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
+When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).

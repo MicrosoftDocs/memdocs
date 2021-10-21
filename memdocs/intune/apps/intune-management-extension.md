@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Add PowerShell scripts to Windows 10 devices in Microsoft Intune
-description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10 devices in Microsoft Intune. Read common issues and resolutions. 
+title: Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune
+description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10/11 devices in Microsoft Intune. Read common issues and resolutions. 
 keywords:
 author: Erikre
 ms.author: erikre
@@ -27,7 +27,7 @@ ms.custom: OS=Windows;intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use PowerShell scripts on Windows 10 devices in Intune
+# Use PowerShell scripts on Windows 10/11 devices in Intune
 
 Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows 10 devices. The management extension enhances Windows device management (MDM), and makes it easier to move to modern management.
 
