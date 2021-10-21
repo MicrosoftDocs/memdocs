@@ -11,6 +11,26 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Intune APP/MAM moving to support Android 9 and higher<!-- 10937255 -->
+
+With the upcoming release of Android 12, Intune app protection policies (APP, also known as MAM) for Android will be moving to support Android 9 (Pie) and higher on **October 1, 2021**. This change is to align with Office mobile apps for Android support of the last four major versions of Android. Based on your feedback, we have updated our support statement. We are doing our best to keeping your organization secure and protecting your users and devices, while aligning with Microsoft app lifecycles.
+
+> [!NOTE]
+> [Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) are not impacted by this announcement and will continue to be supported regardless of their Android OS version.
+
+#### How this will affect your organization?
+
+If you are using app protection policies on any device that is running Android version 8.x or lower, or decide to enroll any device that is running Android version 8.x or lower, please note that these devices will no longer be supported for APP. While APP policies will continue to be applied to devices running Android 6.x – Android 8.x, if you do run into issues with an Office app and APP, support will request you update to a supported Office version for app troubleshooting. To continue to receive support for APP, update your devices to Android version 9 (Pie) or higher or replace them with a device on Android version 9.0 or higher before October 1, 2021.
+
+#### What you need to do to prepare?
+
+Notify your helpdesk, if applicable, of this updated support statement. You also have two admin options to help inform your users.
+
+Here’s how you can warn users:
+
+1. Configure an [app protection policy Conditional launch setting](../apps/app-protection-policy-settings-android.md#conditional-launch) with a Min OS version requirement to warn users.
+2. Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the [action for non-compliance](../protect/actions-for-noncompliance.md) to send a message to users before marking them non-compliant.
+
 ### Plan for change: Enrollment restrictions will no longer be included in policy sets<!--1067033 -->
 
 With the Microsoft Intune service release (2109), you'll no longer be able to configure enrollment restrictions in policy sets. Instead, you'll need to go to **Devices** > **Policy** section > **Enrollment restrictions** to create and manage all enrollment restrictions.  
