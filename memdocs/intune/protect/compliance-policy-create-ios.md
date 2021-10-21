@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 10/08/2021
+ms.date: 10/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,19 +41,15 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Before you begin
 
-When configuring device compliance and configuration policies, the number of various settings and options enable organizations to tailor protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings is required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its iOS/iPadOS security configuration framework.
+When configuring compliance policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS compliance policies.
 
-The security configuration framework is organized into distinct configuration levels providing guidance for personally owned and supervised devices, with each level building off the previous level. For compliance policies, this framework includes two levels:
+The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level.
 
-> [!Note]
-> Due to the limited number of settings available for device compliance, there is no basic security (level 1) offering.
+For details about the settings for each level:
 
-- **Enhanced security (Level 2)** is the minimum security configuration for a device that introduces password policies and sets the minimum iOS/iPadOS version. This configuration is applicable to most personal devices where users access work or school data.
-- **High security (Level 3)** introduces mobile threat defense or Microsoft Defender for Endpoint, increases the minimum iOS/iPadOS version and enacts stronger password policies. This configuration is desirable for users that are accessing sensitive and high risk data.
+- For personally owned and for supervised devices, see [iOS/iPadOS device compliance security configurations](../enrollment/ios-ipados-device-compliance-security-configurations.md)
 
-To see the specific recommendations for each configuration level and the minimum apps that must be protected, review the [iOS/iPadOS Enterprise security configuration framework](../enrollment/ios-ipados-configuration-framework.md).
-
-To create a policy, see [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **iOS/iPadOS**.
+When you're ready to proceed, [create an iOS/iPadOS device compliance policy](create-compliance-policy.md#create-the-policy).
 
 ## Email
 

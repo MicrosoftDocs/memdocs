@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 10/14/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -38,16 +38,42 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- Common categories:  
 ### App management
 ### Device configuration
-### Device enrollment
+### Device provisioning
 ### Device management
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+-->
 
 <!-- ########################## -->
+## Week of October 11, 2021 (Service release 2109)
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Resize support for preview and trial licenses<!--36228235-->
+
+If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Health check improvement<!--36461502-->
+
+The **DNS can resolve Active Directory domain** health check has been improved. A new step has been added to look for the following Azure Active Directory DNS record. If it can’t be found, the check fails.
+
+_ldap._tcp.yourDomain.com -type SRV
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Windows 365 Administrator role<!--5827123-->
+
+The Windows 365 Administrator role is now available for admins by using role assignment in the Microsoft Endpoint Manager Admin Center and Azure Active Directory (Azure AD) for Windows. With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager. For more information, see [Role-based access control](role-based-access.md).
+
+<!-- ########################## -->
 ## Week of October 4, 2021
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
@@ -60,7 +86,6 @@ Windows 365 Enterprise now supports Windows 11 as a Cloud PC operating system.
 
 Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For information about converting existing Generation 1 custom device images to Gen2, see [Convert an existing custom device image to a generation 2 virtual machine](device-images-convert-generation-2.md).
 
-
 ## Week of September 13, 2021
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
@@ -71,7 +96,9 @@ Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For informati
 
 The [Windows365LanguagesInstaller PowerShell script]( https://www.powershellgallery.com/packages/Windows365LanguagesInstaller) can install 38 additional languages on your custom device images. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md#add-languages-to-windows-using-a-script-and-capture-the-image).
 
+<!-- ########################## -->
 ## Week of September 6, 2021 (Service release 2108)
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 

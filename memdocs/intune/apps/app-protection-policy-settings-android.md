@@ -12,7 +12,7 @@ ms.date: 08/18/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 

@@ -36,7 +36,7 @@ You can onboard the following operating systems:
 - Windows 11
 - Windows Server 2012 R2
 - Windows Server 2016
-- Windows Server 2016, version 1803 or later
+- Windows Server Semi-Annual Channel (SAC), version 1803 or later
 - Windows Server 2019
 - Windows Server 2022<!-- 10200029 -->
 
@@ -47,14 +47,14 @@ Different operating systems have different needs for onboarding to Microsoft Def
 Up-level operating systems include:
 - Windows 10, version 1607 and later
 - Windows 11
-- Windows Server 2016, version 1803 or later
+- Windows Server Semi-Annual Channel (SAC), version 1803 or later
 - Windows Server 2019
 - Windows Server 2022
 
 Down-level operating systems include:
 - Windows 8.1
 - Windows Server 2012 R2
-- Windows Server 2016, version 1709 and earlier
+- Windows Server 2016
 
 When you onboard devices to Microsoft Defender for Endpoint with Configuration Manager, you deploy the Defender policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level or if the collection also includes down-level clients.
 
@@ -111,9 +111,9 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 ## <a name="bkmk_uplevel"></a> Onboard devices running only up-level operating systems to Microsoft Defender for Endpoint
 
 Up-level clients require an onboarding configuration file for onboarding to Microsoft Defender for Endpoint. Up-level operating systems include:
-- Windows 10, version 1607 and later 
 - Windows 11
-- Windows Server 2016, version 1803 and later
+- Windows 10, version 1607 and later 
+- Windows Server Semi-Annual Channel (SAC), version 1803 and later
 - Windows Server 2019
 - Windows Server 2022
 
