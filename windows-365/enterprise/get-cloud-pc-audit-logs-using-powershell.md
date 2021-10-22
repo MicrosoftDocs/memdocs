@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Get Cloud PC audit logs using PowerShell
+title: Get Windows 365 audit logs using PowerShell
 titleSuffix:
 description: Learn how to use PowerShell to retrieve Cloud PC audit logs.
 keywords:
@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Get Cloud PC audit logs by using PowerShell
+# Get Windows 365 audit logs by using PowerShell
 
 Audit logs for Windows 365 include a record of activities that generate a change in a Cloud PC. Create, update (edit), delete, assign, and remote actions all create audit events that administrators can review for most Cloud PC actions that go through Graph. By default, auditing is enabled for all customers. It can't be disabled.
 
