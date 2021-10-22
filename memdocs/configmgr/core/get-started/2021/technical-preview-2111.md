@@ -2,7 +2,7 @@
 title: Technical preview 2111
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2111.
-ms.date: 11/22/2021
+ms.date: 11/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -23,10 +23,9 @@ Review the [technical preview](../technical-preview.md) article before installin
 The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2111/1234567.md)] -->
-[!INCLUDE [3601042](includes/2111/3601042.md)]
-[!INCLUDE [10340595](includes/2111/10340595.md)]
-[!INCLUDE [10478792](includes/2111/10478792.md)]
-[!INCLUDE [12362819](includes/2111/12362819.md)]
+[!INCLUDE [10579996](includes/2111/10579996.md)]
+[!INCLUDE [12377291](includes/2111/12377291.md)]
+[!INCLUDE [10957283](includes/2111/10957283.md)]
 
 <!--
 ## General known issues
