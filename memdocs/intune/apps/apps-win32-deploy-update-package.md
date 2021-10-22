@@ -30,7 +30,7 @@ The following steps help you deploy a WinWindows update package to Intune.
 ## Step 1: Prepare the Windows update package as Win32 app content
 
 1. Download the  Windows update package by searching on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).
-2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool will guide you to input the required parameters in a step-by-step process if you don't specific them as command-line parameters. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](../apps/apps-win32-prepare#convert-the-win32-app-content.md).
+2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool will guide you to input the required parameters in a step-by-step process if you don't specific them as command-line parameters. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content).
 
 ## Step 2: Create the Win32 app
 
@@ -62,7 +62,7 @@ The following steps help you deploy a WinWindows update package to Intune.
 
     The `-Wait` option is used to make sure that the app installation returns after *Wusa.exe* exits.
 
-8. On the **Requirements** page, specify the [requirements](../apps/apps-win32-app-management.md#step-3-requirements) that devices must meet before the app is installed.
+8. On the **Requirements** page, specify the [requirements](../apps/apps-win32-add.md#step-3-requirements) that devices must meet before the app is installed.
 
     **Minimum operating system**: Select the minimum operating system that is required to apply the update.
 
@@ -110,7 +110,7 @@ The following steps help you deploy a WinWindows update package to Intune.
      }
     ```
 
-10. Specify [assignments](../apps/apps-win32-app-management.md#step-7---assignments) for the app.
+10. Specify [assignments](../apps/apps-win32-add.md#step-7-assignments) for the app.
 
 11. Review your settings, and then select **Create** to add the app to Intune.
 
