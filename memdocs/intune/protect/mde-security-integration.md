@@ -259,4 +259,5 @@ When you select a policy, you'll see information about the device check-in statu
 
 ## Next steps
 
-[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)
+[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)  
+[Troubleshoot security configuration management onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt?view=o365-21vianet&branch=security-config)
