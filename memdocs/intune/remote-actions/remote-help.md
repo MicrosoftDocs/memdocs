@@ -187,7 +187,7 @@ As a helper, after receiving a request from a user who wants assistance through 
 
    During a help session:
    - Helpers that have the *Elevation* permission can enter local admin permissions for the shares device to run executable programs or take similar actions that require the elevated permissions.
-   - Helpers can use *Reconnect* to disconnect the session and then restart. This action doesn't require the sharer to aprove the reconnection.
+   - Helpers can use *Reconnect* to disconnect the session and then restart. This action doesn't require the sharer to approve the reconnection.
 
 5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app.
 
