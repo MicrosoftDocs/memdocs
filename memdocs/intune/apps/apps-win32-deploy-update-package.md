@@ -23,14 +23,14 @@ ms.collection: M365-identity-device-management
 
 # Deploy Windows update packages in Intune
 
-If you want to deploy a specific Windows update package (*.msu* file) to Windows 10/11 devices managed by Intune, you can use the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities to deploy the *.msu* file as a Win32 app.
+If you want to deploy a specific Windows update package (*.msu* file) to Windows 10/11 devices managed by Intune, you can use the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities to deploy an *.msu* file as a Win32 app.
 
-The following steps help you deploy a WinWindows update package to Intune.
+The following steps help you deploy a Windows update package to Intune.
 
-## Step 1: Prepare the Windows update package as Win32 app content
+## Step 1: Prepare the update package as Win32 app content
 
 1. Download the  Windows update package by searching on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).
-2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool will guide you to input the required parameters in a step-by-step process if you don't specific them as command-line parameters. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content).
+2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool will guide you to input the required parameters in a step-by-step process if you don't specify the parameters in the command-line. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content).
 
 ## Step 2: Create the Win32 app
 
