@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/07/2021
+ms.date: 10/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,75 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+## Week of October 18, 2021 (Service release 2110)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Manage iOS/iPadOS Universal Links using App Protection Policies<!-- 2850827 -->
+You can configure both Managed Universal Links and Universal Link Exemptions for iOS/IPadOS apps via Application Protection Policy (APP) settings.  Managed Universal Links allows http/s links to open into the registered APP protected application instead of the protected browser.  Universal Link Exemptions allows http/s links to open into the registered unprotected application instead of the protected browser. For more information, see [Data Transfer](../apps/app-protection-policy-settings-ios.md#data-transfer) and [Universal Links](../apps/app-protection-policy-settings-ios.md#universal-links).
+
+#### Newly available protected apps for Intune<!-- 10946933, 10952707, 10962244 -->
+The following protected apps are now available for Microsoft Intune:
+
+- Appian for Intune by Appian Corporation
+- Space Connect by SpaceConnect Pty Ltd
+- AssetScan For Intune by Align
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+#### Connected app support for Android personally-owned and corporate-owned work profiles<!-- 9206112 -->
+You can now allow users to turn on Connected apps experiences for supported apps. This app configuration setting enables users to connect the app information across the work and personal app instances. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Apps** > **App configuration policies** > **Add** > **Managed devices**. For more information, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Block or allow personal apps for Android Enterprise corporate-owned work profile devices<!-- 8925033 -->
+In device configuration, you can create a list of personal apps that will be blocked or allowed on the device. You can choose to leave the setting as not configured, or create a list of blocked or allowed apps in the personal profile. This setting is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Android** > **Configuration profiles** > **Create profile**. For information about Android Enterprise corporate-owned work profile device settings, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#personal-profile).
+
+#### New settings when configuring Kerberos single sign-on extension on iOS/iPadOS and macOS<!-- 10175092 -->
+There are new device feature settings available when configuring the Kerberos SSO extension on iOS/iPadOS and macOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** or **macOS** > **Configuration profiles** > **Create profile** > select **Device features** for profile > **Single sign-on app extension** > **Kerberos** for SSO app extension type. For related information, see [iOS/iPadOS device feature settings](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) and [macOS device feature settings in Intune](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
+
+### Four new shared iPad enrollment settings in public preview<!--9684925 -->
+Four new shared iPad settings are available in Intune for public preview. These settings are applied at the time of automated device enrollment.  
+
+For iPadOS 14.5 and later in Shared iPad mode:  
+    - **Require Shared iPad temporary setting only**: Configures the device so that users only see the guest version of the sign-in experience, and must sign in as guest users. They can't sign in with a Managed Apple ID.
+    - **Maximum seconds of inactivity until temporary session logs out**: If there isn't any activity after the specified time, the temporary session automatically signs out.
+    - **Maximum seconds of inactivity until user session logs out**: If there isn't any activity after the specified time, the user session automatically signs out.  
+
+For iPadOS 13.0 and later in Shared iPad mode:  
+    - **Maximum seconds after screen lock before password is required for Shared iPad**: If the screen lock exceeds this amount of time, a device password will be required to unlock the device.
+
+#### Introducing Android (AOSP) management for corporate devices (public preview)<!-- 8957094 -->  
+
+Now in public preview, you can use Microsoft Intune to manage corporate-owned devices that run on the Android Open Source Project (AOSP) platform. Microsoft Intune currently supports the new *Android (AOSP)* management option for RealWear devices only. Management capabilities include:  
+
+* Provision devices as user-associated devices or shared devices.  
+* Deploy device configuration and compliance profiles.  
+
+For more information about how to set up Android (AOSP) management, see [Enroll Android devices](../enrollment/android-enroll.md).  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461 -->
+You can now use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows Enterprise [multi-session VMs](../fundamentals/azure-virtual-desktop-multi-session.md). To find the settings you can use with multi-session VMs in the settings catalog:
+
+1. Create a device configuration policy for Windows 10 that uses the settings catalog, and configure [Settings filter](../fundamentals/azure-virtual-desktop-multi-session.md#to-configure-policies) for *Enterprise multi-session*.
+
+2. Next, expand the *Windows Update for Business* category to select from the update settings that are available for multi-session VMs.
+
+The settings include:
+
+- **Active Hours End**  - See CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-Update#update-activehoursend)
+- **Active Hours Max Range**- See CSP: [Update/ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-Update?#update-activehoursmaxrange)
+- **Active Hours Start** - See CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-Update#update-activehoursstart)
+- **Block "Pause Updates" ability** - See CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-Update#update-setdisablepauseuxaccess)
+- **Configure Deadline Grace Period** - See CSP: [Update/ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-Update#update-configuredeadlinegraceperiod)
+- **Defer Quality Updates Period (Days)** - See CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-Update#update-deferqualityupdatesperiodindays)
+- **Pause Quality Updates Start Time** - See CSP: [Update/PauseQualityUpdatesStartTime](/windows/client-management/mdm/policy-csp-Update#update-pausequalityupdatesstarttime)
+- **Quality Update Deadline Period (Days)** - See CSP: [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-Update?#update-configuredeadlineforqualityupdates)
 
 <!-- ########################## -->
 ## Week of October 4, 2021

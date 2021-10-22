@@ -41,6 +41,8 @@ Configuration Manager provides the following types of information as client stat
 
 - **Obsolete**: The site has discovered a new device record with the same hardware ID, so it marks the old record as obsolete. Reports don't count obsolete records of the same device multiple times. You can still target policies to obsolete devices. If the site doesn't get a heartbeat for an obsolete record after 90 days of inactivity, it removes the obsolete device when it runs the site maintenance task **Delete Obsolete Client Discovery Data**.
 
+> [!TIP]
+> The [Power BI sample reports](../../servers/manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Client Status**. This report can also help with monitoring clients. <!--5679791, 10123832, 10131458, 10488910-->  
 
 ## <a name="bkmk_indStatus"></a> Monitor individual clients
 

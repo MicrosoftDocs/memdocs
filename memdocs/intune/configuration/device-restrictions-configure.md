@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,6 +42,7 @@ These features are available in Intune, and are configurable by the administrato
 This feature applies to:
 
 - Android device administrator
+- Android (AOSP) (preview)  
 - Android Enterprise personally-owned devices with a work profile
 - iOS/iPadOS
 - macOS
@@ -59,6 +60,7 @@ This article shows you how to create a device restrictions profile. You can also
     - **Platform**: Choose the platform of your devices. Your options:  
 
         - **Android device administrator**
+        - **Android (AOSP)** (preview)  
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -80,6 +82,7 @@ This article shows you how to create a device restrictions profile. You can also
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
     - [Android device administrator](device-restrictions-android.md)
+    - [Android (AOSP)](device-restrictions-android-aosp.md) (in preview)  
     - [Android Enterprise](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)

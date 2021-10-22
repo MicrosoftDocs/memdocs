@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 9/28/2021
+ms.date: 10/20/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -33,7 +33,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
 - When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
-- Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 - Similar features may be announced at different times for Windows 365 Business.
 
 > [!NOTE]
@@ -77,11 +76,18 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
 
 <!-- ***********************************************-->
+## Provisioning
+
+### Provisioning maximum timeout changing to five hours<!--36461463-->
+
+To improve reliability, the maximum provisioning timeout will be changed to five hours.
+
+<!-- ***********************************************-->
 ## Role-based access control
 
-### Windows 365 Administrator role<!--5827123-->
+### Custom Windows 365 RBAC roles<!--36222579 -->
 
-In a future update, the Windows 365 Administrator role will be available for admins by using role assignment in the Microsoft Admin Center and Azure Active Directory (AAD). With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager.
+In a future release, custom Windows 365 role-based access control (RBAC) roles will be available in the Microsoft Endpoint Manager admin center. You’ll be able to mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You’ll also be able to create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services.
 
 ## Next steps
 
