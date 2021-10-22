@@ -63,10 +63,11 @@ The Remote help app supports the following capabilities:
 
 ## Prerequisites
 
-- [Intune subscription](../intune/fundamentals/licenses.md).
+- [Intune subscription](../fundamentals/licenses.md).
 - Windows 10/11
 - Devices must install the *remote help* app. Device users can download the app from the Microsoft Store for Windows.
-  <!-- Pending app details including official name/publisher, and download or store link -->
+  - Microsoft remote help: [https://www.microsoft.com/store/apps/9NKX4Z3W9BTJStore](https://www.microsoft.com/store/apps/9NKX4Z3W9BTJStore).
+  
 
   Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 
@@ -101,6 +102,7 @@ The following Intune RBAC permissions manage use of the remote help app. Set eac
   - **View screen** – Yes/No
 
 A user must have the following Intune RBAC permission set to *Yes* to use the admin center to start a new remote assistance session:
+
 - Category: **Remote tasks**
 - Permissions:
   - **Offer remote assistance** – No/Yes
@@ -140,7 +142,7 @@ To request help, you must reach out to your support staff to request assistance.
 > [!TIP]  
 > To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, you are signed out of your device.
 
-1. When assistance is ready to help, start the remote help app on the device. The app will then be ready to respond to the helper when their remote help app attempts to make a device-to-device connection.
+1. When assistance is ready to help, start the remote help app on the device. The app will then be ready to respond to the helper when their remote help app attempts to make a device-to-device connection. The device doesn't need to be enrolled with Intune.
 
 2. After the connection is made, you and the helper see a sign-in screen. You must both sign in with your organization credentials.
 
@@ -183,7 +185,9 @@ As a helper, after receiving a request from a user who wants assistance through 
 
 4. After establishing assistance through a shared display or full control session, the helper can now assist resolving any issues on the device.
 
-   During assistance, helpers that have the *Elevation* permission can enter local admin permissions for the shares device to run executable programs or take similar actions that require the elevated permissions.
+   During a help session:
+   - Helpers that have the *Elevation* permission can enter local admin permissions for the shares device to run executable programs or take similar actions that require the elevated permissions.
+   - Helpers can use *Reconnect* to disconnect the session and then restart. This action doesn't require the sharer to aprove the reconnection.
 
 5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app.
 
