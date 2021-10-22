@@ -66,7 +66,7 @@ You can also copy an existing role.
 The following permissions are available when creating custom roles.
 
 | Permission | Description |
-| --- | :---: |
+| --- | --- |
  | Mobile apps/Create | Add new mobile applications to Intune such as store apps, line-of-business apps, web-links or built-in apps. You can also add books purchased through the Apple Volume Purchase Program or add eBook categories. You can setup iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Read | View mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also view books purchased through the Apple Volume Purchase Program or add eBook categories. You can view iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Update | Manage mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
@@ -136,14 +136,14 @@ The following permissions are available when creating custom roles.
  | Enrollment programs/Read token | View the Apple Device Enrollment Program or Apple School Manager token status. | 
  | Enrollment programs/Update token | Upload the Apple Device Enrollment or Apple School Manager token and sync Apple Device Enrollment Program or Apple School Manager devices. | 
  | Enrollment programs/Delete token | Delete Apple Device Enrollment Program or Apple School Manager token .pem file(s). | 
- | Enrollment programs/Create profile | Create new profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows AutoPilot. | 
- | Enrollment programs/Read profile | View profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows AutoPilot. | 
- | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows AutoPilot. | 
- | Enrollment programs/Delete profile | Delete profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows AutoPilot. | 
- | Enrollment programs/Assign profile | Manage Windows AutoPilot deployment profile assignment settings. | 
+ | Enrollment programs/Create profile | Create new profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
+ | Enrollment programs/Read profile | View profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
+ | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
+ | Enrollment programs/Delete profile | Delete profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
+ | Enrollment programs/Assign profile | Manage Windows Autopilot deployment profile assignment settings. | 
  | Enrollment programs/Create device | Import Apple devices for Apple Configurator. | 
- | Enrollment programs/Read device | View Apple devices for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows AutoPilot devices. | 
- | Enrollment programs/Sync device | Initiate the Sync command for Windows AutoPilot devices. | 
+ | Enrollment programs/Read device | View Apple devices for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot devices. | 
+ | Enrollment programs/Sync device | Initiate the Sync command for Windows Autopilot devices. | 
  | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School Manager, or Apple Configurator | 
  | Device enrollment managers/Read | View the list of device enrollment manager accounts. | 
  | Device enrollment managers/Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. | 
