@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/22/2021
+ms.date: 11/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,10 +121,9 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2111
 
-- [3601042](2021/technical-preview-2111.md) <!--3601042-->
-- [10340595](2021/technical-preview-2111.md) <!--10340595-->
-- [10478792](2021/technical-preview-2111.md) <!--10478792-->
-- [12362819](2021/technical-preview-2111.md) <!--12362819-->
+- [10579996](2021/technical-preview-2111.md) <!--10579996-->
+- [12377291](2021/technical-preview-2111.md) <!--12377291-->
+- [10957283](2021/technical-preview-2111.md) <!--10957283-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
