@@ -88,26 +88,19 @@ Please note: Only security-enabled Microsoft 365 Groups are supported
 > Consider some of the other dynamic user and device groups you can create, such as:
 >
 > - All Students in Contoso high school
-> - All Android Enterprise devices
 > - All iOS 11 and older devices
 > - Marketing
 > - Human Resources
 > - All Charlotte employees
 > - All WA employees
 
-## Groups and policies
+## Intune All Users and All Devices groups
+When assigning policies and apps in the admin center you can choose to assign to **All Users** or **All devices** groups, which are pre-created. The **All devices** group targets all devices that are enrolled into management and the **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you do not create them or view them in Azure Active Directory. They are convenient to use (because they are pre-created in your tenant) and they are a faster targeting unit than Azure AD groups.
 
-Access to your organization's resources are controlled by users and groups you create.
+When assigning policies and applications to large groups such as **All users** and **All devices** you may choose to use **Filters**, so that you can dynamically control which devices the policy or app deployment should apply to.
 
-When you create groups, consider how you'll apply [compliance policies](../protect/device-compliance-get-started.md) and [configuration profiles](../configuration/device-profiles.md). For example, you might have:
+For more guidance on using Filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md)
 
-- Policies that are specific to a device operating system.
-- Policies that are specific to different roles in your organization.
-- Policies that are specific to organizational units you defined in Active Directory.
-
-To create the basic compliance requirements of your organization, you can create a default policy that applies to all groups and devices. Then, create more specific policies for the broadest categories of users and devices. For example, you might create email policies for each of the device operating systems.
-
-For configuration profile recommendations and guidance, see [Assign policies to user groups or device groups](../configuration/device-profile-assign.md#user-groups-vs-device-groups) and [profile recommendations](../configuration/device-profile-create.md#recommendations).
 
 ## See also
 
