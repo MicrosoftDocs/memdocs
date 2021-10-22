@@ -12,7 +12,7 @@ ms.date: 09/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 
@@ -25,7 +25,7 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic
+ms.custom: OS=Android;intune-classic
 ms.collection: M365-identity-device-management
 ---
 

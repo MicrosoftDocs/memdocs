@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot device guidelines
-ms.reviewer: 
-manager: laurawi
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -12,21 +10,23 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
 
-
 # Windows Autopilot device guidelines
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 
 ## Hardware and firmware best practice guidelines for Windows Autopilot
 
-All devices using Windows Autopilot should meet the [minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview) for Windows 10.  
+All devices using Windows Autopilot should meet the [minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview) for Windows.
 
 The following best practices ensure that devices can easily be provisioned as part of the Windows Autopilot deployment process: 
 - TPM 2.0 is enabled and in a good state (not in **Reduced Functionality Mode**) on devices intended for Windows Autopilot self-deploying mode.
@@ -39,10 +39,10 @@ The following best practices ensure that devices can easily be provisioned as pa
 
 ## Software best practice guidelines for Windows Autopilot
 
-- The Windows Autopilot device should be preinstalled with only a Windows 10 base image plus drivers.
+- The Windows Autopilot device should be preinstalled with only a Windows base image plus drivers.
 - You can preinstall your licensed version of Office, such as [Microsoft 365 Apps for enterprise](/deployoffice/about-office-365-proplus-in-the-enterprise).
 - Unless explicitly requested by the customer, no other preinstalled software should be included.
-  - Per OEM Policy, Windows 10 features, including built-in apps, shouldn't be disabled or removed.
+  - Per OEM Policy, Windows features, including built-in apps, shouldn't be disabled or removed.
 
 ## Next steps
 

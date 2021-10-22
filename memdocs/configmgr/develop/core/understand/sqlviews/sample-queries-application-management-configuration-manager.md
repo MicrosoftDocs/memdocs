@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: c0d69334-75eb-408c-8828-94898cf134f5
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for application management in Configuration Manager

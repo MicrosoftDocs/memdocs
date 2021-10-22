@@ -2,14 +2,15 @@
 title: "Console extension registration through community hub"
 description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
-ms.date: "07/30/2021"
+ms.date: "10/20/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
 author: mestew
 ms.author: mstewart
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Console extension registration though community hub
@@ -201,6 +202,9 @@ Make sure you've joined the community hub and that you've accepted the invite af
 - **SHA-256 hash of the content**: SHA-256 hash of the `.cab` file
 - **License URL**: URL of the license for the extension, such as [https://mit-license.org/](https://mit-license.org/)
 - **Privacy statement URL**: URL of your privacy statement
+
+> [!Important]
+> If you import an extension locally into the console by posting it through the administration service, the download will fail if you attempt to download the same extension from the Community hub. To test the download of your extension from Community hub, delete the imported extension and then download from Community hub. <!--12375723-->
 
 ## Next steps
 

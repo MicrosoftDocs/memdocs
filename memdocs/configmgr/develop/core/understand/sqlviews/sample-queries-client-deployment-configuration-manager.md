@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 66e102b8-f80c-4dc8-b39c-e2a5a50c74a6
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for client deployment in Configuration Manager
@@ -26,13 +27,13 @@ This query retrieves the NetBIOS name for client computers that have provided cl
 
 ```sql
     SELECT v_ClientDeploymentState.NetBiosName AS Computer, 
-      v_R_System.User_Name0 AS [User], 
-      v_ClientDeploymentState.AssignedSiteCode AS [Assigned Site], 
-      v_ClientDeploymentState.LastMessageTime AS [Last Message], 
-      v_StateNames.StateName AS State 
+    ï¿½ï¿½v_R_System.User_Name0 AS [User], 
+    ï¿½ï¿½v_ClientDeploymentState.AssignedSiteCode AS [Assigned Site], 
+    ï¿½ï¿½v_ClientDeploymentState.LastMessageTime AS [Last Message], 
+    ï¿½ï¿½v_StateNames.StateName AS State 
     FROM v_ClientDeploymentState INNER JOIN v_R_System ON 
-      v_ClientDeploymentState.SMSID = v_R_System.SMS_Unique_Identifier0 INNER JOIN v_StateNames ON 
-      v_ClientDeploymentState.LastMessageStateID = v_StateNames.StateID 
+    ï¿½ï¿½v_ClientDeploymentState.SMSID = v_R_System.SMS_Unique_Identifier0 INNER JOIN v_StateNames ON 
+    ï¿½ï¿½v_ClientDeploymentState.LastMessageStateID = v_StateNames.StateID 
     WHERE (v_StateNames.TopicType = 800) 
     ORDER BY State, Computer 
 ```

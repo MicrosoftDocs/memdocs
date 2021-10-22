@@ -12,7 +12,7 @@ ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.reviewer: chrisbal
 
@@ -24,7 +24,7 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;workProfilesUpdate
+ms.custom: OS=Android;intune-azure;workProfilesUpdate
 
 ---
 

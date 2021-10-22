@@ -11,7 +11,8 @@ ms.topic: how-to
 ms.assetid: 2020b94b-fc6f-4a70-91fb-51df948b9cb1
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # How to run Configuration Manager reports

@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
-ms.date: 07/16/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -56,7 +56,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 ## Limitations
 
 - Endpoint analytics insights are not available for devices running Windows Server editions.
-- With the exception of the [Recommended software report](recommended-software.md), Endpoint analytics supports only Windows 10 devices.
+- With the exception of the [Recommended software report](recommended-software.md), Endpoint analytics supports only Windows 10 or later devices.
 - Using multiple Configuration Manager hierarchies with a single Endpoint analytics instance is not currently supported.
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager

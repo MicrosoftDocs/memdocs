@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Windows Hello to authenticate to Windows 10 devices using Microsoft Intune
+title: Use Windows Hello to authenticate to Windows 10 and Windows 11 devices using Microsoft Intune
 description: Create an identity protection profile In Microsoft Intune that uses Windows Hello for Business to enable users to authenticate devices. 
 keywords:
 author: brenduns
@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use Windows Hello for Business on Windows 10 devices with Microsoft Intune
+# Use Windows Hello for Business on Windows devices with Microsoft Intune
 
 Windows Hello for Business is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards. Intune includes built-in settings so Administrators can configure and use Windows Hello for Business. For example, you can use these settings to:
 
@@ -34,16 +34,17 @@ Windows Hello for Business is a method for signing in to Windows devices by repl
 - Set device PIN requirements, including a minimum or maximum PIN length
 - Allow gestures, such as a fingerprint, that users can (or can't use) to sign in to devices
 
-This feature applies to device running:
+This feature applies to devices running:
 
-- Windows 10 and later
+- Windows 10
+- Windows 11
 
 > [!NOTE]
 > For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](/windows/client-management/mdm/policy-csp-devicelock)
 
 Intune uses *configuration profiles* to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to user and device groups in your organization.
 
-This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
+This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
 
 > [!IMPORTANT]
 > Due to how Intune determines the scope and applicability of Windows Hello for Business policy, the device may log **Event ID 454** as a result of applying policy. This can be safely ignored when policy is being successful applied (and enforced).
@@ -76,7 +77,7 @@ This article shows you how to create a device configuration profile. For a list 
 
      - **Disabled**: If you don't want to use Windows Hello for Business, select this option. This option disables Windows Hello for Business for all users.
 
-     - **Enabled**: Choose this option to [provision](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning), and configure Windows Hello for Business settings in Intune. Enter the settings you want to configure. For a list of all settings, and what they do, see - [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
+     - **Enabled**: Choose this option to [provision](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning), and configure Windows Hello for Business settings in Intune. Enter the settings you want to configure. For a list of all settings, and what they do, see - [Windows device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
 
    - **Use security keys for sign-in**: Enable Windows Hello security key as a logon credential for all PCs in the tenant.
 

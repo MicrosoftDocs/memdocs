@@ -11,7 +11,8 @@ ms.topic: conceptual
 ms.assetid: 07c979e1-6e57-464a-9c87-6cfe8036a39b
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Sample queries for content management in Configuration Manager

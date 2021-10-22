@@ -9,7 +9,8 @@ ms.topic: conceptual
 ms.assetid: 35e57dfe-b6b5-483d-8c6f-00363b5417f5
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Client deployment views in Configuration Manager

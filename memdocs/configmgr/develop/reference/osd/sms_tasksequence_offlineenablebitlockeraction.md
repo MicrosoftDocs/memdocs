@@ -8,7 +8,8 @@ ms.topic: reference
 ms.assetid: 596e92ca-fc30-47b2-b249-cf61d5c76121
 author: aczechowski
 ms.author: aaroncz
-manager: dougebyms.localizationpriority: low
+manager: dougeby
+ms.localizationpriority: null
 ---
 
 # SMS_TaskSequence_OfflineEnableBitLockerAction server WMI class
