@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/21/2021
+ms.date: 10/22/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -693,6 +693,7 @@ The following table contains the possible output when calling the `GPAnalyticsSe
 | Scope   | 
 | ProfileType   | 
 | CSPName   | 
+| MdmMapping   | 
 
 You can choose to filter the `GPAnalyticsSettingMigrationReadiness` report's output based on the following columns:
 - `MigrationReadiness` 
