@@ -77,6 +77,25 @@ The Remote help app supports the following capabilities:
 > - Remote help is not supported on High GCC tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant. 
 
+### Network considerations
+
+Remote help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remoteassistance.support.services.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
+
+Both the helper and sharer must be able to reach these endpoints over port 443:
+
+| Domain/Name                       | Description                                           |
+|-----------------------------------|-------------------------------------------------------|
+| \*.support.services.microsoft.com | Primary endpoint used for the remote help application    |
+| \*.resources.lync.com             | Required for the Skype framework used by remote help |
+| \*.infra.lync.com                 | Required for the Skype framework used by remote help |
+| \*.latest-swx.cdn.skype.com        | Required for the Skype framework used by remote help |
+| \*.login.microsoftonline.com       | Required for logging in to the application (MSA)      |
+| \*.channelwebsdks.azureedge.net    | Used for chat services within remote help        |
+| \*.aria.microsoft.com             | Used for accessibility features within the app    |
+| \*.api.support.microsoft.com       | API access for remote help                          |
+| \*.vortex.data.microsoft.com      | Used for diagnostic data                                |
+| \*.channelservices.microsoft.com  | Required for chat services within remote help        |
+
 ## Configure remote help for your tenant
 
 To configure your tenant to support remote help, review and complete the following tasks.
