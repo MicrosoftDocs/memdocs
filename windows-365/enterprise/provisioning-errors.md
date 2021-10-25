@@ -56,7 +56,7 @@ Windows 365 doesn’t perform any hybrid Azure Active Directory (Azure AD) join 
 
 If provisioning fails because of hybrid Azure AD join, it’s likely because of an insufficient sync period configured in your AD Sync service. Make sure that Azure AD connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will time out if the Azure AD object doesn’t appear within 90 minutes.
 
-Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 will be replicated fast enough to make it into Azure AD within this timeout window.
+Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 will be replicated fast enough to make it into Azure AD within this five hour timeout window.
 
 If your organization uses Active Directory Federation Services (ADFS), this registration process is optimized and may result in Cloud PC provisioning completing faster than an Azure AD Connect sync might.
 
