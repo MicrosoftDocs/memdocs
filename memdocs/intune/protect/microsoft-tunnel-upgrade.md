@@ -144,6 +144,21 @@ After an update releases, it rolls out to tenants over the following days. This 
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
+### October 25, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:fa4a1e5bd701adc447aa41f11daf83c615b7b16b7994b5d86c383955fd6cdad7
+
+- **serverImageDigest**: sha256:aefcb35c5410b87eb8a46da3e98199aa60e74cdc12eb5b86a0a36420cd64005d
+
+Changes in this release:
+
+- Added ability to get a client network trace
+- Added ability to enabled resoruce access tracking
+- Added support for Podman when using Red Hat Enterprise Linux 8.4
+- Minor bug fixes
+
 ### September 7, 2021
 
 Image hash values:
