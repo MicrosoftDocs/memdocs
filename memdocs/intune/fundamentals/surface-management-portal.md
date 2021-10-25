@@ -27,15 +27,17 @@ ms.collection: M365-identity-device-management
 
 # What is Microsoft Surface management portal?  
 
-Microsoft Surface management portal is a centralized place in Microsoft Endpoint Manager where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale.   
+Microsoft Surface management portal is a centralized place in Microsoft Endpoint Manager where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale. The Surface management portal is available automatically with a Microsoft Intune subscription. To access it, sign in to Microsoft Endpoint Manager and go to **All services** > **Surface management portal**. 
 
-* See all Surface devices in your organization.  
-* Drill down into devices to access additional Surface features.  
+Use the integrated Surface capabilities to:  
+
+* See all enrolled Surface devices in your organization.  
+* Drill down into reports, support requests, and individual devices.  
 * View warranty data and expiration.   
-* Manage warranty and support requests. 
+* Track warranty and support requests.  
 * Access Microsoft Surface news and resources.      
 
-The Surface management portal is available automatically with a Microsoft Intune subscription. To access the portal, sign in to Microsoft Endpoint Manager and go to **All services** > **Surface management portal**. This article describes the main features of the Surface management portal.    
+ This article describes the main features of the Surface management portal.    
 
 ## Monitor  
 Select **Monitor** for an overview of Surface devices, support requests, and warranty coverage in your organization.  
