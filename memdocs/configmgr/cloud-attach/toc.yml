@@ -1,0 +1,16 @@
+- name: Cloud attach documentation
+  href: index.yml
+- name: Fundamentals
+  items:
+  - name: What is cloud attach?
+    href: overview.md
+  - name: Role-based administration
+    href: ../core/understand/fundamentals-of-role-based-administration.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+- name: Concepts
+  items:
+  - name: Endpoint analytics
+    href: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Co-management
+    href: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Tenant attach
+    href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
