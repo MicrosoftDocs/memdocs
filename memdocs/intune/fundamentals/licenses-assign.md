@@ -4,10 +4,10 @@
 title: Assign Microsoft Intune licenses
 description: Assign licenses to users so they can enroll in Intune
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 09/29/2021
+ms.date: 10/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -80,6 +80,34 @@ How you purchased Intune determines your subscription information:
 - If you purchased Intune through an Enterprise Agreement, you can find your subscription information in the Volume License portal under **Subscriptions**.
 - If you purchased Intune through a Cloud Solution Provider, check with your reseller.
 - If you purchased Intune with a CC# or Invoice, then your licenses will be user-based.
+
+## Look up current licenses using PowerShell
+
+To view the number of free and used licenses on a Microsoft Intune subscription, you can use the following steps to run PowerShell commands.
+
+1. From a PowerShell prompt, run the following command:
+
+   ```powershell
+   $creds = Get-Credential
+   ```
+
+2. A pop-up window will prompt for credentials. Enter your Microsoft Intune credentials.
+3. Run the following command:
+
+   ```powershell
+   Connect-MsolService -Credential $creds
+   ```
+
+4. Run the following command:
+
+   ```powershell
+   Get-MsolAccountSku
+   ```
+
+A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
+
+> [!NOTE]
+> To confirm your Azure Active Directory Premium and Microsoft Intune using Microsoft Endpoint Manager admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
 
 ## Use PowerShell to selectively manage EMS user licenses
 Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
