@@ -123,6 +123,8 @@ The following features are available with the most recent Configuration Manager 
 
 - [10579996](2021/technical-preview-2111.md) <!--10579996-->
 - [12377291](2021/technical-preview-2111.md) <!--12377291-->
+- [11125884](2021/technical-preview-2111.md) <!--11125884-->
+- [10422235](2021/technical-preview-2111.md) <!--10422235-->
 - [10957283](2021/technical-preview-2111.md) <!--10957283-->
 
 > [!NOTE]
