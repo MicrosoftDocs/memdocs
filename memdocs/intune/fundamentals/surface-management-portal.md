@@ -3,8 +3,8 @@
 title: Microsoft Surface management portal in Endpoint Manager
 description: An overview of the Surface management portal integrated with Microsoft Intune and Microsoft Endpoint Manager.  
 keywords:
-author: Lanewsad
-ms.author: lenewsad
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/28/2021
 ms.topic: conceptual
