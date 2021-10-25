@@ -40,7 +40,7 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [11018755](includes/2109/known-issue-11018755.md)]
 [!INCLUDE [11002336](includes/2109/known-issue-11002336.md)]
-
+[!INCLUDE [11016837](includes/2109/known-issue-11016837.md)]
 ## Next steps
 
 For more information about installing or updating the technical preview branch, see [Technical preview](../technical-preview.md).

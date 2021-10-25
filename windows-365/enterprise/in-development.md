@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 9/28/2021
+ms.date: 10/20/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -74,6 +74,20 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 ### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
 
 New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
+
+<!-- ***********************************************-->
+## Provisioning
+
+### Provisioning maximum timeout changing to five hours<!--36461463-->
+
+To improve reliability, the maximum provisioning timeout will be changed to five hours.
+
+<!-- ***********************************************-->
+## Role-based access control
+
+### Custom Windows 365 RBAC roles<!--36222579 -->
+
+In a future release, custom Windows 365 role-based access control (RBAC) roles will be available in the Microsoft Endpoint Manager admin center. You’ll be able to mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You’ll also be able to create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services.
 
 ## Next steps
 

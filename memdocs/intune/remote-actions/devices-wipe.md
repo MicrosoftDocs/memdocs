@@ -121,9 +121,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 
 Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
 
-### Android Enterprise dedicated devices
+### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
 
-You can only wipe kiosk devices. You can't retire Android kiosk devices.
+You can only wipe Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
 
 
 ### macOS
@@ -211,7 +211,6 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
-   :::image type="content" source="./media/devices-wipe/retire.png" alt-text="Screen capture of the Retire U I from the M E M admin center.":::
 3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
 4. In the **Assigned to** menu, choose **Unassigned**.
 

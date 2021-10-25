@@ -48,7 +48,7 @@ When [customizations are applied to the company branding settings](/azure/active
 
 ### TPM attestation is not working on Intel Tiger Lake platforms
 
-TPM attestation support for Intel TPM Tiger Lake platforms are only supported on devices with Windows 10 version 21H2 or higher.
+TPM attestation support for Intel firmware TPM Tiger Lake platforms are only supported on devices with Windows 10 version 21H2 or higher.
 
 ### Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP
 
