@@ -576,9 +576,10 @@ Following are some settings available in the settings catalog that might be rele
     - Require Private Store Only - **Only Private store is enabled**
 
 - **Block Gaming**  
-  Organizations might prefer that corporate endpoints cannot be used to play games. Gaming Services built into Windows can be disabled using the following setting.
-  - Games
-    - Allow Advanced Gaming Services – **Block**
+  Organizations might prefer that corporate endpoints cannot be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
+  For additional information on the settings page visibility, refer to the CSP documentation [here(https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist)] and the ms-settings URI scheme reference [here(https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)].
+  - Settings
+    - Page Visibility List – **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame**
 
 ### Device Restrictions
 
