@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2021
+ms.date: 11/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,11 +77,11 @@ Devices must have access to the following endpoints:
 
 Policies for MDE security management are supported for the following device platforms:
 
-- Windows 10 Professional/Enterprise (With KB999999)
-- Windows 11 Professional/Enterprise (With KB999999)
+- Windows 10 Professional/Enterprise (With KB5006738)
+- Windows 11 Professional/Enterprise (With KB5007262)
 - Windows Server 2012 R2 with Microsoft Defender for Down-Level Devices
 - Windows Server 2019 with Microsoft Defender for Down-Level Devices
-- Windows Server 2022 (with KB999999)
+- Windows Server 2022 (with KB5006745)
 
 ### Licensing and subscriptions
 
