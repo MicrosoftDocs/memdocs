@@ -96,6 +96,8 @@ items:
             href: apps-win32-troubleshoot.md
           - name: Win32 app S mode devices
             href: apps-win32-s-mode.md
+          - name: Deploy Windows update packages
+            href: apps-win32-deploy-update-package.md
       - name: Add specific apps
         items:
         - name: Company Portal app - Autopilot
