@@ -27,17 +27,19 @@ ms.collection: M365-identity-device-management
 
 # What is Microsoft Surface management portal?  
 
-Microsoft Surface management portal is a centralized place in Microsoft Endpoint Manager where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale. The Surface management portal is available automatically with a Microsoft Intune subscription. To access it, sign in to Microsoft Endpoint Manager and go to **All services** > **Surface management portal**. 
+Microsoft Surface management portal is a centralized place in Microsoft Endpoint Manager where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale. Surface management portal offers insights about the enrolled Surface devices in your organization, such as warranty eligibility and open support requests. 
 
-Use the integrated Surface capabilities to:  
+You can use it to:
 
 * See all enrolled Surface devices in your organization.  
 * Drill down into reports, support requests, and individual devices.  
-* View warranty data and expiration.   
+* View warranty data and expiration dates.   
 * Track warranty and support requests.  
-* Access Microsoft Surface news and resources.      
+* Access Microsoft Surface news and resources.  
 
- This article describes the main features of the Surface management portal.    
+To access the Surface management portal, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **All services** > **Surface management portal**. 
+
+This article describes the main features of the Surface management portal. 
 
 ## Monitor  
 Select **Monitor** for an overview of Surface devices, support requests, and warranty coverage in your organization.  
@@ -56,7 +58,7 @@ The **coverage status** tracks the expiration and coverage of Surface warranties
  * Expired: Number of devices with expired warranties.  
  * Covered: Number of  devices still covered under warranty.  
  * Expiring: Number of devices approaching the warranty expiration date.  
- * Eligible: Number of devices not covered by a warranty but eligible for coverage.  
+ * Eligible: Number of devices eligible for optional coverage.  
 
 Links to other resources are provided under **Warranty and coverage resources** and **Customer service and support resources**.   
 
