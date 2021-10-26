@@ -50,7 +50,10 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- ########################## -->
 ## Week of November 2, 2021 (Service release 2110)
 
-### Improved user interface for online access to Cloud PCs<!--36735456 -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Improved user interface for online access to Cloud PCs<!--36735456 -->
 
 The user interface on windows365.microsoft.com has been improved with:
 
@@ -60,6 +63,20 @@ The user interface on windows365.microsoft.com has been improved with:
 - Alternative keyboard settings.
 - Edit settings in-session.
 - Accessibility support.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Provisioning maximum timeout changing to five hours<!--36461463-->
+
+To improve reliability, the maximum provisioning timeout has been changed to five hours.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Custom Windows 365 RBAC roles<!--36222579  -->
+
+Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services.
 
 <!-- ########################## -->
 ## Week of October 11, 2021 (Service release 2109)
