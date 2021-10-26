@@ -25,6 +25,8 @@ The following sections describe the new features to try out in this version:
 <!-- [!INCLUDE [Example feature name](includes/2111/1234567.md)] -->
 [!INCLUDE [10579996](includes/2111/10579996.md)]
 [!INCLUDE [12377291](includes/2111/12377291.md)]
+[!INCLUDE [11125884](includes/2111/11125884.md)]
+[!INCLUDE [10422235](includes/2111/10422235.md)]
 [!INCLUDE [10957283](includes/2111/10957283.md)]
 
 <!--
