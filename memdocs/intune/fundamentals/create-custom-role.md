@@ -97,7 +97,7 @@ The following permissions are available when creating custom roles.
  | Remote tasks/Play lost mode sound | Initiate the lost mode ring sound on a device that has been placed in MDM Lost mode. | 
  | Remote tasks/Set device name | Set or change the name of a device.  | 
  | Remote tasks/Locate device | View the location of a lost or stolen corporate-owned device on a map. Can locate supervised iOS/iPadOS devices, Android dedicated devices (COSU), and Windows devices. | 
- | Remote tasks/Bypass activation lock | Remove the Activation Lock from supervised devices without requiring the user's Apple ID and password. This may be required if a user leaves the company and returns the device; without the user's Apple ID and password, there is no way to reactivate the device. Or, you need to reassign some devices to a different department during a device refresh in your organization. You can only reassign devices that do not have Activation Lock enabled. You must also have the Managed Device | Read permission to view devices in the Azure Portal before initiating this remote task. | 
+ | Remote tasks/Bypass activation lock | Remove the Activation Lock from supervised devices without requiring the user's Apple ID and password. This may be required if a user leaves the company and returns the device; without the user's Apple ID and password, there is no way to reactivate the device. Or, you need to reassign some devices to a different department during a device refresh in your organization. You can only reassign devices that do not have Activation Lock enabled. You must also have the Managed Device Read permission to view devices in the Azure Portal before initiating this remote task. | 
  | Remote tasks/Reboot now | Initiates a device restart. This causes the device you choose to be restarted. The device owner isn't automatically notified of the restart, and they might lose work. | 
  | Remote tasks/Shut down | Initiates a shutdown of the device, and will automatically close all applications and running services and leave the device in a powered-off state. | 
  | Remote tasks/Enable Windows IntuneAgent | Enable Windows Intune agent. | 
@@ -152,7 +152,7 @@ The following permissions are available when creating custom roles.
  | Corporate device identifiers/Update | Change IMEI or serial numbers used as corporate device identifiers. | 
  | Corporate device identifiers/Delete | Delete IMEI or serial numbers used as corporate device identifiers. | 
  | Remote assistance connectors/Read | View the status of the TeamViewer connector and remote help. This permission is not required to initiate remote assistance requests for devices. | 
- | Remote assistance connectors/Update | Manage the state of the TeamViewer connector and remote help. This permission also requires the Remote assistance connectors | Read permission to view the status of the TeamViewer connector and remote help. | 
+ | Remote assistance connectors/Update | Manage the state of the TeamViewer connector and remote help. This permission also requires the Remote assistance connectors Read permission to view the status of the TeamViewer connector and remote help. | 
  | Remote assistance connectors/View reports | View, generate and export remote help sessions and monitor reports. | 
  | Remote help app/View screen | View screen allows the helper to view the sharer’s device when remote help is enabled. | 
  | Remote help app/Take full control | Take full control allows the helper to view and control the sharer’s device when remote help is enabled. | 
