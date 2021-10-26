@@ -89,7 +89,7 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 | \*.resources.lync.com             | Required for the Skype framework used by remote help |
 | \*.infra.lync.com                 | Required for the Skype framework used by remote help |
 | \*.latest-swx.cdn.skype.com        | Required for the Skype framework used by remote help |
-| \*.login.microsoftonline.com       | Required for logging in to the application (MSA)      |
+| \*.login.microsoftonline.com       | Required for logging in to the application (AAD)      |
 | \*.channelwebsdks.azureedge.net    | Used for chat services within remote help        |
 | \*.aria.microsoft.com             | Used for accessibility features within the app    |
 | \*.api.support.microsoft.com       | API access for remote help                          |
