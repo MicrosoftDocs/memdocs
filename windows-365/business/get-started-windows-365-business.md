@@ -103,7 +103,7 @@ Users can navigate to **https://windows365.microsoft.com** to access their Cloud
 
 On their Windows 365 home page, users see the Cloud PCs they have access to in the **Your Cloud PCs** section.
 
-![Windows 365 home.](./media/get-started-windows-365-business/cloudpc-home.png)
+![Windows 365 home.](./media/get-started-windows-365-business/cloud-pc-home.png)
 
 Users can select **Open in browser** to open their Cloud PC.
 
@@ -114,18 +114,9 @@ Users can select **Open in browser** to open their Cloud PC.
 
 While on the Windows 365 home page, users can perform actions on their Cloud PCs by selecting the gear icon on a Cloud PC card.
 
-![Card menu.](./media/get-started-windows-365-business/cloudpc-gear.png)
+![Card menu.](./media/get-started-windows-365-business/cloud-pc-gear.png)
 
 - **Restart**: Restarts the Cloud PC.
-
-- **Reset**:  Reset does the following:
-  - Reinstalls Windows 10.
-  - Removes your personal files.
-  - Removes any changes you made to settings.
-  - Removes your apps.
-
-    > [!IMPORTANT]  
-    > Before resetting your Cloud PC, make sure to back up any important files you need to keep to a cloud storage service or external storage. Resetting your Cloud PC will delete these files.
 
 - **Rename**: Changes the name of the Cloud PC shown to the user on the Windows 365 home page.
 
