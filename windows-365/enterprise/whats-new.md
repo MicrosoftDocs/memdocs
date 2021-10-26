@@ -67,7 +67,7 @@ The user interface on windows365.microsoft.com has been improved with:
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
-#### Provisioning maximum timeout changing to five hours<!--36461463-->
+#### Provisioning maximum timeout changed to five hours<!--36461463-->
 
 To improve reliability, the maximum provisioning timeout has been changed to five hours.
 
