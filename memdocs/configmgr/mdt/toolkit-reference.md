@@ -13996,9 +13996,9 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 - [Windows Presentation Foundation](/dotnet/desktop-wpf/) version 4.0  
 
-- [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
+- [Microsoft Prism](https://www.codeproject.com/Articles/165370/Creating-View-Switching-Applications-with-Prism-4) version 4.0  
 
-- [Microsoft Unity Application Block](https://unity.codeplex.com/) (Unity) version 2.1  
+- [Microsoft Unity Application Block](https://www.codeproject.com/articles/42524/a-basic-introduction-to-the-unity-application-bloc) (Unity) version 2.1  
 
   For more information on developing custom UDI wizard page editors, see the section, "Creating Custom Wizard Page Editors", in the MDT document *User-Driven Installation Developers Guide*.  
 
