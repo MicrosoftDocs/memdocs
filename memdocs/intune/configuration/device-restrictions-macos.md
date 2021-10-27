@@ -86,7 +86,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 ### Settings apply to: All enrollment types
 
 - **Block iCloud Keychain sync**: **Yes** disables syncing credentials stored in the Keychain to iCloud. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sync these credentials.
-- **Block iCloud Desktop and Document Sync**: **Yes** prevents iCloud from syncing documents and data. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow document and key-value synchronization to your iCloud storage space.
+- **Block iCloud Document and Data Sync**: **Yes** prevents iCloud from syncing documents and data. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow document and key-value synchronization to your iCloud storage space.
 - **Block iCloud Mail Backup**: **Yes** prevents iCloud from syncing to the macOS Mail app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Mail synchronization to iCloud.
 - **Block iCloud Contact Backup**: **Yes** prevents iCloud from syncing the device contacts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow contact sync using iCloud.
 - **Block iCloud Calendar Backup**: **Yes** prevents iCloud from syncing to the macOS Calendar app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Calendar synchronization to iCloud.
