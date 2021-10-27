@@ -15,6 +15,9 @@ ms.localizationpriority: medium
 
 # What is Desktop Analytics?
 
+> [!IMPORTANT]
+> Desktop Analytics is deprecated and will be retired on November 30, 2022. For more information, see [What's new](whats-new.md).<!-- 10946169 -->
+
 Desktop Analytics is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows clients. It combines data from your organization with data aggregated from millions of devices connected to Microsoft cloud services.
 
 Use Desktop Analytics with Configuration Manager to:
