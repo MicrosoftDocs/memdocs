@@ -261,14 +261,14 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Non-persistent VDI environments
 
-Due to the potential impact on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this private preview in a non-persistent VDI environment.
+Due to the potential impact on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this public preview in a non-persistent VDI environment.
 
 ### Server Core installation
 
-Due to the limited scope of Server core installations, these are currently not supported by Microsoft Defender for Endpoint Security Configuration Manager.
+Due to the limited scope of Server core installations, these are not supported by Security Management for Microsoft Defender for Endpoint.
 
 ### Azure Active Directory onboarding issues
-To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](troubleshoot-security-config-mgt.md).
+To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
 
 ## Next steps
 
