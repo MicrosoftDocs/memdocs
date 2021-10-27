@@ -52,6 +52,7 @@ Intune for Education is included in the following licenses:
 
 - Microsoft 365 Education A5
 - Microsoft 365 Education A3
+- Microsoft 365 Education A1
 
 ## Licensing for Configuration Manager-managed devices in Intune
 
