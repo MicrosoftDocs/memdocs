@@ -257,7 +257,19 @@ When you select a policy, you'll see information about the device check-in statu
 
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
 
+## Known issues and limitations 
+
+### Non-persistent VDI environments
+
+Due to the potential impact on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this private preview in a non-persistent VDI environment.
+
+### Server Core installation
+
+Due to the limited scope of Server core installations, these are currently not supported by Microsoft Defender for Endpoint Security Configuration Manager.
+
+### Azure Active Directory onboarding issues
+To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](troubleshoot-security-config-mgt.md).
+
 ## Next steps
 
 [Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)  
-[Troubleshoot security configuration management onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt?view=o365-21vianet&branch=security-config)
