@@ -555,7 +555,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
   - **Not configured**  
-  - **Block all** *(defulat)*
+  - **Block all** *(default)*
   - **Allow all**
 
 ::: zone-end

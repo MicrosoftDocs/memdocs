@@ -111,7 +111,7 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
     - Remote Enable
 
-1. On the **Security tab** below the **CCM** node, select the **site_&lt;sitecode**> node, and then choose **Security**. Make sure the **SMS Admins** group has the following permissions:
+1. On the **Security tab** below the **SMS** node, select the **site_&lt;sitecode**> node, and then choose **Security**. Make sure the **SMS Admins** group has the following permissions:
 
     - Execute Methods
 
