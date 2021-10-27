@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/26/2021
+ms.date: 10/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -104,7 +104,14 @@ Software Center notifications are currently suppressed during this time. For mor
 
 <!-- 11291031 -->
 
-If you configure the [authentication level](../hierarchy/plan-for-the-sms-provider.md#authentication) for the site to require **Windows Hello for Business authentication**, the Configuration Manager console on a Windows 11 device can't connect to the site. The smsprov.log file on the site shows the following error: `Current thread is not authenticated with the minimal allowed level.`
+_Applies to: Azure Active Directory (Azure AD)-joined devices_
+
+If you configure the [authentication level](../hierarchy/plan-for-the-sms-provider.md#authentication) for the site to require **Windows Hello for Business authentication**, the Configuration Manager console on a Windows 11 device can't connect to the site. The adminui.log file on the devices shows the following errors:
+
+```log
+Description = "Current thread is not authenticated with the minimal allowed level.";
+ErrorCode = 2185761792;
+```
 
 There are two options to work around this issue:
 
