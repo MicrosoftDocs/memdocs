@@ -893,6 +893,10 @@ By default, apps are considered single identity. The SDK sets the process identi
 ## Siri Intents
 
 If your app integrates with Siri Intents or makes Siri Intent Donations, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
+
+## Printing
+
+If your app implements printing and provides a custom print action on a custom menu, be sure to utilize `UIPrintInteractionController.isPrintingAvailable()` to determine if you should add your print action to your custom menu.
     
 ## Notifications
 
