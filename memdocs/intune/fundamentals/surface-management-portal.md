@@ -1,7 +1,7 @@
 ---
 # required metadata
-title: Microsoft Surface management portal in Endpoint Manager
-description: An overview of the Surface management portal integrated with Microsoft Intune and Microsoft Endpoint Manager.  
+title: Microsoft Surface management portal 
+description: Learn more about the features and capabilities of Microsoft Surface Management Portal.     
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -25,9 +25,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# What is Microsoft Surface management portal?  
+# What is Microsoft Surface Management Portal?  
 
-Microsoft Surface management portal is a centralized place in Microsoft Endpoint Manager where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale. Surface management portal offers insights about the enrolled Surface devices in your organization, such as warranty eligibility and open support requests. 
+Microsoft Surface Management Portal is a centralized place in Microsoft Endpoint Manager where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale. Surface Management Portal offers insights about the enrolled Surface devices in your organization, such as warranty eligibility and open support requests. 
 
 You can use it to:
 
@@ -37,9 +37,9 @@ You can use it to:
 * Track warranty and support requests.  
 * Access Microsoft Surface news and resources.  
 
-To access the Surface management portal, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **All services** > **Surface management portal**. 
+To access Surface Management Portal, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **All services** > **Surface Management Portal**. 
 
-This article describes the main features of the Surface management portal. 
+This article describes the main features of Microsoft Surface Management Portal. 
 
 ## Monitor  
 For an overview of Surface devices, support requests, and warranty coverage in your organization, select  **Monitor**. You can drill down into any of the information, including: 
@@ -51,9 +51,9 @@ For an overview of Surface devices, support requests, and warranty coverage in y
 * **News**: Check out the Microsoft Surface IT blog for Microsoft Surface news.  
 
 ## Warranty and coverage  
-Warranty information is available in the Surface management portal for devices enrolled in Microsoft Intune. Select **Warranty and coverage** to manage all of the warranty data that's associated with your Surface devices. You can use the information in this tab to plan for new devices and support requests. 
+Warranty information is available for devices enrolled in Microsoft Intune. Select **Warranty and coverage** to manage all of the warranty data that's associated with your Surface devices. You can use the information in this tab to plan for new devices and support requests. 
 
-The **coverage status** tracks the expiration and coverage of Surface warranties. Select a status to drill down into affected devices. Statuses include:    
+The **coverage status** tracks the expiration and coverage of Surface warranties. Select a status to drill down into affected devices. Statuses shown include:    
  
  * **Expired**: Number of devices with expired warranties.  
  * **Covered**: Number of  devices still covered under warranty.  
