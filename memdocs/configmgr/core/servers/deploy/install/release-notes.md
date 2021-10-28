@@ -113,6 +113,18 @@ To work around this issue, temporarily uninstall the later version of Visual C++
 
 ## OS deployment
 
+### Image servicing with Windows Server 2022
+
+<!-- 11843519, MEMDocs#2108 -->
+
+_Applies to: version 2107_
+
+If you try to [apply software updates to an image](../../../../osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image) for Windows Server 2022, no updates display as available to install.
+
+This issue is caused by a change to the Windows update category for Server 2022.
+
+To resolve this issue, install the [update rollup](../../../../hotfix/2107/11121541.md) for Configuration Manager version 2107.
+
 ### Task sequence and application policy issue
 
 <!-- 10506770 -->
