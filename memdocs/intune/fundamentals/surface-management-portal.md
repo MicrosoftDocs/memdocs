@@ -27,9 +27,9 @@ ms.collection: M365-identity-device-management
 
 # What is Microsoft Surface Management Portal?  
 
-Microsoft Surface Management Portal is a centralized place in Microsoft Endpoint Manager where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale. Surface Management Portal offers insights about the enrolled Surface devices in your organization, such as warranty eligibility and open support requests. 
+Microsoft Surface Management Portal is a centralized place in the Microsoft Endpoint Manager admin center where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale.  
 
-You can use it to:
+Surface Management Portal offers insights about the enrolled Surface devices in your organization, such as warranty eligibility and open support requests. Use it to:
 
 * See all enrolled Surface devices in your organization.  
 * Drill down into reports, support requests, and individual devices.  
@@ -37,23 +37,21 @@ You can use it to:
 * Track warranty and support requests.  
 * Access Microsoft Surface news and resources.  
 
-To access Surface Management Portal, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **All services** > **Surface Management Portal**. 
-
-This article describes the main features of Microsoft Surface Management Portal. 
+This article describes the main features of Microsoft Surface Management Portal. To access Surface Management Portal, sign in to the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **All services** > **Surface Management Portal**. 
 
 ## Monitor  
 For an overview of Surface devices, support requests, and warranty coverage in your organization, select  **Monitor**. You can drill down into any of the information, including: 
 
-* **Count**: See the number of enrolled Surface devices by model. Select **View report** to access a report that you can customize and export.      
-* **Insights**: Get notifications about the state of Surface devices in regards to things such as compliance, hardware, and device activity. Select an insight to learn more about it or take action.   
-* **Last updated support requests**: Track the status of recently updated support requests. Select a request ID to look into the request.   
-* **Warranty and coverage**: Review notifications about the status of your Surface warranties, such as number of expired warranties, and devices eligible for warranty coverage. Select an insight to learn more about it or take action.
-* **News**: Check out the Microsoft Surface IT blog for Microsoft Surface news.  
+* **Count**: See the number of enrolled Surface devices by model. Select **View report** for a list of all enrolled devices.  
+* **Insights**: Get notifications about the state of Surface devices in regards to things such as compliance, hardware, and device activity. Select an insight to view all affected Surface devices.     
+* **Last updated support requests**: Track the status of recently updated support requests. Select a request ID to see details such as who filed the request, when it was created, and what device it pertains to. Select **View all support requests** for a list of all active requests. 
+* **Warranty and coverage**: Review notifications about the status of your Surface warranties, such as number of expired warranties, and devices eligible for warranty coverage. Select an insight to view all affected Surface devices. Select **View report** to see the coverage status for all Surface devices. 
+* **News**: Check out the Microsoft Surface IT blog for Microsoft Surface news. 
 
 ## Warranty and coverage  
 Warranty information is available for devices enrolled in Microsoft Intune. Select **Warranty and coverage** to manage all of the warranty data that's associated with your Surface devices. You can use the information in this tab to plan for new devices and support requests. 
 
-The **coverage status** tracks the expiration and coverage of Surface warranties. Select a status to drill down into affected devices. Statuses shown include:    
+The **coverage status** tracks the expiration and coverage of Surface warranties. Select any status to view and drill down into affected devices. Statuses shown include:    
  
  * **Expired**: Number of devices with expired warranties.  
  * **Covered**: Number of  devices still covered under warranty.  
@@ -63,13 +61,11 @@ The **coverage status** tracks the expiration and coverage of Surface warranties
 Links to other resources are provided under **Warranty and coverage resources** and **Customer service and support resources**.   
 
 ## Support  
-Select **Support** to access and monitor all Surface support requests. This area is for self-service and troubleshooting, and tracks:  
+Select **Support** to access and monitor all Surface support requests. This area is for self-service and troubleshooting, and tracks support activity, including:  
 
-* Open requests  
+* Open requests    
 * Closed requests  
 * Last updated support requests  
-
-You can drill down into any of these insights for more details. 
 
 If a Surface device isn’t working properly, the Microsoft Surface Diagnostic Toolkit (SDT) for Business can help you find and solve problems. Select **Troubleshoot with SDT** to learn how to install and use SDT to target problems on Surface devices. More support channels are listed under **Resources**.  
 
