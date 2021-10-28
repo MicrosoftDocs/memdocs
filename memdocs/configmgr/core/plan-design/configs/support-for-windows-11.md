@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/08/2021
+ms.date: 10/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -69,6 +69,16 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 - OS deployment images and upgrade packages for Windows 11 show the image name as Windows 10. For more information, see [Using deployment tools with Windows 11 images](/windows-hardware/manufacture/desktop/using-deployment-tools-with-windows-11).<!--11128713-->
 
+## Windows 11 on ARM64
+
+<!-- 10589908 -->
+
+Configuration Manager version 2107 with the [update rollup](../../../hotfix/2107/11121541.md) supports the client on Windows 11 ARM64 devices.
+
+The **All Windows 11 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
+
+OS deployment isn't supported, except for a feature update task sequence. You can deploy a task sequence with a feature update to a Windows 11 on ARM64 device. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
+
 ## Support for Windows Insider
 
 You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, its support is best effort. Configuration Manager might not issue a hotfix for this functionality if it doesn't work.
@@ -97,9 +107,26 @@ By default, Windows 11 enables **focus assist** for the first hour after a user 
 
 Software Center notifications are currently suppressed during this time. For more information, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).
 
-
 <!-- 11307733 -->
 [!INCLUDE [windows-adk-11-preprovision-bitlocker](includes/windows-adk-11-preprovision-bitlocker.md)]
+
+### Configuration Manager console with Windows Hello for Business authentication
+
+<!-- 11291031 -->
+
+_Applies to: Azure Active Directory (Azure AD)-joined devices_
+
+If you configure the [authentication level](../hierarchy/plan-for-the-sms-provider.md#authentication) for the site to require **Windows Hello for Business authentication**, the Configuration Manager console on a Windows 11 device can't connect to the site. The adminui.log file on the devices shows the following errors:
+
+```log
+Description = "Current thread is not authenticated with the minimal allowed level.";
+ErrorCode = 2185761792;
+```
+
+There are two options to work around this issue:
+
+- Install the console on a device running another version of Windows.
+- Add users to the authentication exclusion list. For more information, see [Configure SMS Provider authentication](../security/configure-security.md#sms-provider-authentication).
 
 ## Next steps
 

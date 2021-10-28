@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2021
+ms.date: 10/27/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -127,7 +127,7 @@ The default managed Universal Links are the following:
 | `http://*.appsplatform.us/*;` `http://*.powerapps.cn/*;` `http://*.powerapps.com/*;` `http://*.powerapps.us/*;` `https://*.powerbi.com/*;` `https://app.powerbi.cn/*;` `https://app.powerbigov.us/*;` `https://app.powerbi.de/*;` | PowerApps |
 | `http://*.powerbi.com/*;` `http://app.powerbi.cn/*;` `http://app.powerbigov.us/*;` `http://app.powerbi.de/*;` `https://*.appsplatform.us/*;` `https://*.powerapps.cn/*;` `https://*.powerapps.com/*;` `https://*.powerapps.us/*;` | Power BI |
 | `http://*.service-now.com/*;` `https://*.service-now.com/*;` | ServiceNow |
-| [NJ1] [DE2] `http://*.sharepoint.com/*;` `http://*.sharepoint-df.com/*;` `https://*.sharepoint.com/*;` `https://*.sharepoint-df.com/*;` | SharePoint |
+| `http://*.sharepoint.com/*;` `http://*.sharepoint-df.com/*;` `https://*.sharepoint.com/*;` `https://*.sharepoint-df.com/*;` | SharePoint |
 | `http://web.microsoftstream.com/video/*;` `http://msit.microsoftstream.com/video/*;` `https://web.microsoftstream.com/video/*;` `https://msit.microsoftstream.com/video/*;` | Stream |
 | `http://*teams.microsoft.com/l/*;` `http://*devspaces.skype.com/l/*;` `http://*teams.live.com/l/*;` `http://*collab.apps.mil/l/*;` `http://*teams.microsoft.us/l/*;` `http://*teams-fl.microsoft.com/l/*;` `https://*teams.microsoft.com/l/*;` `https://*devspaces.skype.com/l/*;` `https://*teams.live.com/l/*;` `https://*collab.apps.mil/l/*;` `https://*teams.microsoft.us/l/*;` `https://*teams-fl.microsoft.com/l/*;` | Teams |
 | `http://tasks.office.com/*;` `https://tasks.office.com/*;` `http://to-do.microsoft.com/sharing*;` `https://to-do.microsoft.com/sharing*;` | ToDo |
