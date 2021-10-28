@@ -61,21 +61,13 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 <!-- ***********************************************-->
 
-## Role-based access control
-
-### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
-You’ll soon be able to view the BitLocker recovery key for tenant-attached devices in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
-
-To view the keys, your Intune account will need Intune RBAC permissions to view BitLocker keys and must also be associated with an on-premises user that has the related on-premises permissions of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission.
-
-When this capability become available, users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a tenant-attached device* > **Recovery keys**.
-
-This capability will be supported with Configuration Manager sites that run version 2107 or later. An update rollup for version 2107 will be required to support Azure AD joined devices.
-
 ## App management
 
 ### New ADMX settings for Edge 95 and Edge updater<!-- 12426698 -->
 New ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Platform** > **Windows 10 and later** and **Profile** > **Templates** > **Administrative Templates**. For related information, see [Overview of the Microsoft Edge channels](/deployedge/microsoft-edge-channels), [Microsoft Edge Browser Policy Documentation] (/deployedge/microsoft-edge-policies), and [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md).
+
+#### New privacy consent screen during Company Portal installation <!-- 6600502 -->
+People installing the Company Portal app for the first time from certain app stores, such as those in China, may see a new privacy consent screen during installation. The screen explains what information Microsoft collects and how it's used. Users must agree to the terms before they can use the app. Users who installed Company Portal prior to this release will not see the new screen.  
 
 ### New RBAC permission for Win32 app supersedence and dependency relationships<!-- 11126374 -->
 A new Microsoft Endpoint Manager permission will be added to create and edit Win32 app supersedence and dependency relationships with other apps. The permission will be available under the **Mobile apps** category by selecting **Relate**. Starting in the 2202 service release, MEM admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Endpoint Manager admin center. To find this permission when it is available, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**. This permission will be added to the following built-in roles:
@@ -111,6 +103,32 @@ In device configuration, you'll be able to create a list of personal apps that w
 ### Connected app support for Android personally-owned and corporate-owned work profiles<!-- 9206112  -->
 
 You'll be able to allow users to turn on Connected apps experiences for supported apps. This app configuration setting will enable users to connect the app information across the work and personal app instances. For example, connecting a calendar app can show work and personal events together. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+
+## Device security
+
+#### Adding 13 BitLocker settings to settings catalog<!-- 10956191 -->  
+13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) are being added to the Microsoft Intune settings catalog. To access the settings when they become available, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Settings will be under the **BitLocker** category. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalo
+
+### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
+You’ll soon be able to view the BitLocker recovery key for tenant-attached devices in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
+
+To view the keys, your Intune account will need Intune RBAC permissions to view BitLocker keys and must also be associated with an on-premises user that has the related on-premises permissions of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission.
+
+When this capability become available, users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a tenant-attached device* > **Recovery keys**.
+
+This capability will be supported with Configuration Manager sites that run version 2107 or later. An update rollup for version 2107 will be required to support Azure AD joined devices.
+
+### Updates for Security Baselines<!-- 9549108,  10873848 -->
+We’ll soon release updates to the following [security baselines​](../protect/security-baselines.md):
+
+- **Security baseline for Windows 10 and later** (Applies to Windows 10 and Windows 11)
+- **Windows 365 Security Baseline (Preview)**
+
+See the available baselines in the Microsoft Endpoint Manager admin center:  **Endpoint security** > **Security baselines**.
+
+Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.  
+
+Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -170,6 +188,13 @@ New assignment filters in **Enrollment Restrictions** will let you include or ex
 
 <!-- ***********************************************-->
 ## Device management
+
+### MDM support data to refresh automatically in Group Policy analytics tool<-- 7852080 -->
+Whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool will automatically update to reflect the changes. The automation is an improvement over the current behavior, which requires you to reimport your group policy object (GPO) to refresh data.
+
+The **MDM Support** column in **Group Policy analytics (preview)** shows the percentage of group policy settings in the uploaded GPO that have the same setting in Intune MDM.
+
+With 2111, customers who have imported Group Policy objects in the Group Policy analytics (preview), will find their MDM Support column field for their GPOs will automatically update in the event that there are any mapping changes within the product. The previous behavior required a re-upload of your GPO for seeing the latest mapping percentage.
 
 ### Non-applicable status entries will no longer be shown in the **Device Install Status** report<!-- 12419387 -->
 Based on a selected app, the **Device Install Status** report provides a list of devices and status information for the selected app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. If the device's platform differs from the application's platform, rather then showing **Not Applicable** for the **Status details** of the entry, the entry will no longer be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.  To find this report, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. For related information, see [Device Install Status report for apps (Operational)](../fundamentals/reports.md#device-install-status-report-for-apps-operational).
