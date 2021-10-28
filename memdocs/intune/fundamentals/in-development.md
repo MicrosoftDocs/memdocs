@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/1/2021
+ms.date: 10/28/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,7 +60,37 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 -->
 
 <!-- ***********************************************-->
+
+## Role-based access control
+
+### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
+You’ll soon be able to view the BitLocker recovery key for tenant-attached devices in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
+
+To view the keys, your Intune account will need Intune RBAC permissions to view BitLocker keys and must also be associated with an on-premises user that has the related on-premises permissions of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission.
+
+When this capability become available, users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a tenant-attached device* > **Recovery keys**.
+
+This capability will be supported with Configuration Manager sites that run version 2107 or later. An update rollup for version 2107 will be required to support Azure AD joined devices.
+
 ## App management
+
+### New ADMX settings for Edge 95 and Edge updater<!-- 12426698 -->
+New ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Platform** > **Windows 10 and later** and **Profile** > **Templates** > **Administrative Templates**. For related information, see [Overview of the Microsoft Edge channels]( https://docs.microsoft.com/deployedge/microsoft-edge-channels), [Microsoft Edge Browser Policy Documentation] (https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies), and [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md).
+
+### New RBAC permission for Win32 app supercedence and dependency relationships<!-- 11126374 -->
+A new Microsoft Endpoint Manager permission will be added to create and edit Win32 app supercedence and dependency relationships with other apps. The permission will be available under the **Mobile apps** category by selecting **Relate**. Starting in the 2202 service release, MEM admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Endpoint Manager admin center. To find this permission when it is available, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**. This permission will be added to the following built-in roles:
+- Application Manager
+- School administrator
+For related information, see [Create a custom role in Intune](..\fundamentals\create-custom-role.md).
+
+### Filter improvements when displaying platform-specific app lists<!-- 10994275 -->
+Filters will be improved when displaying platform-specific app lists in the Microsoft Endpoint Manager admin center. Previously, when navigating to a platform-specific app list, you could not use the **App type** filter on the list. With this change, you will be able to apply filters (including the **App Type** and **Assignment status** filters) on the platform-specific list of apps. For related information, see [Intune reports](../fundamentals/reports.md).
+
+### Password complexity for Android devices<!-- 9321870 -->
+The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn’t meet the minimum password requirement, you will be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. This feature targets devices that operate on Android 11+. For devices operating on Android 11 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
+
+### Enable app update priority for Managed Google Play apps<!-- 7810180 -->
+You'll be able to set the update priority of Managed Google Play apps on dedicated, fully managed, and corporate-owned with a work profile Android Enterprise devices. Select **High Priority** to update an app as soon as the developer has published the app, regardless of charge status, Wi-Fi capability, or end user activity on the device. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
 
 ### Export underlying discovered apps list data<!-- 9370255  -->
 
@@ -140,6 +170,31 @@ New assignment filters in **Enrollment Restrictions** will let you include or ex
 
 <!-- ***********************************************-->
 ## Device management
+
+### Non-applicable status entries will no longer be shown in the **Device Install Status** report<!-- 12419387 -->
+Based on a selected app, the **Device Install Status** report provides a list of devices and status information for the selected app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. If the device's platform differs from the application's platform, rather then showing **Not Applicable** for the **Status details** of the entry, the entry will no longer be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.  To find this report, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. For related information, see [Device Install Status report for apps (Operational)](../fundamentals/reports.md#device-install-status-report-for-apps-operational).
+
+#### Password complexity for Android devices<!-- 9321870 idready -->
+The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn’t meet the minimum password requirement, you will be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. This feature targets devices that operate on Android 11+. For devices operating on Android 11 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
+
+### Create custom settings for Device Compliance for Windows 10/11 devices (public preview)<!--7536730 -->
+As a public preview, device compliance policy for Windows 10 and Windows 11 devices will support adding custom settings to a device compliance policy. Results from custom settings will report back along with other compliance details.
+ 
+To use custom settings, you must first define those settings through the use of two files:
+ 
+- **JSON** – The JSON file lists custom settings, compliance values, and remediation information.
+- **PowerShell** – A PowerShell script that’s deployed to devices and runs to determine their state based on the related JSON file.
+ 
+After creating and uploading the two files as a script, you create a standard Compliance policy that also includes your custom settings script. (**Endpoint security** > **Device compliance** > **Create Policy** > **Windows 10 and later**). Options for custom settings will appear in a new category named *Custom Compliance* that will be available on the *Compliance settings* page for creating a policy.
+
+### New details for Windows devices available in the Microsoft Endpoint Manager admin center<!-- 6208666 -->
+Soon, new details will be available for Windows 10 and Windows 11 devices. This information will be visible when viewing the device on the **All devices** pane in the Microsoft Endpoint Manager admin center, and as part of the All device *export*.
+ 
+The following device properties will be collected and available in the admin center:
+
+- System Management BIOS version
+- TPM Manufacturer version
+- TPM Manufacturer ID
 
 ### Tenant attach: Offboarding <!--9412904 -->
 
