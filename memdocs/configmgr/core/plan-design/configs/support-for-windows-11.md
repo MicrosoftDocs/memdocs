@@ -69,6 +69,16 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 - OS deployment images and upgrade packages for Windows 11 show the image name as Windows 10. For more information, see [Using deployment tools with Windows 11 images](/windows-hardware/manufacture/desktop/using-deployment-tools-with-windows-11).<!--11128713-->
 
+## Windows 11 on ARM64
+
+<!-- 10589908 -->
+
+Configuration Manager version 2107 with the [update rollup](../../../hotfix/2107/11121541.md) supports the client on Windows 11 ARM64 devices.
+
+The **All Windows 11 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
+
+OS deployment isn't supported, except for a feature update task sequence. You can deploy a task sequence with a feature update to a Windows 11 on ARM64 device. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
+
 ## Support for Windows Insider
 
 You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, its support is best effort. Configuration Manager might not issue a hotfix for this functionality if it doesn't work.
