@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Microsoft Surface management portal 
+title: Overview of Microsoft Surface Management Portal 
 description: Learn more about the features and capabilities of Microsoft Surface Management Portal.     
 keywords:
 author: Lenewsad
