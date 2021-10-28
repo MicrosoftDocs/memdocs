@@ -24,7 +24,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2111/1234567.md)] -->
 [!INCLUDE [Improvements to the Windows servicing dashboard](includes/2111/10579996.md)]
-[!INCLUDE [Improvements to the co-management dashboard](includes/2111/12377291.md)]
+[!INCLUDE [Co-management Eligible Devices collection](includes/2111/12377291.md)]
 [!INCLUDE [Improvement to app groups](includes/2111/11125884.md)]
 [!INCLUDE [Improvement to task sequence deployment type](includes/2111/10422235.md)]
 [!INCLUDE [PowerShell release notes preview](includes/2111/10957283.md)]
