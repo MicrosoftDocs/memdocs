@@ -43,7 +43,7 @@ This article describes the main features of Microsoft Surface Management Portal.
 For an overview of Surface devices, support requests, and warranty coverage in your organization, select  **Monitor**. You can drill down into any of the information, including: 
 
 * **Count**: See the number of enrolled Surface devices by model. Select **View report** for a list of all enrolled devices.  
-* **Insights**: Get notifications about the state of Surface devices in regards to things such as compliance, hardware, and device activity. Select an insight to view all affected Surface devices.     
+* **Insights**: Get notifications about the state of Surface devices regarding things such as compliance, hardware, and device activity. Select an insight to view all affected Surface devices.     
 * **Last updated support requests**: Track the status of recently updated support requests. Select a request ID to see details such as who filed the request, when it was created, and what device it pertains to. Select **View all support requests** for a list of all active requests. 
 * **Warranty and coverage**: Review notifications about the status of your Surface warranties, such as number of expired warranties, and devices eligible for warranty coverage. Select an insight to view all affected Surface devices. Select **View report** to see the coverage status for all Surface devices. 
 * **News**: Check out the Microsoft Surface IT blog for Microsoft Surface news. 
