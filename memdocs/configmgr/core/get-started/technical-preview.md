@@ -121,11 +121,11 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2111
 
-- [10579996](2021/technical-preview-2111.md) <!--10579996-->
-- [12377291](2021/technical-preview-2111.md) <!--12377291-->
-- [11125884](2021/technical-preview-2111.md) <!--11125884-->
-- [10422235](2021/technical-preview-2111.md) <!--10422235-->
-- [10957283](2021/technical-preview-2111.md) <!--10957283-->
+- [Improvements to the Windows servicing dashboard](2021/technical-preview-2111.md#bkmk_servicing) <!--10579996-->
+- [Co-management Eligible Devices collection](2021/technical-preview-2111.md#bkmk_co-management) <!--12377291-->
+- [Improvement to app groups](2021/technical-preview-2111.md#bkmk_appgroup) <!--11125884-->
+- [Improvement to task sequence deployment type](2021/technical-preview-2111.md#bkmk_tsdt) <!--10422235-->
+- [PowerShell release notes preview](2021/technical-preview-2111.md#bkmk_powershell) <!--10957283-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
