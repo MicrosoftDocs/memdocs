@@ -67,7 +67,6 @@ The Remote help app supports the following capabilities:
 - Windows 10/11
 - Devices must install the *remote help* app. Device users can download the app from the Microsoft Store for Windows.
   - Microsoft remote help: [https://www.microsoft.com/store/apps/9NKX4Z3W9BTJStore](https://www.microsoft.com/store/apps/9NKX4Z3W9BTJStore).
-  
 
   Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 
@@ -75,7 +74,8 @@ The Remote help app supports the following capabilities:
 > Remote help has the following limitations:  
 >
 > - Remote help is not supported on High GCC tenants.
-> - You cannot establish a remote help session from one tenant to a different tenant. 
+> - You cannot establish a remote help session from one tenant to a different tenant.
+> - Remote help might not be available in some localized languages. 
 
 ### Network considerations
 
