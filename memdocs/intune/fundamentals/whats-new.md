@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/27/2021
+ms.date: 10/28/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -97,6 +97,9 @@ You can now allow users to turn on Connected apps experiences for supported apps
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
+
+#### Introducing Microsoft Surface Management Portal in Microsoft Endpoint Manager <!--10874729 -->  
+In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you can gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal is available to U.S. customers now and will be rolling out globally later. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog]( https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).  
 
 #### Block or allow personal apps for Android Enterprise corporate-owned work profile devices<!-- 8925033 -->
 In device configuration, you can create a list of personal apps that will be blocked or allowed on the device. You can choose to leave the setting as not configured, or create a list of blocked or allowed apps in the personal profile. This setting is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Android** > **Configuration profiles** > **Create profile**. For information about Android Enterprise corporate-owned work profile device settings, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#personal-profile).
