@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021 
+ms.date: 11/03/2021 
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -52,7 +52,14 @@ Two built-in roles are available for Cloud PC:
 
 ## Custom roles
 
-Custom roles aren't supported for Cloud PCs.
+You can create custom roles for Windows 365 in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, see [Create a custom role]( /mem/intune/fundamentals/create-custom-role).
+
+To create a provisioning policy, an admin needs the following permissions:
+
+- Provisioning Policy Read/Create
+- On-premises network connection Read
+- Supported region Read
+- Image Read permissions
 
 <!-- ########################## -->
 ## Next steps
