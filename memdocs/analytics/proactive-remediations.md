@@ -134,6 +134,5 @@ To help you easily analyze returned outputs, use the **Export** option to save t
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
-- View [Recommended software](recommended-software.md).
 - View [Startup performance](startup-performance.md).
 - Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).

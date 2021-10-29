@@ -1057,7 +1057,11 @@
             "source_path": "windows-365/whats-new.md",
             "redirect_url": "/windows-365/enterprise/whats-new",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/analytics/productivity-score.md",  
+            "redirect_url": "/mem/analytics/work-from-anywhere",  
+            "redirect_document_id": true 
         }
-
     ]
 }

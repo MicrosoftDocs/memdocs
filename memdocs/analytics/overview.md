@@ -29,12 +29,6 @@ These issues and other end-user experience problems persist because IT doesn't h
 
 **Endpoint analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
 
-This initial release, focuses on three things:
-
-- [**Recommended software**](recommended-software.md): Recommendations for providing the best user experience
-- [**Proactive remediation scripting**](proactive-remediations.md): Fix common support issues before end-users notice issues
-- [**Start up performance**](startup-performance.md): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
-
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 You can enroll devices via Configuration Manager or Microsoft Intune.

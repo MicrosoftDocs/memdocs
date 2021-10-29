@@ -74,5 +74,5 @@ Currently, the following roles aren't supported:
 ## Next steps
 
 For more information, see:
-- [Recommended software](recommended-software.md) 
+- [Work from anywhere](work-from-anywhere.md) 
 - [Startup performance scores](startup-performance.md)

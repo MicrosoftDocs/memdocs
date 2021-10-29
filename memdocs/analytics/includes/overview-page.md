@@ -16,6 +16,6 @@ ms.localizationpriority: medium
    - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
   - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.
 
-- **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate to **Best practices** or **Recommended software**.
+- **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate.
 
 [![Endpoint analytics overview page](../media/overview-page.png)](../media/overview-page.png#lightbox)
