@@ -54,12 +54,11 @@ Every failed OPNC or success with warning error state includes the technical det
 
 - **DNS can resolve Active Directory domain**: Resolve the provided Active Directory domain name.
 - **Active directory domain join**: A domain join using the credentials, domain, and OU provided.
-- **Endpoint connectivity**: Connectivity to the required [URL/endpoints](requirements-network.md). 
+- **Endpoint connectivity**: Connectivity to the required [URL/endpoints](requirements-network.md).
 - **Azure AD device sync (warning)**: Azure AD sync is enabled on the Azure AD tenant, and the computer object is being synced within 90 minutes.
 - **Azure subnet IP address usage**: Sufficient IP addresses are available in the provided Azure subnet.
-- **Azure subscription is valid**: The defined Azure subscription is enabled and ready for use.
-- **Azure policy restrictions**: No Azure policy restrictions are blocking Windows 365 resources from being created.
-- **Azure vNet in a supported region**: The defined vNet is in a Windows 365 supported region.
+- **Azure tenant readiness**: The defined Azure subscription is enabled and ready for use. No Azure policy restrictions are blocking Windows 365 resources from being created.
+- **Azure virtual network readiness**: The defined vNet is in a Windows 365 supported region.
 - **First party app permissions exist on Azure subscription**: Sufficient permissions exist on the Azure subscription.
 - **First party app permissions exist on Azure resource group**: Sufficient permissions exist on the Azure resource group.
 - **First party app permissions exist on Azure virtual network**: Sufficient permissions exist on the Azure vNet.
