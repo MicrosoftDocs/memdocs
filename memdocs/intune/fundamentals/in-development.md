@@ -195,7 +195,7 @@ New assignment filters in **Enrollment Restrictions** will let you include or ex
 ### Duplicate a settings catalog profile<!-- 9666635 -->      
 Settings catalog profiles will soon support duplication. A new **Duplicate** button will be added so that you can copy and repurpose an existing profile. The copy will contain the same setting configurations and scope tags as the original profile, but won't have any assignments. For more information about how to duplicate profiles, see [Duplicate a policy](../protect/endpoint-security-policy.md#duplicate-a-policy).
 
-### MDM support data to refresh automatically in Group Policy analytics tool<-- 7852080 -->
+### MDM support data to refresh automatically in Group Policy analytics tool<!-- 7852080 -->
 Whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool will automatically update to reflect the changes. The automation is an improvement over the current behavior, which requires you to reimport your group policy object (GPO) to refresh data.
 
 ### Non-applicable status entries will no longer be shown in the **Device Install Status** report<!-- 12419387 -->
