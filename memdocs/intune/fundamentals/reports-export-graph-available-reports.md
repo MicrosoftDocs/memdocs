@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2021
+ms.date: 10/29/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,6 +42,7 @@ Microsoft Endpoint Manager will export reports using the following Microsoft Gra
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
+
 The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
 
 |         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
@@ -71,6 +72,8 @@ The following table contains the possible values for the `reportName` parameter.
 |         QualityUpdateDeviceStatusByPolicy  |            Under **Reports** > **Windows updates** > **Reports** > **Windows Expedited Update Report**        |
 |         MAMAppProtectionStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App protection report: iOS, Android**       |
 |         MAMAppConfigurationStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App configuration report**        |
+
+
 
 Each of the listed reports is described below.
 
@@ -575,6 +578,9 @@ You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's ou
 
 ## DevicesWithInventory 
 
+> [!NOTE]
+> To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API will allow you to select, to what you will receive back.  
+
 The following table contains the possible output when calling the `DevicesWithInventory` report:
 
 | Requestable Columns  | Columns received  |
@@ -621,7 +627,7 @@ The following table contains the possible output when calling the `DevicesWithIn
 | SkuFamily  | SkuFamily  |
 | JoinType  | JoinType  |
 | PhoneNumber  | Phone number  |
-| Jailbroken  | Jailbroken  |
+| JailBroken  | JailBroken  |
 | ICCID  | ICCID  |
 | EthernetMAC  | EthernetMAC  |
 | CellularTechnology  | CellularTechnology  |
@@ -655,12 +661,12 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `CreatedDate`
 - `LastContact`
 - `CategoryName` 
-- `ComplianceState` 
-- `ManagementAgent` 
+- `CompliantState` 
+- `ManagementAgents` 
 - `OwnerType`
 - `ManagementState`
-- `OS`
-- `Jailbroken` 
+- `DeviceType`
+- `JailBroken` 
 - `EnrollmentType` 
 - `PartnerFeaturesBitmask` 
 
