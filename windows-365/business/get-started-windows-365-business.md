@@ -43,7 +43,7 @@ This article is for people who plan to buy and set up Windows 365 Business for t
 
 There are no licensing prerequisites to set up Windows 365 Business.
 
-For the best onboarding experience, please refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md) to make sure your environment preferences are optimized for Windows 365 Business. For example, the guide can help you if you are using Multi-factor authentication, CA policies, or Intune in your environment.
+For the best onboarding experience, please refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md) to make sure your environment preferences are optimized for Windows 365 Business. For example, the guide can help you if you are using multi-factor authentication, Conditional Access policies, or Intune in your environment.
 
 ## Buy subscriptions
 
