@@ -386,6 +386,8 @@ items:
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md
+    - name: Windows 365 baseline settings
+      href: security-baseline-settings-windows-365.md
   - name: Microsoft Tunnel command-line tools
     href: microsoft-tunnel-reference.md
   - name: Windows update settings
