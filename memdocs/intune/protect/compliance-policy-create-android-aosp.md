@@ -105,9 +105,7 @@ To access these settings, [create an Android (AOSP) compliance policy](create-co
 
     > [!NOTE]  
     >- There is a known issue that prevents **Password required, no restriction** from working on Android (AOSP) devices.  
-  
     >- The following password types are listed as options but are not supported for Android (AOSP) devices: alphabetic, alphanumeric, and alphanumeric with symbols.  
-
 
   - **Maximum minutes of inactivity before password is required**  
       Enter the maximum idle time allowed, from 1 minute to 8 hours, before the user must re-enter their password to get back into their device. When you choose **Not configured** (default), this setting isn't evaluated for compliance or non-compliance.  
