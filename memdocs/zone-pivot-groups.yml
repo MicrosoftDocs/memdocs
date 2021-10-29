@@ -16,6 +16,8 @@ groups:
       title: November 2021
     - id: mdm-december-2020
       title: December 2020
+    - id: mdm-sept-2020
+      title: August 2020
 - id: edge-baseline-versions
   title: Edge baseline versions
   prompt: Choose a version

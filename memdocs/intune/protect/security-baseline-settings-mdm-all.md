@@ -2059,6 +2059,8 @@ For more information, see [Policy CSP - WindowsPowerShell](/windows/client-manag
   [Learn more](/windows/client-management/mdm/policy-csp-windowspowershell#windowspowershell-turnonpowershellscriptblocklogging)
 
   **Default**: Enabled
+
+::: zone-end
 ## Next steps
 
 - [Learn about security baselines](security-baselines.md)
