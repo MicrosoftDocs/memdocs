@@ -50,7 +50,7 @@ Two built-in roles are available for Cloud PC:
 
 **Cloud PC Reader**: Views Cloud PC data available in the Cloud PC node in Microsoft Endpoint Manager, but can’t make changes.
 
-## Custom roles
+## Custom roles (public preview)
 
 You can create custom roles for Windows 365 in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, see [Create a custom role]( /mem/intune/fundamentals/create-custom-role).
 
@@ -60,6 +60,9 @@ To create a provisioning policy, an admin needs the following permissions:
 - On-premises network connection Read
 - Supported region Read
 - Image Read permissions
+
+  > [!IMPORTANT]
+  > Custom role support for Windows 365 is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
 
 <!-- ########################## -->
 ## Next steps
