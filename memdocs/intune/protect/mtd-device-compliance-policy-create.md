@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 10/28/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -64,7 +64,10 @@ Prerequisites for device compliance policy with MTD:
 
    - **High**: This threat level is the least secure as it allows all threat levels and uses Mobile Threat Defense for reporting purposes only. Devices are required to have the MTD app activated with this setting.
 
-6. Select **Next** to advance through to **Assignments**. Select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+6. Select **Next** to advance through to **Assignments**. Select the groups that will receive this profile. 
+
+> [!IMPORTANT]
+> You will see the option to either select user groups, or device based groups under **Select groups to include**. The **Require the device to be at or under the Device Threat Level** setting is currently only supported with **user groups**. Targeting **device groups is currently not supported** and they should not be selected.
 
    Select **Next**.
 
@@ -83,7 +86,7 @@ To assign, or change the assignment of a device compliance policy to users:
 
 3. Select the policy you want to assign to users, and then select **Properties**.
 
-4. Select **Edit** for Assignments, and then use the available options to *Include* and *Exclude* groups to receive this policy.  
+4. Select **Edit** for Assignments, and then use the available options to *Include* and *Exclude* groups to receive this policy. As a reminder, targeting **device groups is currently not supported** and they should not be selected.  
 
 5. Select **Review + save** to complete the assignment. When you save the assignment, the policy deploys to your selected users and their devices are evaluated for compliance.
 
