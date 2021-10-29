@@ -14,7 +14,7 @@ ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid:
-zone_pivot_groups: windows-mdm-versions
+zone_pivot_groups:
 
 # optional metadata
 
@@ -78,7 +78,7 @@ You can chose to deploy this baseline in its default configuration to apply that
 
 ## Attack Surface Reduction Rules
 
-For general information, see [Learn about attack surface reduction rules](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide).
+For general information, see [Learn about attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide).
 
 - **Block Office communication apps from creating child processes**:  
   Baseline default: *Enable*  
@@ -465,7 +465,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer download enclosures**  
   Baseline default: *Disable*  
-  CSP [InternetExplorer/DisableEnclosureDownloading](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableenclosuredownloading)
+  CSP [InternetExplorer/DisableEnclosureDownloading](https://go.microsoft.com/fwlink/?linkid=2067245)
 
 - **Internet Explorer ignore certificate errors**  
   Baseline default: *Disable*  
@@ -493,7 +493,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer block outdated Active X controls**  
   Baseline default: *Enabled*  
-  CSP [InternetExplorer/DoNotBlockOutdatedActiveXControls](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotblockoutdatedactivexcontrols)
+  CSP [InternetExplorer/DoNotBlockOutdatedActiveXControls](https://go.microsoft.com/fwlink/?linkid=2067203)
 
 - **Internet Explorer include all network paths**  
   Baseline default: *Disabled*  
@@ -529,7 +529,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer internet zone allow only approved domains to use ActiveX controls**  
   Baseline default: *Enabled*  
-  CSP [InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstouseactivexcontrols)
+  CSP [InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls](https://go.microsoft.com/fwlink/?linkid=2067091)
 
 - **Internet Explorer internet zone allow only approved domains to use tdc ActiveX controls**  
   Baseline default: *Enabled*  
@@ -1003,7 +1003,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Defender potentially unwanted app action**  
   Baseline default: *Block*  
-  CSP [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  CSP [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**  
   Baseline default: *Yes*  
