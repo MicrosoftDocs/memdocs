@@ -43,7 +43,7 @@ This article is for people who plan to buy and set up Windows 365 Business for t
 
 There are no licensing prerequisites to set up Windows 365 Business.
 
-For the best onboarding experience, please refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md) to make sure your environment preferences are optimized for Windows 365 Business.
+For the best onboarding experience, please refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md) to make sure your environment preferences are optimized for Windows 365 Business. For example, the guide can help you if you are using Multi-factor authentication, CA policies, or Intune in your environment.
 
 ## Buy subscriptions
 
@@ -138,7 +138,7 @@ While on the Windows 365 home page, users can perform actions on their Cloud PCs
     |Can’t connect to Cloud PC. We’re working to fix it, try again later. |A Microsoft service required for connectivity is unavailable. Try connecting again later. |
     |We couldn’t fix issues with your Cloud PC. Contact your administrator. |An issue was detected but it was unable to be fixed. This could be due to an ongoing Windows update or another issue. If this error persists for an extended period of time the Cloud PC may need to be reset. |
 
-- **System Information**: Displays information about the Cloud PC specification. 
+- **System Information**: Displays information about the Cloud PC specification.
 
 ### Remote Desktop
 
