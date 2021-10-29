@@ -36,7 +36,7 @@ View the settings in the Windows 365 Cloud PC security baseline for deployment b
 
 This article is a reference for the settings contained in this baseline. For each setting in this article, the default value identifies the Windows 365 Cloud PC teams recommended configuration for that setting as the setting is represented in the baseline. These defaults are not meant to identify the default configuration of the underlying CSP. To learn more about a setting, use the provided links to view that settings *policy configuration service provider*(CSP) documentation, or underlying rules like *attack surface reduction rule* documentation. The links in this document are the same as those you'll find when viewing information about the setting from within the Microsoft Endpoint Manager admin center.
 
-You can chose to deploy this baseline in its default configuration to apply that recommended security configuration to devices. You  can also create custom instances of the baseline to meet your own security needs.
+You can choose to deploy this baseline in its default configuration to apply that recommended security configuration to devices. You  can also create custom instances of the baseline to meet your own security needs.
 
 > [!TIP]  
 > Before using or modifying a setting in this baseline, review the he *Information* text in the Microsoft Endpoint Manager admin center for the setting to learn about its conditions or limitations and when applicable, the CSP the setting applied so.
