@@ -80,7 +80,7 @@ Sign in to the Azure portal and make sure that the Azure subscription is enabled
 
 Also, visit the Azure portal and view Policies. Make sure that there are no policies blocking resource creation.  
 
-## Azure vNet in a supported region
+## Azure virtual network readiness
 
 When creating an OPNC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](requirements.md).  
 
