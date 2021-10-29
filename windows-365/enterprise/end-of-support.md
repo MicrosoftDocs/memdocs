@@ -28,11 +28,15 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Lifecycle policies and end of support Cloud PC operating systems
+# Lifecycle policies and end of support for Cloud PC operating systems
 
 Lifecycle policies govern operating system (OS) servicing and support (including end of support). The lifecycle is the time period during which Microsoft supports the OS and releases monthly security updates for it. For more information about lifecycles, see [Lifecycle FAQ - General](/lifecycle/faq/general-lifecycle) and [Lifecycle FAQ - Windows](/lifecycle/faq/windows).
 
-A Windows 365 Cloud PC runs on the Windows OS and follows the same OS lifecycle. After the OS on a Cloud PC reaches the end of support, it stops receiving security updates, non-security updates, and assisted support (just like any other device running on Windows OS).
+A Windows 365 Cloud PC runs on the Windows OS and follows the same OS lifecycle. Just like any other Windows device, after the OS on a Cloud PC reaches the end of support, it stops receiving:
+
+- security updates
+- non-security updates
+- assisted support
 
 ## Image status
 
@@ -51,4 +55,4 @@ Starting on the end of support date, images that use the expired OS (in the **Wa
 <!-- ########################## -->
 ## Next steps
 
-To change the device image for a provisioning policy, see [Edit provisoining policies](edit-provisioning-policy.md).
+To change the device image for a provisioning policy, see [Edit provisioning policies](edit-provisioning-policy.md).
