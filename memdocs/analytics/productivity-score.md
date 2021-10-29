@@ -30,7 +30,7 @@ The **Endpoint analytics** page looks similar to the other pages in Productivity
 
 ## About the Endpoint analytics scores
 
-The **Endpoint analytics score** is a 50/50 weighted average of the [**Recommended software**](recommended-software.md) and [**Startup performance scores**](startup-performance.md).
+The **Endpoint analytics score** is a weighted average of the [Startup performance](startup-performance.md), [Application reliability](app-reliability.md), and [Work from anywhere](work-from-anywhere.md) scores.
 
 [!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
 

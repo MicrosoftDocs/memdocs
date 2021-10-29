@@ -5,11 +5,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 06/30/2020
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 <!--Don't apply H2 in this include file since they are context driven by article. Used in scores.md, enroll-configmgr.md and enroll-intune.md files -->
 
-- The **Endpoint analytics score** is a 50/50 weighted average of the [**Recommended software**](../recommended-software.md) and [**Startup performance scores**](../startup-performance.md). We'll be expanding the set of subscores over time.
+- The **Endpoint analytics score** is a weighted average of the [Startup performance](../startup-performance.md), [Application reliability](../app-reliability.md), and [Work from anywhere](../work-from-anywhere.md) scores.
 
 - You can compare your current score to other scores by setting a baseline.
   - There's a built-in baseline for **All organizations (median)** to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time. For more information, see [baseline settings](../settings.md#bkmk_baselines).
