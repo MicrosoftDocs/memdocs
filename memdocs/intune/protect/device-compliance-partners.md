@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/10/2021
+ms.date: 10/22/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,6 +31,8 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune can add compliance state data to Azure Active Directory (Azure AD) for the devices you manage with one or more third-party device compliance partners. With this configuration, compliance data from those devices can be [used with your conditional access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access).
 
+Supported platforms include Android, iOS/iPadOS, and macOS, with support for a platform defined by the device compliance partner you use.
+
 By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Azure AD and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through an Azure AD user group.
 
 To enable use data from device compliance partners, complete the following tasks:
@@ -39,7 +41,7 @@ To enable use data from device compliance partners, complete the following tasks
 
 2. **Configure your compliance partner to send data to Intune**.
 
-3. **Enroll your iOS or Android devices to that device compliance partner**.
+3. **Enroll your devices to your device compliance partner**.
 
 With these tasks complete, the device compliance partner sends device state details to Intune. Intune then adds this information to Azure AD. For example, devices with a state of non-compliant have that status added to their device record in Azure AD.
 
@@ -123,9 +125,9 @@ To enable a device compliance partner to work with Intune, you must complete con
 
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)  
 
-## Enroll your iOS or Android devices to that device compliance partner
+## Enroll your devices to your device compliance partner
 
-Refer to device compliance partners documentation for how to enroll devices with that partner. After devices enroll and submit compliance data to the partner, that compliance data is forwarded to Intune and added to Azure AD.
+Refer to the documentation from your device compliance partner for how to enroll devices with that partner. After devices enroll and submit compliance data to the partner, that compliance data is forwarded to Intune and added to Azure AD.
 
 ## Monitor devices managed by third-party device compliance partners
 

@@ -85,11 +85,6 @@ You'll be able to allow users to turn on Connected apps experiences for supporte
 <!-- ***********************************************-->
 ## Device configuration
 
-### Settings catalog policies for policy sets<!-- 8683467  -->
-
-In addition to profiles based on templates, you'll be able to add a profile based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
-
-
 ### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint Security policies in Endpoint Manager admin center - public preview<!-- 7566953 7591178  -->
 
 In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
@@ -160,11 +155,7 @@ Apple is expected to release macOS 12 (Monterey) in the fall of 2021. Microsoft 
 
 ### New settings when configuring Kerberos single sign-on extension on iOS/iPadOS and macOS<!-- 10175092  -->
 
-There will be new device feature settings available when configuring the Kerberos SSO extension on iOS/iPadOS and macOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** or **macOS** > **Configuration profiles** > **Create profile** > select **Device features** for profile > **Single sign-on app extension** > **Kerberos** for SSO app extension type. For related information, see [iOS/iPadOS device feature settings](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) and [macOS device feature settings in Intune](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
-
-### Introducing Microsoft Surface management portal in Microsoft Endpoint Manager <!--10874729 -->
-
-In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you'll be able to gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal will be available to U.S. customers before rolling out globally. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog]( https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).
+There will be new device feature settings available when configuring the Kerberos SSO extension on iOS/iPadOS and macOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** or **macOS** > **Configuration profiles** > **Create profile** > select **Device features** for profile > **Single sign-on app extension** > **Kerberos** for SSO app extension type. For related information, see [iOS/iPadOS device feature settings](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) and [macOS device feature settings in Intune](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).  
 
 <!-- ***********************************************-->
 ## Intune apps
