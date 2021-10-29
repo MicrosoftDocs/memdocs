@@ -66,7 +66,7 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 ### New ADMX settings for Edge 95 and Edge updater<!-- 12426698 -->
 New ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Platform** > **Windows 10 and later** and **Profile** > **Templates** > **Administrative Templates**. For related information, see [Overview of the Microsoft Edge channels](/deployedge/microsoft-edge-channels), [Microsoft Edge Browser Policy Documentation] (/deployedge/microsoft-edge-policies), and [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md).
 
-#### New privacy consent screen during Company Portal installation <!-- 6600502 -->
+### New privacy consent screen during Company Portal installation <!-- 6600502 -->
 People installing the Company Portal app for the first time from certain app stores, such as those in China, may see a new privacy consent screen during installation. The screen explains what information Microsoft collects and how it's used. Users must agree to the terms before they can use the app. Users who installed Company Portal prior to this release will not see the new screen.  
 
 ### New RBAC permission for Win32 app supersedence and dependency relationships<!-- 11126374 -->
@@ -106,8 +106,8 @@ You'll be able to allow users to turn on Connected apps experiences for supporte
 
 ## Device security
 
-#### Adding 13 BitLocker settings to settings catalog<!-- 10956191 -->  
-13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) are being added to the Microsoft Intune settings catalog. To access the settings when they become available, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Settings will be under the **BitLocker** category. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalo
+### Adding 13 BitLocker settings to settings catalog<!-- 10956191 -->  
+13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) are being added to the Microsoft Intune settings catalog. To access the settings when they become available, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Settings will be under the **BitLocker** category. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 ### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
 You’ll soon be able to view the BitLocker recovery key for tenant-attached devices in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
@@ -188,6 +188,9 @@ New assignment filters in **Enrollment Restrictions** will let you include or ex
 
 <!-- ***********************************************-->
 ## Device management
+
+### Duplicate a settings catalog profile<!-- 9666635 -->      
+Settings catalog profiles will soon support duplication. A new **Duplicate** button will be added so that you can copy and repurpose an existing profile. The copy will contain the same setting configurations and scope tags as the original profile, but won't have any assignments. For more information about how to duplicate profiles, see [Duplicate a policy](../protect/endpoint-security-policy.md#duplicate-a-policy).
 
 ### MDM support data to refresh automatically in Group Policy analytics tool<-- 7852080 -->
 Whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool will automatically update to reflect the changes. The automation is an improvement over the current behavior, which requires you to reimport your group policy object (GPO) to refresh data.
