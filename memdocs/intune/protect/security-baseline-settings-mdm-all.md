@@ -36,9 +36,13 @@ ms.collection: M365-identity-device-management
 View the security baseline settings that Microsoft Intune supports for devices that run Windows 10 and Windows 11. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
-- The most recent baseline version is **Security Baseline for Windows 10 and later for December 2020**
+- The most recent baseline version is **Security Baseline for Windows 10 and later for November 2021**
 
+::: zone pivot="november-2021"
 
+**Security Baseline for Windows 10 and later for November 2021**  
+
+::: zone-end
 ::: zone pivot="mdm-december-2020"
 
 **Security Baseline for Windows 10 and later for December 2020**  
