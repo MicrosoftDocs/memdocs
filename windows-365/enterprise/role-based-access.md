@@ -61,6 +61,9 @@ To create a provisioning policy, an admin needs the following permissions:
 - Supported region Read
 - Image Read permissions
 
+  > [!IMPORTANT]
+  > Custom role support for Windows 365 is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
+
 <!-- ########################## -->
 ## Next steps
 [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
