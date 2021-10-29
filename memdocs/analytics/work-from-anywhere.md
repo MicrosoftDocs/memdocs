@@ -1,7 +1,7 @@
 ---
-title: Work from anywhere (preview) report in Endpoint analytics
+title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
-description: The Work from anywhere (preview) report in Endpoint analytics provides insights to help your end users be productive from anywhere.
+description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
 ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -12,7 +12,7 @@ manager: dougeby
 ms.localizationpriority: high
 ---
 
-# Work from anywhere (preview) report
+# Work from anywhere report
 <!--8668496-->
 The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.  
 
