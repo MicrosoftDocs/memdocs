@@ -32,11 +32,11 @@ ms.collection: M365-identity-device-management
 
 Lifecycle policies govern operating system (OS) servicing and support (including end of support). The lifecycle is the time period during which Microsoft supports the OS and releases monthly security updates for it. For more information about lifecycles, see [Lifecycle FAQ - General](/lifecycle/faq/general-lifecycle) and [Lifecycle FAQ - Windows](/lifecycle/faq/windows).
 
-A Windows 365 Cloud PC runs on the Windows OS and follows the same OS lifecycle. Just like any other Windows device, after the OS on a Cloud PC reaches the end of support, it stops receiving:
+A Cloud PC runs on the Windows OS and follows the same lifecycle. After the OS on a Cloud PC reaches the end of support, it stops receiving:
 
-- security updates
-- non-security updates
-- assisted support
+- Security updates
+- Non-security updates
+- Assisted support
 
 ## Image status
 
