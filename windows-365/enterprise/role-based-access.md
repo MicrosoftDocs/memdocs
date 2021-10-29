@@ -50,7 +50,7 @@ Two built-in roles are available for Cloud PC:
 
 **Cloud PC Reader**: Views Cloud PC data available in the Cloud PC node in Microsoft Endpoint Manager, but can’t make changes.
 
-## Custom roles
+## Custom roles (public preview)
 
 You can create custom roles for Windows 365 in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, see [Create a custom role]( /mem/intune/fundamentals/create-custom-role).
 
