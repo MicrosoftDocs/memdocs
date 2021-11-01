@@ -38,7 +38,7 @@ When devices are managed through this capability:
 - Devices get the policies based on their Azure Active Directory device object. A device that isn’t already present in Azure Active Directory is joined as part of this solution
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the devices status. The device's status is available in the Microsoft Endpoint Manager admin center
 
-This scenario extends the Microsoft Endpoint Manager Endpoint Security surface to devices that aren't capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager, either through Intune or Configuration Manager), the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune or Configuration Manager to deploy policy for Defender to your devices.
+This scenario extends the Microsoft Endpoint Manager Endpoint Security surface to devices that aren't capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager, (either through Intune or Configuration Manager), the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune or Configuration Manager to deploy policy for Defender to your devices.
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
@@ -46,9 +46,9 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
 
-### Environment
+### High level flow:
 
-When a device onboards to Microsoft Defender for Endpoint:
+When a device onboards to Microsoft Defender for Endpoint and security management is enabled:
 
 - The device is surveyed for an existing Endpoint Manager presence, either Configuration Manager or Intune
 - Devices without an Endpoint Manager presence enable the Security Management feature
