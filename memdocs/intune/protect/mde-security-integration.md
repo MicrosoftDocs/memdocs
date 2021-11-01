@@ -219,6 +219,10 @@ After creating one or more Azure AD groups that contain devices managed by MDE, 
      - Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
      - Profile: **Endpoint detection and response (Preview)**
 
+   >[!Note]
+   > The profiles above apply to both devices communicating through Mobile Device Management (MDM) with MIcrosoft Intune as well as devices that are communicating using the Microsoft Defender for Endpoint client.
+   > Ensure you are reviewing your targeting and groups as necessary.
+
 4. Select **Create**.
 
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
