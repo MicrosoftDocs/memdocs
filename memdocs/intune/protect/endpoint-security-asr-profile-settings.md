@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2021
+ms.date: 11/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -65,6 +65,9 @@ Supported platforms and profiles:
   - **Enabled for Edge** - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
   - **Enabled for isolated Windows environments** - Application Guard is turned on for any applications enabled for App Guard within Windows.
   - **Enabled for Edge AND isolated Windows environments** - Application Guard is configured for both scenarios.
+  
+  > [!NOTE]
+  > If you are deploying Application Guard for Microsoft Edge via Intune, **Windows network isolation** policy must be configured as a prerequisite. Network isolation may be configured via various profiles, including **App and broswer isolation** under the **Windows network isolation** setting. 
 
   When set to *Enabled for Edge* or *Enabled for Edge AND isolated Windows environments*, the following settings are available, which apply to Edge:
   
@@ -115,6 +118,8 @@ Supported platforms and profiles:
     - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user’s device.
     - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device. This is the same behavior as *Not configured*.
 
+
+
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
@@ -149,7 +154,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes** - Configure Windows network isolation policy.  
   
-  When set to *Yes*, you can configure the following settings.
+  When set to *Yes*, you can configure the following settings:
 
   - **IP ranges**  
     Expand the dropdown, select **Add**, and then specify a *lower address* and then an *upper address*.
