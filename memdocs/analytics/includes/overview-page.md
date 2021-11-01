@@ -18,4 +18,4 @@ ms.localizationpriority: high
 
 - **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate.
 
-[![Endpoint analytics overview page](../media/overview-page.png)](../media/overview-page.png#lightbox)
+:::image type="content" source="media/8816759-overview-page.png" alt-text="Screenshot of the Endpoint analytics overview page" lightbox="media/8816759-overview-page.png":::
