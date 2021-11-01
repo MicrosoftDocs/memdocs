@@ -16,6 +16,12 @@ highlightedContent:
     - title: What is Windows 365 Enterprise?
       itemType: overview
       url: overview.md
+    - title: What's new in Windows 365 Enterprise?
+      itemType: overview
+      url: whats-new.md
+    - title: Features in development
+      itemType: overview
+      url: in-development.md
     - title: Planning your Windows 365 deployment
       itemType: get-started
       url: planning-guide.md
