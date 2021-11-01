@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 11/03/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,14 +48,14 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of November 2, 2021 (Service release 2110)
+## Week of November 1, 2021 (Service release 2110)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Improved user interface for online access to Cloud PCs<!--36735456 -->
 
-The user interface on windows365.microsoft.com has been improved with:
+The user interface on [windows365.microsoft.com](https://windows365.microsoft.com) has been improved with:
 
 - Faster load times.
 - Higher performance reliability.
