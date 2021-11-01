@@ -38,7 +38,7 @@ ms.collection:
 Company Portal is available for Windows 10/11, Android, iOS, and macOS devices from the following locations (respectively): 
 
 * [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
-* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
+* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416), [Amazon Appstore](https://www.amazon.com/Microsoft-Corporation-Intune-Company-Portal/dp/B092BCFLBJ/), and [in  People's Republic of China](https://docs.microsoft.com/en-us/mem/intune/user-help/install-company-portal-android-china)
 * [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414)  
 * [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070): Selecting this link will immediately download the Company Portal installer package on your device.  
 
