@@ -110,7 +110,7 @@ The following diagram is a conceptual representation of the MDE security configu
 
 Microsoft Endpoint Manager includes several methods and policy types to manage the configuration of Defender for Endpoint on devices.
 
-When your device protection needs extend beyond only managing Defender for Endpoint, see [Device protection overview](./protect/device-protect.md) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
+When your device protection needs extend beyond only managing Defender for Endpoint, see [Device protection overview](../protect/device-protect.md) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
 
 The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
 
