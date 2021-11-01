@@ -55,7 +55,7 @@ Learn what new features are available in Windows 365 Business.
 
 #### Improved user interface for online access to Cloud PCs<!--36735456 -->
 
-The user interface on windows365.microsoft.com has been improved with:
+The user interface on [windows365.microsoft.com](https://windows365.microsoft.com) has been improved with:
 
 - Faster load times.
 - Higher performance reliability.
