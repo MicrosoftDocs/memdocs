@@ -53,7 +53,7 @@ View the security baseline settings that Microsoft Intune supports for devices t
 **Security Baseline for Windows 10 and later for August 2020**  
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
@@ -65,7 +65,7 @@ To understand what's changed with this version of the baseline from previous ver
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 ## App Runtime
 
@@ -377,7 +377,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 ## Device Installation
 
 ::: zone-end
-::: zone pivot="mdm-december-2020"
+::: zone pivot="mdm-december-2020,november-2021"
 
 - **Block hardware device installation by setup classes**:  
   This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you block installation, Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you allow installation, Windows can install and update devices as allowed or prevented by other policy settings.  
@@ -437,7 +437,8 @@ For more information, see [Policy CSP - DeviceInstallation](/windows/client-mana
     **Default**: *No default configuration*
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+
 ## Device Lock
 
 For more information, see [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) in the Windows documentation.
@@ -570,6 +571,7 @@ For more information, see [Policy CSP - Experience](/windows/client-management/m
 
 ::: zone-end
 ::: zone pivot="mdm-sept-2020"
+
 ## Exploit Guard
 
 For more information, see [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.
@@ -581,7 +583,8 @@ For more information, see [Policy CSP - ExploitGuard](/windows/client-management
   **Default**: *Sample xml is provided*
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+
 ## File Explorer
 
 For more information, see [Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) in the Windows documentation.  
@@ -765,9 +768,6 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowautomaticpromptingforfiledownloads)
 
   **Default**: Disabled
-
-::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer restricted zone security warning for potentially unsafe files**:  
   This policy setting controls if the "Open File - Security Warning" message appears when the user tries to open executable files or other potentially unsafe files (from an intranet file share by using File Explorer, for example). If you enable this policy setting and set the drop-down box to Enable, these files open without a security warning. If you set the drop-down box to Prompt, a security warning appears before the files open. If you disable this policy setting, these files don't open. If you don't configure this policy setting, the user can configure how the computer handles these files. By default, these files are blocked in the Restricted zone, enabled in the Intranet and Local Computer zones, and set to prompt in the Internet and Trusted zones.  
@@ -1636,7 +1636,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Everyday
 
 ::: zone-end
-::: zone pivot="mdm-december-2020"
+::: zone pivot="mdm-december-2020,november-2021"
 
 - **Defender scan start time**:  
   Defender schedule scan time.
@@ -1644,14 +1644,27 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Not configured
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   When this setting is set to Yes, real-time monitoring will be enforced and the user can't disable it. When set to Not configured, the setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
 
-  **Default**:  Yes  
+  **Default**: Yes  
+
+::: zone-end
+::: zone pivot="november-2021"
+
+- **Scan scripts that are used in Microsoftbrowsers**  
+  CSP [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
+  When this setting is set to Yes, the Windows Defender Script Scanning functionality will be enforced and the user cannot turn them off. When set to Not configured, the setting is returned to client default which is to enable script scanning, however the user can turn it off.
+
+  **Default**: Yes
+
+::: zone-end
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 - **Scan archive files**:  
   CSP: [Defender/AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
@@ -1715,7 +1728,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   
   **Default**: Block
 
-- **Block executable content download from email and webmail clients**:   
+- **Block executable content download from email and webmail clients**:  
   [Block executable content download from email and webmail clients](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   When set to Yes, executable content downloaded from email and webmail clients will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off.
@@ -2065,6 +2078,7 @@ For more information, see [Policy CSP - WindowsPowerShell](/windows/client-manag
   **Default**: Enabled
 
 ::: zone-end
+
 ## Next steps
 
 - [Learn about security baselines](security-baselines.md)
