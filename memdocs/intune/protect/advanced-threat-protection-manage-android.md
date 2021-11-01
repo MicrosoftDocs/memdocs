@@ -65,7 +65,6 @@ To configure web protection on devices, use the following procedures to create a
 
    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, **Android custom profile for  Defender for Endpoint web protection**.
    - **Description**: Enter a description for the profile. This setting is optional but recommended.
-
 5. In **Configuration settings**, select **Add**.
 
    Specify settings for the configuration you want to deploy:
@@ -149,8 +148,50 @@ To configure web protection on devices, use the following procedures to create a
 
 2. In **Assignments**, specify the groups that will receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). 
 
-3. In **Review + create**, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you
-   created.
+3. In **Review + create**, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+## Configure Defender for Endpoint on devices that run Android
+
+By default, Microsoft Defender for endpoint for Android enables Microsoft defender security features. The IT admins are given the option to either individually configure web protection as described above or choose to enable/disable the toggle for Microsoft Defender for Endpoint completely. On disabling the defender toggle, all Defender functionalities will be disabled and there will not be any signals sent to Defender portal.  
+
+The default value for various Android profiles is listed in the table below:
+
+Key Value = com.microsoft.defender.defendertoggle
+
+
+|             | AE on BYOD     | DA - Enrolled   | Fully managed devices - company owned devices |
+|-------------|----------------|-----------------|-----------------------------------------------|
+|             | Work Profile   | Profile         | Work profile                                  |
+|MDE key      |Default value =1|Default value = 1|Default value =1                               |
+|MDE key (MAM)|Default value =1|Default value = 1|Default value =1                               |
+
+While the defender toggle is enabled by default, there can be valid reasons to configure it as per organization’s requirement. Intune allows you to turn off defender for endpoint feature. The method you use depends on how the Android device is enrolled with Intune.
+>[!NOTE] Default state of this toggle is 'Enabled’ for MAM / App Protection Policies  (APP). This cannot be configured by Admin at this point. We will announce as this configuration is enabled.
+
+### Disable Defender for endpoint on Android
+By default, the Defender for Endpoint toggle is enabled in the Intune portal. To disable defender for endpoint on Android, follow the same configuration steps described previously to disable web protection for each Android profile. The only difference for each profile, respectively, is as follows:
+1.	**Android device administrator:** In configuration settings [(Step 5)](#Disable-web-protection-for-Android-device-administrator.5)
+	- **Name:** Enter a unique name for this OMA-URI setting so you can find it easily. For example, Disable Defender for Endpoint.
+	- **Description:** (Optional) Enter a description that provides an overview of the setting and any other important details.
+	- **OMA-URI:** Enter ./Vendor/MSFT/DefenderATP/defendertoggle
+	- **Data type:** Select Integer in the drop-down list.
+	- **Value:** Enter 0 to disable
+2.	Android enterprise personally owned work profile:
+    - In [step 6](#Disable-web-protection-for-the-Android-Enterprise-Fully-Managed-profile.6), find and select configuration key Microsoft defender for Endpoint, select OK to return to the settings page.
+    - In [step 7](#Disable-web-protection-for-the-Android-Enterprise-Fully-Managed-profile.7), for the configuration value, enter 0 to disable
+3.	Android Enterprise Fully managed profile
+    - In Profile type value, select Fully managed, dedicated, and Corporate-Owned profile type Only.
+    - To disable select 0 for configuration value. Select next to continue.
+
+>[!NOTE] 
+>If an organization deployed combined app (Microsoft Defender for Endpoint + Microsoft Tunnel), the steps to configure Defender security features are:
+>- Sign in into Endpoint Management Centre and go to devices.
+>- Select Android > Configuration policies. Choose the VPN profile set up by the organization to configure Microsoft Tunnel
+>- Select properties > Edit Configuration settings.
+>- Under Custom settings, change the value for defendertoggle to 0
+
+
+
 
 ## Next steps
 
