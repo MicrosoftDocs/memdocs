@@ -1,14 +1,12 @@
 items:
 - name: Windows 365 Business docs
   href: index.yml
-- name: Troubleshoot
-  items:
-  - name: Features in development 
-    href: in-development.md
-  - name: What's New 
-    href: whats-new.md
 - name: Getting started 
   href: get-started-windows-365-business.md
+- name: Features in development 
+  href: in-development.md
+- name: What's New 
+  href: whats-new.md
 - name: Cloud PC sizes 
   href: windows-365-business-sizing.md
 - name: Cloud PC location 
