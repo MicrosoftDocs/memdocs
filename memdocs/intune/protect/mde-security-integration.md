@@ -38,7 +38,7 @@ When devices are managed through this capability:
 - Devices get the policies based on their Azure Active Directory device object. A device that isn’t already present in Azure Active Directory is joined as part of this solution
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the devices status. The device's status is available in the Microsoft Endpoint Manager admin center
 
-This scenario extends the Microsoft Endpoint Manager Endpoint Security surface to devices that aren't capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager, (either through Intune or Configuration Manager), the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune or Configuration Manager to deploy policy for Defender to your devices.
+This scenario extends the Microsoft Endpoint Manager Endpoint Security surface to devices that aren't capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager (either through Intune or Configuration Manager) the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune or Configuration Manager to deploy policy for Defender to your devices.
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
@@ -46,7 +46,7 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
 
-### High level flow:
+### High-level flow
 
 When a device onboards to Microsoft Defender for Endpoint and security management is enabled:
 
@@ -110,7 +110,10 @@ The following diagram is a conceptual representation of the MDE security configu
 
 Microsoft Endpoint Manager includes several methods and policy types to manage the configuration of Defender for Endpoint on devices.
 
-The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenario. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
+When your device protection needs extend beyond only managing Defender for Endpoint, see [Device protection overview](../protect/device-protect.md) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
+
+The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
+
 
 | Microsoft Endpoint Manager  | Policy options  | MDE Security configuration  |  Microsoft Endpoint Manager (Intune and Configuration Manager)  |
 |----------------|----------------|-------------------|------------|
@@ -120,10 +123,12 @@ The following table can help you understand which policies that can configure MD
 |                      | Firewall                | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  |
 |                      | Firewall rules          | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  |
 |         | Security baselines  |       | ![Supported](./media/certificates-configure/green-check.png)  |
+
+<!-- Removing later par to table. Will delete fully prior to publication.
 | Device configuration | Device restriction (template)   |    | ![Supported](./media/certificates-configure/green-check.png)  |
 |                      | Endpoint Protection (template)  |    | ![Supported](./media/certificates-configure/green-check.png)  |
 |                      | Settings catalog                |    | ![Supported](./media/certificates-configure/green-check.png)  |
-
+--> 
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 
 - **Antivirus** policies manage the security configurations found in Microsoft Defender for Endpoint. See  [antivirus](../protect/endpoint-security-antivirus-policy.md) policy for endpoint security.
@@ -133,11 +138,13 @@ The following table can help you understand which policies that can configure MD
 - **Firewall Rules** configure granular rules for Firewalls, including specific ports, protocols, applications, and networks. See [firewall](../protect/endpoint-security-firewall-policy.md) policy for endpoint security.
 - **Security baselines** include preconfigured security settings that define the Microsoft recommended security posture for different products like Defender, Edge, or Windows. The default recommendations are from the relevant product teams and enable you to quickly deploy that recommended secure configuration to devices. While settings are preconfigured in each baseline, you can create customized instances of them to establish your organization’s security expectations. See [security baselines](../protect/security-baselines.md) for Intune.
 
+<!-- Removed along with later portion of table >
 **Device configuration policies** are intended for use by Administrators who manage a broad range of device settings and can often extend beyond a device security focus.
 
-- **Device restriction** policies use a template that include a logical grouping of device settings that manage how users share data, which apps are allowed or prohibited, and similar concepts. See configure [device restriction](../configuration/device-restrictions-configure.md) settings.
-- **Endpoint protection** policies use a template that  include a range of settings from disk encryption, BitLocker, and Antivirus settings. See configure [endpoint Protection](../protect/endpoint-protection-configure.md) settings.
+- **Device restriction** policies use a template that includes a logical grouping of device settings that manage how users share data, which apps are allowed or prohibited, and similar concepts. See configure [device restriction](../configuration/device-restrictions-configure.md) settings.
+- **Endpoint protection** policies use a template that  includes a range of settings from disk encryption, BitLocker, and Antivirus settings. See configure [endpoint Protection](../protect/endpoint-protection-configure.md) settings.
 - **Settings catalog** policies don’t use templates of related settings. Instead, you select each setting you want the policy to manage. This type of policy has no predetermined focus as do templates for device configuration or endpoint security policies. See [settings catalog](../configuration/settings-catalog.md) to configure settings on devices.
+-->
 
 ## Configure your Tenant to support MDE Security Configuration Management
 
@@ -263,13 +270,13 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Active Directory joined devices
 
-Devices that are joined to Active Directory will leverage their **existing infrastructure** to complete Hybrid Azure Active Directory join. While the Defender for Endpoint component will initiate this process, the join action will use your Federation provider or Azure Active Directory Connect (AAD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
+Devices that are joined to Active Directory will use their **existing infrastructure** to complete Hybrid Azure Active Directory join. While the Defender for Endpoint component will initiate this process, the join action will use your Federation provider or Azure Active Directory Connect (AAD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
 
 To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
 
 ### Managing Security Configurations on domain controllers
 
-Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since a Azure Active Directory trust is required, domain controllers are not currently supported. We are looking at ways to add support in the future.
+Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers are not currently supported. We are looking at ways to add support in the future.
 
 ### Non-persistent VDI environments
 
