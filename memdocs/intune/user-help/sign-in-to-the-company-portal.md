@@ -41,7 +41,7 @@ This article describes how to sign in using each of these methods. For the best 
 
 ## Install Intune Company Portal  
 
-Company Portal is available for Windows, Android, iOS, and macOS and can be installed from the following app stores. Select a link to open the store listing for Company Portal. 
+Company Portal is available for Windows, Android, iOS, and macOS and can be installed from the following app stores.  
 
 * [Microsoft Store](https://www.microsoft.com/p/company-portal/9wzdncrfj3pz?rtc=2&activetab=pivot:overviewtab)  
 * [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) 
@@ -49,7 +49,7 @@ Company Portal is available for Windows, Android, iOS, and macOS and can be inst
 * [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358)  
 * [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070): Selecting this link will immediately download the Company Portal installer package on your device.  
 
-For app availability in the People's Republic of China, see [Install Company Portal app in People's Republic of China](../user-help/install-company-portal-android-china).  
+For app availability in the People's Republic of China, see [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md).  
 
 ## Sign in with school or work account    
 Complete the following steps to sign in to Company Portal with your school or work account. 
