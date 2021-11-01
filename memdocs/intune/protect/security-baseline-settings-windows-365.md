@@ -149,7 +149,7 @@ For general information, see [Learn about attack surface reduction rules](/micro
 
 - **Block executable content download from email and webmail clients**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-executable-content-from-email-client-and-webmail)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-executable-content-from-email-client-and-webmail)
 
 ## Audit
 
