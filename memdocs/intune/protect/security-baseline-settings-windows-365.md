@@ -14,7 +14,7 @@ ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid:
-zone_pivot_groups:
+zone_pivot_groups: windows-365-baseline-versions
 
 # optional metadata
 
@@ -35,16 +35,6 @@ ms.collection: M365-identity-device-management
 
 View the settings in the Windows 365 Cloud PC security baseline for deployment by Microsoft Intune. Use this baseline to configure [Windows 365 devices](/windows-365/overview) with a recommended security configuration.
 
-This article is a reference for the settings contained in this baseline. For each setting in this article, the default value identifies the Windows 365 Cloud PC team's recommended configuration for that setting as the setting is represented in the baseline. These defaults are not meant to identify the default configuration of the underlying CSP. To learn more about a setting, use the provided links to view that setting's *policy configuration service provider* (CSP) documentation or underlying rules like *attack surface reduction rule* documentation. The links in this document are the same as those you'll find when viewing information about the setting from within the Microsoft Endpoint Manager admin center.
-
-You can choose to deploy this baseline in its default configuration to apply that recommended security configuration to devices. You  can also create custom instances of the baseline to meet your own security needs.
-
-> [!TIP]  
-> Before using or modifying a setting in this baseline, review the he *Information* text in the Microsoft Endpoint Manager admin center for the setting to learn about its conditions or limitations and when applicable, the CSP the setting applied so.
-
-- To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
-- To update the version of a baseline you've already deployed to devices, see [Change the baseline version for  profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
-
 ::: zone pivot="win365-2101"
 
 **Windows 365 CLoud PC security baseline version 2101**
@@ -52,7 +42,7 @@ You can choose to deploy this baseline in its default configuration to apply tha
 ::: zone-end
 ::: zone pivot="win365-2110"
 
-**Windows 365 CLoud PC security baseline version 2101**
+**Windows 365 CLoud PC security baseline version 2110**
 
 ::: zone-end
 ::: zone pivot="win365-2110"
@@ -67,7 +57,18 @@ To understand what's changed with this version of the baseline from previous ver
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
-::: zone pivot="win365-2110,win365-2101"git 
+::: zone pivot="win365-2110,win365-2101"
+
+This article is a reference for the settings contained in this baseline. For each setting in this article, the default value identifies the Windows 365 Cloud PC team's recommended configuration for that setting as the setting is represented in the baseline. These defaults are not meant to identify the default configuration of the underlying CSP. To learn more about a setting, use the provided links to view that setting's *policy configuration service provider* (CSP) documentation or underlying rules like *attack surface reduction rule* documentation. The links in this document are the same as those you'll find when viewing information about the setting from within the Microsoft Endpoint Manager admin center.
+
+You can choose to deploy this baseline in its default configuration to apply that recommended security configuration to devices. You  can also create custom instances of the baseline to meet your own security needs.
+
+> [!TIP]  
+> Before using or modifying a setting in this baseline, review the he *Information* text in the Microsoft Endpoint Manager admin center for the setting to learn about its conditions or limitations and when applicable, the CSP the setting applied so.
+
+- To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
+- To update the version of a baseline you've already deployed to devices, see [Change the baseline version for  profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
+
 ## Above Lock
 
 - **Voice activate apps from locked screen**:  
