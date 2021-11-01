@@ -101,51 +101,51 @@ You can choose to deploy this baseline in its default configuration to apply tha
 
 ## Attack Surface Reduction Rules
 
-For general information, see [Learn about attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide).
+For general information, see [Learn about attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true).
 
 - **Block Office communication apps from creating child processes**:  
   Baseline default: *Enable*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-office-communication-application-from-creating-child-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-office-communication-application-from-creating-child-processes)
 
 - **Block Adobe Reader from creating child processes**:  
   Baseline default: *Enable*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-adobe-reader-from-creating-child-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-adobe-reader-from-creating-child-processes)
 
 - **Block Office applications from injecting code into other processes**:  
     Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-office-applications-from-injecting-code-into-other-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-&preserve-view=true#block-office-applications-from-injecting-code-into-other-processes)
 
 - **Block Office applications from creating executable content**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-office-applications-from-creating-executable-content)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-office-applications-from-creating-executable-content)
 
 - **Block JavaScript or VBScript from launching downloaded executable content**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
 - **Enable network protection**:  
   Baseline default: *Enable*  
-  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender&preserve-view=true#defender-enablenetworkprotection)
 
 - **Block untrusted and unsigned processes that run from USB**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#rule-block-untrusted-and-unsigned-processes-that-run-from-usb)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-&preserve-view=true#rule-block-untrusted-and-unsigned-processes-that-run-from-usb)
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**:  
   Baseline default: *Enable*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-credential-stealing-from-the-windows-local-security-authority-subsystem#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
 - **Block all Office applications from creating child processes**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-all-office-applications-from-creating-child-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-all-office-applications-from-creating-child-processes)
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-execution-of-potentially-obfuscated-scripts)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-execution-of-potentially-obfuscated-scripts)
 
 - **Block Win32 API calls from Office macro**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-win32-api-calls-from-office-macros)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-win32-api-calls-from-office-macros)
 
 - **Block executable content download from email and webmail clients**:  
   Baseline default: *Block*  
