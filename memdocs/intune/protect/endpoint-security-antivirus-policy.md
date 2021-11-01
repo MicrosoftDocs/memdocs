@@ -80,7 +80,7 @@ Prerequisites to support tamper protection for devices managed by Intune:
 
 - Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
 
-Profiles for *Antivirus* policy that support tamper protection for [devices managed by Intune](#devices-managed-by-intune):
+Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Endpoint Manager](#devices-managed-by-microsoft-endpoint-manager):
 
 - Platform: **Windows 10 later**
   - Profile: **Windows Security experience**  
