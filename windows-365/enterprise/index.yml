@@ -25,6 +25,9 @@ highlightedContent:
     - title: Planning your Windows 365 deployment
       itemType: get-started
       url: planning-guide.md
+    - title: Requirements?
+      itemType: how-to-guide
+      url: requirements.md
     - title: What is provisioning?
       itemType: overview
       url: provisioning.md
