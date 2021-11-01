@@ -88,7 +88,7 @@ Policies for MDE security management are supported for the following device plat
 
 To use security management for MDE, you need:
 
-- A subscription that grants licenses for Microsoft Defender for Endpoint, like Microsoft 365, or a standalone license for only Microsoft Defender for Endpoint. For current information about options, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide).
+- A subscription that grants licenses for Microsoft Defender for Endpoint, like Microsoft 365, or a standalone license for only Microsoft Defender for Endpoint. For current information about options, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide&preserve-view=true).
 
   *Any subscription* that grants MDE licenses also grants your tenant access to the Endpoint security node of the Microsoft Endpoint Manager admin center. The Endpoint security node is where you’ll configure and deploy policies to manage MDE for your devices and monitor device status.
 
@@ -168,7 +168,7 @@ To support MDE security configuration management through the Microsoft Endpoint 
 
 ## Onboard devices to Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/security-config-management?view=o365-worldwide) in the Defender for Endpoint documentation.
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/security-config-management?view=o365-worldwide&preserve-view=true) in the Defender for Endpoint documentation.
 
 Devices that you manage with Intune or Configuration Manager are not supported for this scenario.
 
@@ -245,7 +245,7 @@ After creating one or more Azure AD groups that contain devices managed by MDE, 
 
 9. Wait for the policy to be assigned and view a success indication that policy was applied.
 
-10. You can validate that settings are applied locally on the client by using the [Get-MpPreference](/powershell/module/defender/get-mppreference#examples?view=windowsserver2019-psreserve-view=true) command utility.
+10. You can validate that settings are applied locally on the client by using the [Get-MpPreference](/powershell/module/defender/get-mppreference#examples?view=windowsserver2019-psreserve-view=true&preserve-view=true) command utility.
 
 ## Monitor status
 
