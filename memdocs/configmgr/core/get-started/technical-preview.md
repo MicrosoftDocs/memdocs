@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/12/2021
+ms.date: 11/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,18 +119,13 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2110
+### Technical preview version 2111
 
-- [Simplified cloud attach configuration](2021/technical-preview-2110.md#bkmk_attach) <!--10964629-->
-- [Improvements to client health dashboard](2021/technical-preview-2110.md#bkmk_health) <!--5728069-->
-- [Enable update notifications from Microsoft 365 Apps](2021/technical-preview-2110.md#bkmk_365) <!--10628998-->
-- [Branding in the Windows Update native reboot experience](2021/technical-preview-2110.md#bkmk_brand) <!--10543514-->
-- [Improvements to application groups](2021/technical-preview-2110.md#bkmk_appgroups) <!--10479618-->
-- [Improvements to external notifications](2021/technical-preview-2110.md#bkmk_notify) <!--10615989-->
-- [Approvals for orchestration group scripts](2021/technical-preview-2110.md#bkmk_orchestration) <!--9957939-->
-- [Task sequence check for TPM 2.0](2021/technical-preview-2110.md#bkmk_tpm) <!--9575077-->
-- [Console improvements](2021/technical-preview-2110.md#bkmk_console) <!--9575773-->
-- [Status messages for console extensions](2021/technical-preview-2110.md#bkmk_audit) <!--11048976-->
+- [Improvements to the Windows servicing dashboard](2021/technical-preview-2111.md#bkmk_servicing) <!--10579996-->
+- [Co-management Eligible Devices collection](2021/technical-preview-2111.md#bkmk_co-management) <!--12377291-->
+- [Improvement to app groups](2021/technical-preview-2111.md#bkmk_appgroup) <!--11125884-->
+- [Improvement to task sequence deployment type](2021/technical-preview-2111.md#bkmk_tsdt) <!--10422235-->
+- [PowerShell release notes preview](2021/technical-preview-2111.md#bkmk_powershell) <!--10957283-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -147,6 +142,19 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2110
+
+- [Simplified cloud attach configuration](2021/technical-preview-2110.md#bkmk_attach) <!--10964629-->
+- [Improvements to client health dashboard](2021/technical-preview-2110.md#bkmk_health) <!--5728069-->
+- [Enable update notifications from Microsoft 365 Apps](2021/technical-preview-2110.md#bkmk_365) <!--10628998-->
+- [Branding in the Windows Update native reboot experience](2021/technical-preview-2110.md#bkmk_brand) <!--10543514-->
+- [Improvements to application groups](2021/technical-preview-2110.md#bkmk_appgroups) <!--10479618-->
+- [Improvements to external notifications](2021/technical-preview-2110.md#bkmk_notify) <!--10615989-->
+- [Approvals for orchestration group scripts](2021/technical-preview-2110.md#bkmk_orchestration) <!--9957939-->
+- [Task sequence check for TPM 2.0](2021/technical-preview-2110.md#bkmk_tpm) <!--9575077-->
+- [Console improvements](2021/technical-preview-2110.md#bkmk_console) <!--9575773-->
+- [Status messages for console extensions](2021/technical-preview-2110.md#bkmk_audit) <!--11048976-->
 
 ### Technical preview version 2109
 
