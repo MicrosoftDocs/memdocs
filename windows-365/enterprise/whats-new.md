@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 11/01/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -55,7 +55,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Improved user interface for online access to Cloud PCs<!--36735456 -->
 
-The user interface on windows365.microsoft.com has been improved with:
+The user interface on [windows365.microsoft.com](https://windows365.microsoft.com) has been improved with:
 
 - Faster load times.
 - Higher performance reliability.
