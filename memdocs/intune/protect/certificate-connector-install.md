@@ -144,7 +144,7 @@ We have a pair of updates for [security baselines](../protect/security-baselines
 
 - **Windows 365 Security Baseline (Preview)**
   The new baseline version is *Version 2110* and adds the following two settings, with no other changes:
-  - **Scan scripts that are used in Microsoft browsers** is added to the [Microsoft Defender](security-baseline-settings-windows-365&pivots=win365-2110#microsoft-defender) category.
+  - **Scan scripts that are used in Microsoft browsers** is added to the [Microsoft Defender](../protect/security-baseline-settings-windows-365.md&pivots=win365-2110#microsoft-defender) category.
   - **Enable tamper protection to prevent Microsoft Defender being disabled** is added to the [Windows Security](security-baseline-settings-windows-365&pivots=win365-2110#windows-security), which is also a new category in the updated baseline.
 
 Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
