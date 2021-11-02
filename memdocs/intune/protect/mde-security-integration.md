@@ -78,11 +78,10 @@ Devices must have access to the following endpoints:
 Policies for MDE security management are supported for the following device platforms:
 
 - Windows 10 Professional/Enterprise (with [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541))
-- Windows 11 Professional/Enterprise (to be released)
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
-- Windows Server 2022 (to be released)
+- Windows Server 2022
 
 ### Licensing and subscriptions
 
@@ -127,11 +126,6 @@ The following table can help you understand which policies that can configure MD
 |                      | Conditional Access    |   | ![Supported](./media/certificates-configure/green-check.png)  |
 |                      | Security baselines      |   | ![Supported](./media/certificates-configure/green-check.png)  |
 
-<!-- Removing later par to table. Will delete fully prior to publication.
-| Device configuration | Device restriction (template)   |    | ![Supported](./media/certificates-configure/green-check.png)  |
-|                      | Endpoint Protection (template)  |    | ![Supported](./media/certificates-configure/green-check.png)  |
-|                      | Settings catalog                |    | ![Supported](./media/certificates-configure/green-check.png)  |
---> 
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 
 - **Antivirus** policies manage the security configurations found in Microsoft Defender for Endpoint. See  [antivirus](../protect/endpoint-security-antivirus-policy.md) policy for endpoint security.
@@ -140,14 +134,6 @@ The following table can help you understand which policies that can configure MD
 - **Firewall** policies focus on the Defender firewall on your devices. See [firewall](../protect/endpoint-security-firewall-policy.md) policy for endpoint security. 
 - **Firewall Rules** configure granular rules for Firewalls, including specific ports, protocols, applications, and networks. See [firewall](../protect/endpoint-security-firewall-policy.md) policy for endpoint security.
 - **Security baselines** include preconfigured security settings that define the Microsoft recommended security posture for different products like Defender, Edge, or Windows. The default recommendations are from the relevant product teams and enable you to quickly deploy that recommended secure configuration to devices. While settings are preconfigured in each baseline, you can create customized instances of them to establish your organization’s security expectations. See [security baselines](../protect/security-baselines.md) for Intune.
-
-<!-- Removed along with later portion of table >
-**Device configuration policies** are intended for use by Administrators who manage a broad range of device settings and can often extend beyond a device security focus.
-
-- **Device restriction** policies use a template that includes a logical grouping of device settings that manage how users share data, which apps are allowed or prohibited, and similar concepts. See configure [device restriction](../configuration/device-restrictions-configure.md) settings.
-- **Endpoint protection** policies use a template that  includes a range of settings from disk encryption, BitLocker, and Antivirus settings. See configure [endpoint Protection](../protect/endpoint-protection-configure.md) settings.
-- **Settings catalog** policies don’t use templates of related settings. Instead, you select each setting you want the policy to manage. This type of policy has no predetermined focus as do templates for device configuration or endpoint security policies. See [settings catalog](../configuration/settings-catalog.md) to configure settings on devices.
--->
 
 ## Configure your Tenant to support MDE Security Configuration Management
 
@@ -189,7 +175,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 Two new labels will exist for devices that are using the new security management for Microsoft Defender for Endpoint. We will add two new labels as listed below:
 
 - **MDEJoined** - Added to devices that are joined to the directory as part of this scenario
-- **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration. 
+- **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
 
 You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Endpoint Manager admin center](../fundamentals/groups-add.md).
 
