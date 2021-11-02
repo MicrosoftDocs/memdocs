@@ -49,6 +49,7 @@ Windows 365 won't prevent you from provisioning new Cloud PCs from existing cust
     ![Screenshot of Hyper-V specify name](./media/device-images-convert-generation-2/specify-name.png)
 7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
     ![Screenshot of Specify Generation page](./media/device-images-convert-generation-2/specify-generation.png)
+  Hyper-V only supports Gen 2 images in VHDX and Gen 1 images in VHD. Azure only supports Gen 2 images in VHD. Therefore, we're creating a Gen 1 VHD image here in order to convert it to a Gen 2 VHD image.
 8. On the **Assign Memory** page, set **Startup memory** to at least 1024000 MB, preferably 4096000 MB. Select **Next**.
     ![Screenshot of Hyper-V assign memory](./media/device-images-convert-generation-2/assign-memory.png)
 9. On the **Configure Networking** page, select **Default Switch** > **Next**.
