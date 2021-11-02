@@ -69,7 +69,7 @@ AppX is helpful for distributing applications supported for multiple devices, in
 
 ## Office
 
-Windows 365 Cloud PCs only support the Microsoft 365 Apps version of Office. For more information about the differences between Microsoft 365 apps and other versions of Office, see [About Microsoft 365 Apps in the enterprise](/deployoffice/about-microsoft-365-apps).
+Windows 365 Cloud PCs only support the Microsoft 365 Apps version of Office. For more information about the differences between Microsoft 365 Apps and other versions of Office, see [About Microsoft 365 Apps in the enterprise](/deployoffice/about-microsoft-365-apps).
 
 ## Universal Print
 
