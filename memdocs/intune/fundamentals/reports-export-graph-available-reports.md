@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/29/2021
+ms.date: 11/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -579,7 +579,9 @@ You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's ou
 ## DevicesWithInventory 
 
 > [!NOTE]
-> To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API will allow you to select, to what you will receive back.  
+> To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API will allow you to select, to what you will receive back.
+>
+> The column alias can only be accepted by the select parameter, and can not be accepted by the filter parameter.
 
 The following table contains the possible output when calling the `DevicesWithInventory` report:
 
@@ -616,14 +618,14 @@ The following table contains the possible output when calling the `DevicesWithIn
 | UserName  | Primary user display name  |
 | WiFiIPv4Address  | WiFiIPv4Address  |
 | WiFiSubnetID  | WiFiSubnetID  |
-| ComplianceState  | Compliance  |
+| CompliantState *(alias: ComplianceState)*  | Compliance  |
 | ManagementAgent  | Managed by  |
 | OwnerType  | Ownership  |
 | ManagementState  | Device state  |
 | DeviceRegistrationState  | Intune registered  |
 | IsSupervised  | Supervised  |
 | IsEncrypted  | Encrypted  |
-| OS  | OS  |
+| DeviceType *(alias: OS)*  | OS  |
 | SkuFamily  | SkuFamily  |
 | JoinType  | JoinType  |
 | PhoneNumber  | Phone number  |
@@ -635,27 +637,10 @@ The following table contains the possible output when calling the `DevicesWithIn
 | EID  | EID  |
 | EnrollmentType  | EnrollmentType  |
 | PartnerFeaturesBitmask  | PartnerFeaturesBitmask  |
-| ClientRegistrationStatus  | ClientRegistrationStatus  |
 | ManagementAgents  | ManagementAgents  |
-| CategoryId  | CategoryId  |
 | CertExpirationDate  | CertExpirationDate  |
-| MDMStatus  | MDMStatus  |
-| EnrolledByUser  | EnrolledByUser  |
 | IsManaged  | IsManaged  |
-| EncryptionStatus  | EncryptionStatus  |
-| SupervisedStatus  | SupervisedStatus  |
-| PhoneNumberE164Format  | Phone number  |
-| SCCMCoManagementFeatures  | SCCMCoManagementFeatures  |
-| LastLoggedOnUserUPN  | LastLoggedOnUserUPN  |
-| MDMWinsOverGPStartTime  | MDMWinsOverGPStartTime  |
 | StagedDeviceType  | StagedDeviceType  |
-| UserApprovedEnrollment  | UserApprovedEnrollment  |
-| ExtendedProperties  | ExtendedProperties  |
-| EntitySource  | EntitySource  |
-| PrimaryUser  | PrimaryUser  |
-| RetireAfterDatetime  | RetireAfterDatetime  |
-| PartnerDeviceId  | PartnerDeviceId  |
-| HasUnlockToken  | HasUnlockToken  |
 
 You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
 - `CreatedDate`
