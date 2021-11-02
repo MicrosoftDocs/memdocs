@@ -109,7 +109,7 @@ The following diagram is a conceptual representation of the MDE security configu
 
 Microsoft Endpoint Manager includes several methods and policy types to manage the configuration of Defender for Endpoint on devices.
 
-When your device protection needs extend beyond only managing Defender for Endpoint, see [Device protection overview](../protect/device-protect.md) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
+When your device protection needs extend beyond managing Defender for Endpoint, see [Device protection overview](../protect/device-protect.md) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
 
 The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
 
@@ -172,16 +172,16 @@ Devices that you manage with Intune or Configuration Manager are not supported f
 
 After devices onboard to Defender for Endpoint, you'll need to create device groups to support deployment of policy for MDE.
 
-Two new labels will exist for devices that are using the new security management for Microsoft Defender for Endpoint. We will add two new labels as listed below:
+You'll find two new labels for devices that are using the new security management for Microsoft Defender for Endpoint:
 
-- **MDEJoined** - Added to devices that are joined to the directory as part of this scenario
+- **MDEJoined** - Added to devices that are joined to the directory as part of this scenario.
 - **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
 
 You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Endpoint Manager admin center](../fundamentals/groups-add.md).
 
 ## Deploy policy
 
-After creating one or more Azure AD groups that contain devices managed by MDE, you can create and deploy the following policies for Security Management for Microsoft Defender for Endpoint to those groups:
+After creating one or more Azure AD groups that contain devices managed by MDE, create and deploy the following policies for Security Management for Microsoft Defender for Endpoint to those groups:
 
 - Antivirus
 - Firewall
@@ -259,17 +259,17 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Active Directory joined devices
 
-Devices that are joined to Active Directory will use their **existing infrastructure** to complete Hybrid Azure Active Directory join. While the Defender for Endpoint component will initiate this process, the join action will use your Federation provider or Azure Active Directory Connect (AAD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
+Devices that are joined to Active Directory will use their **existing infrastructure** to complete Hybrid Azure Active Directory join. While the Defender for Endpoint component will start this process, the join action uses your Federation provider or Azure Active Directory Connect (AAD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
 
 To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
 
 ### Managing Security Configurations on domain controllers
 
-Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers are not currently supported. We are looking at ways to add support in the future.
+Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We are looking at ways to add support in the future.
 
 ### Non-persistent VDI environments
 
-Due to the potential impact on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this public preview in a non-persistent VDI environment.
+Due to the potential effect on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this public preview in a non-persistent VDI environment.
 
 ### Server Core installation
 
