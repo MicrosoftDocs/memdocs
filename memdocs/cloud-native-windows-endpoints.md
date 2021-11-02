@@ -120,7 +120,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   To check your Azure AD Device MDM settings are enabled properly, see [Quickstart - Set up automatic enrollment in Intune](./intune/enrollment/quickstart-setup-auto-enrollment.md).
   
 - **Azure AD company branding**  
-  Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistant look-and-feel when they sign-in to Microsoft 365. This configuration is required for Autopilot to work.
+  Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Autopilot to work.
 
   For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
@@ -576,9 +576,10 @@ Following are some settings available in the settings catalog that might be rele
     - Require Private Store Only - **Only Private store is enabled**
 
 - **Block Gaming**  
-  Organizations might prefer that corporate endpoints cannot be used to play games. Gaming Services built into Windows can be disabled using the following setting.
-  - Games
-    - Allow Advanced Gaming Services – **Block**
+  Organizations might prefer that corporate endpoints cannot be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
+  For additional information on the settings page visibility, refer to the CSP documentation [here](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings URI scheme reference [here](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
+  - Settings
+    - Page Visibility List – **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame**
 
 ### Device Restrictions
 

@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/1/2021
+ms.date: 10/29/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,7 +60,32 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 -->
 
 <!-- ***********************************************-->
+
 ## App management
+
+### Update Android Company Portal and Intune apps for custom notifications<!-- 12473860  -->
+We will be making service side updates to custom notifications in Intune's November (2111) service release which require users to have updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) for the best user experience. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app.
+
+### New ADMX settings for Edge 95 and Edge updater<!-- 12426698 -->
+New ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Platform** > **Windows 10 and later** and **Profile** > **Templates** > **Administrative Templates**. For related information, see [Overview of the Microsoft Edge channels](/deployedge/microsoft-edge-channels), [Microsoft Edge Browser Policy Documentation](/deployedge/microsoft-edge-policies), and [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md).
+
+### New privacy consent screen during Company Portal installation <!-- 6600502 -->
+People installing the Company Portal app for the first time from certain app stores, such as those in China, may see a new privacy consent screen during installation. The screen explains what information Microsoft collects and how it's used. Users must agree to the terms before they can use the app. Users who installed Company Portal prior to this release will not see the new screen.  
+
+### New RBAC permission for Win32 app supersedence and dependency relationships<!-- 11126374 -->
+A new Microsoft Endpoint Manager permission will be added to create and edit Win32 app supersedence and dependency relationships with other apps. The permission will be available under the **Mobile apps** category by selecting **Relate**. Starting in the 2202 service release, MEM admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Endpoint Manager admin center. To find this permission when it is available, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**. This permission will be added to the following built-in roles:
+- Application Manager
+- School administrator
+For related information, see [Create a custom role in Intune](..\fundamentals\create-custom-role.md).
+
+### Filter improvements when displaying platform-specific app lists<!-- 10994275 -->
+Filters will be improved when displaying platform-specific app lists in the Microsoft Endpoint Manager admin center. Previously, when navigating to a platform-specific app list, you could not use the **App type** filter on the list. With this change, you will be able to apply filters (including the **App Type** and **Assignment status** filters) on the platform-specific list of apps. For related information, see [Intune reports](../fundamentals/reports.md).
+
+### Password complexity for Android devices<!-- 9321870 -->
+The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn’t meet the minimum password requirement, you will be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. This feature targets devices that operate on Android 11+. For devices operating on Android 11 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
+
+### Enable app update priority for Managed Google Play apps<!-- 7810180 -->
+You'll be able to set the update priority of Managed Google Play apps on dedicated, fully managed, and corporate-owned with a work profile Android Enterprise devices. Select **High Priority** to update an app as soon as the developer has published the app, regardless of charge status, Wi-Fi capability, or end user activity on the device. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
 
 ### Export underlying discovered apps list data<!-- 9370255  -->
 
@@ -82,13 +107,34 @@ In device configuration, you'll be able to create a list of personal apps that w
 
 You'll be able to allow users to turn on Connected apps experiences for supported apps. This app configuration setting will enable users to connect the app information across the work and personal app instances. For example, connecting a calendar app can show work and personal events together. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 
+## Device security
+
+### Adding 13 BitLocker settings to settings catalog<!-- 10956191 -->  
+13 settings from the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) are being added to the Microsoft Intune settings catalog. To access the settings when they become available, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Settings will be under the **BitLocker** category. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
+You’ll soon be able to view the BitLocker recovery key for tenant-attached devices in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
+
+To view the keys, your Intune account will need Intune RBAC permissions to view BitLocker keys and must also be associated with an on-premises user that has the related on-premises permissions of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission.
+
+When this capability become available, users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a tenant-attached device* > **Recovery keys**.
+
+This capability will be supported with Configuration Manager sites that run version 2107 or later. An update rollup for version 2107 will be required to support Azure AD joined devices.
+
+### Updates for Security Baselines<!-- 9549108,  10873848 -->
+We’ll soon release updates to the following [security baselines​](../protect/security-baselines.md):
+
+- **Security baseline for Windows 10 and later** (Applies to Windows 10 and Windows 11)
+- **Windows 365 Security Baseline (Preview)**
+
+See the available baselines in the Microsoft Endpoint Manager admin center:  **Endpoint security** > **Security baselines**.
+
+Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.  
+
+Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
+
 <!-- ***********************************************-->
 ## Device configuration
-
-### Settings catalog policies for policy sets<!-- 8683467  -->
-
-In addition to profiles based on templates, you'll be able to add a profile based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
-
 
 ### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint Security policies in Endpoint Manager admin center - public preview<!-- 7566953 7591178  -->
 
@@ -146,6 +192,34 @@ New assignment filters in **Enrollment Restrictions** will let you include or ex
 <!-- ***********************************************-->
 ## Device management
 
+### Duplicate a settings catalog profile<!-- 9666635 -->      
+Settings catalog profiles will soon support duplication. A new **Duplicate** button will be added so that you can copy and repurpose an existing profile. The copy will contain the same setting configurations and scope tags as the original profile, but won't have any assignments. For more information about how to duplicate profiles, see [Duplicate a policy](../protect/endpoint-security-policy.md#duplicate-a-policy).
+
+### MDM support data to refresh automatically in Group Policy analytics tool<!-- 7852080 -->
+Whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool will automatically update to reflect the changes. The automation is an improvement over the current behavior, which requires you to reimport your group policy object (GPO) to refresh data.
+
+### Non-applicable status entries will no longer be shown in the **Device Install Status** report<!-- 12419387 -->
+Based on a selected app, the **Device Install Status** report provides a list of devices and status information for the selected app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. If the device's platform differs from the application's platform, rather then showing **Not Applicable** for the **Status details** of the entry, the entry will no longer be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.  To find this report, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. For related information, see [Device Install Status report for apps (Operational)](../fundamentals/reports.md#device-install-status-report-for-apps-operational).
+
+### Create custom settings for Device Compliance for Windows 10/11 devices (public preview)<!--7536730 -->
+As a public preview, device compliance policy for Windows 10 and Windows 11 devices will support adding custom settings to a device compliance policy. Results from custom settings will report back along with other compliance details.
+ 
+To use custom settings, you must first define those settings through the use of two files:
+ 
+- **JSON** – The JSON file lists custom settings, compliance values, and remediation information.
+- **PowerShell** – A PowerShell script that’s deployed to devices and runs to determine their state based on the related JSON file.
+ 
+After creating and uploading the two files as a script, you create a standard Compliance policy that also includes your custom settings script. (**Endpoint security** > **Device compliance** > **Create Policy** > **Windows 10 and later**). Options for custom settings will appear in a new category named *Custom Compliance* that will be available on the *Compliance settings* page for creating a policy.
+
+### New details for Windows devices available in the Microsoft Endpoint Manager admin center<!-- 6208666 -->
+Soon, new details will be available for Windows 10 and Windows 11 devices. This information will be visible when viewing the device on the **All devices** pane in the Microsoft Endpoint Manager admin center, and as part of the All device *export*.
+ 
+The following device properties will be collected and available in the admin center:
+
+- System Management BIOS version
+- TPM Manufacturer version
+- TPM Manufacturer ID
+
 ### Tenant attach: Offboarding <!--9412904 -->
 
 While we know customers get enormous value by enabling tenant attach with Configuration Manager, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard from the cloud following a disaster recovery scenario where the on-premises environment was removed. You'll soon be able to offboard a Configuration Manager environment from the Microsoft Endpoint Manager admin center.
@@ -160,11 +234,7 @@ Apple is expected to release macOS 12 (Monterey) in the fall of 2021. Microsoft 
 
 ### New settings when configuring Kerberos single sign-on extension on iOS/iPadOS and macOS<!-- 10175092  -->
 
-There will be new device feature settings available when configuring the Kerberos SSO extension on iOS/iPadOS and macOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** or **macOS** > **Configuration profiles** > **Create profile** > select **Device features** for profile > **Single sign-on app extension** > **Kerberos** for SSO app extension type. For related information, see [iOS/iPadOS device feature settings](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) and [macOS device feature settings in Intune](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
-
-### Introducing Microsoft Surface management portal in Microsoft Endpoint Manager <!--10874729 -->
-
-In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you'll be able to gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal will be available to U.S. customers before rolling out globally. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog]( https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).
+There will be new device feature settings available when configuring the Kerberos SSO extension on iOS/iPadOS and macOS devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** or **macOS** > **Configuration profiles** > **Create profile** > select **Device features** for profile > **Single sign-on app extension** > **Kerberos** for SSO app extension type. For related information, see [iOS/iPadOS device feature settings](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) and [macOS device feature settings in Intune](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).  
 
 <!-- ***********************************************-->
 ## Intune apps
