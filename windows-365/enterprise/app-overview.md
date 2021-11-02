@@ -67,9 +67,9 @@ Within the Windows Store as part of Windows 10/11 Enterprise, apps are automatic
 
 AppX is helpful for distributing applications supported for multiple devices, including PCs, tablets, and smartphones that run on Windows.
 
-## Office
+## Microsoft Office
 
-Microsoft 365 apps is the only version of Office that is supported for Windows 365 Cloud PCs. For more information about the differences between M365 apps and other versions of office, see [About Microsoft 365 Apps in the enterprise](/deployoffice/about-microsoft-365-apps).
+Microsoft 365 apps is the only version of Microsoft Office that is supported for Windows 365 Cloud PCs. For more information about the differences between Microsoft 365 apps and other versions of Office, see [About Microsoft 365 Apps in the enterprise](/deployoffice/about-microsoft-365-apps).
 
 ## Universal Print
 
