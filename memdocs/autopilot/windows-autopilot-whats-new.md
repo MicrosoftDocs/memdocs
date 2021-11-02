@@ -28,7 +28,7 @@ ms.topic: article
 
 ## Autopilot agility rolling out
 
-Autopilot agility is a new feature that allows updates and bug fixes to the OOBE experience. These updates occur before device enrollment, after the AADJ login page and may result in an additional reboot and authentication prompt to the user. This feature is rolling out to Windows 10 8C+ for 19H2 and 20H1 and is not yet available for Windows 11.
+Autopilot agility is a new feature that allows updates and bug fixes to the OOBE experience. These updates occur before device enrollment, after the AADJ login page and may result in an additional reboot and authentication prompt to the user. This feature is rolling out to Windows 10 1909 and 2004/20H2 with August cumulative update and is not yet available for Windows 11.
 
 ## One-time self-deployment and pre-provisioning
 
