@@ -78,7 +78,7 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 <!--IN9740163-->
 The **Windows** metric provides Windows 11 hardware readiness insights for devices that are enrolled via Intune, co-management, or Configuration Manager version 2107 or newer with tenant attach enabled. To determine how many of your enrolled devices meet the [minimum system requirements](/windows/whats-new/windows-11-requirements#hardware-requirements) for Windows 11, select **Windows** to open the flyout on the **Overview** page in **Work from anywhere**. A chart is displayed showing which specific hardware requirements are the top blockers in your organization.
 
-:::image type="content" source="media/windows-hardware.png" alt-text="Screenshot of the Windows flyout that displays a chart showing top hardware blockers in your organization." lightbox="media/windows-hardware.png":::
+:::image type="content" source="media/windows-hardware.png" alt-text="Screenshot of the Windows tab that displays a chart showing top hardware blockers in your organization and OS versions." lightbox="media/windows-hardware.png":::
 
 In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness is displayed. The **Windows 11 readiness status** column indicates whether a device is **Capable** or **Not capable** of upgrading to Windows 11 based on the minimum system requirements. The column also lists if a device is already **Upgraded** or if the status is **Unknown** for a device. The **Windows 11 readiness reason** column outlines the specific hardware requirements that aren't met for devices that have a readiness status of **Not capable**.
 
