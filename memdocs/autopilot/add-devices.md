@@ -43,8 +43,10 @@ For more information about registering HoloLens 2 devices with Windows Autopilot
 > After Intune reports the profile ready to go, only then should the device be connected to the Internet.
 
 > [!NOTE]
-> If OOBE is restarted too many times it can enter a recovery mode and fail to run the Autopilot configuration. You can identify this scenario if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE displays each of these on a separate page. The following value key tracks the count of OOBE retries: <br>
-> <br>**HKCU\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserOOBE** <br>
+> If OOBE is restarted too many times it can enter a recovery mode and fail to run the Autopilot configuration. You can identify this scenario if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE displays each of these on a separate page. The following value key tracks the count of OOBE retries:
+> 
+> **HKCU\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserOOBE**
+> 
 > To ensure OOBE has not been restarted too many times, you can change this value to 1.
 
 ## Prerequisites
@@ -74,6 +76,7 @@ To install it directly and capture the hardware hash from the local computer, us
 ```powershell
 New-Item -Type Directory -Path "C:\HWID"
 Set-Location -Path "C:\HWID"
+$env:Path += ";C:\Program Files\WindowsPowerShell\Scripts"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 Install-Script -Name Get-WindowsAutoPilotInfo
 Get-WindowsAutoPilotInfo -OutputFile AutoPilotHWID.csv
@@ -85,7 +88,8 @@ You can run the commands remotely if both of the following are true:
 
 During the OOBE you also can initiate the hardware hash upload by launching a command prompt (Shift+F10 at the sign in prompt), and using the following commands;
 
-```PowerShell.exe -ExecutionPolicy Bypass
+```powershell
+PowerShell.exe -ExecutionPolicy Bypass
 Install-Script -name Get-WindowsAutopilotInfo -Force
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 Get-WindowsAutoPilotInfo -Online
@@ -111,7 +115,7 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
     - Hardware hashes.
     - Optional group tags.
     - Optional assigned user.
-  
+
     You can have up to 500 rows in the list. The header and line format is shown below:
 
    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
@@ -119,15 +123,15 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
 
    ![Screenshot of Adding Windows Autopilot devices.](media/enrollment-autopilot/autopilot-import-device-2.png)
 
-   >[!IMPORTANT]
+   > [!IMPORTANT]
    > When you use CSV upload to assign a user, make sure that you assign valid UPNs. If you assign an invalid UPN (incorrect username), your device may be inaccessible until you remove the invalid assignment. During CSV upload the only validation we perform on the **Assigned User** column is to check that the domain name is valid. We're unable to perform individual UPN validation to ensure that you're assigning an existing or correct user.
 
     > [!NOTE]
-    > The CSV file being imported into the Intune portal must be formatted as described above.  Extra columns are not supported.  Quotes are not supported.  Only ANSI-format text files can be used (not Unicode).  Headers are case-sensitive.  Editing the file in Excel and saving as a CSV file will not generate a usable file due to these requirements.
+    > The CSV file being imported into the Intune portal must be formatted as described above. Extra columns are not supported. Quotes are not supported. Only ANSI-format text files can be used (not Unicode). Headers are case-sensitive. Editing the file in Excel and saving as a CSV file will not generate a usable file due to these requirements.
 
     > [!NOTE]
     > Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain senstive information that should be maintained by device owners only, Microsoft recommends only registering devices through Microsoft Endpoint Manager via a 4K hardware hash for test or limited scenarios. In most cases, Autopilot device registration should be done through the Microsoft Partner Center instead.
-   
+
 3. Choose **Import** to start importing the device information. Importing can take several minutes.
 
 4. After import is complete, choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Sync**. A message displays that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices are being synchronized.

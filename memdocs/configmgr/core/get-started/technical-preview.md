@@ -119,18 +119,13 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2110
+### Technical preview version 2111
 
-- [Simplified cloud attach configuration](2021/technical-preview-2110.md#bkmk_attach) <!--10964629-->
-- [Improvements to client health dashboard](2021/technical-preview-2110.md#bkmk_health) <!--5728069-->
-- [Enable update notifications from Microsoft 365 Apps](2021/technical-preview-2110.md#bkmk_365) <!--10628998-->
-- [Branding in the Windows Update native reboot experience](2021/technical-preview-2110.md#bkmk_brand) <!--10543514--><!-- ??? -->
-- [Improvements to application groups](2021/technical-preview-2110.md#bkmk_appgroups) <!--10479618--><!-- probably 2111 -->
-- [Improvements to external notifications](2021/technical-preview-2110.md#bkmk_notify) <!--10615989--><!-- probably 2111 -->
-- [Approvals for orchestration group scripts](2021/technical-preview-2110.md#bkmk_orchestration) <!--9957939-->
-- [Task sequence check for TPM 2.0](2021/technical-preview-2110.md#bkmk_tpm) <!--9575077-->
-- [Console improvements](2021/technical-preview-2110.md#bkmk_console) <!--9575773-->
-- [Status messages for console extensions](2021/technical-preview-2110.md#bkmk_audit) <!--11048976-->
+- [Improvements to the Windows servicing dashboard](2021/technical-preview-2111.md#bkmk_servicing) <!--10579996-->
+- [Co-management Eligible Devices collection](2021/technical-preview-2111.md#bkmk_co-management) <!--12377291-->
+- [Improvement to app groups](2021/technical-preview-2111.md#bkmk_appgroup) <!--11125884-->
+- [Improvement to task sequence deployment type](2021/technical-preview-2111.md#bkmk_tsdt) <!--10422235-->
+- [PowerShell release notes preview](2021/technical-preview-2111.md#bkmk_powershell) <!--10957283-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -147,6 +142,46 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2110
+
+- [Simplified cloud attach configuration](2021/technical-preview-2110.md#bkmk_attach) <!--10964629-->
+- [Improvements to client health dashboard](2021/technical-preview-2110.md#bkmk_health) <!--5728069-->
+- [Enable update notifications from Microsoft 365 Apps](2021/technical-preview-2110.md#bkmk_365) <!--10628998-->
+- [Branding in the Windows Update native reboot experience](2021/technical-preview-2110.md#bkmk_brand) <!--10543514-->
+- [Improvements to application groups](2021/technical-preview-2110.md#bkmk_appgroups) <!--10479618-->
+- [Improvements to external notifications](2021/technical-preview-2110.md#bkmk_notify) <!--10615989-->
+- [Approvals for orchestration group scripts](2021/technical-preview-2110.md#bkmk_orchestration) <!--9957939-->
+- [Task sequence check for TPM 2.0](2021/technical-preview-2110.md#bkmk_tpm) <!--9575077-->
+- [Console improvements](2021/technical-preview-2110.md#bkmk_console) <!--9575773-->
+- [Status messages for console extensions](2021/technical-preview-2110.md#bkmk_audit) <!--11048976-->
+
+### Technical preview version 2109
+
+- [Improvements to Support Center OneTrace](2021/technical-preview-2109.md#bkmk_onetrace) <!--9348231-->
+- [Options for Support Center Data Collector and Client Tools](2021/technical-preview-2109.md#bkmk_support) <!--9947307-->
+- [Send product feedback from wizard and property dialogs](2021/technical-preview-2109.md#bkmk_feedback) <!--2711343-->
+- [Implicit uninstall for user collections](2021/technical-preview-2109.md#bkmk_uninstall) <!--10393847-->
+- [Require installation of a console extension](2021/technical-preview-2109.md#bkmk_extensions) <!--10486584-->
+- [Import console extensions wizard](2021/technical-preview-2109.md#bkmk_import) <!--9741121-->
+- [Improvements to ADR search criteria](2021/technical-preview-2109.md#bkmk_adr) <!--7033309-->
+- [Improvements to VPN boundary types](2021/technical-preview-2109.md#bkmk_vpn) <!--7822886-->
+- [.NET version 4.6.2 prerequisite check is an error](2021/technical-preview-2109.md#bkmk_dotnetprereq) <!--10644702-->
+- [External dependencies require .NET 4.6.2](2021/technical-preview-2109.md#bkmk_dotnetsdk) <!--10529267-->
+- [Copy GUID for ISV proxy certificate](2021/technical-preview-2109.md#bkmk_isvproxy) <!--2842082-->
+- [PowerShell release notes preview](2021/technical-preview-2109.md#bkmk_powershell) <!--10654429-->
+
+### Technical preview version 2108
+
+- [Export to CSV](2021/technical-preview-2108.md#bkmk_csv) <!--9663857-->
+- [Custom properties for devices in the console](2021/technical-preview-2108.md#bkmk_custom) <!--10642650-->
+- [Improvements to Software Center notifications with logos](2021/technical-preview-2108.md#bkmk_notify) <!--4993167-->
+- [PowerShell release notes preview](2021/technical-preview-2108.md#bkmk_powershell) <!--10326535-->
+
+### Technical preview version 2107
+
+- [Tenant attach: Software updates information](2021/technical-preview-2107.md#bkmk_sum) <!--6024419-->
+- [Publish query to Community hub from CMPivot](2021/technical-preview-2107.md#bkmk_hub) <!--9965423-->
 
 ## Features in previous technical previews
 
