@@ -58,32 +58,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
-<<<<<<< HEAD
-
-
-## Week of October 25, 2021
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device management
-
-#### Remote help app is available as a public preview<!-- 9843480  -->
-
-As a public preview, you can use of the *remote help* app with your Intune tenant. With remote help, users who authenticate to your Azure Active directly can remotely assist others by connecting a remote help session between devices.
-
-With permissions in remote help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting.
-The capabilities of remote help include:
-
-- **Enable remote help for your tenant** –If you choose to turn on remote help, its use is enabled tenant-wide.
-- **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
-- **Use remote help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
-- **Compliance Warnings** - Before connecting to device, a helper will see a non-compliance warning about that device if it’s not compliant to its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
-- **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access and what the actions they can take while providing assistance.
-- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the UAC prompt on the sharer's machine to enter credentials.
-- **Monitor active remote help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
-
-For more information, see [Use remote help](../remote-actions/remote-help.md).
-
-=======
 ## Week of October 25, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -105,7 +79,6 @@ We made a change to the Windows Autopilot self-deployment mode and pre-provision
 
 #### Introducing Microsoft Surface Management Portal in Microsoft Endpoint Manager <!--10874729 -->  
 In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you can gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal is available to U.S. customers now and will be rolling out globally later. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog]( https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).  
->>>>>>> 82ac9bd86088b7f6744cf83f28c1b85d3a7711cf
 
 ## Week of October 18, 2021 (Service release 2110)
 
