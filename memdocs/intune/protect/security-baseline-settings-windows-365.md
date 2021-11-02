@@ -994,6 +994,10 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   CSP [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
+- **Scan scripts that are used in Microsoft browsers**  
+  Baseline default: *Yes*
+  CSP [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
   Baseline default: *50*  
   CSP [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940)
@@ -1247,5 +1251,14 @@ Audit settings configure the events that are generated for the conditions of the
 - **PowerShell script block logging**  
   Baseline default: *Enabled*  
   CSP [WindowsPowerShell/TurnOnPowerShellScriptBlockLogging](https://go.microsoft.com/fwlink/?linkid=2067330)
+
+::: zone-end
+::: zone pivot="win365-2110"
+
+## Windows Security
+
+- **Enable tamper protection to prevent Microsoft Defender being disabled**  
+  Baseline default: *Enbale*  
+  [Reference for Tamper Protection](https://support.microsoft.com/windows/prevent-changes-to-security-settings-with-tamper-protection-31d51aaa-645d-408e-6ce7-8d7f8e593f87)
 
 ::: zone-end
