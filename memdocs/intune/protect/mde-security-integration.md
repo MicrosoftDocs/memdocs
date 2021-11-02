@@ -77,12 +77,12 @@ Devices must have access to the following endpoints:
 
 Policies for MDE security management are supported for the following device platforms:
 
-- Windows 10 Professional/Enterprise (With KB5006738)
-- Windows 11 Professional/Enterprise (With KB5007262)
-- Windows Server 2012 R2 with Microsoft Defender for Down-Level Devices
-- Windows Server 2016 with Microsoft Defender for Down-Level Devices
-- Windows Server 2019 (With KB5006744)
-- Windows Server 2022 (with KB5006745)
+- Windows 10 Professional/Enterprise (with [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541))
+- Windows 11 Professional/Enterprise (to be released)
+- Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
+- Windows Server 2016 with [Microsoft Defender for Down-Level Devices](microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
+- Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
+- Windows Server 2022 (to be released)
 
 ### Licensing and subscriptions
 
@@ -115,14 +115,17 @@ When your device protection needs extend beyond only managing Defender for Endpo
 The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
 
 
-| Microsoft Endpoint Manager  | Policy options  | MDE Security configuration  |  Microsoft Endpoint Manager (Intune and Configuration Manager)  |
+| Microsoft Endpoint Manager  | Workload | MDE Security configuration  |  Microsoft Endpoint Manager |
 |----------------|----------------|-------------------|------------|
 | Endpoint security    | Antivirus                   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  |
-|                      | Attack surface reduction    |           | ![Supported](./media/certificates-configure/green-check.png)  |
+|                      | Disk Encryption   |           | ![Supported](./media/certificates-configure/green-check.png)  |
+|                      | Firewall (Profile and Rules)                | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  |
 |                      | Endpoint detection and response        | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  |
-|                      | Firewall                | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  |
-|                      | Firewall rules          | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  |
-|         | Security baselines  |       | ![Supported](./media/certificates-configure/green-check.png)  |
+|                      | Attack surface reduction    |           | ![Supported](./media/certificates-configure/green-check.png)  |
+|                      | Account Protection       |       | ![Supported](./media/certificates-configure/green-check.png)  |
+|                      | Device Compliance     |   | ![Supported](./media/certificates-configure/green-check.png)  |
+|                      | Conditional Access    |   | ![Supported](./media/certificates-configure/green-check.png)  |
+|                      | Security baselines      |   | ![Supported](./media/certificates-configure/green-check.png)  |
 
 <!-- Removing later par to table. Will delete fully prior to publication.
 | Device configuration | Device restriction (template)   |    | ![Supported](./media/certificates-configure/green-check.png)  |
