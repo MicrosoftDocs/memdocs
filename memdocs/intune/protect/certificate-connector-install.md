@@ -136,3 +136,15 @@ Deploy:
 - [SCEP certificate profiles](../protect/certificates-profile-scep.md)
 - [PKCS certificates](../protect/certificates-pfx-configure.md)
 - [Imported PKCS certificates](../protect/certificates-imported-pfx-configure.md)
+### Updates for Security Baselines<!-- 9549108,  10873848   -->
+We have a pair of updates for [security baselines](../protect/security-baselines.md), which add the following settings:
+
+- **Security baseline for Windows 10 and later** (Applies to Windows 10 and Windows 11)  
+  The new baseline version is *November 2021* and adds **Scan scripts that are used in Microsoft browsers** to the [Microsoft Defender](security-baseline-settings-mdm-all&pivots=mdm-december-2020#microsoft-defender) category. This baseline has no other changes. 
+
+- **Windows 365 Security Baseline (Preview)**
+  The new baseline version is *Version 2110* and adds the following two settings, with no other changes:
+  - **Scan scripts that are used in Microsoft browsers** is added to the [Microsoft Defender](security-baseline-settings-windows-365&pivots=win365-2110#microsoft-defender) category.
+  - **Enable tamper protection to prevent Microsoft Defender being disabled** is added to the [Windows Security](security-baseline-settings-windows-365&pivots=win365-2110#windows-security), which is also a new category in the updated baseline.
+
+Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
