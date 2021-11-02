@@ -1656,7 +1656,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 ::: zone-end
 ::: zone pivot="november-2021"
 
-- **Scan scripts that are used in Microsoftbrowsers**  
+- **Scan scripts that are used in Microsoft browsers**  
   CSP [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
   When this setting is set to Yes, the Windows Defender Script Scanning functionality will be enforced and the user cannot turn them off. When set to Not configured, the setting is returned to client default which is to enable script scanning, however the user can turn it off.
