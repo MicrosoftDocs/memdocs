@@ -582,6 +582,8 @@ You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's ou
 > To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API will allow you to select, to what you will receive back.
 >
 > The column alias can only be accepted by the select parameter, and can not be accepted by the filter parameter.
+>
+> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` will only be exported when they are included in the select parameter. These columns will not be exported by default.
 
 The following table contains the possible output when calling the `DevicesWithInventory` report:
 
@@ -640,7 +642,6 @@ The following table contains the possible output when calling the `DevicesWithIn
 | ManagementAgents  | ManagementAgents  |
 | CertExpirationDate  | CertExpirationDate  |
 | IsManaged  | IsManaged  |
-| StagedDeviceType  | StagedDeviceType  |
 
 You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
 - `CreatedDate`
