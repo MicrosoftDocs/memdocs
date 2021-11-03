@@ -55,3 +55,5 @@ Managed Server Providers (MSPs) can manage Cloud PCs in Microsoft 365 Lighthouse
 [Learn more about Windows 365 Business](/windows-365/business/get-started-windows-365-business).
 
 [Learn more about Windows 365 Enterprise](/windows-365/enterprise/overview).
+
+[Read the Windows 365 service description](/office365/servicedescriptions/windows-365-service-description/windows-365-service-description).
