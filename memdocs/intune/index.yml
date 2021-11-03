@@ -113,9 +113,6 @@ conceptualContent:
         - url: ./protect/device-compliance-get-started.md
           itemType: concept
           text: Compliance overview
-        - url: ./protect/use-network-locations.md
-          itemType: how-to-guide
-          text: "Network fencing + compliance on Android"
         - url: ./protect/actions-for-noncompliance.md
           itemType: how-to-guide
           text: Actions for non-compliant devices

@@ -81,18 +81,6 @@ Review the configuration settings for your Android Enterprise device restriction
 
 If you want users to have access to developer settings moving forward, you will need to set **Developer settings** to **Allow**, otherwise it will remain as **Not configured** and users will not have access to any developer settings.
 
-### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
-
-Intune is announcing end of support for the [network fence feature](../protect/use-network-locations.md) for use only in devices enrolled through Android device administrator. Google has reduced support for devices enrolled using device administrator and Intune customers have provided feedback leading to a re-envisioning of the location based fencing to better meet customer needs across multiple Android enrollment options.
-
-#### How does this affect me?
-
-This will only affect you if you currently use a location-based (network fence) compliance policy, either on your trial or paid account. In 90 days from the date of this feature end-of-support announcement (on or around October 7, 2021 unless otherwise updated) any network location-based compliance policies targeted to devices enrolled using Android device administrator will no longer work to provide a network fence.
-
-#### What do I need to do to prepare for this change?
-
-No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features, and we will follow up with additional information when it’s available regarding re-envisioned location-based services.
-
 ### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year<!--10144130-->
 
 Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and higher shortly after iOS 15’s release.
