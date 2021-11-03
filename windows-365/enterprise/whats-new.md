@@ -76,7 +76,7 @@ To improve reliability, the maximum provisioning timeout has been changed to fiv
 
 #### Custom Windows 365 RBAC roles in public preview<!--36222579  -->
 
-Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services.
+Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services. For more information, see [Custom roles](role-based-access.md#custom-roles-public-preview).
 
 <!-- ########################## -->
 ## Week of October 11, 2021 (Service release 2109)
