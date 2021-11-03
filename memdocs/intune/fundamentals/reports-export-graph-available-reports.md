@@ -65,7 +65,7 @@ The following table contains the possible values for the `reportName` parameter.
 |         ComanagedDeviceWorkloads  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Managed Workloads**        |
 |         ComanagementEligibilityTenantAttachedDevices  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Management Eligibility**        |
 |         DeviceRunStatesByProactiveRemediation  |            Under **Reports** > **Endpoint Analytics** > **Proactive remediations** > *Select a remediation* > **Device status**        |
-|         DevicesWithInventory  |            Under **Devices** > **All Devices** > **Export** > **Include all inventory data in the exported file**        |
+|         DevicesWithInventory  |            Under **Devices** > **All Devices** > **Export**        |
 |         FirewallStatus  |            Under **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later**        |
 |         GPAnalyticsSettingMigrationReadiness  |            Under **Reports** > **Group policy analytics** > **Reports** > **Group policy migration readiness**        |
 |         QualityUpdateDeviceErrorsByPolicy  |            Under **Devices** > **Monitor** > **Windows Expedited update failures** > *Select a profile*        |
@@ -631,7 +631,7 @@ The following table contains the possible output when calling the `DevicesWithIn
 | SkuFamily  | SkuFamily  |
 | JoinType  | JoinType  |
 | PhoneNumber  | Phone number  |
-| JailBroken  | JailBroken  |
+| JailBroken  | Jailbroken  |
 | ICCID  | ICCID  |
 | EthernetMAC  | EthernetMAC  |
 | CellularTechnology  | CellularTechnology  |
