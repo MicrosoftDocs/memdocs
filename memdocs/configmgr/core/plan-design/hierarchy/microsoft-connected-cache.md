@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 04/05/2021
+ms.date: 11/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -49,6 +49,14 @@ When you configure clients to use the Connected Cache server, they no longer req
 6. Clients use DO to get pieces of the content from peers.
 
 ## Prerequisites and limitations
+
+- You need one of the following license subscriptions for each device that gets content from a Connected Cache-enabled distribution point:<!-- 10735017 -->
+
+  - Windows Enterprise E3 or E5, included in Microsoft 365 F3, E3, or E5
+
+  - Windows Education A3 or A5, included in Microsoft 365 A3 or A5
+
+  - Windows Virtual Desktop Access (VDA) E3 or E5
 
 - An *on-premises* distribution point, with the following configurations:
 
