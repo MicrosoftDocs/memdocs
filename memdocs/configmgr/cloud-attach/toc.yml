@@ -4,13 +4,19 @@
   items:
   - name: What is cloud attach?
     href: overview.md
-  - name: Role-based administration
-    href: ../core/understand/fundamentals-of-role-based-administration.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-- name: Concepts
+- name: Tenant attach
   items:
-  - name: Endpoint analytics
-    href: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-  - name: Co-management
-    href: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-  - name: Tenant attach
+  - name: Overview
     href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+- name: Endpoint analytics
+  items:
+  - name: Overview
+    href: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+- name: Co-management
+  items:
+  - name: Overview
+    href: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+- name: Cloud management gateway (CMG)
+  items:
+  - name: Overview
+    href: ../core/clients/manage/cmg/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
