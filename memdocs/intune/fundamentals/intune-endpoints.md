@@ -123,7 +123,7 @@ Android Enterprise capabilities (see this [Google documentation](https://support
 
 |Used for|Hostname (IP address/subnet)|Protocol|Port|
 |-----|--------|------|-------|
-|Installing Microsoft Intune and Microsoft Authenticator apps|https://intunecdnpeasd.azureedge.net/|    HTTPS    |      443      |
+|Downloading and installing Microsoft Intune and Microsoft Authenticator apps|intunecdnpeasd.azureedge.net|    HTTPS    |      443      |
 
 ### Google Android Enterprise 
 
