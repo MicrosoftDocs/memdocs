@@ -57,12 +57,6 @@ If provisioning fails, make sure that:
 - Azure AD Connect is running correctly and there are no issues with the sync server.  
 - You manually perform an Add-Computer into the OU provided for Cloud PCs. Time how long it takes for that computer object to appear in Azure AD.
 
-## Azure policy restrictions
-
-Many organizations use Azure policies to make sure that resources are only provisioned into certain regions and services. You should make sure that any Azure policies have considered the Cloud PC service and the supported regions.  
-
-To troubleshoot this failure, visit the Azure portal and view Policies. Make sure that there are no policies blocking resource creation.  
-
 ## Azure subnet IP address range usage
 
 As part of the OPNC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC provisioning will create a virtual NIC and consume an IP address from the subnet.  
@@ -76,13 +70,17 @@ If this check fails, make sure that:
 - You clean out any unused vNICs and IP addresses. It’s best to use a dedicated subnet for Cloud PCs only to make sure that no other services are eating allocation.  
 - You expand the subnet to make more addresses are available.
 
-## Azure subscription is valid
+## Azure tenant readiness
 
 When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we’re unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
 
-Sign in to the Azure portal and make sure that the Azure subscription is enabled, valid, and healthy.  
+Many organizations use Azure policies to make sure that resources are only provisioned into certain regions and services. You should make sure that any Azure policies have considered the Cloud PC service and the supported regions.
 
-## Azure vNet in a supported region
+Sign in to the Azure portal and make sure that the Azure subscription is enabled, valid, and healthy.
+
+Also, visit the Azure portal and view Policies. Make sure that there are no policies blocking resource creation.  
+
+## Azure virtual network readiness
 
 When creating an OPNC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](requirements.md).  
 
