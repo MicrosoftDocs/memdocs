@@ -64,7 +64,7 @@ docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-b
 
 Users can manually set their internet search engine's location. For example, on Bing.com users can visit the **Settings** menu (in the top-right corner of the site) to manually set the Language, Country/Region, and Location.
 
-## Microsoft Narrator screen reader not turned on when signed into Cloud PCs from windows365.microsoft.com
+## Microsoft Narrator screen reader not turned on
 
 When users sign into their Cloud PCs from windows365.microsoft.com, the Microsoft Narrator screen reader is not turned on.
 
