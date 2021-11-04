@@ -66,11 +66,11 @@ Users can manually set their internet search engine's location. For example, on 
 
 ## Microsoft Narrator screen reader not turned on when signed into Cloud PCs from windows365.microsoft.com
 
-When users sign into their Cloud PCs from windows365.microsfot.com, the Microsoft Narrator screen reader is not turned on.
+When users sign into their Cloud PCs from windows365.microsoft.com, the Microsoft Narrator screen reader is not turned on.
 
 ### Troubleshooting steps
 
-To turn on Narrator when accessing your Cloud PC from the web interrace:
+To turn on Narrator when accessing your Cloud PC from the web interface:
 
 1. Got to windows365.microsoft.com.
 
