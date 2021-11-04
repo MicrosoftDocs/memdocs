@@ -72,7 +72,7 @@ When users sign into their Cloud PCs from windows365.microsoft.com, the Microsof
 
 To turn on Narrator when accessing your Cloud PC from the web interface:
 
-1. Got to windows365.microsoft.com.
+1. Go to [windows365.microsoft.com](https://windows365.microsoft.com/).
 
 2. Sign into your Cloud PC.
 
