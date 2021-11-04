@@ -119,6 +119,12 @@ Depending on how you choose to manage Android devices, you may need to open the 
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
 Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
+### Android (AOSP)  
+
+|Used for|Hostname (IP address/subnet)|Protocol|Port|
+|-----|--------|------|-------|
+|Installing Microsoft Intune and Microsoft Authenticator apps|https://intunecdnpeasd.azureedge.net/|    HTTPS    |      443      |
+
 ### Google Android Enterprise 
 
 Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document. 
