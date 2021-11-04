@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 10/11/2021
+ms.date: 11/04/2021
 audience: Admin
 ms.topic: troubleshooting
 ms.service: cloudpc
@@ -63,6 +63,20 @@ docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-b
 #### Set search engine location
 
 Users can manually set their internet search engine's location. For example, on Bing.com users can visit the **Settings** menu (in the top-right corner of the site) to manually set the Language, Country/Region, and Location.
+
+## Microsoft Narrator screen reader not turned on when signed into Cloud PCs from windows365.microsoft.com
+
+When users sign into their Cloud PCs from windows365.microsfot.com, the Microsoft Narrator screen reader is not turned on.
+
+### Troubleshooting steps
+
+To turn on Narrator when accessing your Cloud PC from the web interrace:
+
+1. Got to windows365.microsoft.com.
+
+2. Sign into your Cloud PC.
+
+3. On your keyboard, press Alt+F3+Ctrl+Enter.
 
 ## Next steps
 
