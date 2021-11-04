@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Custom PowerShell scripts for discovery
 
-Before you can use [custom settings for compliance](custom-compliance-settings.md) with Intune, you must define a PowerShell script for discovery of custom compliance settings on devices.
+Before you can use [custom settings for compliance](../protect/compliance-use-custom-settings.md) with Intune, you must define a PowerShell script for discovery of custom compliance settings on devices.
 
 The discovery script:
 
@@ -71,5 +71,5 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 ## Next steps
 
 - [Use custom compliance settings](../protect/compliance-use-custom-settings.md)  
-- [Create a JSON for custom compliance](../compliance-custom-json.md)
+- [Create a JSON for custom compliance](..protect/compliance-custom-json.md)
 - [Create a compliance policy](../protect/create-compliance-policy.md)

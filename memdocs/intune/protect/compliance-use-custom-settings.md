@@ -52,19 +52,19 @@ After you’ve deployed custom compliance settings and devices have reported bac
 
 - **PowerShell discovery script** - This is a script that you create that runs on a device to discover the custom settings from your JSON file and returns the configuration value of those settings to Intune. You’ll upload your script to Microsoft Endpoint Manager before you create a compliance policy and then select the script you want to use when creating a policy.
 
-  To create a custom compliance script, see [Custom PowerShell scripts for discovery](custom-compliance-script.md).
+  To create a custom compliance script, see [Custom PowerShell scripts for discovery](../protect/compliance-custom-script.md).
 
 - **JSON file** - The  JSON file defines the custom settings and the value that is to be considered as compliant. You’ll upload your JSON file while creating a compliance policy, just after you select a discovery script for that policy.
 
-  To create a JSON file for compliance, see [Custom compliance JSON files](custom-compliance-json.md)
+  To create a JSON file for compliance, see [Custom compliance JSON files](../protect/compliance-custom-json.md)
 
 ## Create a policy with custom compliance settings
 
 Before starting:
 
-1. Create and upload a PowerShell script to use for discovery.  See [Custom PowerShell scripts for  discovery](custom-compliance-script.md).
+1. Create and upload a PowerShell script to use for discovery.  See [Custom PowerShell scripts for  discovery](../protect/compliance-custom-script.md).
 
-2. Prepare a JSON file that you’ll upload while creating the policy. See [Custom compliance JSON files](custom-compliance-json.md).
+2. Prepare a JSON file that you’ll upload while creating the policy. See [Custom compliance JSON files](../protect/compliance-custom-json.md).
 
 3. When both the script and JSON are ready, start with your normal procedure to create a compliance policy, and on the *Configuration settings* page, configure custom compliance by following the steps in the following procedure.
 
@@ -76,9 +76,9 @@ During the workflow to create a compliance policy, on the Compliance setting pag
 
 2. Set *Custom compliance* to **Require**.
 
-3. For *Select your discovery script*, select *Click to select* and then specify a script that’s been [previously added](custom-compliance-script.md) to Microsoft Endpoint Manager. This script must be uploaded before you begin to create the policy. 
+3. For *Select your discovery script*, select *Click to select* and then specify a script that’s been [previously added](../protect/compliance-custom-script.md) to Microsoft Endpoint Manager. This script must be uploaded before you begin to create the policy. 
 
-4. For *Upload and validate the JSON file with your custom compliance settings*,  select the folder icon and then locate and add the JSON file you want to use with this policy. To create your JSON, see [Custom compliance JSON files](custom-compliance-json.md).
+4. For *Upload and validate the JSON file with your custom compliance settings*,  select the folder icon and then locate and add the JSON file you want to use with this policy. To create your JSON, see [Custom compliance JSON files](../protect/compliance-custom-json.md).
 
    After selecting a file, the JSON is validated, and any problems displayed. After validating a JSON, the rules from the JSON are displayed.
 
@@ -137,6 +137,6 @@ Policies support the use of a single PowerShell script. However, each script sup
 
 ## Next steps
 
-- [Create a JSON for custom compliance](../compliance-custom-json.md)
+- [Create a JSON for custom compliance](../protect/compliance-custom-json.md)
 - [Create a PowerShell script for discovery of custom compliance settings](../protect/compliance-custom-script.md)
 - [Create a compliance policy](../protect/create-compliance-policy.md)
