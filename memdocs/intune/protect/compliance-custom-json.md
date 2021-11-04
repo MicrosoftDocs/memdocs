@@ -1,0 +1,142 @@
+---
+# required metadata
+
+title: Create a JSON file for custom compliance settings in Microsoft Intune
+description: Create the JSON file that defines custom settings and values for use with device compliance policies in Intune.
+keywords:
+author: brenduns
+ms.author: brenduns
+manager: dougeby
+ms.date: 11/16/2021
+ms.topic: conceptual
+ms.service: microsoft-intune
+ms.subservice: protect
+ms.localizationpriority: medium
+ms.technology:
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: tycast
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: intune-azure
+ms.collection: M365-identity-device-management
+---
+
+# Custom compliance JSON files
+
+To support [custom settings for compliance](../protect/compliance-use-custom-settings.md), you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a PowerShell discovery script will evaluate for compliance on the device.
+
+You’ll upload the JSON file when you create a compliance policy that includes custom compliance settings. 
+
+A correctly formatted JSON file includes the following information:
+
+- **SettingName** - The name of the custom setting to use for base compliance
+- **Operator** - Represents a specific action that is used to build a compliance rule. For options, see the following list.
+- **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list.
+- **Operand** - Represent the values that the operator works on.
+- **MoreInfoURL** - A URL that’s shown to device users so they can learn more about the compliance requirement when their device is noncompliant for a setting.
+- **RemediationStrings** -  Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state.
+
+To help you define the settings in your JSON, we recommend using product configuration service providers (CSPs) that identify the settings and values you might want to use for compliance.
+
+**Supported operators**:  
+- IsEquals
+- NotEquals
+- GreaterThan
+- GreaterEquals
+- LessThan
+- LessEquals
+
+**Supported DataTypes**:  
+- Boolean
+- Int64
+- Double
+- String
+- DateTime
+- Version
+
+**Supported Languages**:  
+- cs-CZ
+- da-DK
+- de-DE
+- el-GR
+- en-US
+- es-ES
+- fi-FI
+- fr-FR
+- hu-HU
+- it-IT
+- ja-JP
+- ko-KR
+- nb-NO
+- nl-NL
+- pl-PL
+- pt-BR
+- ro-RO
+- ru-RU
+- sv-SE
+- tr-TR
+- zh-CN
+- zh-TW
+
+## Example JSON file
+
+```json
+{
+"Rules":[ 
+    { 
+       "SettingName":"BiosVersion",
+       "Operator":"GreaterThan",
+       "DataType":"Version",
+       "Operand":"2.3",
+       "MoreInfoUrl":"https://bing.com",
+       "RemediationStrings":[ 
+          { 
+             "Language":"en_US",
+             "Title":"BIOS Version needs to be upgraded to at least 2.3. Value discovered was {ActualValue}.",
+             "Description": "BIOS must be updated. Please refer to the link above"
+          }
+       ]
+    },
+    { 
+       "SettingName":"TPMChipPresent",
+       "Operator":"IsEquals",
+       "DataType":"Boolean",
+       "Operand":true,
+       "MoreInfoUrl":"https://bing.com",
+       "RemediationStrings":[ 
+          { 
+             "Language": "en_US",
+             "Title": "TCM chip must be enabled.",
+             "Description": "TCM chip must be enabled. Please refer to the link above"
+          }
+       ]
+    },
+    { 
+       "SettingName":"ModelName",
+       "Operator":"IsEquals",
+       "DataType":"String",
+       "Operand":"Inspiron",
+       "MoreInfoUrl":"https://bing.com",
+       "RemediationStrings":[ 
+          { 
+             "Language": "en_US",
+             "Title": "Only Inspiron is supported.",
+             "Description": "Only desktop model Inspiron is allowed."
+          }
+       ]
+    }
+ ]
+}
+```
+
+## Next steps
+
+- [Use custom compliance settings](../protect/compliance-use-custom-settings.md)  
+- [Create a PowerShell script for discovery of custom compliance settings](../protect/compliance-custom-script.md)  
+- [Create a compliance policy](../protect/create-compliance-policy.md)  

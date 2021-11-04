@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 11/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -63,6 +63,7 @@ To use device compliance policies, be sure you:
 
 - Enroll devices to one user, or enroll without a primary user. Devices enrolled to multiple users aren't supported.
 
+If you plan to use custom settings for device compliance (*in preview*), you'll need prepare a custom JSON file and PowerShell script before you create a policy. For more information about custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
 ## Create the policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -90,7 +91,7 @@ To use device compliance policies, be sure you:
 
    You can also choose to specify a **Description**.
   
-5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy.  The following articles describe the settings for each platform:
+5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
    - [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
@@ -98,6 +99,10 @@ To use device compliance policies, be sure you:
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
    - [Windows 10/11](compliance-policy-create-windows.md)  
+
+   Before you use the category *Custom Compliance* to add custom compliance settings (*in preview*), you must preconfigure a JSON to define the custom settings you want to use, and upload a PowerShell script that runs discovery of those settings on supported devices.
+
+   For more information about custom settings for device compliance, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
 
 6. On the **Locations** tab, you can force compliance based on the location of the device. Choose from existing locations. If you don't have an available location yet, see [Use Locations (network fence)](use-network-locations.md) for guidance.
    > [!TIP]
