@@ -66,7 +66,7 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
    - **Enforce script signature check**
    - **Run script in 64 bit PowerShell Host**
 
-5. Complete the script creation process. The script is now visible in the Scrips pane of the Microsoft Endpoint Manager admin center and will be available to select when configuring compliance policies.
+5. Complete the script creation process. The script is now visible in the Scripts pane of the Microsoft Endpoint Manager admin center and will be available to select when configuring compliance policies.
 
 ## Next steps
 
