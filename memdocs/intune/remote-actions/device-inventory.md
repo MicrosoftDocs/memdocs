@@ -118,6 +118,7 @@ Depending on the carrier used by the devices, not all details might be collected
 
 > [!Note]  
 > For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
+> For Android corporate-owned personally enabled (COPE) and corporate-owned business-only COBO) devices, reporting for Phone number are not supported.
 
 ## Next steps
 
