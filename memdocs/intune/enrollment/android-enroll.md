@@ -56,8 +56,10 @@ For Samsung Knox Standard devices, there are [more prerequisites](android-samsun
 
 ## Next steps
 
-- [Set up Android Enterprise personally-owned work profile enrollments](android-work-profile-enroll.md)
-- [Set up Android Enterprise dedicated device enrollments](android-kiosk-enroll.md)
-- [Set up Android Enterprise fully managed enrollments](android-fully-managed-enroll.md)
+- [Set up Android Enterprise personally-owned work profile enrollment](android-work-profile-enroll.md)
+- [Set up Android Enterprise dedicated device enrollment](android-kiosk-enroll.md)
+- [Set up Android Enterprise fully managed enrollment](android-fully-managed-enroll.md)
 - [Set up Android device administrator enrollment](android-enroll-device-administrator.md)
 - [Set up Android Enterprise corporate-owned work profile](android-corporate-owned-work-profile-enroll.md)
+- [Set up Android (AOSP) corporate-owned user-associated enrollment](android-aosp-corporate-owned-user-associated-enroll.md)
+- [Set up Android (AOSP) corporate-owned userless enrollment](android-aosp-corporate-owned-userless-enroll.md)

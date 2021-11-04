@@ -86,6 +86,8 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |**Android Device Admin**|**[DEM](#device-enrollment-manager) initiated via Company Portal**| No | No | No |[More information](device-enrollment-manager-enroll.md)|
 |**Android Device Admin**|**(Pre-declared IMEI or SN) User initiated via Company Portal**| No | Yes | No | [More information](corporate-identifiers-add.md)|
 |**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../configuration/android-zebra-mx-overview.md)|
+|**Android (AOSP) user-associated**|**QR code**|Yes|Yes|No|[More information](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
+|**Android (AOSP) userless**|**QR code**|Yes|No|No|[More information](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
 |**Android Enterprise Dedicated**|**NFC, Token, QR code, Zero Touch**| Yes | No | Configurable via policy | [More information](android-kiosk-enroll.md)|
 |**Android Enterprise Fully Managed**|**NFC, Token, QR code, Zero Touch**| Yes | Yes | Configurable via policy | [More information](android-dedicated-devices-fully-managed-enroll.md)|
 |**Android Enterprise corporate-owned with Work Profile** | **NFC, Token, QR code, Zero Touch** | Yes | Yes | Configurable via policy | [More information](android-corporate-owned-work-profile-enroll.md)|
