@@ -71,5 +71,5 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 ## Next steps
 
 - [Use custom compliance settings](../protect/compliance-use-custom-settings.md)  
-- [Create a JSON for custom compliance](..protect/compliance-custom-json.md)
+- [Create a JSON for custom compliance](../protect/compliance-custom-json.md)
 - [Create a compliance policy](../protect/create-compliance-policy.md)
