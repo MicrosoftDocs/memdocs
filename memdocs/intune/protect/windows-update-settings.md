@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 11/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,6 +100,14 @@ Update settings control what bits a device will download, and when. For more inf
   After this period expires, the previous update bits are removed from the device, and it can no longer uninstall to a previous update version.  
 
   For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.  
+
+- **Enable pre-release builds**  
+  **Default**: Not Configured  
+
+  When configuring *Update ring settings*, you can choose to enable **Enable pre-release builds**. Devices that receive this setting as *Enabled* will move to the pre-release build you specify, and will also reboot. When enabled, specify one of the following prerelease builds:  
+  - **Windows Insider - Release Preview** (*default*)
+  - **Beta Channel**
+  - **Dev Chanel**
 
 ## User experience settings  
 
