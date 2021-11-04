@@ -39,7 +39,7 @@ Use one of the following policy types to configure BitLocker on your managed dev
 
 - **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10/11 endpoint protection.
 
-  View the BitLocker settings that are available for [BitLocker in endpoint protection profiles form device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
+  View the BitLocker settings that are available for [BitLocker in endpoint protection profiles from device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
