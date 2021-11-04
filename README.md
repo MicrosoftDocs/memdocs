@@ -44,7 +44,7 @@ We **want and encourage contributions** from our community (users, customers, pa
   3. Select the pencil icon, and make your changes. 
 
 ## Use markdown to format your topic
-All the articles in this repository use GitHub-flavored markdown. Here's a list of resources to get started:
+All the articles in this repository use GitHub-flavored markdown. Here is a list of resources to get started:
 
 * [Markdown basics](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 * [Printable markdown cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
