@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/05/2021
+ms.date: 11/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,7 +57,16 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+## Week of November 8, 2021
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
 
+#### Work from anywhere report <!--7207657-->
+
+The **Work from anywhere** report has replaced the **Recommended software** report in [Endpoint analytics](../../analytics/overview.md). The **Work from anywhere** report contains metrics for Windows, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Week of November 1, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
