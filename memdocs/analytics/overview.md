@@ -65,7 +65,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Proactive reme
 
 Devices enrolled in Endpoint analytics need a valid Microsoft Endpoint Manager license. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
-Proactive remediations also require one of the following licenses for the managed devices:
+Proactive remediations also requires users of the devices to have one of the following licenses:
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10/11 Virtual Desktop Access (VDA) per user
