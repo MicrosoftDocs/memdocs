@@ -18,9 +18,9 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > The recent shift to hybrid and remote work is changing the way organizations manage enterprise devices. Many organizations are moving to modern cloud management solutions. Microsoft is making new features available in Microsoft Endpoint Manager to better facilitate and support this change as you begin your transition to Windows 11 devices.
 >
-> To align investments with this shift, **Desktop Analytics will be retired on November 30, 2022**. Over the next year, the types of insights currently found in Desktop Analytics will be incorporated directly into the Microsoft Endpoint Manager admin center. These changes will be more compatible with a modern management strategy and be more relevant for the challenges you face today.<!-- 10946169 -->
+> To align investments with this shift, **Desktop Analytics will be retired on November 30, 2022**. Over the next year, the types of insights currently found in Desktop Analytics will be incorporated directly into the Microsoft Endpoint Manager admin center.<!-- 10946169 -->
 >
-> For more information, see [Taking a data-driven approach to managing devices in your organization](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog).<!-- NEED TO UPDATE WITH FINAL LINK -->
+> For more information, see [A data-driven approach to managing devices in your organization](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-data-driven-approach-to-managing-devices-in-your-organization/ba-p/2932082).
 
 ## July 2021
 
