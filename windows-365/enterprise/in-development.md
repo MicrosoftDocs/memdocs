@@ -77,7 +77,7 @@ New Windows 365 licenses will be available that include virtual graphics process
 
 ### Operating system end of support status for Cloud PCs<!--36852572 -->
 
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates. For more information, see [Lifecycle policies and end of support for Cloud PC OS](end-of-support.md).
+The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
 
 <!-- ***********************************************-->
 <!--## Provisioning-->
