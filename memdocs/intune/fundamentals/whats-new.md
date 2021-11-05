@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/28/2021
+ms.date: 11/05/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,9 +58,23 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+## Week of November 1, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Security Management with Defender for Endpoint (public preview)<!-- 5475445   -->
+
+*This feature is in public preview and will roll out to tenants gradually over the next few weeks. You can confirm your tenant has received this capability when the relevant toggles show in both the Microsoft Endpoint Manager admin center and Microsoft Defender for Endpoint.*
+
+*Security Management with Microsoft Defender for Endpoint* is a new configuration channel you use to manage the security configuration for Microsoft Defender for Endpoint (MDE) on devices that do not enroll into Microsoft Endpoint Manager. With this scenario, it’s Defender for Endpoint on a device that retrieves, enforces, and reports on the policies for MDE that you deploy from Microsoft Endpoint Manager. The devices are joined to your Azure AD and are also visible in the Microsoft Endpoint Manager admin center alongside other devices you manage with Intune and Configuration Manager.
+
+For more information, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
+
 ## Week of October 25, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
 ### Device security
 
 #### MFA changes to Windows Autopilot enrollment flow <!-- 12376959 part 1 -->

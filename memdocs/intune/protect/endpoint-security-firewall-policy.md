@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 11/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: aanavath
+ms.reviewer: mattcall
 
 ---
 
@@ -42,21 +42,33 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 - Windows 10
 - Windows 11
+- Windows Server 2012 R2 or later
 - Any supported version of macOS
 
 ## Firewall profiles
 
 ### Devices managed by Intune
 
-**macOS profiles**:
+**Platform: macOS**:
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
 
-**Windows profiles**:
+**Platform: Windows 10 and Later**:
 
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
 - **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
+
+**Platform: Windows 10, Windows 11, and Windows Server (Preview)**:
+
+- **Microsoft Defender Firewall (Preview)** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
+
+- **Microsoft Defender Firewall rules (Preview)** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
+
+    >[!Note]
+    > The *Windows 10, Windows 11, and Windows Server (Preview)* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+    >
+    >To setup security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
 
 ### Devices managed by Configuration Manager
 
