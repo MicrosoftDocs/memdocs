@@ -109,6 +109,8 @@ Update settings control what bits a device will download, and when. For more inf
   - **Beta Channel**
   - **Dev Chanel**
 
+  For information about pre-release builds, see [Windows Insider](https://insider.windows.com/understand-flighting).
+
 ## User experience settings  
 
 User experience settings control the end-user experience for device restart and reminders. For more information about the behavior of each setting, see the   Windows Update CSP documentation.  
