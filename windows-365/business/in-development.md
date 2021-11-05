@@ -63,9 +63,9 @@ In a future update, Windows 365 Business Cloud PCs will be created with Windows 
 
 You’ll be able to control organization-wide Cloud PC settings and device-level actions in the Microsoft 365 admin center and on windows365.microsoft.com.
 
-**Organizational defaults**: You’ll be able to choose defaults for operating system (Windows 10 or 11) and account type (Standard or Local Administrator).
-**Device level actions**: You’ll be able to use the following actions on any Cloud PC in your organization: Change account type, Restart, Reset, Rename, and Troubleshoot.
-**Other management actions**: You’ll be able to create and delete users, reset passwords, and manage licenses for Windows 365 Cloud PCs and Microsoft 365 products.
+- **Organizational defaults**: You’ll be able to choose defaults for operating system (Windows 10 or 11) and account type (Standard or Local Administrator).
+- **Device level actions**: You’ll be able to use the following actions on any Cloud PC in your organization: Change account type, Restart, Reset, Rename, and Troubleshoot.
+- **Other management actions**: You’ll be able to create and delete users, reset passwords, and manage licenses for Windows 365 Cloud PCs and Microsoft 365 products.
 
 ## Next steps
 
