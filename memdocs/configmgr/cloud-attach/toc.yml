@@ -104,7 +104,7 @@ items:
     - name: Endpoint analytics in Microsoft Productivity Score
       href: ../../analytics/productivity-score.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Endpoint analytics settings
-      href: ../../analytics/settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json	
+      href: ../../analytics/settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Reference for Endpoint analytics
     items:
     - name: PowerShell scripts
@@ -112,7 +112,7 @@ items:
     - name: Data collection
       href: ../../analytics/data-collection.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Troubleshoot
-      href: ../../analytics/troubleshoot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json	
+      href: ../../analytics/troubleshoot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Get support
       href: ../../analytics/get-support.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Co-management
@@ -122,7 +122,7 @@ items:
   - name: Frequently asked questions
     href: ../comanage/faq.yml?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Enable co-management
-    items:	
+    items:
     - name: Paths to co-management
       href: ../comanage/quickstart-paths.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Path 1 - Enable co-management for Configuration Manager clients
@@ -130,7 +130,7 @@ items:
     - name: Path 2 - Enable co-management for internet-based devices
       href: ../comanage/tutorial-co-manage-new-devices.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Use co-management
-    items:	
+    items:
     - name: About workloads
       href: ../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Switch workloads to Intune
@@ -140,7 +140,7 @@ items:
     - name: Remote actions from Intune
       href: ../comanage/quickstart-remote-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Client health
-      href: ../comanage/quickstart-client-health.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json	  
+      href: ../comanage/quickstart-client-health.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Apps in Company Portal
       href: ../comanage/company-portal.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Monitor co-management
