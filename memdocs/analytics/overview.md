@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Microsoft Endpoint Manager
 description: Overview for Endpoint analytics.
-ms.date: 10/05/2021
+ms.date: 11/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -63,9 +63,9 @@ Whether enrolling devices via Intune or Configuration Manager, [**Proactive reme
 
 ## Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid Microsoft Endpoint Manager license. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Endpoint Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
-Proactive remediations also require one of the following licenses for the managed devices:
+Proactive remediations also requires users of the devices to have one of the following licenses:
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10/11 Virtual Desktop Access (VDA) per user
