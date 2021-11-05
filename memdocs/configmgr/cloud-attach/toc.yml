@@ -1,3 +1,4 @@
+items:
 - name: Cloud attach documentation
   href: index.yml
 - name: Fundamentals
@@ -20,3 +21,47 @@
   items:
   - name: Overview
     href: ../core/clients/manage/cmg/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Plan for CMG
+    items:
+    - name: Plan for CMG
+      href: ../core/clients/manage/cmg/plan-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: CMG client authentication
+      href: ../core/clients/manage/cmg/plan-client-authentication.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: CMG hierarchy design
+      href: ../core/clients/manage/cmg/plan-hierarchy-design.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Supported configurations for CMG
+      href: ../core/clients/manage/cmg/supported-configurations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Performance and scale
+      href: ../core/clients/manage/cmg/perf-scale.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Cost
+      href: ../core/clients/manage/cmg/cost.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Set up CMG
+    items:
+    - name: Set up checklist
+      href: ../core/clients/manage/cmg/set-up-checklist.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 1. Server authentication certificate
+      href: ../core/clients/manage/cmg/server-auth-cert.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 2. Configure Azure Active Directory
+      href: ../core/clients/manage/cmg/configure-azure-ad.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 3. Configure client authentication
+      href: ../core/clients/manage/cmg/configure-authentication.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 4. Set up a CMG
+      href: ../core/clients/manage/cmg/setup-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 5. Configure clients for CMG
+      href: ../core/clients/manage/cmg/configure-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Manage CMG
+    items:
+    - name: Monitor a CMG
+      href: ../core/clients/manage/cmg/monitor-clients-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Modify a CMG
+      href: ../core/clients/manage/cmg/modify-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Reference for CMG
+    items:
+    - name: Manually register Azure AD apps for CMG
+      href: ../core/clients/manage/cmg/manually-register-azure-ad-apps.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Security and privacy for CMG
+      href: ../core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Ports and data flow
+      href: ../core/clients/manage/cmg/data-flow.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: FAQ for CMG
+      href: ../core/clients/manage/cmg/cloud-management-gateway-faq.yml?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json

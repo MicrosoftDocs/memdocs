@@ -18,7 +18,7 @@ Attaching your Configuration Manager environment the the cloud allows you to con
 
 - [Tenant attach](#tenant-attach)
 - [Endpoint analytics](#endpoint-analytics)
-- [Co-management](#Co-management)
+- [Co-management](#co-management)
 
 [Cloud management gateway (CMG)](#bkmk_cmg) is an additional cloud feature that allows you to manage internet-based clients using your established workflows and processes. CMG helps minimize client management traffic through your VPN so that bandwidth is free for business critical traffic.
 
