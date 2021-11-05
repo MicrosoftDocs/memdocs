@@ -1,13 +1,11 @@
 items:
 - name: Cloud attach documentation
   href: index.yml
-- name: Fundamentals
-  items:
-  - name: What is cloud attach?
-    href: overview.md
+- name: What is cloud attach?
+  href: overview.md
 - name: Tenant attach
   items:
-  - name: Overview for tenant attach
+  - name: Tenant attach overview
     href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Enable tenant attach
     href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
@@ -79,7 +77,7 @@ items:
         href: ../tenant-attach/troubleshoot-cmpivot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Endpoint analytics
   items:
-  - name: Overview for Endpoint analytics
+  - name: Endpoint analytics overview
     href: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Scores, baselines, and insights
     href: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
@@ -119,12 +117,42 @@ items:
       href: ../../analytics/get-support.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Co-management
   items:
-  - name: Overview
+  - name: Co-management overview
     href: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Frequently asked questions
+    href: ../comanage/faq.yml?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Enable co-management
+    items:	
+    - name: Paths to co-management
+      href: ../comanage/quickstart-paths.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Path 1 - Enable co-management for Configuration Manager clients
+      href: ../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Path 2 - Enable co-management for internet-based devices
+      href: ../comanage/tutorial-co-manage-new-devices.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Use co-management
+    items:	
+    - name: About workloads
+      href: ../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Switch workloads to Intune
+      href: ../comanage/how-to-switch-workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Conditional access
+      href: ../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Remote actions from Intune
+      href: ../comanage/quickstart-remote-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Client health
+      href: ../comanage/quickstart-client-health.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json	  
+    - name: Apps in Company Portal
+      href: ../comanage/company-portal.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Monitor co-management
+      href: ../comanage/how-to-monitor.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Third-party MDM coexistence
+      href: ../comanage/coexistence.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Cloud management gateway (CMG)
   items:
-  - name: Overview for CMG
+  - name: CMG overview
     href: ../core/clients/manage/cmg/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Frequently asked questions
+    href: ../core/clients/manage/cmg/cloud-management-gateway-faq.yml?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Plan for CMG
     items:
     - name: Plan for CMG
@@ -167,5 +195,3 @@ items:
       href: ../core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Ports and data flow
       href: ../core/clients/manage/cmg/data-flow.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-    - name: FAQ for CMG
-      href: ../core/clients/manage/cmg/cloud-management-gateway-faq.yml?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
