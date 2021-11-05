@@ -9,10 +9,10 @@ items:
   items:
   - name: Overview for tenant attach
     href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-  - name: Deploy and use tenant attach
+  - name: Enable tenant attach
+    href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
+  - name: Use tenant attach
     items:
-    - name: Enable tenant attach
-      href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Client details
       href: ../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Install applications
@@ -79,8 +79,44 @@ items:
         href: ../tenant-attach/troubleshoot-cmpivot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Endpoint analytics
   items:
-  - name: Overview
+  - name: Overview for Endpoint analytics
     href: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Scores, baselines, and insights
+    href: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Enable Endpoint analytics
+    items:
+    - name: Enroll Intune devices
+      href: ../../analytics/enroll-intune.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Enroll Configuration Manager devices
+      href: ../../analytics/enroll-configmgr.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Use Endpoint analytics
+    items:
+    - name: Proactive remediations
+      href: ../../analytics/proactive-remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Startup performance
+      href: ../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Restart frequency
+      href: ../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json    
+    - name: Recommended software
+      href: ../../analytics/recommended-software.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Application reliability
+      href: ../../analytics/app-reliability.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Work from anywhere
+      href: ../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Endpoint analytics in Microsoft Productivity Score
+      href: ../../analytics/productivity-score.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Endpoint analytics settings
+      href: ../../analytics/settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json	
+  - name: Reference for Endpoint analytics
+    items:
+    - name: PowerShell scripts
+      href: ../../analytics/powershell-scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Data collection
+      href: ../../analytics/data-collection.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Troubleshoot
+      href: ../../analytics/troubleshoot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json	
+    - name: Get support
+      href: ../../analytics/get-support.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Co-management
   items:
   - name: Overview
