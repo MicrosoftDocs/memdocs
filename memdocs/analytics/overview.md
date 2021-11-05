@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Microsoft Endpoint Manager
 description: Overview for Endpoint analytics.
-ms.date: 11/05/2021
+ms.date: 11/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview

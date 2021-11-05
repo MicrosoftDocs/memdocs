@@ -2,7 +2,7 @@
 title: Endpoint analytics page in Microsoft Productivity Score
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about endpoint analytics in Microsoft Productivity Score
-ms.date: 07/08/2021
+ms.date: 11/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
