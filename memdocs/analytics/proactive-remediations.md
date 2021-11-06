@@ -44,7 +44,7 @@ Whether enrolling devices via Intune or Configuration Manager, Proactive remedia
 
 ### Licensing
 
-Proactive remediations also requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) and one of the following licenses for the enrolled devices:
+Proactive remediations requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) and also requires users of the devices to have one of the following licenses:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
