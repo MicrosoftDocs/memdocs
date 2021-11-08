@@ -39,8 +39,6 @@ landingContent:
         links:
           - text: Create a policy
             url: create-compliance-policy.md
-          - text: Location based compliance
-            url: use-network-locations.md
           - text: Actions for noncompliance
             url: actions-for-noncompliance.md
 
