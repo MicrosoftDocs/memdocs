@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/27/2021
+ms.date: 11/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -123,9 +123,12 @@ Description = "Current thread is not authenticated with the minimal allowed leve
 ErrorCode = 2185761792;
 ```
 
-There are two options to work around this issue:
+Use one of the following options to work around this issue:
+
+- Update the device to Windows 11 OS build **22000.282**. For more information, see [October 21, 2021—KB5006746 (OS Build 22000.282) Preview](https://support.microsoft.com/topic/october-21-2021-kb5006746-os-build-22000-282-preview-03190705-0960-4ba4-9ee8-af40bef057d3).
 
 - Install the console on a device running another version of Windows.
+
 - Add users to the authentication exclusion list. For more information, see [Configure SMS Provider authentication](../security/configure-security.md#sms-provider-authentication).
 
 ## Next steps
