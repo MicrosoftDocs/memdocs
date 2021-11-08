@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 11/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -90,6 +90,11 @@ Update settings control what bits a device will download, and when. For more inf
   - *Windows version 1709 and later* - 0 to 365 days  
   
   Feature Updates are typically new features for Windows.  
+
+- **Upgrade Windows 10 devices to Latest Windows 11 release**  
+  **Default**: No
+
+  When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](/windows/windows-11-specifications).
 
 - **Set feature update uninstall period (2 – 60 days)**  
   **Default**: 10  
