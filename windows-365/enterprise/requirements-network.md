@@ -82,7 +82,7 @@ You must allow traffic in your Azure network configuration to the following serv
   - login.live.com
   - enterpriseregistration.windows.net
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
-  - hm-iot-in-*._azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-*.azure-devices.net (443 & 5671 outbound)
 
 
 
