@@ -33,16 +33,14 @@ To support [custom settings for compliance](../protect/compliance-use-custom-set
 
 You’ll upload the JSON file when you create a compliance policy that includes custom compliance settings. 
 
-A correctly formatted JSON file includes the following information:
+A correctly formatted JSON file must include the following information:
 
-- **SettingName** - The name of the custom setting to use for base compliance
-- **Operator** - Represents a specific action that is used to build a compliance rule. For options, see the following list.
-- **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list.
+- **SettingName** - The name of the custom setting to use for base compliance.
+- **Operator** - Represents a specific action that is used to build a compliance rule. For options, see the following list of supported operators.
+- **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list of supported DataTypes.
 - **Operand** - Represent the values that the operator works on.
-- **MoreInfoURL** - A URL that’s shown to device users so they can learn more about the compliance requirement when their device is noncompliant for a setting.
-- **RemediationStrings** -  Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state.
-
-To help you define the settings in your JSON, we recommend using product configuration service providers (CSPs) that identify the settings and values you might want to use for compliance.
+- **MoreInfoURL** - A URL that’s shown to device users so they can learn more about the compliance requirement when their device is noncompliant for a setting. You can also use this to link to instructions to help users bring their device into compliance for this setting.
+- **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state.
 
 **Supported operators**:  
 - IsEquals
@@ -83,6 +81,8 @@ To help you define the settings in your JSON, we recommend using product configu
 - tr-TR
 - zh-CN
 - zh-TW
+
+For more information, see [Available languages for Windows](/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
 
 ## Example JSON file
 
