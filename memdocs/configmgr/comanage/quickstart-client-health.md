@@ -1,7 +1,7 @@
 ---
 title: Client health with co-management
 titleSuffix: Configuration Manager
-description: Maintain visibility of Configuration Manager client health from the Intune on Azure portal
+description: Maintain visibility of Configuration Manager client health from the Microsoft Endpoint Manager admin center.
 ms.date: 11/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
