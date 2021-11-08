@@ -198,8 +198,6 @@ To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client ap
 
     For this preview, each device user must download and install the Defender for Endpoint app from the Apple TestFlight website, which requires use of their Apple ID. Eventually, Defender for Endpoint will replace the Microsoft Tunnel client app as the Tunnel client app. You can add new devices to the preview, or [migrate](../protect/microsoft-tunnel-migrate-app.md) devices from the current client app to the preview version of Defender for Endpoint.
 
-    For more information about the opt-in preview, see [BLOG](url).
-
 For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ## Create a VPN profile
