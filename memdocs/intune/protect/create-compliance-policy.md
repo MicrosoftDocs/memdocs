@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 11/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -98,12 +98,7 @@ To use device compliance policies, be sure you:
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
    - [Windows 10/11](compliance-policy-create-windows.md)  
-
-6. On the **Locations** tab, you can force compliance based on the location of the device. Choose from existing locations. If you don't have an available location yet, see [Use Locations (network fence)](use-network-locations.md) for guidance.
-   > [!TIP]
-   > **Locations** are available only for the *Android device administrator* platform.
-
-7. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
+6. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
 
    You can add multiple actions and configure schedules and additional details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
 
@@ -111,17 +106,17 @@ To use device compliance policies, be sure you:
 
    Another example includes the use of Locations where you add at least one location to a compliance policy. In this case, the default action for noncompliance applies when you select at least one location. If the device isn't connected to any of the selected locations, it's considered not compliant. You can configure the schedule to give your users a grace period, such as one day.
 
-8. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
+7. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
 
    For information on using scope tags, see [Use scope tags to filter policies](../fundamentals/scope-tags.md).
 
-9. On the **Assignments** tab, assign the policy to your groups.  
+8. On the **Assignments** tab, assign the policy to your groups.  
 
    Select **+ Select groups to include** and then assign the policy to one or more groups. The policy will apply to these groups when you save the policy after the next step. 
 
-10. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
+9. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
 
-    The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
+   The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
 
 ## Refresh cycle times
 
