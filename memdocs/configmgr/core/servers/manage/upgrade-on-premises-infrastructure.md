@@ -111,7 +111,7 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
     - Remote Enable
 
-1. On the **Security tab** below the **CCM** node, select the **site_&lt;sitecode**> node, and then choose **Security**. Make sure the **SMS Admins** group has the following permissions:
+1. On the **Security tab** below the **SMS** node, select the **site_&lt;sitecode**> node, and then choose **Security**. Make sure the **SMS Admins** group has the following permissions:
 
     - Execute Methods
 
@@ -176,9 +176,9 @@ Configuration Manager supports an in-place upgrade of the OS for Configuration M
 
 - If Configuration Manager supports the resulting service pack level, it supports in-place upgrade to a later Windows service pack.
 
-- In-place upgrade of Windows from a supported version to Windows 10. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
+- In-place upgrade of Windows from a supported version to Windows 10 or later. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
 
-- Build-to-build servicing upgrades of Windows 10. For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
+- Build-to-build servicing upgrades of Windows 10 or later. For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
 
 ## Upgrade SQL Server
 

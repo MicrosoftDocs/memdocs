@@ -24,7 +24,7 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: has-adal-ref
+ms.custom: OS=iOS;has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 
@@ -834,6 +834,9 @@ Apps often dispatch asynchronous and synchronous tasks to thread queues. The SDK
 
 Because `NSOperationQueue` is built on top of GCD, `NSOperations` will run on the identity of the thread at the time the tasks are added to `NSOperationQueue`. `NSOperations` or functions dispatched directly through GCD can also change the current thread identity as they are running. This identity will override the identity inherited from the dispatching thread.
 
+
+In swift, due to a consequence of how the SDK propagates identities for `DispatchWorkItem`, the identity associated with a `DispatchWorkItem` is the identity of the thread that created the item not the thread that dispatches it.
+
 ### File owner
 
 The SDK tracks the identities of local file owners and applies policies accordingly. A file owner is established when a file is created or when a file is opened in truncate mode. The owner is set to the effective file task identity of the thread that's performing the task.
@@ -868,6 +871,10 @@ By default, apps are considered single identity. The SDK sets the process identi
     The result of the identity switch is returned to the app asynchronously through a completion handler. The app should postpone opening the document, mailbox, or tab until a success result code is returned. If the identity switch failed, the app should cancel the task.
     
     Multi-identity apps should avoid using `setProcessIdentity` as a way to set the identity. Apps that use UIScenes should use the `setUIPolicyIdentity:forWindow` API to set the identity.
+    
+    Apps can also set the identity for the current thread using `setCurrentThreadIdentity:` and `setCurrentThreadIdentity:forScope:`. For example the app may spawn a background thread, set the identity to the managed identity, and then perform file operations on managed files. If the app uses `setCurrentThreadIdentity:`, the app should also use `getCurrentThreadIdentity` so that it may restore the original identity once it is done. However if the app uses `setCurrentThreadIdentity:forScope:` then restoring the old identity occurs automatically. It is preferred to use `setCurrentThreadIdentity:forScope:`.
+    
+    In swift, due to async/await, `[IntuneMAMPolicyManager setCurrentThreadIdentity:]` and `[IntuneMAMPolicyManager setCurrentThreadIdentity:forScope:]` are not available. Instead in swift to set the current identity use `IntuneMAMSwiftContextManager.setIdentity(_, forScope:)`. There are variants of this API for async, throwing, and async throwing closures to be passed in.
 
 * **SDK-initiated identity switch**:
 
@@ -891,25 +898,84 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
 
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
 
+## Safari web extensions
+
+If your app has a Safari web extension and supports sending data between the extension and the parent application, in some scenarios, your application might need to support blocking the data. To block the data, in the parent application, call the `isAppSharingAllowed` API in `IntuneMAMPolicy.h`, and then block the web extension.
+
 ## Displaying web content within an application
 
-If your application has the ability to display websites within a webview, you might need to add logic to prevent data leaks, depending on the specific scenario.
+In iOS, web views can be used to surface a wide variety of web content without having to leave the context of the app. Some applications might also use web views as a way of sharing features and UI across multiple platforms.
 
-### Webviews that display only non-corporate content/websites
+Because web views exist within the app, they expose it to potential data leaks. If a user is able to navigate to arbitrary external web pages within an app (either through intentional app design or by clever maneuvering through exposed links in the rendered web page's html content), then the user may be able to leak managed data from the app. 
 
-If your application doesn't display any corporate data in the webview and users have the ability to browse to arbitrary sites where they might potentially copy and paste managed data from other parts of the application into a public forum, the application is responsible for setting the current identity so that managed data can't be leaked through the webview. Examples of this are Suggest a Feature or Feedback webpages that have either direct or indirect links to a search engine. Multi-identity applications should call `setUIPolicyIdentity` on the `IntuneMAMPolicyManager` instance, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call `setUIPolicyIdentity`, passing in the current identity. Single-identity applications should call `setCurrentThreadIdentity` on the `IntuneMAMPolicyManager` instance, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call `setCurrentThreadIdentity`, passing in nil. This ensures that the Intune SDK treats the webview as unmanaged, and that it doesn't allow managed data from other parts of the application to be pasted into the webview if policy is configured as such. 
+The Intune MAM SDK provides several APIs for handling different scenarios where both managed and unmanaged content is surfaced through web views within an app. **These APIs only need to be called if there is a managed user signed into the app.** Please see the table below as a quick guide on which API applies to which scenario. 
 
-### Webviews that display only corporate content/websites
+| Scenario | APIs |
+| - | - |
+| Only user and organizational content with no risk of arbitrary web pages | No APIs needed |
+| Only non-user and non-organizational content | Set `TreatAllWebViewsAsUnmanaged` in the `Info.plist` |
+| A mix of user/organizational and non-user/non-organizational content (majority non-user/non-organizational) | Set `TreatAllWebViewsAsUnmanaged` in the `Info.plist` and use `setWebViewPolicy:forWebViewer:` with `IntuneMAMWebViewPolicyCurrentIdentity` on web views that contain user or organizational data |
+| A mix of user/organizational and non-user/non-organizational content (majority user/organizational) | Only use `setWebViewPolicy:forWebViewer:` with `IntuneMAMWebViewPolicyUnmanaged` on web views that don't contain user or organizational data |
+| User or organizational content but with a risk of arbitrary web pages | Following suitable usage of `TreatAllWebViewsAsUnmanaged` and `setWebViewPolicy:forWebViewer:`, also implement the `IntuneMAMWebViewPolicyDelegate` for web views that might navigate to arbitrary web pages |
 
-If your application displays only corporate data in the webview and users can't browse to arbitrary sites, no changes are required.
+### Web View Scenario 1: Only web pages that display user or organizational content
+If an app only uses web views as a way of rendering user or organizational content and there is no risk of the web view navigating to arbitrary external web pages, then there is no need to use any of the APIs or settings. By default, the SDK will treat any web view surfaced within the app as content belonging to the current UI policy identity.
 
-### Webviews that might display both corporate and non-corporate content/websites
+If a managed user opens a web view within an app, any cut/copy data from the web view will be treated as managed content. Pasting into the web view will be treated according to the managed account's policies.
 
-For this scenario, both WKWebView and SFSafariViewController are supported. Applications which use the legacy UIWebView should transition to WKWebView. If your application both displays corporate content within a WKWebView or SFSafariViewController and allows users to access non-corporate content/websites that may lead to data leaks, the application should implement the `IntuneMAMWebViewPolicyDelegate` and its `isExternalURL:` delegate method defined in `IntuneMAMPolicyDelegate.h`. The `IntuneMAMWebViewPolicyDelegate` should be set for each WKWebView or SFSafariViewController used in this way by calling IntuneMAMPolicyManager's `setWebViewPolicyDelegate:forWebViewer:`. Applications should determine if the URL passed to the delegate method represents a corporate website where managed data can be pasted in or a non-corporate website that could leak corporate data.
+If an unmanaged user opens a web view within an app, any cut/copy data from the web view will be treated as unmanaged content. Pasting into the web view will be treated as if done by the unmanaged account and no additional restrictions will be imposed.
 
-Returning NO in `isExternalURL:` will tell the Intune SDK that the website being loaded is a corporate location where managed data can be shared. If YES is returned, the Intune SDK will open the URL in Edge rather than the WKWebView or SFSafariViewController if current policy settings require it. This will ensure that no managed data from within the app can be leaked to the external website.
+### Web View Scenario 2: Only web pages that don't display user or organizational content
 
-> NOTE: The previous `isExternalURL:` delegate method inside the `IntuneMAMPolicyDelegate` has been deprecated and removed in version 14.0.0 of the Intune SDK. Use of that delegate method is no longer supported since it can apply in unexpected scenarios. Using the `IntuneMAMWebViewPolicyDelegate`'s delegate method ensures that the blocking behavior is only occuring for web views where explicitly set by the app.
+If an app knows that it will never display user or organizational content within a web view, then it can set `TreatAllWebViewsAsUnmanaged` to `YES` in the app's `Info.plist`. This will treat all cut, copy, and paste actions done by any user within a web view as unmanaged. Regardless of the management status of the account used to perform the actions, the action will be treated as if performed by an unmanaged user.
+
+Doing so will ensure that managed app content isn't leaked outside the app through the web view. Setting this flag would be a good idea if an app only uses web views to display privacy notices, EULAs, or other static page content that doesn't require a user to view it.
+
+> When `TreatAllWebViewsAsUnmanaged` is set, all content displayed within the web views **can** be copied and pasted to other unmanaged apps since the web views themselves are considered unmanaged.
+
+### Web View Scenario 3: A mix of user/organizational and non-user/non-organizational content
+
+More complex apps might use a combination of user/organizational and non-user/non-organizational web views. An app might use web views to display privacy notices but also use web views to surface user content. In this case, the `IntuneMAMPolicyManager`'s `setWebViewPolicy:forWebViewer:` API can be used. This API allows an app to mark individual web views as unmanaged or undo the effect of `TreatAllWebViewsAsUnmanaged` for individual web views.
+
+The API takes two arguments. The first is an enum value of `IntuneMAMWebViewPolicy` type. The second can be either a UIView or UIViewController that may contain a WKWebView in its child view hierarchy. A WKWebView itself can also be passed in directly as the second argument. 
+
+> If the WKWebView is a child of the UIView or UIViewController passed in as the second argument, it does not have to exist within the view hierarchy at the time this API is called. Any child WKWebViews of the passed in UIView or UIViewController will have the proper policy applied when they are added.
+
+- `IntuneMAMWebViewPolicyUnset` - This is the default policy for all WKWebViews. Web views will be treated according to only the `TreatAllWebViewsAsUnmanaged` flag.
+- `IntuneMAMWebViewPolicyUnmanaged` - Any cut/copy/paste actions performed by a user on a web view tagged with this policy will be treated as if performed by an unmanaged identity. This policy will overwrite the `TreatAllWebViewsAsUnmanaged` flag.
+- `IntuneMAMWebViewPolicyCurrentIdentity` - Any cut/copy/paste actions performed by a user on a web view tagged with this policy will be treated as if performed by the current UI policy identity. This policy will overwrite the `TreatAllWebViewsAsUnmanaged` flag.
+
+#### Majority non-user and non-organizational data
+
+If a majority of the web views within an app display unmanaged content, then `TreatAllWebViewsAsUnmanaged` can be set in the app's `Info.plist` and `setWebViewPolicy:forWebViewer:` with `IntuneMAMWebViewPolicyCurrentIdentity` can be called on the user or organizational content web views.
+
+#### Majority user and organizational data
+
+If a majority of the web views within an app display user or organizational content, then only `setWebViewPolicy:forWebViewer:` with `IntuneMAMWebViewPolicyUnmanaged` needs to be called on the unmanaged web views since all web views are treated as managed by default.
+
+### Web View Scenario 4: User or organizational content but with a risk of arbitrary web pages
+
+If a web view is used to display user or organizational content but has a risk of navigating to arbitrary external URLs, then an additional API can be used in combination with `TreatAllWebViewsAsUnmanaged` and `setWebViewPolicy:forWebViewer:`. Examples of this are Suggest a Feature or Feedback webpages that have either direct or indirect links to a search engine.
+
+`IntuneMAMWebViewPolicyDelegate` can be implemented and set to a web view using `IntuneMAMPolicyManager`'s `setWebViewPolicyDelegate:forWebViewer:`. The `IntuneMAMWebViewPolicyDelegate` has one required method, `isExternalURL:`.
+
+> The `setWebViewPolicyDelegate:forWebViewer:` method must be called directly on a WKWebView or SFSafariViewController.
+
+Each time the web view navigates to a new page, the `isExternalURL:` delegate method will be called. Applications should determine if the URL passed to the delegate method represents an internal website where user or organizational data can be pasted in or an external website that could leak organizational data. Returning `NO` will tell the SDK that the website being loaded is a organizational location where user or organizational data can be shared. Returning `YES` will cause the SDK to open the URL in a managed browser rather than the WKWebView or SFSafariViewController if current policy settings require it. This will ensure that no user or organizational data from within the app can be leaked to the external website.
+
+
+### Web View APIs Example
+
+An app is built with five web views (A, B, C, D, and E). Web views A, B, and C do not display user or organizational data. Web view D displays a organization page available to all users of the company. Web view E renders the user's documents which may contain links.
+
+Since the majority of web views are unmanaged (A, B, and C), we can set `TreatAllWebViewsAsUnmanaged` to reduce the number of times we need to call `setWebViewPolicy:forWebViewer:`.
+
+Since web views D and E display user content and all web views are unmanaged by default now, we need to tag them with `setWebViewPolicy:forWebViewer:` using `IntuneMAMWebViewPolicyCurrentIdentity`.
+
+Because web view E contains links that the user might click on and could use to navigate to arbitrary URLs, we also need to implement the `IntuneMAMWebViewPolicyDelegate` and set it to web view E using `setWebViewPolicyDelegate:forWebViewer:`. In our `isExternalURL:` implementation, we could check incoming URLs and see if they are the same as the URL for the document. If they do not match, then we know it is an external URL and can return `YES`. If they do match, then we know it is an internal URL and can return `NO`.
+
+Implementing and calling these APIs means that managed user or organizational content can't leak to web views A, B, and C. It also means that managed content can't leak to any external URLs that the user might navigate to in E by clicking on links within documents. Managed content will also be protected by preventing the data from web views D and E from leaking outside the app.
+
 
 ## iOS best practices
 

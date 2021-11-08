@@ -68,7 +68,7 @@ Intune supports derived credentials on the following platforms:
 - Android Enterprise:
   - Fully Managed devices (version 7.0 and above)
   - Corporate-Owned Work Profile
-- Windows 10 and later
+- Windows 10/11
 
 ### Supported issuers
 
@@ -115,6 +115,9 @@ Similarly, some derived credential request workflows require the use of the devi
 - Users aren't notified that they must enroll for derived credentials until you target them with a policy that requires derived credentials.
 
 - Notification can be through app notification for the Company Portal, through email, or both. If you choose to use email notifications and you use enabled conditional access, users might not receive the email notification if their device isn't compliant.
+
+  > [!IMPORTANT]
+  > To ensure notifications related to device credentials are successfully received by end users, you should enable app notifications for the Company Portal, email notifications, or both.
 
 ### 2) Review the end-user workflow for your chosen issuer
 

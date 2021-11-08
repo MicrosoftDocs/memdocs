@@ -62,9 +62,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
     ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
 
-5. On the **Locations** page, you can add locations if you want > **Next**.
-
-6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
+5. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
 
     ![Noncompliance actions](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
@@ -83,9 +81,9 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
     Choose **Next**.
 
-7. On the **Scope tags** page, select any scope tags you want to include.
-8. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
-9. On the **Review + create** page, confirm all your settings, and then select **Create**.
+6. On the **Scope tags** page, select any scope tags you want to include.
+7. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
+8. On the **Review + create** page, confirm all your settings, and then select **Create**.
 
 ## Troubleshooting
 

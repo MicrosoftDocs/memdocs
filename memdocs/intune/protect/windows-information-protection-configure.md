@@ -12,7 +12,7 @@ ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 
 # optional metadata
@@ -24,7 +24,7 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: OS=Windows;intune-azure
 ms.collection: M365-identity-device-management
 ---
 

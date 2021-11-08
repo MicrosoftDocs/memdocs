@@ -51,7 +51,7 @@ The Encryption report pane displays a list of the devices you manage with high
 - **Device name** - The name of the device.
 - **OS** – The device platform, such as Windows or macOS.
 - **OS version** – The version of Windows or macOS on the device.
-- **TPM version** *(applies to Windows 10 only)* – The version of the Trusted Platform Module (TPM) chip detected on the Windows 10 device.
+- **TPM version** *(applies to Windows 10/11 only)* – The version of the Trusted Platform Module (TPM) chip detected on the Windows device.
 
   For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
 
@@ -61,8 +61,8 @@ The Encryption report pane displays a list of the devices you manage with high
     **For macOS devices**:
     - macOS version 10.13 or later
 
-    **For Windows 10 devices**:
-    - Version 1709 or later, of *Business*, *Enterprise*, *Education*, or version 1809 or later of *Pro*
+    **For Windows devices**:
+    - Windows 10 version 1709 or later of *Business*, *Enterprise*, *Education*, Windows 10 version 1809 or later of *Pro*, and Windows 11.
     - The device must have a TPM chip
 
     For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
@@ -82,7 +82,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
 - **Encryption readiness** - An evaluation of the device's readiness to support encryption through the MDM policy based on an activated TPM.
 
-  When a Windows 10 device has a readiness of *Not ready*, it might still support encryption. To have the *Ready* designation, the Windows 10 device must have a TPM chip activated. However, TPM chips aren't required to support encryption, as the device can still be manually encrypted. or through a MDM/Group Policy setting that can be set to allow encrypting without a TPM.
+  When a Windows 10/11 device has a readiness of *Not ready*, it might still support encryption. To have the *Ready* designation, the Windows device must have a TPM chip activated. However, TPM chips aren't required to support encryption, as the device can still be manually encrypted. or through a MDM/Group Policy setting that can be set to allow encrypting without a TPM.
 
 - **Encryption status** - Whether the OS drive is encrypted. It can take up to 24 hours for Intune to report on a device's encryption status or a change to that status. This time includes time for the OS to encrypt, plus time for the device to report back to Intune.
 
@@ -96,7 +96,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
     - Profile type = *Endpoint protection*
     - Settings > FileVault > FileVault = *Enable*
 
-  - Windows 10:
+  - Windows 10/11:
     - Profile type = *Endpoint protection*
     - Settings > Windows Encryption > Encrypt devices = *Require*
 
@@ -133,9 +133,9 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
     *Consider: One possible cause for an unknown status is that the device is locked and Intune can't start the escrow or encryption process. After the device is unlocked, progress can continue*.
 
-  **Windows 10**:
+  **Windows 10/11**:
   
-  For Windows 10 devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](/windows/client-management/mdm/bitlocker-csp).
+  For Windows devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later, or Windows 11. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](/windows/client-management/mdm/bitlocker-csp).
 
   - The BitLocker policy requires user consent to launch the BitLocker Drive Encryption Wizard to start encryption of the OS volume but the user didn't consent.
       
@@ -198,7 +198,7 @@ macOS FileVault:
 - [Rotate recovery keys](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Recover recovery keys](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Windows 10 BitLocker:
+Windows BitLocker:
 - [Rotate BitLocker recovery keys](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## Next steps

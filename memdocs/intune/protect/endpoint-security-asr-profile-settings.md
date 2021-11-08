@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2021
+ms.date: 11/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,6 +30,11 @@ ms.reviewer: mattcall
 # Attack surface reduction policy settings for endpoint security in Intune
 
 View the settings you can configure in profiles for *Attack surface reduction* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+
+Applies to:
+
+- Windows 11
+- Windows 10
 
 Supported platforms and profiles:
 
@@ -60,6 +65,9 @@ Supported platforms and profiles:
   - **Enabled for Edge** - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
   - **Enabled for isolated Windows environments** - Application Guard is turned on for any applications enabled for App Guard within Windows.
   - **Enabled for Edge AND isolated Windows environments** - Application Guard is configured for both scenarios.
+  
+  > [!NOTE]
+  > If you are deploying Application Guard for Microsoft Edge via Intune, **Windows network isolation** policy must be configured as a prerequisite. Network isolation may be configured via various profiles, including **App and broswer isolation** under the **Windows network isolation** setting. 
 
   When set to *Enabled for Edge* or *Enabled for Edge AND isolated Windows environments*, the following settings are available, which apply to Edge:
   
@@ -110,6 +118,8 @@ Supported platforms and profiles:
     - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user’s device.
     - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device. This is the same behavior as *Not configured*.
 
+
+
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
@@ -144,7 +154,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes** - Configure Windows network isolation policy.  
   
-  When set to *Yes*, you can configure the following settings.
+  When set to *Yes*, you can configure the following settings:
 
   - **IP ranges**  
     Expand the dropdown, select **Add**, and then specify a *lower address* and then an *upper address*.
@@ -223,7 +233,7 @@ Supported platforms and profiles:
   - **User defined**
   - **Enable** - Attempts to steal credentials via lsass.exe are blocked.
   - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Adobe Reader from creating child processes**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -233,7 +243,7 @@ Supported platforms and profiles:
   - **User defined**
   - **Enable** - Adobe Reader is blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Office applications from injecting code into other processes**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -242,7 +252,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from injecting code into other processes.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block Office applications from creating executable content**  
@@ -252,7 +262,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from creating executable content.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block all Office applications from creating child processes**  
@@ -262,7 +272,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block Win32 API calls from Office macro**  
@@ -272,7 +282,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block**  - Office macro's are blocked from using Win32 API calls.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block Office communication apps from creating child processes**  
@@ -283,7 +293,7 @@ Supported platforms and profiles:
   - **User defined**
   - **Enable** - Office communication applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -292,7 +302,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Defender blocks execution of obfuscated scripts.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block JavaScript or VBScript from launching downloaded executable content**  
@@ -311,7 +321,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Process creation by PSExec or WMI commands is blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block untrusted and unsigned processes that run from USB**  
@@ -321,7 +331,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Untrusted and unsigned processes that run from a USB drive are blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block executable files from running unless they meet a prevalence, age, or trusted list criteria**  
@@ -331,7 +341,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block**
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Block executable content download from email and webmail clients**  
@@ -340,7 +350,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Executable content downloaded from email and webmail clients is blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
-  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
 - **Use advanced protection against ransomware**  

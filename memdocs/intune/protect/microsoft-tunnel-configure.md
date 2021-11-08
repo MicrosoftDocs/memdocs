@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 11/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,11 +27,6 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-Configuration of Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process. The process includes use of the Microsoft Endpoint Manager admin center, and running a script to install the tunnel software on a Linux server, which must run Docker. While this article walks you through the steps to configure the Microsoft Tunnel for use, configuration of Linux and Docker is beyond the scope of this content.
-
-When installing the Microsoft Tunnel, you’ll start in the Microsoft Endpoint Manager admin center to define both Servers and Sites. Then, you run the tunnel installation script on a Linux server that has Docker installed. The script installs containers to support the tunnel server, pulls information from Intune about the tunnel Sites you’ve defined for your tenant, and then installs the Tunnel server. The Linux server can run on-premises or in the cloud. Depending on your environment and infrastructure, extra configurations and software, like Azure ExpressRoute, might be needed.
-
-Before you continue, be sure to complete the following tasks:
 
 - Review and [Configure prerequisites for Microsoft Tunnel](microsoft-tunnel-prerequisites.md).
 - Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
@@ -137,7 +132,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
    > [!TIP]  
    > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.
 
-   When you start the script, it downloads container images from Docker, and creates necessary folders and files on the server.
+   When you start the script, it downloads container images from Microsoft Tunnel Gateway container images from the Intune service, and creates necessary folders and files on the server.
 
    During setup, the script will prompt you to complete several admin tasks.
 
@@ -181,6 +176,8 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
+8. If you’re using RHEL 8.4, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
+
 ## Deploy the Microsoft Tunnel client app
 
 To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client app. You can deploy the tunnel client app to devices by assigning it to users. The following apps are available:
@@ -217,6 +214,9 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
     > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
 
   The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
+
+  > [!Note]
+  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
 
 - **iOS/iPadOS**:
 
@@ -336,7 +336,7 @@ By default, after a new upgrade is available Intune automatically starts the upg
 - You can allow automatic upgrade of servers at a site, or require admin approval before upgrades being.
 - You can configure a maintenance window, which limits when upgrades at a site can start.
 
-For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade opotons, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
+For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade options, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
 ## Update the TLS certificate on the Linux server
 

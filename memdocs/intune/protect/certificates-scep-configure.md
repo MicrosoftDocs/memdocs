@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/19/2021
+ms.date: 11/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Configure infrastructure to support SCEP with Intune
 
-Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](certificates-configure.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices. The [Certificate Connector for Microft Intune](../protect/certificate-connector-overview.md) is required to use SCEP certificate profiles with Intune when you also use an Active Directory Certificate Services Certification Authority, also called a Microsoft CA. The connector isn't required when using [Third-party Certification Authorities](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
+Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](certificates-configure.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices. The [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md) is required to use SCEP certificate profiles with Intune when you also use an Active Directory Certificate Services Certification Authority, also called a Microsoft CA. The connector isn't required when using [Third-party Certification Authorities](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
 
 The information in this article can help you configure your infrastructure to support SCEP when using Active Directory Certificate Services. After your infrastructure is configured, you can [create and deploy SCEP certificate profiles](certificates-profile-scep.md) with Intune.
 
@@ -161,7 +161,6 @@ For devices enrolled as Android Enterprise dedicated, password enforcement can p
 For devices that run 9.0 and later and receive a kiosk-mode policy, you can use a device compliance or device configuration policy to enforce the password requirement. View [Support Tip: New Google-based Compliance Screens for Kiosk Mode](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-new-google-based-compliance-screens-for-kiosk-mode/ba-p/2129719) from the Intune Support Team, to understand the device experience.
 
 For devices that run 8.x and earlier, you can also use a device compliance or device configuration policy to enforce the password requirement. However, to set up a PIN, you’ll need to manually enter the settings application on the device and configure the PIN.
-
 
 ## Configure the certification authority
 
@@ -406,7 +405,7 @@ On the NDES server, add a **Server authentication certificate**.
 
 
 > [!NOTE]
-> When configuring NDES for the Certificate Connector for Microsoft Intune , only the Server authentication certificate is used. If your configuring NDES to support the older certificate connector (NDESConnectorSetup.exe), you must also configure a *Client authentication certificate*. You can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses. 
+> When configuring NDES for the Certificate Connector for Microsoft Intune , only the Server authentication certificate is used. If you're configuring NDES to support the older certificate connector (NDESConnectorSetup.exe), you must also configure a *Client authentication certificate*. You can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses. 
 > Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
 >
 > The following information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.

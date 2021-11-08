@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 08/26/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -39,16 +39,16 @@ Each script package consists of a detection script, a remediation script, and me
 
 Whether enrolling devices via Intune or Configuration Manager, Proactive remediation scripting has the following requirements:
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
-  - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune.
+  - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
   - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
 
 ### Licensing
 
-Proactive remediations also requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) and one of the following licenses for the enrolled devices:
+Proactive remediations requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) and also requires users of the devices to have one of the following licenses:
 
-- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10 Virtual Desktop Access (VDA) per user
+- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows 10/11 Virtual Desktop Access (VDA) per user
 
 ### Permissions
 

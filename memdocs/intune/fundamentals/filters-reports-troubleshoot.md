@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 10/11/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -88,6 +88,9 @@ This report shows filter information for each device that was evaluated in an ap
 In the following example, you can see this information for the **Microsoft Word** store app:
 
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="See the date, time, evaluation results, and other app filter properties in Microsoft Endpoint Manager and Microsoft Intune.":::
+
+> [!IMPORTANT]
+> In the **Device install status** report, apps deployed as "Available" aren't shown. To troubleshoot if a user/device is filtered in or out of an Available assignment, use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must go to the list of apps in the Company portal app or website.
 
 ## Include vs. Exclude
 

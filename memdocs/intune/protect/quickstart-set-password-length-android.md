@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/10/2020
+ms.date: 10/22/2021
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 81b4fa08-5333-4c54-9f49-8db5f6984ed2
 
@@ -25,7 +25,7 @@ ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: OS=Android;intune-azure
 ms.collection: M365-identity-device-management
 ---
 

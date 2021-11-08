@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 11/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,6 +30,8 @@ ms.collection: M365-identity-device-management
 If you use Microsoft Tunnel as a VPN gateway solution for Microsoft Intune, plan to migrate from the standalone Microsoft Tunnel client app to Microsoft Defender for Endpoint with support for Microsoft Tunnel.
 
 ## Platform support
+
+If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the Android standalone tunnel client app ends on January 31, 2022.
 
 The following device platforms support Microsoft Defender for Endpoint as the tunnel client app:
 
