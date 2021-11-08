@@ -38,24 +38,7 @@ When you configure settings for Windows update rings in Intune, you're configuri
 
 Update settings control what bits a device will download, and when. For more information about the behavior of each setting, see the Windows reference documentation.  
 
-- **Servicing channel**  
-  **Default**: Semi-Annual Channel  
-  Windows Update CSP: [Update/BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
-  Set the channel (branch) from which the device receives Windows updates. Different [Windows servicing channels](/windows/deployment/update/get-started-updates-channels-tools#servicing-channels) can use different deferral periods before updates are delivered. 
-
-  Intune supports the following Windows Servicing channels:
-
-  - Semi-Annual Channel  
-  - Semi-Annual Channel (targeted) for 1809 and below 
-  - Windows Insider – Fast  
-  - Windows Insider – Slow  
-  - Windows Insider - Release Preview  
-
-  If you select an Insider channel, Intune automatically configures the Windows update setting [Update/ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) so that the insider build will work.
-
-  > [!IMPORTANT]  
-  > Beginning with Windows version 1903, the use of the *Semi-Annual Channel (targeted)* (SAC-T), is retired. With this change, SAC-T merges with the *Semi-Annual Channel*. To learn more about this change and how it affects Windows Update for Business, see the Windows IT Pro Blog post [Windows Update for Business and the retirement of SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).  
  
 - **Microsoft product updates**  
   **Default**:  Allow  
