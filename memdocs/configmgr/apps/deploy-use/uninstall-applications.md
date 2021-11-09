@@ -2,7 +2,7 @@
 title: Uninstall applications
 titleSuffix: Configuration Manager
 description: Uninstall an application by using Configuration Manager
-ms.date: 08/02/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
@@ -79,6 +79,8 @@ Then [deploy the application](deploy-applications.md). On the **Deployment Setti
 Many customers have lots of collections because for every application they need at least two collections: one for install and another for uninstall. This practice adds overhead of managing more collections, and can reduce site performance for collection evaluation.
 
 Starting in version 2107, you can enable an application deployment to support implicit uninstall. If a device is in a collection, the application installs. Then when you remove the device from the collection, the application uninstalls.
+
+Starting in version 2111, this behavior also supports [application groups](create-app-groups.md#app-approval).<!-- 10479618 --> When this article refers to an *application*, it also applies to app groups.
 
 > [!NOTE]
 > This behavior only applies to deployments to device collections.

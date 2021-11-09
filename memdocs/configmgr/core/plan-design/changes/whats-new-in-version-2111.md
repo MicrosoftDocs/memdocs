@@ -118,9 +118,9 @@ This release includes the following improvements to application groups:
 
 - Now when you deploy an app group as required to a device or user collection, you can specify that it automatically uninstalls when the resource is removed from the collection.<!--10479618-->
 
-- The following app approval behaviors are now supported with app groups:<!-- 10992210 -->
+- Additional app approval behaviors are now supported with app groups.<!-- 10992210 -->
 
-<!-- For more information, see [Create application groups](../../../apps/deploy-use/create-app-groups.md). -->
+For more information, see [Create application groups](../../../apps/deploy-use/create-app-groups.md).
 
 ## OS deployment
 
@@ -251,8 +251,9 @@ As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), vers
 ## Other updates
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
-<!-- UPDATE NEEDED -->
-- [Cloud management gateway (CMG) with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040,8959690-->
+
+- [Application groups](../../../apps/deploy-use/create-app-groups.md) <!--3555907-->
+- [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816-->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2111 release notes](/powershell/sccm/2111-release-notes).
 

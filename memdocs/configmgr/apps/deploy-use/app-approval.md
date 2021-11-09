@@ -2,7 +2,7 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -17,6 +17,9 @@ ms.localizationpriority: medium
 *Applies to: Configuration Manager (current branch)*
 
 When [deploying an application](deploy-applications.md) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request.
+
+> [!NOTE]
+> Starting in version 2111, you can also use most approval behaviors with [application groups](create-app-groups.md#app-approval).<!-- 10992210 -->
 
 ## <a name="bkmk_approval"></a> Approval settings
 

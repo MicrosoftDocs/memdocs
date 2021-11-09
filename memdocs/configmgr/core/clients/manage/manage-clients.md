@@ -2,7 +2,7 @@
 title: Manage clients
 titleSuffix: Configuration Manager
 description: Learn how to manage clients in Configuration Manager.
-ms.date: 10/19/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -73,6 +73,8 @@ For more information, see [Create and run PowerShell scripts](../../../apps/depl
 ### Install application
 
 Install an application to a device in real time. This feature can help reduce the need for separate collections for every application.
+
+Starting in version 2111, select the **Install Application Group** action for an app group.<!-- 10992210 -->
 
 For more information, see [Install applications for a device](../../../apps/deploy-use/install-app-for-device.md).
 
