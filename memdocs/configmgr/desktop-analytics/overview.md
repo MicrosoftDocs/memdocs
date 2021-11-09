@@ -150,7 +150,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
-- At least one Intune license for you as the administrator to access the Intune portal.
+- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center.
 
 - Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.yml).
 
