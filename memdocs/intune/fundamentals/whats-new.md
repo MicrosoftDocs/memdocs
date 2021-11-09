@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/05/2021
+ms.date: 11/08/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,13 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->
 
 ## Week of November 8, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### App management
+
+#### Update Android Company Portal and Intune apps for custom notifications<!-- 12473860 -->
+We have made service side updates to custom notifications for Intune's November (2111) service release which require users to have updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) for the best user experience. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app. For related information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md#receive-a-custom-notification).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
