@@ -35,7 +35,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
   - Device sync to Intune
   - Device actions in the Microsoft Endpoint Manager admin center
 
-- At least one Intune license for you as the administrator to access the Intune portal. <!--10254915-->
+- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center. <!--10254915-->
 
 - The user accounts triggering device actions have the following prerequisites:
    - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
