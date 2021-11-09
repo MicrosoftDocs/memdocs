@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2021
+ms.date: 11/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -29,33 +29,33 @@ ms.collection: M365-identity-device-management
  
 # Use remote help with Intune and Microsoft Endpoint Manager
 
-In public preview, *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the shared device. During the session they can view the devices display and if permitted by the shared device user, take full control. Full control enables a helper to directly make configurations or take actions on the shared device. Remote help works with both devices that have enrolled with Intune and with devices that aren't enrolled.
+In public preview, *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session they can view the devices display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device. Remote help works with devices that have enrolled with Intune and with devices that aren't enrolled.
 
 In this article, we'll refer to the users who provide help as *helpers*, and users that receive help as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the remote help sessions.
 
 Remote help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you can determine which users can provide help and the level of help they can provide.
 
-The remote help app is available from the Microsoft Store for Windows to install on both devices enrolled with Intune devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
+The remote help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
 
 ## Remote help capabilities and requirements
 
 The Remote help app supports the following capabilities:
 
-- **Enable remote help for your tenant** – By default, Intune tenants aren't enabled for remote help. If you choose to turn on remote help, its use is enabled tenant-wide.
+- **Enable remote help for your tenant** – By default, Intune tenants aren't enabled for remote help. If you choose to turn on remote help, its use is enabled tenant-wide. Remote help must be enabled before users can be authenticated through your tenant when using remote help.
 
 - **Use remote help with unenrolled devices** – Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
 - **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can’t use remote help to assist users who aren’t members of your organization.
 
-- **Compliance Warnings** - Before connecting to device, a helper will see a non-compliance warning about that device if it’s not compliant to its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-  Unenrolled devices always report as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and therefore is unable to establish is compliance status.
+  Unenrolled devices always report as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and therefore is unable to establish its compliance status.
 
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access, like:
   - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
   - The users that can only view a device, and which can request full control of the session while assisting others.
 
-- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter administrative credentials to complete an action on the sharer’s device that requires administrative permissions.
+- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer’s device that requires administrative permissions.
 
 - **Monitor active remote help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
 
@@ -65,10 +65,8 @@ The Remote help app supports the following capabilities:
 
 - [Intune subscription](../fundamentals/licenses.md).
 - Windows 10/11
-- Devices must install the *remote help* app. Device users can download the app from the Microsoft Store for Windows.
-  - Microsoft remote help: [https://www.microsoft.com/store/apps/9NKX4Z3W9BTJStore](https://www.microsoft.com/store/apps/9NKX4Z3W9BTJStore).
+- Devices must install the *remote help* app. Device users can download the app directly from the Microsoft. See [Install and update remote help](#install-and-update-remote-help)
 
-  Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 
 > [!NOTE]
 > Remote help has the following limitations:  
@@ -89,12 +87,38 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 | \*.resources.lync.com             | Required for the Skype framework used by remote help |
 | \*.infra.lync.com                 | Required for the Skype framework used by remote help |
 | \*.latest-swx.cdn.skype.com        | Required for the Skype framework used by remote help |
-| \*.login.microsoftonline.com       | Required for logging in to the application (AAD)      |
+| \*.login.microsoftonline.com       | Required for logging in to the application (AAD). Might not be available in preview in all markets. Localization coming soon.      |
 | \*.channelwebsdks.azureedge.net    | Used for chat services within remote help        |
 | \*.aria.microsoft.com             | Used for accessibility features within the app    |
 | \*.api.support.microsoft.com       | API access for remote help                          |
 | \*.vortex.data.microsoft.com      | Used for diagnostic data                                |
 | \*.channelservices.microsoft.com  | Required for chat services within remote help        |
+
+### Data and privacy
+
+Microsoft logs a small amount of session data to monitor the health of the remote help system. This data includes the following information:
+
+- Start and end time of the session
+- Errors arising from remote help itself, such as unexpected disconnections
+- Features used inside the app such as view only, annotation, and session pause
+
+No logs are created on either the helper’s or sharer’s device. Microsoft cannot access a session or view any actions or keystrokes that occur in the session.
+
+The sharer sees only an abbreviated version of the helper’s name (first name, last initial) and no other information about them. Microsoft does not store any data about either the sharer or the helper for longer than three days.
+
+In some scenarios, the helper does require the sharer to respond to application permission prompts (User Account Control), but otherwise the helper has the same permissions as the sharer on the device.
+
+## Install and update remote help
+
+Remote help is available as  download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session.
+
+When there is an updated to remote help that is required, users are prompted to install that version of remote help when the app opens. The same process to download and install the initial remote help can be used to install the updated version. There is no need to uninstall the previous version before installing the updated version.
+
+- Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
+- Individual users who have permissions to install apps on their devices can also download and install remote help.
+
+**Download remote help**: Download the latest version of remote help from [Link Pending]().
+
 
 ## Configure remote help for your tenant
 
