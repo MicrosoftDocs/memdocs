@@ -1258,7 +1258,7 @@ Audit settings configure the events that are generated for the conditions of the
 ## Windows Security
 
 - **Enable tamper protection to prevent Microsoft Defender being disabled**  
-  Baseline default: *Enbale*  
+  Baseline default: *Enable*  
   [Reference for Tamper Protection](https://support.microsoft.com/windows/prevent-changes-to-security-settings-with-tamper-protection-31d51aaa-645d-408e-6ce7-8d7f8e593f87)
 
 ::: zone-end
