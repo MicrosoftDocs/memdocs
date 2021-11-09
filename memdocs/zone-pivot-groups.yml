@@ -41,5 +41,13 @@ groups:
     - id: atp-april-2020 
       title: April 2020
     - id: atp-march-2020
-      title: March 2020
+      title: March 
+- id: windows-365-baseline-versions
+  title: Windows 365 baseline versions
+  prompt: Choose a version
+  pivots:
+    - id: win365-2110
+      title: Version 2110 
+    - id: win365-2101
+      title: Version 2101
 
