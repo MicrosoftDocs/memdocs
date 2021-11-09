@@ -80,7 +80,7 @@ Many customers have lots of collections because for every application they need 
 
 Starting in version 2107, you can enable an application deployment to support implicit uninstall. If a resource is in a collection, the application installs. Then when you remove the resource from the collection, the application uninstalls.
 
-Starting in version 2111, this behavior also supports [application groups](create-app-groups.md#app-approval).<!-- 10479618 --> When this article refers to an *application*, it also applies to app groups.
+Starting in version 2111, this behavior also supports [application groups](create-app-groups.md#app-approval).<!-- 10479618 --> When this article refers to an _application_, it also applies to app groups.
 
 > [!NOTE]
 > In version 2111 and later, this behavior applies to deployments to device or user collections.<!--10393847--> In version 2107, this behavior only applies to deployments to device collections.
@@ -112,6 +112,10 @@ Depending upon the timing of those steps, the longest time period for the client
 
 > [!NOTE]
 > For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
+
+### Known issues
+
+You configure an app's installation behavior to **Install for system**, and then deploy it to a user collection. A device has multiple users who are both in the collection, and the app installs on the device. If you then remove _one user_ from the collection, the app is uninstalled from the device for all users.<!-- 11104790 -->
 
 ## Next steps
 

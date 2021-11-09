@@ -77,6 +77,7 @@ Starting in version 2111, you can use the following [app approval](app-approval.
 - You can't export or import app groups.
 - Don't include in the group any apps that require restart, or the group deployment may fail.
 - If you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a small change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 -->
+- In most scenarios, user categories on the app group don't display as filters in Software Center. If the app group is deployed as available to a user collection, the categories display.<!-- 12425254 -->
 
 ## PowerShell
 
