@@ -78,16 +78,16 @@ Then [deploy the application](deploy-applications.md). On the **Deployment Setti
 
 Many customers have lots of collections because for every application they need at least two collections: one for install and another for uninstall. This practice adds overhead of managing more collections, and can reduce site performance for collection evaluation.
 
-Starting in version 2107, you can enable an application deployment to support implicit uninstall. If a device is in a collection, the application installs. Then when you remove the device from the collection, the application uninstalls.
+Starting in version 2107, you can enable an application deployment to support implicit uninstall. If a resource is in a collection, the application installs. Then when you remove the resource from the collection, the application uninstalls.
 
 Starting in version 2111, this behavior also supports [application groups](create-app-groups.md#app-approval).<!-- 10479618 --> When this article refers to an *application*, it also applies to app groups.
 
 > [!NOTE]
-> This behavior only applies to deployments to device collections.
+> In version 2111 and later, this behavior applies to deployments to device or user collections.<!--10393847--> In version 2107, this behavior only applies to deployments to device collections.
 
 ### Enable implicit uninstall
 
-When you [deploy the application](deploy-applications.md) to a device collection, configure the following settings on the **Deployment Settings** page:
+When you [deploy the application](deploy-applications.md) to a collection, configure the following settings on the **Deployment Settings** page:
 
 - **Action**: Install
 
@@ -100,15 +100,15 @@ When you [deploy the application](deploy-applications.md) to a device collection
 
 ### Implicit uninstall process
 
-After you remove the device from the collection, the following process happens:
+After you remove the resource from the collection, the following process happens:
 
-- A background worker process runs on the site server every 10 minutes. This task keeps track of apps for which you've enabled this option. It then detects devices that you removed from the target collection. To help you troubleshoot this process, view the **SMS_ImplicitUninstall.log** file on the site server.
+- A background worker process runs on the site server every 10 minutes. This task keeps track of apps for which you've enabled this option. It then detects resources that you removed from the target collection. To help you troubleshoot this process, view the **SMS_ImplicitUninstall.log** file on the site server.
 
-- The client needs to download computer policy. By default, the [client policy polling interval](../../core/clients/deploy/about-client-settings.md#client-policy) client setting is 60 minutes. To accelerate this step, manually [Download computer policy](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
+- The client needs to download policy. By default, the [client policy polling interval](../../core/clients/deploy/about-client-settings.md#client-policy) client setting is 60 minutes. To accelerate this step, manually [Download policy](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
 
 - 15 minutes after the client receives the updated policy, it uninstalls the app.
 
-Depending upon the timing of those steps, the longest time period for the client to uninstall the app is 85 minutes. If the first step happens immediately, and you manually download computer policy on the device, the overall process is 15 minutes.
+Depending upon the timing of those steps, the longest time period for the client to uninstall the app is 85 minutes. If the first step happens immediately, and you manually download policy on the device, the overall process is 15 minutes.
 
 > [!NOTE]
 > For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.

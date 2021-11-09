@@ -106,11 +106,11 @@ For more information about customizing Software Center, see [About client settin
 
 <!--10393847-->
 
-In Configuration Manager current branch version 2107, you can enable an application deployment to support.
+In Configuration Manager current branch version 2107, you can enable an application deployment to support implicit uninstall.
 
 Starting in this release, this behavior also applies to deployments to user collections. If a user is in a collection, the application installs. Then when you remove the user from the collection, the application uninstalls.
 
-<!-- For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall). -->
+For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
 
 ### Improvements to application groups
 
