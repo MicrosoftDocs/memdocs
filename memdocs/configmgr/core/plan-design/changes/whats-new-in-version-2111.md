@@ -90,15 +90,11 @@ This release includes improvements to the **Client health dashboard**.
 
 <!--4993167-->
 
-If you enable Software Center customizations, then notifications on Windows 10 devices display the logo that you configure in client settings. This change helps users to trust these notifications.
+If you enable Software Center customizations, the logo that you specify for Windows notifications is separate from the Software Center logo. This logo helps users to trust these notifications. When you deploy software to a client, the user sees notifications with your logo. For example:
 
-<!-- When you deploy software to a client, the user sees notifications with your logo. The following example uses a star logo:
+:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
 
-media/4993167-notification-with-logo.png
-:::image type="content" source="" alt-text="New software is available notification with custom logo":::
-
-For more information about customizing Software Center, see [About client settings: Software Center](../../clients/deploy/about-client-settings.md#software-center).
- -->
+For more information, see [About client settings: Software Center](../../clients/deploy/about-client-settings.md#software-center) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).
 
 ## Application management
 
