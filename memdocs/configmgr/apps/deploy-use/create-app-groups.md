@@ -21,9 +21,9 @@ ms.localizationpriority: medium
 Create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
 
 > [!TIP]
-> This feature was first introduced in version 1906 as a [pre-release feature](pre-release-features.md). Beginning with version 2111, it's no longer a pre-release feature.
+> This feature was first introduced in version 1906 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 2111, it's no longer a pre-release feature.
 >
-> This feature is optional in Configuration Manager, and enabled by default. For more information, see [Enable optional features from updates](optional-features.md).
+> This feature is optional in Configuration Manager, and enabled by default. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 ## Process
 
