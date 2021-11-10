@@ -123,6 +123,11 @@ Use the following procedure to both configure a new connector and modify a previ
 
 After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
 
+> [!TIP]
+> It can be helpful to rename the connector in the Microsoft Endpoint Manager portal to reference the server which it is installed on. 
+> 
+> To rename the connector, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** and select the connector you wish to rename. Modify the **Name** field as desired, and click **save**
+
 ## Modify the connector configuration
 
 After you configure a Certificate Connector for Microsoft Intune on a server, you can [run the configuration wizard](#configure-the-certificate-connector) on that server to modify the connectors configuration.
