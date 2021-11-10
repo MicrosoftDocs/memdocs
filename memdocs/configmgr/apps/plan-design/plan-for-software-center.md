@@ -81,16 +81,18 @@ Change the appearance of Software Center to meet your organization's branding re
 <!-- 1351224 -->
 Customize the appearance of Software Center by adding your organization's branding elements:
 
-- **Organization name**: Software Center displays this name in the top banner
-- **Color scheme**: The primary color for the banner and other elements
+- **Organization name**: Software Center displays this name in the top banner.
+- **Color scheme**: The primary color for the banner and other elements.
 - **Foreground color**: By default, when you select an item, the font color is white. Starting in version 2103, you can change this color for better visibility with certain primary colors, and better accessibility.<!--8655575-->
-- **Logo for Software Center**: A JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB
+- **Logo for Software Center**: Your organization's logo helps users to trust Software Center.
 
 The following image shows an example of Software Center that's customized with all four branding settings:
 
 :::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding.":::
 
-Starting in version 2111, you can also configure a **Logo for notifications**. It's a separate image file specifically for notifications on devices running Windows 10 or later.<!--4993167-->
+Starting in version 2111, you can also configure a **Logo for notifications**. It's a separate image file specifically for notifications on devices running Windows 10 or later. Your organization's logo helps users to trust these notifications. When you deploy software to a client, the user sees notifications with your logo.<!--4993167--> For example:
+
+:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
 
 For more information, see the following articles:
 
