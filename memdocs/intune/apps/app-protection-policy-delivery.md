@@ -50,7 +50,7 @@ App protection policy (APP) delivery depends on the license state and Intune ser
 
 ## Handling network connectivity issues
 
-When user registration fails due to network connectivity issues an accelerated retry interval is used. The Intune APP SDK will retry at increasingly longer intervals until the interval reaches 60 minutes or a successful connection is made.  The Intune SDK will then continue to retry at 60 minute intervals until a successful connection is made. Then, the Intune APP SDK will return to the standard retry interval based on the user state.
+When user registration fails due to network connectivity issues an accelerated retry interval is used. The Intune APP SDK will retry at increasingly longer intervals until the interval reaches 60 minutes or a successful connection is made.  The Intune APP SDK will then continue to retry at 60 minute intervals until a successful connection is made. Then, the Intune APP SDK will return to the standard retry interval based on the user state.
 
 ## Next steps
 
