@@ -976,6 +976,10 @@ Because web view E contains links that the user might click on and could use to 
 
 Implementing and calling these APIs means that managed user or organizational content can't leak to web views A, B, and C. It also means that managed content can't leak to any external URLs that the user might navigate to in E by clicking on links within documents. Managed content will also be protected by preventing the data from web views D and E from leaking outside the app.
 
+## SwiftUI Support
+
+A newly created SwiftUI app supports UIScenes but does not have a UISceneDelegate implemented by default. If your app intends to support UIScenes and use the Intune App SDK, then it is required to implement a UISceneDelegate. If it does not intend to support UIScenes, the `UIApplicationSceneManifest` (also named "Application Scene Manifest") setting in the app's Info.plist must be removed.
+
 
 ## iOS best practices
 
