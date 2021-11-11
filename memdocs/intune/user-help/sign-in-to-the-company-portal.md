@@ -31,13 +31,9 @@ ms.collection:
 
 # Get the Intune Company Portal app   
 
-Microsoft Intune helps organizations manage access to their internal apps, data, and resources. Intune Company Portal is the app that lets you, as an employee or student in your organization, securely access those resources.  
+Microsoft Intune helps organizations manage access to their internal apps, data, and resources. Intune Company Portal is the app that lets you, as an employee or student in your organization, securely access those resources. 
 
-Company Portal features include: 
-
-* Work and school apps: Browse, search and install apps made available to you by your organization. 
-* Desktop and mobile device enrollment: Manage desktop and mobile device enrollment with Microsoft Intune, including the ability to remotely reset certain device types.  
-* Contact IT – Find your organization's contact information.  
+The app is available for desktop (Windows and maCOS) and mobile (Android and iOS) devices. You must have a work or school account through your organization to sign in to the app.    
 
 ## Install app  
 Company Portal is available for Android, iOS, macOS, and Windows. 
