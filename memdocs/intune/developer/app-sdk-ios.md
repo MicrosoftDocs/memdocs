@@ -481,7 +481,7 @@ Intune lets IT admins select which storage locations a managed app can save data
 
 Additionally, apps can verify that incoming data from a share extension is allowed by querying the `canReceiveSharedItemProvider:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the `canReceiveSharedFile:` API to verify incoming files from an openURL call, also defined in `IntuneMAMPolicy.h`
 
-> [!NOTE] Changes have been made to internal behavior as of MAM SDK v15.1.0.
+>[!NOTE] Changes have been made to internal behavior as of MAM SDK v15.1.0.
 > - A `nil` account will no longer be treated as the current account for the LocalDrive/LocalStorage locations. Passing in a `nil` account will have it treated as an unmanaged account. Because app's can control how they handle their sandbox storage, an identity can and should be associated with those locations.
 > - A `nil` account will no longer be treated as the current account for single-identity apps. Passing in a `nil` account in a single-identity app will now be treated exactly the same as if it was passed into a multi-identity app. If you are developing a single-identity app, please use the `IntuneMAMPolicy`'s `primaryUser` to refer to the current account if managed and `nil` to refer to the current account if unmanaged.
 
@@ -489,7 +489,7 @@ Additionally, apps can verify that incoming data from a share extension is allow
 
 Before moving data to a new cloud-storage or local location, an app must check with the `isSaveToAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being edited and saved in-place does not need to be checked with this API.
 
-> [!NOTE] The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccount:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
+>[!NOTE] The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccount:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
 
 The `isSaveToAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMSaveLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner is not known, `nil` can be used instead.
 
@@ -514,7 +514,7 @@ If the destination location is not listed, either `IntuneMAMSaveLocationAccountD
 
 Before importing data from a new cloud-storage or local location, an app must check with the `isOpenFromAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being opened in-place does not need to be checked with this API.
 
-> [!NOTE] The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccount:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
+>[!NOTE] The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccount:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
 
 The `isOpenFromAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMOpenLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner is not known, `nil` can be used instead.
 
