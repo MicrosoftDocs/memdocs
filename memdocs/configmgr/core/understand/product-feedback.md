@@ -2,7 +2,7 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 11/10/2021
+ms.date: 11/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -123,8 +123,6 @@ If the **Provide feedback** wizard successfully submits your feedback, but fails
 
 ## Send a suggestion
 
-When you **Send a suggestion**, it currently opens this article. For now, use the other feedback options to [Send a smile](#send-a-smile) and [Send a frown](#send-a-frown).
-<!-- 10948264 -->
 When you **Send a suggestion**, it opens the [Feedback for Configuration Manager](https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472) site.
 
 For more information, including the different status values, see [How Microsoft uses feedback](/microsoft-365/admin/misc/feedback-provide-microsoft#how-microsoft-uses-feedback).
