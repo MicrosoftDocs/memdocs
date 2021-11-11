@@ -43,7 +43,8 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 >
 > Check the [In development page](in-development.md) for a list of upcoming features in a release.
 
-**RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
+You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+<!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
 <!-- Common categories:
 ### App management
