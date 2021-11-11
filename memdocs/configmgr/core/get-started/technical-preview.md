@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/01/2021
+ms.date: 11/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -100,7 +100,7 @@ Download a baseline version from the [Evaluation Center](https://www.microsoft.c
 
 We love to hear your feedback about the new features in the technical preview. For more information, see [Product feedback](../understand/product-feedback.md).
 
-<!--10932544 If you have ideas about new features you would like to see, let us know! Submit new ideas and vote on the ideas by others: [Configuration Manager UserVoice](https://configurationmanager.uservoice.com). -->
+If you have ideas about new features you would like to see, let us know! Submit new ideas and vote on the ideas by others: [Feedback for Configuration Manager](https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472).<!-- 10948264 -->
 
 <!--
 ## <a name="bdmk_tpknownissues"></a> General changes introduced in technical preview branch

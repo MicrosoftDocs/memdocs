@@ -2,7 +2,7 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 09/30/2021
+ms.date: 11/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -124,29 +124,20 @@ If the **Provide feedback** wizard successfully submits your feedback, but fails
 ## Send a suggestion
 
 When you **Send a suggestion**, it currently opens this article. For now, use the other feedback options to [Send a smile](#send-a-smile) and [Send a frown](#send-a-frown).
+<!-- 10948264 -->
+When you **Send a suggestion**, it opens the [Feedback for Configuration Manager](https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472) site. The Configuration Manager product team uses the following status values:
 
-> [!NOTE]
-> We're moving away from the UserVoice feedback site. We'll have a new community feedback experience to share soon. We'll carry over many of the top topics from UserVoice. Once our new experience is ready, if you don't see your feedback, you're welcome to resubmit it.
->
-> For more information, see [UserVoice Pages](https://support.microsoft.com/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
-
-<!--10932544
-When you **Send a suggestion**, it opens the Configuration Manager product feedback site. The Configuration Manager product team uses the following status values:
-
-- **Noted**: We understand the request and it makes sense. We've added it to our backlog.
-
-- **Planned**: We've started coding for this feature and expect it to show up in a technical preview build within the next few months.
-
-- **Started**: The feature is now in a technical preview release. Try it out, and share feedback from the console. Let us know if the feature is on the right track or not. Or you can share additional feedback in the comments section of the original request.
-
-- **Completed**: The first version of the feature is in a current branch production build. This status doesn't mean we're 100% done with the feature. It means that the first version of the feature is in a current branch release, and you can start using it in your production environment. We're marking it completed because:
-
-  - We want you to know the feature is production-ready.
-
-  - We want to give back your votes so you can use them on other items.
-
-  - You can file new ideas for this feature. Help us know the next most important improvement for this feature.
--->
+- **We've got it**: This state is the default when we've received the feedback. We read each feedback carefully, but aren't able to respond to each submission.
+- **We've reviewed this**: The feedback was triaged and reviewed.
+- **We're considering this**: We understand the request and it makes sense. We've added it to our backlog.
+- **We need more details**: More information is needed to understand the feedback.
+- **We're working on this**: We've started coding for this feature and expect it to show up in a technical preview build in the near future.
+- **We've closed this**: The feedback was meant for something else, or we couldn't act on it. If you disagree, resubmit with as much detail as possible.
+- **Already supported**: We think the product can do now what you're asking about.
+- **We've added this**: If the feedback is from an older version of Configuration Manager, this status lets you know that you should update your site to get this behavior.
+- **We've improved this**: The feature is now in a technical preview release. Try it out, and share feedback from the console. Let us know if the feature is on the right track or not.
+- **Not right now**: Thanks for the feedback, but we don't currently plan to make this change. If something changes in the future, we'll update this status.
+- **Thank you**: If your suggestion is purely a compliment, we appreciate the feedback!
 
 ## Share feedback in version 2006 and earlier
 
