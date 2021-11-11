@@ -124,17 +124,26 @@ To share feedback on the fundamental docs.microsoft.com platform, see [Docs feed
 
 To receive notifications when content changes in the documentation library, use the following steps:
 
-1. Use the [docs search](/search/) to find an article or set of articles. For example:
+1. Use the [docs search](/search/) to find an article or set of articles.
 
-    - Search for a single article by title, ["What's new in Microsoft Intune"](/search/index?scope=Intune&search=%22What%27s+new+in+microsoft+intune%22)
+    - Search for a single article by title, for example: [What's new in Microsoft Intune](/search/?scope=Intune&terms="What%27s%20new%20in%20microsoft%20intune"%2B"learn%20what%27s%20new").
 
         > [!TIP]
-        > To refine a single article search to a single article, use the full title that displays in the docs.microsoft.com search results. This title is what appears in the browser tab.
+        > To refine the search to a single article, use the full title that displays in the docs.microsoft.com search results. You can also use a string from the first paragraph, as shown in this example.
+
+        This example results in the following RSS link:
+
+        ```url
+        https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%22%2B%22learn+what%27s+new%22&locale=en-us&facet=&%24filter=scopes%2Fany%28t%3A+t+eq+%27Intune%27%29
+        ```
+
+        > [!NOTE]
+        > The above RSS feed URL example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=ja-jp`.
 
     - Search for any Configuration Manager article about [BitLocker](/search/index?scope=ConfigMgr&search=BitLocker)
 
     > [!NOTE]
-    > Use other keywords or the Docs search filters to further refine the query.
+    > Use other keywords or the Docs search filters to further refine your search query.
 
 1. At the bottom of the list of results, select the **RSS** link.
 
