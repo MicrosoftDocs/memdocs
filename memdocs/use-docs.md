@@ -2,7 +2,7 @@
 title: How to use the docs
 titleSuffix: Microsoft Endpoint Manager
 description: Learn how to search the docs, provide doc feedback, and contribute to the docs for Microsoft Endpoint Manager. These docs include Configuration Manager, Intune, and Autopilot.
-ms.date: 09/30/2021
+ms.date: 11/10/2021
 ms.service: mem
 ms.subservice: fundamentals
 ms.topic: how-to
@@ -114,7 +114,7 @@ Use GitHub Issues to submit the following types of feedback:
 
 If you create an issue for something not related to docs, Microsoft will close the issue and redirect you to a better feedback channel. For example:
 
-- Product feedback for [Configuration Manager](configmgr/core/understand/product-feedback.md)
+- Product feedback for [Configuration Manager](configmgr/core/understand/product-feedback.md) or [Intune](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472)
 - [Product questions](/answers/products/mem)
 - Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Endpoint Manager](get-support.md)
 
