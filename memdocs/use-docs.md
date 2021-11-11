@@ -2,7 +2,7 @@
 title: How to use the docs
 titleSuffix: Microsoft Endpoint Manager
 description: Learn how to search the docs, provide doc feedback, and contribute to the docs for Microsoft Endpoint Manager. These docs include Configuration Manager, Intune, and Autopilot.
-ms.date: 11/10/2021
+ms.date: 11/11/2021
 ms.service: mem
 ms.subservice: fundamentals
 ms.topic: how-to
@@ -133,13 +133,16 @@ To receive notifications when content changes in the documentation library, use 
 
     - Search for any Configuration Manager article about [BitLocker](/search/index?scope=ConfigMgr&search=BitLocker)
 
+    > [!NOTE]
+    > Use other keywords or the Docs search filters to further refine the query.
+
 1. At the bottom of the list of results, select the **RSS** link.
 
     :::image type="content" source="media/docs-search-rss.png" alt-text="Screenshot of search results and RSS link.":::
 
-1. Use this feed in any RSS application to receive notifications when there's a change to any of the search results.
+1. Use this feed in an RSS application to receive notifications when there's a change to any of the search results. Refer to the RSS application's documentation on how to configure and tune it.
 
-Several popular articles in this content library have a tip at the top with a ready-made link to the RSS feed.
+<!-- Several popular articles in this content library have a tip at the top with a ready-made link to the RSS feed. -->
 
 > [!TIP]
 > You can also **Watch** the [MEMDocs repository](https://github.com/MicrosoftDocs/memdocs) on GitHub. This method can generate _many_ notifications. It also doesn't include changes from the private repository that Microsoft uses.
