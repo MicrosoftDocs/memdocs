@@ -135,7 +135,7 @@ There are thousands of settings available in the settings catalog. To make it ea
  Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit it to adjust the settings and add assignments.      
  
 1. Go to **Devices** > **Configuration profiles**.
-2. From the table, locate the profile that you want to copy. Right-click the profile or select the ellipses context menu (**…**) that's in the same row.    
+2. Locate the profile that you want to copy in the table. Right-click the profile or select the ellipses context menu (**…**) that's in the same row.    
 3. Select **Duplicate**.  
 4. Enter a new name for the policy, and optionally, a description. 
 5. Select **Save**.  
