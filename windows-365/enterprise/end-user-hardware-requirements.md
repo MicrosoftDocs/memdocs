@@ -84,7 +84,7 @@ You can access Windows 365 Cloud PCs from your Linux OS devices by using:
 - Third-party clients to connect to Azure Virtual Desktop, including:
   - [Dell](https://www.delltechnologies.com/asset/en-us/products/thin-clients/technical-support/dell-thinos-9-for-microsoft-wvd.pdf)
   - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
-  - [IGEL](https://www.igel.com/igel-solution-family/windows-virtual-desktop/)
+  - [IGEL](https://www.igel.com/igel-solution-family/)
 
   Third-party Linux client solutions can't be managed by using Microsoft Endpoint Manager. The partner provides a separate management tool for Linux devices.
 
