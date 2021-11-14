@@ -22,7 +22,7 @@ Configuration Manager supports installing the Configuration Manager client on th
 
 - **Remote Desktop Services sessions**: Host multiple, concurrent client sessions on a centralized server. Users connect to a session and run applications on that server.
 
-- **Pooled virtual machines**: The VM doesn't persist between sessions. When a user closes a session, the virtual environment discards all data and settings. Pooled virtual machines are useful when you can't use Remote Desktop Services. For example, if a required application can't run on the Windows Server that hosts the client sessions.
+- **Pooled virtual machines/Non-Persistent**: The VM doesn't persist between sessions. When a user closes a session, the virtual environment discards all data and settings. Pooled virtual machines are useful when you can't use Remote Desktop Services. For example, if a required application can't run on the Windows Server that hosts the client sessions.
 
 - **Azure Virtual Desktop**: A desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
 
