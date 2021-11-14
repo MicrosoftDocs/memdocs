@@ -38,7 +38,7 @@ You don't install the Configuration Manager client for individual Remote Desktop
 
 For more information, see [Welcome to Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
 
-## Pooled VMs
+## Pooled VMs/Non-Persistent
 
 When you decommission a pooled virtual machine, any changes made by Configuration Manager are lost.
 
