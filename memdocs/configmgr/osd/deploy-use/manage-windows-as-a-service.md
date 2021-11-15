@@ -70,7 +70,7 @@ Starting in version 2103, the **Windows Servicing** dashboard was simplified to 
 
 **Errors Timeline**: Displays the top errors and the number of devices with each error over the course of time for the chosen collection.
 
-:::image type="content" source="./media/3555940-10579996-servicing-dashboard.png" alt-text="The Windows Servicing dashboard in Configuration Manager." lightbox="./media/3555940-10579996-servicing-dashboard.png":::
+:::image type="content" source="./media/3555940-10579996-servicing-dashboard.png" alt-text="Screenshot of the Windows Servicing dashboard in Configuration Manager." lightbox="./media/3555940-10579996-servicing-dashboard.png":::
 
 > [!IMPORTANT]
 > - The **Windows Servicing** dashboard in Configuration Manager versions 2103 and 2107 includes Windows 11 devices with the latest version of Windows 10. They don't distinguish a version for Windows 11.<!-- 10732387 -->
