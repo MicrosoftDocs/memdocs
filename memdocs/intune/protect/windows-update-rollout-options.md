@@ -42,8 +42,6 @@ You configure rollout options when creating [Feature Updates policy](../protect/
 
 - **Make update available gradually** - This process helps distribute the availability of the update across a range of time that you configure, with Windows Update making an update available to different subsets of the devices targeted by the policy, at different times. This option can reduce the effect to your network when compared to offering the update to all devices at the same time. The following section explains how to use this option in more detail.
 
-In addition to configuring a gradual rollout, you can also configure [gradual rollout protections](#protect-your-gradual-updates). With intelligent optimization, the Windows Update service makes the update available to devices considered most likely to reveal possible issues before other devices. When using optimization, early success builds confidence that the larger population of your devices will receive the update successfully as well.
-
 ## Make updates available gradually
 
 With the option **Make update available gradually**, you can direct Windows Update to extend an update offer to different subsets of the devices that are targeted by the policy, at different times. We’ll refer to those subsets as offer groups. This behavior distributes the availability of the update across the time you’ve configured and can reduce the effect to your network as compared to offering the update to all devices at the same time.
@@ -73,27 +71,6 @@ The following behaviors apply to the management of offer groups:
 - If the policy assignment changes to add or remove devices from receiving the policy:
   - New devices are distributed to the remaining offer groups.
   - For devices that are no longer targeted by the policy but were offered the update, Windows Update will attempt to retract the offer. However, the offer can’t be retracted if the device has started processing that offer.
-
-## Protect your gradual updates
-
-You can use a device configuration setting of *AllowWUfBCloudProcessing* for the Windows Update service to protect and optimize your gradual updates and to simplify your deployment processes.
-
-When enabled, the service evaluates the devices that are targeted by the policy to find devices that exhibit or include the greatest range of characteristics that can affect a successful update, and assigns them to earlier groups. Characteristics include drivers, installed applications, hardware components like BIOS/UEFI, RAM, and more.
-
-The intent is to make that update available first to a group of devices most likely to reveal problems with the update in your environment:
-
-- With this optimization, after seeing successful results for that first group, you can have strong confidence that the rollout will go smoothly for later update groups.
-- If there are issues with the first group, you can halt the deployment before additional devices receive the offer.
-
->[!IMPORTANT]  
-> To optimize data, the Windows Update service might need to process the data in a different geographical region than where your tenant resides. If your data must remain the same geographical region as your tenant, do not enable optimization.
-
-**To enable optimization**, you must use a device configuration profile with the settings catalog:
-
-1. In the Microsoft Endpoint Manager admin center, create a device configuration profile that uses the settings catalog.
-2. For the profile, select **Windows 10 and later**, and then **Settings catalog (preview)**.
-3. On the *Configuration settings* page,  select **Add settings**, and then use the *Settings picker* to search for **AllowWUfBCloudProcessing** in the System category.
-4. Complete the policy creation, assigning the policy to the devices that you want to be evaluated for optimization.
 
 ## Next steps
 
