@@ -468,7 +468,14 @@ If you want to enable side-loading, set the **Allow installation from unknown so
 
 #### Dedicated devices
 
-- **Clear local data in apps not optimized for Shared device mode (Public Preview)**: Add any app not optimized for shared device mode to the list. The app's local data will be cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later. When you use this setting, users cannot initiate sign out from non-optimized apps and get single sign-out. Users will need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune’s Managed Home Screen. For apps that have not been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended. All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization’s needs.
+- **Clear local data in apps not optimized for Shared device mode (Public Preview)**: Add any app not optimized for shared device mode to the list. The app's local data will be cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later. 
+
+  When you use this setting, users cannot initiate sign out from non-optimized apps and get single sign-out. 
+  - Users will need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune’s Managed Home Screen. 
+  - For apps that have not been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. 
+  - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended. 
+  
+  All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization’s needs.
 
 ### Connectivity
 
