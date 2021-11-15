@@ -779,6 +779,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/intune/protect/use-network-locations.md",
+            "redirect_url": "/mem/intune/protect/create-compliance-policy",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "windows-365/add-device-images.md",
             "redirect_url": "/windows-365/enterprise/add-device-images",
             "redirect_document_id": false

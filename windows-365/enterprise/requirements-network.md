@@ -82,7 +82,7 @@ You must allow traffic in your Azure network configuration to the following serv
   - login.live.com
   - enterpriseregistration.windows.net
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
-  - hm-iot-in-*._azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-*.azure-devices.net (443 & 5671 outbound)
 
 
 
@@ -94,7 +94,7 @@ As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to
 
 Configure your Azure Virtual Network where the Cloud PCs are provisioned as follows:
 
-1. Make sure taht your Azure Virtual Network has network connectivity to DNS servers that can resolve your Active Directory domain.
+1. Make sure that your Azure Virtual Network has network connectivity to DNS servers that can resolve your Active Directory domain.
 2. From the Azure Virtual Network's Settings, select DNS Servers and then choose Custom.
 3. Enter the IP address of DNS servers that environment that can resolve your AD DS domain.
 

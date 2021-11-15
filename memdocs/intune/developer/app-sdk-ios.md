@@ -477,66 +477,77 @@ Apps can react to changes in this policy by observing the `IntuneMAMDataProtecti
 
 ## Implement save-as and open-from controls
 
-Intune lets IT admins select which storage locations a managed app can save data to or open data from. Apps can query the Intune MAM SDK for allowed save-to storage locations by using the `isSaveToAllowedForLocation` API, defined in `IntuneMAMPolicy.h`. Apps can also query the Intune MAM SDK for allowed open-from storage locations by using the `isOpenFromAllowedForLocation` API, defined in `IntuneMAMPolicy.h`.
+Intune lets IT admins select which storage locations a managed app can save data to or open data from. Apps can query the Intune MAM SDK for allowed save-to storage locations by using the `isSaveToAllowedForLocation:withAccount:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the SDK for allowed open-from storage locations by using the `isOpenFromAllowedForLocation:withAccount:` API, also defined in `IntuneMAMPolicy.h`.
 
-Before apps can save managed data to a cloud-storage or local location, they must check with the `isSaveToAllowedForLocation` API to know if the IT admin has allowed data to be saved there.
-Before opening data into an app from a cloud-storage or local location, the app must check with the `isOpenFromAllowedForLocation` API to know if the IT admin has allowed data to be opened from there.
+Additionally, apps can verify that incoming data from a share extension is allowed by querying the `canReceiveSharedItemProvider:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the `canReceiveSharedFile:` API to verify incoming files from an openURL call, also defined in `IntuneMAMPolicy.h`
 
-When apps use the `isSaveToAllowedForLocation` or `isOpenFromAllowedForLocation` APIs, they must pass in the UPN for the storage location, if it is available.
+> [!NOTE] 
+> Changes have been made to internal behavior as of MAM SDK v15.1.0.
+> - A `nil` account will no longer be treated as the current account for the LocalDrive/LocalStorage locations. Passing in a `nil` account will have it treated as an unmanaged account. Because app's can control how they handle their sandbox storage, an identity can and should be associated with those locations.
+> - A `nil` account will no longer be treated as the current account for single-identity apps. Passing in a `nil` account in a single-identity app will now be treated exactly the same as if it was passed into a multi-identity app. If you are developing a single-identity app, please use the `IntuneMAMPolicy`'s `primaryUser` to refer to the current account if managed and `nil` to refer to the current account if unmanaged.
 
-### Supported save locations
+### Handling save-to scenarios
 
-The `isSaveToAllowedForLocation` API provides constants to check whether the IT admin permits data to be saved to the following locations defined in `IntuneMAMPolicy.h`:
+Before moving data to a new cloud-storage or local location, an app must check with the `isSaveToAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being edited and saved in-place does not need to be checked with this API.
 
-* IntuneMAMSaveLocationOther
-* IntuneMAMSaveLocationOneDriveForBusiness
-* IntuneMAMSaveLocationSharePoint
-* IntuneMAMSaveLocationLocalDrive
-* IntuneMAMSaveLocationCameraRoll
-* IntuneMAMSaveLocationAccountDocument
+> [!NOTE] 
+> The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccount:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
 
-Apps should use the constants in `isSaveToAllowedForLocation` to check if data can be saved to locations considered "managed", like OneDrive for Business, or "personal". Additionally, the API should be used when the app can't check whether a location is "managed" or "personal."
+The `isSaveToAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMSaveLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner is not known, `nil` can be used instead.
 
-The `IntuneMAMSaveLocationSharePoint` should be used for both SharePoint online and AAD Authenticated SharePoint on-prem.
+#### Supported save locations
 
-The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device. Similarly, the `IntuneMAMSaveLocationCameraRoll` constant should be used if the app is saving a photo to the camera roll.
+The Intune MAM SDK provides support for the following save locations defined in `IntuneMAMPolicy.h`:
 
-If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` and `IntuneMAMSaveLocationCameraRoll` locations should always be paired with a `nil` account.
+* `IntuneMAMSaveLocationOneDriveForBusiness` - This location represents OneDrive for Business locations. The identity associated with the OneDrive account should be passed in as the second argument.
+* `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and AAD Hybrid Modern Auth SharePoint on-prem locations. The identity associated with the SharePoint account should be passed in as the second argument.
+* `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there is no identity, `nil` should be passed instead. (For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.)
+* `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there is no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. 
+* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument.  (e.g. Uploading a photo to a organization’s LOB cloud service that is tied to the organization account.)
+* `IntuneMAMSaveLocationOther` - This location represents any non-organizational, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
-### Supported open locations
+##### Special considerations for save locations
 
-The `isOpenFromAllowedForLocation` API provides constants to check whether the IT admin permits data to be opened from the following locations defined in `IntuneMAMPolicy.h`.
+The `IntuneMAMSaveLocationLocalDrive` location should only be used for app-sandbox storage that can only be accessed by the app. For checking if a file can be saved to iOS device storage through a file picker or some other method where the data will be accessible in the Files app, `IntuneMAMSaveLocationOther` should be used.
 
-* IntuneMAMOpenLocationOther
-* IntuneMAMOpenLocationOneDriveForBusiness
-* IntuneMAMOpenLocationSharePoint
-* IntuneMAMOpenLocationCamera
-* IntuneMAMOpenLocationLocalStorage
-* IntuneMAMOpenLocationAccountDocument
+If the destination location is not listed, either `IntuneMAMSaveLocationAccountDocument` or `IntuneMAMSaveLocationOther` should be used. If the location contains organizational data that is accessed using the managed account (ie. LOB cloud service for storing organizational data), `IntuneMAMSaveLocationAccountDocument` should be used. If the location does not contain organizational data, then the `IntuneMAMSaveLocationOther` location should be used.
 
-Apps should use the constants in `isOpenFromAllowedForLocation` to check if data can be opened from locations considered "managed", like OneDrive for Business, or "personal". Additionally, the API should be used when the app can't check whether a location is "managed" or "personal".
+### Handling open-from scenarios
 
-The `IntuneMAMOpenLocationSharePoint` should be used for both SharePoint online and AAD Authenticated SharePoint on-prem.
+Before importing data from a new cloud-storage or local location, an app must check with the `isOpenFromAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being opened in-place does not need to be checked with this API.
 
-The `IntuneMAMOpenLocationCamera` constant should be used when the app is opening data from the camera or photo album.
+> [!NOTE] 
+> The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccount:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
 
-The `IntuneMAMOpenLocationLocalStorage` constant should be used when the app is opening data from any location on the local device.
+The `isOpenFromAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMOpenLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner is not known, `nil` can be used instead.
 
-The `IntuneMAMOpenLocationAccountDocument` constant should be used when the app is opening a document that has a managed account identity (see the "Shared data" section below)
+#### Supported open locations
 
-If the account for the source location is unknown, `nil` should be passed. The `IntuneMAMOpenLocationLocalStorage` and `IntuneMAMOpenLocationCamera` locations should always be paired with a `nil` account.
+The Intune MAM SDK provides support for the following open locations defined in `IntuneMAMPolicy.h`:
 
-### Unknown or unlisted locations
+* `IntuneMAMOpenLocationOneDriveForBusiness` - This location represents OneDrive for Business locations. The identity associated with the OneDrive account should be passed in as the second argument.
+* `IntuneMAMOpenLocationSharePoint` - This location represents both SharePoint online and AAD Hybrid Modern Auth SharePoint on-prem locations. The identity associated with the SharePoint account should be passed in as the second argument.
+* `IntuneMAMOpenLocationCamera` - This location **only** represents new images taken by the camera. Because there is no account associated with the iOS camera, only `nil` should be passed as the second argument when this location is used. For opening data from the iOS Photo Library, use  `IntuneMAMOpenLocationPhotos`.
+* `IntuneMAMOpenLocationPhotos` - This location **only** represents existing images within the iOS Photo Library. Because there is no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. For opening images taken directly from the iOS camera, use `IntuneMAMOpenLocationCamera`.
+* `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there is no identity, `nil` should be passed instead. (e.g. an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.) 
+* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. (e.g. Downloading a photo from a organization’s LOB cloud service that is tied to the organization account.)
+* `IntuneMAMOpenLocationOther` - This location represents any non-organizational location, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
-When the desired location is not listed in the `IntuneMAMSaveLocation` or `IntuneMAMOpenLocation` enums or is unknown, one of two locations should be used.
-* If the save location is being accessed with a managed account then the `IntuneMAMSaveLocationAccountDocument` location should be used (`IntuneMAMOpenLocationAccountDocument` for open).
-* Otherwise, use the `IntuneMAMSaveLocationOther` location (`IntuneMAMOpenLocationOther` for open).
+##### Special considerations for open locations
 
-It is important to make the distinction clear between the managed account and an account that shares the managed account's UPN. For example, a managed account with UPN "user@contoso.com" signed into OneDrive is not the same as an account with UPN "user@contoso.com" signed into Dropbox. If an unknown or unlisted service is accessed by signing into the managed account (e.g. "user@contoso.com" signed into OneDrive), it should be represented by the `AccountDocument` location. If the unknown or unlisted service signs in through another account (e.g. "user@contoso.com" signed into Dropbox), it is not accessing the location with a managed account and should be represented by the `Other` location.
+The `IntuneMAMOpenLocationLocalStorage` location should only be used for app-sandbox storage that can be accessed by the app. For checking if a file can be opened from iOS device storage through a file picker or some other method where the data is also accessible in the Files app, `IntuneMAMOpenLocationOther` should be used.
+
+If the destination location is not listed, either `IntuneMAMOpenLocationAccountDocument` or `IntuneMAMOpenLocationOther` should be used. If the location contains organizational data that is accessed using the managed account (ie. LOB cloud service for storing organizational data), `IntuneMAMOpenLocationAccountDocument` should be used. If the location does not contain organizational data, then the `IntuneMAMSaveLocationOther` location should be used.
+
+##### Handling incoming NSItemProviders and Files
+
+For handling NSItemProviders received from a share extension, the `IntuneMAMPolicy`'s `canReceiveSharedItemProvider:` method can be used instead of `isOpenFromAllowedForLocation:withAccount:`. The `canReceiveSharedItemProvider:` method takes an NSItemProvider and returns whether it is allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account. The item must be loaded prior to calling this method (e.g. by calling `loadItemForTypeIdentifier:options:completionHandler`). This method can also be called from the completion handler passed to the NSItemProvider load call.
+
+For handling incoming files, the `IntuneMAMPolicy`'s `canReceiveSharedFile:` method can be used instead of `isOpenFromAllowedForLocation:withAccount:`. The `canReceiveSharedFile:` method takes a NSString path and returns whether it is allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account.
 
 ### Sharing blocked alert
 
-A UI helper function can be used when either the `isSaveToAllowedForLocation` or `isOpenFromAllowedForLocation` API is called and found to block the save/open action. If the app wants to notify the user that the action was blocked, it can call the `showSharingBlockedMessage` API defined in `IntuneMAMUIHelper.h` to present an alert view with a generic message.
+A UI helper function can be used when either the `isSaveToAllowedForLocation:withAccount:` or `isOpenFromAllowedForLocation:withAccount:` API is called and found to block the save/open action. If the app wants to notify the user  that the action was blocked, it can call the `showSharingBlockedMessage` API defined in `IntuneMAMUIHelper.h` to present an alert view with a generic message.
 
 ## Share Data via UIActivityViewController
 
@@ -975,6 +986,10 @@ Since web views D and E display user content and all web views are unmanaged by 
 Because web view E contains links that the user might click on and could use to navigate to arbitrary URLs, we also need to implement the `IntuneMAMWebViewPolicyDelegate` and set it to web view E using `setWebViewPolicyDelegate:forWebViewer:`. In our `isExternalURL:` implementation, we could check incoming URLs and see if they are the same as the URL for the document. If they do not match, then we know it is an external URL and can return `YES`. If they do match, then we know it is an internal URL and can return `NO`.
 
 Implementing and calling these APIs means that managed user or organizational content can't leak to web views A, B, and C. It also means that managed content can't leak to any external URLs that the user might navigate to in E by clicking on links within documents. Managed content will also be protected by preventing the data from web views D and E from leaking outside the app.
+
+## SwiftUI Support
+
+A newly created SwiftUI app supports UIScenes but does not have a UISceneDelegate implemented by default. If your app intends to support UIScenes and use the Intune App SDK, then it is required to implement a UISceneDelegate. If it does not intend to support UIScenes, the `UIApplicationSceneManifest` (also named "Application Scene Manifest") setting in the app's Info.plist must be removed.
 
 
 ## iOS best practices

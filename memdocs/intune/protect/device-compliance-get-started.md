@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/07/2021
+ms.date: 11/16/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -117,8 +117,6 @@ The following subjects link to dedicated articles for different aspects of devic
   - **Remotely lock devices** that have been noncompliant for some time.
   - **Retire devices** after they’ve been noncompliant for some time. This action marks a qualifying device as ready to be retired. An admin can then view a list of devices marked for retirement and must take an explicit action to retire one or more devices. Retiring a device removes the device from Intune management and removes all company data from the device. For more information about this action, see [Available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).
 
-- [**Configure network locations**](use-network-locations.md) - Supported by Android devices, you can configure *network locations* and then use those locations as a device compliance rule. This type of rule can flag a device as noncompliant when it’s outside of or leaves a specified network. Before you can specify a Location rule, you must configure the network locations.
-
 - [**Create a policy**](create-compliance-policy.md) – With the information in this article, you can review prerequisites, work through the options to configure rules, specify actions for noncompliance, and assign the policy to groups. This article also includes information about policy refresh times.
 
   View the device compliance settings for the different device platforms:
@@ -176,7 +174,6 @@ The following table describes how noncompliant settings are managed when a compl
 
 ## Next steps
 
-- [Configure Locations](../protect/use-network-locations.md) for use with Android devices
 - [Create and deploy policy](../protect/create-compliance-policy.md) and review prerequisites
 - [Monitor device compliance](../protect/compliance-policy-monitor.md)
 - [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
