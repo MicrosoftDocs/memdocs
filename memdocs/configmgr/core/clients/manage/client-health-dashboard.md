@@ -143,6 +143,8 @@ This tile shows the percentage of healthy clients for the selected [scenario](#s
 
 This chart lists the most common failures in your environment. These errors come from Windows or Configuration Manager.
 
+Select a row of this table to drill down to a device list view. This action lets you easily create a collection of devices to target a remediation action or for more detailed reporting.
+
 <!-- The following list includes some of the more common failures overall:
 
 #### Failure 1 title
