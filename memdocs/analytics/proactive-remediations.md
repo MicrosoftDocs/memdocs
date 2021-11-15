@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 10/05/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -134,6 +134,5 @@ To help you easily analyze returned outputs, use the **Export** option to save t
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
-- View [Recommended software](recommended-software.md).
 - View [Startup performance](startup-performance.md).
 - Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).
