@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/11/2020 
+ms.date: 11/15/2021 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,9 +37,18 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
 
+## Week of November 15, 2021  
+
+### New privacy consent screen during Company Portal installation <!-- 6600502 wn -->  
+
+We've added a new privacy consent screen to Company Portal to meet privacy requirements for certain app stores, such as those in China. People installing Company Portal for the first time from those stores will see the new screen during installation. The screen explains what information Microsoft collects and how it's used. A person must agree to the terms before they can use the app. Users who installed Company Portal prior to this release will not see the new screen.  
+
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal **Your new work setup** screen.](./media/whats-new-app-ui/privacy-screen-company-portal-windows-2111.png)  
+
 ## Week of November 9, 2020  
 
-### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->  
+### Improvements to work profile messaging in Company Portal for Android<!--8378333 -->  
 
 We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. After the work profile setup flow, users see a new informational screen explaining where to find work apps, with links to help documentation.   
 
