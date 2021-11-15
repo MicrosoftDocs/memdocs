@@ -213,7 +213,7 @@ You can now require a console extension to be installed before it connects to th
 
 Wizards and some property pages now include an icon to provide feedback. When you select the feedback icon, the **Send a smile** and **Send a frown** options are displayed in the drop-down menu. The additional feedback locations allow you to quickly send feedback right from your current activity. The feedback icon in the admin console's ribbon has also been updated to the new icon.
 
-<!-- For more information, see [Product feedback for Configuration Manager](../../understand/product-feedback.md). -->
+For more information, see [Product feedback for Configuration Manager](../../understand/product-feedback.md).
 
 ### Console improvements
 <!--9575773-->
