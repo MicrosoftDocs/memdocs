@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 11/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -234,12 +234,17 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
 ### Create the client certificate template
 
-The  Certificate Connector for Microsoft Intune requires a certificate with the *Client Authentication* Enhanced Key Usage and Subject name equal to the FQDN of the machine where the connector is installed. A template with the following properties is required:
+> [!NOTE]
+>The following certificate is not used with the Certificate Connector for Microsoft Intune. This information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
+
+The Microsoft Intune Connector requires a certificate with the *Client Authentication* Enhanced Key Usage and Subject name equal to the FQDN of the machine where the connector is installed. A template with the following properties is required:
 
 - **Extensions** > **Application Policies** must contain **Client Authentication**
 - **Subject name** > **Supply in the request**.
 
 If you already have a template that includes these properties, you can reuse it, otherwise create a new template by either duplicating an existing one or creating a custom template.
+
+
 
 ### Create the server certificate template
 
