@@ -189,7 +189,7 @@ Starting in this release, you can create and edit these custom properties in the
 
 You can now export the contents of a grid view in the console along with the column headers to a comma-separated values (CSV) file that can be used to import to Excel or other applications. While you could previously cut and paste from a grid view, exporting to CSV makes extracting a large number of rows faster and easier.
 
-<!-- For more information, see ... -->
+For more information, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_csv).
 
 ### Import console extensions wizard
 
