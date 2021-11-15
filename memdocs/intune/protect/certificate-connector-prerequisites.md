@@ -50,6 +50,8 @@ Requirements for the computer where you install the connector software:
   - Port: **443**
   - Endpoint: **autoupdate.msappproxy.net**
 
+- The **Enhanced Security Configuration** must be deactivated.
+
 ## PKCS
 
 Requirements for PKCS certificate templates:
