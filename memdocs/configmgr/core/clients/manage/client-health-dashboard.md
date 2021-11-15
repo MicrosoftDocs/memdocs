@@ -35,11 +35,15 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Expand
 
 There are two actions in the ribbon to configure client health and the dashboard:
 
+:::image type="content" source="media/client-health-dashboard-ribbon.png" alt-text="Console ribbon for the Client Health Dashboard node showing two actions.":::
+
 - **Choose Default Collection**: Set a persistent user preference for the collection to scope the dashboard.
 
     When you set the collection on the **Filter** tile of the dashboard, that selection resets when you refresh the dashboard.
 
 - **Client Status Settings**: Adjust the evaluation periods for scenario health. By default, if a client doesn't send scenario-specific data in **7 days**, Configuration Manager considers it unhealthy for that scenario.
+
+    :::image type="content" source="media/client-status-settings-properties.png" alt-text="The Client Status Settings Properties window.":::
 
     > [!TIP]
     > You can also configure these settings from the ribbon of the **Client Status** node.
@@ -47,6 +51,8 @@ There are two actions in the ribbon to configure client health and the dashboard
     > Scenario health isn't measured from your configuration of client settings. These values can vary based upon the resultant set of policy per device.
 
 ## Filters
+
+:::image type="content" source="media/client-health-dashboard-filter.png" alt-text="Filter tile on client health dashboard.":::
 
 The single **Filter** tile at the top of the dashboard lets you adjust the data that it displays. It includes the following filters:
 
@@ -66,6 +72,8 @@ The single **Filter** tile at the top of the dashboard lets you adjust the data 
 
 ## Overall client health
 
+:::image type="content" source="media/client-health-dashboard-overall.png" alt-text="Overall client health tile on client health dashboard.":::
+
 This tile shows the percentage of all clients reporting healthy in your hierarchy. This percentage should be as close to 100% as possible. It's on the top row, which makes it easier to see when you view the dashboard.
 
 A healthy Configuration Manager client has the following properties:
@@ -82,6 +90,8 @@ Select a segment of this chart to drill down to a device list view.
 
 ## Clients with any failure
 
+:::image type="content" source="media/client-health-dashboard-any-failure.png" alt-text="Clients with any failure tile on client health dashboard.":::
+
 This tile shows the percentage of clients that report any health issue. This percentage should be as close to 0% as possible.
 
 Hover over the segment to see the number of devices that are unhealthy. Select it to drill down to a device list view.
@@ -91,37 +101,45 @@ Hover over the segment to see the number of devices that are unhealthy. Select i
 
 ## Version tiles
 
+| Client Versions | OS Versions |
+|---------|---------|
+| :::image type="content" source="media/client-health-dashboard-client-versions-chart.png" alt-text="Client Versions tile with chart on Client health dashboard."::: | :::image type="content" source="media/client-health-dashboard-os-versions.png" alt-text="OS Versions tile with chart on Client health dashboard."::: |
+
 There are two tiles that show client health by Configuration Manager **Client versions** and **OS versions**. These tiles are useful when you make changes to the filters, such as **Failure only**. They can help highlight whether any issues are consistent across a specific version. Use this information to help you make upgrade decisions.
 
 Select a segment of these charts to drill down to a device list view.
 
-Select **Show table** to switch to a table view of the data. You can select and copy the data from the table. Select **Show chart** to show the donut chart.
+Select **Show table** to switch to a table view of the data. You can select and copy the data from the table. Select **Show chart** to show the donut chart. The following example shows a chart of Configuration Manager client versions:
+
+:::image type="content" source="media/client-health-dashboard-client-versions-table.png" alt-text="Client Versions tile with table on Client health dashboard.":::
 
 ## Scenario health
 
+:::image type="content" source="media/client-health-dashboard-scenarios.png" alt-text="Scenario health tile on Client health dashboard.":::
+
 This bar chart shows the overall health for the following core scenarios:
 
-- Client health evaluation
+- Client health evaluation (client policy)
 - Policy request
 - Software inventory
 - Hardware inventory
 - Heartbeat discovery
-- Status messaging operational
+- Status messaging operational (status messages)
 
 ## Health trends by scenario
+
+:::image type="content" source="media/client-health-dashboard-trends.png" alt-text="Health Trends By Scenario tile on the Client Health Dashboard.":::
 
 This tile shows the percentage of healthy clients for the selected [scenario](#scenario-health). To adjust the number of days the chart displays, use the slider control at the top of the tile.
 
 > [!NOTE]
 > The maximum value for the slider control is the same as the **Retain client status history for the following number of days** in **Client Status Settings**. It's `31` days by default.
 >
-> It's limited by the amount of client health data in the site database. In the following example, while it's configured to display 31 days of history, there's only three days of available data.
-
-The following example shows the trend for the client health evaluation scenario:
-
-:::image type="content" source="../../media/5728069-health-trends-hardware-inventory.png" alt-text="An example of the Client Health Dashboard, Health Trends By Scenario tile.":::
+> It's limited by the amount of client health data in the site database. For example, you configure it to display 31 days of history. There's only three days of available data, so the chart shows three days.
 
 ## Top 10 client health failures
+
+:::image type="content" source="media/client-health-dashboard-top-ten.png" alt-text="Top 10 client health failures tile on the Client Health Dashboard.":::
 
 This chart lists the most common failures in your environment. These errors come from Windows or Configuration Manager.
 
