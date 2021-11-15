@@ -137,7 +137,7 @@ To help you better deploy Windows 11, the **Check Readiness** step in the task s
 <!--10579996-->
 We now display a **Windows 11 Latest Feature Updates** chart in the **Windows Servicing** dashboard. The new chart makes it easier to determine how many of your Windows 11 clients are on the latest feature update. To display the dashboard, go to **Software Library** > **Overview** > **Windows Servicing**.
 
-For more information, see [The Windows servicing dashboard](../../../osd/deploy-use/manage-windows-as-a-service#bkmk_2103-dashboard).
+For more information, see [The Windows servicing dashboard](../../../osd/deploy-use/manage-windows-as-a-service.md#bkmk_2103-dashboard).
 
 ## Protection
 
