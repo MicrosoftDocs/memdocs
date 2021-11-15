@@ -33,7 +33,7 @@ Starting in Configuration Manager 2111, you can export the contents of a grid vi
 
 To export the information, select **Export to CSV file** from either the ribbon or the right-click menu. Choose **Export selected items** to only export items you've already selected, or you can choose to **Export all items**.
 
-:::image type="content" source="./media/9663857-export-csv.png" alt-text="Screenshot of the export to csv option in the ribbon of the device collections node":::
+:::image type="content" source="./media/9663857-export-csv.png" alt-text="Screenshot of the export to csv option in the ribbon of the device collections node.":::
 
 ### <a name="bkmk_code"></a> Enhanced code editor
 <!--8495588-->
