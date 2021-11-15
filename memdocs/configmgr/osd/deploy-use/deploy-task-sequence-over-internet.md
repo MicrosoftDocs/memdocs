@@ -9,13 +9,14 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Deploy a task sequence over the internet
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager supports various methods to deploy a task sequence to remote clients over the internet. You can deploy a Windows 10 upgrade, use bootable media, or start it from Software Center. This article covers the particular configurations for these scenarios. First use [Deploy a task sequence](deploy-a-task-sequence.md) to create the basic deployment. Then use the configurations in this article to customize it for internet-based clients.
+Configuration Manager supports various methods to deploy a task sequence to remote clients over the internet. You can deploy a Windows upgrade, use bootable media, or start it from Software Center. This article covers the particular configurations for these scenarios. First use [Deploy a task sequence](deploy-a-task-sequence.md) to create the basic deployment. Then use the configurations in this article to customize it for internet-based clients.
 
 > [!WARNING]  
 > You can manage the behavior for high-risk task sequence deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys an OS is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).  
@@ -27,9 +28,9 @@ On the **User Experience** page of the Deploy Software Wizard, you can configure
 > [!NOTE]
 > The task sequence advanced setting to **Run another program first** doesn't apply to task sequences that run on clients that communicate via a cloud management gateway (CMG). This option uses the UNC network path of the package, which isn't accessible via CMG.<!-- 8674270 -->
 
-### Windows 10 in-place upgrade
+### Windows in-place upgrade
 
-Use this setting for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway (CMG). All supported versions of Configuration Manager support this scenario. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).
+Use this setting for deployments of a Windows in-place upgrade task sequence to internet-based clients through the cloud management gateway (CMG). All supported versions of Configuration Manager support this scenario. For more information, see [Deploy Windows in-place upgrade via CMG](#deploy-windows-in-place-upgrade-via-cmg).
 
 ### Install a Windows imaging task sequence from Software Center
 
@@ -49,10 +50,10 @@ In version 2002 and earlier, operations that require a boot media aren't support
 > [!NOTE]
 > For all internet-based task sequence scenarios in version 2002 and earlier, start the task sequence from Software Center. They don't support Windows PE, PXE, or task sequence media.
 
-## Deploy Windows 10 in-place upgrade via CMG
+## Deploy Windows in-place upgrade via CMG
 
 <!-- 1357149 -->
-The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
+The Windows in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade to Windows without needing to connect to the intranet.
 
 Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a content-enabled CMG. Enable the [CMG setting](../../core/clients/manage/cmg/modify-cloud-management-gateway.md#settings-tab): **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. Otherwise devices can't run the task sequence.
 
@@ -62,7 +63,7 @@ When you deploy an upgrade task sequence, use the following settings:
 
 - Choose one of the following options on the Distribution Points tab of the deployment:
 
-  - **Download content locally when needed by the running task sequence**. The task sequence engine can download packages on-demand from a content-enabled CMG. This option provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.<!--3601238-->
+  - **Download content locally when needed by the running task sequence**. The task sequence engine can download packages on-demand from a content-enabled CMG. This option provides additional flexibility with your Windows in-place upgrade deployments to internet-based devices.<!--3601238-->
 
   - **Download all content locally before starting task sequence**. With this option, the Configuration Manager client downloads the content from the cloud source before starting the task sequence.
 

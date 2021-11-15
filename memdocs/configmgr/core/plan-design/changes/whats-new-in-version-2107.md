@@ -2,13 +2,14 @@
 title: What's new in version 2107
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2107 of Configuration Manager current branch.
-ms.date: 08/02/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2107 of Configuration Manager current branch
@@ -24,12 +25,7 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2107+-+Configuration+Manager%22&locale=en-us`
-
 ## Cloud-attached management
-
 
 ### Cloud attach your environment during site update
 <!-- 9563659,7958749-->
@@ -65,6 +61,14 @@ When you deploy a CMG with a virtual machine scale set, you can now choose the v
 This control gives you greater flexibility with your CMG deployment. You can adjust the size for test labs or if you support large environments. For example, the smaller **Lab** size is ideal for testing with a smaller number of clients at less cost. For production deployments, either use the default **Standard** size or add more capacity with the **Large** size.
 
 For more information, see [Cost of CMG: Virtual machine scale set](../../clients/manage/cmg/cost.md#virtual-machine-scale-set).
+
+### Tenant attach: BitLocker recovery keys
+
+<!--6979225-->
+
+Get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center. For example, a help desk technician who doesn't have access to Configuration Manager could use the web-based admin center to help an end user get a recovery key for their device.
+
+For more information, see [Tenant attach: BitLocker recovery keys](../../../tenant-attach/bitlocker-recovery-keys.md).
 
 ### Tenant attach support for US Government cloud
 
@@ -109,7 +113,7 @@ Configuration Manager now supports Windows Server 2022 as site systems and clien
 It also supports the Windows ADK for Windows 11 and Server 2022. For more information, see [Support for Windows ADK](../configs/support-for-windows-adk.md).
 
 > [!TIP]
-> Configuration Manager supports [Windows Insider builds](../configs/support-for-windows-10.md#support-for-windows-insider), which is a great way to test the latest version of Windows 11 with Configuration Manager version 2107.
+> Configuration Manager supports [Windows Insider builds](../configs/support-for-windows-11.md#support-for-windows-insider), which is a great way to test the latest version of Windows 11 with Configuration Manager version 2107.
 
 ### Microsoft .NET requirements
 
@@ -189,6 +193,12 @@ We've made the following improvements to CMPivot:
 For more information, see [Changes to CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2107) and [CMPivot overview](../../servers/manage/cmpivot-overview.md#bkmk_onprem_only).
 
 ## Client management
+
+### Support for Windows 11
+
+<!-- 10589866 -->
+
+Starting with version 2107, Configuration Manager supports Windows 11. For more information, see [Support for Windows 11](../configs/support-for-windows-11.md).
 
 ### Custom properties for devices
 
@@ -304,7 +314,13 @@ For more information, see [Third-party software updates](../../../sum/deploy-use
 
 ### Improvements for managing automatic deployment rules
 
-The following items were added to help you better manage your automatic deployment rules:
+The following items were added to help you better manage your automatic deployment rules (ADRs):
+
+#### Deployment types for automatic deployment rules
+<!--9900107, 7033498-->
+You can now specify the deployment type for the software update deployment created by an ADR. Select **Required** to create a mandatory software update deployment or select **Available** to create an optional software update deployment.
+
+For more information, see [Create an automatic deployment rule](../../../sum/deploy-use/automatically-deploy-software-updates.md#BKMK_CreateAutomaticDeploymentRule).
 
 #### Updated Product parameter for New-CMSoftwareUpdateAutoDeploymentRule cmdlet
 <!--9247522-->
@@ -432,9 +448,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2107 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2107.md#early-update-ring).
+<!-- At this time, version 2107 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2107.md#early-update-ring). -->
 
-<!-- As of April 19, 2021, version 2107 is globally available for all customers to install. -->
+As of August 23, 2021, version 2107 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2107](../../servers/manage/checklist-for-installing-update-2107.md).
 

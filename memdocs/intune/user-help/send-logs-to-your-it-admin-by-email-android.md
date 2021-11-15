@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/29/2021
+ms.date: 10/07/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -72,17 +72,14 @@ This article describes how to send app logs from the Company Portal and Microsof
 4. After the upload is complete, tap **EMAIL** and select your email app.  
 5. An email message will open with the incident ID pre-populated in the subject field. In the body of the email, describe the problem that you came across.  
 
-## Access logs from work profile  
-To view the Company Portal logs from your work profile, you must have access to a file viewing app in the work profile.       
+## Save logs to share with your support person
+To save the Company Portal logs so you can share them with your support person, you must have a file viewing app. If you are on a device with a work profile, you will need a file viewing app in the work profile.
 
 1. Go to your work profile and open Company Portal.
 2. Tap **Settings**.
-3. Tap **COPY LOGS**.
-4. Go back to your work profile and open a file viewing app.  
-5. Tap the menu > **Show internal storage.** 
-    * The setting name may vary between apps.  
-    * Make sure you're viewing the internal storage for your device. If you don't see any folders appear, tap the app menu and then tap your device name to switch to your device's storage.  
-6. From the list of files, tap **Android** > **data** > **com.microsoft.windowsintune.companyportal\files** > **Files**.   
+3. Tap **SAVE LOGS**.<br>
+You will be prompted to choose the location where you want to save the logs.
+4. Share the logs from your chosen location with your support person as needed.
 
 ## Next steps  
 

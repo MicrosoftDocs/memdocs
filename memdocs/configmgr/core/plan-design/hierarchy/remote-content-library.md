@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure a remote content library for the site server
@@ -33,6 +34,9 @@ This action only moves the content library on the site server. It doesn't impact
 - The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
 
 - The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.
+
+  > [!NOTE]
+  > The **Manage Content Library** option isn't available if the distribution point role exists on the site server. To enable the option, remove the distribution point role from the site server.
 
 - The remote system for the content library needs to be in a trusted domain.
 

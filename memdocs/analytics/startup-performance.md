@@ -2,15 +2,14 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 02/25/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: bdf15dfd-8a09-46f4-8a09-6200a67e3fe7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
@@ -20,10 +19,10 @@ The startup performance score helps IT get users from power-on to productivity q
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 For devices enrolled via Intune, Startup performance insights are only available for:
-- Devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro editions.
+- Devices running an Enterprise, Professional, or Education edition of Windows 10 version 1903 or later.
    - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
    - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
-   - Windows 10 long-term servicing channel (LTSC) and Home editions aren't currently supported.
+   - Long-term servicing channel (LTSC) and Home editions aren't currently supported.
 - The devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined machines aren't currently supported.
 
@@ -77,5 +76,5 @@ The **Startup performance** page has reporting tabs that provide support for the
 
 ## Next steps
 
-- View [Recommended software](recommended-software.md).
+- Use the [Work from anywhere report](work-from-anywhere.md).
 - Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.

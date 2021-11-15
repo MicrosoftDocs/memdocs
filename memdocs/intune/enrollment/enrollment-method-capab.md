@@ -5,10 +5,10 @@ title: Intune enrollment method capabilities for Windows devices
 titleSuffix: Microsoft Intune
 description: Capabilities for each enrollment method for Windows devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/04/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -60,7 +60,7 @@ There are several methods to enroll your workforce's devices in Intune. Each met
 
 \* Client apps workloads in Configuration Manager must be moved to Intune Pilot or Intune.
 
-\** [Devices are blocked for Conditional Access with the exception of Windows 10 1803+.](device-enrollment-manager-enroll.md)
+\** [Devices are blocked for Conditional Access with the exception of Windows 10 (version 1803 and later) and Windows 11.](device-enrollment-manager-enroll.md)  
 
 ## Next steps
 

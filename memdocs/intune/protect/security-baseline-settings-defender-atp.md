@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 09/10/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -341,7 +341,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
       - **Blocked** - Block the use of startup keys.
       - **Required** *(default)* - Require BitLocker have a startup key and TPM present to enable BitLocker. For silent enable scenarios (including Autopilot) this setting can't be successful, as user interaction is required. It's recommended that startup keys be disabled where silent enablement of BitLocker is required.
       - **Allowed** - Enable BitLocker using the TPM if present, and allow a startup key (such as a USB drive) be present to unlock the drives.
-      - **Not configured** *(default)*
+      - **Not configured**
 
     - **Disable BitLocker on devices where TPM is incompatible**  
       CSP: [SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
@@ -357,7 +357,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     CSP: [EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)  
     This setting is available when *BitLocker system drive policy* is set to *Configure*.  
 
-    Configure the encryption method and cipher strength for system drives.  *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
+    Configure the encryption method and cipher strength for system drives.  
 
     - **Not configured** (*default*)
     - **AES 128bit CBC**
@@ -404,7 +404,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     CSP: [EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)  
     This setting is available when *BitLocker removable drive policy* is set to *Configure*.
 
-    Configure the encryption method and cipher strength for removable data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
+    Configure the encryption method and cipher strength for removable data-drives disks.
 
     - **Not configured**
     - **AES 128bit CBC** (*default*)
@@ -555,7 +555,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
   - **Not configured**  
-  - **Block all** *(defulat)*
+  - **Block all** *(default)*
   - **Allow all**
 
 ::: zone-end
@@ -935,7 +935,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
   - **Not configured**  - The setting is restored to the system default.
@@ -1128,7 +1128,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
   - **Not configured**  - The setting is restored to the system default.
@@ -1261,7 +1261,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Not configured**
 
 - **Configure Microsoft Defender SmartScreen**  
-  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain; or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain; or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.
 
   Microsoft Defender SmartScreen provides warning messages to help protect your users from potential phishing scams and malicious software. By default, Microsoft Defender SmartScreen is turned on.
 
@@ -1284,7 +1284,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Not configured** - Same behavior as *Disabled*.
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
-  This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain; or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+  This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain; or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.
 
   This policy setting lets you configure whether to turn on blocking for potentially unwanted apps in Microsoft Defender SmartScreen. Potentially unwanted app blocking in Microsoft Defender SmartScreen provides warning messages to help protect users from adware, coin miners, bundleware, and other low-reputation apps that are hosted by websites. Potentially unwanted app blocking in Microsoft Defender SmartScreen is turned off by default.
 

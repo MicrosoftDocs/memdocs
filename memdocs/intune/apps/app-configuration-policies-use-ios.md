@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2021
+ms.date: 08/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 
@@ -25,7 +25,7 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: OS=iOS/iPadOS;intune-azure
 ms.collection: M365-identity-device-management
 ---
 
@@ -219,7 +219,10 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
-    - **Use the Company Portal on a DEP device enrolled with user affinity:**
+    - **Use the Company Portal on an Automated Device Enrollment (ADE) device enrolled with user affinity**: 
+    
+        > [!NOTE]
+        > This process is not needed for iOS/iPadOS devices enrolling with ADE through Setup Assistant with modern authentication. Also, this is not needed for devices enrolling with ADE with user affinity if a VPP token is being used to send the Company Portal app to the device.
 
         ``` xml
         <dict>

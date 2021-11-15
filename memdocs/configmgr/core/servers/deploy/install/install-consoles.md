@@ -2,13 +2,14 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 08/02/2021
+ms.date: 08/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install the Configuration Manager console
@@ -112,15 +113,15 @@ Specifies the FQDN of the site server to which the console connects when it open
 
 #### Silent install
 
-`ConsoleSetup.exe /q TargetDir="%ProgramFiles%\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com`
+`ConsoleSetup.exe /q "TargetDir=%ProgramFiles%\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com`
 
 #### Silent install with language packs
 
-`ConsoleSetup.exe /q TargetDir="C:\Program Files\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com LangPackDir=C:\Downloads\ConfigMgr`  
+`ConsoleSetup.exe /q "TargetDir=C:\Program Files\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com LangPackDir=C:\Downloads\ConfigMgr`
 
 #### Silent uninstall
 
-`ConsoleSetup.exe /uninstall /q`  
+`ConsoleSetup.exe /uninstall /q`
 
 ## Next steps
 

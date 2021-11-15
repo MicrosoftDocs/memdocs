@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use Software Center to deploy Windows over the network with Configuration Manager
@@ -43,6 +43,9 @@ Also configure whether the deployment is required or available:
 - Available deployment: The task sequence is available in Software Center, and a user can install it on demand.
 
 After you create the deployment, clients in the target collection will show the task sequence in Software Center.
+    
+> [!NOTE]
+> If multiple users are signed in on the device, task sequence deployments might not appear in Software Center until other users are signed out.
 
 ## Next steps
 

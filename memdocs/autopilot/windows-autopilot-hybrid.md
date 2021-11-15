@@ -34,7 +34,8 @@ ms.collection: M365-identity-device-management
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 
 You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.  For more information about hybrid Azure AD join, see [Understanding hybrid Azure AD join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
@@ -43,7 +44,8 @@ You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory
 Successfully configure your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) by using the Get-MsolDevice cmdlet.
 
 The device to be enrolled must follow these requirements:
-- Use Windows 10 v1809 or greater.
+
+- Use Windows 11 or Windows 10 version 1809 or later.
 - Have access to the internet [following Windows Autopilot network requirements](./networking-requirements.md).
 - Have access to an Active Directory domain controller. The device must be connected to the organization's network so that it can:
   - Resolve the DNS records for the AD domain and the AD domain controller.
@@ -53,13 +55,13 @@ The device to be enrolled must follow these requirements:
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Azure Active Directory supports in OOBE.
 
-## Set up Windows 10 automatic enrollment
+## Set up Windows automatic enrollment
 
 1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 
 2. Make sure users who deploy Azure AD-joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
-    ![The Mobility (MDM and MAM) Configure pane](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
+    ![The Mobility (MDM and MAM) Configure pane.](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
 
 3. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 
@@ -77,17 +79,17 @@ The organizational unit that's granted the rights to create computers must match
 
 2. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
 
-    ![The Delegate Control command](./media/windows-autopilot-hybrid/delegate-control.png)
+    ![The Delegate Control command.](./media/windows-autopilot-hybrid/delegate-control.png)
 
 3. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
 
 4. In the **Object Types** pane, select the **Computers** > **OK**.
 
-    ![The Object Types pane](./media/windows-autopilot-hybrid/object-types-computers.png)
+    ![The Object Types pane.](./media/windows-autopilot-hybrid/object-types-computers.png)
 
 5. In the **Select Users, Computers, or Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
 
-    ![The Select Users, Computers, or Groups pane](./media/windows-autopilot-hybrid/enter-object-names.png)
+    ![The Select Users, Computers, or Groups pane.](./media/windows-autopilot-hybrid/enter-object-names.png)
 
 6. Select **Check Names** to validate your entry > **OK** > **Next**.
 
@@ -97,13 +99,13 @@ The organizational unit that's granted the rights to create computers must match
 
 9. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
 
-    ![The Active Directory Object Type pane](./media/windows-autopilot-hybrid/only-following-objects.png)
+    ![The Active Directory Object Type pane.](./media/windows-autopilot-hybrid/only-following-objects.png)
  
 10. Select **Next**.
 
 11. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 
-    ![The Permissions pane](./media/windows-autopilot-hybrid/full-control.png)
+    ![The Permissions pane.](./media/windows-autopilot-hybrid/full-control.png)
 
 12. Select **Next** > **Finish**.
 
@@ -249,7 +251,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
     - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
  
     Here are some valid examples:
-      - OU=Level 1,OU=Level2,DC=contoso,DC=com
+      - OU=Sub OU,OU=TopLevel OU,DC=contoso,DC=com
       - OU=Mine,DC=contoso,DC=com
  
     Here are some examples that aren't valid:

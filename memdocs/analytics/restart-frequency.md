@@ -2,19 +2,19 @@
 title: Restart frequency in endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device restart frequency in endpoint analytics
-ms.date: 03/01/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 9fe09e0a-f8ff-4714-8cf9-453e3197760d
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Restart frequency in endpoint analytics
 <!--IN6225459-->
-In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
+In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can be just as impactful to the user experience since a device that reboots daily because of Stop errors will have a poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
 
 ## Prerequisites
 
@@ -30,8 +30,8 @@ In endpoint analytics [startup performance](startup-performance.md), we've provi
 Each restart is categorized into one of six categories. They're described as either abnormal shutdowns or normal shutdowns.
 
 **Abnormal shutdowns**: Where the shutdown or restart didn't go through the normal Windows shutdown process. There are three categories for different types of abnormal shutdowns:
-- **Blue screens**: You may also know these as stop errors. Stop errors should be infrequent, less than 2 per device per year is typical.
-- **Long power button press**: When an end user holds the power button down to force a restart. These shutdowns should be less frequent than stop errors (blue screens).
+- **Stop errors**: You may also know these as blue screen errors. Stop errors should be infrequent, less than 2 per device per year is typical.
+- **Long power button press**: When an end user holds the power button down to force a restart. These shutdowns should be less frequent than Stop errors (blue screen errors).
 - **Unknown**: Any abnormal shutdown that isn't one of the above shutdowns. Over time we'll be refining this list as we isolate issues in this category.
 
 **Normal shutdowns**: Where the shutdown or restart went through the normal Windows shutdown process. There are three categories for different types of normal shutdowns:
@@ -46,15 +46,11 @@ The difference between **Shutdown (no update)** and **Restart (no update)** is t
 
 ## Device performance tab
 
-In the device performance tab, two default columns have been added so you can review the total number of restarts and the number of blue screens (stop errors) each device had in the last 14 days. Sort by these columns to find problematic devices. You can also use this tab to review the total number of devices that have sent restart records. For example, the screenshot below has 31 records, meaning 31 devices have sent restart data.
-
-:::image type="content" source="media/device-performance-tab.png" alt-text="Device performance tab under Startup Performance" lightbox="media/device-performance-tab.png":::
+In the device performance tab, two default columns have been added so you can review the total number of restarts and the number of Stop errors (blue screen errors) each device had in the last 14 days. Sort by these columns to find problematic devices. You can also use this tab to review the total number of devices that have sent restart records. For example, the screenshot below has 31 records, meaning 31 devices have sent restart data.
 
 ## Model performance tab
 
-In the model performance tab, two default columns have been added so you can review both the average number of restarts and the average number of blue screens (stop errors) per model over the last 14 days. Sort by these columns to find problematic device models. Only models with at least 10 devices are shown to ensure the averages are done across enough devices to be meaningful.
-
-:::image type="content" source="media/model-performance-tab.png" alt-text="Model performance tab under Startup Performance" lightbox="media/model-performance-tab.png":::
+In the model performance tab, two default columns have been added so you can review both the average number of restarts and the average number of Stop errors (blue screen errors) per model over the last 14 days. Sort by these columns to find problematic device models. Only models with at least 10 devices are shown to ensure the averages are done across enough devices to be meaningful.
 
 ## Restart frequency tab
 
@@ -74,7 +70,7 @@ Clicking through to a particular device in the [**Device performance** tab](#dev
 
 The **OS restart history** table has the following information:
 -  The **Restart category** for each reboot
-- For blue screens (stop errors), the following additional information is available: 
+- For Stop errors (blue screen errors), the following additional information is available: 
    - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2), also called the bug check code
    - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
 
@@ -88,5 +84,5 @@ The **OS restart history** table is truncated to the 10 most recent restarts tha
    - The aggregates in the [**Device performance** tab](#device-performance-tab) are computed daily to show counts for the last 14 days
 	- The restart history in the [**Devices page**](#devices-page) is truncated to the 10 most recent restarts and goes back up to the last 2 months. This page also has low latency, so new restarts will typically show up here before they make their way into the daily aggregates shown in the **Device performance** tab. The [**Device performance** tab](#device-performance-tab) doesn't have that truncation and goes back for the last 14 days.
 
-- Currently, there isn't an aggregation of blue screens by *driver* or *failure bucket ID*.
+- Currently, there isn't an aggregation of Stop errors (blue screen errors) by *driver* or *failure bucket ID*.
 

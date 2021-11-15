@@ -5,8 +5,8 @@ title: Enroll devices using a device enrollment manager account
 titleSuffix: Microsoft Intune
 description: Use the device enrollment manager account to enroll devices in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/02/2021
 ms.topic: how-to

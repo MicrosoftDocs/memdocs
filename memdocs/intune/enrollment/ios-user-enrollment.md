@@ -5,8 +5,8 @@ title: Enroll iOS/iPadOS devices with user enrollment in Microsoft Intune | Micr
 titleSuffix: Microsoft Intune
 description: Learn how to set up iOS/iPadOS and iPadOS User Enrollment.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 12/21/2020
 ms.topic: how-to

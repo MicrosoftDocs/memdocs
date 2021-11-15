@@ -2,13 +2,14 @@
 title: Checklist for 2107
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2107.
-ms.date: 08/02/2021
+ms.date: 08/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2107 for Configuration Manager
@@ -62,11 +63,11 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of April 19, 2021, version 2107 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of August 23, 2021, version 2107 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
-At this time, version 2107 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2107:
+<!-- At this time, version 2107 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2107:
 
-[Version 2107 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2107 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target
 
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
@@ -89,6 +90,7 @@ The version 2107 update should now be available in the console.
 
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2107. It's not a permanent change.
+ -->
 
 ## Checklist
 
@@ -289,6 +291,12 @@ If you use an availability group, reset the failover configuration to automatic.
 
 If you disabled database [maintenance tasks](maintenance-tasks.md) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.  
 
+### Restore user state from active deployments
+
+<!-- 10362100 -->
+
+If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Due to [changes to the encryption algorithm in version 2103](../../plan-design/changes/whats-new-in-version-2103.md#encryption-algorithm-to-capture-and-restore-user-state), the updated client will fail to restore the user state when it tries to use a different encryption algorithm.
+
 ### Update clients
 
 Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
@@ -324,4 +332,4 @@ For more information, see [Configuration Manager PowerShell cmdlets: Update help
 
 ## Next steps
 
-Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. There's a tip at the top of that article about how to receive RSS notifications of changes.
+Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../use-docs.md#notifications).

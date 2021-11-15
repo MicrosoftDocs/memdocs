@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)
@@ -22,7 +22,7 @@ Configuration Manager supports installing the Configuration Manager client on th
 
 - **Remote Desktop Services sessions**: Host multiple, concurrent client sessions on a centralized server. Users connect to a session and run applications on that server.
 
-- **Pooled virtual machines**: The VM doesn't persist between sessions. When a user closes a session, the virtual environment discards all data and settings. Pooled virtual machines are useful when you can't use Remote Desktop Services. For example, if a required application can't run on the Windows Server that hosts the client sessions.
+- **Pooled virtual machines/Non-Persistent**: The VM doesn't persist between sessions. When a user closes a session, the virtual environment discards all data and settings. Pooled virtual machines are useful when you can't use Remote Desktop Services. For example, if a required application can't run on the Windows Server that hosts the client sessions.
 
 - **Azure Virtual Desktop**: A desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
 
@@ -38,7 +38,7 @@ You don't install the Configuration Manager client for individual Remote Desktop
 
 For more information, see [Welcome to Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
 
-## Pooled VMs
+## Pooled VMs/Non-Persistent
 
 When you decommission a pooled virtual machine, any changes made by Configuration Manager are lost.
 

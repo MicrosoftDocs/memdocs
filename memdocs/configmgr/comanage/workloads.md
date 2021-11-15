@@ -1,15 +1,15 @@
 ---
 title: Co-management workloads
 titleSuffix: Configuration Manager
-description: Learn about the workloads that you can switch from Configuration Manager to Microsoft Intune. 
+description: Learn about the workloads that you can switch from Configuration Manager to Microsoft Intune.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/05/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
-ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
+ms.localizationpriority: medium
 ---
 
 # Co-management workloads
@@ -42,9 +42,9 @@ For more information on the Intune feature, see [Use compliance policies to set 
 
 ## Windows Update policies
 
-Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business.
+Windows Update for Business policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update for Business.
 
-For more information on the Intune feature, see [Manage Windows 10 software updates in Intune](../../intune/protect/windows-update-for-business-configure.md).
+For more information on the Intune feature, see [Manage Windows software updates in Intune](../../intune/protect/windows-update-for-business-configure.md).
 
 ## Resource access policies
 
@@ -98,6 +98,8 @@ You can still deploy settings from Configuration Manager to co-managed devices e
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](../../intune/configuration/device-profile-create.md).
 
 > [!NOTE]
+> A policy created from the settings catalog is controlled by the Device Configuration workload slider regardless of the contents of the policy. 
+> 
 > When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature. Only policies from Intune will apply once the Device Configuration workload is moved to Intune.<!-- 4184095 -->
 
 ## Office Click-to-Run apps
@@ -117,7 +119,7 @@ Updates can be managed using either of the following features:
 - [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune/configuration/administrative-templates-update-office.md)
 - [Manage Microsoft 365 Apps with Configuration Manager](../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-For more information on the Intune feature, see [Add Microsoft 365 apps to Windows 10 devices with Microsoft Intune](../../intune/apps/apps-add-office365.md).
+For more information on the Intune feature, see [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune/apps/apps-add-office365.md).
 
 ## Client apps
 
@@ -128,7 +130,7 @@ For more information on the Intune feature, see [Add Microsoft 365 apps to Windo
 >
 > This feature may appear in the list of features as **Mobile apps for co-managed devices**.<!-- 5849669 -->
 
-Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
+Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 or later devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
 For more information on the Intune feature, see [What is Microsoft Intune app management?](../../intune/apps/app-management.md)
 

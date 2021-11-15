@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2021
+ms.date: 09/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -57,20 +57,21 @@ Sign in as the Intune administrator with a role that has the **Security Baseline
 
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
-Be sure the file is less than 750 kB and has a proper unicode encoding. If the exported file is greater than 750 kB, then include fewer GPOs when you save your report from the GPMC.msc tool.
+Be sure the file is less than 4 MB and has a proper unicode encoding. If the exported file is greater than 4 MB, then include fewer GPOs when you save your report from the GPMC.msc tool.
 
 ## Use Group Policy analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. Select **Import**, and then select your saved XML file. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
-    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 750 kB. If a single GPO is larger than 750 kB, then the import will fail. XML files without the appropriate unicode ending will also fail.
+    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB If a single GPO is larger than 4 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
 
 3. After the analysis runs, the GPO you imported is listed with the following information:
 
     - **Group Policy name**: The name is automatically generated using information in the GPO.
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
     - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.
+    - **Unknown Settings**: Shows GPO settings that fall outside of the list of the Configuration Service Providers (CSPs) that this tool can parse.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
 
@@ -82,11 +83,9 @@ Be sure the file is less than 750 kB and has a proper unicode encoding. If the e
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
     - **Group Policy Setting Category**: Shows the setting category for ADMX settings, such as Internet Explorer and Microsoft Edge. Not all settings have a setting category.
-    - **ADMX Support**: **Yes** means there's an ADMX template for this setting. **No** means there isn't an ADMX template for the specific setting.
+    - **MDM Support**: 
 
-      For more information on ADMX templates, see [Administrative Templates in Microsoft Intune](administrative-templates-windows.md).
-
-    - **MDM Support**: **Yes** means there's a matching setting available in Endpoint Manager. You can configure this setting in a device configuration profile. Settings in device configuration profiles are mapped to Windows CSPs.
+      **Yes** means there's a matching setting available in Endpoint Manager. You can configure this setting in the Settings Catalog.
 
       **No** means there isn't a matching setting available to MDM providers, including Intune.
 
@@ -113,6 +112,12 @@ Group Policy analytics can parse the following CSPs:
 - [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
 - [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
+
+If your imported GPO has settings that fall outside of the above supported CSPs, they may be included the **Unknown Settings** column to acknowledge that were identified in your GPO.
+
+### Known Issues
+
+Currently, the Group Policy analytics (preview) tool only supports non-ADMX settings in the English language. If you import a GPO with settings in languages other than English, then your **MDM Support %** will be inaccurate.
 
 ## Group Policy migration readiness report
 

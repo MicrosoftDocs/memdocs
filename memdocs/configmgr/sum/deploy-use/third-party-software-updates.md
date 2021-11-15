@@ -4,12 +4,12 @@ titleSuffix: Configuration Manager
 description: Enable third-party updates in Configuration Manager
 ms.date: 08/02/2021
 ms.prod: configuration-manager
-ms.technology: configmgr-sum 
+ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Enable third-party updates

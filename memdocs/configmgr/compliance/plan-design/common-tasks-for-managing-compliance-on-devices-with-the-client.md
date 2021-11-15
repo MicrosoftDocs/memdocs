@@ -2,16 +2,14 @@
 title: Common compliance management tasks
 titleSuffix: Configuration Manager
 description: Learn about Configuration Manager compliance settings by working through some common scenarios.
-ms.date: 05/08/2019
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
 # Common tasks for managing compliance on devices with the Configuration Manager client
@@ -35,19 +33,19 @@ This article gives you an introduction to using Configuration Manager compliance
 
      ![General page of the Create Configuration Item Wizard](../../mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
 
-## Scenario: Disable Bluetooth on Windows 10 devices
+## Scenario: Disable Bluetooth on Windows 10 or later devices
 
- In this scenario, your security department has determined that the Bluetooth capability on devices could be used to transmit sensitive corporate information outside the company. You've recently upgraded all your computers to Windows 10. You decide to disable Bluetooth on these devices.  
+ In this scenario, your security department has determined that the Bluetooth capability on devices could be used to transmit sensitive corporate information outside the company. You decide to disable Bluetooth on these devices.  
 
-1. On the **General** page of the Create Configuration Item Wizard, select the **Windows 10** configuration item type, and then select **Next**.  
+1. On the **General** page of the Create Configuration Item Wizard, select the **Windows 10 or later** configuration item type, and then select **Next**.  
 
-2. On the **Supported Platforms** page of the wizard, select all Windows 10 platforms.  
+2. On the **Supported Platforms** page of the wizard, select all Windows 10 or later platforms.  
 
 3. On the **Device Settings** page, select **Device**, and then select **Next**.  
 
 4. On the **Device** page, select **Prohibited** as the value for **Bluetooth**.  
 
-5. Select **Remediate noncompliant settings** to ensure the change is applied to all Windows 10 devices.  
+5. Select **Remediate noncompliant settings** to ensure the change is applied to all Windows 10 or later devices.  
 
 6. Complete the wizard to create the configuration item.  
 

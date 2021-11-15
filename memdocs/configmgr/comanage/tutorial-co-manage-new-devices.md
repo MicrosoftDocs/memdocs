@@ -1,28 +1,29 @@
 ---
 title: Tutorial&#58; Enable co-management for internet devices
-titleSuffix: Configuration Manager 
-description: Learn how to configure co-management for new internet-based Windows 10 devices with Configuration Manager and Microsoft Intune. 
+titleSuffix: Configuration Manager
+description: Learn how to configure co-management for new internet-based Windows 10 or later devices with Configuration Manager and Microsoft Intune.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 08/24/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
+ms.localizationpriority: medium
 ---
 
 # Tutorial: Enable co-management for new internet-based devices
 
 With co-management, you can keep your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning.
 
-In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
+In this tutorial, you set up co-management of Windows 10 or later devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 or later devices are already enrolled with Intune.
 
 If you have a hybrid Azure AD that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](tutorial-co-manage-clients.md).
 
 Use this tutorial when:
   
-- You have Windows 10 devices to bring into co-management. These devices might have been provisioned through Windows Autopilot or are direct from your hardware OEM.
-- You have Windows 10 devices on the internet that you currently manage with Intune to which you want to add the Configuration Manager client.
+- You have Windows 10 or later devices to bring into co-management. These devices might have been provisioned through Windows Autopilot or are direct from your hardware OEM.
+- You have Windows 10 or later devices on the internet that you currently manage with Intune to which you want to add the Configuration Manager client.
 
 **In this tutorial you will:**  
 > [!div class="checklist"]  
@@ -73,13 +74,13 @@ Throughout this tutorial, use the following permissions to complete tasks:
 
 ## Request a public certificate for the cloud management gateway
 
-When your devices are on the internet, co-management requires the Configuration Manager cloud management gateway (CMG). The CMG enables your internet-based Windows 10 devices to communicate with your on-premises Configuration Manager deployment. To establish a trust between devices and your Configuration Manager environment, the CMG requires an SSL certificate.
+When your devices are on the internet, co-management requires the Configuration Manager cloud management gateway (CMG). The CMG enables your internet-based Windows devices to communicate with your on-premises Configuration Manager deployment. To establish a trust between devices and your Configuration Manager environment, the CMG requires an SSL certificate.
 
 This tutorial uses a public certificate called **CMG server authentication certificate** that derives authority from a globally trusted certificate provider. Although it's possible to configure co-management using certificates that derive authority from your on-premises Microsoft certificate authority, use of self-signed certificates is beyond the scope of this tutorial.
 
 The **CMG server authentication certificate** is used to encrypt the communications traffic between the Configuration Manager client and the CMG. The certificate traces back to a Trusted Root to verify the server's identity to the client. The public certificate includes a Trusted Root that Windows clients already trust.
 
-About this certificate: 
+About this certificate:
 
 - You identify a unique name for your CMG service in Azure, and then specify that name in your certificate request.  
 - You generate your certificate request on a specific server, and then submit the request to a public certificate provider to get the necessary SSL certificate.  
@@ -180,8 +181,8 @@ After you copy the certificate to the primary site server, you can delete the Ce
 
 To configure Azure services from within the Configuration Manager console, you use the Configure Azure Services wizard and create two Azure Active Directory (Azure AD) apps.  
 
-- **Server app** –  a *Web app* in Azure AD  
-- **Client app** – a *Native Client* app in Azure AD  
+- **Server app**:  a *Web app* in Azure AD  
+- **Client app**: a *Native Client* app in Azure AD  
 
 Run the following procedure from the primary site server.  
 
@@ -200,7 +201,10 @@ Run the following procedure from the primary site server.
 
    - **HomePage URL**: This value isn't used by Configuration Manager but is required by Azure AD. By default, this value is `https://ConfigMgrService`.  
 
-   - **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default, this value is `https://ConfigMgrService`.  
+   - **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default, this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+
+     - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+     - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
    Next, select **Sign in**, and specify an Azure AD Global Administrator account. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
 
@@ -286,7 +290,7 @@ Use this procedure to install a cloud management gateway as a service in Azure. 
 
 ### Create DNS CNAME records
 
-When you create a DNS entry for the CMG, you enable your Windows 10 devices both inside and outside your corporate network to use name resolution to find the CMG cloud service in Azure.
+When you create a DNS entry for the CMG, you enable your Windows 10 or later devices both inside and outside your corporate network to use name resolution to find the CMG cloud service in Azure.
 
 Our CNAME record example uses the following details:  
 
@@ -358,9 +362,14 @@ When you enable co-management, you'll assign a collection as a *Pilot group*. Th
 
 ## Use Intune to deploy the Configuration Manager client
 
-You can use Intune to install the Configuration Manager client on Windows 10 devices that are currently only managed with Intune.  
+You can use Intune to install the Configuration Manager client on Windows 10 or later devices that are currently only managed with Intune.  
 
-Then, when a previously unmanaged Windows 10 device enrolls with Intune, it automatically installs the Configuration Manager client.
+Then, when a previously unmanaged Windows 10 or later device enrolls with Intune, it automatically installs the Configuration Manager client.
+  
+> [!NOTE]
+> If you're planning to deploy the Configuration Manager client to devices going through Autopilot, it's recommended to target users for the assignment of the Configuration Manager client instead of devices.
+>
+> This action will avoid a conflict between [installing line-of-business apps and Win32 apps during Autopilot](../../intune/apps/lob-apps-windows.md).
 
 ### Create an Intune app to install the Configuration Manager client
 
@@ -387,7 +396,7 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
      > [!TIP]  
      > If you do not have the command line available, you can view the properties of *CoMgmtSettingsProd* in the Configuration Manager console to get a copy of the command line. The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.
 
-5. Select **OK > Add**.  The app is created and becomes available in the Intune console. After the app is available, you can use the following section to configure Intune to assign it to Windows 10 devices.
+5. Select **OK > Add**.  The app is created and becomes available in the Intune console. After the app is available, you can use the following section to configure Intune to assign it to devices.
 
 ### Assign the Intune app to install the Configuration Manager client
 

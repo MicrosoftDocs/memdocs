@@ -2,14 +2,14 @@
 title: Choose a device management solution
 titleSuffix: Configuration Manager
 description: Learn about the solutions that Microsoft offers for managing PCs, servers, and devices.
-ms.date: 01/24/2020
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Choose a device management solution
@@ -33,7 +33,7 @@ Use the following table to help compare these management technologies:
 | **Hyper-V host** | Not applicable | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager |
 | **Windows Server** | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | Configuration Manager |
 | **Linux Server** | Azure management | Azure management | Azure management |  |
-| **Windows 10** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
+| **Windows 10/11** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
 | **Windows 7 or 8.1** | Configuration Manager | Configuration Manager | Configuration Manager | Configuration Manager |
 | **Azure Virtual Desktop** | Configuration Manager | Not applicable | Not applicable | Not applicable |
 
@@ -71,13 +71,13 @@ For more information, see [Client installation methods](../clients/deploy/plan/c
 
 ### <a name="bkmk_opmdm"></a> On-premises MDM  
 
-This option uses the device management capabilities built into Windows 10. While not as full-featured as client-based management, on-premises MDM provides a lighter touch approach to management. It uses on-premises Configuration Manager resources to manage devices.  
+This option uses the device management capabilities built into Windows 10 or later. While not as full-featured as client-based management, on-premises MDM provides a lighter touch approach to management. It uses on-premises Configuration Manager resources to manage devices.  
 
 For more information, see [Manage mobile devices with on-premises infrastructure](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 ### <a name="bkmk_comanage"></a> Co-management with Microsoft Intune
 
-Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality.
+Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality.
 
 For more information, see [What is co-management?](../../comanage/overview.md).  
 
@@ -94,7 +94,7 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 |Android| | |Yes| Yes |
 |iOS| | |Yes| Yes |
 |macOS X|Yes| |Yes| Yes |
-|Windows 10|Yes|Yes|Yes| Yes |
+|Windows 10/11|Yes|Yes|Yes| Yes |
 |Windows 10 Mobile| |Yes|Yes| Yes |
 |Windows (previous versions)|Yes| |Yes|  |
 |Windows Server|Yes| |Yes|  |
@@ -105,7 +105,7 @@ For a complete list of supported platforms, see the following articles:
 - [Supported operating systems for clients and devices for Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md)
 - [Intune supported configurations](/intune/supported-devices-browsers)
 
-Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile devices. For more information, see [What is Microsoft Intune?](/intune/what-is-intune).
+Microsoft recommends using Intune to manage Android, iOS, and Windows 10/11 mobile devices. For more information, see [What is Microsoft Intune?](/intune/what-is-intune).
 
 ### <a name="bkmk_comp2"></a> Compare solutions by management functionality  
 

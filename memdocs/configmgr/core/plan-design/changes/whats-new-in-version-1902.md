@@ -6,11 +6,11 @@ ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1902 of Configuration Manager current branch
@@ -26,10 +26,6 @@ To take full advantage of new Configuration Manager features, after you update t
 <!-- > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
  -->
-
-> [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
 
 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
@@ -247,7 +243,7 @@ When you apply software updates to an OS image, there's a new option to optimize
 
 When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#bkmk_resetbase).
+For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#optimized-image-servicing).
 
 ### Improvements to Run PowerShell Script task sequence step
 

@@ -2,13 +2,14 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 08/02/2021
+ms.date: 08/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install in-console updates for Configuration Manager
@@ -71,6 +72,8 @@ You're presented with the Updates Wizard that displays a list of the product are
    - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
    - [Co-management](../../../comanage/overview.md)
    - [Endpoint analytics](../../../../analytics/enroll-configmgr.md)
+
+  If you don't wish to onboard, clear both of the **Enable Microsoft Endpoint Manager admin center** and **Enable automatic client enrollment for co-management** options. <!--1074186-->
 
 ### 2. During the update installation
 

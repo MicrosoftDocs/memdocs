@@ -2,14 +2,14 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 08/02/2021 
+ms.date: 08/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Community hub and GitHub
@@ -34,11 +34,11 @@ Community hub supports the following objects:
 ## Prerequisites
 
 - The device running the Configuration Manager console used to access the Community hub needs the following items:
-   - .NET Framework version 4.6 or higher
-     - .NET Framework version 4.6.2 or higher is required starting in Configuration Manager 2010
+   - .NET Framework version 4.6 or later
+     - .NET Framework version 4.6.2 or later is required starting in Configuration Manager 2010
      - Starting in version 2107, the console requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md#net-version-requirements).
-   - Windows 10 build 17110 or higher
-      - Windows Server isn't supported before version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
+   - A supported version of Windows 10 or later
+      - Windows Server isn't supported before version 2010, so the Configuration Manager console needs to be installed on a supported Windows client device separate from the site server.
       - Starting in version 2010, [install the Microsoft Edge WebView2 console extension](#bkmk_webview2) to support Windows Server. <!--3555940, 8625943, 8717639 -->
    - The logged-in user account can't be the built-in administrator account
 
@@ -169,6 +169,14 @@ If you delete a downloaded report from the **Monitoring** > **Reports** node, th
  If you previously downloaded a configuration item from Community hub using Configuration Manager 2010, you may receive an error when downloading a baseline after upgrading to Configuration Manager version 2103. A download error can occur when the baseline contains an updated version of the configuration item you previously downloaded with Configuration Manager 2010.
 
 **Workaround**: To work around this issue, delete the configuration item you previously downloaded, then download the baseline with the new version of the configuration item.
+
+### Unable to sign in when single sign on with multifactor authentication is used
+<!--10436429-->
+
+When single sign on with multifactor authentication is used, you may not be able to sign in for the following features when using Configuration Manager 2103 and earlier:
+- Community hub
+- Community hub from CMPivot
+- Custom tabs in Software Center that load a website that's subject to conditional access policies
 
 ## Next steps
 

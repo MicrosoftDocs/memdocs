@@ -2,34 +2,33 @@
 title: Install Power BI sample reports
 titleSuffix: Configuration Manager
 description: Learn how to install the Power BI sample reports in Configuration Manager
-ms.date: 02/10/2021
+ms.date: 11/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install Power BI sample reports
-<!--5679791-->
+<!--5679791, 10123832, 10131458, 10488910-->
 *Applies to: Configuration Manager (current branch)*
 
-Starting in version 2002, you can integrate [Power BI Report Server](/power-bi/report-server/get-started) with Configuration Manager reporting. There are sample reports available for download that you can install in Configuration Manager. This article explains how to install the Power BI sample reports in Configuration Manager.
+You can integrate [Power BI Report Server](/power-bi/report-server/get-started) with Configuration Manager reporting. There are sample reports available for download that you can install in Configuration Manager. This article explains how to install the Power BI sample reports in Configuration Manager.
 
 ## Prerequisites
 
 - Configuration Manager reporting services point with [Power BI Report Server integrated](powerbi-report-server.md)
 
-- [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271), or later
-
-- The [update rollup (4560496) for version 2002](https://support.microsoft.com/help/4560496) is recommended but not required.
+- Microsoft Power BI Desktop (Optimized for Power BI Report Server). Use a version released between September 2019 and [January 2021](https://www.microsoft.com/download/details.aspx?id=55330). For versioning information, see the [Change log for Power BI Report Server](/power-bi/report-server/changelog). <!--12428948, Power BI Desktop versioning information, latest version link, (currently unsupported with CM) is https://www.microsoft.com/download/details.aspx?id=57271 -->
 
     > [!IMPORTANT]
-    > Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/). Don't use a version from the Microsoft Store.
-    >
-    > Only use a version of Power BI Desktop that's [Optimized for Power BI Report Server](/power-bi/report-server/install-powerbi-desktop).
+    > Use versions of Power BI Desktop:
+    > - That are from the [Microsoft Download Center](https://www.microsoft.com/download/). Don't use a version from the Microsoft Store
+    > - [That states they're **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop). Don't use versions that aren't **Optimized for Power BI Report Server**.
+    > - That were released no earlier than September 2019 and no later than January 2021. [Microsoft Power BI Desktop (Optimized for Power BI Report Server - January 2021)](https://www.microsoft.com/download/details.aspx?id=55330) is recommended. <!--12428948, Power BI Desktop versioning information, latest version link, (currently unsupported with CM) is https://www.microsoft.com/download/details.aspx?id=57271 -->
 
 ## Download the sample reports
 
@@ -44,7 +43,7 @@ To download the sample reports:
 1. Run the `ConfigMgrSamplePowerBIReports.exe` file to extract the .pbit files.
 
 > [!NOTE]
-> These sample reports are also available for download in [Community hub](community-hub.md).
+> Some of the sample reports are also available for download in [Community hub](community-hub.md).
 > - Community hub direct link to the [Software Update Compliance Status sample report](https://communityhub.microsoft.com/item/10428)
 > - Community hub direct link to the [Software Update Deployment Status sample report](https://communityhub.microsoft.com/item/10429)
 
@@ -88,3 +87,13 @@ To install the sample reports:
 1. Right-click on one of the reports and select **Run in Browser** to launch the report.
 
     :::image type="content" source="media/view-powerbi-report.png" alt-text="Run the sample report from the Configuration Manager console" lightbox="media/view-powerbi-report.png":::
+
+## Sample reports
+
+The following sample Power BI reports are included in the download:
+
+- Software Update Compliance Status
+- Software Update Deployment Status
+- Client Status
+- Content Status
+- Microsoft Edge Management

@@ -69,6 +69,8 @@ items:
     href: manage-os-versions.md
   - name: Manage Windows Holographic
     href: windows-holographic-for-business.md
+  - name: Microsoft Surface Management Portal
+    href: surface-management-portal.md  
 - name: How-to guides
   items:
   - name: Plan and Deploy
@@ -108,6 +110,8 @@ items:
           href: deployment-guide-platform-ios-ipados.md    
         - name: Android, Android Enterprise 
           href: deployment-guide-platform-android.md 
+        - name: macOS 
+          href: deployment-guide-platform-macOS.md 
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection

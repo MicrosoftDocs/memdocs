@@ -1,15 +1,15 @@
 ---
-title: Changes from version 2012 
+title: Changes from version 2012
 titleSuffix: Configuration Manager
 description: Identify the changes and new capabilities in Configuration Manger versus System Center 2012 Configuration Manager.
 ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's changed from System Center 2012 Configuration Manager
@@ -93,11 +93,11 @@ For more information on how to test clients, see [How to test client upgrades in
 
 Be aware of the following changes to OS deployment:
 
-- In the Create Task Sequence Wizard, a new task sequence type is available: **Upgrade an operating system from upgrade package**. It creates the steps to upgrade computers from Windows 7 or Windows 8.1 to Windows 10. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).  
+- In the Create Task Sequence Wizard, a new task sequence type is available: **Upgrade an operating system from upgrade package**. It creates the steps to upgrade computers from an earlier version of Windows to Windows 10 or later. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).  
 
 - Windows PE peer cache is now available when you deploy operating systems. Computers that run a task sequence to deploy an OS can use Windows PE peer cache to obtain content from a peer cache source, instead of downloading content from a distribution point. This behavior helps minimize WAN traffic in branch office scenarios where there's no local distribution point. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
-- You can now view the state of Windows as a service in your environment. You can also create servicing plans to form deployment rings, and make sure that Windows 10 current branch computers are kept up to date when new builds are released. Additionally, you can view alerts when Windows 10 clients are near the end of support for their build. For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).  
+- You can now view the state of Windows as a service in your environment. You can also create servicing plans to form deployment rings, and make sure that Windows 10 or later computers are kept up to date when new builds are released. Additionally, you can view alerts when Windows clients are near the end of support for their build. For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
 ### Application management  
 
@@ -107,7 +107,7 @@ Be aware of the following changes to application management:
 
 - Software Center has a new, modern look. User-available apps that previously only appeared in the application catalog now appear in Software Center under the Applications tab. This behavior makes these deployments more discoverable, and makes it unnecessary for users to refer to the separate application catalog. Additionally, a Silverlight-enabled browser is no longer required. For more information, see [Plan for and configure application management](../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
-- The new Windows Installer through MDM application type lets you create and deploy Windows Installer-based apps to enrolled PCs that run Windows 10. For more information, see [Creating Windows applications](../../../apps/get-started/creating-windows-applications.md).  
+- The new Windows Installer through MDM application type lets you create and deploy Windows Installer-based apps to enrolled PCs that run Windows 10 or later. For more information, see [Creating Windows applications](../../../apps/get-started/creating-windows-applications.md).  
 
 - In Configuration Manager 2012, to specify a link to an app in the Windows Store, you could either specify the link directly, or browse to a remote computer that had the app installed. In Configuration Manager current branch, you can still enter the link directly, but now, instead of browsing to a reference computer, you can browse the store for the app directly from the Configuration Manager console.  
 
@@ -115,7 +115,7 @@ Be aware of the following changes to application management:
 
 Be aware of the following changes to software updates:
 
-- Configuration Manager can now detect the difference between software update management methods for computers. Specifically, it can differentiate between a Windows 10 computer that connects to Windows Update for Business (WUfB), and a computer connected to WSUS. The **UseWUServer** attribute is new, and specifies whether the computer is managed with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
+- Configuration Manager can now detect the difference between software update management methods for computers. Specifically, it can differentiate between a Windows computer that connects to Windows Update for Business (WUfB), and a computer connected to WSUS. The **UseWUServer** attribute is new, and specifies whether the computer is managed with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
 - You can now schedule and run the WSUS clean-up task from the Configuration Manager console. In **Software Update Point Component** properties, when you select to run the WSUS clean-up task, it runs at the next software updates synchronization. The expired software updates are set to a status of declined on the WSUS server, and the Windows Update Agent on computers no longer scans these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sum/deploy-use/software-updates-maintenance.md).  
 
@@ -127,13 +127,13 @@ Be aware of the following changes to compliance settings:
 
 - The **Create Configuration Item** wizard now makes it easier to choose the configuration item type you want to create. Additionally, new and updated configuration items are available for:  
 
-    - Windows 10 devices managed with the Configuration Manager client  
+    - Windows 10 or later devices managed with the Configuration Manager client  
 
     - mac OS X devices managed with the Configuration Manager client  
 
     - Windows desktop and server computers managed with the Configuration Manager client  
 
-    - Windows 8.1 and Windows 10 devices managed without the Configuration Manager client  
+    - Windows 8.1 and Windows 10 or later devices managed without the Configuration Manager client
 
     For more information, see [How to create configuration items](../../../compliance/deploy-use/create-configuration-items.md).  
 

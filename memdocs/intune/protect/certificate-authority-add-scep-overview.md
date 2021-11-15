@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/22/2021
+ms.date: 11/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -69,7 +69,11 @@ The following diagram shows a detailed flow of third-party SCEP integration with
 Before integrating third-party certification authorities with Intune, confirm that the CA you're using supports Intune. [Third-party CA partners](#third-party-certification-authority-partners) (in this article) includes a list. You can also check your certification authority's guidance for more information. The CA may include setup instructions specific to their implementation.
 
 > [!NOTE]
-> To support Android Enterprise Device Owner devices, the CA must support use of an HTTPS URL when you configure the *HTTP Server URL* for the [SCEP certificate profile](certificates-profile-scep.md).
+> To support the following devices, the CA must support the use of an HTTPS URL when you configure  you must configure an HTTPS URL when you configure *SCEP Server URLs* for the [SCEP certificate profile](certificates-profile-scep.md):
+> - Android device administrator
+> - Android Enterprise device owner
+> - Android Enterprise corporate-owned work profile
+> - Android Enterprise personally-owned work profile
 
 ### Authorize communication between CA and Intune
 
@@ -138,9 +142,10 @@ The following third-party certification authorities support Intune:
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
 - [Entrust](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
-- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
+- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [IDnomic](https://www.idnomic.com/)
+- [Nexus Certificate Manager](https://doc.nexusgroup.com/display/PUB/Example%3A+SCEP+Intune+configuration+in+Protocol+Gateway)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)

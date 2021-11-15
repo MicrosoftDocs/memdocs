@@ -1,17 +1,15 @@
 ---
-title: "Synchronize updates with no Internet connection "
-titleSuffix: "Configuration Manager"
-description: "Run software updates synchronization on the top-level software update point that is disconnected from the Internet."
+title: Synchronize updates with no Internet connection
+titleSuffix: Configuration Manager
+description: Run software updates synchronization on the top-level software update point that is disconnected from the Internet.
 ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 author: mestew
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 
 # Synchronize software updates from a disconnected software update point  

@@ -6,10 +6,10 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Replace an existing computer and transfer settings with Configuration Manager
@@ -28,7 +28,7 @@ This topic provides the general steps in Configuration Manager to replace an exi
 
 -   **Install a state migration point (required only if you transfer settings)**  
 
-     When you are going to capture settings from the existing computer, and then restore the settings to the new operating system, you must install a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+     When you are going to capture settings from the existing computer, and then restore the settings to the new operating system, you must install a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point).  
 
 ##  <a name="BKMK_Configure"></a> Configure  
 

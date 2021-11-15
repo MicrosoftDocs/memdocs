@@ -2,13 +2,14 @@
 title: Custom properties for devices
 titleSuffix: Configuration Manager
 description: Use the administration service to set custom property data on devices, for reporting or collections.
-ms.date: 08/02/2021
+ms.date: 10/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
 ---
 
 # Custom properties for devices
@@ -104,6 +105,9 @@ select SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R
 from SMS_R_System inner join SMS_G_System_ExtensionData on SMS_G_System_ExtensionData.ResourceId = SMS_R_System.ResourceId 
 where SMS_G_System_ExtensionData.PropertyName = "AssetTag" and SMS_G_System_ExtensionData.PropertyValue = "0580255"
 ```
+
+> [!NOTE]
+> To use custom properties WQL statements with incremental collection updates, use Configuration Manager version 2107 with the [update rollup](../../hotfix/2107/11121541.md) or later.<!--10964944-->
 
 ## Next steps
 

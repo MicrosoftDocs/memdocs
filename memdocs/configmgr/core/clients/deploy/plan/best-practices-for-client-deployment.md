@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Recommendations for client deployment in Configuration Manager
@@ -111,7 +111,7 @@ When you have a choice of which type of write filter to enable, choose file-base
 For more information about the maximum number of Windows Embedded clients that a primary site can support, see [Supported operating systems for clients and devices](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 > [!IMPORTANT]
-> For Windows 10 computers that you plan to protect with a unified write filter (UWF), configure the device for UWF before you install the client. This configuration enables Configuration Manager to install the client with a custom credential provider that locks out low-rights users from signing in to the device during maintenance mode.
+> For Windows computers that you plan to protect with a unified write filter (UWF), configure the device for UWF before you install the client. This configuration enables Configuration Manager to install the client with a custom credential provider that locks out low-rights users from signing in to the device during maintenance mode.
 
 ## Next steps
 

@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Add PowerShell scripts to Windows 10 devices in Microsoft Intune
-description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10 devices in Microsoft Intune. Read common issues and resolutions. 
+title: Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune
+description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10/11 devices in Microsoft Intune. Read common issues and resolutions. 
 keywords:
 author: Erikre
 ms.author: erikre
@@ -23,11 +23,11 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: OS=Windows;intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use PowerShell scripts on Windows 10 devices in Intune
+# Use PowerShell scripts on Windows 10/11 devices in Intune
 
 Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows 10 devices. The management extension enhances Windows device management (MDM), and makes it easier to move to modern management.
 
@@ -98,9 +98,9 @@ The Intune management extension has the following prerequisites. Once they're me
 ## Create a script policy and assign it
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **PowerShell scripts** > **Add**.
+2. Select **Devices** > **Scripts** > **Add** > **Windows 10 and later**.
 
-    ![Add and use PowerShell scripts in Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
+    ![Screenshot that shows creating a new script for a Windows 10 device.](./media/intune-management-extension/create-script-windows.png)
 
 3. In **Basics**, enter the following properties, and select **Next**:
     - **Name**: Enter a name for the PowerShell script. 

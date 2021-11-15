@@ -3,7 +3,7 @@ metadata:
   title: Diagnostic and usage data FAQ
   titleSuffix: Configuration Manager
   description: Frequently asked questions about diagnostic and usage data for Configuration Manager
-  ms.date: 08/10/2021
+  ms.date: 11/15/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: conceptual
@@ -29,7 +29,7 @@ sections:
           - [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md)
           - [Use the service connection tool](../../servers/manage/use-the-service-connection-tool.md)
           
-          To support new versions of Windows 10 and cloud services like Microsoft Intune, you need to update the current branch of Configuration Manager on a regular basis. Microsoft requires at least the basic level of diagnostic and usage data. This data is used to keep the product up to date, improve the update experience, and improve the quality and security of the product.
+          To support new versions of Windows and cloud services like Microsoft Intune, you need to update the current branch of Configuration Manager on a regular basis. Microsoft requires at least the basic level of diagnostic and usage data. This data is used to keep the product up to date, improve the update experience, and improve the quality and security of the product.
           
           No data is sent to the service when the service connection point is in offline mode. When you switch to online mode or use the service connection tool, it sends data to the service to check for updates.
           

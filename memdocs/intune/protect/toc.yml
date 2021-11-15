@@ -57,8 +57,6 @@ items:
       href: device-compliance-get-started.md    
     - name: Create a policy
       href: create-compliance-policy.md
-    - name: Location-based compliance
-      href: use-network-locations.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
@@ -106,6 +104,8 @@ items:
         href: advanced-threat-protection-manage-android.md
       - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
+      - name: MDE Security Configuration Management
+        href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
     - name: Tenant attach
@@ -336,7 +336,9 @@ items:
   - name: Compliance policy settings
     items:
     - name: Compliance settings - Android device administrator
-      href: compliance-policy-create-android.md
+      href: compliance-policy-create-android.md  
+    - name: Compliance settings - Android (AOSP) 
+      href: compliance-policy-create-android-aosp.md
     - name: Compliance settings - Android Enterprise
       href: compliance-policy-create-android-for-work.md
     - name: Compliance settings - iOS
@@ -382,6 +384,8 @@ items:
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md
+    - name: Windows 365 baseline settings
+      href: security-baseline-settings-windows-365.md
   - name: Microsoft Tunnel command-line tools
     href: microsoft-tunnel-reference.md
   - name: Windows update settings

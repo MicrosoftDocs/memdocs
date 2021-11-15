@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/15/2021
+ms.date: 09/20/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,6 +43,28 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
+## App Store, doc viewing, gaming  
+
+### Settings apply to: Automated device enrollment (supervised)
+
+- **Block adding Game Center friends**: **Yes** prevents users from adding friends to Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add friends to Game Center.  
+
+  This feature applies to:  
+  - macOS 10.13 and newer  
+
+
+- **Block Game Center**: **Yes** disables Game Center, and the Game Center icon is removed from the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make Game Center available to users.   
+
+  This feature applies to:    
+  - macOS 10.13 and newer  
+
+
+- **Block multiplayer gaming in the Game Center**: **Yes** prevents multiplayer gaming when using Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games. 
+
+  This feature applies to:  
+  - macOS 10.13 and newer  
+
+
 ## Built-in Apps
 
 ### Settings apply to: All enrollment types
@@ -64,7 +86,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 ### Settings apply to: All enrollment types
 
 - **Block iCloud Keychain sync**: **Yes** disables syncing credentials stored in the Keychain to iCloud. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sync these credentials.
-- **Block iCloud Desktop and Document Sync**: **Yes** prevents iCloud from syncing documents and data. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow document and key-value synchronization to your iCloud storage space.
+- **Block iCloud Document and Data Sync**: **Yes** prevents iCloud from syncing documents and data. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow document and key-value synchronization to your iCloud storage space.
 - **Block iCloud Mail Backup**: **Yes** prevents iCloud from syncing to the macOS Mail app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Mail synchronization to iCloud.
 - **Block iCloud Contact Backup**: **Yes** prevents iCloud from syncing the device contacts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow contact sync using iCloud.
 - **Block iCloud Calendar Backup**: **Yes** prevents iCloud from syncing to the macOS Calendar app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Calendar synchronization to iCloud.
@@ -105,24 +127,38 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 - **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
 
-### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
+### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)  
 
-- **Defer software updates**: **Yes** allows you to delay when OS updates and non-OS updates are shown on devices. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting.
+- **Defer software updates**: This setting lets you defer the visibility of software updates on devices for up to 90 days. For example, if Apple releases a macOS update on a specific date, it naturally shows on devices around the release date. This setting can hide the update so that users don't see it as soon as it's available.   
 
-  By default, the OS might show updates on devices as Apple releases them. By default, software updates aren't delayed. If you configure this setting, then OS and non-OS software updates are delayed, depending on the options you select. The drop-down does exactly what you choose. It can delay both, delay neither, or delay one of them.
+  This setting doesn't control when updates are installed and doesn't impact scheduled updates. Seed build updates are allowed without delay. 
 
-  For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows on devices around the release date. Seed build updates are allowed without delay.  
+  To use this setting, select the software updates you want to delay. Your options: 
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. By default, updates are delayed for `30` days. This value applies to the **Defer software updates** options you select. If you only select **Operating system updates**, then only OS updates are delayed for 30 days. If you select **Operating system updates** and **Non operating system updates**, then both are delayed for 30 days.
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might show newly released software updates to users as soon as they're released.    
+  - **Major OS software updates**: Major OS software updates, such as macOS 12, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of major OS software updates** field. Requires macOS 11.3 and newer. 
+  - **Minor OS software updates**: Minor OS software updates, such as macOS 12.x, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of minor OS software updates** field. Requires macOS 11.3 and newer.  
+  - **Non-OS software updates**: Non-OS software updates, such as Safari updates, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of non OS software updates** field. Requires macOS 11.0 and later.    
+  
+  Then enter how long you want to delay each type of update, from 1-90 days. For example, if a macOS update is available on January 1, and **Delay visibility** is set to 5 days, then the update isn't shown as an available update. On the sixth day following the release, that update becomes available, and users are notified to update to the earliest version available when the delay was triggered. Your options: 
 
-    When the delay expires, users get a notification to update to the earliest version available when the delay was triggered.
+   - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually.  
+  - **Delay visibility of major OS software updates**: Enter the number of days to delay all major OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.  
 
-    For example, if a macOS update is available on **January 1**, and **Delay visibility** is set to **5 days**, then the update isn't shown as an available update. On the **sixth day** following the release, that update is available, and users can install it.
+     This feature applies to:  
+    - macOS 11.3 and newer 
 
-    This feature applies to:  
-    - macOS 10.13.4 and newer
+  - **Delay visibility of minor OS software updates**: Enter the number of days to delay all minor OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.    
 
-### Settings apply to: Automated device enrollment
+     This feature applies to:  
+    - macOS 11.3 and newer 
+
+  - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.   
+
+     This features applies to:  
+    - macOS 11.0 and newer  
+
+### Settings apply to: Automated device enrollment  
 
 - **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
 
@@ -136,7 +172,18 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 - **Allow Classroom to lock the device without prompting**: **Yes** lets teachers lock a student's device or app without the student's approval. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students agree before teachers can lock the device or app.
 
-- **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.
+- **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.  
+
+- **Block modification of wallpaper**: 
+**Yes** prevents users from changing the device wallpaper. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the wallpaper.  
+
+  This feature applies to:  
+  - macOS 10.13 and newer  
+
+- **Block users from erasing all content and settings on device**: **Yes** disables the reset option on supervised devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to erase all content and settings on their device.  
+
+  This feature applies to:  
+  - macOS 12 and newer  
 
 ## Password
 
@@ -172,7 +219,7 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
 
     After six failed attempts, macOS automatically forces a time delay before a passcode can be entered again. The delay increases with each attempt. Set the **Lockout duration** to add a delay before the next passcode can be entered.
 
-    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
+    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign-in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
 
       If you leave this value blank, or don't change it, then `30` minutes is used by default.
 

@@ -1,17 +1,15 @@
 ---
-title: "Blocking clients"
-titleSuffix: "Configuration Manager"
-description: "Block client access for system security by using Configuration Manager."
+title: Blocking clients
+titleSuffix: Configuration Manager
+description: Block client access for system security by using Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Determine whether to block clients in Configuration Manager
 

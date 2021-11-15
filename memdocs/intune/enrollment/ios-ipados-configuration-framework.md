@@ -5,8 +5,8 @@ title: iOS/iPadOS security configuration framework
 titleSuffix: Microsoft Intune
 description: Learn the restrictions and settings available for iOS/iPadOS device  security.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/15/2021
 ms.topic: how-to

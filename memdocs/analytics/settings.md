@@ -2,15 +2,14 @@
 title: Endpoint analytics settings
 titleSuffix: Microsoft Endpoint Manager
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
-ms.assetid: 266a84b2-7b8d-4b9c-919e-114c10a510e5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
@@ -37,7 +36,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
     
   - In **Configuration Settings**:
    
-       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
+       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 or later devices
     
        - **Scope**: Select **Endpoint analytics**. Windows updates scope is not used by endpoint analytics.
 
@@ -54,7 +53,7 @@ Once connected, you can [choose which devices you'd like to target](enroll-confi
 
 ### <a name="bkmk_consent"></a> Consent to share data
 
-By sharing anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights like Startup performance or Recommended software. The data currently in the reports immediately becomes stale and new data isn't added. Data prior to revoking consent will display for up to 60 days until the historical data is no longer available.
+By sharing anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights such as startup performance. The data currently in the reports immediately becomes stale and new data isn't added. Data prior to revoking consent will display for up to 60 days until the historical data is no longer available.
 
 To revoke consent:
 

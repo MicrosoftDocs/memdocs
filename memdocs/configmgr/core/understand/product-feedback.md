@@ -2,13 +2,14 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 08/02/2021
+ms.date: 11/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Product feedback for Configuration Manager
@@ -23,7 +24,7 @@ From the Configuration Manager console, you can share feedback directly to the M
 
 - **Send a frown** (**ALT** + **SHIFT** + **8**): Send feedback on what you didn't like, and how Microsoft can improve it.
 
-- **Send a suggestion** (**ALT** + **SHIFT** + **9**): Open the [Configuration Manager UserVoice website](https://configurationmanager.uservoice.com/) to share your idea. For more information, see [Send a suggestion](#send-a-suggestion).
+- **Send a suggestion** (**ALT** + **SHIFT** + **9**): Open the Configuration Manager product feedback website to share your idea. For more information, see [Send a suggestion](#send-a-suggestion).
 
 There's also an option to **Contact support** (**ALT** + **SHIFT** + **0**), which opens the [Microsoft support for business portal](https://aka.ms/cmcbsupport).
 
@@ -80,7 +81,7 @@ Before you file a frown, prepare your information:
 
 - Do you need immediate assistance? If so, contact Microsoft support for urgent issues. For more information, see [Support options and community resources](find-help.md#support-options-and-community-resources).
 
-- Is this feedback a suggestion to improve the product? If so, share a new idea on UserVoice. For more information, see [Send a suggestion](#send-a-suggestion).
+- Is this feedback a suggestion to improve the product? If so, share a new idea instead. For more information, see [Send a suggestion](#send-a-suggestion).
 
 - Is the issue with the product documentation? You can file feedback directly on the documentation. For more information, see [Doc feedback](../../../use-docs.md#about-feedback).
 
@@ -122,21 +123,9 @@ If the **Provide feedback** wizard successfully submits your feedback, but fails
 
 ## Send a suggestion
 
-When you **Send a suggestion**, it opens the Configuration Manager site on [UserVoice](https://configurationmanager.uservoice.com/), a third-party website. The Configuration Manager product team uses the following UserVoice status values:
+When you **Send a suggestion**, it opens the [Feedback for Configuration Manager](https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472) site.
 
-- **Noted**: We understand the request and it makes sense. We've added it to our backlog.
-
-- **Planned**: We've started coding for this feature and expect it to show up in a technical preview build within the next few months.
-
-- **Started**: The feature is now in a technical preview release. Try it out, and share feedback from the console. Let us know if the feature is on the right track or not. Or you can share additional feedback in the UserVoice comments section of the original request.
-
-- **Completed**: The first version of the feature is in a current branch production build. This status doesn't mean we're 100% done with the feature. It means that the first version of the feature is in a current branch release, and you can start using it in your production environment. We're marking it completed because:
-
-  - We want you to know the feature is production-ready.
-
-  - We want to give back your UserVoice votes so you can use them on other items.
-
-  - You can file new ideas for this feature. Help us know the next most important improvement for this feature.
+For more information, including the different status values, see [How Microsoft uses feedback](/microsoft-365/admin/misc/feedback-provide-microsoft#how-microsoft-uses-feedback).
 
 ## Share feedback in version 2006 and earlier
 
@@ -180,7 +169,7 @@ When you **Send a smile** or **Send a frown**, the feedback includes the followi
 
 - OS build information
 
-- Configuration Manager hierarchy ID
+- Configuration Manager support ID, also known as the hierarchy ID
 
 - Product build information
 
