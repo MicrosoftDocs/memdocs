@@ -126,7 +126,7 @@ After the configuration completes successfully and the wizard closes, the Certif
 > [!TIP]
 > It can be helpful to rename the connector in the Microsoft Endpoint Manager portal to reference the server which it is installed on. 
 > 
-> To rename the connector, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** and select the connector you wish to rename. Modify the **Name** field as desired, and click **save**
+> To rename the connector, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** and select the connector you wish to rename. Modify the **Name** field as desired, and click **save**.
 
 ## Modify the connector configuration
 
