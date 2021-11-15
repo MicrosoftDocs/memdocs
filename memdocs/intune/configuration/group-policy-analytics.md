@@ -72,8 +72,8 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
     - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.  
 
-    > [!NOTE]
-    > Whenever the Microsoft Intune product team makes changes to the mapping in Intune, the percentage under MDM Support automatically updates to reflect those changes.   
+        > [!NOTE]
+        > Whenever the Microsoft Intune product team makes changes to the mapping in Intune, the percentage under MDM Support automatically updates to reflect those changes.   
 
     - **Unknown Settings**: Shows GPO settings that fall outside of the list of the Configuration Service Providers (CSPs) that this tool can parse.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
