@@ -80,9 +80,11 @@ To improve the visibility and transparency of console extensions, the site now c
 
 <!--5728069-->
 
-This release includes improvements to the **Client health dashboard**.
+This release includes multiple improvements to the **Client health dashboard**.
 
-<!-- For more information, see [Client health dashboard](../../clients/manage/monitor-clients.md#bkmk_health). -->
+:::image type="content" source="media/5728069-client-health-dashboard-small.png" alt-text="An example of the updated Client Health Dashboard.":::
+
+For more information, see [Client health dashboard](../../clients/manage/client-health-dashboard.md).
 
 ## Software Center
 

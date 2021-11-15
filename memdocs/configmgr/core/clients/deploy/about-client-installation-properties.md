@@ -471,13 +471,13 @@ The frequency in minutes at which the client health evaluation tool (ccmeval.exe
 
 Example: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
-For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md#bkmk_health).
+For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md).
 
 ### CCMEVALHOUR
 
 The hour during the day when the client health evaluation tool (ccmeval.exe) runs. Specify an integer value from `0` (midnight) to `23` (11:00 PM). By default, ccmeval runs at midnight.
 
-For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md#bkmk_health).
+For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md).
 
 ### CCMFIRSTCERT
 
