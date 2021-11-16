@@ -20,6 +20,8 @@ An orchestration group gives you the flexibility to update devices based on a pe
 
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
+:::image type="content" source="./media/9957939-orchestration-group-scripts-tab.png" alt-text="Screenshot of the Scripts tab in the Orchestration Group node." lightbox="./media/9957939-orchestration-group-scripts-tab.png":::
+
 ## Create an orchestration group
 
 1. Verify the [prerequisites, permissions, and limitations](orchestration-groups.md#prerequisites) for orchestration groups.
@@ -152,9 +154,8 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
    - This option was introduced in Configuration Manager version 2103
 1. If an orchestration group is in a *Failed* state:
    1. Determine why the orchestration failed and resolve any issues.
-   1. [Reset the orchestration state for group members](#reset-orchestration-state-for-a-group member).
+   1. [Reset](#reset-orchestration-state-for-a-group-member) the orchestration state for group members.
    1. From the **Orchestration Group** node, choose the **Start Orchestration** button to restart orchestration.
-   [![Start Orchestration ](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
 
 
 > [!TIP]
@@ -164,8 +165,6 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
 ## Reset orchestration state for a group member
 
 If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also select **Reset Orchestration Group Member** from the ribbon. Before resetting the state, you should check the client to see why it failed and correct any issues found.
-
-   [![Reset Orchestration Group Member](./media/3098816-reset-group-member.png)](./media/3098816-reset-group-member.png#lightbox)
 
 ## Next steps
 
