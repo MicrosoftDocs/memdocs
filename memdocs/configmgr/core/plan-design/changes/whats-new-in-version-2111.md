@@ -181,7 +181,7 @@ In Configuration Manager current branch version 2107, you can use the administra
 
 Starting in this release, you can create and edit these custom properties in the Configuration Manager console. This new user interface makes it easier to view and edit these properties. You can still use the administration service interface to automate the process from an external system.
 
-<!-- For more information, see [Custom properties for devices](../../../develop/adminservice/custom-properties.md). -->
+For more information, see [Custom properties for devices](../../../develop/adminservice/custom-properties.md).
 
 ### Export to CSV
 
