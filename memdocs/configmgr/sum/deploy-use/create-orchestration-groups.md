@@ -157,7 +157,6 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
    1. [Reset](#reset-orchestration-state-for-a-group-member) the orchestration state for group members.
    1. From the **Orchestration Group** node, choose the **Start Orchestration** button to restart orchestration.
 
-
 > [!TIP]
 > - Orchestration groups only apply to software update deployments. They don't apply to other deployments.
 > - You can right-click on an Orchestration Group member and select **Reset Orchestration Group Member**. This allows you to rerun orchestration.
