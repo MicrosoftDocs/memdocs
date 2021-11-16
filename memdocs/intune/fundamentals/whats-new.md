@@ -165,7 +165,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - TPM Manufacturer ID
 These details are also included when you *Export* the details from the *All devices* pane.  
 
-#### Settings for Shared iPad now generally available<-10975827  -->  
+#### Settings for Shared iPad now generally available<-- 10975827  -->  
 Four Shared iPad settings are now out of preview and generally available to use when creating an Apple enrollment profile These settings are applied during automated device enrollment (ADE).
 
 For iPadOS 14.5 and later in Shared iPad mode:  
