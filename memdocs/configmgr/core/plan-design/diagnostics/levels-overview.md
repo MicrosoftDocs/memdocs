@@ -6,7 +6,6 @@ ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -51,7 +50,9 @@ The Full level includes all data in the Basic and Enhanced levels. It also inclu
 To change the data collection level, you need **Modify** permissions on the **Site** object class.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
 1. Select **Hierarchy Settings** in the ribbon.
+
 1. Switch to the **Diagnostic and Usage Data** tab, then choose the data level.
 
 ## Version-specific details
@@ -66,5 +67,7 @@ The following articles detail the specific data that Configuration Manager colle
 
 ## Next steps
 
+Next, learn about the diagnostics and usage data that Configuration Manager collects for its tools:
+
 > [!div class="nextstepaction"]
-> [Frequently asked questions](frequently-asked-questions.yml)
+> [Diagnostic usage data for tools](tools.md)
