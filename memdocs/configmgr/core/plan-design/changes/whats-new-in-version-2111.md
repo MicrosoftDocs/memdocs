@@ -161,7 +161,7 @@ Pre and post-scripts for orchestration groups now require approval to take effec
 - **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
 - **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
 
-<!-- For more information, see [Orchestration groups in Configuration Manager](../../../sum/deploy-use/orchestration-groups.md). -->
+For more information, see [Orchestration groups in Configuration Manager](../../../sum/deploy-use/orchestration-groups.md).
 
 ### Enable update notifications from Microsoft 365 Apps
 
