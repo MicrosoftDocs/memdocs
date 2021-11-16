@@ -23,7 +23,7 @@ An orchestration group gives you the flexibility to update devices based on a pe
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
 > [!NOTE]
-> In this version of Configuration Manager, orchestration groups is a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
+> Starting in Configuration Manager version 2111, Orchestration groups is no longer a pre-release feature. For more information, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
 >
 > The **Orchestration Groups** feature is the evolution of the [Server Groups](service-a-server-group.md) feature. An orchestration group is an object in Configuration Manager.
 
@@ -38,6 +38,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 ## Prerequisites
 
 ### Site server and permission prerequisites
+
 - To see all of the orchestration groups and updates for those groups, your account needs to be a **Full Administrator**.
    - Role-based administration for orchestration groups currently isn't available.
 - Enable the **Orchestration Groups** feature. For more information, see [Enable optional features](../../core/servers/manage/optional-features.md).
@@ -50,6 +51,14 @@ Members of an orchestration group can be any Configuration Manager client, not j
 - Devices can't be in more than one orchestration group.
    - Devices already in an orchestration group won't be available to select when adding new members.
 
+### Permissions for approving scripts
+<!--9957939-->
+*(Introduced in version 2111)*
+
+Approving scripts for orchestration groups requires one of the following security roles:
+
+- Full Administrator
+- Operations Administrator
 
 ## Limitations
 

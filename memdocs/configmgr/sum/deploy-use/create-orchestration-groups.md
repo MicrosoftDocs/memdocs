@@ -16,9 +16,13 @@ ms.localizationpriority: medium
 <!--3098816-->
 *Applies to: Configuration Manager (current branch)*
 
+An orchestration group gives you the flexibility to update devices based on a percentage, a specific number, or an explicit order. You can also run a PowerShell script before and after the devices run the update deployment.
+
+Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
 ## Create an orchestration group
 
+1. Verify the [prerequisites, permissions, and limitations](orchestration-groups.md#prerequisites) for orchestration groups.
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Orchestration Group** node.
 
 1. In the ribbon, select **Create Orchestration Group** to open the **Create Orchestration Group Wizard**.
@@ -65,7 +69,7 @@ ms.localizationpriority: medium
 
 Starting in version 2111, pre and post-scripts for orchestration groups require approval to take effect. If you open, author, or modify a script, approval for the script is required from another admin. When selecting an approved script from the [**Scripts** library](../../apps/deploy-use/create-deploy-scripts.md), no additional approval is needed. By default, users can't approve a script they've authored. These roles give an additional level of security against running a script without oversight. For ease of testing, you're able to [disable script approval](../../apps/deploy-use/create-deploy-scripts.md#allow-users-to-approve-their-own-scripts) for the environment by changing the hierarchy setting.
 
-To assist you with script approval, in version 2111 the following two tabs were added to the details pane for **Orchestration Groups**:
+To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**  in version 2111:
    - **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
    - **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
 

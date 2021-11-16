@@ -42,7 +42,7 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
 
 *(Introduced in version 2107*)
 
-Starting in Configuration Manager version 2107, the following two tabs were added to the details pane for **Orchestration Groups** to assist you with [script approval](create-orchestration-groups.md#approvals-for-orchestration-group-scripts): <!--9957939-->
+Starting in Configuration Manager version 2107, the following two tabs were added to the details pane for **Orchestration Groups** to assist you with monitoring the [script approval](create-orchestration-groups.md#approvals-for-orchestration-group-scripts): <!--9957939-->
 
 - **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
 - **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
