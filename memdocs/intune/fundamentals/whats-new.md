@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/15/2021
+ms.date: 11/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -185,6 +185,21 @@ Settings catalog profiles now support duplication. To create a copy of an existi
 
 #### Work from anywhere report<!-- 7207657 -->
 The **Work from anywhere** report has replaced the **Recommended software** report in [Endpoint analytics](../../analytics/overview.md). The **Work from anywhere** report contains metrics for Windows, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
+You can now [view the BitLocker recovery key for tenant-attached devices](../protect/encrypt-devices.md#view-details-for-recovery-keys) in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
+
+To view the keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related on-premises permissions in Configuration Manager of Collection Role, with the permission > *Read BitLocker Recovery Key Permission*.
+
+Users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a device* > **Recovery keys**.
+
+This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107,  you’ll need to install an update rollup to support Azure AD joined devices:. See [KB11121541](/configmgr/hotfix/2107/11121541).
+
+#### 13 BitLocker settings added to settings catalog<!-- 10956191 -->  
+13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) have been added to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then, search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md).  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
