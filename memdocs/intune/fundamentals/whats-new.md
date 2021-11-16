@@ -90,7 +90,7 @@ For related information, see [Create a custom role in Intune](..\fundamentals\cr
 Based on a selected app, the **Device Install Status** report provides a list of devices and status information for the selected app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. If the device's platform differs from the application's platform, rather then showing **Not Applicable** for the **Status details** of the entry, the entry will no longer be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.  To find this report, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. For related information, see [Device Install Status report for apps (Operational)](../fundamentals/reports.md#device-install-status-report-for-apps-operational).
 
 #### New ADMX settings for Edge 95 and Edge updater<!-- 12426698 -->
-New ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Platform** > **Windows 10 and later** and **Profile** > **Templates** > **Administrative Templates**. For related information, see [Overview of the Microsoft Edge channels]( https://docs.microsoft.com/deployedge/microsoft-edge-channels), [Microsoft Edge Browser Policy Documentation](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies), and [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md).
+New ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Platform** > **Windows 10 and later** and **Profile** > **Templates** > **Administrative Templates**. For related information, see [Overview of the Microsoft Edge channels](/deployedge/microsoft-edge-channels), [Microsoft Edge Browser Policy Documentation](/deployedge/microsoft-edge-policies), and [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -105,8 +105,8 @@ Microsoft occasionally places safeguard holds to block installation of an update
 To learn more about active safeguard holds and expectations for their resolution, go to the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](https://aka.ms/WindowsReleaseHealth).  
 
 #### Improvements for managing Windows Updates for pre-release builds<!-- 9231846 -->
-We've improved the experience of using [Update rings for Windows 10 and later](../protect/) to manage  Windows updates for pre-release builds. The improvements include the following: 
-- We've added **Enable pre-release builds** as a new control in on the *Update ring settings*page for update rings. Use this setting to configure assigned devices to update to a pre-release build. The list of pre-release builds you can select include:  
+We've improved the experience of using [Update rings for Windows 10 and later](../protect) to manage  Windows updates for pre-release builds. The improvements include the following: 
+- We've added **Enable pre-release builds** as a new control in on the *Update ring settings* page for update rings. Use this setting to configure assigned devices to update to a pre-release build. The list of pre-release builds you can select include:  
   - **Beta Channel**
   - **Dev Channel**
   - **Windows Insider - Release Preview**
@@ -163,7 +163,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - System Management BIOS version
 - TPM Manufacturer version
 - TPM Manufacturer ID
-These details are also included when you *Export* the details from the *All devcies* pane.  
+These details are also included when you *Export* the details from the *All devices* pane.  
 
 #### Settings for Shared iPad now generally available<-10975827  -->  
 Four Shared iPad settings are now out of preview and generally available to use when creating an Apple enrollment profile These settings are applied during automated device enrollment (ADE).
