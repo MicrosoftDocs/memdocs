@@ -33,7 +33,7 @@ ms.collection:
 
 Microsoft Intune helps organizations manage access to their internal apps, data, and resources. Intune Company Portal is the app that lets you, as an employee or student in your organization, securely access those resources. 
 
-The app is available for desktop (Windows and maCOS) and mobile (Android and iOS) devices. You must have a work or school account through your organization to sign in to the app.    
+The app is available for desktop (Windows and macOS) and mobile (Android and iOS) devices. You must have a work or school account through your organization to sign in to the app.    
 
 ## Install app  
 Company Portal is available for Android, iOS, macOS, and Windows. 
