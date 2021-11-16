@@ -18,6 +18,8 @@ ms.localizationpriority: medium
 
 Create an orchestration group to better control the deployment of software updates to devices. Many server administrators need to carefully manage updates for specific workloads, and automate behaviors in between.
 
+:::image type="content" source="./media/9957939-orchestration-group-scripts-tab.png" alt-text="Screenshot of the Scripts tab in the Orchestration Group node." lightbox="./media/9957939-orchestration-group-scripts-tab.png":::
+
 An orchestration group gives you the flexibility to update devices based on a percentage, a specific number, or an explicit order. You can also run a PowerShell script before and after the devices run the update deployment.
 
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
