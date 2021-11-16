@@ -227,7 +227,7 @@ In this screenshot, CMPivot displays two separate BIOS versions with a device co
 
 ![CMPivot window with example query fro BIOSVersion](media/1358456-cmpivot-biosversion.png)
 
-You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](../clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode):
+You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](../clients/manage/manage-clients.md#manage-clients-from-the-devices-node):
 - Run Script
 - Remote Control
 - Resource Explorer
