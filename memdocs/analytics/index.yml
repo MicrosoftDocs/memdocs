@@ -22,6 +22,14 @@ landingContent:
         links:
           - text: Endpoint analytics overview
             url: overview.md
+          - text: Scores, baselines, and insights
+            url: scores.md
+      - linkListType: whats-new
+        links:
+          - text: Work from anywhere
+            url: work-from-anywhere.md
+          - text: Startup performance
+            url: startup-performance.md
 
   # Card 
   - title: Get started

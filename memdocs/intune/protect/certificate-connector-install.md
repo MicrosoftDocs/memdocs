@@ -105,7 +105,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. This user account must have an Intune license assigned.
+6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. This user account must have an Intune license assigned and the user must be a synchronized account from your local Active Directory.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
@@ -122,6 +122,11 @@ Use the following procedure to both configure a new connector and modify a previ
    If configuration isn’t successful, the wizard displays details about the errors to help you resolve the problem.
 
 After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
+
+> [!TIP]
+> It might be helpful to rename the connector to reference the server the connector is installed on. 
+> 
+> To rename the connector, in the Microsoft Endpoint Manager portal, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. Select the connector you want to rename. In **Name**, enter the name you want to use, and then select **save**.
 
 ## Modify the connector configuration
 

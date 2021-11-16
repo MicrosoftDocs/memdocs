@@ -2,7 +2,7 @@
 title: Endpoint analytics settings
 titleSuffix: Microsoft Endpoint Manager
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 10/05/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
@@ -53,7 +53,7 @@ Once connected, you can [choose which devices you'd like to target](enroll-confi
 
 ### <a name="bkmk_consent"></a> Consent to share data
 
-By sharing anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights like Startup performance or Recommended software. The data currently in the reports immediately becomes stale and new data isn't added. Data prior to revoking consent will display for up to 60 days until the historical data is no longer available.
+By sharing anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights such as startup performance. The data currently in the reports immediately becomes stale and new data isn't added. Data prior to revoking consent will display for up to 60 days until the historical data is no longer available.
 
 To revoke consent:
 
