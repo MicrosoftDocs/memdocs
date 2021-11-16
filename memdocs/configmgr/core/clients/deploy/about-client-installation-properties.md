@@ -274,7 +274,7 @@ Example: `ccmsetup.exe /source:"\\server\share"`
 
 ### /uninstall
 
-Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#BKMK_UninstalClient).
+Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#uninstall-the-client).
 
 Example: `ccmsetup.exe /uninstall`  
 

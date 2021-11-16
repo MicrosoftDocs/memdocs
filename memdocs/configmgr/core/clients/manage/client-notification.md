@@ -84,7 +84,7 @@ Add this permission to any custom roles that need to use client notification act
 
 ### Download computer policy
 
-Refresh the device policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](manage-clients.md#BKMK_PolicyRetrieval).
+Refresh the device policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](manage-clients.md#start-policy-retrieval).
 
 ### Download user policy
 

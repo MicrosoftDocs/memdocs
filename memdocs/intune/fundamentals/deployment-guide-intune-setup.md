@@ -150,7 +150,7 @@ This option is more work for administrators, but can create a more seamless expe
 2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
 3. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
 4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
-5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#BKMK_UninstalClient).
+5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
     Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../../configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
 
@@ -176,7 +176,7 @@ This option applies to Windows 10 and newer devices. If you use Windows Server O
     - Set up [Microsoft 365 Business](/microsoft-365/business/set-up)
 
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
-3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#BKMK_UninstalClient).
+3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
 Next, devices are ready to be enrolled, and receive your policies.
 

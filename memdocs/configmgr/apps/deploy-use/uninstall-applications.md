@@ -102,7 +102,7 @@ After you remove the device from the collection, the following process happens:
 
 - A background worker process runs on the site server every 10 minutes. This task keeps track of apps for which you've enabled this option. It then detects devices that you removed from the target collection. To help you troubleshoot this process, view the **SMS_ImplicitUninstall.log** file on the site server.
 
-- The client needs to download computer policy. By default, the [client policy polling interval](../../core/clients/deploy/about-client-settings.md#client-policy) client setting is 60 minutes. To accelerate this step, manually [Download computer policy](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
+- The client needs to download computer policy. By default, the [client policy polling interval](../../core/clients/deploy/about-client-settings.md#client-policy) client setting is 60 minutes. To accelerate this step, manually [Download computer policy](../../core/clients/manage/manage-clients.md#start-policy-retrieval).
 
 - 15 minutes after the client receives the updated policy, it uninstalls the app.
 
