@@ -67,8 +67,9 @@ items:
     - name: Manage Microsoft 365 Apps updates
       href: deploy-use/manage-office-365-proplus-updates.md
   - name: Monitor software updates
-    href: deploy-use/monitor-software-updates.md
     items:
+    - name: Monitor software updates
+      href: deploy-use/monitor-software-updates.md
     - name: Manage and monitor phased deployments
       href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
   - name: Software updates maintenance
