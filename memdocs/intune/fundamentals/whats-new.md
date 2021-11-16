@@ -105,7 +105,7 @@ Microsoft occasionally places safeguard holds to block installation of an update
 To learn more about active safeguard holds and expectations for their resolution, go to the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](https://aka.ms/WindowsReleaseHealth).  
 
 #### Improvements for managing Windows Updates for pre-release builds<!-- 9231846 -->
-We've improved the experience of using [Update rings for Windows 10 and later](../protect) to manage  Windows updates for pre-release builds. The improvements include the following: 
+We've improved the experience of using [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) to manage  Windows updates for pre-release builds. The improvements include the following: 
 - We've added **Enable pre-release builds** as a new control in on the *Update ring settings* page for update rings. Use this setting to configure assigned devices to update to a pre-release build. The list of pre-release builds you can select include:  
   - **Beta Channel**
   - **Dev Channel**
