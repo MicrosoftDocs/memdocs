@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 <!--3098816-->
 *Applies to: Configuration Manager (current branch)*
 
-
+After you create, edit, or start an orchestration group, you may need to monitor the group or its members. Using monitoring information along with the log files, can help you troubleshoot orchestration groups and group members.  
 
 ## Monitor orchestration groups
 
@@ -37,6 +37,15 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
 - **Orchestration Group Member Timeout (in minutes)**: Value of **Orchestration Group member timeout (in minutes)** set on the **General** page when creating the group, or the **General** tab when editing the group.
 - **Orchestration Group ID**: ID of the group, The ID is used in logs and the database.
 - **Orchestration Group Unique ID**: Unique ID of the group, The Unique ID is used in logs and the database.
+
+## Orchestration groups details tabs
+
+*(Introduced in version 2107*)
+
+Starting in Configuration Manager version 2107, the following two tabs were added to the details pane for **Orchestration Groups** to assist you with [script approval](create-orchestration-groups.md#approvals-for-orchestration-group-scripts): <!--9957939-->
+
+- **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
+- **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
 
 ## Monitor orchestration group members
 

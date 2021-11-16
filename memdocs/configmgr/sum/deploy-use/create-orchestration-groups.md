@@ -12,7 +12,7 @@ manager: dougeby
 ms.localizationpriority: medium
 ---
 
-# Create orchestration groups in Configuration Manager
+# Create and use orchestration groups in Configuration Manager
 <!--3098816-->
 *Applies to: Configuration Manager (current branch)*
 
@@ -38,28 +38,64 @@ ms.localizationpriority: medium
 
    - **Specify the maintenance sequence**, then sort the selected resources in the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-1. Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used. <!--9893550-->
+1. Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group,  if needed, on the **Script Picker** page.
+   - **Pre-Script**: A PowerShell script to run on each device *before* the deployment runs.
+   - **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
 
-   1. For Configuration Manager 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
-      - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
+   The scripts should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->. Choose from the following options when adding or modifying a script on the **Script Picker** page:
+
+    - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
         - **Open**: Open a specific `.ps1` file
         - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters will be hidden from the list. <!--9893550-->
         - **Clear**: Clears the current script in the script pane
-      - **Edit**: Edit the currently selected script
-      - **Delete**: Removes the current script
-      - **Script timeout (in seconds)**: The allowed time in seconds for the script to run before it times out
-   1. For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages.
-      1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs.
-      1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
-
-   > [!NOTE]
-   > In version 2103 and later, the maximum script length is 50,000 characters. In version 2010 and earlier, the maximum script length is 5,000 characters.<!-- MEMDocs#1575 -->
-
+    - **Edit**: Edit the currently selected script
+    - **Delete**: Removes the current script
+    - **Script timeout (in seconds)**: The allowed time in seconds for the script to run before it times out
 1. Complete the wizard.
 
-> [!WARNING]
-> - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
-> - Scripts that have parameters aren't supported. <!--9893550-->
+> [!IMPORTANT]
+> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for orchestration-group-scripts) to take effect.
+> - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->.
+> - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages. 
+>   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
+
+## Approvals for orchestration group scripts
+<!--9957939-->
+*(Introduced in version 2111)*
+
+Starting in version 2111, pre and post-scripts for orchestration groups require approval to take effect. If you open, author, or modify a script, approval for the script is required from another admin. When selecting an approved script from the [**Scripts** library](../../apps/deploy-use/create-deploy-scripts.md), no additional approval is needed. By default, users can't approve a script they've authored. These roles give an additional level of security against running a script without oversight. For ease of testing, you're able to [disable script approval](../../apps/deploy-use/create-deploy-scripts.md#allow-users-to-approve-their-own-scripts) for the environment by changing the hierarchy setting.
+
+To assist you with script approval, in version 2111 the following two tabs were added to the details pane for **Orchestration Groups**:
+   - **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
+   - **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
+
+### Approval states for pre and post-scripts
+
+The approval state for each of the scripts is displayed in the **Scripts** tab. Editing a script after it's approved will reset the approval state. The **Approval State** for each script is defined below:
+
+- **Approved**: The script is approved. Approval is granted from either of the following ways:
+   - Selecting a script from the list of approved PowerShell scripts
+   - Manual approval of the script by selecting **Approve** from the ribbon or the right-click menu.
+- **Waiting for approval**: The script is pending approval. Scripts that are written or edited directly in the code editor, or imported from a `.ps1` file will start in this approval state.
+- **Declined**: The script was denied during the approval process.
+
+> [!IMPORTANT]
+> Editing a script after it's approved will reset the approval state to **Waiting for approval**. This also means that the previously approved version of the script will not run if you start orchestration on the group while that script is in the **Waiting for approval** state.  
+
+### Permissions for approving scripts
+Approving scripts for orchestration groups requires one of the following security roles:
+
+- Full Administrator
+- Operations Administrator
+
+### Approve or deny a script for an orchestration group
+
+1. From the Configuration Manager console, go to the **Assets and Compliance** workspace > **Overview** > **Orchestration Groups**.
+1. Select an orchestration group and then select the **Scripts tab** for the group.
+1. Select one of the scripts and choose **Approve/Deny** from either the ribbon or the right-click menu.
+1. Review the script from the **Script Details** page in the **Approve or Deny Script** wizard. Select **Next** when you're finished reviewing the script.
+1. On the **Script Approval** page in the wizard, select **Approve** or **Deny**. If needed, enter in a comment to be displayed in the **Scripts** detail pane.
+1. Complete the wizard to finish the approval process.
 
 ## Display orchestration groups and members
 
