@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/08/2021
+ms.date: 11/15/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+## Week of November 15, 2021
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Device management
+
+#### Work from anywhere report <!--7207657-->
+
+The **Work from anywhere** report has replaced the **Recommended software** report in [Endpoint analytics](../../analytics/overview.md). The **Work from anywhere** report contains metrics for Windows, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
 
 ## Week of November 8, 2021
 
@@ -766,7 +776,7 @@ For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2
 
 #### Work from anywhere report<!-- 7207657  -->
 
-[Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the [Recommended software](../../analytics/recommended-software.md) report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
+[Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the **Recommended software** report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Intune apps
