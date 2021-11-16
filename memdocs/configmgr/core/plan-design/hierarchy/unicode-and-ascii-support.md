@@ -90,7 +90,7 @@ When you create the following objects, Configuration Manager only supports the A
 
 - Boot media ISO file names
 
-- [Custom property](../../../develop/adminservice/custom-properties.md) names<!-- 12377169 -->
+- [Custom property](../../../develop/adminservice/custom-properties.md) _names_<!-- 12377169 -->
 
 ## Other limitations
 

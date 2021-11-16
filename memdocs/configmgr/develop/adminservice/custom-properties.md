@@ -31,7 +31,7 @@ Starting in version 2107, you can [use the administration service](usage.md) to 
 Starting in version 2111, you can create and edit these custom properties in the Configuration Manager console. This new user interface makes it easier to view and edit these properties.
 
 > [!NOTE]
-> You can use unicode characters for custom property values, but not the property names. For more information, see [Unicode and ASCII support in Configuration Manager](../../core/plan-design/hierarchy/unicode-and-ascii-support.md).<!-- 12377169 -->
+> You can use unicode characters for custom property _values_, but not the property _names_. For more information, see [Unicode and ASCII support in Configuration Manager](../../core/plan-design/hierarchy/unicode-and-ascii-support.md).<!-- 12377169 -->
 
 ## Prerequisites
 
