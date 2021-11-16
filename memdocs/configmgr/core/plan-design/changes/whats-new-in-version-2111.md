@@ -205,7 +205,7 @@ There's a new wizard for importing console extensions that are managed for the h
 
 You can now require a console extension to be installed before it connects to the site. After you require an extension, it automatically installs for the local console the next time an admin launches it.
 
-<!-- For more information, see [Manage Configuration Manager console extensions](../../servers/manage/admin-console-extensions.md). -->
+For more information, see [Manage Configuration Manager console extensions](../../servers/manage/admin-console-extensions.md#require-installation-of-a-console-extension).
 
 ### Send product feedback from wizard and property dialogs
 

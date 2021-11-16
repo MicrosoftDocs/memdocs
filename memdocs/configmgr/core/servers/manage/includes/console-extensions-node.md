@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 08/02/2021
+ms.date: 11/19/2021
 ms.localizationpriority: medium
 ---
 <!--This file will be shared. Currently it's in use by the admin-console-extensions.md file. Some headings may be context driven by the article-->
@@ -23,7 +23,9 @@ The **Console Extensions** node is located under **Administration** > **Overview
    - Notifies then uninstalls existing instances of the extension across the hierarchy at the next launch of a locally installed console.
    - Allows for reapproval of the extension at a later date.
 - **Enable Notifications**: Upon next launch of the console, notifies users within the security scope that the extension can be installed.
-- **Disable Notifications**: Disables the console notification messages for the extension. Users within the security scope can still install approved extensions from the **Console Extensions** node.  
+- **Disable Notifications**: Disables the console notification messages for the extension. Users within the security scope can still install approved extensions from the **Console Extensions** node.
+- **Require Extension** (added in 2111): Automatically installs the extension for users within the security scope on the next launch before connecting to the site. The user launching the console needs local administrator privileges for the extension installation. <!--10486584-->
+- **Make Optional** (added in 2111): Removes the requirement for an extension. Console users can still install the extension locally from the **Console Extensions** node.  <!--10486584--> 
 - **Delete**:
    - Revokes the ability to install the extension from the **Console Extensions** node.
    - Notifies then uninstalls existing instances of the extension across the hierarchy at the next launch of a locally installed console.
@@ -72,3 +74,16 @@ The **Console Extensions** node is located under **Administration** > **Overview
 1. Select **Enable Notifications**.
 1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use a test account that you gave access to when you modified the security scope.
 1. Verify that the notification for the extension occurs and that you can install the extension.
+
+## Require installation of a console extension
+<!--10486584-->
+*(Introduced in 2111)*
+
+Starting in Configuration Manager version 2111, you can require a console extension to be installed before it connects to the site. After you require an extension, it automatically installs for the local console the next time an admin launches it. To require the installation of a console extension:
+
+1. In the Configuration Manager console, go to the **Administration** workspace.
+1. Expand **Updates and Servicing** and select the **Console Extensions** node.
+1. Select the extension, then select **Require Extension** from either the right-click menu or the ribbon.
+   - Selecting **Make Optional** for an extension removes the extension requirement. Console users can still install it locally from the **Console Extensions** node.  
+1. The next time the console is launched by a user within the extension's security scope, installation starts automatically.
+   - The user launching the console needs local administrator privileges for the extension installation.
