@@ -67,7 +67,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 You can set the update priority of Managed Google Play apps on dedicated, fully managed, and corporate-owned with a work profile Android Enterprise devices. Select **High Priority** to update an app as soon as the developer has published the update, regardless of charge status, Wi-Fi capability, or end user activity on the device. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
 
 #### Clear app data between sessions for Android Enterprise dedicated devices enrolled with shared device mode<!-- 8663319 -->
-Using Intune, you can choose to clear app data for applications that have not integrated with Shared device mode to ensure user privacy between sign-in sessions. Users will be required to initiate a sign-out from an application that has integrated with AAD's Shared device mode in order for IT-specified apps to have their data cleared. This functionality will be available for Android Enterprise dedicated devices enrolled with shared device mode on OS 9 and higher.
+Using Intune, you can choose to clear app data for applications that have not integrated with Shared device mode to ensure user privacy between sign-in sessions. Users will be required to initiate a sign-out from an application that has integrated with AAD's Shared device mode in order for IT-specified apps to have their data cleared. This functionality will be available for Android Enterprise dedicated devices enrolled with shared device mode on Android 9 or later.
 
 #### Export underlying discovered apps list data<!-- 9370255 -->
 In addition to exporting the summarized discovered apps list data, you can export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the additional new experience also provides the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data is a list of every device and each app discovered for that device. This functionality has been added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
@@ -124,10 +124,10 @@ When set to *Yes*, Intune displays an information box that confirms that by depl
 
 For more information about update rings, see [Update Rings for Windows 10 and later](../protect/windows-10-update-rings.md).
 
-#### Disable Activation Lock is deprecated as a remote device action for IOS/iPadOS<!-- 10606548 -->
-The remote device action to *Disable Activation Lock* is no longer available in Intune. This remote action is removed because the action to disable the [iOS/iPadOS Activation Lock](https://support.apple.com/en-us/HT201365) feature did not function as intended.
+#### Disable Activation Lock remote device action for iOS/iPadOS has been removed from UI<!-- 10606548 -->
+The remote device action to *Disable Activation Lock* is no longer available in Intune. You can bypass Activation Lock as detailed at [Disable Activation Lock on Supervised iOS/iPadOS devices with Intune](../remote-actions/device-activation-lock-disable.md).
 
-To replace the remote action, you can now use a workaround to disable Activation Lock as detailed [Disable Activation Lock on Supervised iOS/iPadOS devices with Intune](../remote-actions/device-activation-lock-disable.md).
+This remote action is removed because the action to disable the [iOS/iPadOS Activation Lock](https://support.apple.com/en-us/HT201365) feature did not function as intended.
 
 #### Updates for Security Baselines<!-- 9549108,  10873848 -->
 We have a pair of updates for [security baselines​](../protect/security-baselines.md), which add the following settings:
@@ -192,14 +192,14 @@ The **Work from anywhere** report has replaced the **Recommended software** repo
 #### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
 You can now [view the BitLocker recovery key for tenant-attached devices](../protect/encrypt-devices.md#view-details-for-recovery-keys) in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
 
-To view the keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related on-premises permissions in Configuration Manager of Collection Role, with the permission > *Read BitLocker Recovery Key Permission*.
+To view the keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related on-premises permissions in Configuration Manager of Collection Role, with the permission **Read BitLocker Recovery Key Permission**.
 
 Users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a device* > **Recovery keys**.
 
-This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](/configmgr/hotfix/2107/11121541).
+This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](/configmgr/hotfix/2107/11121541.md).
 
-#### 13 BitLocker settings added to settings catalog<!-- 10956191 -->  
-13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) have been added to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then, search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md).  
+#### BitLocker settings added to settings catalog<!-- 10956191 -->  
+We have added 13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) have been added to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then, search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md).  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
