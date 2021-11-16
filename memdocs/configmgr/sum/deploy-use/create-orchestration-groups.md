@@ -60,7 +60,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 1. Complete the wizard.
 
 > [!IMPORTANT]
-> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for orchestration-group-scripts) to take effect.
+> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect.
 > - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->.
 > - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages. 
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
