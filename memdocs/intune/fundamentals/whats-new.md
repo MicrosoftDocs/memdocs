@@ -196,7 +196,7 @@ To view the keys, your Intune account must have the Intune RBAC permissions to v
 
 Users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a device* > **Recovery keys**.
 
-This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](/configmgr/hotfix/2107/11121541.md).
+This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
 #### BitLocker settings added to settings catalog<!-- 10956191 -->  
 We have added 13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) have been added to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then, search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md).  
