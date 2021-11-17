@@ -60,11 +60,15 @@ These notifications use the following standardized schema:
 
 ## Prerequisites
 
+- Create the subscription on the top-level site of the hierarchy. This site is either a standalone primary site, or a central administration site (CAS). You can view and modify an existing subscription on any site in a hierarchy.<!-- 12510324 -->
+
 - The site's service connection point needs to be in online mode. For more information, see [About the service connection point](../deploy/configure/about-the-service-connection-point.md).
 
 - Currently, this feature only supports Azure Logic Apps as the external system. An active Azure subscription with rights to create a logic app is required.
 
-- The **Full administrator** security role with **All** security scope in Configuration Manager.
+- You can configure the following permissions to the **NotificationSubscription** object: Read, Delete, Modify, Create.<!-- 12510324 --> Users also need the **All** security scope.
+  - The **Full administrator** default security role has these permissions.
+  - The **Read only analyst** default security role has the **Read** permission.
 
 - To create an event type for an application approval request, the site needs an app that requires approval and is deployed to a user collection. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md) and [Approve applications](../../../apps/deploy-use/app-approval.md).
 
@@ -138,13 +142,23 @@ _Applies to version 2111 or later_
 
 There are two types of events that are currently supported:
 
-- The site raises a status message that matches conditions specified in a status filter rule. You can create a new rule or use an existing one.
+- The site raises a status message that matches conditions specified in a status filter rule for external notification. You can create a new rule or use an existing one.
 
 - A user requests approval for an application in Software Center.
 
+> [!NOTE]
+> In a hierarchy, the scope of events depends upon the event type:
+>
+> - Application approval events only happen at primary sites.
+> - Status filter rules apply to the site where you create the rule using the **Create external service notification event wizard**.
+>   - If you run the wizard to create the event while connected to the CAS, it only triggers on matching events from the CAS.
+>   - To subscribe to events raised by a child primary site, connect to the primary site. Modify the notification subscription to create a new status filter rule for the child primary site.<!-- 12510324 -->
+
 Use the following process to create an event:
 
-1. In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Alerts**, and select the new **External service notifications** node.
+1. In the Configuration Manager console, connect to the top-level site of the hierarchy. This site is either a standalone primary site, or a CAS.
+
+1. Go to the **Monitoring** workspace, expand **Alerts**, and select the **External service notifications** node.
 
 1. In the ribbon, select **Create subscription**.
 
@@ -174,6 +188,9 @@ After you create a subscription, use the **External service notifications** node
 - **Properties**: Edit the name, description, or events for a subscription. You can't edit the external service URL.
 
 - **Delete**: Remove a subscription.
+
+> [!NOTE]
+> You can view and modify an existing subscription on any site in a hierarchy.
 
 ## Create an event in Configuration Manager version 2107
 
