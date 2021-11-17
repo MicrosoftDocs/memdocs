@@ -213,7 +213,7 @@ After you [recover a central administration site](recover-sites.md) (CAS), delet
 ## Configuration Manager version 2107
 
 > [!IMPORTANT]
-> This section and the PowerShell script only apply to version 2107. In version 2111 and later, [use the Configuration Manager console](#create-an-event-in-the-configuration-manager-console) to create and manage events.
+> This section and the PowerShell script only apply to version 2107. In version 2111 and later, [use the Configuration Manager console](#create-an-event) to create and manage events.
 
 ### Other prerequisites for version 2107
 
