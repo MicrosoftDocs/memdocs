@@ -215,8 +215,14 @@ The DO cache server adds the following rewrite rules:
 
 ### IIS custom headers
 
-In case requests with X-Forwarded-For headers are blocked on a proxy server, you should either allow the header on the proxy server or change the custom header name in IIS for each server farm.
-Open IIS manager, click on "Server Farms", click on a server farm and the proxy icon. Change the value X-Forwarded-For to X-Forwarded-For-Custom (example name) under "Custom Headers".
+If requests with `X-Forwarded-For` headers are blocked on a proxy server, either allow the header on the proxy server or change the custom header name in IIS for each server farm.
+
+To change the custom header name for each server farm:
+
+1. Open IIS Manager.
+1. Select **Server Farms**.
+1. Select a server farm and the proxy icon. 
+1. Under **Custom Headers**, change the value `X-Forwarded-For` to `X-Forwarded-For-<custom-name>`.
 
 ## Manage server resources
 
