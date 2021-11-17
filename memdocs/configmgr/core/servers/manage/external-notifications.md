@@ -27,36 +27,7 @@ Starting in version 2107, you can enable the site to send notifications to an ex
 
 When you set up this feature, the site opens a communication channel with the external system. That system can then start a complex workflow or action that doesn't exist in Configuration Manager.
 
-These notifications use the following standardized schema:
-
-```json
-{
-    "properties": {
-        "EventID": {
-            "type": "integer"
-        },
-        "EventName": {
-            "type": "string"
-        },
-        "EventPayload": {
-            "type": "string"
-        },
-        "MessageID": {
-            "type": "string"
-        },
-        "ServerName": {
-            "type": "string"
-        },
-        "SiteCode": {
-            "type": "string"
-        },
-        "Source": {
-            "type": "string"
-        }
-    },
-    "type": "object"
-}
-```
+Starting in version 2111, use the Configuration Manager console to create or edit subscriptions for external notifications. This article now focuses on that experience. If you're using version 2107, see [Configuration Manager version 2107](#configuration-manager-version-2107).<!-- 10615989 -->
 
 ## Prerequisites
 
@@ -71,20 +42,6 @@ These notifications use the following standardized schema:
   - The **Read only analyst** default security role has the **Read** permission.
 
 - To create an event type for an application approval request, the site needs an app that requires approval and is deployed to a user collection. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md) and [Approve applications](../../../apps/deploy-use/app-approval.md).
-
-- In version 2107, to create the objects in Configuration Manager, you need to use the PowerShell script **SetupExternalServiceNotifications.ps1**. Use the following script sample to properly get the PowerShell script to use for this feature:<!-- 10363343 -->
-
-    ```powershell
-    $FileName = ".\SetupExternalServiceNotifications.ps1"
-    Invoke-WebRequest https://aka.ms/cmextnotificationscript -OutFile $FileName
-    (Get-Content $FileName -Raw).Replace("`n","`r`n") | Set-Content $FileName -Force
-    (Get-Content $FileName -Raw).TrimEnd("`r`n") | Set-Content $FileName -Force
-    ```
-
-    > [!NOTE]
-    > **SetupExternalServiceNotifications.ps1** is digitally signed by Microsoft. This script sample downloads the file and fixes the line breaks to preserve the digital signature.
-
-    To use the Configuration Manager console to create or edit a subscription for external notifications, update to version 2111.<!-- 10615989 -->
 
 ## Create an Azure logic app and workflow
 
@@ -134,11 +91,42 @@ Use the following process to create a sample app in Azure Logic Apps to receive 
 
     Sign in if necessary and complete the required information for the action. For more information, see the [Create logic apps](/azure/logic-apps/quickstart-create-first-logic-app-workflow#add-an-action) quickstart in the Azure Logic Apps documentation.
 
+### Notification schema
+
+These notifications use the following standardized schema:
+
+```json
+{
+    "properties": {
+        "EventID": {
+            "type": "integer"
+        },
+        "EventName": {
+            "type": "string"
+        },
+        "EventPayload": {
+            "type": "string"
+        },
+        "MessageID": {
+            "type": "string"
+        },
+        "ServerName": {
+            "type": "string"
+        },
+        "SiteCode": {
+            "type": "string"
+        },
+        "Source": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+```
+
 ## Create an event in the Configuration Manager console
 
 <!-- 10615989 -->
-
-_Applies to version 2111 or later_
 
 There are two types of events that are currently supported:
 
@@ -172,16 +160,14 @@ Use the following process to create an event:
 
         - **New status filter rule**: Create a new status filter rule to use for this event. Specify a name for the status filter rule, and then configure the filter criteria. For more information about criteria for status message rules, see [Use the status system](use-status-system.md).
 
-        - **Existing status filter rule**: Reuse a status filter rule that already exists at the site. <!-- How to get SFRs to display? -->
+            > [!IMPORTANT]
+            > Be cautious with the type of status filter rule that you create. For external notifications, the site can process 300 status messages every five minutes. If your rule allows more messages than this limit, it will cause a backlog on the site. Create rules with narrow filters for specific scenarios. Avoid generic rules that allow a lot of messages.
+
+        - **Existing status filter rule**: Reuse a status filter rule for external notification that already exists. It doesn't display all status filter rules, only those that you created using this wizard.
 
         - **User submits application request**: Send an external notification for application approval requests.
 
-    > [!IMPORTANT]
-    > Be cautious with the type of status filter rule that you create. For external notifications, the site can process 300 status messages every five minutes. If your rule allows more messages than this limit, it will cause a backlog on the site. Create rules with narrow filters for specific scenarios. Avoid generic rules that allow a lot of messages.
-
 ## Manage events in the Configuration Manager console
-
-_Applies to version 2111 or later_
 
 After you create a subscription, use the **External service notifications** node to do the following actions:
 
@@ -192,7 +178,56 @@ After you create a subscription, use the **External service notifications** node
 > [!NOTE]
 > You can view and modify an existing subscription on any site in a hierarchy.
 
-## Create an event in Configuration Manager version 2107
+## Trigger an event
+
+The process to trigger an event depends upon the type of subscription:
+
+- For a status filter rule, trigger an event for the site component. For example, use the [Configuration Manager Service Manager](../deploy/configure/site-components.md#configuration-manager-service-manager) to restart the component.
+
+- For an app approval request, use Software Center to request an app that requires approval. For more information, see [Software Center user guide](../../understand/software-center.md#install-an-application).
+
+## Monitor the workflow
+
+Within five minutes, the event triggers the logic app workflow. Check the status of the workflow in the Azure portal. Navigate to the **Runs history** page of the logic app.
+
+For more information, see [Monitor run status, review trigger history, and set up alerts for Azure Logic Apps](/azure/logic-apps/monitor-logic-apps).
+
+## Troubleshoot
+
+Use the following Configuration Manager log files on the site server to help troubleshoot this process:
+
+- **ExternalNotificationsWorker.log**: Check if the queue has been processed and notifications are sent to external system.
+- **statmgr.log**: Check if the status filter rules have been processed without errors
+
+## Known issues
+
+If you create a status filter rule, you'll see it in the site's list of **Status filter rules** in the Configuration Manager console. If you make a change on the **Actions** tab of the rule properties, the external notification won't work.
+
+After you [recover a central administration site](recover-sites.md) (CAS), delete and recreate the subscription.<!-- 10333966 -->
+
+> [!TIP]
+> Before you [remove a CAS](../deploy/install/remove-central-administration-site.md), recreate the subscriptions at the child primary site.
+
+## Configuration Manager version 2107
+
+> [!IMPORTANT]
+> This section and the PowerShell script only apply to version 2107. In version 2111 and later, [use the Configuration Manager console](#create-an-event-in-the-configuration-manager-console) to create and manage events.
+
+### Other prerequisites for version 2107
+
+To create the objects in Configuration Manager version 2107, you need to use the PowerShell script **SetupExternalServiceNotifications.ps1**. Use the following script sample to properly get the PowerShell script to use for this feature:<!-- 10363343 -->
+
+```powershell
+$FileName = ".\SetupExternalServiceNotifications.ps1"
+Invoke-WebRequest https://aka.ms/cmextnotificationscript -OutFile $FileName
+(Get-Content $FileName -Raw).Replace("`n","`r`n") | Set-Content $FileName -Force
+(Get-Content $FileName -Raw).TrimEnd("`r`n") | Set-Content $FileName -Force
+```
+
+> [!NOTE]
+> **SetupExternalServiceNotifications.ps1** is digitally signed by Microsoft. This script sample downloads the file and fixes the line breaks to preserve the digital signature.
+
+### Create an event in version 2107
 
 There are two types of events that are supported in version 2107:
 
@@ -200,7 +235,7 @@ There are two types of events that are supported in version 2107:
 
 - A user requests approval for an application in Software Center.
 
-### Create a status message event in version 2107
+#### Create a status message event in version 2107
 
 1. On the site server, run **SetupExternalServiceNotifications.ps1**. Since you're running it on the site server, enter `y` to continue.
 
@@ -235,7 +270,7 @@ There are two types of events that are supported in version 2107:
 
 1. Select `0` to exit the script.
 
-### Create an app approval event in version 2107
+#### Create an app approval event in version 2107
 
 > [!NOTE]
 > This event type requires an application that requires approval and is deployed to a user collection. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md) and [Approve applications](../../../apps/deploy-use/app-approval.md).
@@ -250,28 +285,7 @@ There are two types of events that are supported in version 2107:
 
 1. Select `0` to exit the script.
 
-## Trigger an event
-
-The process to trigger an event depends upon the type of subscription:
-
-- For a status filter rule, trigger an event for the site component. For example, use the [Configuration Manager Service Manager](../deploy/configure/site-components.md#configuration-manager-service-manager) to restart the component.
-
-- For an app approval request, use Software Center to request an app that requires approval. For more information, see [Software Center user guide](../../understand/software-center.md#install-an-application).
-
-## Monitor the workflow
-
-Within five minutes, the event triggers the logic app workflow. Check the status of the workflow in the Azure portal. Navigate to the **Runs history** page of the logic app.
-
-For more information, see [Monitor run status, review trigger history, and set up alerts for Azure Logic Apps](/azure/logic-apps/monitor-logic-apps).
-
-## Troubleshoot
-
-Use the following Configuration Manager log files on the site server to help troubleshoot this process:
-
-- **ExternalNotificationsWorker.log**: Check if the queue has been processed and notifications are sent to external system.
-- **statmgr.log**: Check if the status filter rules have been processed without errors
-
-## Remove a subscription in version 2107
+### Remove a subscription in version 2107
 
 If you need to delete a subscription, use the following process:
 
@@ -283,19 +297,7 @@ If you need to delete a subscription, use the following process:
 
 After you remove the subscription, the site doesn't send notifications to the external system.
 
-## Known issues
-
-If you create a status filter rule, you'll see it in the site's list of **Status filter rules** in the Configuration Manager console. If you make a change on the **Actions** tab of the rule properties, the external notification won't work.
-
-In version 2107, after you [recover a central administration site](recover-sites.md) (CAS), delete and recreate the subscription.<!-- 10333966 -->
-
-> [!TIP]
-> Before you [remove a CAS](../deploy/install/remove-central-administration-site.md), recreate the subscriptions at the child primary site.
-
-## Script usage
-
-> [!IMPORTANT]
-> This script only applies to version 2107. In version 2111 and later, [use the Configuration Manager console](#create-an-event-in-the-configuration-manager-console) to create and manage events.
+### Script usage in version 2107
 
 When you run **SetupExternalServiceNotifications.ps1**, it detects whether it's running on a site server:
 

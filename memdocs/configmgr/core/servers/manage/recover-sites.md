@@ -366,7 +366,7 @@ To resolve this issue, [Renew the secret key](../deploy/configure/azure-services
 ### Delete and recreate subscriptions for external notifications on the CAS
 
 <!-- 10333966 -->
-In version 2107, after you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications](external-notifications.md).
+After you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications](external-notifications.md).
 
 ### Configure HTTPS for site system roles that use IIS
 
