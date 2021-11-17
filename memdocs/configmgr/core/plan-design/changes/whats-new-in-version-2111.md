@@ -215,6 +215,17 @@ Wizards and some property pages now include an icon to provide feedback. When yo
 
 For more information, see [Product feedback for Configuration Manager](../../understand/product-feedback.md).
 
+### Power BI sample reports
+<!--10123832-->
+
+The following reports were recently added to the **Configuration Manager Sample Power BI Reports**:
+
+- Client Status
+- Content Status
+- Microsoft Edge Management
+
+For more information, see [Install Power BI sample reports](../../servers/manage/powerbi-sample-reports.md).
+
 ### Console improvements
 <!--9575773-->
 In this release we've made the following improvements to the Configuration Manager console:
