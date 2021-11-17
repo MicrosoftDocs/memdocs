@@ -213,6 +213,11 @@ The DO cache server adds the following rewrite rules:
 - `Doinc_Outbound_SetHeader_X_CID_E77D08D0-5FEA-4315-8C95-10D359D59294`
 - `Doinc_Outbound_SetHeader_X_CCC_E77D08D0-5FEA-4315-8C95-10D359D59294`
 
+### IIS custom headers
+
+In case requests with X-Forwarded-For headers are blocked on a proxy server, you should either allow the header on the proxy server or change the custom header name in IIS for each server farm.
+Open IIS manager, click on "Server Farms", click on a server farm and the proxy icon. Change the value X-Forwarded-For to X-Forwarded-For-Custom (example name) under "Custom Headers".
+
 ## Manage server resources
 
 Disk space required for each DO cache server may vary, based on your organization's update requirements. 100 GB should be enough space to cache the following content:
