@@ -37,6 +37,8 @@ Starting in version 2111, use the Configuration Manager console to create or edi
 
 - Currently, this feature only supports Azure Logic Apps as the external system. An active Azure subscription with rights to create a logic app is required.
 
+    The service connection point needs to be able to communicate with the notification service, for example Azure Logic Apps. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#external-notifications).
+
 - You can configure the following permissions to the **NotificationSubscription** object: Read, Delete, Modify, Create.<!-- 12510324 --> Users also need the **All** security scope.
   - The **Full administrator** default security role has these permissions.
   - The **Read only analyst** default security role has the **Read** permission.

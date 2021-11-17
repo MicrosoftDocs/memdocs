@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 08/02/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -244,6 +244,18 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 ## Deploy Microsoft Edge
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](includes/internet-endpoints-deploy-microsoft-edge.md)]
+
+## External notifications
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
+
+The service connection point needs to be able to communicate with the notification service, for example Azure Logic Apps. The access endpoint for the logic app typically has the following format: `https://*.<RegionName>.logic.azure.com:443`. For example: `https://prod1.westus2.logic.azure.com:443`
+
+To get the access endpoint for the logic app, as well as the associated IP addresses, use the following process:
+
+1. In the Azure portal, under **Logic Apps**, select the logic app for your notification. For more information, see [Manage logic apps in the Azure portal](/azure/logic-apps/manage-logic-apps-with-azure-portal).
+1. In the app's menu, in the **Settings** section, select **Properties**.
+1. View or copy the values for the **Access endpoint** and the **Access endpoint IP addresses**.
 
 ## Microsoft public IP addresses
 
