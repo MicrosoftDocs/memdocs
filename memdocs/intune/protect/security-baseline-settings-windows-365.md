@@ -223,7 +223,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Block Password Manager**:  
   Baseline default: *Yes*  
-  CSP [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
+  CSP [Browser/AllowPasswordManager](https://go.microsoft.com/fwlink/?linkid=2067128)
 
 - **Require SmartScreen for Microsoft Edge Legacy**:  
   Baseline default: *Yes*  
@@ -466,7 +466,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer download enclosures**  
   Baseline default: *Disable*  
-  CSP [InternetExplorer/DisableEnclosureDownloading](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableenclosuredownloading)
+  CSP [InternetExplorer/DisableEnclosureDownloading](https://go.microsoft.com/fwlink/?linkid=2067245)
 
 - **Internet Explorer ignore certificate errors**  
   Baseline default: *Disable*  
@@ -494,7 +494,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer block outdated Active X controls**  
   Baseline default: *Enabled*  
-  CSP [InternetExplorer/DoNotBlockOutdatedActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotblockoutdatedactivexcontrols)
+  CSP [InternetExplorer/DoNotBlockOutdatedActiveXControls](https://go.microsoft.com/fwlink/?linkid=2067203)
 
 - **Internet Explorer include all network paths**  
   Baseline default: *Disabled*  
@@ -530,7 +530,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer internet zone allow only approved domains to use ActiveX controls**  
   Baseline default: *Enabled*  
-  CSP [InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstouseactivexcontrols)
+  CSP [InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls](https://go.microsoft.com/fwlink/?linkid=2067091)
 
 - **Internet Explorer internet zone allow only approved domains to use tdc ActiveX controls**  
   Baseline default: *Enabled*  
@@ -594,7 +594,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer internet zone include local path when uploading files to server**  
   Baseline default: *Disabled*  
-  CSP [InternetExplorer/InternetZoneIncludeLocalPathWhenUploadingFilesToServer](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneincludelocalpathwhenuploadingfilestoserver)
+  CSP [InternetExplorer/InternetZoneIncludeLocalPathWhenUploadingFilesToServer](https://go.microsoft.com/fwlink/?linkid=2067072)
 
 - **Internet Explorer internet zone initialize and script Active X controls not marked as safe**  
   Baseline default: *Disable*  
@@ -626,7 +626,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer internet zone popup blocker**  
   Baseline default: *Enable*  
-  CSP [InternetExplorer/InternetZoneUsePopupBlocker](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneusepopupblocker)
+  CSP [InternetExplorer/InternetZoneUsePopupBlocker](https://go.microsoft.com/fwlink/?linkid=2067069)
 
 - **Internet Explorer intranet zone do not run antimalware against Active X controls**  
   Baseline default: *Disabled*  
@@ -634,7 +634,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer intranet zone initialize and script Active X controls not marked as safe**  
   Baseline default: *Disable*  
-  CSP [InternetExplorer/IntranetZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneinitializeandscriptactivexcontrols)
+  CSP [InternetExplorer/IntranetZoneInitializeAndScriptActiveXControls](https://go.microsoft.com/fwlink/?linkid=2067175)
 
 - **Internet Explorer intranet zone java permissions**  
   Baseline default: *High safety*  
@@ -674,7 +674,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer processes MIME sniffing safety feature**  
   Baseline default: *Enabled*  
-  CSP [InternetExplorer/MimeSniffingSafetyFeatureInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-mimesniffingsafetyfeatureinternetexplorerprocesses)
+  CSP [InternetExplorer/MimeSniffingSafetyFeatureInternetExplorerProcesses](https://go.microsoft.com/fwlink/?linkid=2067124)
 
 - **Internet Explorer processes MK protocol security restriction**  
   Baseline default: *Enabled*  
@@ -722,7 +722,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer restricted zone drag and drop or copy and paste files**  
   Baseline default: *Disable*  
-  CSP [InternetExplorer/RestrictedSitesZoneAllowDragAndDropCopyAndPasteFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowdraganddropcopyandpastefiles)
+  CSP [InternetExplorer/RestrictedSitesZoneAllowDragAndDropCopyAndPasteFiles](https://go.microsoft.com/fwlink/?linkid=2067096)
 
 - **Internet Explorer restricted zone less privileged sites**  
   Baseline default: *Disable*  
@@ -798,7 +798,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer restricted zone drag content from different domains within windows**  
   Baseline default: *Disabled*  
-  CSP [InternetExplorer/RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenabledraggingofcontentfromdifferentdomainswithinwindows)
+  CSP [InternetExplorer/RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows](https://go.microsoft.com/fwlink/?linkid=2067079)
 
 - **Internet Explorer restricted zone include local path when uploading files to server**  
   Baseline default: *Disabled*  
@@ -850,7 +850,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer processes restrict file download**  
   Baseline default: *Enabled*  
-  CSP [InternetExplorer/RestrictFileDownloadInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictfiledownloadinternetexplorerprocesses)
+  CSP [InternetExplorer/RestrictFileDownloadInternetExplorerProcesses](https://go.microsoft.com/fwlink/?linkid=2067164)
 
 - **Internet Explorer processes scripted window security restrictions**  
   Baseline default: *Enabled*  
@@ -858,7 +858,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer security zones use only machine settings**  
   Baseline default: *Enabled*  
-  CSP [InternetExplorer/SecurityZonesUseOnlyMachineSettings](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-securityzonesuseonlymachinesettings)
+  CSP [InternetExplorer/SecurityZonesUseOnlyMachineSettings](https://go.microsoft.com/fwlink/?linkid=2067086)
 
 - **Internet Explorer use Active X installer service**  
   Baseline default: *Enabled*  
@@ -870,7 +870,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Internet Explorer trusted zone initialize and script Active X controls not marked as safe**  
   Baseline default: *Disable*  
-  CSP [InternetExplorer/InternetZoneInitializeAndScriptActiveXControlsNotMarkedSafe](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneinitializeandscriptactivexcontrolsnotmarkedsafe)
+  CSP [InternetExplorer/InternetZoneInitializeAndScriptActiveXControlsNotMarkedSafe](https://go.microsoft.com/fwlink/?linkid=2067137)
 
 - **Internet Explorer trusted zone java permissions**  
   Baseline default: *High safety*  
@@ -884,105 +884,105 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Block remote logon with blank password**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-limitlocalaccountuseofblankpasswordstoconsolelogononly)
+  CSP [LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](https://go.microsoft.com/fwlink/?linkid=2067219)
 
 - **Minutes of lock screen inactivity until screen saver activates**  
   Baseline default: *15*  
-  CSP [LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-machineinactivitylimit)
+  CSP [LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit](https://go.microsoft.com/fwlink/?linkid=2067210)
 
 - **Smart card removal behavior**  
   Baseline default: *Lock workstation*  
-  CSP [LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior)
+  CSP [LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior](https://go.microsoft.com/fwlink/?linkid=2067331)
 
 - **Require client to always digitally sign communications**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-microsoftnetworkclient-digitallysigncommunicationsalways)
+  CSP [LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways](https://go.microsoft.com/fwlink/?linkid=2067187)
 
 - **Prevent clients from sending unencrypted passwords to third party SMB servers**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-microsoftnetworkclient-sendunencryptedpasswordtothirdpartysmbservers)
+  CSP [LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers](https://go.microsoft.com/fwlink/?linkid=2067235)
 
 - **Require server digitally signing communications always**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-microsoftnetworkserver-digitallysigncommunicationsalways)
+  CSP [LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways](https://go.microsoft.com/fwlink/?linkid=2067319)
 
 - **Prevent anonymous enumeration of SAM accounts**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-donotallowanonymousenumerationofsamaccounts)
+  CSP [LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts](https://go.microsoft.com/fwlink/?linkid=2067318)
 
 - **Block anonymous enumeration of SAM accounts and shares**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-donotallowanonymousenumerationofsamaccountsandshares)
+  CSP [LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares](https://go.microsoft.com/fwlink/?linkid=2067191)
 
 - **Restrict anonymous access to named pipes and shares**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-restrictanonymousaccesstonamedpipesandshares)
+  CSP [LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares](https://go.microsoft.com/fwlink/?linkid=2067212)
 
 - **Allow remote calls to security accounts manager**  
   Baseline default: *O:BAG:BAD:(A;;RC;;;BA)*  
-  CSP [LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-restrictclientsallowedtomakeremotecallstosam)
+  CSP [LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](https://go.microsoft.com/fwlink/?linkid=2067209)
 
 - **Prevent storing LAN manager hash value on next password change**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-donotstorelanmanagerhashvalueonnextpasswordchange)
+  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange](https://go.microsoft.com/fwlink/?linkid=2067213)
 
 - **Authentication level**  
   Baseline default: *Send NTLMv2 response only. Refuse LM and NTLM*  
-  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-lanmanagerauthenticationlevel)
+  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel](https://go.microsoft.com/fwlink/?linkid=2067189)
 
 - **Minimum session security for NTLM SSP based clients**  
   Baseline default: *Require NTLM V2 and 128 bit encryption*  
-  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedclients)
+  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients](https://go.microsoft.com/fwlink/?linkid=2067324)
 
 - **Minimum session security for NTLM SSP based servers**  
   Baseline default: *Require NTLM V2 and 128 bit encryption*  
-  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedservers)
+  CSP [LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers](https://go.microsoft.com/fwlink/?linkid=2067246)
 
 - **Administrator elevation prompt behavior**  
   Baseline default: *Prompt for consent on the secure desktop*  
-  CSP [LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-behavioroftheelevationpromptforadministrators)
+  CSP [LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators](https://go.microsoft.com/fwlink/?linkid=2067215)
 
 - **Standard user elevation prompt behavior**  
   Baseline default: *Automatically deny elevation requests*  
-  CSP [LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-behavioroftheelevationpromptforstandardusers)
+  CSP [LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers](https://go.microsoft.com/fwlink/?linkid=2067183)
 
 - **Detect application installations and prompt for elevation**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
+  CSP [LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation](https://go.microsoft.com/fwlink/?linkid=2067208)
 
 - **Only allow UI access applications for secure locations**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
+  CSP [LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](https://go.microsoft.com/fwlink/?linkid=2067185)
 
 - **Require admin approval mode for administrators**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-useadminapprovalmode)
+  CSP [LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode](https://go.microsoft.com/fwlink/?linkid=2067184)
 
 - **Use admin approval mode**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-runalladministratorsinadminapprovalmode)
+  CSP [LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode](https://go.microsoft.com/fwlink/?linkid=2067186)
 
 - **Virtualize file and registry write failures to per user locations**  
   Baseline default: *Yes*  
-  CSP [LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-virtualizefileandregistrywritefailurestoperuserlocations)
+  CSP [LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](https://go.microsoft.com/fwlink/?linkid=2067321)
 
 ## Microsoft Defender
 
 - **Turn on real-time protection**  
   Baseline default: *Yes*  
-  CSP [Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
   Baseline default: *50*  
-  CSP [Defender/CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940)
 
 - **Scan all downloaded files and attachments**  
   Baseline default: *Yes*  
-  CSP [Defender/AllowIOAVProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+  CSP [Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934)
 
 - **Scan type**  
   Baseline default: *Quick scan*  
-  CSP [Defender/ScanParameter](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
+  CSP [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
 - **Defender schedule scan day**  
   Baseline default: *Everyday*  
@@ -992,15 +992,15 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Defender sample submission consent**  
   Baseline default: *Send safe samples automatically*  
-  CSP [Defender/SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
+  CSP [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
 
 - **Cloud-delivered protection level**  
   Baseline default: *High*  
-  CSP [Defender/CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP [Defender/CloudBlockLevel](https://go.microsoft.com/fwlink/?linkid=2113942)
 
 - **Scan removable drives during full scan**  
   Baseline default: *Yes*  
-  CSP [Defender/AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+  CSP [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
 - **Defender potentially unwanted app action**  
   Baseline default: *Block*  
@@ -1008,7 +1008,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Turn on cloud-delivered protection**  
   Baseline default: *Yes*  
-  CSP [Defender/AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
 
 ## Microsoft Defender Antivirus Exclusions
 
@@ -1090,138 +1090,139 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **SMB v1 client driver start configuration**  
   Baseline default: *Disable driver*  
-  CSP [MSSecurityGuide/ConfigureSMBV1ClientDriver](/windows/client-management/mdm/policy-csp-mssecurityguide#mssecurityguide-configuresmbv1clientdriver)
+  CSP [MSSecurityGuide/ConfigureSMBV1ClientDriver](https://go.microsoft.com/fwlink/?linkid=2067214)
 
 - **Apply UAC restrictions to local accounts on network logon**  
   Baseline default: *Enabled*  
-  CSP [MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon](/windows/client-management/mdm/policy-csp-mssecurityguide#mssecurityguide-applyuacrestrictionstolocalaccountsonnetworklogon)
+  CSP [MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon](https://go.microsoft.com/fwlink/?linkid=2067188)
 
 - **Structured exception handling overwrite protection**  
   Baseline default: *Enabled*  
-  CSP [MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection](/windows/client-management/mdm/policy-csp-mssecurityguide#mssecurityguide-enablestructuredexceptionhandlingoverwriteprotection)
+  CSP [MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection](https://go.microsoft.com/fwlink/?linkid=2067217)
 
 - **SMB v1 server**  
   Baseline default: *Disabled*  
-  CSP [MSSecurityGuide/ConfigureSMBV1Server](/windows/client-management/mdm/policy-csp-mssecurityguide#mssecurityguide-configuresmbv1server)
+  CSP [MSSecurityGuide/ConfigureSMBV1Server](https://go.microsoft.com/fwlink/?linkid=2067190)
 
 - **Digest authentication**  
   Baseline default: *Disabled*  
-  CSP [MSSecurityGuide/WDigestAuthentication](/windows/client-management/mdm/policy-csp-mssecurityguide#mssecurityguide-wdigestauthentication)
+  CSP [MSSecurityGuide/WDigestAuthentication](https://go.microsoft.com/fwlink/?linkid=2067193)
 
 ## MSS Legacy
 
 - **Network IPv6 source routing protection level**  
   Baseline default: *Highest protection*  
-  CSP [MSSLegacy/IPv6SourceRoutingProtectionLevel](/windows/client-management/mdm/policy-csp-msslegacy#msslegacy-ipv6sourceroutingprotectionlevel)
+  CSP [MSSLegacy/IPv6SourceRoutingProtectionLevel](https://go.microsoft.com/fwlink/?linkid=2067216)
 
 - **Network IP source routing protection level**  
   Baseline default: *Highest protection*  
-  CSP [MSSLegacy/IPSourceRoutingProtectionLevel](/windows/client-management/mdm/policy-csp-msslegacy#msslegacy-ipsourceroutingprotectionlevel)
+  CSP [MSSLegacy/IPSourceRoutingProtectionLevel](https://go.microsoft.com/fwlink/?linkid=2067220)
 
 - **Network ignore NetBIOS name release requests except from WINS servers**  
   Baseline default: *Enabled*  
-  CSP [MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers](/windows/client-management/mdm/policy-csp-msslegacy#msslegacy-allowthecomputertoignorenetbiosnamereleaserequestsexceptfromwinsservers)
+  CSP [MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers](https://go.microsoft.com/fwlink/?linkid=2067218)
 
 - **Network ICMP redirects override OSPF generated routes**  
   Baseline default: *Disabled*  
-  CSP [MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes](/windows/client-management/mdm/policy-csp-msslegacy#msslegacy-allowicmpredirectstooverrideospfgeneratedroutes)
+  CSP [MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes](https://go.microsoft.com/fwlink/?linkid=2067326)
 
 ## Remote Assistance
 
 - **Remote Assistance solicited**
    Baseline default: *Disable Remote Assistance*  
-   CSP [RemoteAssistance/SolicitedRemoteAssistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance)
+   CSP [RemoteAssistance/SolicitedRemoteAssistance](https://go.microsoft.com/fwlink/?linkid=2067198)
 
 ## Remote Desktop Services
 
 - **Remote desktop services client connection encryption level**  
   Baseline default: *High*  
-  CSP [RemoteDesktopServices/ClientConnectionEncryptionLevel](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-clientconnectionencryptionlevel)
+  CSP [RemoteDesktopServices/ClientConnectionEncryptionLevel](https://go.microsoft.com/fwlink/?linkid=2067222)
 
 - **Block drive redirection**  
   Baseline default: *Enabled*  
-  <!-- Not devined in UI. Possibly CSP [RemoteDesktopServices/DoNotAllowDriveRedirection](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowdriveredirection) -->
+  <!-- Not devined in UI. Possibly CSP [RemoteDesktopServices/DoNotAllowDriveRedirection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowdriveredirection) -->
 
 - **Block password saving**  
   Baseline default: *Enabled*  
-  CSP [RemoteDesktopServices/DoNotAllowPasswordSaving](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowpasswordsaving)
+  CSP [RemoteDesktopServices/DoNotAllowPasswordSaving](https://go.microsoft.com/fwlink/?linkid=2067301)
 
 - **Prompt for password upon connection**  
   Baseline default: *Enabled*  
-  CSP [RemoteDesktopServices/PromptForPasswordUponConnection](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-promptforpassworduponconnection)
+  CSP [RemoteDesktopServices/PromptForPasswordUponConnection](https://go.microsoft.com/fwlink/?linkid=2067328)
 
 - **Secure RPC communication**  
   Baseline default: *Enabled*  
-  CSP [RemoteDesktopServices/RequireSecureRPCCommunication](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-requiresecurerpccommunication)
+  CSP [RemoteDesktopServices/RequireSecureRPCCommunication](https://go.microsoft.com/fwlink/?linkid=2067248)
 
 ## Remote Management
 
 - **Block client digest authentication**  
   Baseline default: *Enabled*  
-  CSP [RemoteManagement/DisallowNegotiateAuthenticationClient](/windows/client-management/mdm/policy-csp-remotemanagement#remotemanagement-disallownegotiateauthenticationclient)
+  CSP [RemoteManagement/DisallowNegotiateAuthenticationClient](https://go.microsoft.com/fwlink/?linkid=2067302)
 
 - **Block storing run as credentials**  
   Baseline default: *Enabled*  
-  CSP [RemoteManagement/DisallowStoringOfRunAsCredentials](/windows/client-management/mdm/policy-csp-remotemanagement#remotemanagement-disallowstoringofrunascredentials)
+  CSP [RemoteManagement/DisallowStoringOfRunAsCredentials](https://go.microsoft.com/fwlink/?linkid=2067300)
 
 - **Client basic authentication**  
   Baseline default: *Disabled*  
-  CSP [RemoteManagement/AllowBasicAuthentication_Client](/windows/client-management/mdm/policy-csp-remotemanagement#remotemanagement-allowbasicauthentication-client)
+  CSP [RemoteManagement/AllowBasicAuthentication_Client](https://go.microsoft.com/fwlink/?linkid=2067252)
 
 - **Basic authentication**  
   Baseline default: *Disabled*  
-  CSP [RemoteManagement/AllowBasicAuthentication_Service](/windows/client-management/mdm/policy-csp-remotemanagement#remotemanagement-allowbasicauthentication-service)
+  CSP [RemoteManagement/AllowBasicAuthentication_Service](https://go.microsoft.com/fwlink/?linkid=2067223)
 
 - **Client unencrypted traffic**  
   Baseline default: *Disabled*  
-  CSP [RemoteManagement/AllowUnencryptedTraffic_Client](/windows/client-management/mdm/policy-csp-remotemanagement#remotemanagement-allowunencryptedtraffic-client)
+  CSP [RemoteManagement/AllowUnencryptedTraffic_Client](https://go.microsoft.com/fwlink/?linkid=2067304)
 
 - **Unencrypted traffic**  
   Baseline default: *Disabled*  
-  CSP [RemoteManagement/AllowUnencryptedTraffic_Service](/windows/client-management/mdm/policy-csp-remotemanagement#remotemanagement-allowunencryptedtraffic-service)
+  CSP [RemoteManagement/AllowUnencryptedTraffic_Service](https://go.microsoft.com/fwlink/?linkid=2067226)
 
 ## Remote Procedure Call
 
 - **RPC unauthenticated client options**  
   Baseline default: *Authenticated*  
-  CSP [RemoteProcedureCall/RPCEndpointMapperClientAuthentication](/windows/client-management/mdm/policy-csp-remoteprocedurecall#remoteprocedurecall-rpcendpointmapperclientauthentication)
+  CSP [RemoteProcedureCall/RPCEndpointMapperClientAuthentication](https://go.microsoft.com/fwlink/?linkid=2067225)
 
 ## Search
 
 - **Disable indexing encrypted items**  
   Baseline default: *Yes*  
-  CSP [Search/AllowIndexingEncryptedStoresOrItems](/windows/client-management/mdm/policy-csp-search#search-allowindexingencryptedstoresoritems)
+  CSP [Search/AllowIndexingEncryptedStoresOrItems](https://go.microsoft.com/fwlink/?linkid=2067303)
 
 ## Smart Screen
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
-  CSP [SmartScreen/EnableSmartScreenInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
+  CSP [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
 
 - **Block users from ignoring SmartScreen warnings**  
   Baseline default: *Yes*  
-  CSP [SmartScreen/PreventOverrideForFilesInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
+  CSP [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
 ## System
 
 - **System boot start driver initialization**  
   Baseline default: *Good unknown and bad critical*  
-  CSP [System/BootStartDriverInitialization](/windows/client-management/mdm/policy-csp-system#system-bootstartdriverinitialization)
+  CSP [System/BootStartDriverInitialization](https://go.microsoft.com/fwlink/?linkid=2067307)
 
 ## Windows Connection Manager
 
 - **Block connection to non-domain networks**  
   Baseline default: *Enabled*  
-  CSP [WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork](/windows/client-management/mdm/policy-csp-windowsconnectionmanager)
+  CSP [WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork](https://go.microsoft.com/fwlink/?linkid=2067323)
 
 ## Windows Ink Workspace
 
 - **Ink Workspace**  
   Baseline default: *Enabled*  
-  CSP [WindowsInkWorkspace/AllowWindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace#windowsinkworkspace-allowwindowsinkworkspace)
+  CSP [WindowsInkWorkspace/AllowWindowsInkWorkspace](https://go.microsoft.com/fwlink/?linkid=2067241)
 
 ## Windows PowerShell
 
 - **PowerShell script block logging**  
   Baseline default: *Enabled*  
-  CSP [WindowsPowerShell/TurnOnPowerShellScriptBlockLogging](/windows/client-management/mdm/policy-csp-windowspowershell#windowspowershell-turnonpowershellscriptblocklogging)
+  CSP [WindowsPowerShell/TurnOnPowerShellScriptBlockLogging](https://go.microsoft.com/fwlink/?linkid=2067330)
+
