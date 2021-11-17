@@ -2,7 +2,7 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 11/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -366,7 +366,7 @@ To resolve this issue, [Renew the secret key](../deploy/configure/azure-services
 ### Delete and recreate subscriptions for external notifications on the CAS
 
 <!-- 10333966 -->
-In version 2107, after you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications: Remove a subscription](external-notifications.md#remove-a-subscription).
+In version 2107, after you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications](external-notifications.md).
 
 ### Configure HTTPS for site system roles that use IIS
 
