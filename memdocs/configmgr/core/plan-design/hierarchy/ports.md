@@ -773,7 +773,7 @@ On-premises Configuration Manager clients or site systems can make the following
 
 - [Service connection point `-->` Azure](#bkmk_scp-cmg)
 
-- [Service connection point `-->` Azure Logic App](bkmk_scp-notify)
+- [Service connection point `-->` Azure Logic App](#bkmk_scp-notify)
 
 - [CMG connection point `-->` CMG cloud service](#bkmk_cmgcp-cmg)
 
