@@ -148,9 +148,15 @@ For more information, see [The Windows servicing dashboard](../../../osd/deploy-
 
 <!--7033309-->
 
-This release adds more options to the **Date Released or Revised** search criteria for automatic deployment rules.
+We've added the following options in the **Date Released or Revised** search criteria for automatic deployment rules:
 
-<!-- For more information, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md). -->
+- Older than 30 days
+- Older than 60 days
+- Older than 90 days
+- Older than 6 months
+- Older than 1 year
+
+For more information, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ### Approvals for orchestration group scripts
 
