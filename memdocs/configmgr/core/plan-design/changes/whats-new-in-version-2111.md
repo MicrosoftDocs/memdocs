@@ -169,7 +169,7 @@ Pre and post-scripts for orchestration groups now require approval to take effec
 
 You can now configure the end-user experience for Microsoft 365 Apps updates. This client setting allows you to enable or disable notifications from Microsoft 365 Apps for these updates. The new **Enable update notifications from Microsoft 365 Apps** option has been added to the **Software Updates** group of client settings.
 
-<!-- For more information, see [About client settings in Configuration Manager](../../clients/deploy/about-client-settings.md). -->
+For more information, see [About client settings in Configuration Manager](../../clients/deploy/about-client-settings.md#enable-update-notifications-from-microsoft-365-apps).
 
 ## Configuration Manager console
 
