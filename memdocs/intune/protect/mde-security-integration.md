@@ -170,7 +170,7 @@ To support MDE security configuration management through the Microsoft Endpoint 
 
 Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/security-config-management?view=o365-worldwide&preserve-view=true) in the Defender for Endpoint documentation.
 
-Devices that you manage with Intune or Configuration Manager are not supported for this scenario.
+Devices that you manage with Intune are not supported for this scenario.
 
 ## Create Azure AD Groups
 
