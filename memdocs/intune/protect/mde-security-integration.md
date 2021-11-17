@@ -45,11 +45,7 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
-## Prerequisites
-
-Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
-
-### High-level flow
+**High-level flow**:
 
 When a device onboards to Microsoft Defender for Endpoint and security management is enabled:
 
@@ -58,6 +54,10 @@ When a device onboards to Microsoft Defender for Endpoint and security managemen
 - A trust is created with Azure Active Directory if one doesn't already exist
 - Azure Active Directory trust is used to communicate with Endpoint Manager (Intune) and retrieve policies
 - Policy retrieve from Endpoint Manager is enforced on the device by Microsoft Defender for Endpoint
+
+## Prerequisites
+
+Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
 
 ### Active Directory Requirements
 
