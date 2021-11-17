@@ -124,7 +124,7 @@ These notifications use the following standardized schema:
 }
 ```
 
-## Create an event in the Configuration Manager console
+## Create an event
 
 <!-- 10615989 -->
 
@@ -163,11 +163,11 @@ Use the following process to create an event:
             > [!IMPORTANT]
             > Be cautious with the type of status filter rule that you create. For external notifications, the site can process 300 status messages every five minutes. If your rule allows more messages than this limit, it will cause a backlog on the site. Create rules with narrow filters for specific scenarios. Avoid generic rules that allow a lot of messages.
 
-        - **Existing status filter rule**: Reuse a status filter rule for external notification that already exists. It doesn't display all status filter rules, only those that you created using this wizard.
+        - **Existing status filter rule**: Reuse a status filter rule for external notification that already exists. It doesn't display all status filter rules, only the rules that you created using this wizard.
 
         - **User submits application request**: Send an external notification for application approval requests.
 
-## Manage events in the Configuration Manager console
+## Manage events
 
 After you create a subscription, use the **External service notifications** node to do the following actions:
 
@@ -177,6 +177,8 @@ After you create a subscription, use the **External service notifications** node
 
 > [!NOTE]
 > You can view and modify an existing subscription on any site in a hierarchy.
+
+When you select a subscription, the details pane shows information about the events that have happened.
 
 ## Trigger an event
 
