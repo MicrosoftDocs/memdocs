@@ -49,9 +49,9 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
 
-### High-level flow
+### Environment
 
-When a device onboards to Microsoft Defender for Endpoint and security management is enabled:
+When a device onboards to Microsoft Defender for Endpoint:
 
 - The device is surveyed for an existing Endpoint Manager presence, which is a mobile device management (MDM) enrollment to Intune
 - Devices without an Endpoint Manager presence will enable the Security Management feature
@@ -220,7 +220,7 @@ After creating one or more Azure AD groups that contain devices managed by MDE, 
      - Profile: **Endpoint detection and response (Preview)**
 
    >[!Note]
-   > The profiles above apply to both devices communicating through Mobile Device Management (MDM) with MIcrosoft Intune as well as devices that are communicating using the Microsoft Defender for Endpoint client.
+   > The profiles above apply to both devices communicating through Mobile Device Management (MDM) with Microsoft Intune as well as devices that are communicating using the Microsoft Defender for Endpoint client.  
    > Ensure you are reviewing your targeting and groups as necessary.
 
 4. Select **Create**.

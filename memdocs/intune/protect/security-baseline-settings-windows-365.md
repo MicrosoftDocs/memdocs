@@ -7,14 +7,14 @@ description: Review settings for the Windows 365 Cloud PC security baseline for 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2021
+ms.date: 11/19/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid:
-zone_pivot_groups:
+zone_pivot_groups: windows-365-baseline-versions
 
 # optional metadata
 
@@ -35,6 +35,30 @@ ms.collection: M365-identity-device-management
 
 View the settings in the Windows 365 Cloud PC security baseline for deployment by Microsoft Intune. Use this baseline to configure [Windows 365 devices](/windows-365/overview) with a recommended security configuration.
 
+::: zone pivot="win365-2101"
+
+**Windows 365 CLoud PC security baseline version 2101**
+
+::: zone-end
+::: zone pivot="win365-2110"
+
+**Windows 365 CLoud PC security baseline version 2110**
+
+::: zone-end
+::: zone pivot="win365-2110"
+
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
+
+::: zone-end
+::: zone pivot="win365-2110,win365-2101"
+
 This article is a reference for the settings contained in this baseline. For each setting in this article, the default value identifies the Windows 365 Cloud PC team's recommended configuration for that setting as the setting is represented in the baseline. These defaults are not meant to identify the default configuration of the underlying CSP. To learn more about a setting, use the provided links to view that setting's *policy configuration service provider* (CSP) documentation or underlying rules like *attack surface reduction rule* documentation. The links in this document are the same as those you'll find when viewing information about the setting from within the Microsoft Endpoint Manager admin center.
 
 You can choose to deploy this baseline in its default configuration to apply that recommended security configuration to devices. You  can also create custom instances of the baseline to meet your own security needs.
@@ -44,8 +68,6 @@ You can choose to deploy this baseline in its default configuration to apply tha
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
 - To update the version of a baseline you've already deployed to devices, see [Change the baseline version for  profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
-
-**Windows 365 CLoud PC security baseline version 2101**
 
 ## Above Lock
 
@@ -79,55 +101,55 @@ You can choose to deploy this baseline in its default configuration to apply tha
 
 ## Attack Surface Reduction Rules
 
-For general information, see [Learn about attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide).
+For general information, see [Learn about attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true).
 
 - **Block Office communication apps from creating child processes**:  
   Baseline default: *Enable*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-office-communication-application-from-creating-child-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-office-communication-application-from-creating-child-processes)
 
 - **Block Adobe Reader from creating child processes**:  
   Baseline default: *Enable*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-adobe-reader-from-creating-child-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-adobe-reader-from-creating-child-processes)
 
 - **Block Office applications from injecting code into other processes**:  
     Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-office-applications-from-injecting-code-into-other-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-&preserve-view=true#block-office-applications-from-injecting-code-into-other-processes)
 
 - **Block Office applications from creating executable content**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-office-applications-from-creating-executable-content)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-office-applications-from-creating-executable-content)
 
 - **Block JavaScript or VBScript from launching downloaded executable content**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
 - **Enable network protection**:  
   Baseline default: *Enable*  
-  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender&preserve-view=true#defender-enablenetworkprotection)
 
 - **Block untrusted and unsigned processes that run from USB**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#rule-block-untrusted-and-unsigned-processes-that-run-from-usb)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-&preserve-view=true#rule-block-untrusted-and-unsigned-processes-that-run-from-usb)
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**:  
   Baseline default: *Enable*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-credential-stealing-from-the-windows-local-security-authority-subsystem#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
 - **Block all Office applications from creating child processes**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-all-office-applications-from-creating-child-processes)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-all-office-applications-from-creating-child-processes)
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-execution-of-potentially-obfuscated-scripts)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-execution-of-potentially-obfuscated-scripts)
 
 - **Block Win32 API calls from Office macro**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-win32-api-calls-from-office-macros)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-win32-api-calls-from-office-macros)
 
 - **Block executable content download from email and webmail clients**:  
   Baseline default: *Block*  
-  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide#block-executable-content-from-email-client-and-webmail)
+  [ASR rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true#block-executable-content-from-email-client-and-webmail)
 
 ## Audit
 
@@ -972,6 +994,10 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   CSP [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
+- **Scan scripts that are used in Microsoft browsers**  
+  Baseline default: *Yes*
+  CSP [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
   Baseline default: *50*  
   CSP [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940)
@@ -1226,3 +1252,13 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   CSP [WindowsPowerShell/TurnOnPowerShellScriptBlockLogging](https://go.microsoft.com/fwlink/?linkid=2067330)
 
+::: zone-end
+::: zone pivot="win365-2110"
+
+## Windows Security
+
+- **Enable tamper protection to prevent Microsoft Defender being disabled**  
+  Baseline default: *Enable*  
+  [Reference for Tamper Protection](https://support.microsoft.com/windows/prevent-changes-to-security-settings-with-tamper-protection-31d51aaa-645d-408e-6ce7-8d7f8e593f87)
+
+::: zone-end
