@@ -97,6 +97,9 @@ New ADMX settings for Edge 95 and Edge updater have been added to Administrative
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
+#### Endpoint analytics per device scoring<!--8462182 -->
+ [Per device scores](../../analytics/scores.md#bkmk_per-device) in [Endpoint analytics](../../analytics/overview.md) are now out of preview and generally available. Per device scores help you identify devices that could be impacting user experience. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk.
+
 #### Safeguard holds are now visible in the Feature update failures report<!-- 10948779 -->
 When a device is blocked form installing a Windows update due to a [safeguard hold](/windows/deployment/update/safeguard-holds), you’ll now be able to view details about that hold in [Feature update failures report](../protect/windows-update-compliance-reports.md#use-the-feature-update-failures-operational-report) in the Microsoft Endpoint Manager admin center.
 
