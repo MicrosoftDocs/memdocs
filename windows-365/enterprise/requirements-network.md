@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Network requirements
 
-Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must comply with the networking requirements listed below.
+Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must follow the networking requirements listed below.
 
 Each customer has its specific requirements based on the workload they use to pre-calculate the network requirements of their Cloud PC environment.  
 
@@ -39,7 +39,7 @@ Each customer has its specific requirements based on the workload they use to pr
 To use Cloud PCs, you must meet the following requirements:
 
 - Azure virtual network: You must have a virtual network (vNET) in your Azure subscription in the same region as where the Windows 365 desktops are created.
-- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this is, define your AD DS DNS servers as the DNS servers for the virtual network.
+- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this, define your AD DS DNS servers as the DNS servers for the virtual network.
 - The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
@@ -99,7 +99,7 @@ Configure your Azure Virtual Network where the Cloud PCs are provisioned as foll
 >[!TIP]
 >Adding at least two DNS servers, as you would with a physical PC, helps mitigate the risk of a single point of failure in name resolution.
 
-See the Azure docs for more information on [configuring Azure Virtual Networks settings](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+For more information, see [configuring Azure Virtual Networks settings](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
 ## Remote Desktop Protocol requirements
 
@@ -120,7 +120,7 @@ Windows 365 uses the Remote Desktop Protocol (RDP).
 
 Microsoft Teams is one of the core Microsoft 365 services within Cloud PC. Windows 365 offloads the audio and video traffic to your endpoint to make the video experience like Teams on a physical PC.
 
-The network quality is very important per scenario. Make sure that you have the proper bandwidth available for the quality that you want to offer.
+The network quality is important per scenario. Make sure that you have the proper bandwidth available for the quality that you want to offer.
 
 Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud PCs.
 
@@ -134,11 +134,11 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 
 ## Traffic interception technologies
 
-Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can causes issues with running on-premises network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
+Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running on-premises network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
 
 ## Bandwidth
 
-Windows 365 uses the Azure network infrastructure. An Azure subscription is required when a virtual network is selected while deploying Windows 365 Enterprise. Bandwith charges for Cloud PC usage include:
+Windows 365 uses the Azure network infrastructure. An Azure subscription is required when a virtual network is selected while deploying Windows 365 Enterprise. Bandwidth charges for Cloud PC usage include:
 
 - Network traffic into a Cloud PC is free.
 - Outbound (egress) traffic incurs charges against the Azure subscription for the virtual network.
