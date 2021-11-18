@@ -8,7 +8,7 @@ items:
   - name: Privacy information
     href: core/misc/privacy/privacy-information.md
   - name: What's new in the SDK
-    href: core/changes/whats-new-sdk
+    href: core/changes/whats-new-sdk.md
 - name: Requirements
   items:
   - name: About SDK requirements
