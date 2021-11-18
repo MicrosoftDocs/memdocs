@@ -24,7 +24,7 @@ landingContent:
           - text: SDK overview
             url: core/misc/system-center-configuration-manager-sdk.md
           - text: What's new
-            url: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+            url: core/changes/whats-new-sdk
           - text: SDK requirements
             url: core/reqs/about-configuration-manager-sdk-requirements.md
       - linkListType: reference

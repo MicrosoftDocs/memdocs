@@ -8,7 +8,7 @@ items:
   - name: Privacy information
     href: core/misc/privacy/privacy-information.md
   - name: What's new in the SDK
-    href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+    href: core/changes/whats-new-sdk
 - name: Requirements
   items:
   - name: About SDK requirements
