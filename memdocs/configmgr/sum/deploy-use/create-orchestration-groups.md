@@ -59,8 +59,8 @@ Members of an orchestration group can be any Configuration Manager client, not j
     - **Script timeout (in seconds)**: The allowed time in seconds for the script to run before it times out
 1. Complete the wizard.
 
-> [!IMPORTANT]
-> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**.
+> [!WARNING]
+> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**. Scripts that don't have approval will not run on clients.
 > - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->.
 > - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages. 
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
@@ -138,8 +138,8 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
       
    - For Configuration Manager version 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs.
 
-> [!IMPORTANT]
-> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**.
+> [!WARNING]
+> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**. Scripts that don't have approval will not run on clients.
 > - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->.
 > - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs. 
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
