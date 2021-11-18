@@ -266,7 +266,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2111 drops support for the following features:
 
-- Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../get-started/2021/technical-preview-2109.md#bkmk_dotnetsdk)<!--10529267-->.<!-- NEED FINAL LINK NOT TECH PREVIEW -->
+- Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
 ## Other updates
 
