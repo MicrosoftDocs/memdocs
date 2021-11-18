@@ -219,7 +219,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
 
-New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
+New updates for the connector can take a week or more to become available for each tenant.
 
 ### November 17, 2021
 
