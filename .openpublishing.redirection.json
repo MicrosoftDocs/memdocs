@@ -1071,12 +1071,12 @@
         {
             "source_path": "memdocs/configmgr/develop/core/understand/configuration-manager-sdk-samples.md",
             "redirect_url": "/mem/configmgr/develop/core/changes/whats-new-sdk",
-            "redirect_document_id": true 
+            "redirect_document_id": false
         },
         {
             "source_path": "memdocs/configmgr/develop/core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md",
             "redirect_url": "/mem/configmgr/develop/core/changes/whats-new-sdk",
-            "redirect_document_id": true 
+            "redirect_document_id": true
         }
     ]
 }
