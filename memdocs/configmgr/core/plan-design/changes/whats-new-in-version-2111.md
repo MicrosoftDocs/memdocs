@@ -54,6 +54,9 @@ Starting in this release, this prerequisite rule for .NET 4.6.2 is an error. Unt
 
 For more information, see [List of prerequisite checks for Configuration Manager](../../servers/deploy/install/list-of-prerequisite-checks.md#required-version-of-microsoft-net-framework).
 
+> [!IMPORTANT]
+> When the Configuration Manager client updates to version 2111 or later, client notifications are dependent upon .NET 4.6.2 or later. Until you update .NET to version 4.6.2 or later, and restart the device, users won't see notifications from Configuration Manager. Other client-side functionality may be affected until the device is updated and restarted.<!-- 10682548 --> For more information, see [More details about Microsoft .NET](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
+
 ### Improvements to VPN boundary types
 
 <!--7822886-->
