@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021 
+ms.date: 11/18/2021 
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -84,13 +84,11 @@ You must allow traffic in your Azure network configuration to the following serv
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
   - hm-iot-in-*.azure-devices.net (443 & 5671 outbound)
 
-
-
 All endpoints connect over port 443.
 
 ## DNS requirements
 
-As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to join on-prem Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-prem AD environment. 
+As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to join on-prem Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-prem AD environment.
 
 Configure your Azure Virtual Network where the Cloud PCs are provisioned as follows:
 
@@ -101,7 +99,7 @@ Configure your Azure Virtual Network where the Cloud PCs are provisioned as foll
 >[!TIP]
 >Adding at least two DNS servers, as you would with a physical PC, helps mitigate the risk of a single point of failure in name resolution.
 
-See the Azure docs for more information on [configuring Azure Virtual Networks settings](/azure/virtual-network/manage-virtual-network#change-dns-servers). 
+See the Azure docs for more information on [configuring Azure Virtual Networks settings](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
 ## Remote Desktop Protocol requirements
 
@@ -137,6 +135,17 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 ## Traffic interception technologies
 
 Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can causes issues with running on-premises network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
+
+## Bandwidth
+
+Windows 365 uses the Azure network infrastructure. An Azure subscription is required when a virtual network is selected while deploying Windows 365 Enterprise. Bandwith charges for Cloud PC usage include:
+
+- Network traffic into a Cloud PC is free.
+- Outbound (egress) traffic incurs charges against the Azure subscription for the virtual network.
+- Office data (like email and OneDrive for Business file sync) incurs egress charges if the Cloud PC and a user’s data reside in different regions.
+- RDP networking traffic always incurs egress charges.
+
+For more information about costs associated with data transfers, see [Bandwidth pricing]( https://azure.microsoft.com/pricing/details/bandwidth/).
 
 <!-- ########################## -->
 ## Next steps
