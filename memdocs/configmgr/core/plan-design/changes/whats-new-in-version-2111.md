@@ -52,7 +52,7 @@ Configuration Manager current branch version 2107 has a warning prerequisite rul
 
 Starting in this release, this prerequisite rule for .NET 4.6.2 is an error. Until you upgrade .NET, you can't continue installing or updating the site to this version of Configuration Manager.
 
-<!-- For more information, see [List of prerequisite checks for Configuration Manager](../../servers/deploy/install/list-of-prerequisite-checks.md#required-version-of-microsoft-net-framework). -->
+For more information, see [List of prerequisite checks for Configuration Manager](../../servers/deploy/install/list-of-prerequisite-checks.md#required-version-of-microsoft-net-framework).
 
 ### Improvements to VPN boundary types
 
