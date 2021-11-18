@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Lifecycle policies govern operating system (OS) servicing and support (including end of support). The lifecycle is the time period during which Microsoft supports the OS and releases monthly security updates for it. For more information about lifecycles, see [Lifecycle FAQ - General](/lifecycle/faq/general-lifecycle) and [Lifecycle FAQ - Windows](/lifecycle/faq/windows).
 
-A Cloud PC runs on the Windows OS and follows the same lifecycle. After the OS on a Cloud PC reaches the end of support, it stops receiving:
+A Windows 365 Cloud PC runs on the Windows OS and follows the [Microsoft Lifecycle Policy](/lifecycle). After the OS on a Cloud PC reaches the end of support, it stops receiving:
 
 - Security updates
 - Non-security updates
@@ -40,19 +40,19 @@ A Cloud PC runs on the Windows OS and follows the same lifecycle. After the OS o
 
 ## Image status
 
-Microsoft Endpoint Manager tracks end of support information on the **Provisioning policies** page under **Image status**. This column lets you know if the OS on the image used by each provisioning policy is supported or not.
+Windows 365 tracks end of support information in Microsoft Endpoint Manager on the **Provisioning policies** page under **Image status**. This column lets you know if the OS on the image used by each provisioning policy is supported or not.
 
 | Image status | Gallery image | Custom image |
 | --- |--- | --- |
 | Supported | Cloud PCs created using this policy have a Windows OS that is supported by Microsoft and can receive updates. | Same as gallery image. |
-| Warning | Support expired less than six months ago. Cloud PCs created using this policy have an OS that isn’t supported. Such Cloud PCs are vulnerable and not receiving security updates. | Same as gallery image except support expiration isn’t limited to the last six months. |
+| Warning | OS Support expired less than six months ago. Cloud PCs created using this policy have an OS that isn’t supported. Such Cloud PCs are vulnerable and not receiving security updates. | Cloud PCs created using this policy have an OS that isn’t supported. Such Cloud PCs are vulnerable and not receiving security updates.  |
 | Unsupported | Cloud PCs created using this policy have a Windows OS that hasn’t been supported for over six months. This policy can no longer be assigned to users. To resolve this issue, update the OS image in the provisioning policy to an image with a supported OS. Existing Cloud PCs previously created with this policy:<br>- Are vulnerable and not receiving security updates.<br>- Can’t be provisioned or reprovisioned. Attempts to provision a Cloud PC from this policy will fail with a **Windows Image out of Support** message. | Not applicable |
 
-These status values also appear under the **OS support status** column on the **Device images** page.
+These status values for Custom Images also appear under the **OS support status** column on the **Device images** page.
 
 ## Provisioning policies
 
-Starting on the end of support date, images that use the expired OS (in the **Warning** or **Unsupported** state) won’t be selectable for newly created provisioning policies. The images also won’t be available for use when editing existing provisioning policies.
+Starting on the end of support date, gallery images that use the expired OS won’t be selectable for newly created provisioning policies. The images also won’t be available for use when editing existing provisioning policies.
 
 <!-- ########################## -->
 ## Next steps
