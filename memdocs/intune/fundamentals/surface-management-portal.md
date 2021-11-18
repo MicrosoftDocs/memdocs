@@ -71,6 +71,6 @@ If a Surface device isn’t working properly, the Microsoft Surface Diagnostic T
 
 ## Next steps
 
-* Harness the power of Surface, Windows, and Office connected together through the cloud. To learn how to plan, deploy, and manage Microsoft Surface and Surface Hub devices, see [Microsoft Surface for IT professionals](https://docs.microsoft.com/surface/).   
+* Harness the power of Surface, Windows, and Office connected together through the cloud. To learn how to plan, deploy, and manage Microsoft Surface and Surface Hub devices, see [Microsoft Surface for IT professionals](/surface/).   
 
-* To get set up in Microsoft Intune quickly, step through the Intune guided scenarios. If you're new to Intune, set up your Intune tenant by following the [free trial quickstart](free-trial-sign-up.md).  
+* To get set up in Microsoft Intune quickly, step through the Intune guided scenarios. If you're new to Intune, set up your Intune tenant by following the [free trial quickstart](free-trial-sign-up.md).

@@ -118,9 +118,6 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).
 
-> [!IMPORTANT]
-> Windows 10 mobile devices don't support co-management.
-
 ### Permissions and roles
 
 <!--SCCMDocs issue #667-->
