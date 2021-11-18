@@ -211,7 +211,7 @@ We have added 9 [BitLocker settings that were previously only available in Group
 - **Disallow standard users from changing the PIN or password** 
 - **Enable use of BitLocker authentication requiring preboot keyboard input on slates** 
 - **Enforce drive encryption type on operating system drives** 
-- **Control use of BitLocker on removeable drives**
+- **Control use of BitLocker on removable drives**
 - **Enforce drive encryption type on removable data drives** 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
