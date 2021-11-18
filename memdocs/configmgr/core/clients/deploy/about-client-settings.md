@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 08/02/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -881,6 +881,22 @@ If delta content is unavailable from distribution points in the current boundary
 ### Enable management of the Office 365 Client Agent
 
 When you set this option to **Yes**, it enables the configuration of Microsoft 365 Apps installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Microsoft 365 Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+
+### Enable update notifications from Microsoft 365 Apps
+<!--10628998-->
+*(Introduced in version 2111)*
+
+You can configure the end-user experience for Microsoft 365 Apps updates. This client setting allows you to enable or disable notifications from Microsoft 365 Apps for these updates. The following options are available for the setting:
+
+- **No**: Doesn't display Microsoft 365 Apps updates notifications from Microsoft 365 Apps (default)
+- **Yes**: Displays Microsoft 365 Apps updates notifications from Microsoft 365 Apps
+
+Which notifications are displayed to the user about updates for Microsoft 365 Apps is also determined by the settings for per deployment notifications from Software Center. If the deployment's user notifications from Software Center are disabled (found on the [**User Experience** page for the deployment](../../../sum/deploy-use/manually-deploy-software-updates.md#BKMK_4DeployUpdateGroup)), then the end user won't receive any notifications from either Software Center or Microsoft 365 Apps, regardless of how notifications from Microsoft 365 Apps are set. If notifications from both Software Center and Microsoft 365 Apps are enabled, then the end user will receive notifications from Software Center and Microsoft 365 Apps. Below is a chart of which notifications for Microsoft 365 Apps updates are displayed to the end user for these settings:</br></br>  
+
+| &nbsp; | **Display** per deployment Software Center notifications| **Hide** per deployment Software Center notifications|
+|---|---|--|
+| Enable update notifications from Microsoft 365 Apps: **Yes** | User receives notifications from Software Center </br></br> User receives notifications from Microsoft 365 Apps| No notifications from Software Center </br></br> No notifications from Microsoft 365 Apps |
+| Enable update notifications from Microsoft 365 Apps: **No** | User receives notifications from Software Center </br></br> No notifications from Microsoft 365 Apps | No notifications from Software Center </br></br> No notifications from Microsoft 365 Apps |
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 

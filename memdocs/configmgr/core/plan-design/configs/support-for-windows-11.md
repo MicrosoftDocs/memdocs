@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/27/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -44,9 +44,9 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
-|--------------------------------------------|----------------|----------------|----------------|----------------|
-| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
+| Windows 11 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 | ConfigMgr 2111 |
+|--------------------------------------------|----------------|----------------|----------------|----------------|----------------|
+| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
@@ -123,9 +123,12 @@ Description = "Current thread is not authenticated with the minimal allowed leve
 ErrorCode = 2185761792;
 ```
 
-There are two options to work around this issue:
+Use one of the following options to work around this issue:
+
+- Update the device to Windows 11 OS build **22000.282**. For more information, see [October 21, 2021—KB5006746 (OS Build 22000.282) Preview](https://support.microsoft.com/topic/october-21-2021-kb5006746-os-build-22000-282-preview-03190705-0960-4ba4-9ee8-af40bef057d3).
 
 - Install the console on a device running another version of Windows.
+
 - Add users to the authentication exclusion list. For more information, see [Configure SMS Provider authentication](../security/configure-security.md#sms-provider-authentication).
 
 ## Next steps

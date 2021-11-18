@@ -329,4 +329,4 @@ For more information, see [Configuration Manager PowerShell cmdlets: Update help
 
 ## Next steps
 
-Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. There's a tip at the top of that article about how to receive RSS notifications of changes.
+Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../use-docs.md#notifications).

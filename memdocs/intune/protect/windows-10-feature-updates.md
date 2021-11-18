@@ -51,6 +51,8 @@ When a device receives a policy for Feature updates:
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
+- You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
+
 ## Prerequisites
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
@@ -122,7 +124,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 2. Select **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
 
-3. Under **Deployment settings**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**. Only versions of Windows that remain in support are available to select.
+3. Under **Deployment settings**:
+
+   - Specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**. Only versions of Windows that remain in support are available to select.
+
+   - Configure **Rollout options** to manage when Windows Updates makes the update available to devices that receive this policy. For information about using these options, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
 
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 

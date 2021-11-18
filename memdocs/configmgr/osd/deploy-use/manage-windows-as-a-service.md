@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows clients are near end of support.
-ms.date: 10/05/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -50,9 +50,6 @@ For more information about Windows servicing options, see [Overview of Windows a
   - [Specify thread priority for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)
   - [Enable Dynamic Update for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_du)<!--4062619-->
 
-> [!NOTE]
-> The **Windows Servicing** dashboard currently includes Windows 11 devices with the latest version of Windows 10. It doesn't yet distinguish a version for Windows 11.<!-- 10732387 -->
-
 ## <a name="bkmk_2103-dashboard"></a> Windows servicing dashboard in version 2103 or later
 <!--3555940-->
 (*Introduced in version 2103*)
@@ -63,18 +60,21 @@ Starting in version 2103, the **Windows Servicing** dashboard was simplified to 
 
 **Quality Update Versions**: This chart displays the top five revisions of Windows across your devices.
 
-**Latest Feature Update**: This chart shows the number of devices that installed the latest feature update.
+**Windows 10 Latest Feature Update** (added in 2111): This chart shows the number of devices that installed the latest feature update for Windows 10. <!--10579996-->
+
+**Windows 11 Latest Feature Update** (added in 2111): This chart shows the number of devices that installed the latest feature update for Windows 11. <!--10579996-->
+
+**Latest Feature Update** (versions 2103 and 2107): This chart shows the number of devices that installed the latest feature update. 
 
 **Collection Errors**: This tile shows the number of devices that failed with the specified error code. For more information, see [Analyze SetupDiag errors](#analyze-setupdiag-errors).
 
 **Errors Timeline**: Displays the top errors and the number of devices with each error over the course of time for the chosen collection.
 
-:::image type="content" source="./media/3555940-servicing-dashboard.png" alt-text="The Windows Servicing dashboard in Configuration Manager." lightbox="./media/3555940-servicing-dashboard.png":::
+:::image type="content" source="./media/3555940-10579996-servicing-dashboard.png" alt-text="Screenshot of the Windows Servicing dashboard in Configuration Manager." lightbox="./media/3555940-10579996-servicing-dashboard.png":::
 
 > [!IMPORTANT]
-> The information shown in the Windows servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
->
-> For more detailed information about Windows builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
+> - The **Windows Servicing** dashboard in Configuration Manager versions 2103 and 2107 includes Windows 11 devices with the latest version of Windows 10. They don't distinguish a version for Windows 11.<!-- 10732387 -->
+> - The information shown in the Windows servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you. For more detailed information about Windows builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
 
 ## Windows 10 servicing dashboard in version 2010 and earlier
 

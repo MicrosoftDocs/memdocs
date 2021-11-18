@@ -22,10 +22,6 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
-
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
 ### Scripts from the admin center
@@ -228,7 +224,7 @@ This release includes the following improvements to deploy task sequences to dev
 
 - Support for OS deployment<!--6997525-->: With a task sequence that uses a boot image to deploy an OS, you can deploy it to a device that communicates via CMG. The user needs to start the task sequence from Software Center. For more information, see [Supported configurations for CMG](../../clients/manage/cmg/supported-configurations.md).
 
-- This release fixes the two [known issues](../../servers/deploy/install/release-notes.md#task-sequences-cant-run-over-cmg) from Configuration Manager current branch version 2002.<!-- 6983320 --> You can now run a task sequence on a device that communicates via CMG in the following circumstances:
+- This release fixes the two known issues from Configuration Manager current branch version 2002.<!-- 6983320 --> You can now run a task sequence on a device that communicates via CMG in the following circumstances:
 
   - A workgroup device that you register with a [bulk registration token](../../clients/deploy/deploy-clients-cmg-token.md)
 

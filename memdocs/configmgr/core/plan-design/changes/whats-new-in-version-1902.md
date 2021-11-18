@@ -27,10 +27,6 @@ To take full advantage of new Configuration Manager features, after you update t
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
  -->
 
-> [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
-
 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
 

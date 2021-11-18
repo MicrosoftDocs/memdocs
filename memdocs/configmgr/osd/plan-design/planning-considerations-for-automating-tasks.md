@@ -160,7 +160,7 @@ Each destination computer that receives the task sequence runs the task sequence
 >
 > If the task sequence installs an application, the application installs only if the requirement rules for the application are met, and the application isn't already installed, based on the detection method that's specified for the application.  
 
-The Configuration Manager client runs a task sequence deployment when it downloads client policy. To trigger this action rather than wait until the next polling cycle, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).  
+The Configuration Manager client runs a task sequence deployment when it downloads client policy. To trigger this action rather than wait until the next polling cycle, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#start-policy-retrieval).  
 
 When you deploy task sequences to Windows Embedded devices that are enabled with a write filter, you can specify whether to disable the write filter on the device during the deployment and then restart the device after the deployment. If the write filter isn't disabled, the task sequence is deployed to a temporary overlay and it won't be available when the device restarts.  
 

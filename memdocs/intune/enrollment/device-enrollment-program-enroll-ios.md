@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/18/2021
+ms.date: 11/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -202,12 +202,16 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         These features aren't supported when you authenticate by using Apple Setup Assistant.
     - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
-    - **Setup Assistant with modern authentication**: Devices running iOS/iPadOS 13.0 and later can use this method (older iOS/iPadOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process).
+    - **Setup Assistant with modern authentication**: Devices running iOS/iPadOS 13.0 and later can use this method. Older iOS/iPadOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process.  
 
         > [!NOTE]
-        > Right now, MFA will not work for Setup Assistant with modern authentication if you are using a 3rd party MFA provider to present the MFA screen during enrollment. Only the AAD MFA screen will work during this enrollment.
+        > MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment.  
 
-        This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.
+        This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.  
+
+         > [!IMPORTANT]
+         > If you select Setup Assistant with modern authentication as the authentication method, and you also apply a *conditional access - terms of use* policy that requires end users to accept the Azure AD Terms of Use, you must apply a *conditional access* policy that uses the Microsoft Intune cloud app, not the Microsoft Intune Enrollment cloud app. Otherwise, enrollment will fail and devices will need to be wiped to reset enrollment.  
+
 
         The Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option) in both of the following situations:
 
@@ -284,16 +288,13 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     If you're setting up Apple Shared iPad for Business devices, also configure:  
 
-    > [!Important]
-    > *Some settings in this section are in [public preview](../fundamentals/public-preview.md).* 
-
     * **Maximum cached users**: Enter the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users could run out of disk space.  
 
-    * **Maximum seconds after screen lock before password is required** (preview): Enter the number of seconds from 0 to 14,400. If the screen lock exceeds this amount of time, a device password will be required to unlock the device. Available for devices in Shared iPad mode running iPadOS 13.0 and later.  
+    * **Maximum seconds after screen lock before password is required**: Enter the number of seconds from 0 to 14,400. If the screen lock exceeds this amount of time, a device password will be required to unlock the device. Available for devices in Shared iPad mode running iPadOS 13.0 and later.  
 
-    * **Maximum seconds of inactivity until user session logs out** (preview): The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the user session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
+    * **Maximum seconds of inactivity until user session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the user session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
-    * **Require Shared iPad temporary session only** (preview): Configures the device so that users only see the guest version of the sign-in experience and must sign in as guests. They can't sign in with a Managed Apple ID. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
+    * **Require Shared iPad temporary session only**: Configures the device so that users only see the guest version of the sign-in experience and must sign in as guests. They can't sign in with a Managed Apple ID. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
     
         When set to **Yes**, this setting cancels out the following shared iPad settings, because they are not applicable in temporary sessions:  
 
@@ -301,14 +302,14 @@ Now that you've installed your token, you can create an enrollment profile for A
         - Maximum seconds after screen lock before password is required 
         - Maximum seconds of inactivity until user session logs out 
 
-    * **Maximum seconds of inactivity until temporary session logs out** (preview): The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the temporary session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
+    * **Maximum seconds of inactivity until temporary session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the temporary session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
         This setting is available when **Require Shared iPad temporary session only** is set to **Yes**.  
 
 
     > [!NOTE] 
     >- If temporary sessions are enabled, all of the user's data is deleted when they sign out of the session. This means that all targeted policies and apps will come down to the user when they sign-in, and they'll be erased when the user sign outs.  
-    >-  TO alter or change a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad. 
+    >-  To alter a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad. 
          
 
 13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**.

@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 11/19/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -20,23 +20,23 @@ If you switch a workload to Intune, but later change your mind, you can switch i
 
 Co-management supports the following workloads:
 
-- [Compliance policies](#compliance-policies)  
+- [Compliance policies](#compliance-policies)
 
-- [Windows Update policies](#windows-update-policies)  
+- [Windows Update policies](#windows-update-policies)
 
-- [Resource access policies](#resource-access-policies)  
+- [Resource access policies](#resource-access-policies)
 
-- [Endpoint Protection](#endpoint-protection)  
+- [Endpoint Protection](#endpoint-protection)
 
-- [Device configuration](#device-configuration)  
+- [Device configuration](#device-configuration)
 
-- [Office Click-to-Run apps](#office-click-to-run-apps)  
+- [Office Click-to-Run apps](#office-click-to-run-apps)
 
-- [Client apps](#client-apps)  
+- [Client apps](#client-apps)
 
 ## Compliance policies
 
-Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. Beginning in Configuration Manager version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
+Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. You can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
 For more information on the Intune feature, see [Use compliance policies to set rules for devices you manage with Intune](../../intune/protect/device-compliance-get-started.md).
 
@@ -55,7 +55,7 @@ Resource access policies configure VPN, Wi-Fi, email, and certificate settings o
 
 For more information on the Intune feature, see [Deploy resource access profiles](../../intune/configuration/device-profiles.md).
 
-> [!Note]  
+> [!NOTE]
 > The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
 
 ## Endpoint Protection
@@ -79,7 +79,7 @@ For more information on the Intune feature, see [Windows 10 (and later) settings
 > [!NOTE]
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
 >
-> The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 --> 
+> The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 -->
 >
 >When the Endpoint Protection workload resides with Intune, Windows Information Protection settings will apply from both Configuration Manager and Intune. Configuration Manager will continue to apply Windows Information Protection policy until the Device Configuration workload is moved to Intune.<!-- 4184095 -->
 >
@@ -93,7 +93,7 @@ For more information on the Intune feature, see [Windows 10 (and later) settings
 
 The device configuration workload includes settings that you manage for devices in your organization. Switching this workload also moves the **Resource Access** and **Endpoint Protection** workloads.
 
-You can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that your organization requires but aren't yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](../compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline. You can change it later on the **General** tab of the properties of an existing baseline.  
+You can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that your organization requires but aren't yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](../compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline. You can change it later on the **General** tab of the properties of an existing baseline.
 
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](../../intune/configuration/device-profile-create.md).
 
@@ -126,8 +126,6 @@ For more information on the Intune feature, see [Add Microsoft 365 apps to Windo
 <!--1357892-->
 
 > [!TIP]
-> This feature was first introduced in version 1806 as a [pre-release feature](../core/servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.
->
 > This feature may appear in the list of features as **Mobile apps for co-managed devices**.<!-- 5849669 -->
 
 Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 or later devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
@@ -141,7 +139,7 @@ When you enable Microsoft Connected Cache on your Configuration Manager distribu
 
 ## Diagram for app workloads
 
-:::image type="content" source="media/co-management-apps.svg" alt-text="Diagram of co-management app workloads" lightbox="media/co-management-apps.svg":::
+:::image type="content" source="media/co-management-apps.svg" alt-text="Diagram of co-management app workloads." lightbox="media/co-management-apps.svg":::
 
 > [!TIP]
 > Starting in version 2006, you can configure the Company Portal to also show Configuration Manager apps. If you change this app portal experience, it changes the behaviors described in the above diagram. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).<!--CMADO-3601237,INADO-4297660-->
@@ -165,7 +163,7 @@ To work around this issue, apply the CleanUpPolicy.xml using ConfigSecurityPolic
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft Security Client
 
-1. From the command prompt, pass in the xml file to clean up the policy. For example, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
+1. From the command prompt, pass in the xml file to clean up the policy. For example, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.
 
 ## Next steps
 
