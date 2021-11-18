@@ -23,8 +23,6 @@ items:
     href: core/reqs/server-development-requirements.md
   - name: SDK libraries and header files
     href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
-- name: SDK samples
-  href: core/understand/configuration-manager-sdk-samples.md
 - name: Programming fundamentals
   items:
   - name: Get started with Configuration Manager programming
