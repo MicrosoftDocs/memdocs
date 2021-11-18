@@ -49,9 +49,9 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
 
-### High-level flow
+### Environment
 
-When a device onboards to Microsoft Defender for Endpoint and security management is enabled:
+When a device onboards to Microsoft Defender for Endpoint:
 
 - The device is surveyed for an existing Endpoint Manager presence, which is a mobile device management (MDM) enrollment to Intune
 - Devices without an Endpoint Manager presence will enable the Security Management feature
