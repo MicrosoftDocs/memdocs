@@ -51,12 +51,15 @@ This feature doesn't support renaming hybrid Azure AD Windows devices.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a device > **...** > **Rename device**.
-3. In the **Rename device** pane, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated devices are an exception, and don’t require a letter or hyphen.
+3. In the **Rename device** pane, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated, fully managed, and corporate-owned work profile devices are an exception, and don’t require a letter or hyphen.
 4. If you want to restart the device after renaming it, choose **Yes** next to **Restart after rename**.
 5. Choose **Rename**.
 
 > [!NOTE]
 > If you have an enrollment profile (iOS) that uses a Device Name Template, the device will be renamed but will revert to using the template upon the next sync with Intune.
+
+> [!NOTE]
+> It may take 10 minutes or more for a renamed Android Enterprise device to update in the Devices blade.
 
 ## Windows device rename rules
 
