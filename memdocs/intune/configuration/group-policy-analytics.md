@@ -107,7 +107,7 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
-## Supported CSPs and areas of Group Policy
+## Supported CSPs and Group Policies
 
 Group Policy analytics can parse the following CSPs:
 
@@ -116,10 +116,9 @@ Group Policy analytics can parse the following CSPs:
 - [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
 - [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
-- [Group Policy Preferences](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11)#group-policy-preferences-1)
+- [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11)#group-policy-preferences-1)
 
-If your imported GPO has settings that fall outside of the above supported CSPs and Group Policy areas, they may be included the **Unknown Settings** column to acknowledge that were identified in your GPO.
-
+If your imported GPO has settings that aren't in the supported CSPs and Group Policies, then the settings may be listed in the **Unknown Settings** column. This behavior means the settings were identified in your GPO.
 
 ### Known Issues
 
