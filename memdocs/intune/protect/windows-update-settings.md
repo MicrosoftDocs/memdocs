@@ -77,7 +77,7 @@ Update settings control what bits a device will download, and when. For more inf
 - **Upgrade Windows 10 devices to Latest Windows 11 release**  
   **Default**: No
 
-  When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](/windows/windows-11-specifications).
+  When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
 
 - **Set feature update uninstall period (2 – 60 days)**  
   **Default**: 10  
