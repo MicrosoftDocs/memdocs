@@ -202,7 +202,17 @@ Users with the correct permissions can view keys by going to **Devices** > **Win
 This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
 #### BitLocker settings added to settings catalog<!-- 10956191 -->  
-We have added 13 settings from the [Bitlocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) have been added to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then, search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md).  
+We have added 9 [BitLocker settings that were previously only available in Group Policy (GP)](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md). The added settings include:  
+
+- **Provide the unique identifiers for your organization** 
+- **Enforce drive encryption type on fixed data drives** 
+- **Allow devices compliant with InstantGo or HSTI to opt out of preboot PIN** 
+- **Allow enhanced PINs for startup** 
+- **Disallow standard users from changing the PIN or password** 
+- **Enable use of BitLocker authentication requiring preboot keyboard input on slates** 
+- **Enforce drive encryption type on operating system drives** 
+- **Control use of BitLocker on removeable drives**
+- **Enforce drive encryption type on removable data drives** 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
