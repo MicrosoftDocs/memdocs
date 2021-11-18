@@ -162,7 +162,7 @@ For more information, see [Automatically deploy software updates](../../../sum/d
 
 <!--9957939-->
 
-Pre and post-scripts for orchestration groups now require approval to take effect. If you open, author, or modify a script, approval for the script is required from another admin. When selecting an approved script from the **Scripts** library, no additional approval is needed. To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**:
+Pre and post-scripts for orchestration groups now require approval to take effect. If you select a script from a file, author, or modify your own script, approval for the script is required from another admin. When selecting an approved script from the **Scripts** library, no additional approval is needed. To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**:
 
 - **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
 - **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
