@@ -216,9 +216,15 @@ To define a period during which updates to a site server can be installed, use s
 <!--SCCMdocs#587-->
 If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2111. Check with the product vendor for this information.
 
+> [!TIP]
+> If you develop a third-party add-on to Configuration Manager, you should test your add-on with every monthly [technical preview branch release](../../get-started/technical-preview.md). Regular testing helps confirm compatibility, and allows for early reporting of any issues with standard interfaces.
+
 ### Disable any custom solutions
 
 If your site has any custom solutions based on the Configuration Manager SDK or PowerShell, disable this code before you update the site. Make sure to test this custom code in a lab environment to make sure it's compatible with the new version.
+
+> [!NOTE]
+> Starting in version 2111, third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
 ### Read the release notes
 
