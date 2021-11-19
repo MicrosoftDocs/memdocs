@@ -42,7 +42,7 @@ Starting in Configuration Manager current branch version 2107, you could enable 
 
 This release adds support in the Configuration Manager console to create or edit a subscription for external notifications. It supports events for status filter rules and application approval requests.
 
-<!-- For more information, see [External notifications](../../servers/manage/external-notifications.md). -->
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
 
 ### .NET version 4.6.2 prerequisite check is an error
 
