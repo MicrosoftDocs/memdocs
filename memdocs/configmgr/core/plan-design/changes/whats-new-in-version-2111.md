@@ -130,7 +130,7 @@ This release includes the following improvements to application groups:
 
 To help you better deploy Windows 11, the **Check Readiness** step in the task sequence now includes checks for TPM 2.0.
 
-<!-- For more information, see [Task sequence steps: Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness). -->
+For more information, see [Task sequence steps: Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness).
 
 ### Improvements to the Windows servicing dashboard
 
