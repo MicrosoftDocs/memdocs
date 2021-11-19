@@ -22,10 +22,6 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2111+-+Configuration+Manager%22&locale=en-us`
-
 ## Cloud-attached management
 
 ### Simplified cloud attach configuration
@@ -56,7 +52,10 @@ Configuration Manager current branch version 2107 has a warning prerequisite rul
 
 Starting in this release, this prerequisite rule for .NET 4.6.2 is an error. Until you upgrade .NET, you can't continue installing or updating the site to this version of Configuration Manager.
 
-<!-- For more information, see [List of prerequisite checks for Configuration Manager](../../servers/deploy/install/list-of-prerequisite-checks.md#required-version-of-microsoft-net-framework). -->
+For more information, see [List of prerequisite checks for Configuration Manager](../../servers/deploy/install/list-of-prerequisite-checks.md#required-version-of-microsoft-net-framework-error).
+
+> [!IMPORTANT]
+> When the Configuration Manager client updates to version 2111 or later, client notifications are dependent upon .NET 4.6.2 or later. Until you update .NET to version 4.6.2 or later, and restart the device, users won't see notifications from Configuration Manager. Other client-side functionality may be affected until the device is updated and restarted.<!-- 10682548 --> For more information, see [More details about Microsoft .NET](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
 
 ### Improvements to VPN boundary types
 
@@ -270,7 +269,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2111 drops support for the following features:
 
-- Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../get-started/2021/technical-preview-2109.md#bkmk_dotnetsdk)<!--10529267-->.<!-- NEED FINAL LINK NOT TECH PREVIEW -->
+- Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
 ## Other updates
 
