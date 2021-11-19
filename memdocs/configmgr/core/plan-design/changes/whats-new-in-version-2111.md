@@ -22,10 +22,6 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2111+-+Configuration+Manager%22&locale=en-us`
-
 ## Cloud-attached management
 
 ### Simplified cloud attach configuration
@@ -56,7 +52,10 @@ Configuration Manager current branch version 2107 has a warning prerequisite rul
 
 Starting in this release, this prerequisite rule for .NET 4.6.2 is an error. Until you upgrade .NET, you can't continue installing or updating the site to this version of Configuration Manager.
 
-<!-- For more information, see [List of prerequisite checks for Configuration Manager](../../servers/deploy/install/list-of-prerequisite-checks.md#required-version-of-microsoft-net-framework). -->
+For more information, see [List of prerequisite checks for Configuration Manager](../../servers/deploy/install/list-of-prerequisite-checks.md#required-version-of-microsoft-net-framework-error).
+
+> [!IMPORTANT]
+> When the Configuration Manager client updates to version 2111 or later, client notifications are dependent upon .NET 4.6.2 or later. Until you update .NET to version 4.6.2 or later, and restart the device, users won't see notifications from Configuration Manager. Other client-side functionality may be affected until the device is updated and restarted.<!-- 10682548 --> For more information, see [More details about Microsoft .NET](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
 
 ### Improvements to VPN boundary types
 
@@ -64,7 +63,7 @@ Starting in this release, this prerequisite rule for .NET 4.6.2 is an error. Unt
 
 If you use the **VPN** boundary type, you can now match the start of a connection name or description instead of the whole string. Some third-party VPN drivers dynamically create the connection, which starts with a consistent string but also has a unique connection identifier. For example, `Virtual network adapter #19`. When you use the **Connection name** or **Connection description** options, also use the new **Starts with** option.
 
-<!-- For more information, see [Define network locations as boundaries for Configuration Manager](../../servers/deploy/configure/boundaries.md#vpn). -->
+For more information, see [Define network locations as boundaries](../../servers/deploy/configure/boundaries.md#vpn).
 
 ### Status messages for console extensions
 
@@ -130,7 +129,7 @@ This release includes the following improvements to application groups:
 
 To help you better deploy Windows 11, the **Check Readiness** step in the task sequence now includes checks for TPM 2.0.
 
-<!-- For more information, see [Task sequence steps: Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness). -->
+For more information, see [Task sequence steps: Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness).
 
 ### Improvements to the Windows servicing dashboard
 
@@ -148,15 +147,21 @@ For more information, see [The Windows servicing dashboard](../../../osd/deploy-
 
 <!--7033309-->
 
-This release adds more options to the **Date Released or Revised** search criteria for automatic deployment rules.
+We've added the following options in the **Date Released or Revised** search criteria for automatic deployment rules:
 
-<!-- For more information, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md). -->
+- Older than 30 days
+- Older than 60 days
+- Older than 90 days
+- Older than 6 months
+- Older than 1 year
+
+For more information, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ### Approvals for orchestration group scripts
 
 <!--9957939-->
 
-Pre and post-scripts for orchestration groups now require approval to take effect. If you open, author, or modify a script, approval for the script is required from another admin. When selecting an approved script from the **Scripts** library, no additional approval is needed. To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**:
+Pre and post-scripts for orchestration groups now require approval to take effect. If you select a script from a file, author, or modify your own script, approval for the script is required from another admin. When selecting an approved script from the **Scripts** library, no additional approval is needed. To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**:
 
 - **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
 - **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
@@ -215,11 +220,22 @@ Wizards and some property pages now include an icon to provide feedback. When yo
 
 For more information, see [Product feedback for Configuration Manager](../../understand/product-feedback.md).
 
+### Power BI sample reports
+<!--10123832-->
+
+The following reports were recently added to the **Configuration Manager Sample Power BI Reports**:
+
+- Client Status
+- Content Status
+- Microsoft Edge Management
+
+For more information, see [Install Power BI sample reports](../../servers/manage/powerbi-sample-reports.md).
+
 ### Console improvements
 <!--9575773-->
 In this release we've made the following improvements to the Configuration Manager console:
 
-- Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. They can use Configuration Manager to assign a certificate to an ISV proxy, which enables custom communication with the management point. To simplify the management of these ISV proxy certificates, you can now copy its GUID in the Configuration Manager console. <!-- For more information, see ... --><!--2842082-->
+- Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. They can use Configuration Manager to assign a certificate to an ISV proxy, which enables custom communication with the management point. To simplify the management of these ISV proxy certificates, you can now copy its GUID in the Configuration Manager console. For more information, see [ISV proxy solutions and PKI certificates](../security/cryptographic-controls-technical-reference.md#isv-proxy-solutions-and-pki-certificates).<!--2842082-->
 
 - When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 -->
 
@@ -230,12 +246,15 @@ For more information about improvements to the console, see [Configuration Manag
 ## Tools
 
 ### Options for Support Center Data Collector and Client Tools
-
 <!--9947307-->
 
-The following new command-line options have been added to the Support Center Data Collector and Client Tools:
+New command-line options have been added to the Support Center Data Collector and Client Tools. The following options were added:
+- Launch as current user without elevation
+- Specify machine name
+- Disable integrated authentication
+- Display help
 
-<!-- For more information, see [Support Center](../../support/support-center.md). -->
+For more information, see [Support Center](../../support/support-center.md#command-line-options).
 
 ### Improvements to Support Center Log File Viewer and OneTrace
 
@@ -243,7 +262,7 @@ The following new command-line options have been added to the Support Center Dat
 
 The Support Center **Log File Viewer** and **OneTrace** now display status messages in an easy to read format. Entries starting with `>>` are status messages that are automatically converted into a readable format when a log is opened. Search or filter on the `>>` string to find status messages in the log.
 
-<!-- For more information, see [Support Center log file viewer](../../support/support-center.md#support-center-log-file-viewer) and [Support Center OneTrace](../../support/support-center-onetrace.md). -->
+For more information, see [Support Center log file viewer](../../support/support-center-ui-reference.md#support-center-log-file-viewer) and [Support Center OneTrace](../../support/support-center-onetrace.md).
 
 ## Deprecated features
 
@@ -257,7 +276,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2111 drops support for the following features:
 
-- Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../get-started/2021/technical-preview-2109.md#bkmk_dotnetsdk)<!--10529267-->.<!-- NEED FINAL LINK NOT TECH PREVIEW -->
+- Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
 ## Other updates
 

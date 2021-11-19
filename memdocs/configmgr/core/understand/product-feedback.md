@@ -43,6 +43,8 @@ Starting in version 2010, there's a new wizard to send feedback with a redesigne
 <!--4262917-->
 Starting in version 2107, error messages include a link to **Report error to Microsoft**. This action opens the standard [send a frown](#send-a-frown) window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also lets you include the full context of the error message when you share a screenshot.
 
+Starting in Configuration Manager 2111, wizards and some property pages include an icon to provide feedback allowing you to quickly send feedback right from your current activity. <!--2711343-->
+
 ## Prerequisites
 
 Update the Configuration Manager console to the latest version.
@@ -54,7 +56,6 @@ Update the Configuration Manager console to the latest version.
 To send feedback on something that you like about Configuration Manager:
 
 1. In the upper-right corner of the Configuration Manager console, select the feedback icon. Choose **Send a smile**.
-   - Starting in Configuration Manager 2111, wizards and some property pages now include an icon to provide feedback allowing you to quickly send feedback right from your current activity. <!--2711343-->
 
 1. On the first page of the **Provide feedback** wizard:
 
@@ -89,7 +90,6 @@ Before you file a frown, prepare your information:
 To send feedback on something that you didn't like about the Configuration Manager product:
 
 1. In the upper-right corner of the Configuration Manager console, select the feedback icon. Choose **Send a frown**.
-   - Starting in Configuration Manager 2111, wizards and some property pages now include an icon to provide feedback allowing you to quickly send feedback right from your current activity. <!--2711343-->
 
 1. On the first page of the **Provide feedback** wizard:
 

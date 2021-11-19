@@ -59,8 +59,8 @@ Members of an orchestration group can be any Configuration Manager client, not j
     - **Script timeout (in seconds)**: The allowed time in seconds for the script to run before it times out
 1. Complete the wizard.
 
-> [!IMPORTANT]
-> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**.
+> [!WARNING]
+> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**. Scripts that don't have approval will not run on clients.
 > - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->.
 > - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages. 
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
@@ -69,7 +69,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 <!--9957939-->
 *(Introduced in version 2111)*
 
-Starting in version 2111, pre and post-scripts for orchestration groups require approval to take effect. If you open, author, or modify a script, approval for the script is required from another admin. When selecting an approved script from the [**Scripts** library](../../apps/deploy-use/create-deploy-scripts.md), no additional approval is needed. By default, users can't approve a script they've authored. These roles give an additional level of security against running a script without oversight. For ease of testing, you're able to [disable script approval](../../apps/deploy-use/create-deploy-scripts.md#allow-users-to-approve-their-own-scripts) for the environment by changing the hierarchy setting.
+Starting in version 2111, pre and post-scripts for orchestration groups require approval to take effect. If you select a script from a file, author, or modify your own script, approval for the script is required from another admin. When selecting an approved script from the [**Scripts** library](../../apps/deploy-use/create-deploy-scripts.md), no additional approval is needed. By default, users can't approve a script they've authored. These roles give an additional level of security against running a script without oversight. For ease of testing, you're able to [disable script approval](../../apps/deploy-use/create-deploy-scripts.md#allow-users-to-approve-their-own-scripts) for the environment by changing the hierarchy setting.
 
 To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**  in version 2111:
    - **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
@@ -85,8 +85,11 @@ The approval state for each of the scripts is displayed in the **Scripts** tab. 
 - **Waiting for approval**: The script is pending approval. Scripts that are written or edited directly in the code editor, or imported from a `.ps1` file will start in this approval state.
 - **Declined**: The script was denied during the approval process.
 
-> [!IMPORTANT]
-> Editing a script after it's approved will reset the approval state to **Waiting for approval**. This also means that the previously approved version of the script will not run if you start orchestration on the group while that script is in the **Waiting for approval** state.  
+> [!WARNING]
+> Editing a script after it's approved will reset the approval state to **Waiting for approval**. This also means that the previously approved version of the script will not run if you start orchestration on the group while that script is in the **Waiting for approval** state. Scripts that don't have approval will not run on clients.
+
+> [!TIP]
+> One way to update a script without any interruption is to create a new script in the [**Scripts** library](../../apps/deploy-use/create-deploy-scripts.md) and get approval. Then choose the approved script from the library when you [edit an orchestration group's pre or post-script](#edit-or-delete-an-orchestration-group). The already approved new script will replace the existing script immediately.  
 
 ### Permissions for approving scripts
 Approving scripts for orchestration groups requires one of the following security roles:
@@ -135,8 +138,8 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
       
    - For Configuration Manager version 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs.
 
-> [!IMPORTANT]
-> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**.
+> [!WARNING]
+> - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**. Scripts that don't have approval will not run on clients.
 > - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->.
 > - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs. 
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
