@@ -29,7 +29,7 @@ ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Enroll Android devices
+# Enroll Android devices  
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
