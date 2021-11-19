@@ -52,7 +52,7 @@ For more information about registering HoloLens 2 devices with Windows Autopilot
 ## Prerequisites
 
 - [Intune subscription](../intune/fundamentals/licenses.md)
-- [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+- [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## Required permissions
