@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 11/19/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -223,6 +223,23 @@ We have added 9 [BitLocker settings that were previously only available in Group
 
 #### MDM support data to refresh automatically in Group Policy analytics tool<!-- 7852080 -->
 Now whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool automatically updates to reflect the changes. The automation is an improvement over the previous behavior, which required you to reimport your Group Policy object (GPO) to refresh the data. For more information about Group Policy analytics, see [Use Group Policy analytics](../configuration/group-policy-analytics.md#use-group-policy-analytics).  
+
+#### Remote help app is available as a public preview<!-- 9843480 -->
+
+As a public preview, you can use of the remote help app with your Intune tenant. With remote help, users who authenticate to your Azure Active directly can remotely assist others by connecting a remote help session between devices.
+
+With permissions in remote help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting.
+The capabilities of remote help include:
+
+- **Enable remote help for your tenant** –If you choose to turn on remote help, its use is enabled tenant-wide.
+- **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
+- **Use remote help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
+- **Compliance Warnings** - Before connecting to device, a helper will see a non-compliance warning about that device if it’s not compliant to its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access and what the actions they can take while providing assistance.
+- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the UAC prompt on the sharer's machine to enter credentials.
+- **Monitor active remote help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
+
+For more information, see [Use remote help](../remote-actions/remote-help.md).
 
 ## Week of November 8, 2021
 
