@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2021
+ms.date: 11/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -73,7 +73,7 @@ The Remote help app supports the following capabilities:
 >
 > - Remote help is not supported on High GCC tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
-> - May not be available in all markets. Full localization coming soon.
+> - May not be available in all markets or localizations.
 
 ### Network considerations
 
@@ -87,7 +87,7 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 | \*.resources.lync.com             | Required for the Skype framework used by remote help |
 | \*.infra.lync.com                 | Required for the Skype framework used by remote help |
 | \*.latest-swx.cdn.skype.com        | Required for the Skype framework used by remote help |
-| \*.login.microsoftonline.com       | Required for logging in to the application (AAD). Might not be available in preview in all markets. Localization coming soon.      |
+| \*.login.microsoftonline.com       | Required for logging in to the application (AAD). Might not be available in preview in all markets or for all localizations.   |
 | \*.channelwebsdks.azureedge.net    | Used for chat services within remote help        |
 | \*.aria.microsoft.com             | Used for accessibility features within the app    |
 | \*.api.support.microsoft.com       | API access for remote help                          |
