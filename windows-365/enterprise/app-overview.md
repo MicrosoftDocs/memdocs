@@ -67,6 +67,10 @@ Within the Windows Store as part of Windows 10/11 Enterprise, apps are automatic
 
 AppX is helpful for distributing applications supported for multiple devices, including PCs, tablets, and smartphones that run on Windows.
 
+## Office
+
+Windows 365 Cloud PCs only support the Microsoft 365 Apps version of Office. For more information about the differences between Microsoft 365 Apps and other versions of Office, see [About Microsoft 365 Apps in the enterprise](/deployoffice/about-microsoft-365-apps).
+
 ## Universal Print
 
 [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a modern print solution that organizations can use to simplify their print infrastructure through cloud services from Microsoft. You can use Universal Print with Windows 365 Enterprise, either natively or through one of the Universal Print [partners](/universal-print/fundamentals/universal-print-partner-integrations). Legacy print-server environments are also possible to use together with Windows 365.

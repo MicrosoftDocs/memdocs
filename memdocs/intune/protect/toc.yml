@@ -57,6 +57,13 @@ items:
       href: device-compliance-get-started.md    
     - name: Create a policy
       href: create-compliance-policy.md
+    - name: Custom compliance settings
+      href: compliance-use-custom-settings.md 
+      items:   
+      - name: JSON for custom settings
+        href: compliance-custom-json.md    
+      - name: PowerShell script for custom settings
+        href: compliance-custom-script.md    
     - name: Location-based compliance
       href: use-network-locations.md
     - name: Actions for noncompliance
@@ -106,6 +113,8 @@ items:
         href: advanced-threat-protection-manage-android.md
       - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
+      - name: MDE Security Configuration Management
+        href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
     - name: Tenant attach
@@ -289,6 +298,8 @@ items:
         href: windows-10-feature-updates.md
       - name: Expedite updates policy
         href: windows-10-expedite-updates.md
+      - name: Windows rollout options
+        href: windows-update-rollout-options.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies

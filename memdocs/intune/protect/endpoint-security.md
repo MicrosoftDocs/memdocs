@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/21/2021
+ms.date: 11/16/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,10 +99,7 @@ The [available compliance settings](../protect/device-compliance-get-started.md#
 - Setting password requirements
 - Specifying a maximum allowed device threat-level, as determined by Microsoft Defender for Endpoint or another Mobile Threat Defense partner
 
-In addition to the policy rules, compliance policies support:
-
-- [Locations](../protect/use-network-locations.md) that you define in Intune. When you use locations with a compliance policy, policy can ensure devices are connected to a work network to be compliant.
-- [Actions for non-compliance](../protect/actions-for-noncompliance.md). These actions are a time-ordered sequence of actions to apply to non-compliant devices. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
+In addition to the policy rules, compliance policies support [Actions for non-compliance](../protect/actions-for-noncompliance.md). These actions are a time-ordered sequence of actions to apply to non-compliant devices. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
 
 When you integrate Intune with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, Conditional access can use the compliance data to gate access to corporate resources for both managed devices, and from devices that you don't manage.
 

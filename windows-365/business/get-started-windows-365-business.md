@@ -103,7 +103,7 @@ Users can navigate to **https://windows365.microsoft.com** to access their Cloud
 
 On their Windows 365 home page, users see the Cloud PCs they have access to in the **Your Cloud PCs** section.
 
-![Windows 365 home.](./media/get-started-windows-365-business/cloudpc-home.png)
+![Windows 365 home.](./media/get-started-windows-365-business/cloud-pc-home.png)
 
 Users can select **Open in browser** to open their Cloud PC.
 
@@ -114,7 +114,7 @@ Users can select **Open in browser** to open their Cloud PC.
 
 While on the Windows 365 home page, users can perform actions on their Cloud PCs by selecting the gear icon on a Cloud PC card.
 
-![Card menu.](./media/get-started-windows-365-business/cloudpc-gear.png)
+![Card menu.](./media/get-started-windows-365-business/cloud-pc-gear.png)
 
 - **Restart**: Restarts the Cloud PC.
 
