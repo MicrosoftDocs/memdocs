@@ -246,12 +246,15 @@ For more information about improvements to the console, see [Configuration Manag
 ## Tools
 
 ### Options for Support Center Data Collector and Client Tools
-
 <!--9947307-->
 
-The following new command-line options have been added to the Support Center Data Collector and Client Tools:
+New command-line options have been added to the Support Center Data Collector and Client Tools. The following options were added:
+- Launch as current user without elevation
+- Specify machine name
+- Disable integrated authentication
+- Display help
 
-<!-- For more information, see [Support Center](../../support/support-center.md). -->
+For more information, see [Support Center](../../support/support-center.md#command-line-options).
 
 ### Improvements to Support Center Log File Viewer and OneTrace
 
