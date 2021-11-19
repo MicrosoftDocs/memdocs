@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/23/2021
+ms.date: 11/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,7 +70,11 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     - **Group Policy name**: The name is automatically generated using information in the GPO.
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
-    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.
+    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.  
+
+        > [!NOTE]
+        > Whenever the Microsoft Intune product team makes changes to the mapping in Intune, the percentage under MDM Support automatically updates to reflect those changes.   
+
     - **Unknown Settings**: Shows GPO settings that fall outside of the list of the Configuration Service Providers (CSPs) that this tool can parse.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
@@ -79,7 +83,7 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
 
-4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
+4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:  
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
     - **Group Policy Setting Category**: Shows the setting category for ADMX settings, such as Internet Explorer and Microsoft Edge. Not all settings have a setting category.
@@ -103,7 +107,7 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
-## Supported CSPs
+## Supported CSPs and Group Policies
 
 Group Policy analytics can parse the following CSPs:
 
@@ -112,8 +116,9 @@ Group Policy analytics can parse the following CSPs:
 - [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
 - [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
+- [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11)#group-policy-preferences-1)
 
-If your imported GPO has settings that fall outside of the above supported CSPs, they may be included the **Unknown Settings** column to acknowledge that were identified in your GPO.
+If your imported GPO has settings that aren't in the supported CSPs and Group Policies, then the settings may be listed in the **Unknown Settings** column. This behavior means the settings were identified in your GPO.
 
 ### Known Issues
 
