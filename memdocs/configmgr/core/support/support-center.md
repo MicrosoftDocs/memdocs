@@ -2,7 +2,7 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 08/02/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
@@ -88,6 +88,9 @@ After you install it, find the following items on the Start menu in the **Micros
 Starting in version 2103, the Start menu group for Support Center includes these five tools:
 
 :::image type="content" source="media/8693068-support-center-start-menu.png" alt-text="Start menu showing five Support Center tools in version 2103 and later.":::
+
+> [!TIP]
+> When installing Support Center, you can install tools individually. To install only the OneTrace log viewer, use the **Advanced** option when using the Support Center installer. You can also use the `ADDLOCAL` property, for example `supportcenterinstaller.msi ADDLOCAL=OneTraceApplication` <!--10915091-->
 
 ## Known issues
 
