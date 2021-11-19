@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/15/2021 
+ms.date: 11/19/2021 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
