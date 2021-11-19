@@ -249,7 +249,7 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 
 For more information, see [External notifications](../../servers/manage/external-notifications.md).
 
-The service connection point needs to be able to communicate with the notification service, for example Azure Logic Apps. The access endpoint for the logic app typically has the following format: `https://*.<RegionName>.logic.azure.com:443`. For example: `https://prod1.westus2.logic.azure.com:443`
+The service connection point needs to communicate with the notification service, for example Azure Logic Apps. The access endpoint for the logic app typically has the following format: `https://*.<RegionName>.logic.azure.com:443`. For example: `https://prod1.westus2.logic.azure.com:443`
 
 To get the access endpoint for the logic app, as well as the associated IP addresses, use the following process:
 

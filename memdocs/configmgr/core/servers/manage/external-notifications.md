@@ -37,13 +37,41 @@ Starting in version 2111, use the Configuration Manager console to create or edi
 
 - Currently, this feature only supports Azure Logic Apps as the external system. An active Azure subscription with rights to create a logic app is required.
 
-    The service connection point needs to be able to communicate with the notification service, for example Azure Logic Apps. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#external-notifications).
-
-- You can configure the following permissions to the **NotificationSubscription** object: Read, Delete, Modify, Create.<!-- 12510324 --> Users also need the **All** security scope.
-  - The **Full administrator** default security role has these permissions.
-  - The **Read only analyst** default security role has the **Read** permission.
+    The service connection point needs to communicate with the notification service, for example Azure Logic Apps. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#external-notifications).
 
 - To create an event type for an application approval request, the site needs an app that requires approval and is deployed to a user collection. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md) and [Approve applications](../../../apps/deploy-use/app-approval.md).
+
+### Permissions
+
+You can configure the following permissions to the **NotificationSubscription** object: Read, Delete, Modify, Create.<!-- 12510324 --> Users also need the **All** security scope.
+
+- The **Full administrator** default security role has these permissions.
+- The **Read only analyst** default security role has the **Read** permission.
+
+Other permissions may be required for custom roles. Use the following table to understand what's needed:
+
+| Action              | Alerts:<br>Read | Site:<br>Read | Notify:<br>Read | Notify:<br>Modify                | Notify:<br>Create                | Notify:<br>Delete | Site:<br>Manage SFR |
+|---------------------|-----------------|---------------|-----------------|----------------------------------|----------------------------------|-------------------|---------------------|
+| View subscription   | X               |               | X               |                                  |                                  |                   |                     |
+| Modify subscription | X               | X             | X               | X                                |                                  |                   |                     |
+| Create subscription <sup>[Note 1](#bkmk_note1)</sup> | X               | X             | X               |                                  | X                                |                   |                     |
+| Delete subscription | X               |               | X               |                                  |                                  | X                 |                     |
+| Create new SFR      | X               | X             | X               | <sup>[Note 2](#bkmk_note2)</sup> | <sup>[Note 2](#bkmk_note2)</sup> |                   | X                   |
+| Add existing SFR    | X               | X             | X               | <sup>[Note 2](#bkmk_note2)</sup> | <sup>[Note 2](#bkmk_note2)</sup> |                   |                     |
+| Add app approval    | X               | X             | X               | <sup>[Note 2](#bkmk_note2)</sup> | <sup>[Note 2](#bkmk_note2)</sup> |                   |                     |
+
+The above table uses the following shorthand:
+
+- **Notify**: **Notification subscription** objects
+- **SFR**: Status filter rule
+
+#### <a name="bkmk_note1"></a> Note 1: Top-level site in hierarchy
+
+Create the subscription on the top-level site of the hierarchy. This site is either a standalone primary site, or a CAS. You can view and modify an existing subscription on any site in a hierarchy.<!-- 12510324 -->
+
+#### <a name="bkmk_note2"></a> Note 2: Modify and Create permissions for event actions
+
+When managing events on the subscription, the permissions to **Modify** or **Create** on the **Notification subscription** object depend upon whether you need to modify or create the event. For example, if you have the **Create** permission, then you can add a status filter rule to the subscription. If you don't have the **Modify** permission, then you can't make changes to the subscription events.
 
 ## Create an Azure logic app and workflow
 
