@@ -7,7 +7,7 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2021
+ms.date: 12/13/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,9 +56,9 @@ See the instructions for [adding iOS store apps to Microsoft Intune](../apps/sto
 
 To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration is not available, so please refer to [Add Mobile Threat Defense apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md).
 
-### Blackberry Mobile Threat Protection app configuration policy
+### Blackberry Cylance AI app configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Blackberry Mobile Threat Protection iOS app configuration policy.
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Blackberry Cylance AI iOS app configuration policy.
 
 <!-- Pending revision to the following to support the Blackberry app  >
 

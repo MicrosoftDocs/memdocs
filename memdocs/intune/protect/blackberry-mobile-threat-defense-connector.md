@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Blackberry Mobile Threat Protection connector for Intune
+title: Blackberry Cylance AI connector for Intune
 titleSuffix: Intune on Azure
-description: Learn about integrating Intune with Blackberry Mobile Threat Protection to control mobile device access to your corporate resources.
+description: Learn about integrating Intune with Blackberry Cylance AI to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2021
+ms.date: 12/13/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,11 +29,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use Blackberry Mobile Threat Protection with Intune
+# Use Blackberry Cylance AI with Intune
 
-You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Blackberry Mobile Threat Protection, a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Blackberry app.
+You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Blackberry Cylance AI, a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Blackberry app.
 
-You can configure Conditional Access policies based on Blackberry Mobile Threat Protection risk assessment enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
+You can configure Conditional Access policies based on Blackberry Cylance AI risk assessment enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
 ## Supported platforms
 
@@ -47,20 +47,20 @@ You can configure Conditional Access policies based on Blackberry Mobile Threat 
 
 - Microsoft Intune subscription
 
-- Blackberry Mobile Threat Protection subscription
+- Blackberry Cylance AI subscription
 
-For more information, see the documentation for Blackberry Mobile Threat Protection.
+For more information, see the documentation for Blackberry Cylance AI.
 
-## How do Intune and Blackberry Mobile Threat Protection help protect your company resources?
+## How do Intune and Blackberry Cylance AI help protect your company resources?
 
-The Blackberry Mobile Threat Protection app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the Blackberry Mobile Threat Protection cloud service to assess the device's risk for mobile threats.
+The Blackberry Cylance AI app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the Cylance AI Protection cloud service to assess the device's risk for mobile threats.
 
-- **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Blackberry Mobile Threat Protection. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Blackberry Mobile Threat Protection app installed in their devices to resolve the issue and regain access to corporate resources. To support using Blackberry Mobile Threat Protection with enrolled devices:
+- **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Blackberry Mobile Threat Protection. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Blackberry Cylance AI app installed in their devices to resolve the issue and regain access to corporate resources. To support using Blackberry Cylance AI with enrolled devices:
   - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
   - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
   - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
 
-- **Support for unenrolled devices** - Intune can use the risk assessment data from the Blackberry Mobile Threat Protection app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a Microsoft Intune protected app, Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using Blackberry Mobile Threat Protection with unenrolled devices:
+- **Support for unenrolled devices** - Intune can use the risk assessment data from the Blackberry Cylance AI app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a Microsoft Intune protected app, Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using Blackberry Cylance AI with unenrolled devices:
 
   - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
   - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
@@ -68,7 +68,7 @@ The Blackberry Mobile Threat Protection app for Android and iOS/iPadOS captures 
   
 ## Sample scenarios
 
-See below a few scenarios when integrating Blackberry Mobile Threat Protection with Intune:
+See below a few scenarios when integrating Blackberry Cylance AI with Intune:
 
 ### Control access based on threats from malicious apps
 
@@ -120,7 +120,7 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
-When the Blackberry Mobile Threat Protection mobile threat defense solution considers a device to be infected:
+When the Blackberry Cylance AI mobile threat defense solution considers a device to be infected:
 
 > [!div class="mx-imgBorder"]
 > ![App protection policy blocks due to detected malware](./media/blackberry-mobile-threat-defense-connector/blackberry-mobile-app-policy-block.png)
@@ -132,12 +132,12 @@ Access is granted on remediation:
 
 ## Next steps
 
-- [Integrate Blackberry Mobile Threat Protection with Intune](blackberry-mtd-connector-integration.md)
+- [Integrate Blackberry Cylance AI with Intune](blackberry-mtd-connector-integration.md)
 
-- [Set up Blackberry Mobile Threat Protection apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Blackberry Cylance AI apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
-- [Create Blackberry Mobile Threat Protection device compliance policy](mtd-device-compliance-policy-create.md)
+- [Create Blackberry Cylance AI device compliance policy](mtd-device-compliance-policy-create.md)
 
-- [Enable Blackberry Mobile Threat Protection Threat Protection MTD connector](mtd-connector-enable.md)
+- [Enable Blackberry Cylance AI Threat Protection MTD connector](mtd-connector-enable.md)
 
 - [Create an MTD app protection policy](../protect/mtd-app-protection-policy.md)
