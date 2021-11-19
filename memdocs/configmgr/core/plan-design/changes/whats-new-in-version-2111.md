@@ -63,7 +63,7 @@ For more information, see [List of prerequisite checks for Configuration Manager
 
 If you use the **VPN** boundary type, you can now match the start of a connection name or description instead of the whole string. Some third-party VPN drivers dynamically create the connection, which starts with a consistent string but also has a unique connection identifier. For example, `Virtual network adapter #19`. When you use the **Connection name** or **Connection description** options, also use the new **Starts with** option.
 
-<!-- For more information, see [Define network locations as boundaries for Configuration Manager](../../servers/deploy/configure/boundaries.md#vpn). -->
+For more information, see [Define network locations as boundaries](../../servers/deploy/configure/boundaries.md#vpn).
 
 ### Status messages for console extensions
 
@@ -129,7 +129,7 @@ This release includes the following improvements to application groups:
 
 To help you better deploy Windows 11, the **Check Readiness** step in the task sequence now includes checks for TPM 2.0.
 
-<!-- For more information, see [Task sequence steps: Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness). -->
+For more information, see [Task sequence steps: Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness).
 
 ### Improvements to the Windows servicing dashboard
 
@@ -235,7 +235,7 @@ For more information, see [Install Power BI sample reports](../../servers/manage
 <!--9575773-->
 In this release we've made the following improvements to the Configuration Manager console:
 
-- Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. They can use Configuration Manager to assign a certificate to an ISV proxy, which enables custom communication with the management point. To simplify the management of these ISV proxy certificates, you can now copy its GUID in the Configuration Manager console. <!-- For more information, see ... --><!--2842082-->
+- Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. They can use Configuration Manager to assign a certificate to an ISV proxy, which enables custom communication with the management point. To simplify the management of these ISV proxy certificates, you can now copy its GUID in the Configuration Manager console. For more information, see [ISV proxy solutions and PKI certificates](../security/cryptographic-controls-technical-reference.md#isv-proxy-solutions-and-pki-certificates).<!--2842082-->
 
 - When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 -->
 
