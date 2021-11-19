@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 10/05/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -44,7 +44,7 @@ Whether enrolling devices via Intune or Configuration Manager, Proactive remedia
 
 ### Licensing
 
-Proactive remediations also requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) and one of the following licenses for the enrolled devices:
+Proactive remediations requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) and also requires users of the devices to have one of the following licenses:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
@@ -134,6 +134,5 @@ To help you easily analyze returned outputs, use the **Export** option to save t
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
-- View [Recommended software](recommended-software.md).
 - View [Startup performance](startup-performance.md).
 - Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).

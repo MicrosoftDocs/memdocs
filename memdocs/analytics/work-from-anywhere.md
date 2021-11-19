@@ -1,8 +1,8 @@
 ---
-title: Work from anywhere (preview) report in Endpoint analytics
+title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
-description: The Work from anywhere (preview) report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 10/19/2021
+description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -12,9 +12,12 @@ manager: dougeby
 ms.localizationpriority: high
 ---
 
-# Work from anywhere (preview) report
+# Work from anywhere report
 <!--8668496-->
-The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. The **Work from anywhere** report is an evolution of the [Recommended software report](recommended-software.md). You may notice changes in your scores because the calculations are different in the **Work from anywhere** report.  From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.  
+The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.  
+
+> [!Note]
+> The **Work from anywhere** report replaced the **Recommended software report**. You may notice changes in your scores because the calculations are different in the **Work from anywhere** report.
 
 ## <a name="bkmk_score"></a> Work from anywhere score
 
@@ -68,8 +71,6 @@ Cloud identity provides users with many productivity benefits including device-w
 
 Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Autopilot. The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](../autopilot/enrollment-autopilot.md).
 
-> [!NOTE]
-> You can export a device list as a `.csv` file from **Cloud provisioning** and use it to [Manually register devices with Windows Autopilot](../autopilot/add-devices.md#add-devices).
 
 :::image type="content" source="media/8668496-cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list" lightbox="media/8668496-cloud-provisioning.png":::
 
@@ -77,7 +78,7 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 <!--IN9740163-->
 The **Windows** metric provides Windows 11 hardware readiness insights for devices that are enrolled via Intune, co-management, or Configuration Manager version 2107 or newer with tenant attach enabled. To determine how many of your enrolled devices meet the [minimum system requirements](/windows/whats-new/windows-11-requirements#hardware-requirements) for Windows 11, select **Windows** to open the flyout on the **Overview** page in **Work from anywhere**. A chart is displayed showing which specific hardware requirements are the top blockers in your organization.
 
-:::image type="content" source="media/windows-hardware.png" alt-text="Screenshot of the Windows flyout that displays a chart showing top hardware blockers in your organization." lightbox="media/windows-hardware.png":::
+:::image type="content" source="media/windows-hardware.png" alt-text="Screenshot of the Windows tab that displays a chart showing top hardware blockers in your organization and OS versions." lightbox="media/windows-hardware.png":::
 
 In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness is displayed. The **Windows 11 readiness status** column indicates whether a device is **Capable** or **Not capable** of upgrading to Windows 11 based on the minimum system requirements. The column also lists if a device is already **Upgraded** or if the status is **Unknown** for a device. The **Windows 11 readiness reason** column outlines the specific hardware requirements that aren't met for devices that have a readiness status of **Not capable**.
 

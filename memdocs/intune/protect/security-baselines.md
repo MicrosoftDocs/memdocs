@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 11/19/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,28 +55,34 @@ Security baselines can help you to have an end-to-end secure workflow when worki
 
 ## Available security baselines
 
-The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline.
+The following security baseline instances are available for use with Intune. Use the links to view the settings for recent instances of each baseline.
 
-- **MDM Security Baseline**  
-  - [MDM Security Baseline for December 2020](security-baseline-settings-mdm-all.md?pivots=december-2020)
-  - [MDM Security Baseline for August 2020](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
-  - [MDM Security Baseline for May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+- **Security Baseline for Windows 10 and later**  
+  - [November 2021](security-baseline-settings-mdm-all.md?pivots=november-2021)
+  - [December 2020](security-baseline-settings-mdm-all.md?pivots=december-2020)
+  - [August 2020](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
+<!-- deprecating from content 
+  - [May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: MDM Security Baseline for October 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+-->
 
 - **Microsoft Defender for Endpoint baseline**  
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites))*.
-  - [Microsoft Defender for Endpoint baseline for December 2020 - version 6](security-baseline-settings-defender-atp.md?pivots=december-2020)
-  - [Microsoft Defender for Endpoint baseline for August 2020 - version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
-  - [Microsoft Defender for Endpoint baseline for April 2020 - version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
-  - [Microsoft Defender for Endpoint baseline for March 2020 - version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
+  - [Version 6](security-baseline-settings-defender-atp.md?pivots=december-2020)
+  - [Version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
+  - [Version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft Edge Baseline**
-  - [Microsoft Edge baseline for September 2020 (Edge version 85 and later)](security-baseline-settings-edge.md?pivots-edge-sept-2020)
-  - [Microsoft Edge baseline for April 2020 (Edge version 80 and later)](security-baseline-settings-edge.md?pivots-edge-april-2020)
-  - [Preview: Microsoft Edge baseline for October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+  - [September 2020 (Edge version 85 and later)](security-baseline-settings-edge.md?pivots-edge-sept-2020)
+  - [April 2020 (Edge version 80 and later)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Preview: October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+- **Windows 365 Security Baseline**
+  - [Windows 365 Security Baseline version 2101](security-baseline-settings-windows-365.md)
 
 After a new version for a profile releases, settings in profiles based on the older versions become read-only. You can continue using those older profiles, including editing their name, description and assignments, but you won't be able to edit settings for them or create new profiles based on the older versions.
 

@@ -116,6 +116,9 @@ Similarly, some derived credential request workflows require the use of the devi
 
 - Notification can be through app notification for the Company Portal, through email, or both. If you choose to use email notifications and you use enabled conditional access, users might not receive the email notification if their device isn't compliant.
 
+  > [!IMPORTANT]
+  > To ensure notifications related to device credentials are successfully received by end users, you should enable app notifications for the Company Portal, email notifications, or both.
+
 ### 2) Review the end-user workflow for your chosen issuer
 
 Following are key considerations for each supported partner. Become familiar with this information so you can ensure your Intune policies and configurations don't block users and devices from successfully completing enrollment for a derived credential from that issuer.

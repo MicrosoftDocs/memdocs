@@ -4,12 +4,32 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 08/20/2021
+ms.date: 10/25/2021
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for Change: Intune APP/MAM moving to support Android 9 and higher<!-- 10937255 -->
+
+With the upcoming release of Android 12, Intune app protection policies (APP, also known as MAM) for Android will be moving to support Android 9 (Pie) and higher on **October 1, 2021**. This change is to align with Office mobile apps for Android support of the last four major versions of Android. Based on your feedback, we have updated our support statement. We are doing our best to keeping your organization secure and protecting your users and devices, while aligning with Microsoft app lifecycles.
+
+> [!NOTE]
+> [Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) are not impacted by this announcement and will continue to be supported regardless of their Android OS version.
+
+#### How this will affect your organization?
+
+If you are using app protection policies on any device that is running Android version 8.x or lower, or decide to enroll any device that is running Android version 8.x or lower, please note that these devices will no longer be supported for APP. While APP policies will continue to be applied to devices running Android 6.x – Android 8.x, if you do run into issues with an Office app and APP, support will request you update to a supported Office version for app troubleshooting. To continue to receive support for APP, update your devices to Android version 9 (Pie) or higher or replace them with a device on Android version 9.0 or higher before October 1, 2021.
+
+#### What you need to do to prepare?
+
+Notify your helpdesk, if applicable, of this updated support statement. You also have two admin options to help inform your users.
+
+Here’s how you can warn users:
+
+1. Configure an [app protection policy Conditional launch setting](../apps/app-protection-policy-settings-android.md#conditional-launch) with a Min OS version requirement to warn users.
+2. Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the [action for non-compliance](../protect/actions-for-noncompliance.md) to send a message to users before marking them non-compliant.
 
 ### Plan for change: Enrollment restrictions will no longer be included in policy sets<!--1067033 -->
 
@@ -63,7 +83,7 @@ If you want users to have access to developer settings moving forward, you will 
 
 ### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
 
-Intune is announcing end of support for the [network fence feature](../protect/use-network-locations.md) for use only in devices enrolled through Android device administrator. Google has reduced support for devices enrolled using device administrator and Intune customers have provided feedback leading to a re-envisioning of the location based fencing to better meet customer needs across multiple Android enrollment options.
+Intune is announcing end of support for the [network fence feature](../protect/create-compliance-policy.md) for use only in devices enrolled through Android device administrator. Google has reduced support for devices enrolled using device administrator and Intune customers have provided feedback leading to a re-envisioning of the location based fencing to better meet customer needs across multiple Android enrollment options.
 
 #### How does this affect me?
 
@@ -123,11 +143,11 @@ User impact - Most users have app updates set to automatic, so they receive the 
 
 ### Plan for Change: Intune ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
-Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending after October 26, 2021. When support ends, the standalone tunnel app will be removed from the Google Play store.
+Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated with support ending after January 31, 2022. When support ends, the standalone tunnel app will be removed from the Google Play store.
 
 #### How this change will affect your organization
 
-If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before October 26, 2021 to ensure users can still access the Tunnel Gateway configuration.
+If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before January 31, 2022 to ensure users can still access the Tunnel Gateway configuration.
 
 #### What you need to do to prepare
 

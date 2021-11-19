@@ -96,6 +96,8 @@ items:
             href: apps-win32-troubleshoot.md
           - name: Win32 app S mode devices
             href: apps-win32-s-mode.md
+          - name: Deploy Windows update packages
+            href: apps-win32-deploy-update-package.md
       - name: Add specific apps
         items:
         - name: Company Portal app - Autopilot
@@ -122,7 +124,7 @@ items:
       - name: Include and exclude apps
         href: apps-inc-exl-assignments.md
         displayName: app assignment
-      - name: Deploy Windows 10 apps
+      - name: Deploy Windows 10/11 apps
         href: apps-windows-10-app-deploy.md
       - name: Deploy apps to Government environments
         href: apps-deploy-gcc-dod.md

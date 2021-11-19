@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 11/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,24 +38,7 @@ When you configure settings for Windows update rings in Intune, you're configuri
 
 Update settings control what bits a device will download, and when. For more information about the behavior of each setting, see the Windows reference documentation.  
 
-- **Servicing channel**  
-  **Default**: Semi-Annual Channel  
-  Windows Update CSP: [Update/BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
-  Set the channel (branch) from which the device receives Windows updates. Different [Windows servicing channels](/windows/deployment/update/get-started-updates-channels-tools#servicing-channels) can use different deferral periods before updates are delivered. 
-
-  Intune supports the following Windows Servicing channels:
-
-  - Semi-Annual Channel  
-  - Semi-Annual Channel (targeted) for 1809 and below 
-  - Windows Insider – Fast  
-  - Windows Insider – Slow  
-  - Windows Insider - Release Preview  
-
-  If you select an Insider channel, Intune automatically configures the Windows update setting [Update/ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) so that the insider build will work.
-
-  > [!IMPORTANT]  
-  > Beginning with Windows version 1903, the use of the *Semi-Annual Channel (targeted)* (SAC-T), is retired. With this change, SAC-T merges with the *Semi-Annual Channel*. To learn more about this change and how it affects Windows Update for Business, see the Windows IT Pro Blog post [Windows Update for Business and the retirement of SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).  
  
 - **Microsoft product updates**  
   **Default**:  Allow  
@@ -91,6 +74,11 @@ Update settings control what bits a device will download, and when. For more inf
   
   Feature Updates are typically new features for Windows.  
 
+- **Upgrade Windows 10 devices to Latest Windows 11 release**  
+  **Default**: No
+
+  When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
+
 - **Set feature update uninstall period (2 – 60 days)**  
   **Default**: 10  
   Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
@@ -100,6 +88,16 @@ Update settings control what bits a device will download, and when. For more inf
   After this period expires, the previous update bits are removed from the device, and it can no longer uninstall to a previous update version.  
 
   For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.  
+
+- **Enable pre-release builds**  
+  **Default**: Not Configured  
+
+  When configuring *Update ring settings*, you can choose to enable **Enable pre-release builds**. Devices that receive this setting as *Enabled* will move to the pre-release build you specify, and will also reboot. When enabled, specify one of the following prerelease builds:  
+  - **Windows Insider - Release Preview** (*default*)
+  - **Beta Channel**
+  - **Dev Chanel**
+
+  For information about pre-release builds, see [Windows Insider](https://insider.windows.com/understand-flighting).
 
 ## User experience settings  
 

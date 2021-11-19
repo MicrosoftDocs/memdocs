@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/31/2021
+ms.date: 10/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -32,8 +32,9 @@ For information about the new features introduced with different versions, see t
 For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
+> You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
+<!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
+> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
 
 ## Client management
 
@@ -114,6 +115,18 @@ If the site system server has a version of the Visual C++ redistributable later 
 To work around this issue, temporarily uninstall the later version of Visual C++ redistributable. When you install Configuration Manager version 2107, it will install version 14.28.29914.
 
 ## OS deployment
+
+### Image servicing with Windows Server 2022
+
+<!-- 11843519, MEMDocs#2108 -->
+
+_Applies to: version 2107_
+
+If you try to [apply software updates to an image](../../../../osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image) for Windows Server 2022, no updates display as available to install.
+
+This issue is caused by a change to the Windows update category for Server 2022.
+
+To resolve this issue, install the [update rollup](../../../../hotfix/2107/11121541.md) for Configuration Manager version 2107.
 
 ### Task sequence and application policy issue
 

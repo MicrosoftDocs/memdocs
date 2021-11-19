@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/19/2021
+ms.date: 11/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -162,7 +162,6 @@ For devices that run 9.0 and later and receive a kiosk-mode policy, you can use 
 
 For devices that run 8.x and earlier, you can also use a device compliance or device configuration policy to enforce the password requirement. However, to set up a PIN, you’ll need to manually enter the settings application on the device and configure the PIN.
 
-
 ## Configure the certification authority
 
 In the following sections, you'll:
@@ -235,12 +234,17 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
 ### Create the client certificate template
 
-The  Certificate Connector for Microsoft Intune requires a certificate with the *Client Authentication* Enhanced Key Usage and Subject name equal to the FQDN of the machine where the connector is installed. A template with the following properties is required:
+> [!NOTE]
+>The following certificate is not used with the Certificate Connector for Microsoft Intune. This information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
+
+The Microsoft Intune Connector requires a certificate with the *Client Authentication* Enhanced Key Usage and Subject name equal to the FQDN of the machine where the connector is installed. A template with the following properties is required:
 
 - **Extensions** > **Application Policies** must contain **Client Authentication**
 - **Subject name** > **Supply in the request**.
 
 If you already have a template that includes these properties, you can reuse it, otherwise create a new template by either duplicating an existing one or creating a custom template.
+
+
 
 ### Create the server certificate template
 
@@ -406,7 +410,7 @@ On the NDES server, add a **Server authentication certificate**.
 
 
 > [!NOTE]
-> When configuring NDES for the Certificate Connector for Microsoft Intune , only the Server authentication certificate is used. If your configuring NDES to support the older certificate connector (NDESConnectorSetup.exe), you must also configure a *Client authentication certificate*. You can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses. 
+> When configuring NDES for the Certificate Connector for Microsoft Intune , only the Server authentication certificate is used. If you're configuring NDES to support the older certificate connector (NDESConnectorSetup.exe), you must also configure a *Client authentication certificate*. You can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses. 
 > Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
 >
 > The following information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.

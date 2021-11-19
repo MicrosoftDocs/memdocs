@@ -5,7 +5,7 @@ metadata:
    ms.topic: hub-page
    ms.prod: configuration-manager
    ms.localizationpriority: high
-   ms.date: 09/23/2021
+   ms.date: 11/10/2021
 
 highlightedContent: 
   items: 
@@ -205,8 +205,8 @@ additionalContent:
         summary: Send a smile or frown to the engineering team
         url: ./core/understand/product-feedback.md
       - title: Product feedback
-        summary: Share product ideas with the engineering team #10932544
-        url: ./core/understand/product-feedback.md#send-a-suggestion
+        summary: Share product ideas with the engineering team
+        url: https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472
       - title: Product support
         summary: Get professional help from Microsoft support
         url: https://aka.ms/cmcbsupport
