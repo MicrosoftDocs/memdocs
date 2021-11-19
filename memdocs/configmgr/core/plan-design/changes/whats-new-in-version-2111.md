@@ -64,7 +64,7 @@ Starting in this release, this prerequisite rule for .NET 4.6.2 is an error. Unt
 
 If you use the **VPN** boundary type, you can now match the start of a connection name or description instead of the whole string. Some third-party VPN drivers dynamically create the connection, which starts with a consistent string but also has a unique connection identifier. For example, `Virtual network adapter #19`. When you use the **Connection name** or **Connection description** options, also use the new **Starts with** option.
 
-<!-- For more information, see [Define network locations as boundaries for Configuration Manager](../../servers/deploy/configure/boundaries.md#vpn). -->
+For more information, see [Define network locations as boundaries](../../servers/deploy/configure/boundaries.md#vpn).
 
 ### Status messages for console extensions
 
