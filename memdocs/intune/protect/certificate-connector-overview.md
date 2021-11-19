@@ -221,13 +221,6 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take a week or more to become available for each tenant.
 
-### November 17, 2021
-
-Version **6.2111.4.0**. This update includes:
-
-- Bug fix for high memory usage under certain conditions.
-- Bug fix to allow removal of proxy server from within the configuration tool.
-
 ### October 11, 2021
 
 Version **6.2110.201.0**. This update includes:
