@@ -260,7 +260,7 @@ The following new command-line options have been added to the Support Center Dat
 
 The Support Center **Log File Viewer** and **OneTrace** now display status messages in an easy to read format. Entries starting with `>>` are status messages that are automatically converted into a readable format when a log is opened. Search or filter on the `>>` string to find status messages in the log.
 
-<!-- For more information, see [Support Center log file viewer](../../support/support-center.md#support-center-log-file-viewer) and [Support Center OneTrace](../../support/support-center-onetrace.md). -->
+For more information, see [Support Center log file viewer](../../support/support-center-ui-reference.md#support-center-log-file-viewer) and [Support Center OneTrace](../../support/support-center-onetrace.md).
 
 ## Deprecated features
 
