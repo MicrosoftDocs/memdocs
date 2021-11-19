@@ -268,7 +268,11 @@ For more information, see [Support Center log file viewer](../../support/support
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-- The ability to deploy a cloud management gateway (CMG) as a **cloud service (classic)** is deprecated. All CMG deployments should use a [virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586-->
+- Managing apps from the **Microsoft Store for Business and Education** with Configuration Manager. For more information, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423).<!-- 10884039 -->
+
+- **Asset intelligence**<!-- 12454890 -->
+
+- **On-premises MDM**<!-- 12454901 -->
 
 As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2111 drops support for the following features:
 
