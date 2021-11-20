@@ -17,3 +17,6 @@ Starting in Configuration Manager version 2107, you can choose to allow unsigned
 1. Select **Hierarchy Settings** from the ribbon.
 1. On the **General** tab, enable the **Hierarchy approved console extensions can be unsigned** option.
 1. Select **Ok** when done to close the **Hierarchy Settings Properties**.
+
+> [!NOTE]
+> Currently, when an unsigned extension isn't [enabled for user notification](#bkmk_enable-notifications), in the **Console Extensions** node, the **Required** column remains blank instead of populating a value of **No**. <!--10349053, 10401804 -->

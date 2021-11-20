@@ -83,9 +83,8 @@ When you have an extension packaged in a signed `.cab` file, you can import it i
 
 Starting in Configuration Manager version 2107, you can choose to allow unsigned hierarchy approved console extensions. It's a best practice to always used signed extensions to minimize security risks and to confirm the authenticity of a console extension. However, in some cases you may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
-When you have the `.cab` file for an extension, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../develop/adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
+When you have the `.cab` file for an extension, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../develop/adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node. To import, run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`:
 
-Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`:
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
    - `$cabFilePath` - Path to the extension's  `.cab` file
 
@@ -128,9 +127,12 @@ Starting in version 2111, you can use the **Import Console Extension** wizard to
 1. Select **Next** to review the import summary, then complete the wizard to import the extension.
 
 > [!Note] 
->To import unsigned extensions, the **Hierarchy approved console extensions can be unsigned** option needs to be enabled in the **Hierarchy Settings**. For more information, see [Allow unsigned hierarchy approved console extensions](#bkmk_allow-unsigned).
+> To import unsigned extensions, the **Hierarchy approved console extensions can be unsigned** option needs to be enabled in the **Hierarchy Settings**. For more information, see [Allow unsigned hierarchy approved console extensions](#bkmk_allow-unsigned).
 
 
+[!INCLUDE [console extensions local install](includes/console-extensions-local-install.md)]
+
+[!INCLUDE [console extensions enable notification](includes/console-extensions-enable-notification.md)]
 
 ## Next steps
 

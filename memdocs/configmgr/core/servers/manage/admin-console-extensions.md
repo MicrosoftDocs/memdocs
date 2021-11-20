@@ -37,12 +37,10 @@ The old style of console extensions may start being phased out in favor of the n
 [!INCLUDE [console extensions local install](includes/console-extensions-local-install.md)]
 
 
-## <a name="bkmk_enable-notifications"></a> Enable user notifications for extension installation
+[!INCLUDE [console extensions enable notification](includes/console-extensions-enable-notification.md)]
 
-1. If needed, modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
-1. Select **Enable Notifications**.
-1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use a test account that you gave access to when you modified the security scope.
-1. Verify that the notification for the extension occurs and that you can install the extension.
+[!INCLUDE [Allow unsigned console extensions notifications](includes/console-extensions-allow-unsigned.md)]
+
 
 ## Require installation of a console extension
 <!--10486584-->
@@ -61,24 +59,8 @@ Starting in Configuration Manager version 2111, you can require a console extens
 <!--3555909-->
 [!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
 
-## <a name="bkmk_unsigned"></a> Allow unsigned console extensions for hierarchy approval
-<!--9761129-->
-(*Applies to Configuration Manager version 2107 or later*)
-
-Starting in Configuration Manager version 2107, you can choose to allow unsigned hierarchy approved console extensions. It's a best practice to always used signed extensions to minimize security risks and to confirm the authenticity of a console extension. However, in some cases you may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab. To import and install an unsigned hierarchy approved console extension, the high-level steps are:
-
-   1. [Allow unsigned](#bkmk_allow-unsigned) hierarchy approved console extensions.
-   1. [Import](#bkmk_import-unsigned) the unsigned console extension.
-   1. [Test](#bkmk_local_install) the unsigned console extension in a local console.
-   1. [Enable notifications](#bkmk_enable-notifications) to allow console users to install the unsigned console extension.
 
 
-
-[!INCLUDE [Allow unsigned console extensions notifications](includes/console-extensions-allow-unsigned.md)]
-
-
-> [!NOTE]
-> Currently, when an unsigned extension isn't [enabled for user notification](#bkmk_enable-notifications), in the **Console Extensions** node, the **Required** column remains blank instead of populating a value of **No**. <!--10349053, 10401804 -->
 
 ## Status messages for console extensions
 <!--11048976-->
