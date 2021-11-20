@@ -42,7 +42,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 ## Prerequisites for Windows devices bulk enrollment
 
 - Devices running Windows 11 or Windows 10 Creator update (build 1709) or later  
-- [Windows automatic enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment)
+- [Windows automatic enrollment](windows-enroll.md#enable-windows-automatic-enrollment)
 
 ## Create a provisioning package
 
