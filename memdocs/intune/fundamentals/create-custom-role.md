@@ -141,10 +141,10 @@ The following permissions are available when creating custom roles.
  | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
  | Enrollment programs/Delete profile | Delete profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
  | Enrollment programs/Assign profile | Manage Windows Autopilot deployment profile assignment settings. | 
- | Enrollment programs/Create device | Import Apple devices for Apple Configurator. | 
+ | Enrollment programs/Create device | Import Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. | 
  | Enrollment programs/Read device | View Apple devices for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot devices. | 
  | Enrollment programs/Sync device | Initiate the Sync command for Windows Autopilot devices. | 
- | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School Manager, or Apple Configurator | 
+ | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. | 
  | Device enrollment managers/Read | View the list of device enrollment manager accounts. | 
  | Device enrollment managers/Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. | 
  | Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. | 
