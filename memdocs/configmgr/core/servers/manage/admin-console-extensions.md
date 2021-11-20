@@ -55,12 +55,9 @@ Starting in Configuration Manager version 2111, you can require a console extens
 1. The next time the console is launched by a user within the extension's security scope, installation starts automatically.
    - The user launching the console needs local administrator privileges for the extension installation.
 
-## <a name="bkmk_notification"></a> Console extension installation notifications
+## <a name="bkmk_notification"></a> Console extension installation user notifications
 <!--3555909-->
 [!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
-
-
-
 
 ## Status messages for console extensions
 <!--11048976-->
@@ -84,5 +81,6 @@ For example, the description of status message ID **54201** is **User `"%1"` mad
 ## Next steps
 
 - [Console extensions from Community hub](community-hub-extensions.md)
+- [Import console extensions](import-admin-console-extensions.md)
 - [Configuration Manager console notifications](admin-console-notifications.md)
 - [Console tips](admin-console-tips.md)

@@ -51,14 +51,14 @@ When you have an extension packaged in a signed `.cab` file, you can import it i
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
    - `$cabFilePath` - Path to the extension's signed `.cab` file
  
-    ```powershell
-    $adminServiceProvider = "SMSProviderServer.contoso.com"
-    $cabFilePath = "C:\Testing\MyExtension.cab"
-    $adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
-    $cabFileName = (Get-Item -Path $cabFilePath).Name
-    $Data = Get-Content $cabFilePath
-    $Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
-    $base64Content = [Convert]::ToBase64String($Bytes)
+ ```powershell
+$adminServiceProvider = "SMSProviderServer.contoso.com"
+$cabFilePath = "C:\Testing\MyExtension.cab"
+$adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
+$cabFileName = (Get-Item -Path $cabFilePath).Name
+$Data = Get-Content $cabFilePath
+$Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
+$base64Content = [Convert]::ToBase64String($Bytes)
     
     $Headers = @{
         "Content-Type" = "Application/json"
@@ -73,9 +73,9 @@ When you have an extension packaged in a signed `.cab` file, you can import it i
     
     $result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
     
-    if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
-    else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
-    ```
+if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
+else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
+```
 
 ## <a name="bkmk_unsigned_admin"></a> Import an unsigned console extension with a script
 <!--9761129-->
@@ -118,7 +118,7 @@ else {Write-Host "$cabFileName publish failed. Review AdminService.log for more 
 <!--9741121, 9761129-->
 (*Applies to Configuration Manager version 2111 or later*)
 
-Starting in version 2111, you can use the **Import Console Extension** wizard to import [console extensions](.admin-console-extensions.md) that are managed for the hierarchy. You no longer need to use a PowerShell script to import a signed or unsigned console extension. To import a console extension using the wizard:
+Starting in version 2111, you can use the **Import Console Extension** wizard to import [console extensions](admin-console-extensions.md) that are managed for the hierarchy. You no longer need to use a PowerShell script to import a signed or unsigned console extension. To import a console extension using the wizard:
 
 1. From the **Administration** workspace, expand **Updates and Servicing**, then select the **Console Extensions** node.
 1. Select **Import Console Extension** from either the ribbon or the right-click menu.
@@ -136,3 +136,6 @@ Starting in version 2111, you can use the **Import Console Extension** wizard to
 
 ## Next steps
 
+ - [Manage console extensions](admin-console-extensions.md)
+ - [Console extensions from Community hub](community-hub-extensions.md)
+ - [Develop custom console extensions](../../../develop/core/servers/console/console-extension-register.md)
