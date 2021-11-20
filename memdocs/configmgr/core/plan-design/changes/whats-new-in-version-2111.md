@@ -71,7 +71,7 @@ For more information, see [Define network locations as boundaries](../../servers
 
 To improve the visibility and transparency of console extensions, the site now creates status messages for related events. These status messages have IDs from **54201** to **54208**.
 
-<!-- For more information, see ... -->
+For more information, see [Manage Configuration Manager console extensions](../../servers/manage/admin-console-extensions.md#status-messages-for-console-extensions).
 
 ## Client management
 
@@ -202,7 +202,7 @@ For more information, see [Configuration Manager console changes and tips](../..
 
 There's a new wizard for importing console extensions that are managed for the hierarchy. You no longer need to use a PowerShell script to import a signed or unsigned console extension.
 
-For more information, see [Manage Configuration Manager console extensions](../../servers/manage/admin-console-extensions.md).
+For more information, see [Import Configuration Manager console extensions](../../servers/manage/import-admin-console-extensions.md).
 
 ### Require installation of a console extension
 
