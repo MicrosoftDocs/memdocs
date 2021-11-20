@@ -44,7 +44,9 @@ To import console extensions, you'll follow four basic steps. Exactly how you im
 
 ## <a name="bkmk_signed_admin"></a> Import a signed console extension with a script
 
-When you have an extension packaged in a signed `.cab` file, you can import it into Configuration Manager. You'll do this by posting it through the [administration service](../../../develop/adminservice/usage.md) using a PowerShell script. Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node. To import, run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`:
+(*Applies to Configuration Manager version 2103 or later*)
+
+When you have an extension packaged in a signed `.cab` file, you can import it into Configuration Manager. You'll do this by posting it through the [administration service](../../../develop/adminservice/usage.md) using a PowerShell script. Once the extension is inserted into the site, you can approve and install it locally from the **Console Extensions** node. To import, run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`:
 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
    - `$cabFilePath` - Path to the extension's signed `.cab` file
@@ -75,24 +77,11 @@ When you have an extension packaged in a signed `.cab` file, you can import it i
     else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
     ```
 
-
-
 ## <a name="bkmk_unsigned_admin"></a> Import an unsigned console extension with a script
 <!--9761129-->
 (*Applies to Configuration Manager version 2107 or later*)
 
-Starting in Configuration Manager version 2107, you can choose to allow unsigned hierarchy approved console extensions. It's a best practice to always used signed extensions to minimize security risks and to confirm the authenticity of a console extension. However, in some cases you may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab. To import and install an unsigned hierarchy approved console extension, the high-level steps are:
-
-   1. [Allow unsigned](#bkmk_allow-unsigned) hierarchy approved console extensions.
-   1. [Import](#bkmk_import-unsigned) the unsigned console extension.
-   1. [Test](#bkmk_local_install) the unsigned console extension in a local console.
-   1. [Enable notifications](#bkmk_enable-notifications) to allow console users to install the unsigned console extension.
-
-
-
-
-
-### <a name="bkmk_import-unsigned"></a> Import the unsigned console extension
+Starting in Configuration Manager version 2107, you can choose to allow unsigned hierarchy approved console extensions. It's a best practice to always used signed extensions to minimize security risks and to confirm the authenticity of a console extension. However, in some cases you may need to allow unsigned console extensions due to an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
 When you have the `.cab` file for an extension, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../develop/adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
 
@@ -126,4 +115,22 @@ else {Write-Host "$cabFileName publish failed. Review AdminService.log for more 
 > [!NOTE]
 > Currently, when an unsigned extension isn't [enabled for user notification](#bkmk_enable-notifications), in the **Console Extensions** node, the **Required** column remains blank instead of populating a value of **No**. <!--10349053, 10401804 -->
 
+## <a name="bkmk_wizard"></a> Import console extensions wizard
+<!--9741121, 9761129-->
+(*Applies to Configuration Manager version 2111 or later*)
+
+Starting in version 2111, you can use the **Import Console Extension** wizard to import [console extensions](.admin-console-extensions.md) that are managed for the hierarchy. You no longer need to use a PowerShell script to import a signed or unsigned console extension. To import a console extension using the wizard:
+
+1. From the **Administration** workspace, expand **Updates and Servicing**, then select the **Console Extensions** node.
+1. Select **Import Console Extension** from either the ribbon or the right-click menu.
+1. When the wizard launches, select **Browse** and navigate to the extension's cab file.
+1. If needed, select the option for **Allow extension to be unsigned**.
+1. Select **Next** to review the import summary, then complete the wizard to import the extension.
+
+> [!Note] 
+>To import unsigned extensions, the **Hierarchy approved console extensions can be unsigned** option needs to be enabled in the **Hierarchy Settings**. For more information, see [Allow unsigned hierarchy approved console extensions](#bkmk_allow-unsigned).
+
+
+
+## Next steps
 

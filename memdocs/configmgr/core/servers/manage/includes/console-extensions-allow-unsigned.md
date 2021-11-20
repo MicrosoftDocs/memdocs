@@ -7,7 +7,7 @@ ms.date: 11/19/2021
 ms.localizationpriority: medium
 ---
 <!--This file is shared. Currently it's in use by the admin-console-extensions.md file and the import-admin-console-extensions.md file. Some headings may be context driven by the article-->
-## <a name="bkmk_allow-unsigned"></a> Allow unsigned hierarchy approved console extensions
+## <a name="bkmk_allow-unsigned"></a> Allow unsigned console extensions for the hierarchy
 <!--9761129-->
 (*Applies to Configuration Manager version 2107 or later*)
 

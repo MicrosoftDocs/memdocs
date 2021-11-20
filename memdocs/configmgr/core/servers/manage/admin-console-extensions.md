@@ -72,7 +72,7 @@ Starting in Configuration Manager version 2107, you can choose to allow unsigned
    1. [Test](#bkmk_local_install) the unsigned console extension in a local console.
    1. [Enable notifications](#bkmk_enable-notifications) to allow console users to install the unsigned console extension.
 
-## <a name="bkmk_allow-unsigned"></a> Allow unsigned hierarchy approved console extensions
+
 
 [!INCLUDE [Allow unsigned console extensions notifications](includes/console-extensions-allow-unsigned.md)]
 
@@ -101,5 +101,6 @@ For example, the description of status message ID **54201** is **User `"%1"` mad
 
 ## Next steps
 
-- [Console tips](admin-console-tips.md)
+- [Console extensions from Community hub](community-hub-extensions.md)
 - [Configuration Manager console notifications](admin-console-notifications.md)
+- [Console tips](admin-console-tips.md)
