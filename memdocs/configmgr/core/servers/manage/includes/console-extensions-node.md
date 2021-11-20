@@ -53,37 +53,3 @@ The **Console Extensions** node is located under **Administration** > **Overview
 
 > [!Important]
 > If this setting is `enabled`, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](../updates.md#bkmk_Baselines). The setting remains `disabled` by default, if you upgraded from a version prior to 2103. If the setting was enabled in error, disabling the setting allows the old style extensions to be used again.
-
-## <a name="bkmk_local_install"></a> Install and test an extension on a local console
-
-1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#security-scopes) for the extension. Changing the security scope is recommended for initial testing of an extension.
-   1. Go to the **Console Extensions** node under **Administration** > **Overview** > **Updates and Servicing**.
-   1. Select the extension, then select **Set Security Scopes** from the ribbon.
-   1. Remove the **Default** security scope and add a scope that only contains one or two admins for initial testing.
-   1. Choose **OK** to save the security scope for the extension.
-
-1. Approve the extension by selecting **Approve Installation** from the ribbon or right-click menu.
-   - If the extension isn't approved, you won't be able to install it or enable in-console notifications for it.
-   - If you restart your console at this point, a notification about the available extension won't occur since you haven't enabled the option yet.
-1. Install the extension on the local console by choosing **Install**.
-1. Once the extension is installed, verify it displays and you can use it from the local console.
-
-## <a name="bkmk_enable-notifications"></a> Enable user notifications for extension installation
-
-1. If needed, modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
-1. Select **Enable Notifications**.
-1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use a test account that you gave access to when you modified the security scope.
-1. Verify that the notification for the extension occurs and that you can install the extension.
-
-## Require installation of a console extension
-<!--10486584-->
-*(Introduced in 2111)*
-
-Starting in Configuration Manager version 2111, you can require a console extension to be installed before it connects to the site. After you require an extension, it automatically installs for the local console the next time an admin launches it. To require the installation of a console extension:
-
-1. In the Configuration Manager console, go to the **Administration** workspace.
-1. Expand **Updates and Servicing** and select the **Console Extensions** node.
-1. Select the extension, then select **Require Extension** from either the right-click menu or the ribbon.
-   - Selecting **Make Optional** for an extension removes the extension requirement. Console users can still install it locally from the **Console Extensions** node.  
-1. The next time the console is launched by a user within the extension's security scope, installation starts automatically.
-   - The user launching the console needs local administrator privileges for the extension installation.

@@ -33,11 +33,35 @@ The old style of console extensions may start being phased out in favor of the n
 
 [!INCLUDE [console extensions node](includes/console-extensions-node.md)]
 
+
+[!INCLUDE [console extensions local install](includes/console-extensions-local-install.md)]
+
+
+## <a name="bkmk_enable-notifications"></a> Enable user notifications for extension installation
+
+1. If needed, modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
+1. Select **Enable Notifications**.
+1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use a test account that you gave access to when you modified the security scope.
+1. Verify that the notification for the extension occurs and that you can install the extension.
+
+## Require installation of a console extension
+<!--10486584-->
+*(Introduced in 2111)*
+
+Starting in Configuration Manager version 2111, you can require a console extension to be installed before it connects to the site. After you require an extension, it automatically installs for the local console the next time an admin launches it. To require the installation of a console extension:
+
+1. In the Configuration Manager console, go to the **Administration** workspace.
+1. Expand **Updates and Servicing** and select the **Console Extensions** node.
+1. Select the extension, then select **Require Extension** from either the right-click menu or the ribbon.
+   - Selecting **Make Optional** for an extension removes the extension requirement. Console users can still install it locally from the **Console Extensions** node.  
+1. The next time the console is launched by a user within the extension's security scope, installation starts automatically.
+   - The user launching the console needs local administrator privileges for the extension installation.
+
 ## <a name="bkmk_notification"></a> Console extension installation notifications
 <!--3555909-->
 [!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
 
-## <a name="bkmk_unsigned"></a> Import unsigned console extensions for hierarchy approval
+## <a name="bkmk_unsigned"></a> Allow unsigned console extensions for hierarchy approval
 <!--9761129-->
 (*Applies to Configuration Manager version 2107 or later*)
 
@@ -48,47 +72,32 @@ Starting in Configuration Manager version 2107, you can choose to allow unsigned
    1. [Test](#bkmk_local_install) the unsigned console extension in a local console.
    1. [Enable notifications](#bkmk_enable-notifications) to allow console users to install the unsigned console extension.
 
-### <a name="bkmk_allow-unsigned"></a> Allow unsigned hierarchy approved console extensions
+## <a name="bkmk_allow-unsigned"></a> Allow unsigned hierarchy approved console extensions
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**.
-1. Select **Hierarchy Settings** from the ribbon.
-1. On the **General** tab, enable the **Hierarchy approved console extensions can be unsigned** option.
-1. Select **Ok** when done to close the **Hierarchy Settings Properties**.
+[!INCLUDE [Allow unsigned console extensions notifications](includes/console-extensions-allow-unsigned.md)]
 
-### <a name="bkmk_import-unsigned"></a> Import the unsigned console extension
-
-When you have the `.cab` file for an extension, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../develop/adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
-
-Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`:
-   - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
-   - `$cabFilePath` - Path to the extension's  `.cab` file
-
-```powershell
-$adminServiceProvider = "SMSProviderServer.contoso.com"
-$cabFilePath = "C:\Testing\MyExtension.cab"
-$adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
-$cabFileName = (Get-Item -Path $cabFilePath).Name
-$Data = Get-Content $cabFilePath
-$Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
-$base64Content = [Convert]::ToBase64String($Bytes)
-$Headers = @{
-    "Content-Type" = "Application/json"
-}
-$Body = @{
-            CabFile = @{
-                FileName = $cabFileName
-                FileContent = $base64Content
-            }
-            AllowUnsigned = $true
-        } | ConvertTo-Json
-$result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
-if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
-else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
-```
 
 > [!NOTE]
 > Currently, when an unsigned extension isn't [enabled for user notification](#bkmk_enable-notifications), in the **Console Extensions** node, the **Required** column remains blank instead of populating a value of **No**. <!--10349053, 10401804 -->
 
+## Status messages for console extensions
+<!--11048976-->
+*(Introduced in 2111)*
+
+Starting in version 2111, the site creates status messages for events related to console extensions. Status messages improve the visibility and transparency of console extensions that are used with your site. Use these status messages to make sure your site uses known and trusted console extensions. The status messages have IDs from **54201** to **54208**. They all include the following information:
+
+- The user that made the change
+- The ID of the extension
+- The version of the extension
+
+There are four categories of message events:
+
+- Required or optional
+- Approve or disapprove
+- Enable or disable
+- Tombstone or untombstone
+
+For example, the description of status message ID **54201** is **User `"%1"` made console extension with ID `"%2"` and version `"%3"` required**.
 
 ## Next steps
 

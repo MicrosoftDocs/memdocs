@@ -202,7 +202,7 @@ For more information, see [Configuration Manager console changes and tips](../..
 
 There's a new wizard for importing console extensions that are managed for the hierarchy. You no longer need to use a PowerShell script to import a signed or unsigned console extension.
 
-<!-- For more information, see [Manage Configuration Manager console extensions](../../servers/manage/admin-console-extensions.md). -->
+For more information, see [Manage Configuration Manager console extensions](../../servers/manage/admin-console-extensions.md).
 
 ### Require installation of a console extension
 
