@@ -41,7 +41,7 @@ The old style of console extensions will start being phased out in favor of the 
 There are three ways to get the new style of hierarchy approved console extensions into Configuration Manager:
 
 - An extension may come with Configuration Manager, such as WebView2
-- [Download console extensions from Community hub](../community-hub-extensions.md)
+- [Download console extensions from Community hub](community-hub-extensions.md)
 - [Import console extensions](import-admin-console-extensions.md)
 
 
