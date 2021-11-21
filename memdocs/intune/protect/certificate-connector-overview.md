@@ -219,14 +219,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
 
-New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
-
-### November 17, 2021
-
-Version **6.2111.4.0**. This update includes:
-
-- Bug fix for high memory usage under certain conditions.
-- Bug fix to allow removal of proxy server from within the configuration tool.
+New updates for the connector can take a week or more to become available for each tenant.
 
 ### October 11, 2021
 

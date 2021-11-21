@@ -2,7 +2,7 @@
 title: Windows client prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 08/02/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -87,7 +87,12 @@ Microsoft recommends that you install the latest version of .NET version 4.8 to 
 >
 > For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
-Whether you update .NET before updating the Configuration Manager client, or CCMSetup updates it, .NET may require a restart to complete its installation. CCMSetup suppresses a restart if necessary. The user sees a **Restart required** notice in the Windows notification area. The following scenarios are common reasons why .NET requires the computer to restart:
+Whether you update .NET before updating the Configuration Manager client, or CCMSetup updates it, .NET may require a restart to complete its installation. CCMSetup suppresses a restart if necessary. The user sees a **Restart required** notice in the Windows notification area.
+
+> [!IMPORTANT]
+> When the Configuration Manager client updates to version 2111 or later, client notifications are dependent upon .NET 4.6.2 or later. Until you update .NET to version 4.6.2 or later, and restart the device, users won't see notifications from Configuration Manager. Other client-side functionality may be affected until the device is updated and restarted.<!-- 10682548 -->
+
+The following scenarios are common reasons why .NET requires the computer to restart:
 
 - .NET applications or services are running on the computer.
 

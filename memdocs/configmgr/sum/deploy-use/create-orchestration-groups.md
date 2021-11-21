@@ -20,7 +20,7 @@ An orchestration group gives you the flexibility to update devices based on a pe
 
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
-:::image type="content" source="./media/9957939-orchestration-group-scripts-tab.png" alt-text="Screenshot of the Scripts tab in the Orchestration Group node." lightbox="./media/9957939-orchestration-group-scripts-tab.png":::
+:::image type="content" source="./media/9957939-orchestration-group-scripts-tab.png" alt-text="Screenshot of the Scripts tab in the Orchestration Group node. The pre-script is declined and this status is displayed in the Scripts tab." lightbox="./media/9957939-orchestration-group-scripts-tab.png":::
 
 ## Create an orchestration group
 
