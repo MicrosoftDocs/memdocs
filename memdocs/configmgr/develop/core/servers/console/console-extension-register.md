@@ -157,7 +157,7 @@ Example manifest.xml file:
 When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
 
 > [!Important]
-> For local testing, you can import unsigned console extensions when you use version 2107 or later. For more information, see [import an unsigned extension](../../../../core/servers/manage/import-admin-console-extensions.md).
+> For local testing, you can import unsigned console extensions when you use version 2107 or later. For more information and additional import methods, see [Import console extensions](../../../../core/servers/manage/import-admin-console-extensions.md).
 
 1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
