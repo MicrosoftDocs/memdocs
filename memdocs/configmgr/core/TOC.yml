@@ -29,6 +29,8 @@ items:
       href: servers/manage/admin-console-notifications.md
     - name: Console extensions
       href: servers/manage/admin-console-extensions.md
+    - name: Import console extensions
+      href: servers/manage/import-admin-console-extensions.md      
     - name: Console changes and tips
       href: servers/manage/admin-console-tips.md
   - name: Fundamentals

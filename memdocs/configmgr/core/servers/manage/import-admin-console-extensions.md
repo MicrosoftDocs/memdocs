@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 
 Starting in Configuration Manager 2103, you can import console extensions to be used in your environment. These extensions show up under the **Console extensions** node. Importing and just having extensions in the console doesn't make them immediately available. An administrator still has to approve the extension for the site and enable notifications. Then console users can install the extension to their local console. For more information about managing and installing console extensions, see [Manage Configuration Manager console extensions](admin-console-extensions.md).
 
-Based on the version of Configuration Manager you are running, different import options are available. Initially, only signed extensions could be imported through the administration service. Then support for importing unsigned extensions was added, followed by a wizard that could import both signed and unsigned extensions for you without having to run a script.  
+Based on the version of Configuration Manager you're running, different import options are available. Initially, only signed extensions could be imported through the administration service. Support for importing unsigned extensions was added later. Then a wizard that could import both signed and unsigned extensions for you without having to run a script was introduced in version 2111.  
 
 
 |Configuration Manager version| 2103| 2107 | 2111 or later|
@@ -30,14 +30,14 @@ Based on the version of Configuration Manager you are running, different import 
 
 ## How to import console extensions
 
-To import console extensions, you'll follow four basic steps. Exactly how you import will be determined by the version of Configuration Manager you're using and if the extension is signed or not. To import and install a hierarchy approved console extension, the high-level steps are:
+To import console extensions, you'll follow four basic steps. Exactly how you can import will be determined by the version of Configuration Manager you're using and if the extension is signed or not. To import and install a hierarchy approved console extension, the high-level steps are:
 
 1. Determine if you need to [allow unsigned](#bkmk_allow-unsigned) hierarchy approved console extensions (version 2107 and later).
-1. Import the the console extension using one of the following methods:
+1. Import the console extension using one of the following methods:
     - [Import a signed console extension with a script](#bkmk_signed_admin) (version 2103 and later)
     - [Import an unsigned console extension with a script](#bkmk_unsigned_admin) (version 2107 and later)
     - [Use the **Import Console Extension** wizard](#bkmk_wizard) (version 2111 and later)
-1. [Test](#bkmk_local_install) the extension in a local console.
+1. [Test the extension](#bkmk_local_install) in a local console.
 1. [Enable notifications](#bkmk_enable-notifications) to allow console users to install the console extension.
 
 [!INCLUDE [Allow unsigned console extensions notifications](includes/console-extensions-allow-unsigned.md)]
