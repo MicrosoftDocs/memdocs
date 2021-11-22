@@ -25,7 +25,8 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-classic
+ms.collection: OS=Android
+ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ---
 

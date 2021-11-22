@@ -25,7 +25,7 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;
+ms.collection: OS=Android
 ms.collection: M365-identity-device-management
 ---
 

@@ -24,7 +24,8 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=iOS;intune-classic
+ms.collection: OS=iOS
+ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ---
 

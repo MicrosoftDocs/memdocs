@@ -24,8 +24,11 @@ ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=iOS/iPadOS;OS=Android;intune-azure
+ms.custom: intune-azure
 ms.collection: M365-identity-device-management
+ms.collection: OS=iOS/iPadOS
+ms.custom: OS
+ms.collection: OS=Android
 ---
 
 # Manage collaboration experiences using Office for iOS and Android with Microsoft Intune

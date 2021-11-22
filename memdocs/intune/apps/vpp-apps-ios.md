@@ -25,7 +25,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=iOS/iPadOS;OS=macOS;intune-azure
+ms.custom: intune-azure
+ms.collection: OS=iOS/iPadOS
+ms.collection: OS=macOS
 ms.collection: M365-identity-device-management
 ---
 
