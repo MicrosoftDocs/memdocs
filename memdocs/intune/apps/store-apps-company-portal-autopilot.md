@@ -25,9 +25,8 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=Windows
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=Windows
 ---
 
 # Add and assign the Windows 10 Company Portal app for Autopilot provisioned devices

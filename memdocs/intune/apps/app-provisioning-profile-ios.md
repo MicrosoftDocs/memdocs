@@ -25,9 +25,8 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=iOS/iPadOS
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=iOS/iPadOS
 ---
 
 # Use iOS app provisioning profiles to prevent your apps from expiring

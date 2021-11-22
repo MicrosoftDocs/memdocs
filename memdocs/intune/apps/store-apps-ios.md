@@ -23,9 +23,8 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=iOS/iPadOS
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=iOS/iPadOS
 ---
 
 # Add iOS store apps to Microsoft Intune

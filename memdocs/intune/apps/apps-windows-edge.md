@@ -25,9 +25,8 @@ ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=Windows
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=Windows
 ---
 
 # Add Microsoft Edge for Windows 10/11 to Microsoft Intune

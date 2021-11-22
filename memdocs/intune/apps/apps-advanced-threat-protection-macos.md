@@ -25,8 +25,7 @@ ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=macOS
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=macOS
 ---
 
 # Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune

@@ -25,8 +25,7 @@ ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=Android
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=Android
 ---
 
 # Use a VPN and per-app VPN policy on Android Enterprise devices in Microsoft Intune

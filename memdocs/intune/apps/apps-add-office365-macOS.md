@@ -26,8 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: OS=macOS
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=macOS
 ---
 
 # Assign Microsoft 365 to macOS devices with Microsoft Intune

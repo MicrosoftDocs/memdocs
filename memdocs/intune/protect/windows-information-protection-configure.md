@@ -24,9 +24,8 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=Windows
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: M365-identity-device-management;OS=Windows
 ---
 
 # How to configure Windows Information Protection in Microsoft Intune

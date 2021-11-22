@@ -25,9 +25,8 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: OS=Android
+ms.collection: M365-identity-device-management;OS=Android
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
 # Configure Microsoft Launcher
