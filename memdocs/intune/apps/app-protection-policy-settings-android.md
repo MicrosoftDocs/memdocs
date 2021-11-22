@@ -25,8 +25,10 @@ ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+ms.custom: intune-azure
 ---
 # Android app protection policy settings in Microsoft Intune
 This article describes the app protection policy settings for Android devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the portal.

@@ -24,7 +24,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure;workProfilesUpdate
+ms.collection:
+- Android
+ms.custom: intune-azure;workProfilesUpdate
 
 ---
 
