@@ -61,7 +61,7 @@ You can retry the installation of an app that you previously approved for a user
 1. Deploy an app that requires approval, and approve it.
 
     > [!TIP]
-    > Alternatively, [Install an application for a device](install-app-for-device.md). It creates an approved request for the app on the device.
+    > Alternatively, [install an application for a device](install-app-for-device.md). It creates an approved request for the app on the device.
 
 If the application doesn't install successfully, or the user uninstalls the app, use the following process to retry:
 
