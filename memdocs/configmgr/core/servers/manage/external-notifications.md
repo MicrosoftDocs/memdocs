@@ -43,10 +43,12 @@ Starting in version 2111, use the Configuration Manager console to create or edi
 
 ### Permissions
 
-You can configure the following permissions to the **NotificationSubscription** object: Read, Delete, Modify, Create.<!-- 12510324 --> Users also need the **All** security scope.
+You can configure the following permissions to the **NotificationSubscription** object: Read, Delete, Modify, Create.<!-- 12510324 -->
 
 - The **Full administrator** default security role has these permissions.
 - The **Read only analyst** default security role has the **Read** permission.
+
+In version 2107, users also need the **All** security scope. In version 2111 and later, you can't scope the subscription objects. If needed, you can use scopes on the **Site** object, to which users need at least read permission.
 
 Other permissions may be required for custom roles. Use the following table to understand what's needed:
 

@@ -1077,6 +1077,11 @@
             "source_path": "memdocs/configmgr/develop/core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md",
             "redirect_url": "/mem/configmgr/develop/core/changes/whats-new-sdk",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/configmgr/develop/core/understand/sqlviews/reports-supplied-with-configuration-manager.md",
+            "redirect_url": "/mem/configmgr/core/servers/manage/list-of-reports",
+            "redirect_document_id": true
         }
     ]
 }
