@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 11/17/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -226,6 +226,14 @@ By default, users have the My Apps bookmark configured within the organization f
 ### App behavior experiences
 
 Edge for iOS and Android offers organizations several options for managing the app's behavior.
+
+#### Azure AD password single sign-on
+
+The Azure AD Password single sign-on (SSO) functionality offered by Azure Active Directory brings user access management to web applications that don't support identity federation. By default, Edge for iOS and Android does not perform SSO with the Azure AD credentials. For more information, see [Add password-based single sign-on to an application](/azure/active-directory/manage-apps/configure-password-single-sign-on-non-gallery-applications).
+
+|    Key    |    Value    |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      com.microsoft.intune.mam.managedbrowser.PasswordSSO     |     **true** Azure AD Password SSO is enabled<br>**false** (default) Azure AD Password SSO is disabled     |
 
 #### Default protocol handler
 
