@@ -144,7 +144,7 @@ With these additional optional prerequisites, recipients can approve or deny the
         1. For Configuration Manager version 2111 and later, in the **Implicit grant and hybrid flows** section, select the following options:<!-- 12510370 -->
 
             - **Access tokens (used for implicit flows)**
-            - **ID tokens (user for implicit and hybrid flows)**
+            - **ID tokens (used for implicit and hybrid flows)**
 
         1. Then select **Save**.
 
