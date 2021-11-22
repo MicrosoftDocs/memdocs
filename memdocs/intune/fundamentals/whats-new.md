@@ -79,8 +79,7 @@ The capabilities of remote help include:
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the UAC prompt on the sharer's machine to enter credentials.
 - **Monitor active remote help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
 
-For more information, see [Use remote help](../remote-actions/remote-help.md).
-
+This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use remote help](../remote-actions/remote-help.md).
 
 ## Week of November 15, 2021 (Service release 2111)
 
