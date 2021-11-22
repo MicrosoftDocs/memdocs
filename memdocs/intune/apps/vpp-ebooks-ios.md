@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management;OS=iOS/iPadOS
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # How to manage iOS/iPadOS eBooks you purchased through a volume-purchase program with Microsoft Intune

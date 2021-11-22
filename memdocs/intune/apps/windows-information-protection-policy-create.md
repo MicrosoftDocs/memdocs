@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management;OS=Windows
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 
 # Create and deploy Windows Information Protection (WIP) policy with Intune

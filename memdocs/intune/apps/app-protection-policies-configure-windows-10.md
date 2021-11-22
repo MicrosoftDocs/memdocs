@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management;OS=Windows
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 
 # Get ready for Windows Information Protection in Windows 10/11 

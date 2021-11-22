@@ -25,7 +25,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management;OS=iOS/iPadOS;OS=Android
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
+- Android
 ---
 
 # Manage team collaboration access by using Teams for iOS and Android with Microsoft Intune

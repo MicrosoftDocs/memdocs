@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management;OS=iOS/iPadOS
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # Use iOS app provisioning profiles to prevent your apps from expiring

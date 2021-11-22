@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seoapril2019
-ms.collection: M365-identity-device-management;OS=Windows
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 
 # Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune

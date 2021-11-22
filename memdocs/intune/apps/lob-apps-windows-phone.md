@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management;OS=Windows
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 
 # Add a Windows Phone line-of-business app to Microsoft Intune
