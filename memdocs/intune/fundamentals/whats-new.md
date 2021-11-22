@@ -181,6 +181,8 @@ To use custom settings, you create and add the following to the admin center to 
 
 With the JSON and script ready, you can then create a standard compliance policy that includes your custom settings. The option to include custom settings is found in a new compliance settings category named *Custom Compliance*.
 
+Custom compliance settings are rolling out slowly, with availability for most tenants starting in early December.
+
 To learn more, including examples for the .JSON and PowerShell script, see [Custom compliance settings](../protect/compliance-use-custom-settings.md).
 
 #### New scheduling options for Feature updates for Windows 10 and later<!-- 6286037 -->
