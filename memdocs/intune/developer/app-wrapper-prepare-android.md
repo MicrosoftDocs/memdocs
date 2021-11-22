@@ -24,8 +24,10 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+ms.custom: intune-classic
 ---
 
 # Prepare Android apps for app protection policies with the Intune App Wrapping Tool

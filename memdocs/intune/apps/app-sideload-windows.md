@@ -25,8 +25,10 @@ ms.reviewer: manchen
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Windows;intune-classic
-ms.collection: M365-identity-device-management
+ms.custom: intune-classic
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 # Sign line-of-business apps so they can be deployed to Windows devices with Intune
 
