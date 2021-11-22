@@ -37,7 +37,9 @@ Configuration Manager provides the following types of information as client stat
 
   Client check runs automatically during the Windows maintenance window.
 
-  You can configure remediation not to run on specific devices, for example, a business-critical server. If there are more items that you want to evaluate, use Configuration Manager compliance settings to monitor other configurations. For more information about compliance settings, see [Plan for and configure compliance settings](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).
+  You can configure remediation not to run on specific devices, for example, a business-critical server. For more information, see [How to configure client status](../deploy/configure-client-status.md#automatic-remediation-exclusion).
+
+  If there are more items that you want to evaluate, use Configuration Manager compliance settings to monitor other configurations. For more information about compliance settings, see [Plan for and configure compliance settings](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).
 
 - **Decommissioned**: The site has marked the device record for deletion. This behavior can happen when a new registration for same device assigns to the same or a different primary site in a hierarchy. The site deletes these devices the next time it runs the site maintenance task **Delete Aged Discovery Data**.<!-- SCCMDocs issue #1418 -->
 
