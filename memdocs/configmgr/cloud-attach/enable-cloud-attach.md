@@ -16,6 +16,7 @@ ms.localizationpriority: high
 
 *Applies to: Configuration Manager (current branch)*
 
+Starting in version 2111, it's simpler to cloud attach your Configuration Manager environment. You can choose to use a set of streamlined recommended defaults or customize your cloud attach features.
 
 ## <a name="bkmk_attach"></a> Simplified cloud attach configuration
 <!--10964629-->
@@ -30,16 +31,21 @@ We've simplified the process to cloud attach your Configuration Manager environm
 
 :::image type="content" source="./media/10964629-cloud-attach-wizard.png" alt-text="Screenshot of the cloud attach configuration wizard":::
 
-### Cloud attach using the default settings
+## Cloud attach using the default settings
 
 Use the following steps to cloud attach your environment with the default settings:
   
 1. From the Configuration Manager console, go to **Administration** > **Cloud services** > **Cloud Attach**.
 1. Select **Configure Cloud Attach** from the ribbon to open the wizard.
-1. Select your **Azure environment**, then select **Sign In**. Sign into your account when prompted.
+1. Select your **Azure environment** from the following list:
+   - Azure Public Cloud
+   - Azure US Government Cloud
+   - Azure China Cloud
+
+1. Select **Sign In**. Sign into your account when prompted.
 1. Ensure that **Use default settings (recommended)** is selected, then choose **Next** and **Yes** when the app registration notice appears.  
 1. Review the summary and select **Next** to cloud attach your environment and complete the wizard.
 
 
-
+## Cloud attach using custom settings
 

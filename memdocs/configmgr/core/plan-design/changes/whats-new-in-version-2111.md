@@ -30,7 +30,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 We've simplified the process to cloud attach your Configuration Manager environment. You can now choose to use a streamlined set of recommended defaults when cloud attaching your environment. By using the recommended default settings, your eligible devices will be cloud attached and you'll enable capabilities like rich analytics, cloud console, and real-time device querying.
 
-<!-- For more information, see ... -->
+<!-- For more information, see ... --> 
 
 ## Site infrastructure
 
