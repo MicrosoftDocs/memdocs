@@ -142,7 +142,13 @@ InstallUpdate returned code 0x8007007b
 Failed to install update with ID 16787962 on the image. ErrorCode = 123
 ```
 
-Currently, there's no workaround.
+This issue is because DISM doesn't support the `.cab` files.
+
+To work around this issue, you can manually service the image:
+
+1. Download the update directly from the Microsoft Update Catalog. For example, `https://www.catalog.update.microsoft.com/Search.aspx?q=KB5007215`
+1. Use DISM to manually inject the downloaded `.msu` update file into the Windows 11 image. For more information, see [Add updates to a Windows image](/windows-hardware/manufacture/desktop/servicing-the-image-with-windows-updates-sxs).
+1. Manually update the image file in the package source. Then update it on distribution points.
 
 ## Next steps
 
