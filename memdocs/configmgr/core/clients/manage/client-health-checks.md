@@ -140,7 +140,7 @@ The following checks have the most commonly reported failures. The numbers are i
 - Verify Configuration Manager Remote Control service status (345)
 - Verify Configuration Manager Remote Control service startup type (294)
 - Verify SMS Agent Host service status (249)
-- Verify SQL CE database is healthy (157)
+- Verify SQL Server CE database is healthy (157)
 - Verify client WMI Provider (131)
 - Verify client installation (120)
 - WMI event sink test (93)
