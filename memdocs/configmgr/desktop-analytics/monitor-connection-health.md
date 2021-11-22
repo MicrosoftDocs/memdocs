@@ -38,7 +38,7 @@ This tile displays the following basic information about the connection from Con
   - Devices running Long Term Servicing Channel (LTSC) versions of Windows 10
   - Devices running Windows Server
 
-    For more information on these device states, see [About client status](../core/clients/manage/monitor-clients.md#bkmk_about).
+    For more information on these device states, see [About client status](../core/clients/manage/monitor-clients.md#about-client-status).
 
     > [!NOTE]
     > Configuration Manager uploads to Desktop Analytics all of the devices in the target collection minus decommissioned and obsolete clients.

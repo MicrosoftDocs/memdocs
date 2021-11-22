@@ -79,9 +79,25 @@ For more information, see [Manage Configuration Manager console extensions](../.
 
 <!--5728069-->
 
-This release includes improvements to the **Client health dashboard**.
+This release includes multiple improvements to the **Client health dashboard**.
 
-<!-- For more information, see [Client health dashboard](../../clients/manage/monitor-clients.md#bkmk_health). -->
+:::image type="content" source="media/5728069-client-health-dashboard-small.png" alt-text="An example of the updated Client Health Dashboard.":::
+
+- New actions in the ribbon:
+
+  - **Choose Default Collection**: Set a persistent user preference
+
+  - **Client Status Settings**: Configure the periods of time to evaluate client health
+
+- More prominent **Overall client health** tile
+
+- Filters condensed on a single tile
+
+- The **Combined (All)** and **Combined (Any)** scenarios are replaced by a new tile, **Clients with any failure**
+
+- New tile for **Health trends by scenario**
+
+For more information, see [Client health dashboard](../../clients/manage/client-health-dashboard.md).
 
 ## Software Center
 

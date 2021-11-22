@@ -561,7 +561,7 @@ For more information, see [Surface dashboard](../../clients/manage/surface-devic
 
 ### View the currently signed on user for a device
 <!--1358202-->
-Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
+Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#monitor-individual-clients). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
 For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
