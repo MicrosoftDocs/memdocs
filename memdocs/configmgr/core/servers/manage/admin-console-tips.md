@@ -2,7 +2,7 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 09/30/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -19,6 +19,21 @@ ms.localizationpriority: medium
 Use the information below to find out about changes to the Configuration Manager console and tips for using the console:
 
 ## General tips
+
+### <a name="bkmk_csv"></a> Export to CSV
+<!--9663857-->
+*(Introduced in version 2111)*
+
+Starting in Configuration Manager 2111, you can export the contents of a grid view in the console along with the column headers to a comma-separated values (CSV) file that can be used to import to Excel or other applications. While you could previously cut and paste from a grid view, exporting to CSV makes extracting a large number of rows faster and easier. You can export either all or selected items from the following nodes:
+
+- Device Collections
+- User Collections
+- Devices
+- Users
+
+To export the information, select **Export to CSV file** from either the ribbon or the right-click menu. Choose **Export selected items** to only export items you've already selected, or you can choose to **Export all items**.
+
+:::image type="content" source="./media/9663857-export-csv.png" alt-text="Screenshot of the export to csv option in the ribbon of the device collections node.":::
 
 ### <a name="bkmk_code"></a> Enhanced code editor
 <!--8495588-->
@@ -173,7 +188,7 @@ Submit product feedback from the console.
 
 - **Send a frown**: Send feedback on what you didn't like
 
-- **Send a suggestion**: Takes you to the product feedback site to share your idea<!-- 10932544 -->
+- **Send a suggestion**: Takes you to the product feedback site to share your idea
 
 For more information, see [Product Feedback](../../understand/product-feedback.md).
 

@@ -25,10 +25,6 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2107+-+Configuration+Manager%22&locale=en-us`
-
 ## Cloud-attached management
 
 ### Cloud attach your environment during site update
@@ -373,7 +369,7 @@ For more information, see [Product feedback](../../understand/product-feedback.m
 <!--9761129-->
 Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions because of an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
-For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
+For more information, see [Allow unsigned console extensions in the hierarchy](../../servers/manage/admin-console-extensions.md#bkmk_allow-unsigned).
 
 ### Console improvements
 <!--9575773-->

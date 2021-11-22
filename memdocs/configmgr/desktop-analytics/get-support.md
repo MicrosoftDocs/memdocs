@@ -2,7 +2,7 @@
 title: Get support for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Get online and telephone support for Desktop Analytics paid and trial subscriptions.
-ms.date: 09/16/2021
+ms.date: 11/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -45,7 +45,7 @@ Choose one of the following options:
 - I have a suggestion
 - Contact support
 
-The first three options currently take you to the product feedback site for Desktop Analytics.<!-- 10932544 -->
+The first three options currently take you to the product feedback site for Configuration Manager.
 
 The fourth option opens the **Help and Support** option in the portal.
 

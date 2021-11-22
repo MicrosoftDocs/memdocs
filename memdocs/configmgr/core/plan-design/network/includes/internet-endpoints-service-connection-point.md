@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
-ms.date: 10/01/2021
+ms.date: 11/17/2021
 ms.localizationpriority: medium
 ---
 
@@ -26,6 +26,7 @@ The specific URLs required by the service connection point vary by Configuration
 - [Configuration Manager console](../internet-endpoints.md#configuration-manager-console)
 - [Desktop Analytics](../internet-endpoints.md#desktop-analytics)
 - [Tenant attach](../internet-endpoints.md#tenant-attach)
+- [External notifications](../internet-endpoints.md#external-notifications)
 
 > [!TIP]  
 > The service connection point uses the Microsoft Intune service when it connects to `go.microsoft.com` or `manage.microsoft.com`. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [Service connection point doesn't download updates](/troubleshoot/mem/configmgr/service-connection-point-not-download-updates).

@@ -41,7 +41,7 @@ This article helps IT administrators simplify Windows enrollment for their users
 
 As an Intune admin, you can simplify enrollment in the following ways:
 
-- [Enable automatic enrollment](#enable-windows-10-automatic-enrollment) (Azure AD Premium required).
+- [Enable automatic enrollment](#enable-windows-automatic-enrollment) (Azure AD Premium required).
 - [CNAME registration](#simplify-windows-enrollment-without-azure-ad-premium).
 - [Enable bulk enrollment](windows-bulk-enroll.md) (Azure AD Premium and Windows Configuration Designer required).
 
@@ -52,7 +52,7 @@ Two factors determine how you can simplify Windows device enrollment:
 
 | | **Azure AD Premium** | **Other AD** |
 |----------|---------------|---------------|  
-| **Windows 10/11** | [Automatic enrollment](#enable-windows-10-automatic-enrollment) | User enrollment |
+| **Windows 10/11** | [Automatic enrollment](#enable-windows-automatic-enrollment) | User enrollment |
 | **Earlier Windows versions** | User enrollment | User enrollment |
 
 Organizations that can use automatic enrollment can also configure [bulk enroll devices](windows-bulk-enroll.md) by using the Windows Configuration Designer app.

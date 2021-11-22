@@ -5,7 +5,7 @@ description: Configuration Manager synchronizes Microsoft 365 Apps client update
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/28/2021
+ms.date: 11/19/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -111,7 +111,10 @@ If Microsoft 365 Apps was installed recently and deployed updates are not detect
 
 ## Restart behavior and client notifications for Microsoft 365 Apps updates
 
-The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart. <!--510006--> For more information about notifications from Microsoft 365 Apps see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
+The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart. <!--510006--> For more information about notifications from Microsoft 365 Apps, see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
+
+> [!NOTE]
+> Starting in version 2111, you can configure the end-user notification experience for Microsoft 365 Apps updates. The **Enable update notifications from Microsoft 365 Apps** option was added to the **Software Updates** group of client settings. For more information about this setting and the user notification experience, see [About client settings in Configuration Manager](../../core/clients/deploy/about-client-settings.md#enable-update-notifications-from-microsoft-365-apps).<!--10628998-->
 
 ## <a name="bkmk_o365_lang"></a> Add languages for Microsoft 365 Apps update downloads
 You can add support for Configuration Manager to download updates for any languages that are supported by Microsoft 365 Apps.

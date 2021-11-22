@@ -216,9 +216,15 @@ To define a period during which updates to a site server can be installed, use s
 <!--SCCMdocs#587-->
 If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2111. Check with the product vendor for this information.
 
+> [!TIP]
+> If you develop a third-party add-on to Configuration Manager, you should test your add-on with every monthly [technical preview branch release](../../get-started/technical-preview.md). Regular testing helps confirm compatibility, and allows for early reporting of any issues with standard interfaces.
+
 ### Disable any custom solutions
 
 If your site has any custom solutions based on the Configuration Manager SDK or PowerShell, disable this code before you update the site. Make sure to test this custom code in a lab environment to make sure it's compatible with the new version.
+
+> [!NOTE]
+> Starting in version 2111, third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
 ### Read the release notes
 
@@ -317,7 +323,7 @@ Use the **Update Distribution Points** action for any boot image that you use, w
 When you update the site, Configuration Manager automatically updates the *default* boot images. It doesn't automatically distribute the updated content to distribution points. Use the **Update Distribution Points** action on specific boot images when you're ready to distribute this content across your network.
 
 > [!NOTE]
-> The site always uses the production version of the Configuration Manager client in default boot images. Even if you configure automatic client upgrades to use a [pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
+> For default boot images, the site always uses the current version of the Configuration Manager client that matches the site's version.<!-- 11131898 --> Even if you configure automatic client upgrades to use a [pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
 
 After updating the site, manually update any *custom* boot images. This action updates the boot image with the latest client components if necessary, optionally reloads it with the current Windows PE version, and redistributes the content to the distribution points.
 
@@ -331,4 +337,4 @@ For more information, see [Configuration Manager PowerShell cmdlets: Update help
 
 ## Next steps
 
-Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. There's a tip at the top of that article about how to receive RSS notifications of changes.
+Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../use-docs.md#notifications).

@@ -27,10 +27,12 @@ items:
       href: servers/manage/admin-console.md
     - name: Console notifications
       href: servers/manage/admin-console-notifications.md
-    - name: Console extensions
+    - name: Manage console extensions
       href: servers/manage/admin-console-extensions.md
+    - name: Import console extensions
+      href: servers/manage/import-admin-console-extensions.md     
     - name: Console changes and tips
-      href: servers/manage/admin-console-tips.md
+      href: servers/manage/admin-console-tips.md      
   - name: Fundamentals
     items: 
     - name: Configuration Manager fundamentals
@@ -233,6 +235,8 @@ items:
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2010.md
         - name: Data for version 2006
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
+    - name: Configuration Manager tools
+      href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.yml
   - name: Security and privacy for Configuration Manager
@@ -498,7 +502,7 @@ items:
     - name: Contribute to Community hub
       href: servers/manage/community-hub-contribute.md
     - name: Console extensions in Community hub
-      href: servers/manage/community-hub-extensions.md      
+      href: servers/manage/community-hub-extensions.md 
   - name: CMPivot
     items:
     - name: CMPivot overview
