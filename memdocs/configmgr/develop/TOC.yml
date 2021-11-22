@@ -326,7 +326,7 @@ items:
           - name: WMI namespaces and classes for reports
             href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
       - name: List of reports in Configuration Manager
-        href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
+        href: ../core/servers/manage/list-of-reports.md
   - name: SMS Provider
     items:
     - name: About the SMS Provider
