@@ -458,7 +458,7 @@ Choose one of the following options for this setting:
 > [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
-Starting in version 2006, client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
+Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
@@ -601,7 +601,7 @@ Set this option to **Yes** to use network-level authentication (NLA) to establis
 ### Select the user portal
 
 <!--CMADO-3601237,INADO-4297660-->
-Starting in version 2006, if you deploy the Company Portal to co-managed devices, configure this setting to **Company Portal**. This setting makes sure that notifications from Configuration Manager and Intune both launch the Company Portal. If a Configuration Manager notification is for a scenario that the Company Portal doesn't support, selecting the notification launches Software Center.
+If you deploy the Company Portal to co-managed devices, configure this setting to **Company Portal**. This setting makes sure that notifications from Configuration Manager and Intune both launch the Company Portal. If a Configuration Manager notification is for a scenario that the Company Portal doesn't support, selecting the notification launches Software Center.
 
 If you install the Company Portal on a co-managed device, but configure this setting to **Software Center**, then notifications from Configuration Manager launch Software Center. Notifications from Intune launch the Company Portal. This behavior may be confusing to users to interact with different portals.
 
@@ -621,7 +621,19 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 - **Foreground color for Software Center**: Starting in version 2103, configure a custom color for the foreground font. By default, this color is white (Red: 255, Green: 255, Blue: 255). For some customers, their brand color doesn't work well with the default white font color for a selected item. This setting better supports these customers and improves accessibility.<!--8655575-->
 
-- **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
+- **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo for Software Center has the following requirements:
+
+  - A JPG, PNG, or BMP file.
+  - Dimensions of 400 x 100 pixels.
+  - A maximum file size of 750 KB.
+  - No spaces in the file name.
+
+- **Select a logo for notifications**: Starting in version 2111, enable this setting to display a logo with notifications on devices running Windows 10 or later.<!--4993167--> Because of how the image is used, it's separate from the Software Center logo. The logo for notifications has the following requirements:
+
+  - A JPG, PNG, or BMP file.
+  - Square aspect ratio. For example, 100 x 100 pixels.
+  - A maximum file size of 2 MB.
+  - No spaces in the file name.
 
 - **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 

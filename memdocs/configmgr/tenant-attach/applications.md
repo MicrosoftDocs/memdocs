@@ -2,7 +2,7 @@
 title: Tenant attach - Applications (preview) in the admin center
 titleSuffix: Configuration Manager
 description: Install applications for uploaded Configuration Manager devices from the admin center.
-ms.date: 06/28/2021
+ms.date: 11/19/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -21,7 +21,10 @@ ms.localizationpriority: high
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
+   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center." lightbox="media/6024389-tenant-attach-application-list.png":::
+
+> [!NOTE]
+> Starting in version 2111, this behavior also supports [application groups](../apps/deploy-use/create-app-groups.md#app-approval).<!-- 10992210 --> When this article refers to an *application*, it also applies to app groups.
 
 ## Prerequisites
 

@@ -74,6 +74,8 @@ For more information, see [Create and run PowerShell scripts](../../../apps/depl
 
 Install an application to a device in real time. This feature can help reduce the need for separate collections for every application.
 
+Starting in version 2111, select the **Install Application Group** action for an app group.<!-- 10992210 -->
+
 For more information, see [Install applications for a device](../../../apps/deploy-use/install-app-for-device.md).
 
 ### Reassign site

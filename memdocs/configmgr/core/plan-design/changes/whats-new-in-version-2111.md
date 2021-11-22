@@ -89,15 +89,11 @@ This release includes improvements to the **Client health dashboard**.
 
 <!--4993167-->
 
-If you enable Software Center customizations, then notifications on Windows 10 devices display the logo that you configure in client settings. This change helps users to trust these notifications.
+If you enable Software Center customizations, the logo that you specify for Windows notifications is separate from the Software Center logo. This logo helps users to trust these notifications. When you deploy software to a client, the user sees notifications with your logo. For example:
 
-<!-- When you deploy software to a client, the user sees notifications with your logo. The following example uses a star logo:
+:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
 
-media/4993167-notification-with-logo.png
-:::image type="content" source="" alt-text="New software is available notification with custom logo":::
-
-For more information about customizing Software Center, see [About client settings: Software Center](../../clients/deploy/about-client-settings.md#software-center).
- -->
+For more information, see [About client settings: Software Center](../../clients/deploy/about-client-settings.md#software-center) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).
 
 ## Application management
 
@@ -105,11 +101,11 @@ For more information about customizing Software Center, see [About client settin
 
 <!--10393847-->
 
-In Configuration Manager current branch version 2107, you can enable an application deployment to support.
+In Configuration Manager current branch version 2107, you can enable an application deployment to support implicit uninstall.
 
 Starting in this release, this behavior also applies to deployments to user collections. If a user is in a collection, the application installs. Then when you remove the user from the collection, the application uninstalls.
 
-<!-- For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall). -->
+For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
 
 ### Improvements to application groups
 
@@ -117,9 +113,9 @@ This release includes the following improvements to application groups:
 
 - Now when you deploy an app group as required to a device or user collection, you can specify that it automatically uninstalls when the resource is removed from the collection.<!--10479618-->
 
-- The following app approval behaviors are now supported with app groups:<!-- 10992210 -->
+- Additional app approval behaviors are now supported with app groups.<!-- 10992210 -->
 
-<!-- For more information, see [Create application groups](../../../apps/deploy-use/create-app-groups.md). -->
+For more information, see [Create application groups](../../../apps/deploy-use/create-app-groups.md).
 
 ## OS deployment
 
@@ -281,8 +277,9 @@ As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), vers
 ## Other updates
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
-<!-- UPDATE NEEDED -->
-- [Cloud management gateway (CMG) with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040,8959690-->
+
+- [Application groups](../../../apps/deploy-use/create-app-groups.md) <!--3555907-->
+- [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816-->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2111 release notes](/powershell/sccm/2111-release-notes).
 
