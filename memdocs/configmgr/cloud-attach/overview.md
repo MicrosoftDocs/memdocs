@@ -2,7 +2,7 @@
 title: Cloud attach overview
 titleSuffix: Configuration Manager
 description: Cloud attach for Configuration Manager overview
-ms.date: 11/01/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
@@ -14,6 +14,8 @@ ms.localizationpriority: high
 
 # Cloud attach your Configuration Manager environment
 <!--9251060-->
+*Applies to: Configuration Manager (current branch)*
+
 Attaching your Configuration Manager environment the the cloud allows you to continue to modernizing and streamlining your management solution. Cloud attach allows you to transform your existing environment without having to worry about a lot of disruption or risk. A Configuration Manager environment is considered cloud attached when it uses at least one of the three primary cloud attach features. You can enable these three features in any order you wish, or all at once.  
 
 - [Tenant attach](#tenant-attach)

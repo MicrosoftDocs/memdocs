@@ -3,6 +3,8 @@ items:
   href: index.yml
 - name: What is cloud attach?
   href: overview.md
+- name: Enable cloud attach?
+  href: enable-cloud-attach.md 
 - name: Tenant attach
   items:
   - name: Tenant attach overview
