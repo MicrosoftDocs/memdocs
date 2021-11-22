@@ -27,7 +27,6 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.collection: OS=iOS/iPadOS
-ms.custom: OS
 ms.collection: OS=Android
 ---
 

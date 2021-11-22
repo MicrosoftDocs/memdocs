@@ -26,7 +26,6 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection: OS=iOS/iPadOS
-ms.custom: OS
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
