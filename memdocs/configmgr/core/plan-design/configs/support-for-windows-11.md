@@ -69,6 +69,9 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 - OS deployment images and upgrade packages for Windows 11 show the image name as Windows 10. For more information, see [Using deployment tools with Windows 11 images](/windows-hardware/manufacture/desktop/using-deployment-tools-with-windows-11).<!--11128713-->
 
+<!--12440724-->
+[!INCLUDE [windows11-adk-x86](includes/windows11-adk-x86.md)]
+
 ## Windows 11 on ARM64
 
 <!-- 10589908 -->
