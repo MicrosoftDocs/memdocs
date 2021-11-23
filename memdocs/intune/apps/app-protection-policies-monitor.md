@@ -39,7 +39,7 @@ There are three different places to monitor app protection policies:
 - Detailed view
 - Reporting view
 
-The retention period for app protection data is 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. An *app instance* is a unique user + app + device. 
+App protection data is retained for a minimum of 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. An *app instance* is a unique user + app + device. 
 
 > [!NOTE]
 > For more information, see [How to create and assign app protection policies](app-protection-policies.md).
