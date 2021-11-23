@@ -123,7 +123,7 @@ When an update to remote help that is required, users are prompted to install th
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
 
-**Download remote help**: Download the latest version of remote help direct from Microsoft at [aka.ms\downloadremotehelp](aka.ms\downloadremotehelp).
+**Download remote help**: Download the latest version of remote help direct from Microsoft at *aka.ms\downloadremotehelp*.
 
 
 ## Configure remote help for your tenant
