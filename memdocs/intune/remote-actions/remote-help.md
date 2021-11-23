@@ -109,7 +109,7 @@ The helper and sharer both see the following information about the other individ
 - Their organization profile picture (if present)
 - Company name
 - Verified domain
-- Firs and Last name
+- First and Last name
 - Job title
 
 Microsoft does not store any data about either the sharer or the helper for longer than three days.
