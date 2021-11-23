@@ -22,7 +22,7 @@ To get the update for version 2111, you must use a service connection point at t
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 2111, review the following information [about installing update 2111](#about-installing-update-2111) and the [checklist](#checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2111, review the following information [about installing update 2111](#about-installing-update-2111) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
