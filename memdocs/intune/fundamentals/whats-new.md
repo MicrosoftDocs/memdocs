@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/22/2021
+ms.date: 11/23/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,8 +68,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 As a public preview, you can use of the remote help app with your Intune tenant. With remote help, users who authenticate to your Azure Active directly can remotely assist others by connecting a remote help session between devices.
 
-With permissions in remote help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting.
-The capabilities of remote help include:
+With permissions in remote help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting. The capabilities of remote help include:
 
 - **Enable remote help for your tenant** –If you choose to turn on remote help, its use is enabled tenant-wide.
 - **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
