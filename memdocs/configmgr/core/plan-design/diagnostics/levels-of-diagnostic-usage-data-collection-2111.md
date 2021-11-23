@@ -43,7 +43,7 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - Count of Windows 10 and later devices by branch, build, and unique Active Directory forest
 
-- Count of clients joined to Azure Active Directory
+- Count of clients joined to Azure Active Directory (Azure AD)
 
 - Count of extended interoperability clients
 
@@ -53,7 +53,9 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - Use of the bulk registration token
 
-- Count of clients by identity source and registration method. For example, Active Directory, Azure Active Directory, or PKI client authentication certificate.
+- Count of clients by identity source and registration method. For example, Active Directory, Azure AD, or PKI client authentication certificate.
+
+- ***[New]*** Count of clients by OS type and version that are joined to Azure AD or hybrid-joined
 
 ### Cloud services (Level 1)
 
@@ -63,7 +65,7 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - Aggregated usage statistics of co-management: number of clients ever enrolled, number of enrolled clients, number of clients pending enrollment, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors
 
-- Count of Azure Active Directory applications and services connected to Configuration Manager
+- Count of Azure AD applications and services connected to Configuration Manager
 
 - Cloud attach and detach actions
 
@@ -74,6 +76,8 @@ For Configuration Manager version 2111, this level includes the following data:
 - Summarized count of Endpoint Analytics event
 
 - Aggregated statistics on Desktop Analytics enrollment errors and usage
+
+- ***[New]*** Count of clients by OS type and version that are co-managed, cloud-attached, or both
 
 ### Configuration Manager console (Level 1)
 
@@ -237,7 +241,7 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - Application global condition usage by type
 
-- Software Center customization configuration
+- ***[Updated]*** Software Center customization configuration, including use of settings to configure Software Center and notification branding
 
 - Package Conversion Manager readiness and counts
 
@@ -264,6 +268,8 @@ For Configuration Manager version 2111, this level includes the following data:
 - Count and size of Office Pro Plus pilot collections
 
 - Number of Office Pro Plus devices sending Office health data
+
+- ***[New]*** Count of the type of actions used on apps over time
 
 ### Client (Level 2)
 
@@ -319,7 +325,7 @@ For Configuration Manager version 2111, this level includes the following data:
 
 ### Cloud services (Level 2)
 
-- Azure Active Directory discovery statistics
+- Azure AD discovery statistics
 
 - Count of collections synced to Azure Log Analytics
 
@@ -334,6 +340,8 @@ For Configuration Manager version 2111, this level includes the following data:
 - Cloud services configuration onboarding properties
 
 - Cloud services endpoint connectivity and component health
+
+- ***[New]*** Usage of the cloud-attach wizard
 
 ### CMPivot (Level 2)
 
@@ -359,7 +367,7 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - Collections without a deployment
 
-- Count of collections synchronized to Azure Active Directory
+- Count of collections synchronized to Azure AD
 
 ### Compliance settings (Level 2)
 
@@ -395,7 +403,7 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - 25 most common actions, wizards, property sheets, and tree nodes accessed in the console
 
-- List of installed console extensions
+- ***[Updated]*** List of installed console extensions, and whether they're enabled, required, or approved
 
 - Summary of size and count of admin persisted settings
 
@@ -579,6 +587,8 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - Windows Update fallback configuration settings
 
+- ***[New]*** Type, size, and timeout settings of orchestration group scripts
+
 ### SQL/performance data (Level 2)
 
 - Configuration and duration of site summarization
@@ -627,7 +637,7 @@ For Configuration Manager version 2111, this level includes the following data:
 
 - Count of clients with browser usage
 
-- Summary of how many site systems have the proxy enabled and how many are authenticated proxy
+- ***[Updated]*** Summary of how many site systems have the proxy enabled and how many are authenticated proxy, including configuration, usage patterns, and traffic patterns
 
 - Usage information for the last seven days of in-console product feedback
 
