@@ -91,7 +91,7 @@ The version 2111 update should now be available in the console.
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2111. It's not a permanent change.
 
-## Checklist
+## Pre-update checklist
 
 ### All sites run a supported version of Configuration Manager
 
@@ -198,6 +198,14 @@ If you or a third-party product customizes any Configuration Manager configurati
 
 For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. Reapply your customizations.
 
+### Review hardware inventory customizations
+
+<!-- 12613335 -->
+
+If you changed the state of [hardware inventory classes in client settings](../../clients/manage/inventory/configure-hardware-inventory.md), when you update the site, some classes may revert to a default state. For example, if you disable the `SMS_Windows8Application` or `SMS_Windows8ApplicationUserInfo` classes, they're enabled after installing a Configuration Manager update.
+
+When you customize hardware inventory classes, note their configuration before you install the update.
+
 ### Plan for client piloting
 
 When you install a site update that also updates the client, test that new client update in pre-production before you update all production clients. To use this option, configure your site to support automatic upgrades for pre-production before beginning installation of the update.
@@ -233,6 +241,8 @@ Before you start the update, review the current release notes. With Configuratio
 Feature-specific documentation may include information about known issues that affect core scenarios.
 
 For more information, see the [Release notes](../deploy/install/release-notes.md).
+
+## Install the update
 
 ### Run the setup prerequisite checker
 
@@ -295,6 +305,14 @@ If you use an availability group, reset the failover configuration to automatic.
 ### Reconfigure any disabled maintenance tasks
 
 If you disabled database [maintenance tasks](maintenance-tasks.md) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.  
+
+### Restore hardware inventory customizations
+
+<!-- 12613335 -->
+
+If you changed the state of [hardware inventory classes in client settings](../../clients/manage/inventory/configure-hardware-inventory.md), when you update the site, some classes may revert to a default state. For example, if you disable the `SMS_Windows8Application` or `SMS_Windows8ApplicationUserInfo` classes, they're enabled after installing a Configuration Manager update.
+
+When you customize hardware inventory classes, review their configuration after you install the update to make sure they are configured as you intend.
 
 ### Restore user state from active deployments
 
