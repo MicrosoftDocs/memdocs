@@ -32,6 +32,12 @@ We've simplified the process to cloud attach your Configuration Manager environm
 
 <!-- For more information, see ... -->
 
+### Improvements to cloud management gateway
+
+Starting in this release, cloud management gateway (CMG) deployments with a virtual machine scale set support Azure US Government cloud environments.<!--12141235-->
+
+For more information, see [CMG - Virtual machine scale sets](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+
 ## Site infrastructure
 
 ### Improvements to external notifications

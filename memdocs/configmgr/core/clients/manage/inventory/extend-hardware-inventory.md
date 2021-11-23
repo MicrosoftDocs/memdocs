@@ -2,7 +2,7 @@
 title: Extend hardware inventory
 titleSuffix: Configuration Manager
 description: Learn ways to extend hardware inventory in Configuration Manager.
-ms.date: 10/19/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -27,6 +27,8 @@ When Configuration Manager clients request policy, the Configuration.mof is atta
 In Configuration Manager current branch, you don't edit the sms_def.mof file as with earlier versions. Instead, make these changes with client settings. Configuration Manager provides the following methods to extend hardware inventory.
 
 > [!NOTE]
+> If you changed the state of classes in client settings, when you update the site, some classes may revert to a default state. For example, if you disable the `SMS_Windows8Application` or `SMS_Windows8ApplicationUserInfo` classes, they're enabled after installing a Configuration Manager update. When you customize hardware inventory classes, make sure to review their configuration before and after a site update.<!-- 12613335 -->
+>
 > If you've manually changed the Configuration.mof file to add custom inventory classes, these changes will be overwritten when you update the site. To keep using custom classes after you update, add them to the **Added extensions** section of the Configuration.mof file. Don't modify anything above this section. The other sections are reserved for modification by Configuration Manager. The site backs up your custom Configuration.mof in the `data\hinvarchive\` folder of the Configuration Manager installation directory on the site server.
 
 Starting in version 2107, you can use the administration service to set custom properties on devices.<!--8939867--> You can then use the custom properties in Configuration Manager for reporting or to create collections. For more information, see [Custom properties for devices](../../../../develop/adminservice/custom-properties.md).

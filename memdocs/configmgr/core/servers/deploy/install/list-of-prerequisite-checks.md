@@ -719,12 +719,6 @@ When you install site roles that require HTTPS, configure IIS site bindings on t
 
 There are discovery records that are no longer valid. These records will be marked for deletion.
 
-### Microsoft XML Core Services 6.0 (MSXML60)
-
-*Applies to Central administration site, primary site, secondary site, Configuration Manager console, management point, distribution point*
-
-Verifies that MSXML 6.0 or a later version is installed.
-
 ### Network access protection (NAP) is no longer supported
 
 *Applies to: Primary site*

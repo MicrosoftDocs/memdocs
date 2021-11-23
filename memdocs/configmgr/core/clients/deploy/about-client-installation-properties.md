@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 10/19/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -276,7 +276,10 @@ Example: `ccmsetup.exe /source:"\\server\share"`
 
 Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#uninstall-the-client).
 
-Example: `ccmsetup.exe /uninstall`  
+Example: `ccmsetup.exe /uninstall`
+
+> [!NOTE]
+> Starting in version 2111, when you uninstall the client it also removes the client bootstrap, ccmsetup.msi, if it exists.<!-- 12425149 -->
 
 ### /UsePKICert
 
