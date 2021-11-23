@@ -50,6 +50,9 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 - If you're deploying both Windows 11 and Windows Server 2022, use the Windows ADK for Windows 11, which is the latest version. If you're deploying Windows Server 2022 and not Windows 11, you can use either Windows ADK for Windows Server 2022 or Windows 11.
 
+<!--12440724-->
+[!INCLUDE [windows11-adk-x86](includes/windows11-adk-x86.md)]
+
 ## Known issues
 
 <!-- 11307733 -->
