@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2021
+ms.date: 11/11/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -24,8 +24,10 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+ms.custom: intune-classic
 ---
 
 # Prepare Android apps for app protection policies with the Intune App Wrapping Tool
@@ -47,7 +49,7 @@ Before running the tool, review [Security considerations for running the App Wra
 
   - It cannot be encrypted.
   - It must not have previously been wrapped by the Intune App Wrapping Tool.
-  - It must be written for Android 4.0 or later.
+  - It must be written for Android 9.0 or later.
 
   > [!NOTE]
   > If your input app is an Android App Bundle (.aab), you will need to convert it to an APK before using the Intune App Wrapping Tool. For details, see [Convert Android App Bundle (AAB) to APK](#convert-android-app-bundle-aab-to-apk). As of August 2021, [new private apps can still be published to the Google Play Store as APKs](https://support.google.com/googleplay/work/answer/6145139?hl=en).
