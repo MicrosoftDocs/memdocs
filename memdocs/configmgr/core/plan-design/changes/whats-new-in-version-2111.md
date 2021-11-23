@@ -22,6 +22,69 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
+## Application management
+
+### Improvements to application groups
+
+> [!TIP]
+> Starting with this release, app groups are no longer a [pre-release](../../servers/manage/pre-release-features.md) feature.
+
+This release includes the following improvements to application groups:
+
+- Now when you deploy an app group as required to a device or user collection, you can specify that it automatically uninstalls when the resource is removed from the collection.<!--10479618-->
+
+- More app approval behaviors are now supported with app groups.<!-- 10992210 -->
+
+For more information, see [Create application groups](../../../apps/deploy-use/create-app-groups.md).
+
+### Implicit uninstall for user collections
+
+<!--10393847-->
+
+In Configuration Manager current branch version 2107, you can enable an application deployment to support implicit uninstall.
+
+Starting in this release, this behavior also applies to deployments to user collections. If a user is in a collection, the application installs. Then when you remove the user from the collection, the application uninstalls.
+
+For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
+
+## Software updates
+
+### Approvals for orchestration group scripts
+
+> [!TIP]
+> Starting with this release, orchestration groups are no longer a [pre-release](../../servers/manage/pre-release-features.md) feature.
+
+<!--9957939-->
+
+Pre and post-scripts for orchestration groups now require approval to take effect. If you select a script from a file, author, or modify your own script, approval for the script is required from another admin. When selecting an approved script from the **Scripts** library, no other approval is needed. To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**:
+
+- **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
+- **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
+
+For more information, see [Approvals for orchestration group scripts](../../../sum/deploy-use/create-orchestration-groups.md#approvals-for-orchestration-group-scripts).
+
+### Improvements to ADR search criteria
+
+<!--7033309-->
+
+We've added the following options in the **Date Released or Revised** search criteria for automatic deployment rules:
+
+- Older than 30 days
+- Older than 60 days
+- Older than 90 days
+- Older than 6 months
+- Older than 1 year
+
+For more information, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md).
+
+### Enable update notifications from Microsoft 365 Apps
+
+<!--10628998-->
+
+You can now configure the end-user experience for Microsoft 365 Apps updates. This client setting allows you to enable or disable notifications from Microsoft 365 Apps for these updates. The new **Enable update notifications from Microsoft 365 Apps** option has been added to the **Software Updates** group of client settings.
+
+For more information, see [About client settings in Configuration Manager](../../clients/deploy/about-client-settings.md#enable-update-notifications-from-microsoft-365-apps).
+
 ## Cloud-attached management
 
 ### Simplified cloud attach configuration
@@ -111,28 +174,6 @@ If you enable Software Center customizations, the logo that you specify for Wind
 
 For more information, see [About client settings: Software Center](../../clients/deploy/about-client-settings.md#software-center) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).
 
-## Application management
-
-### Implicit uninstall for user collections
-
-<!--10393847-->
-
-In Configuration Manager current branch version 2107, you can enable an application deployment to support implicit uninstall.
-
-Starting in this release, this behavior also applies to deployments to user collections. If a user is in a collection, the application installs. Then when you remove the user from the collection, the application uninstalls.
-
-For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
-
-### Improvements to application groups
-
-This release includes the following improvements to application groups:
-
-- Now when you deploy an app group as required to a device or user collection, you can specify that it automatically uninstalls when the resource is removed from the collection.<!--10479618-->
-
-- Additional app approval behaviors are now supported with app groups.<!-- 10992210 -->
-
-For more information, see [Create application groups](../../../apps/deploy-use/create-app-groups.md).
-
 ## OS deployment
 
 ### Task sequence check for TPM 2.0
@@ -150,43 +191,9 @@ We now display a **Windows 11 Latest Feature Updates** chart in the **Windows Se
 
 For more information, see [The Windows servicing dashboard](../../../osd/deploy-use/manage-windows-as-a-service.md#bkmk_2103-dashboard).
 
+<!--
 ## Protection
-
-
-## Software updates
-
-### Improvements to ADR search criteria
-
-<!--7033309-->
-
-We've added the following options in the **Date Released or Revised** search criteria for automatic deployment rules:
-
-- Older than 30 days
-- Older than 60 days
-- Older than 90 days
-- Older than 6 months
-- Older than 1 year
-
-For more information, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md).
-
-### Approvals for orchestration group scripts
-
-<!--9957939-->
-
-Pre and post-scripts for orchestration groups now require approval to take effect. If you select a script from a file, author, or modify your own script, approval for the script is required from another admin. When selecting an approved script from the **Scripts** library, no additional approval is needed. To assist you with script approval, the following two tabs were added to the details pane for **Orchestration Groups**:
-
-- **Summary**: Contains information about the selected orchestration group, including the **Approval State** of scripts.
-- **Scripts**: Lists information about pre and post-scripts, including the timeout, approver, and approval state for each script.
-
-For more information, see [Approvals for orchestration group scripts](../../../sum/deploy-use/create-orchestration-groups.md#approvals-for-orchestration-group-scripts).
-
-### Enable update notifications from Microsoft 365 Apps
-
-<!--10628998-->
-
-You can now configure the end-user experience for Microsoft 365 Apps updates. This client setting allows you to enable or disable notifications from Microsoft 365 Apps for these updates. The new **Enable update notifications from Microsoft 365 Apps** option has been added to the **Software Updates** group of client settings.
-
-For more information, see [About client settings in Configuration Manager](../../clients/deploy/about-client-settings.md#enable-update-notifications-from-microsoft-365-apps).
+ -->
 
 ## Configuration Manager console
 
@@ -228,7 +235,7 @@ For more information, see [Manage Configuration Manager console extensions](../.
 
 <!--2711343-->
 
-Wizards and some property pages now include an icon to provide feedback. When you select the feedback icon, the **Send a smile** and **Send a frown** options are displayed in the drop-down menu. The additional feedback locations allow you to quickly send feedback right from your current activity. The feedback icon in the admin console's ribbon has also been updated to the new icon.
+Wizards and some property pages now include an icon to provide feedback. When you select the feedback icon, the **Send a smile** and **Send a frown** options are displayed in the drop-down menu. The other feedback locations allow you to quickly send feedback right from your current activity. The feedback icon in the admin console's ribbon has also been updated to the new icon.
 
 For more information, see [Product feedback for Configuration Manager](../../understand/product-feedback.md).
 
@@ -280,13 +287,17 @@ For more information, see [Support Center log file viewer](../../support/support
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-- Managing apps from the **Microsoft Store for Business and Education** with Configuration Manager. For more information, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423).<!-- 10884039 -->
+The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.
+
+- Managing apps from the **Microsoft Store for Business and Education** with Configuration Manager<!-- 10884039 -->
 
 - **Asset intelligence**<!-- 12454890 -->
 
 - **On-premises MDM**<!-- 12454901 -->
 
-As [previously announced](deprecated/removed-and-deprecated-cmfeatures.md), version 2111 drops support for the following features:
+For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
+
+As previously announced, version 2111 drops support for the following features:
 
 - Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
