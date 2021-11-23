@@ -86,6 +86,3 @@ The certificate is associated with the Apple ID used to create it. Renew the MDM
 7. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select the **Apple MDM push certificate** browse icon, select the .pem file downloaded from Apple, and choose **Upload**.
 
 Your Apple MDM push certificate appears **Active** and has 365 days until expiration.
-
-> [!IMPORTANT]
-> Please be aware that if you renew an expired APNs certificate outside of the grace period (30 days as of this writing), Apple will issue you a brand new certificate. When this happens, because the certificate is now different, you will be forced to un-enroll and re-enroll all existing, Intune-managed iOS devices.
