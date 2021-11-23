@@ -25,8 +25,10 @@ ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+ms.custom: intune-azure
 ---
 
 # Quickstart: Create a password compliance policy for Android devices

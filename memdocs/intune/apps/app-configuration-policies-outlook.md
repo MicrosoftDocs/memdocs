@@ -22,8 +22,10 @@ ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+ms.custom: intune-azure
 ---
 
 # Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune

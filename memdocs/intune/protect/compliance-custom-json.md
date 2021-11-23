@@ -112,8 +112,8 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
        "RemediationStrings":[ 
           { 
              "Language": "en_US",
-             "Title": "TCM chip must be enabled.",
-             "Description": "TCM chip must be enabled. Please refer to the link above"
+             "Title": "TPM chip must be enabled.",
+             "Description": "TPM chip must be enabled. Please refer to the link above"
           }
        ]
     },
