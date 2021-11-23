@@ -29,11 +29,11 @@ ms.collection: M365-identity-device-management
  
 # Use remote help with Intune and Microsoft Endpoint Manager
 
-In [public preview](../fundamentals/public-preview.md), *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session they can view the devices display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device. Remote help works with devices that have enrolled with Intune and with devices that aren't enrolled.
+In [public preview](../fundamentals/public-preview.md), *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session they can view the devices display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
 In this article, we'll refer to the users who provide help as *helpers*, and users that receive help as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the remote help sessions.
 
-Remote help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you can determine which users can provide help and the level of help they can provide.
+Remote help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
 The remote help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
 
@@ -49,7 +49,7 @@ The Remote help app supports the following capabilities:
 
 - **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-  Unenrolled devices always report as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and therefore is unable to establish its compliance status.
+  Unenrolled devices always report as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
 
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access, like:
   - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
@@ -63,7 +63,7 @@ The Remote help app supports the following capabilities:
 
 ## Prerequisites
 
-- [Intune subscription](../fundamentals/licenses.md).
+- [Intune subscription](../fundamentals/licenses.md)
 - Windows 10/11
 - Devices must install the *remote help* app. Device users can download the app directly from the Microsoft. See [Install and update remote help](#install-and-update-remote-help)
 
@@ -71,7 +71,7 @@ The Remote help app supports the following capabilities:
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote help is not supported on High GCC tenants.
+> - Remote help is not supported on GCC High tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
@@ -102,22 +102,28 @@ Microsoft logs a small amount of session data to monitor the health of the remot
 - Errors arising from remote help itself, such as unexpected disconnections
 - Features used inside the app such as view only, annotation, and session pause
 
-No logs are created on either the helper’s or sharer’s device. Microsoft cannot access a session or view any actions or keystrokes that occur in the session.
+Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session. Microsoft cannot access a session or view any actions or keystrokes that occur in the session.
 
-The sharer sees only an abbreviated version of the helper’s name (first name, last initial) and no other information about them. Microsoft does not store any data about either the sharer or the helper for longer than three days.
+The helper and sharer both see the following information about the other individual, taken from their organizational profiles:
 
-In some scenarios, the helper does require the sharer to respond to application permission prompts (User Account Control), but otherwise the helper has the same permissions as the sharer on the device.
+- Their organization profile picture (if present)
+- Company name
+- Verified domain
+- Firs and Last name
+- Job title
+
+Microsoft does not store any data about either the sharer or the helper for longer than three days.
 
 ## Install and update remote help
 
 Remote help is available as  download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session.
 
-When there is an updated to remote help that is required, users are prompted to install that version of remote help when the app opens. The same process to download and install the initial remote help can be used to install the updated version. There is no need to uninstall the previous version before installing the updated version.
+When an update to remote help that is required, users are prompted to install that version of remote help when the app opens. The same process to download and install the initial remote help can be used to install the updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
 
-**Download remote help**: Download the latest version of remote help from [Link Pending]().
+**Download remote help**: Download the latest version of remote help direct from Microsoft at [aka.ms\downloadremotehelp](aka.ms\downloadremotehelp).
 
 
 ## Configure remote help for your tenant
@@ -153,7 +159,7 @@ A user must have the following Intune RBAC permission set to *Yes* to use the ad
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
 > [!IMPORTANT]  
-> When a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is automatically signed out of their device. Therefore, it is important for helpers who are granted these permissions to understand the impact this action can have. The sharer should plan to save any active work to prevent a loss of unsaved work in case the session ends unexpectedly.
+> When a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is automatically signed out of their device. Therefore, it is important for helpers who are granted these permissions to understand the impact this action can have. The sharer should plan to save any active work to prevent a loss of unsaved work.
 
 ### Task 3 – Assign user to roles
 
@@ -180,33 +186,26 @@ The use of remote help depends on whether you're requesting help or providing he
 
 ### Request help
 
-To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on. While the remote help app can respond to an offer to help, it doesn’t support submitting a request for assistance from others. To aid in starting the session, be prepared to provide your username and device name on which assistance is needed. You're the sharer during the session.
+To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helpers instance of remote help. 
 
 > [!TIP]  
 > To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, you are signed out of your device.
 
 As a sharer, when you’ve requested help and both you and the helper are ready to start:
 
-1. Start the remote help app on the device and sign-in to authenticate to your organization. The device doesn't need to be enrolled with Intune.
+1. Start the remote help app on the device and sign-in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
 
-2. After signing into the app, select the option **Get assistance**. Remote help generates a code that you’ll share with the person who is going to provide that assistance. The individual who will help also signs-in, selects I, and receives a code that they’ll share with you.
+2. After signing into the app, get the security code from the individual assisting you and enter that code below *Get Help*, and then select **Submit**.
 
-3. To establish a trusted connection, exchange codes and enter them into remote help.
+3. After submitting the security code from the helper, the helper will see information about you including your full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
 
-4. After exchanging and then entering the remote help codes, a session is established between the devices and remote help displays  information about the other individual. The information can include usernames, user profile pictures, job title, and the verified domain. This is the same as you might see in Teams or Outlook:
+   At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*. Full control must be established before the help session starts. If full control is desired after the sessions starts, both users must disconnect and restart the remote help session.
 
-   - As the sharer, your app displays the organizational details of the helper. If the helper requests full control of your device, you can select the option to *Allow full control* or choose to *Decline the request*.
-   
-     Full control must be established before the help session starts. If full control is desired after the sessions starts, both users must disconnect and restart the remote help session.
-
-   - The helper’s app displays the organization details about you, the sharer. The helper can request *Full control* of your device or select *Screen sharing* to view your device but not control it.
-
-5. After establishing assistance through a shared display or full control session, the helper can now assist resolving any issues on the device.
+4. After establishing they type of session (full control or screen sharing), the session is established and the helper can now assist resolving any issues on the device.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-6. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app.
-
+5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
 ### Provide help  
 
@@ -215,39 +214,19 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
 As a helper, after receiving a request from a user who wants assistance through the remote help app:
 
-1. Start the remote help app on your device and sign-in to authenticate to your organization.  
+1. Start the remote help app on your device and sign-in to authenticate to your organization.
 
-2. After signing into the app, select the option **Give assistance**. Remote help generates a code that you’ll share with the person who has requested assistance. The individual who is seeking help also signs-in, selects *Get assistance*, and receives a code that they’ll share with you.
+2. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
 
-3. To establish a trusted connection, exchange codes and enter them into remote help.
+3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
 
-4. After exchanging and entering the remote help codes, a session is established between the devices and remote help displays  information about the other individual. The information can include usernames, user profile pictures, job title, and the verified domain. This is the same as you might see in Teams or Outlook:
+   At this time, you can request a session with full control of the sharers device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*. Full control must be established before the help session starts. If full control is desired after the sessions starts, both users must disconnect and restart the remote help session.
 
-   - As the helper, your app displays the organizational details of the sharer. You can request *Full control* of the sharers device or select *Screen sharing* to only view their device but not control it.  The sharer can choose to accept or decline your request for full control.
-
-     Full control must be established before the help session starts. If full control is desired after the sessions starts, both users must disconnect and restart the remote help session.
-
-   - The sharers app displays your organizational details.
-
-5. After establishing that the session will use a shared display or full control, remote help will display a **Compliance Warning* to the helper if the sharers device fails to meet the conditions of its assigned compliance policies.
+4. After establishing that the session will use a shared display or full control, remote help will display a **Compliance Warning* if the sharers device fails to meet the conditions of its assigned compliance policies.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-6. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app.
-
-## Data and privacy
-
-Intune logs a small amount of session data to monitor the health of the remote help system. This data includes the following information:
-
-- Start and end time of the session
-- Errors arising from remote help itself, such as unexpected disconnections
-- Features used inside the app such as view only, annotation, and session pause
-
-Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
-
-Both helper and the sharer see details about the other, taken from their organizational profiles.
-
-In some scenarios, the helper does require the sharer to respond to application permission prompts (User Account Control), but otherwise the helper has the same permissions as the sharer on the device.
+5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
 ## Monitoring and reports
 
