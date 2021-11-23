@@ -63,14 +63,16 @@ The Configuration Manager client has external dependencies. These dependencies d
 
 | Component | Description |
 |-----------|-------------|
-|Microsoft Core XML Services (MSXML) version 6.20.5002 or later (`msxml6.msi`)|Required to support the processing of XML documents in Windows.|
 |Microsoft Visual C++ 2015-2019 Redistributable version 14.28.29914.0 (`vcredist_x*.exe`)|(_Version 2107 and later_) Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- 5170229 -->|
 |Microsoft Visual C++ 2013 Redistributable version 12.0.40660.0 (`vcredist_x*.exe`)|(_Version 2103 and earlier_) Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- SCCMDocs#1526 -->|
 |Windows Imaging APIs 6.0.6001.18000 or later (`wimgapi.msi`)|Required to allow Configuration Manager to manage Windows image (.wim) files.|
 |Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`)|Required to allow clients to evaluate compliance settings.|
 |Microsoft .NET Framework version 4.6.2 or later (`NDP462-KB3151800-x86-x64-AllOS-ENU.exe`)|_Version 2107 and later_:<!--10402814--> Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net).|
 |Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|_Version 2103 and earlier_: Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net).|
-|Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|
+|Microsoft SQL Server Compact Edition (CE) 4.0 SP1 components|Required to store information related to client operations.|
+|Microsoft Monitoring Agent version 10.20.18053.0 (`MMASetup-*.exe`)||
+|Windows Firewall configuration (`WindowsFirewallConfigurationProvider.msi`)|Required for certain endpoint protection policies.|
+|Microsoft WebView2 (`Microsoft.WebView2.FixedVersionRuntime.x86.cab`)|Required for Software Center custom tabs and the Community Hub.|
 
 #### More details about Microsoft .NET
 
