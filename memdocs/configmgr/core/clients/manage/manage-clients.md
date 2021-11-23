@@ -255,6 +255,8 @@ You can uninstall the Configuration Manager client software from a computer by u
 >
 > If you need to wait for the uninstall process to complete before doing something else, run `Wait-Process CCMSetup` in PowerShell. This command can pause a script until the CCMSetup process completes.
 
+Starting in version 2111, when you uninstall the client it also removes the client bootstrap, ccmsetup.msi, if it exists.<!-- 12425149 -->
+
 ## Manage conflicting records
 
 Configuration Manager uses the hardware identifier to attempt to identify clients that might be duplicates and alert you to the conflicting records. For example, if you reinstall a computer, the hardware identifier would be the same but the GUID used by Configuration Manager might be changed.
