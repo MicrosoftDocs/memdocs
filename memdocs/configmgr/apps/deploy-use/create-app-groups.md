@@ -39,6 +39,9 @@ Create a group of applications that you can send to a user or device collection 
 
 1. Complete the wizard.
 
+> [!TIP]
+> To manage app groups, you need permissions on the **Application Groups** object. The permissions for most administrative operations are the same as on applications.
+
 ## Deploy
 
 Deploy the app group using the same process as for an application. For more information, see [Deploy applications](deploy-applications.md). You can deploy an app group to device or user collections. Starting in version 2111, when you deploy an app group as required to a device or user collection, you can specify that it automatically uninstalls when the resource is removed from the collection.<!--10479618--> For more information, see [Implicit uninstall](uninstall-applications.md#implicit-uninstall).
@@ -76,7 +79,7 @@ Starting in version 2111, you can use the following [app approval](app-approval.
 - You can't use application groups with the **Install Application** task sequence step.
 - You can't export or import app groups.
 - Don't include in the group any apps that require restart, or the group deployment may fail.
-- If you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a small change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 -->
+- In 2107 and earlier, if you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a small change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 --> Starting in version 2111, you can't delete an app that's part of an app group.
 - In most scenarios, user categories on the app group don't display as filters in Software Center. If the app group is deployed as available to a user collection, the categories display.<!-- 12425254 -->
 
 ## PowerShell
