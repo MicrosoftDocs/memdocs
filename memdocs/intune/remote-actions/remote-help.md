@@ -31,6 +31,9 @@ ms.collection: M365-identity-device-management
 
 In [public preview](../fundamentals/public-preview.md), *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session they can view the devices display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
+This feature applies to:  
+- Windows 10/11
+
 In this article, we'll refer to the users who provide help as *helpers*, and users that receive help as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the remote help sessions.
 
 Remote help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
@@ -149,12 +152,6 @@ The following Intune RBAC permissions manage use of the remote help app. Set eac
   - **Take full control** – Yes/No
   - **Elevation** – Yes/No
   - **View screen** – Yes/No
-
-A user must have the following Intune RBAC permission set to *Yes* to use the admin center to start a new remote assistance session:
-
-- Category: **Remote tasks**
-- Permissions:
-  - **Offer remote assistance** – No/Yes
 
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
