@@ -57,7 +57,9 @@ There are other WinPE packages available to add. For more information, see [WinP
 1. Copy the boot image (`winpe.wim`) from the WinPE installation folder, which by default is `C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\x86\en-us`. Create a working directory on the computer where you'll customize the boot image, and copy the default image file to it. This procedure uses `C:\WinPE` as the folder name. For example:
 
     ```powershell
-    Copy-Item "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\x86\en-us\winpe.wim" -Destination (New-Item -Path "C:\" -Name "WinPE" -ItemType "directory")
+    $workingDir = New-Item -Path "C:\" -Name "WinPE" -ItemType "directory"
+    $peDir = "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\x86\en-us"
+    Copy-Item "$($peDir)\winpe.wim" -Destination $workingDir
     ```
 
 1. Create a new folder to use as the mount point for the boot image. This procedure uses `C:\WinPEMount` as the folder name.
