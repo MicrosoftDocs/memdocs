@@ -23,8 +23,10 @@ ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=macOS;intune-azure
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure
+ms.collection:
+- M365-identity-device-management
+- macOS
 ---
 
 # Use shell scripts on macOS devices in Intune

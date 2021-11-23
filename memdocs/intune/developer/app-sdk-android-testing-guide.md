@@ -24,8 +24,9 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
 ---
 
 # Microsoft Intune App SDK for Android developers testing guide
