@@ -29,7 +29,7 @@ By using the recommended default settings, your eligible devices will be cloud a
 
 - Enables automatic enrollment of all eligible devices into Intune
     - Enrolls your clients into [co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), with all [workloads](../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) pointed to Configuration Manager
-    - Devices are eligible if they meet the [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites).
+    - Devices are eligible if they meet the [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites). These devices are listed in the built-in **Co-management Eligible Devices** collection. <!--12377291-->
     - This option is the only one currently available for China21Vianet (Azure China Cloud).
 - Enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - Enables automatic upload of all your devices to Microsoft Endpoint Manager admin center ([tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json))
@@ -82,7 +82,7 @@ Use the following steps to cloud attach your environment with custom settings:
 
    Choose your co-management setting from the following options under **Automatic enrollment in Intune**:
       - **All**: Enrolls all eligible devices into Intune
-        - Devices are eligible if they meet the [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites)
+        - Devices are eligible if they meet the [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites). These devices are listed in the built-in **Co-management Eligible Devices** collection. <!--12377291-->
       - **Pilot**: Enrolls all eligible devices in a specified collection into Intune
          - Select **Browse** to choose the collection for **Intune auto enrollment**
       - **None**: Don't enable co-management or enroll any clients
