@@ -7,7 +7,7 @@ ms.topic: include
 ms.localizationpriority: high
 ms.date: 11/19/2021
 ---
-<!-- This include file is currently used by device-sync-actions.md and enable-cloud-attach.md. Note H2/H3s for this include file may be context driven by article. -->
+<!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 
 ## <a name="bkmk_aad_app"></a> Import a previously created Azure AD application (optional)
 <!--6479246-->

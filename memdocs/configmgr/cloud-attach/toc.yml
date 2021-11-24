@@ -4,7 +4,7 @@ items:
 - name: What is cloud attach?
   href: overview.md
 - name: Enable cloud attach
-  href: enable-cloud-attach.md 
+  href: enable.md 
 - name: Tenant attach
   items:
   - name: Tenant attach overview

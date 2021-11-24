@@ -50,4 +50,4 @@ Co-management transforms your on-premises Configuration Manager environment with
 
 ## Next steps
 
-[Enable cloud attach](enable-cloud-attach.md)
+[Enable cloud attach](enable.md)
