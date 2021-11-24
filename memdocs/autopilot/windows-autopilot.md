@@ -17,6 +17,7 @@ ms.topic: article
 ms.collection: 
 - M365-modern-desktop
 - m365initiative-coredeploy
+- highpri
 ---
 
 # Overview of Windows Autopilot

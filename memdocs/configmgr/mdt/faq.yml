@@ -9,6 +9,8 @@ metadata:
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
+  ms.localizationpriority: null
+  ms.collection: openauth
     
 title: Microsoft Deployment Toolkit frequently asked questions (FAQ)
 summary: This article provides frequently asked questions (FAQ) about the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.

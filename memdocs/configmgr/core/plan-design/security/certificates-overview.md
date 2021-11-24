@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Certificates in Configuration Manager

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/23/2021
+ms.date: 11/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -229,7 +229,7 @@ As a helper, after receiving a request from a user who wants assistance through 
 
 You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
-1. Sign into Microsoft Endpoint Manager admin center and go to Tenant admin > Connectors and tokens > Remote help (preview).
+1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Connectors and tokens** > **Remote help (preview)**.
 
 2. On the Monitor tab, you’ll see a count of active sessions and historical data about past sessions.
 

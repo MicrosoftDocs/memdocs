@@ -11,6 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What is co-management?

@@ -10,6 +10,7 @@ manager: dougeby
 author: mestew
 ms.author: mstewart
 ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # <a name="bkmk_attach"></a> Microsoft Endpoint Manager tenant attach: Device sync and device actions
