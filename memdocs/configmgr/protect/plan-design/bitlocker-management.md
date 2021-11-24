@@ -1,8 +1,8 @@
 ---
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
-description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 10/05/2021
+description: Plan for managing BitLocker Drive Encryption with Configuration Manager.
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -83,15 +83,18 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ### Prerequisites for the recovery service
 
-- The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
+- In version 2010 and earlier, the BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
 
-  - Enable the site for enhanced HTTP. This option applies to version 2103 or later.<!-- 9503186 -->
+  - HTTPS-enable the IIS website on the management point that hosts the recovery service.<!-- 5925660 -->
 
-  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option applies to version 2002 or later.<!-- 5925660 -->
-
-  - Configure the management point for HTTPS. This option applies to all supported Configuration Manager versions.
+  - Configure the management point for HTTPS.
 
   For more information, see [Encrypt recovery data over the network](../deploy-use/bitlocker/encrypt-recovery-data-transit.md).
+
+  > [!NOTE]
+  > When both the site and clients are running Configuration Manager version 2103 or later, clients send their recovery keys to the management point over the secure client notification channel. If any clients are on version 2010 or earlier, they need an HTTPS-enabled recovery service on the management point to escrow their keys.
+  >
+  > Starting in version 2103, since clients use the secure client notification channel to escrow keys, you can enable the site for enhanced HTTP. This configuration doesn't affect the functionality of BitLocker management in Configuration Manager.<!-- 11108795 -->
 
 - In version 2010 and earlier, to use the recovery service, you need at least one management point not in a replica configuration. Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
 
