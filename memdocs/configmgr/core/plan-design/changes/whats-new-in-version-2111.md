@@ -241,6 +241,8 @@ In this release we've made the following improvements to the Configuration Manag
 
 - When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data.
 
+- There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date. <!--12377291-->
+
 For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 
 ## Tools
