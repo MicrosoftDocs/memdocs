@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 09/09/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -191,6 +191,9 @@ For information about the versions of SQL Server that Configuration Manager supp
 If Configuration Manager still supports the resulting SQL Server service pack level, it supports the in-place upgrade of SQL Server to a later service pack.
 
 When you have more than one Configuration Manager site in a hierarchy, each site can run a different service pack version of SQL Server. There's no limitation to the order in which sites upgrade the service pack version of SQL Server.
+
+> [!IMPORTANT]
+> If you use [BitLocker management](../../../protect/plan-design/bitlocker-management.md) in Configuration Manager, and you encrypt recovery data in the database, before you upgrade SQL Server, make sure the certificate is for a supported version. For example, certificates created with SQL Server 2014 or earlier aren't compatible with SQL Server 2016 or later. For more information, see [Manage the encryption certificate on SQL Server upgrade](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md#manage-the-encryption-certificate-on-sql-server-upgrade).<!-- 12405266 -->
 
 ### Upgrade to a new version of SQL Server
 

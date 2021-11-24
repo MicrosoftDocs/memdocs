@@ -412,6 +412,10 @@ As part of the state migration point properties, you specify the folders that st
 
 After you restore a site, the **distmgr.log** might list the following entry for one or more distribution points: `Failed to decrypt cert PFX data`. This entry indicates that the distribution point certificate data can't be decrypted by the site. To resolve this issue, regenerate or reimport the certificate for affected distribution points. Use the [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet.
 
+### Restore database encryption certificates
+
+If you use SQL Server encryption for the entire database or for specific tables, you may need to restore the certificates after you restore the site database. For example, if you encrypt recovery data for BitLocker management. For more information, see [Restore certificate for BitLocker management](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md#restore-certificate).<!-- memdocs#1901 -->
+
 ## Recover a secondary site
 
 Configuration Manager doesn't support the backup of the database at a secondary site, but does support recovery by reinstalling the secondary site. Secondary site recovery is required when a Configuration Manager secondary site fails.

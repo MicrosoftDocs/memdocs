@@ -2,7 +2,7 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 10/05/2021
+ms.date: 11/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -22,7 +22,7 @@ BitLocker management in Configuration Manager includes the following components:
 
 - **BitLocker management agent**: Configuration Manager enables this agent on a device when you [create a policy](#create-a-policy) and [deploy it to a collection](#deploy-a-policy).
 
-- **Recovery service**: The server component that receives BitLocker recovery data from clients. For more information, see [Recovery service](#recovery-service).
+- **Recovery service**: The server component that receives BitLocker recovery data from clients. For more information, see [Recovery service](recovery-service.md).
 
 Before you create and deploy BitLocker management policies:
 
@@ -97,7 +97,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 1. On the **Client Management** page, specify the following settings:
 
     > [!IMPORTANT]
-    > If you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](#recovery-service).
+    > If you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](recovery-service.md).
 
     - **Configure BitLocker Management Services**: When you enable this setting, Configuration Manager automatically and silently backs up key recovery information in the site database. If you disable or don't configure this setting, Configuration Manager doesn't save key recovery information.
 
@@ -166,24 +166,6 @@ Use the following logs to monitor and troubleshoot:
 
 - Recovery service trace logs: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
 
-## Recovery service
-
-The BitLocker recovery service is a server component that receives BitLocker recovery data from Configuration Manager clients. The site deploys the recovery service when you create a BitLocker management policy. Configuration Manager automatically installs the recovery service on each management point with an HTTPS-enabled website.
-
-Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
-
-Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When domain-joined clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
-
-Starting in version 2103, all supported clients use the message processing engine component of the management point as the recovery service. This change reduces dependencies on legacy MBAM components, and enables support for [enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md).<!-- 9503186 -->
-
-> [!NOTE]
-> For version 2010, the message processing engine channel only escrows keys for OS and fixed drive volumes. It doesn't support recovery keys for removable drives or the TPM password hash.
->
-> Starting in version 2103, BitLocker management policies over a CMG support the following capabilities:<!--8845996-->
->
-> - Recovery keys for removable drives
-> - TPM password hash, otherwise known as TPM owner authorization
-
 ## Migration considerations
 
 If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), you can seamlessly migrate management to Configuration Manager. When you deploy BitLocker management policies in Configuration Manager, clients automatically upload recovery keys and packages to the Configuration Manager recovery service.
@@ -235,5 +217,7 @@ For more information about managing BitLocker with Intune, see the following art
 - [Troubleshoot BitLocker policies in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 
 ## Next steps
+
+[About the BitLocker recovery service](recovery-service.md)
 
 [Set up BitLocker reports and portals](setup-websites.md)
