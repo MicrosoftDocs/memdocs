@@ -81,6 +81,8 @@ If your site database is on SQL Server 2014 or earlier, before you upgrade SQL S
 > [!IMPORTANT]
 > If you upgrade SQL Server before you rotate the certificate, contact Microsoft Support for assistance with a work around.
 
+You can also use this process if your business requirements specify that you need to regularly renew this certificate.
+
 ## Example scripts
 
 These SQL scripts are examples to create and deploy a BitLocker management encryption certificate in the Configuration Manager site database.
@@ -118,7 +120,9 @@ END
 ```
 
 > [!NOTE]
-> The certificate expiration date is not checked or enforced by SQL Server when the certificate is used for database encryption as is the case here.
+> The certificate expiration date isn't checked or enforced by SQL Server when the certificate is used for database encryption as is the case here.
+>
+> If your business requirements specify that you regularly renew this certificate, use the same process to [Manage the encryption certificate on SQL Server upgrade](#manage-the-encryption-certificate-on-sql-server-upgrade).<!-- memdocs#1011 -->
 
 ### Back up certificate
 
