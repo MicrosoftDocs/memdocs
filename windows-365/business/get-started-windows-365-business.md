@@ -168,12 +168,12 @@ All Windows 365 Business users have local administrator privileges on their Clou
 
 As an admin, you can manage Cloud PCs in your organization on three platforms:
 
-- [Windows365.microsoft.com](https://windows365.microsoft.com/). Users can sign in to windows365.microsoft.com to access and manage their own Cloud PCs. Also, admins can use this website to manage all the Cloud PCs in their organization with the following options:
+- [Windows365.microsoft.com](https://windows365.microsoft.com/). You can use this website to manage all the Cloud PCs in your organization with the following options:
   - Run the following **remote actions** on any Cloud PC: Change account type, Restart, Reset, Rename, and Troubleshoot.
   - Set **organization defaults** for Cloud PC operating system (Windows 10 or 11) and account type (Standard or Local Administrator).
   - Create and delete users, reset passwords, and manage licenses.
 - [Microsoft 365 admin center]( https://go.microsoft.com/fwlink/p/?linkid=2024339). If you purchased a Microsoft 365 for business plan and you have admin permissions, you have access to the admin center. Here, admins can manage Cloud PCs in their organization, including remote actions, organizational defaults, and other tasks (as listed above). For more information about Microsoft 365 admin center, see [About Microsoft 365 admin center](/microsoft-365/).
-- [Microsoft Intune]( (https://go.microsoft.com/fwlink/?linkid=2109431)). If your organization and users are properly [licensed](/mem/intune/fundamentals/licenses), Cloud PCs can be enrolled and managed with Intune using the same procedure for [enrolling Windows 10 machines](/mem/intune/user-help/enroll-windows-10-device). Intune provides a vast array of options for managing Windows machines, including Cloud PCs. For more information about Intune, see the [Microsoft Intune documentation](/mem/intune/).
+- [Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2109431). If your organization and users are properly [licensed](/mem/intune/fundamentals/licenses), Cloud PCs can be enrolled and managed with Intune using the same procedure for [enrolling Windows 10 machines](/mem/intune/user-help/enroll-windows-10-device). Intune provides a vast array of options for managing Windows machines, including Cloud PCs. For more information about Intune, see the [Microsoft Intune documentation](/mem/intune/).
 
 ## Sending outbound email messages using port 25 is not supported
 
