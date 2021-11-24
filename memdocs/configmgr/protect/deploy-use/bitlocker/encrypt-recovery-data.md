@@ -138,6 +138,8 @@ BACKUP CERTIFICATE BitLockerManagement_CERT TO FILE = 'C:\BitLockerManagement_CE
 ```
 
 > [!IMPORTANT]
+> Always back up the certificate. In case you need to recover the site database, you may need to restore the certificate to regain access to the recovery keys.
+>
 > Store the exported certificate file and associated password in a secure location.
 
 ### Restore certificate
