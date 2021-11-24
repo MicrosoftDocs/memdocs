@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/24/2021
+ms.date: 11/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -70,7 +70,6 @@ The Remote help app supports the following capabilities:
 - Windows 10/11
 - Devices must install the *remote help* app. Device users can download the app directly from the Microsoft. See [Install and update remote help](#install-and-update-remote-help)
 
-
 > [!NOTE]
 > Remote help has the following limitations:  
 >
@@ -126,8 +125,50 @@ When an update to remote help that is required, users are prompted to install th
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
 
-**Download remote help**: Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
+### Download remote help
 
+Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
+
+The most recent version of remote help is **10.0.100110.16384**
+
+### Deploy remote help as a Win32 app
+
+To deploy remote help with Intune, you can add the app as a Windows win32 app, and define a detection rule to identify devices that don’t have the most current version of remote help installed.  Before you can add remote help as a Win32 app, you must repackage *remotehelp.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Wind32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
+
+After you repackage remote help as a *.intunewinfile*, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md ) with the following details to upload and deploy remote help. In the following, the repackaged remotehelp.exe file is named *remotehelp.intunewin*.
+
+1. On the App information page, click **Select app package file**, and locate the *remotehelp.intunewin* file you’ve previously prepared, and then select **OK**.
+
+   Add a *Publisher* and then select **Next**. The additional details on the App Information page are optional.
+
+2. On the Program page, configure the following options:
+
+   - For *Install command line*, specify **remotehelp.exe /install /quiet acceptTerms=Yes**
+   - For *Uninstall command line*, specify **remotehelp.exe/ uninstall /quiet acceptTerms=Yes**
+
+   > [!IMPORTANT]
+   > The command line option *acceptTerms* is always case sensitive.
+
+   You can leave the remainder of the options at their default values and select **Next** to continue.
+
+3. On the Requirements page, configure the following options to meet your environment, and then select **Next**:
+
+   - *Operating system architecture*
+   - *Minimum operating system*
+
+4. On the Detection rules page, for *Rules format*, select **Manually configure detection rules**, and then select **Add** to open the *Detection rule* pane. Configure the following options:
+
+   - For *Rule type*, select **File**
+   - For *Path*, specify **C:\Program Files\Remote Help**
+   - For *File or folder*, specify **RemoteHelp.exe**
+   - For *Detection method*, select **String (version)**
+   - For *Operator*, select **Greater than or equal to**
+   - For *Value*, specify the [version of remote help](#download-remote-help) your deploying. For example, **10.0.10011.16384**
+   - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
+
+5. Proceed to the Assignments pane, and then select an applicable device group or groups that should install the remote help app.
+
+6. Complete creation of the Windows app to have Intune deploy and install remote help on applicable devices. 
 
 ## Configure remote help for your tenant
 
