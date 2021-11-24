@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What's new in version 2107 of Configuration Manager current branch
