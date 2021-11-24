@@ -13,6 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Advanced exercise 1: Create a new report for compliance settings in Configuration Manager

@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 ms.collection: M365-identity-device-management
 ---
 

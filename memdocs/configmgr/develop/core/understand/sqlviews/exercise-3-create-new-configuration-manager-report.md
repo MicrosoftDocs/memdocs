@@ -13,6 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Exercise 3: Create a new Configuration Manager report
