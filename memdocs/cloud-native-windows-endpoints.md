@@ -297,20 +297,6 @@ Your cloud native endpoint will need some applications. To get started, we recom
 
   To deploy Microsoft 365 Apps, see [Add Microsoft 365 apps to Windows devices using Microsoft Intune](./intune/apps/apps-add-office365.md)
 
-- **Microsoft Edge**  
-  Microsoft Edge is the new browser from Microsoft built on Chromium open source. Edge can easily be deployed to devices using the built-in app profile in Intune.
-
-  To deploy Microsoft Edge, see [Add Microsoft Edge for Windows to Microsoft Intune](./intune/apps/apps-windows-edge.md).
-
-  > [!NOTE]
-  > Microsoft Edge is included on devices that run:
-  >
-  > - Windows 11
-  > - Windows 10 20H2 or later.
-  > - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update.
-
-  For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224).
-
 - **Company Portal**  
   Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the portal to sync their device with Intune, check compliance status, and so on.
 
@@ -496,9 +482,6 @@ For more information, see:
 
 If you’d like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](./configmgr/comanage/overview.md).
 
-> [!NOTE]
-> Known Issue: Applying a Windows Update ring will cause a reboot during the Enrollment Status Page phase and require the user to authenticate again.
-
 ## Phase 4 – Apply customizations and review your on-premises configuration
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
@@ -517,7 +500,20 @@ In this phase, you'll apply organization-specific settings, apps, and review you
 - [Applications](#applications)
 
 ### Microsoft Edge
+#### Microsoft Edge Deployment
+Microsoft Edge is included on devices that run:
+ - Windows 11.
+ - Windows 10 20H2 or later.
+ - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update.
 
+Microsoft Edge will update automatically post user logon. To trigger an update for Microsoft Edge during deployment you could run the following command:
+```powershell
+Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"
+```
+
+To deploy Microsoft Edge to previous versions of Windows, see [Add Microsoft Edge for Windows to Microsoft Intune](./intune/apps/apps-windows-edge.md).
+
+#### Microsoft Edge Configuration
 Two components of the Microsoft Edge experience, which apply when users sign in with their Microsoft 365 credentials, can be configured from the Microsoft 365 Admin Center.
 
 - The start page logo in Microsoft Edge can be customized by configuring the *Your organization* section within the Microsoft 365 admin center. For more information, see [Customize ‎Office 365‎ for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
@@ -525,7 +521,7 @@ Two components of the Microsoft Edge experience, which apply when users sign in 
 
 You can also set other settings for Microsoft Edge using settings catalog profiles. For example, you might want to configure specific sync settings for your organization.
 
-- Microsoft Edge
+- **Microsoft Edge**
   - Configure the list of types that are excluded from synchronization - **passwords**
 
 ### Start and Taskbar layout
@@ -577,9 +573,21 @@ Following are some settings available in the settings catalog that might be rele
 
 - **Block Gaming**  
   Organizations might prefer that corporate endpoints cannot be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
-  For additional information on the settings page visibility, refer to the CSP documentation [here](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings URI scheme reference [here](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
+  For additional information on the settings page visibility, refer to the [CSP documentation](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings [URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
   - Settings
     - Page Visibility List – **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame**
+
+- **Control Chat Icon Visbility in Taskbar**
+  The visiblity of the Chat icon in the Windows 11 taskbar can be controlled using the [Policy CSP](/windows/client-management/mdm/policy-csp-Experience#experience-configurechaticonvisibilityonthetaskbar).
+  
+  - Experience
+    - Configure Chat Icon - **Disabled**
+
+- **Control which tenants the Teams desktop client can sign in to**
+  When this policy is configured on a device, users can only sign in with accounts homed in an Azure AD tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma seperated list of Azure AD tenant IDs. By specifing this policy and defining an Azure AD tenant you also block sign in to Teams for personal use. For more information see [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
+  
+  - Administrative Templates \ Microsoft Teams
+    - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
 
 ### Device Restrictions
 
