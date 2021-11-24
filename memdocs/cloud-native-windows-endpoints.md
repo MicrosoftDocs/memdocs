@@ -482,9 +482,6 @@ For more information, see:
 
 If you’d like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](./configmgr/comanage/overview.md).
 
-> [!NOTE]
-> Known Issue: Applying a Windows Update ring will cause a reboot during the Enrollment Status Page phase and require the user to authenticate again.
-
 ## Phase 4 – Apply customizations and review your on-premises configuration
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
