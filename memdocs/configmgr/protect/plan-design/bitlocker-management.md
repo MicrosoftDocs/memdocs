@@ -81,6 +81,19 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
     > [!NOTE]
     > For the **Recovery Audit Report** to work from the administration and monitoring website, only use a reporting services point at the primary site.
 
+### Prerequisites for clients
+
+<!-- memdocs#2098 -->
+
+- The device requires a TPM chip that's enabled in the BIOS and is resettable from Windows.
+
+    Microsoft recommends devices with TPM version 2.0 or later. Devices with TPM version 1.2 may not properly support all BitLocker functionality.
+
+- The computer's hard disk requires a BIOS that's compatible with TPM and that supports USB devices during computer startup.
+
+> [!NOTE]
+> Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 or later by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
+
 ### Prerequisites for the recovery service
 
 - In version 2010 and earlier, the BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
