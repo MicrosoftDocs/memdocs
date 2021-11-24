@@ -18,20 +18,20 @@ ms.localizationpriority: high
 
 Starting in version 2111, it's simpler to cloud attach your Configuration Manager environment. You can choose a streamlined set of recommended defaults, or customize your cloud attach features.
 
+:::image type="content" source="./media/10964629-cloud-attach-wizard.png" alt-text="Screenshot of the cloud attach configuration wizard":::
+
 ## <a name="bkmk_attach"></a> Simplified cloud attach configuration
 <!--10964629-->
 (*Applies to version 2111 or later*)
 
-We've simplified the process to cloud attach your Configuration Manager environment. You can now choose to use a streamlined set of recommended defaults when cloud attaching your environment. By using the recommended default settings, your eligible devices will be cloud attached. You'll enable capabilities like rich analytics, cloud console, and real-time device querying. The default settings include the following features:
+By using the recommended default settings, your eligible devices will be cloud attached. You'll enable capabilities like rich analytics, cloud console, and real-time device querying. The default settings include the following features:
 
 - Enables automatic enrollment of all eligible devices into Intune
     - Enrolls your clients into [co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), with all [workloads](../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) pointed to Configuration Manager
     - Devices are eligible if they meet the [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites).
-    - This option is the only one currently  available for China21Vianet (Azure China Cloud).
+    - This option is the only one currently available for China21Vianet (Azure China Cloud).
 - Enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - Enables automatic upload of all your devices to Microsoft Endpoint Manager admin center ([tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json))
-
-:::image type="content" source="./media/10964629-cloud-attach-wizard.png" alt-text="Screenshot of the cloud attach configuration wizard":::
 
 ## Cloud attach using the default settings
 
@@ -43,13 +43,15 @@ Use the following steps to cloud attach your environment with the default settin
    - Azure Public Cloud
    - Azure US Government Cloud
    - Azure China Cloud
-      - Endpoint analytics and device upload to Microsoft Endpoint Manager admin center can't be enabled in Azure China Cloud
+      - Endpoint analytics and device upload to Microsoft Endpoint Manager admin center can't be enabled for Azure China Cloud
 
 1. Select **Sign In**. Sign into your account when prompted.
 1. Ensure that **Use default settings (recommended)** is selected, then choose **Next** and **Yes** when the app registration notice appears.  
 1. Review the summary and select **Next** to cloud attach your environment and complete the wizard.
 
 ## Cloud attach using custom settings
+<!--10964629-->
+(*Applies to version 2111 or later*)
 
 Use the following steps to cloud attach your environment with custom settings:
 
@@ -59,7 +61,7 @@ Use the following steps to cloud attach your environment with custom settings:
    - Azure Public Cloud
    - Azure US Government Cloud
    - Azure China Cloud
-      - Endpoint analytics and device upload to Microsoft Endpoint Manager admin center can't be enabled in Azure China Cloud
+      - Endpoint analytics and device upload to Microsoft Endpoint Manager admin center can't be enabled for Azure China Cloud
 1. Select **Sign In**. Sign into your account when prompted.
 1. Choose the **Customize settings** option to enable cloud features individually.
 1. By default, Configuration Manager uses your credentials to register an app in your Azure AD tenant. This app to authorize synchronization of data between your on-premises site and Intune. To use an app that you already created, select  **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. For more information, see [Import a previously created Azure AD application](#bkmk_aad_app).
@@ -85,7 +87,13 @@ Use the following steps to cloud attach your environment with custom settings:
       - **None**: Don't enable co-management or enroll any clients
       
     > [!NOTE]
-    > Enrolling devices, doesn't move any workloads to Intune. Specify workloads to move by editing the co-management settings in the **Cloud Attach** node when you're ready.
+    > Enrolling devices, doesn't move any workloads to Intune. [Specify workloads to move](../comanage/how-to-switch-workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) by editing the co-management settings in the **Cloud Attach** node when you're ready.
 1. When you're finished with your selections, select **Next** to display the **Summary** page. Select **Next** after reviewing the summary to cloud attach your Configuration Manager environment.
 
 [!INCLUDE [Import a previously created Azure AD application](../tenant-attach/includes/import-azure-app.md)]
+
+## Next steps
+
+- 
+- 
+- 
