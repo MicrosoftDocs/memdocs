@@ -35,8 +35,6 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 
 #### Videos
 
-- [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](https://view.officeapps.live.com/op/view.aspx?src=http%3A%2F%2Fvideo.ch9.ms%2Fteched%2F2012%2Fna%2FMGT309.pptx)  
-
 - [YouTube: Technical Deep Dive: Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
 
 #### Forums
