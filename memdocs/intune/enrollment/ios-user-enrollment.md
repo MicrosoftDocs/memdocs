@@ -44,6 +44,9 @@ For more information about the options available with User Enrollment, see [User
 - [Managed Apple ID](https://support.apple.com/en-us/HT210737)
 - [iOS 13 or later](https://support.apple.com/en-au/guide/security/sec38eb8731b/web)
 
+> [!NOTE]
+> There are Azure Conditional Access implications when enrolling iPadOS devices with User Enrollment. See [Azure Active Directory support documentation](https://support.microsoft.com/en-us/topic/action-required-evaluate-and-update-conditional-access-policies-after-new-ipados-release-23795067-9048-62ad-a5bd-ad63995fc488) to determine any required actions for your policies. 
+
 ## Create a User Enrollment profile in Intune
 
 An enrollment profile defines the settings applied to a group of devices during enrollment. 
