@@ -10,13 +10,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # Enable cloud attach for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Starting in version 2111, it's simpler to cloud attach your Configuration Manager environment. You can choose a streamlined set of recommended defaults, or customize your cloud attach features.
+Starting in version 2111, it's simpler to cloud attach your Configuration Manager environment. You can choose a streamlined set of recommended defaults, or customize your cloud attach features. If you're not running version 2111 yet, use the [Tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [Endpoint analytics](../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [Co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) articles to enable cloud attach features.
 
 :::image type="content" source="./media/10964629-cloud-attach-wizard.png" alt-text="Screenshot of the cloud attach configuration wizard":::
 
