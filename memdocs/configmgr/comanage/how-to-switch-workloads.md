@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 10/05/2021
 ms.topic: how-to
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # How to switch Configuration Manager workloads to Intune
