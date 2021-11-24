@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # Work from anywhere report
