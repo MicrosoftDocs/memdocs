@@ -133,7 +133,7 @@ Connected Cache in Configuration Manager requires an _on-premises_ distribution 
 
     1. Enable the option to **Enable this distribution point to be used as Microsoft Connected Cache server**
 
-        View and accept the license terms.
+        Review the list of [required license subscriptions](#licensing), and then confirm your licenses.
 
     2. **Local drive to be used**: Select the disk to use for the cache. **Automatic** is the default value, which uses the disk with the most free space.<sup>[Note 1](#bkmk_note1)</sup>
 
