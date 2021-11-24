@@ -23,23 +23,35 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Cloud attach overview
+          - text: What is cloud attach
             url: overview.md
-      - linkListType: reference
+      - linkListType: deploy
         links:
-          - text: Role-based administration
-            url: ../core/understand/fundamentals-of-role-based-administration.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Enable cloud attach
+            url: enable.md
 
- # Card
-  - title: Get information about uploaded devices
+# Card
+  - title: Cloud attach features
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: concept
         links:
-          - text: View ConfigMgr client details (preview)
-            url: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Endpoint analytics
+            url: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Co-management
             url: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Tenant attach
             url: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-            
-  
+
+
+ # Card
+  - title: Use cloud attach features
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run scripts on uploaded devices
+            url: ../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Display the work from anywhere report
+            url: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Monitor co-management
+            url: ../comanage/how-to-monitor.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json            
+         
