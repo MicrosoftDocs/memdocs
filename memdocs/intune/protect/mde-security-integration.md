@@ -45,7 +45,7 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
-[!INCLUDE] [Prerequisites](includes/security-config-mgt-prerequisites.md)]
+[!INCLUDE [Prerequisites](includes/security-config-mgt-prerequisites.md)]
 
 ## Monitor status
 
