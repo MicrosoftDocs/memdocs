@@ -181,7 +181,7 @@ When you view properties for a collection, you can view and configure the follow
 
 - **Distribution Point Groups**: Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](../../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
-- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md). For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
+- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
     Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center](../../../../tenant-attach/atp-onboard.md).
 
