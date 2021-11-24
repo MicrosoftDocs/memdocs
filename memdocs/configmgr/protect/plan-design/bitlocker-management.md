@@ -94,6 +94,8 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 > [!NOTE]
 > Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 or later by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
 
+BitLocker management doesn't support all client types that are generally supported by Configuration Manager. For more information, see [Supported configurations](#supported-configurations).
+
 ### Prerequisites for the recovery service
 
 - In version 2010 and earlier, the BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
@@ -107,7 +109,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
   > [!NOTE]
   > When both the site and clients are running Configuration Manager version 2103 or later, clients send their recovery keys to the management point over the secure client notification channel. If any clients are on version 2010 or earlier, they need an HTTPS-enabled recovery service on the management point to escrow their keys.
   >
-  > Starting in version 2103, since clients use the secure client notification channel to escrow keys, you can enable the site for enhanced HTTP. This configuration doesn't affect the functionality of BitLocker management in Configuration Manager.<!-- 11108795 -->
+  > Starting in version 2103, since clients use the secure client notification channel to escrow keys, you can enable the Configuration Manager site for enhanced HTTP. This configuration doesn't affect the functionality of BitLocker management in Configuration Manager.<!-- 11108795 -->
 
 - In version 2010 and earlier, to use the recovery service, you need at least one management point not in a replica configuration. Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
 

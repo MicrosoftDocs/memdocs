@@ -36,7 +36,10 @@ Starting in version 2103, all supported clients use the message processing engin
 
 ## Rotate keys
 
-When you recover a key, since it's disclosed, Configuration Manager requires the client to rotate the key. Rotating the key means that the client generates a new key for BitLocker recovery. It then escrows the new key to the [recovery service](recovery-service.md).<!-- 12571609 -->
+When you recover a key with the self-service or helpdesk portals, since it's disclosed, Configuration Manager requires the client to rotate the key. Rotating the key means that the client generates a new key for BitLocker recovery. It then escrows the new key to the [recovery service](recovery-service.md).<!-- 12571609 -->
+
+> [!NOTE]
+> When you migrate from MBAM, when the device receives a BitLocker management policy from Configuration Manager, it first rotates its key. It then sends the new key to the Configuration Manager recovery service.
 
 ## Next steps
 

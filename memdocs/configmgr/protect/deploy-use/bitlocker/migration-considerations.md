@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), you can seamlessly migrate management to Configuration Manager. When you deploy BitLocker management policies in Configuration Manager, clients automatically upload recovery keys and packages to the Configuration Manager recovery service.
+If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), you can seamlessly migrate management to Configuration Manager. When you deploy BitLocker management policies in Configuration Manager, clients automatically rotate their keys and upload them to the Configuration Manager recovery service.
 
 > [!IMPORTANT]
 > When you migrate from stand-alone MBAM to Configuration Manager BitLocker management, if you require existing functionality of stand-alone MBAM, don't reuse stand-alone MBAM servers or components with Configuration Manager BitLocker management. If you reuse these servers, stand-alone MBAM will stop working when Configuration Manager BitLocker management installs its components on those servers. Don't run the MBAMWebSiteInstaller.ps1 script to set up the BitLocker portals on stand-alone MBAM servers. When you set up Configuration Manager BitLocker management, use separate servers.
