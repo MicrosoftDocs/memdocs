@@ -70,9 +70,9 @@ When you configure clients to use the Connected Cache server, they no longer req
 
 2. Configuration Manager configures Delivery Optimization (DO) settings on the client, including the cache server name.
 
-3. Client A requests content from the DO cache server.
+3. Client A requests content from the Connected Cache server.
 
-4. If the cache doesn't include the content, then the DO cache server gets it from the CDN.
+4. If the cache doesn't include the content, then the Connected Cache server gets it from the CDN.
 
 5. If the cache server fails to respond, the client downloads the content from the CDN.
 
@@ -80,37 +80,48 @@ When you configure clients to use the Connected Cache server, they no longer req
 
 ## Prerequisites and limitations
 
-- Clients running a supported version of Windows 10 or later
+> [!NOTE]
+> Additional prerequisites apply to the scenario for co-managed clients and Intune Win32 apps. For more information, see [Support for Intune Win32 apps](#support-for-intune-win32-apps).
 
-- You need one of the following license subscriptions for each device that gets content from a Connected Cache-enabled distribution point:<!-- 10735017 -->
+### Supported clients
 
-  - Windows Enterprise E3 or E5, included in Microsoft 365 F3, E3, or E5
+Connected Cache and Delivery Optimization only support clients running a supported version of Windows 10 or later.
 
-  - Windows Education A3 or A5, included in Microsoft 365 A3 or A5
+### Licensing
 
-  - Windows Virtual Desktop Access (VDA) E3 or E5
+You need one of the following license subscriptions for each device that gets content from a Connected Cache-enabled distribution point:<!-- 10735017 -->
 
-- An *on-premises* distribution point, with the following configurations:
+- Windows Enterprise E3 or E5, included in Microsoft 365 F3, E3, or E5
 
-  - Running Windows Server 2012 or later
+- Windows Education A3 or A5, included in Microsoft 365 A3 or A5
 
-  - Microsoft .NET Framework version 4.7.2 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
+- Windows Virtual Desktop Access (VDA) E3 or E5
 
-  - The default web site enabled on port 80
+### Distribution point
 
-  - Don't preinstall the IIS [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
+Connected Cache in Configuration Manager requires an _on-premises_ distribution point, with the following configurations:
 
-  - The Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
+- Running Windows Server 2012 or later
 
-  - Don't use a distribution point that has other site roles, for example, a management point. Enable Connected Cache on a site system server that only has the distribution point role.<!-- 9580345 -->
+- Microsoft .NET Framework version 4.7.2 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
 
-- Network access requirements:<!-- MEMDocs#1655 -->
+- The default web site enabled on port 80
 
-  - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. Make sure to also allow the endpoints for delivery optimization. For more information, see [Internet access requirements](../network/internet-endpoints.md).
+- Don't preinstall the IIS [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
 
-  - For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../intune/fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
+- The Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 
-  - Clients technically only need access to the distribution point with the Connected Cache. Although it's best to also give clients access to the internet endpoints for the content, in case they need to fall back to the original source.
+- Don't use a distribution point that has other site roles, for example, a management point. Enable Connected Cache on a site system server that only has the distribution point role.<!-- 9580345 -->
+
+### Network access requirements
+
+<!-- MEMDocs#1655 -->
+
+- The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. Make sure to also allow the endpoints for delivery optimization. For more information, see [Internet access requirements](../network/internet-endpoints.md).
+
+- For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../intune/fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
+
+- Clients technically only need access to the distribution point with the Connected Cache. Although it's best to also give clients access to the internet endpoints for the content, in case they need to fall back to the original source.
 
 ## Enable Connected Cache
 

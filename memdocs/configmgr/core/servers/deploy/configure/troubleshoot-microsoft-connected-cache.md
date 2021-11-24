@@ -5,7 +5,7 @@ description: Technical details for Microsoft Connected Cache to help you trouble
 ms.date: 11/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
