@@ -4,6 +4,8 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
+ms.date: 11/22/2021
+ms.topic: include
 ---
 
 
@@ -22,7 +24,7 @@ When a device onboards to Microsoft Defender for Endpoint:
 - Azure Active Directory trust is used to communicate with Endpoint Manager (Intune) and retrieve policies
 - Policy retrieve from Endpoint Manager is enforced on the device by Microsoft Defender for Endpoint
 
-### Active Directory Requirements
+### Active Directory requirements
 
 When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. The Security Management for Microsoft Defender for Endpoint fully supports this scenario with the following requirements:
 
@@ -31,7 +33,7 @@ When a device that is domain joined creates a trust with Azure Active Directory,
 - AAD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join)
 - AAD Connect rules for sync must be modified for Server 2012 R2 (when support for Server 2012 R2 is needed)
 
-### Connectivity Requirements
+### Connectivity requirements
 
 Devices must have access to the following endpoints:
 
