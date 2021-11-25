@@ -17,6 +17,7 @@ ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
 - m365initiative-coredeploy
+- highpri
 ---
 
 # Manually register devices with Windows Autopilot

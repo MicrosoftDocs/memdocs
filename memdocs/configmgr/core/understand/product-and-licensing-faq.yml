@@ -10,7 +10,8 @@ metadata:
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-    
+  ms.collection: highpri
+
 title: Frequently asked questions for Configuration Manager branches and licensing
 summary: |
   *Applies to: Configuration Manager (current branch) & System Center Configuration Manager (long-term servicing branch)*

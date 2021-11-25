@@ -13,6 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Evaluation of the Computer information for a specific computer report in Configuration Manager

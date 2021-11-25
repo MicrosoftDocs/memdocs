@@ -10,6 +10,7 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Set up CMG for Configuration Manager

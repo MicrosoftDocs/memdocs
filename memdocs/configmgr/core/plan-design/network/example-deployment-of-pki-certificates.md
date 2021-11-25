@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Step-by-step example deployment of the PKI certificates for Configuration Manager: Windows Server 2008 certification authority

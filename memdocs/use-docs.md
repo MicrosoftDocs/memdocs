@@ -10,6 +10,7 @@ ms.localizationpriority: high
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: highpri
 ---
 
 # How to use the docs
