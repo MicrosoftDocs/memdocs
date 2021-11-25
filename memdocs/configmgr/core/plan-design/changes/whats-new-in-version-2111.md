@@ -93,7 +93,7 @@ For more information, see [About client settings in Configuration Manager](../..
 
 We've simplified the process to cloud attach your Configuration Manager environment. You can now choose to use a streamlined set of recommended defaults when cloud attaching your environment. By using the recommended default settings, your eligible devices will be cloud attached and you'll enable capabilities like rich analytics, cloud console, and real-time device querying.
 
-<!-- For more information, see ... -->
+For more information, see the [Overview for cloud attach](../../../cloud-attach/overview.md) and [Enable cloud attach](../../../cloud-attach/enable.md).
 
 ### Improvements to cloud management gateway
 
@@ -265,6 +265,8 @@ In this release we've made the following improvements to the Configuration Manag
 - When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 -->
 
 - When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data.
+
+- There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date. <!--12377291-->
 
 For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 

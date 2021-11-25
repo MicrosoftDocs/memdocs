@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
-ms.date: 09/29/2021
+ms.date: 11/19/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -91,6 +91,9 @@ If you don't have co-management enabled, you'll use the **Cloud Attach Configura
 When co-management isn't enabled, use the instructions below to enable device upload:
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** >  **Cloud Attach**. For version 2103 and earlier, select the **Co-management** node.
+
+    - Starting in Configuration Manager version 2111, the tenant attach onboarding experience changed. The cloud attach wizard makes it easier to enable tenant attach and other [cloud features](../cloud-attach/overview.md). You can choose a streamlined set of recommended defaults, or customize your cloud attach features. For more information on enabling tenant attach with the new wizard, see [Enable cloud attach](../cloud-attach/enable.md).<!--10964629-->
+
 1. In the ribbon, select **Configure Cloud Attach** to open the wizard. For version 2103 and earlier, select **Configure co-management** to open the wizard.
 1. On the onboarding page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
    - Starting in version 2107, US Government customers can select **AzureUSGovernmentCloud**.<!-- 8353823 -->
@@ -121,42 +124,8 @@ When co-management isn't enabled, use the instructions below to enable device up
 
    [![Device overview in Microsoft Endpoint Manager admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="bkmk_aad_app"></a> Import a previously created Azure AD application (optional)
-<!--6479246-->
-*(Introduced in version 2006)*
 
-During a [new onboarding](#bkmk_config), an administrator can specify a previously created application during onboarding to tenant attach. Don't share or reuse Azure AD applications across multiple hierarchies. If you have multiple hierarchies, create separate Azure AD applications for each.
-
-From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-management Configuration Wizard** in versions 2103 and earlier), select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
-
-- Azure AD tenant name
-- Azure AD tenant ID
-- Application name
-- Client ID
-- Secret key
-- Secret key expiry
-- App ID URI
-
-> [!Important]
-> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
-
-### Azure AD application permissions and configuration
-
-Using a previously created application during onboarding to tenant attach requires the following permissions:
-
-- Configuration Manager Microservice permissions:
-   - CmCollectionData.read
-   - CmCollectionData.write
-
-- Microsoft Graph permissions:
-   - Directory.Read.All [Applications permission](/graph/permissions-reference#application-permissions)
-   - Directory.Read.All [Delegated directory permission](/graph/permissions-reference#directory-permissions)
-
-- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](/azure/active-directory/manage-apps/grant-admin-consent).
-
-- The imported application needs to be configured as follows:
-   - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
-   -  Has a valid application ID URI and secret
+[!INCLUDE [Import a previously created Azure AD application](includes/import-azure-app.md)]
 
 ## Display the Configuration Manager connector status from the admin console
  <!--IN9229333, CM7138634-->

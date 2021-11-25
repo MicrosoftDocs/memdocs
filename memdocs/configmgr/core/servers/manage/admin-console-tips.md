@@ -194,6 +194,12 @@ For more information, see [Product Feedback](../../understand/product-feedback.m
 
 ## Assets and Compliance workspace
 
+### Co-management Eligible Devices collection
+<!--12377291-->
+*(Introduced in version 2111)*
+
+There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date.
+
 ### Navigate to collection
 <!--9502958-->
 *(Introduced in version 2107)*

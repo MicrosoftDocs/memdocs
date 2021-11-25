@@ -142,7 +142,7 @@ When you enable Microsoft Connected Cache on your Configuration Manager distribu
 :::image type="content" source="media/co-management-apps.svg" alt-text="Diagram of co-management app workloads." lightbox="media/co-management-apps.svg":::
 
 > [!TIP]
-> Starting in version 2006, you can configure the Company Portal to also show Configuration Manager apps. If you change this app portal experience, it changes the behaviors described in the above diagram. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).<!--CMADO-3601237,INADO-4297660-->
+> You can configure the Company Portal to also show Configuration Manager apps. If you change this app portal experience, it changes the behaviors described in the above diagram. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 ## Known issues
 
