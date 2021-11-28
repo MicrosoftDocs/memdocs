@@ -81,6 +81,11 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
   If the grace period was triggered in error, you have seven days to resolve the breaking change to get the Cloud PC switched back to **Provisioned**.
 
   You can manually end the grace period by using the [End grace period](end-grace-period.md) option.
+- **Pending**: A Cloud PC will marked Pending if there are not enough available licenses in your tenant to process the provisioning request. 
+
+  Your Windows 365 tenant can only have as many active Cloud PC's as the license allocation allows. An active Cloud PC can either be in a Provisioned or In grace period state.
+
+  To begin provisioning on Pending Cloud PC's, free up some Windows 365 licenses or end grace period on Cloud PC's in the grace period state. 
 
 **User**: The user assigned to the Cloud PC.  
 
