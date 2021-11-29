@@ -196,9 +196,17 @@ For more information, see [Product Feedback](../../understand/product-feedback.m
 
 ### Co-management Eligible Devices collection
 <!--12377291-->
-*(Introduced in version 2111)*
+*(Introduced in version 2111)* 
 
 There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date.
+
+### Collections tab
+<!--9575773, 10480635-->
+*(Introduced in version 2111)*
+
+When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 -->
+
+:::image type="content" source="./media/10480635-collections-tab.png" alt-text="Collections tab in the details pane of the list of collection members.":::
 
 ### Navigate to collection
 <!--9502958-->
@@ -399,6 +407,14 @@ In the **Software Library** workspace, expand **Operating Systems**, and select 
    - This action is also available from the right-click context menu on the deployment in this view.
 
 ## Monitoring workspace
+
+### Collection evaluation time
+<!--9575773, 9648622-->
+*(Introduced in version 2111)*
+
+When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data.
+
+:::image type="content" source="./media/9648622-collection-evaluation-data.png" alt-text="Full Evaluation Status node in the Monitoring workspace of the Configuration Manager console, showing collection evaluation times.":::
 
 ### Correct names for client operations
 <!--4616810-->

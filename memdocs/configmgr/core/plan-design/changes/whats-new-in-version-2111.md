@@ -262,13 +262,13 @@ In this release we've made the following improvements to the Configuration Manag
 
 - Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. They can use Configuration Manager to assign a certificate to an ISV proxy, which enables custom communication with the management point. To simplify the management of these ISV proxy certificates, you can now copy its GUID in the Configuration Manager console. For more information, see [ISV proxy solutions and PKI certificates](../security/cryptographic-controls-technical-reference.md#isv-proxy-solutions-and-pki-certificates).<!--2842082-->
 
-- When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 -->
+- When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 --> For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md#assets-and-compliance-workspace).
 
-- When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data.
+- When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data. For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md#monitoring-workspace).
 
-- There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date. <!--12377291-->
+- There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date. <!--12377291-->For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md#assets-and-compliance-workspace). 
 
-For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
+
 
 ## Tools
 
