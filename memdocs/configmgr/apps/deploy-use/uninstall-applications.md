@@ -94,9 +94,12 @@ When you [deploy the application](deploy-applications.md) to a collection, confi
 - **Purpose**: Required
 
 - Enable the option to **Uninstall this application if the targeted object falls out of the collection**
+   - In version 2111, this option was renamed to **When a resource is no longer a member of the collection, uninstall the application**
 
+   
 > [!IMPORTANT]
 > Be careful with enabling this option on deployments to large query-based collections. Especially queries to external sources like Active Directory groups. An unexpected external change could automatically trigger a large number of devices to uninstall the application.
+
 
 ### Implicit uninstall process
 
@@ -111,7 +114,8 @@ After you remove the resource from the collection, the following process happens
 Depending upon the timing of those steps, the longest time period for the client to uninstall the app is 85 minutes. If the first step happens immediately, and you manually download policy on the device, the overall process is 15 minutes.
 
 > [!NOTE]
-> For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
+> - For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
+> - If the uninstall doesn't occur, it's likely that there's a conflicting install deployment of the same application, application group, or a different application group with the same apps. <!--12618105-->
 
 ### Known issues
 
