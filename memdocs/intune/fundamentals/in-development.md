@@ -118,7 +118,7 @@ Applies to:
 On Android Enterprise devices, you can configure settings that control features on devices (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile type).
 
 For Android Enterprise corporate-owned devices with a work profile, there are new settings:
-- Restrict searching work contacts and display work contact caller-id in personal profile
+- Restrict searching work contacts and displaying work contact caller-id in personal profile
 - Restrict copy and paste between work and personal profiles
 - Restrict data sharing between work and personal profiles
 
@@ -198,7 +198,7 @@ New assignment filters in **Enrollment Restrictions** will let you include or ex
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
-### Adding event viewer for Windows 10 diagnostics<-- 10741116 -->
+### Adding event viewer for Windows 10 diagnostics<!-- 10741116 -->
 We're adding a new event viewer to Windows 10 device diagnostics called Microsoft-Windows-Windows Firewall with Advanced Security/Firewall. The event viewer will assist you in troubleshooting issues with the firewall.
 
 ### Account protection policy changes in Endpoint security<!--  7492116   -->
