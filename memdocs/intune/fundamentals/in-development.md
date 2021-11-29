@@ -67,9 +67,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Device compliance status in Company Portal website<!-- 8782968 -->
 End users will be able to more easily see the compliance status of their devices from the Company Portal website. End users can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
-### New privacy consent screen during Company Portal installation <!-- 6600502 -->
-People installing the Company Portal app for the first time from certain app stores, such as those in China, may see a new privacy consent screen during installation. The screen explains what information Microsoft collects and how it's used. Users must agree to the terms before they can use the app. Users who installed Company Portal prior to this release will not see the new screen.  
-
 ### Password complexity for Android devices<!-- 9321870 -->
 The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn’t meet the minimum password requirement, you will be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. This feature targets devices that operate on Android 11+. For devices operating on Android 10 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
 
@@ -200,6 +197,9 @@ New assignment filters in **Enrollment Restrictions** will let you include or ex
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
+
+### Adding event viewer for Windows 10 diagnostics<-- 10741116 -->
+We're adding a new event viewer to Windows 10 device diagnostics called Microsoft-Windows-Windows Firewall with Advanced Security/Firewall. The event viewer will assist you in troubleshooting issues with the firewall.
 
 ### Account protection policy changes in Endpoint security<!--  7492116   -->
 
