@@ -83,7 +83,7 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
   You can manually end the grace period by using the [End grace period](end-grace-period.md) option.
 - **Pending**: If there are not enough available licenses in your tenant to process the provisioning request, new Cloud PCs are marked as **Pending**.
 
-  Your Windows 365 tenant can only have as many active Cloud PCs as the license allocation allows. An active Cloud PC can either be in a **Provisioned** or **In grace period state**.
+  Your Windows 365 tenant can only have as many active Cloud PCs as the license allocation allows. An active Cloud PC can either be in a **Provisioned** or **In grace period** state.
 
   To begin provisioning on Pending Cloud PCs, free up some Windows 365 licenses or end grace period on Cloud PCs in the grace period state. 
 
