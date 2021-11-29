@@ -2,7 +2,7 @@
 title: What's new in version 2111
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2111 of Configuration Manager current branch.
-ms.date: 11/19/2021
+ms.date: 11/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

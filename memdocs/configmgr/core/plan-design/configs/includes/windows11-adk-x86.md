@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
-ms.date: 11/19/2021
+ms.date: 11/29/2021
 ms.localizationpriority: medium
 # the same text of this include is also used in customize-boot-images.md
 ---

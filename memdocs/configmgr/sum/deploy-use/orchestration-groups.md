@@ -2,7 +2,7 @@
 title: Orchestration groups
 titleSuffix: Configuration Manager
 description: About orchestration groups and their prerequisites and limitations.
-ms.date: 11/19/2021
+ms.date: 11/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
