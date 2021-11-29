@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # How to enable co-management in Configuration Manager

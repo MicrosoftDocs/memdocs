@@ -9,7 +9,9 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: apps
   ms.topic: landing-page 
-  ms.collection: collection
+  ms.collection: 
+    - collection
+    - highpri
   author: dougeby
   ms.author: dougeby
   manager: johmar
