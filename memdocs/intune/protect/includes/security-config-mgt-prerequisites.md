@@ -4,7 +4,7 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
-ms.date: 11/22/2021
+ms.date: 11/29/2021
 ms.topic: include
 ---
 
@@ -109,7 +109,10 @@ To support Microsoft Defender for Endpoint security configuration management thr
 
 Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/security-config-management) in the Defender for Endpoint documentation.
 
-Devices that you manage with Intune or Configuration Manager are not supported for this scenario.
+> [!IMPORTANT]  
+> After a device onboards with Microsoft Defender for Endpoint, it must and be tagged with **MDE-Management** before it can enroll with Security Management for Microsoft Defender for Endpoint. For more information on device tagging in MDE, see Create and manage device tags](/microsoft-365/security/defender-endpoint/machine-tag).
+
+Devices that you manage with Intune are not supported for this scenario.
 
 ## Create Azure AD Groups
 
