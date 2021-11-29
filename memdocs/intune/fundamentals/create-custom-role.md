@@ -72,6 +72,7 @@ The following permissions are available when creating custom roles.
  | Mobile apps/Update | Manage mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Delete | Delete mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also delete books purchased through the Apple Volume Purchase Program or delete eBook categories. You can delete iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Assign | Assign mobile applications or eBooks to Azure AD security groups. | 
+ | Mobile apps/Relate | Create relationships with other managed apps using Dependencies and Supersedence features. Without this permission, IT admins are not able to add App dependency or supercedence relationships when creating or editing Win32 apps. |
  | Terms and conditions/Create | Create new terms and conditions. | 
  | Terms and conditions/Read | View terms and conditions. | 
  | Terms and conditions/Update | Manage existing terms and conditions but not assignments. | 
