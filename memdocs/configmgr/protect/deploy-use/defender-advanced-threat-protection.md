@@ -56,6 +56,9 @@ Down-level operating systems include:
 - Windows Server 2012 R2
 - Windows Server 2016
 
+> [!Note]
+> Currently, the [modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/bc-p/2904464) is in public preview. Microsoft Endpoint Configuration Manager version 2107 with the hotfix rollup supports configuration using Endpoint Protection policies, including those created in Microsoft Endpoint Manager using tenant attach. Automated deployment and onboarding using the .onboarding file will arrive at a later date. Please refer to [Server migration scenarios](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/server-migration) for more information on how to deploy the preview.
+
 When you onboard devices to Microsoft Defender for Endpoint with Configuration Manager, you deploy the Defender policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level or if the collection also includes down-level clients.
 
 - If your target collection contains both up-level and down-level devices, then use the instructions to [onboard devices running any supported operating system](#bkmk_any_os) (recommended).
