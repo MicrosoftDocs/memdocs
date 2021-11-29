@@ -11,6 +11,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Console extension registration though community hub

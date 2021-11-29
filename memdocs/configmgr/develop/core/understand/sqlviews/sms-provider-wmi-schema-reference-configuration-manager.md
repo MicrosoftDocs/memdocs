@@ -13,6 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS provider WMI schema reference in Configuration Manager

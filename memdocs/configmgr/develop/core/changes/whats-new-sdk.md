@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # What's new in the Configuration Manager SDK

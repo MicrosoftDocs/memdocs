@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Co-management workloads
