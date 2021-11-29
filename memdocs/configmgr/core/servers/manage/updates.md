@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 11/19/2021
+ms.date: 11/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -55,7 +55,7 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
-| [**2111**](../../plan-design/changes/whats-new-in-version-2111.md)<br /> (5.00.9070) | November 19, 2021 | May 19, 2023 | No | Yes |
+| [**2111**](../../plan-design/changes/whats-new-in-version-2111.md)<br /> (5.00.9068) | November 29, 2021 | May 29, 2023 | No | Yes |
 | [**2107**](../../plan-design/changes/whats-new-in-version-2107.md)<br /> (5.00.9058) | August 2, 2021 | February 2, 2023 | No | Yes |
 | [**2103**](../../plan-design/changes/whats-new-in-version-2103.md)<br /> (5.00.9049) | April 5, 2021 | October 5, 2022 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2010**](../../plan-design/changes/whats-new-in-version-2010.md)<br /> (5.00.9040) | November 30, 2020 | May 30, 2022 | No | Yes |

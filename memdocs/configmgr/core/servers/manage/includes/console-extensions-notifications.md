@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 11/19/2021
+ms.date: 11/29/2021
 ms.localizationpriority: medium
 ---
 <!--This file is shared by the admin-console-extensions.md, admin-console-notifications.md, and community-hub-extension.md files. Some headings may be context driven by the article. -->
