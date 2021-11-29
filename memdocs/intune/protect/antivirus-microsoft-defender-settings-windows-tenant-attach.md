@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 
@@ -118,7 +118,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure Defender to allow or disallow Intrusion Prevention functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **No** - Intrusion Prevention Systme is not allowed.
+  - **No** - Intrusion Prevention System is not allowed.
   - **Yes** - Intrusion Prevention System is allowed.
 
 - **Scan all downloaded files and attachments**  
