@@ -146,8 +146,7 @@ If you have multiple Radius servers with the same DNS suffix in their fully qual
 When you enter this value, user devices can bypass the dynamic trust dialog that's sometimes shown when connecting to the Wi-Fi network. 
 
 **What you need to know**:
-- **Android 11+** devices may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network. 
-- On **Android 10 and older** devices, don't use this setting. It may prevent the devices from connecting to your Wi-Fi network.
+-	New Wi-Fi profiles targeting Android 11 or later may require this setting to be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
 For more information on the settings you can currently configure, see [Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile Wi-Fi settings](../configuration/wi-fi-settings-android-enterprise.md#fully-managed-dedicated-and-corporate-owned-work-profile).
 
