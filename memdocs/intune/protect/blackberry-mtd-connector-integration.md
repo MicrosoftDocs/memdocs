@@ -72,7 +72,7 @@ For more information about consent and Azure Active Directory applications, see 
 
 ***The actual console name, link, and following step details are pending***
 
-1. Go to [Blackberry Cylance AI]() and sign in with your credentials. To perform the Blackberry Cylance AI integration setup process, you must sign in with an Azure Active Directory user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Blackberry Cylance AI apps to communicate with Intune.
+1. Go to [Blackberry Cylance AI](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues) and sign in with your credentials. To perform the Blackberry Cylance AI integration setup process, you must sign in with an Azure Active Directory user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Blackberry Cylance AI apps to communicate with Intune.
 
 2. Choose **Management** from the left menu.
 
