@@ -26,7 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
+ms.collection: highpri
 ---
 
 # Intune enrollment methods for Windows devices  
