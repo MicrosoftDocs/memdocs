@@ -35,12 +35,12 @@ When you integrate Intune with Microsoft Defender for Endpoint, you can take adv
 
 ## How integration works
 
-After you connect Intune to Microsoft Defender for Endpoint, Defender for Endpoint receives threat and vulnerability details from managed devices. 
+After you connect Intune to Microsoft Defender for Endpoint, Defender for Endpoint receives threat and vulnerability details from managed devices.
 
-- Vulnerabilities that are discovered are not based on configurations from Intune. They are based on Microsoft Defender for Endpoint configurations and scan details.
-- Only issues that can be remediated by Intune are raised as security tasks for Intune.
+- Vulnerabilities that are discovered aren't based on configurations from Intune. They're based on Microsoft Defender for Endpoint configurations and scan details.
+- Not all issues that Defender for Endpoint flags for remediation support remediation through the creation of a security task for Intune.
 
-In the Microsoft Defender Security Center console, Defender for Endpoint security admins review data about endpoint vulnerabilities. The admins then use a a few clicks to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Microsoft Endpoint Manager admin center where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
+In the Microsoft Defender Security Center console, Defender for Endpoint security admins review data about endpoint vulnerabilities. The admins then use a few clicks to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Microsoft Endpoint Manager admin center where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
 
 When a task is accepted, the Intune admin then acts to remediate the vulnerability through Intune, using the guidance provided as part of the security task.
 
@@ -87,7 +87,7 @@ Following is an example workflow for an application. This same general workflow 
 
 **Intune configurations for Defender for Endpoint**:
 
-- Configure a service to service connection with Microsoft Defender for Endpoint.
+- Configure a service-to-service connection with Microsoft Defender for Endpoint.
 - Deploy a device configuration policy with a profile type of **Microsoft Defender for Endpoint (desktop devices running Windows 10 or later)** to devices that will have risk assessed by Defender for Endpoint.
 
   For information about how to set up Intune to work with Defender for Endpoint, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune).
@@ -102,7 +102,7 @@ To manage security tasks:
 
 2. Select **Endpoint security** > **Security tasks**.
 
-3. Select a task from the list to open a resource window that displays additional details for that security task.
+3. Select a task from the list to open a resource window that displays more details for that security task.
 
    While viewing the security task resource window, you can select additional links:
 
@@ -119,7 +119,7 @@ To manage security tasks:
 
 6. After completing the remediation steps, open the security task and select **Complete Task**. This action updates the security task status in both Intune and Defender for Endpoint.
 
-After remediation is successful, the risk exposure score in Microsoft Defender for Endpoint can drop, based on new information from the remediated devices.
+After remediation is successful, the risk exposure score in Defender for Endpoint can drop, based on new information from the remediated devices.
 
 ## Next Steps
 
