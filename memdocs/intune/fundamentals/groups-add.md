@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 Intune uses Azure Active Directory (Azure AD) groups to manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices.
 
 > [!NOTE]
-> Default groups created from [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) are not security enabled. You must explicitly create security enabled Microsoft 365 groups in [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), the Azure AD (https://portal.azure.com/) admin center, or [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> Default groups created from [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) are not security enabled. You must explicitly create security enabled Microsoft 365 groups in [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), the [Azure AD admin center](https://portal.azure.com/), or [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 You can add the following types of groups:
 
