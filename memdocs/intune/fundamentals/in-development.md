@@ -127,8 +127,8 @@ For more information on the settings you can currently configure, see [Android E
 Applies to:
 - Android Enterprise corporate-owned work profile (COPE)
 
-### Settings Catalog is supported on U.S. Government GCC High and DoD<!-- 12389409 -->
-Settings Catalog is available and supported on U.S. Government GCC High and DoD.
+### Settings Catalog will soon be supported on U.S. Government GCC High and DoD<!-- 12389409 -->
+Settings Catalog will soon be available and supported on U.S. Government GCC High and DoD.
 
 For more information on Settings Catalog, and what it is, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
 
