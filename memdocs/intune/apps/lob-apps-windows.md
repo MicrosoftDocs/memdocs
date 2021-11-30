@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - Windows
+- highpri
 ---
 
 # Add a Windows line-of-business app to Microsoft Intune
