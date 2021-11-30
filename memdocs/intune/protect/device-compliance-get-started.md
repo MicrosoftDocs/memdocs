@@ -11,8 +11,6 @@ ms.date: 11/16/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
-ms.technology:
 ms.reviewer: samyada
 
 # optional metadata
@@ -24,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune
