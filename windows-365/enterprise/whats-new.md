@@ -57,9 +57,9 @@ Learn what new features are available in Windows 365 Enterprise.
 
 Windows 365 Enterprise now supports the following Windows 11 security baseline settings:
 
-- Tamper Protection: Helps protect Cloud PCs from bad actors bypassing security features like anti-virus protection.
+- **Tamper Protection**: Helps protect Cloud PCs from bad actors bypassing security features like anti-virus protection.
 
-- Script Scanning: Helps identify possible threats by intercepting scripts and scanning them before they’re run.
+- **Script Scanning**: Helps identify possible threats by intercepting scripts and scanning them before they’re run.
 
 For more information about the security baseline updates for Windows 11, see [Windows 11 Security baseline](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/windows-11-security-baseline/ba-p/2810772). For more information about setting security baselines for Cloud PCs, see [Deploy security baselines](deploy-security-baselines.md).
 
