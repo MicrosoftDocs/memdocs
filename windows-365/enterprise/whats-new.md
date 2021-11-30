@@ -51,6 +51,13 @@ Learn what new features are available in Windows 365 Enterprise.
 ## Week of November 29, 2021 (Service release 2111)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### Operating system end of support status for Cloud PCs<!--36852572 -->
+
+The **Provisioning policies** page has a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates. For more information, see [Lifecycle policies and end of support for Cloud PC OS](end-of-support.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
 #### Two new security baseline settings for Windows 11 Cloud PCs<!--36989243 -->
