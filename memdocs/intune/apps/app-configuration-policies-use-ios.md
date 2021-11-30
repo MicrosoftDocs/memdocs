@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
+- highpri
 ---
 
 # Add app configuration policies for managed iOS/iPadOS devices

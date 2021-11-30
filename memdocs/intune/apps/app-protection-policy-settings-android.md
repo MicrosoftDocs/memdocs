@@ -28,6 +28,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- highpri
 ms.custom: intune-azure
 ---
 # Android app protection policy settings in Microsoft Intune

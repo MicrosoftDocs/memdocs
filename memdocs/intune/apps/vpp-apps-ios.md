@@ -30,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
 - macOS
+- highpri
 ---
 
 # How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune

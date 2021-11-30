@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - Windows
+- highpri
 ---
 
 # Use PowerShell scripts on Windows 10/11 devices in Intune

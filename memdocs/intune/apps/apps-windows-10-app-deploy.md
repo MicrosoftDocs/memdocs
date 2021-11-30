@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - Windows
+- highpri
 ---
 
 # Windows 10/11 app deployment by using Microsoft Intune 
