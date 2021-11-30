@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -136,17 +136,17 @@ Applies to:
 - macOS
 - Windows 10 and newer
 
-### Enter the certificate common name in Wi-Fi profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile devices<!-- 12439458 -->
+### Enter the certificate common name in Wi-Fi profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile devices<!-- 12439458  -->
 On Android Enterprise devices, you can create a Wi-Fi profile that configures enterprise Wi-Fi settings (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
 
-When you select **Enterprise**, there's a new **Server names** setting. This setting is the DNS name used in the certificate presented by the Radius Server during client authentication to the Wi-Fi access point. For example, enter `Contoso.com`, `uk.contoso.com`, or `jp.contoso.com`. 
+When you select **Enterprise**, there's a new **Server names** setting. This setting is the DNS name used in the certificate presented by the Radius Server during client authentication to the Wi-Fi access point. For example, enter `Contoso.com`, `uk.contoso.com`, or `jp.contoso.com`.
 
 If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then you can enter only the suffix. For example, you can enter `contoso.com`.
 
 When you enter this value, user devices can bypass the dynamic trust dialog that's sometimes shown when connecting to the Wi-Fi network. 
 
 **What you need to know**:
--	New Wi-Fi profiles targeting Android 11 or later may require this setting to be configured. Otherwise, the devices may not connect to your Wi-Fi network.
+- New Wi-Fi profiles targeting Android 11 or later may require this setting to be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
 For more information on the settings you can currently configure, see [Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile Wi-Fi settings](../configuration/wi-fi-settings-android-enterprise.md#fully-managed-dedicated-and-corporate-owned-work-profile).
 
