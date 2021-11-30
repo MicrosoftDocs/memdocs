@@ -125,7 +125,7 @@ For general information, see [Learn about attack surface reduction rules](/micro
 
 - **Enable network protection**:  
   Baseline default: *Enable*  
-  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender&preserve-view=true#defender-enablenetworkprotection)
+  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 - **Block untrusted and unsigned processes that run from USB**:  
   Baseline default: *Block*  

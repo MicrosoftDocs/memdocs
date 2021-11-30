@@ -11,7 +11,8 @@ metadata:
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-    
+  ms.collection: highpri
+
 title: Microsoft Endpoint Configuration Manager FAQ
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch)*

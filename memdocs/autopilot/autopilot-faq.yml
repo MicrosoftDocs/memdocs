@@ -14,7 +14,9 @@ metadata:
   ms.reviewer: jubaptis
   manager: dougeby
   ms.date: 11/12/2021
-  ms.collection: M365-modern-desktop
+  ms.collection:
+    - M365-modern-desktop
+    - highpri
   ms.topic: troubleshooting
     
 title: Windows Autopilot FAQ
