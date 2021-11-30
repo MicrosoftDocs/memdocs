@@ -15,7 +15,9 @@ ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Microsoft Intune protected apps  

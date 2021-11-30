@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - Windows
+- highpri
 ---
 
 # Add the Windows 10 Company Portal app by using Microsoft Intune

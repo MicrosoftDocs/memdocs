@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - Windows
+- highpri
 ---
 
 # Add and assign the Windows 10 Company Portal app for Autopilot provisioned devices
