@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-### Two new security baseline settings for Windows 11 Cloud PCs<!--36989243 -->
+#### Two new security baseline settings for Windows 11 Cloud PCs<!--36989243 -->
 
 Windows 365 Enterprise now supports the following Windows 11 security baseline settings:
 
