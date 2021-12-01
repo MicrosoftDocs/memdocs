@@ -12,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-ms.assetid:
 
 # optional metadata
 #audience:
@@ -22,7 +20,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Manage BitLocker policy for Windows devices with Intune

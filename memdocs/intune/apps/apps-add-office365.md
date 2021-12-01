@@ -29,6 +29,7 @@ ms.custom: intune-azure, seoapril2019
 ms.collection:
 - M365-identity-device-management
 - Windows
+- highpri
 ---
 
 # Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune

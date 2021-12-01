@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - macOS
+- highpri
 ---
 
 # Add the macOS Company Portal app

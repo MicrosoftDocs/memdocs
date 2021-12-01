@@ -11,8 +11,6 @@ ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.technology: 
-ms.assetid: 0649d310-43a7-4b01-85d2-da255d03e1da
 
 # optional metadata
 
@@ -24,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: microsoft-intune
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Device management overview

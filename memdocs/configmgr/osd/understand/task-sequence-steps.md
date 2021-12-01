@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -813,6 +813,8 @@ Starting in version 2006, this step includes includes a check to determine if th
 
 Starting in version 2103, the task sequence progress displays more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements of this step, the user can select an option to **Inspect**. This action shows the checks that failed on the device. For more information, see [User experiences for OS deployment](user-experience.md#task-sequence-error).<!--8888218-->
 
+Starting in version 2111, this step includes checks for TPM 2.0. These checks can help you better deploy Windows 11.<!-- 9575077 -->
+
 > [!IMPORTANT]
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -835,6 +837,8 @@ Use the following task sequence variables with this step:
 - [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
 - [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (starting in version 2006)
 - [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRTPMACTIVATED](task-sequence-variables.md#TSCRTPMACTIVATED) (starting in version 2111)
+- [_TS_CRTPMENABLED](task-sequence-variables.md#TSCRTPMENABLED) (starting in version 2111)
 
 ### Cmdlets for Check Readiness
 
@@ -898,6 +902,14 @@ Verify that the device has a network adapter that's connected to the network. Yo
 #### Computer is in UEFI mode
 
 Starting in version 2006, determine whether the device is configured for UEFI or BIOS.
+
+#### TPM 2.0 or above is enabled
+
+Starting in version 2111, checks whether the device that's running the task sequence has a TPM 2.0 that's enabled.<!--9575077-->
+
+#### TPM 2.0 or above is activated
+
+Starting in version 2111, if the device has an enabled TPM 2.0, check that it's activated.<!--9575077-->
 
 ### Options for Check Readiness
 

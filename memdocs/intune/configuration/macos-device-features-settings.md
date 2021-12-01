@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2021
+ms.date: 11/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,12 +50,12 @@ Create a [macOS device features configuration profile](device-features-configure
 ### Settings apply to: All enrollment types
 
 - **AirPrint destinations**: **Add** one or more AirPrint printers users can print from their devices. Also enter:
+  - **IP address**: Enter the IPv4 or IPv6 address of the printer. For example, enter `10.0.0.1`. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.  
+  - **Resource path**: Enter the resource path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
   - **Port** (iOS 11.0+, iPadOS 13.0+): Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port.
-  - **IP address**: Enter the IPv4 or IPv6 address of the printer. For example, enter `10.0.0.1`. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
-  - **Path**: Enter the resource path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
-  - **TLS** (iOS 11.0+, iPadOS 13.0+): Your options:
-    - **No** (default): Transport Layer Security (TLS) isn't enforced when connecting to AirPrint printers.
-    - **Yes**: Secures AirPrint connections with Transport Layer Security (TLS).
+  - **Force TLS** (iOS 11.0+, iPadOS 13.0+): Your options:  
+    - **Disable** (default): Transport Layer Security (TLS) isn't enforced when connecting to AirPrint printers.
+    - **Enable**: Secures AirPrint connections with Transport Layer Security (TLS).
 
 - **Import** a comma-separated file (.csv) that includes a list of AirPrint printers. Also, after you add AirPrint printers in Intune, you can **Export** this list.
 
@@ -109,7 +109,7 @@ These settings use the [AssociatedDomains.ConfigurationItem payload](https://dev
     - **applink**: Universal link
     - **webcredentials**: Password autofill
 
-  - **Enable direct download**: **Yes** downloads the domain data directly from the device, instead of going through Apple's content delivery network (CDN). When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might download data through Apple's CDN dedicated to Associated Domains.
+  - **Enable direct downloads**: **Yes** downloads the domain data directly from the device, instead of going through Apple's content delivery network (CDN). When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might download data through Apple's CDN dedicated to Associated Domains.
 
     This setting applies to:
 
@@ -246,6 +246,8 @@ For more information on these settings, see [Content Caching payload settings](h
 
 ### Settings apply to: All enrollment types
 
+#### Windows Layout  
+
 - **Show additional information in the menu bar**: When the time area on the menu bar is selected, **Yes** shows the host name and macOS version. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show this information on the menu bar.
 - **Banner**: Enter a message that's shown on the sign in screen on devices. For example, enter your organization information, a welcome message, lost and found information, and so on.
 - **Require username and password text fields**: Choose how users sign in to devices. **Yes** requires users to enter a username and password. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS may require users to select their username from a list, and then type their password.
@@ -256,17 +258,21 @@ For more information on these settings, see [Content Caching payload settings](h
   - **Hide mobile accounts**: **Yes** hides mobile accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the mobile accounts in the user list. Some mobile accounts may show as network users.
   - **Show network users**: Select **Yes** to list the network users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the network user accounts in the user list.
   - **Hide computer's administrators**: **Yes** hides the administrator user accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the administrator user accounts in the user list.
-  - **Show other users**: Select **Yes** to list **Other...** users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the other user accounts in the user list.
+  - **Show other users**: Select **Yes** to list **Other...** users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the other user accounts in the user list.  
+
+#### Login screen power settings  
 
 - **Hide shut down button**: **Yes** hides the shutdown button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the shutdown button.
 - **Hide restart button**: **Yes** hides the restart button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the restart button.
 - **Hide sleep button**: **Yes** hides the sleep button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the sleep button.
-- **Disable user login from Console**: **Yes** hides the macOS command line used to sign in. For typical users, set this setting to **Yes**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow advanced users to sign in using the macOS command line. To enter console mode, users enter `>console` in the Username field, and must authenticate in the console window.
+- **Disable user login from Console**: **Yes** hides the macOS command line used to sign in. For typical users, set this setting to **Yes**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow advanced users to sign in using the macOS command line. To enter console mode, users enter `>console` in the Username field, and must authenticate in the console window.  
+
+#### Apple Menu  
 - **Disable Shut Down while logged in**: **Yes** prevents users from selecting the **Shutdown** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Shutdown** menu item on devices.
 - **Disable Restart while logged in**: **Yes** prevents users from selecting the **Restart** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Restart** menu item on devices.
 - **Disable Power Off while logged in**: **Yes** prevents users from selecting the **Power off** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Power off** menu item on devices.
 - **Disable Log Out while logged in** (macOS 10.13 and later): **Yes** prevents users from selecting the **Log out** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Log out** menu item on devices.
-- **Disable Lock Screen while logged in** (macOS 10.13 and later): **Yes** prevents users from selecting the **Lock screen** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Lock screen** menu item on devices.
+- **Disable Lock Screen while logged in** (macOS 10.13 and later): **Yes** prevents users from selecting the **Lock screen** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Lock screen** menu item on devices.  
 
 ## Single sign-on app extension
 
@@ -327,7 +333,7 @@ This setting applies to:
 
   - **Value**: Enter the data.
 
-- **Block Keychain usage** (Kerberos only): **Yes** prevents passwords from being saved and stored in the keychain. When set to **Yes**, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
+- **Block keychain usage** (Kerberos only): **Yes** prevents passwords from being saved and stored in the keychain. When set to **Yes**, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
 - **Require Face ID, Touch ID, or passcode** (Kerberos only): **Yes** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
 - **Set as default realm** (Kerberos only): Choose **Yes** to set the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
@@ -408,7 +414,6 @@ This setting applies to:
   - macOS 11 and newer
 
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
-- **Enable shared device mode** (Microsoft Azure AD only): Select **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to macOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. 
 
   When set to **Yes**, all existing user accounts are wiped from the devices. To avoid data loss, or prevent a factory reset, make sure you understand how this setting changes your devices.
 
