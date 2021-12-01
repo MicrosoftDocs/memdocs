@@ -44,7 +44,7 @@ This procedure configures custom client settings for Endpoint Protection, which 
 
 8. In the **Select Collection** dialog box, choose the collection to which you want to deploy the client settings and then click **OK**. The new deployment is shown in the **Deployments** tab of the details pane.  
 
-Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).  
+Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#start-policy-retrieval).  
 
 
 

@@ -100,11 +100,14 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
 ### Limitations for a CMG with a virtual machine scale set
 
-#### Limitations with versions 2107
+#### Limitations with versions 2107 and later
 
-- It doesn't support Azure US Government cloud environments.
+> [!NOTE]
+> Starting in version 2111, CMG deployments with a virtual machine scale set support Azure US Government cloud environments.<!--12141235-->
+
 - Users may experience a delay of up to three seconds for actions in Software Center.
 - You can't approve/deny application requests through the CMG.<!-- 10023094 -->
+- Version 2107 doesn't support Azure US Government cloud environments.
 
 #### Limitations with versions 2010 and 2103
 

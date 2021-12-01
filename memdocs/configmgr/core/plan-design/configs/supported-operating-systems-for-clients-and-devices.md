@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 10/11/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -178,6 +178,9 @@ For more information, see [How to deploy clients to Macs](../../clients/deploy/d
 
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901 -->
+
 Configuration Manager has built-in capabilities for managing mobile devices that are on-premises without installing client software. For more information, see [Manage mobile devices with on-premises infrastructure](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
 
 ### Supported operating systems
@@ -188,8 +191,6 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 
 - **Windows 10 IoT Enterprise** (x86, x64)
     This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->
-
-- **Windows 10 IoT Mobile Enterprise**
 
 - **Windows 10 Team for Surface Hub**
 
