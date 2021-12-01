@@ -2,7 +2,7 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

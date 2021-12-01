@@ -2,7 +2,7 @@
 title: Cloud attach overview
 titleSuffix: Configuration Manager
 description: Cloud attach for Configuration Manager overview
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview

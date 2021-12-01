@@ -2,7 +2,7 @@
 title: Monitor orchestration groups
 titleSuffix: Configuration Manager
 description: Monitor and reset orchestration groups.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual

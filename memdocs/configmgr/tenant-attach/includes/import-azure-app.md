@@ -5,7 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 

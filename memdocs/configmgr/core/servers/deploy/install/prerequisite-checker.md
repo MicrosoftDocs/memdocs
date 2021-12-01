@@ -2,7 +2,7 @@
 title: Prerequisite checker
 titleSuffix: Configuration Manager
 description: Learn how to use prerequisite checker to identify and fix problems that might block a site or site system role installation.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

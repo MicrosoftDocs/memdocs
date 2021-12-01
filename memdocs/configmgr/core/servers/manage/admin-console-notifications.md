@@ -2,7 +2,7 @@
 title: Configuration Manager console notifications
 titleSuffix: Configuration Manager
 description: Learn about notifications from the Configuration Manager console.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
