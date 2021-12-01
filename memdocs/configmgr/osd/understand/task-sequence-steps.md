@@ -274,7 +274,7 @@ This step performs different actions depending on whether it uses an OS image or
 
 The **Apply Operating System Image** step performs the following actions when using an OS image:  
 
-1. Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
+1. Delete all content on the targeted volume, except files in the **Configuration Manager Client Cache folder** and any files in the folder specified by the **\_SMSTSUserStatePath** variable.  
 
 2. Extract the contents of the specified .wim file to the specified destination partition.  
 
