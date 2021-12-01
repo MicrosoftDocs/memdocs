@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/08/2021
+ms.date: 12/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -113,10 +113,16 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
       2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications).
       3. Select **Add permissions** to save this configuration.
 
-   1. Select **Add a permission** again.
-      1. On the *Request API permissions* page, select **Azure Active Directory Graph** > **Application permissions**.
-      2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications). 
-      3. Select **Add permissions** to save this configuration.
+   1. Use *Microsoft Graph* to add the following permissions to the app:
+
+      - **Application.Read.All** (Read all applications).
+
+      For information on how to complete this step, see [Configure Azure AD Graph permissions](/graph/migrate-azure-ad-graph-configure-permissions).
+
+      > [!NOTE]  
+      > Previously, these permissions were configured by using Azure AD Graph, and available through the App registration UI. Azure AD Graph is now deprecated and will be retired on June 30, 2022. As part of this deprecation path, the capability to add Azure AD Graph permissions to the required permissions for an app registration through the Azure portal is now disabled.
+      >
+      > In addition to using the information at [Configure Azure AD Graph permissions](/graph/migrate-azure-ad-graph-configure-permissions) to set permission on the app, we recommend that you follow the [App migration planning checklist](/graph/migrate-azure-ad-graph-planning-checklist) to help you transition your apps to the [Microsoft Graph](/graph/overview) API.
 
 8. Remain on the **API permissions** page, and select **Grant admin consent for** ***\<your tenant>***, and then select **Yes**.  
 
