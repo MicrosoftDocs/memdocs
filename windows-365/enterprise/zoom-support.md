@@ -30,8 +30,14 @@ ms.collection: M365-identity-device-management
 
 # Optimize Zoom on a Windows 365 Cloud PC
 
-Zoom is a 3rd-party application that provides online meeting services including support for virtualized environments like Windows 365 Cloud PCs. The instructions in this article help you optimize traffic for Zoom meetings when using the Microsoft Remote Desktop client on a Windows PC to access a Cloud PC. These instructions don’t support connections through a web browser or on non-Windows operating systems.
+Zoom is a 3rd-party application that provides online meeting services including support for virtualized environments like Windows 365 Cloud PCs. The instructions in this article help you optimize traffic for Zoom meetings when using the Microsoft Remote Desktop client on a Windows PC to access a Cloud PC.
+
 To set up optimized Zoom support, you’ll need to install the VDI Client on the Cloud PC and the Azure Virtual Desktop plugin on the Windows PC that the user will use to access the Cloud PC.
+
+## Requirements
+
+- **Azure Virtual Desktop**: These instructions don't support connections through a web browser.
+- **Operating system**: Windows
 
 ## Install the VDI client on the Cloud PC
 
