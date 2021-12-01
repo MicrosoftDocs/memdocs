@@ -221,6 +221,9 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take a week or more to become available for each tenant.
 
+> [!IMPORTANT]
+> Intune supports each connector release for six months after the release. After six months have passed, the connector is no longer supported and might not function as expected. On February 1, 2022, Intune certificate connectors earlier than version **6.1806.5.0** will no longer allow you to issue certificates to users and devices.
+
 ### October 11, 2021
 
 Version **6.2110.201.0**. This update includes:
