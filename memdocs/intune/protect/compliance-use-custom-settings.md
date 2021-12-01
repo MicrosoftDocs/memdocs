@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,9 +30,6 @@ ms.collection: M365-identity-device-management
 # Use custom compliance settings with Intune
 
 *Custom compliance settings are in [public preview](../fundamentals/public-preview.md).*
-
-> [!NOTE]
-> Custom compliance settings are rolling out slowly, with availability for most tenants starting in early December.
 
 To expand on Intune’s built-in device compliance options, you can add custom compliance settings to compliance policies for managed devices.
 This feature applies to:
