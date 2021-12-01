@@ -45,15 +45,19 @@ To set up optimized Zoom support, you’ll need to install the VDI Client on the
 2. n the **Download Links** table, under **VDI Release – Version**, select the most recent version (for example, **5.8.4**).
 3. On the **VDI Release Version** page, select **Click here to download VDI Client**.
 4. Run the MSI and follow the installation instructions.
+
 Alternatively, the admin can deploy the Zoom VDI client. For more information about deploying apps, see the [Win32 App management guide](/mem/intune/apps/apps-win32-app-management).
 
 ## Install the Azure Virtual Desktop plugin
 
 1. Sign in to the Windows PC that will be used to access the Cloud PC.
-2. In a browser, navigate to the VDI release version page matching the page you used to install the VID client. For example, [VDI Release Version 5.8.4]( https://support.zoom.us/hc/en-us/articles/4413719670285).
+2. In a browser, navigate to the VDI release version page matching the page you used to install the VDI client. For example, [VDI Release Version 5.8.4]( https://support.zoom.us/hc/en-us/articles/4413719670285).
 3. In the **Compatible Plugins** table, find the row for the VDI client that you installed, and, in the second column, select the appropriate entry for **Azure Virtual Desktop**. For example, **Windows x86 or x64 (Phone and Meetings): 5.8.4.21112**. Only Windows clients are supported for these optimizations.
-4.Run the MSI and follow the installation instructions.
-Note: Zoom recommends that you use the same version numbers for both the VDI client and the plugin. Zoom doesn’t support running a plugin version higher than the VDI client version.
+4. Run the MSI and follow the installation instructions.
+
+> [!NOTE]  
+> Zoom recommends that you use the same version numbers for both the VDI client and the plugin. Zoom doesn’t support running a plugin version higher than the VDI client version.
+
 For more information on these installation steps, see Zoom’s [Getting started with VDI article]( https://support.zoom.us/hc/en-us/articles/360031096531-Getting-Started-with-VDI).
 
 ## To use the optimized Zoom client
