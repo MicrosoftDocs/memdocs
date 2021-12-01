@@ -2,7 +2,7 @@
 title: Collections introduction
 titleSuffix: Configuration Manager
 description: Get an introduction to using collections in Configuration Manager.
-ms.date: 05/07/2019
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -49,7 +49,8 @@ Here are some examples of collection use:
 |**All Desktop and Server Clients**|Contains the server and desktop devices that have the Configuration Manager client installed. Membership is maintained by Heartbeat Discovery.|  
 |**All Mobile Devices**|Contains the mobile devices that are managed by Configuration Manager. Membership is restricted to those mobile devices that are successfully assigned to a site or discovered by the Exchange Server connector.|  
 |**All Systems**|Contains the All Desktop and Server Clients, the All Mobile Devices, and the All Unknown Computers collections, and all mobile devices that are enrolled by Microsoft Intune. This collection contains the largest scope of device resources.|  
-|**All Unknown Computers**|Contains generic computer records for multiple computer platforms. You can use this collection to deploy an operating system by using a task sequence and PXE boot, bootable media, or prestaged media.|  
+|**All Unknown Computers**|Contains generic computer records for multiple computer platforms. You can use this collection to deploy an operating system by using a task sequence and PXE boot, bootable media, or prestaged media.| 
+|**Co-management Eligible Devices**|  Contains devices that meet the client prerequisites and are eligible for co-management enrollment (added in version 2111). <!--12377291-->|
 
 ### Custom collections  
  When you create a custom collection in Configuration Manager, the membership of that collection is determined by one or more collection rules, as described in [How to create collections](../../../../core/clients/manage/collections/create-collections.md). 

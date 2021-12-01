@@ -414,7 +414,6 @@ This setting applies to:
   - macOS 11 and newer
 
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
-- **Enable shared device mode** (Microsoft Azure AD only): Select **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to macOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. 
 
   When set to **Yes**, all existing user accounts are wiped from the devices. To avoid data loss, or prevent a factory reset, make sure you understand how this setting changes your devices.
 

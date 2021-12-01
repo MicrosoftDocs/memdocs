@@ -227,7 +227,7 @@ In this screenshot, CMPivot displays two separate BIOS versions with a device co
 
 ![CMPivot window with example query fro BIOSVersion](media/1358456-cmpivot-biosversion.png)
 
-You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](../clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode):
+You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](../clients/manage/manage-clients.md#manage-clients-from-the-devices-node):
 - Run Script
 - Remote Control
 - Resource Explorer
@@ -394,7 +394,7 @@ The CMTrace log viewing tool is now automatically installed along with the Confi
 <!--1358202-->
 We've made the following improvement to the Configuration Manager console:
 
-- Device lists under Assets and Compliance, Devices, now by default display the currently logged on user. This value is as current as the [client status](../clients/manage/monitor-clients.md#bkmk_indStatus). The value is cleared when the user logs off. If no user is logged on, the value is blank. 
+- Device lists under Assets and Compliance, Devices, now by default display the currently logged on user. This value is as current as the [client status](../clients/manage/monitor-clients.md#monitor-individual-clients). The value is cleared when the user logs off. If no user is logged on, the value is blank. 
 
 <!-- ### Known issues
 The currently logged on user value is blank in the Devices node or when viewing a device list under the Device Collections node. To work around this issue, download this [SQL script](https://gallery.technet.microsoft.com/ConfigMgr-1805-BgbUpdateLiv-306ff46c). Run sp_BgbUpdateLiveData.sql on the site database server, and then restart the smsexec and sms_notification_server services on the management point.<!--514471
