@@ -106,7 +106,7 @@ On iOS/iPadOS and macOS devices, you can create a device restrictions policy tha
 There are new settings:
 - iOS/iPadOS:
   - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site).
-- macOS
+- macOS:
   - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site).
   - **Timeout**: Users can unlock their devices using a Touch ID, such as a fingerprint. Use this setting to require users to enter their password after a period of inactivity. The default inactivity period is is 48 hours. After 48 hours of inactivity, the device prompts for the password, instead of Touch ID.
 
@@ -118,7 +118,7 @@ Applies to:
 On Android Enterprise devices, you can configure settings that control features on devices (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile type).
 
 For Android Enterprise corporate-owned devices with a work profile, there are new settings:
-- Restrict searching work contacts and displaying work contact caller-id in personal profile
+- Restrict searching work contacts and displaying work contact caller-ID in personal profile
 - Restrict copy and paste between work and personal profiles
 - Restrict data sharing between work and personal profiles
 
