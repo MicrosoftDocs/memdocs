@@ -319,7 +319,7 @@ Starting with this version, the following features are no longer [pre-release](.
 
 Similarly, the [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md) is now generally available for production use.<!-- 10735017 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2111 release notes](/powershell/sccm/2111-release-notes).
+<!-- For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2111 release notes](/powershell/sccm/2111-release-notes). -->
 
 <!-- Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2111]. -->
 
