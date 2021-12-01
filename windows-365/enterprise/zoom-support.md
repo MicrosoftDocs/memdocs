@@ -2,7 +2,7 @@
 # required metadata
 title: Optimize Zoom on a Windows 365 Cloud PC
 titleSuffix:
-description: Learn how to use optimize Zoom on a Windows Cloud PC.
+description: Learn how to optimize Zoom on a Windows Cloud PC.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Zoom is a 3rd-party application that provides online meeting services including support for virtualized environments like Windows 365 Cloud PCs. The instructions in this article help you optimize traffic for Zoom meetings when using the Microsoft Remote Desktop client on a Windows PC to access a Cloud PC.
 
-To set up optimized Zoom support, you’ll need to install the VDI Client on the Cloud PC and the Azure Virtual Desktop plugin on the Windows PC that the user will use to access the Cloud PC.
+To optimize Zoom, you’ll need to install the VDI Client on the Cloud PC and the Azure Virtual Desktop plugin on the Windows PC that the user will use to access the Cloud PC.
 
 ## Requirements
 
@@ -42,7 +42,7 @@ To set up optimized Zoom support, you’ll need to install the VDI Client on the
 ## Install the VDI client on the Cloud PC
 
 1. Have the user sign in to the Cloud PC as a local administrator and, in their browser, navigate to the [Zoom VDI downloads and backwards compatibility page](https://support.zoom.us/hc/en-us/articles/360041602711).
-2. n the **Download Links** table, under **VDI Release – Version**, select the most recent version (for example, **5.8.4**).
+2. In the **Download Links** table, under **VDI Release – Version**, select the most recent version (for example, **5.8.4**).
 3. On the **VDI Release Version** page, select **Click here to download VDI Client**.
 4. Run the MSI and follow the installation instructions.
 
