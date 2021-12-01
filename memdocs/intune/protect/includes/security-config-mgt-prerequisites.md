@@ -114,8 +114,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
 
 2. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager or grant those permissions by configuring a role in the Microsoft 365 Defender portal. Go to **Settings** > **Roles** > **Add item**:
 
-   :::image type="content" source="../media/mde-security-integration/add-role-in-mde.png
- " alt-text="Create a new role in the Defender portal.":::
+   :::image type="content" source="../media/mde-security-integration/add-role-in-mde.png" alt-text="Create a new role in the Defender portal.":::
 
    > [!TIP]
    > You can modify existing roles and add the necessary permissions versus creating additional roles in Microsoft Defender for Endpoint
