@@ -192,8 +192,6 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 - **Windows 10 IoT Enterprise** (x86, x64)
     This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->
 
-- **Windows 10 IoT Mobile Enterprise**
-
 - **Windows 10 Team for Surface Hub**
 
 ## <a name="bkmk_ExSrvConOS"></a> Exchange Server connector
