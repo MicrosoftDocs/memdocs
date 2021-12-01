@@ -52,7 +52,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Expand
 
 ![Screenshot of client health dashboard](media/3599209-client-health-dashboard.png)
 
-For more information, see [How to monitor clients](../../clients/manage/monitor-clients.md#bkmk_health).
+For more information, see [Client health dashboard](../../clients/manage/client-health-dashboard.md).
 
 ### New management insight rules
 

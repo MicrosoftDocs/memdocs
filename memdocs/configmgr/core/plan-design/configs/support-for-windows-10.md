@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients with Configuration Manager.
-ms.date: 11/16/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -12,7 +12,7 @@ manager: dougeby
 ms.localizationpriority: medium
 ---
 
-# Support for Windows 10 in Configuration Manager  
+# Support for Windows 10 in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -31,25 +31,25 @@ Configuration Manager attempts to provide support as a client for each new Windo
 
 A Configuration Manager version drops from the matrix after [support for that version](../../servers/manage/current-branch-versions-supported.md) ends. Similarly, support for Windows 10 versions like the Enterprise 2015 LTSB or 1511 drops from the matrix when they're removed from support.
 
-- The latest version of Configuration Manager current branch receives both security and critical updates, which can include fixes for issues with Windows 10 versions. When Microsoft releases a new version of Configuration Manager current branch, prior versions only receive security updates. For more information, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).  
+- The latest version of Configuration Manager current branch receives both security and critical updates, which can include fixes for issues with Windows 10 versions. When Microsoft releases a new version of Configuration Manager current branch, prior versions only receive security updates. For more information, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).
 
     > [!NOTE]
-    > The best way to stay current with Windows 10 is to stay current with Configuration Manager. For more information, see [Configuration Manager and Windows as a Service](../../understand/configuration-manager-and-windows-as-service.md).  
+    > The best way to stay current with Windows 10 is to stay current with Configuration Manager. For more information, see [Configuration Manager and Windows as a Service](../../understand/configuration-manager-and-windows-as-service.md).
 
-- This information supplements [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md).  
+- This information supplements [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md).
 
-- If you use the long-term servicing branch of Configuration Manager, see [Supported configurations for the long-term servicing branch](../../understand/supported-configurations-for-ltsb.md).  
+- If you use the long-term servicing branch of Configuration Manager, see [Supported configurations for the long-term servicing branch](../../understand/supported-configurations-for-ltsb.md).
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 |
-|--------------------------------------------|----------------|----------------|----------------|----------------|
-| **1909**<br>(10.0.18363) <!--05/10/2022--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **2004**<br>(10.0.19041) <!--12/14/2021--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **20H2** <sup>[Note](#bkmk_20h2)</sup><br>(10.0.19042) <!--05/09/2023--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **21H1**<br>(10.0.19043) <!--12/13/2022--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **21H2**<br>(10.0.19044) <!--06/11/2024--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
-| **Enterprise LTSC 2021**<br>(10.0.19044) <!--01/12/2027--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) |
+| Windows 10 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 | ConfigMgr 2111 |
+|--------------------------------------------|----------------|----------------|----------------|----------------|----------------|
+| **21H2**<br>(10.0.19044) <!--06/11/2024--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **Enterprise LTSC 2021**<br>(10.0.19044) <!--01/12/2027--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **21H1**<br>(10.0.19043) <!--12/13/2022--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **20H2** <sup>[Note](#bkmk_20h2)</sup><br>(10.0.19042) <!--05/09/2023--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **2004**<br>(10.0.19041) <!--12/14/2021--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **1909**<br>(10.0.18363) <!--05/10/2022--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -61,7 +61,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 | Key |
 |--|
-| ![Supported](media/green-check.png) = **Supported**  |
+| ![Supported](media/green-check.png) = **Supported** |
 | ![Not supported](media/red-x.png) = **Not supported** |
 
 ## Support notes
@@ -87,7 +87,7 @@ OS deployment isn't supported, except for a feature update task sequence. Starti
 
 ## Support for Windows Insider
 
-You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
+You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.
 
 To provide feedback on Windows Insider, use the [Feedback Hub](/windows-insider/business/feedback).
 

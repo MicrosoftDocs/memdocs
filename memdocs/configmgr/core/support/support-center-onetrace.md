@@ -2,7 +2,7 @@
 title: Support Center OneTrace
 titleSuffix: Configuration Manager
 description: OneTrace is a new log viewer with Support Center that has improvements over CMTrace.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -25,6 +25,8 @@ OneTrace is a new log viewer with Support Center. It works similarly to CMTrace,
 - Scrollbar hints to quickly identify clusters of errors
 - Fast log opening for large files
 - Windows jump lists for recently opened files (version 2103 and later)
+- Status messages are displayed in an easy to read format (version 2111 and later) 
+   - Entries starting with `>>` are status messages that are automatically converted into a readable format when a log is opened. Search or filter on the `>>` string to find status messages in the log.
 
 :::image type="content" source="media/3555962-onetrace.png" alt-text="Screenshot of Support Center OneTrace log viewer." lightbox="media/3555962-onetrace.png":::
 
