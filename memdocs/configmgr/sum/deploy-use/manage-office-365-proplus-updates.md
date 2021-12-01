@@ -5,7 +5,7 @@ description: Configuration Manager synchronizes Microsoft 365 Apps client update
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

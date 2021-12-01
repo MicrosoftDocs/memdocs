@@ -2,7 +2,7 @@
 title: Extend hardware inventory
 titleSuffix: Configuration Manager
 description: Learn ways to extend hardware inventory in Configuration Manager.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to

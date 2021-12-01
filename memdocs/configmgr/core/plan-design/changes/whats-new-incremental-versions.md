@@ -2,7 +2,7 @@
 title: Incremental versions
 titleSuffix: Configuration Manager
 description: Learn about what's new in the latest update for Configuration Manager.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

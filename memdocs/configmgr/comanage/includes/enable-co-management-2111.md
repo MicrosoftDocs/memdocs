@@ -4,7 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.localizationpriority: high
 ---
 <!-- 10964629 This file is shared by comanage/how-to-enable.md, tutorial-co-manage-clients.md, and tutorial-co-manage-new-devices.md. Don't apply H2/H3 in this include file since they are context driven by article-->

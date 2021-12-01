@@ -2,7 +2,7 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to

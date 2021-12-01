@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage

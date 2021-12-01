@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: include
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.localizationpriority: medium
 ---
 

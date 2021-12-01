@@ -2,7 +2,7 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

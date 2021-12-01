@@ -2,7 +2,7 @@
 title: Client health checks
 titleSuffix: Configuration Manager
 description: The checks that the Configuration Manager client runs regularly to keep healthy.
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
