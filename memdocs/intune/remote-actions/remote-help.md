@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 12/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -144,7 +144,7 @@ After you repackage remote help as a *.intunewinfile*, use the procedures in [Ad
 2. On the Program page, configure the following options:
 
    - For *Install command line*, specify **remotehelp.exe /install /quiet acceptTerms=Yes**
-   - For *Uninstall command line*, specify **remotehelp.exe/ uninstall /quiet acceptTerms=Yes**
+   - For *Uninstall command line*, specify **remotehelp.exe /uninstall /quiet acceptTerms=Yes**
 
    > [!IMPORTANT]
    > The command line option *acceptTerms* is always case sensitive.
