@@ -117,7 +117,8 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
 
       - **Application.Read.All** (Read all applications).
 
-      For information on how to complete this step, see [Configure Azure AD Graph permissions](/graph/migrate-azure-ad-graph-configure-permissions).
+      For information on how to complete this step, see [Use Microsoft Graph to configure required Azure AD Graph permissions for an app registration
+](/graph/migrate-azure-ad-graph-configure-permissions).
 
       > [!NOTE]  
       > Previously, these permissions were configured by using Azure AD Graph, and available through the App registration UI. Azure AD Graph is now deprecated and will be retired on June 30, 2022. As part of this deprecation path, the capability to add Azure AD Graph permissions to the required permissions for an app registration through the Azure portal is now disabled.
