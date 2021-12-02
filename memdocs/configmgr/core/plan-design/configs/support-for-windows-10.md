@@ -68,11 +68,13 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 - Support for Windows 10 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
 
-- For Windows 10, version 1909, OS deployment media shows the version as 10.0.18362.418.
+- OS deployment media shows the build number from the base version. For example, `10.0.19041`. When Windows is installed, it applies an enablement package, which updates the build number to what's in the above table. You can use the revision ID to distinguish the media:
 
-- For Windows 10, version 20H2, OS deployment media shows the version as 10.0.19041.508.
-
-- For Windows 10, version 21H1, OS deployment media shows the version as 10.0.19041.844.<!-- 9504158 -->
+  | Media version     | Windows version          |
+  |-------------------|--------------------------|
+  | `10.0.19041.1288` | Windows 10, version 21H2 |
+  | `10.0.19041.844`  | Windows 10, version 21H1 |
+  | `10.0.19041.508`  | Windows 10, version 20H2 |
 
 ## <a name="bkmk_arm64"></a> Windows 10 on ARM64
 
