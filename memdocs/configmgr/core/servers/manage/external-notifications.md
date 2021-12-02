@@ -98,7 +98,7 @@ Use the following process to create a sample app in Azure Logic Apps to receive 
 
 1. At the bottom of the trigger editor, select **Use sample payload to generate schema**.
 
-1. Paste the following sample schema:
+1. Paste the following sample payload:
 
     ```json
     {
