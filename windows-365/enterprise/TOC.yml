@@ -115,6 +115,8 @@ items:
           href: create-custom-image-support-teams.md
       - name: App Assure
         href: app-assure.md
+      - name: Optimize Zoom
+        href: zoom-support.md
     - name: Device management
       items:
       - name: Overview
