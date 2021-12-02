@@ -13,7 +13,7 @@ metadata:
   ms.author: greglin
   ms.reviewer: jubaptis
   manager: dougeby
-  ms.date: 11/12/2021
+  ms.date: 12/02/2021
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -149,7 +149,7 @@ sections:
           |------------------|-----------------|
           | If I wipe the machine and restart, will I still receive Windows Autopilot?|Yes, if the device is still registered for Windows Autopilot and is running a supported version of Windows 10 semi-annual channel, it will receive the Windows Autopilot experience.|
           | Can I harvest the device fingerprint on existing machines?|Yes, if the device is running a supported version of Windows 10 semi-annual channel, you can harvest device fingerprints for registration. There are no plans to backport the functionality to legacy releases and no way to harvest them on devices running unsupported versions of Windows.|
-          | Is Windows Autopilot supported on other SKUs, for example, Surface Hub, HoloLens, Windows Mobile.|No, Windows Autopilot isn't supported on other SKUs.|
+          | Is Windows Autopilot supported on other SKUs, for example, Surface Hub, HoloLens, or Windows Mobile?|For Surface Hub, Windows Mobile, and other SKUs, Windows Autopilot isn't supported. HoloLens 1 also doesn't support Windows Autopilot. Starting with Windows Holographic version 2004, HoloLens 2 supports Windows Autopilot self-deploying mode with Microsoft Intune. Third-party MDM providers aren't supported. For more information on HoloLens 2, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).|
           | Does Windows Autopilot work after MBR or image reinstallation? | Yes. For more information, see [Windows Autopilot motherboard replacement scenario guidance](autopilot-mbr.md). |
           | Can devices that have been reimaged a few times go through Autopilot? What does the error message "This user isn't authorized to enroll" mean? Error code 801c0003. |There are limits to the number of devices a particular Azure AD user can enroll in Azure AD, and the number of devices that are supported per user in Intune. These limits are configurable, but not infinite. You'll run into this error frequently if you reuse the devices, or even if you roll back to previous virtual machine snapshots.|
           | What happens if a device is registered to a malicious agent? | By design, Windows Autopilot doesn't apply a profile until the user signs in with the matching tenant for the configured profile using the Azure AD sign-in process. For example, if badguys.com registers a device owned by contoso.com, then at worst, the user will be directed to sign in to badguys.com. When the user enters their email and password, the sign-in information is redirected through Azure AD to the proper Azure AD authentication and the user is prompted to then sign into contoso.com. Since contoso.com doesn't match badguys.com as the tenant, the Windows Autopilot profile won't be applied and the regular Azure AD OOBE will occur.|
