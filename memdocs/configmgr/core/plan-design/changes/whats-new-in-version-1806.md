@@ -125,7 +125,7 @@ For more information, see [Windows LEDBAT](../hierarchy/fundamental-concepts-for
 <!--1357346-->
 Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. 
 
-For more information, see [Partial download support](../hierarchy/client-peer-cache.md#bkmk_parts). 
+For more information, see [Partial download support](../hierarchy/client-peer-cache.md#partial-download-support). 
 
 
 ### Boundary group options for peer downloads
