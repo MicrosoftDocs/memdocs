@@ -10,6 +10,7 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Set up CMG for Configuration Manager
@@ -57,7 +58,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
         - In versions 2010 and 2103, most customers should use this deployment method. Use this option.
 
-        - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set because of one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107).
+        - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set because of one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107-and-later).
 
         > [!IMPORTANT]
         > The option to deploy a CMG as a **cloud service (classic)** is deprecated. All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).

@@ -30,6 +30,7 @@ ms.collection:
 - M365-modern-desktop
 - m365initiative-coredeploy
 - M365-identity-device-management
+- highpri
 ---
 
 # Create device groups

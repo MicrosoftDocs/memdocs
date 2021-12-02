@@ -7,13 +7,11 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 11/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # See device details in Intune
@@ -98,7 +98,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display MEID for Android personally-owned work profile devices running Android 12 and newer|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, iOS/iPadOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android (not supported on Android Enterprise fully managed and corporate-owned work profile)|
 |Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android<br><br>**NOTE**: As of October 2021, Intune doesn't display Wi-Fi MAC addresses for newly enrolled personally-owned work profile devices and devices managed with device administrator running Android 9 and above. |
@@ -118,7 +118,7 @@ Depending on the carrier used by the devices, not all details might be collected
 
 > [!Note]  
 > For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
-> For Android corporate-owned personally enabled (COPE) and corporate-owned business-only COBO) devices, reporting for Phone number are not supported.
+> For Android Enterprise corporate-owned work profile and fully managed devices, reporting for Phone number is not supported.
 
 ## Next steps
 

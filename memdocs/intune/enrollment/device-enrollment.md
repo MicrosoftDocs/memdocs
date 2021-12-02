@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # What is device enrollment in Intune?
@@ -64,7 +66,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | No | Yes | No | [More information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[More information](device-enrollment-manager-enroll.md)|
-|**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-automatic-enrollment)|
 |**Autopilot** |Yes |Yes |No | [More information](../../autopilot/enrollment-autopilot.md)
 |**Bulk enroll** |No |No |No | [More information](windows-bulk-enroll.md) |
 |**Co-management** |No |Yes |No | [More information](/configmgr/core/clients/manage/co-management-overview)

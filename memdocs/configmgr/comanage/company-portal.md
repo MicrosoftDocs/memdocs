@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Use the Company Portal app on co-managed devices

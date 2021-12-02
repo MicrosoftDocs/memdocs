@@ -15,7 +15,9 @@ ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
 ms.date: 10/18/2021
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: how-to
 ---
 

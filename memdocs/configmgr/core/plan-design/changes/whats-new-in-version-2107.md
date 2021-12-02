@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What's new in version 2107 of Configuration Manager current branch
@@ -369,7 +370,7 @@ For more information, see [Product feedback](../../understand/product-feedback.m
 <!--9761129-->
 Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions because of an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
-For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
+For more information, see [Allow unsigned console extensions in the hierarchy](../../servers/manage/admin-console-extensions.md#bkmk_allow-unsigned).
 
 ### Console improvements
 <!--9575773-->

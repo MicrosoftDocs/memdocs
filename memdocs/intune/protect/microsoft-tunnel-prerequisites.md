@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 11/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -234,6 +234,17 @@ The following details can help you configure an internal proxy when using RHEL 8
       :::image type="content" source="./media/microsoft-tunnel-prerequisites/review-results-for-port.png" alt-text="Screen shot of checking the port after modification.":::
 
       In this example, port 3128 is now associated with both *http_port-t* and *squid_port_t*. That result is expected. If your proxy port isn't listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but the **-m** in the *semanage* command with **-a**: `sudo semanage port -a -t http_port_t -p tcp “your proxy port”`
+
+### Update the proxy server in use by the tunnel server
+
+To change the proxy server configuration that is in use by the Linux host of the tunnel server, use the following procedure:
+
+1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
+2. Run `mst-cli install`.
+
+   This command rebuilds the containers with the new proxy server details. During this process you’re asked to verify the contents of */etc/mstunnel/env.h* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
+
+   To confirm both and complete the configuration, enter **yes**.
 
 ## Platforms
 

@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.reviewer: aanavath
 
 # optional metadata
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Configure Microsoft Defender for Endpoint in Intune
@@ -57,7 +58,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
    :::image type="content" source="./media/advanced-threat-protection-configure/atp-device-compliance-open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
 
 3. In **Microsoft Defender Security Center**:
-   1. Select **Settings** > **Advanced features**.
+   1. Select **Settings** > **Endpoints** >**Advanced features**.
    2. For **Microsoft Intune connection**, choose **On**:
 
       :::image type="content" source="./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
@@ -65,7 +66,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
    3. Select **Save preferences**.
 
    > [!NOTE]
-   > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive** 
+   > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive**
 
 4. Return to **Microsoft Defender for Endpoint** page in the Microsoft Endpoint Manager admin center.
 
@@ -190,7 +191,7 @@ For devices that run iOS/iPadOS (in Supervised Mode), there is specialized abili
 
 Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for iOS team has made available a custom .mobileconfig profile to deploy to iPad/iOS devices. The .mobileconfig profile will be used to analyze network traffic to ensure a safe browsing experience - a feature of Defender for iOS.
 
-1. Download the .mobile profile, which is hosted here: https://aka.ms/mdatpiossupervisedprofile.
+1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **Configuration profiles** > **Create profile**.
 4. For **Platform**, select **iOS/iPadOS**

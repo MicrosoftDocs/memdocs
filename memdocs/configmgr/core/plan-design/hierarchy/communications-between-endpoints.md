@@ -131,7 +131,7 @@ When you install site system servers in an untrusted Active Directory forest, th
 
 For more information, see the following articles:  
 
-- [Manage conflicting records](../../clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
+- [Manage conflicting records](../../clients/manage/manage-clients.md#manage-conflicting-records)  
 
 - [Network access account](fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
 

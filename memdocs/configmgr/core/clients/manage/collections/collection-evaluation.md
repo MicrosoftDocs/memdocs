@@ -106,4 +106,3 @@ In the following example, installing DNS on the existing server makes it a membe
 - [Best practices for collections](best-practices-for-collections.md)
 - [View collection evaluation (starting in version 2010)](collection-evaluation-view.md)
 - [Collection Evaluation Viewer](../../../support/ceviewer.md)
-- [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) session at TechEd Australia
