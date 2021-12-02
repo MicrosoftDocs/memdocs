@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 12/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -100,9 +100,10 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 
 Microsoft logs a small amount of session data to monitor the health of the remote help system. This data includes the following information:
 
-- Start and end time of the session
-- Errors arising from remote help itself, such as unexpected disconnections
-- Features used inside the app such as view only, annotation, and session pause
+- Start and end time of the session. This information is stored on Microsoft servers for 30 days.
+- Who helped whom and on what device. This information is stored on Microsoft servers for 30 days.
+- Errors arising from remote help itself, such as unexpected disconnections. This information is stored on the sharer's device in the event viewer.
+- Features used inside the app such as view only and elevation. This information is stored on Microsoft servers for 30 days.
 
 Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session. Microsoft cannot access a session or view any actions or keystrokes that occur in the session.
 
@@ -114,7 +115,7 @@ The helper and sharer both see the following information about the other individ
 - First and Last name
 - Job title
 
-Microsoft does not store any data about either the sharer or the helper for longer than three days.
+Microsoft does not store any data about either the sharer or the helper for longer than 30 days.
 
 ## Install and update remote help
 
