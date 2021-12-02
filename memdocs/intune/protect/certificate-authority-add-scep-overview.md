@@ -121,8 +121,6 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
 
       > [!NOTE]  
       > Previously, these permissions were configured by using Azure AD Graph, and available through the App registration UI. Azure AD Graph is now deprecated and will be retired on June 30, 2022. As part of this deprecation path, the capability to add Azure AD Graph permissions to the required permissions for an app registration through the Azure portal is now disabled.
-      >
-      > In addition to using the information at [Configure Azure AD Graph permissions](/graph/migrate-azure-ad-graph-configure-permissions) to set permission on the app, we recommend that you follow the [App migration planning checklist](/graph/migrate-azure-ad-graph-planning-checklist) to help you transition your apps to the [Microsoft Graph](/graph/overview) API.
 
 8. Remain on the **API permissions** page, and select **Grant admin consent for** ***\<your tenant>***, and then select **Yes**.  
 
