@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/13/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,9 +37,9 @@ You can configure Conditional Access policies based on Blackberry Cylance AI ris
 
 ## Supported platforms
 
-- **Android 6.0 and later**
+- **Android 9.0 and later**
 
-- **iOS 9 and later**
+- **iOS 13.0 and later**
 
 ## Prerequisites
 
