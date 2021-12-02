@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/03/2021
+ms.date: 11/30/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,33 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of November 29, 2021 (Service release 2111)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Operating system end of support status for Cloud PCs<!--36852572 -->
+
+The **Provisioning policies** page has a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates. For more information, see [Lifecycle policies and end of support for Cloud PC OS](end-of-support.md).
+
+#### New documentation article: Optimize Zoom on a Windows 365 Cloud PC<!--37106382-->
+
+We’ve just published a new help documentation article. For more information, see [Optimize Zoom on a Windows 365 Cloud PC](zoom-support.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Two new security baseline settings for Windows 11 Cloud PCs<!--36989243 -->
+
+Windows 365 Enterprise now supports the following Windows 11 security baseline settings:
+
+- **Tamper Protection**: Helps protect Cloud PCs from bad actors bypassing security features like anti-virus protection.
+
+- **Script Scanning**: Helps identify possible threats by intercepting scripts and scanning them before they’re run.
+
+For more information about the security baseline updates for Windows 11, see [Windows 11 Security baseline](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/windows-11-security-baseline/ba-p/2810772). For more information about setting security baselines for Cloud PCs, see [Deploy security baselines](deploy-security-baselines.md).
 
 <!-- ########################## -->
 ## Week of November 1, 2021 (Service release 2110)
