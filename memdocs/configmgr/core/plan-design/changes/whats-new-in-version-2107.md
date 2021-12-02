@@ -434,7 +434,7 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/10096997.md).
 
 
-The following update rollup (11121541) is available in the console starting on October 27, 2021: [Update rollup for Configuration Manager current branch, version 2107](../../../hhotfix/2107/11121541.md).
+The following update rollup (11121541) is available in the console starting on October 27, 2021: [Update rollup for Configuration Manager current branch, version 2107](../../../hotfix/2107/11121541.md).
 
 
 ### Hotfixes
