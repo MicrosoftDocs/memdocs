@@ -97,6 +97,9 @@ To turn on automatic updates:
 
 Organizations may disable app updates. If this option is unavailable on your device, use the first set of Windows 10/11 instructions to update your app. 
 
+> [!NOTE]
+> The latest version of Company Portal app is supported and recommended because it contains the latest bug fixes, including security updates.
+
 ## Next steps  
 
 Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
