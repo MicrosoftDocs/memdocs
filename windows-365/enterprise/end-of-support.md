@@ -48,7 +48,7 @@ Windows 365 tracks end of support information in Microsoft Endpoint Manager on t
 | Warning | OS Support expired less than six months ago. Cloud PCs created using this policy have an OS that isn’t supported. Such Cloud PCs are vulnerable and not receiving security updates. | Cloud PCs created using this policy have an OS that isn’t supported. Such Cloud PCs are vulnerable and not receiving security updates.  |
 | Unsupported | Cloud PCs created using this policy have a Windows OS that hasn’t been supported for over six months. This policy can no longer be assigned to users. To resolve this issue, update the OS image in the provisioning policy to an image with a supported OS. Existing Cloud PCs previously created with this policy:<br>- Are vulnerable and not receiving security updates.<br>- Can’t be provisioned or reprovisioned. Attempts to provision a Cloud PC from this policy will fail with a **Windows Image out of Support** message. | Not applicable |
 
-These status values for Custom Images also appear under the **OS support status** column on the **Device images** page.
+These status values for custom images also appear under the **OS support status** column on the **Device images** page.
 
 ## Provisioning policies
 
