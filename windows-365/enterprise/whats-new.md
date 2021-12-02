@@ -57,6 +57,10 @@ Learn what new features are available in Windows 365 Enterprise.
 
 The **Provisioning policies** page has a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates. For more information, see [Lifecycle policies and end of support for Cloud PC OS](end-of-support.md).
 
+#### New documentation article: Optimize Zoom on a Windows 365 Cloud PC<!--37106382-->
+
+We’ve just published a new help documentation article. For more information, see [Optimize Zoom on a Windows 365 Cloud PC](zoom-support.md).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
