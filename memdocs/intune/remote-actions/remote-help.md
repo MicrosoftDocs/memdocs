@@ -280,6 +280,19 @@ You can monitor the use of remote help from within Microsoft Endpoint Manager.
    - The device that received assistance.
    - The start and end time of the Remote Assistance session.
 
+## Log files
+
+Remote help logs data during installation and during remote help sessions, which can be of use when investigating issues.
+
+**Installation of remote help** - The following logs are created when remote help installs on a device.
+
+- Remote_help_*_QuickAssist_Win10_x64.msi.log
+- Remote_help_*.log
+
+**Operational logs** - During use of remote help, operational details are logged in the Windows Event Viewer:
+
+- Event Viewer > Application and Services > Microsoft > Windows > RemoteHelp
+
 ## Next steps
 
 [Get support in Microsoft Endpoint Manager admin center](../../get-support.md)
