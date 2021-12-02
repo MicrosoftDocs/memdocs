@@ -2,7 +2,7 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 11/11/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -16,9 +16,9 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-From the Configuration Manager console, you can share feedback directly to the Microsoft product group. In the upper right corner of the console, select the smiley face icon.  There are three types of feedback:
+From the Configuration Manager console, you can share feedback directly to the Microsoft product group. In the upper right corner of the console, select the feedback icon.  There are three types of feedback:
 
-:::image type="content" source="media/console-share-feedback.png" alt-text="Submit feedback in Configuration Manager.":::
+:::image type="content" source="media/console-share-feedback.png" alt-text="Screenshot of the submit feedback icon in Configuration Manager.":::
 
 - **Send a smile** (**ALT** + **SHIFT** + **7**): Send feedback on what you liked.
 
@@ -43,6 +43,8 @@ Starting in version 2010, there's a new wizard to send feedback with a redesigne
 <!--4262917-->
 Starting in version 2107, error messages include a link to **Report error to Microsoft**. This action opens the standard [send a frown](#send-a-frown) window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also lets you include the full context of the error message when you share a screenshot.
 
+Starting in Configuration Manager 2111, wizards and some property pages include an icon to provide feedback allowing you to quickly send feedback right from your current activity. <!--2711343-->
+
 ## Prerequisites
 
 Update the Configuration Manager console to the latest version.
@@ -53,7 +55,7 @@ Update the Configuration Manager console to the latest version.
 
 To send feedback on something that you like about Configuration Manager:
 
-1. In the upper-right corner of the Configuration Manager console, select the smiley face icon. Choose **Send a smile**.
+1. In the upper-right corner of the Configuration Manager console, select the feedback icon. Choose **Send a smile**.
 
 1. On the first page of the **Provide feedback** wizard:
 
@@ -87,7 +89,7 @@ Before you file a frown, prepare your information:
 
 To send feedback on something that you didn't like about the Configuration Manager product:
 
-1. In the upper-right corner of the Configuration Manager console, select the smiley face icon. Choose **Send a frown**.
+1. In the upper-right corner of the Configuration Manager console, select the feedback icon. Choose **Send a frown**.
 
 1. On the first page of the **Provide feedback** wizard:
 

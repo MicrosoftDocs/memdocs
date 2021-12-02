@@ -2,7 +2,7 @@
 title: Microsoft Store apps
 titleSuffix: Configuration Manager
 description: Manage and deploy apps from the Microsoft Store for Business and Education with Configuration Manager.
-ms.date: 05/05/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -13,6 +13,9 @@ ms.localizationpriority: medium
 ---
 
 # Manage apps from the Microsoft Store for Business and Education with Configuration Manager
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 10884039 --> For more information, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423).
 
 The [Microsoft Store for Business and Education](/microsoft-store/) is where you find and acquire Windows apps for your organization. When you connect the store to Configuration Manager, you then synchronize the list of apps you've acquired. View these apps in the Configuration Manager console, and deploy them like you deploy any other app.
 

@@ -249,7 +249,7 @@ Starting in this release, BitLocker management policies over a CMG support the f
 
 - TPM password hash, otherwise known as TPM owner authorization
 
-For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
+For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/recovery-service.md).
 
 This release also provides support for the following features:
 

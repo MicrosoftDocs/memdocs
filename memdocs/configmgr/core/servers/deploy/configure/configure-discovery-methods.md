@@ -2,7 +2,7 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 04/27/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -259,8 +259,6 @@ When configuring the **Cloud Management** Azure service:
 ## <a name="bkmk_azuregroupdisco"></a> Azure AD User Group Discovery
 
 <!--3611956-->
-> [!Tip]  
-> This feature was first introduced in version 1906 as a [pre-release feature](../../manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
 
 You can discover user groups and members of those groups from Azure AD. When the site finds users in Azure AD groups that it hasn't previously discovered, it adds them as new user resources in Configuration Manager. A user group resource record is created when the group is a security group.
 

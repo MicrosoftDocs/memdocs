@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 10/19/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -274,9 +274,12 @@ Example: `ccmsetup.exe /source:"\\server\share"`
 
 ### /uninstall
 
-Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#BKMK_UninstalClient).
+Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#uninstall-the-client).
 
-Example: `ccmsetup.exe /uninstall`  
+Example: `ccmsetup.exe /uninstall`
+
+> [!NOTE]
+> Starting in version 2111, when you uninstall the client it also removes the client bootstrap, ccmsetup.msi, if it exists.<!-- 12425149 -->
 
 ### /UsePKICert
 
@@ -471,13 +474,13 @@ The frequency in minutes at which the client health evaluation tool (ccmeval.exe
 
 Example: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
-For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md#bkmk_health).
+For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md).
 
 ### CCMEVALHOUR
 
 The hour during the day when the client health evaluation tool (ccmeval.exe) runs. Specify an integer value from `0` (midnight) to `23` (11:00 PM). By default, ccmeval runs at midnight.
 
-For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md#bkmk_health).
+For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md).
 
 ### CCMFIRSTCERT
 
