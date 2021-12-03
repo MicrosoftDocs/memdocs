@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/02/2021
+ms.date: 12/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -105,7 +105,7 @@ Microsoft logs a small amount of session data to monitor the health of the remot
 - Errors arising from remote help itself, such as unexpected disconnections. This information is stored on the sharer's device in the event viewer.
 - Features used inside the app such as view only and elevation. This information is stored on Microsoft servers for 30 days.
 
-Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session. Microsoft cannot access a session or view any actions or keystrokes that occur in the session.
+Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
 
 The helper and sharer both see the following information about the other individual, taken from their organizational profiles:
 
@@ -121,7 +121,7 @@ Microsoft does not store any data about either the sharer or the helper for long
 
 Remote help is available as  download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session.
 
-When an update to remote help that is required, users are prompted to install that version of remote help when the app opens. The same process to download and install the initial remote help can be used to install the updated version. There's no need to uninstall the previous version before installing the updated version.
+When an update to remote help that is required, users are prompted to install that version of remote help when the app opens. You can use the same process to download and install remote help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
@@ -136,11 +136,11 @@ The most recent version of remote help is **10.0.100110.16384**
 
 To deploy remote help with Intune, you can add the app as a Windows win32 app, and define a detection rule to identify devices that don’t have the most current version of remote help installed.  Before you can add remote help as a Win32 app, you must repackage *remotehelp.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Wind32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
 
-After you repackage remote help as a *.intunewinfile*, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md ) with the following details to upload and deploy remote help. In the following, the repackaged remotehelp.exe file is named *remotehelp.intunewin*.
+After you repackage remote help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md ) with the following details to upload and deploy remote help. In the following, the repackaged remotehelp.exe file is named *remotehelp.intunewin*.
 
-1. On the App information page, click **Select app package file**, and locate the *remotehelp.intunewin* file you’ve previously prepared, and then select **OK**.
+1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you’ve previously prepared, and then select **OK**.
 
-   Add a *Publisher* and then select **Next**. The additional details on the App Information page are optional.
+   Add a *Publisher* and then select **Next**. The other details on the App Information page are optional.
 
 2. On the Program page, configure the following options:
 
@@ -150,7 +150,7 @@ After you repackage remote help as a *.intunewinfile*, use the procedures in [Ad
    > [!IMPORTANT]
    > The command line option *acceptTerms* is always case sensitive.
 
-   You can leave the remainder of the options at their default values and select **Next** to continue.
+   You can leave the rest of the options at their default values and select **Next** to continue.
 
 3. On the Requirements page, configure the following options to meet your environment, and then select **Next**:
 
@@ -238,7 +238,7 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
 3. After submitting the security code from the helper, the helper will see information about you including your full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
 
-   At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*. Full control must be established before the help session starts. If full control is desired after the sessions starts, both users must disconnect and restart the remote help session.
+   At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*. Full control must be established before the help session starts. If full control is required after the sessions starts, both users must disconnect and restart the remote help session.
 
 4. After establishing they type of session (full control or screen sharing), the session is established and the helper can now assist resolving any issues on the device.
 
@@ -253,13 +253,13 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
 As a helper, after receiving a request from a user who wants assistance through the remote help app:
 
-1. Start the remote help app on your device and sign-in to authenticate to your organization.
+1. Start the remote help app on your device and sign in to authenticate to your organization.
 
 2. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
 
 3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
 
-   At this time, you can request a session with full control of the sharers device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*. Full control must be established before the help session starts. If full control is desired after the sessions starts, both users must disconnect and restart the remote help session.
+   At this time, you can request a session with full control of the sharers device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*. Full control must be established before the help session starts. If full control is required after the sessions starts, both users must disconnect and restart the remote help session.
 
 4. After establishing that the session will use a shared display or full control, remote help will display a **Compliance Warning* if the sharers device fails to meet the conditions of its assigned compliance policies.
 
@@ -282,9 +282,9 @@ You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
 ## Log files
 
-Remote help logs data during installation and during remote help sessions, which can be of use when investigating issues.
+Remote help logs data during installation and during remote help sessions, which can be of use when investigating issues with the app.
 
-**Installation of remote help** - The following logs are created when remote help installs on a device.
+**Installation of remote help** - When remote help installs or uninstalls, the following two logs are created in the device users Temp folder, for example `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created. 
 
 - Remote_help_*_QuickAssist_Win10_x64.msi.log
 - Remote_help_*.log
