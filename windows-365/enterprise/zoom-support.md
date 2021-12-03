@@ -32,14 +32,14 @@ ms.collection: M365-identity-device-management
 
 Zoom is a 3rd-party application that provides online meeting services including support for virtualized environments like Windows 365 Cloud PCs. The instructions in this article help you optimize traffic for Zoom meetings when using the Microsoft Remote Desktop client on a Windows PC to access a Cloud PC.
 
-To optimize Zoom, you’ll need to install the VDI Client on the Cloud PC and the Azure Virtual Desktop plugin on the Windows PC that the user will use to access the Cloud PC.
+To optimize Zoom, you’ll need to install the Zoom VDI Client on the Cloud PC and the Zoom Azure Virtual Desktop plugin on the local Windows PC that the user will use to access the Cloud PC.
 
 ## Requirements
 
-- **Azure Virtual Desktop**: These instructions don't support connections through a web browser.
+- **Windows Remote Desktop Client**: These instructions don't support connections through a web browser.
 - **Operating system**: Windows
 
-## Install the VDI client on the Cloud PC
+## Install the Zoom VDI client on the Cloud PC
 
 1. Have the user sign in to the Cloud PC as a local administrator and, in their browser, navigate to the [Zoom VDI downloads and backwards compatibility page](https://support.zoom.us/hc/en-us/articles/360041602711).
 2. In the **Download Links** table, under **VDI Release – Version**, select the most recent version (for example, **5.8.4**).
@@ -48,7 +48,7 @@ To optimize Zoom, you’ll need to install the VDI Client on the Cloud PC and th
 
 Alternatively, the admin can deploy the Zoom VDI client. For more information about deploying apps, see the [Win32 App management guide](/mem/intune/apps/apps-win32-app-management).
 
-## Install the Azure Virtual Desktop plugin
+## Install the plugin on the local Windows PC
 
 1. Sign in to the Windows PC that will be used to access the Cloud PC.
 2. In a browser, navigate to the VDI release version page matching the page you used to install the VDI client. For example, [VDI Release Version 5.8.4]( https://support.zoom.us/hc/en-us/articles/4413719670285).
@@ -62,7 +62,7 @@ For more information on these installation steps, see Zoom’s [Getting started 
 
 ## To use the optimized Zoom client
 
-To benefit from these optimizations, users must sign in to their Cloud PC from a Windows PC by using Azure Virtual Desktop. After doing so, the user can open Zoom from the Cloud PC.
+To benefit from these optimizations, users must sign in to their Cloud PC from a Windows PC. After doing so, the user can open Zoom from the Cloud PC.
 
 ## Next steps
 
