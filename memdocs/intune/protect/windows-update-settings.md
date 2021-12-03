@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 12/03/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: davidmeb; bryanke
+ms.reviewer: davguy; bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,18 +29,16 @@ ms.collection:
 ---
 
 
-# Windows update settings for Intune  
+# Windows update settings for Intune
 
 View the Windows 10 and Windows 11 Update settings that you can [configure and manage](windows-update-for-business-configure.md) with Microsoft Intune.  
 
 When you configure settings for Windows update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 or Windows 11 version dependency, the version dependency is noted in the settings details.  
 
-## Update settings  
+## Update settings
 
 Update settings control what bits a device will download, and when. For more information about the behavior of each setting, see the Windows reference documentation.  
 
-
- 
 - **Microsoft product updates**  
   **Default**:  Allow  
   Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
@@ -141,8 +139,8 @@ User experience settings control the end-user experience for device restart and 
       **Default**: 5 PM  
       Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
-  - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.   
-  Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.  
+    Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
     This option supports additional settings.  
 
@@ -153,7 +151,7 @@ User experience settings control the end-user experience for device restart and 
       **Default**: Any Day  
 
     - **Scheduled install time** - Specify the time of day when you want updates to install.  
-      **Default**: 3 AM   
+      **Default**: 3 AM
   
       > [!IMPORTANT]  
       > The device might not complete the installation at the specified time because of power policies, user absence, and so on. In this case, it will not attempt installation until the specified time occurs again or until a deadline you have specified is reached.
@@ -161,7 +159,6 @@ User experience settings control the end-user experience for device restart and 
   - **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.  
 
   - **Reset to default** - Restore the original auto update settings on machines that run the Windows 10 October 2018 Update or later, and that run Windows 11.  These original auto update settings allow Windows to use automatically determined active hours to schedule the best time to install updates and restart the system after it installs the updates.
-
 
 - **Restart checks**  
   **Default**: Allow  
@@ -178,33 +175,10 @@ User experience settings control the end-user experience for device restart and 
 
 - **Option to check for Windows updates**  
   **Default**: Enable  
-  Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+  Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess)
 
   - **Enable** - Allow device users to use Windows Update scan to find updates.
   - **Disable** - Prevent device users from accessing the Windows Update scan.  
-
-- **Require user approval to dismiss restart notification**  
-  **Default**: Not configured  
-  Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
-  
-  - **No** - Automatic Dismissal after 25 seconds.
-  - **Yes** - Require User Dismissal.
-   
-- **Remind user prior to required auto-restart with dismissible reminder (hours)**  
-  **Default**: 4  
-  Windows Update CSP: [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
-
-  Specify how long in advance of an automatic restart to display a dismissible notification to a device user about that restart. Values of **2**, **4**, **8**, **12**, or **24** hours are supported.  
-  
-  When you clear the default value, this setting becomes *Not configured*.  
-
-- **Remind user prior to required auto-restart with permanent reminder (minutes)**  
-  **Default**: 15  
-  Windows Update CSP: [Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
-
-  Specify how long in advance of an automatic restart to display a non-dismissible warning to a device user about that restart. Values of **15**, **30** or **60** minutes are supported.  
-
-  When you clear the default value, this setting becomes *Not configured*.  
 
 - **Change notification Update level**  
   **Default**: Use the default Windows Update notifications  
@@ -220,7 +194,7 @@ User experience settings control the end-user experience for device restart and 
 
 - **Use deadline settings**  
   **Default**: Not configured  
- 
+
   Allows user to use deadline settings.  
 
   - **Not configured**
