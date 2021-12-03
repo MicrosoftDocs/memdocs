@@ -40,10 +40,12 @@ ms.collection:
 - Windows 11  
 
  
-Get the latest version of the Company Portal app on your Android, iOS, macOS, or Windows device. Your organization may require you to update the app on your device when:  
+Get the latest version of the Microsoft Intune Company Portal app on your Android, iOS, macOS, or Windows device. We recommend always using the latest version of the Company Portal app because it contains the latest bug fixes and security updates. 
 
-* A newer version of Company Portal becomes available.
-* Your version of Company Portal is no longer supported. 
+Your organization may require you to update the app on your device when:  
+
+* A newer version of Company Portal becomes available.  
+* Your version of Company Portal is no longer supported.  
 
 If an update is required, you'll receive a notification from Company Portal.  
 
@@ -97,8 +99,6 @@ To turn on automatic updates:
 
 Organizations may disable app updates. If this option is unavailable on your device, use the first set of Windows 10/11 instructions to update your app. 
 
-> [!NOTE]
-> The latest version of Company Portal app is supported and recommended because it contains the latest bug fixes, including security updates.
 
 ## Next steps  
 
