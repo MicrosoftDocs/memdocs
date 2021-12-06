@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 12/06/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,7 +73,8 @@ Use one of the following procedures to create the policy type you prefer.
 
 4. On the **Configuration settings** page, configure settings for BitLocker to meet your business needs.  
 
-   If you want to enable BitLocker silently, see [Silently enable BitLocker on devices](#silently-enable-bitlocker-on-devices), in this article for additional prerequisites and the specific setting configurations you must use.
+   > [!TIP]
+   > If you want to enable BitLocker silently, you must use a Endpoint protection template as part of a device configuration profile and not an Endpoint security policy. See [Silently enable BitLocker on devices](#silently-enable-bitlocker-on-devices) in this article for additional prerequisites and the specific setting configurations you must use.
 
    Select **Next**.
 
@@ -117,26 +118,26 @@ To view information about devices that receive BitLocker policy, see [Monitor di
 
 ### Silently enable BitLocker on devices
 
-You can configure a BitLocker policy that automatically and silently enables BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn't a local Administrator on the device.
+You can use an *Endpoint protection* template as part of a *device configuration* profile to configure a BitLocker policy that automatically and silently enables BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn't a local Administrator on the device.
 
 **Device Prerequisites**:
 
 A device must meet the following conditions to be eligible for silently enabling BitLocker:
 
 - If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later, or Windows 11.
-- If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later, or Windows 11.
+- If end users log in to the devices as Standard Users, the device must run Windows 10 version 1809 or later, or Windows 11.
 - The device must be Azure AD Joined or Hybrid Azure AD Joined.
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only. 
 
 **BitLocker policy configuration**:
 
-The following two settings for *BitLocker base settings* must be configured in the BitLocker policy:
+The following two settings for *BitLocker base settings* must be configured in the BitLocker policy of a device configuration profile:
 
 - **Warning for other disk encryption** = *Block*.
 - **Allow standard users to enable encryption during Azure AD Join** = *Allow*
 
-The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker can not silently enable and requires interaction from the end user.  This requirement is met through the following four *BitLocker OS drive settings* in the same policy:
+The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker can't silently enable and requires interaction from the end user.  This requirement is met through the following four *BitLocker OS drive settings* in the same policy:
 
 - **Compatible TPM startup** must be set to *Allowed* or *Required*
 - **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
@@ -182,7 +183,7 @@ When you’ve configured the tenant attach scenario, Microsoft Endpoint Manager 
 
 - To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices:. See [KB11121541](/mem/configmgr/hotfix/2107/11121541).
 
-- To view the recovery keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related permissions for Configuration Manager of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission. For more information see [Configure role-based administration for Configuration Manager](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
+- To view the recovery keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related permissions for Configuration Manager of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission. For more information, see [Configure role-based administration for Configuration Manager](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
 
 
 ### Rotate BitLocker recovery keys
