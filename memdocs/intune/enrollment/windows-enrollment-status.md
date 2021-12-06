@@ -94,10 +94,10 @@ To turn on the Enrollment Status Page, follow the steps below.
 5. Optionally, on the **Scope tags** page, you can add the scope tags that you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with Enrollment Status Page profiles, users can only re-order profiles for which they have scope. Also, they can only reorder for the profile positions for which they have scope. Users see the true profile priority number on each policy. A scoped user can tell the relative priority of their profile even if they can't see all the other profiles.
 6. Choose **Assignments** > **Select groups** > choose the groups that you want to adopt this profile > **Select** > **Save**.
 7. Optionally, select **Edit filter** to restrict the policy assignment further.
-8. Choose **Settings** > choose the settings you want to apply to this profile > **Save**.
+8. Choose **Settings** > *choose the settings you want to apply to this profile* > **Save**.
 
 > [!NOTE]
-> Due to OS restrictions, only a subset of filters are available to use when assigning **Enrollment Status Page** policies. The filter picker will only show filters that have rules defined for `osVersion`, `operatingSystemSKU`, `deviceOwnership`, and `e`nrollmentProfileName` properties. Filters that contain other properties are not shown.
+> Due to OS restrictions, only a subset of filters are available to use when assigning **Enrollment Status Page** policies. The filter picker will only show filters that have rules defined for `osVersion`, `operatingSystemSKU`, `deviceOwnership`, and `enrollmentProfileName` properties. Filters that contain other properties are not shown.
 
 ## Set the enrollment status page priority
 
