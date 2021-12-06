@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -107,8 +107,9 @@ Event Viewers:
 34. Microsoft-Windows-HelloForBusiness/Operational
 35. Microsoft-Windows-SENSE/Operational
 36. Microsoft-Windows-SenseIR/Operational
-37. Setup
-38. System
+37. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
+38. Setup
+39. System
 
 Files:
 
