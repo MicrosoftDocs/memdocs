@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: mikedano, kakyker; annovich
+ms.reviewer: beflamm, jayeren
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -101,6 +101,15 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
   This feature applies to:  
   - macOS 10.15 and newer
 
+### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
+
+- **Block iCloud Private Relay**: **Yes** disables the iCloud Private Relay. When disabled, Apple doesn't encrypt internet traffic leaving the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature, which prevents networks and servers from monitoring a user's activity across the internet.
+
+  This feature applies to:  
+  - macOS 12 and newer
+
+  [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site)
+
 ## Connected devices
 
 ### Settings apply to: All enrollment types
@@ -157,7 +166,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
   - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.   
 
-     This features applies to:  
+     This feature applies to:  
     - macOS 11.0 and newer  
 
 ### Settings apply to: Automated device enrollment  
@@ -232,6 +241,15 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
 - **Block user from modifying passcode**: **Yes** stops the passcode from being changed, added, or removed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
 
 - **Block Touch ID to unlock device**: **Yes** prevents using fingerprints to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+
+- **Timeout (hours of inactivity)**: Enter a value of inactive hours that users must enter their password, instead of TouchID.
+
+  The default inactivity period is 48 hours. After 48 hours of inactivity, the device prompts for the password, instead of Touch ID.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might set the timeout to 48 hours (172,800 seconds).
+
+  This feature applies to:  
+  - macOS 12 and newer
 
 - **Block password AutoFill**: **Yes** prevents using the AutoFill Passwords feature on macOS. Choosing **Yes** also has the following impact:
 
