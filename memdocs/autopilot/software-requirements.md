@@ -50,7 +50,7 @@ The following editions are supported: Pro, Pro Education, Pro for Workstations, 
 
 ### Windows 10
 
-- A [supported version](/windows/release-health/) of Windows 10 Semi-Annual Channel is required. 
+- A [supported version](/windows/release-health/) of Windows 10 Semi-Annual Channel or Windows 10 General Availability Channel is required. 
 - The following editions are supported:
   - Windows 10 Pro
   - Windows 10 Pro Education
