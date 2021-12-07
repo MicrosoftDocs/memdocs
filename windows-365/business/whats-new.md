@@ -55,7 +55,7 @@ Learn what new features are available in Windows 365 Business.
 
 #### Windows 11 support for newly created Cloud PCs<!--35091970 wnready -->
 
-Windows 365 Business Cloud PCs are now created with Windows 11 installed by default. For information about how to change the default operating system between Windows 10 and Windows 11, see [Change organizational default settings](change-organizational-default-settings.md). On [windows365.microsoft.com](https://windows365.microsoft.com), users can see the difference between their Windows 10 and 11 Cloud PCs.
+Windows 365 Business Cloud PCs are now created with Windows 11 installed by default. For information about how to change the default operating system between Windows 10 and Windows 11, see [Change organization default settings](change-organization-default-settings.md). On [windows365.microsoft.com](https://windows365.microsoft.com), users can see the difference between their Windows 10 and 11 Cloud PCs.
 
 #### Manage Cloud PCs in the Microsoft 365 admin center and windows365.microsoft.com<!--36859306 -->
 
