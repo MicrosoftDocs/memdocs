@@ -257,11 +257,11 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    1. Sign into [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
-   2. From the remote actions bar across the top of the device view, select **New remote help session**. When the app opens, you’ll already be authenticated.
+   2. From the remote actions bar across the top of the device view, select **New remote help session**. This action opens the remote help app.
 
    Alternately, or for devices not enrolled in Intune, locate the remote help app on your device and manually start it. After remote helps opens, you'll need to sign in to authenticate to your organization.
 
-2. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
+2. When remote help opens you must sign in to authenticate to your organization. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
 
 3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
 
