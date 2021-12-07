@@ -192,10 +192,7 @@ Filters allows you to include or exclude devices in policy or app assignments ba
 New assignment filters in Enrollment Restrictions will let you include or exclude restrictions based on device type. For example, you can allow personal devices, while blocking Windows 10 Home devices, by applying the operatingSystemSKU assignment filter. These filters will be released for public preview with a new configuration experience for enrollment restrictions and supported for Windows and Apple devices, with Android support coming at a later date. For more information about how to use filters, see [Create a filter](../fundamentals/filters.md).   
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-## Monitor and troubleshoot
-
-### Adding event viewer for Windows 10 diagnostics<!-- 10741116 -->
-We're adding a new event viewer to Windows 10 device diagnostics called Microsoft-Windows-Windows Firewall with Advanced Security/Firewall. The event viewer will assist you in troubleshooting issues with the firewall.
+## Monitor and troubleshoot  
 
 ### Account protection policy changes in Endpoint security<!--  7492116   -->
 
