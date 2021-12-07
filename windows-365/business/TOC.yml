@@ -22,7 +22,7 @@ items:
     - name: Change organizational defaults
       href: change-organizational-default-settings.md
     - name: Remotely manage Cloud PCs
-      href: remotely-manage-cloud-pcs.md
+      href: remotely-manage-business-cloud-pcs.md
     - name: Reset a user's password
       href: reset-user-password.md
 - name: Troubleshoot
