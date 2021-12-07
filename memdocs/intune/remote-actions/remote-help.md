@@ -44,8 +44,7 @@ The remote help app is available from Microsoft to install on both devices enrol
 
 The Remote help app supports the following capabilities:
 
-- **Enable remote help for your tenant** – By default, Intune tenants aren't enabled for remote help. If you choose to turn on remote help, its use is enabled tenant-wide. Remote help must be enabled before users can be authenticated through 
-- your tenant when using remote help.
+- **Enable remote help for your tenant** – By default, Intune tenants aren't enabled for remote help. If you choose to turn on remote help, its use is enabled tenant-wide. Remote help must be enabled before users can be authenticated through your tenant when using remote help.
 
 - **Use remote help with unenrolled devices** – Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
@@ -256,11 +255,11 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 1. Start the remote help app on your device. You can start the app from within the Microsoft Endpoint Manager admin center:
 
-   1. Sign into [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed. If you can’t find the correct device, you can select any device to start the remote help app.
+   1. Sign into [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
    2. From the remote actions bar across the top of the device view, select **New remote help session**. When the app opens, you’ll already be authenticated.
 
-   Alternately, you can locate the remote help app on your device and manually open it. After it opens you'll need to sign in to authenticate to your organization.
+   Alternately, or for devices not enrolled in Intune, locate the remote help app on your device and manually start it. After remote helps opens, you'll need to sign in to authenticate to your organization.
 
 2. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
 
