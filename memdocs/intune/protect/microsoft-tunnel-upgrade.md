@@ -155,7 +155,7 @@ Image hash values:
 Changes in this release:
 
 - Added ability to get a client network trace
-- Added ability to enabled resoruce access tracking
+- Added ability to enabled resource access tracking
 - Added support for Podman when using Red Hat Enterprise Linux 8.4
 - Minor bug fixes
 
