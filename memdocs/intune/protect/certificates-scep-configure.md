@@ -213,7 +213,9 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
    - **Security**:
 
      - Add the **NDES service account**. This account requires **Read** and **Enroll** permissions to this template.
-
+     - Remove Authenticated Users **Read** and **Enroll** permissions
+        > [!Important]
+        > There is a vulnerability The certificate template allows requesters to specify a subjectAltName in the CSR. A requester can specify the SAN in a CSR, the requester can request a certificate as anyone. The mspki-certificate-name-flag property is a bitmask and if the CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT flag is present, a  requester can specify the SAN.
      - Add additional Accounts for Intune administrators who will create SCEP profiles. These accounts require **Read** permissions to the template to enable these admins to browse to this template while creating SCEP profiles.
 
      ![Template, security tab](./media/certificates-scep-configure/scep-ndes-security.jpg)
