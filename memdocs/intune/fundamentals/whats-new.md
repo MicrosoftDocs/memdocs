@@ -66,7 +66,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Monitor and troubleshoot  
 
 #### New event viewer for Windows 10 diagnostics <!-- 10741116 -->
-We've added a new event viewer to Windows 10 device diagnostics called *Microsoft-Windows-Windows Firewall with Advanced Security/Firewall*. The event viewer can assist you in troubleshooting issues with the firewall.  
+We've added a new event viewer to Windows device diagnostics called *Microsoft-Windows-Windows Firewall with Advanced Security/Firewall*. The event viewer can assist you in troubleshooting issues with the firewall. For more information about Windows device diagnostics, see [Collect diagnostics from a Windows device](../remote-actions/collect-diagnostics.md).  
 
 ## Week of November 22, 2021  
 
