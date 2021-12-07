@@ -34,11 +34,12 @@ You can add a user and assign them licenses by following these steps:
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an Azure Active Directory (Azure AD) Global Administrator account.
 2. Select **Your organization’s Cloud PCs** > **Add a user**.
-  ![Screenshot of Add user button](/media/add-user-assign-licences/add-user.png)
-3. Select **Edit products** to see all available licenses that can be assigned to the user.
-4. Select the licenses that you want to assign to the user.
-5. Under **User information**, enter a name and username, and select a domain name.
-6. If you want to specify a password, select **???** and then provide a password. If you don’t choose this option, a random password is automatically created for the user.
-7. Select **???** if you don’t want to require the user to change their password when they first sign into the new Cloud PC. If you don’t choose this option, the user will be prompted to change the password when the first sign into the Cloud PC.
-8. Select **???** to automatically send the sign in info to the user in an email.
+  ![Screenshot of Add user](/media/add-user-assign-licences/add-user.png)
+3. Choose **Select products** to see all available licenses that can be assigned to the user.
+    ![Screenshot of Select products](/media/add-user-assign-licences/select-products.png)
+4. Select the licenses that you want to assign to the user > **Update**.
+5. Under **User information**, enter a first and last name, username, and select a domain name.
+6. If you want to specify a password, de-select the **Automatically create a password** box. Then, enter a password.
+7. If you don’t want to require the user to change their password when they first sign into the new Cloud PC, de-select the **This user must change their password when they first sign in** box.
+8. If you don't want to automatically email the sign-in info to the user, de-select **Email the sign-in info** box.
 9. Select **Add user**. A new Cloud PC will be created and the user can use the sign in information to access it.
