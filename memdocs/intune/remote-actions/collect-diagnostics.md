@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 12/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -67,13 +67,13 @@ Registry Keys:
 
 1. HKLM\Software\Microsoft\IntuneManagementExtension
 2. HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
-3. HKLM\SOFTWARE\Microsoft\Windows Endpoint
+3. HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
 4. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
 5. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
 6. HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
 7. HKLM\Software\Policies
 8. HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
-9. HKLM\SOFTWARE\Policies\Microsoft\Windows Endpoint
+9. HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
 10. HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 11. HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -113,19 +113,19 @@ Event Viewers:
 
 Files:
 
-39. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
-40. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
-41. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
-42. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-43. %temp%\MDMDiagnostics\battery-report.html
-44. %temp%\MDMDiagnostics\energy-report.html
-45. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
-46. %temp%\MDMDiagnostics\msinfo32.log
-47. %windir%\ccm\logs\*.log
-48. %windir%\ccmsetup\logs\*.log
-49. %windir%\logs\CBS\cbs.log
-50. %windir%\logs\measuredboot\*.*
-51. %windir%\Logs\WindowsUpdate\*.etl
+40. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+41. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+42. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
+43. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+44. %temp%\MDMDiagnostics\battery-report.html
+45. %temp%\MDMDiagnostics\energy-report.html
+46. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
+47. %temp%\MDMDiagnostics\msinfo32.log
+48. %windir%\ccm\logs\*.log
+49. %windir%\ccmsetup\logs\*.log
+50. %windir%\logs\CBS\cbs.log
+51. %windir%\logs\measuredboot\*.*
+52. %windir%\Logs\WindowsUpdate\*.etl
 
 ## Disable device diagnostics
 
