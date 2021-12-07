@@ -34,7 +34,7 @@ You can add a user and assign them licenses by following these steps:
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an Azure Active Directory (Azure AD) Global Administrator account.
 2. Select **Your organization’s Cloud PCs** > **Add a user**.
-  ![Screenshot of Add user button](./media/add-user-assign-licences/add-user.png)
+  ![Screenshot of Add user button](/media/add-user-assign-licences/add-user.png)
 3. Select **Edit products** to see all available licenses that can be assigned to the user.
 4. Select the licenses that you want to assign to the user.
 5. Under **User information**, enter a name and username, and select a domain name.
