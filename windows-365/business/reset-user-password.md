@@ -34,6 +34,6 @@ To reset a user’s password:
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an Azure Active Directory (Azure AD) Global Administrator account.
 2. Select **Your organization’s Cloud PCs**.
-3. Hover over the user whose password you want to reset.
-4. Select the key icon > **Reset password**.
-5. What happens next???
+3. Hover over the user whose password you want to reset and select the key icon > **Reset password**.
+4. Under **Reset password**, choose the options that you want for resetting the password.
+5. Select **Reset password**.
