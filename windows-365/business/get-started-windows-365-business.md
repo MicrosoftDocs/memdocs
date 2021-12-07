@@ -83,7 +83,10 @@ If you already have a Microsoft 365 tenant and are a Global or Billing admin, yo
 
 ## Assign licenses to users
 
-Whether you purchased your subscriptions through the Windows 365 products site, or through the Microsoft 365 admin center, you can [assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users) through the **Billing** page in the Microsoft 365 admin center.
+Whether you purchased your subscriptions through the Windows 365 products site, or through the Microsoft 365 admin center, you can assign licenses to users through either:
+
+- The **Billing** page in the Microsoft 365 admin center. For more information, see [assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
+- [windows365.microsoft.com](https://windows365.microsoft.com). For more information, see [Assign or unassign a license](assign-unassign-license.md).
 
 You can assign different Windows 365 Business license types to a user, based on the users business need. See [Windows 365 Business sizing options](windows-365-business-sizing.md)  for guidance on which license type might be suitable for your users.
 
