@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 12/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,13 +121,14 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2111
+### Technical preview version 2112
 <!-- all items are in 2111 CB -->
-- [Improvements to the Windows servicing dashboard](2021/technical-preview-2111.md#bkmk_servicing) <!--10579996-->
-- [Co-management Eligible Devices collection](2021/technical-preview-2111.md#bkmk_co-management) <!--12377291-->
-- [Improvement to app groups](2021/technical-preview-2111.md#bkmk_appgroup) <!--11125884-->
-- [Improvement to task sequence deployment type](2021/technical-preview-2111.md#bkmk_tsdt) <!--10422235-->
-- [PowerShell release notes preview](2021/technical-preview-2111.md#bkmk_powershell) <!--10957283-->
+- [3601042](2021/technical-preview-2112.md) <!--3601042-->
+- [4575930](2021/technical-preview-2112.md) <!--4575930-->
+- [12441118](2021/technical-preview-2112.md) <!--12441118-->
+- [12580525](2021/technical-preview-2112.md) <!--12580525-->
+- [12726153](2021/technical-preview-2112.md) <!--12726153-->
+- [12770887](2021/technical-preview-2112.md) <!--12770887-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
