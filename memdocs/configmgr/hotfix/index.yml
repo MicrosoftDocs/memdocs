@@ -13,11 +13,17 @@ metadata:
   author: bhuney
   ms.author: brianhun
   manager: dougeby
-  ms.date: 09/23/2021
+  ms.date: 12/09/2021
   ms.localizationpriority: high
 
 landingContent:
-  - title: Configuration Manager 2107
+  - title: Configuration Manager 2111
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 11052354 Summary of changes in 2111
+            url: 2111/11052354.md
+   - title: Configuration Manager 2107
     linkLists:
       - linkListType: overview
         links:
@@ -37,7 +43,7 @@ landingContent:
             url: 2103/9603111.md
           - text: KB 10036164 Update rollup for 2103
             url: 2103/10036164.md
-  - title: Configuration Manager 2010
+   - title: Configuration Manager 2010
     linkLists:
       - linkListType: overview
         links:
