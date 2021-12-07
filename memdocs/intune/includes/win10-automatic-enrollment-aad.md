@@ -6,6 +6,7 @@ Automatic enrollment lets users enroll their Windows devices in Intune. To enrol
 
 - Azure Active Directory Premium subscription ([trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845))
 - Microsoft Intune subscription
+- Global Administrator rights
 
 ### Configure automatic MDM enrollment
 
