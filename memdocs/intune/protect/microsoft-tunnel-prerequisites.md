@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/23/2021
+ms.date: 12/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,7 @@ At a high level, you’ll need the following to use the Microsoft Tunnel:
 - An Azure subscription.
 - An Intune subscription.
 - A Linux server that runs containers. This server can be on-premises or in the cloud:
-  - Podman for Red Hat Enterprise Linux (RHEL) 8.4 or later
+  - Podman for Red Hat Enterprise Linux (RHEL) 8.4
   - Docker for all other Linux distributions
 - A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
 - Devices that run Android or iOS/iPadOS.
@@ -53,7 +53,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   - CentOS 7.4+(CentOS 8+ isn’t supported)
   - Red Hat (RHEL) 7.4+
-  - Red Hat (RHEL) 8.4+
+  - Red Hat (RHEL) 8.4
   - Ubuntu 18.04
   - Ubuntu 20.04
 
@@ -72,17 +72,17 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **CPU**: 64-bit AMD/Intel processor.
 
-- **Install Docker CE or Podman**: Install Podman version 3.0 on RHEL 8.4 or later. For all other versions of RHEL or other Linux distributions, install Docker version 19.03 CE or later.
-  Microsoft Tunnel requires Docker (or Podman on RHEL 8.4 or later) on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
+- **Install Docker CE or Podman**: Install Podman version 3.0 on RHEL 8.4. For all other versions of RHEL or other Linux distributions, install Docker version 19.03 CE or later.
+  Microsoft Tunnel requires Docker (or Podman on RHEL 8.4) on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
   For information about installing and configuring Docker or Podman, see:
 
   - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
     > [!NOTE]
-    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7. The version installed on RHEL 7 by default is too old to support Microsoft Tunnel Gateway. Red Hat Enterprise Linux 8 does not support Docker. For RHEL 8.4 or later, install and use Podman instead.
+    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7. The version installed on RHEL 7 by default is too old to support Microsoft Tunnel Gateway. Red Hat Enterprise Linux 8 does not support Docker. For RHEL 8.4, install and use Podman instead.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-  - [Install Podman on Red Hat Enterprise Linux 8.4 or later (scroll down to RHEL8)](https://podman.io/getting-started/installation).  
-    Podman is the container solution used on RHEL 8.4 and later, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
+  - [Install Podman on Red Hat Enterprise Linux 8.4 (scroll down to RHEL8)](https://podman.io/getting-started/installation).  
+    Podman is the container solution used on RHEL 8.4, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
 with documentation for the application, and packages with helper utilities. For more information see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
@@ -184,7 +184,7 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 ### Configure an internal proxy for Podman
 
-The following details can help you configure an internal proxy when using RHEL 8.4 or later, and Podman:
+The following details can help you configure an internal proxy when using RHEL 8.4, and Podman:
 
 - Podman reads HTTP Proxy information stored in **/etc/profile.d/http_proxy.sh**. If this file doesn't exist on your server, create it. Edit **http_proxy.sh** to add the following two lines. In the following lines, *10.10.10.1:3128* is an example address:port entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP *address:port*:
 
