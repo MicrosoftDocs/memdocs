@@ -19,8 +19,8 @@ items:
       href: add-user-assign-licenses.md
     - name: Assign or unassign a license
       href: assign-unassign-license.md
-    - name: Change organizational defaults
-      href: change-organizational-default-settings.md
+    - name: Change organization defaults
+      href: change-organization-default-settings.md
     - name: Remotely manage Cloud PCs
       href: remotely-manage-business-cloud-pcs.md
     - name: Reset a user's password
