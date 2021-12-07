@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -44,7 +44,8 @@ The remote help app is available from Microsoft to install on both devices enrol
 
 The Remote help app supports the following capabilities:
 
-- **Enable remote help for your tenant** – By default, Intune tenants aren't enabled for remote help. If you choose to turn on remote help, its use is enabled tenant-wide. Remote help must be enabled before users can be authenticated through your tenant when using remote help.
+- **Enable remote help for your tenant** – By default, Intune tenants aren't enabled for remote help. If you choose to turn on remote help, its use is enabled tenant-wide. Remote help must be enabled before users can be authenticated through 
+- your tenant when using remote help.
 
 - **Use remote help with unenrolled devices** – Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
@@ -225,7 +226,7 @@ The use of remote help depends on whether you're requesting help or providing he
 
 ### Request help
 
-To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helpers instance of remote help. 
+To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helper's instance of remote help.
 
 > [!TIP]  
 > To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, you are signed out of your device.
@@ -240,20 +241,26 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
    At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*. Full control must be established before the help session starts. If full control is required after the sessions starts, both users must disconnect and restart the remote help session.
 
-4. After establishing they type of session (full control or screen sharing), the session is established and the helper can now assist resolving any issues on the device.
+4. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist resolving any issues on the device.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
 ### Provide help  
 
 > [!TIP]  
 > Plan to have the sharer save any active work before a remote help session ends to avoid an unexpected loss of work. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is signed out of their device to ensure any elevated permissions are cleared from the device.
 
-As a helper, after receiving a request from a user who wants assistance through the remote help app:
+As a helper, after receiving a request from a user who wants assistance by using the remote help app:
 
-1. Start the remote help app on your device and sign in to authenticate to your organization.
+1. Start the remote help app on your device. You can start the app from within the Microsoft Endpoint Manager admin center:
+
+   1. Sign into [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed. If you can’t find the correct device, you can select any device to start the remote help app.
+
+   2. From the remote actions bar across the top of the device view, select **New remote help session**. When the app opens, you’ll already be authenticated.
+
+   Alternately, you can locate the remote help app on your device and manually open it. After it opens you'll need to sign in to authenticate to your organization.
 
 2. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
 
@@ -265,7 +272,7 @@ As a helper, after receiving a request from a user who wants assistance through 
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
 ## Monitoring and reports
 
@@ -284,7 +291,7 @@ You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
 Remote help logs data during installation and during remote help sessions, which can be of use when investigating issues with the app.
 
-**Installation of remote help** - When remote help installs or uninstalls, the following two logs are created in the device users Temp folder, for example `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created. 
+**Installation of remote help** - When remote help installs or uninstalls, the following two logs are created in the device users Temp folder, for example `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created.
 
 - Remote_help_*_QuickAssist_Win10_x64.msi.log
 - Remote_help_*.log
