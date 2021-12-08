@@ -55,7 +55,7 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 <!-- ***********************************************-->
 ## Upcoming features
 
-Upcoming features will be listed here.
+Check back here for announcements of upcoming features.
 
 ## Next steps
 
