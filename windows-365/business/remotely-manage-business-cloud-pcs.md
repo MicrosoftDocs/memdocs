@@ -53,7 +53,7 @@ To use these remote actions, you must have either of the following Azure Active 
 4. Select the Cloud PC you want to manage.
 5. Select the action that you want to perform.
 
-## Remotely manage Cloud PCs by using the Microsoft 365 admin center 
+## Remotely manage Cloud PCs by using the Microsoft 365 admin center
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com).
 2. In the left navigation select **Users** -> **Active users**.
@@ -92,3 +92,7 @@ To assign a Windows 365 Administrator role to a user:
 6. Select **Windows 365 Administrator** > **Save changes**.
 
 You can also assign the Windows 365 admin role through the Microsoft 365 Admin Center and Azure Active Directory.
+
+## Next steps
+
+You can manage users and Cloud PCs in other ways. For more information, see [Managing Cloud PCs](get-started-windows-365-business.md#).
