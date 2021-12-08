@@ -26,15 +26,13 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [3601042](includes/2112/3601042.md)]
 [!INCLUDE [4575930](includes/2112/4575930.md)]
 [!INCLUDE [12441118](includes/2112/12441118.md)]
-[!INCLUDE [12580525](includes/2112/12580525.md)]
 [!INCLUDE [12726153](includes/2112/12726153.md)]
 [!INCLUDE [12770887](includes/2112/12770887.md)]
 
-<!--
-## General known issues
 
-[!INCLUDE [11018755](includes/2112/known-issue-11018755.md)]
- -->
+## General known issues
+<!-- [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
+[!INCLUDE [12580525](includes/2112/12580525.md)]
 
 ## Next steps
 
