@@ -44,9 +44,9 @@ Install Company Portal for Android from these stores:
 * [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)  
 * [Amazon Appstore for Android](https://www.amazon.com/Microsoft-Corporation-Intune-Company-Portal/dp/B092BCFLBJ/)  
 
-If the app stores listed above are unavailable, or you're using a device that doesn't support Google Mobile Services, you can [download Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually.  
+If the app stores listed above are unavailable, or you're using a device that doesn't support Google Mobile Services, you can [download Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or fixes automatically. Be sure to regularly update and patch the app yourself.  
 
-The Google Play Store is not available in People's Republic of China, but you can install Company Portal from select Chinese app marketplaces. For more information, see [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md).   
+Google Play Store is not available in People's Republic of China. You can install the Company Portal app from select Chinese app marketplaces instead. For more information, see [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md).   
 
 ### iOS  
 Install Company Portal for iOS from the [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358).  
