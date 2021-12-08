@@ -37,3 +37,7 @@ To reset a user’s password:
 3. Hover over the user whose password you want to reset and select the key icon > **Reset password**.
 4. Under **Reset password**, choose the options that you want for resetting the password.
 5. Select **Reset password**.
+
+You can also reset a user's password through the Microsoft 365 Admin Center and Azure Active Directory.
+
+

@@ -45,7 +45,7 @@ To use these remote actions, you must have either of the following Azure Active 
 5. Select the Cloud PC you want to manage.
 6. Select the action that you want to perform.
 
-## Remotely manage Cloud PCs by using the Microsoft 365 admin center
+## Remotely manage Cloud PCs by using the Microsoft 365 admin center simplified view
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com).
 2. Select the user whose Cloud PC you want to manage.
@@ -53,7 +53,7 @@ To use these remote actions, you must have either of the following Azure Active 
 4. Select the Cloud PC you want to manage.
 5. Select the action that you want to perform.
 
-## Remotely manage Cloud PCs by using the Microsoft 365 admin center simplified view
+## Remotely manage Cloud PCs by using the Microsoft 365 admin center 
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com).
 2. In the left navigation select **Users** -> **Active users**.
@@ -64,7 +64,7 @@ To use these remote actions, you must have either of the following Azure Active 
 
 ## Remote management actions
 
-The following remote actions are supported on winodws465.microsoft.com and the Microsoft 365 admin center:
+The following remote actions are supported on winodws365.microsoft.com and the Microsoft 365 admin center:
 
 **Change account type**: Change the role of a user on their Cloud PC. Options include Standard User and Local Administrator. For the role change to take effect, the user must sign out of Windows on their Cloud PC and sign back in. Alternatively, the admin can remotely restart the Cloud PC, but the user may lose any unsaved data.
 
@@ -75,7 +75,6 @@ The following remote actions are supported on winodws465.microsoft.com and the M
 - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
 - Removes all apps and locally stored files.
 - Removes changes made to settings.
-After a Cloud PC is reset, the newly created Cloud PC uses the latest settings from the Organization Settings.
 
 **Restart**: Restart a user’s Cloud PC on their behalf.
 
