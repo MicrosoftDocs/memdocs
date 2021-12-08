@@ -27,6 +27,9 @@ ms.topic: troubleshooting
 <table>
 <th>Issue<th>More information
 
+<tr><td>TPM attestation failure on Windows 11 error code 0x81039024.</td>
+<td>Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039024. This error code indicates that there are known vulnerabilities detected with the TPM and as a result will fail attestation. If you receive this error, please visit your PC manufacturer’s website to update the TPM firmware.</tr>
+
 <tr><td>Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP.</td>
 <td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. In the future, it will be possible to instead target the ESP profile to device groups to avoid this issue.</tr>
 
