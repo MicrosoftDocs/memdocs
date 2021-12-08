@@ -24,15 +24,15 @@ To download console extensions from the [Community hub](../../../../core/servers
 - A technical preview version of Configuration Manager
 - Configuration Manager [version 2103](../../../../core/plan-design/changes/whats-new-in-version-2103.md) or later
 
-You can test your own signed extensions by [importing them locally](/mem/configmgr/core/servers/manage/import-admin-console-extensions) with the following versions:
+You can test your own signed extensions by [importing them locally](../../../../core/servers/manage/import-admin-console-extensions.md) with the following versions:
 - A technical preview version of Configuration Manager
 - Configuration Manager [version 2103](../../../../core/plan-design/changes/whats-new-in-version-2103.md) or later
 
-You can [import an unsigned extension](/mem/configmgr/core/servers/manage/import-admin-console-extensions) locally. Unsigned extensions are for local import and testing purposes only. Unsigned extensions can't be submitted to Community hub. Importing an unsigned extension requires one of the following versions:
+You can [import an unsigned extension](../../../../core/servers/manage/import-admin-console-extensions.md) locally. Unsigned extensions are for local import and testing purposes only. Unsigned extensions can't be submitted to Community hub. Importing an unsigned extension requires one of the following versions:
 - [Technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later.
 - Configuration Manager [version 2107](../../../../core/plan-design/changes/whats-new-in-version-2107.md) or later
 
-Starting in version 2111, you can import both signed and unsigned extensions using the [**Import Console Extension** wizard](/mem/configmgr/core/servers/manage/import-admin-console-extensions).
+Starting in version 2111, you can import both signed and unsigned extensions using the [**Import Console Extension** wizard](../../../../core/servers/manage/import-admin-console-extensions.md).
 
 ## Prerequisites
 
@@ -158,7 +158,7 @@ Example manifest.xml file:
 When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
 
 > [!Important]
-> For local testing, you can import unsigned console extensions when you use version 2107 or later. For more information and additional import methods, see [Import console extensions](/mem/configmgr/core/servers/manage/import-admin-console-extensions).
+> For local testing, you can import unsigned console extensions when you use version 2107 or later. For more information and additional import methods, see [Import console extensions](../../../../core/servers/manage/import-admin-console-extensions.md).
 
 1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
@@ -213,4 +213,4 @@ Make sure you've joined the community hub and that you've accepted the invite af
 
 - [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md)
 - [Use the community hub](../../../../core/servers/manage/community-hub.md)
-- [Import console extensions](/mem/configmgr/core/servers/manage/import-admin-console-extensions)
+- [Import console extensions](../../../../core/servers/manage/import-admin-console-extensions.md)
