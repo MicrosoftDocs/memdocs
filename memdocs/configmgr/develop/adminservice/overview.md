@@ -79,7 +79,7 @@ For more information on scalability of the SMS Provider and administration servi
 >     1. Set `enabled="false"`
 >     1. Add the FQDN of the SMS Provider to the `<bypasslist>`.
 >
->    For more information, see [<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).
+>    For more information, see [`<defaultProxy>` Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).
 
 ## Next steps
 
