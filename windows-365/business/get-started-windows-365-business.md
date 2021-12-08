@@ -97,7 +97,7 @@ You can assign different Windows 365 Business license types to a user, based on 
 
 After licenses are assigned, let your users know that there are two different ways in which they can access their Cloud PCs:
 
-- Windows 365 home page (https://windows365.microsoft.com)
+- Windows 365 home page [(https://windows365.microsoft.com)](https://windows365.microsoft.com)
 - Microsoft Remote Desktop client
 
 ### Windows 365 home page
@@ -173,7 +173,7 @@ As an admin, you can manage Cloud PCs in your organization in various ways:
 
 ### windows365.microsoft.com
 
-You can sign in to windows365.microsoft.com](https://windows365.microsoft.com) to:
+You can sign in to [windows365.microsoft.com](https://windows365.microsoft.com) to:
 
 - [Add a user and assign a license](add-user-assign-license.md).
 - [Assign or unassign licenses](assign-unassign-license.md).
