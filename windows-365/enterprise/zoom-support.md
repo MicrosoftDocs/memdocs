@@ -35,7 +35,7 @@ Zoom is a 3rd-party application that provides online meeting services including 
 To optimize Zoom, you’ll need to install the Zoom VDI Client on the Cloud PC and the Zoom Azure Virtual Desktop plugin on the local Windows PC that the user will use to access the Cloud PC.
 
 > [!NOTE]  
-> If you run into issues with Zoom for VDI on your Cloud PC, report them at Zoom support.
+> If you run into issues with Zoom for VDI on your Cloud PC, report them at Cisco support. 
 
 ## Requirements
 
