@@ -175,7 +175,7 @@ As an admin, you can manage Cloud PCs in your organization in various ways:
 
 You can sign in to [windows365.microsoft.com](https://windows365.microsoft.com) to:
 
-- [Add a user and assign a license](add-user-assign-license.md).
+- [Add a user and assign a license](add-user-assign-licenses.md).
 - [Assign or unassign licenses](assign-unassign-license.md).
 - [Change organization default settings](change-organization-default-settings.md).
 - [Use remote actions on Cloud PCs](remotely-manage-business-cloud-pcs.md).
@@ -191,7 +191,7 @@ If the organization and users are properly licensed, Cloud PCs can be enrolled t
 
 ### Microsoft Graph
 
-You can also use the Microsoft Graph APIs to manage Cloud PCs. For more information, see [Overview for Windows 365 Cloud PC on Microsoft Graph](graph/cloudpc-concept-overview).
+You can also use the Microsoft Graph APIs to manage Cloud PCs. For more information, see [Overview for Windows 365 Cloud PC on Microsoft Graph](/graph/cloudpc-concept-overview).
 
 ## Sending outbound email messages using port 25 is not supported
 
