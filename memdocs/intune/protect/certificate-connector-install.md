@@ -101,7 +101,7 @@ Use the following procedure to both configure a new connector and modify a previ
    - **SYSTEM**
    - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
-4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, *http://proxy.contoso.com*.
+4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, `http://proxy.contoso.com`.
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
