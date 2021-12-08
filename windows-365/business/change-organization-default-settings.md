@@ -35,7 +35,6 @@ By default, new Cloud PCs are created with the Windows 11 operating system and t
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an Azure Active Directory (Azure AD) Global Administrator account.
 2. Select **Your organization’s Cloud PCs** > **Update organization settings**.
 3. Select your preferred operating system and account type > **Save**.
-    ![Screenshot of default settings](/media/change-organization-default-settings/change-organization-default-settings.png)
 
 Organization settings only apply to newly created Cloud PCs. When these settings are changed, they won’t change the OS or account type of existing Cloud PCs.
 
