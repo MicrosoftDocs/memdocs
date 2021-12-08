@@ -122,7 +122,7 @@ While on the Windows 365 home page, users can perform actions on their Cloud PCs
 - **Restart**: Restarts the Cloud PC.
 
 - **Reset**:  Reset does the following:
-  - Reinstalls Windows 10.
+  - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.
   - Removes any changes you made to settings.
   - Removes your apps.
