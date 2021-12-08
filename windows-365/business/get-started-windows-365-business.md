@@ -61,7 +61,7 @@ If you don't already have a Microsoft 365 subscription, you can buy your Windows
 1. On the [Windows 365 Business](https://www.microsoft.com/windows-365/business) page, select **See plans and pricing**.
 2. On the next page, select the subscription you want to purchase, and then select **Buy now**.
 3. On the **Thank you for choosing Windows 365 Business** page, follow the steps to set up your account.
-4. In **step 5 - Confirmation details**, if you are ready to assign licenses to users, select **Get started** to go to your Windows 365 home page at https://windows365.microsoft.com.
+4. In **step 5 - Confirmation details**, if you are ready to assign licenses to users, select **Get started** to go to your [Windows 365 home page](https://windows365.microsoft.com).
 5. On the Windows 365 home page, in the **Quick actions** section, select **Manage your organization**. This takes you to the Microsoft 365 admin center where you can assign licenses to users.
 
 Users without the Global or Billing admin roles can use self-service purchase to buy a subscription for Windows 365 Business directly from the [Windows 365 Business products site](https://www.microsoft.com/windows-365/business?rtc=1). A user who buys a subscription this way is granted a limited view of the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), where they can assign licenses for that subscription to other users in their organization. Assigning a license to another user automatically creates a Windows 365 Business Cloud PC for them, which can be accessed from the [Windows 365 home page](https://windows365.microsoft.com/).
@@ -83,7 +83,10 @@ If you already have a Microsoft 365 tenant and are a Global or Billing admin, yo
 
 ## Assign licenses to users
 
-Whether you purchased your subscriptions through the Windows 365 products site, or through the Microsoft 365 admin center, you can [assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users) through the **Billing** page in the Microsoft 365 admin center.
+Whether you purchased your subscriptions through the Windows 365 products site, or through the Microsoft 365 admin center, you can assign licenses to users through either:
+
+- The **Billing** page in the Microsoft 365 admin center. For more information, see [assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
+- [windows365.microsoft.com](https://windows365.microsoft.com). For more information, see [Assign or unassign a license](assign-unassign-license.md).
 
 You can assign different Windows 365 Business license types to a user, based on the users business need. See [Windows 365 Business sizing options](windows-365-business-sizing.md)  for guidance on which license type might be suitable for your users.
 
@@ -94,7 +97,7 @@ You can assign different Windows 365 Business license types to a user, based on 
 
 After licenses are assigned, let your users know that there are two different ways in which they can access their Cloud PCs:
 
-- Windows 365 home page (https://windows365.microsoft.com)
+- Windows 365 home page [(https://windows365.microsoft.com)](https://windows365.microsoft.com)
 - Microsoft Remote Desktop client
 
 ### Windows 365 home page
@@ -164,9 +167,31 @@ All Windows 365 Business users have local administrator privileges on their Clou
 > [!IMPORTANT]
 > If a user tries to use a Microsoft 365 Business Standard license on their Cloud PC, they might see the following error: "Account Issue: The products we found in your account cannot be used to activate Office in shared computer scenarios." In this scenario, the user must uninstall the version of Office installed on their Cloud PC and install a new copy from Office.com.
 
-## Management through Intune
+## Managing Cloud PCs
+
+As an admin, you can manage Cloud PCs in your organization in various ways:
+
+### windows365.microsoft.com
+
+You can sign in to [windows365.microsoft.com](https://windows365.microsoft.com) to:
+
+- [Add a user and assign a license](add-user-assign-licenses.md).
+- [Assign or unassign licenses](assign-unassign-license.md).
+- [Change organization default settings](change-organization-default-settings.md).
+- [Use remote actions on Cloud PCs](remotely-manage-business-cloud-pcs.md).
+- [Reset a user's password](reset-user-password.md).
+
+### Microsoft 365 admin center
+
+You can sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) to [use remote actions on Cloud PCs](remotely-manage-business-cloud-pcs.md).
+
+### Intune
 
 If the organization and users are properly licensed, Cloud PCs can be enrolled to Intune using the same procedure for [enrolling Windows 10 machines to Intune](/mem/intune/user-help/enroll-windows-10-device).
+
+### Microsoft Graph
+
+You can also use the Microsoft Graph APIs to manage Cloud PCs. For more information, see [Overview for Windows 365 Cloud PC on Microsoft Graph](/graph/cloudpc-concept-overview).
 
 ## Sending outbound email messages using port 25 is not supported
 
