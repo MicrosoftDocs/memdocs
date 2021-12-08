@@ -41,7 +41,7 @@ Intune Company Portal is available for Android, iOS, macOS, and Windows.
 ### Android  
 Install Company Portal for Android from these stores:  
 
-* [Portal](https://portal.facebook.com/help/467356237073256/)(Opens Facebook Portal help documentation)  
+* [Portal](https://portal.facebook.com/help/467356237073256/)(Opens Portal help documentation)  
 * [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)  
 * [Amazon Appstore for Android](https://www.amazon.com/Microsoft-Corporation-Intune-Company-Portal/dp/B092BCFLBJ/)  
 
