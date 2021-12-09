@@ -12,7 +12,7 @@ ms.date: 04/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 
@@ -26,8 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # How to manage data transfer between iOS apps in Microsoft Intune

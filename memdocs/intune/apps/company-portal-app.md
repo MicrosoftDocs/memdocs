@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/11/2021
+ms.date: 11/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # How to configure the Intune Company Portal apps, Company Portal website, and Intune app
@@ -107,15 +109,16 @@ The following table provides enrollment-specific configuration details:
 
 #### Device enrollment setting options
 
-> [!NOTE]
-> Support for the device enrollment setting requires end users have these Company Portal versions:
-> - Company Portal on iOS/iPadOS: version 4.4 or later
-> - Company Portal on Android: version 5.0.4715.0 or later 
+Support for the device enrollment setting requires end users have these Company Portal versions:
+- Company Portal on iOS/iPadOS: version 4.4 or later
+- Company Portal on Android: version 5.0.4715.0 or later 
 
 > [!IMPORTANT]
 > The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
 > 
 > The following settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device has been configured for KME and device enrollment is set to Unavailable, the device will not be able to enroll during the out of box flow.
+>
+> For the Android Company Portal app, if Intune detects that the user's device is set up for [app protection policies without enrollment](../fundamentals/deployment-guide-enrollment-mamwe.md), the user will not get prompted to enroll in the Company Portal, even if the device enrollment setting is configured to prompt enrollment. This applies to all Android device types except Surface Duo devices.
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App visibility (for an app that requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -191,7 +194,7 @@ If the user does not have the Company Portal app installed, the user will be tak
 
 ## Company Portal and Apple Setup Assistant for iOS/iPadOS
 
-For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication (preview)**.  This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
+For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**.  This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
 
 Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when users complete the additional Azure AD login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed. 
 
@@ -219,9 +222,10 @@ The following keyboard shortcuts are available in the Windows Company Portal app
 | Navigation menu | Navigation | Alt+M |
 |  | Home | Alt+H |
 |  | All apps | Alt+A |
-|  | Installed apps | Alt+I |
+|  | All devices | Alt+D |
+|  | Downloads & updates | Alt+U |
 |  | Send feedback | Alt+F |
-|  | My profile | Alt+U |
+|  | My profile | Alt+P |
 |  | Settings | Alt+T |
 | Device tile | Rename | F2 |
 |  | Remove | Ctrl+D or Delete |
@@ -284,7 +288,14 @@ If you are using Azure Government, app logs are offered to the end user to decid
 
 ## Company Portal app notifications
 
-The Company Portal app can store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
+The Company Portal app can store, as well as display, push notifications sent to your users' devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
+
+> [!NOTE]
+> Users must updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) to receive custom notifications on Android devices. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app.
+
+Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
+
+For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md#receive-a-custom-notification).
 
 ## Next steps
 

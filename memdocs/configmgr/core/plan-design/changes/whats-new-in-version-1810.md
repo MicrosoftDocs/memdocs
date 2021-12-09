@@ -6,11 +6,11 @@ ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1810 of Configuration Manager current branch
@@ -27,11 +27,6 @@ To take advantage of new Configuration Manager features, first update clients to
 > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized. 
 -->  
-
-> [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
-
 
 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
@@ -264,7 +259,7 @@ For more information, see [Manage drivers](../../../osd/get-started/manage-drive
 <!--3098809, 3113836, 3204570 -->
 Additional filters have been added to Windows 10 servicing plans. You can now filter by **Architecture**, **Product Category**, and if the upgrade is **Superseded**.
 
-For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#windows-10-servicing-plan).
+For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#windows-servicing-plan).
 
 ### New task sequence variable for last action name
 

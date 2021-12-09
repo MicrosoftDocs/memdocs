@@ -1,18 +1,16 @@
 ---
-title: "Technical Preview 1802 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1802 for Configuration Manager."
+title: Technical Preview 1802 | Microsoft Docs
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview version 1802 for Configuration Manager.
 ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1802 for Configuration Manager
 
@@ -160,13 +158,13 @@ To access the Lifecycle Dashboard, in the Configuration Manager console, go to *
 
 ## Improvements to reporting
 <!--1357653-->
-As a result of [your feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and) we added a new report, **Windows 10 Servicing details for a specific collection**. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. To access the report, go to **Monitoring** >**Reporting** >**Reports** >**Operating Systems** >**Windows 10 Servicing details for a specific collection**.
+As a result of your feedback we added a new report, **Windows 10 Servicing details for a specific collection**. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. To access the report, go to **Monitoring** >**Reporting** >**Reports** >**Operating Systems** >**Windows 10 Servicing details for a specific collection**.
 
 
 
 ## Improvements to Software Center
 <!--1357592-->
-As a result of [your feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/13002684-software-center-show-only-available-software-hid) installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled. 
+As a result of your feedback installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled. 
 
 ### Try it out!
 Enable the **Hide Installed Applications in Software Center** setting in the Software Center client settings. Observe the behavior on Software Center when the end user installs an application.

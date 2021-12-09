@@ -10,7 +10,9 @@ metadata:
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart
-  ms.date: 06/25/2020
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
+  ms.collection: highpri
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -21,6 +23,14 @@ landingContent:
         links:
           - text: Endpoint analytics overview
             url: overview.md
+          - text: Scores, baselines, and insights
+            url: scores.md
+      - linkListType: whats-new
+        links:
+          - text: Work from anywhere
+            url: work-from-anywhere.md
+          - text: Startup performance
+            url: startup-performance.md
 
   # Card 
   - title: Get started

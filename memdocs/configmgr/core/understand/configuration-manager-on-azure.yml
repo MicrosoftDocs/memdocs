@@ -170,7 +170,7 @@ sections:
       - question: Why is user experience a main area of importance?
         answer: The decisions you make for networking, availability, performance, and site server location can directly affect your users. Moving a site to Azure should be transparent to your users so that they don't experience a change in their day-to-day interactions with Configuration Manager.
 
-      - question: To keep costs low for a single primary site, should remote site systems be in Azure on on-premises?
+      - question: To keep costs low for a single primary site, should remote site systems be in Azure or on-premises?
         answer: |
           Except for communication from the site server to a distribution point, these server-to-server communications in a site can occur at any time and don't use mechanisms to control the use of network bandwidth. Because you can't control the communication between site systems like management points and software update points, make sure to consider any costs associated with these communications.
           

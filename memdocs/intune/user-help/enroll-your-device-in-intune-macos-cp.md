@@ -49,7 +49,7 @@ If after enrollment your organization enforces a new security requirement, such 
 To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
 ## Get your macOS device managed  
-Use the following steps to enroll your macOS device with your organization. Your device must be running macOS 10.13 or later.   
+Use the following steps to enroll your macOS device with your organization. Your device must be running macOS 10.15 or later.   
 
 > [!NOTE]
 > Throughout this process, you might be prompted to allow Company Portal to use confidential information that's stored in your keychain. These prompts are part of Apple security. When you get the prompt, type in your login keychain password and select **Always Allow**. If you press **Enter** or **Return** on your keyboard, the prompt will instead select **Allow**, which may result in additional prompts.  
@@ -95,11 +95,6 @@ After you report the problem to Microsoft, you can send the details of your expe
  
 
 Additionally, the Microsoft Intune Company Portal team would love to hear your feedback. Go to **Help** > **Send Feedback** to share your thoughts and ideas.  
-
-## Unverified profiles  
-When you view the installed mobile device management (MDM) profiles in **System Preferences** > **Profiles**, some profiles might show an unverified status. As long as the management profile shows a verified status, you don't need to be concerned.  
-
-The management profile is what defines the MDM channel connection. As long as the management profile is verified, any other profiles delivered to the machine via that channel inherit the security traits of the management profile.  
 
 ## Updating the Company Portal app
 

@@ -2,13 +2,14 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 11/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Recover a Configuration Manager site
@@ -365,7 +366,7 @@ To resolve this issue, [Renew the secret key](../deploy/configure/azure-services
 ### Delete and recreate subscriptions for external notifications on the CAS
 
 <!-- 10333966 -->
-In version 2107, after you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications: Remove a subscription](external-notifications.md#remove-a-subscription).
+After you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications](external-notifications.md).
 
 ### Configure HTTPS for site system roles that use IIS
 
@@ -410,6 +411,10 @@ As part of the state migration point properties, you specify the folders that st
 ### Regenerate the certificates for distribution points
 
 After you restore a site, the **distmgr.log** might list the following entry for one or more distribution points: `Failed to decrypt cert PFX data`. This entry indicates that the distribution point certificate data can't be decrypted by the site. To resolve this issue, regenerate or reimport the certificate for affected distribution points. Use the [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet.
+
+### Restore database encryption certificates
+
+If you use SQL Server encryption for the entire database or for specific tables, you may need to restore the certificates after you restore the site database. For example, if you encrypt recovery data for BitLocker management. For more information, see [Restore certificate for BitLocker management](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md#restore-certificate).<!-- memdocs#1901 -->
 
 ## Recover a secondary site
 

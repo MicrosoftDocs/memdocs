@@ -2,27 +2,30 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 02/06/2020
+ms.date: 11/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 7ff8d453-f24d-4230-a116-585190a663fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # How to set up Desktop Analytics
 
-Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
+> [!IMPORTANT]
+> Desktop Analytics is deprecated and will be retired on November 30, 2022. For more information, see [What's new](whats-new.md).<!-- 10946169 -->
 
-> [!Important]  
-> For information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](overview.md#prerequisites).  
+Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.
+
+> [!NOTE]
+> For information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](overview.md#prerequisites).
 
 ## Initial onboarding
 
-1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with the **Global Admin** role. Select **Start**. Alternatively, on the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in the Microsoft Endpoint Manager admin center as a user with the **Global Admin** role. Select **Start**. Alternatively, on the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -71,7 +74,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 9. On the **Last steps** page, select **Go to Desktop Analytics**.
 
-The Azure portal shows the Desktop Analytics **Home** page.
+The admin center shows the Desktop Analytics **Home** page.
 
 ## Next steps
 

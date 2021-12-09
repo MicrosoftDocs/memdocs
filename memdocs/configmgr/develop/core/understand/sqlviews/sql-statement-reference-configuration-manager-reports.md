@@ -1,7 +1,7 @@
-﻿---
+---
 title: SQL statement reference for reports
 titleSuffix: Configuration Manager
-description: Information about SQL Server statements that can be used when creating Configuration Manager reports.
+description: Information about SQL Server statements that can be used when creating Configuration�Manager reports.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
@@ -12,11 +12,13 @@ ms.assetid: be1ea4b0-b003-488e-bb88-860d37d6b72c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SQL statement reference for Configuration Manager reports
 
-Many useful Microsoft SQL Server statements can be used when creating Configuration Manager reports, and they are briefly described in this section. To follow this discussion, you should have a basic level of SQL query statement knowledge and the ability to write queries such as the following:
+Many useful Microsoft SQL Server statements can be used when creating Configuration�Manager reports, and they are briefly described in this section. To follow this discussion, you should have a basic level of SQL query statement knowledge and the ability to write queries such as the following:
 
 ```sql
 SELECT Name, Comment, CollectionID
@@ -225,7 +227,7 @@ A full outer join retrieves all the rows from both joined views. It returns all 
 
 ## Cross join
 
-A cross join returns the product of two views, not the sum. Each row in the left view is matched up with each row in the right view. It's the set of all possible row combinations, without any filtering. However, if you add a WHERE clause, a cross join functions as an inner join—it uses the condition to filter all possible row combinations down to the ones you want.
+A cross join returns the product of two views, not the sum. Each row in the left view is matched up with each row in the right view. It's the set of all possible row combinations, without any filtering. However, if you add a WHERE clause, a cross join functions as an inner join�it uses the condition to filter all possible row combinations down to the ones you want.
 
 ## Self join
 

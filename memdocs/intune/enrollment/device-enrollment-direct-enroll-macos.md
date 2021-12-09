@@ -5,8 +5,8 @@ title: Use Direct Enrollment for macOS devices
 titleSuffix: Microsoft Intune
 description: Learn how to enroll macOS devices using Direct Enrollment.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/04/2020
 ms.topic: how-to

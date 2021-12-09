@@ -1,17 +1,15 @@
 ---
-title: "Content infrastructure"
-titleSuffix: "Configuration Manager"
-description: "Learn how to deploy and then manage your content management infrastructure for Configuration Manager."
+title: Content infrastructure
+titleSuffix: Configuration Manager
+description: Learn how to deploy and then manage your content management infrastructure for Configuration Manager.
 ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: ceff72f5-f19d-43a0-a8c0-72f1c09b9bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Manage content and content infrastructure for Configuration Manager
 

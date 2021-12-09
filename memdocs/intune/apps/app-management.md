@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # What is Microsoft Intune app management?
@@ -54,7 +56,7 @@ Intune MAM supports two configurations:
 
 Intune offers a range of capabilities to help you get the apps you need on the devices you want to run them on. The following table provides a summary of app management capabilities.
 
-| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10/11 |
 |-------------------------- | -------------------------- | ---------- | ----- | ---------- |
 | Add and assign   apps to devices and users | Yes | Yes | Yes | Yes |
 | Assign apps to   devices not enrolled with Intune | Yes | Yes | No | No |
@@ -71,7 +73,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 | Apps from a   store | Yes | Yes | No | Yes |
 | Update apps | Yes | Yes | No | Yes |
 
-<sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
+<sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10/11.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
 <sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 

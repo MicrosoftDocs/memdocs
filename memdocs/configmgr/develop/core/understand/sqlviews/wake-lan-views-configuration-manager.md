@@ -1,4 +1,4 @@
-﻿---
+---
 title: Wake On LAN views
 titleSuffix: Configuration Manager
 description: Information about the objects that have Wake On LAN enabled.
@@ -12,11 +12,13 @@ ms.assetid: c31b2528-de90-4a60-8a99-75990b9ad0ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Wake On LAN views in Configuration Manager
 
-The Configuration Manager Wake On LAN views contain information about the objects, such as application management, software updates, and task sequence deployments, that have Wake On LAN enabled, as well as the clients that are Wake On LAN enabled, and clients that have deployments that are Wake On LAN enabled. There is also a status view that contains information about the Wake On LAN error messages that have been reported. Most often, the Wake On LAN views will be joined to discovery views by using the **ResourceID** column, and to application management and compliance settings views by using the **ObjectID** column.
+The Configuration�Manager Wake On LAN views contain information about the objects, such as application management, software updates, and task sequence deployments, that have Wake On LAN enabled, as well as the clients that are Wake On LAN enabled, and clients that have deployments that are Wake On LAN enabled. There is also a status view that contains information about the Wake On LAN error messages that have been reported. Most often, the Wake On LAN views will be joined to discovery views by using the **ResourceID** column, and to application management and compliance settings views by using the **ObjectID** column.
 
 The following sections provide detailed information about Wake On LAN views and the Wake On LAN status view.
 
@@ -26,7 +28,7 @@ The Wake On LAN views are described in this section.
 
 ### v_WOLClientTimeZones
 
-Lists the time zone offsets for all Wake On LAN–enabled clients.
+Lists the time zone offsets for all Wake On LAN�enabled clients.
 It is unlikely that this view will be joined with other views.
 
 ### v_WOLCommunicationHistory
@@ -91,7 +93,7 @@ The view can be joined to other views by using the **ResourceID** and **ObjectID
 
 ### v_WOLWorkstationInfo
 
-Lists all Wake On LAN–enabled clients, by **ResourceID** and **MachineName**, the assigned site, and the current time zone.
+Lists all Wake On LAN�enabled clients, by **ResourceID** and **MachineName**, the assigned site, and the current time zone.
 The view can be joined to other views by using the **ResourceID** column.
 
 ## Wake On LAN status views

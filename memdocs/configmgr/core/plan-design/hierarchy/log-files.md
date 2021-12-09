@@ -9,6 +9,7 @@ ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Log file reference
@@ -97,7 +98,7 @@ The following sections provide details about the different log files available t
 
   - [Wake On LAN](#BKMK_WOLLog)  
 
-  - [Windows 10 servicing](#BKMK_WindowsServicingLog)
+  - [Windows servicing](#BKMK_WindowsServicingLog)
 
   - [Windows Update Agent](#BKMK_WULog)  
 
@@ -827,9 +828,9 @@ The following table lists the log files that contain information related to usin
 |wolcmgr.log|Records details about which clients need to be sent wake-up packets, the number of wake-up packets sent, and the number of wake-up packets retried.|Site server|  
 |wolmgr.log|Records details about wake-up procedures, such as when to wake up deployments that are configured for Wake On LAN.|Site server|  
 
-### <a name="BKMK_WindowsServicingLog"></a> Windows 10 servicing
+### <a name="BKMK_WindowsServicingLog"></a> Windows servicing
 
-The following table lists the log files that contain information related to Windows 10 servicing.  
+The following table lists the log files that contain information related to Windows servicing.  
 Servicing uses the same infrastructure and process as software updates. For other logs applicable to the servicing scenario, see [Software updates](#BKMK_SU_NAPLog).
 
 |Log name|Description|Computer with log file|  

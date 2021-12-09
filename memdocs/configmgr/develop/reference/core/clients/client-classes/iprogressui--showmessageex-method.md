@@ -10,6 +10,8 @@ ms.assetid: 24a048fc-c8dc-4fc5-a094-4e4e4d0ada64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # IProgressUI::ShowMessageEx method

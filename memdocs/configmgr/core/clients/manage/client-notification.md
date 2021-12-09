@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Client notification in Configuration Manager
@@ -83,7 +84,7 @@ Add this permission to any custom roles that need to use client notification act
 
 ### Download computer policy
 
-Refresh the device policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](manage-clients.md#BKMK_PolicyRetrieval).
+Refresh the device policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](manage-clients.md#start-policy-retrieval).
 
 ### Download user policy
 
@@ -115,7 +116,7 @@ Trigger clients to switch to the next available software update point. For more 
 
 ### Evaluate device health attestation
 
-Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
+Trigger Windows 10 or later clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
 
 ### Check conditional access compliance
 

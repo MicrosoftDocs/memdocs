@@ -9,6 +9,8 @@ ms.assetid: 17c5d9c3-b561-432c-bd69-7277c94f347c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_TaskSequence_PartitionDiskAction server WMI class

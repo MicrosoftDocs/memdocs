@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2021
+ms.date: 10/11/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune
@@ -162,7 +163,7 @@ This task list provides an overview. For more specific information, see [Apple B
 
 ### ADE end user tasks
 
-When you create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (**Enroll with user affinity**), or have shared devices (**Enroll without user affinity**). The specific steps depend on how you configure the enrollment profile.
+When you create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (**Enroll with user affinity**), or have shared devices (**Enroll without user affinity**). The specific steps depend on how you configure the enrollment profile. With Shared iPad, after activation, all Setup Assistant panes are automatically skipped.
 
 - **Enroll with user affinity + Company Portal app**:
 
@@ -190,8 +191,9 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
-  3. The Company Portal app automatically installs, which takes some time. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`) again.
+  2.  Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete, the device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices. At this point, however, the device is not yet fully registered with Azure AD. 
+  3. The Company Portal app automatically installs. Users open Company Portal and sign in with their work or school account (`user@contoso.com`) again. 
+  4. Users complete registration in Company Portal, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies. 
 
 - **Enroll with user affinity + Setup Assistant with modern authentication - Company Portal app**:
 

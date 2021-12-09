@@ -5,8 +5,8 @@ title: Tutorial - Use Autopilot to enroll devices in Intune
 titleSuffix: Microsoft Intune
 description: In this tutorial, you'll set up Windows Autopilot to enroll devices in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/19/2018
 ms.topic: tutorial
@@ -27,7 +27,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Tutorial: Use Autopilot to enroll Windows devices in Intune

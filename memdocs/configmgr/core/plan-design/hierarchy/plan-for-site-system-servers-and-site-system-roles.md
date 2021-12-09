@@ -2,14 +2,14 @@
 title: Plan site system roles
 titleSuffix: Configuration Manager
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
-ms.date: 04/05/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for site system servers and site system roles in Configuration Manager
@@ -62,6 +62,9 @@ The site assigns this role to each computer that hosts an instance of the SMS Pr
 To install additional providers, run Configuration Manager setup to [Manage the SMS Provider](../../servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider). Then install additional providers on additional computers. Only install one instance of the SMS Provider on a computer. That computer must be in the same domain as the site server.  
 
 ### Asset Intelligence synchronization point
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
 
 A site system role that connects to Microsoft to download information for the Asset Intelligence catalog. This role also uploads uncategorized titles, so that Microsoft can consider them for future inclusion in the catalog. A hierarchy supports only a single instance of this role at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site. Then install it at the central administration site.
 

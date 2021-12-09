@@ -8,7 +8,7 @@ items:
     href: use-managed-devices-to-get-work-done.md
   - name: What information can my organization see? 
     href: what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md
-  - name: Access Intune Company Portal 
+  - name: Get Intune Company Portal  
     href: sign-in-to-the-company-portal.md
   - name: Device password requirements
     href: password-does-not-meet-it-administrator-requirements.md
@@ -65,8 +65,6 @@ items:
       href: set-the-amount-of-time-before-your-device-is-locked-android.md
     - name: Install VPN
       href: install-your-companys-virtual-private-network-VPN-android.md
-    - name: Update device for Outlook
-      href: update-device-outlook-android.md
     - name: Update device software
       href: you-need-to-update-your-android-device.md
     - name: Unsupported version
@@ -75,8 +73,6 @@ items:
       href: your-device-is-rooted-and-you-cant-connect-android.md
     - name: Missing a required certificate
       href: your-device-is-missing-an-IT-required-certificate-android.md
-    - name: Disable unknown source installations
-      href: you-need-to-turn-off-unknown-sources-android.md
     - name: Turn off USB debugging
       href: you-need-to-turn-off-usb-debugging-android.md
     - name: Turn on security threat scans
@@ -159,8 +155,6 @@ items:
       href: how-do-i-find-the-serial-number-on-my-device-ios.md
     - name: Update iOS/iPadOS version
       href: you-need-to-update-your-ios-device.md
-    - name: Update iOS device for Outlook
-      href: update-device-outlook-ios.md
     - name: iOS/iPadOS version isn't supported 
       href: your-ios-version-isnt-yet-supported.md
   - name: Resolve a threat in MTD app
@@ -225,7 +219,7 @@ items:
     items:
     - name: About Windows device enrollment
       href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md
-    - name: Enroll Windows 10 device  
+    - name: Enroll Windows 10/11 device  
       href: enroll-windows-10-device.md
     - name: Enroll Windows 8.1 or Windows RT 8.1 device
       href: enroll-your-w81-or-rt81-windows.md
@@ -233,16 +227,8 @@ items:
       href: unenroll-your-device-from-intune-windows.md
   - name: Update device settings
     items:
-    - name: Encrypt your device
-      href: encrypt-your-device-windows.md
-    - name: Set or change device password
-      href: set-or-change-your-password-windows.md
     - name: Resolve access point restrictions
       href: resolve-access-point-restrictions.md
-    - name: Check for software updates
-      href: you-need-to-update-your-windows-device.md
-    - name: Enable Windows encryption
-      href: you-need-to-enable-windows-encryption.md
     - name: Enable antimalware software
       href: your-device-needs-antimalware-software.md
     - name: Enable Secure Boot

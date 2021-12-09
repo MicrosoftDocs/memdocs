@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/16/2021
+ms.date: 11/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 
@@ -25,8 +25,11 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- M365-identity-device-management
+- Android
+- highpri
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
 ---
 
 # Add Managed Google Play apps to Android Enterprise devices with Intune
@@ -75,7 +78,7 @@ There are two ways to browse and approve Managed Google Play store apps with Int
 4. Click **Select**. The **Managed Google Play** app store is displayed.
 
     > [!NOTE]
-    > Your Intune tenant account must be connected to your Android Enterprise account to browse managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+    > Your Intune tenant account must be connected to your Android Enterprise account to browse Managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 5. Select an app to view the app details.
 6. On the page that displays the app, click **Approve**. A window for the app opens asking you to give permissions for the app to perform various operations.
@@ -209,21 +212,47 @@ After you assign the app, it is installed (or available for install) on the devi
 
 ## Assign a Managed Google Play app to Android Enterprise fully managed devices
 
-[Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md) are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Users on fully managed devices can get their available company apps from the managed Google Play app on their device.
+[Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md) are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Users on fully managed devices can get their available company apps from the Managed Google Play app on their device.
 
 By default, an Android Enterprise fully managed device will not allow employees to install any apps that are not approved by the organization. Also, employees will not be able to remove any installed apps against policy. If you wish to allow users to access the full Google Play store to install apps rather than only having access to the approved apps in Managed Google Play store, you can set the **Allow access to all apps in Google Play store** to **Allow**. With this setting, the user can access all the apps in the Google Play store using their corporate account, however purchases may limited. You can remove the limited purchases restriction by allowing users to add new accounts to the device. Doing so will enable end users to have the ability to purchase apps from the Google Play store using personal accounts, as well as conduct in-app purchases. For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md). 
 
 > [!NOTE]
 > The Microsoft Intune app, the Microsoft Authenticator app, and the Company Portal app will be installed as required apps onto all fully managed devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues. 
 
+## Update a Managed Google Play app
+By default, Managed Google Play apps will not update unless the following conditions are met:
+
+- The device is connected to wi-fi
+- The device is charging
+- The device is not actively being used 
+- The app to be updated is not running on the foreground
+
+For more information, see the [Manage App Updates](https://support.google.com/googleplay/work/answer/9350374?hl=en) documentation from Google. 
+
+You can choose to configure the wi-fi requirement for dedicated, fully managed, and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
+
+For dedicated, fully managed, and corporate-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
+
+- **Default**: The app's updates are subject to default conditions (described above). 
+- **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
+
+To edit the app update mode:
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps**.
+3. Select the app from the apps list.
+4. Select **Properties**.
+5. Select **Edit** by the **Assignments** section.
+6. Find the group you'd like to edit the app update mode for by clicking the corresponding group mode for that group.
+7. Under **app settings**, select the desired update mode.
+
 ## Manage Android Enterprise app permissions
-Android Enterprise requires you to approve apps in the managed Google Play web console before you sync them with Intune and assign them to your users. Because Android Enterprise allows you to silently and automatically push the apps to users' devices, you must accept the app permissions on behalf of all your users. Users don't see any app permissions when they install the apps, so it's important that you understand the permissions.
+Android Enterprise requires you to approve apps in the Managed Google Play web console before you sync them with Intune and assign them to your users. Because Android Enterprise allows you to silently and automatically push the apps to users' devices, you must accept the app permissions on behalf of all your users. Users don't see any app permissions when they install the apps, so it's important that you understand the permissions.
 
 When an app developer updates permissions with a new version of the app, the permissions are not automatically accepted even if you approved the previous permissions. Devices that run the previous version of the app can still use it. However, the app is not upgraded until the new permissions are approved. Devices without the app installed do not install the app until you approve the app's new permissions. 
 
 ### Update app permissions
 
-Periodically visit the managed Google Play console to check for new permissions. You can configure Google Play to send you or others an email when new permissions are required for an approved app. If you assign an app and observe that it isn't installed on devices, check for new permissions following these steps:
+Periodically visit the Managed Google Play console to check for new permissions. You can configure Google Play to send you or others an email when new permissions are required for an approved app. If you assign an app and observe that it isn't installed on devices, check for new permissions following these steps:
 
 1. Go to [Google Play](https://play.google.com/work).
 2. Sign in with the Google account that you used to publish and approve the apps.
@@ -244,7 +273,7 @@ You can distribute a non-production version of a Managed Google Play app to devi
 > Required app deployments for non-production app tracks are currently unavilable for devices enrolled in Android Enterprise personally-owned work profile (BYOD).
 
 ## Delete Managed Google Play apps
-When necessary, you can delete managed Google Play apps from Microsoft Intune. To delete a managed Google Play app, open Microsoft Intune in the portal and select **Apps** > **All apps**. From the app list, select the ellipses (...) to the right of the managed Google Play app, then select **Delete** from the displayed list. When you delete a managed Google Play app from the app list, the managed Google Play app is automatically unapproved.
+When necessary, you can delete Managed Google Play apps from Microsoft Intune. To delete a Managed Google Play app, open Microsoft Intune in the portal and select **Apps** > **All apps**. From the app list, select the ellipses (...) to the right of the Managed Google Play app, then select **Delete** from the displayed list. When you delete a Managed Google Play app from the app list, the managed Google Play app is automatically unapproved.
 
 > [!NOTE]
 > If an app is unapproved or deleted from the managed Google Play store, it will not be removed from the Intune client apps list. This allows you to still target an uninstall policy to users even if the app is unapproved.

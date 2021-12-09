@@ -5,8 +5,8 @@ title: Setup Intune enrollment for Android Enterprise dedicated devices
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise dedicated devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 11/23/2020
 ms.topic: how-to
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Set up Intune enrollment of Android Enterprise dedicated devices

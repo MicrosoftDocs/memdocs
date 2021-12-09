@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # CMG client authentication
@@ -26,7 +27,7 @@ The following table summarizes the key factors for each method:
 |         | Azure AD | PKI certificate | Site token |
 |---------|---------|---------|---------|
 | **ConfigMgr version** | All supported | All supported | All supported |
-| **Windows client version** | Windows 10 | All supported | All supported |
+| **Windows client version** | Windows 10 or later | All supported | All supported |
 | **Scenario support** | User and device | Device-only | Device-only |
 | **Management point** | E-HTTP or HTTPS | E-HTTP or HTTPS | E-HTTP or HTTPS |
 
@@ -38,7 +39,7 @@ Which ever method you choose, you may also need to reconfigure one or more manag
 
 ## Azure AD
 
-If your internet-based devices are running Windows 10, consider using Azure AD modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios. For example, deploying apps to a user collection.
+If your internet-based devices are running Windows 10 or later, consider using Azure AD modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios. For example, deploying apps to a user collection.
 
 First, the devices need to be either cloud domain-joined or hybrid Azure AD-joined, and the user also needs an Azure AD identity. If your organization is already using Azure AD identities, then you should be set with this prerequisite. If not, talk with your Azure administrator to plan for cloud-based identities. For more information, see [Azure AD device identity](/azure/active-directory/devices/). Until that process is complete, consider [token-based authentication](#site-token) for internet-based clients with your CMG.
 
@@ -55,10 +56,10 @@ For more information on these prerequisites, see [Install clients using Azure AD
 
 ## PKI certificate
 
-If you have a public key infrastructure (PKI) that can issue client authentication certificates to devices, then consider this authentication method for internet-based devices with your CMG. It doesn't support user-centric scenarios, but supports devices running Windows 8.1 or Windows 10.
+If you have a public key infrastructure (PKI) that can issue client authentication certificates to devices, then consider this authentication method for internet-based devices with your CMG. It doesn't support user-centric scenarios, but supports devices running any supported version of Windows.
 
 > [!TIP]
-> Windows 10 devices that are hybrid or cloud domain-joined don't require this certificate because they use [Azure AD](#azure-ad) to authenticate.
+> Windows devices that are hybrid or cloud domain-joined don't require this certificate because they use [Azure AD](#azure-ad) to authenticate.
 
 This certificate may also be required on the CMG connection point.
 

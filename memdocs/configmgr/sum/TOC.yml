@@ -52,28 +52,37 @@ items:
       href: deploy-use/automatically-deploy-software-updates.md
     - name: Create a phased deployment
       href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
-  - name: Monitor software updates
-    href: deploy-use/monitor-software-updates.md
+  - name: Orchestration groups
     items:
+    - name: About orchestration groups
+      href: deploy-use/orchestration-groups.md
+    - name: Create and use orchestration groups
+      href: deploy-use/create-orchestration-groups.md
+    - name: Monitor orchestration groups
+      href: deploy-use/monitor-orchestration-groups.md
+  - name: Manage Microsoft 365 Apps
+    items:
+    - name: Office 365 client management dashboard
+      href: deploy-use/office-365-dashboard.md  
+    - name: Manage Microsoft 365 Apps updates
+      href: deploy-use/manage-office-365-proplus-updates.md
+  - name: Monitor software updates
+    items:
+    - name: Monitor software updates
+      href: deploy-use/monitor-software-updates.md
     - name: Manage and monitor phased deployments
       href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
   - name: Software updates maintenance
     href: deploy-use/software-updates-maintenance.md
-  - name: Orchestration groups
-    href: deploy-use/orchestration-groups.md  
   - name: Service a server group
     href: deploy-use/service-a-server-group.md
-  - name: Office 365 client management dashboard
-    href: deploy-use/office-365-dashboard.md    
-  - name: Manage Microsoft 365 Apps updates
-    href: deploy-use/manage-office-365-proplus-updates.md
-  - name: Optimize Windows 10 update delivery
+  - name: Optimize Windows update delivery
     href: deploy-use/optimize-windows-10-update-delivery.md
-  - name: Manage Express installation files for Windows 10 updates
+  - name: Manage Express installation files for Windows updates
     href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
   - name: Manage Surface drivers
     href: deploy-use/surface-drivers.md   
-  - name: Integration with Windows Update for Business in Windows 10
+  - name: Integration with Windows Update for Business
     href: deploy-use/integrate-windows-update-for-business-windows-10.md
   - name: Third-party software updates
     href: deploy-use/third-party-software-updates.md

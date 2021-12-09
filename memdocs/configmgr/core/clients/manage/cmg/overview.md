@@ -9,6 +9,8 @@ ms.topic: overview
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Cloud management gateway overview
@@ -34,19 +36,19 @@ This article provides the foundational knowledge to learn about the CMG and the 
 
 There are several scenarios for which a CMG is beneficial. The following scenarios are some of the more common:  
 
-- Manage traditional Windows clients with Active Directory domain-joined identity. These clients include Windows 8.1 and Windows 10. It uses PKI certificates to secure the communication channel. Management activities include:  
+- Manage traditional Windows clients with Active Directory domain-joined identity. These clients include any supported version of Windows. It uses PKI certificates to secure the communication channel. Management activities include:  
 
   - Software updates and endpoint protection
   - Inventory and client status
   - Compliance settings
   - Software distribution to the device
-  - Windows 10 in-place upgrade task sequence
+  - Windows in-place upgrade task sequence
 
-- Manage traditional Windows 10 clients with modern identity, either hybrid or pure cloud domain-joined with Azure Active Directory (Azure AD). Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. Management activities are the same as the first scenario plus:
+- Manage traditional Windows 10 or later clients with modern identity, either hybrid or pure cloud domain-joined with Azure Active Directory (Azure AD). Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. Management activities are the same as the first scenario plus:
 
   - Software distribution to the user  
 
-- Install the Configuration Manager client on Windows 10 devices over the internet. Using Azure AD allows the device to authenticate to the CMG for client registration and assignment. You can install the client manually, or using another software distribution method, such as Microsoft Intune.  
+- Install the Configuration Manager client on Windows 10 or later devices over the internet. Using Azure AD allows the device to authenticate to the CMG for client registration and assignment. You can install the client manually, or using another software distribution method, such as Microsoft Intune.  
 
 - New device provisioning with co-management. When auto-enrolling existing clients, CMG isn't required for co-management. It's required for new devices involving Windows Autopilot, Azure AD, Microsoft Intune, and Configuration Manager. For more information, see [Paths to co-management](../../../../comanage/quickstart-paths.md).
 

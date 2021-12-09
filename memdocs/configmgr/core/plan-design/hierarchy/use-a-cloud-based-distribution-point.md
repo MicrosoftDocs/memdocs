@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use a cloud distribution point in Configuration Manager
@@ -152,7 +153,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
 ### Deployment settings
 
-- **Download content locally when needed by the running task sequence**. The task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This option provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
+- **Download content locally when needed by the running task sequence**. The task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This option provides additional flexibility with your Windows in-place upgrade deployments to internet-based devices.
 
 - **Download all content locally before starting task sequence**. With this option, the Configuration Manager client downloads the content from the cloud source before starting the task sequence.
 
@@ -186,7 +187,7 @@ Configuration Manager includes the following options to help control costs and m
 - To help reduce the number of data transfers from cloud distribution points by clients, use one of the following peer caching technologies:  
   - Configuration Manager peer cache
   - Windows BranchCache
-  - Windows 10 Delivery Optimization  
+  - Windows Delivery Optimization  
 
     For more information, see [Fundamental concepts for content management](fundamental-concepts-for-content-management.md).  
 

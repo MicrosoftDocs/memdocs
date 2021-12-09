@@ -2,14 +2,14 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 04/13/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to create collections in Configuration Manager
@@ -215,8 +215,6 @@ You can use PowerShell to create and import collections. For more information, s
 ## <a name="bkmk_aadcollsync"></a> Synchronize members to Azure AD groups
 
 <!--3607475-->
-> [!TIP]
-> This feature was first introduced in version 1906 as a [pre-release feature](../../../servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.
 
 You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device or user collections. Only resources with an Azure AD record are reflected in the Azure AD group. Both hybrid Azure AD-joined and Azure AD-joined devices are supported. The synchronization of collection memberships is a one-way process from Configuration Manager to Azure AD. Ideally, Configuration Manager should be the authority for managing the membership for the target Azure AD groups.
 

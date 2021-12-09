@@ -5,8 +5,8 @@ title: Enroll Android Enterprise personally-owned work profile devices in Intune
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise personally-owned work profile devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 2/10/2021
 ms.topic: how-to
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Set up enrollment of Android Enterprise personally-owned work profile devices

@@ -11,7 +11,7 @@ ms.date: 03/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 
 
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- macOS
 ---
 
 # Use shell scripts on macOS devices in Intune
@@ -51,7 +53,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
  
 ## Create and assign a shell script policy
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **macOS** > **Scripts** > **Add**.
+2. Select **Devices** > **macOS** > **Shell scripts** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the shell script.
    - **Description**: Enter a description for the shell script. This setting is optional, but recommended.

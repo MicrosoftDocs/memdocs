@@ -5,10 +5,11 @@ description: Learn about guidance and recommendations for security and privacy w
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 10/25/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for the cloud management gateway
@@ -97,6 +98,8 @@ This subset provides administrators with more control over security. The CTL res
 <!-- SCCMDocs-pr#4021 -->
 
 Use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients.
+
+Starting in version 2107 with the [update rollup](../../../../hotfix/2107/11121541.md), this setting also applies to the CMG storage account.<!--10800237-->
 
 For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
 

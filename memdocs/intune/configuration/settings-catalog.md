@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/09/2021
+ms.date: 11/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,6 +45,8 @@ This feature applies to:
 - **Windows 10 and newer**
 
   There are thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+
+  Settings Catalog policies are not supported on U.S. Government GCC High and DoD.
 
 > [!TIP]
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
@@ -127,6 +129,17 @@ There are thousands of settings available in the settings catalog. To make it ea
 - In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value. In **value**, you can filter to only show the settings that apply to Holographic for Business, Windows Enterprise, and other editions:
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="In Settings Catalog, filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
+
+## Duplicate a profile  
+
+ Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit it to adjust the settings and add assignments.      
+ 
+1. Go to **Devices** > **Configuration profiles**.
+2. Locate the profile that you want to copy in the table. Right-click the profile or select the ellipses context menu (**…**) that's in the same row.    
+3. Select **Duplicate**.  
+4. Enter a new name for the policy, and optionally, a description. 
+5. Select **Save**.  
+
 
 ## Reporting and conflicts
 

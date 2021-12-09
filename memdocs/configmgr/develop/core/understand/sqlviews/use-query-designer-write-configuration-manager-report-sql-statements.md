@@ -1,4 +1,4 @@
-﻿---
+---
 title: Using query designer to write report SQL statements
 titleSuffix: Configuration Manager
 description: Information about using query designer to write report SQL statements for Configuration Manager reports.
@@ -12,6 +12,8 @@ ms.assetid: 624e2cb1-db83-4e68-b9c1-335f7b3832c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Using query designer to write report SQL statements for Configuration Manager reports
@@ -20,7 +22,7 @@ To help you to write SQL statements for Configuration Manager reports, you can u
 
 ## Using query designer to create report queries
 
-Writing SQL statements in the Query Designer component of the Microsoft SQL Server Management Studio provides a graphical interface for writing queries. You can create a new query or copy a query from an existing Configuration Manager report, paste the SQL statement into the **SQL** pane of the Query Designer, and easily add views, create joins, select columns to display, add criteria, sort data, and so on. Query Designer provides the following panes:
+Writing SQL statements in the Query Designer component of the Microsoft SQL Server�Management Studio provides a graphical interface for writing queries. You can create a new query or copy a query from an existing Configuration Manager report, paste the SQL statement into the **SQL** pane of the Query Designer, and easily add views, create joins, select columns to display, add criteria, sort data, and so on. Query Designer provides the following panes:
 
 - **Diagram** pane: Provides the ability to join the views on specific columns and select the columns to display as part of the query results.
 - **Criteria** pane: Provides the ability to create aliases for columns, configure the sort order for the query results, configure filters, and so on.

@@ -9,6 +9,8 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Plan for PKI certificates in Configuration Manager

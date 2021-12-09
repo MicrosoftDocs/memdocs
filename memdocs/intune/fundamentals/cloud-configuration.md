@@ -87,7 +87,7 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
 
 - Creates a Windows 10 update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates.
 
-  For more information about update rings, and creating your policy, see [Windows 10 update rings policy](../protect/windows-10-update-rings.md).
+  For more information about update rings, and creating your policy, see [Update rings for Windows 10 and later policy](../protect/windows-10-update-rings.md).
 
 > [!TIP]
 > This guided scenario creates all these resources for you, automatically. If you want create your own individual resources, and not use the guided scenario, then you can. For the specific steps, see the [cloud config overview and setup guide](https://aka.ms/CloudConfigGuide).
@@ -107,7 +107,7 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
 - [Set the MDM authority to Intune](mdm-authority-set.md). The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
 - Enable automatic enrollment for Windows 10 devices. For more information, see:
   - [Quickstart: Set up automatic enrollment for Windows 10 devices](../enrollment/quickstart-setup-auto-enrollment.md)
-  - [Enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+  - [Enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 
 - Sign in as the Intune Service Administrator, also known as the Intune Administrator. For more information on the roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 

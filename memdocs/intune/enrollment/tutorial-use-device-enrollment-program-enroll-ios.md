@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Tutorial - Use Apple Business Manager or the Device Enrollment Program to enroll iOS/iPadOS devices in Intune
+title: Tutorial - Use Apple Business Manager to enroll iOS/iPadOS devices in Intune
 titleSuffix: Microsoft Intune
 description: In this tutorial, you'll set up Apple's corporate device enrollment features from ABM to enroll iOS/iPadOS devices in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/30/2019
 ms.topic: tutorial
@@ -16,7 +16,9 @@ ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Tutorial: Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune

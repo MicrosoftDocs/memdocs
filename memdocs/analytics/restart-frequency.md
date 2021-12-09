@@ -2,14 +2,14 @@
 title: Restart frequency in endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device restart frequency in endpoint analytics
-ms.date: 03/01/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 9fe09e0a-f8ff-4714-8cf9-453e3197760d
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Restart frequency in endpoint analytics
@@ -48,13 +48,9 @@ The difference between **Shutdown (no update)** and **Restart (no update)** is t
 
 In the device performance tab, two default columns have been added so you can review the total number of restarts and the number of Stop errors (blue screen errors) each device had in the last 14 days. Sort by these columns to find problematic devices. You can also use this tab to review the total number of devices that have sent restart records. For example, the screenshot below has 31 records, meaning 31 devices have sent restart data.
 
-:::image type="content" source="media/device-performance-tab.png" alt-text="Device performance tab under Startup Performance" lightbox="media/device-performance-tab.png":::
-
 ## Model performance tab
 
 In the model performance tab, two default columns have been added so you can review both the average number of restarts and the average number of Stop errors (blue screen errors) per model over the last 14 days. Sort by these columns to find problematic device models. Only models with at least 10 devices are shown to ensure the averages are done across enough devices to be meaningful.
-
-:::image type="content" source="media/model-performance-tab.png" alt-text="Model performance tab under Startup Performance" lightbox="media/model-performance-tab.png":::
 
 ## Restart frequency tab
 

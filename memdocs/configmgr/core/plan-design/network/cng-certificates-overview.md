@@ -6,10 +6,11 @@ ms.date: 07/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # CNG v3 certificates overview

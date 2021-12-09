@@ -2,13 +2,15 @@
 title: Apps in Company Portal
 titleSuffix: Configuration Manager
 description: Provide a consistent user experience for co-managed devices to use the Company Portal app.
-ms.date: 08/02/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Use the Company Portal app on co-managed devices
@@ -51,7 +53,7 @@ For more information, see the following articles:
   > [!NOTE]
   > Starting with Configuration Manager 2107 and Company Portal app version 11.0.12141.0, when you enable the site for [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md), the Company Portal prefers secure communication over HTTPS with the management point that's configured for HTTP.<!-- 9199146 --> On any version of Configuration Manager, when you configure the site or the management point to require HTTPS communication, Company Portal always uses HTTPS.
 
-- Windows 10, version 1803 or later:
+- Windows 10 version 1803 or later:
 
   - Enrolled to [co-management](how-to-enable.md)
 
@@ -82,7 +84,7 @@ For more information on client settings, see the following articles:
 
   - If the client apps workload is with Configuration Manager, [create and deploy an application with Configuration Manager](../apps/get-started/create-and-deploy-an-application.md). Download the offline Company Portal app from the [Microsoft Store for Business](https://www.microsoft.com/business-store).
 
-  - If the client apps workload is with Intune, you can deploy it via Configuration Manager or [add the Windows 10 Company Portal app by using Microsoft Intune](../../intune/apps/store-apps-company-portal-app.md).
+  - If the client apps workload is with Intune, you can deploy it via Configuration Manager or [add the Company Portal app by using Microsoft Intune](../../intune/apps/store-apps-company-portal-app.md).
 
 For more information on branding the Company Portal for your organization, see [How to customize the Intune Company Portal app](../../intune/apps/company-portal-app.md).
 

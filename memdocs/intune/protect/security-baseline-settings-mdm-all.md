@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Intune security baselines settings for Windows 10 MDM
+title: Intune security baselines settings for Windows 10/11 MDM
 titleSuffix: Microsoft Intune
 description: Review the defaults and available settings for the different versions of the Windows MDM security baseline that you can manage with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 11/19/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid:
 zone_pivot_groups: windows-mdm-versions
 
 # optional metadata
@@ -27,34 +25,35 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 
-# Windows MDM security baseline settings for Intune
+# Security baseline settings Windows 10 and later with Intune
 
-View the MDM security baseline settings that Microsoft Intune supports for devices that run Windows 10 or later. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
+View the security baseline settings that Microsoft Intune supports for devices that run Windows 10 and Windows 11. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
-- The most recent baseline version is **MDM Security Baseline for December 2020**
+- The most recent baseline version is **Security Baseline for Windows 10 and later for November 2021**
 
+::: zone pivot="november-2021"
 
+**Security Baseline for Windows 10 and later for November 2021**  
+
+::: zone-end
 ::: zone pivot="mdm-december-2020"
 
-**MDM Security Baseline for December 2020**  
+**Security Baseline for Windows 10 and later for December 2020**  
 
 ::: zone-end
 ::: zone pivot="mdm-sept-2020"
 
-**MDM Security Baseline for August 2020**  
+**Security Baseline for Windows 10 and later for August 2020**  
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
-
-**MDM Security Baseline for May 2019**:  
-
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
@@ -66,35 +65,7 @@ To understand what's changed with this version of the baseline from previous ver
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
-::: zone pivot="mdm-preview"
-
-**Preview - MDM Security Baseline for October 2018**:  
-> [!NOTE]
-> This is the preview version of the MDM security baseline, released in October of 2018. This preview baseline was replaced in June of 2019 by the release of the *MDM Security Baseline for May 2019* template, which is generally available (not in preview). Profiles that were created prior to the availability of the *MDM Security Baseline for May 2019* baseline won't update to reflect the settings and values that are in the MDM Security Baseline for May 2019 version. Although you can't create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
-
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
-
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
-
-## Above Lock
-
-For more information, see [Policy CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock) in the Windows documentation.  
-
-- **Block display of toast notifications**:  
-  This policy setting allows you to prevent app notifications from appearing on the lock screen. If you enable this policy setting, no app notifications are displayed on the lock screen. If you disable or don't configure this policy setting, users can choose which apps display notifications on the lock screen.  
-  [Learn more](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
-
-  **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Voice activate apps from locked screen**:  
-  **Default**: Disabled
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 ## App Runtime
 
@@ -109,10 +80,7 @@ For more information, see [Policy CSP - AppRuntime](/windows/client-management/m
 ## Application Management
 
 For more information, see [Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) in the Windows documentation.
-
-::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
-
+ 
 - **Block app installations with elevated privileges**:
   This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system. If you enable this policy setting, privileges are extended to all programs. This enables users to install programs that require access to directories that the user might not have permission to view or change, including directories on highly restricted computers.  
   [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
@@ -130,37 +98,6 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
   [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
   **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Block user control over installations**:  
-  This policy prevents users from changing the installation options typically reserved for system administrators, such as entering the directory to install the files. When set to Not configured (default), Intune doesn't change or update this setting. By default, Windows Installer might prevent users from changing these installation options, and some of the Windows Installer security features are bypassed.  
-  [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
-
-  **Default**: Yes
-
-- **Block MSI app installations with elevated privileges**:  
-  This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system.
-
-  - *If you enable this policy setting*, privileges are extended to all programs. Typically, these privileges are reserved for programs that are assigned to the user (offered on the desktop), assigned to the computer (installed automatically), or are available in Add or Remove Programs in Control Panel. This profile setting lets users install programs that require access to directories that the user might not have permission to view or change, including directories on highly restricted computers.
-
-  - *If you disable or don't configure this policy setting*, the system applies the current user's permissions when it installs programs that a system administrator doesn't distribute or offer. Note: This policy setting appears both in the Computer Configuration and User Configuration folders. To make this policy setting effective, you must enable it in both folders. Caution: Skilled users can take advantage of the permissions this policy setting grants to change their privileges and gain permanent access to restricted files and folders. The User Configuration version of this policy setting isn't guaranteed to be secure.  
-  [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
-
-  **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Block game DVR (desktop only)**:  
-  Configures whether recording and broadcasting of games is allowed.  
-  [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
-
-  **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
 
 ## Audit
 
@@ -283,9 +220,6 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
 
   **Default**: Success and Failure
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 ## Auto Play
 
 For more information, see [Policy CSP - Autoplay](/windows/client-management/mdm/policy-csp-autoplay) in the Windows documentation.
@@ -313,55 +247,15 @@ For more information, see [Policy CSP - Autoplay](/windows/client-management/mdm
 For more information, see [Policy CSP - BitLocker](/windows/client-management/mdm/policy-csp-bitlocker) in the Windows documentation.
 
 - **BitLocker removable drive policy**:  
-  This policy setting is used to control the encryption method and cipher strength. The values of this policy determine the strength of the cipher that BitLocker uses for encryption. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.  
+  This policy setting is used to control the encryption method and cipher strength. The values of this policy determine the strength of the cipher that BitLocker uses for encryption. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10 version 1511 or later, or Windows 11. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.  
   [Learn more](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)
 
   **Default**: Configure
 
   For BitLocker removable drive policy, configure the following setting:
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
   - **Block write access to removable data-drives not protected by BitLocker**:  
     **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-preview"
-
-  - **Require encryption for write access**:  
-    **Default**: Yes
-
-- **BitLocker removable drive policy**:  
-  This policy setting is used to control the encryption method and cipher strength. The values of this policy determine the strength of the cipher that BitLocker uses for encryption. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.  
-  [Learn more](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)
-
-  For BitLocker removable drive policy, configure the following setting:
-
-  - **Require encryption for write access**:  
-    **Default**: Yes  
-
-  - **Encryption method**:  
-    **Default**: AES 256bit CBC  
-
-- **BitLocker fixed drive policy**:  
-  This policy setting is used to control the encryption method and cipher strength. The values of this policy determine the strength of the cipher that BitLocker uses for encryption. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.
-
-  For BitLocker fixed drive policy, configure the following settings:
-
-  - **Encryption method**:  
-    **Default**: AES 256bit XTS  
-
-- **BitLocker system drive policy**:  
-  This policy setting is used to control the encryption method and cipher strength. The values of this policy determine the strength of the cipher that BitLocker uses for encryption. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.
-
-  For BitLocker system drive policy, configure the following settings:
-
-  - **Encryption method**:  
-    **Default**: AES 256bit XTS
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Browser
 
@@ -407,9 +301,6 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
   
   **Default**: Enabled
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Configure secure access to UNC paths**:  
   This policy setting configures secure access to UNC paths. If you enable this policy, Windows only allows access to the specified UNC paths after fulfilling additional security requirements.  
   [Learn more](/windows/client-management/mdm/policy-csp-connectivity#connectivity-hardeneduncpaths)
@@ -420,9 +311,6 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
 
 - **Hardened UNC path list**:  
   Select **Add** to specify additional security flags and server paths.
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Block downloading of print drivers over HTTP**:  
   This policy setting specifies whether to allow this client to download print driver packages over HTTP. To set up HTTP printing, non-inbox drivers need to be downloaded over HTTP. Note: This policy setting doesn't prevent the client from printing to printers on the Intranet or the Internet over HTTP. It only prohibits downloading drivers that aren't already installed locally. If you enable this policy setting, print drivers can't be downloaded over HTTP. If you disable or don't configure this policy setting, users can download print drivers over HTTP.  
@@ -470,16 +358,10 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 
   **Default**: Enable with UEFI lock
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Virtualization based security**:  
   Turns on virtualization-based security (VBS) at the next reboot. Virtualization based security uses the Windows Hypervisor to provide support for security services.
 
   **Default**: Enable VBS with secure boot
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Enable virtualization based security**:  
   Turns on virtualization-based security (VBS) at the next reboot. Virtualization-based security uses the Windows Hypervisor to provide support for security services.  
@@ -495,7 +377,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 ## Device Installation
 
 ::: zone-end
-::: zone pivot="mdm-december-2020"
+::: zone pivot="mdm-december-2020,november-2021"
 
 - **Block hardware device installation by setup classes**:  
   This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you block installation, Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you allow installation, Windows can install and update devices as allowed or prevented by other policy settings.  
@@ -514,7 +396,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
     Manage a list of device setup class globally unique identifiers that for device drivers that Windows is prevented from installing.
  
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-sept-2020"
 
 For more information, see [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) in the Windows documentation.
 
@@ -555,7 +437,8 @@ For more information, see [Policy CSP - DeviceInstallation](/windows/client-mana
     **Default**: *No default configuration*
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+
 ## Device Lock
 
 For more information, see [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) in the Windows documentation.
@@ -630,9 +513,6 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
 
   **Default**: Enabled *A setting of Enabled prevents slide shows from running.*
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 ## DMA Guard
 
 For more information, see [Policy CSP - DmaGuard](/windows/client-management/mdm/policy-csp-dmaguard) in the Windows documentation.
@@ -642,9 +522,6 @@ For more information, see [Policy CSP - DmaGuard](/windows/client-management/mdm
   [Learn more](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Default**: Block all
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Event Log Service
 
@@ -693,7 +570,8 @@ For more information, see [Policy CSP - Experience](/windows/client-management/m
     **Default**: Not configured
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-sept-2020"
+
 ## Exploit Guard
 
 For more information, see [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.
@@ -705,7 +583,8 @@ For more information, see [Policy CSP - ExploitGuard](/windows/client-management
   **Default**: *Sample xml is provided*
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+
 ## File Explorer
 
 For more information, see [Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) in the Windows documentation.  
@@ -794,9 +673,6 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disabled
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Internet Explorer internet zone drag and drop or copy and paste files**:  
   This policy setting allows you to manage whether users can drag files or copy and paste files from a source within the zone. If you enable this policy setting, users can drag files or copy and paste files from this zone automatically. If you select Prompt in the drop-down box, users are queried to choose whether to drag or copy files from this zone. If you disable this policy setting, users are prevented from dragging files or copying and pasting files from this zone. If you don't configure this policy setting, users can drag files or copy and paste files from this zone automatically.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowdraganddropcopyandpastefiles)
@@ -814,9 +690,6 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezonedonotrunantimalwareagainstactivexcontrols)
 
   **Default**: Disabled
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer internet zone access to data sources**:  
   This policy setting allows you to manage whether Internet Explorer can access data from another security zone using the Microsoft XML Parser (MSXML) or ActiveX Data Objects (ADO). If you enable this policy setting, users can load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you select Prompt in the drop-down box, users are queried to choose whether to allow a page to load in the zone that uses MSXML or ADO to access data from another site in the zone. If you disable this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you don't configure this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone.  
@@ -890,26 +763,11 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disable
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Internet Explorer internet zone automatic prompt for file downloads**:  
   This policy setting determines whether users are prompted for non user-initiated file downloads. Regardless of this setting, users will receive file download dialogs for user-initiated downloads. If you enable this setting, users will receive a file download dialog for automatic download attempts. If you disable or don't configure this setting, file downloads that aren't user-initiated are blocked, and users will see the Notification bar instead of the file download dialog. Users can then click the Notification bar to allow the file download prompt.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowautomaticpromptingforfiledownloads)
 
   **Default**: Disabled
-
-::: zone-end
-::: zone pivot="mdm-preview"
-
-- **Internet Explorer internet zone automatic prompt for file downloads**:  
-  This policy setting determines whether users are prompted for non user-initiated file downloads. Regardless of this setting, users will receive file download dialogs for user-initiated downloads. If you enable this setting, users will receive a file download dialog for automatic download attempts. If you disable or don't configure this setting, file downloads that aren't user-initiated are blocked, and users will see the Notification bar instead of the file download dialog. Users can then click the Notification bar to allow the file download prompt.  
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowautomaticpromptingforfiledownloads)
-
-  **Default**: Enabled
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer restricted zone security warning for potentially unsafe files**:  
   This policy setting controls if the "Open File - Security Warning" message appears when the user tries to open executable files or other potentially unsafe files (from an intranet file share by using File Explorer, for example). If you enable this policy setting and set the drop-down box to Enable, these files open without a security warning. If you set the drop-down box to Prompt, a security warning appears before the files open. If you disable this policy setting, these files don't open. If you don't configure this policy setting, the user can configure how the computer handles these files. By default, these files are blocked in the Restricted zone, enabled in the Intranet and Local Computer zones, and set to prompt in the Internet and Trusted zones.  
@@ -929,18 +787,12 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: No sites
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Internet Explorer encryption support**:  
   This policy setting allows you to turn off support for Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0, or SSL 3.0 in the browser. TLS and SSL are protocols that help protect communication between the browser and the target server. When the browser attempts to set up a protected communication with the target server, the browser and server negotiate which protocol and version to use. The browser and server attempt to match each other's list of supported protocols and versions, and they select the most preferred match. If you enable this policy setting, the browser negotiates or doesn't negotiate an encryption tunnel by using the encryption methods that you select from the drop-down list. If you disable or don't configure this policy setting, the user can select which encryption method the browser supports.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableencryptionsupport)
 
   **Default**: 2 items:  TLS v1.1 and TLS v1.2  
   *Select the down arrow to display options that you can select for this setting.*
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer locked down internet zone smart screen**:  
   This policy setting controls whether SmartScreen Filter scans pages in this zone for malicious content. If you enable this policy setting, SmartScreen Filter scans pages in this zone for malicious content. If you disable this policy setting, SmartScreen Filter doesn't scan pages in this zone for malicious content. If you don't configure this policy setting, the user can choose whether SmartScreen Filter scans pages in this zone for malicious content. Note: In Internet Explorer 7, this policy setting controls whether Phishing Filter scans pages in this zone for malicious content.  
@@ -1061,7 +913,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Enabled
 
 - **Internet Explorer prevent managing smart screen filter**:  
-  This policy setting prevents the user from managing SmartScreen Filter, which warns the user if the website they visit is known for fraudulent attempts to gather personal information through "phishing," or is known to host malware. If you enable this policy setting, the user isn't prompted to turn on SmartScreen Filter. All website addresses that aren't on the filters allow list are sent automatically to Microsoft without prompting the user. If you disable or don't configure this policy setting, the user gets prompted to decide whether to turn on SmartScreen Filter during the first-run experience.  
+  This policy setting prevents the user from managing SmartScreen Filter, which warns the user if the website they visit is known for fraudulent attempts to gather personal information through "phishing," or is known to host malware. If you enable this policy setting, the user isn't prompted to turn on SmartScreen Filter. All website addresses that aren't on the filters allowlist are sent automatically to Microsoft without prompting the user. If you disable or don't configure this policy setting, the user gets prompted to decide whether to turn on SmartScreen Filter during the first-run experience.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-preventmanagingsmartscreenfilter)
 
   **Default**: Enable
@@ -1753,9 +1605,6 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](/windows/c
 
 For more information, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Block Adobe Reader from creating child processes**:  
 This rule prevents attacks by blocking Adobe Reader from creating additional processes. Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader. By blocking child processes from being generated by Adobe Reader, malware attempting to use it as a vector are prevented from spreading.
 [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -1774,9 +1623,6 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default**: 4
 
-::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
-
 - **Scan type**  
   CSP: [Defender/ScanParameter](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
 
@@ -1784,16 +1630,13 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default** Quick scan
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Defender schedule scan day**:  
   Defender schedule scan day.
 
   **Default**: Everyday
 
 ::: zone-end
-::: zone pivot="mdm-december-2020"
+::: zone pivot="mdm-december-2020,november-2021"
 
 - **Defender scan start time**:  
   Defender schedule scan time.
@@ -1801,34 +1644,27 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Not configured
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Turn on cloud-delivered protection**:  
-  CSP: [Defender/AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
-  
-  When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default, which enables the feature but allows the user to disable it.
-
-  **Default**:  Yes  
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Cloud-delivered protection**:  
-  CSP: [Defender/AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
-  
-  Specify the level of protection for Potentially Unwanted Applications (PUAs). Selecting *Not configured* will configure the client to the default, which turns off PUA protection. Disable will turn off PUA protection and not protect against unwanted applications. Selecting Enable will turn on PUA protection and will block detected items. Audit mode allows PUA to detect potentially unwanted applications, but takes no action. [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection).
-
-  **Default**:  Not configured
-  
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   When this setting is set to Yes, real-time monitoring will be enforced and the user can't disable it. When set to Not configured, the setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
 
-  **Default**:  Yes  
+  **Default**: Yes  
+
+::: zone-end
+::: zone pivot="november-2021"
+
+- **Scan scripts that are used in Microsoft browsers**  
+  CSP [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
+  When this setting is set to Yes, the Windows Defender Script Scanning functionality will be enforced and the user cannot turn them off. When set to Not configured, the setting is returned to client default which is to enable script scanning, however the user can turn it off.
+
+  **Default**: Yes
+
+::: zone-end
+::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
 - **Scan archive files**:  
   CSP: [Defender/AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
@@ -1892,28 +1728,12 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   
   **Default**: Block
 
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Email content execution type**:  
+- **Block executable content download from email and webmail clients**:  
   [Block executable content download from email and webmail clients](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   When set to Yes, executable content downloaded from email and webmail clients will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off.
 
   **Default**: Block
-
-::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020"
-
-- **Block executable content download from email and webmail clients**:   
-  [Block executable content download from email and webmail clients](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
-
-  When set to Yes, executable content downloaded from email and webmail clients will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off.
-
-  **Default**: Block
-
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Prevent credential stealing type**:  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -1949,22 +1769,6 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
 
   **Default**: Send safe samples automatically
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Scan network files**  
-  [Defender/AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
-
-  - **Default**: Yes
-
-- **Block JavaScript or VBScript from launching downloaded executable content**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
-
-  When set to Yes, Defender will block JavaScript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
-
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020,mdm-december-2020"
 
 ## MS Security Guide
 
@@ -2047,9 +1851,6 @@ For more information, see [Policy CSP - Power](/windows/client-management/mdm/po
 
   **Default**: Enabled
 
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 ## Remote Assistance
 
 For more information, see [Policy CSP - RemoteAssistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) in the Windows documentation.
@@ -2067,9 +1868,6 @@ For more information, see [Policy CSP - RemoteAssistance](/windows/client-manage
   [Learn more](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance)
 
   **Default**: Disable Remote Assistance
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Remote Desktop Services
 
@@ -2184,29 +1982,6 @@ For more information, see [Policy CSP - Search](/windows/client-management/mdm/p
 
 For more information, see [Policy CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen) in the Windows documentation.
 
-::: zone-end
-::: zone pivot="mdm-preview"
-
-- **Block execution of unverified files**:  
-  Block user from running unverified files.
-
-  - *Not Configured* - Employees can ignore SmartScreen warnings and run malicious files.
-
-  - *Yes* – Employees can't ignore SmartScreen warnings and run malicious files.
-
-  [Learn more](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
-
-  **Default**: Yes
-
-- **Require SmartScreen for apps and files**:  
-  Allows IT Admins to configure SmartScreen for Windows.  
-  [Learn more](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
-
-  **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
@@ -2222,9 +1997,6 @@ For more information, see [Policy CSP - SmartScreen](/windows/client-management/
   This setting requires the 'Turn on Windows SmartScreen' setting be set to Yes.
 
   **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## System
 
@@ -2278,63 +2050,6 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
 
   **Default**: Enabled
 
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-## Windows Hello for Business
-
-- **Block Windows Hello for Business**  
-  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards. If you disable or don't configure this policy setting, the device provisions Windows Hello for Business. If you enable this policy setting, the device doesn't provision Windows Hello for Business for any user.
-
-  **Default**: Enabled
-  
-  When set to *Disabled*, you can configure the following settings:
-
-  - **Minimum PIN length**  
-    Minimum PIN length must be between 4 and 127.
-
-    **Default**: Not configured
-
-  - **Enable to use enhanced anti-spoofing, when available**  
-    [Anti-spoofing protection](/microsoft-365/security/office-365-security/anti-spoofing-protection)
-
-    If enabled, devices will use enhanced anti-spoofing, when available. If not configured, the client configuration for anti-spoofing will be honored.
-
-    **Default**: Not configured
-
-  - **Lowercase letters in PIN**:  
-    If required, user PIN must include at least one lowercase letter.
-
-    **Default**: Not allowed
-
-  - **Special characters in PIN**:  
-    If required, user PIN must include at least one special character.
-
-    **Default**: Not allowed
-
-  - **Uppercase letters in PIN**:  
-    If required, user PIN must include at least one uppercase letter.
-
-    **Default**: Not allowed
-
-  - **Lowercase letters in PIN**:  
-    If required, user PIN must include at least one lowercase letter.
-
-    **Default**: Not configured
-
-  - **Special characters in PIN**:  
-    If required, user PIN must include at least one special character.
-
-    **Default**: Not configured
-
-  - **Uppercase letters in PIN**:  
-    If required, user PIN must include at least one uppercase letter.
-
-    **Default**: Not configured
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
-
 ## Windows Ink Workspace
 
 For more information, see [Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace) in the Windows documentation.
@@ -2361,106 +2076,6 @@ For more information, see [Policy CSP - WindowsPowerShell](/windows/client-manag
   [Learn more](/windows/client-management/mdm/policy-csp-windowspowershell#windowspowershell-turnonpowershellscriptblocklogging)
 
   **Default**: Enabled
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-## What's changed in the new template
-
-<!-- This section is deprecated from future baseline updates. Use the Compare feature to identify changes -->
-
-The *MDM Security Baseline for May 2019* template has the following changes from the *preview* template.
-
-### Changes to the baseline settings
-
-The following settings are either:
-
-- *New* in this latest version of the baseline.
-- *Removed* from this latest baseline version, but were present in the previous version.
-- *Revised* in some way from how the settings appeared in the previous version.
-
-*[New]* [**Above Lock**](#above-lock):
-
-- **Voice activate apps from locked screen**
-
-*[New]* [**Application Management**](#application-management):
-
-- **Block user control over installations**
-- **Block MSI app installations with elevated privileges**
-
-*[Removed]* [**BitLocker**](#bitlocker):
-
-- BitLocker removable drive policy > **Encryption method**
-- **BitLocker fixed drive policy** *(all settings)*
-- **BitLocker system drive policy** *(all settings)*
-
-*[New]* [**Connectivity**](#connectivity):
-
-- **Configure secure access to UNC paths**
-
-*[New]* [**Device Guard**](#device-guard):
-
-- **Virtualization based security**
-
-*[New]* [**DMA Guard**](#dma-guard):
-
-- **Enumeration of external devices incompatible with Kernel DMA Protection**
-
-*[New]* [**Internet Explorer**](#internet-explorer):
-
-- **Internet Explorer internet zone updates to status bar via script**
-- **Internet Explorer internet zone drag and drop or copy and paste files**
-- **Internet Explorer restricted zone .NET Framework reliant components**
-- **Internet Explorer local machine zone do not run antimalware against Active X controls**
-- **Internet Explorer encryption support**
-
-*[Revised]* [**Internet Explorer**](#internet-explorer):
-
-- **Internet Explorer internet zone automatic prompt for file downloads** > The default value is now **Disabled**. In preview this setting was set to Enabled.
-
-*[New]* [**Remote Assistance**](#remote-assistance):
-
-- **Remote Assistance solicited**
-  - **Remote Assistance solicited permission**
-  - **Maximum ticket time value**
-  - **Maximum ticket time period**
-  - **E-Mail invitation method**
-
-*[New]* [**Microsoft Defender**](#microsoft-defender):
-
-- **Adobe Reader Launch in a child process**
-- **Office communication apps launch in a child process**
-
-*[New]* [**Firewall**](#firewall)
-
-- **Firewall profile domain**
-  - **Inbound connections blocked**
-  - **Outbound connections required**
-  - **Inbound notifications blocked**
-  - **Firewall enabled**
-- **Firewall profile public**
-  - **Inbound connections blocked**
-  - **Outbound connections required**
-  - **Inbound notifications blocked**
-  - **Firewall enabled**
-  - **Connection security rules from group policy not merged**
-  - **Policy rules from group policy not merged**
-- **Firewall profile private**
-  - **Inbound connections blocked**
-  - **Outbound connections required**
-  - **Inbound notifications blocked**
-  - **Firewall enabled**
-
-*[New]* [**Windows Hello for Business**](#windows-hello-for-business):
-
-- **Require enhanced anti-spoofing, when available**
-- **Configure Windows Hello for Business**
-- **Require lowercase letters in PIN**
-- **Require special characters in PIN**
-- **Minimum PIN length**
-- **Require uppercase letters in PIN**
-
-<!-- END OF DEPRECATED SECTION -->
 
 ::: zone-end
 

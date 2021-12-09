@@ -10,6 +10,8 @@ ms.assetid: 73b6a9b7-6d9b-4ca2-87bc-1e9c898a3fef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Architectural overview

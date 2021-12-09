@@ -12,8 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use certificates for authentication in Microsoft Intune
@@ -141,10 +141,10 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | iOS/iPadOS                   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
 | Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
-| Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) |
+| Windows 10/11  | ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) |
 
 - ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
-- ***Note 2*** - This profile is supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+- ***Note 2*** - This profile is supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Additional resources
 

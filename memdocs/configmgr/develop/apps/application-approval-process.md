@@ -9,7 +9,8 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Application approval process

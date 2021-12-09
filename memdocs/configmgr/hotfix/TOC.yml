@@ -5,6 +5,12 @@ items:
   items:
   - name: KB 10096997 Summary of changes in 2107
     href: 2107/10096997.md
+  - name: KB 10503003 Early update ring
+    href: 2107/10503003.md
+  - name: KB 11121541 Update rollup for 2107
+    href: 2107/11121541.md
+  - name: KB 12636660 Network access account update
+    href: 2107/12636660.md
 - name: Version 2103
   items:
   - name: KB 9210721 Summary of changes in 2103

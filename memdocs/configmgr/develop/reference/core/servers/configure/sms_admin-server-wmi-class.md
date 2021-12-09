@@ -10,6 +10,8 @@ ms.assetid: ddc3da5e-2d17-4e03-9987-d7fc5c06f25d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_Admin server WMI class

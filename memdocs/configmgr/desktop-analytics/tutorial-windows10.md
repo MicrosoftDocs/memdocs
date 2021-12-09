@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
+ms.localizationpriority: medium
 ---
 
 # Tutorial: Deploy Windows 10 to pilot
@@ -20,7 +21,7 @@ This tutorial uses Desktop Analytics and Configuration Manager to deploy Windows
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> - Set up Desktop Analytics in the Azure portal
+> - Set up Desktop Analytics in the Microsoft Endpoint Manager admin center
 > - Connect Configuration Manager and configure device settings
 > - Create a Desktop Analytics deployment plan for Windows 10
 > - Use Configuration Manager to deploy Windows 10 to the pilot group
@@ -127,7 +128,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 8. Back on the page to **Set up your workspace**, select **Next**.
 
-9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.
+9. On the **Last steps** page, select **Go to Desktop Analytics**. The admin center shows the Desktop Analytics **Home** page.
 
 ## Connect Configuration Manager
 

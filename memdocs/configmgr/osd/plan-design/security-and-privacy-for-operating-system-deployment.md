@@ -6,12 +6,10 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for OS deployment in Configuration Manager

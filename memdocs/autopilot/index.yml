@@ -9,11 +9,14 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: apps
   ms.topic: landing-page 
-  ms.collection: collection
+  ms.collection: 
+    - collection
+    - highpri
   author: dougeby
   ms.author: dougeby
-  ms.manager: mtillman
-  ms.date: 06/22/2020  
+  manager: johmar
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 

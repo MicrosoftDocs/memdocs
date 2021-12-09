@@ -2,13 +2,14 @@
 title: Proxy server support
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site system servers use proxy servers.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Proxy server support in Configuration Manager
@@ -30,6 +31,9 @@ Some Configuration Manager site system servers require connections to the intern
 The following site system roles connect to the internet, and if necessary, can use a proxy server:  
 
 ### Asset Intelligence synchronization point
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
 
 This site system role connects to Microsoft and uses a proxy server configuration on the computer that hosts the Asset Intelligence synchronization point.  
 

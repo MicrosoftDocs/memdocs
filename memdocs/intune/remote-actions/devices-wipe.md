@@ -7,13 +7,11 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/11/2021
+ms.date: 08/31/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Remove devices by using wipe, retire, or manually unenrolling the device
@@ -121,9 +121,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 
 Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
 
-### Android Enterprise dedicated devices
+### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
 
-You can only wipe kiosk devices. You can't retire Android kiosk devices.
+You can only wipe Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
 
 
 ### macOS
@@ -205,13 +205,12 @@ You might need to delete devices from Azure AD due to communication issues or mi
 6. Select **Devices**.
 7. Remove devices as appropriate. For example, you might remove devices that are no longer in use, or devices that have inaccurate definitions.
 
-## Retire an Apple DEP device from Intune
+## Retire an Apple ADE device from Intune
 
-If you want to completely remove an Apple DEP device from management by Intune, follow these steps:
+If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
-![Screenshot for retire](./media/devices-wipe/retire.png)
 3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
 4. In the **Assigned to** menu, choose **Unassigned**.
 

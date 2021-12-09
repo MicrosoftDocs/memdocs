@@ -1,17 +1,15 @@
 ---
 title: Prepare for unknown computer deployments
-titleSuffix: "Configuration Manager"
-description: "Learn how to deploy operating systems to computers that are not managed by Configuration Manager in your Configuration Manager environment."
+titleSuffix: Configuration Manager
+description: Learn how to deploy operating systems to computers that are not managed by Configuration Manager in your Configuration Manager environment.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Prepare for unknown computer deployments in Configuration Manager
 
@@ -66,11 +64,11 @@ Use the information in this topic to deploy operating systems to unknown compute
 
 -   **PXE**  
 
-     Select the **Enable unknown computer support** check box on the **PXE** tab for a distribution point that is enabled for PXE. For more information, see [Configuring distribution points to accept PXE requests](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint).  
+     Select the **Enable unknown computer support** check box on the **PXE** tab for a distribution point that is enabled for PXE. For more information, see [Configuring distribution points to accept PXE requests](prepare-site-system-roles-for-operating-system-deployments.md#configuring-distribution-points-to-accept-pxe-requests).  
 
 -   **Bootable media**  
 
-     Select the **Enable unknown computer support** check box on the **Security** page of the Create Task Sequence Media Wizard. For more information, see [Configuring distribution points to accept PXE requests](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint) and [Use PXE to deploy Windows over the network with Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+     Select the **Enable unknown computer support** check box on the **Security** page of the Create Task Sequence Media Wizard. For more information, see [Configuring distribution points to accept PXE requests](prepare-site-system-roles-for-operating-system-deployments.md#configuring-distribution-points-to-accept-pxe-requests) and [Use PXE to deploy Windows over the network with Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 -   **Prestaged media**  
 

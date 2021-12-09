@@ -2,13 +2,15 @@
 title: Plan for CMG
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 08/02/2021
+ms.date: 09/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Plan for the CMG in Configuration Manager
@@ -75,6 +77,8 @@ You create the CMG using an **Azure Resource Manager deployment**. [Azure Resour
 
 > [!NOTE]
 > CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
+>
+> The option to deploy a CMG as a **cloud service (classic)** is deprecated. All CMG deployments should use a [virtual machine scale set](#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
 ## Virtual machine scale sets
 
@@ -96,11 +100,14 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
 ### Limitations for a CMG with a virtual machine scale set
 
-#### Limitations with versions 2107
+#### Limitations with versions 2107 and later
 
-- It doesn't support Azure US Government cloud environments.
+> [!NOTE]
+> Starting in version 2111, CMG deployments with a virtual machine scale set support Azure US Government cloud environments.<!--12141235-->
+
 - Users may experience a delay of up to three seconds for actions in Software Center.
 - You can't approve/deny application requests through the CMG.<!-- 10023094 -->
+- Version 2107 doesn't support Azure US Government cloud environments.
 
 #### Limitations with versions 2010 and 2103
 
@@ -118,8 +125,10 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 > [!TIP]
 > To clarify some Azure terminology:
 >
-> - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
-> - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+> - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+>
+> For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
 
 - An **Azure subscription** to host the CMG. This subscription can be in one of the following environments:
 
@@ -136,7 +145,7 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
   - When you integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Administrator**.
 
-  - When you create the CMG, you need a **Subscription Owner**.
+  - When you create the CMG, you need an account that is an Azure **Subscription Owner** and an Azure AD **Global Administrator**.
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 

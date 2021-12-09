@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 10/22/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,7 +18,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: contperf-fy21q1
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Win32 app management in Microsoft Intune

@@ -1,44 +1,35 @@
 ---
 title: "How to Create an Application with the Script Deployment Type"
 titleSuffix: "Configuration Manager"
+description: Use the SDK to create an app with the script deployment type.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: how-to
-ms.assetid: 11ec1d68-c5ee-4822-a519-b92011909d1d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: null
+ms.collection: openauth
 ---
+
 # How to Create an Application with the Script Deployment Type
-Applications are new to Configuration Manager.  Prior to Configuration Manager, a package was the basic object that was used to install software.  Now, a more flexible and complete model exists for applications in Configuration Manager.  Software based on this new model are referred to as Applications.  Packages still exist in Configuration Manager, but they are defined and behave in much the same manner as packages did in Configuration Manager.  
+Applications are new to Configuration Manager.  Prior to Configuration Manager, a package was the basic object that was used to install software.  Now, a more flexible and complete model exists for applications in Configuration Manager.  Software based on this new model is referred to as an application.  Packages still exist in Configuration Manager, but they are defined and behave in much the same manner as packages did in Configuration Manager.  
 
  The application model defines a standard set of properties and metadata that is used by the system to manage the lifecycle of the application. As applications are modeled, the application itself can be a building block used to help define other applications in the system. For example, .NET Framework can be defined as an application, and then it can be referenced by a parent application as a dependency that must be present or installed before the parent application is installed.  
 
 ## To Create an Application with the Script Deployment Type  
  In order to get started with creating an application, the following section defines a simple application and its basic properties.  Assuming that all applications you create are new from the Configuration Manager perspective, then adding a new application into Configuration Manager is relatively straightforward. When applications may already exist, and may have relationships to other applications, either through dependencies or supersedence is more complicated and not covered in the example below.  
 
- A simple command line program that demonstrates the how to create the model and persist to the database through the SMS Provider is shown below. As a sample, it contains strings that are hard-coded, and should not be considered a real world application for automating application creation. Additionally, there is minimal error handling. However, this example should be enough to get you started.  
+ A simple command-line program that demonstrates how to create the model and persist to the database through the SMS Provider is shown below. As a sample, it contains strings that are hard-coded, and should not be considered a real world application for automating application creation. Additionally, there is minimal error handling. However, this example should be enough to get you started.  
 
-### Additional references
+### Other references
 
-You can refer to the following posts for additional details about creating applications:  
+For more information, see the following blog posts:
 
-- **Saving the World One Line of Code at a Time**  
-
-    [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](/archive/blogs/one_line_of_code_at_a_time/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk)  
+- [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](/archive/blogs/one_line_of_code_at_a_time/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk)
 
 - [Adam Meltzer's Configuration Manager blog](/archive/blogs/ameltzer/)
-
-- **SDK Sample: AppSupersedence**  
-
-    Demonstrates how to create an application-supersedence relationship between two versions of an application. For more information, see [Configuration Manager SDK samples](../../develop/core/understand/configuration-manager-sdk-samples.md).
-
-- **SDK Sample: DTRequirements**  
-
-    Demonstrates how to create deployment type requirements and add them to a deployment type. For more information, see [Configuration Manager SDK Samples](../../develop/core/understand/configuration-manager-sdk-samples.md).
 
 ##### To Create an Application with the Script Deployment Type  
 
@@ -48,7 +39,7 @@ You can refer to the following posts for additional details about creating appli
 
 3. Persist the application to the provider.  
 
-   To use this sample, create a new command line C# application and copy and replace the code shown. You'll need to add references to the 5 assemblies below are all found in the adminconsole\bin directory:  
+   To use this sample, create a new command-line C# application and copy and replace the code shown. You'll need to add references to the five assemblies below are all found in the adminconsole\bin directory:  
 
 - AdminUI.AppManFoundation.dll  
 
@@ -70,7 +61,7 @@ You can refer to the following posts for additional details about creating appli
 
    The Configuration Manager managed WMI interface.  
 
-  After compiling and running the application, the output for the application will show this when it is successful.  
+  After compiling and running the application, the output for the application will show this output when it is successful.  
 
 ```  
 C:\sms\AdminConsole\bin>ApplicationCreator.exe  

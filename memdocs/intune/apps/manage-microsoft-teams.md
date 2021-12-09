@@ -12,7 +12,7 @@ ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 
 # optional metadata
@@ -25,7 +25,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
+- Android
 ---
 
 # Manage team collaboration access by using Teams for iOS and Android with Microsoft Intune

@@ -7,6 +7,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/13/2021
+ms.localizationpriority: medium
 ---
 
 # Configuration Manager site size and performance guidelines

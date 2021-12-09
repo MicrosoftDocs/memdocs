@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Windows 10 (and newer) device settings to allow or restrict features using Intune
@@ -733,6 +735,9 @@ These settings use the [search policy CSP](/windows/client-management/mdm/policy
 ## Start
 
 These settings use the [start policy CSP](/windows/client-management/mdm/policy-csp-start), which also lists the supported Windows editions.  
+
+> [!NOTE]
+> Management capabilities to deliver customized Start and Taskbar experiences are currently limited on Windows 11. For more information, see [Supported configuration service provider (CSP) policies for Windows 11 Start menu](/windows/configuration/supported-csp-start-menu-layout-windows).
 
 - **Start menu layout**: Upload an XML file that includes your customizations, including the order the apps are listed, and more. The XML file overrides the default start layout. Users can't change the start menu layout you enter.
 

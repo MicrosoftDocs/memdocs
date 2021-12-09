@@ -2,14 +2,14 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
-ms.date: 04/05/2021
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create applications in Configuration Manager
@@ -273,7 +273,7 @@ When you view the properties of a deployment type, the following options appear 
 
 <!--3555953-->
 
-For more information on the task sequence deployment type starting in version 2002, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt).
+For more information on the task sequence deployment type, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt).
 
 On the **Task Sequence** page, specify the following information:
 
@@ -691,19 +691,19 @@ For more information about how to export an application, see [Management tasks f
 Configuration Manager supports the following deployment types for applications:
 
 | Deployment type name | Description |
-|--------------------------|----------------------|  
-| **Windows Installer (\*.msi file)** | A Windows Installer file. |  
-| **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | A Windows app package file (.appx), a Windows app bundle package (.appxbundle), a Windows 10 app package (.msix), or Windows 10 app bundle (.msixbundle).<!--1357427--> |  
-| **Windows app package (in the Windows Store)** | Specify a link to the app in the Windows Store, or browse the store to select the app.<sup>[Note 1](#bkmk_note1)</sup> |  
-| **Script Installer** | Specify a script or program that runs on Windows clients to install content or to do an action. Use this deployment type for setup.exe installers or script wrappers. |  
-| **Microsoft Application Virtualization 4** | A Microsoft App-V v4 manifest. |  
-| **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
-| **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |  
-| **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
-| **macOS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
-| **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
-| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
-| **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
+|--------------------------|----------------------|
+| **Windows Installer (\*.msi file)** | A Windows Installer file (`.msi`). |
+| **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | Windows app package files (`.appx` or `.msix`) or Windows app bundle packages (`.appxbundle` or `.msixbundle`).<!--1357427--> |
+| **Windows app package (in the Windows Store)** | Specify a link to the app in the Windows Store, or browse the store to select the app.<sup>[Note 1](#bkmk_note1)</sup> |
+| **Script Installer** | Specify a script or program that runs on Windows clients to install content or to do an action. Use this deployment type for setup.exe installers or script wrappers. |
+| **Microsoft Application Virtualization 4** | A Microsoft App-V v4 manifest. |
+| **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |
+| **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |
+| **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |
+| **macOS X** | For macOS computers running the Configuration Manager client. Create a `.cmmac` file with the **CMAppUtil** tool. |
+| **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |
+| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows devices using on-premises mobile device management (MDM). For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
+| **Task sequence** | Install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
 
 > [!NOTE]
 > The Configuration Manager console may display other deployment types, but they are for platforms that are no longer supported. For more information, see [What happened to hybrid?](../../mdm/understand/what-happened-to-hybrid.md).

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 12/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,9 @@ ms.collection: M365-identity-device-management
 # Certificate connectors for Microsoft Intune
 
 > [!IMPORTANT]
-> As of July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the previous connectors remain in support, they are no longer available for download and will not be further developed.
+> As of July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Support for the previous connectors ends on 9/22/2021 with the release of version 6.2109.51.0 of the Certificate Connector for Microsoft.
+>
+> On February 1, 2022, Intune certificate connectors earlier than version 6.1806.5.0 will no longer allow you to issue certificates to users and devices.
 >
 > If you need to install a new certificate connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune. For more information, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
 
@@ -266,6 +268,9 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 ## What's new for Connectors
 
 Updates for the two certificate connectors are released periodically. When we update a connector, you can read about the changes here.
+
+> [!IMPORTANT]
+> On February 1, 2022, Intune certificate connectors earlier than version 6.1806.5.0 will no longer allow you to issue certificates to users and devices. See the note at the to start of this article for detail on moving to the new **Certificate Connector for Microsoft**.
 
 ### PFX Certificate Connector release history
 

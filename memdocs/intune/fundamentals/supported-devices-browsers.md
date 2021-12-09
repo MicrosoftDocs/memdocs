@@ -5,16 +5,14 @@ title: Operating systems and browsers supported by Microsoft Intune
 titleSuffix: 
 description: Lists supported device platforms and browsers for Intune device management
 keywords:
-author: ErikjeMS  
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 10/26/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 
 # optional metadata
 
@@ -26,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started; seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Supported operating systems and browsers in Intune
@@ -38,16 +38,13 @@ For help installing Intune on your device, see [using managed devices to get wor
 For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 > [!NOTE]
-> Intune requires Android 6.x or higher for applications and devices to access company resources via the Company Portal app for Android and the Intune App SDK for Android. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported.
+> Intune requires Android 6.x or higher for device enrollment scenarios. For Intune app protection policies, Intune requires Android 9.0 or higher. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported.
 
 ## Intune supported operating systems
 
 You can manage devices running the following operating systems:
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
-
-> [!NOTE]
-> Intune does not currently support managing UWF enabled devices. See [Unified Write Filter (UWF) feature](/windows-hardware/customize/enterprise/unified-write-filter) for more information.
 
 ### Supported Samsung Knox Standard devices
 

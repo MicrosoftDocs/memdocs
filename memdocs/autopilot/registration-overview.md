@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot registration overview
-ms.reviewer: 
-manager: laurawi
 description: Overview of Windows Autopilot device registration
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -12,20 +10,22 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
 - m365initiative-coredeploy
+- highpri
 ---
-
 
 # Windows Autopilot registration overview
 
 **Applies to**
 
-- Windows 10
-- Windows 11
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
 Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. 
@@ -57,7 +57,7 @@ The following terms are used to refer to various steps in the registration proce
 
 ## Device identification
 
-To identify a device with Windows Autopilot, the device's unique hardware hash must be captured and uploaded to the service. As previously mentioned, this step is ideally done by the hardware vendor (OEM, reseller, or distributor) automatically associating the device with an organization. It's also possible to do identify a device with a [harvesting process](add-devices.md) that collects the device's hardware hash from within a running Windows 10 installation.
+To identify a device with Windows Autopilot, the device's unique hardware hash must be captured and uploaded to the service. As previously mentioned, this step is ideally done by the hardware vendor (OEM, reseller, or distributor) automatically associating the device with an organization. It's also possible to do identify a device with a [harvesting process](add-devices.md) that collects the device's hardware hash from within a running Windows installation.
 
 The hardware hash contains details about the device, such as:
 - manufacturer
@@ -87,5 +87,4 @@ Devices that have been registered with the Windows Autopilot service are display
 
 ## Related topics
 
-[Register devices manually](add-devices.md)<br>
-
+[Register devices manually](add-devices.md)

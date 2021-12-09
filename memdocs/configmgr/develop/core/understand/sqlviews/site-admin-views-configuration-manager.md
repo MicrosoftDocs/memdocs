@@ -1,4 +1,4 @@
-﻿---
+---
 title: Site administration views
 titleSuffix: Configuration Manager
 description: Information such as the site code, Configuration Manager version, and the location of the SMS provider.
@@ -12,11 +12,13 @@ ms.assetid: 7c8ca172-c5de-4f13-90e4-039eb3913577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Site administration views in Configuration Manager
 
-The Configuration Manager site views contain information such as the site code, Configuration Manager version, the location of the SMS provider, site server name, site system names, site boundary information, and more. There are also status views that contain information about sites, site systems, and components. The site and site status views will most often be joined to other views by using the **SiteCode** or **ServerName** columns.
+The Configuration�Manager site views contain information such as the site code, Configuration Manager version, the location of the SMS provider, site server name, site system names, site boundary information, and more. There are also status views that contain information about sites, site systems, and components. The site and site status views will most often be joined to other views by using the **SiteCode** or **ServerName** columns.
 
 The following sections provide detailed information about site views and site status views.
 

@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 # Get started with compliance settings in Configuration Manager
 
@@ -31,7 +31,7 @@ Configuration items fall into two main categories:
 
 | Device type | More information |  
 |------------|----------------------|  
-| Windows PCs (with the Configuration Manager client) | Create custom configuration items to assess objects such as registry keys, files, and Active Directory attributes.<br /><br /> When you use the Windows 10 configuration item type, select settings from a predefined list. |  
+| Windows PCs (with the Configuration Manager client) | Create custom configuration items to assess objects such as registry keys, files, and Active Directory attributes.<br /><br /> When you use the Windows 10 or later configuration item type, select settings from a predefined list. |  
 | Windows PCs (enrolled with on-premises MDM) | Select settings from a predefined list. |  
 | Windows Phone devices (enrolled with on-premises MDM) | Select settings from a predefined list. |  
 | Mac computers (with the Configuration Manager client) | Create custom configuration items to assess objects such as macOS preferences, and results returned by a script. |  

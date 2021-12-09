@@ -6,10 +6,11 @@ ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # How to enable TLS 1.2

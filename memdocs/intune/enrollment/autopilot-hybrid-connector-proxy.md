@@ -4,8 +4,8 @@
 title: Configure proxy settings for the Intune Connector for Active Directory
 description: Covers how to configure the Intune Connector for Active Directory to work with existing on-premises proxy servers.
 keywords:
-author: master11218    
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 4/16/2019
 ms.topic: how-to
@@ -30,17 +30,17 @@ ms.collection: M365-identity-device-management
 
 # Work with existing on-premises proxy servers
 
-This article explains how to configure the Intune Connector for Active Directory to work with outbound proxy servers. It is intended for customers with network environments that have existing proxies.
+This article explains how to configure the Intune Connector for Active Directory to work with outbound proxy servers. It's intended for customers with network environments that have existing proxies.
 
-By default, the Intune Connector for Active Directory will attempt to automatically locate a proxy server on the network using Web Proxy Auto-Discovery (WPAD). If this has been configured on your network, additional configuration may not be required.  If changes are needed, the following sections describe how to override the default settings, leveraging [the standard .NET Framework capabilities for configuring proxy settings](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  Additional options are described in that documentation.
+By default, the Intune Connector for Active Directory will attempt to automatically locate a proxy server on the network using Web Proxy Auto-Discovery (WPAD). If this has been configured on your network, other configuration may not be required. When changes are needed, the following sections describe how to override the default settings, using [the standard .NET Framework capabilities for configuring proxy settings](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings). More options are described in that documentation.
 
 For more information about how connectors work, see [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## Completely bypass outbound proxies
 
-You can configure the connector to bypass your on-premises proxy to ensure that it uses direct connectivity to the Azure services. We recommend this approach, as long as your network policy allows for it, because it means that you have one less configuration to maintain.
+You can configure the connector to bypass your on-premises proxy to ensure it uses direct connectivity to the Azure services. We recommend this approach, as long as your network policy allows for it, because it means that you have one less configuration to maintain.
 
-To disable outbound proxy usage for the connector, edit the :\Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config file and add the proxy address and proxy port in the section shown in this code sample:
+To disable outbound proxy usage for the connector, edit the ``:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config`` file and add the proxy address and proxy port in the section shown in this code sample:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -89,7 +89,7 @@ To ensure that the Connector Updater service also bypasses the proxy, make a sim
 
 Be sure to make copies of the original files, in case you need to revert to the default .config files.
 
-Once the configuration files have been modified, you will need to restart the Intune Connector service. 
+Once the configuration files have been modified, you'll need to restart the Intune Connector service.
 
 1. Open **services.msc**.
 2. Find and select the **Intune ODJConnector Service**.
@@ -100,7 +100,7 @@ Once the configuration files have been modified, you will need to restart the In
 
 ## Specifying an alternative proxy server
 
-If a different proxy server (for example, one that bypasses authentication) needs to be used with the Intune Connector for Active Directory, this can be specified in a similar manner. To do this, edit the :\Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config file and add the proxy address and proxy port in the section shown in this code sample:
+If a different proxy server (for example, one that bypasses authentication) needs to be used with the Intune Connector for Active Directory, this can be specified in a similar manner. To use a different proxy, edit the ``:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config`` file and add the proxy address and proxy port in the section shown in this code sample:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -149,7 +149,7 @@ To ensure that the Connector Updater service also bypasses the proxy, make a sim
 
 Be sure to make copies of the original files, in case you need to revert to the default .config files.
 
-Once the configuration files have been modified, you will need to restart the Intune Connector service. 
+Once the configuration files have been modified, you'll need to restart the Intune Connector service.
 
 1. Open **services.msc**.
 2. Find and select the **Intune ODJConnector Service**.

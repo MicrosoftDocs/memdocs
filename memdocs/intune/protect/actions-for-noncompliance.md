@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -24,7 +23,9 @@ search.appverid: MET150
 ms.reviewer: samyada
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Configure actions for noncompliant devices in Intune
@@ -40,6 +41,9 @@ By configuring  **Actions for noncompliance** you gain flexibility to decide wha
 For each action you set, you can configure a schedule that determines when that action takes effect. The schedule is a number of days after the device is marked as noncompliant. You can also configure multiple instances of an action. When you set multiple instances of an action in a policy, the action runs again at that later scheduled time if the device remains non-compliant.
 
 Not all actions are available for all platforms.
+
+   > [!NOTE]
+   > The Microsoft Endpoint Manager admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
 
 ## Available actions for noncompliance
 
@@ -65,6 +69,7 @@ When you enable this action:
 
   The following platforms support this action:
   - Android device administrator
+  - Android (AOSP) (preview)  
   - Android Enterprise:
     - Fully Managed
     - Dedicated
@@ -78,6 +83,7 @@ When you enable this action:
 
   The following platforms support this action:
   - Android device administrator
+  - Android (AOSP) (preview)  
   - Android Enterprise:
     - Fully Managed
     - Dedicated
@@ -85,11 +91,13 @@ When you enable this action:
     - Personally-Owned Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10/11
 
   When this action applies to a device, that device is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
 
-  To retire one or more devices from the list, select devices from the list and then select **Retire Selected Devices**. You can also select options to *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
+  To retire one or more devices from the list, select devices to retire and then select **Retire Selected Devices**. When you choose an action that retires devices, you're then presented with a dialog box to confirm the action. It's only after confirming the intent to retire the devices that they are cleared of company data and removed from Intune management. 
+
+  Other options include *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
@@ -131,6 +139,7 @@ To use device compliance policies to block devices from corporate resources, Azu
 To create a device compliance policy, see the following platform-specific guidance:
 
 - [Android](compliance-policy-create-android.md)
+- [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
 - [Android work profiles](compliance-policy-create-android-for-work.md)
 - [iOS](compliance-policy-create-ios.md)
 - [macOS](compliance-policy-create-mac-os.md)
@@ -142,7 +151,7 @@ To send email to your users, create a notification message template and associat
 
 A *notification message template* can include multiple messages that are each specified for a different locale. One local must be specified as the default.
 
-When you specify multiple messages and locales, non-compliant end-users receive the appropriate localized message based on their O365 preferred language. Intune sends the default message to users that haven’t set a preferred language or when the template doesn’t include a specific message for their locale.
+When you specify multiple messages and locales, non-compliant end users receive the appropriate localized message based on their O365 preferred language. Intune sends the default message to users that haven’t set a preferred language or when the template doesn’t include a specific message for their locale.
 
 ### To create the template
 
@@ -216,7 +225,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
 5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
 
-   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in with Intune and evaluates the policy, if it is not compliant to that policy Intune immediately marks that device as noncompliant. If the client checks-in at a later time after remediating the issues that lead to noncompliance, it’s status will update to its new compliance status. If you use Conditional Access, those policies also apply as soon as a device is marked as noncompliant. To set a grace period to allow for a condition of noncompliance to be remediated before the device is marked as noncompliant, change the **Schedule** on the **Mark device noncompliant** action.
+   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in with Intune and evaluates the policy, if it is not compliant to that policy Intune immediately marks that device as noncompliant. If the client checks-in at a later time after remediating the issues that lead to noncompliance, its status will update to its new compliance status. If you use Conditional Access, those policies also apply as soon as a device is marked as noncompliant. To set a grace period to allow for a condition of noncompliance to be remediated before the device is marked as noncompliant, change the **Schedule** on the **Mark device noncompliant** action.
 
    In your compliance policy, for example, you also want to notify the user. You can add the **Send email to end user** action. On this **Send email** action, you set the **Schedule** to two days. If the device or end user is still evaluated as non-compliant on day two, then your email is sent on day two. If you want to email the user again on day five of noncompliance, then add another action, and set the **Schedule** to five days.
 

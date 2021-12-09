@@ -1,18 +1,18 @@
 ---
 # required metadata
 
-title: Add Microsoft 365 apps to Windows 10 devices using Microsoft Intune
+title: Add Microsoft 365 apps to Windows 10/11 devices using Microsoft Intune
 titleSuffix: 
-description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10 devices.
+description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10/11 devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 08/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 
@@ -26,10 +26,13 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seoapril2019
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Windows
+- highpri
 ---
 
-# Add Microsoft 365 apps to Windows 10 devices with Microsoft Intune
+# Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune
 
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
@@ -92,7 +95,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
 - App suite information
 - Properties
 
-<img alt="Add Microsoft 365 Apps - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
+:::image type="content" source="./media/apps-add-office365/apps-add-microsoft-365-02.png" alt-text="Screenshot: Add Microsoft 365 Apps - Configuration designer.":::
 
 1. On the **Configuration app suite** page choose **Configuration designer**.
    - **Select Office apps**: Select the standard Office apps that you want to assign to devices by choosing the apps in the dropdown list.
@@ -124,7 +127,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
 
 If you selected the **Enter XML data** option under the **Setting format** dropdown box on the **Configure app suite** page, you can configure the Office app suite using a custom configuration file.
 
-![Add Office 365 configuration designer](./media/apps-add-office365/apps-add-office365-01.png)
+:::image type="content" source="./media/apps-add-office365/apps-add-microsoft-365-01.png" alt-text="Screenshot: Add Microsoft 365 - Configuration designer - XML example.":::
 
 1. Added your configuration XML.
 

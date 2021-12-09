@@ -1,28 +1,29 @@
 ---
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
-description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
-ms.date: 08/02/2021
+description: Configure co-management with Microsoft Intune when you already manage Windows devices with Configuration Manager.
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: tutorial
-ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
 
 With co-management, you can keep your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning.  
 
-In this tutorial, you set up co-management of your Windows 10 devices that are already enrolled in Configuration Manager. This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.
+In this tutorial, you set up co-management of your Windows 10 or later devices that are already enrolled in Configuration Manager. This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 or later devices.
 
 Use this tutorial when:  
 
 - You have an on-premises Active Directory that you can connect to Azure Active Directory (Azure AD) in a hybrid Azure AD configuration.
 
-  If you can't deploy a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for new internet-based Windows 10 devices](tutorial-co-manage-new-devices.md).
+  If you can't deploy a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for new internet-based Windows 10 or later devices](tutorial-co-manage-new-devices.md).
 - You have existing Configuration Manager clients that you want to cloud-attach.
 
 **In this tutorial you will:**  
@@ -95,10 +96,10 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
 6. On the **Device options** page, select **Configure Hybrid Azure AD join**, and then select **Next**.
 7. On the **Device operating systems** page, select the operating systems used by devices in your Active Directory environment, and then select **Next**.  
 
-   You can select the option to support Windows downlevel domain-joined devices, but keep in mind that co-management of devices is only supported for Windows 10.
+   You can select the option to support Windows downlevel domain-joined devices, but keep in mind that co-management of devices is only supported for Windows 10 or later.
 8. On the **SCP** page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select **Next**:  
    1. Select the forest.  
-   2. Select the authentication service.  If you have a federated domain, select AD FS server unless your organization has exclusively Windows 10 clients and you have configured computer/device sync or your organization is using [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso).  
+   2. Select the authentication service.  If you have a federated domain, select AD FS server unless your organization has exclusively Windows 10 or later clients and you have configured computer/device sync or your organization is using [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Click **Add** to enter the enterprise administrator credentials.  
 9. If you have a managed domain, skip this step.  
 
@@ -124,15 +125,15 @@ Use Client Settings to configure Configuration Manager clients to automatically 
 
 Next, we'll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune.
 
-Automatic enrollment also lets users enroll their Windows 10 devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory.  
+Automatic enrollment also lets users enroll their Windows 10 or later devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory.  
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.  
 
 2. Configure **MDM user scope**. Specify one of the following to configure which users' devices are managed by Microsoft Intune and accept the defaults for the URL values.  
 
-   - **Some**: Select the **Groups** that can automatically enroll their Windows 10 devices  
+   - **Some**: Select the **Groups** that can automatically enroll their Windows 10 or later devices  
 
-   - **All**: All users can automatically enroll their Windows 10 devices
+   - **All**: All users can automatically enroll their Windows 10 or later devices
 
    - **None**: Disable MDM automatic enrollment
 
@@ -154,13 +155,17 @@ Automatic enrollment also lets users enroll their Windows 10 devices to Intune. 
 
 ## Enable co-management in Configuration Manager
 
-With hybrid Azure AD set-up and Configuration Manager client configurations in place, you're ready to flip the switch and enable co-management of your Windows 10 devices. The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices. 
+With hybrid Azure AD set-up and Configuration Manager client configurations in place, you're ready to flip the switch and enable co-management of your Windows 10 or later devices. The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices. 
 
 When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
 
-### Enable co-management
+### Enable co-management for versions 2111 and later
 
-[!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
+[!INCLUDE [Enable Co-management starting in version 2111](includes/enable-co-management-2111.md)]
+
+### Enable co-management for versions 2107 and earlier
+
+[!INCLUDE [Enable Co-management in version 1906 through 2107](includes/enable-co-management-1906-2107.md)]
 
 ## Next steps
 

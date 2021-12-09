@@ -5,8 +5,8 @@ title: Setup Intune enrollment for Android Enterprise corporate-owned devices wi
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise corporate-owned devices with work profile in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 01/22/2021
 ms.topic: how-to
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile
@@ -61,12 +63,12 @@ To set up Android Enterprise corporate-owned work profile device management, fol
 ### Create an enrollment profile
 
 > [!NOTE]
-> - Tokens for corporate-owned devices with a work profile will not expire automatically. If an admin decides to revoke a token , the profile associated with it will not be displayed in **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states.
+> - Tokens for corporate-owned devices with a work profile will not expire automatically. If an admin decides to revoke a token , the profile associated with it will not be displayed in **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states.
 > - For corporate-owned work profile (COPE) devices, the `afw#setup` enrollment method and the Near Field Communication (NFC) enrollment method are only supported on devices running Android 8-10. They are not available on Android 11. For further details, refer to the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
 
 You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-corporate-owned-work-profile-devices).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
 2. Choose **Create profile** and fill out the fields.
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
     - **Description**: Add a profile description (optional).
@@ -99,7 +101,7 @@ You can immediately expire the token/QR code. From this point on, the token/QR c
 
 Revoking a token/QR code won't have any effect on devices that are already enrolled.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
 2. Choose the profile that you want to work with.
 3. Choose **Token**.
 5. To revoke the token, choose **Revoke token** > **Yes**.

@@ -1,15 +1,15 @@
 ---
-title:  Tenant attached CMPivot sample scripts
+title: Tenant attached CMPivot sample scripts
 titleSuffix: Configuration Manager
 description: Script samples for CMPivot for Microsoft Endpoint Manager tenant attached devices.
 ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: sample
-ms.assetid: 1d589306-9537-4306-a9bf-02c9771df514
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Tenant attach: CMPivot (preview) sample scripts

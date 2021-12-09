@@ -6,13 +6,11 @@ ms.date: 06/06/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 52d64ef0-8c0d-42c3-857e-07d7ec776f29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # Capabilities in Technical Preview 1806 for Configuration Manager
@@ -61,7 +59,7 @@ Move the content library to a drive local to the site server. For more informati
 
 ## <a name="bkmk-3pupdate"></a> Third-party software updates
 <!--1352101-->
-This release further iterates on support for third-party software updates as a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). You no longer require the use of System Center Updates Publisher (SCUP) for some common scenarios. The new **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients. 
+This release further iterates on support for third-party software updates as a result of your feedback. You no longer require the use of System Center Updates Publisher (SCUP) for some common scenarios. The new **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients. 
 
 The following third-party software update catalogs are available in this release:
 
@@ -169,7 +167,7 @@ This release adds three settings for [Windows Defender SmartScreen](/windows/sec
 
 ## Sync MDM policy from Microsoft Intune for a co-managed device
 <!--1357377-->
-Starting in this release when you [switch a co-management workload](../../comanage/how-to-switch-workloads.md), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](../clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
+Starting in this release when you [switch a co-management workload](../../comanage/how-to-switch-workloads.md), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](../clients/manage/manage-clients.md#start-policy-retrieval).
 
 
 

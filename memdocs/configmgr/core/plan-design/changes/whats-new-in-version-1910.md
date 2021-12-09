@@ -6,11 +6,11 @@ ms.date: 01/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
@@ -22,10 +22,6 @@ Update 1910 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1910](../../servers/manage/checklist-for-installing-update-1910.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1910.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="bkmk_mem"></a> Microsoft Endpoint Configuration Manager
 
@@ -117,7 +113,7 @@ This release also includes several [other enhancements](../../servers/manage/cmp
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients.
 
-For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
+For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
 > [!NOTE]
 > Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called Microsoft Connected Cache.
@@ -196,7 +192,7 @@ You can use the task sequence to deploy a Windows 10 in-place upgrade via the cl
 
 Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
 
-For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg).
 
 ### Improvements to OS deployment
 

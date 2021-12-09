@@ -2,14 +2,14 @@
 title: Configuration Manager console notifications
 titleSuffix: Configuration Manager
 description: Learn about notifications from the Configuration Manager console.
-ms.date: 08/11/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a0d709fa-c4f8-46e1-b432-582cc293be35
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration Manager console notifications
@@ -17,14 +17,14 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--3556016, fka 1318035-->
-Starting in Configuration Manager version 1902, the Configuration Manager console notifies you for specific events that occur. You can configure some of the event notifications for your Configuration Manager sites.
+The Configuration Manager console notifies you for specific events that occur. You can configure some of the event notifications for your Configuration Manager sites.
 
 - Non-configurable event notifications:
    - When an update is available for Configuration Manager itself
    - When lifecycle and maintenance events occur in the environment
 - Configurable event notifications:
    - [Non-critical site health changes](#bkmk_noncrit)
-   - [Messages from Microsoft](#bkmk_msft) (starting in version 2006)
+   - [Messages from Microsoft](#bkmk_msft)
 
 This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
 

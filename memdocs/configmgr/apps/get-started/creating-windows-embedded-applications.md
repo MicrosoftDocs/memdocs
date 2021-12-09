@@ -1,17 +1,15 @@
 ---
-title: "Create Windows Embedded applications"
-titleSuffix: "Configuration Manager"
-description: "See which considerations you must take into account when you create and deploy applications for Windows Embedded devices."
+title: Create Windows Embedded applications
+titleSuffix: Configuration Manager
+description: See which considerations you must take into account when you create and deploy applications for Windows Embedded devices.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # Create Windows Embedded applications with Configuration Manager
 

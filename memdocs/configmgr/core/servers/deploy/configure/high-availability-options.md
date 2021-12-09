@@ -2,13 +2,14 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 07/15/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # High availability options for Configuration Manager
@@ -206,6 +207,9 @@ The site database, rather than the individual client, retains important informat
 Several site systems don't support multiple instances at a site or in the hierarchy. This information can help you prepare for these site systems going offline.  
 
 ### Asset intelligence synchronization point (hierarchy)
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
 
 This site system role isn't considered mission critical and provides optional functionality in Configuration Manager. If this site system goes offline, use one of the following options:  
 

@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot Enrollment Status Page 
-ms.reviewer: 
-manager: laurawi
 description: Gives an overview of the Enrollment Status Page capabilities, configuration
 keywords: Autopilot Plug and Forget, Windows 10
 ms.technology: windows
@@ -13,6 +11,8 @@ ms.localizationpriority: medium
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
@@ -23,11 +23,12 @@ ms.topic: conceptual
 
 **Applies to**
 
--  Windows 10, version 1803 and later 
+- Windows 11
+- Windows 10, version 1803 and later
 
 When a user signs into a device for the first time, the Enrollment Status Page (ESP) displays the device's configuration progress. The ESP also makes sure the device is in the expected state before the user can access the desktop for the first time.
 
-The ESP tracks the installation of applications, security policies, certificates, and network connections. 
+The ESP tracks the installation of applications, security policies, certificates, and network connections.
 
 ## ESP profiles
 

@@ -2,14 +2,14 @@
 title: Support Center UI reference
 titleSuffix: Configuration Manager
 description: Learn how to use the Support Center tools.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Support Center user interface reference
@@ -658,6 +658,9 @@ This section describes the user interface for the **Support Center Log File View
 - [Home tab](#home-tab-log-file-viewer)
 
 This tool is almost identical to the **Logs** tab of **Support Center Client Tools**. The main difference is that this tool doesn't include the options to **Configure client logging** and **Log groups**.
+
+Starting in version 2111, Support Center Log File Viewer display status messages in an easy to read format. Entries starting with `>>` are status messages that are automatically converted into a readable format when a log is opened. Search or filter on the `>>` string to find status messages in the log. <!--9348231, 10915091-->
+
 
 ### Window menu (Log File Viewer)
 

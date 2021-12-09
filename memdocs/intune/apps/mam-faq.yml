@@ -23,7 +23,9 @@ metadata:
   search.appverid: MET150
   #ms.tgt_pltfrm:
   ms.custom: intune-azure
-  ms.collection: M365-identity-device-management
+  ms.collection:
+    - M365-identity-device-management
+    - highpri
     
 title: Frequently asked questions about MAM and app protection
 summary: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.

@@ -2,34 +2,29 @@
 title: Troubleshoot Connected Cache
 titleSuffix: Configuration Manager
 description: Technical details for Microsoft Connected Cache to help you troubleshoot issues.
-ms.date: 11/29/2019
+ms.date: 11/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
-ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
+ms.topic: troubleshooting
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Troubleshoot Microsoft Connected Cache in Configuration Manager
 
 This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
-> [!NOTE]
-> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
-
 ## Verify
 
 When you correctly install the Delivery Optimization cache server, and correctly configure clients, they download from the cache server installed on your distribution point rather than the internet.
 
-Verify this behavior [on a client](#bkmk_verify-client) or [on the server](#bkmk_verify-server).
+Verify this behavior [on a client](#verify-on-a-client) or [on the server](#verify-on-the-server).
 
-### <a name="bkmk_verify-client"></a> Verify on a client
+### Verify on a client
 
-1. On client running Windows 10, version 1809 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Verify Connected Cache](../../../plan-design/hierarchy/microsoft-connected-cache.md#verify).
+1. On client running a supported version of Windows 10 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Supported content types](../../../plan-design/hierarchy/microsoft-connected-cache.md#supported-content-types).
 
 2. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`
 
@@ -71,7 +66,7 @@ Notice that the `BytesFromCacheServer` attribute isn't zero.
 
 If the client isn't configured correctly, or the cache server isn't installed correctly, the Delivery Optimization client falls back to the original cloud source. Then the BytesFromCacheServer attribute will be zero.
 
-### <a name="bkmk_verify-server"></a> Verify on the server
+### Verify on the server
 
 First, verify the registry properties are configured correctly: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`. For example, the drive cache location is `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`, where `PrimaryDrivesInput` can be multiple drives such as `C,D,E`.
 
@@ -113,11 +108,11 @@ The following attributes indicate success:
 
 - ARR setup log: `%temp%\arr_setup.log`
 
-- DO cache server setup log: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` on the distribution point, and `DistMgr.log` on the site server
+- Connected Cache server setup log: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` on the distribution point, and `DistMgr.log` on the site server
 
 - IIS operational logs: By default, `%SystemDrive%\inetpub\logs\LogFiles`
 
-- DO cache server operational log: `C:\Doinc\Product\Install\Logs`
+- Connected Cache server operational log: `C:\Doinc\Product\Install\Logs`
 
     > [!TIP]
     > Among other uses, this log can help you identify connectivity issues with the Microsoft cloud.
@@ -144,7 +139,7 @@ When Configuration Manager installs the Connected Cache component on the distrib
 | 0x00D0000B | Failure: A valid cache drive size percent set must be supplied |
 | 0x00D0000C | Failure: A valid cache drive size percent set or cache drive size in GB must be supplied |
 | 0x00D0000D | Failure: A valid cache drive size percent set and cache drive size in GB cannot both be supplied |
-| 0x00D0000E | Failure: The number of cache drives specified must match the number of cache drive size in GB specified |
+| 0x00D0000E | Failure: The number of cache drives specified must match the number of cache drives size in GB specified |
 | 0x00D0000F | Failure: Couldn't back up the applicationhost.config file from $AppHostConfig to $AppHostConfigDestinationName |
 | 0x00D00010 | Failure: Couldn't back up the Default Web Site web.config file from $WebsiteConfigFilePath to $WebConfigDestinationName |
 | 0x00D00011 | Failure: An exception occurred in SetupARRWebFarm.ps1 |
@@ -162,7 +157,7 @@ When Configuration Manager installs the Connected Cache component on the distrib
 | 0x00D0001D | Failure: An exception occurred in VerifyCacheNodeSetup.ps1 |
 | 0x00D0001E | You can't install Connected Cache if the Default Web Site isn't on port 80 |
 | 0x00D0001F | Failure: The cache drive allocation in percentage can't exceed 100 |
-| 0x00D00020 | Failure: The cache drive allocation in GB cannot exceed the drive's free space |
+| 0x00D00020 | Failure: The cache drive allocation in GB can't exceed the drive's free space |
 | 0x00D00021 | Failure: The cache drive allocation in percentage must be greater than 0 |
 | 0x00D00022 | Failure: The cache drive allocation in GB must be greater than 0 |
 | 0x00D00023 | Failure: An exception occurred in RegisterScheduledTask_CacheNodeKeepAlive |
@@ -173,15 +168,15 @@ When Configuration Manager installs the Connected Cache component on the distrib
 
 ## IIS configurations
 
-The DO cache server install makes several modifications to the IIS configuration on the distribution point.
+The Connected Cache server install makes several modifications to the IIS configuration on the distribution point.
 
 ### Application request routing
 
-The DO cache server installs and configures IIS [Application Request Routing (ARR)](https://www.iis.net/downloads/microsoft/application-request-routing). To avoid potential conflicts, the distribution point can't already have this component installed.
+The Connected Cache server installs and configures IIS [Application Request Routing (ARR)](https://www.iis.net/downloads/microsoft/application-request-routing). To avoid potential conflicts, the distribution point can't already have this component installed.
 
 ### Allowed server variables
 
-After you install the DO cache server, the default web site has the following *local* server variables:
+After you install the Connected Cache server, the default web site has the following *local* server variables:
 
 - HTTP_HOST
 - QUERY_STRING
@@ -191,7 +186,7 @@ After you install the DO cache server, the default web site has the following *l
 
 ### Rewrite rules
 
-The DO cache server adds the following rewrite rules:
+The Connected Cache server adds the following rewrite rules:
 
 #### Inbound rewrite rules
 
@@ -215,15 +210,26 @@ The DO cache server adds the following rewrite rules:
 - `Doinc_Outbound_SetHeader_X_CID_E77D08D0-5FEA-4315-8C95-10D359D59294`
 - `Doinc_Outbound_SetHeader_X_CCC_E77D08D0-5FEA-4315-8C95-10D359D59294`
 
+### IIS custom headers
+
+If requests with `X-Forwarded-For` headers are blocked on a proxy server, either allow the header on the proxy server or change the custom header name in IIS for each server farm.
+
+To change the custom header name for each server farm:
+
+1. Open IIS Manager.
+1. Select **Server Farms**.
+1. Select a server farm and the proxy icon. 
+1. Under **Custom Headers**, change the value `X-Forwarded-For` to `X-Forwarded-For-<custom-name>`.
+
 ## Manage server resources
 
-Disk space required for each DO cache server may vary, based on your organization's update requirements. 100 GB should be enough space to cache the following content:
+Disk space required for each Connected Cache server may vary, based on your organization's update requirements. 100 GB should be enough space to cache the following content:
 
 - A feature update
 - Two to three months of quality and Microsoft 365 Apps updates
 - Microsoft Intune apps and Windows inbox apps
 
-The DO cache server shouldn't consume much system memory or processor time. After you install the DO cache server, if you notice significant process or memory resource consumption, analyze the IIS and ARR log files.
+The Connected Cache server shouldn't consume much system memory or processor time. After you install the Connected Cache server, if you notice significant process or memory resource consumption, analyze the IIS and ARR log files.
 
 If the IIS and ARR log files take up too much space on the server, there are several methods you can use to manage the log files. For more information, see [Managing IIS Log File Storage](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
