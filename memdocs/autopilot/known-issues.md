@@ -12,7 +12,7 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 12/08/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -27,6 +27,10 @@ ms.topic: troubleshooting
 This article describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 ## Known issues
+
+### TPM attestation failure on Windows 11 error code 0x81039024
+
+Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039024. This error code indicates that there are known vulnerabilities detected with the TPM and as a result will fail attestation. If you receive this error, please visit your PC manufacturer’s website to update the TPM firmware.
 
 ### Delete device record in Intune before reusing devices in self-deployment mode or Pre-Provisioning mode
 
