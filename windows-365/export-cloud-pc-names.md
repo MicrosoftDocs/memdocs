@@ -64,7 +64,7 @@ Disconnect-MgGraph
 
 7. Save the file as “GetCloudPCNames.ps1” in a location of your choice.
 8. In the file explorer navigate to your file location.
-9. Right click on the file and select “Run with PowerShell”.
+9. Right click on the file and select **Run with PowerShell**.
 10. A PowerShell window will pop up. In the window type “CloudPCNames.csv” and press enter.
 11. When the authentication Window pops up, log in with the same account you used to access the Cloud PC.
 
