@@ -51,7 +51,7 @@ Hardware requirements:
 If you'll be using Microsoft Teams on the Cloud PCs, the Windows device requirements increase to:
 
 - **CPU**: At least 2vCPU with Minimum 1.6 GHz or faster processor. For higher video/screen share resolution and frame rate, a four-core processor or better is recommended.
-- **RAM**: 1024 MB
+- **RAM**: 4096 MB
 - **Hard drive**: 3 GB or more
 - **.NET Framework version**: 4.6.1 or later
 - **Video**: DirectX 9 or later with WDDM 1.0 driver. Background video effects require Windows 10/11 or a processor with AVX2 instruction set. Also, Teams audio and video offloading on a Cloud PC benefits from a dedicated Graphics Processing Unit (GPU) within the device.
