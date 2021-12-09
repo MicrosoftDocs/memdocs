@@ -123,9 +123,11 @@ Default restrictions are automatically provided for both device type and device 
 5. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
 10. Select **Next** to go to the **Assignments** page.
 11. Select **Add groups** and then use the search box to find groups that you want to include in this restriction. To assign the restriction to everyone, select **Add all users**. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, the restriction won't take effect.   
-12. After you add a group, you can apply an assignment filter to further include and exclude specific devices. Select **Edit filter** next to any of the selected groups to add supported filter properties. When you're done, choose **Select**. Filters are available for macOS, iOS, and Windows. They are not available for Android.        
+12. After you add a group, you can apply an assignment filter to further include and exclude specific devices. Select **Edit filter** next to any of the selected groups to add supported filter properties. When you're done, choose **Select**. Enrollment restriction filters are available for macOS, iOS, and Windows. They are not available for Android.        
 12. Select **Next** to go to the **Review + create** page.
 13. Select **Create** to create the restriction.   
+
+After you create the restriction, you can view it and access its properties from the **Device type restrictions** table. Select and drag a restriction to reposition it in the table and change its priority.  
 
 
 ## Create a device limit restriction
