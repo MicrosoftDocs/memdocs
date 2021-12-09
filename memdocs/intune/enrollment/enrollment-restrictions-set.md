@@ -100,7 +100,7 @@ Default restrictions are automatically provided for both device type and device 
 
 ## Create a device platform restriction (preview)  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then [enable the filters public preview](../fundamentals/filters#enable-filters-public-preview.md) in your tenant.  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then [enable the filters public preview](../fundamentals/filters.md#enable-filters-public-preview) in your tenant.  
 2. Using the navigation menu, go to > **Devices** and scroll down to **Policy**. Select **Enrollment device platform restrictions**.  
 3. Select the tab that corresponds with the platform you're configuring. Your options:  
     * **Android restrictions**
