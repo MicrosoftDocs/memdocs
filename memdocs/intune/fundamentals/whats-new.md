@@ -70,6 +70,7 @@ The Managed Home Screen app for Android Enterprise now has the option to enforce
 - The ability to define a minimum length for Session PIN.
 - The ability to define a maximum number of tries a user has to successfully enter their Session PIN before getting logged out from Managed Home Screen.
 - The ability to define complexity values that restrict users from creating PINs with repeating (444) or ordered (123, 321, 246) patterns.
+
 For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ### Monitor and troubleshoot  
