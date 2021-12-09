@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/13/2021
+ms.date: 12/10/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -141,6 +141,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | N/A |
 | Email (Samsung KNOX only) | ✔️ |
 | Endpoint Protection | N/A |
+| Enrollment restrictions | ❌ |
 | MX profile (Zebra only) | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -170,6 +171,7 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | N/A |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
+| Enrollment restrictions | ❌ |
 | OEMConfig | ❌ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -199,6 +201,7 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | ✔️ |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
+| Enrollment restrictions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
@@ -227,6 +230,7 @@ You can use filters for some common device configuration policies on the followi
 | Device features | ✔️ |
 | Email | N/A |
 | Endpoint Protection | ✔️ |
+| Enrollment restrictions | ❌ |
 | Extensions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -264,6 +268,7 @@ You can use filters for some common device configuration policies on the followi
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
 | Endpoint Protection | ✔️ |
+| Enrollment restrictions | ✔️ |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
 | Microsoft Defender for Endpoint (Windows 10 Desktop) | ✔️ |
@@ -294,7 +299,6 @@ The following features don't support using filters:
 - App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows 10
 - End user experiences customization policies
-- Enrollment restrictions
 - iOS/iPadOS app provisioning profiles
 - Partner device management
 - Policies for Office apps
