@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/07/2021
+ms.date: 12/09/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 
 ## Week of December 6, 2021  
+
+### App management
+
+#### Additional Session PIN restrictions available for the Microsoft Managed Home Screen app<!-- 9843535 -->
+The Managed Home Screen app for Android Enterprise now has the option to enforce additional restrictions on user's Session PINs. Specifically, Managed Home Screen now offers the following: 
+- The ability to define a minimum length for Session PIN.
+- The ability to define a maximum number of tries a user has to successfully enter their Session PIN before getting logged out from Managed Home Screen.
+- The ability to define complexity values that restrict users from creating PINs with repeating (444) or ordered (123, 321, 246) patterns.
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ### Monitor and troubleshoot  
 
