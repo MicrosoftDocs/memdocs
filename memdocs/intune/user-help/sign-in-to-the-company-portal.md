@@ -36,11 +36,12 @@ Microsoft Intune helps organizations manage access to their internal apps, data,
 The app is available for desktop (Windows and macOS) and mobile (Android and iOS) devices. You must have a work or school account through your organization to sign in to the app.    
 
 ## Install app  
-Company Portal is available for Android, iOS, macOS, and Windows. 
+Intune Company Portal is available for Android, iOS, macOS, and Windows. 
 
 ### Android  
 Install Company Portal for Android from these stores:  
 
+* [Portal AppStore](https://portal.facebook.com/help/467356237073256/)(Opens Portal help documentation)  
 * [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)  
 * [Amazon Appstore for Android](https://www.amazon.com/Microsoft-Corporation-Intune-Company-Portal/dp/B092BCFLBJ/)  
 
@@ -52,7 +53,7 @@ Google Play Store is not available in People's Republic of China. You can instal
 Install Company Portal for iOS from the [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358).  
 
 ### macOS
-Install Company Portal for macOS from [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070.) Selecting this link will immediately download the Company Portal installer package on your device.  
+Install Company Portal for macOS from [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070.). Selecting this link will immediately download the Company Portal installer package on your device.  
 
 ### Windows  
 Install Company Portal for Windows from the [Microsoft Store](https://www.microsoft.com/p/company-portal/9wzdncrfj3pz?rtc=2&activetab=pivot:overviewtab).  

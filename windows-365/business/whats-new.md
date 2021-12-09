@@ -48,7 +48,7 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
-## Week of December 6, 2021 (Service release 2110)
+## Week of December 6, 2021 (Service release 2111)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -61,9 +61,9 @@ Windows 365 Business Cloud PCs are now created with Windows 11 installed by defa
 
 You can now control organization-wide Cloud PC settings and device-level actions in the Microsoft 365 admin center and on [windows365.microsoft.com](https://windows365.microsoft.com).
 
-- **Organizational defaults**: Choose defaults for operating system (Windows 10 or 11) and account type (Standard or Local Administrator).
-- **Device level actions**: Use the following actions on any Cloud PC in your organization: Change account type, Restart, Reset, Rename, and Troubleshoot.
-- **Other management actions**: Create and delete users, reset passwords, and manage licenses for Windows 365 Cloud PCs and Microsoft 365 products.
+- **Organizational defaults**: Choose defaults for operating system (Windows 10 or 11) and account type (Standard or Local Administrator). For more information, see [Change organization default settings](change-organization-default-settings.md).
+- **Device level actions**: Use the following actions on any Cloud PC in your organization: Change account type, Restart, Reset, Rename, and Troubleshoot. For more information, see [Remotely manage Windows 365 Business Cloud PCs](remotely-manage-business-cloud-pcs.md).
+- **Other management actions**: Create and delete users, reset passwords, and manage licenses for Windows 365 Cloud PCs and Microsoft 365 products. For more information, see [Add user and assign license](add-user-assign-licenses.md), [Assign or unassign licenses](assign-unassign-license.md), and [Reset a user's password](reset-user-password.md).
 
 <!-- ########################## -->
 ## Week of November 1, 2021 (Service release 2110)
