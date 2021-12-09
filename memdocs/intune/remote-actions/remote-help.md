@@ -7,7 +7,6 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-<<<<<<< 12773983-launch-remote-help
 ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
