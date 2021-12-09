@@ -31,9 +31,12 @@ ms.collection:
   - highpri
 ---
 
-# Set enrollment restrictions
+# Set enrollment restrictions  
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> This article discusses capabilities that are in public preview that might be modified before they’re released. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+
+[!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
 As an Intune administrator, you can create and manage enrollment restrictions that define what devices can enroll into management with Intune, including the:
 - Number of devices.
@@ -100,8 +103,10 @@ Default restrictions are automatically provided for both device type and device 
 
 ## Create a device platform restriction (preview)  
 
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then [enable the filters public preview](../fundamentals/filters.md#enable-filters-public-preview) in your tenant.  
-2. Using the navigation menu, go to > **Devices** and scroll down to **Policy**. Select **Enrollment device platform restrictions**.  
+2. In the side menu, go to **Devices** and scroll down to **Policy**. Select **Enrollment device platform restrictions**. You can also access this policy by going to **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.  
+
 3. At the top of the page, select the tab that corresponds with the platform you're configuring. Your options:  
 
     * **Android restrictions**
@@ -109,7 +114,7 @@ Default restrictions are automatically provided for both device type and device 
     * **MacOS restrictions**
     * **iOS restrictions**  
 
-4. Select **Create restriction**.  
+    Then select **Create restriction**.  
 
     > [!div class="mx-imgBorder"]
     > ![Example image of the Enrollment device platform restrictions page highlighting the platform tabs and Create restriction option.](./media/enrollment-restrictions-set/intune-enrollment-device-platform-restrictions-2112.png) 
