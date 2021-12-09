@@ -98,10 +98,11 @@ Default restrictions are automatically provided for both device type and device 
 14. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).  
 
 
-## Create a device platform restriction  
+## Create a device platform restriction (preview)  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to > **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
-2. Select the platform you're configuring. Your options:  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and [enable filters public preview](../fundamentals/filters#enable-filters-public-preview.md).  
+2. Using the navigation menu, go to > **Devices** and scroll down to **Policy**. Select **Enrollment device platform restrictions**.  
+2. Select the tab that corresponds with the platform you're configuring. Your options:  
     * **Android restrictions**
     * **Windows restrictions**
     * **MacOS restrictions**
@@ -123,7 +124,8 @@ Default restrictions are automatically provided for both device type and device 
 5. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
 10. Select **Next** to go to the **Assignments** page.
 11. Select **Add groups** and then use the search box to find groups that you want to include in this restriction. To assign the restriction to everyone, select **Add all users**. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, the restriction won't take effect.   
-12. After you add a group, you can apply an assignment filter to further include and exclude specific devices. Select **Edit filter** next to any of the selected groups to add supported filter properties. When you're done, choose **Select**. Enrollment restriction filters are available for macOS, iOS, and Windows. They are not available for Android.        
+12. After you add a group, you can apply an assignment filter to further include and exclude specific devices. Select **Edit filter** next to any of the selected groups to add supported filter properties. Enrollment restriction filters are available for macOS, iOS, and Windows. For more information, see [Using filters with enrollment restriction policies](enrollment-restrictions-set.md#using-filters-with-enrollment-restriction-policies) (in this article).  
+13.  When you're done adding filters, choose **Select**.     
 12. Select **Next** to go to the **Review + create** page.
 13. Select **Create** to create the restriction.   
 
@@ -170,6 +172,36 @@ You can change the settings for an enrollment restriction by following the steps
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.
 3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.  
+
+## Using filters with enrollment restriction policies 
+
+Use assignment filters to further include and exclude devices from groups targeted in your enrollment restriction policies. For example, to allow personal Windows devices to enroll while still blocking Windows 10 Home edition: 
+
+1. Create an enrollment restriction policy for Windows.
+2. **Allow** devices to enroll as personally owned devices. 
+2. Apply a preconfigured filter with the `operatingSystemSKU` property to an assigned group to block devices running Windows 10 Home edition. 
+
+For more information about creating filters, see [Create a filter](../fundamentals/filters.md). 
+
+Enrollment restriction policies support fewer filter properties compared to other group-targeted policies. This is because devices are not yet enrolled, so Intune doesn't have the device info to support all device properties. You'll see a limited selection of properties when configuring enrollment restriction policies for iOS and Windows devices, and when editing a filter that's in-use in an enrollment restriction profile. 
+
+The following filter properties are always available to use with enrollment policies:    
+
+**Windows** 
+
+* osVersion 
+* operatingSystemSKU 
+* deviceOwnership 
+* enrollmentProfileName 
+
+**iOS/iPadOS and macOS**  
+* Manufacturer 
+* Model 
+* OS Version 
+* Device ownership 
+* Enrollment profile name 
+
+For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.   
 
 
 ## Blocking personal Android devices
