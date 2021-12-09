@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 12/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -39,6 +39,9 @@ In this article, we'll refer to the users who provide help as *helpers*, and use
 Remote help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
 The remote help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
+
+> [!NOTE]
+> On 12/08/2021, the remote help installer was renamed from *remotehelp.exe* to *remotehelpinstaller.exe* to resolve issues with silent deployments. Although app functionality hasn't changed, we recommend using the same [*download link*](#download-remote-help) to download the updated version with the renamed installer. The installation command lines in this article have been updated to reflect the new installer file name.
 
 ## Remote help capabilities and requirements
 
@@ -134,9 +137,9 @@ The most recent version of remote help is **10.0.100110.16384**
 
 ### Deploy remote help as a Win32 app
 
-To deploy remote help with Intune, you can add the app as a Windows win32 app, and define a detection rule to identify devices that don’t have the most current version of remote help installed.  Before you can add remote help as a Win32 app, you must repackage *remotehelp.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Wind32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
+To deploy remote help with Intune, you can add the app as a Windows win32 app, and define a detection rule to identify devices that don’t have the most current version of remote help installed.  Before you can add remote help as a Win32 app, you must repackage *remotehelpinstaller.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Wind32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
 
-After you repackage remote help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md ) with the following details to upload and deploy remote help. In the following, the repackaged remotehelp.exe file is named *remotehelp.intunewin*.
+After you repackage remote help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md ) with the following details to upload and deploy remote help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
 
 1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you’ve previously prepared, and then select **OK**.
 
@@ -144,8 +147,8 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
 
 2. On the Program page, configure the following options:
 
-   - For *Install command line*, specify **remotehelp.exe /install /quiet acceptTerms=Yes**
-   - For *Uninstall command line*, specify **remotehelp.exe /uninstall /quiet acceptTerms=Yes**
+   - For *Install command line*, specify **remotehelpinstaller.exe /install /quiet acceptTerms=Yes**
+   - For *Uninstall command line*, specify **remotehelpinstaller.exe /uninstall /quiet acceptTerms=Yes**
 
    > [!IMPORTANT]
    > The command line option *acceptTerms* is always case sensitive.
@@ -161,7 +164,7 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
 
    - For *Rule type*, select **File**
    - For *Path*, specify **C:\Program Files\Remote Help**
-   - For *File or folder*, specify **RemoteHelp.exe**
+   - For *File or folder*, specify **RemotehelpInstaller.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
    - For *Value*, specify the [version of remote help](#download-remote-help) your deploying. For example, **10.0.10011.16384**
@@ -181,7 +184,7 @@ To configure your tenant to support remote help, review and complete the followi
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow use of remote help.  By default, this setting is *Enabled*.
-   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Not allowed*.
+   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
 
 3. Select **Save**.
 
@@ -232,7 +235,7 @@ To request help, you must reach out to your support staff to request assistance.
 
 As a sharer, when you’ve requested help and both you and the helper are ready to start:
 
-1. Start the remote help app on the device and sign-in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
+1. Start the remote help app on the device and sign in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
 
 2. After signing into the app, get the security code from the individual assisting you and enter that code below *Get Help*, and then select **Submit**.
 

@@ -117,7 +117,7 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Windows
 
-Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).
+Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
 
 ### Permissions and roles
 
