@@ -183,8 +183,8 @@ You can change the settings for an enrollment restriction by following the steps
 You can use assignment filters to include and exclude additional devices from certain group-targeted policies. For example, to allow personal Windows devices to enroll while still blocking Windows 10 Home edition: 
 
 1. Create an enrollment restriction policy for Windows.
-2. **Allow** devices to enroll as personally owned devices. 
-2. Apply a preconfigured filter with the `operatingSystemSKU` property to an assigned group to block devices running Windows 10 Home edition. 
+2. Configure the platform settings to allow devices to enroll as personally owned devices. 
+3. Select assignments and then apply a preconfigured filter with the `operatingSystemSKU` property to an assigned group to block devices running Windows 10 Home edition. 
 
 For more information about creating filters, see [Create a filter](../fundamentals/filters.md). 
 
