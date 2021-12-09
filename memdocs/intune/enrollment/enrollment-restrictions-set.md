@@ -102,17 +102,17 @@ Default restrictions are automatically provided for both device type and device 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to > **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
 2. Select the platform you're configuring. Your options:  
-  * Android restrictions
-  * Windows restrictions
-  * MacOS restrictions
-  * iOS restrictions  
+    * ***Android restrictions**
+    * **Windows restrictions**
+    * **MacOS restrictions**
+    * **iOS restrictions**  
 3. Select **Create restriction**.  
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 3. Select **Next** to go to the **Platform settings** page.
-4. Configure mobile device management for your selected platform:
+4. Allow or block mobile device management for your selected platform:  
 
-* Android: Under **Platform**, select **Allow** to permit devices running on this platform to enroll in Intune. 
-* macOS, iOS, and Windows: Next to **MDM**, select **Allow** to permit devices running on this platform to enroll in Intune mobile device management (MDM). 
+    * Android: Under **Platform**, select **Allow** to permit devices running on this platform to enroll in Intune.  
+    * macOS, iOS, and Windows: Next to **MDM**, select **Allow** to permit devices running on this platform to enroll in Intune mobile device management (MDM). 
 4. In **Allow min/max range**, enter the minimum and maximum OS versions allowed to enroll. This restriction is not supported on macOS. For iOS and Android, version restrictions only apply to devices enrolled with the Company Portal.
      Supported version formats include:
     - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
