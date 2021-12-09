@@ -102,7 +102,7 @@ Default restrictions are automatically provided for both device type and device 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to > **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
 2. Select the platform you're configuring. Your options:  
-    * ***Android restrictions**
+    * **Android restrictions**
     * **Windows restrictions**
     * **MacOS restrictions**
     * **iOS restrictions**  
