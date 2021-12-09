@@ -41,7 +41,7 @@ Remote help uses Intune role-based access controls (RBAC) to set the level of ac
 The remote help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
 
 > [!NOTE]
-> On 12/08/2021, the remote help installer name was renamed from *remotehelp.exe* to *remotehelpinstaller.exe* to resolve issues with silent deployments. Although app functionality hasn't changed, we recommend using the same [download link](#download-remote-help) to download the updated version of the app and its installer. The installation command lines in this article have been updated to reflect the new installer file name.
+> On 12/08/2021, the remote help installer was renamed from *remotehelp.exe* to *remotehelpinstaller.exe* to resolve issues with silent deployments. Although app functionality hasn't changed, we recommend using the same [*download link*](#download-remote-help) to download the updated version with the renamed installer. The installation command lines in this article have been updated to reflect the new installer file name.
 
 ## Remote help capabilities and requirements
 
