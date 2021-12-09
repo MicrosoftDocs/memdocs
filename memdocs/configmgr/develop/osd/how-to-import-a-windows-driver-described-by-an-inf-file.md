@@ -9,6 +9,8 @@ ms.assetid: 7855f112-ef75-4754-affb-170ded8e1d0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -228,7 +230,7 @@ public string GetDriverName(IResultObject driver)
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md)   

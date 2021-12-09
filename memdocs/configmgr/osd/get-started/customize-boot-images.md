@@ -2,287 +2,190 @@
 title: Customize boot images
 titleSuffix: Configuration Manager
 description: Learn several ways to use Configuration Manager or the Deployment Image Servicing and Management (DISM) command-line tool to customize a boot image.
-ms.date: 01/23/2017
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Customize boot images with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Each version of Configuration Manager supports a specific version of the Windows Assessment and Deployment Kit (Windows ADK). You can service, or customize, boot images from the Configuration Manager console when they are based on a Windows PE  version from the supported version of Windows ADK. For other boot images, you must customize them by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK.  
+Each version of Configuration Manager supports a specific version of the Windows Assessment and Deployment Kit (Windows ADK). You can service, or customize, boot images from the Configuration Manager console when they're based on a Windows PE (WinPE) version from the WinPE add-on of a [supported version of the Windows ADK](../../core/plan-design/configs/support-for-windows-adk.md). For more information on how to customize boot images in the Configuration Manager console, see [Manage boot images](manage-boot-images.md#modify-a-boot-image).
 
- The following provides the supported version of Windows ADK, the Windows PE version on which the boot image is based that can be customized from the Configuration Manager console, and the Windows PE versions on which the boot image is based that you can customize by using DISM and then add the image to Configuration Manager.  
+For boot images with other versions of WinPE, customize them by using another method. For example, use the Deployment Image Servicing and Management (DISM) command-line tool. Then import the boot images into Configuration Manager to use with OS deployments.
 
-- **Windows ADK version**  
+For example, you install the Windows ADK and WinPE add-on for Windows 11 on the site server. For x64 boot images based on WinPE version 11 from the WinPE add-on for Windows 11, you can customize them from the Configuration Manager console. However, while x86 boot images based on WinPE version 10 are supported, you need to manually customize them from a different computer. Use the version of DISM that's installed with the Windows ADK for Windows 10. Then, you can add the boot image to the Configuration Manager console.
 
-   Windows ADK for Windows 10  
+> [!IMPORTANT]
+> The 32-bit versions of Windows PE (WinPE) in the WinPE add-ons for Windows 11 and Windows Server 2022 aren't supported. The last supported version of 32-bit WinPE is available in the **WinPE add-on for Windows 10, version 2004**. For more information, see [Download and install the Windows ADK](/windows-hardware/get-started/adk-install).<!--12440724--><!-- the same text of this note is also used in the include file: ../../core/plan-design/configs/includes/windows11-adk-x86.md -->
 
-- **Windows PE versions for boot images customizable from the Configuration Manager console**  
+The following steps summarize the process to customize an x86 boot image that uses WinPE version 10:
 
-   Windows PE 10  
+- Install the Windows ADK and WinPE add-on for Windows 10, version 2004
+- Use the DISM command-line tool to:
+  - Mount the x86 boot image
+  - Add optional components
+  - Add drivers
+  - Commit the changes to the boot image
+- Import the customized boot image to Configuration Manager
 
-- **Supported Windows PE versions for boot images not customizable from the Configuration Manager console**  
+## Required components
 
-   Windows PE 3.1<sup>1</sup> and Windows PE 5  
+The procedures in this article demonstrate how to add the WinPE _optional components_ that Configuration Manager requires:
 
-   <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
+- **WinPE-WMI**: Adds Windows Management Instrumentation (WMI) support.
 
-   For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console.  
+- **WinPE-Scripting**: Adds Windows Script Host (WSH) support.
 
-  The procedures in this topic demonstrate how to add the optional components required by Configuration Manager to the boot image by using the following Windows PE packages:  
+- **WinPE-WDS-Tools**: Installs Windows Deployment Services (WDS) tools.
 
-- **WinPE-WMI**: Adds Windows Management Instrumentation (WMI) support.  
+There are other WinPE packages available to add. For more information, see [WinPE optional components reference](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
-- **WinPE-Scripting**: Adds Windows Script Host (WSH) support.  
+## Customize the image with DISM
 
-- **WinPE-WDS-Tools**: Installs Windows Deployment Services tools.  
+1. On a computer that doesn't have a version of the Windows ADK and doesn't have any Configuration Manager components installed, install the Windows ADK (`adksetup.exe`) and WinPE add-on (`adkwinpesetup.exe`). For more information, see [Other ADK downloads](/windows-hardware/get-started/adk-install#other-adk-downloads).
 
-  There are other Windows PE packages available for you to add. For more information about the optional components that you can add to the boot image, see [WinPE: Add packages (Optional Components Reference)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+    > [!TIP]
+    > You only need to install the **Deployment Tools** component for this process.
+
+1. Copy the boot image (`winpe.wim`) from the WinPE installation folder, which by default is `C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\x86\en-us`. Create a working directory on the computer where you'll customize the boot image, and copy the default image file to it. This procedure uses `C:\WinPE` as the folder name. For example:
+
+    ```powershell
+    $workingDir = New-Item -Path "C:\" -Name "WinPE" -ItemType "directory"
+    $peDir = "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\x86\en-us"
+    Copy-Item "$($peDir)\winpe.wim" -Destination $workingDir
+    ```
+
+1. Create a new folder to use as the mount point for the boot image. This procedure uses `C:\WinPEMount` as the folder name.
+
+    ```powershell
+    New-Item -Path "C:\" -Name "WinPEMount" -ItemType "directory"
+    ```
+
+1. Use DISM to mount the boot image to a local Windows PE folder. For example, type the following command line:
+
+    > [!IMPORTANT]
+    > Make sure you're using the version of DISM from the installed Windows ADK. Windows may default to the OS version, which may not technically support the version of WinPE that you're servicing. For more information, see [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms).
+
+    ```powershell
+    Set-Location "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\DISM\"
+
+    .\dism.exe /mount-wim /wimfile:C:\WinPE\winpe.wim /index:1 /mountdir:C:\WinPEMount
+    ```
+
+    > [!TIP]
+    > For more information on DISM commands, see the [DISM Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+
+1. After you mount the boot image, use DISM to add optional components to the boot image. By default, the optional components are located in `C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\x86\WinPE_OCs`.
+
+    > [!NOTE]
+    > This procedure uses the default location and `en-us` locale for the optional components. The path you use might be different depending on the version and installation options you choose for the Windows ADK, and the locale of the boot image.
+
+    Type the following commands to install the optional components that Configuration Manager requires:
+
+    ```powershell
+    $ocpath = "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\x86\WinPE_OCs"
+
+    .\dism.exe /image:C:\WinPEMount /add-package /packagepath:"$($ocpath)\winpe-wmi.cab"
+
+    .\dism.exe /image:C:\WinPEMount /add-package /packagepath:"$($ocpath)\winpe-scripting.cab"
+
+    .\dism.exe /image:C:\WinPEMount /add-package /packagepath:"$($ocpath)\winpe-wds-tools.cab"
+
+    .\dism.exe /image:C:\WinPEMount /add-package /packagepath:"$($ocpath)\en-us\winpe-wmi_en-us.cab"
+
+    .\dism.exe /image:C:\WinPEMount /add-package /packagepath:"$($ocpath)\en-us\winpe-scripting_en-us.cab"
+
+    .\dism.exe /image:C:\WinPEMount /add-package /packagepath:"$($ocpath)\en-us\winpe-wds-tools_en-us.cab"
+    ```
+
+    > [!TIP]
+    > For more information about the different packages that you can add to the boot image, see [WinPE optional components reference](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+
+1. If needed, use DISM to add specific drivers to the boot image. For example, type the following command to add a driver to the boot image:
+
+    ```powershell
+    .\dism.exe /image:C:\WinPEMount /add-driver /driver:C:\Drivers\driver.inf
+    ```
+
+1. When you're done making changes, type the following command to unmount the boot image file and commit the changes:
+
+    ```powershell
+    .\dism.exe /unmount-wim /mountdir:C:\WinPEMount /commit
+    ```
+
+    > [!IMPORTANT]
+    > Whether or not you will use this customized image, make sure to unmount it when you're done. To not save your changes but still unmount the image, use the `/discard` parameter instead of the `/commit` option.
+
+1. Copy the customized boot image to your site's centralized package source location.
+
+## Import the boot image
+
+Add the updated boot image to Configuration Manager to make it available to use in your task sequences. Use the following steps to import the updated boot image:
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Boot Images** node.
+
+1. On the **Home** tab of the ribbon, in the **Create** group, select **Add Boot Image**. This action starts the Add Boot Image Wizard.
+
+1. On the **Data Source** page, specify the following options:
+
+    - Specify the **Path** to the updated boot image file. The specified path must be a valid network path in the UNC format. For example: `\\server\share\WinPE10x86\winpe.wim`
+
+    - Choose the specific boot image from the **Boot Image** list. If the WIM file contains multiple images, each image is listed.
+
+1. On the **General** page, specify the following options:
+
+    - **Name**: Specify a unique name for the boot image.
+
+    - **Version**: Specify a version number for the boot image. This value doesn't have to be the OS version, it's a string that you maintain for the boot image version.
+
+    - **Comment**: Specify an optional description of how the boot image is used to better identify it in the console.
+
+1. Complete the wizard.
+
+## Enable command shell for testing
+
+You can enable a command shell in the boot image to open a command prompt by using the **F8** key while the boot image is deployed. This option is useful for troubleshooting while you're testing your deployment. Using this setting in a production deployment isn't advised because of security concerns.
+
+Use the following steps to enable the command shell on a custom boot image:
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.
+
+1. Find the new boot image in the list and identify the package ID for the image. You can find the package ID in the **Image ID** column for the boot image.
+
+1. From a command prompt, type `wbemtest` to open the Windows Management Instrumentation Tester.
+
+1. For the **Namespace**, type `\\<smsprovider>\root\sms\site_<sitecode>`, and then select **Connect**.
+
+1. Select **Open Instance**. Type `sms_bootimagepackage.packageID="<packageID>"`, and then select **OK**.
+
+1. Select **Refresh Object**, and then in the **Properties** pane select **EnableLabShell**.
+
+1. Select **Edit Property**, change the value to **TRUE**, and select **Save Property**.
+
+1. Select **Save Object**, and then exit the Windows Management Instrumentation Tester.
 
 > [!NOTE]
->When you boot to WinPE from a customized boot image that includes tools that you added, you can open a command prompt from WinPE and type the file name of the tool to run it. The location of these tools are automatically added to the path variable. The command prompt can only be added if the **Enable command support (testing only)** setting is selected on the **Customization** tab in the boot image properties.
+> When you boot to WinPE from a customized boot image that includes tools that you added, you can open a command prompt from WinPE and type the file name of the tool to run it. The location of these tools are automatically added to the path variable.
 
-## Customize a boot image that uses Windows PE 5  
- To customize a boot image that uses Windows PE 5, you must install Windows ADK and use the DISM command-line tool to mount the boot image, add optional components and drivers, and commit the changes to the boot image. Use the following procedure to customize the boot image.  
+## Distribute content
 
-#### To customize a boot image that uses Windows PE 5  
+Before you can use the boot image in a task sequence, distribute the boot image to distribution points. Use the following steps to distribute the boot image:
 
-1. Install the Windows ADK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.
 
-2. Download Windows ADK for Windows 8.1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39982).  
+1. Select the new custom boot image.
 
-3. Copy the boot image (wimpe.wim) from the Windows ADK installation folder (for example, <*Installation path*>\Windows Kits\\<*version*>\Assessment and Deployment Kit\Windows Preinstallation Environment\\<*x86 or amd64*>\\<*locale*>) to a destination folder on the computer from which you will customize the boot image. This procedure uses C:\WinPEWAIK as the destination folder name.  
+1. On the **Home** tab of the ribbon, in the **Deployment** group, select **Update Distribution Points**.
 
-4. Use DISM to mount the boot image to a local Windows PE folder. For example, type the following command-line:  
+## Next steps
 
-    **dism.exe /mount-wim /wimfile:C:\WinPEWAIK\winpe.wim /index:1 /mountdir:C:\WinPEMount**  
+[Manage boot images](manage-boot-images.md)
 
-    Where C:\WinPEWAIK is the folder that contains the boot image and C:\WinPEMount is the mounted folder.  
-
-   > [!NOTE]
-   >  For more information, see the [DISM (Deployment Image Servicing and Management) Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
-
-5. After you mount the boot image, use DISM to add optional components to the boot image. In Windows PE 5, the 64-bit optional components are located in <*Installation path*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
-
-   > [!NOTE]
-   >  This procedure uses the following location for the optional components: C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs. The path you use might be different depending on the version and installation options you choose for the Windows ADK.  
-
-    Type the following to install the optional components:  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\winpe-wmi.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\winpe-scripting.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\winpe-wds-tools.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-SecureStartup.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\\** *<locale\>* **\WinPE-SecureStartup_** *<locale\>* **.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\\** *<locale\>* **\WinPE-WMI_** *<locale\>* **.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\\** *<locale\>* **\WinPE-Scripting** *<locale\>* **.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\\** *<locale\>* **\WinPE-WDS-Tools_** *<locale\>* **.cab"**  
-
-    Where C:\WinPEMount is the mounted folder and locale is the locale for the components. For example, for the **en-us** locale, you would type:  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-SecureStartup_en-us.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WMI_en-us.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-Scripting_en-us.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
-
-   > [!TIP]
-   >  For more information about the optional components that you can add to the boot image, see the [Windows PE Optional Components Reference](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
-
-6. Use DISM to add specific drivers to the boot image, when required. Type the following to add drivers to the boot image:  
-
-    **dism.exe /image:C:\WinPEMount /add-driver /driver:<** *path to driver .inf file* **>**  
-
-    Where C:\WinPEMount is the mounted folder.  
-
-7. Type the following to unmount the boot image file and commit the changes.  
-
-    **dism.exe /unmount-wim /mountdir:C:\WinPEMount /commit**  
-
-    Where C:\WinPEMount is the mounted folder.  
-
-8. Add the updated boot image to Configuration Manager to make it available to use in your task sequences. Use the following steps to import the updated boot image:  
-
-   1. In the Configuration Manager console, click **Software Library**.  
-
-   2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
-
-   3. On the **Home** tab, in the **Create** group, click **Add Boot Image** to start the Add Boot Image Wizard.  
-
-   4. On the **Data Source** page, specify the following options, and then click **Next**.  
-
-      - In the **Path** box, specify the path to the updated boot image file. The specified path must be a valid network path in the UNC format. For example:  **\\\\<**<em>servername</em>**>\\<**<em>WinPEWAIK share</em>**>\winpe.wim**.  
-
-      - Select the boot image from the **Boot Image** drop-down list. If the WIM file contains multiple boot images, each image is listed.  
-
-   5. On the **General** page, specify the following options, and then click **Next**.  
-
-      -   In the **Name** box, specify a unique name for the boot image.  
-
-      -   In the **Version** box, specify a version number for the boot image.  
-
-      -   In the **Comment** box, specify a brief description of how the boot image is used.  
-
-   6. Complete the wizard.  
-
-9. You can enable a command shell in the boot image to debug and troubleshoot it in Windows PE. Use the following steps to enable the command shell.  
-
-   1. In the Configuration Manager console, click **Software Library**.  
-
-   2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
-
-   3. Find the new boot image in the list and identify the package ID for the image. You can find the package ID in the **Image ID** column for the boot image.  
-
-   4. From a command prompt, type **wbemtest** to open the Windows Management Instrumentation Tester.  
-
-   5. Type **\\\\<**<em>SMS Provider Computer</em>**>\root\sms\site_<**<em>sitecode</em>**>** in **Namespace**, and then click **Connect**.  
-
-   6. Click **Open Instance**, type **sms_bootimagepackage.packageID="<packageID\>"**, and then click **OK**. For packageID, enter the value that you identified in step 3.  
-
-   7. Click **Refresh Object**, and then click **EnableLabShell** in the **Properties** pane.  
-
-   8. Click **Edit Property**, change the value to **TRUE**, and click **Save Property**.  
-
-   9. Click **Save Object**, and then exit the Windows Management Instrumentation Tester.  
-
-10. You must distribute the boot image to distribution points, distribution point groups, or to collections that are associated with distribution point groups before you can use the boot image in a task sequence. Use the following steps to distribute the boot image.  
-
-    1.  In the Configuration Manager console, click **Software Library**.  
-
-    2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
-
-    3.  Click the boot image identified in step 3.  
-
-    4.  On the **Home** tab, in the **Deployment** group, click **Update Distribution Points**.  
-
-## Customize a boot image that uses Windows PE 3.1  
- To customize a boot image that uses WinPE 3.1, you must install Windows AIK, install the Windows AIK supplement for Windows 7 SP1, and use the DISM command-line tool to mount the boot image, add optional components and drivers, and commit the changes to the boot image. Use the following procedure to customize the boot image.  
-
-#### To customize a boot image that uses Windows PE 3.1  
-
-1. Install the Windows AIK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed. Download Windows AIK from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5753).  
-
-2. Install the Windows AIK Supplement for Windows 7 with SP1 on the computer from step 1. Download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
-
-3. Copy the boot image (wimpe.wim) from the Windows AIK installation folder (for example, <*InstallationPath*>\Windows AIK\Tools\PETools\amd64\\) to a folder on the computer from which you will customize the boot image. This procedure uses C:\WinPEWAIK as the folder name.  
-
-4. Use DISM to mount the boot image to a local Windows PE folder. For example, type the following command-line:  
-
-    **dism.exe /mount-wim /wimfile:C:\WinPEWAIK\winpe.wim /index:1 /mountdir:C:\WinPEMount**  
-
-    Where C:\WinPEWAIK is the folder that contains the boot image and C:\WinPEMount is the mounted folder.  
-
-   > [!NOTE]
-   > For more information, see the [DISM (Deployment Image Servicing and Management) Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
-
-5. After you mount the boot image, use DISM to add optional components to the boot image. In Windows PE 3.1, for example, the optional components are located in <*InstallationPath*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
-
-   > [!NOTE]
-   >  This procedure uses the following location for the optional components: C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs. The path you use might be different depending on the version and installation options you choose for the Windows AIK.  
-
-    Type the following to install the optional components:  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\winpe-wmi.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\winpe-scripting.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\winpe-wds-tools.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\** *<locale\>* **\winpe-wmi_** *<locale\>* **.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\** *<locale\>* **\winpe-scripting_** *<locale\>* **.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\** *<locale\>* **\winpe-wds-tools_** *<locale\>* **.cab"**  
-
-    Where C:\WinPEMount is the mounted folder and locale is the locale for the components. For example, for the **en-us** locale, you would type:  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wmi_en-us.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-scripting_en-us.cab"**  
-
-    **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
-
-   > [!TIP]
-   >  For more information about the different packages that you can add to the boot image, see [Add a Package to a Windows PE Image](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
-
-6. Use DISM to add specific drivers to the boot image, when required. Type the following to add drivers to the boot image, if required:  
-
-    **dism.exe /image:C:\WinPEMount /add-driver /driver:<** *path to driver .inf file* **>**  
-
-    Where C:\WinPEMount is the mounted folder.  
-
-7. Type the following to unmount the boot image file and commit the changes.  
-
-    **dism.exe /unmount-wim /mountdir:C:\WinPEMount /commit**  
-
-    Where C:\WinPEMount is the mounted folder.  
-
-8. Add the updated boot image to Configuration Manager to make it available to use in your task sequences. Use the following steps to import the updated boot image:  
-
-   1. In the Configuration Manager console, click **Software Library**.  
-
-   2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
-
-   3. On the **Home** tab, in the **Create** group, click **Add Boot Image** to start the Add Boot Image Wizard.  
-
-   4. On the **Data Source** page, specify the following options, and then click **Next**.  
-
-      - In the **Path** box, specify the path to the updated boot image file. The specified path must be a valid network path in the UNC format. For example:  **\\\\<**<em>servername</em>**>\\<**<em>WinPEWAIK share</em>**>\winpe.wim**.  
-
-      - Select the boot image from the **Boot Image** drop-down list. If the WIM file contains multiple boot images, each image is listed.  
-
-   5. On the **General** page, specify the following options, and then click **Next**.  
-
-      -   In the **Name** box, specify a unique name for the boot image.  
-
-      -   In the **Version** box, specify a version number for the boot image.  
-
-      -   In the **Comment** box, specify a brief description of how the boot image is used.  
-
-   6. Complete the wizard.  
-
-9. You can enable a command shell in the boot image to debug and troubleshoot it in Windows PE. Use the following steps to enable the command shell.  
-
-   1. In the Configuration Manager console, click **Software Library**.  
-
-   2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
-
-   3. Find the new boot image in the list and identify the package ID for the image. You can find the package ID in the **Image ID** column for the boot image.  
-
-   4. From a command prompt, type **wbemtest** to open the Windows Management Instrumentation Tester.  
-
-   5. Type **\\\\<**<em>SMS Provider Computer</em>**>\root\sms\site_<**<em>sitecode</em>**>** in **Namespace**, and then click **Connect**.  
-
-   6. Click **Open Instance**, type **sms_bootimagepackage.packageID="<packageID\>"**, and then click **OK**. For packageID, enter the value that you identified in step 3.  
-
-   7. Click **Refresh Object**, and then click **EnableLabShell** in the **Properties** pane.  
-
-   8. Click **Edit Property**, change the value to **TRUE**, and click **Save Property**.  
-
-   9. Click **Save Object**, and then exit the Windows Management Instrumentation Tester.  
-
-10. You must distribute the boot image to distribution points, distribution point groups, or to collections that are associated with distribution point groups before you can use the boot image in a task sequence. Use the following steps to distribute the boot image.  
-
-    1.  In the Configuration Manager console, click **Software Library**.  
-
-    2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
-
-    3.  Click the boot image identified in step 3.  
-
-    4.  On the **Home** tab, in the **Deployment** group, click **Update Distribution Points**.
+[Support for the Windows ADK in Configuration Manager](../../core/plan-design/configs/support-for-windows-adk.md)

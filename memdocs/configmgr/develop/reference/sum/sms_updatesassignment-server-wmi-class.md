@@ -9,6 +9,8 @@ ms.assetid: e470bca9-d185-4d49-80c7-47802c515cf7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

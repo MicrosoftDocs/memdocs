@@ -2,19 +2,22 @@
 title: On-premises MDM
 titleSuffix: Configuration Manager
 description: Learn about on-premises mobile device management (MDM) in Configuration Manager
-ms.date: 01/09/2020
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
-ms.assetid: 497c05c7-fe9f-4b88-983b-1c5b3d59308e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # On-premises MDM in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901 -->
 
 Configuration Manager on-premises mobile device management (MDM) is a device management solution that relies on the built-in management capabilities of Windows. This feature is based on the Open Mobile Alliance (OMA) Device Management (DM) standard. It uses your organization's Configuration Manager infrastructure to manage and maintain the devices. Your organization requires Microsoft Intune licenses to use this feature, but it doesn't require any cloud connection. Configuration Manager stores all data about your devices in your on-premises site database.
 

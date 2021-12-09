@@ -1,18 +1,16 @@
 ---
-title: "Capabilities in Technical Preview 1607"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1607."
+title: Capabilities in Technical Preview 1607
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1607.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1607 for Configuration Manager
 
@@ -51,7 +49,7 @@ Custom branding for the Software Center is applied according to the following ru
 
 1. If the Application Catalog website point site server role is not installed, then Software Center will display the organization name specified in the **Computer Agent** client setting **Organization name displayed in Software Center**. For instructions, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
-2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
+2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties.
 
 3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties.
 

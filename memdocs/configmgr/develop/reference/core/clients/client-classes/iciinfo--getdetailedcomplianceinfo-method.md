@@ -9,6 +9,8 @@ ms.assetid: cdc74613-5c3d-4eb0-a6fd-d4e4c0ee05f6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

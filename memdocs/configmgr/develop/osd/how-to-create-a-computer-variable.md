@@ -9,6 +9,8 @@ ms.assetid: e4db0e59-84c0-44eb-8e41-acb91c4ee463
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -162,7 +164,7 @@ public void CreateComputerVariable(
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See also
 

@@ -9,6 +9,8 @@ ms.assetid: c4e64b28-2159-4286-b1ef-4935c7e07e14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -210,7 +212,7 @@ public void CreateDriverPackage(
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md)   

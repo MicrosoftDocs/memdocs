@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manually sync your Windows device | Microsoft Docs
-description:
+description: Sync your Windows devices using the Company Portal app, the Start menu, the task bar, or the Settings app.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,19 +29,22 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Sync your Windows device manually
+# Sync your Windows device manually  
 
-When app installation speed is less than ideal, initiate a manual device sync. Manual syncs force your device to connect with Intune for the latest updates and communications. Installation speed may increase after the device sync is complete.
+**Applies to**  
+- Windows 10  
+- Windows 11  
 
-Intune supports manual sync from the Company Portal app, desktop taskbar or Start menu, and from the device Settings app. Company Portal app functionality is supported on Windows 10 devices running the Creator's Update (1703) or later. 
+Syncing forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, you can manually sync to get any updates you missed when you return.   
+ 
+Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
-All Windows devices can be synced from the device Settings app, including:
+You can start a sync from the Company Portal app, desktop taskbar or Start menu, and from the device Settings app. Company Portal app functionality is supported on Windows 10 devices running the Creator's Update (1703) or later, and Windows 11.  
 
-* [Windows 10 desktop](#windows-10-desktop)  
-* [Microsoft HoloLens](#microsoft-hololens)   
+All Windows devices can be synced from the device Settings app.  
 
-## Sync directly from Company Portal app for Windows
-Complete these steps to manually sync any Windows 10 device running Creator's Update (version 1709) or later.
+## Sync from Company Portal app for Windows
+Complete these steps to sync your Windows 10/11 device.  
 
 1. Open the Company Portal app on your device.
 
@@ -62,10 +65,10 @@ You can also access the sync control outside of the app, from your device's desk
 
 3. Select **Sync this device**. The Company Portal app opens to the **Settings** page and initiates your sync.  
 
-## Sync from Settings App 
+## Sync from Settings app 
 Complete these steps to manually sync your Microsoft HoloLens and Windows 10 desktop devices from the Settings app.  
 
-### Windows 10 desktop
+### Windows 10 desktop  
 1. On your device, select **Start** > **Settings**.
 
 2. Select **Accounts**.

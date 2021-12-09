@@ -2,14 +2,14 @@
 title: Support for Windows features
 titleSuffix: Configuration Manager
 description: Learn which Windows and networking features Configuration Manager supports.
-ms.date: 02/19/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Support for Windows features and networks in Configuration Manager
@@ -22,7 +22,7 @@ This article identifies Configuration Manager support for common Windows and net
 
 Use Windows BranchCache with Configuration Manager when you enable it on distribution points, and configure clients to use it in distributed cache mode.
 
-Configure the BranchCache settings on a deployment type for applications, on the deployment for a package, and for task sequences. Starting in version 1802, BranchCache is enabled by default.
+Configure the BranchCache settings on a deployment type for applications, on the deployment for a package, and for task sequences. BranchCache is enabled by default.
 
 When the requirements for BranchCache are met, this feature enables clients in remote locations to obtain content from local clients that have a current cache of the content.  
 
@@ -37,7 +37,8 @@ These clients also cache the content. Other clients on the same subnet don't hav
 Add the **Windows BranchCache** feature to the site system server that's configured as a distribution point.
 
 - Distribution points on servers that are configured to support BranchCache require no additional configuration.
-- You can't add Windows BranchCache to a cloud-based distribution point. Cloud-based distribution points do support the download of content by clients that are configured for Windows BranchCache.  
+
+- You can't add Windows BranchCache to a content-enabled cloud management gateway. CMGs do support the download of content by clients that are configured for Windows BranchCache.
 
 #### Configure clients
 
@@ -92,19 +93,16 @@ Configuration Manager doesn't support the following functionality over DirectAcc
 
 Configuration Manager can't manage more than one OS on a single computer. If there's more than one OS on a computer to manage, adjust the site's discovery and client installation methods to ensure that the Configuration Manager client is installed only on the OS that has to be managed.  
 
-## <a name="bkmk_IPv6"></a> IPv6  
+## <a name="bkmk_IPv6"></a> IPv6
 
-In addition to Internet Protocol version 4 (IPv4), Configuration Manager supports Internet Protocol version 6 (IPv6), with the following exceptions:  
+In addition to Internet Protocol version 4 (IPv4), Configuration Manager supports Internet Protocol version 6 (IPv6), with the following exceptions:
 
-|Function| Exception to IPv6 support|  
-|--------------|-------------------------------|  
-|Cloud-based distribution points|IPv4 is required to support Microsoft Azure and cloud-based distribution points.|  
-|Cloud management gateway|IPv4 is required to support Microsoft Azure and the cloud management gateway.|  
-|Mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector|IPv4 is required to support mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector.|  
-|Network Discovery|IPv4 is required when you configure a DHCP server to search in Network Discovery.|  
-|OS deployment|In version 1802 and prior, IPv4 is required to support OS deployment.  </br> </br> Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service. This new PXE responder service supports IPv6. Other aspects of the OS deployment feature, such as capturing or setting static IP addresses during the task sequence, continue to require IPv4. |  
-|Wake-up proxy communication|IPv4 is required to support the client wake-up proxy packets.|  
-|Windows CE|IPv4 is required to support the Configuration Manager client on Windows CE devices.|  
+| Function                    | Exception to IPv6 support                                                           |
+|-----------------------------|-------------------------------------------------------------------------------------|
+| Cloud management gateway    | IPv4 is required to support Microsoft Azure and the cloud management gateway.       |
+| Network Discovery           | IPv4 is required when you configure a DHCP server to search in Network Discovery.   |
+| OS deployment               | Capturing or setting static IP addresses during the task sequence requires IPv4.    |
+| Wake-up proxy communication | IPv4 is required to support the client wake-up proxy packets.                       |
 
 ## <a name="bkmk_NAT"></a> Network Address Translation  
 
@@ -125,3 +123,7 @@ Site server roles require NTFS, so that Configuration Manager can set directory 
      Additionally, the cache of a Configuration Manager client isn't supported on a SIS-enabled volume.  
 
 - **Removable disk drive**: Configuration Manager doesn't support the installation of Configuration Manager site systems or clients on a removable disk drive.
+
+## Next steps
+
+[Support for virtualization environments with Configuration Manager](support-for-virtualization-environments.md)

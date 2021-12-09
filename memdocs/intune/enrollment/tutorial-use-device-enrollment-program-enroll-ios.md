@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Tutorial - Use Apple Business Manager or the Device Enrollment Program to enroll iOS/iPadOS devices in Intune
+title: Tutorial - Use Apple Business Manager to enroll iOS/iPadOS devices in Intune
 titleSuffix: Microsoft Intune
 description: In this tutorial, you'll set up Apple's corporate device enrollment features from ABM to enroll iOS/iPadOS devices in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/30/2019
 ms.topic: tutorial
@@ -16,7 +16,9 @@ ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Tutorial: Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune
@@ -126,6 +128,9 @@ You must assign an enrollment program profile to devices before they can enroll.
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose your token in the list.
 2. Choose **Devices** > choose devices in the list > **Assign profile**.
 3. Under **Assign profile**, choose a profile for the devices > **Assign**.
+
+> [!NOTE]
+> Ensure that **Device Type Restrictions** under **Enrollment Restrictions** does not have the default **All Users** policy set to block the iOS/iPadOS platform. This setting will cause automated enrollment to fail and your device will show as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which will permit corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled via a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.
 
 ## Distribute devices to users
 

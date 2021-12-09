@@ -2,14 +2,14 @@
 title: Create bootable media
 titleSuffix: Configuration Manager
 description: Use bootable media in Configuration Manager to install a new version of Windows or replace a computer.
-ms.date: 08/11/2020
+ms.date: 08/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create bootable media
@@ -42,7 +42,7 @@ Because the task sequence isn't on the media, you can change the task sequence o
 
 The packages on bootable media aren't encrypted. To make sure that the package contents are secured from unauthorized users, take appropriate security measures. For example, add a password to the media.
 
-Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
+Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG).<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## Prerequisites
 
@@ -76,7 +76,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 ## Process
 
 > [!NOTE]
-> For PKI environments, since you specify the root certificate authority (CA) at the primary site, make sure to create the bootable media at the primary site. The central administration site (CAS) doesn't have the root CA information to properly create the bootable media.
+> For PKI environments, since you specify the root certificate authority (CA) at the primary site, make sure to create the bootable media at the primary site. The central administration site (CAS) doesn't have the root CA information to properly create the bootable media. For more technical information on this issue, see [Sending with winhttp failed 80072f8f error in Smsts.log during OS deployment by using bootable or prestaged media](/troubleshoot/mem/configmgr/sending-with-winhttp-failed-80072f8f-error).
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.
 
@@ -123,7 +123,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.
 
 1. On the **Security** page, specify the following options:
 

@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 04/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,7 +18,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

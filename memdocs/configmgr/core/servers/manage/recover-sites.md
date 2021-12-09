@@ -2,16 +2,14 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 09/24/2020
+ms.date: 11/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
+ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Recover a Configuration Manager site
@@ -100,7 +98,7 @@ If possible, use the same version of SQL Server. However, it's supported to rest
 
 Don't change the SQL Server edition. Restoring a site database from Standard edition to Enterprise edition isn't supported.
 
-Additional SQL Server configuration requirements:
+Other SQL Server configuration requirements:
 
 - SQL Server can't be set to **single-user mode**.
 - Make sure the MDF and LDF files are valid. When you recover a site, there's no check for the state of the files.  
@@ -359,13 +357,18 @@ For example, before the site failure the **Total activations** count shows as **
 
 <!-- SCCMDocs#1022 -->
 
-In Configuration Manager version 1806, after site recovery you'll see the following error in the cloudmgr.log:
+After site recovery, you may see the following error in the cloudmgr.log:
 
 `Index (zero-based) must be greater than or equal to zero`
 
-To resolve this, [Renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew) for each Azure tenant connection.
+To resolve this issue, [Renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew) for each Azure tenant connection.
 
-### Configure SSL for site system roles that use IIS
+### Delete and recreate subscriptions for external notifications on the CAS
+
+<!-- 10333966 -->
+After you recover the CAS, you need to delete and recreate any subscriptions for external notifications. For more information, see [External notifications](external-notifications.md).
+
+### Configure HTTPS for site system roles that use IIS
 
 When you recover site systems that run IIS and you configured for HTTPS, reconfigure IIS to use the web server certificate.
 
@@ -409,9 +412,9 @@ As part of the state migration point properties, you specify the folders that st
 
 After you restore a site, the **distmgr.log** might list the following entry for one or more distribution points: `Failed to decrypt cert PFX data`. This entry indicates that the distribution point certificate data can't be decrypted by the site. To resolve this issue, regenerate or reimport the certificate for affected distribution points. Use the [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet.
 
-### Update certificates used for cloud-based distribution points
+### Restore database encryption certificates
 
-Configuration Manager requires an Azure management certificate for the site server to communicate with cloud-based distribution points. After a site recovery, update the certificates for cloud-based distribution points.
+If you use SQL Server encryption for the entire database or for specific tables, you may need to restore the certificates after you restore the site database. For example, if you encrypt recovery data for BitLocker management. For more information, see [Restore certificate for BitLocker management](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md#restore-certificate).<!-- memdocs#1901 -->
 
 ## Recover a secondary site
 

@@ -2,30 +2,20 @@
 title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
-ms.date: 03/12/2020
+ms.date: 08/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: conceptual
-ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
+ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # How to connect Configuration Manager with Desktop Analytics
 
-Desktop Analytics is tightly integrated with Configuration Manager. First, make sure the site is up to date to support the latest features. Then create the Desktop Analytics connection in Configuration Manager. Finally, monitor the health of the connection.
-
-## <a name="bkmk_hotfix"></a> Update the site
-
-First, make sure that your Configuration Manager site is running at least version 1902. For more information, see [Install in-console updates](../core/servers/manage/install-in-console-updates.md).
-
-You also need to install the version 1902 update rollup (4500571) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
-
-1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](../core/servers/manage/install-in-console-updates.md).
-
-2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).
+Desktop Analytics is tightly integrated with Configuration Manager. Any supported version of Configuration Manager supports Desktop Analytics. When connecting to a cloud service, make sure the site and clients are up to date to support the latest features. To connect the on-premises site with the Desktop Analytics cloud service, create the Desktop Analytics connection in Configuration Manager. Then monitor the health of the connection.
 
 ## <a name="bkmk_connect"></a> Connect to the service
 
@@ -64,12 +54,15 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.
 
-    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.
+    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+
+       - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+       - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
     - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
     > [!TIP]
-    > Take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service. 
+    > Take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service.
 
     Select **Sign in** . After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
@@ -94,7 +87,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
    Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next** to continue or **Previous** to make changes.
 
-    ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)
+    :::image type="content" source="media/available-functionality.png" alt-text="Example Available Functionality page in the Azure Services Wizard.":::
 
 <a name="bkmk_Collections"></a>
 

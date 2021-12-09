@@ -39,7 +39,7 @@ You can configure Conditional Access policies based on Sophos Mobile risk assess
 
 ## Supported platforms
 
-- Android 5.0 and later
+- Android 6.0 and later
 - iOS 11.0 and later
 
 ## Prerequisites

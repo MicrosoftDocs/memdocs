@@ -5,11 +5,11 @@ description: Configuration Manager synchronizes Surface driver updates for deplo
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 01/15/2021
+ms.date: 04/15/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
+ms.localizationpriority: medium
 ---
 
 # Manage Surface drivers with Configuration Manager
@@ -22,7 +22,7 @@ Configuration Manager allows you to synchronize drivers for Surface devices and 
 
 - An internet connected top-level software update point.
 - All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
-- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
 
 ## Enable sync for Surface drivers
 
@@ -154,6 +154,11 @@ No. Even if the update is imported into WSUS, the update won't be imported into 
 ### What alternative methods do I have to deploy Surface driver and firmware updates?
 
 For information about how to deploy Surface driver and firmware updates through alternative channels, see [Manage Surface driver and firmware updates](/surface/manage-surface-driver-and-firmware-updates). If you want to download the .msi or .exe file, and then deploy through traditional software deployment channels, see [Keeping Surface Firmware Updated with Configuration Manager](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
+
+### My Surface drivers are expired or no longer visible after removing my CAS. What should I do?
+<!-- 5728727,8734926, 8763769-->
+
+If you recently removed a central administration site from your hierarchy, you may notice that the option to **Include Microsoft Surface drivers and firmware updates** is no longer enabled. You may also see that the driver updates are expired in your Configuration Manager console. When you remove a CAS, you'll need to re-enable synchronization of Surface drivers and reconfigure this feature. For more information about post-setup tasks for CAS removal, see [Removing the central administration site (CAS)](../../core/servers/deploy/install/remove-central-administration-site.md).<!-- 5728727 -->
 
 ## Next steps
 

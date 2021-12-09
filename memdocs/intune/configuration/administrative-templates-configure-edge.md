@@ -1,10 +1,10 @@
 ---
-title: Deploy Microsoft Edge policy using ADMX template in Microsoft Intune - Azure | Microsoft Docs
+title: Deploy Microsoft Edge policy using ADMX template in Microsoft Intune
 description: Add or create settings using ADMX administrative templates to configure Microsoft Edge on Windows devices. Using Microsoft Intune and Endpoint Manager, you can configure group policy settings, and deploy these settings to Microsoft Edge users.
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 01/19/2021
+ms.date: 11/04/2021
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -32,7 +32,10 @@ This article applies to:
 - Windows 10 and newer
 - Microsoft Edge version 77 and newer
 
-  For Microsoft Edge version 45 and earlier, see [Microsoft Edge Browser device restrictions](device-restrictions-windows-10.md#microsoft-edge-browser).
+  For Microsoft Edge version 45 and earlier, see [Microsoft Edge Browser device restrictions](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+
+> [!NOTE]
+> Additional ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune.
 
 When you use Intune to manage and enforce policies, it's similar to using Active Directory group policy, or configuring local Group Policy Object (GPO) settings on user devices. But, Intune is 100% cloud.
 
@@ -62,7 +65,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Administrative Templates**.
+    - **Profile**: Select **Templates** > **Administrative Templates**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

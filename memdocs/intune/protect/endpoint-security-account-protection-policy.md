@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 
@@ -43,7 +43,7 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Prerequisites for Account protection profiles
 
-- Windows 10 or later
+- Windows 10 or Windows 11
 
 ## Account protection profiles
 

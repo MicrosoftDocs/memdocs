@@ -5,58 +5,51 @@ description: Review information about Surface devices using the dashboard.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/09/2020
-ms.topic: conceptual
+ms.date: 11/15/2021
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-
-
+ms.localizationpriority: medium
 ---
+
 # Surface device dashboard in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Beginning in version 1802, the Surface device dashboard gives you information about Surface devices found in your environment at a single glance. <!--1355788-->
+The Surface device dashboard gives you information about Surface devices found in your environment at a single glance.<!--1355788-->
 
-## Open the Surface device dashboard
+## How to open
 
-To open the Surface device dashboard, use the following steps: 
+To open the Surface device dashboard, use the following steps:
 
-1. Open the Configuration Manager console. 
-2. Click on the **Monitoring** node. 
-3. To load the dashboard, click on **Surface Devices**.
+1. Open the Configuration Manager console.
+2. Select the **Monitoring** workspace.
+3. To load the dashboard, select the **Surface Devices** node.
 
-**Surface device dashboard**
-![Surface device dashboard](media/Surface-device-dashboard.PNG)
+:::image type="content" source="media/Surface-device-dashboard.PNG" alt-text="An example view of the Surface device dashboard.":::
 
+## Review information
 
+The Surface device dashboard shows three graphs:
 
-## Reviewing information in the Surface device dashboard
+- **Percent of Surface devices**: The percentage of Surface devices throughout your environment.
 
-The Surface device dashboard shows three graphs for your environment. 
+    :::image type="content" source="media/Percent-Surface-Devices.PNG" alt-text="Percent of Surface devices graph.":::
 
-- **Percent of Surface devices** -Gives you the percentage of Surface devices throughout your environment.
+- **Surface Models**: The number of devices per Surface model. Hover over a graph section to see the percentage of Surface devices for that model.
 
-    ![Percent of Surface devices graph](media/Percent-Surface-Devices.PNG)
-- **Surface Models** -Shows the number of devices per Surface model. 
-  - Hovering over a graph section will give you the percentage of Surface devices that are the model selected. 
+    :::image type="content" source="media/Surface-Models-Hover.PNG" alt-text="Surface models graph.":::
 
-       ![Surface models graph](media/Surface-Models-Hover.PNG)
-  - Clicking on a graph section will take you to a device list for the model. 
-      ![Surface model device list](media/Surface-Model-Device-List.PNG)
+  - Select a graph section to go through to a device list for that model.
 
-- **Top five firmware versions**- Displays a chart with the top five firmware models in your environment. 
-  - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. Starting in Configuration Manager version 1806, clicking on a graph section displays a list of relevant devices. <!--1358654-->
-     ![Surface firmware tool tip](media/Surface-Firmware-Hover.PNG)
+    :::image type="content" source="media/Surface-Model-Device-List.PNG" alt-text="Surface model device list.":::
 
+- **Top five firmware versions**: The top five firmware models in your environment. Hover over a graph section to see the number of Surface devices with that firmware version. Select a graph section to go through to a device list.<!--1358654-->
 
-## More information
+    :::image type="content" source="media/Surface-Firmware-Hover.PNG" alt-text="Surface top five firmware versions graph.":::
+
+## Next steps
+
+You can use Configuration Manager to deploy Surface firmware updates. For more information, see [Managing Surface driver updates](../../../sum/deploy-use/surface-drivers.md).
 
 For more information about Surface devices, see the [Surface](https://www.microsoft.com/surface) website.
-
-For more information about deploying Surface firmware updates in Configuration Manager, see [Managing Surface driver updates](../../../sum/deploy-use/surface-drivers.md).
-
-
-
-

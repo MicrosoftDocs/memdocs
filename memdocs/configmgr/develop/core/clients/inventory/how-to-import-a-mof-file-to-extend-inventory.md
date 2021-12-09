@@ -9,6 +9,8 @@ ms.assetid: 4b57f922-9029-4617-8c21-6c75ccebbb5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -56,7 +58,7 @@ An example MOF file.================================[ SMS_Report (TRUE),  SMS_Gr
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   

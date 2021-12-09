@@ -9,6 +9,8 @@ ms.assetid: 85b50703-f51d-470b-9d9f-4d065c2bcb88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -146,7 +148,7 @@ public void RemoveDriverCategory(WqlConnectionManager connection,
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   

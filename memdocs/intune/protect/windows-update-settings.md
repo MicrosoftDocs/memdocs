@@ -1,65 +1,44 @@
 ---
 # required metadata
 
-title:  Windows for Business Update settings for  Microsoft Intune - Azure | Microsoft Docs
-description: WUfB settings for Windows 10 devices that you can deploy using Intune.
+title:  Windows for Business Update settings for Microsoft Intune
+description: WUfB settings for Windows 10 and Windows 11 devices that you can deploy using Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 12/03/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: dudeso
+ms.reviewer: davguy; bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 
-# Windows update settings for Intune  
+# Windows update settings for Intune
 
-View the Windows 10 Update settings you can [configure and manage](windows-update-for-business-configure.md) with Microsoft Intune.  
+View the Windows 10 and Windows 11 Update settings that you can [configure and manage](windows-update-for-business-configure.md) with Microsoft Intune.  
 
-When you configure settings for Windows 10 update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 version dependency, the version dependency is noted in the settings details.  
+When you configure settings for Windows update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 or Windows 11 version dependency, the version dependency is noted in the settings details.  
 
-## Update settings  
+## Update settings
 
 Update settings control what bits a device will download, and when. For more information about the behavior of each setting, see the Windows reference documentation.  
 
-- **Servicing channel**  
-  **Default**: Semi-Annual Channel  
-  Windows Update CSP: [Update/BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
-
-  Set the channel (branch) from which the device receives Windows updates. Different channels can use different deferral periods before updates are delivered.  
-
-  For example, the *Semi-Annual Channel* has a six-month deferral. If you use this channel with no additional deferrals from this body of settings, the device installs the update six-months after its release.  
-
-  Supported update channels:  
-
-  - Semi-Annual Channel  
-  - Semi-Annual Channel (targeted)  
-  - Windows Insider – Fast  
-  - Windows Insider – Slow  
-  - Release Windows Insider  
-
-  If you select an Insider channel, Intune automatically configures the Windows update setting [Update/ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) so that the insider build will work.  
-
-
-  > [!IMPORTANT]  
-  > Beginning with Windows version 1903, the use of the *Semi-Annual Channel (targeted)* (SAC-T), is retired. With this change, SAC-T merges with the *Semi-Annual Channel*. To learn more about this change and how it affects Windows Update for Business, see the Windows IT Pro Blog post [Windows Update for Business and the retirement of SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).  
- 
 - **Microsoft product updates**  
   **Default**:  Allow  
   Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
@@ -78,7 +57,7 @@ Update settings control what bits a device will download, and when. For more inf
   **Default**: 0  
   Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
-  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when the policy is received by the device.  
+  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.  
 
   Quality Updates are typically fixes and improvements to existing Windows functionality.  
 
@@ -86,13 +65,18 @@ Update settings control what bits a device will download, and when. For more inf
   **Default**: 0  
   Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
-  Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when the policy is received by the device.  
+  Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
 
   Supported deferral period:  
 
   - *Windows version 1709 and later* - 0 to 365 days  
   
   Feature Updates are typically new features for Windows.  
+
+- **Upgrade Windows 10 devices to Latest Windows 11 release**  
+  **Default**: No
+
+  When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
 
 - **Set feature update uninstall period (2 – 60 days)**  
   **Default**: 10  
@@ -102,7 +86,17 @@ Update settings control what bits a device will download, and when. For more inf
 
   After this period expires, the previous update bits are removed from the device, and it can no longer uninstall to a previous update version.  
 
-  For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.  
+  For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.  
+
+- **Enable pre-release builds**  
+  **Default**: Not Configured  
+
+  When configuring *Update ring settings*, you can choose to enable **Enable pre-release builds**. Devices that receive this setting as *Enabled* will move to the pre-release build you specify, and will also reboot. When enabled, specify one of the following prerelease builds:  
+  - **Windows Insider - Release Preview** (*default*)
+  - **Beta Channel**
+  - **Dev Chanel**
+
+  For information about pre-release builds, see [Windows Insider](https://insider.windows.com/understand-flighting).
 
 ## User experience settings  
 
@@ -117,6 +111,9 @@ User experience settings control the end-user experience for device restart and 
   Supported options:  
 
   - **Notify download** - Notify the user before downloading the update. Users choose to download and install updates.  
+  
+    > [!IMPORTANT]  
+    > If the user takes no action, the update will not install until the deadline you have configured is reached.
 
   - **Auto install at maintenance time** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, users are prompted to restart for up to seven days, and then restart is forced.  
 
@@ -130,7 +127,7 @@ User experience settings control the end-user experience for device restart and 
       **Default**: 5 PM  
       Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
-  - **Auto install and restart at maintenance time** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. (This is the default for unmanaged devices.)  
+  - **Auto install and restart at maintenance time** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used, which is the default for unmanaged devices.
 
     This option can restart a device automatically after the update installs. Use of the **Active hours** settings aren't described in Windows Update settings but are used by Intune to define a period during which the automatic restarts are blocked:  
 
@@ -142,8 +139,8 @@ User experience settings control the end-user experience for device restart and 
       **Default**: 5 PM  
       Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
-  - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on uses can delay countdown and restart.   
-  Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.  
+    Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
     This option supports additional settings.  
 
@@ -154,61 +151,36 @@ User experience settings control the end-user experience for device restart and 
       **Default**: Any Day  
 
     - **Scheduled install time** - Specify the time of day when you want updates to install.  
-      **Default**: 3 AM  
+      **Default**: 3 AM
+  
+      > [!IMPORTANT]  
+      > The device might not complete the installation at the specified time because of power policies, user absence, and so on. In this case, it will not attempt installation until the specified time occurs again or until a deadline you have specified is reached.
 
   - **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.  
 
-  - **Reset to default** - Restore the original auto update settings on Windows 10 machines that run the October 2018 Update or later.  
-
+  - **Reset to default** - Restore the original auto update settings on machines that run the Windows 10 October 2018 Update or later, and that run Windows 11.  These original auto update settings allow Windows to use automatically determined active hours to schedule the best time to install updates and restart the system after it installs the updates.
 
 - **Restart checks**  
   **Default**: Allow  
   Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
-  To skip these checks when you restart a device, select **Skip**. 
-  
-  This setting has different results depending on the devices version of Windows:  
- 
-  - *Windows version 1709 and later* - During Active Hours, the following processes don't run for updates: scan, download, install, and reboot. After Active Hours, the update processes do run and can wake the device from sleep, scan, download, install, and reboot the device as long as the battery checks and power checks pass. 
+  To skip these checks when you restart a device, select **Skip**.
 
-- **Block user from pausing Windows updates**  
-  **Default**: Allow  
+- **Option to pause Windows updates**  
+  **Default**: Enable  
   Windows Update CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
-  - **Allow** - Allow device users to pause the installation of an update.  
-  - **Block** - Prevent device users from pausing the installation of an update.  
+  - **Enable** - Allow device users to pause the installation of an update for a number of days.  
+  - **Disable** - Prevent device users from pausing the installation of an update.  
 
-- **Block user from scanning for Windows updates**  
-  **Default**: Allow  
-  Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+- **Option to check for Windows updates**  
+  **Default**: Enable  
+  Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess)
 
-  - **Allow** - Allow device users to use Windows Update scan to find and download updates, and install features.
-  - **Block** - Prevent device users from accessing the Windows Update scan, downloading updates, and installing features.  
+  - **Enable** - Allow device users to use Windows Update scan to find updates.
+  - **Disable** - Prevent device users from accessing the Windows Update scan.  
 
-- **Require user approval to dismiss restart notification**  
-  **Default**: Not configured  
-  Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
-  
-  - **No** - Automatic Dismissal after 25 seconds.
-  - **Yes** - Require User Dismissal.
-   
-- **Remind user prior to required auto-restart with dismissible reminder (hours)**  
-  **Default**: 4  
-  Windows Update CSP: [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
-
-  Specify how long in advance of an automatic restart to display a dismissible notification to a device user about that restart. Values of **2**, **4**, **8**, **12**, or **24** hours are supported.  
-  
-  When you clear the default value, this setting becomes *Not configured*.  
-
-- **Remind user prior to required auto-restart with permanent reminder (minutes)**  
-  **Default**: 15  
-  Windows Update CSP: [Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
-
-  Specify how long in advance of an automatic restart to display a non-dismissible warning to a device user about that restart. Values of **15**, **30** or **60** minutes are supported.  
-
-  When you clear the default value, this setting becomes *Not configured*.  
-
-- **Change Update notification level**  
+- **Change notification Update level**  
   **Default**: Use the default Windows Update notifications  
   Windows Update CSP: [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
@@ -222,7 +194,7 @@ User experience settings control the end-user experience for device restart and 
 
 - **Use deadline settings**  
   **Default**: Not configured  
- 
+
   Allows user to use deadline settings.  
 
   - **Not configured**
@@ -258,6 +230,6 @@ User experience settings control the end-user experience for device restart and 
 
 ### Delivery Optimization download mode  
 
-Delivery Optimization is no longer configured as part of a Windows 10 Update Ring under Software Updates. Delivery Optimization is now set through device configuration. However, previous configurations remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified. 
+Delivery Optimization is no longer configured as part of a Windows update policy. Delivery Optimization is now set through device configuration. However, previous configurations remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified.
 
-To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Windows 10 Update Rings](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) and then move your settings to a Delivery Optimization profile.
+To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Update rings for Windows 10 and later](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-update-rings) and then move your settings to a Delivery Optimization profile. 

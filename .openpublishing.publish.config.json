@@ -13,6 +13,20 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
+    },
+    {
+      "docset_name": "windows-365",
+      "build_source_folder": "windows-365",
+      "build_output_subfolder": "windows-365",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
@@ -21,7 +35,7 @@
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/memdocs",
-  "git_repository_branch_open_to_public_contributors": "master",
+  "git_repository_branch_open_to_public_contributors": "main",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "contribution_branch_mappings": {},
@@ -29,13 +43,19 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "mde",
+      "url": "https://github.com/MicrosoftDocs/microsoft-365-docs-pr/",
       "branch": "master",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],

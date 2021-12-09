@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Enroll Android device with the Microsoft Intune app and Entrust Datacard  
-description: Enroll an Android device and set up derived credential authentication with Entrust Datacard.
+title: Enroll Android device with the Microsoft Intune app and Entrust  
+description: Enroll an Android device and set up derived credential authentication with Entrust.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 ---
 
 
-# Set up Android device with Company Portal and Entrust Datacard
+# Set up Android device with Company Portal and Entrust
 
 Enroll your device with the Microsoft Intune app to gain secure, mobile access to your organization's email, files, and apps. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune.
 
@@ -44,7 +44,7 @@ You likely need to set up a derived credential if you use a smart card to:
 In this article, you will:
 
 * Enroll a mobile Android device with the Intune app
-* Set up your smart card by installing a derived credential from your organization's derived credential provider, [Entrust Datacard](https://www.entrustdatacard.com/)
+* Set up your smart card by installing a derived credential from your organization's derived credential provider, [Entrust](https://www.entrust.com/)
 
 ## What are derived credentials?
 

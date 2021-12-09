@@ -1,9 +1,12 @@
+items:
 - name: Co-management documentation
   href: index.yml
 - name: Overview
   items:
   - name: What is co-management?
     href: overview.md
+  - name: Frequently asked questions
+    href: faq.yml
 - name: Quickstarts
   items:
   - name: Quickstart overview
@@ -26,7 +29,7 @@
       href: quickstart-paths.md
     - name: Set up hybrid Azure AD
       href: quickstart-setup-hybrid-aad.md
-    - name: Upgrade to Windows 10
+    - name: Upgrade Windows 10
       href: quickstart-upgrade-win10.md
     - name: Get help from FastTrack
       href: quickstart-fasttrack.md

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Activate iOS/iPadOS lost mode with Microsoft Intune - Azure | Microsoft Docs
+title: Activate iOS/iPadOS lost mode with Microsoft Intune
 description: Turn on or start lost mode to customize a message that appears on the lock screen of a lost or stolen iOS/iPadOS device by using Microsoft Intune. And, get details on security and privacy information when you are using the lost mode action.
 keywords:
 author: ErikjeMS

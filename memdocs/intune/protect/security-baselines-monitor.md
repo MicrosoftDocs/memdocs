@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Check the success or failure of security baselines in Microsoft Intune - Azure | Microsoft Docs
+title: Check the success or failure of security baselines in Microsoft Intune
 description: Check the error, conflict, and success status when deploying security baselines to users and devices in Microsoft Intune MDM. See how to troubleshoot using client logs, and the report features in Intune.
 keywords:
 author: brenduns 
@@ -168,7 +168,7 @@ You deployed a security baseline, but the deployment status shows an error. The 
 
 Now you know the problematic setting. The next step is to find out why this setting is causing an error or conflict.
 
-On Windows 10 devices, there's a built-in MDM diagnostic information report. This report includes default values, current values, lists the policy, shows if it's deployed to the device or the user, and more. Use this report to help determine why the setting is causing a conflict or error.
+On Windows 10/11 devices, there's a built-in MDM diagnostic information report. This report includes default values, current values, lists the policy, shows if it's deployed to the device or the user, and more. Use this report to help determine why the setting is causing a conflict or error.
 
 1. On the device, go to **Settings** > **Accounts** > **Access work or school**.
 

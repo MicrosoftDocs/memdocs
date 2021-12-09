@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Wi-Fi settings for iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure Wi-Fi settings for iOS/iPadOS devices in Microsoft Intune
 titleSuffix:
 description: Create or add a WiFi device configuration profile for iOS/iPadOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune. 
 keywords:
@@ -9,7 +9,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/06/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium

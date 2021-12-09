@@ -6,10 +6,10 @@ ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.localizationpriority: medium
 ---
 
 # Packages and programs in Configuration Manager
@@ -112,16 +112,16 @@ Packages can use some new features of Configuration Manager, including distribut
 
     - **Allow users to view and interact with the program installation**: Use this setting, if available, to specify whether to allow users to interact with the program installation. This option is only available if the following conditions are met:
 
-        - **Program can run** setting is **Only when no user is logged on** or **Whether or not a user is logged on**
+        - **Program can run** setting is **Only when a user is logged on** or **Whether or not a user is logged on**
         - **Run mode** setting is to **Run with administrative rights**  
 
     - **Drive mode**: Specify information about how this program runs on the network. Choose one of the following options:  
 
         - **Runs with UNC name**: Specify that the program runs with a Universal Naming Convention (UNC) name. This setting is the default.  
 
-        - **Requires drive letter**: Specify that the program requires a drive letter to fully qualify its location. For this setting, Configuration Manager can use any available drive letter on the client.  
+        - **Requires drive letter**: Specify that the program requires a drive letter to fully qualify its location. For this setting, Configuration Manager can use any available drive letter on the client.  This setting requires the deployment to use the Deployment option **Run program from distribution point** and the package's Data Access option enabled to **Copy the content in this package to a package share on distribution points**.
 
-        - **Requires specific drive letter**: Specify that the program requires a specific drive letter that you specify to fully qualify its location. For example, **Z:**. If the client is already using the specified drive letter, the program doesn't run.  
+        - **Requires specific drive letter**: Specify that the program requires a specific drive letter that you specify to fully qualify its location. For example, **Z:**. If the client is already using the specified drive letter, the program doesn't run.  This setting requires the deployment to use the Deployment option **Run program from distribution point** and the package's Data Access option enabled to **Copy the content in this package to a package share on distribution points**.
 
     - **Reconnect to distribution point at log on**: Indicate whether the client reconnects to the distribution point when the user signs in. By default, the wizard doesn't enable this option.
 

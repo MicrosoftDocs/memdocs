@@ -1,4 +1,4 @@
-﻿---
+---
 title: Compliance settings views
 titleSuffix: Configuration Manager
 description: Information about the compliance of devices with regard to a number of configurations.
@@ -12,6 +12,8 @@ ms.assetid: cf84f727-0993-455b-9184-313bc10a3ce2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Compliance settings views in Configuration Manager
@@ -24,7 +26,7 @@ The following sections provide detailed information about compliance settings vi
 
 There are many compliance settings views, and it can sometimes be difficult to find the information that you need for your report SQL statement. The following are some of the key compliance settings views and columns:
 
-- **CI_ID** column – Commonly used to join compliance settings views
+- **CI_ID** column � Commonly used to join compliance settings views
 
 - **v_ConfigurationItems** view - Used to retrieve information about the configuration items in the site.
 

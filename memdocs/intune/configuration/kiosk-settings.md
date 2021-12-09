@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Kiosk settings for Windows and Holographic devices in Microsoft Intune - Azure | Microsoft Docs
-description: Configure your Windows 10 (and later) and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune. 
+title: Kiosk settings for Windows and Holographic devices in Microsoft Intune
+description: Configure your Windows 10/11 and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 10/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,13 +26,14 @@ ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune
+# Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune
 
-On Windows 10 devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more. 
+On Windows devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more.
 
 This feature applies to:
 
-- Windows 10 and later
+- Windows 11
+- Windows 10
 - Windows Holographic for Business
 
 To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
@@ -50,7 +51,7 @@ This article shows you how to create a device configuration profile. For a list 
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile**: Select **Kiosk**.
+   - **Profile**: Select **Templates** > **Kiosk**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -62,10 +63,16 @@ This article shows you how to create a device configuration profile. For a list 
 7. In **Configuration settings** > **Select a kiosk mode**, choose the type of kiosk mode supported by the policy. Options include:
 
     - **Not Configured** (default): Intune doesn't change or update this setting. The policy doesn't enable kiosk mode.
-    - **Single app, full-screen kiosk**: The device runs as a single user account, and locks it to a single Store app. So when the user signs in, a specific app starts. This mode also restricts the user from opening new apps, or changing the running app.
-    - **Multi app kiosk**: The device runs multiple Store apps, Win32 apps, or inbox Windows apps by using the Application User Model ID (AUMID). Only the apps you add are available on the device.
+    - **Single app, full-screen kiosk**: The device runs as a single user account, and locks it to a single web browser or app. So when the user signs in, a specific app starts. This mode also restricts users from opening new apps, or changing the running app.
+
+      For example, you can run the Microsoft Edge browser, and only show one site, such as `Contoso.com`. Or, you can run a Store app, and have the device locked on this app.
+
+    - **Multi app kiosk**: The device runs multiple Store apps, Win32 apps, web browsers, or inbox Windows apps by using the Application User Model ID (AUMID). Only the apps you add are available on the device.
 
         The benefit of a multi-app kiosk, or fixed-purpose device, is to provide an easy-to-understand experience for users by only accessing apps they need. And, also removing from their view the apps they don't need.
+
+        > [!NOTE]
+        > Currently, multi-app kiosk is only supported on Windows 10. It's not supported on Windows 11.
 
     For a list of all settings, and what they do, see:
 
@@ -90,7 +97,7 @@ The next time each device checks in, the policy is applied.
 
 After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
-You can create kiosk profiles for devices that run the following platforms:
+You can also create kiosk profiles for devices that run the following platforms:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#device-experience)

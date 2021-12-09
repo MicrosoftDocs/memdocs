@@ -1,3 +1,4 @@
+items:
 - name: Docs
   tocHref: /
   topicHref: /
@@ -51,6 +52,9 @@
         - name: Device compliance
           tocHref: /mem/configmgr/compliance/
           topicHref: /mem/configmgr/compliance/
+        - name: Cloud attach
+          tocHref: /mem/configmgr/cloud-attach/
+          topicHref: /mem/configmgr/cloud-attach/
         - name: Core infrastructure guide
           tocHref: /mem/configmgr/core/
           topicHref: /mem/configmgr/core/
@@ -75,6 +79,9 @@
         - name: Tenant attach
           tocHref: /mem/configmgr/tenant-attach/
           topicHref: /mem/configmgr/tenant-attach/
+        - name: Hotfix
+          tocHref: /mem/configmgr/hotfix
+          topicHref: /mem/configmgr/hotfix
       - name: Endpoint analytics
         tocHref: /mem/analytics/
         topicHref: /mem/analytics/

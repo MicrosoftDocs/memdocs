@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 08/06/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,6 +41,9 @@ You don't need the source code to use the tool, but you do need signing credenti
 The App Wrapping Tool does **not** support apps in the Apple App Store or Google Play Store. It also doesn't support certain features that require developer integration (see the following feature comparison table).
 
 For more information about the App Wrapping Tool for app protection policies on devices that are not enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../apps/apps-add.md).
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool](https://github.com/msintuneappsdk) repositories for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Reasons to use the App Wrapping Tool
 
@@ -80,7 +83,7 @@ To learn more about the SDK, see the [Overview](app-sdk.md). To get started with
 
 ## Not using an app development platform listed above?
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms. 
+The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. Guidance is not provided for other platforms, but it is possible to use the native SDK to create your own plug-ins.
 
 ## Feature comparison
 
@@ -111,7 +114,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Prevent "Save as"|X||
 |Targeted Application Configuration (or app config through the "MAM channel")|X|X|
 |Support for Multi-Identity|X||
-|Customizable Style |X|||
+|Customizable Style |X||
 |On-demand application VPN connections with Citrix mVPN|X|X| 
 |Disable contact sync|X|X|
 |Disable printing|X|X|

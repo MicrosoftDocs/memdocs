@@ -6,12 +6,10 @@ ms.date: 12/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # How to deploy clients to Macs
@@ -65,7 +63,7 @@ Use the [default client settings](about-client-settings.md) to configure enrollm
     > [!TIP]  
     > If you want to change the client policy interval, use **Client policy polling interval** in the **Client Policy** client setting group.  
 
-The next time the devices download client policy, Configuration Manager applies these settings for all users. To initiate policy retrieval for a single client, see [Initiate policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).  
+The next time the devices download client policy, Configuration Manager applies these settings for all users. To initiate policy retrieval for a single client, see [Initiate policy retrieval for a Configuration Manager client](../manage/manage-clients.md#start-policy-retrieval).  
 
 In addition to the enrollment client settings, make sure that you have configured the following client device settings:  
 

@@ -1,15 +1,15 @@
 ---
 title: Online Documentation
 titleSuffix: Configuration Manager
-ms.date: 11/06/2019
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 description: Additional links for Configuration Manager help documentation
+ms.localizationpriority: medium
 ---
 
 # Online documentation for Configuration Manager
@@ -42,7 +42,7 @@ View the online documentation for the current branch of Configuration Manager at
 
 - [Monitor and maintain Configuration Manager](../servers/manage/maintenance-tasks.md)  
 
-- [Security and privacy for Configuration Manager](../plan-design/security/security-and-privacy.md)  
+- [Security documentation hub](../../security/index.yml)  
 
 ### Release notes
 

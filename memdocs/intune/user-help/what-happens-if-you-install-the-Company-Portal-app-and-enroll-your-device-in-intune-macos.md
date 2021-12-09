@@ -34,19 +34,15 @@ ms.collection:
 
 # What happens if you install the Company Portal app and enroll your macOS device in Intune?
 
-When you install the Company Portal app and enroll your macOS device in Intune, you can use the Company Portal app to:
+The Company Portal app gives you access to:
 
-- Access the company's network, and your email and work files.
+- Your organization's network, email, and work files.
 
-- Get company apps from the Company Portal.
+- Work or school-related apps.
 
-- Remotely reset your phone to factory settings if it is lost or stolen.
+- Remote actions such as the option to reset an enrolled device to factory settings if lost or stolen.
 
-- Automatically set up your company email account.
-
-When you enroll your device in Intune, you are giving your company support permission to manage your device to help protect the company information on the device.
-
-When your device is enrolled, your company support can:
+When you enroll your device in Intune, you give your IT support permission to manage your device to help protect the company information on the device. When your device is enrolled, your company support can:
 
 - Reset your device back to manufacturer's default settings if the device is lost or stolen.
 

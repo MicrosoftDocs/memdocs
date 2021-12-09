@@ -6,10 +6,11 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What is Configuration Manager?
@@ -30,7 +31,7 @@ The following Microsoft management solutions are all now part of the **Microsoft
 - [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
-For more information, see [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.md).
+For more information, see [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).
 
 ## Introduction
 

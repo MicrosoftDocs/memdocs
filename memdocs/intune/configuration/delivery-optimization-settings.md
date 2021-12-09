@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/04/2021
-ms.topic: reference
+ms.date: 10/05/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -28,17 +28,24 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Delivery Optimization settings for Windows 10 devices in Intune
+# Delivery Optimization settings for Windows devices in Intune
 
-This article lists the settings for Delivery Optimization that Intune supports for devices that run Windows 10 or later.  
+Applies to:  
+- Windows 10
+- Windows 11
+
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows 10 or later.  
 
 Most options in the Intune console directly map to Delivery Optimization settings that are covered in-depth in the Windows documentation. These options include links to relevant content.  Settings or options that are specific to Intune don't contain links to additional content.  
 
 The following tables include:  
 
-- **Setting**: The setting as it appears in Intune. Settings that are links open the relevant entry in [Configure Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation where you can learn more about the setting.
+- **Setting**: The setting as it appears in Intune. Settings that are links open the relevant entry in [Configure Delivery Optimization for Windows updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation where you can learn more about the setting.
 
-- **Windows version**: The minimum version of Windows 10 that includes support for this setting.  
+- **Windows version**: The minimum version of Windows that includes support for this setting.
 
 - **Details**: A brief description of how Intune implements the setting, including the Intune default. When available, there are links to [Delivery Optimization Policy configuration service provider](/windows/client-management/mdm/policy-csp-deliveryoptimization) (CSP) entries.  
 
@@ -46,7 +53,7 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 
 ## Before you begin
 
-[Create a Windows 10 Delivery Optimization profile](delivery-optimization-windows.md).
+[Create a Windows Delivery Optimization profile](delivery-optimization-windows.md).
 
 ## Delivery Optimization  
 
@@ -85,6 +92,9 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 |Cache server host names | 1809  |Specify the IP address or FQDN of Network Cache servers that will be used by your devices for Delivery Optimization, and then select **Add** to add that entry to the list.  <br><br>**Default**: Not configured  <br><br>Policy CSP: [DOCacheHost](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)  |
 |[Delay foreground download Cache Server fallback (in seconds)](/windows/deployment/update/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) | 1903    |Specify a time in seconds (0-2592000) to delay the fallback from a Cache server to the HTTP source for a foreground content download. When the [Bandwidth](#bandwidth) setting for *Delay background HTTP download (in seconds)* is configured, that setting applies first to allow downloads from peers. (0-2592000).   <br><br>**Default**: 0  <br><br>Policy CSP [DODelayCacheServerFallbackForeground](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)  |
 |[Delay background download Cache Server fallback (in seconds)](/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Specify a time in seconds (0-2592000) to delay the fallback from a Cache server to the HTTP source for a background content download. When the [Bandwidth](#bandwidth) setting for *Delay background HTTP download (in seconds)* is configured, that setting applies first to allow downloads from peers.    (0-2592000)   <br><br>**Default**: 0 <br><br>Policy CSP: [DODelayCacheServerFallbackBackground](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
+
+> [!NOTE]
+> When you install a Microsoft Connected Cache on a Configuration Manager distribution point, cloud-managed devices can use the on-premises cache. As long as the device can communicate with the server, the cache is available to deliver content to these devices. For more information, see [Microsoft Connected Cache in Configuration Manager](../../configmgr/core/plan-design/hierarchy/microsoft-connected-cache.md).<!-- 8827227 -->
 
 ## Next steps
 

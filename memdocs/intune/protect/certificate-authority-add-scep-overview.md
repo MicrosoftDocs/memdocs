@@ -1,11 +1,11 @@
 ---
-title: Use third-party certification authorities (CA) with SCEP in Microsoft Intune - Azure | Microsoft Docs
+title: Use third-party certification authorities (CA) with SCEP in Microsoft Intune
 description: In Microsoft Intune, you can add a vendor or third-party certificate authority (CA) to issue certificates to mobile devices using the SCEP protocol. In this overview, an Azure Active Directory (Azure AD) application gives Microsoft Intune permissions to validate certificates. Then, use the application ID, authentication key, and tenant ID of the AAD application in the setup of your SCEP server to issue certificates. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/05/2021
+ms.date: 12/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ Use third-party certification authorities (CA) with Intune. Third-party CAs can 
 There are two parts to using this feature: open-source API, and the Intune administrator tasks.
 
 **Part 1 - Use an open-source API**  
-Microsoft created an API to integrate with Intune. Though the API you can validate certificates, send success or failure notifications, and use SSL, specifically SSL socket factory, to communicate with Intune.
+Microsoft created an API to integrate with Intune. Through the API you can validate certificates, send success or failure notifications, and use SSL, specifically SSL socket factory, to communicate with Intune.
 
 The API is available on the [Intune SCEP API public GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) for you to download, and use in your solutions. Use this API with third-party SCEP servers to run custom challenge validation against Intune before SCEP provisions a certificate to a device.
 
@@ -69,7 +69,11 @@ The following diagram shows a detailed flow of third-party SCEP integration with
 Before integrating third-party certification authorities with Intune, confirm that the CA you're using supports Intune. [Third-party CA partners](#third-party-certification-authority-partners) (in this article) includes a list. You can also check your certification authority's guidance for more information. The CA may include setup instructions specific to their implementation.
 
 > [!NOTE]
-> To support Android Enterprise Device Owner devices, the CA must support use of an HTTPS URL when you configure the *HTTP Server URL* for the [SCEP certificate profile](certificates-profile-scep.md).
+> To support the following devices, the CA must support the use of an HTTPS URL when you configure  you must configure an HTTPS URL when you configure *SCEP Server URLs* for the [SCEP certificate profile](certificates-profile-scep.md):
+> - Android device administrator
+> - Android Enterprise device owner
+> - Android Enterprise corporate-owned work profile
+> - Android Enterprise personally-owned work profile
 
 ### Authorize communication between CA and Intune
 
@@ -97,13 +101,28 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
 
 6. Record your **Tenant ID**. The Tenant ID is the domain text after the @ sign in your account. For example, if your account is *admin@name.onmicrosoft.com*, then your tenant ID is **name.onmicrosoft.com**.  
 
-7. In the navigation pane for the app, go to **API permissions** under **Manage**, and then select **Add a permission**.  
+7. In the navigation pane for the app, go to **API permissions**, which are under **Manage**. You're going to add three separate application permissions:
 
-8. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select the checkbox for **scep_challenge_provider** (SCEP challenge validation).  
+   1. Select **Add a permission**:
+      1. On the *Request API permissions* page, select **Intune** and then select **Application permissions**.
+      2. Select the checkbox for **scep_challenge_provider** (SCEP challenge validation).
+      3. Select **Add permissions** to save this configuration.
 
-   Select **Add permissions** to save this configuration.  
+   1. Select **Add a permission** again.
+      1. On the *Request API permissions* page, select **Microsoft Graph** > **Application permissions**.
+      2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications).
+      3. Select **Add permissions** to save this configuration.
 
-9. Remain on the **API permissions** page, and select **Grant admin consent for Microsoft**, and then select **Yes**.  
+   1. Use *Microsoft Graph* to add the following permissions to the app:
+
+      - **Application.Read.All** (Read all applications).
+
+      For information on how to complete this step, see [Use Microsoft Graph to configure required Azure AD Graph permissions for an app registration](/graph/migrate-azure-ad-graph-configure-permissions).
+
+      > [!NOTE]  
+      > Previously, these permissions were configured by using Azure AD Graph, and available through the App registration UI. Azure AD Graph is now deprecated and will be retired on June 30, 2022. As part of this deprecation path, the capability to add Azure AD Graph permissions to the required permissions for an app registration through the Azure portal is now disabled.
+
+8. Remain on the **API permissions** page, and select **Grant admin consent for** ***\<your tenant>***, and then select **Yes**.  
 
    The app registration process in Azure AD is complete.
 
@@ -125,12 +144,15 @@ The following third-party certification authorities support Intune:
 
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
-- [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
+- [Entrust](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
+- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [IDnomic](https://www.idnomic.com/)
-- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
+- [Nexus Certificate Manager](https://doc.nexusgroup.com/display/PUB/Example%3A+SCEP+Intune+configuration+in+Protocol+Gateway)
+- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
+- [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:

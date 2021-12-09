@@ -2,14 +2,14 @@
 title: View BitLocker reports
 titleSuffix: Configuration Manager
 description: Learn about the BitLocker management reports in Configuration Manager
-ms.date: 08/11/2020
+ms.date: 11/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
-ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # View BitLocker reports
@@ -113,6 +113,9 @@ The pie chart shows the following compliance statuses:
 
 - Policy not enforced
 
+    > [!NOTE]
+    > This state may be caused by a device that's encrypted and previously escrowed its key, but can't currently escrow its key. Because it can't escrow its key it doesn't enforce policy anymore.<!-- memdocs#1884 -->
+
 - Unknown. These computers reported a status error, or they're part of the collection but have never reported their compliance status. The lack of a compliance status could occur if the computer is disconnected from the organization.
 
 ### Non-compliant - Errors distribution
@@ -194,7 +197,7 @@ Use this report to show the overall BitLocker compliance across your organizatio
 ## <a name="bkmk-audit"></a> Recovery audit report
 
 > [!NOTE]
-> Starting in version 2002, this report is only available from the [BitLocker administration and monitoring website](helpdesk-portal.md#reports).<!-- 7629549 -->
+> This report is only available from the [BitLocker administration and monitoring website](helpdesk-portal.md#reports).<!-- 7629549 -->
 
 Use this report to audit users who have requested access to BitLocker recovery keys. You can filter on the following criteria:
 

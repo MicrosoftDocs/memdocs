@@ -2,23 +2,21 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 05/07/2020
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
+ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # List of prerequisite checks for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](prerequisite-checker.md).  
-
-
+This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](prerequisite-checker.md).
 
 ## Errors
 
@@ -52,7 +50,23 @@ The user account that runs Configuration Manager setup has **Administrator** rig
 
 The user account that runs Configuration Manager setup has **Administrator** rights on the central administration site server.
 
+### Application catalog rules are unsupported
+
+<!-- 10158844 -->
+
+*Applies to: Primary site*
+
+Starting in version 2107, this error happens if the site has either of the following site system roles:
+
+- Application catalog website point
+- Application catalog web service point
+
+Support for the application catalog was removed in version 1910. For more information, see [Remove the application catalog](../../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog).
+
 ### Asset Intelligence synchronization point on the expanded primary site
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
 
 *Applies to: Central administration site*
 
@@ -244,7 +258,7 @@ The replication status of the parent site is **Replication active** (state **125
 
 Before you run setup, another program requires the server to be restarted.
 
-Starting in version 1810, this check is more resilient. To see if the computer is in a pending restart state, it checks the following registry locations:<!--SCCMDocs-pr issue 3010-->  
+To see if the computer is in a pending restart state, it checks the following registry locations:<!--SCCMDocs-pr issue 3010-->  
 
 - `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
 
@@ -266,7 +280,7 @@ The NetBIOS name of the computer matches the local hostname in the fully qualifi
 
 Site database servers and secondary site servers aren't supported on a read-only domain controller (RODC).
 
-For more information, see the Microsoft Support article on [Problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911).
+For more information, see [Installing SQL Server on a domain controller](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#Install_DC).
 
 ### Required SQL Server collation
 
@@ -277,6 +291,18 @@ The instance for SQL Server is configured to use the **SQL_Latin1_General_CP1_CI
 If the Configuration Manager site database is already installed, this check also applies to the database. For information about changing your SQL Server instance and database collations, see [SQL Server collation and unicode support](/sql/relational-databases/collations/collation-and-unicode-support).
 
 If you're using a Chinese OS and require GB18030 support, this check doesn't apply. For more information about enabling GB18030 support, see [International support](../../../plan-design/hierarchy/international-support.md).
+
+### Required version of Microsoft .NET Framework (error)
+
+_Applies to: CAS, primary site, secondary site_
+
+<!--10644702-->
+This rule checks if the .NET Framework is at least version 4.6.2. You'll see this error if the system has less than version 4.6.2.
+
+Starting in version 2111, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
+
+> [!NOTE]
+> Third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
 ### Server service is running
 
@@ -290,12 +316,12 @@ The Server service is started and running.
 
 The computer account for the secondary site has the following permissions to the setup source folder and share:
 
-- **Read** NTFS file system permissions  
+- **Read** NTFS file system permissions
 
-- **Read** share permissions  
+- **Read** share permissions
 
-> [!Note]  
-> If you use administrative shares, for example, C$ and D$, the secondary site computer account must be an **Administrator** on the server.  
+> [!NOTE]
+> If you use administrative shares, for example, C$ and D$, the secondary site computer account must be an **Administrator** on the server.
 
 ### Setup source version
 
@@ -374,14 +400,14 @@ When using an availability group, replicas are on the default instance.
 <!-- SCCMDocs-pr#3899 -->
 *Applies to: Site database server*
 
-Starting in version 1906, when using an availability group, you need to configure replicas with the same [seeding mode](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+When using an availability group, you need to configure replicas with the same [seeding mode](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
 
 ### SQL Server Always On availability group replicas must be healthy
 
 <!-- SCCMDocs-pr#3899 -->
 *Applies to: Site database server*
 
-Starting in version 1906, when using an availability group, replicas are in a healthy state.
+When using an availability group, replicas are in a healthy state.
 
 ### SQL Server configuration for site upgrade
 
@@ -395,6 +421,14 @@ The SQL Server meets the minimum requirements for site upgrade. For more informa
 
 SQL Server at the site isn't SQL Server Express.
 
+### SQL Server Express database size on secondary site
+
+*Applies to: Secondary site*
+
+<!-- 6047275 -->
+
+Starting in version 2107, this check will fail if the amount of replicated data from the primary site will exceed the 10-GB size limit of SQL Server Express. For more information, see [Configuration Manager site sizing and performance FAQ](../../../understand/site-size-performance-faq.yml#when-should-i-use-full-sql-server-instead-of-sql-server-express-on-my-secondary-sites-).
+
 ### SQL Server Express on secondary site
 
 *Applies to: Secondary site*
@@ -407,8 +441,8 @@ SQL Server Express can successfully install on the secondary site server.
 
 SQL Server is installed on the secondary site server. You can't install SQL Server on a remote site system for a secondary site.
 
-> [!Warning]  
-> This check only applies when you select to have setup use an existing instance of SQL Server.  
+> [!WARNING]
+> This check only applies when you select to have setup use an existing instance of SQL Server.
 
 ### SQL Server service running account
 
@@ -586,11 +620,21 @@ To resolve this warning, check whether the despooler and scheduler site system c
 
 The Background Intelligent Transfer Service (BITS) is installed and enabled in IIS.
 
+### Check if the site uses Microsoft Operations Management Suite (OMS) Connector
+
+*Applies to: Central administration site, primary site*
+
+<!--8269855-->
+
+Starting in version 2103, this check warns about the presence of the [Log Analytics connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context). (This feature is called the *OMS Connector* in the Azure Services wizard.)
+
+Starting in version 2107, this connector is removed from the product. This check will be an error that blocks upgrade.<!-- 9649296 -->
+
 ### Check if the site uses Upgrade Readiness cloud service connector
 
 *Applies to: Central administration site, primary site*
 
-The Upgrade Readiness service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+The Upgrade Readiness service is retired as of January 31, 2020. For more information, see [Windows Analytics retirement on January 31, 2020](/lifecycle/announcements/windows-analytics-retirement).
 
 Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../../desktop-analytics/overview.md).
 
@@ -622,6 +666,31 @@ All distribution points in the site have the latest version of software distribu
 
 The Configuration Manager computer is a member of a Windows domain.
 
+### Enable site system roles for HTTPS or Enhanced HTTP
+
+*Applies to: central administration site, primary site*
+
+<!-- 9390933,9572265 -->
+
+Starting in version 2103, if your site is configured to allow HTTP communication without enhanced HTTP, you'll see this warning. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP.
+
+This check looks at the following settings:
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
+1. Select a site, and then in the ribbon select **Properties**.
+
+1. Switch to the **Communication Security** tab.
+
+    Configure one of the following options:
+
+    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-certificates.md#transition-strategy-for-pki-certificates).
+
+    - **HTTPS or HTTP** _and_ **Use Configuration Manager-generated certificates for HTTP site systems**: This combination of settings enables [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
+
+> [!NOTE]
+> If you see this warning when updating the central administration site, it may be because of a child primary site.<!-- 9480431 -->
+
 ### Firewall exception for SQL Server (standalone primary site)
 
 *Applies to: Primary site (standalone only)*
@@ -650,12 +719,6 @@ When you install site roles that require HTTPS, configure IIS site bindings on t
 
 There are discovery records that are no longer valid. These records will be marked for deletion.
 
-### Microsoft XML Core Services 6.0 (MSXML60)
-
-*Applies to Central administration site, primary site, secondary site, Configuration Manager console, management point, distribution point*
-
-Verifies that MSXML 6.0 or a later version is installed.
-
 ### Network access protection (NAP) is no longer supported
 
 *Applies to: Primary site*
@@ -674,7 +737,7 @@ The disk drive is formatted with the NTFS file system. For better security, inst
 
 *Applies to: Primary site*
 
-Starting in version 1806, if you're updating from version 1706 or later, you may see this warning if you have many application deployments and at least one of them requires approval.
+You may see this warning if you have many application deployments and at least one of them requires approval.
 
 You have two options:  
 
@@ -684,7 +747,7 @@ You have two options:
 
 ### Pending system restart on the remote SQL Server
 
-*Applies to: Version 1902 and later, remote SQL Server*
+*Applies to: remote SQL Server*
 
 Before you run setup, another program requires the server to be restarted.
 
@@ -704,11 +767,32 @@ To see if the computer is in a pending restart state, it checks the following re
 
 Windows PowerShell 2.0 or a later version is installed on the site server for the Configuration Manager Exchange Connector.
 
+### Recommended version of Microsoft .NET Framework
+
+_Applies to: CAS, primary site, secondary site_
+
+<!--10402814-->
+This rule checks if the .NET Framework is at least version 4.8. You'll see this warning if the system has at least version 4.6.2, but less than version 4.8.
+
+Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
+
 ### Remote connection to WMI on secondary site
 
 *Applies to: Secondary site*
 
 Setup can establish a remote connection to WMI on the secondary site server.
+
+### Required version of Microsoft .NET Framework (warning)
+
+_Applies to: CAS, primary site, secondary site_
+
+<!--10402814-->
+In version 2107, this rule checks if the .NET Framework is at least version 4.6.2. You'll see this warning if the system has less than version 4.6.2.
+
+> [!IMPORTANT]
+> Starting in version 2111, if this check fails, it returns an [error](#required-version-of-microsoft-net-framework-error) instead of a warning.
+
+Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 ### Schema extensions
 
@@ -730,11 +814,21 @@ Packages don't have invalid characters in the share name, such as `#`.
 
 The account that you configured to run the SQL Server service for the site database instance has a valid service principal name (SPN) in Active Directory Domain Services. Register a valid SPN in Active Directory to support Kerberos authentication.
 
+### SQL Server 2012 lifecycle
+
+<!--10092858-->
+
+_Applies to: CAS, primary site, secondary site_
+
+This rule warns for the presence of SQL Server 2012. The [support lifecycle](/lifecycle/products/microsoft-sql-server-2012) for SQL Server 2012 ends on July 12, 2022. Plan to upgrade database servers in your environment, including SQL Server Express at secondary sites.
+
+For more information, see [Removed and deprecated for site servers: SQL Server](../../../plan-design/changes/deprecated/removed-and-deprecated-server.md#sql-server).
+
 ### <a name="bkmk_changetracking"></a> SQL Server change tracking cleanup
 
 *Applies to: Site database server*
 
-Starting in version 1810, check if the site database has a backlog of SQL Server change tracking data.<!--SCCMDocs-pr issue 3023-->  
+Check if the site database has a backlog of SQL Server change tracking data.<!--SCCMDocs-pr issue 3023-->  
 
 Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`.
 
@@ -760,8 +854,17 @@ This command starts a cleanup of syscommittab and all of the associated side tab
 SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 ```
 
-### SQL Server Native Client
+### SQL Server Express version on secondary site
 
+_Applies to: Secondary site_
+
+<!-- 9421748 -->
+
+Starting in version 2103, if you have a secondary site that uses SQL Server Express edition, this check warns if the version is earlier than SQL Server 2016 with service pack 2 (13.0.5026.0). If Configuration Manager didn't install SQL Server Express, then setup skips this check. Setup looks for the presence of the CONFIGMGRSEC instance.
+
+Microsoft recommends that you keep SQL Server Express up to date. For more information, see [Security for site administration](../../../plan-design/hierarchy/security-and-privacy-for-site-administration.md#update-sql-server-express-at-secondary-sites).
+
+### SQL Server Native Client
 <!--SCCMDocs-pr issue 3094-->
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Updating the SQL Server Native Client may require a restart, which can impact the site install process.
@@ -770,9 +873,9 @@ This check makes sure the site server has a supported version of the SQL Server 
 
 The minimum version is SQL Server 2012 SP4 (`11.*.7001.0`). This SQL Server Native Client version supports TLS 1.2. For more information, see the following articles:
 
-- [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
+- [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe)
 
-- [How to enable TLS 1.2 for Configuration Manager](../../../plan-design/security/enable-tls-1-2.md)  
+- [How to enable TLS 1.2 for Configuration Manager](../../../plan-design/security/enable-tls-1-2.md)
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:<!-- SCCMDocs issue 1150 -->
 
@@ -786,7 +889,6 @@ Configuration Manager uses SQL Server Native Client on the following site system
 - Multicast-enabled distribution point
 - Asset Intelligence update service point
 - Reporting services point
-- Application catalog web service
 - Enrollment point
 - Endpoint Protection point
 - Service connection point
@@ -799,10 +901,10 @@ Configuration Manager uses SQL Server Native Client on the following site system
 
 SQL Server reserves a minimum of 8 GB of memory for the central administration site and primary site, and a minimum of 4 GB of memory for the secondary site.
 
-For more information, see [How to configure memory options using SQL Server Management Studio](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
+For more information, see [SQL Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options).
 
-> [!NOTE]  
-> This check isn't applicable to SQL Server Express on a secondary site. This edition is limited to 1 GB of reserved memory.  
+> [!NOTE]
+> This check isn't applicable to SQL Server Express on a secondary site. This edition is limited to 1 GB of reserved memory.
 
 ### SQL Server security mode
 

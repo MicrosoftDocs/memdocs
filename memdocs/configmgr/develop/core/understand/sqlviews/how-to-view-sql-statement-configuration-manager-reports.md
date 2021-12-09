@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to view the SQL Statement for reports
 titleSuffix: Configuration Manager
 description: Information to find out what SQL statement is used in a Configuration Manager report.
@@ -12,6 +12,8 @@ ms.assetid: e596b1be-c09e-4e44-a400-43345ab0f71b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # How to view the SQL statement for Configuration Manager reports

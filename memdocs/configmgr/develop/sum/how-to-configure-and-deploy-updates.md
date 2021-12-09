@@ -1,6 +1,7 @@
 ---
 title: "Configure and Deploy Updates"
 titleSuffix: "Configuration Manager"
+description: Learn how to use the Configuration Manager SDK to configure and deploy software updates
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: bd5be2ec-0db9-4bdb-adc6-452c2103b5b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -124,9 +127,8 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
         newSUMUpdatesAssignment["LogComplianceToWinEvent"].BooleanValue = newLogComplianceToWinEvent;  
         newSUMUpdatesAssignment["NotifyUser"].BooleanValue = newNotifyUser;  
         newSUMUpdatesAssignment["RaiseMomAlertsOnFailure"].BooleanValue = newRaiseMomAlertsOnFailure;  
-        newSUMUpdatesAssignment["NotifyUser"].BooleanValue = newNotifyUser;  
         newSUMUpdatesAssignment["SendDetailedNonComplianceStatus"].BooleanValue = newSendDetailedNonComplianceStatus;  
-        newSUMUpdatesAssignment["StartTime"].StringValue = newStartTime;  
+        newSUMUpdatesAssignment["StartTime"].DateTimeValue = newStartTime;  
         newSUMUpdatesAssignment["SuppressReboot"].IntegerValue = newSuppressReboot;  
         newSUMUpdatesAssignment["TargetCollectionID"].StringValue = newTargetCollectionID;  
         newSUMUpdatesAssignment["UseGMTTimes"].BooleanValue = newUseGMTTimes;  
@@ -192,7 +194,7 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See also
 

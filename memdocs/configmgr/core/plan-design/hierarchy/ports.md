@@ -2,14 +2,14 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 01/21/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Ports used in Configuration Manager
@@ -24,8 +24,6 @@ This article lists the network ports that Configuration Manager uses. Some conne
 ## Ports you can configure
 
 Configuration Manager enables you to configure the ports for the following types of communication:
-
-- Application Catalog website point to Application Catalog web service point
 
 - Enrollment proxy point to enrollment point
 
@@ -60,7 +58,7 @@ Configuration Manager doesn't allow you to configure ports for the following typ
 
 - Configuration Manager console to the internet
 
-- Connections to cloud services, such as Microsoft Intune and cloud distribution points
+- Connections to cloud services, such as Microsoft Azure
 
 ## Ports used by clients and site systems
 
@@ -81,26 +79,6 @@ The following sections detail the ports that are used for communication in Confi
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |SQL over TCP|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
-
-### <a name="BKMK_PortsAppCatalogService-SQL"></a> Application Catalog web service point `-->` SQL Server
-
-|Description|UDP|TCP|
-|-----------------|---------|---------|
-|SQL over TCP|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
-
-### <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> Application Catalog website point `-->` Application Catalog web service point
-
-|Description|UDP|TCP|
-|-----------------|---------|---------|
-|HTTP|--|80 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
-|HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
-
-### <a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> Client `-->` Application Catalog website point
-
-|Description|UDP|TCP|
-|-----------------|---------|---------|
-|HTTP|--|80 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
-|HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
 
 ### <a name="BKMK_PortsClient-ClientWakeUp"></a> Client `-->` Client
 
@@ -136,15 +114,15 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |-----------------|---------|---------|
 |HTTPS|--|443|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsClient-DP"></a> Client `-->` Distribution point, both standard and pull
 
-|Description|UDP|TCP|
-|-----------------|---------|---------|
+| Description | UDP | TCP |
+|-------------|-----|-----|
 |HTTP|--|80 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
 |HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
-|Express updates|--|8005 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|<!-- SCCMDocs#2091 -->
+|Express updates|--|8005 <sup>[Note 2](#bkmk_note2) Alternate port available</sup><!-- SCCMDocs#2091 -->|
 
 > [!NOTE]
 > Use client settings to configure the alternate port for express updates. For more information, see [Port that clients use to receive requests for delta content](../../clients/deploy/about-client-settings.md#port-that-clients-use-to-receive-requests-for-delta-content).
@@ -204,9 +182,18 @@ A Configuration Manager client doesn't contact a global catalog server when it's
 |HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
 |Server Message Block (SMB)|--|445|
 
-### <a name="bkmk_cmgcp-cmg"></a> CMG connection point `-->` CMG cloud service
+### <a name="bkmk_cmgcp-cmg2"></a> CMG connection point `-->` CMG virtual machine scale set
 
-Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
+
+|Description|UDP|TCP|
+|-----------------|---------|---------|
+|HTTPS (one VM)|--|443|
+|HTTPS (two or more VMs)|--|10124-10139|
+
+### <a name="bkmk_cmgcp-cmg"></a> CMG connection point `-->` CMG classic cloud service
+
+Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 |Description|UDP|TCP|
 |-----------------|---------|---------|
@@ -219,8 +206,9 @@ Configuration Manager uses these connections to build the CMG channel. For more 
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |HTTPS|--|443|
+|HTTP|--|80|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+The specific port required depends upon the management point configuration.<!--MEMDocs#1658--> For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="bkmk_cmgcp-sup"></a> CMG connection point `-->` Software update point
 
@@ -231,7 +219,7 @@ The specific port depends upon the software update point configuration.
 |HTTPS|--|443/8531|
 |HTTP|--|80/8530|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsConsole-Client"></a> Configuration Manager console `-->` Client
 
@@ -394,23 +382,15 @@ A distribution point communicates to the management point in the following scena
 |-----------------|---------|---------|
 |HTTPS for CMG service deployment|--|443|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
+For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
-### <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site server `<-->` Application Catalog web service point
+### <a name="bkmk_scp-notify"></a> Service connection point `-->` Azure Logic App
 
-|Description|UDP|TCP|
-|-----------------|---------|---------|
-|Server Message Block (SMB)|--|445|
-|RPC Endpoint Mapper|135|135|
-|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
+| Description                     | UDP | TCP |
+|---------------------------------|-----|-----|
+| HTTPS for external notification | --  | 443 |
 
-### <a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> Site server `<-->` Application Catalog website point
-
-|Description|UDP|TCP|
-|-----------------|---------|---------|
-|Server Message Block (SMB)|--|445|
-|RPC Endpoint Mapper|135|135|
-|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
 
 ### <a name="BKMK_PortsSite-AISP"></a> Site server `<-->` Asset Intelligence synchronization point
 
@@ -521,7 +501,7 @@ This communication is used when you deploy certificate profiles by using the cer
 
 ### <a name="BKMK_PortsSite-RCL"></a> Site server `-->` Server hosting remote content library share
 
-You can move the content library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](the-content-library.md#bkmk_remote).
+You can move the content library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](remote-content-library.md).
 
 |Description|UDP|TCP|
 |-----------------|---------|---------|
@@ -733,11 +713,9 @@ Configure the following ports:
 - RPC Endpoint Mapper: TCP 135
 
 > [!WARNING]
-> Configuration Manager doesn't support dynamic ports. by default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.
+> Configuration Manager doesn't support dynamic ports. By default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.
 
 The following site system roles communicate directly with the SQL Server database:
-
-- Application Catalog web service point
 
 - Certificate registration point role
 
@@ -795,6 +773,8 @@ On-premises Configuration Manager clients or site systems can make the following
 
 - [Service connection point `-->` Azure](#bkmk_scp-cmg)
 
+- [Service connection point `-->` Azure Logic App](#bkmk_scp-notify)
+
 - [CMG connection point `-->` CMG cloud service](#bkmk_cmgcp-cmg)
 
 ### Installation requirements for site systems that support internet-based clients
@@ -816,10 +796,10 @@ Application and package installations on distribution points require the followi
 
 - Site server `-->` Distribution point: RPC dynamic TCP ports
 
-Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe). Use the tool to configure a limited range of ports for these RPC packets. For more information, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).
+Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe). Use the tool to configure a limited range of ports for these RPC packets. For more information, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/topic/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those-ports-by-using-ipsec-2a94b798-063a-479a-8452-9cf07ac613d9).
 
 > [!IMPORTANT]
-> Before you install these site systems, make sure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship. For example, the remote registry service is used on servers running site systems such as distribution points (both pull and standard), remote SQL Servers, and the Application Catalog.
+> Before you install these site systems, make sure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship. For example, the remote registry service is used on servers running site systems such as distribution points (both pull and standard) and remote SQL Servers.
 
 ### Ports used by Configuration Manager client installation
 

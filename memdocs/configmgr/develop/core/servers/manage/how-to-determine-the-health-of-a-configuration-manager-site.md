@@ -9,6 +9,8 @@ ms.assetid: 2b49a2b8-b141-4ed3-9b94-925a6cca1711
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -130,7 +132,7 @@ public void ShowSiteHealth(WqlConnectionManager connection, string siteCode)
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [About status messages](about-configuration-manager-status-messages.md)

@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Sync devices with Microsoft Intune - Azure | Microsoft Docs
+title: Sync devices with Microsoft Intune
 description: Synchronize devices that are registered or managed with Microsoft Intune to get the latest policies and actions. Includes the steps to sync by using the Azure portal, and lists the error codes that can be retried.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/31/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Sync devices to get the latest policies and actions with Intune
@@ -38,7 +38,7 @@ The **Sync** device action forces the selected device to immediately check in wi
 - Windows
 - iOS
 - macOS
-- Android (Device administrator and Android for work only)
+- Android (Device administrator and Android for Work only)
 
 ## Sync a device
 

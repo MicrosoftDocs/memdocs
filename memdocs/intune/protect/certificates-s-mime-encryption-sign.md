@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Sign and encrypt email using S/MIME - Microsoft Intune - Azure | Microsoft Docs
+title: Sign and encrypt email using S/MIME - Microsoft Intune
 description: Learn how to use email digital certificates in Microsoft Intune to sign and encrypt emails on devices. These certificates are called S/MIME and are configured using device configuration profiles. Signing and encryption certificates use PKCS, or private certificates, and use a connector to import certificates.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 07/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ Email certificates, also known as S/MIME certificate, provide extra security to 
 - Android
 - iOS/iPadOS
 - macOS
-- Windows 10 and later
+- Windows 10/11
 
 Intune can automatically deliver S/MIME encryption certificates to all platforms. S/MIME certificates are automatically associated with mail profiles that use the native mail client on iOS, and with Outlook on iOS and Android devices. For the Windows and macOS platforms, and for other mail clients on iOS and Android, Intune delivers the certificates but users must manually enable S/MIME in their mail app and choose their S/MIME certificates.
 
@@ -49,17 +49,13 @@ To use signing certificates, create a template on your certificate authority (CA
 
 Signing certificates in Intune use PKCS certificates. [Configure and use PKCS certificates](certificates-pfx-configure.md) describes how to deploy and use PKCS certificate in your Intune environment. These steps include:
 
-- Download and install the PFX Certificate Connector to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
-  > [!IMPORTANT]
-  > Beginning with the PFX Certificate Connector version 6.2008.60.607 (released in August of 2020), this connector supports certificate deployment for PCKS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user. You no longer need to use the Microsoft Intune Connector when you use PKCS certificate profiles.
-  > 
-  > For more information, see [Certificate connectors](certificate-connectors.md)
+- Install and configure the [Certificate Connector for Microsoft Intune](certificate-connector-install.md) to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 - Create a trusted root certificate profile for your devices. This step includes using trusted root and intermediate certificates for your certification authority, and then deploying the profile to devices.
 - Create a PKCS certificate profile using the certificate template you created. This profile issues signing certificates to devices, and deploys the PKCS certificate profile to devices.
 
 You can also import a signing certificate for a specific user. The signing certificate is deployed across any device that a user enrolls. To import certificates into Intune, use the [PowerShell cmdlets in GitHub](https://github.com/Microsoft/Intune-Resource-Access). To deploy a PKCS certificate imported in  Intune to be used for email signing, follow the steps in [Configure and use PKCS certificates with Intune](certificates-pfx-configure.md). These steps include:
 
-- Download and install the PFX Certificate Connector for Microsoft Intune. This connector delivers imported PKCS certificates to devices.
+- Download, install, and configure the [Certificate Connector for Microsoft Intune](certificate-connector-install.md). This connector delivers imported PKCS certificates to devices.
 - Import S/MIME email signing certificates to Intune.
 - Create a PKCS imported certificate profile. This profile delivers imported PKCS certificates to the appropriate user's devices.
 
@@ -75,7 +71,7 @@ To deploy S/MIME certificates using Intune, you must import all of a user's encr
 
 To deploy a PKCS certificate imported in Intune used for email encryption, follow the steps in [Configure and use PKCS certificates with Intune](certificates-pfx-configure.md). These steps include:
 
-- Download and install the PFX Certificate Connector for Microsoft Intune. This connector delivers imported PKCS certificates to devices.
+- Install and configure the [Certificate Connector for Microsoft Intune](certificate-connector-install.md). This connector delivers imported PKCS certificates to devices.
 - Import S/MIME email encryption certificates to Intune.
 - Create a PKCS imported certificate profile. This profile delivers imported PKCS certificates to the appropriate user's devices.
 

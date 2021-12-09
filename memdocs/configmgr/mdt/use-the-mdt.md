@@ -6,10 +6,11 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: 10a846c2-e63c-4c2b-8210-7485bfe7e47f
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Using the Microsoft Deployment Toolkit  
@@ -60,7 +61,7 @@ manager: dougeby
 
  Figure 1 illustrates the high-level LTI, ZTI, and UDI deployment processes.  
 
- ![MDTDevToolkit1](media/MDTDevToolkit1.jpg "MDTDevToolkit1")  
+ ![Figure 1 illustrates the high-level LTI, ZTI, and UDI deployment processes.](media/MDTDevToolkit1.jpg)
 
  **Figure 1. High-level deployment process**  
 
@@ -530,7 +531,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 - During LTI deployments to new computers, some pages (such as the **User Locale** and **Keyboard Locale** pages) do not display text correctly if required fonts are not installed in Windows PE. In the Refresh Computer scenario, the same symptoms appear if required fonts are not installed in the operating system being replaced.  
 
-- Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see the Microsoft Support article [How to add Input Method Editor (IME) support to Windows PE 2.0](https://support.microsoft.com/kb/926181).  
+- Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see [Custom Input Method Editor (IME) requirements](/windows/uwp/design/input/input-method-editor-requirements).
 
 - A maximum of two WINS server addresses can be added when configuring static IP configuration settings for a network adapter. If more than two WINS server addresses are added using MDT, only the first two WINS server addresses are used.  
 
@@ -6032,20 +6033,20 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
   Task sequences created using the **User Driven Installation Task Sequence** task sequence template automatically detect which method to use and perform the deployment accordingly. The New Computer deployment scenario always begins with the target computer running Windows PE, which is how the tasks sequence knows the difference between the New Computer deployment scenario and the Refresh Computer deployments scenario. Figure 2 illustrates how UDI is used in the New Computer deployment scenario using the traditional OSD deployment methodology in Configuration Manager with the operating system image located on a distribution point.  
 
-  ![MDTDevToolkit2](media/MDTDevToolkit2.jpg "MDTDevToolkit2")  
+  ![Figure 2. Process flow for UDI performing the New Computer deployment scenario for images stored on distribution points](media/MDTDevToolkit2.jpg)
 
   **Figure 2. Process flow for UDI performing the New Computer deployment scenario for images stored on distribution points**  
 
   Figure 3 illustrates how UDI is used in the New Computer deployment scenario using the prestaged media feature in Configuration Manager with the operating system image located on a local disk on the target computer.  
 
-  ![MDTDevToolkit3](media/MDTDevToolkit3.jpg "MDTDevToolkit3")  
+  ![Figure 3. Process flow for UDI performing the New Computer deployment scenario for prestaged media](media/MDTDevToolkit3.jpg)
 
   **Figure 3. Process flow for UDI performing the New Computer deployment scenario for prestaged media**  
 
 #####  <a name="UDIintheRefreshComputerDeploymentScenario"></a> UDI in the Refresh Computer Deployment Scenario  
  Task sequences used to perform the Refresh Computer scenario use the same task sequence template as the New Computer scenario, the **User Driven Installation Task Sequence** task sequence template. The Refresh Computer deployment scenario always begins with the target computer running the existing Windows operating system, which is how the tasks sequence knows the difference between the Refresh Computer deployment scenario and the New Computer deployments scenario. Figure 4 illustrates how UDI is used in the Refresh Computer deployment scenario.  
 
- ![MDTDevToolkit4](media/MDTDevToolkit4.jpg "MDTDevToolkit4")  
+ ![Figure 4. Process flow for UDI performing the Refresh Computer deployment scenario](media/MDTDevToolkit4.jpg)
 
  Figure 4. Process flow for UDI performing the Refresh Computer deployment scenario  
 
@@ -6058,7 +6059,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
   Figure 5 illustrates how UDI is used in the Replace Computer deployment scenario.  
 
-  ![MDTDevToolkit5](media/MDTDevToolkit5.jpg "MDTDevToolkit5")  
+  ![Figure 5. Process flow for UDI performing the Replace Computer deployment scenario](media/MDTDevToolkit5.jpg)
 
   **Figure 5. Process flow for UDI performing the Replace Computer deployment scenario**  
 
@@ -6565,7 +6566,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  Figure 6 illustrates the high-level overview of the UDI administrative process.  
 
- ![MDTDevToolkit6](media/MDTDevToolkit6.jpg "MDTDevToolkit6")  
+ ![Figure 6 illustrates the high-level overview of the UDI administrative process.](media/MDTDevToolkit6.jpg)
 
  **Figure 6. Overview of UDI administration process**  
 
@@ -6740,7 +6741,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ####  <a name="ReviewtheRelationshipAmongUDIWizardPagesWizardPageEditorsandtheUDIWizardConfigurationFile"></a> Review the Relationship Among UDI Wizard Pages, Wizard Page Editors, and the UDI Wizard Configuration File  
  For each wizard page displayed in the UDI Wizard, there is a corresponding wizard page editor that can be used to configure that wizard page using the UDI Wizard Designer. The UDI Wizard configuration file (UDIWizard_Config.xml) is used to store the configuration settings for each wizard page. Figure 7 illustrates the relationship between UDI wizard pages, UDI wizard page editors, and the UDI Wizard configuration file.  
 
- ![MDTDevToolkit7](media/MDTDevToolkit7.jpg "MDTDevToolkit7")  
+ ![Figure 7. Relationship between UDI wizard pages, UDI wizard page editors, and the UDI Wizard configuration file](media/MDTDevToolkit7.jpg)
 
  **Figure 7. Relationship between UDI wizard pages, UDI wizard page editors, and the UDI Wizard configuration file**  
 
@@ -6781,7 +6782,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 #####  <a name="ReviewtheUDIWizardDesignerHighLevelUserInterfaceElements"></a> Review the UDI Wizard Designer High-Level User Interface Elements  
  Figure 8 illustrates the UDI Wizard Designer high-level UI elements.  
 
- ![MDTDevToolkit8](media/MDTDevToolkit8.jpg "MDTDevToolkit8")  
+ ![Figure 8. UDI Wizard Designer high-level UI elements](media/MDTDevToolkit8.jpg)
 
  **Figure 8. UDI Wizard Designer high-level UI elements**  
 
@@ -6798,7 +6799,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 #####  <a name="ReviewthePageLibraryPaneintheUDIWizardDesigner"></a> Review the Page Library Pane in the UDI Wizard Designer  
   Figure 9 illustrates the UI elements in the Page Library pane in the UDI Wizard Designer.  
 
- ![MDTDevToolkit9](media/MDTDevToolkit9.jpg "MDTDevToolkit9")  
+ ![Figure 9. UI elements in the Page Library pane](media/MDTDevToolkit9.jpg)
 
  **Figure 9. UI elements in the Page Library pane**  
 
@@ -6821,7 +6822,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 2. Sequence of the wizard pages as they are displayed in the UDI Wizard  
 
-   ![MDTDevToolkit10](media/MDTDevToolkit10.jpg "MDTDevToolkit10")  
+   ![Figure 10. Flow tab in the UDI Wizard Designer](media/MDTDevToolkit10.jpg)
 
    **Figure 10. Flow tab in the UDI Wizard Designer**  
 
@@ -6842,7 +6843,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 > [!NOTE]
 >  Any changes made to the settings on the **Configure** tab affect the instance of that wizard page in the Page Library. The result is any stage groups or stages that contain the same instance of that wizard page will also reflect the changes in the configuration settings.  
 
- ![MDTDevToolkit11](media/MDTDevToolkit11.jpg "MDTDevToolkit11")  
+ ![Figure 11. Configure tab in the UDI Wizard Designer](media/MDTDevToolkit11.jpg)
 
  **Figure 11. Configure tab in the UDI Wizard Designer**  
 
@@ -6858,7 +6859,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  If you expand a subsection, you can see the controls within that subsection. Figure 12 illustrates the UI elements for a control beneath a subsection. A subsection may contain multiple controls.  
 
- ![MDTDevToolkit12](media/MDTDevToolkit12.jpg "MDTDevToolkit12")  
+ ![Figure 12. UI elements for a control on the Configure tab in the UDI Wizard Designer](media/MDTDevToolkit12.jpg)
 
  **Figure 12. UI elements for a control on the Configure tab in the UDI Wizard Designer**  
 
@@ -7339,7 +7340,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
   Figure 13 provides an example of a custom wizard page and the Build Your Own Page toolbox.  
 
- ![MDTDevToolkit13](media/MDTDevToolkit13.jpg "MDTDevToolkit13")  
+ ![Figure 13. Example custom wizard page](media/MDTDevToolkit13.jpg)
 
  Figure 13. Example custom wizard page  
 
@@ -8936,7 +8937,7 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
    |                       **Name**                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Type a name for the task.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
    |                   **Description**                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Type a description of the task—for example, ***runbook_name*** (where *runbook_name* is the name of the Orchestrator runbook that this task sequence step will run).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
    |               **Orchestrator Server**                | Type the URL for the Orchestrator web service, which includes the server name. The Orchestrator web service can use either Hypertext Transfer Protocol (HTTP) or HTTP over Secure Sockets Layer (HTTPS). The Orchestrator web service defaults to port 81.<br /><br /> The Orchestrator web service supports multiple runbook servers. By default, a runbook can run on any runbook server. A runbook can be configured to specify which runbook servers should be used to run the runbook.<br /><br /> The Orchestrator web service supports the ability to run a runbook on a specific runbook server. This feature is not supported in MDT.<br /><br /> Specify the URL in any of the following formats:<br /><br /> -                                  **servername**. When using this format, the URL defaults to:<br /><br /> `https://<servername>:81/Orchestrator2012/Orchestrator.svc`<br /><br /> -                                  **servername:port**. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  <strong>https://servername:port</strong>. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  <strong>https://servername:port</strong>. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  <strong>https://servername:port/Orchestrator2012/Orchestrator.svc</strong>. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with *.svc*.<br /><br /> -                                  <strong>https://servername:port/Orchestrator2012/Orchestrator.svc</strong>. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with *.svc*. |
-   |                     **Runbook**                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> To successfully browse for Orchestrator runbooks, install the [ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=2343).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |                     **Runbook**                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> To successfully browse for Orchestrator runbooks, install the ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
    |  **Automatically provide runbook parameter values**  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Select this option to automatically provide the Orchestrator runbook input parameter values( which assumes that the runbook parameter values are task sequence variables). For example, if a runbook has an input parameter named **OSDComputerName**, then the **OSDComputerName** task sequence variable value is passed to the runbook.<br /><br /> This option works only for input parameters that are valid task sequence variable names and do not contain spaces or other special characters. Although spaces and other special characters are supported as Orchestrator parameter names, they are not valid task sequence variable names. If you need to pass values to parameters with spaces or other special characters, use the **Specify explicit runbook parameters** option.<br /><br /> The other option is **Specify explicit runbook parameters**.<br /><br /> The values provided for the runbook input parameters to the Orchestrator web service are formatted as XML. Passing values that contain data that is or resembles XML-formatted data may cause errors.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
    |       **Specify explicit runbook parameters**        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Select this option to explicitly provide the Orchestrator runbook input parameters.<br /><br /> You must configure the following settings for each input parameter that the Orchestrator runbook requires:<br /><br /> -                                  **Name**. This is the name of the input runbook parameter.<br /><br /> If you change the parameters for an existing Orchestrator runbook, you need to browse (reselect) for the runbook again, because MDT only retrieves the parameter list when initially adding the Orchestrator runbook.<br /><br /> -                                  **Value**. This can be a constant or a variable, such as a task sequence variable or an environment variable. For example, you can specify a value of **%OSDComputerName%**, which will pass the value of the **OSDComputerName** task sequence variable to the runbook input parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
    | **Wait for the runbook to finish before continuing** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.If this check box is:<br /><br /> -                                  **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> -                                  **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> This check box must be selected if the runbook returns output parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |

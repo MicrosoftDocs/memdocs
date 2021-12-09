@@ -3,7 +3,8 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
+ms.date: 02/25/2021
+ms.localizationpriority: medium
 ---
 
 <!--This file is shared by the CMPivot script samples articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
@@ -89,7 +90,7 @@ ProcessModule('powershell')
 
 ## Antimalware software status
 
-Gets the status of antimalware software installed on the computer.
+Gets the status of antimalware software installed on the computer gathered by the `Get-MpComputerStatus` cmdlet. The entity is supported on Windows 10 and Server 2016, or later with defender running. <!--7643613-->|
 
 ```kusto
 EPStatus
@@ -124,3 +125,17 @@ The following query will look at events in the last 1 hour:
 CcmLog('Scripts',1h)
 ```
 
+## Find information in the registry
+
+Search for registry information.
+
+```kusto
+// Change the path to match your desired registry hive query
+// The RegistryKey entity (added in version 2107) isn't supported with CMPivot for tenant attached devices.  
+
+Registry('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+RegistryKey('hklm:\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\*')
+
+RegistryKey('hklm:\SOFTWARE\Microsoft\SMS\*')
+Registry('hklm:\SOFTWARE\Microsoft\SMS\*')
+```

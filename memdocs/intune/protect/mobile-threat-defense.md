@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 7/7/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,12 +34,12 @@ ms.collection: M365-identity-device-management
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
 > [!NOTE]
-> This article is about 3rd party Mobile Threat Defense vendors, for more information on Microsoft Defender, see [Microsoft Defender ATP](../protect/advanced-threat-protection.md).
+> This article is about 3rd party Mobile Threat Defense vendors, for more information on Microsoft Defender, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
 
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
 > [!NOTE]
-> Mobile Threat Defense integration with the Intune GCC High and DoD offering is currently *not* supported. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+> Intune for GCC High only supports the Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors that also have support in this environment. You will see connectors enabled for those specific vendors when you log in with a GCC-H tenant. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## Protect corporate resources
 
@@ -93,6 +93,8 @@ Access is granted when the device is remediated:<br>
 > We recommend using one Mobile Threat Defense vendor per tenant per platform. 
 > 
 > For Device Compliance, you can use multiple Mobile Defense vendors with a single Intune tenant. However, when two or more vendors are configured for use for the same platform, all devices that run that platform must install each MTD app and scan for threats. Failure to submit a scan from any configured app results in the device being marked as non-compliant. 
+>
+> This recommendation does not apply to Microsoft Defender for Endpoint. You can use Defender for Endpoint with a third-party MTD app and check compliance separately by deploying different compliance policies to different groups.
 
 ## Mobile Threat Defense partners
 
@@ -101,7 +103,7 @@ Learn how to protect access to company resource based on device, network, and ap
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md)
-- [Microsoft Defender](../protect/advanced-threat-protection.md)
+- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
 - [MVISION Mobile](mcafee-mobile-threat-defense-connector.md)
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)

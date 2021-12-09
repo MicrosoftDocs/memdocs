@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Enable eSIM data connections in Microsoft Intune - Azure | Microsoft Docs
+title: Enable eSIM data connections in Microsoft Intune
 description: Add or use eSIM to get internet and data access using different data plans. In Intune, add or import activation codes, and then assign these activation codes using a configuration profile. You can also monitor the eSIM profiles and check the status of the eSIM-enabled devices. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 09/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: ericor
+ms.reviewer: rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -44,6 +44,9 @@ To deploy eSIM to your devices using Intune, the following are needed:
 - **eSIM capable devices**, such as the Surface LTE: See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Or, see a list of [some of the known eSIM capable devices](#esim-capable-devices) (in this article).
 - **Windows 10 Fall creators update PC** (1709 or later) that is enrolled and MDM managed by Intune
 - **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
+
+> [!NOTE]
+> You can create a custom OMA-URI profile using the [eUICCs CSP](/windows/client-management/mdm/euiccs-csp). Be sure to deploy one custom profile for each device. The profile must include the device ICCID and matching activation code from the carrier for each device.
 
 ## Deploy eSIM to devices - overview
 
@@ -89,15 +92,23 @@ When working with the csv file with the activation codes, be sure you or your mo
 
         :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
 
-3. The csv file name becomes the cellular subscription pool name in the Endpoint Manager admin center. In the previous image, the file name is `UnlimitedDataSkynet.csv`. So, Intune names the subscription pool `UnlimitedDataSkynet.csv`:
+3. The cellular subscription becomes the first part of the SMDP of your mobile operator. For example, in the previous image, the first row includes the `smdp.skynet.mobile` URL of the mobile operator. Intune names the cellular subscription pool name as `smdp`:
 
     :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
+
+> [!IMPORTANT]
+> You can't have two lists with the same provider. If you try to upload two lists with the same provider, you may get a `The request is invalid` error message. 
+> 
+> To add more devices with the same provider or carrier, then you must:
+> - Remove the current `.csv`.
+> - Upload a new `.csv` that has all the old device/ICCID pairs and has the new devices you want to add.
 
 ## Step 2: Create an Azure AD device group
 
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
+>
 > - Only devices are targeted, users aren't targeted.
 > - We recommend creating a static Azure AD device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
 
@@ -148,7 +159,7 @@ After you create your device profile, Intune provides graphical charts. These ch
 You can monitor and view a detailed list of devices you can view in Device Status.**
 
 1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
-2. Select **Device Status**. Intune shows additional details about the device:
+2. Select **Device Status**. Intune shows more details about the device:
 
     - **Device Name**: Name of the device that is targeted
     - **User**: User of the enrolled device
@@ -180,9 +191,9 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
 
 ## Best practices & troubleshooting
 
-- Be sure your csv file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
+- Be sure your `.csv` file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
 - Create a static device Azure AD group that only includes the eSIM devices that are targeted.
-- If there's an issue with the deployment status, check the following:
+- If there's an issue with the deployment status, check the following settings:
   - **File format not proper**: See **Step 1: Add cellular activation codes** (in this article) on how to properly format your file.
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 

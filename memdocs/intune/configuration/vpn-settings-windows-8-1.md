@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure VPN settings on Windows 8.1 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure VPN settings on Windows 8.1 devices in Microsoft Intune
 description: Add or create a VPN configuration profile using virtual private network (VPN) configuration settings, including the connection details, and the proxy settings to include IP or FQDN address, and TCP port in Microsoft Intune on devices running Windows 8.1.
 keywords:
 author: MandiOhlinger

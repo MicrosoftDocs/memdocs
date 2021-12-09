@@ -2,14 +2,14 @@
 title: Site administration security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
-ms.date: 12/23/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for site administration in Configuration Manager
@@ -70,7 +70,7 @@ To make sure service continuity and least privileges, don't manually edit these 
 
 If clients can't query the global catalog for Configuration Manager information, they must rely on the trusted root key to authenticate valid management points. The trusted root key is stored in the client registry. It can be set by using group policy or manual configuration.  
 
-If the client doesn't have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the trusted root key](../security/plan-for-security.md#BKMK_PlanningForRTK).  
+If the client doesn't have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the trusted root key](../security/plan-for-security.md#the-trusted-root-key).  
 
 ### Use non-default port numbers
 
@@ -129,7 +129,7 @@ If a site system isn't uninstalled properly, or stops functioning and can't be r
 
 To remove the peer trust that was originally established with the site system and site system roles, manually remove the Configuration Manager certificates for the failed server in the **Trusted People** certificate store on other site system servers. This action is important if you reuse the server without reformatting it.  
 
-For more information, see [Cryptographic controls for server communication](../security/cryptographic-controls-technical-reference.md#cryptographic-controls-for-server-communication).  
+For more information, see [Cryptographic controls for server communication](../security/cryptographic-controls-technical-reference.md#server-communication).  
 
 ### Don't configure internet-based site systems to bridge the perimeter network
 
@@ -242,7 +242,10 @@ Install only the minimum IIS features for the site system role that you install.
 
 When clients connect to a site system by using HTTP rather than by using HTTPS, they use Windows authentication. This behavior might fall back to using NTLM authentication rather than Kerberos authentication. When NTLM authentication is used, clients might connect to a rogue server.  
 
-The exception to this guidance might be distribution points. Package access accounts don't work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security best practices for content management](security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
+The exception to this guidance might be distribution points. Package access accounts don't work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security guidance for content management](security-and-privacy-for-content-management.md#security-guidance).
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ### Configure a certificate trust list (CTL) in IIS for site system roles
 
@@ -254,7 +257,7 @@ Site system roles:
 
 A CTL is a defined list of trusted root certification authorities (CAs). When you use a CTL with group policy and a public key infrastructure (PKI) deployment, a CTL enables you to supplement the existing trusted root CAs that are configured on your network. For example, CAs that are automatically installed with Microsoft Windows or added through Windows enterprise root CAs. When a CTL is configured in IIS, it defines a subset of those trusted root CAs.  
 
-This subset provides you with more control over security. The CTL restricts the client certificates that are accepted to only those certificates that are issued from the list of CAs in the CTL. For example, Windows comes with a number of well-known, third-party CA certificates, such as VeriSign and Thawte.
+This subset provides you with more control over security. The CTL restricts the client certificates that are accepted to only those certificates that are issued from the list of CAs in the CTL. For example, Windows comes with a number of well-known, third-party CA certificates.
 
 By default, the computer that runs IIS trusts certificates that chain to these well-known CAs. When you don't configure IIS with a CTL for the listed site system roles, the site accepts as a valid client any device that has a certificate issued from these CAs. If you configure IIS with a CTL that didn't include these CAs, the site refuses client connections, if the certificate chains to these CAs. For Configuration Manager clients to be accepted for the listed site system roles, you must configure IIS with a CTL that specifies the CAs that are used by Configuration Manager clients.  
 

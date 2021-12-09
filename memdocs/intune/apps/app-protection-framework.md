@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/12/2021
+ms.date: 11/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 
 
@@ -65,14 +65,22 @@ Individual APP settings for each app can be validated on devices using Edge and 
 
 The following App Protection Policy settings should be enabled for the applicable apps and assigned to all mobile users. For more information on each policy setting, see [iOS app protection policy settings](app-protection-policy-settings-ios.md) and [Android app protection policy settings](app-protection-policy-settings-android.md).
 
-Microsoft recommends reviewing and categorizing usage scenarios, and then configuring users using the prescriptive guidance for that level. As with any framework, settings within a corresponding level may need to be adjusted based on the needs of the organization as data protection must evaluate the threat environment, risk appetite, and impact to usability.  
+Microsoft recommends reviewing and categorizing usage scenarios, and then configuring users using the prescriptive guidance for that level. As with any framework, settings within a corresponding level may need to be adjusted based on the needs of the organization as data protection must evaluate the threat environment, risk appetite, and impact to usability.
+
+Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Intune App Protection Policy Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ### Conditional Access Policies
-To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. See **Scenario 1: Office 365 apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies.
+
+To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. These policies are described in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+
+ See **Scenario 1: Office 365 apps require approved apps with app protection policies** and **Scenario 2: Browser apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies. Finally, implement the steps in [Block legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication) to block legacy authentication capable iOS and Android apps.
+
+ > [!NOTE]
+> These policies leverage the grant controls [Require approved client app](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app) and [Require app protection policy](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
 ### Apps to include in the App Protection Policies  
 
-For each App Protection Policy, the following core Microsoft apps should be included:
+For each App Protection Policy, the Core Microsoft Apps group is targeted, which includes the following apps:
 
 - Edge
 - Excel
@@ -81,10 +89,10 @@ For each App Protection Policy, the following core Microsoft apps should be incl
 - OneNote
 - Outlook
 - PowerPoint
-- Microsoft Teams
-- Microsoft To-Do
+- SharePoint
+- Teams
+- To Do
 - Word
-- Microsoft SharePoint
 
 The policies should include other Microsoft apps based on business need, additional third-party public apps that have integrated the Intune SDK used within the organization, as well as line-of-business apps that have integrated the [Intune SDK](../developer/app-sdk.md) (or have been wrapped).
 
@@ -112,7 +120,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Functionality  |       Restrict   web content transfer with other apps  |             Any app  |             iOS/iPadOS, Android        |
 | Functionality  |       Org data notifications  |             Allow  |             iOS/iPadOS, Android        |
 
-#### Access requirements 
+#### Access requirements
 
 | Setting  | Value  | Platform  | Notes  |
 |----------------------------------------------------------------|---------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -128,11 +136,12 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Face ID instead of PIN for access (iOS 11+/iPadOS)  | Allow  | iOS/iPadOS  |   |
 | Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |
+| Select number of previous PIN values to maintain  | 0  | Android  |   |
 | App PIN when device PIN is set  | Require  | iOS/iPadOS, Android  | If the device is enrolled in Intune, administrators can consider setting this to "Not required" if they are enforcing a strong device PIN via a device compliance policy.  |
 | Work or school account credentials for access  | Not required  | iOS/iPadOS, Android  |   |
 | Recheck the access requirements after (minutes of inactivity)  | 30  | iOS/iPadOS, Android  |   |
 
-#### Conditional launch 
+#### Conditional launch
 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -142,6 +151,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google's SafetyNet Attestation on end user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
 | Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
+| Device conditions  |       Require device lock  |        N/A / Block   access  |         Android  |          This   setting ensures that Android devices have a device PIN, password, or pattern are set to enable a device lock.  This condition does not distinguish between lock options or the complexity.                |
 
 #### Level 2 enterprise enhanced data protection
 
@@ -158,7 +168,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Data Transfer |       Select apps to exempt  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Allow   users to save copies to selected services  |          OneDrive   for Business, SharePoint Online |          iOS/iPadOS,   Android  |                  |
-| Data Transfer |       Transfer telecommunication data to  |          All apps |          iOS/iPadOS,   Android  |                  |
+| Data Transfer |       Transfer telecommunication data to  |          Any dialer app |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Restrict   cut, copy, and paste between apps  |          Policy   managed apps with paste in  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Screen   capture and Google Assistant  |          Block  |          Android  |                  |
 | Functionality |       Restrict   web content transfer with other apps  |          Microsoft   Edge  |          iOS/iPadOS,   Android  |                  |
@@ -169,11 +179,12 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       App   conditions  |          Disabled account  |        N/A / Block access  |          iOS/iPadOS,   Android        |  |
-| Device conditions  |       Min   OS version  |          *Format: Major.Minor.Build <br>Example:   13.7* / Block access |          iOS/iPadOS        | Microsoft recommends configuring the minimum iOS   major version to match the supported iOS versions for Microsoft apps.   Microsoft apps support a N-1 approach where N is the current iOS major   release version. For minor and build version values, Microsoft recommends   ensuring devices are up to date with the respective security updates. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
-| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 5.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor.Build <br>Example:   14.8* / Block access |          iOS/iPadOS        | Microsoft recommends configuring the minimum iOS   major version to match the supported iOS versions for Microsoft apps.   Microsoft apps support a N-1 approach where N is the current iOS major   release version. For minor and build version values, Microsoft recommends   ensuring devices are up to date with the respective security updates. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 9.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Min patch   version  |          *Format:   YYYY-MM-DD <br> Example: 2020-01-01* / Block access  |          Android        | Android devices can receive monthly security patches, but the   release is dependent on OEMs and/or carriers. Organizations should ensure   that deployed Android devices do receive security updates before implementing   this setting. See [Android Security Bulletins](https://source.android.com/security/bulletin/) for the latest patch   releases.  |
+| Device conditions  |       Required SafetyNet evaluation type  |          Hardware-backed key  |          Android  |          Hardware backed attestation enhances the existing SafetyNet attestation service check by leveraging a new evaluation type called [Hardware Backed](https://developer.android.com/training/safetynet/attestation#evaluation-types), providing a more robust root detection in response to newer types of rooting tools and methods that cannot always be reliably detected by a software only solution.<p> As its name implies, hardware backed attestation leverages a hardware-based component which shipped with devices installed with Android 8.1 and later. Devices that were upgraded from an older version of Android to Android 8.1 are unlikely to have the hardware-based components necessary for hardware backed attestation. While this setting should be widely supported starting with devices that shipped with Android 8.1, Microsoft strongly recommends testing devices individually before enabling this policy setting broadly.</p>  |
 
-#### Level 3 enterprise high data protection 
+#### Level 3 enterprise high data protection
 
 Level 3 is the data protection configuration recommended as a standard for organizations with large and sophisticated security organizations, or for specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries, and as such merit the additional constraints and controls described. This configuration expands upon the configuration in Level 2 by restricting additional data transfer scenarios, increasing the complexity of the PIN configuration, and adding mobile threat detection.  
 
@@ -207,9 +218,10 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 8.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
 |       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](../protect/mtd-enable-unenrolled-devices.md).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](../protect/mtd-device-compliance-policy-create.md).</p> |
+| Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 11.0* / Block access   |          Android        | Microsoft recommends configuring   the maximum Android major version to ensure beta or unsupported versions of the operating system are not used.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
+| Device conditions  |       Max   OS version  |          *Format: Major.Minor.Build <br>Example:   15.0* / Block access |          iOS/iPadOS        | Microsoft recommends configuring   the maximum iOS/iPadOS major version to ensure beta or unsupported versions of the operating system are not used. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
 
 ## Next steps
 
@@ -220,4 +232,4 @@ Administrators can incorporate the above configuration levels within their ring 
 - [How to create and deploy app protection policies with Microsoft Intune](app-protection-policies.md)
 - [Available Android app protection policy settings with Microsoft Intune](app-protection-policy-settings-android.md)
 - [Available iOS/iPadOS app protection policy settings with Microsoft Intune](app-protection-policy-settings-ios.md)
-- Third-party apps such as the Salesforce mobile app work with Intune in specific ways to protect corporate data. To learn more about how the Salesforce app in particular works with Intune (including MDM app configurations settings), see [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).
+

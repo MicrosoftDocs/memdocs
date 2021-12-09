@@ -2,12 +2,12 @@
 # required metadata
 
 title: Your Android device is rooted and can't connect - Microsoft Intune
-description: Find out why you're receiving a message that your device is rooted. 
+description: Find out why you're receiving a message that your device is rooted and how to regain access. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/22/2017
+ms.date: 04/20/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,10 +30,10 @@ ms.collection:
 ---
 
 # Android device is rooted so you can't connect  
+ 
+Your organization can block your device from accessing work or school resources when:  
 
-Your device will be blocked from accessing corporate resources if:  
-
-- You install an app on your device that the root detection software thinks is a security risk. If you're prompted to unroot your device immediately after you install an app, try uninstalling that app.  
+- You install an app on your device that the root detection software thinks is a security risk. For example, if you're prompted to unroot your device immediately after you install an app, uninstall the app and then check to see if you regain access.    
 
 - Your device manufacturer installed software on your device that the root detection software thinks is a security risk. Contact your IT support person for help. For contact information, go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

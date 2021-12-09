@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create security baseline profiles in Microsoft Intune - Azure | Microsoft Docs
+title: Create security baseline profiles in Microsoft Intune
 description: Create default profiles and customized profiles to deploy security baselines to devices you manage with Intune. Security baselines manage settings on windows devices to help keep your users and devices secure. 
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,6 +38,7 @@ When you create a security baseline profile in Intune, you're creating a templat
 This feature applies to:
 
 - Windows 10 version 1809 and later
+- Windows 11
 
 See the list of [available security baselines](../protect/security-baselines.md#available-security-baselines).
 
@@ -51,7 +52,7 @@ Common tasks when working with security baselines include:
 
 - To manage baselines in Intune, your account must have the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles) built-in role.
 
-- Use of some baselines might require you to have an active subscription to additional services, like Microsoft Defender ATP.
+- Use of some baselines might require you to have an active subscription to additional services, like Microsoft Defender for Endpoint.
 
 ## Create the profile
 
@@ -65,7 +66,7 @@ Common tasks when working with security baselines include:
 
 4. On the **Basics** tab, specify the following properties:
 
-   - **Name**: Enter a name for your security baselines profile. For example, enter *Standard profile for Defender ATP*.
+   - **Name**: Enter a name for your security baselines profile. For example, enter *Standard profile for Defender for Endpoint*.
 
    - **Description**: Enter some text that describes what this baseline does. The description is for you to enter any text you want. It's optional, but recommended.
 
@@ -107,7 +108,7 @@ We recommend you [test the version](#test-the-conversion-and-updated-baseline) u
 
 When you change the profile version:
 
-- You select the latest instance of the same baseline. You can't change between two different baseline types, such as changing a profile from using a baseline for Defender ATP to using the MDM security baseline.
+- You select the latest instance of the same baseline. You can't change between two different baseline types, such as changing a profile from using a baseline for Defender for Endpoint to using the MDM security baseline.
 - You have the option to download a CSV file that lists the changes between the two baseline versions involved.
 - You choose how to update the profile:
   - You can keep all your customizations from the original baseline version.
@@ -210,7 +211,7 @@ If you have a profile associated with an older baseline, that older baseline wil
 
 ## Co-managed devices
 
-Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
+Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10/11 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
 
 When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](/configmgr/comanage/workloads#device-configuration) provides more information.
 
@@ -220,6 +221,6 @@ When using co-managed devices, you must switch the **Device configuration** work
 
 - View the settings in the latest versions of the available baselines:
   - [MDM security baseline](security-baseline-settings-mdm-all.md)
-  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
   - [Microsoft Edge Baseline](security-baseline-settings-edge.md)
 

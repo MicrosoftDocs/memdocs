@@ -6,10 +6,10 @@ ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Modify your Configuration Manager infrastructure
@@ -61,7 +61,7 @@ The following tasks help you manage the Configuration Manager console:
 
 - To configure DCOM permissions to enable consoles that are remote from the site server, see the [Configure DCOM permissions for remote Configuration Manager consoles](#BKMK_ConfigDCOMforRemoteConsole) section.
 
-- To modify administrative permissions to limit what users can see and do in the console, see [Modify the administrative scope of an administrative user](../deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser).
+- To modify administrative permissions to limit what users can see and do in the console, see [Modify the administrative scope of an administrative user](../deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
 
 ### <a name="BKMK_ManageConsoleLanguages"></a> Manage Configuration Manager console language
 

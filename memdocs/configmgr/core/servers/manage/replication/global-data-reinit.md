@@ -6,10 +6,10 @@ ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: d36622c0-776c-493b-971a-4a586fc394d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Troubleshoot global data reinit

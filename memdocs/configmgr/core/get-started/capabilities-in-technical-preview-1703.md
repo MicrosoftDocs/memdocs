@@ -1,18 +1,16 @@
 ---
-title: "Capabilities in Technical Preview 1703"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1703."
+title: Capabilities in Technical Preview 1703
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1703.
 ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1703 for Configuration Manager
 
@@ -79,7 +77,7 @@ Technical preview 1703 introduces the **Configure Azure Services** wizard. This 
 
 With technical preview 1703, only Windows Store for Business (WSfB) is configured by using this wizard.  Other cloud services are configured by using their separate workflows.
 
-- Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
+- Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#set-up-synchronization) section of the Current Branch topic [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 - For more information about web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview).
 

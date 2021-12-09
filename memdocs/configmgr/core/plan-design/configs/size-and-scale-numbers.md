@@ -2,14 +2,14 @@
 title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
-ms.date: 08/11/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Size and scale numbers for Configuration Manager
@@ -47,41 +47,17 @@ These support numbers are based on using the recommended hardware for Configurat
 
 ## <a name="bkmk_roles"></a> Site system roles
 
-### Application catalog web service point  
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-- You can install multiple instances of the Application Catalog web service point at primary sites.  
-
-### Application catalog website point  
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-- You can install multiple instances of the Application Catalog website point at primary sites.  
-
 ### <a name="bkmk_cmg"></a> Cloud management gateway
 
 [!INCLUDE [Size and scale for cloud management gateway](includes/scale-cmg.md)]
 
-For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
+For more information, see CMG [Performance and scale](../../clients/manage/cmg/perf-scale.md).
 
 ### Cloud management gateway connection point
 
 [!INCLUDE [Size and scale for cloud management gateway connection point](includes/scale-cmgcp.md)]
 
-For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
+For more information, see CMG [Performance and scale](../../clients/manage/cmg/perf-scale.md).
 
 ### Distribution point  
 
@@ -147,7 +123,7 @@ The number of supported clients depends on the version of Windows Server Update 
   - Increase the WsusPool Queue Length to 2000
   - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see [WSUS best practices](/troubleshoot/mem/configmgr/windows-server-update-services-best-practices#disable-recycling-and-configure-memory-limits).
 
-    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#bkmk_ScaleSieSystems).  
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#site-systems).  
 
 #### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
 
@@ -180,11 +156,11 @@ A central administration site supports a total number of devices that includes u
 
 - 700,000 Windows desktops. Also see support for [embedded devices](#embedded).
 
-- 25,000 devices that run Mac and Windows CE 7.0  
+- 25,000 devices that run macOS
 
 - 100,000 devices that you manage by using on-premises mobile device management (MDM)
 
-For example, in a hierarchy you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 devices, and up to 100,000 devices managed by on-premises MDM. This hierarchy supports a total of 825,000 devices.
+For example, in a hierarchy you can support 700,000 desktops, up to 25,000 macOS devices, and up to 100,000 devices managed by on-premises MDM. This hierarchy supports a total of 825,000 devices.
 
 > [!IMPORTANT]  
 > In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. To support more than 50,000 desktops and devices, you must use an Enterprise edition of SQL Server. This requirement applies only to a central administration site. It doesn't apply to a stand-alone primary site or a child primary site. The edition of SQL Server you use for a primary site doesn't limit its capacity to support the stated number of clients.
@@ -197,7 +173,7 @@ Each child primary site in a hierarchy with a central administration site suppor
 
 - 150,000 total clients and devices that aren't limited to a specific group or type, as long as support doesn't exceed the number that is supported for the hierarchy. Also see, support for [embedded devices](#embedded).
 
-For example, a primary site supports 25,000 Mac and Windows CE 7.0 devices. That number is the limit for a hierarchy. This primary site can then support an additional 125,000 desktop computers. The total number of supported devices for the child primary site is the supported maximum limit of 150,000.
+For example, a primary site supports 25,000 macOS devices. That number is the limit for a hierarchy. This primary site can then support an additional 125,000 desktop computers. The total number of supported devices for the child primary site is the supported maximum limit of 150,000.
 
 ### <a name="bkmk_pri"></a> Stand-alone primary site
 
@@ -207,7 +183,7 @@ A stand-alone primary site supports the following number of devices:
 
   - 150,000 Windows clients. Also see, support for [embedded devices](#embedded).
 
-  - 25,000 devices that run Mac and Windows CE 7.0
+  - 25,000 devices that run macOS
 
   - 50,000 devices that you manage by using on-premises MDM  
 
@@ -235,4 +211,4 @@ Each management point can support the following number of devices:
 
     - 10,000 devices that are managed by using on-premises MDM  
 
-    - 10,000 devices that run macOS and Windows CE 7.0 clients
+    - 10,000 devices that run macOS

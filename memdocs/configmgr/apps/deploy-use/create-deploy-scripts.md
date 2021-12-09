@@ -6,12 +6,10 @@ ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Create and run PowerShell scripts from the Configuration Manager console
@@ -22,7 +20,7 @@ manager: dougeby
 Configuration Manager has an integrated ability to run PowerShell scripts. PowerShell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.  
 
 > [!Note]  
-> In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+> In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
 
 
 With this integration in Configuration Manager, you can use the *Run Scripts* functionality to do the following things:

@@ -78,7 +78,7 @@ Complete the steps in this article to check access from the Company Portal app f
  
 4. A message appears under the device to let you know that the device **Can access company resources** or **Can't access company resources**. 
 
-    ![Example screenshot of the Company Portal app for Windows, Device details page, highlighting the Status section.](./media/1809_CheckAccess_Context_Menu_Alert2.png) 
+    ![Screenshot shows My Devices with a phone highlighted.](./media/1809_CheckAccess_Context_Menu_Alert2.png) 
 
 5. If your device can't access resources, select the device.  
 6. On the **Device details** page, go the alert at the top of the page. Click **More** to expand its details. Click **Less** to collapse them.  

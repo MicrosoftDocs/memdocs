@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 07/13/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,12 +21,14 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 #ROBOTS:
 #audience:
 
-ms.reviewer: joglocke
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, get-started, seoapril2019
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # App protection policies overview
@@ -208,22 +210,27 @@ By default, there can only be one **Global** policy per tenant. However, you can
 
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy will override these settings.
 
+> [!NOTE]
+> The policy settings in the OneDrive Admin Center are no longer being updated. Microsoft Enpoint Manager may be used instead. For more information, see [Control access to features in the OneDrive and SharePoint mobile apps](/onedrive/control-access-to-mobile-app-features).
+
 ## App protection features
 
 ### Multi-identity
 
-Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. Work and school accounts are used by "corporate" audiences, whereas personal accounts would be used for consumer audiences, such as Microsoft Office users. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../developer/app-sdk.md) to only apply app protection policies to the work or school account signed into the app. If a personal account is signed into the app, the data is untouched.
+Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. Work and school accounts are used by "corporate" audiences, whereas personal accounts would be used for consumer audiences, such as Microsoft Office users. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../developer/app-sdk.md) to only apply app protection policies to the work or school account signed into the app. If a personal account is signed into the app, the data is untouched. App protection policies can be used to prevent the transfer of work or school account data to personal accounts within the multi-identity app, personal accounts within other apps, or personal apps.
 
-For an example of "personal" context, consider a user who starts a new document in Word, this is considered personal context so Intune App Protection policies are not applied. Once the document is saved on the "corporate" OneDrive account, then it will be considered "corporate" context and Intune App Protection policies will be applied.
+For an example of "personal" context, consider a user who starts a new document in Word, this is considered personal context so Intune App Protection policies are not applied. Once the document is saved on the "corporate" OneDrive account, then it is considered "corporate" context and Intune App Protection policies are applied.
 
-For an example of work or "corporate" context, consider a user who starts the OneDrive app by using their work account. In the work context, they can't move files to a personal storage location. Later, when they use OneDrive with their personal account, they can copy and move data from their personal OneDrive without restrictions.
+Consider the following examples for the work or "corporate" context:
 
-Outlook has a combined email view of both "personal" and "corporate" emails. In this situation, the Outlook app prompts for the Intune PIN on launch.
+- A user starts the OneDrive app by using their work account. In the work context, they can't move files to a personal storage location. Later, when they use OneDrive with their personal account, they can copy and move data from their personal OneDrive without restrictions.
+- A user starts drafting an email in the Outlook app. Once the subject or message body is populated, the user is unable to switch the FROM address from the work context to the personal context as the subject and message body are protected by the App Protection policy.
 
-  >[!NOTE]
-  > Although Edge is in "corporate" context, user can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Manage restricted web sites](manage-microsoft-edge.md#manage-restricted-web-sites) and configure the allowed/blocked site list for Edge.
+> [!NOTE]
+> Outlook has a combined email view of both "personal" and "corporate" emails. In this situation, the Outlook app prompts for the Intune PIN on launch.
 
-For more information about multi-identity in Intune, see [MAM and multi-identity](apps-supported-intune-apps.md).
+>[!IMPORTANT]
+> Although Edge is in "corporate" context, users can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Manage restricted web sites](manage-microsoft-edge.md#manage-restricted-web-sites) and configure the allowed/blocked site list for Edge.
 
 ### Intune app PIN
 
@@ -265,14 +272,16 @@ If you observe the PIN being wiped on some devices, the following is likely happ
 **Setting a PIN twice on apps from the same publisher?**<br>
 MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
-In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Therefore, if a device has applications with Intune SDK for iOS versions before 7.1.12 AND after 7.1.12 from the same publisher, they will have to set up two PINs. The two PINs (for each app) are not related in any way (i.e. they must adhere to the app protection policy that's applied to the app). As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may set up the same PIN twice. 
+In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Another change was introduced in the Intune SDK for iOS v 14.6.0 that causes all PINs in 14.6.0+ to be handled separately from any PINs in previous versions of the SDK.
+
+Therefore, if a device has applications with Intune SDK for iOS versions before 7.1.12 AND after 7.1.12 from the same publisher (or versions before 14.6.0 AND after 14.6.0), they will have to set up two PINs. The two PINs (for each app) are not related in any way (i.e. they must adhere to the app protection policy that's applied to the app). As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may set up the same PIN twice. 
 
 This behavior is specific to the PIN on iOS/iPadOS applications that are enabled with Intune Mobile App Management. Over time, as applications adopt later versions of the Intune SDK for iOS/iPadOS, having to set a PIN twice on apps from the same publisher becomes less of an issue. Please see the note below for an example.
 
   >[!NOTE]
-  > For example, if app A is built with a version prior to 7.1.12 and app B is built with a version greater than or equal to 7.1.12 from the same publisher, the end user will need to set up PINs separately for A and B if both are installed on an iOS/iPadOS device.
-  > If an app C that has SDK version 7.1.9 is installed on the device, it will share the same PIN as app A.
-  > An app D built with 7.1.14 will share the same PIN as app B.  
+  > For example, if app A is built with a version prior to 7.1.12 (or 14.6.0) and app B is built with a version greater than or equal to 7.1.12 (or 14.6.0) from the same publisher, the end user will need to set up PINs separately for A and B if both are installed on an iOS/iPadOS device.
+  > If an app C that has SDK version 7.1.9 (or 14.5.0) is installed on the device, it will share the same PIN as app A.
+  > An app D built with 7.1.14 (or 14.6.2) will share the same PIN as app B.  
   > If only apps A and C are installed on a device, then one PIN will need to be set. The same applies to if only apps B and D are installed on a device.
 
 ### App data encryption
@@ -308,7 +317,7 @@ For more information about remote wipe for MDM, see [Remove devices by using wip
 See [Remove devices - retire](../remote-actions/devices-wipe.md#retire) to read about removing company data.
 
 **Selective wipe for MAM**<br>
-Selective wipe for MAM simply removes company app data from an app. The request is initiated using the Intune Azure portal. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
+Selective wipe for MAM simply removes company app data from an app. The request is initiated using Intune. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
 If the user is using the app when selective wipe is initiated, the [Intune SDK](../developer/app-sdk.md) checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
 
@@ -340,6 +349,18 @@ When dealing with different types of settings, an Intune SDK version requirement
 
 ## App protection experience for Android devices
 
+ > [!NOTE]
+ > App protection policies are not supported on Intune managed Android Enterprise dedicated devices. If your users on Android Enterprise dedicated devices have APP policies
+ > applied for another device, then you'll want to take the following steps: 
+ > 
+ > 1. Ensure that the devices you want target are only Intune managed dedicated devices. The block policy does not take effect if the device is managed by a 3rd party MDM
+ > provider.
+ > 
+ > 2. Ensure that Company Portal is installed on the dedicated device. This is required for the APP block policy to take effect. No end-user interaction is needed in Company
+ > Portal app on dedicated devices to block APP functionality, so there is no requirement to make the Company Portal app launchable by end users. The Company Portal simply needs
+ > to be installed on the device. For example, you don't need to allow-list it on top of Managed Home Screen.
+ > 
+ > Note that users targeted with APP policies on non-dedicated devices will not be impacted.
 ### Device biometric authentication
 For Android devices that support biometric authentication, you can allow end users to use fingerprint or Face Unlock, depending on what their Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. Note that fingerprint and Face Unlock are only available for devices manufactured to support these biometric types and are running the correct version of Android. Android 6 and higher is required for fingerprint, and Android 10 and higher is required for Face Unlock.
 
@@ -383,5 +404,4 @@ The app protection policy settings that leverage Google Play Protect APIs requir
 
 [Available iOS/iPadOS app protection policy settings with Microsoft Intune](app-protection-policy-settings-ios.md)
 
-## See also
-Third-party apps such as the Salesforce mobile app work with Intune in specific ways to protect corporate data. To learn more about how the Salesforce app in particular works with Intune (including MDM app configurations settings), see [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).
+

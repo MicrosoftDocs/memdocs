@@ -6,12 +6,11 @@ ms.date: 10/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1906 of Configuration Manager current branch
@@ -23,10 +22,6 @@ Update 1906 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1906](../../servers/manage/checklist-for-installing-update-1906.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1906.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
 
 
 ## Requirement changes
@@ -40,7 +35,7 @@ Because of weaknesses in the SHA-1 algorithm and to align to industry standards,
 - Windows Server 2008 R2 SP1
 - Windows Server 2008 SP2
 
-For more information, see [Prerequisites for Windows clients](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_sha2).
+For more information, see [Prerequisites for Windows clients](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#sha-2-code-signing-support).
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure
@@ -164,7 +159,7 @@ For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_standal
 
 <!--4683130-->
 
-The following permissions have been added to Configuration Manager's built-in [**Security Administrator**](../../understand/fundamentals-of-role-based-administration.md#bkmk_Planroles) role:
+The following permissions have been added to Configuration Manager's built-in [**Security Administrator**](../../understand/fundamentals-of-role-based-administration.md#security-roles) role:
 
 - Read on SMS Script
 - Run CMPivot on Collection
@@ -402,14 +397,14 @@ This release includes the following infrastructure improvements to Software Cent
 > - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
 > - Support ends for the application catalog roles with version 1910.  
 
-For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
+For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
 
 ### Redesigned notification for newly available software
 
 <!--3555904-->
 The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed or was redeployed.
 
-For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md#end-user-experience).
+For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md#user-experience).
 
 ### More frequent countdown notifications for restarts
 
@@ -425,7 +420,7 @@ For more information, see [Device restart notifications](../../clients/deploy/de
 
 <!--4655176-->
 
-You can now provide users with a direct link to a [custom tab](../../clients/deploy/about-client-settings.md#software-center-tab-visibility) in Software Center.
+You can now provide users with a direct link to a [custom tab](../../clients/deploy/about-client-settings.md#software-center-customization---tabs) in Software Center.
 
 Use the following URL format to open Software Center to a particular tab:
 
@@ -446,7 +441,7 @@ You can also use this syntax to open default tabs in Software Center:
 |`Compliance`|Device compliance|
 |`Options`|Options|
 
-For more information, see [Software Center tab visibility](../../clients/deploy/about-client-settings.md#software-center-tab-visibility).
+For more information, see [Software Center tab visibility](../../clients/deploy/about-client-settings.md#software-center-customization---tabs).
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -537,7 +532,7 @@ For more information, see [Create and deploy Windows Defender Application Guard 
 
 You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
-For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#how-to-configure-security-scopes-for-an-object).
 
 ### Add SMBIOS GUID column to device and device collection nodes
 
@@ -549,7 +544,7 @@ In both the **Devices** and **Device Collections** nodes, you can now add a new 
 <!--4223683-->
 You can now enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
 
-For more information, see [Administration service](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service).
+For more information, see [Administration service](../hierarchy/plan-for-the-sms-provider.md#administration-service).
 
 > [!Note]
 > Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->  
@@ -603,7 +598,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 Version 1906 drops support for the following features:  
 
-- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex).
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#configure-software-center).
 
 Version 1906 deprecates support for the following products:  
 
@@ -616,7 +611,7 @@ Version 1906 deprecates support for the following products:
 
 As of this version, the following features are no longer pre-release:
 
-- [SMS Provider administration service](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service)
+- [SMS Provider administration service](../hierarchy/plan-for-the-sms-provider.md#administration-service)
 - [Windows Defender Application Control management](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).

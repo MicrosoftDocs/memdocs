@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2021
+ms.date: 04/12/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 
@@ -22,7 +22,7 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 
 #audience:
 
-ms.reviewer: joglocke
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

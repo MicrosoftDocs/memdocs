@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for the query view
 titleSuffix: Configuration Manager
 description: Sample queries that show how the query view can be joined to a security view.
@@ -12,6 +12,8 @@ ms.assetid: f03a4839-c731-44c3-99e7-fffc4885cae9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for the query view in Configuration Manager

@@ -5,8 +5,8 @@ title: Apple School Manager Program enrollment for iOS/iPadOS devices
 titleSuffix: Microsoft Intune
 description: Learn how to set up Apple School Manager program enrollment for corporate-owned iOS/iPadOS devices with Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 06/17/2020
 ms.topic: how-to
@@ -42,7 +42,7 @@ Apple School Manager enrollment can't be used with [Apple's Automated Device Enr
 **Prerequisites**
 - [Apple Mobile Device Management (MDM) Push certificate](apple-mdm-push-certificate-get.md)
 - [MDM Authority](../fundamentals/mdm-authority-set.md)
-- If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
+- If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint).
 - Devices purchased from the [Apple School Management](http://school.apple.com) program
 
 ## Get an Apple token and assign devices
@@ -62,12 +62,12 @@ Before you can enroll corporate-owned iOS/iPadOS devices with Apple School Manag
 1. Choose **Create a token via Apple School Manager**, and sign in to Apple School with your company Apple ID. You can use this Apple ID to renew your Apple School Manager token.
 2. In the [Apple School Manager portal](https://school.apple.com), go to **MDM Servers**, and then choose **Add MDM Server** (upper right).
 3. Enter the **MDM Server Name**. The server name is for your reference to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune server.
-   ![Screenshot of Apple School Manager portal with Serial Number option selected](./media/apple-school-manager-set-up-ios/asm-server-assignment.png)
+   ![Screenshot of Apple School Manager portal with MDM Servers option selected](./media/apple-school-manager-set-up-ios/asm-server-assignment.png)
 
 4. Choose **Upload File...** in the Apple portal, browse to the .pem file, and choose **Save MDM Server** (lower right).
 5. Choose **Get Token** and then download the server token (.p7m) file to your computer.
 6. Go to  **Device Assignments**, and **Choose Device** by manual entry of **Serial Numbers**, **Order Number**, or **Upload CSV File**.
-     ![Screenshot of Apple School Manager portal with Serial Number option selected](./media/apple-school-manager-set-up-ios/asm-device-assignment.png)
+     ![Screenshot of Apple School Manager portal with Device Assignment option selected](./media/apple-school-manager-set-up-ios/asm-device-assignment.png)
 7. Choose the action **Assign to Server**, and choose the **MDM Server** you created.
 8. Specify how to **Choose Devices**, then provide device information and details.
 9. Choose **Assign to Server** and choose the &lt;ServerName&gt; specified for Microsoft Intune, and then choose **OK**.
@@ -92,7 +92,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     ![Profile name and description.](./media/apple-school-manager-set-up-ios/image05.png)
 
 4. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
-    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. This option also lets users authenticate their devices by using the company portal. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).   Apple School Manager's Shared iPad mode requires user enroll without user affinity.
+    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. This option also lets users authenticate their devices by using the company portal. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint).   Apple School Manager's Shared iPad mode requires user enroll without user affinity.
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 

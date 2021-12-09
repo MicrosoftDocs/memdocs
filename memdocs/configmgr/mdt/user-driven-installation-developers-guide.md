@@ -1,5 +1,4 @@
 ---
-
 title: User driven installation (UDI)
 titleSuffix: Microsoft Deployment Toolkit
 description: Developers guide for user driven installation (UDI) of Microsoft Deployment Toolkit (MDT)
@@ -7,10 +6,11 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: a2b3a3a0-7b81-4191-b1f9-c618e59347c3
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # User Driven Installation - Developers Guide
@@ -44,7 +44,7 @@ User Driven Installation (UDI) helps simplify the deployment of Windows® client
 
  Figure 1 illustrates the relationship between the UDI Wizard Designer and the UDI Wizard.  
 
- ![UDIDevelopersGuide1](media/UDIDevelopersGuide1.jpg "UDIDevelopersGuide1")  
+ ![Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer](media/UDIDevelopersGuide1.jpg)
 Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer  
 
  **Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer**  
@@ -57,9 +57,9 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
   - [WPF](/dotnet/desktop-wpf/) version 4.0  
 
-  - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
+  - [Microsoft Prism](https://www.codeproject.com/Articles/165370/Creating-View-Switching-Applications-with-Prism-4) version 4.0  
 
-  - [Microsoft Unity Application Block](https://unity.codeplex.com/) (Unity) version 2.1  
+  - [Microsoft Unity Application Block](https://www.codeproject.com/articles/42524/a-basic-introduction-to-the-unity-application-bloc) (Unity) version 2.1  
 
     MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
 
@@ -133,7 +133,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
      When completed, the folder structure beneath *local_folder* should look like the folder structure illustrated in Figure 2 (where *local_folder* is the folder you created earlier in the process and is shown as *UDIDevelopment* in the figure).  
 
-     ![UDIDevelopersGuide2](media/UDIDevelopersGuide2.jpg "UDIDevelopersGuide2")  
+     ![Figure 2. Folder structure for UDI development](media/UDIDevelopersGuide2.jpg)
 Figure 2. Folder structure for UDI development  
 
      **Figure 2. Folder structure for UDI development**  
@@ -2402,9 +2402,8 @@ __interface IDataNodes : IUnknown
 
 ### Table 42. HRESULT GetProperty  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|The property was retrieved.|  
 |**E_INVALIDARG**|The index is past the end of the array.|  
 
@@ -2768,9 +2767,8 @@ __interface IStringProperties : IUnknown
 
 ### Table 48. IHRESULT Get Property Value Results  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|Property value is retrieved.|  
 |**E_INVALIDARG**|There is no property with the name you provided.|  
 

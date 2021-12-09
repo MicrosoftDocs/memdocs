@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2020
+ms.date: 08/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 
@@ -21,12 +21,14 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # Add an iOS/iPadOS line-of-business app to Microsoft Intune
@@ -39,11 +41,10 @@ Use the information in this article to help you add an iOS/iPadOS line-of-busine
 > Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You cannot use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
 >
 > iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
->
-> Apple Shared iPads do not support LOB apps.
-
-> [!NOTE]
+> 
 > Bundle identifiers (for example, *com.contoso.app*) are meant to be unique identifiers of an app. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
+
+You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. 
 
 ## Select the app type
 
@@ -108,7 +109,7 @@ The app that you created now appears in the list of apps. From the list, you can
 The update to the line-of-business app will be installed automatically.
 
 > [!NOTE]
-> For the Intune service to successfully deploy a new IPA file to the device, you must increment the `CFBundleVersion` string in the Info.plist file in your IPA package.
+> For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion string in the Info.plist file in your IPA package. You are allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you cannot upload a new version of CFBundleVersion if the new app is identical to the existing one.
 
 ## Next steps
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 07/15/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -20,12 +20,14 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 
 #audience:
 #ROBOTS: 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # What is Microsoft Intune app management?
@@ -35,7 +37,9 @@ As an IT admin, you can use Microsoft Intune to manage the client apps that your
 - You might need to manage apps on both company devices and users' personal devices.
 - You must ensure that your network and your data remain secure.
 
-Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune.
+Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune.<p>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4MRyj]
 
 ## Mobile Application Management (MAM) basics
 
@@ -52,10 +56,10 @@ Intune MAM supports two configurations:
 
 Intune offers a range of capabilities to help you get the apps you need on the devices you want to run them on. The following table provides a summary of app management capabilities.
 
-| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10/11 |
 |-------------------------- | -------------------------- | ---------- | ----- | ---------- |
 | Add and assign   apps to devices and users | Yes | Yes | Yes | Yes |
-| Assign apps to   devices not enrolled with Intune | Yes | Yes | No | No |  |
+| Assign apps to   devices not enrolled with Intune | Yes | Yes | No | No |
 | Use app   configuration policies to control the startup behavior of apps | Yes | Yes | No | No |
 | Use mobile app   provisioning policies to renew expired apps | No | Yes | No | No |
 | Protect company   data in apps with app protection policies | Yes | Yes | No | No <sup>1</sup> |
@@ -69,7 +73,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 | Apps from a   store | Yes | Yes | No | Yes |
 | Update apps | Yes | Yes | No | Yes |
 
-<sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
+<sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10/11.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
 <sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
@@ -115,7 +119,7 @@ The top of the App workload navigation menu provide commonly used app details:
 ### Try the interactive guide
 The [Manage and protect mobile and desktop applications with Microsoft Endpoint Manager](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) interactive guide steps you through the Microsoft Endpoint Manager admin center to show you how to manage devices enrolled in Intune, enforce compliance with policies, and protect your organization's data.</br></br>
 
-<div align=”center”>
+<div align="center">
 <iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
@@ -125,6 +129,7 @@ The following items within the console provide app related functionality:
 - **Windows enterprise certificate**: Apply or view the status of a code-signing certificate that's used to distribute line-of-business apps to your managed Windows devices.
 - **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate.
 - **Windows side loading keys**: Add a Windows side-loading key that can be used to install an app directly to devices rather than publishing and downloading the app from the Windows store. For more information, see [Side-load a Windows app](app-sideload-windows.md).
+- **Microsoft Endpoint Configuration Manager**: Displays information about the Configuration Manager connector including last successful synchronization time and the connection status. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
 - **Apple Business Manager location tokens**: Apply and view your iOS/iPadOS volume purchased licenses. For more information, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](vpp-apps-ios.md).
 - **Managed Google Play**: Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).
 - **Customization**: Customize the Company Portal to give it your company branding. For more information, see [Company Portal configuration](company-portal-app.md).

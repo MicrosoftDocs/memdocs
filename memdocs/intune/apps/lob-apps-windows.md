@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 
@@ -21,12 +21,15 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Windows
+- highpri
 ---
 
 # Add a Windows line-of-business app to Microsoft Intune

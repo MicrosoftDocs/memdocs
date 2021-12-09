@@ -2,12 +2,12 @@
 # required metadata
 
 title: Enable Windows Defender Firewall | Microsoft Docs
-description: Learn how to enable your Windows 10 device to access company resources by turning on your firewall.
+description: Learn how to turn on Windows Defender Firewall to meet your organization's device security requirements. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 04/26/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,10 +31,13 @@ ms.collection:
 
 # Turn on your Windows Defender Firewall
 
-Your work or school wants to ensure that devices accessing their resources are secured. One way they've chosen to make sure that your device is set up to access those resources is by turning on your Windows Defender Firewall. Here's how you can turn it on:
+Windows Defender Firewall helps prevent hackers and malicious software from gaining access to your PC through the internet or a network. Your organization might require you to turn it on before you can access their network resources from your device. 
+
+To turn on Windows Defender Firewall:
 
 1. Go to **Start** and open **Control Panel**.
-2. Open **System and Security** > **Windows Defender Firewall**.
-3. Choose **Customize Settings** > **Turn Windows Firewall on or off** for domain, private, and public networks.
+2. Select **System and Security** > **Windows Defender Firewall**.
+3. Choose **Turn Windows Firewall on or off**. 
+4. Select **Turn on Windows Firewall** for domain, private, and public network settings.    
 
-Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.

@@ -2,14 +2,14 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
-ms.date: 07/10/2020
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create applications in Configuration Manager
@@ -110,9 +110,6 @@ To add more deployment types or configure other settings, see [Create deployment
 
 3. On the **Software Center** page of the Create Application wizard, specify the following information:  
 
-    > [!Note]  
-    > In version 1902 and earlier, this page was named **Application Catalog**.
-
     - **Selected language**: In the drop-down list, select the language version of the application that you want to set up. Choose **Add/Remove** to set up more languages for this application.  
 
     - **Localized application name**: Specify the application name in the selected language.  
@@ -122,10 +119,8 @@ To add more deployment types or configure other settings, see [Create deployment
 
     - **User categories**: Choose **Edit** to specify application categories in the selected language. Users of Software Center use these categories to help filter and sort the applications.  
 
-        > [!Note]  
-        > In version 1902 and earlier, user categories only apply to available deployments to user collections. If an application is deployed to a computer collection, the user categories are ignored.
-        >
-        > Starting in version 1906, user categories for device-targeted application deployments show as filters in Software Center. These deployments can be either available or required.
+        > [!NOTE]
+        > User categories for device-targeted application deployments show as filters in Software Center. These deployments can be either available or required.
         >
         > <!-- 4726793 -->Renaming or deleting a category doesn't automatically apply to apps with this category. These changes apply on the next revision of the app. To work around this issue for rename or delete:
         >
@@ -166,7 +161,7 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 > - [Return Codes](#bkmk_dt-return)
 > - [Dependencies](#bkmk_dt-depend)
 >  
-> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](deploy-applications.md#bkmk_exe-check).  
+> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](check-for-running-executable-files.md).
 
 ### Start the Create Deployment Type wizard  
 
@@ -271,13 +266,14 @@ When you view the properties of a deployment type, the following options appear 
 
 - **Deployment options**: Specify if clients should download the application when they use a distribution point from a neighbor or the default site boundary groups.  
 
-- **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). BranchCache is always enabled on clients. This setting was removed in version 1802, as clients use BranchCache if the distribution point supports it.  
+> [!NOTE]
+> Windows BranchCache is always enabled on clients. If the distribution point supports BranchCache, clients use it. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).
 
 ### <a name="bkmk_dt-ts"></a> Deployment type **Task Sequence** options
 
 <!--3555953-->
 
-For more information on the task sequence deployment type starting in version 2002, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt).
+For more information on the task sequence deployment type, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt).
 
 On the **Task Sequence** page, specify the following information:
 
@@ -695,19 +691,19 @@ For more information about how to export an application, see [Management tasks f
 Configuration Manager supports the following deployment types for applications:
 
 | Deployment type name | Description |
-|--------------------------|----------------------|  
-| **Windows Installer (\*.msi file)** | A Windows Installer file. |  
-| **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | A Windows app package file (.appx), a Windows app bundle package (.appxbundle), a Windows 10 app package (.msix), or Windows 10 app bundle (.msixbundle).<!--1357427--> |  
-| **Windows app package (in the Windows Store)** | Specify a link to the app in the Windows Store, or browse the store to select the app.<sup>[Note 1](#bkmk_note1)</sup> |  
-| **Script Installer** | Specify a script or program that runs on Windows clients to install content or to do an action. Use this deployment type for setup.exe installers or script wrappers. |  
-| **Microsoft Application Virtualization 4** | A Microsoft App-V v4 manifest. |  
-| **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
-| **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |  
-| **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
-| **macOS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
-| **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
-| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
-| **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
+|--------------------------|----------------------|
+| **Windows Installer (\*.msi file)** | A Windows Installer file (`.msi`). |
+| **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | Windows app package files (`.appx` or `.msix`) or Windows app bundle packages (`.appxbundle` or `.msixbundle`).<!--1357427--> |
+| **Windows app package (in the Windows Store)** | Specify a link to the app in the Windows Store, or browse the store to select the app.<sup>[Note 1](#bkmk_note1)</sup> |
+| **Script Installer** | Specify a script or program that runs on Windows clients to install content or to do an action. Use this deployment type for setup.exe installers or script wrappers. |
+| **Microsoft Application Virtualization 4** | A Microsoft App-V v4 manifest. |
+| **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |
+| **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |
+| **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |
+| **macOS X** | For macOS computers running the Configuration Manager client. Create a `.cmmac` file with the **CMAppUtil** tool. |
+| **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |
+| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows devices using on-premises mobile device management (MDM). For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
+| **Task sequence** | Install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
 
 > [!NOTE]
 > The Configuration Manager console may display other deployment types, but they are for platforms that are no longer supported. For more information, see [What happened to hybrid?](../../mdm/understand/what-happened-to-hybrid.md).
@@ -725,7 +721,7 @@ Windows clients always evaluate deployment types that use a link to a store befo
 
 After creating an application in Configuration Manager, the next step is to [deploy the application](deploy-applications.md).
 
-Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
+Create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
 
 For more information about creating applications on different OS platforms, see the following articles:  
 

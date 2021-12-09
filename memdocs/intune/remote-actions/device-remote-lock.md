@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Lock devices with Microsoft Intune - Azure | Microsoft Docs
+title: Lock devices with Microsoft Intune
 description: Use the Remote lock action in Microsoft Intune to lock a device that is protected by a PIN or password. 
 keywords:
 author: ErikjeMS

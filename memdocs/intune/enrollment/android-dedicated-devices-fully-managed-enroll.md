@@ -5,8 +5,8 @@ title: Enroll Android Enterprise dedicated, fully managed, or corporate-owned wo
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise dedicated, fully managed, or corporate-owned work profile devices in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 01/20/2021
 ms.topic: how-to
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Enroll your Android Enterprise dedicated, fully managed, or corporate-owned with work profile devices
@@ -57,7 +59,7 @@ For corporate-owned work profile (COPE) devices, the NFC enrollment method is on
 
 - For Android 6 and newer devices, you can use the token value, such as `12345`, to enroll the device.
 - Android 6.1 and newer versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
-- For corporate-owned work profile (COPE) devices, token entry through the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11. For further details, refer to the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
+- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11. For further details, refer to the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
 
 ### Steps
 

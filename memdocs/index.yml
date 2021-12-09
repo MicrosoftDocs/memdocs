@@ -8,14 +8,19 @@ metadata:
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: mtillman
-  ms.date: 07/06/2020
+  manager: johmar
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
+  ms.collection: highpri
 
 highlightedContent:
   items:
     - title: Overview of Microsoft Endpoint Manager
       itemType: overview
       url: endpoint-manager-overview.md
+    - title: Getting started with Microsoft Endpoint Manager
+      itemType: get-started
+      url: endpoint-manager-getting-started.md
     - title: Microsoft Endpoint Manager (product page)
       itemType: get-started
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager

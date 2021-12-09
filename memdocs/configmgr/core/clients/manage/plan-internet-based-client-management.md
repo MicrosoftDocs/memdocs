@@ -2,14 +2,14 @@
 title: Internet-based client management
 titleSuffix: Configuration Manager
 description: Create a plan to manage internet-based clients in Configuration Manager.
-ms.date: 04/29/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for internet-based client management in Configuration Manager
@@ -36,7 +36,7 @@ The following site system roles at primary sites support connections from client
 
 - Distribution point
 
-- Cloud-based distribution point
+- Content-enabled cloud management gateway (CMG)
 
 - Enrollment proxy point
 
@@ -45,9 +45,6 @@ The following site system roles at primary sites support connections from client
 - Management point
 
 - Software update point
-
-> [!NOTE]
-> Support ended for the application catalog roles with version 1910. For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). For Configuration Manager versions 1906 and earlier that are still in support, the application catalog website point can accept connections from internet-based clients.
 
 ### About internet facing site systems
 
@@ -139,7 +136,6 @@ Allow the following verbs for the internet-based site system server roles:
 | Management point | - HEAD<br>- CCM_POST<br>- BITS_POST<br>- GET<br>- PROPFIND |
 | Distribution point | - HEAD<br>- GET<br>- PROPFIND |
 | Fallback status point | POST |
-| Application catalog website point | -POST<br>-GET |
 
 #### HTTP headers
 
@@ -168,7 +164,7 @@ The following features aren't supported when you manage clients on the internet 
 
 - Remote control
 
-- Software deployment to users. This feature relies upon the application catalog, which is deprecated.
+- Software deployment to users. This feature relied upon the application catalog, which is no longer supported.
 
 - Client roaming. Roaming enables clients to always find the closest distribution points to download content. Clients non-deterministically select one of the internet-based site systems, whatever the bandwidth or physical location.
 

@@ -9,6 +9,8 @@ ms.assetid: fbabd2ed-c3ee-48f0-8d9d-7d0c48f69af6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -75,7 +77,7 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [About OS deployment site role configuration](about-operating-system-deployment-site-role-configuration.md)

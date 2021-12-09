@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to customize the Intune Company Portal apps, Company Portal website, and Intune app
+title: How to configure the Intune Company Portal apps, Company Portal website, and Intune app
 titleSuffix: Microsoft Intune
-description: Learn how you can apply company-specific branding to the Intune Company Portal apps, Company Portal website, and Intune app.
+description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 11/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,15 +26,19 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
-# How to customize the Intune Company Portal apps, Company Portal website, and Intune app
+# How to configure the Intune Company Portal apps, Company Portal website, and Intune app
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common task may include enrolling devices, installing apps, and locating information (such as for assistance from your IT department). Additionally, they allow users to securely access company resources. The end-user experience provides several different pages, such as Home, Apps, App details, Devices, and Device details. To quickly find apps within the Company Portal, you can filter the apps on the Apps page.
 
 > [!NOTE]
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
+>
+> The minimum supported version of the iOS Company Portal app is v4.16.0. If users are running v4.14.1 or below, they will be prompted for an update at login.
 
 ## Customizing the user experience
 
@@ -50,9 +54,9 @@ The following table provides the branding customization details for the end-user
 | **Color** | Choose **Standard** to choose from five standard colors. Choose **Custom** to select a specific color   based on a hex code value. |
 | **Theme color** | Set theme color to show across end-user experience. We'll   automatically set the text color to black or white so that it's most visible   on top of your selected theme color. |
 | **Show in header** | Select whether the header in the end-user experiences   should display the **Organization logo and name**, the **Organization logo only**, or the **Organization name only**. The preview boxes below will only show the logos, not the   name.  |
-| **Upload logo for theme color background** | Upload the logo you want to show on top of your selected   theme color. For the best appearance, upload a logo with a transparent   background. You can see how this will look in the preview box below the   setting.<p>Maximum image size: 400 x 400 px<br>Maximum file size:   750KB<br>File type: PNG, JPG, or JPEG |
-| **Upload logo for white or light background** | Upload the logo you want to show on top of white or light-colored backgrounds. For the best appearance, upload a logo with a   transparent background. You can see how this will look on a white background   in the preview box below the setting.<p>Maximum image size: 400 x 400   px<br>Maximum file size: 750KB<br>File type: PNG, JPG, or JPEG |
-| **Upload brand image** | Upload an image that reflects   your organization's brand.<p><ul><li>Recommended image   width: Greater than 1125 px (required to be at least 650   px)</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Windows Company Portal: Background image on the user's profile page.</li><li>Company Portal website:   Background image on the user's profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user's profile   page.</li></ul></ul> |
+| **Upload logo for theme color background** | Upload the logo you want to show on top of your selected   theme color. For the best appearance, upload a logo with a transparent   background. You can see how this will look in the preview box below the   setting.<p>Recommended image height: Greater than 72 px<br>Maximum file size:   750KB<br>File type: PNG, JPG, or JPEG |
+| **Upload logo for white or light background** | Upload the logo you want to show on top of white or light-colored backgrounds. For the best appearance, upload a logo with a   transparent background. You can see how this will look on a white background   in the preview box below the setting.<p>Recommended image height: Greater than 72 px<br>Maximum file size: 750KB<br>File type: PNG, JPG, or JPEG |
+| **Upload brand image** | Upload an image that reflects   your organization's brand.<p><ul><li>Recommended image   width: Greater than 1125 px</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Windows Company Portal: Background image on the user's profile page.</li><li>Company Portal website:   Background image on the user's profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user's profile   page.</li></ul></ul> |
 
 > [!NOTE]
 > When a user is installing an iOS/iPadOS application from the Company Portal they will receive a prompt. This occurs when the iOS/iPadOS app is linked to the app store, linked to a volume-purchase program (VPP), or linked to a line-of-business (LOB) app. The prompt allows the users to accept the action or allow management of the app. The prompt will display your company name, or when your company name is unavailable, **Company Portal** will be displayed.
@@ -105,15 +109,16 @@ The following table provides enrollment-specific configuration details:
 
 #### Device enrollment setting options
 
-> [!NOTE]
-> Support for the device enrollment setting requires end users have these Company Portal versions:
-> - Company Portal on iOS/iPadOS: version 4.4 or later
-> - Company Portal on Android: version 5.0.4715.0 or later 
+Support for the device enrollment setting requires end users have these Company Portal versions:
+- Company Portal on iOS/iPadOS: version 4.4 or later
+- Company Portal on Android: version 5.0.4715.0 or later 
 
 > [!IMPORTANT]
 > The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
 > 
 > The following settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device has been configured for KME and device enrollment is set to Unavailable, the device will not be able to enroll during the out of box flow.
+>
+> For the Android Company Portal app, if Intune detects that the user's device is set up for [app protection policies without enrollment](../fundamentals/deployment-guide-enrollment-mamwe.md), the user will not get prompted to enroll in the Company Portal, even if the device enrollment setting is configured to prompt enrollment. This applies to all Android device types except Surface Duo devices.
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App visibility (for an app that requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -127,7 +132,7 @@ The following table provides privacy-specific configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Privacy statement URL | 79 | Set your organization's privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. |
+| Privacy statement URL | 79 | Set your organization's privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. This is a mandatory field. |
 | Privacy message about what support can't see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 | Privacy message about what support can see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 
@@ -182,11 +187,20 @@ Upon selecting the Company Portal, the user will be directed to the correspondin
 - `/apps/[appID]` - The Web Company Portal will open the Details page of the corresponding app.
 - *The URI path is different or unexpected* - The Web Company Portal home page will be displayed.
 
-If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal.
+If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal. 
+
+> [!NOTE]
+> To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
+
+## Company Portal and Apple Setup Assistant for iOS/iPadOS
+
+For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**.  This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
+
+Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when users complete the additional Azure AD login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed. 
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
-Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
+Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
 
 > [!NOTE]
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
@@ -208,18 +222,20 @@ The following keyboard shortcuts are available in the Windows Company Portal app
 | Navigation menu | Navigation | Alt+M |
 |  | Home | Alt+H |
 |  | All apps | Alt+A |
-|  | Installed apps | Alt+I |
+|  | All devices | Alt+D |
+|  | Downloads & updates | Alt+U |
 |  | Send feedback | Alt+F |
-|  | My profile | Alt+U |
+|  | My profile | Alt+P |
 |  | Settings | Alt+T |
-| Home - Device tile | Rename | F2 |
+| Device tile | Rename | F2 |
 |  | Remove | Ctrl+D or Delete |
 |  | Check access | Ctrl+M or F9 |
 | Device details | Rename | F2 |
 |  | Remove | Ctrl+D or Delete |
 |  | Check access | Ctrl+M or F9 |
 | App details | Install | Ctrl+I |
-| Devices | Available | Ctrl+D |
+| Apps list tile | Install | Ctrl+I |
+| Apps list item | Install | Ctrl+I |
 
 End users will also be able to see the available shortcuts in the Windows Company Portal app.
 
@@ -269,6 +285,17 @@ If you are using Azure Government, app logs are offered to the end user to decid
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
+
+## Company Portal app notifications
+
+The Company Portal app can store, as well as display, push notifications sent to your users' devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
+
+> [!NOTE]
+> Users must updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) to receive custom notifications on Android devices. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app.
+
+Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
+
+For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md#receive-a-custom-notification).
 
 ## Next steps
 

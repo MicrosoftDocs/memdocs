@@ -6,13 +6,11 @@ ms.date: 10/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 # What's new in version 1802 of Configuration Manager
 
@@ -70,7 +68,7 @@ Starting in this release, use CNG certificates for the following HTTPS-enabled s
 
 ### Boundary group fallback for management points
 <!-- 1324594 -->
-Configure fallback relationships for management points between [boundary groups](../../servers/deploy/configure/boundary-groups.md). This behavior provides greater control for the management points that clients use. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#management-points).
+Configure fallback relationships for management points between [boundary groups](../../servers/deploy/configure/boundary-groups.md). This behavior provides greater control for the management points that clients use. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-management-points.md).
 
 
 ### Cloud distribution point site affinity
@@ -124,13 +122,13 @@ When creating an instance of the [cloud management gateway](../../clients/manage
     - [Plan for the cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Cloud management gateway size and scale numbers](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Security and privacy for cloud management gateway](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
-    - [Frequently asked questions about the cloud management gateway](../../clients/manage/cmg/cloud-management-gateway-faq.md)
+    - [Frequently asked questions about the cloud management gateway](../../clients/manage/cmg/cloud-management-gateway-faq.yml)
     - [Set up cloud management gateway](../../clients/manage/cmg/setup-cloud-management-gateway.md)  
 
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#bkmk_GreaterThan255) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#collect-strings-larger-than-255-characters) article. 
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -147,7 +145,7 @@ For details, see the [Surface dashboard](../../clients/manage/surface-device-das
 
 ### Change in the Configuration Manager client install
 <!--1356195-->
-Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_ExternalDependencies)
+Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 
 ## Co-management
 
@@ -183,7 +181,7 @@ Configure an application deployment to not automatically upgrade any superseded 
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings).
 
  > [!Note]  
- > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).  
+ > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/optional-features.md).  
 
 
 ### Run scripts improvements 
@@ -199,7 +197,7 @@ The Windows 10 [in-place upgrade task sequence](../../../osd/deploy-use/upgrade-
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->
-The default task sequence template for Windows 10 in-place upgrade now includes additional groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-to-prepare-for-upgrade).
+The default task sequence template for Windows 10 in-place upgrade now includes additional groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [In-place upgrade recommendations](../../../osd/understand/in-place-upgrade-recommendations.md#prepare-for-upgrade).
 
 ### Improvements to operating system deployment
 This release includes the following improvements to operating system deployment:
@@ -231,15 +229,15 @@ If an end user or desktop technician needs to install multiple applications on a
 
 ### Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ### Hide installed applications in Software Center
 <!--1357592-->
-Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#bkmk_HideInstalled) has additional details.   
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.   
 
 ### Hide unapproved applications in Software Center
  <!--1355146-->
-When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#bkmk_HideUnapproved) has additional details.  
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.  
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->

@@ -6,12 +6,10 @@ ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Configure custom client settings for Endpoint Protection
@@ -46,7 +44,7 @@ This procedure configures custom client settings for Endpoint Protection, which 
 
 8. In the **Select Collection** dialog box, choose the collection to which you want to deploy the client settings and then click **OK**. The new deployment is shown in the **Deployments** tab of the details pane.  
 
-Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).  
+Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#start-policy-retrieval).  
 
 
 
@@ -55,7 +53,7 @@ Clients are configured with these settings when they next download client policy
 Install the Endpoint Protection client on a computer that you intend to use as a disk image source for Configuration Manager OS deployment. This computer is typically called the reference computer. After you create the OS image, then use Configuration Manager OS deployment to deploy the image.
 
 > [!Important]  
-> Windows 10 and Windows Server 2016 have Windows Defender installed by default. You don't need this procedure on those versions of Windows.  
+> Starting in Windows 10 and Windows Server 2016, Windows Defender is installed by default. You don't need this procedure on those versions or later versions of Windows.  
 
 Use the following procedures to help you install and configure the Endpoint Protection client on a reference computer.
 
@@ -72,10 +70,6 @@ The following list contains the required prerequisites for installing the Endpoi
   >  You can't export the **Default Client Antimalware Policy**.  
 
 - If you want to install the Endpoint Protection client with the latest definitions, download them from [Windows Defender Security Intelligence](https://www.microsoft.com/wdsi).  
-
-> [!NOTE]  
-> Starting in Configuration Manager 1802, you don't need to install the Endpoint Protection agent (SCEPInstall) on Windows 10 devices. If it's already installed on Windows 10 devices, Configuration Manager doesn't remove it. Administrators can remove the Endpoint Protection agent on Windows 10 devices that are running at least the 1802 client version. SCEPInstall.exe may still be present in C:\Windows\ccmsetup on some machines, but new client installations shouldn't download it. <!--503654-->
-
 
 ### How to install the Endpoint Protection client on the reference computer
 

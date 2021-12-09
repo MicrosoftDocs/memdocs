@@ -6,12 +6,10 @@ ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 
 # Set up a Configuration Manager lab
@@ -315,7 +313,7 @@ Internet Information Services (IIS) is a flexible, scalable web server that can 
 
 7.  Click **Install** and verify that the installation completed properly in the **Notifications** pane of **Server Manager**.  
 
-By default, IIS blocks several types of file extensions and locations from access by HTTP or HTTPS communication. To enable these files to be distributed to client systems, you will need to configure request filtering for IIS on your distribution point. For more information, see [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
+By default, IIS blocks several types of file extensions and locations from access by HTTP or HTTPS communication. To enable these files to be distributed to client systems, you will need to configure request filtering for IIS on your distribution point. For more information, see [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#iis-request-filtering-for-distribution-points).  
 
 #### To configure IIS filtering on distribution points:  
 

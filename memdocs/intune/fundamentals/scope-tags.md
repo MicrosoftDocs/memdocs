@@ -11,20 +11,20 @@ ms.date: 08/06/2019
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.technology:
-ms.assetid: a21d3039-f2ed-4f43-b6fa-d00c071edbc4
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-#ms.reviewer: pjain
+#ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use role-based access control (RBAC) and scope tags for distributed IT
@@ -85,7 +85,6 @@ When working with scope tags, remember these details:
 
 - You can assign scope tags to an Intune object type if the tenant can have multiple versions of that object (such as role assignments or apps).
   The following Intune objects are exceptions to this rule and don't currently support scope tags:
-    - Windows ESP profiles
     - Corp Device Identifiers
     - Autopilot Devices
     - Device compliance locations

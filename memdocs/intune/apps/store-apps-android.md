@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 
@@ -21,12 +21,14 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- M365-identity-device-management
+- Android
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
 # Add Android store apps to Microsoft Intune
@@ -37,7 +39,7 @@ Before you assign an app to a device or a group of users, you must first add the
 
 ## Add an app
 
-You can add an Android store app to Intune from the Azure portal by doing the following:
+You can add an Android store app to Intune from the portal by doing the following:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.

@@ -12,6 +12,8 @@ ms.assetid: f9c7b72d-e781-49e2-b5a7-23a3e005596f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # IProgressUI::ShowRebootDialog method

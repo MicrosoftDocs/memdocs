@@ -1,7 +1,7 @@
 ---
 title: "SMS_R_System Class"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "02/01/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
@@ -9,6 +9,8 @@ ms.assetid: a3bfa9cf-2aa0-4fcc-be1e-50983a1fb432
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -319,7 +321,7 @@ Class SMS_R_System : SMS_Resource
 
  Qualifiers: None  
 
- The date of the last user logon.   
+ The date of the last logon for the system.   
 
  `LastLogonUserName`  
  Data type: `String`  

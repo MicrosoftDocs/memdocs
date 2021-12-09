@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add custom settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings for Windows 10 devices in Microsoft Intune
 description: Add or create a custom profile to use the OMA-URI settings for devices running Windows 10 in Microsoft Intune. Use a custom profile to add custom settings.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
-ms.topic: reference
+ms.date: 10/21/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -23,12 +23,17 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use custom settings for Windows 10 devices in Intune
 
-This article lists and describes all the different custom settings you can control on Windows 10 and newer devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built-in to Intune.
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+This article describes some of the different custom settings you can control on Windows 10 and newer devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built-in to Intune.
 
 For more information on custom profiles, see [Create a profile with custom settings](custom-settings-configure.md).
 
@@ -76,6 +81,15 @@ There's a complete list of all configuration service providers (CSPs) that Windo
 Not all settings are compatible with all Windows 10 versions. [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) tells you which versions are supported for each CSP.
 
 Additionally, Intune doesn't support all the settings listed in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
+ 
+> [!NOTE]
+> For settings that were created by using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
+>
+> - Create, Read, and Update permissions in a Microsoft Endpoint Manager role-based access control (RBAC) role.
+> - Intune Service Administrator.
+> - Global Administrator Azure Active Directory role.
+> 
+> For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Next steps
 

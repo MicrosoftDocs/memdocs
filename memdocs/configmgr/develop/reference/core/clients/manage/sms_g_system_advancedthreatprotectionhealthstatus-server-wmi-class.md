@@ -9,11 +9,14 @@ ms.assetid: 677fcbd0-9b4d-4e44-8601-3975dc59c9b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
+description: An overview of SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
 
 
 ---
 # SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
-The  `SMS_G_System_AdvancedThreatProtectionHealthStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Defender Advanced Threat Protection (ATP) client health status.  
+The  `SMS_G_System_AdvancedThreatProtectionHealthStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Defender for Endpoint client health status.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -41,7 +44,7 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
  Qualifiers: [not_null]  
 
- The time that the Microsoft Defender ATP agent last connected to the cloud.  
+ The time that the Microsoft Defender for Endpoint agent last connected to the cloud.  
 
  `OnboardingState`  
  Data type: `UInt32`  
@@ -59,7 +62,7 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
  Qualifiers: [not_null]  
 
- The ID of the organization that the Microsoft Defender ATP agent reports to.  
+ The ID of the organization that the Microsoft Defender for Endpoint agent reports to.  
 
  `ResourceID`  
  Data type: `UInt32`  
@@ -77,7 +80,7 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
  Qualifiers: [not_null]  
 
- Indicates whether the Microsoft Defender ATP agent is running.  
+ Indicates whether the Microsoft Defender for Endpoint agent is running.  
 
 ## Remarks  
  Class qualifiers for this class include:  
@@ -92,8 +95,8 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
 ## Requirements  
 
-### Runtime Requirements  
+### Runtime requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-### Development Requirements  
+### Development requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  

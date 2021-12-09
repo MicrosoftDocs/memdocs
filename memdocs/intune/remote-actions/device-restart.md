@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Restart devices with Microsoft Intune - Azure | Microsoft Docs
+title: Restart devices with Microsoft Intune
 description: Restart Windows and iOS/iPadOS devices using Microsoft Intune in the Azure portal using the Restart remote action.
 keywords:
 author: ErikjeMS
@@ -40,7 +40,7 @@ The **Restart** device action causes the device you choose to be restarted (with
 - Windows - Supported on Windows 8.1 and later
 - Android Enterprise dedicated devices - Supported on Android 7.0 and later
 - Android Enterprise fully managed devices - Supported on Android 6.0 and later
-- Android Enterprise corporate-owned with work profile devices - Supported on Android 8.0 and later
+- Android Enterprise corporate-owned with work profile devices - Not supported 
 - iOS/iPadOS - Supported
 
     > [!Note]  

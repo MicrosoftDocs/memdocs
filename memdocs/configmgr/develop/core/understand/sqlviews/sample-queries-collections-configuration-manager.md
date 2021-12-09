@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for collections
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join some of the most commonly used collection views to other views.
@@ -12,6 +12,8 @@ ms.assetid: 9b2fec1a-41d1-4c62-8a3b-154e63a67ddf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for collections in Configuration Manager
@@ -24,9 +26,9 @@ The following query lists the resources in the Configuration Manager hierarchy t
 
 ```sql
     SELECT FCM.Name, FCM.SiteCode, FCM.CollectionID, 
-      COL.Name, COL.LastRefreshTime 
+    ��COL.Name, COL.LastRefreshTime 
     FROM v_FullCollectionMembership FCM INNER JOIN v_Collection COL 
-      ON FCM.CollectionID = COL.CollectionID 
+    ��ON FCM.CollectionID = COL.CollectionID 
     ORDER BY FCM.Name, FCM.CollectionID 
 ```
 
@@ -36,12 +38,12 @@ The following query lists all of the discovered resources that do not have a Con
 
 ```sql
     SELECT SYS.Resource_Domain_OR_Workgr0, COLL1.Name, 
-      SYSIP.IP_Addresses0 
+    ��SYSIP.IP_Addresses0 
     FROM v_CM_RES_COLL_SMS00001 COLL1 
-      INNER JOIN v_R_System SYS 
-      ON COLL1.ResourceID = SYS.ResourceID 
-      INNER JOIN v_RA_System_IPAddresses SYSIP 
-      ON COLL1.ResourceID = SYSIP.ResourceID 
+    ��INNER JOIN v_R_System SYS 
+    ��ON COLL1.ResourceID = SYS.ResourceID 
+    ��INNER JOIN v_RA_System_IPAddresses SYSIP 
+    ��ON COLL1.ResourceID = SYSIP.ResourceID 
     WHERE COLL1.IsClient = 0 
     ORDER BY SYS.Resource_Domain_OR_Workgr0, COLL1.Name 
 ```
@@ -52,11 +54,11 @@ The following query lists all of the resources in the Configuration Manager hier
 
 ```sql
     SELECT FCM.Name AS ResourceName, FCM.ResourceID, 
-      ADV.SourceSite, ADV.AdvertisementID, ADV.AdvertisementName, 
-      ADV.ProgramName, COL.Name AS CollectionName 
+    ��ADV.SourceSite, ADV.AdvertisementID, ADV.AdvertisementName, 
+    ��ADV.ProgramName, COL.Name AS CollectionName 
     FROM v_FullCollectionMembership FCM INNER JOIN v_Advertisement ADV 
-      ON FCM.CollectionID = ADV.CollectionID INNER JOIN 
-      v_Collection COL ON FCM.CollectionID = COL.CollectionID 
+    ��ON FCM.CollectionID = ADV.CollectionID INNER JOIN 
+    ��v_Collection COL ON FCM.CollectionID = COL.CollectionID 
     ORDER BY FCM.Name 
 ```
 

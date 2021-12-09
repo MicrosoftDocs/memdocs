@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Software update errors and descriptions in Microsoft Intune - Azure | Microsoft Docs
+title: Software update errors and descriptions in Microsoft Intune
 description: See a list of the Software Update agent error code in Microsoft Intune, including the error code, symbolic name, and error description.
 keywords:
 author: Brenduns

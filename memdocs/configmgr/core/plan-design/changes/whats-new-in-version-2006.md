@@ -6,10 +6,10 @@ ms.date: 11/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2006 of Configuration Manager current branch
@@ -21,10 +21,6 @@ Update 2006 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2006](../../servers/manage/checklist-for-installing-update-2006.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2006.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
@@ -49,7 +45,7 @@ For more information about CMPivot from the admin center, see [Tenant attach: La
 ### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
 <!--4812909-->
 You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
-- [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
+- [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
 - [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
 - [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 - [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
@@ -97,17 +93,17 @@ This release adds a new group of management insights, **Optimize for remote work
 
 For more information, see [Management insights](../../servers/manage/management-insights.md).
 
-### Improved support for Windows Virtual Desktop
+### Improved support for Azure Virtual Desktop
 
 <!--6527576-->
 
 The **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
-For more information on Configuration Manager's support for Windows Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+For more information on Configuration Manager's support for Azure Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop).
 
 ### Intranet clients can use a CMG software update point
 <!--7102873-->
-Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
+Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-software-update-points.md#intranet-clients-can-use-a-cmg-software-update-point).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
@@ -197,7 +193,7 @@ For more information, see [device restart notifications](../../clients/deploy/de
 <!--6935376-->
 This release fixes an issue with Software Center and Azure Active Directory (Azure AD) authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.
 
-For more information, see [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+For more information, see [Prerequisites to deploy user-available apps](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ### Microsoft 365 Apps for enterprise
 <!--6298093-->
@@ -228,7 +224,7 @@ This release includes the following improvements to deploy task sequences to dev
 
 - Support for OS deployment<!--6997525-->: With a task sequence that uses a boot image to deploy an OS, you can deploy it to a device that communicates via CMG. The user needs to start the task sequence from Software Center. For more information, see [Supported configurations for CMG](../../clients/manage/cmg/supported-configurations.md).
 
-- This release fixes the two [known issues](../../servers/deploy/install/release-notes.md#task-sequences-cant-run-over-cmg) from Configuration Manager current branch version 2002.<!-- 6983320 --> You can now run a task sequence on a device that communicates via CMG in the following circumstances:
+- This release fixes the two known issues from Configuration Manager current branch version 2002.<!-- 6983320 --> You can now run a task sequence on a device that communicates via CMG in the following circumstances:
 
   - A workgroup device that you register with a [bulk registration token](../../clients/deploy/deploy-clients-cmg-token.md)
 

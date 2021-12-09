@@ -9,6 +9,8 @@ ms.assetid: dd1a5ba5-b611-4b28-888f-7918fcd1d869
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -146,7 +148,7 @@ class CCM_SoftwareUpdate : CCM_SoftwareBase
 > [!NOTE]
 >  The **EvaluationState** property is only meant to evaluate progress, not to find the compliance state of a software update. When a software update is not in a progress state, the value of **EvaluationState** is `none` or `available`, depending on whether there was any progress at any point in the past. This is not related to compliance state. Also, if a software update was downloaded at activation time, the value of **EvaluationState** is `none`. This value only changes once an install is attempted on the software update.  
 
- The following table shows the values for the **EvaluationState**property for software updates.  
+ The following table shows the values for the **EvaluationState** property for software updates.  
 
 |Value|State|  
 |-|-|  

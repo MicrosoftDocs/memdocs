@@ -1,18 +1,16 @@
 ---
-title: "New version 1706"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1706 of Configuration Manager."
+title: New version 1706
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1706 of Configuration Manager.
 ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1706 of Configuration Manager
 
@@ -74,7 +72,7 @@ This release includes improvements for how software update points work with boun
 - Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
 - After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point. This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
 
-For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) in the Boundary Groups topic for the Current Branch.
+For more information, see [software update points](../../servers/deploy/configure/boundary-groups-software-update-points.md) in the Boundary Groups topic for the Current Branch.
 
 ### Azure AD integration with Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->

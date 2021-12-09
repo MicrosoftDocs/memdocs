@@ -4,10 +4,10 @@
 title: Use Graph APIs to export Intune Reports | Microsoft Docs
 description: Learn about exporting Intune reports using Graph APIs.
 keywords: 
-ms.author: erikre
 author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 03/10/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+#ms.reviewer: spenspshumwa
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,11 +35,12 @@ All reports that have been migrated to the Intune reporting infrastructure will 
 > [!NOTE]
 > For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports based on the following Microsoft Graph API endpoint:
+Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
+
 ## Example devices report request and response
 
 When making the request, you must provide a `reportName` parameter as part of the request body based on the report that you would like to export. Below is an example of an export request for the **Devices** report. You must use the POST HTTP method on your request. The POST method is used to create a new resource or perform an action.
@@ -51,7 +52,8 @@ The below request contains the HTTP method used on the request to Microsoft Grap
 ```http
 { 
     "reportName": "Devices", 
-    "filter": "", 
+    "filter":"(OwnerType eq '1')", 
+    "localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -65,6 +67,10 @@ The below request contains the HTTP method used on the request to Microsoft Grap
     ]
 } 
 ```
+
+> [!NOTE]
+> To retrieve data, select specific columns, such as those specified in the above example. Do not build automation around default columns of any report export. You should build your automation to explicitly select relevant columns.
+
 ### Response example
 
 Based on the above POST request, Graph returns a response message. The response message is the data that you requested or the result of the operation.
@@ -74,7 +80,8 @@ Based on the above POST request, Graph returns a response message. The response 
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/reports/exportJobs/$entity", 
     "id": "Devices_05e62361-783b-4cec-b635-0aed0ecf14a3", 
     "reportName": "Devices", 
-    "filter": "", 
+    "filter":"(OwnerType eq '1')", 
+    "localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -106,7 +113,8 @@ You will need to continue calling this URL until you get a response with a `stat
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/reports/exportJobs/$entity", 
     "id": "Devices_05e62361-783b-4cec-b635-0aed0ecf14a3", 
     "reportName": "Devices", 
-    "filter": "", 
+    "filter":"(OwnerType eq '1')", 
+    "localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -130,361 +138,54 @@ You can then directly download the compressed CSV from the `url` field.
 
 ## Report parameters
 
-There are three main parameters you can submit in your request body to define the export request: 
+There are four main parameters you can submit in your request body to define the export request: 
 
 - `reportName`: Required. This parameter is the name of the report you want to specify.  
-- `filter`: Not required for most reports. 
-- `select`: Not required. If you don't specify a `select` value you will receive a default set of columns, which for most reports is the entire dataset. 
+- `filter`: Not required for most reports. Note that the filter parameter is a string.
+- `select`: Not required. Specify which columns from the report you want. Only valid column names relevant to the report you are calling will be accepted.  
+- `localizationType`: This parameter controls localization behavior for the report. Possible values are `LocalizedValuesAsAdditionalColumn` and `ReplaceLocalizableValues`.
 
-## Available reports
+## Localization behavior
 
-The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
+The `localizationType` parameter controls localization behavior for the report. The possible values for this parameter are `LocalizedValuesAsAdditionalColumn` and `ReplaceLocalizableValues`.
 
-|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
+### LocalizedValuesAsAdditionalColumn report value
+
+This value for the `localizationType` parameter is the default value. It will be inserted automatically if the `localizationType` parameter is not specified. This value specifies that Intune provides two columns for each localizable column.
+- *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column will be under the original column name (see example).
+- *localized string value*: This column  will be the original column name with _loc appended. It will contain string values that are human readable, and locale conditional (see example).
+
+#### Example
+
+|         OS  |            OS_loc        |
 |-|-|
-|         DeviceCompliance  |            Device   Compliance Org        |
-|         DeviceNonCompliance  |            Non-compliant   devices        |
-|         Devices  |            All   devices list        |
-|         DetectedAppsAggregate  |            Detected   Apps report        |
-|         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
-|         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
-|         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
-|         UnhealthyDefenderAgents  |            Under   **Endpoint Security** > **Antivirus** > **Win10 Unhealthy   Endpoints**        |
-|         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |
-|         ActiveMalware  |            Under   **Endpoint Security** > **Antivirus** > **Win10 detected   malware**        |
-|         Malware  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Detected   malware**        |
+|         1  |            Windows        |
+|         1  |            Windows        |
+|         1  |            Windows        |
+|         2  |            iOS        |
+|         3  |            Android        |
+|         4  |            Mac        |
 
-Each of the listed reports is described below.
 
-### DeviceCompliance report
+### ReplaceLocalizableValues report value
 
-The following table contains the possible output when calling the `DeviceCompliance` report:
+ReplaceLocalizableValues report value will only return one column per localized attribute. This column will contain the original column name with the localized values.
 
-| Available properties |
+#### Example 
+
+|         OS        |
 |-|
-| DeviceId |
-| IntuneDeviceId |
-| AadDeviceId |
-| DeviceName |
-| DeviceType |
-| OSDescription |
-| OSVersion |
-| OwnerType |
-| LastContact |
-| InGracePeriodUntil |
-| IMEI |
-| SerialNumber |
-| ManagementAgents |
-| PrimaryUser |
-| UserId |
-| UPN |
-| UserEmail |
-| UserName |
-| DeviceHealthThreatLevel |
-| RetireAfterDatetime |
-| PartnerDeviceId |
-| ComplianceState |
-| OS |
+|         Windows        |
+|         Windows        |
+|         Windows        |
+|         iOS        |
+|         Android        |
+|         Mac        |
 
-You can choose to filter the `DeviceCompliance` report's output based on the following columns:
-- `ComplianceState`
-- `OS` 
-- `OwnerType`
-- `DeviceType` 
+For columns without localized values, only a single column with the true column name and the true column values are returned.  
 
-### DeviceNonCompliance report
-
-The following table contains the possible output when calling the `DeviceNonCompliance` report:
-
-|     Available properties  |
-|-|
-|     DeviceId  |
-|            IntuneDeviceId   |
-| AadDeviceId   |
-| DeviceName   |
-| DeviceType   |
-| OSDescription   |
-|            OSVersion   |
-| OwnerType   |
-| LastContact   |
-| InGracePeriodUntil   |
-| IMEI   |
-|            SerialNumber   |
-| ManagementAgents   |
-| PrimaryUser   |
-| UserId     |
-| UPN   |
-|            UserEmail   |
-| UserName   |
-| DeviceHealthThreatLevel   |
-| RetireAfterDatetime   |
-| PartnerDeviceId   |
-|            ComplianceState         |
-| OS |
-
-You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
-- `OS` 
-- `OwnerType`
-- `DeviceType` 
-- `UserId`
-- `ComplianceState`
-
-### Devices report
-
-The following table contains the possible output when calling the `Devices` report:
-
-|     Available properties |
-|-|
-|     DeviceId  |
-| DeviceName  |
-| DeviceType  |
-| ClientRegistrationStatus  |
-|            OwnerType  |
-| CreatedDate  |
-| LastContact  |
-| ManagementAgents  |
-| ManagementState  |
-|            ReferenceId  |
-| CategoryId  |
-| EnrollmentType  |
-| CertExpirationDate  |
-| MDMStatus  |
-|            OSVersion  |
-| GraphDeviceIsManaged  |
-| EasID  |
-| SerialNumber  |
-| EnrolledByUser  |
-|            Manufacturer  |
-| Model  |
-| OSDescription  |
-| IsManaged  |
-| EasActivationStatus  |
-|            IMEI  |
-| EasLastSyncSuccessUtc  |
-| EasStateReason  |
-| EasAccessState  |
-| EncryptionStatus  |
-|            SupervisedStatus  |
-| PhoneNumberE164Format  |
-| InGracePeriodUntil  |
-| AndroidPatchLevel  |
-| WifiMacAddress  |
-|            SCCMCoManagementFeatures  |
-| MEID  |
-| SubscriberCarrierNetwork  |
-| StorageTotal  |
-| StorageFree  |
-|            ManagedDeviceName  |
-| LastLoggedOnUserUPN  |
-| MDMWinsOverGPStartTime  |
-| StagedDeviceType  |
-| UserApprovedEnrollment  |
-|            ExtendedProperties  |
-| EntitySource  |
-| PrimaryUser  |
-| CategoryName  |
-| UserId  |
-|            UPN  |
-| UserEmail  |
-| UserName  |
-| RetireAfterDatetime  |
-| PartnerDeviceId  |
-|            HasUnlockToken  |
-| CompliantState  |
-| ManagedBy  |
-| Ownership  |
-| DeviceState  |
-|            DeviceRegistrationState  |
-| SupervisedStatusString  |
-| EncryptionStatusString  |
-| OS  |
-| SkuFamily  |
-|            JoinType  |
-| PhoneNumber  |
-| JailBroken  |
-| EasActivationStatusString        |
-
-You can choose to filter the `Devices` report's output based on the following columns:
-- `OwnerType`
-- `DeviceType` 
-- `ManagementAgents`
-- `CategoryName` 
-- `ManagementState` 
-- `CompliantState` 
-- `JailBroken` 
-- `LastContact` 
-- `CreatedDate` 
-- `EnrollmentType` 
-
-### DetectedAppsAggregate report
-
-The following table contains the possible output when calling the `DetectedAppsAggregate` report:
-
-|     Available properties  |
-|-|
-|     ApplicationKey  |
-| ApplicationName  |
-|            ApplicationVersion  |
-| DeviceCount  |
-| BundleSize  |
-
-You can choose to filter the `DetectedAppsAggregate` report's output based on the following column:
-- `ApplicationName`
-
-### FeatureUpdatePolicyFailuresAggregate report
-
-The following table contains the possible output when calling the `FeatureUpdatePolicyFailuresAggregate` report:
-
-| Available properties  |
-|-|
-|     PolicyId  |
-|     PolicyName  |
-|     FeatureUpdateVersion  |
-|     NumberOfDevicesWithErrors     |
-
-You cannot filter this report.
-
-### DeviceFailuresByFeatureUpdatePolicy report
-
-The following table contains the possible output when calling the `DeviceFailuresByFeatureUpdatePolicy` report:
-
-| Available properties  |
-|-|
-|     PolicyId  |
-|     PolicyName  |
-|     FeatureUpdateVersion  |
-|     DeviceId  |
-|     AADDeviceId  |
-|     AlertId  |
-|     EventDateTimeUTC  |
-|     LastUpdatedAlertStatusDateTimeUTC  |
-|     AlertType  |
-|     AlertStatus  |
-|     AlertClassification  |
-|     WindowsUpdateVersion  |
-|     Build  |
-|     AlertMessage  |
-|     AlertMessageDescription  |
-|     AlertMessageData  |
-|     Win32ErrorCode  |
-|     RecommendedAction  |
-|     ExtendedRecommendedAction  |
-|     StartDateTimeUTC  |
-|     ResolvedDateTimeUTC  |
-|     DeviceName  |
-|     UPN     |
-
-You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's output based on the following columns:
-- `PolicyId` **(Required)** 
-- `AlertMessage` 
-- `RecommendedAction` 
-- `WindowsUpdateVersion` 
-
-### FeatureUpdateDeviceState report
-
-The following table contains the possible output when calling the `FeatureUpdateDeviceState` report:
-
-| Available properties  |
-|-|
-|     PolicyId  |
-|     PolicyName  |
-|     FeatureUpdateVersion  |
-|     DeviceId  |
-|     AADDeviceId  |
-|     PartnerPolicyId  |
-|     EventDateTimeUTC  |
-|     LastSuccessfulDeviceUpdateStatus  |
-|     LastSuccessfulDeviceUpdateSubstatus  |
-|     LastSuccessfulDeviceUpdateStatusEventDateTimeUTC  |
-|     CurrentDeviceUpdateStatus  |
-|     CurrentDeviceUpdateSubstatus  |
-|     CurrentDeviceUpdateStatusEventDateTimeUTC  |
-|     LatestAlertMessage  |
-|     LatestAlertMessageDescription  |
-|     LatestAlertRecommendedAction  |
-|     LatestAlertExtendedRecommendedAction  |
-|     UpdateCategory  |
-|     WindowsUpdateVersion  |
-|     LastWUScanTimeUTC  |
-|     Build  |
-|     DeviceName  |
-|     OwnerType  |
-|     UPN  |
-|     AggregateState     |
-
-You can choose to filter the `FeatureUpdateDeviceState` report's output based on the following columns:
-- `PolicyId` **(Required)**
-- `AggregateState`
-- `LatestAlertMessage`
-- `OwnerType`
-
-### UnhealthyDefenderAgents and DefenderAgents reports
-
-The `UnhealthyDefenderAgents` and `DefenderAgents` reports are two distinct reports that have the same set of properties and filters. The following table contains the possible output when calling the `UnhealthyDefenderAgents` or `DefenderAgents` reports:
-
-| Available   Columns  |
-|-|
-|     DeviceId  |
-|     DeviceName  |
-|     DeviceState  |
-|     PendingFullScan  |
-|     PendingReboot  |
-|     PendingManualSteps  |
-|     PendingOfflineScan  |
-|     CriticalFailure  |
-|     MalwareProtectionEnabled  |
-|     RealTimeProtectionEnabled  |
-|     NetworkInspectionSystemEnabled  |
-|     SignatureUpdateOverdue  |
-|     QuickScanOverdue  |
-|     FullScanOverdue  |
-|     RebootRequired  |
-|     FullScanRequired  |
-|     EngineVersion  |
-|     SignatureVersion  |
-|     AntiMalwareVersion  |
-|     LastQuickScanDateTime  |
-|     LastFullScanDateTime  |
-|     LastQuickScanSignatureVersion  |
-|     LastFullScanSignatureVersion  |
-|     LastReportedDateTime  |
-|     UPN  |
-|     UserEmail  |
-|     UserName     |
-
-You can choose to filter the `UnhealthyDefenderAgents` and `DefenderAgents` report's output based on the following columns:
-- `DeviceState` 
-- `SignatureUpdateOverdue` 
-- `MalwareProtectionEnabled`
-- `RealTimeProtectionEnabled` 
-- `NetworkInspectionSystemEnabled`
-
-### ActiveMalware and Malware reports
-
-The `ActiveMalware` and `Malware` reports are two distinct reports that have the same set of properties and filters. The following table contains the possible output when calling the `ActiveMalware` or `Malware` reports:
-
-| Available   Columns  |
-|-|
-|     DeviceId  |
-|     DeviceName  |
-|     MalwareId  |
-|     MalwareName  |
-|     AdditionalInformationUrl  |
-|     Severity  |
-|     MalwareCategory  |
-|     ExecutionState  |
-|     State  |
-|     InitialDetectionDateTime  |
-|     LastStateChangeDateTime  |
-|     DetectionCount  |
-|     UPN  |
-|     UserEmail  |
-|     UserName     |
-
-You can choose to filter the `ActiveMalware` and `Malware` report's output based on the following columns:
-- `Severity` 
-- `ExecutionState` 
-- `State` 
+> [!IMPORTANT]
+> The `localizationType` parameter is relevant for any export experience hosted by Intune's reporting infrastructure with a few exceptions. The`Devices` and `DevicesWithInventory` report types will not honor the `localizationType` parameter due to legacy compatibility requirements.
 
 ## Next steps
 

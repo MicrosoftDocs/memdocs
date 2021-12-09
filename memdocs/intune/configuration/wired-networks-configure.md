@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Configure 802.1x wired network settings for macOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure 802.1x wired network settings for macOS devices in Microsoft Intune
 titleSuffix:
 description: Create or add a wired network device configuration profile for macOS desktop computer devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -55,12 +55,12 @@ This article lists the steps to create a wired network profile. It also includes
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**.
-    - **Profile**: Select **Wired Network**.
+    - **Profile**: Select **Templates** > **Wired Network**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Wired network profile for entire company on macOS devices**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: Wired network for entire company**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -80,4 +80,4 @@ This article lists the steps to create a wired network profile. It also includes
 
 ## Next steps
 
-The profile is created, but it may not be doing anything. Be sure to [assign this profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+The profile is created, but may not be doing anything. Be sure to [assign this profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).

@@ -6,11 +6,11 @@ ms.date: 12/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # Assets in Desktop Analytics
@@ -97,6 +97,6 @@ In a deployment plan, you can also set the **Upgrade decision**. For more inform
 
 - [Learn about Desktop Analytics deployment plans](about-deployment-plans.md)  
 
-- [Learn about security and feature updates](about-updates.md)  
+- [Learn about feature updates](about-updates.md)  
 
 - [Compatibility assessment in Desktop Analytics](compat-assessment.md)  

@@ -1,9 +1,7 @@
 ---
 title: Windows Autopilot what's new
-ms.reviewer: 
-manager: laurawi
 description: Read news and resources about the latest updates and past versions of Windows Autopilot.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens
+keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens, diagnostics
 ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -13,19 +11,52 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
-ms.collection: M365-modern-desktop
+manager: dougeby
+ms.reviewer: jubaptis
+ms.date: 10/20/2021
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: article
 ---
-
 
 # Windows Autopilot: What's new
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
+## Autopilot agility rolling out
+
+Autopilot agility is a new feature that allows updates and bug fixes to the OOBE experience. These updates occur before device enrollment, after the AADJ login page and may result in an additional reboot and authentication prompt to the user. This feature is rolling out to Windows 10 1909 and 2004/20H2 with August cumulative update and is not yet available for Windows 11.
+
+## One-time self-deployment and pre-provisioning
+
+We made a change to the Windows Autopilot self-deployment mode and pre-provisioning mode experience, adding in a step to delete the device record as part of the device re-use process. This change impacts all Windows Autopilot deployments where the Autopilot profile is set to self-deployment or pre-provisioning mode. This change will only affect a device when it is re-used or when it is reset and attempts to redeploy. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452)
+
+## Update to the Windows Autopilot sign-in experience
+
+Users must enter their credentials at initial sign-in during enrollment. We no longer allow pre-population of the Azure Active Directory (Azure AD) User Principal Name (UPN). For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452)
+
+## MFA changes to Windows Autopilot enrollment flow
+
+To improve the baseline security for Azure Active Directory (Azure AD), we changed Azure AD behavior for multi-factor authentication (MFA) during device registration. Previously, if a user completed MFA as part of their device registration, the MFA claim was carried over to the user state after registration was complete. Going forward, the MFA claim is not preserved after registration and users will be prompted to redo MFA for any apps that require MFA by policy. For more information, see [Windows Autopilot MFA changes to enrollment flow](https://techcommunity.microsoft.com/t5/intune-customer-success/windows-autopilot-mfa-changes-to-enrollment-flow/ba-p/2774687).
+
+## [Preview] Windows Autopilot diagnostics page
+
+When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available to provide IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. 
+
+An example of the diagnostics page is shown below. In this example, **Configuration info** is expanded first by clicking on **Show details**. Next, the user expands **Deployment info** and displays details about **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The user also has the option to **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+
+![diagnostics page start](images/oobe-01.png)<br>
+![diagnostics page click](images/oobe-02.png)<br>
+![diagnostics page expand](images/oobe-03.png)
+
+The diagnostics page can be enabled by going to the [ESP profile](../intune/enrollment/windows-enrollment-status.md#available-settings) and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. 
+
+The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 
 ## Windows Autopilot for HoloLens 2
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create a Wi-Fi profile for devices in Microsoft Intune - Azure | Microsoft Docs
+title: Create a Wi-Fi profile for devices in Microsoft Intune
 description: See the steps to create a Wi-Fi device configuration profile in Microsoft Intune. Create profiles for Android device administrator, Android Enterprise, Android kiosk, iOS, iPadOS, macOS, Windows 10 and newer, and Windows Holographic for Business. Use these profiles to create a WiFi connection to use certificates, choose an EAP type, select an authentication method, enable a proxy, and more.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/07/2021
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Add and use Wi-Fi settings on your devices in Microsoft Intune
@@ -51,7 +53,7 @@ Wi-Fi profiles support the following device platforms:
 - Windows 10 and newer, and Windows Holographic for Business
 
 > [!NOTE]
-> For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device.
+> For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device. For more information, see [Import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
 
 ## Create the profile
 
@@ -68,7 +70,7 @@ Wi-Fi profiles support the following device platforms:
       - **Windows 10 and later**
       - **Windows 8.1 and later**
 
-    - **Profile**: Select **Wi-Fi**.
+    - **Profile**: Select **Wi-Fi**. Or, select **Templates** > **Wi-Fi**.
 
       > [!TIP]
       >
@@ -109,4 +111,4 @@ Wi-Fi profiles support the following device platforms:
 
 The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status.](device-profile-monitor.md).
 
-[Troubles Wi-Fi profiles in Intune](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles).
+[Troubleshoot Wi-Fi profiles in Intune](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles).

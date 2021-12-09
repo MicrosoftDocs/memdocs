@@ -9,6 +9,8 @@ ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -115,7 +117,7 @@ public void ClearPxeAdvertisementResource(WqlConnectionManager connection, int r
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [How to Clear a PXE Advertisement For a Configuration Manager Collection](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md)   

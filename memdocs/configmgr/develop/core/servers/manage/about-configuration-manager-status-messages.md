@@ -10,6 +10,8 @@ ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # About Configuration Manager Status Messages

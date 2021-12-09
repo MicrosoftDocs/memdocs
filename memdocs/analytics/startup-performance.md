@@ -1,16 +1,15 @@
 ---
 title: Startup performance in Endpoint Analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 10/23/2020
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: bdf15dfd-8a09-46f4-8a09-6200a67e3fe7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
@@ -20,21 +19,20 @@ The startup performance score helps IT get users from power-on to productivity q
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 For devices enrolled via Intune, Startup performance insights are only available for:
-- Devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro editions.
+- Devices running an Enterprise, Professional, or Education edition of Windows 10 version 1903 or later.
    - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
    - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
-   - Windows 10 long-term servicing channel (LTSC) and Home editions aren't currently supported.
+   - Long-term servicing channel (LTSC) and Home editions aren't currently supported.
 - The devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined machines aren't currently supported.
 
 For devices that do not meet the above criteria, you are able to [enroll via Configuration Manager](enroll-configmgr.md).
 
+> [!Important]
+> Client devices require a restart to fully enable all analytics. <!--7698085-->
 ## <a name="bkmk_score"></a> Startup score
 
-The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
-
-- **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
-- **Sign-in score**: Based on the time from when credentials have been entered until the user can access a responsive desktop (meaning the desktop has rendered and the CPU usage has fallen below 50% for at least 2 seconds). We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
+[!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
 
 [![Endpoint analytics startup performance page](media/startup-performance.png)](media/startup-performance.png#lightbox)
 
@@ -78,5 +76,5 @@ The **Startup performance** page has reporting tabs that provide support for the
 
 ## Next steps
 
-- View [Recommended software](recommended-software.md).
+- Use the [Work from anywhere report](work-from-anywhere.md).
 - Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.

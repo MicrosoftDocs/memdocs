@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Microsoft Endpoint Manager overview - Azure | Microsoft Docs
+title: Microsoft Endpoint Manager overview
 description: Endpoint Manager includes Intune, Configuration Manager, co-management, Desktop Analytics, Windows Autopilot, and the admin center to manage all devices, including on-premises.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/28/2020
+ms.date: 04/14/2021
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Microsoft Endpoint Manager overview
@@ -32,10 +34,6 @@ ms.collection: M365-identity-device-management
 Microsoft Endpoint Manager helps deliver the modern workplace and modern management to keep your data secure, in the cloud and on-premises. Endpoint Manager includes the services and tools you use to manage and monitor mobile devices, desktop computers, virtual machines, embedded devices, and servers.
 
 Endpoint Manager combines services you may know and already be using, including Microsoft Intune, Configuration Manager, Desktop Analytics, co-management, and Windows Autopilot. These services are part of the Microsoft 365 stack to help secure access, protect data, and respond and manage risk.
-
-Start by watching the following two-minute video from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
-
-> [!VIDEO https://www.youtube.com/embed/GS7oNPInFuw]
 
 ## What you get
 
@@ -52,7 +50,7 @@ Endpoint Manager includes the following services:
 
   For more information, see [What is Microsoft Intune](/intune/fundamentals/what-is-intune).
 
-- **Configuration Manager**: Configuration Manager is an on-premises management solution to manage desktops, servers, and laptops that are on your network or internet-based. You can cloud-enable it to integrate with Intune, Azure Active Directory (AD), Microsoft Defender ATP, and other cloud services. Use Configuration Manager to deploy apps, software updates, and operating systems. You can also monitor compliance, query and act on clients in real time, and much more.
+- **Configuration Manager**: Configuration Manager is an on-premises management solution to manage desktops, servers, and laptops that are on your network or internet-based. You can cloud-enable it to integrate with Intune, Azure Active Directory (AD), Microsoft Defender for Endpoint, and other cloud services. Use Configuration Manager to deploy apps, software updates, and operating systems. You can also monitor compliance, query and act on clients in real time, and much more.
 
   As part of Endpoint Manager, continue to use Configuration Manager as you always have. If you're ready to move some tasks to the cloud, consider [co-management](/configmgr/comanage/).
 

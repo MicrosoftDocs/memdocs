@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: iOS/iPadOS device compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS device compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your iOS/iPadOS devices in Microsoft Intune. Require an email, check jailbroken or rooted devices, set the allowed minimum and maximum operating system, set any password restrictions, including password length and device inactivity, restrict apps, and more.
 keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 12/15/2020
+ms.date: 10/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# iOS/iPadOS settings to mark devices as compliant or not compliant using Intune
+# Device Compliance settings for iOS/iPadOS in Intune
 
 This article lists and describes the different compliance settings you can configure on iOS/iPadOS devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require an email, mark rooted (jailbroken) devices as not compliant, set an allowed threat level, set passwords to expire, and more.
 
@@ -41,7 +41,15 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Before you begin
 
-[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **iOS/iPadOS**.
+When configuring compliance policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS compliance policies.
+
+The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level.
+
+For details about the settings for each level:
+
+- For personally owned and for supervised devices, see [iOS/iPadOS device compliance security configurations](../enrollment/ios-ipados-device-compliance-security-configurations.md)
+
+When you're ready to proceed, [create an iOS/iPadOS device compliance policy](create-compliance-policy.md#create-the-policy).
 
 ## Email
 

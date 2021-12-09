@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 04/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -192,7 +192,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
    * applicationId - The application ID of the native app that was created in AAD.
    *
    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
-   *      the Azure portal.
+   *      the Microsoft Endpoint Manager admin center.
    *
    * collectionName - The name of the warehouse entity collection you would like to
    *      access.

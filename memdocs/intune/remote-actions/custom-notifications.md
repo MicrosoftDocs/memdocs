@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: jinyoon
+ms.reviewer: petermt
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -72,7 +72,7 @@ If you have the Company Portal app open on an Android device, the notification r
 - To send notifications to a device, your account must have the following RBAC permission in Intune: *Remote tasks* > **Send custom notifications**.
 
 **Creating notifications**:
- 
+
 - To create a message, use an account that is assigned an Intune role that includes the correct permission as described in the preceding *Permissions* section. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#role-assignments).
 - Custom notifications are limited to 50-character titles and 500-character messages.  
 - Intune doesn't save text from previously sent custom notifications. To resend a message, you must recreate that message.  
@@ -127,6 +127,7 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 Intune processes the message immediately. The only confirmation that the message was sent is the Intune notification you'll receive in the console, which displays the text of the message you sent.  
 
+
 ## Receive a custom notification
 
 On a device, users see custom notification messages that are sent by Intune as a standard push notification from the Company Portal app or the Microsoft Intune app. These notifications are similar to the push notifications users receive from other apps on the device.  
@@ -134,6 +135,9 @@ On a device, users see custom notification messages that are sent by Intune as a
 On iOS/iPadOS devices, if the Company Portal app is open when the notification is received, the notification displays in the app instead of being a push notification.  
 
 The notification remains until the user dismisses it.  
+
+> [!NOTE]
+> For Android devices, users must update to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) to receive custom notifications. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app.
 
 ## Next steps
 

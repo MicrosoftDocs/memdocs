@@ -2,16 +2,16 @@
 title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
-ms.date: 10/23/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
-ms.assetid: 1be507b8-c3bf-46fd-b010-e2f432659a63
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Intune devices into Endpoint analytics so that I can gain insights into the user experience.
+ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # Quickstart: Enroll Intune devices into Endpoint analytics
@@ -24,17 +24,18 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Intune device requirements
 
-- Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
-   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
-      -  Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
-      - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
-- Windows 10 devices must be Azure AD joined or hybrid Azure AD joined.
+- Intune enrolled or co-managed devices running the following:
+   - Windows 10 version 1903 or later
+      - The cumulative update from July 2021 or later installed
+     - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
+
+- Windows devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined or Azure AD registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Intune-managed devices
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows 10 and Windows Server **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices.
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices.
 
 | Endpoint  | Function  |
 |-----------|-----------|
@@ -60,6 +61,8 @@ Onboarding from  the Endpoint analytics portal is required for Intune managed de
 [!INCLUDE [Endpoint analytics overview page information](includes/onboard.md)]
 
 ## <a name="bkmk_view"></a> View the Overview page
+
+You won't see your data immediately. The data needs to be gathered and the results calculated. For startup performance, the device needs to have been restarted at least once. Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
 
 [!INCLUDE [Endpoint analytics overview page information](includes/overview-page.md)]
 

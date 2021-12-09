@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 04/01/2021
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -104,9 +104,9 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 ## Create the Conditional Access policy
 
-Now we'll create a Conditional Access policy that requires all device platforms to enroll in Intune and comply with our Intune compliance policy before they can access Exchange Online. We'll also require the Outlook app for email access. Conditional Access policies are configurable in either the Azure AD portal or the Intune portal. Since we're already in the Intune portal, we'll create the policy here.
+Now we'll create a Conditional Access policy that requires all device platforms to enroll in Intune and comply with our Intune compliance policy before they can access Exchange Online. We'll also require the Outlook app for email access. Conditional Access policies are configurable in either the Azure AD portal or the Microsoft Endpoint Manager admin center. Since we're already in the admin center, we'll create the policy here.
 
-1. In Intune, select **Endpoint security** > **Conditional Access** > **New policy**.
+1. In Microsoft Endpoint Manager admin center, select **Endpoint security** > **Conditional Access** > **New policy**.
 
 2. For **Name**, enter **Test policy for Microsoft 365 email**.
 

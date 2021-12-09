@@ -2,14 +2,14 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 10/12/2020
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Internet access requirements
@@ -25,15 +25,74 @@ Configuration Manager uses the following Microsoft URL forwarding services throu
 
 Even if they're not explicitly listed in the sections below, you should always allow these endpoints.
 
-## <a name="bkmk_scp"></a> Service connection point
+## Service connection point
 
-For more information on the service connection point, see [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md).
+For more information, see [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md).
 
 [!INCLUDE [Internet endpoints for service connection point](includes/internet-endpoints-service-connection-point.md)]
 
+## Updates and servicing
+
+For more information, see [Updates and servicing](../../servers/manage/updates.md).
+
+> [!TIP]
+> Enable these endpoints for the [management insight](../../servers/manage/management-insights.md) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**.
+
+- `*.akamaiedge.net`  
+
+- `*.akamaitechnologies.com`  
+
+- `*.manage.microsoft.com`  
+
+- `go.microsoft.com`  
+
+- `download.microsoft.com`  
+
+- `download.windowsupdate.com`  
+
+- `sccmconnected-a01.cloudapp.net`  
+
+- `configmgrbits.azureedge.net`
+
+    > [!IMPORTANT]
+    > This Azure endpoint only supports TLS 1.2 with specific cipher suites.<!-- 10424111 --> Make sure your environment supports these Azure configurations. For more information, see [Azure Front Door: TLS configuration FAQ](/azure/frontdoor/front-door-faq#tls-configuration).
+
+- `ceuswatcab01.blob.core.windows.net`
+
+- `ceuswatcab02.blob.core.windows.net`
+
+- `eaus2watcab01.blob.core.windows.net`
+
+- `eaus2watcab02.blob.core.windows.net`
+
+- `weus2watcab01.blob.core.windows.net`
+
+- `weus2watcab02.blob.core.windows.net`
+
+- `umwatsonc.events.data.microsoft.com`
+
+- `*-umwatsonc.events.data.microsoft.com`
+
+## Windows servicing
+
+For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
+
+- `download.microsoft.com`  
+
+- `https://go.microsoft.com/fwlink/?LinkID=619849`  
+
+- `dl.delivery.mp.microsoft.com`  
+
+## Azure services
+
+For more information, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
+
+- `management.azure.com` (Azure public cloud)
+- `management.usgovcloudapi.net` (Azure US Government cloud)
+
 ## Co-management
 
-If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
+If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
 
 ## Microsoft Store for Business
 
@@ -51,7 +110,7 @@ For more information, see the following articles:
 - [Fundamental concepts for content management in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
-## <a name="bkmk_cloud"></a> Cloud services
+## Cloud services
 
 <!-- SCCMDocs-pr #3402 -->
 
@@ -59,7 +118,7 @@ For more information on the cloud management gateway (CMG), see [Plan for CMG](.
 
 [!INCLUDE [Internet endpoints for cloud services](includes/internet-endpoints-cloud-services.md)]
 
-## <a name="bkmk_sum"></a> Software updates
+## Software updates
 
 Allow the active software update point to access the following endpoints so that WSUS and Automatic Updates can communicate with the Microsoft Update cloud service:  
 
@@ -117,12 +176,20 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
 
+Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
+
+- Starting March 2, 2021: `https://omex.cdn.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
+   - Location prior to March 2, 2021: `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
+
+> [!NOTE]
+> The location of this file is changing *March 2, 2021* <!--edit this, placeholder line-->. For more information, see [Download location change for Microsoft 365 Apps readiness file](https://techcommunity.microsoft.com/t5/configuration-manager-blog/download-location-change-for-microsoft-365-apps-readiness-file/ba-p/2110282).
+
 ## Configuration Manager console
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:
 
 > [!NOTE]
-> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](#bkmk_scp-updates), so you may have already allowed it.
+> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](#updates-and-servicing), so you may have already allowed it.
 
 ### In-console feedback
 
@@ -178,11 +245,23 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](includes/internet-endpoints-deploy-microsoft-edge.md)]
 
+## External notifications
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
+
+The service connection point needs to communicate with the notification service, for example Azure Logic Apps. The access endpoint for the logic app typically has the following format: `https://*.<RegionName>.logic.azure.com:443`. For example: `https://prod1.westus2.logic.azure.com:443`
+
+To get the access endpoint for the logic app, as well as the associated IP addresses, use the following process:
+
+1. In the Azure portal, under **Logic Apps**, select the logic app for your notification. For more information, see [Manage logic apps in the Azure portal](/azure/logic-apps/manage-logic-apps-with-azure-portal).
+1. In the app's menu, in the **Settings** section, select **Properties**.
+1. View or copy the values for the **Access endpoint** and the **Access endpoint IP addresses**.
+
 ## Microsoft public IP addresses
 
 For more information on the Microsoft IP address ranges, see [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). These addresses update regularly. There's no granularity by service, any IP address in these ranges could be used.
 
-## See also
+## Next steps
 
 - [Ports used in Configuration Manager](../hierarchy/ports.md)
 

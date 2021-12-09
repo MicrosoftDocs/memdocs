@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Update Windows BIOS features using MDM policies in Microsoft Intune - Azure | Microsoft Docs
+title: Update Windows BIOS features using MDM policies in Microsoft Intune
 description: Add a Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings, such as the CPU, built-in hardware, and boot options on Windows 10 devices in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,13 +35,13 @@ DFCI [enables Windows](/windows/client-management/mdm/uefi-csp) to pass manageme
 
 In Intune, use this feature to control BIOS settings. Typically, firmware is more resilient to malicious attacks. It limits end users control over the BIOS, which is good in a compromised situation.
 
-For example, you use Windows 10 devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
-
-When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
-
 This feature applies to:
 
 - Windows 10 RS5 (1809) and later on supported UEFI
+
+For example, you use Windows 10 devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
+
+When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
 
 ## Before you begin
 
@@ -85,7 +85,7 @@ This profile includes the DFCI settings you configure.
 3. Enter the following properties:
 
     - **Platform**: Choose **Windows 10 and later**.
-    - **Profile**: Select **Device Firmware Configuration Interface**.
+    - **Profile**: Select **Templates** > **Device Firmware Configuration Interface**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

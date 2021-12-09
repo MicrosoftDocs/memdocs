@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create WiFi profile with pre-shared key in Microsoft Intune - Azure | Microsoft Docs
+title: Create WiFi profile with pre-shared key in Microsoft Intune
 description: Use a custom profile to create a Wi-Fi profile with a pre-shared key, and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2021
+ms.date: 08/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi profile using a pre-shared key. To create the profile, use the **Custom device profiles** feature within Intune. This article also includes some examples of how to create an EAP-based Wi-Fi profile.
 
-This feature supports:
+This feature applies to:
 
 - Android device administrator
 - Android Enterprise personally owned devices with a work profile
@@ -59,12 +59,12 @@ This feature supports:
 3. Enter the following properties:
 
     - **Platform**: Choose your platform.
-    - **Profile**: Select **Custom**.
+    - **Profile**: Select **Custom**. Or, select **Templates** > **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile settings for Android device administrator devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile for Android DA**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -78,9 +78,11 @@ This feature supports:
         - **For Windows**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
         > [!NOTE]
-        > Be sure to include the dot character at the beginning.
+        > 
+        > - Be sure to include the dot character at the beginning.
+        > - If the SSID has a space, then add an escape space `%20`.
 
-        SSID is the SSID for which you're creating the policy. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        SSID is the SSID for which you're creating the policy. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
     4. **Data Type**: Select **String**.
 
@@ -130,8 +132,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 <password> = Plain text of the password to connect to the network
 -->
 
-<WLANProfile
-xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
   <name><Name of wifi profile></name>
   <SSIDConfig>
     <SSID>
@@ -260,9 +261,9 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
         `key=clear` exports the key in plain text, which is required to successfully use the profile.
-        
+
     - If the exported Wi-Fi profile `<name></name>` element includes a space, then it might return a `ERROR CODE 0x87d101f4 ERROR DETAILS Syncml(500)` error when assigned. When this issue happens, the profile is listed in `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces`, and shows as a known network. But, it doesn't successfully display as managed policy in the "Areas managed by..." URI.
-    
+
       To resolve this issue, remove the space.
 
 After you have the XML file, copy and paste the XML syntax into OMA-URI settings > **Data type**. [Create a custom profile](#create-a-custom-profile) (in this article) lists the steps.

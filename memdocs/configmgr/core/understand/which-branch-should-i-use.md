@@ -6,12 +6,10 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Which branch of Configuration Manager should I use?
@@ -38,7 +36,7 @@ This branch is licensed for use in a production environment. Use this branch to 
 - System Center Configuration Manager
 - Equivalent subscription rights  
 
-For more information about Software Assurance and licensing options, see [Licensing and branches for Configuration Manager](learn-more-editions.md) and [Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.md).
+For more information about Software Assurance and licensing options, see [Licensing and branches for Configuration Manager](learn-more-editions.md) and [Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.yml).
 
 Microsoft plans to release updates for Configuration Manager current branch a few times per year. Each update version remains in support for 18 months from its general availability (GA) release date. Technical support is provided for the entire period of support. However, our support structure is dynamic, evolving into two distinct servicing phases that depend on the availability of the latest current branch version. (For more information, see [Support for Configuration Manager current branch versions](../servers/manage/current-branch-versions-supported.md). Updates to newer versions are available as in-console updates.
 
@@ -75,7 +73,7 @@ For more information, see [Support for current branch versions](../servers/manag
 
 ## Long-term servicing branch
 
-This branch is licensed for use in production for Configuration Manager customers who are using the current branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October 1, 2016. For more about Software Assurance and licensing options, see [Licensing and branches for Configuration Manager](learn-more-editions.md) and [Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.md).
+This branch is licensed for use in production for Configuration Manager customers who are using the current branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October 1, 2016. For more about Software Assurance and licensing options, see [Licensing and branches for Configuration Manager](learn-more-editions.md) and [Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.yml).
 
 The LTSB is based on version 1606. This branch doesn't receive in-console updates that deliver new features or update existing capabilities. However, critical security fixes are provided. To install the LTSB, you must use the version 1606 [baseline media](../servers/manage/updates.md#bkmk_Baselines) that you get with System Center 2016. Later baseline versions don't support install of the LTSB.
 
@@ -104,7 +102,7 @@ The LTSB is based on the current branch version 1606 and has the following limit
 - Doesn't support the following capabilities:
   - Cloud-attached features like co-management or Desktop Analytics
   - On-premises MDM
-  - The Windows 10 servicing dashboard, servicing plans, or Windows 10 semi-annual channel
+  - The Windows servicing dashboard, servicing plans, or Windows release channels
   - Future releases of Windows 10 LTSB and Windows Server
   - Asset intelligence
   - Any pre-release features

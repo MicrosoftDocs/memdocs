@@ -2,14 +2,14 @@
 title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
-ms.date: 11/30/2020
+ms.date: 10/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # About the service connection point in Configuration Manager
@@ -61,9 +61,11 @@ To use the Configuration Manager Service Manager to restart the SMS_DMP_DOWNLOAD
 
 ## Remote site system requirements
 
-When you install the service connection point on a site system server that's remote from the site server, configure the following requirements:
+When you install the service connection point on a site system server that's remote from the site server, configure one of the following requirements:
 
 - The computer account of the site server must be a local admin on the computer that hosts a remote service connection point.
+
+  or<!-- MEMDocs#1479 -->
 
 - Set up the site system server that hosts this role with a [site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account). The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
 
@@ -130,6 +132,9 @@ There are several scenarios in which you may need to move the service connection
 
 After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
 
+## <a name="bkmk_notifications"></a> Console notifications for the service connection point
+<!--11047451-->
+Occasionally, the Configuration Manager console may give you a [notification](../../manage/admin-console-notifications.md) about your service connection point. The notification asks you to restart the SMS_EXECUTIVE service on the server that hosts the service connection point. This notification occurs  because a configuration change was made by Microsoft on the services that your service connection point connects to. Features of Configuration Manager that rely on these services may not function for your site properly until the SMS_EXECUTIVE service is restarted.
 ## Log files
 
 To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](../../../plan-design/hierarchy/log-files.md#BKMK_WITLog).

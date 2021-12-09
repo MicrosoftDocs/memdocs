@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 09/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -163,13 +163,13 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
 ## ownerTypes
 
-The **enrollmentType** entity indicates whether a device is corporate, personally owned, or unknown.
+The **ownerType** entity indicates whether a device is corporate, personally owned, or unknown.
 
 | Property  | Description | Example |
 |---------|------------|--------|
 | ownerTypeID |Unique identifier of the owner type. | |
 | ownerTypeKey |Unique identifier of the owner type in the data warehouse - surrogate key. | |
-| ownerTypeName |Represents the owner type of the devices:  <br>Corporate - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Corporate Personal Unknown |
+| ownerTypeName |Represents the owner type of the devices:  <br>Company - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Company Personal Unknown |
 
 > [!Note]  
 > For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
@@ -215,13 +215,14 @@ The **ManagementAgentType** entity represents the agents used to manage a device
 
 | ManagementAgentTypeID  | Name | Description |
 |---------|------------|--------|
-| 1 |EAS | The device is managed through Exchange Active Sync |
-| 2 |MDM | The device is managed using an MDM agent |
-| 3 |EasMdm | The device is managed by both Exchange Active Sync and an MDM agent |
-| 4 |IntuneClient | The device is managed by the Intune PC agent |
-| 5 |EasIntuneClient | The device is managed by both Exchange Active Sync and the Intune PC agent |
-| 8 |ConfigManagerClient | The device is managed by the Configuration Manager agent |
-| 16 |Unknown | Unknown management agent type |
+| 1 |EAS | The device is managed through Exchange Active Sync. |
+| 2 |MDM | The device is managed using an MDM agent. |
+| 3 |EasMdm | The device is managed by both Exchange Active Sync and an MDM agent. |
+| 4 |IntuneClient | The device is managed by the Intune PC agent. |
+| 5 |EasIntuneClient | The device is managed by both Exchange Active Sync and the Intune PC agent. |
+| 8 |ConfigManagerClient | The device is managed by the Configuration Manager agent. |
+| 16 |Unknown | Unknown management agent type. |
+| 2048 |IntuneAosp |  The device is managed by Intune's MDM for AOSP (Android Open Source Project) devices. |
 
 ## devices
 
@@ -268,12 +269,16 @@ The **devices** entity lists all enrolled devices under management and their cor
 | windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
-| office365Version           | The version of Microsoft 365 that is installed on the device.                                                                                                                             |
+| office365Version           | The version of Microsoft 365 that is installed on the device. `Office365Version` is only collected when the Intune management extension agent is installed on a Windows machine. The admin must also create and assign a PowerShell or Win32 App for the agent to be installed. For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md) and [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).<p>**NOTE**:<br>There is a known issue with the Intune Data Warehouse **devices** table. The `office365Version` property for the device record may be null. This property is currently under maintenance and may be subject to deprecation. Therefore, you should consider not using this property value for reporting purposes.                                                                                                                               |
+| SubnetAddressV4Wifi           | The subnet address for IPV4 Wifi connection.                                                                                                                             |
+| IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
+> [!NOTE]
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
 
 ## devicePropertyHistories
 
-The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 90 days. The DateKey column indicates the day for each row.
+The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 60 days. The DateKey column indicates the day for each row.
 
 |          Property          |                                                                                      Description                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

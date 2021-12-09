@@ -7,10 +7,10 @@ ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
-ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install and configure the Exchange connector
@@ -129,5 +129,5 @@ After you complete the installation, monitor the mobile devices that are found a
 
 - [Ports used by Configuration clients and site systems](../../core/plan-design/hierarchy/ports.md#BKMK_PortsExchangeConnectorHosted)
 - [Proxy server support](../../core/plan-design/network/proxy-server-support.md#site-system-roles-that-use-a-proxy)
-- [Security recommendations for mobile devices](../../core/clients/deploy/plan/security-and-privacy-for-clients.md#bkmk_mobile)
-- [Privacy information for mobile devices that are managed with the Exchange Server connector](../../core/clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Privacy_ExchangeConnector)
+- [Security recommendations for mobile devices](../../core/clients/deploy/plan/security-and-privacy-for-clients.md#security-guidance-for-mobile-devices)
+- [Privacy information for mobile devices that are managed with the Exchange Server connector](../../core/clients/deploy/plan/security-and-privacy-for-clients.md#privacy-information-for-the-exchange-server-connector)

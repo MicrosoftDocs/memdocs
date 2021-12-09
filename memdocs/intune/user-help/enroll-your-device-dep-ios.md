@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Enroll your organization-provided iOS device in management. | Microsoft Docs
-description: Describes how to enroll an iOS device in Intune that was purchased and provided by your organization
+title: Enroll your organization-provided iOS/iPadOS device in management. | Microsoft Docs
+description: Describes how to enroll an iOS/iPadOS device in Intune that was purchased and provided by your organization
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -30,23 +30,23 @@ ms.collection:
 ---
 
 
-# Enroll your organization-provided iOS device in management
+# Enroll your organization-provided iOS/iPadOS device in management
 
 Learn how to get your new iOS device managed in Intune.  
 
-The iOS devices that are provided to you by work or school are often preconfigured before you receive them. Your organization will send these preconfigured settings to your device after you turn it on and sign in for the first time. After your device completes setup, you'll receive access to your work or school resources.  
+The iOS/iPadOS devices that are provided to you by work or school are often preconfigured before you receive them. Your organization will send these preconfigured settings to your device after you turn it on and sign in for the first time. After your device completes setup, you'll receive access to your work or school resources.  
 
 To begin setup, power on your device and sign in with your work or school credentials. The rest of this article describes the steps and screens you'll see as you walk through Setup Assistant.
 
-## What is Apple DEP?
+## What is Apple Automated Device Enrollment?
 
-Your organization might have purchased their devices through something called the *Apple Device Enrollment Program* (DEP). Apple DEP lets organizations buy large amounts of iOS or macOS devices. Organizations can then configure and manage those devices within their preferred mobile device management provider, such as Intune. If you're an administrator and want more information about Apple DEP, see [Automatically enroll iOS devices with Apple's Device Enrollment Program](/intune/enrollment/device-enrollment-program-enroll-ios).
+Your organization might have purchased their devices through something called the *Apple Automated Device Enrollment* (formerly known as DEP). Automated Device Enrollment lets organizations buy large amounts of iOS, iPadOS and macOS devices. Organizations can then configure and manage those devices within their preferred mobile device management provider, such as Intune. If you're an administrator and want more information about ADE, see [Automatically enroll iOS devices with Apple's Automated Device Enrollment with ABM/ASM](/intune/enrollment/device-enrollment-program-enroll-ios).
 
-## Set up your iOS device
+## Set up your iOS/iPadOS device
 
-If you're using your own iOS device, rather than an org-provided one, follow the steps for [personal and bring-your-own devices](enroll-your-device-in-intune-ios.md).  
+If you're using your own iOS/iPadOS device, rather than an org-provided one, follow the steps for [personal and bring-your-own devices](enroll-your-device-in-intune-ios.md).  
 
-1. Turn on your iOS device.
+1. Turn on your iOS/iPadOS device.
 2. After you select your **Language**, connect your device to Wi-Fi.
 3. On the **Set up iOS device** screen, choose **Set up as new device**.  
 4. Once you've connected to Wi-Fi, the **Configuration** screen will appear. This will say that **[Your Company] will automatically configure your device.**
@@ -54,7 +54,7 @@ If you're using your own iOS device, rather than an org-provided one, follow the
    **Configuration allows [Your Company] to manage this device over the air. An administrator can help you set up email and network accounts, install and configure apps, and manage settings remotely. An administrator may disable features, install and remove apps, monitor and restrict your Internet traffic and remotely erase this device.**
 
    **Configuration is provided by:
-   [Your Company's] iOS Team
+   [Your Company's] iOS/iPadOS Team
    [Address]**
 
 5. Log in with your Apple ID. Logging in lets you install the Company Portal app and install the management profile that will let your company give you access to their resources, like email and apps.

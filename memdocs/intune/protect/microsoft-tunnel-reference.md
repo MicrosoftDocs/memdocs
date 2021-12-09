@@ -1,12 +1,12 @@
 ---
-title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune
 description: Find file and command-line references for tools you use to install or manage the Microsoft Tunnel Gateway, a VPN server that runs on Linux.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/23/2020
-ms.topic: reference
+ms.date: 10/19/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,6 +37,7 @@ The information in this reference for Microsoft Tunnel Gateway is provided to su
 - Set or update the configuration of the tunnel server.
 - Restart the tunnel server.
 - Uninstall the tunnel server.
+
 The following are common command line uses of the tool.
 
 **Command-line interface**:  
@@ -48,7 +49,7 @@ The following are common command line uses of the tool.
   - `server` - Operate on the server component.
   - `uninstall` - Uninstall the Microsoft Tunnel.
   - `eula` - Show the EULA.
-  - `import_cert` - Import the TLS certificate.
+  - `import_cert` - Import or update the TLS certificate.
 
 - `mst-cli agent –help` - Usage: **mst-cli agent [command]**
 
@@ -200,6 +201,11 @@ Following are environment variables you might want to configure when you install
 
 The following are common commands for Docker that can be of use if you must investigate problems on a tunnel server.
 
+> [!NOTE]
+> Most Linux distributions use Docker. However, *Red Hat Enterprise Linux (RHEL) 8.4* are not supported to use Docker. Instead, RHEL 8.4 use Podman.
+>
+> The references and command lines that are written for Docker can be used with Podman by replacing *docker* with *podman*.
+
 Command-line interface:
 
 - `docker ps –a` – See all containers.
@@ -212,6 +218,14 @@ Command-line interface:
 - **To run something in a container**:
   - `docker exec –it mstunnel-server bash`
   - `docker exec –it mstunnel-agent bash`
+
+## Podman commands
+
+The following are commands for Podman that can be of use if you must investigate problems on a tunnel server. For additional commands you can use with Podman, see [Docker commands](#docker-commands).
+
+- `sudo podman images` - List all running containers.
+- `sudo podman stats` - Display container CPU utilization, MEM usage, Network and Block IO.
+- `sudo podman port mstunnel-server` - List the port mappings from tunnel-server to the local Linux host.
 
 ## Linux commands
 

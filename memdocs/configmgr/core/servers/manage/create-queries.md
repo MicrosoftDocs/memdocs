@@ -1,17 +1,15 @@
 ---
-title: "Create queries"
-titleSuffix: "Configuration Manager"
-description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
-ms.date: 11/30/2020
+title: Create queries
+titleSuffix: Configuration Manager
+description: Discover how to create and import queries in Configuration Manager. Includes example queries and tips.
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Create queries in Configuration Manager
 
@@ -153,7 +151,6 @@ Use one of these values for &lt;Device ID\>:
 |Nokia Symbian|3|  
 |Windows Phone|4|  
 |Mac computer|5|  
-|Windows CE|6|  
 |Windows Embedded|7|  
 |Intel system on a chip|12|  
 |Microsoft HoloLens (MDM)|15|
@@ -163,6 +160,7 @@ Use one of these values for &lt;Device ID\>:
 > Values that aren't listed in this table are associated with devices that are no longer supported.
 
 <!-- old, unsupported values
+|Windows CE|6|
 |iOS|8|  
 |iPad|9|  
 |iPod touch|10|  
@@ -177,6 +175,16 @@ For example, if you want to return only Mac computers, use this query:
 ``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
 ```  
+
+###  <a name="bkmk_comgmt"></a> Devices that are co-managed
+
+```WQL
+select SMS_R_SYSTEM.ResourceID, SMS_R_SYSTEM.ResourceType, SMS_R_SYSTEM.Name,
+SMS_R_SYSTEM.SMSUniqueIdentifier, SMS_R_SYSTEM.ResourceDomainORWorkgroup, SMS_R_SYSTEM.Client
+from SMS_R_System
+inner join SMS_Client_ComanagementState on SMS_Client_ComanagementState.ResourceId = SMS_R_System.ResourceId 
+where SMS_Client_ComanagementState.ComgmtPolicyPresent = 1 AND SMS_Client_ComanagementState.MDMEnrolled = 1 AND MDMProvisioned = 1
+```
 
 ## Next steps
 

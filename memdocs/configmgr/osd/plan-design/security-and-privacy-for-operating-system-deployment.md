@@ -6,12 +6,10 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Security and privacy for OS deployment in Configuration Manager
@@ -257,4 +255,4 @@ Before you configure OS deployment, consider your privacy requirements.
 
 [Diagnostics and usage data](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
 
-[Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md)
+[Security and privacy for Configuration Manager](../../security/index.yml)

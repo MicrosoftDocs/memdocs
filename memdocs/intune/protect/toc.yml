@@ -1,3 +1,4 @@
+items:
 - name: Protect Data and Devices with Intune
   href: index.yml
 - name: Overview
@@ -56,6 +57,13 @@
       href: device-compliance-get-started.md    
     - name: Create a policy
       href: create-compliance-policy.md
+    - name: Custom compliance settings
+      href: compliance-use-custom-settings.md 
+      items:   
+      - name: JSON for custom settings
+        href: compliance-custom-json.md    
+      - name: PowerShell script for custom settings
+        href: compliance-custom-script.md    
     - name: Location-based compliance
       href: use-network-locations.md
     - name: Actions for noncompliance
@@ -95,16 +103,18 @@
           href: endpoint-security-asr-policy.md
         - name: Account protection
           href: endpoint-security-account-protection-policy.md
-    - name: Microsoft Defender ATP
+    - name: Microsoft Defender for Endpoint
       items:
-      - name: Microsoft Defender ATP
+      - name: Microsoft Defender for Endpoint
         href: advanced-threat-protection.md  
-      - name: Configure Defender ATP
+      - name: Configure Defender for Endpoint
         href: advanced-threat-protection-configure.md
       - name: Android web protection
         href: advanced-threat-protection-manage-android.md
-      - name: Monitor Defender ATP
+      - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
+      - name: MDE Security Configuration Management
+        href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
     - name: Tenant attach
@@ -121,10 +131,18 @@
     items:
     - name: Microsoft Tunnel overview
       href: microsoft-tunnel-overview.md
+    - name: Microsoft Tunnel prerequisites
+      href: microsoft-tunnel-prerequisites.md
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
+    - name: Upgrade Microsoft Tunnel
+      href: microsoft-tunnel-upgrade.md
+    - name: Microsoft Tunnel with Conditional Access
+      href: microsoft-tunnel-conditional-access.md
+    - name: Migrate to the Defender for Endpoint app
+      href: microsoft-tunnel-migrate-app.md
   - name: Identity protection
     items:
     - name: Windows Hello
@@ -144,14 +162,14 @@
       href: conditional-access-exchange-create.md
     - name: Device-based Conditional Access policy
       href: create-conditional-access-intune.md
-    - name: Reassign Conditional Access policies from Intune classic portal
-      href: conditional-access-intune-reassign.md
     - name: App-based Conditional Access
       href: app-based-conditional-access-intune.md
     - name: Set up app-based Conditional Access
       href: app-based-conditional-access-intune-create.md
     - name: ADAL and Intune
       href: app-modern-authentication-block.md
+    - name: Use the Jamf Cloud connector
+      href: conditional-access-jamf-cloud-connector.md
     - name: Integrate Jamf Pro with Intune for compliance
       href: conditional-access-integrate-jamf.md
     - name: Enforce compliance on Macs managed with Jamf Pro
@@ -160,6 +178,7 @@
     href: endpoint-protection-configure.md
   - name: Mobile Threat Defense partners
     href: mobile-threat-defense.md
+    displayName: MTD
     items:
     - name: MTD on unenrolled devices
       items:
@@ -233,8 +252,14 @@
       href: certificates-configure.md
     - name: Trusted certificate profiles
       href: certificates-trusted-root.md
-    - name: Certificate connectors
-      href: certificate-connectors.md
+    - name: Certificate Connector
+      items:
+      - name: Certificate Connector
+        href: certificate-connector-overview.md
+      - name: Connector prerequisites
+        href: certificate-connector-prerequisites.md
+      - name: Install the connector
+        href: certificate-connector-install.md
     - name: SCEP  
       items:
       - name: SCEP infrastructure
@@ -243,7 +268,7 @@
       - name: SCEP certificate profiles
         href: certificates-profile-scep.md
       - name: Use third-party certificate authority with SCEP
-        href: certificate-authority-add-scep-overview.md        
+        href: certificate-authority-add-scep-overview.md
     - name: PKCS
       items:
       - name: PKCS
@@ -271,6 +296,10 @@
         href: windows-10-update-rings.md
       - name: Feature updates policy
         href: windows-10-feature-updates.md
+      - name: Expedite updates policy
+        href: windows-10-expedite-updates.md
+      - name: Windows rollout options
+        href: windows-update-rollout-options.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
@@ -317,17 +346,19 @@
     href: scep-libraries-apis.md
   - name: Compliance policy settings
     items:
-    - name: Compliance policy settings - Android
-      href: compliance-policy-create-android.md
-    - name: Compliance policy settings - Android Enterprise
+    - name: Compliance settings - Android device administrator
+      href: compliance-policy-create-android.md  
+    - name: Compliance settings - Android (AOSP) 
+      href: compliance-policy-create-android-aosp.md
+    - name: Compliance settings - Android Enterprise
       href: compliance-policy-create-android-for-work.md
-    - name: Compliance policy settings - iOS
+    - name: Compliance settings - iOS
       href: compliance-policy-create-ios.md
-    - name: Compliance policy settings - macOS
+    - name: Compliance settings - macOS
       href: compliance-policy-create-mac-os.md
-    - name: Compliance policy settings - Windows 10
+    - name: Compliance settings - Windows 10
       href: compliance-policy-create-windows.md
-    - name: Compliance policy settings - Windows 8.1
+    - name: Compliance settings - Windows 8.1
       href: compliance-policy-create-windows-8-1.md
   - name: Endpoint security policy settings
     items:
@@ -345,6 +376,7 @@
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings
       href: endpoint-security-disk-encryption-profile-settings.md
+      displayName: AWA; Add Work Account
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
     - name: Tenant attach Firewall settings    
@@ -359,10 +391,12 @@
     items: 
     - name: Windows 10 MDM baseline settings
       href: security-baseline-settings-mdm-all.md
-    - name: Microsoft Defender ATP baseline settings 
+    - name: Microsoft Defender for Endpoint baseline settings 
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md
+    - name: Windows 365 baseline settings
+      href: security-baseline-settings-windows-365.md
   - name: Microsoft Tunnel command-line tools
     href: microsoft-tunnel-reference.md
   - name: Windows update settings
@@ -371,6 +405,8 @@
     items:
     - name: Software update errors
       href: software-update-agent-error-codes.md
+  - name: Deprecated certificate connectors
+    href: certificate-connectors.md 
 - name: Scenario implementation guides 
   items:
   - name: Protect Exchange Online

@@ -9,6 +9,8 @@ ms.assetid: be25c931-3cc9-407d-b10e-b57b22a5b1c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # GetUserCapability Method in Class CCM_ClientUtilities

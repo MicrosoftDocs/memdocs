@@ -1,0 +1,123 @@
+### 
+### STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the EMMDocs team. 
+###  
+items:
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
+    items:
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
+      items:
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Security
+          tocHref: /mem/configmgr/core/
+          topicHref: /mem/configmgr/security/index
+
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
+    items:
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
+      items:
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Security
+          tocHref: /mem/configmgr/osd/
+          topicHref: /mem/configmgr/security/index
+
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
+    items:
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
+      items:
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Security
+          tocHref: /mem/configmgr/apps/
+          topicHref: /mem/configmgr/security/index
+
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
+    items:
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
+      items:
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Security
+          tocHref: /mem/configmgr/compliance/
+          topicHref: /mem/configmgr/security/index
+
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
+    items:
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
+      items:
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Security
+          tocHref: /mem/configmgr/protect/
+          topicHref: /mem/configmgr/security/index
+
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
+    items:
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
+      items:
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Security
+          tocHref: /mem/configmgr/sum/
+          topicHref: /mem/configmgr/security/index

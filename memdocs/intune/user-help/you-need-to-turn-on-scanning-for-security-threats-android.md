@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: You need to turn on security threat scanning 
-description: Learn how to enable security threat scans on your device
+title: You need to turn on Google Play Protect 
+description: Learn how to turn on Google Play Protect for security threat scans.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 04/15/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,14 +30,16 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Enable security threat scans on your device 
-If you unknowingly install an unsafe app, your device data may be at risk. To protect the data on your device, we recommend that you: 
+# Turn on Google Play Protect   
+Some apps contain harmful behavior and can compromise the data on your device. To prevent these types of apps from harming your device, we recommend that you: 
 
 * Only download apps from verified sources, such as the Google Play Store.  
-* Enable security threat scans on your device. These scans are performed by Google and verify that apps are safe to install.  
+* Turn on Google Play Protect. Play Protect checks the apps on your device and alerts you to security threats.  
 
-To enable the scans on your device, go to **Settings** > **Google** > **Security**. Turn on **Scan device for security threats**.  
+Complete the following steps to turn on Play Protect.  
 
-On some Samsung devices, you may find the setting in **Settings** > **Google** > **Security** > **Google Play Protect**.
+1. Go to the **Settings** app and tap > **Biometrics and security**.
+2. Tap **Google Play Protect**.
+3. Tap **Turn on**. 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). 
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). 

@@ -6,10 +6,10 @@ ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 4b305a71-9ad8-4332-9692-d51554158981
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Tenant attach data collection
@@ -71,10 +71,10 @@ For each device:
 - **DomainNames**: Any domain names for the device
 - **SKU**
 
-## Windows Defender Advanced Threat Protection (ATP)
+## Microsoft Defender for Endpoint
 <!-- 6505652 -->
 
-For any collection that you select for ATP policy deployment:
+For any collection that you select for Endpoint policy deployment:
 
 - **CollectionId**: The unique identifier of the collection. For example, `ABC00014`
 - **CollectionName**: The name of the collection. For example, `All Windows servers`

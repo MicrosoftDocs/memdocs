@@ -9,12 +9,10 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/09/2017
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 
 # optional metadata
 
@@ -26,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Help end users understand Company Portal app messages

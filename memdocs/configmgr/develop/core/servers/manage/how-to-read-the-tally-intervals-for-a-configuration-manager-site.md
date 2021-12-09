@@ -9,6 +9,8 @@ ms.assetid: 856f0bb5-25cd-4c54-b452-6a0d6acc7500
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -129,7 +131,7 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../../develop/core/servers/configure/role-based-administration.md).  
 
 ## See Also  
  [About status messages](about-configuration-manager-status-messages.md)

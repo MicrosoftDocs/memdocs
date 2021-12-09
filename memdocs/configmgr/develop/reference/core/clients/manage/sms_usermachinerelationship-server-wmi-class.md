@@ -10,6 +10,8 @@ ms.assetid: 97f57654-c1d1-4a2f-b05f-9f16b22372b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_UserMachineRelationship server WMI class
@@ -122,6 +124,7 @@ An array of sources for this relationship, with one of the following values:
 |`6`|OSD|The user and device were tied together as part of an OS deployment task sequence.|  
 |`7`|Fast install|The user/device were tied together temporarily to enable an on-demand install from the catalog if no UDA relationship installed before the Install was triggered.|  
 |`8`|Exchange Server connector|The device was provisioned through Exchange ActiveSync.|  
+|`9`|Secure usage agent||
 
  `Types`  
  Data type: `UInt32` Array  

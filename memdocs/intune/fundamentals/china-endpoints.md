@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 10/04/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: kerimh
+ms.reviewer: srink
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,13 +42,13 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for China customers, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md#windows-10-auto-enrollment-and-device-registration).
+For more information about Windows 10 auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enroll.md#windows-auto-enrollment-and-device-registration).  
 
 The following tables list the ports and services that the Intune client accesses:
 
 |**Endpoint**|**IP address**|
 |---------------------|-----------|
-|*.manage.microsoft.cn | 40.73.38.143<br>139.217.97.81<br>52.130.80.24<br>40.73.41.162<br>40.73.58.153<br>139.217.95.85 |
+|*.manage.microsoftonline.cn | 40.73.38.143<br>139.217.97.81<br>52.130.80.24<br>40.73.41.162<br>40.73.58.153<br>139.217.95.85 |
 
 
 ## Intune customer designated endpoints in China

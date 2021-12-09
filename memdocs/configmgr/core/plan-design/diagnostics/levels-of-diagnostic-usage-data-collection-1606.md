@@ -1,16 +1,16 @@
 ---
-title: "Diagnostic data for 1606"
-titleSuffix: "Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1606 collects."
+title: Diagnostic data for 1606
+titleSuffix: Configuration Manager
+description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1606 collects.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Levels of diagnostic usage data collection for version 1606 of Configuration Manager
@@ -219,7 +219,7 @@ Beginning with Configuration Manager version 1606, this level includes the follo
 
     -   Count of alerts that are configured for the Endpoint Protection feature  
 
-    - ***[New]*** Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
+    - ***[New]*** Endpoint Policies (count of policies and whether policies are deployed)
 
 
 -   ***[Removed]*** **Mobile application management (MAM):**  

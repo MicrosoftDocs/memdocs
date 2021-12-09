@@ -2,14 +2,14 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 08/17/2020
+ms.date: 07/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Token-based authentication for cloud management gateway
@@ -20,9 +20,9 @@ manager: dougeby
 
 The cloud management gateway (CMG) supports many types of clients, but even with [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), these clients require a [client authentication certificate](../manage/cmg/configure-authentication.md#pki-certificate). This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate.
 
-To overcome these challenges, starting in version 2002, Configuration Manager extends its device support by issuing its own authentication tokens to devices. To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
+To overcome these challenges, Configuration Manager extends its device support by issuing its own authentication tokens to devices. To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](../manage/upgrade/test-client-upgrades.md#promote-a-new-client-to-production).
 
- Clients initially register for these tokens using one of the following two methods:
+Clients initially register for these tokens using one of the following two methods:
 
 - Internal network
 
@@ -42,6 +42,9 @@ Make sure to **Enable clients to use a cloud management gateway** in the **Cloud
 This method requires the client to first register with the management point on the internal network. Client registration typically happens right after installation. The management point gives the client a unique token that shows it's using a self-signed certificate. When the client roams onto the internet, to communicate with the CMG it pairs its self-signed certificate with the management point-issued token.
 
 The site enables this behavior by default.
+
+> [!NOTE]
+> With an HTTPS management point, the client needs to first register regardless of internet/intranet management point. The client needs to present a valid PKI-issued certificate, an Azure AD token, or a bulk registration token.
 
 ## Bulk registration token
 
@@ -82,10 +85,6 @@ On the server, review the following logs:
   - CCM_STS.log
   - MP_RegistrationManager.log
   - ClientAuth.log
-
-### Known issues
-
-You can't create a bulk registration token on a site that has a site server in passive mode.<!-- 6399087 -->
 
 ### Bulk registration token tool usage
 
@@ -153,4 +152,4 @@ You can't renew a bulk registration token. Once a bulk registration token expire
 
 - [Overview of cloud management gateway](../manage/cmg/overview.md)
 
-- [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md)
+- [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md)

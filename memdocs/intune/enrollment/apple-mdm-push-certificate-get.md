@@ -5,8 +5,8 @@ title: Get an Apple MDM Push certificate for Intune
 titleSuffix: 
 description: Get an Apple MDM Push certificate to manage iOS/iPadOS devices with Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: how-to
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Get an Apple MDM push certificate
@@ -56,10 +58,13 @@ Select **I agree.** to give Microsoft permission to send data to Apple.
 Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
 
 ### Step 3. Create an Apple MDM push certificate
-Select **Create your MDM push Certificate** to go to the Apple Push Certificates Portal. Sign in with your company Apple ID, and then click **Create a Certificate**. Select **Choose File** and browse to the certificate signing request file, and then choose **Upload**. On the Confirmation page, choose **Download** to the download the certificate (.pem)  file, and save the file locally.
+Select **Create your MDM push Certificate** to go to the Apple Push Certificates Portal. Sign in with your company email address Apple ID, and then click **Create a Certificate**. Select **Choose File** and browse to the certificate signing request file, and then choose **Upload**. On the Confirmation page, choose **Download** to the download the certificate (.pem)  file, and save the file locally.
 
 > [!NOTE]
-> The certificate is associated with the Apple ID used to create it. As a best practice, use a company Apple ID for management tasks and make sure the mailbox is monitored by more than one person like a distribution list. Never use a personal Apple ID.
+> The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address for Apple ID for management tasks and make sure the mailbox is monitored by more than one person like a distribution list. Avoid using personal Apple ID.
+
+> [!NOTE]
+> If you plan to federate your existing AAD Accounts with Apple for Managed Apple ID Usage, please contact Apple to have the existing APNS certificate migrated to new managed apple ID. Refer https://support.apple.com/en-in/guide/apple-school-manager/apd6603d9206/web for more info.
 
 ### Step 4. Enter the Apple ID used to create your Apple MDM push certificate
 Record this ID as a reminder for when you need to renew this certificate.

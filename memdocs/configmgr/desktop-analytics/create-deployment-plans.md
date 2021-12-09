@@ -6,11 +6,11 @@ ms.date: 03/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 8e0e8496-136b-461f-8239-cc19c6b78c3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # How to create deployment plans in Desktop Analytics
@@ -46,7 +46,7 @@ Follow the steps in this section to use Desktop Analytics to create a plan for d
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.yml#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal-).  
 
 6. Open the deployment plan by selecting its name.  
 

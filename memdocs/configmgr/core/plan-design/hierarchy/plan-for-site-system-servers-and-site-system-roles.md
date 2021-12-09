@@ -2,16 +2,14 @@
 title: Plan site system roles
 titleSuffix: Configuration Manager
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
-ms.date: 11/29/2019
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Plan for site system servers and site system roles in Configuration Manager
@@ -63,31 +61,10 @@ The site assigns this role to each computer that hosts an instance of the SMS Pr
 
 To install additional providers, run Configuration Manager setup to [Manage the SMS Provider](../../servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider). Then install additional providers on additional computers. Only install one instance of the SMS Provider on a computer. That computer must be in the same domain as the site server.  
 
-### Application catalog web service point
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-A site system role that provides software information to the application catalog website from the software library. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
-
-### Application catalog website point
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-A site system role that provides users with a list of available software from the application catalog. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
-
 ### Asset Intelligence synchronization point
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
 
 A site system role that connects to Microsoft to download information for the Asset Intelligence catalog. This role also uploads uncategorized titles, so that Microsoft can consider them for future inclusion in the catalog. A hierarchy supports only a single instance of this role at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site. Then install it at the central administration site.
 
@@ -152,6 +129,9 @@ A site system role that provides policy and service location information to clie
 By default, this role installs on the site server when you install a new primary or secondary site. Primary sites support multiple instances of this role. Secondary sites support a single management point. Also referred to as a proxy management point, this role at a secondary site provides a local point of contact for clients to obtain computer and user policies.  
 
 Set up management points to support either HTTP or HTTPs. They can also support mobile devices that you manage with Configuration Manager on-premises mobile device management (MDM). To help reduce the processing load placed on the site database server by management points as they service requests from clients, use [Database replicas for management points](../../servers/deploy/configure/database-replicas-for-management-points.md).  
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ### Reporting services point
 

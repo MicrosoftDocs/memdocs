@@ -1,35 +1,38 @@
 ---
 # required metadata
-title: Protection settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
-description: On Windows 10 devices, use or configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
+title: Settings you can deploy with Intune to protect managed Windows devices
+description: On Windows 10 or Windows 11 devices, configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-ms.date: 12/16/2020
 manager: dougeby
-ms.topic: reference
-ms.technology:
+ms.date: 01/29/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
-ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
-# Windows 10 (and later) settings to protect devices using Intune
+# Windows settings you can deploy with Intune policy to protect Windows devices
 
-Microsoft Intune includes many settings to help protect your devices. This article describes all the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-To configure Microsoft Defender Antivirus, see [Windows 10 device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
+Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and Windows 11 devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
+
+To configure Microsoft Defender Antivirus, see [Windows device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).  
 
 ## Before you begin  
 
@@ -41,7 +44,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
 
-Application Guard is only available for Windows 10 (64-bit) devices. Using this profile installs a Win32 component to activate Application Guard.  
+Application Guard is only available for b4-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
 
 - **Application Guard**  
   **Default**: Not configured  
@@ -300,7 +303,7 @@ The following settings are each listed in this article a single time, but all ap
 
 ### Firewall rules  
 
-You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows 10 devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices).  
+You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices).  
 
 Custom Firewall rules support the following options:  
 
@@ -456,17 +459,6 @@ Microsoft Edge must be installed on the device.
   
   If Windows encryption is turned on while another encryption method is active, the device might become unstable.  
 
-<!-- Support Deprecated for Windows 10 Mobile as of August 2020
-
-- **Encrypt storage card (mobile only)**  
-  *This setting only applies to Windows 10 mobile.*  
-  **Default**: Not configured  
-  BitLocker CSP: [RequireStorageCardEncryption](/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)  
-
-  - **Require** to encrypt any removable storage cards used by the device.  
-  - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
--->
-
 ### BitLocker base settings  
 
 Base settings are universal BitLocker settings for all types of data drives. These settings manage what drive encryption tasks or configuration options the end user can modify across all types of data drives.  
@@ -524,7 +516,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Encryption for removable data-drives**  
     **Default**: AES-CBC 128-bit  
 
-    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows 10, then we recommend you use the AES-CBC algorithm.  
+    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows 10/11, then we recommend you use the AES-CBC algorithm.  
     - **AES-CBC 128-bit**  
     - **AES-CBC 256-bit**  
     - **XTS-AES 128-bit**  
@@ -792,7 +784,7 @@ Attack surface reduction rules help prevent behaviors malware often uses to infe
 
 #### Attack Surface Reduction rules  
 
-To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender ATP documentation.
+To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
 **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -803,7 +795,7 @@ Attack surface reduction rule merge behavior is as follows:
 - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
   - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
   - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
-  - Endpoint security > Security baselines > Microsoft Defender ATP Baseline > **Attack Surface Reduction Rules**.
+  - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
 - Settings that do not have conflicts are added to a superset of policy for the device.
 - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
 - Only the configurations for conflicting settings are held back.
@@ -910,7 +902,7 @@ Block the following to help prevent against script threats:
   
 - **Executables that don't meet a prevalence, age, or trusted list criteria**  
   **Default**: Not configured  
-  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
   - **Not configured**  
   - **Block** - Block executable files from running unless they meet a prevalence, age, or trusted list criteria.  
@@ -1053,7 +1045,7 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
     > [!NOTE]
     > If you use this setting, and then later want to disable Credential Guard, you must set the Group Policy to **Disabled**. And, physically clear the UEFI configuration information from each computer. As long as the UEFI configuration persists, Credential Guard is enabled.​  
 
-  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and newer.​  
+  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and newer, or Windows 11.​  
 
   When you *enable* Credential Guard, the following required features are also enabled:  
   
@@ -1179,7 +1171,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 - **Tamper Protection**  
   **Default**: Not configured
 
-  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender Advanced Threat Protection with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
+  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
   - **Not configured** - No change is made to device settings.
   - **Enabled** - Tamper Protection is turned on and restrictions are enforced on devices.
   - **Disabled** - Tamper Protection is turned off and restrictions are not enforced.
@@ -1221,7 +1213,7 @@ You can choose to **Display in app and in notifications**, **Display only in app
  
 ## Local device security options  
 
-Use these options to configure the local security settings on Windows 10 devices.  
+Use these options to configure the local security settings on Windows 10/11 devices.  
 
 ### Accounts  
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Add custom settings to Windows Phone 8.1 devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings to Windows Phone 8.1 devices in Microsoft Intune
 titleSuffix:
 description: Add or create a custom profile to use the OMA-URI settings for devices running Windows Phone 8.1 in Microsoft Intune.
 keywords:
@@ -9,7 +9,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 08/11/2020
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium

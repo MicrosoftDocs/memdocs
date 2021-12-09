@@ -12,6 +12,8 @@ ms.assetid: 6be79f37-cc77-4ea0-8d1d-7fe8c98d601f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Migration views in Configuration Manager

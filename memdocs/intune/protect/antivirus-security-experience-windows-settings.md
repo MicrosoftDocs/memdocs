@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Windows 10 Antivirus policy settings for Windows Security experience for Intune | Microsoft Docs
+title: Antivirus policy settings for Windows Security experience policy for Microsoft Intune | Microsoft Docs
 description: Endpoint security Antivirus policy settings for the Windows Security app in Microsoft Intune 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 12/06/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Settings for the Windows Security experience profile in Microsoft Intune
 
-View the Antivirus policy settings you can configure for the **Windows Security Experience** profile for Windows 10 in Microsoft Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+View the Antivirus policy settings you can configure for the **Windows Security Experience** profile for Windows 10 and Windows 11 devices as part of a Microsoft Intune [Endpoint security policy](../protect/endpoint-security-policy.md).
 
 **Windows Security**
 
@@ -41,19 +41,23 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   - **Enable** - Enable the Tamper Protection restriction. To change the state from either enabled or disabled, deploy the opposite setting to have effect.
   - **Disable** - Disable the Tamper Protection restrictions. To change the state from either enabled or disabled, deploy the opposite setting to have effect.
 
-- **Hide the Virus and threat protection area in the Windows Security app**  
+  **Hide the Virus and threat protection area in the Windows Security app**  
   CSP: [DisableVirusUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablevirusui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The virus and threat protection area in the Windows Security app is hidden from end-users. Virus and threat protection-related notifications are suppressed.
   - **No** - Behavior is the same as *Not configured*.
 
+  When this setting is configured as *No* or *Not configured*, the following setting is available:
+
   - **Hide the Ransomware data recovery option in the Windows Security app**  
     CSP: [HideRansomwareDataRecovery](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
 
-  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
-  - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
-  - **No** - Behavior is the same as *Not configured*.
+    This setting is only available when *Hide the Virus and threat protection area in the Windows Security app* is set to *No* or *Not configured*.
+  
+    - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+    - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
+    - **No** - Behavior is the same as *Not configured*.
 
 - **Hide the Account protection area in the Windows Security app**  
   CSP: [DisableAccountProtectionUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableaccountprotectionui)
@@ -102,7 +106,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
 
   Use this setting to block Windows Security notifications to your users for all of the preceding feature settings. Alternatively, you can manage the Windows Security app notifications per feature by using the proceeding settings.
 
-  - **Not configured** (*default*) - All Windows Security app notifications that are not controlled by another setting are allowed.
+  - **Not configured** (*default*) - This setting doesn't enforce a block of any settings and all Windows Security app notifications that are not controlled by another setting are allowed.
   - **Block non-critical notification** - Notifications such as scan completions are blocked.
   - **Block all notifications** - Critical and non-critical notifications are blocked for all Windows Security features.
 
@@ -111,7 +115,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
 
   For this setting to take effect, the user needs to either sign out and back in, or reboot the computer.
   - **Not configured** (*default*) - The setting returns the client to the default, which is to show the icon.
-  - **Yes** - Hide the Windows Security icon from the users system tray.
+  - **Yes** - Hide the Windows Security icon from the notification area.
   - **No** - Behavior is the same as *Not configured*.
   
 - **Disable the Clear TPM option in the Windows Security app**  
@@ -125,7 +129,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   CSP: [DisableTpmFirmwareUpdateWarning](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to not prompt users.
-  - **Yes** - Allow Windows to prompt end-users when a potential vulnerability is found in their TPM firmware. They are then encouraged to run firmware updates to resolve the vulnerability.
+  - **Yes** - Allow Windows to prompt end-users when a potential vulnerability is found in their TPM firmware. Users are then encouraged to run firmware updates to resolve the vulnerability.
   - **No** - Behavior is the same as *Not configured*.
 
 - **Organization's support contact information**  

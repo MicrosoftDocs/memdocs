@@ -5,10 +5,10 @@ title: Connect your Intune account to your Managed Google Play account.
 titleSuffix: Microsoft Intune
 description: Learn how to connect your Intune account to your Managed Google Play account.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 5/13/2019
+ms.date: 10/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Connect your Intune account to your Managed Google Play account
@@ -44,10 +46,10 @@ Refer to the following support article from Google to ensure that Android Enterp
 
 Intune makes it easier for you to configure and use Android Enterprise management. After connecting to Google Play, Intune automatically adds these four common Android Enterprise related apps to the Intune admin console:
 
-- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios.
-- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification.
-- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise personally-owned and corporate-owned work profile scenarios.
-- [Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise) - Used for Android Enterprise dedicated/kiosk scenarios.
+- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed, dedicated and corporate-owned work profile scenarios.
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification, and is also used for Android Enterprise dedicated devices that enroll with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices).
+- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for Android Enterprise personally-owned work profile scenarios, as well as App Protection Policies (APP). 
+- **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for multi-app kiosk mode on Android Enterprise dedicated devices. [Learn more about Managed Home Screen](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060). 
 
 > [!NOTE]
 > Due to interaction between Google and Microsoft domains, this step may require that you adjust your browser settings.  Make sure that "portal.azure.com" and "play.google.com" are in the same security zone in your browser.
@@ -62,13 +64,23 @@ Intune makes it easier for you to configure and use Android Enterprise managemen
 4. Choose **Launch Google to connect now** to open the Managed Google Play website. The website opens on a new tab in your browser.
   
 5. On Google's sign-in page, enter the Google account that will be associated with all Android Enterprise management tasks for this tenant. This Google account is the one that your company's IT admins share to manage and publish apps in the Google Play console. You can use an existing Google account or create a new one. The account you choose must not be associated with a G-Suite domain.
+
+   >[!Important]
+   > Be sure to use or create an Enterprise account rather than a personal GMail account. Keep in mind that the account you use should be one that is easily shared or
+   > transferred in the case that the person setting up the Managed Google Play connection leaves the company or moves teams.  
     
-    > [!Note]
-    > If you are using the Microsoft Edge browser, click **Sign-In** in the upper right corner to sign-in to your Google account.
+   > [!Note]
+   > If you are using the Microsoft Edge browser, click **Sign-In** in the upper right corner to sign-in to your Google account.
 
 6. Provide your company's name for **Organization name**. For **Enterprise mobility management (EMM) provider**, **Microsoft Intune** should be displayed.
 
 7. Agree to the Android agreement, and then choose **Confirm**. Your request will be processed.
+
+   > [!NOTE]
+   > Choose a scope tag for your Managed Google Play apps. Under this section, you can select a scope tag that will apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this section:<ul><li>Android Sync - Read</li><li>Android Sync – UpdateOnBoarding</li></ul><p>Admins without these permissions will not be able to remove the scope tag selected on the pane. Tenant admins, or admins who are in charge of giving admin permissions to others, can update permissions in Microsoft Endpoint Manager admin center by selecting **Tenant Administration** > **Roles**.
+   
+      >[!Important]
+   > Only link 1 Intune account to a managed Google Play account. Linking multiple accounts is unsupported and prevents basic functionality from working as expected.  
 
 ## Disconnect your Android Enterprise administrative account
 

@@ -2,14 +2,14 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 11/30/2020
+ms.date: 08/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure Azure services for use with Configuration Manager
@@ -24,7 +24,7 @@ Configure the following Azure services using this wizard:
 
 - **Cloud Management**: This service enables the site and clients to authenticate by using Azure AD. This authentication enables other scenarios, such as:  
 
-  - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
+  - [Install and assign Configuration Manager clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
   - [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
@@ -32,12 +32,15 @@ Configure the following Azure services using this wizard:
 
   - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/overview.md)  
 
+    > [!TIP]
+    > For more information specific to cloud management, see [Configure Azure Active Directory for cloud management gateway](../../../clients/manage/cmg/configure-azure-ad.md).
+
   - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
 - **Log Analytics Connector**: [Connect to Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
 
-    > [!Note]  
-    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](/azure/azure-monitor/terminology#log-analytics).  
+    > [!IMPORTANT]
+    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. This feature was deprecated in November 2020. It's removed from Configuration Manager in version 2107. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).<!-- 9649296 -->
 
 - **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
 
@@ -83,6 +86,9 @@ For more information about Azure apps, start with the following articles:
 After you decide the service to which you want to connect, refer to the table in [Service details](#service-details). This table provides information you need to complete the Azure Service Wizard. Have a discussion in advance with your Azure AD administrator. Decide which of the following actions to take:
 
 - Manually create the apps in advance in the Azure portal. Then import the app details into Configuration Manager.  
+
+    > [!TIP]
+    > For more information specific to cloud management, see [Manually register Azure Active Directory apps for the cloud management gateway](../../../clients/manage/cmg/manually-register-azure-ad-apps.md).
 
 - Use Configuration Manager to directly create the apps in Azure AD. To collect the necessary data from Azure AD, review the information in the other sections of this article.  
 
@@ -148,9 +154,12 @@ When you select **Import** from the Server app dialog or the App page of the Azu
 - **Client ID**: The **Application (client) ID** value of the app registration. The format is a standard GUID.
 - **Secret Key**: You have to copy the secret key when you register the app in Azure AD.
 - **Secret Key Expiry**: Select a future date from the calendar.
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. The value is the **Application ID URI** of the app registration entry in the Azure AD portal. The format is similar to `https://ConfigMgrService`.
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. The value is the **Application ID URI** of the app registration entry in the Azure AD portal.
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to either the [App page](#azure-app-properties) of the Azure Services Wizard, or the [Server app dialog](#server-app-dialog).
+
+> [!IMPORTANT]
+> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../../manage/admin-console-notifications.md). <!--10568158-->
 
 #### Create Server Application dialog
 
@@ -158,11 +167,15 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 
 - **Application Name**: A friendly name for the app.
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+
+  - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+  - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
+
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
-   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654-->
-   > [!IMPORTANT]
-   > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment until you manually mitigate.
+
+    > [!NOTE]
+    > You may see an option for **Never**, but Azure AD no longer supports it. If you previously selected this option, the expiration date is now set for 99 years from the date you created it.<!-- MEMDocs#1530 -->
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
@@ -185,7 +198,7 @@ When you select **Browse** for the **Native Client app** on the App page of the 
 
 There are three actions you can take from the Client App dialog:
 
-- To reuse an existing native app, select it from the list. 
+- To reuse an existing native app, select it from the list.
 - Select **Import** to open the [Import apps dialog](#import-apps-dialog-client).
 - Select **Create** to open the [Create Client Application dialog](#create-client-application-dialog).
 
@@ -216,15 +229,24 @@ Select **OK** to create the native app in Azure AD and close the Create Client A
 
 ## Configuration or Discovery
 
-After specifying the web and native apps on the Apps page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
+After specifying the web and native apps on the **Apps** page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
 
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
 - **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
-- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
+- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#supplemental-information-and-configuration)  
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
+
+## Update application settings
+
+To allow your Configuration Manager clients to request an **Azure AD device token** and to enable the **Reading directory data** permissions, you need to update the web server application settings.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
+1. Select the Azure AD tenant for the application you want to update.
+1. In the **Applications** section, select your Azure AD web server application, then select **Update Application Settings** from the ribbon.
+1. When prompted for confirmation, select **Yes** to confirm you want to update the application with the latest settings.
 
 ## <a name="bkmk_renew"></a> Renew secret key
 

@@ -1,18 +1,16 @@
 ---
-title: "New in version 1606"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1606 of Configuration Manager."
+title: New in version 1606
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1606 of Configuration Manager.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1606 of Configuration Manager
 
@@ -66,7 +64,7 @@ The following are changes to the Updates and Servicing node in the Configuration
 
 
 ###  Pre-release features
-Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### New distribution point update behavior
 Update 1606 introduces changes that improve the availability of distribution points when you install future updates.
@@ -84,11 +82,11 @@ The following are changes to Administration in the Configuration Manager console
 
 You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](/azure/azure-monitor/platform/collect-sccm).
 
-The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/pre-release-features.md).
 
 ### Support for cache size in Client Settings
 
-You can now configure the size of the cache folder on client computers with **Client Settings** in the Configuration Manager console. Previously, you could only set the client cache size when installing or reinstalling the client software. Now you can specify the cache size as a client setting (either default or custom), and then have those settings applied with the next policy update on the client, without requiring a client reinstall. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
+You can now configure the size of the cache folder on client computers with **Client Settings** in the Configuration Manager console. Previously, you could only set the client cache size when installing or reinstalling the client software. Now you can specify the cache size as a client setting (either default or custom), and then have those settings applied with the next policy update on the client, without requiring a client reinstall. For more information, see [Configure the client cache](../../../core/clients/manage/configure-client-cache.md).
 
 ## On-premises mobile device management
 
@@ -155,7 +153,7 @@ For details, see [Task sequence built-in variables](../../../osd/understand/task
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
 You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you are using PXE to meet your specific network requirements.
 
-For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points).
 
 ## Compliance settings
 
@@ -190,11 +188,11 @@ Configuration Manager can help you manage Activation Lock in two ways:
 - Bypass Activation Lock on supervised devices.
 
 
-### Microsoft Defender Advanced Threat Protection
+### Microsoft Defender for Endpoint
 
-Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
+Endpoint Protection can help manage and monitor Microsoft Defender for Endpoint. Microsoft Defender for Endpoint is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
 
-For details, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md).
+For details, see [Microsoft Defender for Endpoint](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### Device categories
 You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.
@@ -209,5 +207,5 @@ You can now enable Health Attestation services monitoring for Windows 10 PCs by 
 
 For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
-## Remote Control
+## Remote control
 Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.

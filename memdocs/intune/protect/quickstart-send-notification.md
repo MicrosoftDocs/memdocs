@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/10/2020
+ms.date: 10/22/2021
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: a1b89f2d-7937-46bb-926b-b05f6fa9c749
 

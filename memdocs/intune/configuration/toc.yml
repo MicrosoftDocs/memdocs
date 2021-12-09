@@ -1,3 +1,4 @@
+items:
 - name: Configure device settings
   href: index.yml
 - name: Overview
@@ -15,8 +16,10 @@
     href: tutorial-walkthrough-administrative-templates.md
 - name: How-to guides
   items:
-  - name: Profile overview
+  - name: Profiles - Get started
     href: device-profile-create.md
+  - name: Settings catalog
+    href: settings-catalog.md
   - name: Custom settings
     displayName: oma-uri, csp
     items:
@@ -76,8 +79,12 @@
   - name: Upgrade Windows and S mode
     href: edition-upgrade-configure-windows-10.md
   - name: Device features on iOS/iPadOS and macOS
-    href: device-features-configure.md
-    displayName: airprint, home screen, lock screen, sso, single sign-on
+    items:
+    - name: Device features
+      href: device-features-configure.md
+      displayName: airprint, home screen, lock screen, sso, single sign-on
+    - name: Use Enterprise SSO plug-in
+      href: use-enterprise-sso-plug-in-ios-ipados-macos.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
     displayName: kernel extensions, system extensions
@@ -154,6 +161,10 @@
         href: vpn-settings-android.md
       - name: Wi-Fi
         href: wi-fi-settings-android.md
+    - name: Android (AOSP) 
+      items: 
+      - name: Device restrictions
+        href: device-restrictions-android-aosp.md  
     - name: Android Enterprise
       items:
       - name: Custom

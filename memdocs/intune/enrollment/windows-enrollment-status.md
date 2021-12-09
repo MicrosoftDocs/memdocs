@@ -3,12 +3,12 @@
 
 title: Set up the Enrollment Status Page
 titleSuffix: Microsoft Intune
-description: Set up a greeting page for users enrolling Windows 10 devices.
+description: Set up a greeting page for users enrolling Windows 10 or Windows 11 devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 10/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,12 +26,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 
  
-# Set up the Enrollment Status Page
+# Set up the Enrollment Status Page  
+
+**Applies to**
+- Windows 10  
+- Windows 11  
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
@@ -49,7 +55,7 @@ You can create multiple Enrollment Status Page profiles with different configura
 These profiles are specified in a priority order; the highest priority that is applicable will be used.  Each ESP profile can be targeted to groups containing devices or users.  When determining which profile to use, the following criteria will be followed:
 
 - The highest-priority profile targeted to the device will be used first.
-- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used.)
+- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used. Only profiles targeted to the device are used during the device preparation and device setup phases.)
 - If there are no profiles targeted to specific groups, then the default ESP profile will be used.
 
 ## Available settings
@@ -58,16 +64,19 @@ The following settings can be configured to customize behavior of the Enrollment
 
 <table>
 <th align="left">Setting<th align="left">Yes<th align="left">No
-<tr><td>Show app and profile installation progress<td>The enrollment status page is displayed.<td>The enrollment status page isn't displayed.
+<tr><td>Show app and profile configuration progress<td>The enrollment status page is displayed.<td>The enrollment status page isn't displayed.
+<tr><td>Show an error when installation takes longer than specified number of minutes<td colspan="2">Specify the number of minutes to wait for installation to complete. A default value of 60 minutes is entered.
+<tr><td>Show custom message when time limit or error occurs<td>A text box is provided where you can specify a custom message to display if an installation error occurs.<td>The default message is displayed: <br><b>Setup could not be completed. Please try again or contact your support person for help.<b>
+<tr><td>Turn on log collection and diagnostics page for end users<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b>.<br>In Windows 11, the <b>Windows Autopilot diagnostics</b> page is also displayed.<td>The <b>Collect logs</b> button isn't displayed if there's an installation error.<br>The <b>Windows Autopilot diagnostics</b> page is not displayed in Windows 11.
+<tr><td>Only show page to devices provisioned by out-of-box experience (OOBE)<td>The enrollment status page is only shown to devices that go through the out-of-box experience (OOBE).<td>The enrollment status page is shown to devices that go through the out-of-box experience (OOBE) and the first logged on user, but not to subsequent users who logon to the device.
 <tr><td>Block device use until all apps and profiles are installed<td>The settings in this table are made available to customize behavior of the enrollment status page, so that the user can address potential installation issues.
-<td>The enrollment status page is displayed with no additional options to address installation failures.
 <tr><td>Allow users to reset device if installation error occurs<td>A <b>Reset device</b> button is displayed if there's an installation failure.<td>The <b>Reset device</b> button isn't displayed if there's an installation failure.
 <tr><td>Allow users to use device if installation error occurs<td>A <b>Continue anyway</b> button is displayed if there's an installation failure.<td>The <b>Continue anyway</b> button isn't displayed if there's an installation failure.
-<tr><td>Show timeout error when installation takes longer than specified number of minutes<td colspan="2">Specify the number of minutes to wait for installation to complete. A default value of 60 minutes is entered.
-<tr><td>Show custom message when an error occurs<td>A text box is provided where you can specify a custom message to display if an installation error occurs.<td>The default message is displayed: <br><b>Installation exceeded the time limit set by your organization. Try again or contact your IT support person for help.<b>
-<tr><td>Allow users to collect logs about installation errors<td>If there's an installation error, a <b>Collect logs</b> button is displayed. <br>If the user clicks this button, they're asked to choose a location to save the log file <b>MDMDiagReport.cab</b><td>The <b>Collect logs</b> button isn't displayed if there's an installation error.
-<tr><td>Block device use until these required apps are installed if they're assigned to the user/device<td colspan="2">Choose <b>All</b> or <b>Selected</b>. <br><br>If <b>Selected</b> is chosen, a <b>Select apps</b> button appears that lets you choose which apps must be installed before enabling the device.
+<tr><td>Block device use until these required apps are installed if they are assigned to the user/device<td colspan="2">Choose <b>All</b> or <b>Selected</b>. <br><br>If <b>Selected</b> is chosen, a <b>Select apps</b> button appears that lets you choose which apps must be installed before enabling the device.
 </table>
+
+> [!NOTE]
+> Be aware that the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is not *only* applicable to Windows Autopilot devices. If set to **No**, subsequent users will see the user ESP splash screen on any MDM-enrolled device, including co-managed ones. If you only want the ESP screen to appear on Autopilot devices during the initial provisioning, leave the default policy set to **No**. Then create a new ESP profile, set it to **Yes**, and target it to an Autopilot device group. For more information about troubleshooting the ESP page, including how to disable it once it's been configured, see [Understand and troubleshoot the Enrollment Status Page](/troubleshoot/mem/intune/understand-troubleshoot-esp#common-questions-for-troubleshooting-esp-related-issues).  
 
 ## Turn on default Enrollment Status Page for all users
 
@@ -84,8 +93,9 @@ To turn on the Enrollment Status Page, follow the steps below.
 2. Provide a **Name** and **Description**.
 3. Choose **Create**.
 4. Choose the new profile in the **Enrollment Status Page** list.
-5. Choose **Assignments** > **Select groups** > choose the groups that you want to adopt this profile > **Select** > **Save**.
-6. Choose **Settings** > choose the settings you want to apply to this profile > **Save**.
+5. Optionally, on the **Scope tags** page, you can add the scope tags that you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with Enrollment Status Page profiles, users can only re-order profiles for which they have scope. Also, they can only reorder for the profile positions for which they have scope. Users see the true profile priority number on each policy. A scoped user can tell the relative priority of their profile even if they can't see all the other profiles.
+6. Choose **Assignments** > **Select groups** > choose the groups that you want to adopt this profile > **Select** > **Save**.
+7. Choose **Settings** > choose the settings you want to apply to this profile > **Save**.
 
 ## Set the enrollment status page priority
 
@@ -134,7 +144,12 @@ The Enrollment Status Page tracks the following device setup items:
   - Per machine Line-of-business (LoB) MSI apps.
   - LoB store apps with installation context = Device.
   - Offline store and LoB store apps with installation context = Device.
-  - Win32 applications (Windows 10 version 1903 and newer only) 
+  - Win32 applications (Windows 11 and Windows 10 version 1903 and later only) 
+
+  > [!NOTE]
+  > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.
+  > 
+
 - Connectivity profiles
   - VPN or Wi-Fi profiles that are assigned to **All Devices** or a device group in which the enrolling device is a member, but only for Autopilot devices
 - Certificate profiles that are assigned to **All Devices** or a device group in which the enrolling device is a member, but only for Autopilot devices
@@ -165,7 +180,7 @@ The following are known issues related to the Enrollment Status Page.
 
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
-- Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
+- Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions earlier than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and newer.  
 - Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes.
 
   This delay gives time for the on-prem AD connector to create the new device record to Azure AD.
@@ -175,9 +190,11 @@ The following are known issues related to the Enrollment Status Page.
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
 - ESP is stuck for a long time or never completes the "Identifying" phase. Intune computes the ESP policies during the identifying phase. A device may never complete computing ESP policies if the current user doesn't have an Intune licensed assigned.  
 - Configuring Microsoft Defender Application Control causes a prompt to reboot during Autopilot. Configuring Microsoft Defender Application (AppLocker CSP) requires a reboot. When this policy is configured, it may cause a device to reboot during Autopilot. Currently, there's no way to suppress or postpone the reboot.
-- When the DeviceLock policy (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) is enabled as part of an ESP profile, the OOBE or user desktop autologon could fail unexpectantly for two reasons.
+- When the [DeviceLock policy](/windows/client-management/mdm/policy-csp-devicelock) is enabled as part of an ESP profile, the OOBE or user desktop autologon could fail unexpectantly for two reasons.
   - If the device didn't reboot before exiting the ESP Device setup phase, the user may be prompted to enter their Azure AD credentials. This prompt occurs instead of a successful autologon where the user sees the Windows first login animation.
   - The autologon will fail if the device rebooted after the user entered their Azure AD credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
+- ESP doesn't apply to a Windows device that was enrolled with Group Policy (GPO).
+- Scripts that run in user context ('Run this script using the logged on credentials' on the script properties is set to 'yes') may not execute during ESP.  As a workaround, execute scripts in System context by changing this setting to 'no'.
 
 ## Next steps
 

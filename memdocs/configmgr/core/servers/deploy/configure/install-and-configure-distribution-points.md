@@ -2,14 +2,14 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 12/22/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install and configure distribution points in Configuration Manager
@@ -40,7 +40,7 @@ Configure most of the distribution point settings with either method. A few sett
 
 ## Install a distribution point
 
-Before you can make content available to clients, choose a site system server as a distribution point. Assign each distribution point to at least one [boundary group](boundary-groups.md#distribution-points). Add the distribution point role to a new server, or add it to an existing server.
+Before you can make content available to clients, choose a site system server as a distribution point. Assign each distribution point to at least one [boundary group](boundary-groups-distribution-points.md). Add the distribution point role to a new server, or add it to an existing server.
 
 ### Prerequisites
 
@@ -181,10 +181,10 @@ This process automatically populates the **Members** tab of the Create New Distr
 
 Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to keep distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly for time and network bandwidth to distribute to these remote servers.
 
-This feature lets you reassign a distribution point to another primary site without redistributing the content. This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
+This feature lets you reassign a distribution point to another primary site without redistributing the content. The distribution point's current site can be either a primary or secondary site.<!-- SCCMDocs #1677, MEMDocs #1356--> This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
 
 > [!IMPORTANT]
-> The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you cannot reassign the distribution point. You cannot reassign a cloud distribution point.
+> The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you can't reassign the distribution point. You can't reassign a cloud management gateway.
 
 Before reassigning a distribution point, add the computer account of the destination site server to the local Administrator group on the target distribution point server.
 
@@ -269,9 +269,9 @@ For more information on automating this process with the Configuration Manager S
 
 ## <a name="bkmk_configs"></a> Configure a distribution point
 
-Individual distribution points support different kinds of configurations. However, not all distribution point types support all configurations. For example, cloud distribution points don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:
+Individual distribution points support different kinds of configurations. However, not all distribution point types support all configurations. For example, cloud management gateways don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:
 
-- [Use a cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+- [Supported configurations for cloud management gateway](../../../clients/manage/cmg/supported-configurations.md)
 
 - [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md)
 
@@ -329,7 +329,7 @@ The following settings are on the **Distribution point** page of the Create Site
 
 The following settings are on the **Communication** page of the Create Site System Server wizard and the distribution point properties window:
 
-- **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using **HTTP** or **HTTPS**. For more information, see [Security best practices for content management](../../../plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).
+- **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using **HTTP** or **HTTPS**. For more information, see [Security guidance for content management](../../../plan-design/hierarchy/security-and-privacy-for-content-management.md#security-guidance).
 
 - **Allow clients to connect anonymously**: This setting specifies whether the distribution point allows anonymous connections from Configuration Manager clients to the content library.
 
@@ -411,7 +411,7 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 > [!NOTE]
 > Select **Yes** in the **Review Required Ports for PXE** dialog box to confirm that you want to enable PXE. Configuration Manager automatically configures the default ports on Windows firewall. If you use a different firewall, manually configure the ports.
 >
-> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP).
+> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#considerations-when-you-have-wds-and-dhcp-on-the-same-server).
 
 - **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable WDS to respond to PXE service requests. Use this setting to enable and disable the service without removing the PXE functionality from the distribution point.
 

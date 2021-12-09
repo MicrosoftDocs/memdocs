@@ -1,14 +1,15 @@
 ---
 # required metadata
 
-title: Enroll devices with Windows Autopilot - Microsoft Intune | Microsoft Docs
+title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Learn how to enroll Windows 10 devices using Windows Autopilot.
+description: Learn how to create device groups for Windows Autopilot.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: greg-lindsay
+ms.author: greglin
+ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 12/16/2020
+ms.date: 03/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +22,6 @@ ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,17 +30,19 @@ ms.collection:
 - M365-modern-desktop
 - m365initiative-coredeploy
 - M365-identity-device-management
+- highpri
 ---
 
 # Create device groups
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
-> HoloLens 2 devices require Windows Autopilot self-deploying mode. For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+> HoloLens 2 devices require Windows Autopilot self-deploying mode. For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot). **Assign to User** is not applicable for self-deployment Autopilot mode on Hololens 2.
 
 
 ## Create an Autopilot device group using Intune
@@ -71,43 +73,24 @@ ms.collection:
 
 3. Select **Create**.
 
-## Edit Autopilot device attributes
+## Add devices
 
-After you've uploaded an Autopilot device, you can edit certain attributes of the device.
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
-2. Select the device you want to edit.
-3. In the pane on the right of the screen, you can edit:
-    - Device name.
-    - Group tag.
-    - User Friendly Name (if you've assigned a user).
-4. Select **Save**.
-
-> [!NOTE]
-> Device names can be configured for all devices, but are ignored in Hybrid Azure AD joined deployments. Device name still comes from the domain join profile for Hybrid Azure AD devices.
-
-## Alerts for Windows Autopilot unassigned devices <!-- 163236 --> 
-
-Alerts will show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them.
-
-To see alerts for unassigned devices, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**. 
-
-## Autopilot deployments report
-
-You can see details on each device deployed through Windows Autopilot.
-To see the report, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
-The data is available for 30 days after deployment.
-
-This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Deployments that don't trigger a new Intune enrollment won't appear this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
+For information about formatting and using a CSV file to manually add Windows Autopilot devices, see [Manually register devices with Windows Autopilot](add-devices.md).
 
 ## Assign a user to a specific Autopilot device
+
+> [!NOTE]
+> This functionality has been removed as of September 30, 2021.
+> While the option to assign user to a device in Autopilot is still available in the GUI portal and PowerShell, it will be ignored by the device during provisioning.
 
 You can assign a licensed Intune user to a specific Autopilot device. This assignment:
 - Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
 - Lets you set a custom greeting name.
 - Doesn't pre-fill or modify Windows sign-in.
 
-Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
+Prerequisites: 
+- Azure Active Directory Company Branding has been configured.
+- Windows 10, version 1809 or later.
 
 > [!NOTE]
 > Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
@@ -125,20 +108,6 @@ Prerequisites: Azure Active Directory Company Portal has been configured and Win
     ![Screenshot of friendly name](./media/enrollment-autopilot/friendly-name.png)
 
 4. Choose **Ok**.
-
-## Delete Autopilot devices
-
-You can delete Windows Autopilot devices that aren't enrolled into Intune:
-
-- Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**. Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
-
-Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. These deletions can all be done from Intune:
-
-1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
-
-2. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
-
-3. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** >. Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
 
 ## Using Autopilot in other portals
 
@@ -161,4 +130,6 @@ You can group Windows devices by a correlator ID when enrolling using [Autopilot
 
 ## Next steps
 
-After you configure Windows Autopilot for registered Windows 10 devices, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md)
+After you have created a device group, you can configure and apply a Windows Autopilot deployment profile to each device in the group. Deployment profiles determine the deployment mode, and customize the OOBE for your end users. For more information, see [Configure deployment profiles](profiles.md).
+
+For more information about managing your Windows Autopilot devices, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md)

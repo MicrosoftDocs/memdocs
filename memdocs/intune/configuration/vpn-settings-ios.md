@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Configure VPN settings to iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure VPN settings to iOS/iPadOS devices in Microsoft Intune
 description: Add or create a VPN configuration profile on iOS/iPadOS devices using virtual private network (VPN) configuration settings in Microsoft Intune. Configure the connection details, authentication methods, split tunneling, custom VPN settings with the identifier, key and value pairs, per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains, proxy settings to include a configuration script, IP or FQDN address, and TCP port.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2020
-ms.topic: reference
+ms.date: 03/02/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -47,7 +47,7 @@ Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.m
 Select the VPN connection type from the following list of vendors:
 
 - **Check Point Capsule VPN**
-- **Cisco Legacy AnyConnect**: Applicable to [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) app version 4.0.5x and earlier.
+- **Cisco Legacy AnyConnect**: Applicable to Cisco Legacy AnyConnect app version 4.0.5x and earlier.
 - **Cisco AnyConnect**: Applicable to [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) app version 4.0.7x and later.
 - **SonicWall Mobile Connect**
 - **F5 Access Legacy**: Applicable to F5 Access app version 2.1 and earlier.
@@ -100,7 +100,7 @@ Select the VPN connection type from the following list of vendors:
 
   - Confirm you're using Citrix Gateway 12.0.59 or higher.
   - Confirm your users have Citrix SSO 1.1.6 or later installed on their devices.
-  - Integrate Citrix Gateway with Intune for NAC. See the [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) Citrix deployment guide.
+  - Integrate Citrix Gateway with Intune for NAC. See the [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario)](https://docplayer.net/47400257-Integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler-ldap-otp-scenario.html) Citrix deployment guide.
   - Enable NAC in the VPN profile.
 
   **When using F5 Access**, be sure to:
@@ -204,6 +204,10 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - AES-256 (default)
     - AES-128-GCM
     - AES-256-GCM
+
+    > [!NOTE]
+    > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
+
   - **Integrity algorithm**:  Select the algorithm you want:
     - SHA1-96
     - SHA1-160
@@ -222,7 +226,11 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - AES-256 (default)
     - AES-128-GCM
     - AES-256-GCM
-  - **Integrity algorithm**:  Select the algorithm you want:
+
+    > [!NOTE]
+    > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
+
+- **Integrity algorithm**:  Select the algorithm you want:
     - SHA1-96
     - SHA1-160
     - SHA2-256 (default)
@@ -293,11 +301,14 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Per-app VPN
 
-These settings apply when you choose **Connection type** > **Microsoft Tunnel**.
+These settings apply when you choose **Connection type** > **Microsoft Tunnel (standalone client)**.  
 
 - **Per-app VPN**: **Enable** associates a specific to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
 
-  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).  
+
+> [!Important]
+> In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 ## Proxy
 

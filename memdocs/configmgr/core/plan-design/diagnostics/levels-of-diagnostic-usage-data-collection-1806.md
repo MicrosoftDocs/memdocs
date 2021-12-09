@@ -6,11 +6,11 @@ ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Diagnostic and usage data for 1806
@@ -232,7 +232,7 @@ For Configuration Manager version 1806, this level includes the following data:
 - ***[New]*** Count of Microsoft Surface devices by model  
 
 
-### Cloud Services  
+### Cloud services  
 
 - Azure Active Directory discovery statistics
 
@@ -314,7 +314,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 ### Endpoint Protection  
 
-- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
+- Microsoft Defender for Endpoint policies (formerly known as Windows Defender for Endpoint): count of policies, and whether policies are deployed.
 
 - Count of alerts that are configured for Endpoint Protection feature  
 
@@ -391,7 +391,7 @@ For Configuration Manager version 1806, this level includes the following data:
 - Versions of installed Configuration Manager hotfixes
 
 
-### Software Updates  
+### Software updates  
 
 - Available and deadline deltas that are used in automatic deployment rules  
 

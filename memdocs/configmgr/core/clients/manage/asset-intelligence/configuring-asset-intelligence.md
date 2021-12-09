@@ -1,17 +1,15 @@
 ---
-title: "Configure Asset Intelligence"
-titleSuffix: "Configuration Manager"
-description: "Set up Asset Intelligence in Configuration Manager."
+title: Configure Asset Intelligence
+titleSuffix: Configuration Manager
+description: Set up Asset Intelligence in Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Configure Asset Intelligence in Configuration Manager
 
@@ -153,7 +151,7 @@ In addition to downloading new Asset Intelligence catalog information, the Asset
 Asset Intelligence matches the products that you specify in the general license statement by using the product name and product version, but not publisher name. You must use a product name in the general license statement that is an exact match with the product name stored in the site database. Asset Intelligence takes the **EffectiveQuantity** number given in the general license statement and compares the number with the number of installed products found in Configuration Manager inventory.  
 
 > [!TIP]  
->  To get a complete list of the product names stored in the Configuration Manager site database, you can run the following query on the site database: SELECT ProductName0 FROM v_GS_INSTALLED_SOFTWARE.  
+>  To get a complete list of the product names stored in the Configuration Manager site database, you can run the following query on the site database: SELECT DISTINCT ProductName0 FROM v_GS_INSTALLED_SOFTWARE.  
 
  You can specify exact versions for a product or specify part of the version, such as only the major version. The following examples provide the resulting version matches for a general license statement version entry for a specific product.  
 

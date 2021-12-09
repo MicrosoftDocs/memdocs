@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Restrict devices features using policy in Microsoft Intune - Azure | Microsoft Docs
-description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, and Windows 10 devices in Microsoft Intune.
+title: Restrict devices features using policy in Microsoft Intune
+description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, and Windows 10 devices in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 10/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
  
 # Configure device restriction settings in Microsoft Intune
@@ -39,6 +41,16 @@ Intune includes device restriction policies that help administrators control And
 
 These features are available in Intune, and are configurable by the administrator. Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you can then push or deploy the profile to devices in your organization.
 
+This feature applies to:
+
+- Android device administrator
+- Android (AOSP) (preview)  
+- Android Enterprise personally-owned devices with a work profile
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
+- Windows 8.1 and newer
+
 This article shows you how to create a device restrictions profile. You can also see all the available settings for the different platforms.
 
 ## Create the profile
@@ -50,13 +62,14 @@ This article shows you how to create a device restrictions profile. You can also
     - **Platform**: Choose the platform of your devices. Your options:  
 
         - **Android device administrator**
+        - **Android (AOSP)** (preview)  
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 and later**
         - **Windows 8.1 and later**
 
-    - **Profile**: Select **Device restrictions**.
+    - **Profile**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
 
         To create a device restrictions profile for Windows 10 Team devices, such as Surface Hub, then choose **Device restrictions (Windows 10 Team)**.
 
@@ -71,6 +84,7 @@ This article shows you how to create a device restrictions profile. You can also
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
     - [Android device administrator](device-restrictions-android.md)
+    - [Android (AOSP)](device-restrictions-android-aosp.md) (in preview)  
     - [Android Enterprise](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
@@ -92,7 +106,7 @@ This article shows you how to create a device restrictions profile. You can also
 
 ## Next steps
 
-After the profile is created, it's ready to be assigned. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+After the profile is created, it's ready to be assigned. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

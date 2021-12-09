@@ -6,10 +6,10 @@ ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.localizationpriority: medium
 ---
 
 # Plan for reporting in Configuration Manager
@@ -78,7 +78,7 @@ Consider the following recommendations and tips for reporting in Configuration M
 
 Configuration Manager reports display information that it collects during standard Configuration Manager management operations. For example, you can display a report of information that Configuration Manager collected from discovery or inventory. Reports can also contain the current status information for client management operations, such as deploying software, and checking for compliance.
 
-For more information about any security recommendations and privacy information for Configuration Manager operations that might generate data that you can view in reports, see [Security and privacy for Configuration Manager](../../plan-design/security/security-and-privacy.md).  
+For more information about any security recommendations and privacy information for Configuration Manager operations that might generate data that you can view in reports, see [Security and privacy for Configuration Manager](../../../security/index.yml).  
 
 ## Next steps
 

@@ -1,17 +1,15 @@
 ---
-title: "Resource Explorer default inventory classes"
+title: Resource Explorer default inventory classes
 titleSuffix: Configuration Manager
-description: "Shows the classes that appear in Resource Explorer"
-ms.date: 11/12/2019
+description: Shows the classes that appear in Resource Explorer.
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
-ms.assetid: 1d333f4c-0f85-4278-b421-064cf01529a5
+ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 # Resource Explorer default inventory classes
 
@@ -619,6 +617,27 @@ class Win32_CDROMDrive
 - (String) VolumeSerialNumber
 
 
+## Client Diagnostics
+
+<!--5602449-->
+
+_Starting in version 2107_
+
+Namespace: root\cimv2
+
+class CCM_ClientDiagnostics
+
+- (String) Identifier
+
+- (String) DebugLoggingEnabled
+
+- (UInt32) LogEnabled
+
+- (UInt32) LogLevel
+
+- (UInt32) LogMaxHistory
+
+- (UInt32) LogMaxSize
 
 ## Client Events
 
