@@ -127,9 +127,6 @@ Default restrictions are automatically provided for both device type and device 
 12. Select **Next** to go to the **Review + create** page.
 13. Select **Create** to create the restriction.   
 
-### Block Home SKU  
-
-
 
 ## Create a device limit restriction
 

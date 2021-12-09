@@ -230,7 +230,7 @@ You can use filters for some common device configuration policies on the followi
 | Device features | ✔️ |
 | Email | N/A |
 | Endpoint Protection | ✔️ |
-| Enrollment restrictions | ❌ |
+| Enrollment restrictions | ✔️ |
 | Extensions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
