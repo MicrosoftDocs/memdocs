@@ -44,7 +44,7 @@ Update settings control what bits a device will download, and when. For more inf
   Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **Allow** - Select *Allow* to scan for app updates from Microsoft Update.  
-  - **Block** - Select Block to prevent scanning for app updates.  
+  - **Not configured** 
 
 - **Windows drivers**  
   **Default**:  Allow  
