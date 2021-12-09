@@ -33,36 +33,35 @@ ms.collection: M365-identity-device-management
 You can export the Cloud PC name of every Cloud PC on your tenant.  
 
 1. Sign in to a Cloud PC with a user who is assigned the Azure Active Directory (Azure AD) Global Administrator role.
-2. Open Powershell and type ```Install-Module Microsoft.Graph -Scope CurrentUser```.
+2. Open PowerShell and type ```Install-Module Microsoft.Graph -Scope CurrentUser```.
 3. Enter **Y** in all confirmation dialogs.
 4. Wait for the installation to finish then close PowerShell.
 5. Open a text editor like Visual Studio Code.
 6. In a new file past the following script:
     ```
-param(
-    [Parameter(Mandatory)]
-    [string]$Output
-)
+    param(
+        [Parameter(Mandatory)]
+        [string]$Output
+    )
 
-Select-MgProfile -Name "beta"
-Connect-MgGraph -Scopes "CloudPC.Read.All"
-$CloudPCs = Get-MgDeviceManagementVirtualEndpointCloudPC -Property "DisplayName"
-$DisplayNames = $CloudPCs | Select -ExpandProperty DisplayName
-Write-Output $DisplayNames
+    Select-MgProfile -Name "beta"
+    Connect-MgGraph -Scopes "CloudPC.Read.All"
+    $CloudPCs = Get-MgDeviceManagementVirtualEndpointCloudPC -Property "DisplayName"
+    $DisplayNames = $CloudPCs | Select -ExpandProperty DisplayName
+    Write-Output $DisplayNames
 
-$Outarray = @()
+    $Outarray = @()
 
-foreach ( $Name in $DisplayNames )
-{
-    $Outarray += New-Object PsObject -property @{
-    'DisplayName' = $Name
-    }
-}
-$Outarray | Export-Csv -Path $Output -NoTypeInformation
-Disconnect-MgGraph
+    foreach ( $Name in $DisplayNames )
+    {
+        $Outarray += New-Object PsObject -property @{
+        'DisplayName' = $Name
+         }
+    }
+    $Outarray | Export-Csv -Path $Output -NoTypeInformation
+    Disconnect-MgGraph
     ```
-
-7. ave the file as “GetCloudPCNames.ps1” in a location of your choice.
+7. Save the file as “GetCloudPCNames.ps1” in a location of your choice.
 8. In the file explorer navigate to your file location.
 9. Right click on the file and select “Run with PowerShell”.
 10. A PowerShell window will pop up. In the window type “CloudPCNames.csv” and press enter.
