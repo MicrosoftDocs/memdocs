@@ -49,7 +49,7 @@ When you can't use PKI authentication, approval identifies a computer that you t
 
 The most secure approval method is to automatically approve clients that are members of trusted domains. This option includes cloud-domain joined clients from connected Azure Active Directory (Azure AD) tenants.<!-- MEMDocs#318 --> Then manually check and approve all other computers. Automatically approving all clients isn't recommended, unless you have other access controls to prevent untrustworthy computers from accessing your network.
 
-For more information about how to manually approve computers, see [Manage clients from the devices node](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).
+For more information about how to manually approve computers, see [Manage clients from the devices node](../../manage/manage-clients.md#manage-clients-from-the-devices-node).
 
 ### Don't rely on blocking to prevent clients from accessing the Configuration Manager hierarchy  
 

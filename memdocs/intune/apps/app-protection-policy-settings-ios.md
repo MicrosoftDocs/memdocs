@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # iOS app protection policy settings
@@ -113,7 +115,7 @@ The default app Universal Link exemptions are the following:
 | `http://maps.apple.com;` `https://maps.apple.com` | Maps App |
 | `http://facetime.apple.com;` `https://facetime.apple.com` | FaceTime App |
 
-If you don't want to allow the default Universal Link exemptions, you can delete them. You can also add Universal Links for third party or LOB apps.
+If you don't want to allow the default Universal Link exemptions, you can delete them. You can also add Universal Links for third party or LOB apps. The exempted universal links allow for wildcards such as `http://*.sharepoint-df.com/*`.
 
 ### Managed Universal Links
 

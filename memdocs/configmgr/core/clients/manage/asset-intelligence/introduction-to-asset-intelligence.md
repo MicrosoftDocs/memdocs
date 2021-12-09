@@ -2,7 +2,7 @@
 title: Asset intelligence introduction
 titleSuffix: Configuration Manager
 description: Use asset intelligence in Configuration Manager to inventory and manage software license usage throughout your enterprise.
-ms.date: 12/10/2018
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -15,6 +15,11 @@ ms.localizationpriority: medium
 # Introduction to asset intelligence in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454890 -->
+>
+> This deprecation plan doesn't include the [product lifecycle dashboard](product-lifecycle-dashboard.md).
 
 Inventory and manage software license usage throughout your enterprise by using the asset intelligence catalog. Asset intelligence adds hardware inventory classes to improve the breadth of information that Configuration Manager collects. This information includes the hardware and software titles used in your environment. Over 60 reports present this information in an easy-to-use format. Many of these reports link to more specific reports. Query for general information and drill down to more detailed information. 
 

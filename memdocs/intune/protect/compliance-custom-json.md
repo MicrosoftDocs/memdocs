@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 12/08/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,28 +59,28 @@ A correctly formatted JSON file must include the following information:
 - Version
 
 **Supported Languages**:  
-- cs-CZ
-- da-DK
-- de-DE
-- el-GR
-- en-US
-- es-ES
-- fi-FI
-- fr-FR
-- hu-HU
-- it-IT
-- ja-JP
-- ko-KR
-- nb-NO
-- nl-NL
-- pl-PL
-- pt-BR
-- ro-RO
-- ru-RU
-- sv-SE
-- tr-TR
-- zh-CN
-- zh-TW
+- cs_CZ
+- da_DK
+- de_DE
+- el_GR
+- en_US
+- es_ES
+- fi_FI
+- fr_FR
+- hu_HU
+- it_IT
+- ja_JP
+- ko_KR
+- nb_NO
+- nl_NL
+- pl_PL
+- pt_BR
+- ro_RO
+- ru_RU
+- sv_SE
+- tr_TR
+- zh_CN
+- zh_TW
 
 For more information, see [Available languages for Windows](/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
 
@@ -112,8 +112,8 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
        "RemediationStrings":[ 
           { 
              "Language": "en_US",
-             "Title": "TCM chip must be enabled.",
-             "Description": "TCM chip must be enabled. Please refer to the link above"
+             "Title": "TPM chip must be enabled.",
+             "Description": "TPM chip must be enabled. Please refer to the link above"
           }
        ]
     },

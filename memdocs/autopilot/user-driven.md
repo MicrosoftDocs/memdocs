@@ -13,7 +13,9 @@ ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 09/02/2021
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: how-to
 ---
 

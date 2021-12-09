@@ -11,6 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What is co-management?
@@ -112,14 +113,11 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 - [Set up Intune](/intune/setup-steps)  
 
-- [Enable automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Enable automatic enrollment](/intune/windows-enroll#enable-windows-automatic-enrollment)  
 
 ### Windows
 
-Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).
-
-> [!IMPORTANT]
-> Windows 10 mobile devices don't support co-management.
+Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
 
 ### Permissions and roles
 

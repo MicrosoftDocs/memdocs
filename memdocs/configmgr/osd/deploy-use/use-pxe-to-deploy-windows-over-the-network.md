@@ -109,7 +109,7 @@ Deploy the OS to a target collection. For more information, see [Deploy a task s
 
 - **Available deployment**: Available deployments require that the user is present at the destination computer. A user must press the **F12** key to continue the PXE boot process. If a user isn't present to press **F12**, the computer boots into the current OS, or from the next available boot device.
 
-You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. For more information on the **Clear Required PXE Deployments** action, see [Manage clients](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) or [Manage collections](../../core/clients/manage/collections/manage-collections.md). This action resets the status of that deployment and reinstalls the most recent required deployments.
+You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. For more information on the **Clear Required PXE Deployments** action, see [Manage clients](../../core/clients/manage/manage-clients.md#manage-clients-from-the-devices-node) or [Manage collections](../../core/clients/manage/collections/manage-collections.md). This action resets the status of that deployment and reinstalls the most recent required deployments.
 
 > [!IMPORTANT]
 > The PXE protocol isn't secure. Make sure that the PXE server and the PXE client are located on a physically secure network, such as in a data center, to prevent unauthorized access to your site.

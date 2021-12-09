@@ -8,7 +8,7 @@ items:
     href: use-managed-devices-to-get-work-done.md
   - name: What information can my organization see? 
     href: what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md
-  - name: Access Intune Company Portal 
+  - name: Get Intune Company Portal  
     href: sign-in-to-the-company-portal.md
   - name: Device password requirements
     href: password-does-not-meet-it-administrator-requirements.md

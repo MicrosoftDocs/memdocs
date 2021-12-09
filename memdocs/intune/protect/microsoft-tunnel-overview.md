@@ -5,12 +5,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2021
+ms.date: 12/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -22,7 +21,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Microsoft Tunnel for Microsoft Intune
@@ -32,6 +33,9 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a c
 This article introduces the tunnel, how it works, and its architecture.
 
 If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then [Configure the Microsoft Tunnel](microsoft-tunnel-configure.md).
+
+> [!TIP]
+> Download the Microsoft Tunnel Deployment Guide v2 from the [*Microsoft Download Center*](https://www.microsoft.com/download/details.aspx?id=102274).
 
 ## Overview of Microsoft Tunnel
 
@@ -98,7 +102,7 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 **Components**:  
 - **A** – Microsoft Intune.
 - **B**- Azure Active Directory (AD).
-- **C** – Linux server with Podman (Red Hat Enterprise Linux 8.4 or later) or Docker CE (all other Linux distributions).
+- **C** – Linux server with Podman (Red Hat Enterprise Linux 8.4) or Docker CE (all other Linux distributions).
   - **C.1** - Microsoft Tunnel Gateway.
   - **C.2** – Management Agent.
   - **C.3** – Authentication plugin – Authorization plugin, which authenticates with Azure AD.

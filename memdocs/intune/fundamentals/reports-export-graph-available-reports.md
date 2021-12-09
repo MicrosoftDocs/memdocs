@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 12/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -665,6 +665,9 @@ The following table contains the possible output when calling the `DevicesWithIn
 | ManagementAgents  | ManagementAgents  |
 | CertExpirationDate  | CertExpirationDate  |
 | IsManaged  | IsManaged  |
+| SystemManagementBIOSVersion  | SystemManagementBIOSVersion  |
+| TPMManufacturerId  | TPMManufacturerId  |
+| TPMManufacturerVersion  | TPMManufacturerVersion  |
 
 You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
 - `CreatedDate`

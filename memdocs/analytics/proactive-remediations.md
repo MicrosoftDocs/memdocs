@@ -11,6 +11,7 @@ ms.author: mstewart
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # Tutorial: Proactive remediations
@@ -30,7 +31,7 @@ In this tutorial, you learn how to:
 
 Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you can deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them.
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you can deploy these script packages and see reports on their effectiveness.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 

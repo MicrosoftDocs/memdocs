@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2021
+ms.date: 12/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,9 +85,9 @@ The Certificate Connector for Microsoft Intune supports:
 
 ## Lifecycle
 
-Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What’s New](../fundamentals/whats-new.md) article for Intune, and in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
+Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-When a new version releases, support for the previous version is deprecated with a limited grace period for its continued use. After the grace period expires, support for that deprecated version ends, and it can stop functioning at any time. The grace period is six months.
+Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer be supported and might not function as expected.
 
 If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
 
@@ -219,14 +219,10 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
 
-New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
+New updates for the connector can take a week or more to become available for each tenant.
 
-### November 17, 2021
-
-Version **6.2111.4.0**. This update includes:
-
-- Bug fix for high memory usage under certain conditions.
-- Bug fix to allow removal of proxy server from within the configuration tool.
+> [!IMPORTANT]
+> On February 1, 2022, Intune certificate connectors earlier than version **6.1806.5.0** will no longer allow you to issue certificates to users and devices.
 
 ### October 11, 2021
 

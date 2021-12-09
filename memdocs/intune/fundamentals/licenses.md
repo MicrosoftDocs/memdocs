@@ -12,9 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 4a94440c-11cb-11e8-b642-0ed5f89f718b
-
-
 
 # optional metadata
 
@@ -25,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Microsoft Intune licensing
@@ -73,7 +72,7 @@ For more information about giving administrators access to Microsoft Endpoint Ma
 A Microsoft Intune license is created for you when you sign up for the Intune free trial. As part of this trial, you'll also have a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
 
 > [!NOTE]
-> If you are unable to access this portal using the step below, or if you don't have an Intune license, you can sign up now for the [Intune free trial](/mem/intune/fundamentals/free-trial-sign-up). When setting up Intune, you can give an administrators access to Microsoft Endpoint Manager [without them requiring an Intune license](/mem/intune/fundamentals/unlicensed-admins).
+> If you are unable to access this portal using the step below, or if you don't have an Intune license, you can sign up now for the [Intune free trial](./free-trial-sign-up.md). When setting up Intune, you can give an administrators access to Microsoft Endpoint Manager [without them requiring an Intune license](./unlicensed-admins.md).
 
 To confirm your Microsoft Intune license or trial, use the following steps:
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use derived credentials for mobile devices in Microsoft Intune
+title: Use derived credentials for mobile devices with Microsoft Intune
 description: Use derived credentials on mobile devices as an authentication method for Intune VPN, email, Wi-Fi profiles, applications, and S/MIME and encryption. Derived credentials are an implementation of the NIST guidelines for Special Publication 800-157.  
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/08/2021
+ms.date: 12/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,9 +28,13 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use derived credentials in Microsoft Intune
+# Use derived credentials with Microsoft Intune
 
-*This article applies to iOS/iPadOS, Android Enterprise fully managed devices that run version 7.0 and above, and devices that run Windows*
+*This article applies to:*
+
+- *Android Enterprise fully managed devices that run version 7.0 and above*
+- *iOS/iPadOS*
+- *Windows 10/11*
 
 In an environment where smart cards are required for authentication or encryption and signing, you can use Intune to provision mobile devices with a certificate that's derived from a user's smart card. That certificate is called a *derived credential*. Intune [supports several derived credential issuers](#supported-issuers), though you can use only a single issuer per tenant at a time.
 
@@ -87,7 +91,7 @@ For important details about using the different issuers, review guidance for tha
 
 ### Required apps
 
-Plan to deploy the relevant user facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
+Plan to deploy the relevant user-facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
 
 - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
 - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
@@ -121,7 +125,7 @@ Similarly, some derived credential request workflows require the use of the devi
 
 ### 2) Review the end-user workflow for your chosen issuer
 
-Following are key considerations for each supported partner. Become familiar with this information so you can ensure your Intune policies and configurations don't block users and devices from successfully completing enrollment for a derived credential from that issuer.
+The following are key considerations for each supported partner. Become familiar with this information so you can ensure your Intune policies and configurations don't block users and devices from successfully completing enrollment for a derived credential from that issuer.
 
 #### DISA Purebred
 
@@ -134,11 +138,18 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer.
 - iOS and iPadOS devices that will enroll for a derived credential must install the Intune Company Portal app. Android Fully Managed and Corporate-Owned Work Profile devices must install and use the Intune app.
-- Use Intune to [deploy the DISA Purebred app](#deploy-the-disa-purebred-app) to devices that will enroll for a derived credential. This app must be deployed through Intune so that it's managed, and can then work with the Intune Company Portal app or Intune App, which device users use to complete the derived credential request.
+- Use Intune to [deploy the DISA Purebred app](#deploy-the-disa-purebred-app) to devices that will enroll for a derived credential. This app must be deployed through Intune so that it's managed and can then work with the Intune Company Portal app or Intune App, which device users use to complete the derived credential request.
 - To retrieve a derived credential from the Purebred app, the device must have access to the on-premises network. Access might be through corporate Wi-Fi or VPN.
 - Device users must work with a live agent during the enrollment process. During enrollment, time-limited one-time passcodes are provided to the user as they continue through the enrollment process.
 - When changes are made to a policy that uses derived credentials, such as creation of a new Wi-Fi profile, iOS and iPadOS users are notified to open the Company Portal app.
 - Users are notified to open the applicable app when they need to renew their derived credential.
+  
+  The renewal process happens like this:
+  - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
+  - The device checks in during the renewal period (the last 20% of the validity period).
+  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
+
 
 For information getting and configuring the DISA Purebred app, see [Deploy the DISA Purebred app](#deploy-the-disa-purebred-app) later in this article.
 
@@ -159,6 +170,12 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   - **iOS and iPadOS** - Users are notified to open the Company Portal app.
   - **Android Enterprise** *Corporate-Owned Work Profile* or *Fully managed devices* - The Company Portal app doesn't need to open.
 - Users are notified to open the applicable app when they need to renew their derived credential.
+  
+  The renewal process happens like this:
+  - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
+  - The device checks in during the renewal period (the last 20% of the validity period).
+  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 #### Intercede
 
@@ -177,6 +194,12 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   - **iOS and iPadOS** - Users are notified to open the Company Portal app.
   - **Android Enterprise** *Corporate-Owned Work Profile* or *Fully managed devices* - The Company Portal app doesn't need to open.
 - Users are notified to open the applicable app when they need to renew their derived credential.
+  
+  The renewal process happens like this:
+  - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
+  - The device checks in during the renewal period (the last 20% of the validity period).
+  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 ### 3) Deploy a trusted root certificate to devices
 
@@ -195,7 +218,7 @@ Create new policies or edit existing policies to use derived credentials. Derive
 - App authentication
 - Wi-Fi
 - VPN
-- email (iOS only)
+- Email (iOS only)
 - S/MIME signing and encryption, including Outlook (iOS only)
 
 Avoid requiring use of a derived credential to access a process that you'll use as part of the process to get the derived credential, as that can prevent users from completing the request.
@@ -237,7 +260,7 @@ After you save the configuration, you can make changes to all fields except for 
 
 To use **DISA Purebred** as your derived credential issuer for Intune, you must get the DISA Purebred app and then use Intune to deploy the app to devices. Then users request the derived credential from DISA Purebred by using the Company Portal App on their iOS/iPadOS device, or the Intune app on their Android devices.
 
-In addition to the deploying the DISA Purebred app with Intune, the device must have access to the on-premises network. To provide this access, consider using a VPN or corporate Wi-Fi.
+In addition to deploying the DISA Purebred app with Intune, the device must have access to the on-premises network. To provide this access, consider using a VPN or corporate Wi-Fi.
 
 **Complete the following tasks**:
   
@@ -311,13 +334,13 @@ For Windows, users don't work through a smartcard registration process to obtain
 
 1. **Install the app from the Derived Credential providers on the Windows device**.
 
-   When you install the Windows app from a derived credential provider on a Windows device, the derived certificate is added to that devices Windows certificate store. After the certificate is added to the device, it becomes available for use a derived credential authentication method.
+   When you install the Windows app from a derived credential provider on a Windows device, the derived certificate is added to that device's Windows certificate store. After the certificate is added to the device, it becomes available for use a derived credential authentication method.
 
    After you get the app from your chosen provider, the app can be deployed to Users, or directly installed by the user of the device.
 
 2. **Configure Wi-Fi and VPN profiles to use derived credentials as the authentication method**.
 
-   When configuring a Windows profile for Wi-Fi or VPN, select **Derived credential** for the *Authentication Method*. With this configuration, the profile uses the certificate that installs on the device when the providers app was installed.
+   When configuring a Windows profile for Wi-Fi or VPN, select **Derived credential** for the *Authentication Method*. With this configuration, the profile uses the certificate that installs on the device when the provider's app was installed.
 
 ## Renew a derived credential
 
@@ -329,7 +352,7 @@ After a device receives a new derived credential, policies that use derived cred
 
 ## Change the derived credential issuer
 
-At the tenant level, you can change your credential issuer, although only one issuer is supported for a tenant at a time.
+At the tenant level, you can change your credential issuer, although only one issuer is supported by a tenant at a time.
 
 After you change the issuer, users are prompted to get a new derived credential from the new issuer. They must do so before they can use a derived credential for authentication.
 

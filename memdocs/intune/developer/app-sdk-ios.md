@@ -24,8 +24,10 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=iOS;has-adal-ref
-ms.collection: M365-identity-device-management
+ms.custom: has-adal-ref
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # Microsoft Intune App SDK for iOS developer guide

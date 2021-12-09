@@ -24,8 +24,10 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=iOS;intune-classic
-ms.collection: M365-identity-device-management
+ms.custom: intune-classic
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # Prepare iOS apps for app protection policies with the Intune App Wrapping Tool

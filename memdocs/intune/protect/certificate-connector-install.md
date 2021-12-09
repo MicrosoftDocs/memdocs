@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/13/2021
+ms.date: 11/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-ms.assetid:
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Install the Certificate Connector for Microsoft Intune
@@ -101,7 +101,7 @@ Use the following procedure to both configure a new connector and modify a previ
    - **SYSTEM**
    - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
-4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access.
+4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, `http://proxy.contoso.com`.
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 

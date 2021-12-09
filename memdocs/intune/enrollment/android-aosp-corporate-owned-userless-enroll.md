@@ -209,6 +209,10 @@ The following are known limitations when working with AOSP devices in Intune:
     * Weak biometric   
 *  Device compliance reporting is not available for for Android (AOSP).   
 
+* Android (AOSP) management is not supported in these environments:  
+    * Intune for Government Community Cloud (GCC) High and Department of Defense (D0D)  
+    * Intune operated by 21Vianet  
+
 ## Next steps  
 
 * [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-aosp.md) to restrict settings on devices. 

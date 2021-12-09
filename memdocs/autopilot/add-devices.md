@@ -17,6 +17,7 @@ ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
 - m365initiative-coredeploy
+- highpri
 ---
 
 # Manually register devices with Windows Autopilot
@@ -52,7 +53,7 @@ For more information about registering HoloLens 2 devices with Windows Autopilot
 ## Prerequisites
 
 - [Intune subscription](../intune/fundamentals/licenses.md)
-- [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+- [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## Required permissions
@@ -161,8 +162,8 @@ You can delete Windows Autopilot devices that aren't enrolled into Intune:
 
 Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. These deletions can all be done from Intune:
 
-1. First, delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
-2. If the devices are enrolled in Intune, you must [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+1. First if the devices are enrolled in Intune, you must [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+2. Once device is not enrolled in Intune, delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
 3. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
 
 ## Next steps

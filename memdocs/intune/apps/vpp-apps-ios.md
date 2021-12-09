@@ -25,8 +25,12 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=iOS/iPadOS;OS=macOS;intune-azure
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
+- macOS
+- highpri
 ---
 
 # How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune
