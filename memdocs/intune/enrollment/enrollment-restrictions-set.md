@@ -110,17 +110,17 @@ Default restrictions are automatically provided for both device type and device 
 3. Select **Create restriction**.  
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 3. Select **Next** to go to the **Platform settings** page.
-4. Allow or block mobile device management for your selected platform:  
+4. Allow or block Intune mobile device management (MDM) for your selected platform. Your options:      
+    - **Platform** (Android): Select **Allow** to permit devices running the Android or Android Enterprise platforms to enroll in Intune.  
+    - **MDM** (Windows, macOS, and iOS/iPadOS): Select **Allow** to permit devices running the selected platform to enroll in Intune. 
 
-    * Android: Under **Platform**, select **Allow** to permit devices running on this platform to enroll in Intune.  
-    * macOS, iOS, and Windows: Next to **MDM**, select **Allow** to permit devices running on this platform to enroll in Intune mobile device management (MDM). 
-4. In **Allow min/max range**, enter the minimum and maximum OS versions allowed to enroll. This restriction is not supported on macOS. For iOS and Android, version restrictions only apply to devices enrolled with the Company Portal.
+4. For **Allow min/max range**, enter the minimum and maximum OS versions allowed to enroll. This restriction is not supported on macOS. For iOS and Android, version restrictions only apply to devices enrolled with the Company Portal.
      Supported version formats include:
     - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
     - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
     - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
-4. Next to **Personally owned**, choose **Allow** to permit devices to operate as personally owned devices.  
-5. In **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
+4. Next to **Personally owned**, choose **Allow** to permit devices to enroll and operate as personally owned devices.  
+5. For **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
 5. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
 10. Select **Next** to go to the **Assignments** page.
 11. Select **Add groups** and then use the search box to find groups that you want to include in this restriction. To assign the restriction to everyone, select **Add all users**. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, the restriction won't take effect.   
