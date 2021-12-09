@@ -48,7 +48,7 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
-## Week of December 6, 2021 (Service release 2110)
+## Week of December 6, 2021 (Service release 2111)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
