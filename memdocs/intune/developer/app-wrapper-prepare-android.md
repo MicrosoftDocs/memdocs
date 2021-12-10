@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/11/2021
+ms.date: 12/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -54,7 +54,7 @@ Before running the tool, review [Security considerations for running the App Wra
   > [!NOTE]
   > If your input app is an Android App Bundle (.aab), you will need to convert it to an APK before using the Intune App Wrapping Tool. For details, see [Convert Android App Bundle (AAB) to APK](#convert-android-app-bundle-aab-to-apk). As of August 2021, [new private apps can still be published to the Google Play Store as APKs](https://support.google.com/googleplay/work/answer/6145139?hl=en).
   
-- The app must be developed by or for your company. You cannot use this tool on apps downloaded from the Google Play Store.
+- The app must be developed by or for your company. You cannot use this tool on apps that are available in the Google Play Store. This includes downloading or obtaining the app from the Google Play Store.
 
 - To run the App Wrapping Tool, you must install the latest version of the [Java Runtime Environment](https://java.com/download/) and then ensure that the Java path variable has been set to C:\ProgramData\Oracle\Java\javapath in your Windows environment variables. For more help, see the [Java documentation](https://java.com/en/download/help/index.html).
 
