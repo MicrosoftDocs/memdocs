@@ -63,7 +63,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of December 6, 2021  
 
-
 ### Device enrollment
 
 #### Apply device type filters to Windows and Apple enrollment restriction policies (preview)<!-- 9284419 -->  

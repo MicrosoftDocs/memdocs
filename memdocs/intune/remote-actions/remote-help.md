@@ -41,7 +41,7 @@ Remote help uses Intune role-based access controls (RBAC) to set the level of ac
 The remote help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
 
 > [!NOTE]
-> On 12/08/2021, the remote help installer was renamed from *remotehelp.exe* to *remotehelpinstaller.exe* to resolve issues with silent deployments. Although app functionality hasn't changed, we recommend using the same [*download link*](#download-remote-help) to download the updated version with the renamed installer. The installation command lines in this article have been updated to reflect the new installer file name.
+> On 12/08/2021, the remote help installer was renamed from *remotehelp.exe* to *remotehelpinstaller.exe* to resolve issues with silent deployments and interactive installations. Although app functionality hasn't changed, we recommend using the same [*download link*](#download-remote-help) to download the updated version with the renamed installer. The installation command lines in this article have been updated to reflect the new installer file name.
 
 ## Remote help capabilities and requirements
 
@@ -163,8 +163,8 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
 4. On the Detection rules page, for *Rules format*, select **Manually configure detection rules**, and then select **Add** to open the *Detection rule* pane. Configure the following options:
 
    - For *Rule type*, select **File**
-   - For *Path*, specify **C:\Program Files\Remote Help**
-   - For *File or folder*, specify **RemotehelpInstaller.exe**
+   - For *Path*, specify **C:\Program Files\Remote help**
+   - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
    - For *Value*, specify the [version of remote help](#download-remote-help) your deploying. For example, **10.0.10011.16384**
