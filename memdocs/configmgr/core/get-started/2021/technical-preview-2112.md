@@ -23,16 +23,14 @@ Review the [technical preview](../technical-preview.md) article before installin
 The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2112/1234567.md)] -->
-[!INCLUDE [3601042](includes/2112/3601042.md)]
-[!INCLUDE [4575930](includes/2112/4575930.md)]
-[!INCLUDE [12441118](includes/2112/12441118.md)]
-[!INCLUDE [12726153](includes/2112/12726153.md)]
-[!INCLUDE [12770887](includes/2112/12770887.md)]
-
+[!INCLUDE [Customize maximum run time for other software update types](includes/2112/12770887.md)]
+[!INCLUDE [Console and user experience improvements](includes/2112/12726153.md)]
+[!INCLUDE [Exclude data warehouse reporting tables from synchronization](includes/2112/12441118.md)]
+[!INCLUDE [A new remote assistance tool](includes/2112/4575930.md)]
 
 ## General known issues
 <!-- [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
-[!INCLUDE [12580525](includes/2112/12580525.md)]
+[!INCLUDE [12580525 - Extensions](includes/2112/12580525.md)]
 
 ## Next steps
 

@@ -123,12 +123,11 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2112
 <!-- all items are in 2111 CB -->
-- [3601042](2021/technical-preview-2112.md) <!--3601042-->
-- [4575930](2021/technical-preview-2112.md) <!--4575930-->
-- [12441118](2021/technical-preview-2112.md) <!--12441118-->
-- [12580525](2021/technical-preview-2112.md) <!--12580525-->
-- [12726153](2021/technical-preview-2112.md) <!--12726153-->
-- [12770887](2021/technical-preview-2112.md) <!--12770887-->
+
+- [Customize maximum run time for other software update types](2021/technical-preview-2112.md#bkmk_maxruntime) <!--12770887-->
+- [Console and user experience improvements](2021/technical-preview-2112.md#bkmk_ux) <!--12726153-->
+- [Exclude data warehouse reporting tables from synchronization](2021/technical-preview-2112.md#bkmk_warehouse) <!--12441118-->
+- [A new remote assistance tool](2021/technical-preview-2112.md#bkmk_cmgrc) <!--4575930-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
