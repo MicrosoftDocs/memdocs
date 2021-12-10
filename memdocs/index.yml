@@ -30,6 +30,9 @@ highlightedContent:
     - title: Secure your remote workforce
       itemType: get-started
       url: /enterprise-mobility-security/remote-work/
+    - title: Microsoft Endpoint Manager fundamentals
+      itemType: learn
+      url: /learn/paths/endpoint-manager-fundamentals/
 
 conceptualContent:
   items:
