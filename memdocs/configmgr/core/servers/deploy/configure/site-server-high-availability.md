@@ -262,6 +262,8 @@ The following steps may be required if necessary in your environment:
 
 - Recreate OSD bootable media and prestaged media in non-PKI environments.  
 
+- In non-PKI environments, distribution points that are PXE enabled may need to have their self-signed certificate updated. This can be done in the properties of the distribution point under the Communication tab by making changes to the self-signed certificate date and/or time.
+
 ## Daily monitoring
 
 When you have a site server in passive mode, monitor it daily. Make sure its Status remains OK and is ready for use. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Site Server Status** node. View both site servers and their current status. Also view status in the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node. Select the site, and then switch to the **Nodes** tab.
