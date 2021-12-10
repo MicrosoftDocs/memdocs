@@ -28,7 +28,6 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Exclude data warehouse reporting tables from synchronization](includes/2112/12441118.md)]
 [!INCLUDE [A new remote assistance tool](includes/2112/4575930.md)]
 
-
 ## General known issues
 <!-- [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
 [!INCLUDE [12580525 - Extensions](includes/2112/12580525.md)]
