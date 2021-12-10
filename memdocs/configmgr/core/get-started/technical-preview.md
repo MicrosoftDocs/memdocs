@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 12/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,13 +121,13 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2111
+### Technical preview version 2112
 <!-- all items are in 2111 CB -->
-- [Improvements to the Windows servicing dashboard](2021/technical-preview-2111.md#bkmk_servicing) <!--10579996-->
-- [Co-management Eligible Devices collection](2021/technical-preview-2111.md#bkmk_co-management) <!--12377291-->
-- [Improvement to app groups](2021/technical-preview-2111.md#bkmk_appgroup) <!--11125884-->
-- [Improvement to task sequence deployment type](2021/technical-preview-2111.md#bkmk_tsdt) <!--10422235-->
-- [PowerShell release notes preview](2021/technical-preview-2111.md#bkmk_powershell) <!--10957283-->
+
+- [Customize maximum run time for other software update types](2021/technical-preview-2112.md#bkmk_maxruntime) <!--12770887-->
+- [Console and user experience improvements](2021/technical-preview-2112.md#bkmk_ux) <!--12726153-->
+- [Exclude data warehouse reporting tables from synchronization](2021/technical-preview-2112.md#bkmk_warehouse) <!--12441118-->
+- [A new remote assistance tool](2021/technical-preview-2112.md#bkmk_cmgrc) <!--4575930-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -170,7 +170,6 @@ The following features were released with previous versions of the Configuration
 | Community hub support for application content <!--7983035--> | [Tech preview 2012](2020/technical-preview-2012.md#bkmk_hubapp) |
 | Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Phased deployment templates <!--4961086--> | [Tech preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
-| Remote control anywhere using cloud management gateway <!--4575930--> | [Tech preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) and [Tech preview 2009](2020/technical-preview-2009.md#bkmk_remctrl) |
 | Client-based PXE responder service <!--3556018, fka 1357148--> | [Tech preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE network boot support for IPv6 <!--3601254, fka 1269793--> |[Tech preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Use Azure Active Directory <!--3607315, fka 1322145--> | [Tech preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |

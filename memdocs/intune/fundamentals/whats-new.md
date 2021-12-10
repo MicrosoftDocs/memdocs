@@ -63,6 +63,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of December 6, 2021  
 
+### Device enrollment
+
+#### Apply device type filters to Windows and Apple enrollment restriction policies (preview)<!-- 9284419 -->  
+Use the new assignment filters in **Enrollment Restrictions** to include or exclude devices based on device type. For example, you can allow personal devices, while also blocking devices running Windows 10 Home, by applying the **operatingsystemSKU** assignment filter. Filters are currently in public preview and can be applied to Windows, macOS, and iOS enrollment policies, with Android support coming at a later date. Enabling the filters public preview in your tenant also enables a new setup experience for enrollment restrictions. For more information about how to create filters, see [Create a filter](../fundamentals/filters.md). For more information about using filters with enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md). 
+
+#### Use filters on Windows Enrollment Status Page profile assignments<!-- 7423484 -->
+Filters allows you to include or exclude devices in policy or app assignments based on different device properties. When you create an Enrollment Status Page (ESP) profile, you'll be able to use filters when assigning the profile. The **All users** and **All devices** assignment options will also be available. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Enroll devices** > **Enrollment Status Page** > **Create**. For more information about filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md). For more information about ESP profiles, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md). 
+
 ### App management
 
 #### Additional Session PIN restrictions available for the Microsoft Managed Home Screen app<!-- 9843535 -->
@@ -76,7 +84,7 @@ For more information, see [Configure the Microsoft Managed Home Screen app for A
 ### Monitor and troubleshoot  
 
 #### New event viewer for Windows 10 diagnostics <!-- 10741116 -->
-We've added a new event viewer to Windows device diagnostics called *Microsoft-Windows-Windows Firewall with Advanced Security/Firewall*. The event viewer can assist you in troubleshooting issues with the firewall. For more information about Windows device diagnostics, see [Collect diagnostics from a Windows device](../remote-actions/collect-diagnostics.md).  
+We've added a new event viewer to Windows device diagnostics called *Microsoft-Windows-Windows Firewall with Advanced Security/Firewall*. The event viewer can assist you in troubleshooting issues with the firewall. For more information about Windows device diagnostics, see [Collect diagnostics from a Windows device](../remote-actions/collect-diagnostics.md).   
 
 ## Week of November 22, 2021  
 
