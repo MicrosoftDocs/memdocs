@@ -86,6 +86,9 @@ For more information, see [Configure the Microsoft Managed Home Screen app for A
 #### New event viewer for Windows 10 diagnostics <!-- 10741116 -->
 We've added a new event viewer to Windows device diagnostics called *Microsoft-Windows-Windows Firewall with Advanced Security/Firewall*. The event viewer can assist you in troubleshooting issues with the firewall. For more information about Windows device diagnostics, see [Collect diagnostics from a Windows device](../remote-actions/collect-diagnostics.md).   
 
+#### Device compliance status in Company Portal website<!-- 8782968 -->
+End users can more easily see the compliance status of their devices from the Company Portal website. End users can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
 ## Week of November 22, 2021  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
