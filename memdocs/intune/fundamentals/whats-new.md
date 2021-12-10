@@ -63,6 +63,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of December 6, 2021  
 
+### Device enrollment
+
+#### Use filters on Windows Enrollment Status Page profile assignments<!-- 7423484 -->
+Filters allows you to include or exclude devices in policy or app assignments based on different device properties. When you create an Enrollment Status Page (ESP) profile, you'll be able to use filters when assigning the profile. The **All users** and **All devices** assignment options will also be available. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Enroll devices** > **Enrollment Status Page** > **Create**. For more information about filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md). For more information about ESP profiles, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md). 
+
 ### App management
 
 #### Additional Session PIN restrictions available for the Microsoft Managed Home Screen app<!-- 9843535 -->

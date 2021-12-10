@@ -163,8 +163,8 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
 4. On the Detection rules page, for *Rules format*, select **Manually configure detection rules**, and then select **Add** to open the *Detection rule* pane. Configure the following options:
 
    - For *Rule type*, select **File**
-   - For *Path*, specify **C:\Program Files\Remote Help**
-   - For *File or folder*, specify **RemotehelpInstaller.exe**
+   - For *Path*, specify **C:\Program Files\Remote help**
+   - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
    - For *Value*, specify the [version of remote help](#download-remote-help) your deploying. For example, **10.0.10011.16384**
