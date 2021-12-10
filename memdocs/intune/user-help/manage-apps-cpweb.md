@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 12/10/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -109,6 +109,9 @@ Select an app on the **Apps** or **Installed apps** page to view its details. Yo
 
 
    ![Screenshot of Company Portal website, App details page.](./media/intune-app-details-1907.png)  
+
+## Device compliance status
+View the compliance status of your devices from the Company Portal website. You can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**.
 
 ## Next steps
 Need more help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
