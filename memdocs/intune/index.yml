@@ -29,9 +29,9 @@ highlightedContent:
     - title: Set up automatic enrollment for Windows 10 devices
       itemType: get-started
       url: ./enrollment/quickstart-setup-auto-enrollment.md
-    - title: Microsoft Endpoint Manager fundamentals
-      itemType: learn
-      url: /learn/paths/endpoint-manager-fundamentals/
+    - title: Intune reports
+      itemType: overview
+      url: ./fundamentals/reports.md
 
 conceptualContent:
   items:
