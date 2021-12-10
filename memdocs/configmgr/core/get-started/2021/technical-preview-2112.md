@@ -23,7 +23,6 @@ Review the [technical preview](../technical-preview.md) article before installin
 The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2112/1234567.md)] -->
-[!INCLUDE [3601042](includes/2112/3601042.md)]
 [!INCLUDE [4575930](includes/2112/4575930.md)]
 [!INCLUDE [12441118](includes/2112/12441118.md)]
 [!INCLUDE [12726153](includes/2112/12726153.md)]

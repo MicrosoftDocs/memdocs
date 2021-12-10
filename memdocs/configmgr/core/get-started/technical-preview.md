@@ -123,7 +123,7 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2112
 <!-- all items are in 2111 CB -->
-- [3601042](2021/technical-preview-2112.md) <!--3601042-->
+
 - [4575930](2021/technical-preview-2112.md) <!--4575930-->
 - [12441118](2021/technical-preview-2112.md) <!--12441118-->
 - [12580525](2021/technical-preview-2112.md) <!--12580525-->
