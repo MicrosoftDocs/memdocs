@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2021
+ms.date: 12/02/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -218,6 +218,9 @@ While the **Global** policy applies to all users in your tenant, any standard In
 ### Multi-identity
 
 Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. Work and school accounts are used by "corporate" audiences, whereas personal accounts would be used for consumer audiences, such as Microsoft Office users. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../developer/app-sdk.md) to only apply app protection policies to the work or school account signed into the app. If a personal account is signed into the app, the data is untouched. App protection policies can be used to prevent the transfer of work or school account data to personal accounts within the multi-identity app, personal accounts within other apps, or personal apps.
+
+> [!IMPORTANT]
+> Regardless of whether an app supports multi-identity, only a single "corporate" identity can have an Intune App Protection Policy applied.
 
 For an example of "personal" context, consider a user who starts a new document in Word, this is considered personal context so Intune App Protection policies are not applied. Once the document is saved on the "corporate" OneDrive account, then it is considered "corporate" context and Intune App Protection policies are applied.
 
