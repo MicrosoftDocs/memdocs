@@ -11,22 +11,22 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Plan for Change: Intune APP/MAM moving to support Android 9 and higher<!-- 10937255 -->
+### Plan for change: Intune APP/MAM moving to support Android 9 and later<!-- 10937255 -->
 
-With the upcoming release of Android 12, Intune app protection policies (APP, also known as MAM) for Android will be moving to support Android 9 (Pie) and higher on **October 1, 2021**. This change is to align with Office mobile apps for Android support of the last four major versions of Android. Based on your feedback, we have updated our support statement. We are doing our best to keeping your organization secure and protecting your users and devices, while aligning with Microsoft app lifecycles.
+With the upcoming release of Android 12, Intune app protection policies (APP, also known as MAM) for Android will be moving to support Android 9 (Pie) and later on **October 1, 2021**. This change is to align with Office mobile apps for Android support of the last four major versions of Android. Based on your feedback, we have updated our support statement. We are doing our best to keeping your organization secure and protecting your users and devices, while aligning with Microsoft app lifecycles.
 
 > [!NOTE]
-> [Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) are not impacted by this announcement and will continue to be supported regardless of their Android OS version.
+> [Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) are not affected by this announcement and will continue to be supported regardless of their Android OS version.
 
 #### How this will affect your organization?
 
-If you are using app protection policies on any device that is running Android version 8.x or lower, or decide to enroll any device that is running Android version 8.x or lower, please note that these devices will no longer be supported for APP. While APP policies will continue to be applied to devices running Android 6.x – Android 8.x, if you do run into issues with an Office app and APP, support will request you update to a supported Office version for app troubleshooting. To continue to receive support for APP, update your devices to Android version 9 (Pie) or higher or replace them with a device on Android version 9.0 or higher before October 1, 2021.
+If you're using app protection policies on any device that's running Android version 8.x or earlier, or decide to enroll any device that's running Android version 8.x or earlier, please note that these devices will no longer be supported for APP. While APP policies will continue to be applied to devices running Android 6.x – Android 8.x, if you do run into issues with an Office app and APP, support will request you update to a supported Office version for app troubleshooting. To continue to receive support for APP, update your devices to Android version 9 (Pie) or later or replace them with a device on Android version 9.0 or later before October 1, 2021.
 
 #### What you need to do to prepare?
 
 Notify your helpdesk, if applicable, of this updated support statement. You also have two admin options to help inform your users.
 
-Here’s how you can warn users:
+Here's how you can warn users:
 
 1. Configure an [app protection policy Conditional launch setting](../apps/app-protection-policy-settings-android.md#conditional-launch) with a Min OS version requirement to warn users.
 2. Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the [action for non-compliance](../protect/actions-for-noncompliance.md) to send a message to users before marking them non-compliant.
@@ -37,21 +37,21 @@ With the Microsoft Intune service release (2109), you'll no longer be able to co
 
 #### How does this affect me?
 
-If our service telemetry indicates that your existing policy sets include enrollment restrictions, we will migrate your policies when the new restrictions are in place. To create and manage new enrollment restrictions going forward, go to **Devices** > **Policy** section > **Enrollment restrictions**.
+If our service telemetry indicates that your existing policy sets include enrollment restrictions, we'll migrate your policies when the new restrictions are in place. To create and manage new enrollment restrictions going forward, go to **Devices** > **Policy** section > **Enrollment restrictions**.
 
 #### What action do I need to take?
 
-Update your documentation. Make sure to configure all new enrollment restrictions in the **Enrollment restrictions** section of Intune. We’ll start migrating existing policies with the 2109 service release.
+Update your documentation. Make sure to configure all new enrollment restrictions in the **Enrollment restrictions** section of Intune. We'll start migrating existing policies with the 2109 service release.
 
 ### Take Action: Update to the latest version of the Android Company Portal app<!--10488117-->
 
-Due to a change in our integration with Samsung devices, with Intune's October (2110) service release we will no longer be able to support new Android device administrator enrollments using Company Portal version of 5.04993.0 or below.
+Due to a change in our integration with Samsung devices, with Intune's October (2110) service release, we'll no longer be able to support new Android device administrator enrollments using Company Portal version of 5.04993.0 or below.
 
 #### How this will affect my organization
 
 Users using an older version of the Company Portal app to enroll Samsung devices may need to take action.
 
-User impact: Users who need to enroll Samsung devices into Android device administrator using an older version of the Company Portal app (any version below 5.04993.0) will no longer be successful. They will need to update the Company Portal app to successfully enroll.
+**User impact:** Users who need to enroll Samsung devices into Android device administrator using an older version of the Company Portal app (any version below 5.04993.0) will no longer be successful. They will need to update the Company Portal app to successfully enroll.
 
 #### What do I need to do to prepare
 
@@ -64,13 +64,13 @@ Update any older version of Company Portal staged in your environment to support
 
 ### Plan for Change: Safe boot and Debugging features in Android Enterprise device restrictions will be replaced
 
-[Google announced](https://developers.google.com/android/management/release-notes#march-2021) they have deprecated several settings in the Android Management API and will stop supporting the settings for Intune on **November 1, 2021**. This impacts the **Safe boot** and **Debugging features** configuration settings for Android Enterprise device restrictions, and they will be no longer be available at the end of October. To prepare for this change, we will be adding a new setting **Developer settings** in September's (2109) service release.
+[Google announced](https://developers.google.com/android/management/release-notes#march-2021) they have deprecated several settings in the Android Management API and will stop supporting the settings for Intune on **November 1, 2021**. This affects the **Safe boot** and **Debugging features** configuration settings for Android Enterprise device restrictions, and they will be no longer be available at the end of October. To prepare for this change, we'll be adding a new setting **Developer settings** in September's (2109) service release.
 
 **How this will affect your organization:**
 
 With Intune's October (2110) service release, **Safe boot** and **Debugging features** will be removed from the admin center UI and then removed shortly after from Microsoft Graph API on October 31, 2021. If applicable, you should use the new setting, **Developer settings**.
 
-**Developer settings** will be available for new and existing profiles in the September (2109) service release. By default, it is set as "Not configured". If you choose to set this to "Allow", users will be able to access developer settings which may include the ability to enable debugging features and/or reboot the device into safe boot mode.
+**Developer settings** will be available for new and existing profiles in the September (2109) service release. By default, it's set as "Not configured". If you choose to set this to "Allow", users will be able to access developer settings which may include the ability to enable debugging features and/or reboot the device into safe boot mode.
 
 > [!NOTE]
 > If **Developer settings** is set to **Allow**, it will override both the **Safe boot** and **Debugging features** settings.
@@ -91,15 +91,15 @@ This will only affect you if you currently use a location-based (network fence) 
 
 #### What do I need to do to prepare for this change?
 
-No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features, and we will follow up with additional information when it’s available regarding re-envisioned location-based services.
+No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features, and we'll follow up with additional information when it's available regarding re-envisioned location-based services.
 
-### Plan for Change: Intune moving to support iOS/iPadOS 13 and higher later this year<!--10144130-->
+### Plan for Change: Intune moving to support iOS/iPadOS 13 and later later this year<!--10144130-->
 
-Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and higher shortly after iOS 15’s release.
+Later this year, we expect iOS 15 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require  iOS/iPadOS 13 and later shortly after iOS 15's release.
 
 #### How does this affect me?
 
-If you are managing iOS/iPadOS devices, you might have devices that will not be able to upgrade to the minimum supported version (iOS/iPadOS 13). Provided that Office 365 mobile apps are supported on iOS/iPadOS 13.0 and higher, this may not affect you; you’ve likely already upgraded your OS or devices. See the following Apple documentation for devices to check which devices support iOS 13 or iPadOS 13 (if applicable).
+If you are managing iOS/iPadOS devices, you might have devices that will not be able to upgrade to the minimum supported version (iOS/iPadOS 13). Provided that Office 365 mobile apps are supported on iOS/iPadOS 13.0 and later, this may not affect you; you've likely already upgraded your OS or devices. See the following Apple documentation for devices to check which devices support iOS 13 or iPadOS 13 (if applicable).
 
 - [Supported iPhone models](https://support.apple.com/guide/iphone/supported-iphone-models-iphe3fa5df43/13.0/ios/13.0)
 - [Supported iPad models](https://support.apple.com/guide/ipad/supported-models-ipad213a25b2/13.0/ipados/13.0)
@@ -115,11 +115,11 @@ To manage the supported OS version in your organization, you can use Microsoft E
 
 ### Plan for Change: Intune moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
 
-With Apple's expected release of macOS 12 Monterey in the fall of 2021, Microsoft Intune, the Company Portal app and the Intune MDM agent will be moving to support macOS 10.15 (Catalina) and higher shortly after the release.
+With Apple's expected release of macOS 12 Monterey in the fall of 2021, Microsoft Intune, the Company Portal app and the Intune MDM agent will be moving to support macOS 10.15 (Catalina) and later shortly after the release.
 
 #### How does this affect me?
 
-This will only affect you if you currently manage, or plan to manage macOS devices with Intune. This may not impact you because your users have likely already upgraded their macOS devices. See [macOS Catalina is compatible with these computers](https://support.apple.com/en-us/HT210222) for a list of devices that are supported.
+This will only affect you if you currently manage, or plan to manage macOS devices with Intune. This may not affect you because your users have likely already upgraded their macOS devices. See [macOS Catalina is compatible with these computers](https://support.apple.com/en-us/HT210222) for a list of devices that are supported.
 
 > [!NOTE]
 > Devices that are currently enrolled on macOS 10.13.x and 10.14 will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if running macOS 10.14 or below.
@@ -136,7 +136,7 @@ We have recently released an updated Company Portal for iOS to the Apple Store t
 If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices. Otherwise, no action is needed, but if you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app.
 
 #### How does this affect me?
-User impact - Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+**User impact:** Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
 > [!NOTE]
 > If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you may need to manually push an update to the related devices.
@@ -155,7 +155,7 @@ For your devices that run Android Enterprise and currently use the standalone tu
 
 ### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 
-We’ve released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices.
+We've released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices.
 
 The new version for the Microsoft Intune Management Extension is **1.43.203.0**. Intune automatically upgrades all versions of the extension that are less than **1.43.203.0** to this latest version. To check the version of the extension on a device, review the version for *Microsoft Intune Management Extension* in the program list under **Apps & features**.
 
@@ -167,7 +167,7 @@ No action is required. As soon as the client connects to the service, it automat
 
 ### Update to Endpoint Security Antivirus Windows 10 Profiles<!-- 9741752   -->
 
-We've made a minor change to improve the Antivirus profile experience for Windows 10. There’s no end-user effect as this is a change only in what you’ll see in the UI.
+We've made a minor change to improve the Antivirus profile experience for Windows 10. There's no end-user effect as this is a change only in what you'll see in the UI.
 
 #### How does this affect me?
 
@@ -181,7 +181,7 @@ No action is needed. However, you might want to notify your helpdesk about this 
 
 ### Plan for Change: Intune ending company portal support for unsupported versions of Windows
 
-Intune follows Windows 10 lifecycle for supported Windows 10 versions. We’re now removing support for the associated Windows 10 Company Portals for those Windows versions that are out of the Modern Support policy.
+Intune follows Windows 10 lifecycle for supported Windows 10 versions. We're now removing support for the associated Windows 10 Company Portals for those Windows versions that are out of the Modern Support policy.
 
 #### How does this affect me?
 
@@ -193,33 +193,33 @@ Given that Microsoft no longer supports these OSs, this may not affect you; you 
 - Windows 10, Version 1703, Company portal version 10.3.5601.0
 - Windows 10, Version 1709, any Company portal version
 
-We will not uninstall these Company portal versions mentioned above, but we will remove them from the Microsoft Store and stop testing our service releases with them.
+We won't uninstall these Company portal versions mentioned above, but we will remove them from the Microsoft Store and stop testing our service releases with them.
 
-**User Impact:** If you continue to use an unsupported version of Window 10, your users won't get the latest security updates, new features, bug fixes, latency improvements, accessibility improvements, and performance investments. The user will not be able to be co-managed with System Center Configuration Manager and Intune.
+**User impact:** If you continue to use an unsupported version of Window 10, your users won't get the latest security updates, new features, bug fixes, latency improvements, accessibility improvements, and performance investments. The user will not be able to be co-managed with System Center Configuration Manager and Intune.
 
 #### What do I need to do?
 
-In the Microsoft Endpoint Manager admin center, use the [Discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user’s device, the Company Portal version is shown in the **Settings** page of the company portal. Update to a supported Windows/Company Portal version.
+In the Microsoft Endpoint Manager admin center, use the [Discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown in the **Settings** page of the company portal. Update to a supported Windows/Company Portal version.
 
-### Plan for Change: Intune moving to support Android 6.0 and higher in April 2021
+### Plan for Change: Intune moving to support Android 6.0 and later in April 2021
 
-As mentioned in MC234534, Intune will be moving to support Android 6.0 (Marshmallow) and higher in the April (2104) service release.
+As mentioned in MC234534, Intune will be moving to support Android 6.0 (Marshmallow) and later in the April (2104) service release.
 
 #### How this change will affect your organization
 
-Given that the Office mobile apps for Android ended support for Android 5.x (Lollipop) on June 30, 2019 (MC181101) this change may not affect you; you have likely already upgraded your OS or devices. However, if you have any device that is still running Android version 5.x, or decide to enroll any device that is running Android version 5.x, please note that these devices will no longer be supported. Either update them to Android version 6.0 (Marshmallow) or higher or replace them with a device on Android version 6.0 or higher.
+Given that the Office mobile apps for Android ended support for Android 5.x (Lollipop) on June 30, 2019 (MC181101) this change may not affect you; you have likely already upgraded your OS or devices. However, if you have any device that's still running Android version 5.x, or decide to enroll any device that's running Android version 5.x, please note that these devices will no longer be supported. Either update them to Android version 6.0 (Marshmallow) or later or replace them with a device on Android version 6.0 or later.
 
 > [!NOTE]
-> Teams Android devices are not impacted by this announcement and will continue to be supported regardless of their Android OS version.
+> Teams Android devices are not affected by this announcement and will continue to be supported regardless of their Android OS version.
 
 #### What you need to do to prepare
 
-Notify your helpdesk, if applicable, of this upcoming change in support. You also have two admin options to help inform your end users or block enrollment.
+Notify your helpdesk, if applicable, of this upcoming change in support. You also have two admin options to help inform your users or block enrollment.
 
-1. Here’s how you can warn end users:
+1. Here's how you can warn users:
     - Utilize a device compliance policy for Android device administrator or Android Enterprise and set the action for non-compliance to send a message to users before marking them noncompliant.
     - Configure an app protection policy Conditional launch setting with a Min OS version requirement to warn users.
-2. Here’s how you can block devices on versions below Android 6.0:
+2. Here's how you can block devices on versions below Android 6.0:
     - Set enrollment restrictions to prevent devices on Android 5.x from enrolling
     - Utilize a device compliance policy for Android device administrator or Android Enterprise to make devices on Android 5.x non-compliant.
     - Configure an app protection policy Conditional launch setting with a Min OS version requirement to block users from app access.
