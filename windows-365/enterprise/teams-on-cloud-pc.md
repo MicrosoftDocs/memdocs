@@ -90,13 +90,10 @@ The following calling and meeting features are not supported:
   - Live reactions (Like, Heart, Applause, Laugh and Surprised)
   - QOS setting for Teams
   - Support for http proxies
-
   - Enhanced emergency services (e911)
   - Call Me
-
   - Live captions
   - Transcription
-
   - Remote volume control support
   - Multi-window (MW) functionality
 
