@@ -41,7 +41,7 @@ Using Microsoft Teams on a Cloud PC is different from using it on a physical PC.
 
 ## Teams optimizations
 
-The [Windows 10/11 images](device-images.md#gallery-images), in the gallery, are pre-configured with required optimization components - so when you install and use Microsoft Teams in your cloud PC, you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
+The [Windows 10/11 images](device-images.md#gallery-images) in the gallery are pre-configured with required optimization components. When you install and use Microsoft Teams in your cloud PC you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
 
 Some of the key benefits of the optimizations are:
 - High-performance peer-to-peer streaming facilitated by WebRTC and rendered directly on the endpoint.
