@@ -178,6 +178,9 @@ The following actions are available:
 > [!NOTE]
 > These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies.
 
+### Device compliance status in Company Portal website
+End users can see the compliance status of their devices from the Company Portal website. End users can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
+
 ## Opening Web Company Portal applications
 For Web Company Portal applications, if the end user has the Company Portal application installed, the end users will see a dialog box asking how they want to open the application when opening outside of the browser. If the app is not in the path of the Company Portal, then the Company Portal will open the homepage. If the app is in the path, then the Company Portal will open the specific app. 
 
