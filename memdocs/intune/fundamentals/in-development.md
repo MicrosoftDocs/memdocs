@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 12/13/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -94,9 +94,6 @@ In the Endpoint Manager admin center, there's a new option that states something
 This new option is available in the following locations in the Endpoint Manager admin center:
 - Home page
 - Dashboard
-- **Devices** > **Configuration profiles**
-
-  When you select a Windows profile, the **Overview** summary page shows this option.
 
 For more information, see [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md) and [Assignment failures report](reports.md#assignment-failures-report-operational).
 
