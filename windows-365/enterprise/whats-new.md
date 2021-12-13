@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-### Cloud PCs in grace period count towards active Cloud CP license usage<!-- 37017463-->
+#### Cloud PCs in grace period count towards active Cloud CP license usage<!-- 37017463-->
 
 Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
 
