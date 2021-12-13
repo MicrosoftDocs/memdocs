@@ -64,7 +64,7 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
-### Cloud PCs in grace period count towards active Cloud CP license usage<!-- 37017463-->
+### Cloud PCs in grace period count towards active Cloud PC license usage<!-- 37017463-->
 
 In a future update, Cloud PCs that are in grace period will count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
 
