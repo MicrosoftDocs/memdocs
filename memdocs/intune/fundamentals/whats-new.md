@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/13/2021
+ms.date: 12/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -160,6 +160,15 @@ For related information, see:
 Applies to:
 - Windows 10 and newer
 - Microsoft Edge
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 12425933 -->
+The following protected app is now available for Microsoft Intune:
+
+- Groupdolists by Centrallo LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of December 6, 2021  
 
