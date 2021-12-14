@@ -13,7 +13,7 @@ These notices provide important information that can help you prepare for future
 
 ### Plan for change: Intune APP/mobile application management is moving to support Android 9 and later<!-- 10937255 -->
 
-With the upcoming release of Android 12, Intune app protection policies (APP, also known as mobile application management) for Android will be moving to support Android 9 (Pie) and later on October 1, 2021. This change will align with Office mobile apps for Android support of the last four major versions of Android. 
+With the upcoming release of Android 12, Intune app protection policies (APP, also known as mobile application management) for Android will move to support Android 9 (Pie) and later on October 1, 2021. This change will align with Office mobile apps for Android support of the last four major versions of Android. 
 
 Based on your feedback, we've updated our support statement. We're doing our best to keep your organization secure and protect your users and devices, while aligning with Microsoft app lifecycles.
 
@@ -51,8 +51,6 @@ Starting with the October (2110) service release, Intune will no longer support 
 
 #### How does this affect you or your users?
 
-Users who use an older version of the Company Portal app to enroll Samsung devices might need to take action.
-
 Users who need to enroll Samsung devices in an Android device administrator by using an older version of the Company Portal app (any version earlier than 5.04993.0) will no longer be successful. They'll need to update the Company Portal app to successfully enroll.
 
 #### How can you prepare?
@@ -89,7 +87,7 @@ Intune is announcing end of support for the [network fence feature](../protect/c
 
 #### How does this affect you or your users?
 
-This will affect you only if you currently use a location-based (network fence) compliance policy, on either your trial account or your paid account. In 90 days from the date of this feature end-of-support announcement (on or around October 7, 2021 unless otherwise updated), any network location-based compliance policies targeted to devices enrolled through an Android device administrator will no longer work to provide a network fence.
+This change will affect you only if you currently use a location-based (network fence) compliance policy, on either your trial account or your paid account. In 90 days from the date of this feature end-of-support announcement (on or around October 7, 2021 unless otherwise updated), any network location-based compliance policies targeted to devices enrolled through an Android device administrator will no longer work to provide a network fence.
 
 #### How can you prepare?
 
@@ -174,7 +172,7 @@ We've made a minor change to improve the antivirus profile experience for Window
 
 #### How does this affect you or your users?
 
-Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for the Endpoint Security antivirus policy, you had two options for most settings: **Yes** and **Not configured**. Those settings now include **Yes**, **Not configured** and a new option of **No**. 
+Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for the Endpoint Security antivirus policy, you had two options for most settings: **Yes** and **Not configured**. Those settings now include **Yes**, **Not configured**, and a new option of **No**. 
 
 Previously configured settings that were set to **Not configured** remain as **Not configured**. When you create new profiles or edit an existing profile, you can now explicitly specify **No**.
 
@@ -190,7 +188,7 @@ Intune follows the Windows 10 lifecycle for supported Windows 10 versions. We're
 
 #### How does this affect you or your users?
 
-Because Microsoft no longer supports these operating systems, this change might not affect you. You've likely already upgraded your OS or devices. This will affect you only if you're still managing unsupported Windows 10 versions. 
+Because Microsoft no longer supports these operating systems, this change might not affect you. You've likely already upgraded your OS or devices. This change will affect you only if you're still managing unsupported Windows 10 versions. 
 
 Windows and Company Portal versions that this change affects include:
 
@@ -202,7 +200,7 @@ Windows and Company Portal versions that this change affects include:
 
 We won't uninstall these Company Portal versions, but we will remove them from the Microsoft Store and stop testing our service releases with them.
 
-If you continue to use an unsupported version of Window 10, your users won't get the latest security updates, new features, bug fixes, latency improvements, accessibility improvements, and performance investments. You won't be able to co-manage users by using System Center Configuration Manager and Intune.
+If you continue to use an unsupported version of Windows 10, your users won't get the latest security updates, new features, bug fixes, latency improvements, accessibility improvements, and performance investments. You won't be able to co-manage users by using System Center Configuration Manager and Intune.
 
 #### How can you prepare?
 
