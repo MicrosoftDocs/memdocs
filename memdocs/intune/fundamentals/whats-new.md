@@ -70,7 +70,7 @@ You can now [launch remote help from within the Microsoft Endpoint Manager admin
 ### Device security
 
 #### BlackBerry Cylance – New Mobile Threat Defense partner<!-- 7822722 -->
-You can now use [BlackBerry’s Cylance AI](../protect/blackberry-mobile-threat-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune to control mobile device access to corporate resources using Conditional Access based on risk assessment.
+You can now use BlackBerry’s Cylance AI as an integrated Mobile Threat Defense (MTD) partner with Intune to control mobile device access to corporate resources using Conditional Access based on risk assessment.
 
 For more information, see: 
 - [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)  
