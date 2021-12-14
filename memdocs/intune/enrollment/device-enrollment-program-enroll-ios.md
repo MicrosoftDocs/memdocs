@@ -207,7 +207,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     - **Setup Assistant with modern authentication**: Devices running iOS/iPadOS 13.0 and later can use this method. Older iOS/iPadOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process.  
 
         > [!NOTE]
-        > MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment. This AAD documentation would have the latest updates on support for custom controls for MFA - https://techcommunity.microsoft.com/t5/azure-active-directory-identity/upcoming-changes-to-custom-controls/ba-p/1144696 
+        > MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment. To read the latest updates on support for custom controls for MFA, see [Upcoming changes to Custom Controls](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/upcoming-changes-to-custom-controls/ba-p/1144696).  
 
         This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.  
 
