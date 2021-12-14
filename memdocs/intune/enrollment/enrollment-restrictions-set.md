@@ -213,7 +213,7 @@ The following filter properties are always available to use with enrollment poli
 For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.   
 
 >[!NOTE]
->To use filters on Enrollment Restriction and Enrollment Status page assignments you must enable the preview feature, see [device properties](../fundamentals/filters.md#enable-filters-public-preview)
+>To use filters on enrollment restriction and enrollment status assignments, you must [enable the filters public preview in your tenant](../fundamentals/filters.md#enable-filters-public-preview).  
 
 ## Blocking personal Android devices
 - If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
