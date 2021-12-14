@@ -93,7 +93,7 @@ This will affect you only if you currently use a location-based (network fence) 
 
 #### How can you prepare?
 
-No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features. We'll follow up with additional information when it's available regarding re-envisioned location-based services.
+No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features. We'll follow up with more information about re-envisioned location-based services when that information is available.
 
 ### Plan for change: Intune is moving to support iOS/iPadOS 13 and later<!--10144130-->
 
@@ -176,7 +176,7 @@ We've made a minor change to improve the antivirus profile experience for Window
 
 Previously, when you configured a [Windows security profile](../protect/antivirus-security-experience-windows-settings.md) for the Endpoint Security antivirus policy, you had two options for most settings: **Yes** and **Not configured**. Those settings now include **Yes**, **Not configured** and a new option of **No**. 
 
-Previously configured settings that were set to **Not configured** remain as **Not configured**. When you create new profiles or edit an existing profile, you now have the option to explicitly specify **No**.
+Previously configured settings that were set to **Not configured** remain as **Not configured**. When you create new profiles or edit an existing profile, you can now explicitly specify **No**.
 
 In addition, the setting **Hide the Virus and threat protection area in the Windows Security app** has a child setting, **Hide the Ransomware data recovery option in the Windows Security app**. If the parent setting is set to **Not configured** and the child setting is set to **Yes**, both the parent and child settings will be set to **Not configured**. That change will take effect when you edit the profile.
 

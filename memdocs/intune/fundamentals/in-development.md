@@ -143,7 +143,7 @@ When you select **Enterprise**, there's a new **Server names** setting. This set
 
 If you have multiple RADIUS servers with the same DNS suffix in their fully qualified domain name, then you can enter only the suffix. For example, you can enter `contoso.com`.
 
-When you enter this value, user devices can bypass the dynamic trust dialog that's sometimes shown when a device is connecting to the Wi-Fi network. 
+When you enter this value, user devices can bypass the dynamic trust dialog that sometimes appears when a device is connecting to the Wi-Fi network. 
 
 New Wi-Fi profiles that target Android 11 or later might require this setting to be configured. Otherwise, the devices might not connect to your Wi-Fi network.
 
