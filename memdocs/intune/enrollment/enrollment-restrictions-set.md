@@ -198,20 +198,22 @@ The following filter properties are always available to use with enrollment poli
 
 **Windows** 
 
-* osVersion 
-* operatingSystemSKU 
-* deviceOwnership 
-* enrollmentProfileName 
+* OS version 
+* Operating System SKU 
+* Ownership
+* Enrollment profile name
 
 **iOS/iPadOS and macOS**  
 * Manufacturer 
 * Model 
-* OS Version 
-* Device ownership 
+* OS version 
+* Ownership 
 * Enrollment profile name 
 
 For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.   
 
+>[!NOTE]
+>To use filters on Enrollment Restriction and Enrollment Status page assignments you must enable the preview feature, see [device properties](../fundamentals/filters.md#enable-filters-public-preview)
 
 ## Blocking personal Android devices
 - If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
