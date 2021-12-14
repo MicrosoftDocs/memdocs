@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/24/2021
+ms.date: 12/13/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -43,7 +43,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- Common categories:  
 ## App management
 ## Device configuration
-## Device enrollment
+## Device provisioning
 ## Device management
 ## Intune apps
 ## Monitor and troubleshoot
@@ -64,12 +64,6 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
-### Cloud PCs in grace period count towards active Cloud CP license usage<!-- 37017463-->
-
-In a future update, Cloud PCs that are in grace period will count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
-
-For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
-
 ### Support for Azure AD joined Cloud PCs<!-- 35060203-->
 
 Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These devices will run in a Microsoft-hosted network, so customers:
@@ -85,6 +79,9 @@ New Windows 365 licenses will be available that include virtual graphics process
 
 The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
 
+### Configure installed language and region for provisioning Cloud PCs<!--37095808-->
+
+When creating a provisioning policy, you’ll be able to configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States).
 <!-- ***********************************************-->
 <!--## Provisioning-->
 
