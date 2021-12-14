@@ -116,19 +116,7 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 *Access granted on remediation:*
 
 > [!div class="mx-imgBorder"]
-> ![Access granted on remediation for SharePoint example](./media/blackberry-mobile-threat-defense-connector/blackberry-network-spo-unblocked.png)
-
-### Control access on unenrolled devices based on threats from malicious apps
-
-When the Blackberry Cylance AI mobile threat defense solution considers a device to be infected:
-
-> [!div class="mx-imgBorder"]
-> ![App protection policy blocks due to detected malware](./media/blackberry-mobile-threat-defense-connector/blackberry-mobile-app-policy-block.png)
-
-Access is granted on remediation:
-
-> [!div class="mx-imgBorder"]
-> ![Access is granted on remediation for App protection policy](./media/blackberry-mobile-threat-defense-connector/blackberry-mobile-app-policy-remediated.png)
+> ![Access granted on remediation for SharePoint example](./media/blackberry-mobile-threat-defense-connector/blackberry-network-spo-unblocked.png)  
 
 ## Next steps
 
@@ -138,6 +126,4 @@ Access is granted on remediation:
 
 - [Create Blackberry Cylance AI device compliance policy](mtd-device-compliance-policy-create.md)
 
-- [Enable Blackberry Cylance AI Threat Protection MTD connector](mtd-connector-enable.md)
-
-- [Create an MTD app protection policy](../protect/mtd-app-protection-policy.md)
+- [Enable Blackberry Cylance AI Threat Protection MTD connector](mtd-connector-enable.md)  
