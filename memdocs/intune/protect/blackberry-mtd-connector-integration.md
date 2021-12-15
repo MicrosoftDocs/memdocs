@@ -35,7 +35,7 @@ Complete the following steps to integrate the Blackberry Cylance AI solution wit
 
 ## Before you begin
 
-The following steps are done in the Blackberry Cylance AI console <!-- Link pending --> and will enable a connection to Blackberry's service for Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are done in the Blackberry Cylance AI console and will enable a connection to Blackberry's service for Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating Blackberry Cylance AI with Intune, make sure you have the following subscription and credentials:
 
@@ -70,28 +70,19 @@ For more information about consent and Azure Active Directory applications, see 
 
 ## To set up Blackberry Cylance AI integration
 
-***The actual console name, link, and following step details are pending***
+During setup, use an Azure Active Directory (Azure AD) account that has Global Administrator rights. These rights are needed to grant permission for Blackberry Mobile Threat Protection apps to communicate with Intune. For detailed setup instructions, see [How to set up UES](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues) on the Blackberry UES website.         
 
-1. Go to [Blackberry Cylance AI](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues) and sign in with your credentials. To perform the Blackberry Cylance AI integration setup process, you must sign in with an Azure Active Directory user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Blackberry Cylance AI apps to communicate with Intune.
+1.	Sign it to the Blackberry Mobile Threat Protection console. 
+2.	Go to your MDM settings and add Microsoft Intune as an MDM provider.  
+3.	A new window opens and prompts you with Microsoft Intune configuration settings. Add Azure AD for each of the following options:
+    * Blackberry Mobile Threat Protection console 
+    * Blackberry Mobile Threat Protection iOS and Android apps  
 
-2. Choose **Management** from the left menu.
-
-3. Choose the **MDM settings** tab.
-
-4. Choose **Add MDM,** then select **Microsoft Intune** from the **MDM provider** list.
-
-5. After you set Microsoft Intune as the MDM service, the **Microsoft Intune Configuration** window pops up, choose the **Add Azure Active Directory** for each option: **Blackberry Cylance AI console**, **Blackberry Cylance AI iOS and Android apps** to authorize Blackberry Mobile Threat Protection to communicate with Intune and Azure AD through Azure AD Single Sign-On.
-
-    > [!IMPORTANT]  
-    > You must add the console, and the Blackberry Cylance AI iOS and Android apps to complete the integration process with Intune.
-
-6. Choose **Accept** to authorize the Blackberry Cylance AI app to communicate with Intune and Azure Active Directory.
-
-7. After you add the console and Blackberry Cylance AI iOS and Android apps to Azure AD, add the Azure AD security groups. This addition allows Blackberry Cylance AI to synchronize the Azure AD security group with its service.
-
-8. Choose **Finish** to save the configuration and start the first Azure AD security group synchronization.
-
-9. Sign out of the Blackberry Cylance AI console.
+    This step authorizes Blackberry Mobile Threat Protection to communicate with Intune and Azure AD via Azure AD single sign-on.  
+4.	Read and accept the terms that authorize the Blackberry Mobile Threat Protection app to communicate with Intune and Azure AD.  
+5.	Add Azure AD security groups to sync them with the Blackberry Mobile Threat Protection service.  
+6.	Finish setup to save your configurations and start the first Azure AD security group-synchronization.  
+7.	Sign out of the Blackberry Mobile Threat Protection MTD console.  
 
 ## Next steps
 
