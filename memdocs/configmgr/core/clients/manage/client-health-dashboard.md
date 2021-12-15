@@ -2,7 +2,7 @@
 title: Client health dashboard
 titleSuffix: Configuration Manager
 description: Use a dashboard in the console to view information about the health of clients in your environment.
-ms.date: 12/01/2021
+ms.date: 12/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -30,6 +30,8 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Expand
 
 > [!NOTE]
 > Configuration Manager version 2111 includes improvements to this dashboard.<!--5728069--> This article mainly focuses on the current experience. For more information on the dashboard appearance and behavior in version 2107 and earlier, see [Version 2107 and earlier](#version-2107-and-earlier).
+
+To view this dashboard your account needs the **Read Client Status Settings** permission on the **Site** object.<!-- 12843630 -->
 
 ## Configure
 
