@@ -56,11 +56,11 @@ See the instructions for [adding iOS store apps to Microsoft Intune](../apps/sto
 
 To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration is not available, so please refer to [Add Mobile Threat Defense apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md).
 
-### Blackberry Cylance AI app configuration policy
+### BlackBerry Protect configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Blackberry Cylance AI iOS app configuration policy.
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the BlackBerry Protect iOS app configuration policy.
 
-<!-- Pending revision to the following to support the Blackberry app  >
+<!-- Pending revision to the following to support the BlackBerry app  >
 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body. Replace the `https://client.bmobi.net` URL with the appropriate console URL.
 
