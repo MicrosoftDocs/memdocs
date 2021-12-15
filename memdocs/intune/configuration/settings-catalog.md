@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -45,8 +45,6 @@ This feature applies to:
 - **Windows 10 and newer**
 
   There are thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
-
-  Settings Catalog policies are not supported on U.S. Government GCC High and DoD.
 
 > [!TIP]
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
@@ -88,7 +86,7 @@ This article lists the steps to create a policy, and shows how to search and fil
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
 
-    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="In Settings Catalog, choose select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="In Settings Catalog, select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
 
     After you add your settings, close the settings picker. All the settings are shown, and configured with a default value, such as **Block** or **Allow**. These defaults values are the same default values in the OS. If you don't want to configure a setting, then select the minus:
 
