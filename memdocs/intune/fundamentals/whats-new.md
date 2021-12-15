@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,15 +66,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### Launch Remote help from within the admin center<!-- 12773983 -->
 You can now [launch remote help from within the Microsoft Endpoint Manager admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New remote help session**, which is available from the remote actions bar across the top of the devices view. 
-
-### Device security
-
-#### BlackBerry Cylance – New Mobile Threat Defense partner<!-- 7822722 -->
-You can now use BlackBerry’s Cylance AI as an integrated Mobile Threat Defense (MTD) partner with Intune to control mobile device access to corporate resources using Conditional Access based on risk assessment.
-
-For more information, see: 
-- [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)  
-- [BlackBerry’s Cylance AI](https://www.blackberry.com/us/en/products/unified-endpoint-security/cylance-ai) in the Blackberry documentation
 
 ### Device configuration
 
