@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: mikedano, chmaguir, chrisbal, priyar
+ms.reviewer: shthilla, chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -45,14 +45,12 @@ For Android device administrator, see [Android and Samsung Knox Standard device 
 
 ## Before you begin
 
-When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
+- Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
 
-The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
+- When creating device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 
-- For Android Enterprise personally-owned work profile devices: [Android personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
-- For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md)
-
-When ready to proceed, create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
+  - [Android Enterprise personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+  - [Android Enterprise fully managed, dedicated, and corporate-owned work profile security settings](../enrollment/android-fully-managed-security-settings.md)
 
 ## Fully managed, dedicated, and corporate-owned work profile
 
@@ -160,6 +158,31 @@ For corporate-owned devices with a work profile, some settings only apply in the
 #### Corporate-owned work profile devices  
 
 - **Contact sharing via Bluetooth (work profile-level)**: **Block** prevents users from sharing their work profile contacts with devices over Bluetooth. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts via Bluetooth.  
+
+- **Search work contacts and display work contact caller-id in personal profile**: In the personal profile, **Block** prevents users from searching work contacts, and showing work caller ID information.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow searching work contacts, and show work caller IDs.
+
+  [ShowWorkContactsInPersonalProfile](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#showworkcontactsinpersonalprofile)
+
+- **Copy and paste between work and personal profiles**: **Allow** lets users copy and paste data between the work and personal profiles.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
+
+  - Prevent users from pasting text into the personal profile that's copied from the work profile.
+  - Allow users to copy text from the personal profile, and paste into the work profile.
+  - Allow users to copy text from the work profile, and paste into the work profile.
+
+  [CrossProfileCopyPaste](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#crossprofilecopypaste)
+
+- **Data sharing between work and personal profiles**: Choose if data can be shared between work and personal profiles. Your options:
+
+  - **Device default**: Intune doesn't change or update this setting. By default, the OS might prevent users from sharing data in the work profile with the personal profile. Data in the personal profile can be shared in the work profile.
+  - **Block all sharing between profiles**: Prevents users from sharing data between the work and personal profiles.
+  - **Block sharing from work to personal profile**: Prevents users from sharing data in the work profile with the personal profile. Data in the personal profile can be shared with the work profile.
+  - **No restrictions on sharing**: Data can be shared between the work and personal profiles.
+
+  [CrossProfileDataSharing](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#crossprofiledatasharing)
 
 ### System security
 
