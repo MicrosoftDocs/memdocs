@@ -2,7 +2,7 @@
 title: Scores, baselines, and insights in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 08/23/2021
+ms.date: 12/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -64,6 +64,12 @@ Selecting a device from the **Devices scores** tab loads a device page that give
 When reviewing your organization's **Startup performance** or **Application reliability** reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
 
 :::image type="content" source="media/8816759-per-device-startup-score.png" alt-text="Screenshot of Endpoint analytics startup performance page for a single device." lightbox="media/8816759-per-device-startup-score.png":::
+
+## Filter reports
+<!--7207888-->
+Use the **Add filter** option on tables to display items that match your criteria. You can add additional filters to drill further into the data. Using filters enables you to discover trends in your environment or spot potential issues. For instance, in the **Device performance** tab of the **Startup performance** report, you might use a filter to identify devices with a high **Time to responsive desktop**. After reviewing your filtered data, you add another filter to include devices with a high **Group Policy sign-in time**. With the additional filter, you can gauge the impact Group Policy has on the user experience for devices that take a long time to get to a responsive desktop.
+
+:::image type="content" source="media/7207888-filter.png" alt-text="Screenshot of a table filter in Endpoint analytics ." lightbox="media/7207888-filter.png":::
 
 ## Next steps
 
