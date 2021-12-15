@@ -67,9 +67,9 @@ When reviewing your organization's **Startup performance** or **Application reli
 
 ## Filter reports
 <!--7207888-->
-Use the **Add filter** option on tables to display items that match your criteria. You can add additional filters to drill further into the data. Using filters enables you to discover trends in your environment or spot potential issues. For instance, in the **Device performance** tab of the **Startup performance** report, you might use a filter to identify devices with a high **Time to responsive desktop**. After reviewing your filtered data, you add another filter to include devices with a high **Group Policy sign-in time**. With the additional filter, you can gauge the impact Group Policy has on the user experience for devices that take a long time to get to a responsive desktop.
+Use the **Add filter** option on tables to display items that match your criteria. You can add more filters to drill further into your data. Using filters enables you to discover trends in your environment or spot potential issues. For instance, in the **Device performance** tab of the **Startup performance** report, you might use a filter to identify devices with a high **Time to responsive desktop**. After reviewing your filtered data, you add another filter to include devices with a high **Group Policy sign-in time**. With the additional filter, you can gauge the impact Group Policy has on the user experience for devices that take a long time to get to a responsive desktop.
 
-:::image type="content" source="media/7207888-filter.png" alt-text="Screenshot of a table filter in Endpoint analytics ." lightbox="media/7207888-filter.png":::
+:::image type="content" source="media/7207888-filter.png" alt-text="Screenshot of a table filter in Endpoint analytics." lightbox="media/7207888-filter.png":::
 
 ## Next steps
 
