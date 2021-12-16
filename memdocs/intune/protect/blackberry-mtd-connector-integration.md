@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Connect BlackBerry Protect Mobile MTD connector in Microsoft Intune
 
-Connect the BlackBerry Protect Mobile MTD connector to mitigate device risk levels on Intune-managed devices. When connected, BlackBerry Protect Mobile (powered by Cylance AI) reports device risk levels to Intune, and Intune uses that information to enforce app configuration and risk assessment policies configured for each risk level. This article describes the requirements and steps to connect the MTD connector in your tenant.  
+Connect the BlackBerry Protect Mobile MTD connector to monitor and mitigate device risk levels on Intune-managed devices. BlackBerry Protect Mobile (powered by Cylance AI) works by reporting device risk levels to Microsoft Intune. Intune then uses that information to enforce the appropriate app configuration and risk assessment policies. For more information about BlackBerry Protect Mobile, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/overview/What-is-BlackBerry-Protect-Mobile/Key-features-of-BlackBerry-Protect-Mobile)(opens BlackBerry UES docs).  
 
-For more information about BlackBerry Protect Mobile, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/overview/What-is-BlackBerry-Protect-Mobile/Key-features-of-BlackBerry-Protect-Mobile)(opens BlackBerry UES docs).  
+This article describes the requirements and steps to connect the MTD connector in your tenant.  
 
 ## Before you begin    
 
