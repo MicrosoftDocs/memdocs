@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Connect the BlackBerry Protect Mobile MTD connector to mitigate device risk levels on Intune-managed devices. When connected, BlackBerry Protect Mobile (powered by Cylance AI) reports device risk levels to Intune, and Intune uses that information to enforce app configuration and risk assessment policies configured for each risk level. This article describes the requirements and steps to connect the MTD connector in your tenant.  
 
-For more information about BlackBerry Protect Mobile, the MTD connector supported by Microsoft Intune, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/unified-endpoint-security/blackberry-ues/overview/What-is-BlackBerry-Protect-Mobile/Key-features-of-BlackBerry-Protect-Mobile)(opens BlackBerry UES docs).  
+For more information about BlackBerry Protect Mobile, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/overview/What-is-BlackBerry-Protect-Mobile/Key-features-of-BlackBerry-Protect-Mobile)(opens BlackBerry UES docs).  
 
 ## Before you begin    
 
@@ -53,9 +53,9 @@ The following subscriptions and accounts are required to integrate UES with Micr
 
 - Admin sign-in credentials to access the UES management console 
 
-### BlackBerry UES app authorization
+### App authorization  
 
-By integrating BlackBerry UES with Intune, you authorize the following actions in your tenant:   
+The following authorization process happens when you connect the BlackBerry Protect Mobile MTD connector:   
 
 - Allow BlackBerry UES to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day-to-day operation.
 
