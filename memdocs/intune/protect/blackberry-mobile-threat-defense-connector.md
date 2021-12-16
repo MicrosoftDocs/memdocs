@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Blackberry Protect Mobile connector for Intune
+title: BlackBerry Protect Mobile connector for Intune
 titleSuffix: Intune on Azure
-description: Learn about integrating Intune with Blackberry Protect Mobile (powered by Cylance AI) to control mobile device access to your corporate resources.
+description: Connect the Blackberry Protect Mobile MTD connector to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -29,9 +29,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use Blackberry Protect Mobile with Intune
+# Use BlackBerry Protect Mobile with Intune
 
-Control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by BlackBerry Protect Mobile (powered by Cylance AI), a mobile threat defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Blackberry Protect Mobile app.
+Control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by BlackBerry Protect Mobile (powered by Cylance AI), a mobile threat defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the BlackBerry Protect Mobile app.
 
 You can configure Conditional Access policies based on a BlackBerry Protect risk assessment, enabled through Intune device compliance policies for enrolled devices. You can set up your policies to allow or block noncompliant devices from accessing corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.  
 
@@ -68,7 +68,7 @@ The BlackBerry Protect Mobile app for Android and iOS/iPadOS captures file syste
   
 ## Sample scenarios
 
-The following scenarios demonstrate the use of Blackberry UES when integrated with Intune:
+The following scenarios demonstrate the use of BlackBerry Protect Mobile MTD when integrated with Intune:
 
 ### Control access based on threats from malicious apps
 

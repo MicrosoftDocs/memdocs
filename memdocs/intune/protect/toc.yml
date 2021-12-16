@@ -204,10 +204,10 @@ items:
         - name: Better Mobile and Intune integration
           href: better-mobile-mtd-connector-integration.md
           displayName: sso
-      - name: Set up Blackberry Mobile Threat Defense
+      - name: Set up BlackBerry Protect Mobile 
         href: blackberry-mobile-threat-defense-connector.md
         items:
-        - name: Blackberry and Intune integration
+        - name: BlackBerry and Intune integration
           href: blackberry-mtd-connector-integration.md
       - name: Set up Check Point
         href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
