@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2021
+ms.date: 12/16/2021
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
