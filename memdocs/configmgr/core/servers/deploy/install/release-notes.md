@@ -210,6 +210,28 @@ For more information, see [Create custom security roles](../configure/configure-
 
 ## Configuration Manager console
 
+### Unable to open console because extension installation loops
+<!--12868458-->
+_Applies to: version 2111_
+
+In certain circumstances, you'll be unable to open the console due to an extension installation loop. This occurs when two or more versions of a single extension were marked as [required for installation](../../manage/admin-console-extensions.md#require-installation-of-a-console-extension). This issue occurs for extensions imported through the wizard or through Community hub.
+
+To avoid this scenario, select **Make optional** for the extension before importing a new version into the Configuration Manager console.
+
+To work around this issue, run the following SQL script on one of your databases:
+
+```sql
+-- The extension metadata is global for the hierarchy.
+-- You only need to run this script on one site database
+
+WITH CTE AS(
+   SELECT ID, IsRequired, Version,
+       RN = ROW_NUMBER()OVER(PARTITION BY ID, IsRequired ORDER BY Version DESC)
+   FROM ConsoleExtensionMetadata
+   WHERE IsRequired = 1
+)
+update CTE set IsRequired = 0 where RN > 
+```
 ### Supported platform conditions don't update for some objects
 
 <!-- 10247604,10425120 -->
