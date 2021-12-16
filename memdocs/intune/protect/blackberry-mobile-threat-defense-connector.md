@@ -3,7 +3,7 @@
 
 title: BlackBerry Protect Mobile connector for Intune
 titleSuffix: Intune on Azure
-description: Connect the Blackberry Protect Mobile MTD connector to control mobile device access to your corporate resources.
+description: Learn about the Blackberry Protect Mobile MTD connector, which enables you to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
