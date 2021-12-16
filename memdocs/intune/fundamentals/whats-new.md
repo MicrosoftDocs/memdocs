@@ -161,7 +161,14 @@ The following protected app is now available for Microsoft Intune:
 
 - Groupdolists by Centrallo LLC
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).  
+
+#### BlackBerry – New mobile threat defense partner<!-- 7822722 -->
+You can now use [BlackBerry Protect Mobile (powered by Cylance AI)](../protect/blackberry-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By connecting the BlackBerry Protect Mobile MTD connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment.
+
+For more information, see: 
+- [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)  
+- [BlackBerry UES documentation](https://docs.blackberry.com/unified-endpoint-security/blackberry-ues) 
 
 ## Week of December 6, 2021  
 
