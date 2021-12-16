@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Integrate BlackBerry UES with Microsoft Intune
+title: Connect BlackBerry Protect Mobile MTD connector to Microsoft Intune
 titleSuffix: Microsoft Intune
-description: How to set up the BlackBerry UES with Microsoft Intune to control mobile device access to your corporate resources.
+description: How to set up the BlackBerry Protect Mobile MTD connector in Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -29,10 +29,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Integrate BlackBerry UES with Microsoft Intune
+# Connect BlackBerry Protect Mobile MTD connector in Microsoft Intune
 
-Integrate BlackBerry Unified Endpoint Security (UES) with your Microsoft Intune tenant to connect the BlackBerry Protect Mobile MTD connector and mitigate device risk levels.
-When connected, BlackBerry Protect Mobile (powered by Cylance AI) reports device risk levels to Intune, and Intune uses that information to enforce app configuration and risk assessment policies configured for each risk level. This article describes the requirements and steps to connect the MTD connector in your tenant.  
+Connect the BlackBerry Protect Mobile MTD connector to mitigate device risk levels on Intune-managed devices. When connected, BlackBerry Protect Mobile (powered by Cylance AI) reports device risk levels to Intune, and Intune uses that information to enforce app configuration and risk assessment policies configured for each risk level. This article describes the requirements and steps to connect the MTD connector in your tenant.  
 
 For more information about BlackBerry Protect Mobile, the MTD connector supported by Microsoft Intune, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/unified-endpoint-security/blackberry-ues/overview/What-is-BlackBerry-Protect-Mobile/Key-features-of-BlackBerry-Protect-Mobile)(opens BlackBerry UES docs).  
 
