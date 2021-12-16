@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Integrate BlackBerry Cylance AI with Microsoft Intune
+title: Integrate BlackBerry UES with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: How to set up the BlackBerry Cylance AI with Microsoft Intune to control mobile device access to your corporate resources.
+description: How to set up the BlackBerry UES with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -29,15 +29,13 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Connect BlackBerry UES with Intune
+# Integrate BlackBerry UES with Microsoft Intune
 
-Connect the BlackBerry Unified Endpoint Security (UES) solution with your Microsoft Intune tenant to gain access to the UES products. When integrated, UES reports a device's risk level to Intune. Then, to mitigate the reported risk, Intune enforces the app configuration and risk assessment policies configured for that risk level. 
-
-For more information about BlackBerry Protect Mobile, the MTD connector supported by Microsoft Intune, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/unified-endpoint-security/blackberry-ues/overview/What-is-BlackBerry-Protect-Mobile/Key-features-of-BlackBerry-Protect-Mobile)(opens BlackBerry UES docs).  
+Integrate the BlackBerry Unified Endpoint Security (UES) with your Microsoft Intune tenant to connect the BlackBerry Protect Mobile MTD connector. When connected, BlackBerry Protect Mobile reports the device risk level to Intune, and Intune enforces the app configuration and risk assessment policies configured for that risk level. For more information about BlackBerry Protect Mobile, the MTD connector supported by Microsoft Intune, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/unified-endpoint-security/blackberry-ues/overview/What-is-BlackBerry-Protect-Mobile/Key-features-of-BlackBerry-Protect-Mobile)(opens BlackBerry UES docs).  
 
 ## Before you begin    
 
-To ensure a successful integration, you must have: 
+The following subscriptions and accounts are required to integrate UES with Microsoft Intune. 
 
 - Microsoft Intune subscription 
 
