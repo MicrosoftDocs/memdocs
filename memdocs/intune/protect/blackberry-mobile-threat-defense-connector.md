@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Use Blackberry Protect Mobile with Intune
 
-You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by BlackBerry Protect Mobile, a mobile threat defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Blackberry Protect Mobile app (powered by Cylance AI).
+Control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by BlackBerry Protect Mobile (powered by Cylance AI), a mobile threat defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Blackberry Protect Mobile app.
 
 You can configure Conditional Access policies based on a BlackBerry Protect risk assessment, enabled through Intune device compliance policies for enrolled devices. You can set up your policies to allow or block noncompliant devices from accessing corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.  
 
