@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/01/2021
+ms.date: 12/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -214,7 +214,7 @@ For more information, see [Create custom security roles](../configure/configure-
 <!--12868458-->
 _Applies to: version 2111_
 
-In certain circumstances, you'll be unable to open the console due to an extension installation loop. This occurs when two or more versions of a single extension were marked as [required for installation](../../manage/admin-console-extensions.md#require-installation-of-a-console-extension). This issue occurs for extensions imported through the wizard or through Community hub.
+In certain circumstances, you'll be unable to open the console due to an extension installation loop. This issue occurs when two or more versions of a single extension were marked as [required for installation](../../manage/admin-console-extensions.md#require-installation-of-a-console-extension). This issue occurs for extensions imported through the wizard or through Community hub.
 
 To avoid this scenario, select **Make optional** for the extension before importing a new version into the Configuration Manager console.
 
@@ -232,6 +232,7 @@ WITH CTE AS(
 )
 update CTE set IsRequired = 0 where RN > 
 ```
+
 ### Supported platform conditions don't update for some objects
 
 <!-- 10247604,10425120 -->
