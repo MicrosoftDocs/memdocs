@@ -145,7 +145,7 @@ Some best practices for rewrapping include:
 
 Android requires that all apps must be signed by a valid certificate in order to be installed on Android devices.
 
-Wrapped apps can be signed *after* wrapping using your existing signing tools (any signing information in the app before wrapping is discarded).
+Wrapped apps can be signed *after* wrapping using your existing signing tools (any signing information in the app before wrapping is discarded). If possible, the signing information that was already used during the build process should be used during wrapping. In certain organizations, this may require working with whoever owns the keystore information (ie. the app build team).
 
 If the previous signing certificate cannot be used, or the app has not been deployed before, you may create a new signing certificate by following the instructions in the [Android Developer Guide](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
