@@ -268,3 +268,37 @@ You can change the priority of any non-default restriction.
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment restrictions**.
 2. Select **Device type restrictions** or **Device limit restrictions** to view the priority list.               
 3. In the list, hover over any restriction in the **Priority** column. When you see three vertical dots appear, select and drag the priority to the desired position in the list.    
+# Enrollment reports
+You can use several reports to troubleshoot issues with Enrollment restrictions and Enrollment Status page assignments.
+- Enrollment failures report
+- Troubleshooting + support page
+- Device enrollment page
+
+## Enrollment failures report
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Enrollment failures**.
+2. Select **All users** or **Select user**, depending on the scenario you are troubleshooting.
+3. The results will display each of the failed enrollment attempts by date including failure reason, OS, OS version, Username and enrollment method. 
+4. Select the enrollment failure event row for more details and recommened remediation steps.
+
+![image](https://user-images.githubusercontent.com/19563363/146618606-2ca8042e-4978-4cc9-ac29-c209223a76af.png)
+
+## Troubleshooting + support page
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Troubleshooting + support** > **Select user**.
+2. Select a user.
+3. The results page will display assignments, devices and app protection status for the selected user. At the bottom of the page you can see **Enrollment failures** with a lise of failed enrollment attempts for the user by date including failure reason, OS, OS version, Username and enrollment method. 
+4. Select the enrollment failure event row for more details and recommened remediation steps.
+
+## Device enrollment page
+The device enrollment page is shown for iOS/iPadOS, macOS and Windows devices. It is useful to help nderstand which enrollment policies (Enrollment restriction and Enrollment status page policies) applied to a device when it was first enrolled into Microsoft endpoint manager.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
+2. Select an enrolled Windows or iOS/iPadOS device.
+3. Select **Enrollment**.
+4. The results page shows enrollment Profile name, user principal name, profile type (Enrollment Status page or Enrollment platform restriction), Priorty, Target (user or device) and will show a link to filter evaluation results if the enrollment policy was assigned using an assignment filter.
+
+![image](https://user-images.githubusercontent.com/19563363/146619208-d07b15b6-70b5-479e-885a-bf431d6ca7c0.png)
+
+>[!NOTE]
+>The device enrollment page was released in the Intune 2112 release and is only currently visible for customers that have enabled filters. Only newly enrolled devices (after 2112 release) will show data in this report, devices that enrolled prior to this release will show "no results".
+>This page is not shown for Android devices. 
+
