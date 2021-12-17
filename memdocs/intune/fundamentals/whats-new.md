@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 12/17/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,7 +68,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 You can now [launch remote help from within the Microsoft Endpoint Manager admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New remote help session**, which is available from the remote actions bar across the top of the devices view. 
 
 #### Endpoint analytics filtering <!--7207888 -->
-You can now [add filters](../../analytics/scores.md#filter-reports) to the tables in [Endpoint analytics](../../analytics/overview.md) reports. Using filters enables you to discover trends in your environment or spot potential issues.
+You can now [add filters](../../analytics/scores.md#filter-reports) to the tables in [Endpoint analytics](../../analytics/overview.md) reports. Using filters enables you to discover trends in your environment or spot potential issues.  
+
+### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint security policies in admin center - public preview<!-- 7566953 -->
+
+In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
+
+- [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
+- [Endpoint Security policies](../protect/endpoint-security-policy.md), including Account protection, Antivirus, Attack surface reduction, and more.
+
+For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](../fundamentals/filters.md
+).  
+
+Applies to:
+
+- macOS
+- Windows 10 and newer
 
 ### Device configuration
 
