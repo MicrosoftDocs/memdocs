@@ -95,7 +95,7 @@ When you make group assignments, groups that have already been assigned aren't a
 To edit assignments, in the app **Assignments** list, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**. 
 
 > [!NOTE]
-> Removing a group assignment does not remove the related app. The installed app will remain on the device.  
+> Removing a group assignment does not remove the related app except on Android Enterprise dedicated, fully managed, and corporate-owned work profile devices. The installed app will remain on the device.  
 
 To change the view of the **Assignments** list, group by **Assignment type** or by **Included/Excluded**.
 
