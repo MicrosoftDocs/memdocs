@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/01/2021
+ms.date: 12/17/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -209,6 +209,54 @@ To work around this issue, create a custom security role. Copy an existing secur
 For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#create-custom-security-roles)
 
 ## Configuration Manager console
+
+### Unable to open console because extension installation loops
+<!--12868458-->
+_Applies to: version 2111_
+
+In certain circumstances, you'll be unable to open the console due to an extension installation loop. This issue occurs when two or more versions of a single extension were marked as [required for installation](../../manage/admin-console-extensions.md#require-installation-of-a-console-extension). This issue occurs for extensions imported through the wizard, from a PowerShell script, or through Community hub. If you use the **Make optional** setting before importing a new version of the extension, this issue doesn't occur.
+
+When you encounter this issue, it initially appears as a normal console extension installation. After the extension finishes installing, you select **Close** to restart the Configuration Manager console. When the console restarts, you're prompted to install the console extension again. The extension installation will continue to loop and the Configuration Manager console doesn't fully open.
+
+To both prevent and workaround this issue, run the below SQL script on your CAS database and all of your primary site databases:
+
+```sql
+ALTER VIEW vSMS_ConsoleExtensionMetadata
+AS
+    WITH m AS(
+       SELECT *,
+           RN = ROW_NUMBER()OVER(PARTITION BY ID ORDER BY Version DESC)
+       FROM ConsoleExtensionMetadata
+    ) 
+    SELECT 
+        m.ID, 
+        m.Name, 
+        m.Description, 
+        m.Author, 
+        m.Version, 
+        m.IsEnabled, 
+        m.IsApproved, 
+        m.CreatedTime, 
+        m.CreatedBy, 
+        m.UpdateTime, 
+        m.IsTombstoned, 
+        m.IsRequired, 
+        m.IsSigned, 
+        m.IsUnsignedAllowed, 
+        CASE m.IsRequired 
+            WHEN 0 THEN ''  
+            ELSE  
+            ( 
+                SELECT top(1) author FROM ConsoleExtensionRevisionHistory h 
+                WHERE m.ID=h.ExtensionId AND m.Version=h.Version AND h.Changes & 1=1 
+                ORDER BY h.RevisionTime DESC 
+            ) 
+        END AS RequiredBy, 
+        m.IsSetupDefined 
+    FROM m
+    WHERE RN = 1
+GO
+```
 
 ### Supported platform conditions don't update for some objects
 
