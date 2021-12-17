@@ -10,6 +10,7 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.localizationpriority: medium
+#Customer intent: As a Configuration Manager admin, I want enable co-management so I can manage some client workloads from Intune and others from Configuration Manager.
 ---
 
 # Tutorial: Enable co-management for new internet-based devices
@@ -83,7 +84,7 @@ About this certificate:
 - You identify a unique name for your CMG service in Azure and then specify that name in your certificate request.  
 - You generate your certificate request on a specific server and then submit the request to a public certificate provider to get the necessary SSL certificate.  
 - You import the certificate that you receive from the provider to the system that generated the request. You use the same computer to export the certificate when you later deploy the CMG to Azure.  
-- When the CMG is installed, it creates a CMG service in Azure using the name that you specified in the certificate.  
+- When the CMG is installed, it creates a CMG service in Azure by using the name that you specified in the certificate.  
 
 ### Identify a unique name for your cloud management gateway in Azure
 
