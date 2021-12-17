@@ -50,7 +50,7 @@ In this tutorial, you will:
 
 ### On-premises infrastructure
 
-- A supported version of the Configuration Manager current branch.
+- A supported version of Configuration Manager current branch.
   
   This tutorial uses [enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md) to avoid more complex requirements for a public key infrastructure. When you use enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.
 
@@ -58,7 +58,7 @@ In this tutorial, you will:
 
 ### External certificates
 
-- CMG server authentication certificate. This SSL certificate is from a public and globally trusted certificate provider.<!-- memdocs#1668 --> You'll export this certificate as .pfx file with a private key.  
+- CMG server authentication certificate. This SSL certificate is from a public and globally trusted certificate provider.<!-- memdocs#1668 --> You'll export this certificate as a .pfx file with the private key.  
 
   Later in this tutorial, we provide guidance on how to configure the request for this certificate.
 
@@ -83,7 +83,7 @@ About this certificate:
 - You identify a unique name for your CMG service in Azure and then specify that name in your certificate request.  
 - You generate your certificate request on a specific server and then submit the request to a public certificate provider to get the necessary SSL certificate.  
 - You import the certificate that you receive from the provider to the system that generated the request. You use the same computer to export the certificate when you later deploy the CMG to Azure.  
-- When the CMG is installed, it creates a CMG service in Azure by using the name that you specified in the certificate.  
+- When the CMG is installed, it creates a CMG service in Azure using the name that you specified in the certificate.  
 
 ### Identify a unique name for your cloud management gateway in Azure
 
@@ -100,7 +100,7 @@ Before you request your public certificate, confirm that the name you want to us
 
 3. For **DNS name**, specify the prefix name for the cloud service that you'll use. 
 
-   This prefix must be the same as what you use later when you request a publish certificate for the CMG server authentication certificate. In this tutorial, we use *MyCSG*, which creates the namespace of *MyCSG.cloudapp.net*. The interface confirms whether the name is available or already in use by another service.  
+   This prefix must be the same as what you use later when you request a public certificate for the CMG server authentication certificate. In this tutorial, we use *MyCSG*, which creates the namespace of *MyCSG.cloudapp.net*. The interface confirms whether the name is available or already in use by another service.  
 
 After you confirm the name that you want to use is available, you're ready to submit the certificate signing request (CSR).
 
@@ -177,7 +177,7 @@ Export the CMG server authentication certificate from your server. Re-exporting 
 
 6. After you complete the export, locate the .pfx file and place a copy of it in *C:\Certs* on the Configuration Manager primary site server that will manage internet-based clients. 
 
-   The *Certs8* folder is a temporary folder to use while you're moving certificates between servers. You access the certificate file from the primary site server when you deploy the CMG to Azure.  
+   The *Certs* folder is a temporary folder to use while you're moving certificates between servers. You access the certificate file from the primary site server when you deploy the CMG to Azure.  
 
 After you copy the certificate to the primary site server, you can delete the certificate from the personal certificate store on the member server.
 
@@ -337,7 +337,7 @@ Configure the site to support enhanced HTTP:
 
 ### Configure client settings to direct clients to use the CMG
 
-Use client settings to configure Configuration Manager clients to communicate with the CMG:  
+Use **Client Settings** to configure Configuration Manager clients to communicate with the CMG:  
 
 1. Open **Configuration Manager console** > **Administration** > **Overview** > **Client Settings**, and then edit the **Default Client Settings** information.  
 
@@ -411,7 +411,7 @@ Then, when a previously unmanaged Windows 10 or later device enrolls with Intune
      > [!TIP]  
      > If you don't have the command available, you can view the properties of `CoMgmtSettingsProd` in the Configuration Manager console to get a copy of the command. The command appears only if you've met all of the prerequisites, such as setting up a CMG.
 
-5. Select **OK** > **Add**. The app is created and becomes available in the Intune console. After the app is available, you can use the following section to assign Intune to devices.
+5. Select **OK** > **Add**. The app is created and becomes available in the Intune console. After the app is available, you can use the following section to assign the app to your devices from Intune.
 
 ### Assign the Intune app to install the Configuration Manager client
 
