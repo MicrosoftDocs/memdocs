@@ -72,11 +72,10 @@ You can now [add filters](../../analytics/scores.md#filter-reports) to the table
 
 ### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint security policies in admin center - public preview<!-- 7566953 -->
 
-In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
+In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policy:
 
-- [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
-- [Endpoint Security policies](../protect/endpoint-security-policy.md), including Account protection, Antivirus, Attack surface reduction, and more.
-
+- [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)  
+- 
 For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](../fundamentals/filters.md
 ).  
 
