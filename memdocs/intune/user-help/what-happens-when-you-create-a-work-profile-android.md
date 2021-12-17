@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 01/11/2021
 ms.topic: end-user-help
 ms.prod:
+ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
