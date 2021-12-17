@@ -168,7 +168,7 @@ You can now use [BlackBerry Protect Mobile (powered by Cylance AI)](../protect/b
 
 For more information, see: 
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)  
-- [BlackBerry UES documentation](https://docs.blackberry.com/unified-endpoint-security/blackberry-ues) 
+- [BlackBerry UES documentation](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues) 
 
 ## Week of December 6, 2021  
 
