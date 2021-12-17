@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/16/2021
+ms.date: 12/17/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -218,7 +218,7 @@ In certain circumstances, you'll be unable to open the console due to an extensi
 
 When you encounter this issue, it initially appears as a normal console extension installation. After the extension finishes installing, you select **Close** to restart the Configuration Manager console. When the console restarts, you're prompted to install the console extension again. The extension installation will continue to loop and the Configuration Manager console doesn't fully open.
 
-To both prevent and work around this issue, run the following SQL script on your CAS database and all of your primary site databases:
+To both prevent and workaround this issue, run the below SQL script on your CAS database and all of your primary site databases:
 
 ```sql
 ALTER VIEW vSMS_ConsoleExtensionMetadata
