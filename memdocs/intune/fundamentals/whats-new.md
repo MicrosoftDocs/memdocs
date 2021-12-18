@@ -70,7 +70,7 @@ You can now [launch remote help from within the Microsoft Endpoint Manager admin
 #### Endpoint analytics filtering <!--7207888 -->
 You can now [add filters](../../analytics/scores.md#filter-reports) to the tables in [Endpoint analytics](../../analytics/overview.md) reports. Using filters enables you to discover trends in your environment or spot potential issues.  
 
-### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint security policies in admin center - public preview<!-- 7566953 -->
+### Use filters to assign Endpoint analytics proactive remediations scripts in admin center - public preview<!-- 7566953 -->
 
 In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policy:
 
