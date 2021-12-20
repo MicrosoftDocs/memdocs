@@ -43,7 +43,9 @@ Configuration Manager natively uses the administration service for the following
 
 - Microsoft Endpoint Manager [tenant attach](../../tenant-attach/device-sync-actions.md)
 
-- [Community hub](../../core/servers/manage/community-hub.md) (version 2006 and later)
+- [Community hub](../../core/servers/manage/community-hub.md)
+
+- [Managing console extensions](../../core/servers/manage/admin-console-extensions.md)
 
 In addition, you can develop custom solutions with the administration service, for example:
 
