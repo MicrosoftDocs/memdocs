@@ -81,7 +81,6 @@ For more information on filters, see [Use filters (preview) when assigning your 
 
 Applies to:
 
-- macOS
 - Windows 10 and newer
 
 ### Device configuration
