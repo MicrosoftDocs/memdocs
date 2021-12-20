@@ -66,12 +66,12 @@ You can use RSS to be notified when this article is updated. For more informatio
 ## App management
 
 ### Device compliance status on the Company Portal website<!-- 8782968 -->
-Users will be able to more easily see the compliance status of their devices from the [Company Portal](https://portal.manage.microsoft.com/devices) website. Users can go to the Company Portal website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. 
+End users will be able to more easily see the compliance status of their devices from the [Company Portal](https://portal.manage.microsoft.com/devices) website. End users can go to the Company Portal website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. 
 
 For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 ### Password complexity for Android devices<!-- 9321870 -->
-The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn't meet the minimum password requirement, you'll be able to warn, wipe data, or block the user from accessing a managed account in a managed app. 
+The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn't meet the minimum password requirement, you'll be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. 
 
 This feature targets devices that operate on Android 11+. For devices that operate on Android 10 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
 
@@ -79,7 +79,7 @@ This feature targets devices that operate on Android 11+. For devices that opera
 
 ## Device security
 
-### BlackBerry Cylance: New Mobile Threat Defense partner<!-- 7822722  IDready -->
+### BlackBerry Cylance - New Mobile Threat Defense partner<!-- 7822722  IDready -->
 You'll soon be able to use [BlackBerry's Cylance AI](https://www.blackberry.com/us/en/products/unified-endpoint-security/cylance-ai) offering as an integrated Mobile Threat Defense (MTD) partner. Intune will help you control mobile device access to corporate resources by offering Conditional Access based on risk assessment.
 
 For more information about MTD partners for Intune, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
@@ -89,7 +89,7 @@ For more information about MTD partners for Intune, see [Mobile Threat Defense i
 ## Device configuration
 
 ### New option to see the number of profiles with an error or conflict in device configuration profiles<!-- 9142810 -->
-In the Endpoint Manager admin center, there's a new option that states something like "X policies with error or conflict." When you select this option, you automatically go to the **Devices** > **Monitor** > **Assignment Failures** report. This report helps you troubleshoot errors and conflicts.
+In the Endpoint Manager admin center, there's a new option that states something like "X policies with error or conflict". When you select this option, you automatically go to the **Devices** > **Monitor** > **Assignment Failures** report. This report helps you troubleshoot errors and conflicts.
 
 This new option is available in the following locations in the Endpoint Manager admin center:
 - Home page
@@ -98,7 +98,7 @@ This new option is available in the following locations in the Endpoint Manager 
 For more information, see [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md) and [Assignment failures report](reports.md#assignment-failures-report-operational).
 
 Applies to:
-- Windows 10 and later
+- Windows 10 and newer
 
 ### New Timeout and Block iCloud Private Relay settings for iOS/iPadOS and macOS devices<!-- 10370284 -->
 On iOS/iPadOS and macOS devices, you can create a device restrictions policy that manages features on the device (**Devices** > **Configuration Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Device restrictions**).
@@ -108,17 +108,17 @@ There are new settings:
   - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's website).
 - macOS:
   - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's website).
-  - **Timeout**: Users can unlock their devices by using a touch ID, such as a fingerprint. Use this setting to require users to enter their password after a period of inactivity. The default inactivity period is 48 hours. After 48 hours of inactivity, the device prompts for the password instead of a touch ID.
+  - **Timeout**: Users can unlock their devices by using a Touch ID, such as a fingerprint. Use this setting to require users to enter their password after a period of inactivity. The default inactivity period is 48 hours. After 48 hours of inactivity, the device prompts for the password instead of a Touch ID.
 
 Applies to:
-- iOS/iPadOS 15 and later
-- macOS 12 and later
+- iOS/iPadOS 15 and newer
+- macOS 12 and newer
 
 ### New device restriction settings for Android Enterprise corporate-owned devices with a work profile<!-- 10982232 -->
 On Android Enterprise devices, you can configure settings that control features on devices (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile type).
 
 For Android Enterprise corporate-owned devices with a work profile, there are new settings:
-- Restrict searching work contacts and displaying caller ID for work contacts in a personal profile
+- Restrict searching work contacts and displaying work contact caller-ID in personal profile
 - Restrict copy and paste between work and personal profiles
 - Restrict data sharing between work and personal profiles
 
@@ -127,14 +127,14 @@ For more information on the settings that you can currently configure, see [Andr
 Applies to:
 - Android Enterprise corporate-owned work profile (COPE)
 
-### Settings catalog will soon be supported on US Government GCC High and DoD<!-- 12389409 -->
-The settings catalog will soon be available and supported on US Government GCC High and DoD.
+### Settings Catalog will soon be supported on U.S. Government GCC High and DoD<!-- 12389409 -->
+The settings Catalog will soon be available and supported on U.S. Government GCC High and DoD.
 
 For more information on the settings catalog, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
 
 Applies to:
 - macOS
-- Windows 10 and later
+- Windows 10 and newer
 
 ### Entry of the certificate common name in Wi-Fi profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile devices<!-- 12439458  -->
 On Android Enterprise devices, you can create a Wi-Fi profile that configures enterprise Wi-Fi settings (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
@@ -165,10 +165,10 @@ For related information, see:
 - [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies)
 
 Applies to:
-- Windows 10 and later
+- Windows 10 and newer
 - Microsoft Edge
 
-### Use filters to assign proactive remediation scripts for endpoint analytics and to assign endpoint security policies in the Endpoint Manager admin center (public preview)<!-- 7566953 7591178  -->
+### Use filters to assign proactive remediation scripts for endpoint analytics and to assign Endpoint Security policies in the Endpoint Manager admin center (public preview)<!-- 7566953 7591178  -->
 
 In the Endpoint Manager admin center, you can create filters and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
 
@@ -180,14 +180,14 @@ For more information on filters, see [Use filters (preview) when assigning your 
 Applies to:
 
 - macOS
-- Windows 10 and later
+- Windows 10 and newer
 
 <!-- ***********************************************-->
 ## Device enrollment
 
 ### Use filters on Windows Enrollment Status Page profile assignments<!-- 7423484  -->
 
-Filters allow you to include or exclude devices in policy or app assignments based on device properties. After you create an Enrollment Status Page (ESP) profile, you'll be able to use filters when assigning the profile. The **All users** and **All devices** assignment options will also be available. 
+Filters allow you to include or exclude devices in policy or app assignments based on device properties. When you create an Enrollment Status Page (ESP) profile, you'll be able to use filters when assigning the profile. The **All users** and **All devices** assignment options will also be available. 
 
 You'll be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Enroll devices** > **Enrollment Status Page** > **Create**. For more information about filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md). For more information about ESP profiles, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).   
 
@@ -198,9 +198,9 @@ You'll be able to find this setting in the [Microsoft Endpoint Manager admin cen
 
 We're reworking the account protection policy in endpoint security to use the new API for Windows Hello for Business. The new API will result in a more consistent experience. 
 
-The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts. This API replaces *./User/Vendor/MSFT/PassportForWork*  (**Endpoint security** > **Account protection**).
+The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts. This API replaces *./User/Vendor/MSFT/PassportForWork* (**Endpoint security** > **Account protection**).
 
-After the change, only new policies that you create will use the new API. Your existing policies won't be affected by this change and will continue to use the older API.
+After the change, only new policies then you create will use the new API. Your existing policies won't be affected by this change and will continue to use the older API.
 
 <!-- ***********************************************
 ## Role-based access control
@@ -211,7 +211,7 @@ After the change, only new policies that you create will use the new API. Your e
 
 ### Intune Data Warehouse updates<!-- 9370034 -->
 
-The `applicationInventory` entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via an export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+The `applicationInventory` entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 <!-- ***********************************************-->
 <!--## Security-->
