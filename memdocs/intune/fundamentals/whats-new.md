@@ -60,6 +60,12 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of December 20, 2021 
+
+### Device management  
+#### Preview filtered device list before deployment <!-- 7541587 -->
+Now as you create or edit a filter in Microsoft Intune, you can preview the list of filtered devices. The new view eliminates the need to apply test filters, because you can immediately preview the impact a filter has on devices and adjust filter rules to achieve your desired outcome.  
+
 ## Week of December 13, 2021 (Service release 2112)
 
 ### Device management
