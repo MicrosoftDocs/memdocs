@@ -81,7 +81,7 @@ With the Intune October (2110) service release, **Safe boot** and **Debugging fe
 
 Review the configuration settings for your Android Enterprise device restrictions. If you want users to have access to developer settings after **Safe boot** and **Debugging features** are removed, you'll need to set **Developer settings** to **Allow**. Otherwise, it will remain as **Not configured**, and users won't have access to any developer settings.
 
-### Plan for change: Support is ending for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
+### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
 
 Intune is announcing end of support for the [network fence feature](../protect/create-compliance-policy.md) for use only in devices enrolled through an Android device administrator. Google has reduced support for devices enrolled through a device administrator. Intune customers provided feedback that led to a re-envisioning of location-based fencing to better meet customer needs across multiple Android enrollment options.
 
