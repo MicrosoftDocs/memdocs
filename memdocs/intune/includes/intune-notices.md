@@ -11,7 +11,7 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Plan for change: Intune APP/mobile application management is moving to support Android 9 and later<!-- 10937255 -->
+### Plan for change: Intune APP/MAM is moving to support Android 9 and higher<!-- 10937255 -->
 
 With the upcoming release of Android 12, Intune app protection policies (APP, also known as mobile application management) for Android will move to support Android 9 (Pie) and later on October 1, 2021. This change will align with Office mobile apps for Android support of the last four major versions of Android. 
 
@@ -22,7 +22,7 @@ Based on your feedback, we've updated our support statement. We're doing our bes
 
 #### How does this affect you or your users?
 
-If you're using APP on any device that's running Android version 8.x or earlier, or you decide to enroll any device that's running Android version 8.x or earlier, these devices will no longer be supported for APP. 
+If you're using app protection policies (APP) on any device that's running Android version 8.x or earlier, or you decide to enroll any device that's running Android version 8.x or earlier, these devices will no longer be supported for APP. 
 
 APP policies will continue to be applied to devices running Android 6.x to Android 8.x. But if you have problems with an Office app and APP, support will request that you update to a supported Office version for troubleshooting. To continue to receive support for APP, update your devices to Android version 9 (Pie) or later, or replace them with a device on Android version 9.0 or later before October 1, 2021.
 
