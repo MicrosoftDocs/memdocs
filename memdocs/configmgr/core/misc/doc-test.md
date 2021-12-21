@@ -56,7 +56,7 @@ Examples:
 
 To link to a header in the same markdown file, find the section anchor and link using `#` (for example, `#blockquote`). Use the Docs Authoring Pack to help.
 
-- Example: [Blockquotes](#blockquote)
+- Example: [Blockquotes](#blockquotes)
 
 To link to a header in a markdown file in the same repo, use relative linking + hashtag linking.
 
@@ -153,7 +153,7 @@ This example is for `in-line code`.
 
 ### Image with lightbox
 
-:::image type="content" source="../../../media/docs-github-edit.png" alt-text="Screenshot of 'Edit this file' pencil icon in GitHub." lightbox="memdocs/media/docs-github-edit.png":::
+:::image type="content" source="../../../media/docs-github-edit.png" alt-text="Screenshot of 'Edit this file' pencil icon in GitHub." lightbox="../../../media/docs-github-edit.png":::
 
 ### Animated gif
 
