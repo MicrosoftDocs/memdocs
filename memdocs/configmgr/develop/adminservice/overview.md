@@ -2,7 +2,7 @@
 title: What is the administration service
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager administration service REST API to interact with the site over an HTTPS OData connection.
-ms.date: 12/07/2021
+ms.date: 12/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -45,7 +45,7 @@ Configuration Manager natively uses the administration service for the following
 
 - [Community hub](../../core/servers/manage/community-hub.md)
 
-- [Managing console extensions](../../core/servers/manage/admin-console-extensions.md)
+- [Managing console extensions](../../core/servers/manage/admin-console-extensions.md)<!--1104776-->
 
 In addition, you can develop custom solutions with the administration service, for example:
 
