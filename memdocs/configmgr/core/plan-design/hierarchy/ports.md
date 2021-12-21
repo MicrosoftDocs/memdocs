@@ -490,6 +490,7 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |HTTP|--|80 <sup>[Note 1](#bkmk_note1)</sup>|
+|HTTPS|--|443|
 
 ### <a name="BKMK_PortsIssuingCA_SiteServer"></a> Site server `<-->` Issuing certification authority (CA)
 
