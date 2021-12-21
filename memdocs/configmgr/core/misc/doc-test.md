@@ -16,7 +16,8 @@ manager: dougeby
 
 # Doc team test
 
-This article is for testing purposes only. I am causing a merge conflict. You're welcome!
+This article is for testing purposes only. This is for the team only. 
+
 
 ## Basic Markdown and GFM
 
