@@ -239,8 +239,7 @@ The Configuration Manager console uses internet access for the following actions
 
 - Downloading software updates from Microsoft Update for deployment packages.
 - The Feedback item in the ribbon.
-- Links to documentation within the console.
-<!--506823-->
+- Links to documentation within the console. <!--506823-->
 - Downloading items from Community hub
 
 ### <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console `-->` Reporting services point
