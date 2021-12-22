@@ -287,6 +287,20 @@ Use the following procedure to modify an administrative user that has the secura
 
 You can use the following PowerShell cmdlets to automate some of these tasks:
 
+Manage administrative users:
+
+- [Get-CMAdministrativeUser](/powershell/module/configurationmanager/Get-CMAdministrativeUser): Get an administrative user object.
+- [New-CMAdministrativeUser](/powershell/module/configurationmanager/New-CMAdministrativeUser): Create a new administrative user.
+- [New-CMAdministrativeUserPermission](/powershell/module/configurationmanager/New-CMAdministrativeUserPermission): {{ Fill in the Synopsis }}
+- [Remove-CMAdministrativeUser](/powershell/module/configurationmanager/Remove-CMAdministrativeUser): Remove an administrative user.
+
+Manage roles and scopes on users:
+
+- [Add-CMSecurityRoleToAdministrativeUser](/powershell/module/configurationmanager/Add-CMSecurityRoleToAdministrativeUser): Add a security role to a user or group.
+- [Remove-CMSecurityRoleFromAdministrativeUser](/powershell/module/configurationmanager/Remove-CMSecurityRoleFromAdministrativeUser): Remove the association between a security role and an administrative user.
+- [Add-CMSecurityScopeToAdministrativeUser](/powershell/module/configurationmanager/Add-CMSecurityScopeToAdministrativeUser): Add a security scope to a user or group.
+- [Remove-CMSecurityScopeFromAdministrativeUser](/powershell/module/configurationmanager/Remove-CMSecurityScopeToAdministrativeUser): Remove the association between a security scope and an administrative user.
+
 Manage security roles:
 
 - [Copy-CMSecurityRole](/powershell/module/configurationmanager/Copy-CMSecurityRole): Create a custom security role.
@@ -295,8 +309,6 @@ Manage security roles:
 - [Import-CMSecurityRole](/powershell/module/configurationmanager/Import-CMSecurityRole): Import a security role from an XML file.
 - [Remove-CMSecurityRole](/powershell/module/configurationmanager/Remove-CMSecurityRole): Remove custom security roles.
 - [Set-CMSecurityRole](/powershell/module/configurationmanager/Set-CMSecurityRole): Change configuration settings of a security role.
-- [Add-CMSecurityRoleToAdministrativeUser](/powershell/module/configurationmanager/Add-CMSecurityRoleToAdministrativeUser): Add a security role to a user or group.
-- [Remove-CMSecurityRoleFromAdministrativeUser](/powershell/module/configurationmanager/Remove-CMSecurityRoleFromAdministrativeUser): Remove the association between a security role and an administrative user.
 
 Manage permissions on security roles:
 
@@ -309,15 +321,12 @@ Manage security scopes:
 - [New-CMSecurityScope](/powershell/module/configurationmanager/New-CMSecurityScope): Create a security scope.
 - [Remove-CMSecurityScope](/powershell/module/configurationmanager/Remove-CMSecurityScope): Remove a security scope.
 - [Set-CMSecurityScope](/powershell/module/configurationmanager/Set-CMSecurityScope): Configure a security scope.
-- [Add-CMSecurityScopeToAdministrativeUser](/powershell/module/configurationmanager/Add-CMSecurityScopeToAdministrativeUser): Add a security scope to a user or group.
-- [Remove-CMSecurityScopeFromAdministrativeUser](/powershell/module/configurationmanager/Remove-CMSecurityScopeToAdministrativeUser): Remove the association between a security scope and an administrative user.
 
 Manage object security scope:
 
 - [Add-CMObjectSecurityScope](/powershell/module/configurationmanager/Add-CMObjectSecurityScope): Add a security scope to an object.
 - [Get-CMObjectSecurityScope](/powershell/module/configurationmanager/Get-CMObjectSecurityScope): Get the security scope for a Configuration Manager object.
 - [Remove-CMObjectSecurityScope](/powershell/module/configurationmanager/Remove-CMObjectSecurityScope): Remove a security scope from a Configuration Manager object.
-- [Set-CMObjectSecurityScope](/powershell/module/configurationmanager/Set-CMObjectSecurityScope): Configure the security scopes for Configuration Manager objects.
 
 ## Next steps
 
