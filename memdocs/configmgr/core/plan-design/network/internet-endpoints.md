@@ -50,6 +50,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `download.windowsupdate.com`  
 
+- `download.visualstudio.microsoft.com`  
+
 - `sccmconnected-a01.cloudapp.net`  
 
 - `configmgrbits.azureedge.net`
