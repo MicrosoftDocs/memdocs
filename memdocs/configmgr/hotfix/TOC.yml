@@ -5,6 +5,8 @@ items:
   items:
   - name: KB 10096997 Summary of changes in 2111
     href: 2111/11052354.md
+  - name: KB 12709700 Update for Configuration Manager 2111
+    href: 2111/12709700.md
 - name: Version 2107
   items:
   - name: KB 10096997 Summary of changes in 2107
