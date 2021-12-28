@@ -23,6 +23,8 @@ landingContent:
         links:
           - text: KB 11052354 Summary of changes in 2111
             url: 2111/11052354.md
+          - text: KB 12709700 Update for Configuration Manager 2111
+            url: 2111/12709700.md
   - title: Configuration Manager 2107
     linkLists:
       - linkListType: overview
