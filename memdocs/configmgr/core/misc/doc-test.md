@@ -200,12 +200,6 @@ This example is for `in-line code`.
 > [!div class="button"]
 [button links](/rights-management)
 
-### Selector
-
-> [!div class="op_single_selector"]
-- [foo](/rights-management/template.md)
-- [bar](/rights-management/scratch.md)
-
 ### Step-By-Step
 
 >[!div class="step-by-step"]
