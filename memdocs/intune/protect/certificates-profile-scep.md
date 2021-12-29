@@ -89,6 +89,8 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
      >
      >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store.
+     >   
+     >   When configured for VPN apps, user will be prompted to select the correct certificate. Silent certificate approval for Fully Managed (or BYOD scenarios) is not supported. If everything is setup correctly, the correct certificate should already be preselected in the dialog box. 
 
    - **Subject name format**:
 
