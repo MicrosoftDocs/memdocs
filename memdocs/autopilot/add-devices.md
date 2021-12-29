@@ -61,9 +61,9 @@ After Intune reports the profile as ready to go, you can connect the device to t
 > [!NOTE]
 > If OOBE is restarted too many times, it can enter a recovery mode and fail to run the Autopilot configuration. You can identify this scenario if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE process displays each of these on a separate page. The following value key tracks the count of OOBE retries:
 > 
-> **HKCU\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserOOBE**
+> `HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserOOBE`
 > 
-> To ensure that OOBE has not been restarted too many times, you can change this value to 1.
+> To ensure that OOBE has not been restarted too many times, you can change this value to `1`.
 
 ### Configuration Manager
 
@@ -109,7 +109,7 @@ To install the script directly and capture the hardware hash from the local comp
 
 4. After you confirm the details of the uploaded device hash, run a sync in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Sync**. 
 
-5. After the device appears in your device list, and an autopilot profile is assigned, restarting the device causes OOBE to run through the Windows Autopilot provisioning process.
+5. After the device appears in your device list, and an Autopilot profile is assigned, restarting the device causes OOBE to run through the Windows Autopilot provisioning process.
 
    On first run, you're prompted to approve the required app registration permissions.
 
@@ -120,7 +120,7 @@ For more information about running the *Get-WindowsAutoPilotInfo.ps1* script, se
 
 ## Ensure that the CSV file meets requirements
 
-Device information in the CSV file where you've captured hardware hashes should include:
+Device information in the CSV file where you capture hardware hashes should include:
 
 - Serial number
 - Windows product ID
@@ -128,19 +128,19 @@ Device information in the CSV file where you've captured hardware hashes should 
 - Optional group tag
 - Optional assigned user
 
-You can have up to 500 rows in the list of devices. The header and line format looks like this:
+You can have up to 500 rows in the file's list of devices. The header and line format must look like this:
 
 `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
 `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
-The CSV file that you're importing into the Intune portal must be formatted this way. Keep these other requirements in mind:
+Keep these other requirements for the CSV file in mind:
 
-- Extra columns are not supported. 
-- Quotes are not supported. 
+- You can't use extra columns. 
+- You can't use quotation marks. 
 - You can use only ANSI-format text files (not Unicode). 
 - Headers are case-sensitive. 
 
-Because of these requirements, editing the file in Excel and saving as a CSV file will not generate a usable file.
+Because of these requirements, editing an Excel file and saving it as .csv will not generate a usable file for importing into the Intune portal.
    
 When you upload a CSV file to assign a user, make sure that you assign valid User Principal Names (UPNs). If you assign an invalid UPN (that is, an incorrect username), your device might be inaccessible until you remove the invalid assignment. 
 
@@ -191,7 +191,7 @@ You can delete Windows Autopilot devices that aren't enrolled in Intune:
 Completely removing a device from your tenant requires you to delete the Intune, Azure AD, and Windows Autopilot device records. You can do all these deletions from Intune, in this order:
 
 1. If the devices are enrolled in Intune, [delete them from the Intune All devices pane](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
-2. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
+2. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices that you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
 3. Delete the devices from Azure AD at **Devices** > **Azure AD devices**.
 
 ## Next steps
