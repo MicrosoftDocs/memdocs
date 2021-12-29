@@ -46,11 +46,11 @@ This article provides step-by-step guidance for manual registration. For more in
 
 ## Required permissions
 
-Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. You can also create a custom Autopilot device manager role by using [role-based access control](../intune/fundamentals/role-based-access-control.md). Autopilot device management requires only that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
+Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. You can also create a custom Autopilot device manager role by using [role-based access control](../intune/fundamentals/role-based-access-control.md). Autopilot device management requires only that you enable all permissions under **Enrollment programs**, except for the four token management options.
 
 ## Collect the hardware hash
 
-You can use either Microsoft Endpoint Configuration Manager or Windows Powershell to collect the hardware hash from existing devices.
+You can use either Microsoft Endpoint Configuration Manager or Windows PowerShell to collect the hardware hash from existing devices.
 
 In *Windows 10 version 1809 and earlier*, it's important to capture the hardware hash and create an Autopilot device profile before you connect a device to the internet. Those steps include collecting the hardware hash, uploading the CSV file into Microsoft Store for Business (MSfB) or Intune, assigning the profile, and confirming the profile assignment. 
 
@@ -173,9 +173,9 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
 2. Select the device that you want to edit.
 3. On the pane on the right of the screen, you can edit:
-   - Device name.
-   - Group tag.
-   - User Friendly Name (if you've assigned a user).
+   - Device name
+   - Group tag
+   - Username (if you've assigned a user)
 4. Select **Save**.
 
 > [!NOTE]
