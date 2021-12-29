@@ -133,7 +133,7 @@ When an update to remote help that is required, users are prompted to install th
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **10.0.100110.16384**
+The most recent version of remote help is **10.0.10011.16384**
 
 ### Deploy remote help as a Win32 app
 
