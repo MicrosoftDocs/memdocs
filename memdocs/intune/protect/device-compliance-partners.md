@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2021
+ms.date: 12/29/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,6 +62,8 @@ The following compliance partners are supported as generally available:
 ## Prerequisites
 
 - A subscription to Microsoft Intune, and access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+- Device users must be assigned a license for Intune.
 
 - A subscription to the device compliance partner.
 
