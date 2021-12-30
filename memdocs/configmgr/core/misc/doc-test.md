@@ -28,7 +28,7 @@ All basic and Github-flavored markdown is supported. For more information, see:
 
 ## Headings
 
-Examples of first  and second-level headings are above.
+Examples of first and second-level headings are above.
 
 There **must** be only one first level heading in your article, which will be displayed as the on-page title.  
 
@@ -110,7 +110,11 @@ To link to an external file, use the full URL as the link. Remove any locales.
 - Contains
 - Other
     1. Colonel Mustard
+        1. Yellow
+        1. gold
     1. White
+        1. cream
+        1. silver
 - Lists
 
 ## Horizontal rule
