@@ -73,10 +73,11 @@ To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Sec
 
 ### Unsupported security settings
 
-The following security settings are pending deprecation. The Security Management for Microsoft Defender for Endpoint flow does not support them:
-- Expedite telemetry reporting frequency (under "Endpoint Detection and Response")
-- AllowOnAccessProtection (under "Antivirus")
-- AllowIntrusionPreventionSystem (under "Antivirus")
+The following security settings are pending deprecation. The Security Management for Microsoft Defender for Endpoint flow does not support these settings:
+
+- Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
+- AllowOnAccessProtection (under **Antivirus**)
+- AllowIntrusionPreventionSystem (under **Antivirus**)
 
 ### Managing Security Configurations on domain controllers
 
