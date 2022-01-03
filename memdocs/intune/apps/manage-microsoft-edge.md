@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/17/2021
+ms.date: 01/03/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -260,9 +260,6 @@ Edge for iOS and Android allows organizations to disable certain features that a
 |    Key    |    Value    |
 |-----------------------|-----------------------|
 |    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** disables prompts that offer to save passwords for the end user<br>**inprivate** disables InPrivate browsing<p>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage.     |
-
-> [!NOTE]
-> Edge for Android does not support disabling the password manager.
 
 #### Disable extensions
 
