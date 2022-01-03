@@ -106,7 +106,7 @@ For more information on filters, see [Use filters when assigning your apps, poli
 ## Device configuration
 
 ### Use Collect diagnostics to collect addtional details from Windows 365 devices through Intune remote actions<!--  12636207 -->
-Intune’s remote action to [*Collect diagnostics*]](../remote-actions/collect-diagnostics.md) will soon collect additional details from Windows 365 (Coud-PC) devices.  (**Devices** > **Windows** > *select a Windows 365 device* > **Collect diagnostics**)
+Intune’s remote action to [*Collect diagnostics*](../remote-actions/collect-diagnostics.md) will soon collect additional details from Windows 365 (Coud-PC) devices.  (**Devices** > **Windows** > *select a Windows 365 device* > **Collect diagnostics**)
 
 The new details for Windows 365 devices include the following registry data:
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector 
