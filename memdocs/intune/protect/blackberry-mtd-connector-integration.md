@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 01/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -88,4 +88,3 @@ For more information about consent and Azure AD applications, see [Request the p
 ## Next steps
 
 - [Set up BlackBerry Protect app for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up BlackBerry Protect app for unenrolled devices](mtd-add-apps-unenrolled-devices.md)
