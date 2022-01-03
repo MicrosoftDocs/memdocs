@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -39,6 +39,9 @@ In this article, we'll refer to the users who provide help as *helpers*, and use
 Remote help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
 The remote help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
+
+> [!NOTE]
+> On 12/08/2021, the remote help installer was renamed from *remotehelp.exe* to *remotehelpinstaller.exe* to resolve issues with silent deployments and interactive installations. Although app functionality hasn't changed, we recommend using the same [*download link*](#download-remote-help) to download the updated version with the renamed installer. The installation command lines in this article have been updated to reflect the new installer file name.
 
 ## Remote help capabilities and requirements
 
@@ -130,13 +133,13 @@ When an update to remote help that is required, users are prompted to install th
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **10.0.100110.16384**
+The most recent version of remote help is **10.0.10011.16384**
 
 ### Deploy remote help as a Win32 app
 
-To deploy remote help with Intune, you can add the app as a Windows win32 app, and define a detection rule to identify devices that don’t have the most current version of remote help installed.  Before you can add remote help as a Win32 app, you must repackage *remotehelp.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Wind32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
+To deploy remote help with Intune, you can add the app as a Windows win32 app, and define a detection rule to identify devices that don’t have the most current version of remote help installed.  Before you can add remote help as a Win32 app, you must repackage *remotehelpinstaller.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Wind32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
 
-After you repackage remote help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md ) with the following details to upload and deploy remote help. In the following, the repackaged remotehelp.exe file is named *remotehelp.intunewin*.
+After you repackage remote help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md ) with the following details to upload and deploy remote help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
 
 1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you’ve previously prepared, and then select **OK**.
 
@@ -144,8 +147,8 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
 
 2. On the Program page, configure the following options:
 
-   - For *Install command line*, specify **remotehelp.exe /install /quiet acceptTerms=Yes**
-   - For *Uninstall command line*, specify **remotehelp.exe /uninstall /quiet acceptTerms=Yes**
+   - For *Install command line*, specify **remotehelpinstaller.exe /install /quiet acceptTerms=Yes**
+   - For *Uninstall command line*, specify **remotehelpinstaller.exe /uninstall /quiet acceptTerms=Yes**
 
    > [!IMPORTANT]
    > The command line option *acceptTerms* is always case sensitive.
@@ -160,7 +163,7 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
 4. On the Detection rules page, for *Rules format*, select **Manually configure detection rules**, and then select **Add** to open the *Detection rule* pane. Configure the following options:
 
    - For *Rule type*, select **File**
-   - For *Path*, specify **C:\Program Files\Remote Help**
+   - For *Path*, specify **C:\Program Files\Remote help**
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
@@ -181,7 +184,7 @@ To configure your tenant to support remote help, review and complete the followi
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow use of remote help.  By default, this setting is *Enabled*.
-   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Not allowed*.
+   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
 
 3. Select **Save**.
 
@@ -225,14 +228,14 @@ The use of remote help depends on whether you're requesting help or providing he
 
 ### Request help
 
-To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helpers instance of remote help. 
+To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helper's instance of remote help.
 
 > [!TIP]  
 > To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, you are signed out of your device.
 
 As a sharer, when you’ve requested help and both you and the helper are ready to start:
 
-1. Start the remote help app on the device and sign-in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
+1. Start the remote help app on the device and sign in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
 
 2. After signing into the app, get the security code from the individual assisting you and enter that code below *Get Help*, and then select **Submit**.
 
@@ -240,22 +243,28 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
    At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*. Full control must be established before the help session starts. If full control is required after the sessions starts, both users must disconnect and restart the remote help session.
 
-4. After establishing they type of session (full control or screen sharing), the session is established and the helper can now assist resolving any issues on the device.
+4. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist resolving any issues on the device.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
 ### Provide help  
 
 > [!TIP]  
 > Plan to have the sharer save any active work before a remote help session ends to avoid an unexpected loss of work. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is signed out of their device to ensure any elevated permissions are cleared from the device.
 
-As a helper, after receiving a request from a user who wants assistance through the remote help app:
+As a helper, after receiving a request from a user who wants assistance by using the remote help app:
 
-1. Start the remote help app on your device and sign in to authenticate to your organization.
+1. Start the remote help app on your device. You can start the app from within the Microsoft Endpoint Manager admin center:
 
-2. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
+   1. Sign into [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
+
+   2. From the remote actions bar across the top of the device view, select **New remote help session**. This action opens the remote help app.
+
+   Alternately, or for devices not enrolled in Intune, locate the remote help app on your device and manually start it. After remote helps opens, you'll need to sign in to authenticate to your organization.
+
+2. When remote help opens you must sign in to authenticate to your organization. After signing into the app, under *Give help* select **Get a security code**. Remote help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of remote help to establish a connection to your remote help instance.
 
 3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
 
@@ -265,7 +274,7 @@ As a helper, after receiving a request from a user who wants assistance through 
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer or helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
 ## Monitoring and reports
 
@@ -284,7 +293,7 @@ You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
 Remote help logs data during installation and during remote help sessions, which can be of use when investigating issues with the app.
 
-**Installation of remote help** - When remote help installs or uninstalls, the following two logs are created in the device users Temp folder, for example `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created. 
+**Installation of remote help** - When remote help installs or uninstalls, the following two logs are created in the device users Temp folder, for example `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created.
 
 - Remote_help_*_QuickAssist_Win10_x64.msi.log
 - Remote_help_*.log

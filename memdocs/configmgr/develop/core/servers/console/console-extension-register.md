@@ -32,7 +32,7 @@ You can [import an unsigned extension](../../../../core/servers/manage/import-ad
 - [Technical preview version 2105.2](../../../../core/get-started/2021/technical-preview-2105-2.md#bkmk_ext) or later.
 - Configuration Manager [version 2107](../../../../core/plan-design/changes/whats-new-in-version-2107.md) or later
 
-Starting in version 2111, you can import both signed and unsigned extensions using the [**Import Console Extension** wizard](/../../../core/servers/manage/import-admin-console-extensions.md).
+Starting in version 2111, you can import both signed and unsigned extensions using the [**Import Console Extension** wizard](../../../../core/servers/manage/import-admin-console-extensions.md).
 
 ## Prerequisites
 
