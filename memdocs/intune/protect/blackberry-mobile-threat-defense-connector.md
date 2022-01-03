@@ -37,6 +37,9 @@ You can configure Conditional Access policies based on a BlackBerry Protect risk
 
 For more information about how to integrate BlackBerry UES with Microsoft Intune, see the [BlackBerry UES documentation](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues).  
 
+> [!NOTE]
+> This Mobile Threat Defense vendor is not supported for unenrolled devices.
+
 ## Supported platforms
 
 - **Android 9.0 and later**
