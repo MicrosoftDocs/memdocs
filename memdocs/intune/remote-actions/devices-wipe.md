@@ -99,7 +99,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Certificate profile settings|Certificates are removed and revoked.|
 |Management agent|The management profile is removed.|
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Azure AD unjoin|The Azure AD record is removed.|
+|AAD Device Record |The Azure AD record is not removed.|
 
 ### Android device administrator
 
@@ -135,7 +135,7 @@ You can only wipe Dedicated, Fully Managed, and Corporate-Owned Work Profile dev
 |Certificate profile settings|Certificates that were deployed through MDM are removed and revoked.|
 |Management agent|The management profile is removed.|
 |Outlook|If Conditional Access is enabled, the device doesn't receive new mail.|
-|Azure AD unjoin|The Azure AD record is removed.|
+|AAD Device Record |The Azure AD record is not removed.|
 
 ### Windows
 
