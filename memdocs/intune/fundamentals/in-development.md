@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 12/13/2021
+ms.date: 01/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Deploy DMG-type applications to managed macOS devices<!-- 1171356 -->
+You will be able to upload and deploy DMG-type applications to managed Macs from Microsoft Endpoint Manager using the **required** assignment type. DMG is the file extension for Apple disk image files. DMG-type apps are deployed using the Intune MDM agent for macOS devices. You can add a DMG app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **macOS app (DMG)**. 
+
 ### Device compliance status on the Company Portal website<!-- 8782968 -->
 End users will be able to more easily see the compliance status of their devices from the [Company Portal](https://portal.manage.microsoft.com/devices) website. End users can go to the Company Portal website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. 
 
@@ -79,14 +82,51 @@ This feature targets devices that operate on Android 11+. For devices that opera
 
 ## Device security
 
-### BlackBerry Cylance - New Mobile Threat Defense partner<!-- 7822722  IDready -->
+### New Account protection policy to configure users in local groups on devices<!--5663034 -->
+We’re adding a new policy under endpoint security Account protection that you can use to manage the local user groups on a device. The settings are from the [Windows Client Management CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups).  (**Endpoint security** > **Account protection** > **Local Group Restrictions**).
+
+With this capability, when configuring the policy you’ll be able to select users from the Azure AD group picker, or manually add users by their SID.
+
+### BlackBerry Cylance - New Mobile Threat Defense partner<!-- 7822722 -->
 You'll soon be able to use [BlackBerry's Cylance AI](https://www.blackberry.com/us/en/products/unified-endpoint-security/cylance-ai) offering as an integrated Mobile Threat Defense (MTD) partner. Intune will help you control mobile device access to corporate resources by offering Conditional Access based on risk assessment.
 
 For more information about MTD partners for Intune, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
 <!-- ***********************************************-->
 
+## Device Management
+
+### Filters is moving from Public Preview to GA<!-- 12466893 -->
+You will be able to use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters is moving from public preview to generally available (GA).
+
+For more information on filters, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+
+<!-- ***********************************************-->
+
 ## Device configuration
+
+### Automatic clean-up rules support for Android Enterprise devices<!-- 9797532 -->
+Intune supports the configuration of rules to automatically remove devices that appear to be inactive, stale, or unresponsive. You'll soon be able to use these clean-up rules with Android Enterprise devices that previously did not support them. This support is coming for:
+- Android Enterprise Fully Managed
+- Android Enterprise Dedicated
+- Android Enterprise Corporate-Owned with Work Profile
+
+To learn more about clean-up rules, see [Automatically delete devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+
+### Choose a user or device scope when creating Windows VPN profiles<!-- 10685553 -->
+You will be able to create a VPN profile for Windows devices that configures VPN settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile).
+
+When you create a profile, there's a new **Use this VPN profile with a user/device scope** setting that lets you apply the profile to the user scope or the device scope:
+- **User scope**: The VPN profile is installed within the user's account on the device.
+- **Device scope**: The VPN profile is installed in the device context and applies to all users on the device.
+
+Existing VPN profiles will apply to their existing scope, and are not impacted by this change. Currently, all VPN profiles are installed in the user scope *except* for the profiles with device tunnel enabled, which requires device scope.
+
+For more information on VPN settings you can currently configure, see [Windows device settings to add VPN connections using Intune](../configuration/vpn-settings-windows-10.md).
+
+Applies to:
+- Windows 11
+- Windows 10
 
 ### New option to see the number of profiles with an error or conflict in device configuration profiles<!-- 9142810 -->
 In the Endpoint Manager admin center, there's a new option that states something like "X policies with error or conflict". When you select this option, you automatically go to the **Devices** > **Monitor** > **Assignment Failures** report. This report helps you troubleshoot errors and conflicts.
