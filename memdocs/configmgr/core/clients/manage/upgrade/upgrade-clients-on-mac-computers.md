@@ -2,7 +2,7 @@
 title: Upgrade macOS clients
 titleSuffix: Configuration Manager
 description: Upgrade the Configuration Manager client on Mac computers.
-ms.date: 09/10/2019
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -16,14 +16,22 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12927803 --> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.
+>
+> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune/fundamentals/deployment-guide-platform-macos.md).
+
 Follow the high-level steps in this article to upgrade the client for Mac computers by using a Configuration Manager application. You can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer, and then instruct users to manually run the installation.  
 
 > [!NOTE]  
-> Before you do these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
+> Before you do these steps, make sure that your Mac computer meets the prerequisites. For more information, see [Supported operating systems for Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 ## Download the latest Mac client
 
-The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850). The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.  
+The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.
+
+> [!NOTE]
+> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.<!-- 12927803 -->
 
 ## Create the Mac client installation file
 

@@ -2,7 +2,7 @@
 title: Prepare to deploy the client to Macs
 titleSuffix: Configuration Manager
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
-ms.date: 10/07/2021
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -16,17 +16,14 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is [deprecated](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12927803 --> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.
+>
+> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune/fundamentals/deployment-guide-platform-macos.md).
+
 Follow these steps to make sure that you're ready to [deploy the Configuration Manager client to Mac computers](deploy-clients-to-macs.md).
 
-
-
-## Mac prerequisites
-
-The Mac client installation package isn't supplied with the Configuration Manager media. Download it from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=100850).
-
 For the list of supported versions, see [Supported operating systems for clients and devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
-
-
 
 ## Certificate requirements
 

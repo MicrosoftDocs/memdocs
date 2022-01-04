@@ -2,7 +2,7 @@
 title: Plan site system roles
 titleSuffix: Configuration Manager
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
-ms.date: 12/01/2021
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -104,11 +104,17 @@ A site system role that Configuration Manager uses to accept the Endpoint Protec
 
 ### Enrollment point
 
+> [!IMPORTANT]
+> With the deprecation of on-premises MDM and the Configuration Manager client for macOS, this site system role is also deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
+
 A site system role that uses PKI certificates for Configuration Manager to enroll mobile devices and macOS computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
 If a user enrolls mobile devices by using Configuration Manager, and the user's Active Directory account is in a forest that's untrusted by the site server's forest, install an enrollment point in the user's forest. Then Configuration Manager can authenticate the user.  
 
 ### Enrollment proxy point
+
+> [!IMPORTANT]
+> With the deprecation of on-premises MDM and the Configuration Manager client for macOS, this site system role is also deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
 
 A site system role that manages Configuration Manager enrollment requests from mobile devices and macOS computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
