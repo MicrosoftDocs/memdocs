@@ -105,15 +105,15 @@ For more information on filters, see [Use filters when assigning your apps, poli
 
 ## Device configuration
 
-### Use Collect diagnostics to collect addtional details from Windows 365 devices through Intune remote actions<!--  12636207 -->
+### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--  12636207 -->
 Intune’s remote action to [*Collect diagnostics*](../remote-actions/collect-diagnostics.md) will soon collect additional details from Windows 365 (Coud-PC) devices.  (**Devices** > **Windows** > *select a Windows 365 device* > **Collect diagnostics**)
 
 The new details for Windows 365 devices include the following registry data:
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector 
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
 
-### Automatic clean-up rules support for Android Enterprise devices<!-- 9797532 -->
-Intune supports the configuration of rules to automatically remove devices that appear to be inactive, stale, or unresponsive. You'll soon be able to use these clean-up rules with Android Enterprise devices that previously did not support them. This support is coming for:
+### Automatic device clean-up rules support for Android Enterprise devices<!-- 9797532 -->
+Intune supports the creation of rules to automatically remove devices that appear to be inactive, stale, or unresponsive. You'll soon be able to use these clean-up rules with Android Enterprise devices that previously did not support them. This support is coming for:
 - Android Enterprise Fully Managed
 - Android Enterprise Dedicated
 - Android Enterprise Corporate-Owned with Work Profile
