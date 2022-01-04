@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 2006 of Configuration Manager current branch
