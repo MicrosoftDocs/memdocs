@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/07/2021
+ms.date: 01/04/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -83,7 +83,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
   - [Install Podman on Red Hat Enterprise Linux 8.4 (scroll down to RHEL8)](https://podman.io/getting-started/installation).  
     Podman is the container solution used on RHEL 8.4, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
-with documentation for the application, and packages with helper utilities. For more information see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
+with documentation for the application, and packages with helper utilities. For more information,, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
@@ -242,7 +242,7 @@ To change the proxy server configuration that is in use by the Linux host of the
 1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
 2. Run `mst-cli install`.
 
-   This command rebuilds the containers with the new proxy server details. During this process you’re asked to verify the contents of */etc/mstunnel/env.h* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
+   This command rebuilds the containers with the new proxy server details. During this process, you’re asked to verify the contents of */etc/mstunnel/env.h* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
 
    To confirm both and complete the configuration, enter **yes**.
 
@@ -261,7 +261,7 @@ Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only t
 
 The following functionality is supported by all platforms:
 
-- Azure Active Directory (Azure AD) authentication to the Tunnel using either username and password, or certificates.
+- Azure Active Directory (Azure AD) authentication to the Tunnel using username and password.
 - Per-app support.
 - Manual full-device tunnel through a Tunnel app, where the user launches VPN and selects *Connect*.
 - Split tunneling. However, on iOS split tunneling rules are ignored when your VPN profile uses *per app VPN*.
