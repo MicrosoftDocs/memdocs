@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > Starting in January 2022, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12927803 --> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.
 >
-> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune/fundamentals/deployment-guide-platform-macos.md).
+> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../intune/fundamentals/deployment-guide-platform-macos.md).
 
 Keep the following considerations in mind when you create and deploy applications for Mac computers.  
 
