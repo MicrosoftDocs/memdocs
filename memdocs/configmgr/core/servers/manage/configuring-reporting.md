@@ -40,7 +40,7 @@ Before you can install the reporting services point in a Configuration Manager s
 
 Use the following procedure to verify that SQL Server Reporting Services is installed and running correctly.
 
-1. Go to the **Start** menu on the site system, and open **Reporting Services Configuration Manager**. You may find it in the **Configuration Tools** section of the **Microsoft SQL Server** group.
+1. Go to the **Start** menu on the site system, and open **Report Server Configuration Manager**. You may find it in the **Configuration Tools** section of the **Microsoft SQL Server** group.
 
 2. In the **Reporting Services Configuration Connection** window, enter the name of the server that hosts SQL Server Reporting Services. Select the instance of SQL Server on which you installed SQL Server Reporting Services. Then select **Connect** to open Reporting Services Configuration Manager.  
 

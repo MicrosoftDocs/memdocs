@@ -2,7 +2,7 @@
 title: Create orchestration groups
 titleSuffix: Configuration Manager
 description: Create, edit, and use orchestration groups.
-ms.date: 12/01/2021
+ms.date: 12/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -168,6 +168,20 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
 ## Reset orchestration state for a group member
 
 If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also select **Reset Orchestration Group Member** from the ribbon. Before resetting the state, you should check the client to see why it failed and correct any issues found.
+
+## Automate with Windows PowerShell
+
+You can use the following PowerShell cmdlets to automate some of these tasks:
+
+- [Get-CMOrchestrationGroup](/powershell/module/configurationmanager/Get-CMOrchestrationGroup): Use this cmdlet to get an orchestration group object by name or ID. You can use this object to start, remove, or configure the orchestration group.
+
+- [Invoke-CMOrchestrationGroup](/powershell/module/configurationmanager/Invoke-CMOrchestrationGroup): Use this cmdlet to start orchestration.
+
+- [New-CMOrchestrationGroup](/powershell/module/configurationmanager/New-CMOrchestrationGroup): Use this cmdlet to create a new orchestration group.
+
+- [Remove-CMOrchestrationGroup](/powershell/module/configurationmanager/Remove-CMOrchestrationGroup): Use this cmdlet to remove an orchestration group.
+
+- [Set-CMOrchestrationGroup](/powershell/module/configurationmanager/Set-CMOrchestrationGroup): Use this cmdlet to configure an orchestration group.
 
 ## Next steps
 

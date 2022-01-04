@@ -36,7 +36,7 @@ Windows 365 uses both default and custom operating system images to automaticall
 
 Both marketplace and custom images must meet the following requirements:
 
-- Windows 10 Enterprise version 1909 or later.
+- Windows 10 Enterprise version 1909 or later, excluding 2004.
 - Windows 11 Enterprise 21H2.
 - Generation 2 images.
     > [!Note]

@@ -71,6 +71,14 @@ Devices that are joined to Active Directory will use their **existing infrastruc
 
 To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
 
+### Unsupported security settings
+
+The following security settings are pending deprecation. The Security Management for Microsoft Defender for Endpoint flow does not support these settings:
+
+- Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
+- AllowOnAccessProtection (under **Antivirus**)
+- AllowIntrusionPreventionSystem (under **Antivirus**)
+
 ### Managing Security Configurations on domain controllers
 
 Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We are looking at ways to add support in the future.
