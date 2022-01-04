@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: medium
+ROBOTS: NOINDEX
 ---
 
 # Diagnostic and usage data for version 2006
