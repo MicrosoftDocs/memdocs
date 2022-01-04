@@ -119,47 +119,6 @@ Applies to:
 - Windows 11
 - Windows 10
 
-### New device restriction settings for Android Enterprise corporate-owned devices with a work profile<!-- 10982232 -->
-On Android Enterprise devices, you can configure settings that control features on devices (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile type).
-
-For Android Enterprise corporate-owned devices with a work profile, there are new settings:
-- Restrict searching work contacts and displaying work contact caller-ID in personal profile
-- Restrict copy and paste between work and personal profiles
-- Restrict data sharing between work and personal profiles
-
-For more information on the settings that you can currently configure, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
-
-Applies to:
-- Android Enterprise corporate-owned work profile (COPE)
-
-### Use filters to assign proactive remediation scripts for endpoint analytics and to assign Endpoint Security policies in the Endpoint Manager admin center (public preview)<!-- 7566953 7591178  -->
-
-In the Endpoint Manager admin center, you can create filters and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
-
-- [Windows PowerShell scripts for proactive remediations in endpoint analytics](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
-- [Endpoint security policies](../protect/endpoint-security-policy.md), such as account protection, antivirus, and attack surface reduction
-
-For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-
-Applies to:
-
-- macOS
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-## Monitor and troubleshoot  
-
-### Changes to the account protection policy in endpoint security<!--  7492116   -->
-
-We're reworking the account protection policy in endpoint security to use the new API for Windows Hello for Business. The new API will result in a more consistent experience. 
-
-The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts. This API replaces *./User/Vendor/MSFT/PassportForWork* (**Endpoint security** > **Account protection**).
-
-After the change, only new policies then you create will use the new API. Your existing policies won't be affected by this change and will continue to use the older API.
-
-<!-- ***********************************************
-## Role-based access control
--->
-
 <!-- ***********************************************-->
 ## Scripting
 
