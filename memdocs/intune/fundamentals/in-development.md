@@ -82,6 +82,9 @@ We’re adding a new policy under endpoint security Account protection that you 
 
 With this capability, when configuring the policy you’ll be able to select users from the Azure AD group picker, or manually add users by their SID.
 
+### Use Microsoft Defender for Endpoint as the Tunnel app for iOS devices (public preview)<!-- 9851681 -->
+As part of a public preview, you'll soon be able to use the Microsoft Defender for Endpoint client app as [Microsoft Tunnel app](../protect/microsoft-tunnel-overview.md) for your iOS devices.  Eventually, Defender for Endpoint will replace the use of the standalone Tunnel client app for iOS devices as it has for Android devices.
+
 <!-- ***********************************************-->
 
 ## Device configuration
