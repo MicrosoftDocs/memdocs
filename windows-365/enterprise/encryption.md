@@ -34,7 +34,7 @@ Windows 365 encrypts data at rest and in transit as explained below.
 
 ## Encryption of data at rest
 
-To protect data and help you meet your organizational security and compliance goals, Windows 365 Enterprise and Business disks are encrypted with [Azure Storage server-side encryption (SSE)](/azure/storage/common/storage-service-encryption).
+To help you protect your organization's data, Windows 365 Enterprise and Business disks are encrypted with [Azure Storage server-side encryption (SSE)](/azure/storage/common/storage-service-encryption).
 
 This storage layer encryption provides the following benefits:
 
@@ -42,9 +42,13 @@ This storage layer encryption provides the following benefits:
 - Windows 365 disk data is encrypted transparently using 256-bit Advanced Encryption Standard (AES) encryption, a modern block cipher, and is FIPS 140-2 compliant.
 - The encryption doesn't impact Cloud PC performance.
 - By default, the encryption is applied to every Cloud PC in every region at no extra cost.
-- All Windows 365 Enterprise and Business managed disks, snapshots, images, and data written to existing managed disks are automatically encrypted-at-rest with platform-managed keys. Customer-managed Keys aren't currently supported.
+- All the following Windows 365 Enterprise and Business objects are automatically encrypted-at-rest with platform-managed keys (Customer-managed Keys aren't currently supported):
+  - Managed disks
+  - Snapshots
+  - Images
+  - Data written to existing managed disks
 
-Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information on how Windows 365 treats privacy and personal data, see [Privacy and personal data in Windows 365](/windows-365/enterprise/privacy-personal-data).
+Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](/windows-365/enterprise/privacy-personal-data).
 
 ## Encryption of data in transit
 
@@ -56,7 +60,7 @@ Windows 365 uses the Transport Layer Security (TLS) protocol to protect data in 
 - Algorithm flexibility
 - Ease of deployment and use
 
-TLS 1.2 is used for all connections initiated from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites).
+TLS 1.2 is used for all connections started from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites).
 
 <!-- ########################## -->
 ## Next steps
