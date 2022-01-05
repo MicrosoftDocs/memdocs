@@ -49,11 +49,10 @@ Software Center shows a notification with a snooze option and the time remaining
 
 ### Software Center final countdown notification
 
-Software Center shows this final countdown notification that the user can't close or snooze.
+Software Center shows this final countdown notification that the user can't close or snooze. The user won't see a progress bar in the restart notification until the pending restart is less than 24 hours away.
+
 
 :::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center final restart countdown":::
-
-Starting in version 1906, the user won't see a progress bar in the restart notification until the pending restart is less than 24 hours away.
 
 ### Software Center notification before deadline
 
@@ -71,7 +70,7 @@ When you don't use toast notifications, the dialog for software marked as **Avai
 
 <!--3601213-->
 
-Starting in version 2006, you can configure client settings to prevent devices from automatically restarting when a deployment requires it. When a required deployment needs the device to restart, but you disable the client setting **Configuration Manager can force a device to restart**, you see the following notification:
+You can configure client settings to prevent devices from automatically restarting when a deployment requires it. When a required deployment needs the device to restart, but you disable the client setting **Configuration Manager can force a device to restart**, you see the following notification:
 
 :::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Software Center notification to restart your computer":::
 
@@ -88,7 +87,7 @@ To control the client restart behaviors, configure the following device client s
 
 <!--3601213-->
 
-Starting in version 2006, you can configure client settings to prevent devices from automatically restarting when a deployment requires it. Configuration Manager enables this setting by default.
+You can configure client settings to prevent devices from automatically restarting when a deployment requires it. Configuration Manager enables this setting by default.
 
 > [!IMPORTANT]
 > This client setting applies to all application, software update, and package deployments to the device. Until a user manually restarts the device:
@@ -105,7 +104,7 @@ When you disable this setting, you can't specify the amounts of time after the d
 
 This setting must be shorter in duration than the shortest maintenance window applied to the computer. For more information about maintenance windows, see [How to use maintenance windows](../manage/collections/use-maintenance-windows.md).
 
-The default value is 90 minutes. Starting in version 1906, the maximum value increased from 1440 minutes (24 hours) to 20160 minutes (two weeks).
+The default value is 90 minutes. The maximum value is 20160 minutes (two weeks).
 
 > [!NOTE]
 > This setting was previously titled **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**.
@@ -121,7 +120,6 @@ The default value is 15 minutes.
 
 ### Specify the frequency of reminder notifications presented to the user, after the deadline, before a device gets restarted (minutes)
 <!--3976435-->
-_Starting in version 1906_
 
 This frequency duration value should be less than the value of **Specify the amount of time after the deadline before a device gets restarted (minutes)** minus the value of **Specify the amount of time that a user is presented a final countdown notification before a device gets restarted (minutes)**. Otherwise, the reminder notifications won't work.
 
@@ -138,7 +136,7 @@ To change the user experience to be more intrusive, configure this setting to **
 
 <!--7821529-->
 
-For a low-rights user on a device that runs Windows Server, by default they aren't assigned the user rights to restart Windows. When you target a deployment to this device, this user can't manually restart. For example, they can't restart Windows to install software updates. Starting in version 2010, you can now control this behavior as needed.
+For a low-rights user on a device that runs Windows Server, by default they aren't assigned the user rights to restart Windows. When you target a deployment to this device, this user can't manually restart. For example, they can't restart Windows to install software updates.
 
 > [!IMPORTANT]
 > Allowing low-rights users to restart a server can potentially impact other users or services.
