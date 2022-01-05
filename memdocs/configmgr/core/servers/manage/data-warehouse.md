@@ -126,7 +126,7 @@ The data warehouse site system role includes the following reports, under the **
 
 - **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.
 
-## <a name="bkmk_warehouse"></a> Exclude data warehouse reporting tables from synchronization
+## <a name="bkmk_exclude"></a> Exclude data warehouse reporting tables from synchronization
 <!--12441118-->
 (*Introduced in version 2203*)
 
