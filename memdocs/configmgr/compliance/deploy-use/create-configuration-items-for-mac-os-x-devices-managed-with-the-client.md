@@ -15,9 +15,7 @@ ms.localizationpriority: medium
 # Create configuration items for macOS X devices
 
 > [!IMPORTANT]
-> Starting in January 2022, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12927803 -->
->
-> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../intune/fundamentals/deployment-guide-platform-macos.md).
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 Use the Configuration Manager **Mac OS X (custom)** configuration item to manage settings for macOS X devices that are managed by the Configuration Manager client.  
   

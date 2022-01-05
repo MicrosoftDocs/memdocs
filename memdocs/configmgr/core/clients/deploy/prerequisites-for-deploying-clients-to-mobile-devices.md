@@ -2,7 +2,7 @@
 title: Mobile device client prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to mobile devices.
-ms.date: 01/04/2022
+ms.date: 01/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > On-premises MDM and the Configuration Manager client for macOS are both [deprecated](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
 >
-> Migrate management of macOS and mobile devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune/fundamentals/deployment-guide-platform-macos.md).
+> Migrate management of macOS and mobile devices to Microsoft Intune. For more information, see [Supported clients and devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 Deploying Configuration Manager clients in your environment has the following external dependencies and dependencies within the product.
 
