@@ -39,7 +39,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--4316341-->
 When installing software updates from Configuration Manager, you can now choose to use the native Windows Update interface and restart experience. The client's Windows Update Settings page will display the updates like they appear when using Windows Update for scanning. Restarts from software updates will also behave as though you're using Windows Update.
 
-For more information, see [Client settings for computer restart](../../clients/deploy/device-restart-notifications.md) and []().
+For more information, see [Computer restart client settings](../../clients/deploy/device-restart-notifications.md#bkmk_wu).
 ## OS deployment
 
 <!--
