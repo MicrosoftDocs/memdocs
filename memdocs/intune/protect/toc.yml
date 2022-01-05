@@ -337,8 +337,6 @@ items:
       items:
       - name: Troubleshoot Exchange connectors
         href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
-      - name: Common problems 
-        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-problems
       - name: Common errors   
         href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
     - name: Troubleshoot BitLocker policies
