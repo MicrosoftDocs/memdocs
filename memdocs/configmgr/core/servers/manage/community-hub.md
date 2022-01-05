@@ -162,7 +162,8 @@ In certain circumstances, you may encounter the following exception when loading
 
 Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
 
-**Workaround**: To work around this issue, update the .Net Framework to version 4.7.1 or later for the machine running the Configuration Manager console.
+**Workaround**: To work around this issue, update the .NET Framework to version 4.7.1 or later for the machine running the Configuration Manager console.
+
 ### Unable to access Community hub node when running console as a different user
 <!--7826897-->
 If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node.
