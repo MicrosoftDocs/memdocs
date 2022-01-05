@@ -71,10 +71,6 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 - Don’t need their own Azure infrastructure
 - Don’t need to create an on-premises network connection.
 
-### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
-
-New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
-
 ### Operating system end of support status for Cloud PCs<!--36852572 -->
 
 The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.

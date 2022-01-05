@@ -162,7 +162,7 @@ For a list of clients by operating system, see [Remote Desktop clients](/windo
 
 Users can install apps on their Cloud PC as they would normally in Windows by either downloading them from the application’s website or by downloading them from the Microsoft Store.
 
-All Windows 365 Business users have local administrator privileges on their Cloud PC, so they should have the permissions required to install apps to their workspaces.
+Some apps may require that the user have administrator privileges. To change a user's role/privileges, see [Remote management actions](remotely-manage-business-cloud-pcs.md#remote-management-actions).
 
 > [!IMPORTANT]
 > If a user tries to use a Microsoft 365 Business Standard license on their Cloud PC, they might see the following error: "Account Issue: The products we found in your account cannot be used to activate Office in shared computer scenarios." In this scenario, the user must uninstall the version of Office installed on their Cloud PC and install a new copy from Office.com.
