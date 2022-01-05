@@ -133,7 +133,7 @@ The data warehouse site system role includes the following reports, under the **
 When you install the data warehouse, it synchronizes a set of default tables from the site database. These tables are required for data warehouse reports. While troubleshooting issues, you may want to stop synchronizing these default tables. Starting in version 2203, you can exclude one or more of these required tables from synchronization. To exclude tables from synchronization:
 
 1. From the **Administration** workspace, open **Site Configuration** > **Servers and Site System Roles**.
-1. Select the server where the Data Warehouse service point is installed.
+1. Select the server where the data warehouse service point is installed.
 1. In the **Site System Roles** details pane, select the **Data Warehouse service point** role, then select **Properties**.
 1. On the **Synchronization settings** page, choose **Select tables**.
 1. In the **Database tables** window, deselect one or more tables of type **Required**.
