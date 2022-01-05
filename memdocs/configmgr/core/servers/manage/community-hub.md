@@ -160,7 +160,7 @@ The Community hub may not load, or load after a long delay if the WebView2 conso
 <!--12109686-->
 In certain circumstances, you may encounter the following exception when loading Community hub:
 
-Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+`Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.`
 
 **Workaround**: To work around this issue, update the .NET Framework to version 4.7.1 or later for the machine running the Configuration Manager console.
 
