@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2021
+ms.date: 11/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,8 +25,11 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+- highpri
+ms.custom: intune-classic
 ---
 
 # Add Managed Google Play apps to Android Enterprise devices with Intune
@@ -215,6 +218,32 @@ By default, an Android Enterprise fully managed device will not allow employees 
 
 > [!NOTE]
 > The Microsoft Intune app, the Microsoft Authenticator app, and the Company Portal app will be installed as required apps onto all fully managed devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues. 
+
+## Update a Managed Google Play app
+By default, Managed Google Play apps will not update unless the following conditions are met:
+
+- The device is connected to wi-fi
+- The device is charging
+- The device is not actively being used 
+- The app to be updated is not running on the foreground
+
+For more information, see the [Manage App Updates](https://support.google.com/googleplay/work/answer/9350374?hl=en) documentation from Google. 
+
+You can choose to configure the wi-fi requirement for dedicated, fully managed, and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
+
+For dedicated, fully managed, and corporate-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
+
+- **Default**: The app's updates are subject to default conditions (described above). 
+- **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
+
+To edit the app update mode:
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps**.
+3. Select the app from the apps list.
+4. Select **Properties**.
+5. Select **Edit** by the **Assignments** section.
+6. Find the group you'd like to edit the app update mode for by clicking the corresponding group mode for that group.
+7. Under **app settings**, select the desired update mode.
 
 ## Manage Android Enterprise app permissions
 Android Enterprise requires you to approve apps in the Managed Google Play web console before you sync them with Intune and assign them to your users. Because Android Enterprise allows you to silently and automatically push the apps to users' devices, you must accept the app permissions on behalf of all your users. Users don't see any app permissions when they install the apps, so it's important that you understand the permissions.

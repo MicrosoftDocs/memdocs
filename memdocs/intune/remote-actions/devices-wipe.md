@@ -12,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Remove devices by using wipe, retire, or manually unenrolling the device
@@ -99,7 +99,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Certificate profile settings|Certificates are removed and revoked.|
 |Management agent|The management profile is removed.|
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Azure AD unjoin|The Azure AD record is removed.|
+|AAD Device Record |The Azure AD record is not removed.|
 
 ### Android device administrator
 
@@ -135,7 +135,7 @@ You can only wipe Dedicated, Fully Managed, and Corporate-Owned Work Profile dev
 |Certificate profile settings|Certificates that were deployed through MDM are removed and revoked.|
 |Management agent|The management profile is removed.|
 |Outlook|If Conditional Access is enabled, the device doesn't receive new mail.|
-|Azure AD unjoin|The Azure AD record is removed.|
+|AAD Device Record |The Azure AD record is not removed.|
 
 ### Windows
 

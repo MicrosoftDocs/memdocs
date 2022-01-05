@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2021
+ms.date: 12/29/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,6 +62,8 @@ The following compliance partners are supported as generally available:
 ## Prerequisites
 
 - A subscription to Microsoft Intune, and access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+- Device users must be assigned a license for Intune.
 
 - A subscription to the device compliance partner.
 
@@ -139,6 +141,7 @@ Sign in to the Azure portal and go to **Azure AD** > **Devices** > [**All device
 
 Use additional documentation from your third-party partner to create compliance policies for devices.
 
-- [Blackberry UEM](https://docs.blackberry.com/en/endpoint-management/blackberry-uem/12_15/installation-configuration/cloud-configuration/get15233768326701/Configure-Azure-AD-Conditional-Access)
+- [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_9/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Azure AD Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
+- [MobileIron Device Compliance Cloud](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)

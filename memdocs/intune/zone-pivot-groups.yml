@@ -9,17 +9,13 @@ groups:
     - id: microsoft-defender-atp
       title: Microsoft Defender for Endpoint
 - id: windows-mdm-versions
-  title: Windows MDM baseline versions
+  title: Security Baselines for Windows 10 and later
   prompt: Choose a version
   pivots:
+    - id: november-2021
+      title: November 2021
     - id: mdm-december-2020
       title: December 2020
-    - id: mdm-sept-2020
-      title: August 2020
-    - id: mdm-may-2019
-      title: May 2019
-    - id: mdm-preview
-      title: Preview - October 2018
 - id: edge-baseline-versions
   title: Edge baseline versions
   prompt: Choose a version

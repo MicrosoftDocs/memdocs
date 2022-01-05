@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 10/05/2021
+ms.date: 12/17/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -11,6 +11,7 @@ ms.author: mstewart
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # Tutorial: Proactive remediations
@@ -30,7 +31,7 @@ In this tutorial, you learn how to:
 
 Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you can deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them.
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you can deploy these script packages and see reports on their effectiveness.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -116,7 +117,7 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package.    
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).     
 1. Complete the **Review + Create** step for your deployment.
 
 
@@ -134,6 +135,5 @@ To help you easily analyze returned outputs, use the **Export** option to save t
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
-- View [Recommended software](recommended-software.md).
 - View [Startup performance](startup-performance.md).
 - Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).

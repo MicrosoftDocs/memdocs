@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 12/30/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 
@@ -113,12 +113,11 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed** Turns on real-time behavior monitoring.
 
 - **Allow Intrusion Prevention System**  
-  CSP: [AllowIntrusionPreventionSystem](/windows/client-management/mdm/policy-csp-defender#defender-allowintrusionpreventionsystem)
 
   Configure Defender to allow or disallow Intrusion Prevention functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **No** - Intrusion Prevention Systme is not allowed.
+  - **No** - Intrusion Prevention System is not allowed.
   - **Yes** - Intrusion Prevention System is allowed.
 
 - **Scan all downloaded files and attachments**  

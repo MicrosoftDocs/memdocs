@@ -2,7 +2,7 @@
 title: Prerequisite checker
 titleSuffix: Configuration Manager
 description: Learn how to use prerequisite checker to identify and fix problems that might block a site or site system role installation.
-ms.date: 09/09/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -98,6 +98,7 @@ There are four installation scenarios. The following list summarizes all of the 
     - /EXPAND
     - /INSTALLDIR
     - /NOUI
+    - /SCP
     - /SSBPORT
 - **Primary site**
   - _Required_
@@ -110,6 +111,7 @@ There are four installation scenarios. The following list summarizes all of the 
     - /JOIN
     - /MP
     - /NOUI
+    - /SCP
     - /SSBPORT
 - **Secondary site**
   - _Required_
@@ -196,6 +198,14 @@ Optional. This option starts the prerequisite checker without displaying the use
 _Applies to: Primary_
 
 Required. This option verifies that the local server meets the requirements for a primary site. You can't combine it with the **/CAS** or **/SEC** options.
+
+### /SCP
+
+_Applies to: CAS, Primary_
+
+Optional. Specify the FQDN of the server to host the service connection point. This server may be the same as the site server.
+
+Starting in version 2111<!--11104731-->, this option verifies that the specified computer meets the requirements for the service connection point site system role. You can use this option alone or with the **/PRI** or **/CAS** options.
 
 ### /SDK
 

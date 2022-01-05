@@ -2,7 +2,7 @@
 title: Create Windows applications
 titleSuffix: Configuration Manager
 description: Learn more information about creating and deploying Windows applications in Configuration Manager.
-ms.date: 10/01/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -122,6 +122,18 @@ Starting in version 2006, use the following Windows PowerShell cmdlets to add an
 
 - [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype)
 - [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype)
+
+> [!NOTE]
+> Consider the following scenario:<!--10422235-->
+>
+> - An application has a task sequence deployment type.
+> - It's deployed as available.
+> - A device has maintenance windows defined.
+> - A user on the device runs the deployment in Software Center outside of a maintenance window.
+>
+> Configuration Manager honors the user's intent to install the application, even though there's no available maintenance window. In version 2107 and earlier, when the task sequence ran, the **Restart Computer** step would fail because of the maintenance window.
+>
+> Starting in version 2111, this step now ignores maintenance windows only when the task sequence is run as an app deployment type.
 
 ### Prerequisites for a task sequence deployment type
 

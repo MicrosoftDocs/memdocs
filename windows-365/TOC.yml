@@ -5,4 +5,6 @@ items:
   href: overview.md
 - name: Compare Windows 365 Business and Enterprise 
   href: business-enterprise-comparison.md
+- name: Export Cloud PC names 
+  href: export-cloud-pc-names.md
   

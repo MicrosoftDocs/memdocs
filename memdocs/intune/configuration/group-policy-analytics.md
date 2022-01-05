@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/23/2021
+ms.date: 11/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview
@@ -64,13 +66,17 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. Select **Import**, and then select your saved XML file. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
-    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB If a single GPO is larger than 4 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
+    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB. If a single GPO is larger than 4 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
 
 3. After the analysis runs, the GPO you imported is listed with the following information:
 
     - **Group Policy name**: The name is automatically generated using information in the GPO.
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
-    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.
+    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.  
+
+        > [!NOTE]
+        > Whenever the Microsoft Intune product team makes changes to the mapping in Intune, the percentage under MDM Support automatically updates to reflect those changes.   
+
     - **Unknown Settings**: Shows GPO settings that fall outside of the list of the Configuration Service Providers (CSPs) that this tool can parse.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
@@ -79,7 +85,7 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
 
-4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
+4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:  
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
     - **Group Policy Setting Category**: Shows the setting category for ADMX settings, such as Internet Explorer and Microsoft Edge. Not all settings have a setting category.
@@ -103,7 +109,7 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
-## Supported CSPs
+## Supported CSPs and Group Policies
 
 Group Policy analytics can parse the following CSPs:
 
@@ -112,8 +118,9 @@ Group Policy analytics can parse the following CSPs:
 - [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
 - [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
+- [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11)#group-policy-preferences-1)
 
-If your imported GPO has settings that fall outside of the above supported CSPs, they may be included the **Unknown Settings** column to acknowledge that were identified in your GPO.
+If your imported GPO has settings that aren't in the supported CSPs and Group Policies, then the settings may be listed in the **Unknown Settings** column. This behavior means the settings were identified in your GPO.
 
 ### Known Issues
 

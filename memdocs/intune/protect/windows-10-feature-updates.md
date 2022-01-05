@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 12/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Feature updates for Windows 10 and later policy in Intune
@@ -50,6 +51,8 @@ When a device receives a policy for Feature updates:
   >   For example, for Windows version 2004, open [Windows release information](/windows/release-information/), and then from the left-hand pane, select *Version 2004* and then *Known issues and notifications*. The [resultant page](/windows/release-information/status-windows-10-2004) details known issues for that Windows version that might result in safeguard hold.
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
+
+- You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
 
 ## Prerequisites
 
@@ -99,7 +102,17 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
-  To prevent this initial delay from impacting your co-managed devices, configure a [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md) policy and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows feature update report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
+  To prevent this initial delay from impacting your co-managed devices:
+  
+  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  2. Go to **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
+  3. For **Deployment settings**, enter a meaningful name and a description for the policy.  Then, Specify the feature update you want devices to be running.  
+  4. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you’ve selected, or a newer version, won’t be offered the update.
+
+     Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** Tab > **Feature Updates report**. Select the policy you created and then generate the report.
+
+  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 and later feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report).
+  6. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
@@ -122,7 +135,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 2. Select **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
 
-3. Under **Deployment settings**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**. Only versions of Windows that remain in support are available to select.
+3. Under **Deployment settings**:
+
+   - Specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**. Only versions of Windows that remain in support are available to select.
+
+   - Configure **Rollout options** to manage when Windows Updates makes the update available to devices that receive this policy. For information about using these options, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
 
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 

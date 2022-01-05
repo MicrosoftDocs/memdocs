@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/30/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -23,8 +23,10 @@ ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=macOS;intune-azure
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure
+ms.collection:
+- M365-identity-device-management
+- macOS
 ---
 
 # Use shell scripts on macOS devices in Intune

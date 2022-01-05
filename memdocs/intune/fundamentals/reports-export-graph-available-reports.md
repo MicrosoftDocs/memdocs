@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 12/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -53,6 +53,7 @@ The following table contains the possible values for the `reportName` parameter.
 |         DetectedAppsAggregate  |            Detected   Apps report        |
 |         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
 |         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
+|         DiscoveredAppsRawData  |            Under **Apps** > **Monitor** > **Discoverd apps** > **Export**         |
 |         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
 |         UnhealthyDefenderAgents  |            Under   **Endpoint Security** > **Antivirus** > **Win10 Unhealthy   Endpoints**        |
 |         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |
@@ -397,6 +398,28 @@ You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's outp
 - `RecommendedAction` 
 - `WindowsUpdateVersion` 
 
+## DiscoveredAppsRawData report
+
+The following table contains the possible output when calling the `DiscoveredAppsRawData` report:
+
+| Available   properties |
+|-|
+| ApplicationKey |
+| ApplicationName |
+| ApplicationPublisher |
+| ApplicationShortVersion |
+| ApplicationSize |
+| ApplicationVersion |
+| DeviceId |
+| DeviceName |
+| ImeiNumber |
+| OSDescription |
+| OSVersion |
+| Platform |
+| UserId |
+| EmailAddress |
+| UserName |
+
 ## FeatureUpdateDeviceState report
 
 The following table contains the possible output when calling the `FeatureUpdateDeviceState` report:
@@ -642,6 +665,9 @@ The following table contains the possible output when calling the `DevicesWithIn
 | ManagementAgents  | ManagementAgents  |
 | CertExpirationDate  | CertExpirationDate  |
 | IsManaged  | IsManaged  |
+| SystemManagementBIOSVersion  | SystemManagementBIOSVersion  |
+| TPMManufacturerId  | TPMManufacturerId  |
+| TPMManufacturerVersion  | TPMManufacturerVersion  |
 
 You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
 - `CreatedDate`

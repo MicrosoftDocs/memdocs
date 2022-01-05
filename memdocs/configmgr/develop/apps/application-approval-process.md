@@ -10,7 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: null
-ms.collection: M365-identity-device-management
+ms.collection: openauth
 ---
 
 # Application approval process

@@ -5,13 +5,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 01/04/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 
 # optional metadata
 
@@ -23,12 +21,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Configure infrastructure to support SCEP with Intune
 
-Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](certificates-configure.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices. The [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md) is required to use SCEP certificate profiles with Intune when you also use an Active Directory Certificate Services Certification Authority, also called a Microsoft CA. The connector isn't required when using [Third-party Certification Authorities](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
+Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](certificates-configure.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices.
+
+The [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md) is required to use SCEP certificate profiles with Intune when you also use an Active Directory Certificate Services Certification Authority, also called a *Microsoft CA*. The connector isn't supported on the same server as your issuing Certification Authority (CA). The connector isn't required when using [Third-party Certification Authorities](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
 
 The information in this article can help you configure your infrastructure to support SCEP when using Active Directory Certificate Services. After your infrastructure is configured, you can [create and deploy SCEP certificate profiles](certificates-profile-scep.md) with Intune.
 
@@ -49,7 +51,7 @@ Before you continue, ensure you've [created and deployed a *trusted certificate*
 
 To support SCEP, the following on-premises infrastructure must run on servers that are domain-joined to your Active Directory, with the exception of the Web Application Proxy Server.
 
-- **Certificate Connector for Microsoft Intune** – The Certificate Connector for Microsoft Intune is required to use SCEP certificate profiles with Intune when you use a Microsoft CA.
+- **Certificate Connector for Microsoft Intune** – The Certificate Connector for Microsoft Intune is required to use SCEP certificate profiles with Intune when you use a Microsoft CA. It installs on the server that also runs the NDES server role. However, the connector isn't supported on the same server as your issuing Certification Authority (CA).
 
   For information about the certificate connector, see:
 
@@ -67,10 +69,10 @@ To support SCEP, the following on-premises infrastructure must run on servers th
 - **NDES server role** – To support using the Certificate Connector for Microsoft Intune with SCEP, you must configure the Windows Server that will host the certificate connector with the Network Device Enrollment Service (NDES) server role. The connector supports installation on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
 
   - The server that hosts NDES and the connector must be domain-joined and in the same forest as your Enterprise CA.
-  - We recommend you don’t use NDES that's installed on the server that hosts the Enterprise CA. While use of NDES that's installed on an Enterprise CA is supported, this configuration represents a security risk when the CA services internet requests.  
+  - Do not use NDES that's installed on the server that hosts the Enterprise CA. This configuration represents a security risk when the CA services internet requests, and installation of the connector isn't supported on the same server as your issuing Certification Authority (CA).
   - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) and the Microsoft Intune Connector.
 
-  To learn more about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
+  To learn more about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)). To learn how to configure high availability for NDES, see [High Availability](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso-cert#high-availability).
 
 #### Support for NDES on the internet
 
@@ -234,12 +236,17 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
 ### Create the client certificate template
 
-The  Certificate Connector for Microsoft Intune requires a certificate with the *Client Authentication* Enhanced Key Usage and Subject name equal to the FQDN of the machine where the connector is installed. A template with the following properties is required:
+> [!NOTE]
+>The following certificate is not used with the Certificate Connector for Microsoft Intune. This information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
+
+The Microsoft Intune Connector requires a certificate with the *Client Authentication* Enhanced Key Usage and Subject name equal to the FQDN of the machine where the connector is installed. A template with the following properties is required:
 
 - **Extensions** > **Application Policies** must contain **Client Authentication**
 - **Subject name** > **Supply in the request**.
 
 If you already have a template that includes these properties, you can reuse it, otherwise create a new template by either duplicating an existing one or creating a custom template.
+
+
 
 ### Create the server certificate template
 

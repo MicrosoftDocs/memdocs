@@ -7,12 +7,11 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 11/09/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.reviewer: aanavath
 
 # optional metadata
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 
@@ -71,26 +72,15 @@ For devices that run Android, you can use Intune policy to modify the configurat
 ## Prerequisites
 
 **Subscriptions**:  
-To use Microsoft Defender for Endpoint with Intune, you must have the following subscriptions: 
+To use Microsoft Defender for Endpoint with Intune, you must have the following subscriptions:
 
 - **Microsoft Defender for Endpoint** - This subscription provides you access to the Microsoft Defender Security Center (ATP portal).  
 
-  Common options that include a Microsoft Defender for Endpoint license:
-  - Microsoft 365 E5
-  - Windows 10/11 Enterprise E5 (*This license is included with Microsoft 365 E5*)
-
-  For more information, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
+  For Defender for Endpoint licensing options, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 
 - **Microsoft Intune** – This subscription provides access to Intune and the Microsoft Endpoint Manager admin center.
 
-  Common options that include a Microsoft Intune license:
-  - Microsoft 365 Business Premium
-  - Microsoft 365 E3
-  - Microsoft 365 E5
-  - Enterprise Mobility + Security E3
-  - Enterprise Mobility + Security E5
-
-  For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md).
+  For Intune licensing options, see [Microsoft Intune licensing](../fundamentals/licenses.md).
 
 **Devices managed with Intune**:  
 The following platforms are supported for Intune with Microsoft Defender for Endpoint:

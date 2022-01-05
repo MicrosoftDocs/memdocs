@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,8 +25,11 @@ ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=macOS;intune-azure
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure
+ms.collection:
+- M365-identity-device-management
+- macOS
+- highpri
 ---
 
 # How to add macOS line-of-business (LOB) apps to Microsoft Intune

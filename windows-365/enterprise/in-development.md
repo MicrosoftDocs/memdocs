@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/05/2021
+ms.date: 12/13/2021
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -43,7 +43,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- Common categories:  
 ## App management
 ## Device configuration
-## Device enrollment
+## Device provisioning
 ## Device management
 ## Intune apps
 ## Monitor and troubleshoot
@@ -71,20 +71,18 @@ Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These de
 - Don’t need their own Azure infrastructure
 - Don’t need to create an on-premises network connection.
 
-### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
-
-New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
-
 ### Operating system end of support status for Cloud PCs<!--36852572 -->
 
 The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
 
+### Configure installed language and region for provisioning Cloud PCs<!--37095808-->
+
+When creating a provisioning policy, you’ll be able to configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States).
 <!-- ***********************************************-->
 <!--## Provisioning-->
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->
-
 
 ## Next steps
 

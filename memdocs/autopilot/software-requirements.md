@@ -12,8 +12,10 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 12/16/2020
-ms.collection: M365-modern-desktop
+ms.date: 11/12/2021
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: conceptual
 ms.custom: 
 - CI 116757
@@ -48,14 +50,13 @@ The following editions are supported: Pro, Pro Education, Pro for Workstations, 
 
 ### Windows 10
 
-- A [supported version](/windows/release-health/) of Windows 10 Semi-Annual Channel is required. Windows 10 Enterprise 2019 long-term servicing channel (LTSC) is also supported.
+- A [supported version](/windows/release-health/) of Windows 10 Semi-Annual Channel or Windows 10 General Availability Channel is required. 
 - The following editions are supported:
   - Windows 10 Pro
   - Windows 10 Pro Education
   - Windows 10 Pro for Workstations
   - Windows 10 Enterprise
   - Windows 10 Education
-  - Windows 10 Enterprise 2019 LTSC
 
 > [!NOTE]
 > Procedures for deploying Windows Autopilot might refer to specific products and versions. The inclusion of these products in this content doesn't imply an extension of support for a version that is beyond its support lifecycle. Windows Autopilot does not support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](/lifecycle/).

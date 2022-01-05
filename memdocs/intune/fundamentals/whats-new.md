@@ -2,17 +2,16 @@
 # required metadata
 title: What's new in Microsoft Intune
 titleSuffix:
-description: Find out what's new in the Intune Azure portal
+description: Find out what's new in Microsoft Intune
 keywords:
-author: dougeby
-ms.author: dougeby
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 11/05/2021
-ms.topic: reference
+ms.date: 12/17/2021
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 
 # optional metadata
@@ -25,12 +24,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # What's new in Microsoft Intune
 
-Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). You can also find [important notices](#notices), [past releases](whats-new-archive.md), and information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
+Learn what's new each week in Microsoft Intune. You can also find [important notices](#notices), [past releases](whats-new-archive.md), and information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
 
 > [!Note]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to three days to rollout and will be in the following order:
@@ -44,7 +45,8 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 >
 > Check the [In development page](in-development.md) for a list of upcoming features in a release.
 
-**RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
+You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+<!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
 <!-- Common categories:
 ### App management
@@ -58,7 +60,353 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 -->
 
+## Week of December 13, 2021 (Service release 2112)
+
+### Device management
+
+#### Launch Remote help from within the admin center<!-- 12773983 -->
+You can now [launch remote help from within the Microsoft Endpoint Manager admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New remote help session**, which is available from the remote actions bar across the top of the devices view. 
+
+#### Endpoint analytics filtering <!--7207888 -->
+You can now [add filters](../../analytics/scores.md#filter-reports) to the tables in [Endpoint analytics](../../analytics/overview.md) reports. Using filters enables you to discover trends in your environment or spot potential issues.  
+
+### Use filters to assign Endpoint analytics proactive remediations scripts in admin center - public preview<!-- 7566953 -->
+
+In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policy:
+
+* [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)   
+
+For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](../fundamentals/filters.md
+).  
+
+Applies to:
+
+- Windows 10 and newer
+
+### Device configuration
+
+#### New option to see the number of profiles with an error or conflict in device configuration profiles<!-- 9142810 -->
+In the Endpoint Manager admin center, there's a new "X policies with error or conflict" option. When you select this option, you automatically go to the **Devices** > **Monitor** > **Assignment Failures** report. This report helps you troubleshoot errors and conflicts.
+
+This new option is available in the following locations in the Endpoint Manager admin center:
+- Home page
+- Dashboard
+
+For more information, see [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md) and [Assignment failures report](reports.md#assignment-failures-report-operational).
+
+Applies to:
+- Windows 10 and newer
+
+#### New Timeout and Block iCloud Private Relay settings for iOS/iPadOS and macOS devices<!-- 10370284 -->
+On iOS/iPadOS and macOS devices, you can create a device restrictions policy that manages features on the device (**Devices** > **Configuration Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Device restrictions**).
+
+There are new settings:
+- iOS/iPadOS: 
+  - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site).
+- macOS
+  - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site).
+  - **Timeout**: Users can unlock their devices using a Touch ID, such as a fingerprint. Use this setting to require users to enter their password after a period of inactivity. The default inactivity period is is 48 hours. After 48 hours of inactivity, the device prompts for the password, instead of Touch ID.
+
+Applies to:
+- iOS/iPadOS 15 and newer
+- macOS 12 and newer
+
+#### New device restrictions settings for Android Enterprise corporate-owned devices with a work profile<!-- 10982232 -->
+On Android Enterprise devices, you can configure settings that control features on devices (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile type > **General**).
+
+For Android Enterprise corporate-owned devices with a work profile, there are new settings:
+- Search work contacts and display work contact caller-id in personal profile
+- Copy and paste between work and personal profiles
+- Data sharing between work and personal profiles
+
+For more information on the settings you can currently configure, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android Enterprise corporate-owned work profile (COPE)
+
+#### Settings Catalog is supported on U.S. Government GCC High and DoD<!-- 12389409 -->
+Settings Catalog is available and supported on U.S. Government GCC High and DoD.
+
+For more information on Settings Catalog, and what it is, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
+- Windows 10 and newer
+
+#### Enter the certificate common name in Wi-Fi profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile devices<!-- 12439458 -->
+
+On Android Enterprise devices, you can create a Wi-Fi profile that configures enterprise Wi-Fi settings (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
+
+When you select **Enterprise**, there's a new **Radius server name** setting. This setting is the DNS name used in the certificate presented by the Radius Server during client authentication to the Wi-Fi access point. For example, enter `Contoso.com`, `uk.contoso.com`, or `jp.contoso.com`.
+
+If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then you can enter only the suffix. For example, you can enter `contoso.com`.
+
+When you enter this value, user devices can bypass the dynamic trust dialog that's sometimes shown when connecting to the Wi-Fi network.
+
+**What you need to know**:
+- New Wi-Fi profiles targeting Android 11 or later may require this setting to be configured. Otherwise, the devices may not connect to your Wi-Fi network.
+
+For more information on the settings you can currently configure, see [Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile Wi-Fi settings](../configuration/wi-fi-settings-android-enterprise.md#fully-managed-dedicated-and-corporate-owned-work-profile).
+
+Applies to:
+- Android Enterprise corporate-owned work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise dedicated devices (COSU)
+
+#### New Administrative Templates settings for Microsoft Edge 96, 97, and Microsoft Edge updater on Windows devices<!-- 12442597 -->
+In Intune, you can use Administrative Templates to configure Microsoft Edge settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative Templates** for profile type).
+
+There are new Administrative Templates settings for Microsoft Edge 96, 97, and the Microsoft  Edge updater, including **Target Channel override** support. Use **Target Channel override** so users get the **Extended Stable** release cycle option, which can be set using Group Policy or through Intune.
+
+For related information, see:
+- [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md)
+- [Overview of the Microsoft Edge channels](/deployedge/microsoft-edge-channels)
+- [Microsoft Edge Browser Policy Documentation](/deployedge/microsoft-edge-policies)
+
+Applies to:
+- Windows 10 and newer
+- Microsoft Edge
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 12425933 -->
+The following protected app is now available for Microsoft Intune:
+
+- Groupdolists by Centrallo LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).  
+
+#### BlackBerry – New mobile threat defense partner<!-- 7822722 -->
+You can now use [BlackBerry Protect Mobile (powered by Cylance AI)](../protect/blackberry-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By connecting the BlackBerry Protect Mobile MTD connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment.
+
+For more information, see: 
+- [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)  
+- [BlackBerry UES documentation](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues) 
+
+## Week of December 6, 2021  
+
+### Device enrollment
+
+#### Apply device type filters to Windows and Apple enrollment restriction policies (preview)<!-- 9284419 -->  
+Use the new assignment filters in **Enrollment Restrictions** to include or exclude devices based on device type. For example, you can allow personal devices, while also blocking devices running Windows 10 Home, by applying the **operatingsystemSKU** assignment filter. Filters are currently in public preview and can be applied to Windows, macOS, and iOS enrollment policies, with Android support coming at a later date. Enabling the filters public preview in your tenant also enables a new setup experience for enrollment restrictions. For more information about how to create filters, see [Create a filter](../fundamentals/filters.md). For more information about using filters with enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md). 
+
+#### Use filters on Windows Enrollment Status Page profile assignments<!-- 7423484 -->
+Filters allows you to include or exclude devices in policy or app assignments based on different device properties. When you create an Enrollment Status Page (ESP) profile, you'll be able to use filters when assigning the profile. The **All users** and **All devices** assignment options will also be available. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Enroll devices** > **Enrollment Status Page** > **Create**. For more information about filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md). For more information about ESP profiles, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md). 
+
+### App management
+
+#### Additional Session PIN restrictions available for the Microsoft Managed Home Screen app<!-- 9843535 -->
+The Managed Home Screen app for Android Enterprise now has the option to enforce additional restrictions on user's Session PINs. Specifically, Managed Home Screen now offers the following: 
+- The ability to define a minimum length for Session PIN.
+- The ability to define a maximum number of tries a user has to successfully enter their Session PIN before getting logged out from Managed Home Screen.
+- The ability to define complexity values that restrict users from creating PINs with repeating (444) or ordered (123, 321, 246) patterns.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+### Monitor and troubleshoot  
+
+#### New event viewer for Windows 10 diagnostics <!-- 10741116 -->
+We've added a new event viewer to Windows device diagnostics called *Microsoft-Windows-Windows Firewall with Advanced Security/Firewall*. The event viewer can assist you in troubleshooting issues with the firewall. For more information about Windows device diagnostics, see [Collect diagnostics from a Windows device](../remote-actions/collect-diagnostics.md).   
+
+#### Device compliance status in Company Portal website<!-- 8782968 -->
+End users can more easily see the compliance status of their devices from the Company Portal website. End users can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+## Week of November 22, 2021  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Monitor and troubleshoot
+
+#### Remote help app is available as a public preview<!-- 9843480 -->
+
+As a public preview, you can use of the remote help app with your Intune tenant. With remote help, users who authenticate to your Azure Active directly can remotely assist others by connecting a remote help session between devices.
+
+With permissions in remote help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting. The capabilities of remote help include:
+
+- **Enable remote help for your tenant** –If you choose to turn on remote help, its use is enabled tenant-wide.
+- **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
+- **Use remote help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
+- **Compliance Warnings** - Before connecting to device, a helper will see a non-compliance warning about that device if it’s not compliant to its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access and what the actions they can take while providing assistance.
+- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the UAC prompt on the sharer's machine to enter credentials.
+- **Monitor active remote help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
+
+This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use remote help](../remote-actions/remote-help.md).
+
+## Week of November 15, 2021 (Service release 2111)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management  
+
+#### Enable app update priority for Managed Google Play apps<!-- 7810180 -->
+You can set the update priority of Managed Google Play apps on dedicated, fully managed, and corporate-owned with a work profile Android Enterprise devices. Select **High Priority** to update an app as soon as the developer has published the update, regardless of charge status, Wi-Fi capability, or end user activity on the device. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
+
+#### Clear app data between sessions for Android Enterprise dedicated devices enrolled with shared device mode (public preview)<!-- 8663319 -->
+Using Intune, you can choose to clear app data for applications that have not integrated with Shared device mode to ensure user privacy between sign-in sessions. Users will be required to initiate a sign-out from an application that has integrated with AAD's Shared device mode in order for IT-specified apps to have their data cleared. This functionality will be available for Android Enterprise dedicated devices enrolled with shared device mode on Android 9 or later.
+
+#### Export underlying discovered apps list data<!-- 9370255 -->
+In addition to exporting the summarized discovered apps list data, you can export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the additional new experience also provides the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data is a list of every device and each app discovered for that device. This functionality has been added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+
+#### Filter improvements when displaying platform-specific app lists<!-- 10994275 -->
+Filters have been improved when displaying platform-specific app lists in the Microsoft Endpoint Manager admin center. Previously, when navigating to a platform-specific app list, you could not use the **App type** filter on the list. With this change, you  can apply filters (including the **App Type** and **Assignment status** filters) on the platform-specific list of apps. For related information, see [Intune reports](../fundamentals/reports.md).
+
+#### Newly available protected apps for Intune<!-- 11030094 -->
+The following protected app is now available for Microsoft Intune:
+- PenPoint by Pen-Link, Ltd.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+#### New RBAC permission for Win32 app supersedence and dependency relationships<!-- 11126374 -->
+A new Microsoft Endpoint Manager permission has been added to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, MEM admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Endpoint Manager admin center. To find this permission in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**. This permission has been added to the following built-in roles:
+- Application Manager
+- School administrator
+
+For related information, see [Create a custom role in Intune](..\fundamentals\create-custom-role.md).
+
+#### Non-applicable status entries are no longer shown in the **Device Install Status** report<!-- 12419387 -->
+Based on a selected app, the **Device Install Status** report provides a list of devices and status information for the selected app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. If the device's platform differs from the application's platform, rather then showing **Not Applicable** for the **Status details** of the entry, the entry will no longer be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.  To find this report, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *Select an app* > **Device Install status**. For related information, see [Device Install Status report for apps (Operational)](../fundamentals/reports.md#device-install-status-report-for-apps-operational).
+
+#### New ADMX settings for Edge 95 and Edge updater<!-- 12426698 -->
+New ADMX settings for Edge 95 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Platform** > **Windows 10 and later** and **Profile** > **Templates** > **Administrative Templates**. For related information, see [Overview of the Microsoft Edge channels](/deployedge/microsoft-edge-channels), [Microsoft Edge Browser Policy Documentation](/deployedge/microsoft-edge-policies), and [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md).  
+
+#### New privacy consent screen during Company Portal installation <!-- 6600502 -->  
+
+We've added a new privacy consent screen to Company Portal for Android to meet privacy requirements for certain app stores, such as those in China. People installing Company Portal for the first time from those stores will see the new screen during installation. The screen explains what information Microsoft collects and how it's used. A person must agree to the terms before they can use the app. Users who installed Company Portal prior to this release will not see the new screen.  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Endpoint analytics per device scoring<!--8462182 -->
+ [Per device scores](../../analytics/scores.md#bkmk_per-device) in [Endpoint analytics](../../analytics/overview.md) are now out of preview and generally available. Per device scores help you identify devices that could be impacting user experience. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk.
+
+#### Safeguard holds are now visible in the Feature update failures report<!-- 10948779 -->
+When a device is blocked form installing a Windows update due to a [safeguard hold](/windows/deployment/update/safeguard-holds), you’ll now be able to view details about that hold in [Feature update failures report](../protect/windows-update-compliance-reports.md#use-the-feature-update-failures-operational-report) in the Microsoft Endpoint Manager admin center.
+
+A device with a safeguard hold appears as a device with an error in the report. When you view details for such a device, the *Alert Message* column displays **Safeguard Hold**, and the *Deployment Error Code* column displays the ID of the safeguard hold.
+
+Microsoft occasionally places safeguard holds to block installation of an update on a device when something detected on that device is known to result in a poor post-update experience. For example, software or drivers are common reasons to place a safeguard hold. The hold remains in place until the underlying issue is resolved, and the update is safe to install.
+
+To learn more about active safeguard holds and expectations for their resolution, go to the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](https://aka.ms/WindowsReleaseHealth).  
+
+#### Improvements for managing Windows Updates for pre-release builds<!-- 9231846 -->
+We've improved the experience of using [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) to manage  Windows updates for pre-release builds. The improvements include the following: 
+- We've added **Enable pre-release builds** as a new control in on the *Update ring settings* page for update rings. Use this setting to configure assigned devices to update to a pre-release build. The list of pre-release builds you can select include:  
+  - **Beta Channel**
+  - **Dev Channel**
+  - **Windows Insider - Release Preview**
+  For more information about pre-release builds, see the [Windows Insider](https://insider.windows.com/understand-flighting) website.
+- Devices assigned *Update rings for Windows 10 and later* policies will no longer have the *ManagePreviewBuilds* setting changed during Autopilot. When this setting changed during Autopilot it forced an additional device reboot.
+
+#### Use Update Rings for Windows 10 and later to upgrade to Windows 11<!-- 10753015 -->
+We’ve added a [new setting](../protect/windows-update-settings.md#update-settings) to *Update Rings for Windows 10 and later* that you can use to upgrade eligible devices from Windows 10 to Windows 11, when you are ready to do so.
+- **Upgrade Windows 10 devices to Latest Windows 11 release**
+By default, this setting is set to No. When set to *Yes*, eligible Windows 10 devices that receive this policy will update to the latest build of Windows 11.
+
+When set to *Yes*, Intune displays an information box that confirms that by deploying this setting you are accepting the Microsoft License Terms for devices that upgrade. The information box also contains a link to the [Microsoft License Terms]( https://go.microsoft.com/fwlink/?linkid=2171206).
+
+For more information about update rings, see [Update Rings for Windows 10 and later](../protect/windows-10-update-rings.md).
+
+#### Disable Activation Lock remote device action for iOS/iPadOS has been removed from UI<!-- 10606548 -->
+The remote device action to *Disable Activation Lock* is no longer available in Intune. You can bypass Activation Lock as detailed at [Disable Activation Lock on Supervised iOS/iPadOS devices with Intune](../remote-actions/device-activation-lock-disable.md).
+
+This remote action is removed because the action to disable the [iOS/iPadOS Activation Lock](https://support.apple.com/en-us/HT201365) feature did not function as intended.
+
+#### Updates for Security Baselines<!-- 9549108,  10873848 -->
+We have a pair of updates for [security baselines​](../protect/security-baselines.md), which add the following settings:
+- **Security baseline for Windows 10 and later** (Applies to Windows 10 and Windows 11) 
+  The new baseline version is [November 2021](../protect/security-baseline-settings-mdm-all.md) and adds **Scan scripts that are used in Microsoft browsers** to the *Microsoft Defender* category. This baseline has no other changes.
+
+- **Windows 365 Security Baseline (Preview)**
+  The new baseline version is [Version 2110](../protect/security-baseline-settings-windows-365.md) and adds the following two settings, with no other changes:
+  - **Scan scripts that are used in Microsoft browsers** is added to the *Microsoft Defender* category.
+  - **Enable tamper protection to prevent Microsoft Defender being disabled** is added to *Windows Security*, which is a new category added with this baseline version.
+
+Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
+
+#### Use custom settings for Device Compliance for Windows 10/11 devices (public preview)<!-- 7536730 -->
+As a public preview, device compliance policy for Windows 10 and Windows 11 devices supports the addition of custom settings to a device compliance policy. Results from custom settings appear in the Microsoft Endpoint Manager admin center along with other compliance policy details.
+
+To use custom settings, you create and add the following to the admin center to power custom compliance settings:
+- **JSON file** – The JSON file details the custom settings and their compliance values. The JSON also includes information you provide to your users on how to remediate the settings when noncompliant.
+- **PowerShell script** – The PowerShell script will deploy to devices where it runs to determine the state of the settings defined in your JSON file, and reports them back to Intune.
+
+With the JSON and script ready, you can then create a standard compliance policy that includes your custom settings. The option to include custom settings is found in a new compliance settings category named *Custom Compliance*.
+
+To learn more, including examples for the .JSON and PowerShell script, see [Custom compliance settings](../protect/compliance-use-custom-settings.md).
+
+#### New scheduling options for Feature updates for Windows 10 and later<!-- 6286037 -->
+We’ve added a trio of *Rollout options* to support improved scheduling of when the updates from a policy for *Feature updates for Windows 10 and later* are made available for your devices to install. These new options include:
+- **Make update available as soon as possible** - There is no delay in making the update available, which has been the previous behavior.
+- **Make update available on a specific date** - With this option you then select the first day that this update will be offered by Windows Update to the devices that receive this policy.
+- **Make update available gradually** - With this option Windows Update divides the devices that receive this policy into a number of groups that are calculated based on a start group time, end group time, and days to wait between groups. Windows update then offers the update to those groups one at a time, until the last group is offered the update. This process helps distribute the availability of the update across the time you’ve configured and can reduce the impact to your network when compared to offering the update to all devices at the same time.
+
+For more information including details for gradual availability, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
+
+#### New details for Windows devices available in the Microsoft Endpoint Manager admin center<!-- 6208666 -->
+The following details for Windows 10 and Windows 11 devices are now collected and can be viewed on a devices details pane of the Microsoft Endpoint Manager admin center: 
+- System Management BIOS version
+- TPM Manufacturer version
+- TPM Manufacturer ID
+These details are also included when you *Export* the details from the *All devices* pane.  
+
+#### Settings for Shared iPad now generally available<!-- 10975827  -->  
+Four Shared iPad settings are now out of preview and generally available to use when creating an Apple enrollment profile These settings are applied during automated device enrollment (ADE).
+
+For iPadOS 14.5 and later in Shared iPad mode:  
+  - **Require Shared iPad temporary setting only**: Configures the device so that users only see the guest version of the sign-in experience, and must sign in as guest users. They can't sign in with a Managed Apple ID.
+  - **Maximum seconds of inactivity until temporary session logs out**: If there isn't any activity after the specified time, the temporary session automatically signs out.
+  - **Maximum seconds of inactivity until user session logs out**: If there isn't any activity after the specified time, the user session automatically signs out.  
+
+For iPadOS 13.0 and later in Shared iPad mode:  
+  - **Maximum seconds after screen lock before password is required for Shared iPad**: If the screen lock exceeds this amount of time, a device password will be required to unlock the device.
+
+For more information about setting up devices in Shared iPad mode, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+#### Duplicate a settings catalog profile<!-- 9666635 -->      
+Settings catalog profiles now support duplication. To create a copy of an existing profile, simply select **Duplicate**.  The copy contains the same setting configurations and scope tags as the original profile, but doesn't have any assignments attached to it. For more information about the settings catalog, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
+
+#### Work from anywhere report<!-- 7207657 -->
+The **Work from anywhere** report has replaced the **Recommended software** report in [Endpoint analytics](../../analytics/overview.md). The **Work from anywhere** report contains metrics for Windows, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### View BitLocker recovery keys for tenant attached devices<!-- 8509415 -->
+You can now [view the BitLocker recovery key for tenant-attached devices](../protect/encrypt-devices.md#view-details-for-recovery-keys) in the Microsoft Endpoint Manager admin center. The recovery keys continue to be stored on-premises for tenant-attached devices, but the visibility in the admin center is intended to assist your Helpdesk scenarios from within the admin center. 
+
+To view the keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related on-premises permissions in Configuration Manager of Collection Role, with the permission **Read BitLocker Recovery Key Permission**.
+
+Users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a device* > **Recovery keys**.
+
+This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](../../configmgr/hotfix/2107/11121541.md).
+
+#### BitLocker settings added to settings catalog<!-- 10956191 -->  
+We have added 9 [BitLocker settings that were previously only available in Group Policy (GP)](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md). The added settings include:  
+
+- **Provide the unique identifiers for your organization** 
+- **Enforce drive encryption type on fixed data drives** 
+- **Allow devices compliant with InstantGo or HSTI to opt out of preboot PIN** 
+- **Allow enhanced PINs for startup** 
+- **Disallow standard users from changing the PIN or password** 
+- **Enable use of BitLocker authentication requiring preboot keyboard input on slates** 
+- **Enforce drive encryption type on operating system drives** 
+- **Control use of BitLocker on removable drives**
+- **Enforce drive encryption type on removable data drives** 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### MDM support data to refresh automatically in Group Policy analytics tool<!-- 7852080 -->
+Now whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool automatically updates to reflect the changes. The automation is an improvement over the previous behavior, which required you to reimport your Group Policy object (GPO) to refresh the data. For more information about Group Policy analytics, see [Use Group Policy analytics](../configuration/group-policy-analytics.md#use-group-policy-analytics).  
+
 ## Week of November 8, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### App management
+
+#### Update Android Company Portal and Intune apps for custom notifications<!-- 12473860 -->
+We have made service side updates to custom notifications for Intune's November (2111) service release which require users to have updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) for the best user experience. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app. For related information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md#receive-a-custom-notification).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
@@ -759,7 +1107,7 @@ For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2
 
 #### Work from anywhere report<!-- 7207657  -->
 
-[Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the [Recommended software](../../analytics/recommended-software.md) report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
+[Endpoint analytics](../../analytics/overview.md) has a new report named **Work from anywhere**. The **Work from anywhere** report is an evolution of the **Recommended software** report. The new report contains metrics for Windows 10, cloud management, cloud identity, and cloud provisioning. For more information, see the [Work from anywhere report](../../analytics/work-from-anywhere.md) article.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Intune apps

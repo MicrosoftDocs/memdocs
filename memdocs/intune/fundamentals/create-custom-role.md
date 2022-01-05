@@ -72,6 +72,7 @@ The following permissions are available when creating custom roles.
  | Mobile apps/Update | Manage mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Delete | Delete mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also delete books purchased through the Apple Volume Purchase Program or delete eBook categories. You can delete iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Assign | Assign mobile applications or eBooks to Azure AD security groups. | 
+ | Mobile apps/Relate | Create relationships with other managed apps using Dependencies and Supersedence features. Without this permission, IT admins are not able to add App dependency or supercedence relationships when creating or editing Win32 apps. |
  | Terms and conditions/Create | Create new terms and conditions. | 
  | Terms and conditions/Read | View terms and conditions. | 
  | Terms and conditions/Update | Manage existing terms and conditions but not assignments. | 
@@ -141,10 +142,10 @@ The following permissions are available when creating custom roles.
  | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
  | Enrollment programs/Delete profile | Delete profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
  | Enrollment programs/Assign profile | Manage Windows Autopilot deployment profile assignment settings. | 
- | Enrollment programs/Create device | Import Apple devices for Apple Configurator. | 
+ | Enrollment programs/Create device | Import Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. | 
  | Enrollment programs/Read device | View Apple devices for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot devices. | 
  | Enrollment programs/Sync device | Initiate the Sync command for Windows Autopilot devices. | 
- | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School Manager, or Apple Configurator | 
+ | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. | 
  | Device enrollment managers/Read | View the list of device enrollment manager accounts. | 
  | Device enrollment managers/Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. | 
  | Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. | 

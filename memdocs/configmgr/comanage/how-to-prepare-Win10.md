@@ -10,6 +10,7 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # How to prepare internet-based devices for co-management

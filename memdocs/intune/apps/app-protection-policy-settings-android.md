@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,8 +25,11 @@ ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+- highpri
+ms.custom: intune-azure
 ---
 # Android app protection policy settings in Microsoft Intune
 This article describes the app protection policy settings for Android devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the portal.
@@ -54,7 +57,7 @@ There are three categories of policy settings: data protection settings, access 
 | <ul><b><ul><b>**Allow users to open data from selected services** | Select the application storage services that users can open data from. All other services are blocked. Selecting no services will prevent users from opening data.<br><br>Supported services:<ul><li>OneDrive for Business</li><li>SharePoint Online</li><li>Camera</li></ul>**Note:** Camera does not include Photos or Photo Gallery access.| **All selected**  |
 | **Restrict cut, copy and paste between other apps** | Specify when cut, copy, and paste actions can be used with this app. Choose from: <ul><li>**Blocked**:  Do not allow cut, copy, and paste actions between this app and any other app.</li><li>**Policy managed apps**: Allow cut, copy, and paste actions between this app and other policy-managed apps.</li><li>**Policy managed with paste in**: Allow cut or copy between this app and other policy-managed apps. Allow data from any app to be pasted into this app.</li><li>**Any app**: No restrictions for cut, copy, and paste to and from this app. | **Any app** |
 | <ul><b>**Cut and copy character limit for any app** | Specify the number of characters that may be cut or copied from org data and accounts.  This will allow sharing of the specified number of characters when it would be otherwise blocked by the "Restrict cut, copy, and paste with other apps" setting.<p>Default Value = 0<p>**Note**: Requires Intune Company Portal version 5.0.4364.0 or later.  | **0** |
-| **Screen capture and Google Assistant** | Select **Block** to block screen capture and the **Google Assistant** capabilities of the device when using this app. Choosing **Allow** will also blur the App-switcher preview image when using this app with a work or school account.| **Block** |
+| **Screen capture and Google Assistant** | Select **Block** to block screen capture and the **Google Assistant** capabilities of the device when using this app. Choosing **Block** will also blur the App-switcher preview image when using this app with a work or school account.| **Block** |
 | **Approved keyboards**  | Select *Require* and then specify a list of approved keyboards for this policy. <p>Users who aren't using an approved keyboard receive a prompt to download and install an approved keyboard before they can use the protected app. This setting requires the app to have the Intune SDK for Android version 6.2.0 or later. | **Not required** |
 | <ul><b>**Select keyboards to approve** | This option is available when you select *Require* for the previous option. Choose *Select* to manage the list of keyboards and input methods that can be used with apps protected by this policy. You can add additional keyboards to the list, and remove any of the default options. You must have at least one approved keyboard to save the setting. Over time, Microsoft may add additional keyboards to the list for new App Protection Policies, which will require administrators to review and update existing policies as needed.<p>To add a keyboard, specify: <ul><li>**Name**: A friendly name that that identifies the keyboard, and is visible to the user. </li><li>**Package ID**:  The Package ID of the app in the Google Play store. For example, if the URL for the app in the Play store is `https://play.google.com/store/details?id=com.contoskeyboard.android.prod`, then the Package ID is `com.contosokeyboard.android.prod`. This package ID is presented to the user as a simple link to download the keyboard from Google Play.</li></ul></p> <p>**Note:** A user assigned multiple App Protection Policies will be allowed to use only the approved keyboards common to all policies.</p> | |
 

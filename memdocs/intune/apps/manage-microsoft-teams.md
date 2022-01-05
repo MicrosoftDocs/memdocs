@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/15/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -24,8 +24,11 @@ ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=iOS/iPadOS;OS=Android;intune-azure
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
+- Android
 ---
 
 # Manage team collaboration access by using Teams for iOS and Android with Microsoft Intune

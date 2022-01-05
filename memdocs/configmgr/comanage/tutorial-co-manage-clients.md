@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
@@ -158,9 +159,13 @@ With hybrid Azure AD set-up and Configuration Manager client configurations in p
 
 When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
 
-### Enable co-management
+### Enable co-management for versions 2111 and later
 
-[!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
+[!INCLUDE [Enable Co-management starting in version 2111](includes/enable-co-management-2111.md)]
+
+### Enable co-management for versions 2107 and earlier
+
+[!INCLUDE [Enable Co-management in version 1906 through 2107](includes/enable-co-management-1906-2107.md)]
 
 ## Next steps
 

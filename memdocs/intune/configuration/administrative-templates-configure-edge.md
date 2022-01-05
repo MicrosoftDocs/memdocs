@@ -4,7 +4,7 @@ description: Add or create settings using ADMX administrative templates to confi
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 02/26/2021
+ms.date: 12/16/2021
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 
-ms.reviewer:
+ms.reviewer: mikedano
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
@@ -33,6 +33,9 @@ This article applies to:
 - Microsoft Edge version 77 and newer
 
   For Microsoft Edge version 45 and earlier, see [Microsoft Edge Browser device restrictions](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+
+> [!NOTE]
+> Additional ADMX settings for Edge 96 and Edge updater have been added to Administrative Templates. This includes support for "Target Channel override" which allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune.
 
 When you use Intune to manage and enforce policies, it's similar to using Active Directory group policy, or configuring local Group Policy Object (GPO) settings on user devices. But, Intune is 100% cloud.
 

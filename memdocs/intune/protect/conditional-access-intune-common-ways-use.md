@@ -13,8 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 
 # optional metadata
 
@@ -26,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started; seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # What are common ways to use Conditional Access with Intune?
@@ -59,6 +59,8 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 > 2. Go to the **Settings** page from the menu.
 > 3. In the **Enable Browser Access** section, tap the **ENABLE** button.
 > 4. Close and then restart the browser app.
+> 
+> This enables access in browser apps, but not to browser WebViews that open within apps.
 
 ## Applications available in Conditional Access for controlling Microsoft Intune
 When you are configuring conditional access in the Azure Active Directory portal, you have two applications available:

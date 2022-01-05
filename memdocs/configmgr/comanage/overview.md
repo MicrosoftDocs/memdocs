@@ -11,6 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What is co-management?
@@ -82,7 +83,7 @@ Co-management has these prerequisites in the following areas:
     > [!Note]  
     > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
 
-- At least one Intune license for you as the administrator to access the Intune portal.
+- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center.
 
     > [!Tip]
     > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message *An unanticipated error occurred*.<!-- MEMDocs#691 -->
@@ -112,14 +113,11 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 - [Set up Intune](/intune/setup-steps)  
 
-- [Enable automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Enable automatic enrollment](/intune/windows-enroll#enable-windows-automatic-enrollment)  
 
 ### Windows
 
-Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).
-
-> [!IMPORTANT]
-> Windows 10 mobile devices don't support co-management.
+Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
 
 ### Permissions and roles
 

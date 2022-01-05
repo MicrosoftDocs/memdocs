@@ -12,11 +12,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 06/01/2021
+ms.date: 11/12/2021
 ms.topic: article
 ms.collection: 
 - M365-modern-desktop
 - m365initiative-coredeploy
+- highpri
 ---
 
 # Overview of Windows Autopilot
@@ -61,7 +62,7 @@ Once deployed, you can manage Windows devices with:
 
 ## Requirements
 
-A [supported version](/windows/release-information/) of Windows 11 or Windows 10 semi-annual channel is required to use Windows Autopilot. Windows 10 Enterprise LTSC 2019 is also supported. For more information, see [Windows Autopilot software](software-requirements.md), [networking](networking-requirements.md), [configuration](configuration-requirements.md), and [licensing](licensing-requirements.md) requirements.
+A [supported version](/windows/release-information/) of Windows 11 or Windows 10 semi-annual channel is required to use Windows Autopilot. For more information, see [Windows Autopilot software](software-requirements.md), [networking](networking-requirements.md), [configuration](configuration-requirements.md), and [licensing](licensing-requirements.md) requirements.
 
 ## Summary
 

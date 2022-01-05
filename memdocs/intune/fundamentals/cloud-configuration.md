@@ -107,7 +107,7 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
 - [Set the MDM authority to Intune](mdm-authority-set.md). The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
 - Enable automatic enrollment for Windows 10 devices. For more information, see:
   - [Quickstart: Set up automatic enrollment for Windows 10 devices](../enrollment/quickstart-setup-auto-enrollment.md)
-  - [Enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+  - [Enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 
 - Sign in as the Intune Service Administrator, also known as the Intune Administrator. For more information on the roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 

@@ -51,7 +51,7 @@ Hardware requirements:
 If you'll be using Microsoft Teams on the Cloud PCs, the Windows device requirements increase to:
 
 - **CPU**: At least 2vCPU with Minimum 1.6 GHz or faster processor. For higher video/screen share resolution and frame rate, a four-core processor or better is recommended.
-- **RAM**: 1024 MB
+- **RAM**: 4096 MB
 - **Hard drive**: 3 GB or more
 - **.NET Framework version**: 4.6.1 or later
 - **Video**: DirectX 9 or later with WDDM 1.0 driver. Background video effects require Windows 10/11 or a processor with AVX2 instruction set. Also, Teams audio and video offloading on a Cloud PC benefits from a dedicated Graphics Processing Unit (GPU) within the device.
@@ -84,7 +84,7 @@ You can access Windows 365 Cloud PCs from your Linux OS devices by using:
 - Third-party clients to connect to Azure Virtual Desktop, including:
   - [Dell](https://www.delltechnologies.com/asset/en-us/products/thin-clients/technical-support/dell-thinos-9-for-microsoft-wvd.pdf)
   - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
-  - [IGEL](https://www.igel.com/igel-solution-family/windows-virtual-desktop/)
+  - [IGEL](https://www.igel.com/igel-solution-family/)
 
   Third-party Linux client solutions can't be managed by using Microsoft Endpoint Manager. The partner provides a separate management tool for Linux devices.
 

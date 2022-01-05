@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,8 +25,11 @@ ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Windows;intune-azure, seoapril2019
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure, seoapril2019
+ms.collection:
+- M365-identity-device-management
+- Windows
+- highpri
 ---
 
 # Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune

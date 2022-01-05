@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -110,6 +111,12 @@ UInt32 TriggerSchedule(
 
 ```powershell
 Invoke-CimMethod -Namespace 'root\CCM' -ClassName SMS_Client -MethodName TriggerSchedule -Arguments @{sScheduleID='{00000000-0000-0000-0000-000000000024}'}
+```
+### Example 3: Trigger Software Update Scan cache deletion and scan via Command Prompt using WMIC
+
+```batchfile
+%windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm\invagt path inventoryActionStatus where InventoryActionID="{00000000-0000-0000-0000-000000000113}" DELETE /NOINTERACTIVE
+%windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000113}" /NOINTERACTIVE
 ```
 
 ## See also

@@ -57,6 +57,15 @@ items:
       href: device-compliance-get-started.md    
     - name: Create a policy
       href: create-compliance-policy.md
+    - name: Custom compliance settings
+      href: compliance-use-custom-settings.md 
+      items:   
+      - name: JSON for custom settings
+        href: compliance-custom-json.md    
+      - name: PowerShell script for custom settings
+        href: compliance-custom-script.md    
+    - name: Location-based compliance
+      href: use-network-locations.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
@@ -195,6 +204,11 @@ items:
         - name: Better Mobile and Intune integration
           href: better-mobile-mtd-connector-integration.md
           displayName: sso
+      - name: Set up BlackBerry Protect Mobile 
+        href: blackberry-mobile-threat-defense-connector.md
+        items:
+        - name: BlackBerry and Intune integration
+          href: blackberry-mtd-connector-integration.md
       - name: Set up Check Point
         href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
         items:
@@ -289,6 +303,8 @@ items:
         href: windows-10-feature-updates.md
       - name: Expedite updates policy
         href: windows-10-expedite-updates.md
+      - name: Windows rollout options
+        href: windows-update-rollout-options.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
@@ -321,8 +337,6 @@ items:
       items:
       - name: Troubleshoot Exchange connectors
         href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
-      - name: Common problems 
-        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-problems
       - name: Common errors   
         href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
     - name: Troubleshoot BitLocker policies

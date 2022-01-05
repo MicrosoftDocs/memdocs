@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2021
+ms.date: 12/16/2021
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,8 +25,10 @@ ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+ms.custom: intune-azure
 ---
 
 # Quickstart: Create a password compliance policy for Android devices

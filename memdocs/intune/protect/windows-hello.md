@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -23,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: shpate
 ---
 
@@ -35,14 +36,13 @@ Hello for Business is an alternative sign-in method that uses Active Directory o
 
 Intune integrates with Hello for Business in two ways:
 
-- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutopPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
+- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutoPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
 - **Discrete groups**: For devices that have previously enrolled with Intune, use a device configuration [**Identity protection**](../protect/identity-protection-configure.md) profile to configure devices for Windows Hello for Business. Identity protection profiles can target assigned users or devices, and apply during check-in.
 
 In addition, Intune supports the following types of policy to manage some settings for Windows Hello for Business:
 
 - [**Security baselines**](../protect/security-baselines.md). The following baselines include settings for Windows Hello for Business:
   - [Microsoft Defender for Endpoint baseline settings](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
-  - [Windows MDM security baseline settings](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
 - Endpoint security [**Account protection**](../protect/endpoint-security-account-protection-policy.md) policy. View the [Account protection settings](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
 
 The remainder of this article focuses on creating a default Windows Hello for Business policy that targets your entire organization.
