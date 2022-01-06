@@ -477,6 +477,8 @@ When "block and enable user override" is selected, user can override admin desig
 These settings use the [NetworkProxy policy CSP](/windows/client-management/mdm/networkproxy-csp), which also lists the supported Windows editions.
 
 - **Automatically detect proxy settings**: **Block** disables devices from automatically detecting a proxy auto config (PAC) script. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might enable this feature, and devices try to find the path to a PAC script.
+> [!NOTE]
+> When setting 'Automatically detect proxy settings' to Block, the additional setting ProxySettingsPerUser is also set automatically to 0.  
 - **Use proxy script**: Choose **Allow** to enter a path to your PAC script to configure the proxy server. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not let you enter the URL to a PAC script.
   - **Setup script address URL**: Enter the URL of a PAC script you want to use to configure the proxy server.
 - **Use manual proxy server**: Choose **Allow** to manually enter the  name or IP address, and TCP port number of a proxy server. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not let you manually enter details of a proxy server.
