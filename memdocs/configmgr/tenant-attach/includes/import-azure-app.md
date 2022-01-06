@@ -5,7 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
-ms.date: 12/01/2021
+ms.date: 01/06/2022
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 
@@ -19,13 +19,18 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 - Azure AD tenant name
 - Azure AD tenant ID
 - Application name
-- Client ID
+- Client ID 
 - Secret key
 - Secret key expiry
-- App ID URI
+- App ID URI 
 
 > [!Important]
-> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
+> - The App ID URI must use one of the following formats:<!-- 10617402 -->
+>    - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+>    - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
+>
+>   For more information on creating an Azure AD app, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md).
+> - When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
 
 ### Azure AD application permissions and configuration
 
