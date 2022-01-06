@@ -13,7 +13,7 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 01/05/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -253,7 +253,7 @@ See the following examples.
     - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package that was created earlier.
 
      > [!IMPORTANT]
-     > TThe AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
+     > The AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
 
 
 17. In the **Apply Autopilot for existing devices config file** step, select the **Package** > **Browse**.
