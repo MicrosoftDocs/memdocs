@@ -108,7 +108,7 @@ There is no requirement to configure your Cloud PCs to make these connections. W
 
 For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](/azure/virtual-desktop/network-connectivity).
 
-Windows 365 Cloud PC's don't support third-party connection brokers. 
+Windows 365 Cloud PCs don't support third-party connection brokers. 
 
 <!-- ########################## -->
 ## Next steps
