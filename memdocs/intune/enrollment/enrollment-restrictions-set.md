@@ -282,7 +282,7 @@ Use the enrollment failures report to view enrollment failures for all users or 
 3. Select a row in the table for more details about the failure and recommended remediation steps.  
 
     > [!div class="mx-imgBorder"]
-    > ![Example image of the Device enrollment page, Enrollment failures report, showing the enrollment failure details for a selected row.](./media/enrollment-restrictions-set/enrollment-failure-report-details-2112.png)  
+    > ![Example image of the enrollment failures report, showing the enrollment failure details for a selected row.](./media/enrollment-restrictions-set/enrollment-failure-report-details-2112.png)  
 
 ### Troubleshooting + support page  
 Use the enrollment failures report on the Troubleshooting + support page to view enrollment failures for a select user. This report shows every failed enrollment attempt the user encountered along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method. You can also view other data about the user on this page, including all assignments, devices, and app protection statuses they're associated with.    
@@ -309,7 +309,7 @@ To access the device enrollment page:
 4. Review the report data. 
 
     > [!div class="mx-imgBorder"]
-    > ![Example image of the Device enrollment page, Enrollment failures report, showing the enrollment failure details for a selected row.](./media/enrollment-restrictions-set/enrollment-page-report-2112.png)  
+    > ![Example image of the Device enrollment page, showing a table of enrollment profiles.](./media/enrollment-restrictions-set/enrollment-page-report-2112.png)  
 
 >[!NOTE]
 >You must enable filters to view the device enrollment page. Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.
