@@ -176,7 +176,7 @@ Specifies the path defined by the [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) va
 
 ### <a name="SMSTSMediaType"></a> _SMSTSMediaType
 
-Specifies the type of media used to initiate the installation which includes:
+Specifies the type of media used to initiate the installation, which includes:
 
 - `BootMedia`: Boot Media
 - `FullMedia`: Full Media
