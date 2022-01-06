@@ -5,7 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
-ms.date: 01/05/2022
+ms.date: 01/06/2022
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 
@@ -25,7 +25,7 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 - App ID URI 
 
 > [!Important]
-> - The App ID URI must use one of the following recommended formats:<!-- 10617402 -->
+> - The App ID URI must use one of the following formats:<!-- 10617402 -->
 >    - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
 >    - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 >
