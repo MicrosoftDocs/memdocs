@@ -29,7 +29,7 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 >    - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
 >    - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 >
->   For more information on creating an Azure AD app, see [Configure Azure services](../core/servers/deploy/configure/azure-services-wizard.md).
+>   For more information on creating an Azure AD app, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md).
 > - When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
 
 ### Azure AD application permissions and configuration
