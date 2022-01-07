@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/17/2021
+ms.date: 01/07/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,7 +60,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of December 20, 2021 
+## Week of January 3, 2022 
 
 ### Device management  
 #### Preview filtered device list before deployment <!-- 7541587 -->
