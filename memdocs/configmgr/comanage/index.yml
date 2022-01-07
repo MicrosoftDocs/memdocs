@@ -29,10 +29,7 @@ landingContent:
             url: overview.md
           - text: Paths to co-management
             url: quickstart-paths.md
-      - linkListType: video
-        links:
-          - text: Conditional access with co-management
-            url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+
 
   # Card 
   - title: Get started
@@ -43,10 +40,6 @@ landingContent:
             url: tutorial-co-manage-clients.md
           - text: Enable co-management for new internet-based devices
             url: tutorial-co-manage-new-devices.md
-      - linkListType: video
-        links:
-          - text: Upgrade Windows for co-management
-            url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
 
   # Card
   - title: Top tasks
@@ -59,7 +52,4 @@ landingContent:
             url: how-to-monitor.md
           - text: Use the Company Portal app on co-managed devices
             url: company-portal.md
-      - linkListType: video
-        links:
-          - text: Windows Autopilot with co-management
-            url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player
+
