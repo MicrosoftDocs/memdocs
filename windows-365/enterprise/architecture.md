@@ -77,7 +77,7 @@ Azure AD provides user authentication and authorization for both the Windows 365
   - cookie persistence for the Windows 365 web portal
 - device compliance controls
 
-For more information on how to use Azure AD Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md). 
+For more information on how to use Azure AD Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md).
 
 ### Active Directory Domain Services
 
@@ -99,6 +99,8 @@ Windows 365 aligns with Microsoft 365 data protection policies and provisions. C
 - Secured for access using role-based access controls.
 - Replicated to multiple servers, storage endpoints, and data centers for redundancy.
 - Monitored for unauthorized access, excessive resource consumption, and availability.
+
+For more information about Windows 365 Cloud PC encryption, see [Data encryption in Windows 365](encryption.md).
 
 ## Azure Virtual Desktop connectivity
 
