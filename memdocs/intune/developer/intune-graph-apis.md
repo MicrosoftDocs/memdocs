@@ -8,7 +8,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 05/21/2020
+ms.date: 01/10/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -353,7 +353,7 @@ If this happens, verify that:
 This example shows how to use C# to retrieve a list of devices associated with your Intune account.
 
  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+ > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 1. Start Visual Studio and then create a new Visual C# Console app (.NET Framework) project.
 
@@ -499,7 +499,7 @@ function Get-AuthToken {
         $Latest_Version = ($AadModule | select version | Sort-Object)[-1]
         $aadModule = $AadModule | ? { $_.version -eq $Latest_Version.version }
         $adal = Join-Path $AadModule.ModuleBase "Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-        $adalforms = Join-Path $AadModule.ModuleBase "Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
+        $adalforms = Join-Path $AadModule.ModuleBase "Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
     }
 
     else {
