@@ -2,7 +2,7 @@
 title: Maintain Mac clients
 titleSuffix: Configuration Manager
 description: Maintenance tasks for Configuration Manager Mac clients.
-ms.date: 04/23/2017
+ms.date: 01/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -14,6 +14,9 @@ ms.localizationpriority: medium
 
 # Maintain Mac clients
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 Here are procedures for uninstalling Mac clients and for renewing their certificates.
 

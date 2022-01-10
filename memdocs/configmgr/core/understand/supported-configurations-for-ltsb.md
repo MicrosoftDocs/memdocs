@@ -92,47 +92,6 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 -   Windows 10 Enterprise 2015 LTSB (x86, x64)  
 -   Windows Embedded 8.1 Industry (x86, x64)    
 
-### Windows CE  
- You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  
-
-**Requirements and limitations:**  
-
--   The mobile device client requires 0.78 MB of storage space to install the client. A mobile device can require up to 256 KB of additional storage space to sign in.    
-
--   Features for these mobile devices vary by platform and client type. For information about the kind of management functions that Configuration Manager supports for a mobile device legacy client, see [Choose a device management solution for Configuration Manager](../plan-design/choose-a-device-management-solution.md).  
-
-**Supported operating systems:**  
-
--   Windows CE 7.0 (ARM and x86 processors)  
-
-**Supported languages include:**  
--   Chinese (simplified and traditional)    
--   English (US)    
--   French (France)    
--   German    
--   Italian    
--   Japanese  
--   Korean  
--   Portuguese (Brazil)  
--   Russian  
--   Spanish (Spain)  
-
-### Mac computers
-
-You can use the LTSB to manage macOS X computers with the Configuration Manager client for Mac.
-
-The Mac client installation package isn't with the Configuration Manager media. Download it from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=100850).
-
-Support for Mac operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
-
-For more information, see [How to deploy clients to Macs](../clients/deploy/deploy-clients-to-macs.md).
-
-#### Supported versions for macOS
-
-- macOS X 10.9 (Mavericks)
-- macOS X 10.10 (Yosemite)
-- macOS X 10.11 (El Capitan)
-
 ## Exchange Server connector
  The LTSB supports limited management of devices that connect to your Exchange Server instance, without installing client software. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
