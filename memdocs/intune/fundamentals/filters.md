@@ -144,8 +144,9 @@ To use filters, you must enable it in your organization tenant.
     > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
-6. Select **Next**.
-7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+6. Optionally, select **Preview devices** to generate a list of enrolled devices that match the filter criteria you defined.
+7. Select **Next**.
+8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
