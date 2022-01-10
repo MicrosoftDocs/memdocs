@@ -40,7 +40,7 @@ Organizations can use use Azure AD Conditional Access policies to ensure that us
 1. Follow the steps in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection). This policy allows Outlook for iOS and Android, but blocks OAuth and basic authentication capable Exchange ActiveSync clients from connecting to Exchange Online.
 
     > [!NOTE]
-    >  This policy ensures mobile users can access all Microsoft 365 endpoints using the applicable apps.
+    > This policy ensures mobile users can access all Microsoft 365 endpoints using the applicable apps.
 
    The above policy leverages the grant control [Require app protection policy](/azure/active-directory/active-directory-conditional-access-technical-reference), which ensures that an Intune App Protection Policy is applied to the associated account within Outlook for iOS and Android prior to granting access. If the user isn't assigned to an Intune App Protection Policy, isn't licensed for Intune, or the app isn't included in the Intune App Protection Policy, then the policy prevents the user from obtaining an access token and gaining access to messaging data.
 
