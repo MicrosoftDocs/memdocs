@@ -499,7 +499,7 @@ function Get-AuthToken {
         $Latest_Version = ($AadModule | select version | Sort-Object)[-1]
         $aadModule = $AadModule | ? { $_.version -eq $Latest_Version.version }
         $adal = Join-Path $AadModule.ModuleBase "Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-        $adalforms = Join-Path $AadModule.ModuleBase "Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
+        $adalforms = Join-Path $AadModule.ModuleBase "Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
     }
 
     else {
