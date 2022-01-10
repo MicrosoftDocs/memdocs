@@ -48,7 +48,9 @@ After you’ve deployed custom compliance settings and devices have reported bac
 
 ## Prerequisites
 
-- **Azure Active Directory (Azure AD) joined** – Devices that are not Azure AD joined are evaluated as not applicable.
+- **Azure Active Directory (Azure AD) joined**, including: 
+  - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AAD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
+– Devices that are not Azure AD joined or Hybrid Azure AD-joined are evaluated as not applicable.
 
 - **PowerShell discovery script** - This is a script that you create that runs on a device to discover the custom settings defined in your JSON file and returns the configuration value of those settings to Intune. You’ll upload your script to the Microsoft Endpoint Manager admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
