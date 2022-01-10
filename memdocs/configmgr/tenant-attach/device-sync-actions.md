@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
-ms.date: 12/01/2021
+ms.date: 12/21/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -37,6 +37,8 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
   - Device actions in the Microsoft Endpoint Manager admin center
 
 - At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center. <!--10254915-->
+
+- The [administration service](../develop/adminservice/overview.md) in Configuration Manager needs to be set up and functional. <!--1104776-->
 
 - The user accounts triggering device actions have the following prerequisites:
    - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
