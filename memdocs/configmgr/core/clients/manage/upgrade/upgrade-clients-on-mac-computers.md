@@ -71,29 +71,29 @@ Use this procedure to prevent the Computer Enrollment Wizard from running, and t
 
 1. Add the following script to the setting:  
 
-  ``` Shell
-  #!/bin/sh  
-  echo "Starting script\n"  
-  echo "Changing directory to MAC Client\n"  
-  cd /Users/Administrator/Desktop/'MAC Client'/  
-  echo "Import root cert\n"  
-  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
-  echo "Using openssl to convert pfx to a crt\n"  
-  /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
-  echo "Adding trust to root cert\n"  
-  /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
-  echo "Import client cert\n"  
-  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
-  echo "Executing ccmclient with MP\n"  
-  sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
-  echo "Editing Plist file\n"  
-  sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
-  echo "Changing directory to CCM\n"  
-  cd /Library/'Application Support'/Microsoft/CCM/  
-  echo "Making connection to the server\n"  
-  sudo open ./CCMClient  
-  echo "Ending Script\n"  
-  exit  
-  ```  
+    ``` Shell
+    #!/bin/sh  
+    echo "Starting script\n"  
+    echo "Changing directory to MAC Client\n"  
+    cd /Users/Administrator/Desktop/'MAC Client'/  
+    echo "Import root cert\n"  
+    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
+    echo "Using openssl to convert pfx to a crt\n"  
+    /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
+    echo "Adding trust to root cert\n"  
+    /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
+    echo "Import client cert\n"  
+    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
+    echo "Executing ccmclient with MP\n"  
+    sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
+    echo "Editing Plist file\n"  
+    sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
+    echo "Changing directory to CCM\n"  
+    cd /Library/'Application Support'/Microsoft/CCM/  
+    echo "Making connection to the server\n"  
+    sudo open ./CCMClient  
+    echo "Ending Script\n"  
+    exit  
+    ```  
 
 1. Add the configuration item to a [configuration baseline](../../../../compliance/deploy-use/create-configuration-baselines.md). Then [deploy the configuration baseline](../../../../compliance/deploy-use/deploy-configuration-baselines.md) to all Mac computers that install a certificate independently from Configuration Manager.  

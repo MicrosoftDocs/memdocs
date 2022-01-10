@@ -2,7 +2,7 @@
 title: Deprecated for clients
 titleSuffix: Configuration Manager
 description: Learn about the client operating systems that Configuration Manager no longer supports.
-ms.date: 01/04/2022
+ms.date: 01/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

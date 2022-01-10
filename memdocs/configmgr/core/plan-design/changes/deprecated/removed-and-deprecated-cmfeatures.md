@@ -5,7 +5,7 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.date: 01/04/2022
+ms.date: 01/10/2022
 author: mestew
 ms.author: mstewart
 manager: dougeby
