@@ -48,6 +48,8 @@ For a tutorial on this path, see [Tutorial: Enable co-management for existing Co
 
 ## <a name="bkmk_path2"></a> Path 2: Bootstrap with modern provisioning
 
+This path is for those devices that are first enrolled with Intune, meaning they are cloud first devices and will use Intune to install the Configuration Managmet Client.
+
 Here's what you need to set it up:
 
 1. [Setup enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md)  
