@@ -48,7 +48,7 @@ To enable peer cache, deploy the [client settings](#client-settings) to a collec
 - A client that operates as a peer content source submits a list of available cached content to its management point using state messages. A peer content source client also sends a state message to the management point when it removes content from its local cache.
 
   > [!NOTE]
-  > For the list of applicable peer content source state messages, see [State messages in Configuration Manager](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map). Specifically those with state message IDs of 7200, 7201, 7202, and 7203.
+  > For the list of applicable peer content source state messages, see [State messages in Configuration Manager](state-messages.md#7200-state_topictype_super_peer_update_cache_map). Specifically those with state message IDs of 7200, 7201, 7202, and 7203.
 
 - Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](fundamental-concepts-for-content-management.md#content-source-priority).
 
