@@ -423,7 +423,6 @@ The following topic types have no state IDs:
 
 | Topic type | Description |
 |:--|:--|
-
 | 2200 | STATE_TOPICTYPE_FDM |
 | 2201 | STATE_TOPICTYPE_CCM_CERT_BINDING |
 | 2202 | STATE_TOPICTYPE_SERVER_STATISTIC |
