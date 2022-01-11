@@ -2,7 +2,7 @@
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
 description: Troubleshoot client details for Configuration Manager tenant attach
-ms.date: 09/13/2021
+ms.date: 01/25/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,14 +12,11 @@ ms.author: mstewart
 ms.localizationpriority: high
 ---
 
-# Troubleshoot ConfigMgr client details in the admin center (preview)
+# Troubleshoot ConfigMgr client details in the admin center
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
 When viewing the ConfigMgr client details, you may run across a common error. Use the following information of common error messages to troubleshoot ConfigMgr client details in the Microsoft Endpoint Manager admin center:
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## <a name="bkmk_intune"></a> You don’t have access to view this information
 <!--7980141-->
