@@ -2,7 +2,7 @@
 title: Create Mac computer applications
 titleSuffix: Configuration Manager
 description: See which considerations you must take into account when you create and deploy applications for Mac computers.
-ms.date: 10/06/2016
+ms.date: 01/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -14,6 +14,9 @@ ms.localizationpriority: medium
 # Create Mac computer applications with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 Keep the following considerations in mind when you create and deploy applications for Mac computers.  
 
