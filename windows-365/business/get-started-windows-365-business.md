@@ -167,32 +167,6 @@ Some apps may require that the user have administrator privileges. To change a u
 > [!IMPORTANT]
 > If a user tries to use a Microsoft 365 Business Standard license on their Cloud PC, they might see the following error: "Account Issue: The products we found in your account cannot be used to activate Office in shared computer scenarios." In this scenario, the user must uninstall the version of Office installed on their Cloud PC and install a new copy from Office.com.
 
-## Managing Cloud PCs
-
-As an admin, you can manage Cloud PCs in your organization in various ways:
-
-### windows365.microsoft.com
-
-You can sign in to [windows365.microsoft.com](https://windows365.microsoft.com) to:
-
-- [Add a user and assign a license](add-user-assign-licenses.md).
-- [Assign or unassign licenses](assign-unassign-license.md).
-- [Change organization default settings](change-organization-default-settings.md).
-- [Use remote actions on Cloud PCs](remotely-manage-business-cloud-pcs.md).
-- [Reset a user's password](reset-user-password.md).
-
-### Microsoft 365 admin center
-
-You can sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) to [use remote actions on Cloud PCs](remotely-manage-business-cloud-pcs.md).
-
-### Intune
-
-If the organization and users are properly licensed, Cloud PCs can be enrolled to Intune using the same procedure for [enrolling Windows 10 machines to Intune](/mem/intune/user-help/enroll-windows-10-device).
-
-### Microsoft Graph
-
-You can also use the Microsoft Graph APIs to manage Cloud PCs. For more information, see [Overview for Windows 365 Cloud PC on Microsoft Graph](/graph/cloudpc-concept-overview).
-
 ## Sending outbound email messages using port 25 is not supported
 
 Sending outbound email messages directly on port 25 from a Windows 365 Business Cloud PC is not supported. Communication over port TCP/25 is blocked at the Windows 365 Business network layer for security reasons. If your email service uses Simple Mail Transfer Protocol (SMTP) for your email client application, you can use their web interface, if available. Or you can ask your email service provider for help to configure their email client app to use secure SMTP over Transport Layer Security (TLS), which uses a different port.
@@ -202,6 +176,8 @@ Sending outbound email messages directly on port 25 from a Windows 365 Business 
 If you need to get help while setting up Windows 365 Business in the Microsoft 365 admin center, see [Get help or support](/microsoft-365/business-video/get-help-support).
 
 ## Next steps
+
+[Manage your Cloud PCs](device-management.md)
 
 [Windows 365 Business](https://www.microsoft.com/windows-365/business)
 
