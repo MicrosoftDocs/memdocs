@@ -143,7 +143,7 @@ As you set up apps and app policies, think about your organization's requirement
 | Task | Detail | Platform | 
 | ---- | ------ | ------ | 
 |[Add Google Play Store apps](../apps/store-apps-android.md) | Add Android apps from the Google Play Store. | Android device administrator|
-|[Add Managed Google Play apps](../apps/apps-add-android-for-work.md) | Add store apps, line-of-business (LOB) apps, and web apps through the Managed Google Play Store.| Android Enterprise|
+|[Add managed Google Play apps](../apps/apps-add-android-for-work.md) | Add store apps, line-of-business (LOB) apps, and web apps through the managed Google Play Store.| Android Enterprise|
 |[Add Android Enterprise system apps](../apps/apps-ae-system.md) | Use Intune to enable and disable Android Enterprise system apps. | Android Enterprise|  
 |[Add web apps](../apps/web-app.md) | Add web apps to Intune and assign to groups. | Android device administrator|
 |[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | Android Enterprise, Android device administrator| 
@@ -178,7 +178,7 @@ For information about each enrollment method and how to choose one that's right 
 
 | Task | Detail | Platform |
 | ---- | ------ | ------ | 
-|[Connect Intune account to Managed Google Play account](../enrollment/connect-intune-android-enterprise.md)| To enable Android Enterprise management in Intune, connect your Intune tenant account to your Managed Google Play account. |  Android Enterprise|
+|[Connect Intune account to managed Google Play account](../enrollment/connect-intune-android-enterprise.md)| To enable Android Enterprise management in Intune, connect your Intune tenant account to your managed Google Play account. |  Android Enterprise|
 |[Set up work profile enrollment for personally owned devices ](../enrollment/android-work-profile-enroll.md)|Set up work profile management for personally owned devices. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected.| Android Enterprise| 
 |[Set up work profile enrollment for corporate-owned devices](../enrollment/android-corporate-owned-work-profile-enroll.md)|Set up work profile management for corporate-owned devices intended for work and personal use. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected. | Android Enterprise|
 |[Set up enrollment for dedicated devices](../enrollment/android-kiosk-enroll.md)| Set up enrollment for corporate-owned, single-use, kiosk-style devices.    |   Android Enterprise|
