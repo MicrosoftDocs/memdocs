@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/17/2022
+ms.date: 01/31/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -188,7 +188,7 @@ To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client ap
 
   - A preview version of **Microsoft Defender for Endpoint** that supports Microsoft Tunnel capabilities – Available through a public preview, you can use a preview version of Microsoft Defender for Endpoint as the Tunnel client app on iOS/iPadOS devices.
 
-    For this preview, each device user must download and install the Defender for Endpoint app from the Apple TestFlight website, which requires use of their Apple ID. Eventually, Defender for Endpoint will replace the Microsoft Tunnel client app as the Tunnel client app. You can add new devices to the preview, or [migrate](../protect/microsoft-tunnel-migrate-app.md) devices from the current client app to the preview version of Defender for Endpoint.
+    For this preview, each device user must download and install the Defender for Endpoint app from the Apple app store, which requires use of their Apple ID. Eventually, Defender for Endpoint will replace the Microsoft Tunnel client app as the Tunnel client app. You can add new devices to the preview, or [migrate](../protect/microsoft-tunnel-migrate-app.md) devices from the current client app to the preview version of Defender for Endpoint.
 
 For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
