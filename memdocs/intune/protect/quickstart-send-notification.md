@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 In this quickstart, you'll use Microsoft Intune to send an email notification to the members of your workforce that have noncompliant devices.
 
 > [!NOTE]
-> The remote action to send an email notification is not supported on macOS devices that are managed by Jamf Pro.
+> The remote action to send an email notification is not supported on devices that are managed by a [device compliance partner](../protect/device-compliance-partners.md).
 
 By default, when Intune detects a device that isn't compliant, Intune immediately marks the device as noncompliant. Azure Active Directory (Azure AD) [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) then blocks the device. When a device isn't compliant, Intune allows you to add actions for noncompliance, which gives you flexibility to decide what to do. For example, you can give users a grace period to be compliant before blocking noncompliant devices.
 
