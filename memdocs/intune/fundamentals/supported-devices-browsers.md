@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/26/2021
+ms.date: 01/12/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,7 +38,7 @@ For help installing Intune on your device, see [using managed devices to get wor
 For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 > [!NOTE]
-> Intune requires Android 6.x or higher for device enrollment scenarios. For Intune app protection policies, Intune requires Android 9.0 or higher. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported.
+> Intune requires Android 6.x or higher for device enrollment scenarios. For Intune app protection policies, Intune requires Android 9.0 or higher. This requirement does NOT apply to [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) as these devices will continue to be supported.
 
 ## Intune supported operating systems
 
