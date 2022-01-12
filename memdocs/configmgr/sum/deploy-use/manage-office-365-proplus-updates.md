@@ -5,7 +5,7 @@ description: Configuration Manager synchronizes Microsoft 365 Apps client update
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 01/05/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -52,6 +52,7 @@ For previous Configuration Manager versions, you must take the following steps t
 ### Limitations
 
 - Content-enabled cloud management gateways don't support content for Microsoft 365 Apps updates. <!--7366753-->
+- In certain circumstances when using Office Customization Tool for Click-to-Run, you may encounter the following exception:  `Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'`. To work around the issue, update .NET Framework to version 4.7.1 or later for the machine running the Configuration Manager console. <!--12109686-->
 
 ### Deploy Microsoft 365 Apps using Configuration Manager 
 The Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149, these instructions are for 1806 and later-->

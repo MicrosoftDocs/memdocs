@@ -28,6 +28,10 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Duplicate device objects with hybrid Azure AD deployments 
+
+A device object is pre-created in Azure AD once a device is registered in Autopilot. If a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries. 
+
 ### TPM attestation failure on Windows 11 error code 0x81039024
 
 Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039024. This error code indicates that there are known vulnerabilities detected with the TPM and as a result will fail attestation. If you receive this error, please visit your PC manufacturer’s website to update the TPM firmware.

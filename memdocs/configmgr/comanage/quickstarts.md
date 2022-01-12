@@ -20,9 +20,9 @@ Co-management adds new functionality to your existing Configuration Manager depl
 
 In this co-management quickstart series, see how you can quickly drive new management value. Co-management is built to create features and tools you can use right now.
 
-In the following video, Microsoft corporate vice president Brad Anderson introduces this co-management series:
+<!--In the following video, Microsoft corporate vice president Brad Anderson introduces this co-management series:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Cloud-Connecting-with-Co-Management/player]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Cloud-Connecting-with-Co-Management/player] -->
 
 | Immediate value | Getting started |
 |-----------------|-----------------|

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 07/21/2021
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals

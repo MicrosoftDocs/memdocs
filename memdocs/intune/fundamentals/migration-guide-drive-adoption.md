@@ -78,7 +78,7 @@ Choose one of the following options:
 
 - [Set up app-based Conditional Access policies for SharePoint Online](../protect/app-based-conditional-access-intune-create.md)
 
-- [Block apps that do not use modern authentication (ADAL or MSAL)](../protect/app-modern-authentication-block.md) 
+- [Block apps that do not use modern authentication (MSAL)](../protect/app-modern-authentication-block.md) 
 
 ## Next steps
 

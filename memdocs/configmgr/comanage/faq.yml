@@ -7,7 +7,7 @@ metadata:
   ms.author: aaroncz
   ms.reviewer: crosorio
   manager: dougeby
-  ms.date: 10/05/2021
+  ms.date: 01/10/2021
   ms.topic: reference
   ms.prod: configuration-manager
   ms.technology: configmgr-comanage
@@ -45,6 +45,11 @@ sections:
           _Tenant attach_ sets up synchronization between your Configuration Manager site and your Intune tenant. Then you can see Configuration Manager devices in the Microsoft Endpoint Manager admin center. This connection provides you with a single view for all devices that you manage with Microsoft Endpoint Manager. This web-based console may be beneficial in some scenarios that don't want to use the full Configuration Manager console, such as with help desk staff. You can also benefit from insights in [Endpoint analytics](../../analytics/overview.md). You can configure the site to upload devices to the Microsoft Endpoint Manager admin center and not enable co-management. However, those devices are still managed by ConfigMgr until you enable co-management.
 
           For more information on tenant attach and how to configure it, see [Microsoft Endpoint Manager tenant attach](../tenant-attach/device-sync-actions.md).
+
+      - question: |
+          Can I co-manage Windows 365 Cloud PCs?
+        answer: |
+          Yes! You can co-manage Windows 365 Cloud PCs.
 
   - name: Authentication
     questions:
