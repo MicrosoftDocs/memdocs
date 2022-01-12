@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/07/2021
+ms.date: 09/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,7 +87,7 @@ The following tasks apply to both Android Enterprise and Android device administ
 | Task | Detail | 
 | ---- | ------ | 
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |       
-| [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |  
+| [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy.|Specify the app or services you want to protect and define the conditions for access.
 |[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2.  For example, you can block apps that use basic and form-based authentication. Before you block any access, sign in to Azure AD and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things (like meeting room calendar kiosks) you forgot about or are unaware of. |  
 
@@ -97,8 +97,8 @@ Use the Intune endpoint security features to configure device security and to ma
 
 The following tasks apply to both Android Enterprise and Android device administrator platforms. 
 
-| Task | Detail | Platform|
-| ---- | ------ | ------ |
+| Task | Detail | 
+| ---- | ------ | 
 |[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the **Endpoint security** settings in Intune to effectively manage device security and remediate issues for devices.|
 |[Enable the mobile threat defense (MTD) connector for enrolled devices](../protect/mtd-connector-enable.md)|Enable the MTD connection in Intune so that MTD partner apps can work with Intune and your MTD device compliance policies. If you're not using Microsoft Defender for Endpoint, consider enabling the connector so that you can use another mobile threat defense solution. You can also [enable the MTD connector for devices not enrolled in Intune](../protect/mtd-enable-unenrolled-devices.md).| 
 |[Create MTD app protection policy](../protect/mtd-app-protection-policy.md)|Create an Intune app protection policy that assesses risks and limits a device's access to work or school apps.| 
@@ -111,7 +111,7 @@ Use Microsoft Intune to enable or disable settings and features on devices. To c
 
 | Task | Detail | Platform | 
 | ---- | ------ | ------ | 
-|[Create a device profile in Microsoft Intune](../configuration/device-profile-create.md) |Learn about the different types of device profiles you can create for your organization.| Android Enterprise, Android device administrator  |
+| [Create a device profile in Microsoft Intune](../configuration/device-profile-create.md) | Learn about the different types of device profiles you can create for your organization.| Android Enterprise, Android device administrator  |
 |[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the Wi-Fi settings reference for [Android Enterprise Wi-Fi settings](../configuration/wi-fi-settings-android-enterprise.md) or [Android device administrator Wi-Fi settings](../configuration/wi-fi-settings-android.md).|Android Enterprise, Android device administrator |
 |[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network. For a description of the settings in this area, see the VPN settings reference for [Android Enterprise VPN settings](../configuration/vpn-settings-android-enterprise.md) or [Android device administrator VPN settings](../configuration/vpn-settings-android.md). | Android Enterprise, Android device administrator  |
 |[Configure email profile](../configuration/email-settings-configure.md)|Configure email settings so that people can connect to a mail server and access their work or school email. For a description of the settings in this area, see [Android Enterprise email settings](../configuration/email-settings-android-enterprise.md) or [Android device administrator email settings](../configuration/email-settings-android.md).| Android Enterprise, Android device administrator  |
@@ -119,8 +119,8 @@ Use Microsoft Intune to enable or disable settings and features on devices. To c
 |[Configure custom settings for Android device administrator](../configuration/custom-settings-android.md)|Add or create custom settings that aren't built in to Intune, such as a per-app VPN profile and web protection with Microsoft Defender for Endpoint.|Android device administrator |
 |[Configure Samsung Knox apps](../configuration/samsung-knox-apps-allow-block.md)|Create a custom profile to allow and block apps for Samsung Knox Standard devices.| Android device administrator|
 |[Create custom profile for Android Enterprise](../configuration/custom-settings-android-for-work.md)|Add or create custom settings that aren't built in to Intune for personally owned devices.|Android Enterprise|
-|[Configure Zebra Mobility Extensions (MX) profile](../configuration/android-zebra-mx-overview.md)|Use Zebra's Mobility Extensions (MX) profiles to customize or add more Zebra-specific settings in Intune.| Android device administrator|
-|[Create OEMConfig configuration profile](../configuration/android-oem-configuration-overview.md)|Use OEMConfig to add, create, and customize OEM-specific settings for Android Enterprise devices.| Android Enterprise|
+|[Configure Zebra Mobility Extensions (MX) profile](../configuration/android-zebra-mx-overview.md)|Use Zebra's Mobility Extensions (MX) profiles to customize or add more Zebra-specific settings in Intune.| Android device administrator |
+|[Create OEMConfig configuration profile](../configuration/android-oem-configuration-overview.md)|Use OEMConfig to add, create, and customize OEM-specific settings for Android Enterprise devices.| Android Enterprise |
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune apps with your organization's branding to create a familiar experience for people enrolling their devices.|Android Enterprise, Android device administrator |  
 
 
@@ -129,18 +129,18 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 
 | Task | Detail | Platform | 
 | ---- | ------ | ------ | 
-|[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of enrollment.| Android Enterprise|
+|[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of enrollment.| Android Enterprise |
 |[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices using SCEP, PKCS, and PKCS imported certificates.| Android Enterprise, Android device administrator |  
-|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).| Android Enterprise| 
-|[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. |Android Enterprise, Android device administrator| 
-|[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). |Android Enterprise, Android device administrator|
-|[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Android devices with certificates that are derived from user smart cards. |Android Enterprise| 
+|[Use SCEP certificates with Intune](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).| Android Enterprise | 
+|[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)| Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | Android Enterprise, Android device administrator | 
+|[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). | Android Enterprise, Android device administrator |
+|[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Android devices with certificates that are derived from user smart cards. | Android Enterprise | 
 
 ## Deploy apps  
 
 As you set up apps and app policies, think about your organization's requirements, such as the platforms you'll support, the tasks people need to do, the type of apps they need to complete those tasks, and the groups who need those apps. You can use Intune to manage the whole device (including apps) or use Intune to manage apps only.  
 
-| Task | Detail |Platform| 
+| Task | Detail | Platform | 
 | ---- | ------ | ------ | 
 |[Add Google Play Store apps](../apps/store-apps-android.md) | Add Android apps from the Google Play Store. | Android device administrator|
 |[Add managed Google Play apps](../apps/apps-add-android-for-work.md) | Add store apps, line-of-business (LOB) apps, and web apps through the managed Google Play Store.| Android Enterprise|
@@ -176,17 +176,17 @@ Intune supports the following enrollment methods for Android devices:
 
 For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](deployment-guide-enrollment-android.md). 
 
-| Task | Detail | Platform|
+| Task | Detail | Platform |
 | ---- | ------ | ------ | 
 |[Connect Intune account to managed Google Play account](../enrollment/connect-intune-android-enterprise.md)| To enable Android Enterprise management in Intune, connect your Intune tenant account to your managed Google Play account. |  Android Enterprise|
 |[Set up work profile enrollment for personally owned devices ](../enrollment/android-work-profile-enroll.md)|Set up work profile management for personally owned devices. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected.| Android Enterprise| 
 |[Set up work profile enrollment for corporate-owned devices](../enrollment/android-corporate-owned-work-profile-enroll.md)|Set up work profile management for corporate-owned devices intended for work and personal use. This enrollment method creates a separate area on the device for work-related data so that personal things remain unaffected. | Android Enterprise|
 |[Set up enrollment for dedicated devices](../enrollment/android-kiosk-enroll.md)| Set up enrollment for corporate-owned, single-use, kiosk-style devices.    |   Android Enterprise|
-|[Set up enrollment for fully managed devices](../enrollment/android-fully-managed-enroll.md)|Set up enrollment for corporate-owned devices that are associated with a single user and used exclusively for work.|  Android Enterprise |
+|[Set up enrollment for fully managed devices](../enrollment/android-fully-managed-enroll.md)|Set up enrollment for corporate-owned devices that are associated with a single user and used exclusively for work.| Android Enterprise |
 |[Enroll dedicated, fully managed, or corporate-owned work-profile devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md)|After you've set up Intune for Android Enterprise enrollment, enroll devices using one of the five supported enrollment methods. |Android Enterprise|  
 |[Set up device administrator enrollment](../enrollment/android-enroll-device-administrator.md)|Set up Android device administrator enrollment. This method of managing devices has been superseded by Android Enterprise, so we don't recommend enrolling new devices this way.| Android device administrator|  
 |[Use Samsung Knox Mobile Enrollment to automatically enroll Android devices](../enrollment/android-samsung-knox-mobile-enroll.md)|Set up Intune for Samsung Knox Mobile Enrollment (KME), which enables you to automatically enroll large numbers of corporate-owned Android devices.  | Android Enterprise, Android device administrator|
-| [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | Android Enterprise, Android device administrator |
+|[Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | Android Enterprise, Android device administrator |
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.| Android Enterprise, Android device administrator| 
 |[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-android-enrollment)|Troubleshoot and find resolutions to problems that occur during enrollment.|Android Enterprise, Android device administrator|   
 
