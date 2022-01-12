@@ -37,7 +37,7 @@ After licenses are assigned, let your users know that there are two different wa
 
 ## Windows 365 home page
 
-Users can navigate to **https://windows365.microsoft.com** to access their Cloud PCs.
+Users can navigate to [https://windows365.microsoft.com](https://windows365.microsoft.com) to access their Cloud PCs.
 
 On their Windows 365 home page, users see the Cloud PCs they have access to in the **Your Cloud PCs** section.
 
@@ -50,13 +50,13 @@ Users can select **Open in browser** to open their Cloud PC.
 
 ### User actions
 
-While on the Windows 365 home page, users can perform actions on their Cloud PCs by selecting the gear icon on a Cloud PC card.
+While on the Windows 365 home page, users can take actions on their Cloud PCs. To do so, they can select the gear icon on a Cloud PC card.
 
 ![Card menu.](./media/get-started-windows-365-business/cloud-pc-gear.png)
 
 - **Restart**: Restarts the Cloud PC.
 
-- **Reset**:  Reset does the following:
+- **Reset**:
   - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.
   - Removes any changes you made to settings.
@@ -74,13 +74,13 @@ While on the Windows 365 home page, users can perform actions on their Cloud PCs
     |No issues detected |None of the checks ran discovered an issue with the Cloud PC. |
     |Issues resolved |An issue was detected and fixed. |
     |Can’t connect to Cloud PC. We’re working to fix it, try again later. |A Microsoft service required for connectivity is unavailable. Try connecting again later. |
-    |We couldn’t fix issues with your Cloud PC. Contact your administrator. |An issue was detected but it was unable to be fixed. This could be due to an ongoing Windows update or another issue. If this error persists for an extended period of time the Cloud PC may need to be reset. |
+    |We couldn’t fix issues with your Cloud PC. Contact your administrator. |An issue was detected but it was unable to be fixed. This issue could be caused by an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reset. |
 
 - **System Information**: Displays information about the Cloud PC specification.
 
 ## Remote Desktop
 
-The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC. Windows 365 users can download and install the Remote Desktop client they need from the Windows 365 home page.
+The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC. Windows 365 users can download and install the Remote Desktop client from the Windows 365 home page.
 
 ### Install the Microsoft Remote Desktop app
 
