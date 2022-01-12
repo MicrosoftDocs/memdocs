@@ -488,7 +488,7 @@ items:
     - name: Release notes
       href: servers/deploy/install/release-notes.md
     - name: State messages
-      href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md   
+      href: plan-design/hierarchy/state-messages.md
     - name: Unicode and ASCII support
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Manage infrastructure

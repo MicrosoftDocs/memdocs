@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 08/27/2021
+ms.date: 01/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -155,6 +155,14 @@ Follow the instructions below to enable the full functionality of Community hub:
 ### Community hub doesn't load
 <!--9561090-->
 The Community hub may not load, or load after a long delay if the WebView2 console extension hasn't been installed. For more information about installing console extensions, see the [Install the WebView2 console extension](#bkmk_webview2) and [Managing console extensions (starting in version 2103)](admin-console-extensions.md).
+
+### Unhandled exception occurs when loading Community hub
+<!--12109686-->
+In certain circumstances, you may encounter the following exception when loading Community hub:
+
+`Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.`
+
+**Workaround**: To work around this issue, update the .NET Framework to version 4.7.1 or later for the machine running the Configuration Manager console.
 
 ### Unable to access Community hub node when running console as a different user
 <!--7826897-->

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/30/2021
+ms.date: 01/10/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,20 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of January 10, 2022
+
+#### New documentation: Data encryption in Windows 365<!--36626607-->
+
+We've just added information to the help documentation about encryption for Windows 365 Cloud PCs. For more information, see [Data encryption in Windows 365](encryption.md).
+
+<!-- ########################## -->
+## Week of January 3, 2022
+
+#### New documentation: Gallery image update cycle<!--36626607-->
+
+We've just added information to the help documentation about the update cycle for Windows 365 Cloud PC gallery images. For more information, see [Gallery image update cycle](device-images.md#gallery-image-update-cycle).
 
 <!-- ########################## -->
 ## Week of December 13, 2021

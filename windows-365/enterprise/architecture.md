@@ -77,7 +77,7 @@ Azure AD provides user authentication and authorization for both the Windows 365
   - cookie persistence for the Windows 365 web portal
 - device compliance controls
 
-For more information on how to use Azure AD Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md). 
+For more information on how to use Azure AD Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md).
 
 ### Active Directory Domain Services
 
@@ -100,6 +100,8 @@ Windows 365 aligns with Microsoft 365 data protection policies and provisions. C
 - Replicated to multiple servers, storage endpoints, and data centers for redundancy.
 - Monitored for unauthorized access, excessive resource consumption, and availability.
 
+For more information about Windows 365 Cloud PC encryption, see [Data encryption in Windows 365](encryption.md).
+
 ## Azure Virtual Desktop connectivity
 
 Cloud PC connectivity is provided by Azure Virtual Desktop. No inbound connections direct from the Internet are made to the Cloud PC. Instead, connections are made from the Cloud PC to the Azure Virtual Desktop endpoints and from Remote Desktop clients to Azure Virtual Desktop endpoints. For more information on these ports, see [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list). To ease configuration of network security controls, use Service Tags for Azure Virtual Desktop to identity those endpoints. For more information on Azure Service Tags and their use in simplifying virtual network configuration, see [Azure service tags overview](/azure/virtual-network/service-tags-overview).
@@ -107,6 +109,8 @@ Cloud PC connectivity is provided by Azure Virtual Desktop. No inbound connectio
 There is no requirement to configure your Cloud PCs to make these connections. Windows 365 seamlessly integrates Azure Virtual Desktop connectivity components into gallery or custom images.
 
 For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](/azure/virtual-desktop/network-connectivity).
+
+Windows 365 Cloud PCs don't support third-party connection brokers. 
 
 <!-- ########################## -->
 ## Next steps

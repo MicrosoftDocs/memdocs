@@ -16,9 +16,9 @@ ms.localizationpriority: medium
 
 If you have Windows 10 or later devices joined to on-premises Active Directory, before you enable co-management in Configuration Manager, first join these devices to Azure Active Directory (Azure AD). This process is called hybrid Azure AD join.
 
-In the following video, senior program manager Sandeep Deo and product marketing manager Adam Harbour discuss and demo configuring devices in Azure AD:
+<!--In the following video, senior program manager Sandeep Deo and product marketing manager Adam Harbour discuss and demo configuring devices in Azure AD:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]-->
 
 The hybrid Azure AD-join process automatically registers your on-premises domain-joined devices with Azure AD. For more information on this process, see the following articles:
 

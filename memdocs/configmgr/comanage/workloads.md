@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 01/10/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -113,7 +113,9 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 - Office updates may take around 24 hours to show up on client unless the devices are restarted
 
-- There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Microsoft 365 deployed via Configuration Manager.
+- There's a [global condition](../apps/deploy-use/create-global-conditions.md) that's added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Microsoft 365 deployed via Configuration Manager. The global condition is named either:
+   - **Microsoft 365 apps managed by Microsoft Intune** (version 2111 or later) <!--12425123, 10784457-->
+   - **Are Office 365 applications managed by Intune on the device** (version 2107 and earlier)
 
 Updates can be managed using either of the following features:
 

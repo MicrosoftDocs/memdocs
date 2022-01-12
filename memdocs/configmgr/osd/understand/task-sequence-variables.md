@@ -176,7 +176,12 @@ Specifies the path defined by the [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) va
 
 ### <a name="SMSTSMediaType"></a> _SMSTSMediaType
 
-Specifies the type of media that's used to initiate the installation. Examples of types of media are Boot Media, Full Media, PXE, and Prestaged Media.
+Specifies the type of media used to initiate the installation, which includes:
+
+- `BootMedia`: Boot Media
+- `FullMedia`: Full Media
+- `PXE`: PXE
+- `OEMMedia`: Prestaged Media
 
 ### <a name="SMSTSModel"></a> _SMSTSModel
 
