@@ -32,6 +32,13 @@ ms.collection: M365-identity-device-management
 
 Users can install apps on their Cloud PC as they would normally in Windows by either downloading them from the application’s website or by downloading them from the Microsoft Store.
 
+To download an app from the Microsoft store:
+
+1. On the Cloud PC, open the Microsoft Store app.
+2. Search or browse for an app.
+3. On the app's page, choose **Get**.
+4. After the download completes, open the app.
+
 Some apps may require that the user have administrator privileges. To change a user's role/privileges, see [Remote management actions](remotely-manage-business-cloud-pcs.md#remote-management-actions).
 
 ## Default apps
