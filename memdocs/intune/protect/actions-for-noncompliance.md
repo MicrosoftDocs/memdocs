@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 01/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -129,6 +129,13 @@ When you enable this action:
   - For a single policy that includes multiple instances of a push notification set for the same day, only a single notification is sent for that day.
 
   - When multiple compliance policies include the same compliance conditions, and include the push notification action with the same schedule, Intune sends multiple notifications to the same device on the same day.
+
+> [!NOTE]
+> The following actions for noncompliance are not supported for devices that are managed by a [device compliance management partner](../protect/device-compliance-partners.md):  
+> - Send push notification to end user
+> - Remotely lock the noncompliant device
+> - Retire the noncompliant device
+> - Send push notification to end user
 
 ## Before you begin
 
