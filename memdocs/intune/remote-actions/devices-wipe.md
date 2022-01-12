@@ -169,6 +169,9 @@ Device owners can manually un-enroll their devices as explained in the following
 - [Remove device from Company Portal for macOS app](../user-help/unenroll-your-device-from-intune-macos.md)
 - [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
+> [!TIP]
+> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Azure AD records. To remove record of the Intune device, sign in to Microsoft Endpoint Manager and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Azure AD record, if applicable, because the cleanups rule will not remove it.  
+
 ## Delete devices from the Intune portal
 
 If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the console.
