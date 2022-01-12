@@ -60,9 +60,7 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
     - **Microsoft product updates**
     - **Servicing channel**: Supports **Semi-annual channel** and **Semi-annual channel (Targeted)** options. For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
-  > [!NOTE]
-  > **Unsupported versions and editions**:  
-  > *Windows 10/11 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+
 
 ## Create and assign update rings
 
