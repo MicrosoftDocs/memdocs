@@ -1473,8 +1473,8 @@ In addition, the following applies to configuration of the setting *Hide the Vir
 There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
 
 - **Devices** > **Filters** > **Create**
-- **Apps** > **Filters**> **Create**
-- **Tenant administration** > **Filters**> **Create**
+- **Apps** > **Filters** > **Create**
+- **Tenant administration** > **Filters** > **Create**
 
 You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile.
 
@@ -1537,7 +1537,7 @@ Applies to:
 
 #### Disable NFC pairing on iOS/iPadOS devices running 14.2 and newer<!-- 9112701   -->
 
-On supervised iOS/iPadOS devices, you can create a device restrictions profile that disables NFC (**Devices** > **Configuration  profiles**> **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Connected devices** > **Disable near field communication (NFC)**). When you disable this feature, it prevents devices from pairing with other NFC-enabled devices, and disables NFC.
+On supervised iOS/iPadOS devices, you can create a device restrictions profile that disables NFC (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Connected devices** > **Disable near field communication (NFC)**). When you disable this feature, it prevents devices from pairing with other NFC-enabled devices, and disables NFC.
 
 To see this setting, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
@@ -1992,7 +1992,7 @@ By default, Intune Administrators and Azure Active Directory administrators have
 
 #### Scope tag support for customization policies for Intune for Government and 21Vianet<!--9419267  -->
 
-You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options.
+You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Customization** where you will see **Scope tags** configuration options.
 
 <!-- ########################## -->
 ## Week of February 22, 2021
@@ -2351,7 +2351,7 @@ Win32 apps added to Intune cannot be removed if they are in a dependency relatio
 
 #### Scope tag support for customization policies<!--6182440  -->
 
-You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. This feature is now available for Intune for Government or Intune operated by 21Vianet.
+You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Customization** where you will see **Scope tags** configuration options. This feature is now available for Intune for Government or Intune operated by 21Vianet.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
