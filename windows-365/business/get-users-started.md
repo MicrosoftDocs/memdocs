@@ -95,14 +95,8 @@ For a list of clients by operating system, see [Remote Desktop clients](/windo
 
 ## Next steps
 
+[Users installing apps](apps-install.md)
+
 [Manage your Cloud PCs](device-management.md)
-
-[Windows 365 Business](https://www.microsoft.com/windows-365/business)
-
-[Windows 365 Business sizing options](windows-365-business-sizing.md)
-
-[Windows 365 Business plan comparison](https://www.microsoft.com/windows-365/business/compare-plans-pricing)
-
-[Remote Desktop client app comparison](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare)
 
 [Set up Microsoft Teams in your small business](/microsoftteams/deploy-small-business)

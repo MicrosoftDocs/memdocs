@@ -39,4 +39,6 @@ Some apps may require that the user have administrator privileges. To change a u
 
 ## Next steps
 
+[Users installing apps](apps-install.md)
+
 [Manage your Cloud PCs](device-management.md)

@@ -56,4 +56,4 @@ You can also use the Microsoft Graph APIs to manage Cloud PCs. For more informat
 
 ## Next steps
 
-[Windows 365 Business sizing options](windows-365-business-sizing.md)
+[Troubleshoot](troubleshoot-windows-365-business.md)
