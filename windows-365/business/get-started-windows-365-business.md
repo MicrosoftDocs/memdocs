@@ -93,10 +93,6 @@ You can assign different Windows 365 Business license types to a user, based on 
 > [!IMPORTANT]
 > The first time a Windows 365 license is assigned on your tenant, a system account called **Windows 365 BPRT Permanent User** is automatically created in Azure Active Directory. Do not delete this account or make any changes to it (such as changing the name or UPN). If the system account is deleted, the setup might fail. This system account ensures a smooth set up process, and doesn't have any write capabilities or access to your tenant beyond the scoped service capabilities of Windows 365 Business. If you delete this user, follow these [troubleshooting steps](/microsoft-365/admin/setup/troubleshoot-windows-365-business?#step-2-verify-that-the-windows-365-bprt-permanent-user-system-account-is-active).
 
-## Sending outbound email messages using port 25 is not supported
-
-Sending outbound email messages directly on port 25 from a Windows 365 Business Cloud PC is not supported. Communication over port TCP/25 is blocked at the Windows 365 Business network layer for security reasons. If your email service uses Simple Mail Transfer Protocol (SMTP) for your email client application, you can use their web interface, if available. Or you can ask your email service provider for help to configure their email client app to use secure SMTP over Transport Layer Security (TLS), which uses a different port.
-
 ## How to get help
 
 If you need to get help while setting up Windows 365 Business in the Microsoft 365 admin center, see [Get help or support](/microsoft-365/business-video/get-help-support).
