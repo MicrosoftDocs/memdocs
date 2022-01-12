@@ -93,6 +93,8 @@ Whether you purchased your subscriptions through the Windows 365 products site, 
 - The **Billing** page in the Microsoft 365 admin center. For more information, see [assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 - [windows365.microsoft.com](https://windows365.microsoft.com). For more information, see [Assign or unassign a license](assign-unassign-license.md).
 
+As soon as you assign a license to a user, Windows 365 will create a Cloud PC for that user. This can take up to 30 minutes.
+
 You can assign different Windows 365 Business license types to a user, based on the users business need. See [Windows 365 Business sizing options](windows-365-business-sizing.md)  for guidance on which license type might be suitable for your users.
 
 > [!IMPORTANT]
