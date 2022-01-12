@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 01/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,7 +53,8 @@ After you create your device profile, Intune provides graphical charts. These ch
     - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10.
 
 3. The top graphical chart shows the number of devices assigned to the device profile. For example, if the configuration device profile applies to macOS devices, the chart lists the count of the macOS devices.
-Add a note here stating: When monitoring a profile for Windows devices, the counts in the Profile assignment status are per device per user, i.e., if 2 users are logging on to the same device that device would be counted twice.
+
+    When monitoring a Windows profile, the count in the **Profile assignment** status are per device per user. So, if two users sign in to the same device, then that device is counted twice.
 
     It can also show the number of devices for other platforms that are assigned the same device profile. For example, it shows the count of the non-macOS devices.
 
