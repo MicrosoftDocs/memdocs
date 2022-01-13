@@ -5,8 +5,8 @@ title: Policy mapping between Basic Mobility and Security and Intune
 titleSuffix: Microsoft Intune
 description: An overview of the policy map between Basic Mobility and Security and Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 12/18/2020
 ms.topic: how-to

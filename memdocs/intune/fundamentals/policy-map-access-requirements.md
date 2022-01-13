@@ -5,8 +5,8 @@ title: Access requirements policy mapping from Basic Mobility and Security to In
 titleSuffix: Microsoft Intune
 description: A detailed list of the policy map between Basic Mobility and Security access requirements and Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 12/18/2020
 ms.topic: reference
