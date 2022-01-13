@@ -4,13 +4,13 @@
 title: Quickstart - Create a user in Intune
 description: Quickstart - Create a user in Intune.
 services: microsoft-intune
-author: ErikjeMS
+author: Smritib17
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 01/17/2020
-ms.author: erikje
+ms.author: smbhardwaj
 manager: dougeby
 ms.assetid: 820fcb18-0927-4ebd-be79-dce92b51c261
 
