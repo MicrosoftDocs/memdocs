@@ -105,7 +105,7 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 1. In the MMC, open the **Properties** of **WMI Control (Local)** and select the **Security** tab.
 
-1. Expand the tree below Root, select the **CCM** node, and then choose **Security**.  Make sure the **SMS Admins** group has the following permissions:
+1. Expand the tree below Root, select the **SMS** node, and then choose **Security**.  Make sure the **SMS Admins** group has the following permissions:
 
     - Enable Account
 
