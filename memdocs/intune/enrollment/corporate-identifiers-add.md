@@ -5,8 +5,8 @@ title: Add corporate identifiers to Intune
 titleSuffix: 
 description: Learn how to add corporate identifiers (enrollment method, IMEI, and serial numbers) to Microsoft Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 8/16/2021
 ms.topic: how-to
@@ -31,8 +31,6 @@ ms.collection:
 ---
 
 # Identify devices as corporate-owned
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 As an Intune admin, you can identify devices as corporate-owned to refine management and identification. Intune can perform additional management tasks and collect additional information such as the full phone number and an inventory of apps from corporate-owned devices. You can also set device restrictions to block enrollment by devices that aren't corporate-owned.
 
