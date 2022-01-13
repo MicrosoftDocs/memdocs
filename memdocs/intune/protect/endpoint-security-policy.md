@@ -30,9 +30,7 @@ ms.reviewer: mattcall
 
 # Manage device security with endpoint security policies in Microsoft Intune
 
-Use Intune endpoint security policies to manage security focused settings on devices. Each endpoint security policy supports one or more profiles, which are similar in concept to a device configuration policy template, a logical group of related settings. However, endpoint security profiles focus on a subset of available settings that focus on configuring and securing your device endpoints.
-
-As a security admin concerned with device security, use these security-focused policies to avoid the overhead of device configuration profiles or security baselines. Device configuration profiles and baselines include a large body of diverse settings outside the scope of securing endpoints. In contrast, each endpoint security profile focuses on a specific subset of device settings intended to configure a specific aspect of device security.
+Use Intune endpoint security policies to manage security settings on devices. Each endpoint security policy supports one or more profiles. These profiles are similar in concept to a device configuration policy template, a logical group of related settings. As a security admin concerned with device security, you can use these security-focused profiles to avoid the overhead of device configuration profiles or security baselines. Where device configuration profiles and baselines include a large body of diverse settings outside the scope of securing endpoints, each endpoint security profile focuses on a specific subset of device settings intended to configure one aspect of device security.
 
 Intune treats the settings from security baselines, device configuration policies, and endpoint security policies as equal. Therefore, it’s important to develop a plan for using the multiple policy types to minimize the risk of settings conflict.
 
