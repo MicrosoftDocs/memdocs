@@ -92,7 +92,7 @@ Administrators and users will be able to restore a Cloud PC to a state from a pr
 
 ### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
 
-Intune’s remote action to Collect diagnostics will soon collect additional details from Windows 365 C;oud PCs.
+Intune’s remote action to Collect diagnostics will soon collect additional details from Windows 365 Cloud PCs.
 
 The new details for Windows 365 Cloud PCs include the following registry data:
 
