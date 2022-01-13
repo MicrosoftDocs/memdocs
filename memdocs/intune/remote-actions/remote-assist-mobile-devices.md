@@ -4,8 +4,8 @@
 title: Remotely assist mobile devices managed by Intune 
 description: You can use a four different options to remotely assist users with their mobile devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 11/22/2021
 ms.topic: how-to

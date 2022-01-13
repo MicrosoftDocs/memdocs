@@ -4,8 +4,8 @@
 title: Retire or wipe devices using Microsoft Intune
 description: Retire or wipe a device on an Android, Android work profile, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Azure Active Directory.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 08/31/2021
 ms.topic: how-to

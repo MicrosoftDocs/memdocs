@@ -4,8 +4,8 @@
 title: Reset device passcodes with Microsoft Intune
 description: Remove or reset the passcode by using the remove passcode action on devices you manage or monitor with Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/27/2020
 ms.topic: how-to

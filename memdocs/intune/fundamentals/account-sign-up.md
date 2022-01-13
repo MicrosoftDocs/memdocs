@@ -4,8 +4,8 @@
 title: Sign up or sign in to Microsoft Intune
 description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/19/2021
 ms.topic: how-to

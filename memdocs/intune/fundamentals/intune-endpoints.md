@@ -5,8 +5,8 @@ title: Network endpoints for Microsoft Intune
 titleSuffix: 
 description: Review endpoints for Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 01/05/2022
 ms.topic: reference
