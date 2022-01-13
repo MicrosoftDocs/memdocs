@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/30/2021
+ms.date: 01/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,8 +39,8 @@ These certificates can be removed when you [wipe](../remote-actions/devices-wipe
 >
 > 1. Wipe or retire the user's device.
 > 2. Remove the user from on-premises Active Directory or Azure AD.
->
-> Please note, this article is not applicable for imported PKCS certificates. The imported certificates are removed by Intune when company data is removed, or when users are unenrolled from management.
+
+The majority of this article aplies to SCEP and PKCS certificate profiles, but not to impported PKCS certificates. Imported PKCS certificates are removed by Intune when company data is removed from the device, when a device is unenrolled from management, or a user is no longer targeted by the deloyment of the certificate. 
 
 
 ## Manually deleted certificates
