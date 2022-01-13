@@ -22,7 +22,7 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
+ms.custom: seodec18, references_regions
 ms.collection: M365-identity-device-management
 ---
 
