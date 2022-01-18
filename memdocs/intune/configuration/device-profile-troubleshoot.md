@@ -2,7 +2,7 @@
 # required metadata
 
 title: Troubleshoot device profiles in Microsoft Intune
-description: Common questions and answers with device policies and profiles, including profile changes not applied to users or devices, how long it takes for new policies to be pushed to devices, which settings are applied when there are multiple policies, what happens when a profile is deleted or removed, and more with Microsoft Intune.
+description: Common questions and answers with device policies and profiles, including profile changes not applied to users or devices, how long it takes for new policies to deploy to devices, which settings apply when there are multiple policies, what happens when a profile is deleted or removed, and more with Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 
-## How long does it take for devices to get a policy, profile, or app after they are assigned?
+## How long does it take for devices to get a policy, profile, or app after it's assigned?
 
 Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms.
 
@@ -84,9 +84,9 @@ When two or more policies are assigned to the same user or device, then the sett
 
 ## What happens when app protection policies conflict with each other? Which one is applied to the app?
 
-Conflict values are the most restrictive settings available in an app protection policy *except* for the number entry fields, such as PIN attempts before reset. The number entry fields are set the same as the values, as if you created a MAM policy using the recommended settings option.
+Conflict values are the most restrictive settings available in an app protection policy. The exception is numeric entry fields, such as PIN attempts before reset. Numeric entry fields are set the same as the values, as if you created a MAM policy using the recommended settings option.
 
-Conflicts happen when two profile settings are the same. For example, you configured two MAM policies that are identical except for the copy/paste setting. In this scenario, the copy/paste setting is set to the most restrictive value, but the rest of the settings are applied as configured.
+Conflicts happen when two profile settings are the same. For example, you configured two MAM policies that are identical except for the copy/paste setting. In this scenario, the copy/paste setting is set to the most restrictive value. The rest of the settings apply as configured.
 
 A policy is deployed to the app and takes effect. A second policy is deployed. In this scenario, the first policy takes precedence, and stays applied. The second policy shows a conflict. If both are applied at the same time, meaning that there isn't preceding policy, then both are in conflict. Any conflicting settings are set to the most restrictive values.
 
@@ -98,7 +98,7 @@ When you assign a custom policy, confirm that the configured settings don't conf
 
 ## What happens when a profile is deleted or no longer applicable?
 
-When you delete a profile, or remove a device from a group that's assigned the profile, then the profile and settings are removed from the device as described:
+When you delete a profile, or remove a device from a group that's assigned the profile, then the profile and settings are removed from the device. Specifically, they're removed as described in the following list:
 
 - Wi-Fi, VPN, certificate, and email profiles: These profiles are removed from all supported enrolled devices.
 - All other profile types:
@@ -118,7 +118,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 
-To apply a less restrictive profile, some devices, such as Android, iOS/iPadOS, and Windows client, may need to be retired and re-enrolled in to Intune.
+To apply a less restrictive profile, some devices may need to be retired and re-enrolled in to Intune. For example, you may have to retire and re-enroll Android, iOS/iPadOS, and Windows client devices.
 
 ## Some settings in a Windows 10/11 profile return "Not Applicable"
 

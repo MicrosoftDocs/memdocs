@@ -94,7 +94,7 @@ Use these settings to control how software updates are downloaded to devices in 
 
 This feature supports:
 
-- Winodws 11
+- Windows 11
 - Windows 10
 
 ## Derived credential
