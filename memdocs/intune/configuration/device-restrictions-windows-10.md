@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Device restriction settings for Windows 10 in Microsoft Intune
-description: See a list of all the settings and their descriptions for creating device restrictions on Windows 10 and later devices. Use these settings in a configuration profile to control screenshots, password requirements, kiosk settings, apps in the store, Microsoft Edge browser, Microsoft Defender, access to the cloud, start menu, and more in Microsoft Intune.
+title: Device restriction settings for Windows 10/11 in Microsoft Intune
+description: See a list of all the settings and their descriptions for creating device restrictions on Windows 10/11 client devices. Use these settings in a configuration profile to control screenshots, password requirements, kiosk settings, apps in the store, Microsoft Edge browser, Microsoft Defender, access to the cloud, start menu, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2022
+ms.date: 01/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,23 +29,28 @@ ms.collection:
   - highpri
 ---
 
-# Windows 10 (and newer) device settings to allow or restrict features using Intune
+# Windows 10/11 device settings to allow or restrict features using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes some of the settings you can control on Windows 10 and newer devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, customize the lock screen, use Microsoft Defender, and more.
+This article describes some of the settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, customize the lock screen, use Microsoft Defender, and more.
 
-These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows 10 devices.
+These settings apply to:
+
+- Windows 11
+- Windows 10
+
+These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows client devices.
 
 > [!Note]
 > Some settings are only available on specific Windows editions, such as Enterprise. To see the supported editions, refer to the [policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider) (opens another Microsoft web site).
 >  
-> In a Windows 10 device restrictions profile, most configurable settings are deployed at the device level using device groups. Policies deployed to user groups apply to targeted users. The policies also apply to users who have an Intune license, and users that sign in to that device.
+> In a Windows 10/11 device restrictions profile, most configurable settings are deployed at the device level using device groups. Policies deployed to user groups apply to targeted users. The policies also apply to users who have an Intune license, and users that sign in to that device.
 
 ## Before you begin
 
-[Create a Windows 10 device restrictions profile](device-restrictions-configure.md#create-the-profile).
+[Create a Windows 10/11 device restrictions profile](device-restrictions-configure.md#create-the-profile).
 
 ## App Store
 
@@ -353,8 +358,8 @@ These settings use the [browser policy CSP](/windows/client-management/mdm/polic
 The available settings change depending on what you choose. Your options:
 
 - **No** (default): Microsoft Edge isn't running in kiosk mode. All Microsoft Edge settings are available for you to change and configure.
-- **Digital/Interactive signage (single app kiosk)**: Filters Microsoft Edge settings that are applicable for Digital/Interactive signage Microsoft Edge Kiosk mode for use only on Windows 10 single-app kiosks. Choose this setting to open a URL full screen, and only show the content on that website. [Set up digital signs](/windows/configuration/setup-digital-signage) provides more information on this feature.
-- **InPrivate Public browsing (single app kiosk)**: Filters Microsoft Edge settings that are applicable for InPrivate Public Browsing Microsoft Edge Kiosk mode for use on Windows 10 single-app kiosks. Runs a multi-tab version of Microsoft Edge.
+- **Digital/Interactive signage (single app kiosk)**: Filters Microsoft Edge settings that apply to Digital/Interactive signage Microsoft Edge Kiosk mode on Windows 10/11 single-app kiosks. Choose this setting to open a URL full screen, and only show the content on that website. [Set up digital signs](/windows/configuration/setup-digital-signage) provides more information on this feature.
+- **InPrivate Public browsing (single app kiosk)**: Filters Microsoft Edge settings that are applicable for InPrivate Public Browsing Microsoft Edge Kiosk mode for use on Windows 10/11 single-app kiosks. Runs a multi-tab version of Microsoft Edge.
 - **Normal mode (multi-app kiosk)**: Filters Microsoft Edge settings that are applicable for Normal Microsoft Edge Kiosk mode. Runs a full-version of Microsoft Edge with all browsing features.
 - **Public browsing (multi-app kiosk)**: Filters Microsoft Edge settings that are applicable for Public browsing on a Windows 10 multi-app kiosk.  Runs a multi-tab version of Microsoft Edge InPrivate.
 
@@ -544,7 +549,7 @@ These settings use the [DeviceLock policy CSP](/windows/client-management/mdm/po
 
   [Cryptography/AllowFipsAlgorithmPolicy CSP](/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Windows Hello device authentication**: **Allow** users to use a Windows Hello companion device, such as a phone, fitness band, or IoT device, to sign in to a Windows 10 computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent Windows Hello companion devices from authenticating.
+- **Windows Hello device authentication**: **Allow** users to use a Windows Hello companion device, such as a phone, fitness band, or IoT device, to sign in to a Windows 10/11 computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent Windows Hello companion devices from authenticating.
 
   [Authentication/AllowSecondaryAuthenticationDevice CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
@@ -1272,6 +1277,6 @@ These settings use the [power policy CSP](/windows/client-management/mdm/policy-
 
 ## Next steps
 
-For additional technical details on each setting and what editions of Windows are supported, see [Windows 10 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider)
+For additional technical details on each setting and what editions of Windows are supported, see [Windows 10/11 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider)
 
 [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).

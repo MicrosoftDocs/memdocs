@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 01/18/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,7 +45,7 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
 | Android | About every 8 hours |
-| Windows 10 PCs enrolled as devices | About every 8 hours |
+| Windows 10/11 PCs enrolled as devices | About every 8 hours |
 | Windows Phone | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
@@ -56,7 +56,7 @@ If devices recently enroll, then the compliance, non-compliance, and configurati
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |  
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours | 
 | Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows 10 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
+| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows Phone | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 
@@ -118,11 +118,11 @@ When you delete a profile, or remove a device from a group that's assigned the p
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 
-To apply a less restrictive profile, some devices, such as Android, iOS/iPadOS, and Windows 10, may need to be retired and re-enrolled in to Intune.
+To apply a less restrictive profile, some devices, such as Android, iOS/iPadOS, and Windows client, may need to be retired and re-enrolled in to Intune.
 
-## Some settings in a Windows 10 profile return "Not Applicable"
+## Some settings in a Windows 10/11 profile return "Not Applicable"
 
-Some settings on Windows 10 devices may show as "Not Applicable". When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
+Some settings on Windows client devices may show as "Not Applicable". When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
 
 - The setting is only available for newer versions of Windows, and not the current operating system (OS) version on the device.
 - The setting is only available for specific Windows editions or specific SKUs, such as Home, Professional, Enterprise, and Education.
