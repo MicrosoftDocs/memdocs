@@ -22,7 +22,7 @@ In this co-management quickstart series, see how you can quickly drive new manag
 
 In the following video, Microsoft corporate vice president Brad Anderson introduces this co-management series:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Cloud-Connecting-with-Co-Management/player]
+> [!VIDEO https://aka.ms/docs/player?id=43180fed-54f8-4179-bcfc-98c0f9efcdbc]
 
 | Immediate value | Getting started |
 |-----------------|-----------------|

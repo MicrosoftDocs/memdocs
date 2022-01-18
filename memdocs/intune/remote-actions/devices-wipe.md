@@ -4,7 +4,7 @@
 title: Retire or wipe devices using Microsoft Intune
 description: Retire or wipe a device on an Android, Android work profile, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Azure Active Directory.
 keywords:
-author: smbhardwaj
+author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
 ms.date: 01/26/2022
@@ -168,6 +168,9 @@ Device owners can manually un-enroll their devices as explained in the following
 - [Remove device from Company Portal for iOS app](../user-help/unenroll-your-device-from-intune-ios.md)
 - [Remove device from Company Portal for macOS app](../user-help/unenroll-your-device-from-intune-macos.md)
 - [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
+
+> [!TIP]
+> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Azure AD records. To remove record of the Intune device, sign in to Microsoft Endpoint Manager and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Azure AD record, if applicable, because the cleanups rule will not remove it.  
 
 ## Delete devices from the Intune portal
 

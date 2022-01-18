@@ -18,7 +18,7 @@ Conditional Access makes sure that only trusted users can access organizational 
 
 In the following video, senior program manager Joey Glocke and product marketing manager Locky Ainley discuss and demo Conditional Access with co-management:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player]
+> [!VIDEO https://aka.ms/docs/player?id=18f4da94-2409-4a4e-86c1-b74262fea18a]
 
 With co-management, Intune evaluates every device in your network to determine how trustworthy it is. It does this evaluation in the following two ways:
 

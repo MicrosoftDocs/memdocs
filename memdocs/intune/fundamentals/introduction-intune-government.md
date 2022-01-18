@@ -4,8 +4,8 @@
 title: What is Intune for Government?
 description: Learn what is available with Intune for Government.
 keywords: what is Intune
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/11/2020
 ms.topic: conceptual
