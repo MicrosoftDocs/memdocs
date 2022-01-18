@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/22/2021
+ms.date: 01/18/2022
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -141,7 +141,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 3. Select *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
 
-   ![Microsoft Intune Connector download](./media/certificates-pfx-configure/download-connector.png)
+   :::image type="content source="./media/certificates-pfx-configure/download-connector.png" alt-text="Microsoft Intune Connector download.":::
 
 4. After the download completes, sign in to the server and run the installer (PfxCertificateConnectorBootstrapper.exe).  
    - When you accept the default installation location, the connector installs to `Program Files\Microsoft Intune\PFXCertificateConnector`.
