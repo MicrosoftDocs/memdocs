@@ -64,13 +64,13 @@ It is not recommended that multiple apps that are not dependent on each other ar
 ## Step 1 – App information
 
 Select the app package file:
-1.	In the **Add app** pane, click **Select app package file**.
-2.	In the **App package file** pane, select the browse button. Then, select a macOS DMG file with the extension *.dmg*. The app details will be displayed.
-3.	When you're finished, select **OK** on the **App package file** pane to add the app.
+1. In the **Add app** pane, click **Select app package file**.
+2. In the **App package file** pane, select the browse button. Then, select a macOS DMG file with the extension *.dmg*. The app details will be displayed.
+3. When you're finished, select **OK** on the **App package file** pane to add the app.
 
 ### Set app information
 
-1.	In the **App information** page, add the details for your app. Depending on the app that you chose, some of the values in this pane might be automatically filled in.
+1. In the **App information** page, add the details for your app. Depending on the app that you chose, some of the values in this pane might be automatically filled in.
 
     - **Name**: Enter the name of the app as it appears in the policy name and company portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.
     - **Description**: Enter the description of the app. The description appears in the company portal.
@@ -83,7 +83,7 @@ Select the app package file:
     - **Owner**: Optionally, enter a name for the owner of this app. An example is HR department.
     - **Notes**: Enter any notes that you want to associate with this app.
     - **Logo**: Upload an icon that is associated with the app. This icon is displayed with the app when users browse through the company portal.
-2.	Click Next to display the Scope tags page.
+2. Click Next to display the Scope tags page.
 
 ## Step 2 – Requirements
 
@@ -109,15 +109,14 @@ Then, run the following:
 defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion
 - Alternatively, the CFBundleIdentifier and CFBundleVersion can be found under <app_name>.app/Contents/Info.plist file of a mounted DMG file on a Mac.
 
-
 > [!NOTE]
 > - The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file. 
 > - Mac Terminal can be used to lookup and confirm the included app details of an installed app.
->    For example, to look up the bundle ID and build number of Company Portal, run the following:
->    `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`
->    
->    Then, run the following:
->    `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion`
+> For example, to look up the bundle ID and build number of Company Portal, run the following:
+> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`
+> 
+> Then, run the following:
+> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion`
 >
 > - Alternatively, the `CFBundleIdentifier` and `CFBundleVersion` can be found under *<app_name>.app/Contents/Info.plist* file of a mounted DMG file on a Mac.
 
@@ -128,13 +127,15 @@ You can use scope tags to determine who can see client app information in Intune
     2. Click Next to display the Assignments page.
 
 ## Step 5 - Assignments
-    1. Select the **Required, Available for enrolled devices**, or **Uninstall group assignments** for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
-    2. Click **Next** to display the **Review + create** page.
+
+1. Select the **Required, Available for enrolled devices**, or **Uninstall group assignments** for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+2. Click **Next** to display the **Review + create** page.
 
 ## Step 6 – Review + create
-    1. Review the values and settings you entered for the app.
-    2. When you are done, click **Create** to add the app to Intune. 
-        The **Overview** pane for the macOS DMG app is displayed.
+
+1. Review the values and settings you entered for the app.
+2. When you are done, click **Create** to add the app to Intune. 
+   The **Overview** pane for the macOS DMG app is displayed.
 
 The app you have created appears in the apps list where you can assign it to the groups you choose. For help, see [How to assign apps to groups](../apps/apps-deploy.md).
 
@@ -149,9 +150,7 @@ The app you have created appears in the apps list where you can assign it to the
 - **App upgrade fails to install**: Updating an app that has the same bundle ID as an existing app in Applications folder fails to install. 
 - **DMG apps report once after deployment**: Assigned DMG apps report back on initial deployment only. These apps will not report back again during preview.
 - **Some DMG apps may display a warning to end-users on launch**: Apps downloaded from the internet and deployed using Intune may show a warning to end-users when launched. End-users can click "Open" on the dialog to continue opening the app.
-
-    ![DMG apps may display a warning to end-users on launch](../media/lob-apps-macos-dmg/lob-apps-macos-dmg-01.png)
-
+  ![DMG apps may display a warning to end-users on launch](../media/lob-apps-macos-dmg/lob-apps-macos-dmg-01.png)
 - **Some app icons may not display immediately after installation**: some app icons may take some time after installation to start displaying on the installed device.
 
 ## Next steps
