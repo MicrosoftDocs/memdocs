@@ -66,7 +66,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- A Microsoft 365 E3 or E5 subscription, which includes Intune and Azure Active Directory (AD) premium. If you don't have an E3 or E5 subscription, [try it for free](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- A Microsoft 365 E3 or E5 subscription, which includes Intune and Azure Active Directory (AD) premium. If you don't have an E3 or E5 subscription, [try it for free](/office365/admin/try-or-buy-microsoft-365).
 
   For more information on what you get with the different Microsoft 365 licenses, see [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -447,7 +447,7 @@ At this point, you created some administrative templates, and assigned them to g
 This section uses the following resources. We'll install these resources in this section.
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Microsoft Graph API for Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Microsoft Graph API for Intune](/graph/api/resources/intune-graph-overview)
 
 1. On the **Admin computer**, open **Windows PowerShell** as administrator:
 
