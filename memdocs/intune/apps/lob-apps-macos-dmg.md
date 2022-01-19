@@ -150,7 +150,9 @@ The app you have created appears in the apps list where you can assign it to the
 - **App upgrade fails to install**: Updating an app that has the same bundle ID as an existing app in Applications folder fails to install. 
 - **DMG apps report once after deployment**: Assigned DMG apps report back on initial deployment only. These apps will not report back again during preview.
 - **Some DMG apps may display a warning to end-users on launch**: Apps downloaded from the internet and deployed using Intune may show a warning to end-users when launched. End-users can click "Open" on the dialog to continue opening the app.
+
   ![DMG apps may display a warning to end-users on launch](./media/lob-apps-macos-dmg/lob-apps-macos-dmg-01.png)
+
 - **Some app icons may not display immediately after installation**: some app icons may take some time after installation to start displaying on the installed device.
 
 ## Next steps
