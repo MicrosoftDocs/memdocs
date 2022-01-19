@@ -66,7 +66,7 @@ It is not recommended that multiple apps that are not dependent on each other ar
 Select the app package file:
 1.	In the **Add app** pane, click **Select app package file**.
 2.	In the **App package file** pane, select the browse button. Then, select a macOS DMG file with the extension *.dmg*. The app details will be displayed.
-3.	When you're finished, select **OK**on the **App package file** pane to add the app.
+3.	When you're finished, select **OK** on the **App package file** pane to add the app.
 
 ### Set app information
 
