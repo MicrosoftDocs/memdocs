@@ -110,9 +110,7 @@ You can use detection rules to choose how an app installation is detected on a m
 > 
 >   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion```
 >
-> - Alternatively, the `CFBundleIdentifier` and `CFBundleVersion` can be found under the following:
->
->   ```<app_name>.app/Contents/Info.plist``` file of a mounted DMG file on a Mac.
+> - Alternatively, the `CFBundleIdentifier` and `CFBundleVersion` can be found under the ```<app_name>.app/Contents/Info.plist``` file of a mounted DMG file on a Mac.
 
 ## Step 4 – Select scope tags (optional)
 
