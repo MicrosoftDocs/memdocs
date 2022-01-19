@@ -240,7 +240,7 @@ This feature applies to:
 
 - **"If Lost, Return to..." Message**: If devices are lost or stolen, enter a note that might help get the device returned if found. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
 
- The text you enter is shown on the sign in window and lock screen on devices.
+  The text you enter is shown on the sign in window and lock screen on devices.
 
 - **Asset tag information**: Enter information about the asset tag of the device. For example, enter `Owned by Contoso Corp` or `Serial Number: {{serialnumber}}`.
 
