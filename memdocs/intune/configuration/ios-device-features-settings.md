@@ -245,7 +245,34 @@ This feature applies to:
 - **Asset tag information**: Enter information about the asset tag of the device. For example, enter `Owned by Contoso Corp` or `Serial Number: {{serialnumber}}`.
 
   Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}` or `Device ID: {{DEVICEID}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `DEVICENAME` or any other device-specific value.
-
+  
+  The following device information variables are supported:
+  - **{{userPrincipalName}}**:  UPN of the user
+  - **{{mail}}**:  Email address of the user
+  - **{{partialUPN}}**:  UPN prefix before the @ symbol
+  - **{{UserName}}**:  User name
+  - **{{AccountId}}**:  Intune tenant ID or account ID
+  - **{{AccountName}}**:  Intune tenant name or account name
+  - **{{DeviceId}}**:  Intune device ID
+  - **{{DeviceName}}**:  Intune device name
+  - **{{UserId}}**:  Intune user ID
+  - **{{SerialNumber}}**:  Device serial number
+  - **{{SerialNumberLast4Digits}}**: Last 4 digits of the device serial number
+  - **{{UDID}}**: Device UDID
+  - **{{UDIDLast4Digits}}**:  Last 4 digits of the device UDID
+  - **{{domain}}**:  Domain name
+  - **{{AppleId}}**:  Apple ID of the user
+  - **{{ManagedAppleId}}**: Managed Apple ID of the user
+  - **{{EDUUserType}}**: Type of user
+  - **{{SearchableDeviceKey}}**:  NGC Key ID
+  - **{{SIGNEDDEVICEID}}**:  Device ID blob assigned to client during Company Portal enrollment
+  - **{{SignedDeviceIdWithUserId}}**:  Device ID blob assigned to client with user-affinity during Apple Setup Assistant
+  - **{{EASID}}**: Exchange Active Sync ID
+  - **{{IMEI}}**:  IMEI of the device
+  - **{{MEID}}**:  MEID of the device
+  - **{{AADDeviceId}}**:  Azure AD device ID
+  - **{{Department}}**:  Department assigned during Setup Assistant
+ 
   > [!NOTE]
   > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}` or '{{DEVICEID}}', then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix. 
 
