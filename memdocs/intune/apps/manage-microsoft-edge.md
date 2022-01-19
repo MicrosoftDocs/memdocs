@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2022
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,7 +38,7 @@ Edge for iOS and Android is designed to enable users to browse the web and suppo
 
 This feature applies to:
 - iOS/iPadOS 14.0 or later
-- Android 6.0 or later
+- Android 8.0 or later
 
 > [!NOTE]
 > Edge for iOS and Android doesn't consume settings that users set for the native browser on their devices, because Edge for iOS and Android can't access these settings.

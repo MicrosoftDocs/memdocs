@@ -17,7 +17,10 @@ ms.localizationpriority: high
 ### Google
 
 - Android 8.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
-- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
+- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)  
+
+> [!NOTE]
+> Intune requires Android 8.x or higher for device enrollment scenarios. For Intune app protection policies, Intune requires Android 9.0 or higher. These requirements do not apply to Microsoft Teams certified Polycom devices running Android 4.4. These devices will continue to be supported.  
 
 ### Microsoft
 

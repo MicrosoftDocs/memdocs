@@ -627,7 +627,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   This setting applies to:
 
-  - Android 6.0 and newer personally owned devices with a work profile
+  - Android 8.0 and newer personally owned devices with a work profile
 
 - **Screen capture**: **Block** prevents screenshots or screen captures on the device in the work profile. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
 
@@ -635,7 +635,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   This setting applies to:
 
-  - Android 6.0 and newer personally owned devices with a work profile
+  - Android 8.0 and newer personally owned devices with a work profile
 
 - **Search work contacts from personal profile**: **Block** prevents users from searching for work contacts in apps in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow searching for work contacts in the personal profile.
 
@@ -649,7 +649,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   This setting applies to:
 
-  - Android 7.0 and newer personally owned devices with a work profile
+  - Android 8.0 and newer personally owned devices with a work profile
 
   Also configure:
 

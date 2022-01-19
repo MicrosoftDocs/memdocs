@@ -35,10 +35,7 @@ Before setting up Microsoft Intune, review the supported operating systems and b
 
 For help installing Intune on your device, see [using managed devices to get work done](../user-help/use-managed-devices-to-get-work-done.md) and [Intune network bandwidth usage](network-bandwidth-use.md).
 
-For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
-
-> [!NOTE]
-> Intune requires Android 8.x or higher for device enrollment scenarios. For Intune app protection policies, Intune requires Android 9.0 or higher. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported.  
+For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).  
 
 ## Intune supported operating systems
 
