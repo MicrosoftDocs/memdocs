@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 This article will help you migrate your mobile device management (MDM) from Basic Mobility and Security (Office 365) to the Microsoft Endpoint Manager portal (Intune).
 
-Moving to Intune combines all your MDM in one solution. It lets all your users benefit from the wider set of features offered by Intune. To see a comparison of the features available in the two services, see [Choose between Basic Mobility and Security or Intune]( https://docs.microsoft.com/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
+Moving to Intune combines all your MDM in one solution. It lets all your users benefit from the wider set of features offered by Intune. To see a comparison of the features available in the two services, see [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
 
 After migrating to Intune, the existing device security policies deployed with Basic Mobility and Security will be permanently frozen.
 
@@ -103,7 +103,7 @@ To migrate policies from Basic Mobility and Security to Intune, follow these ste
     The policy recommendation on this page isn’t itself an Intune policy. It’s only a read-only report documenting the suggested settings and assignments to use. While reviewing the recommendations, keep these points in mind:
     - If the groups listed in the recommendation already have Intune policies assigned to them, these may conflict with the recommended settings. To learn how conflicts are handled for a specific setting, refer to the documentation for [device configuration](../configuration/device-profiles.md) or [device compliance](../protect/device-compliance-get-started.md).
     > [!NOTE]
-    > If you make any changes to the migrated email profiles or fail to assign them to recommended groups, users may be asked to re-enter their username and password to access email on their devices when the device migrates to Intune. See [policy mapping for Configuration](https://docs.microsoft.com/mem/intune/fundamentals/policy-map-configurations 
+    > If you make any changes to the migrated email profiles or fail to assign them to recommended groups, users may be asked to re-enter their username and password to access email on their devices when the device migrates to Intune. See [policy mapping for Configuration](policy-map-configurations.md) 
     - If there are already Intune-licensed users in the recommended groups, verify that the recommended policies will also be appropriate for them. After you assign the policies to these groups, all Intune licensed users will receive them, even users not previously managed by Basic Mobility and Security.
 6. If you want to implement the recommended policy, choose **Open policy**. This opens the actual policy page. Initially, the policy doesn’t have any groups assigned to it. This means that it’s not affecting any users who are licensed for Intune and happened to be in the same groups assigned to the original device security policy. You’ll need to assign the recommended groups to the Intune policy to replace the device settings configured in Basic Mobility and Security. If you don’t, devices managed by Basic Mobility and Security could lose settings and email configuration when their users are licensed for Intune causing their devices to migrate.
    > [!NOTE]
