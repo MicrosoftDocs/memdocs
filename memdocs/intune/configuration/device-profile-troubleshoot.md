@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 
-## How long does it take for devices to get a policy, profile, or app after it's assigned?
+## How long does it take for devices to get a policy, profile, or app after they are assigned?
 
 Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms.
 
