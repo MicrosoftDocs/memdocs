@@ -67,11 +67,11 @@ Ensure that the following prerequisites are met when composing shell scripts and
 6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
    > [!NOTE]
    > - Shell scripts assigned to user groups applies to any user logging in to the Mac.  
-   > - Updating assignments for shell scripts also updates assignments for [Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+   > - Updating assignments for shell scripts also updates assignments for [Microsoft Intune MDM Agent for macOS](../apps/lob-apps-macos-dmg.md).
 
 7. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
-The script you created now appears in the list of scripts. 
+The script you created now appears in the list of scripts.
 
 ## Monitor a shell script policy
 You can monitor the run status of all assigned scripts for users and devices by choosing one of the following reports:

@@ -124,16 +124,16 @@ defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion
 ## Step 4 – Select scope tags (optional)
 
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
-    1.	Click Select scope tags to optionally add scope tags for the app.
-    2.	Click Next to display the Assignments page.
+    1. Click Select scope tags to optionally add scope tags for the app.
+    2. Click Next to display the Assignments page.
 
 ## Step 5 - Assignments
-    1.	Select the **Required, Available for enrolled devices**, or **Uninstall group assignments** for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
-    2.	Click **Next** to display the **Review + create** page.
+    1. Select the **Required, Available for enrolled devices**, or **Uninstall group assignments** for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+    2. Click **Next** to display the **Review + create** page.
 
 ## Step 6 – Review + create
-    1.	Review the values and settings you entered for the app.
-    2.	When you are done, click **Create** to add the app to Intune. 
+    1. Review the values and settings you entered for the app.
+    2. When you are done, click **Create** to add the app to Intune. 
         The **Overview** pane for the macOS DMG app is displayed.
 
 The app you have created appears in the apps list where you can assign it to the groups you choose. For help, see [How to assign apps to groups](../apps/apps-deploy.md).
@@ -150,7 +150,7 @@ The app you have created appears in the apps list where you can assign it to the
 - **DMG apps report once after deployment**: Assigned DMG apps report back on initial deployment only. These apps will not report back again during preview.
 - **Some DMG apps may display a warning to end-users on launch**: Apps downloaded from the internet and deployed using Intune may show a warning to end-users when launched. End-users can click "Open" on the dialog to continue opening the app.
 
-    ![DMG apps may display a warning to end-users on launch](./media/lob-apps-macos-dmg/lob-apps-macos-dmg-01.png)
+    ![DMG apps may display a warning to end-users on launch](../media/lob-apps-macos-dmg/lob-apps-macos-dmg-01.png)
 
 - **Some app icons may not display immediately after installation**: some app icons may take some time after installation to start displaying on the installed device.
 
