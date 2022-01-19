@@ -99,26 +99,20 @@ You can use detection rules to choose how an app installation is detected on a m
 
 **Included apps**: Provide the apps that are contained in the uploaded file. Included app bundle IDs and build numbers are used for detecting and monitoring app installation status of the uploaded file. Included apps list should only contain the application(s) installed by the uploaded file in **Applications** folder on Macs. Any other type of file that is not an application or an application that is not installed to **Applications** folder should be excluded from the **Included apps** list. If **Included apps** list contains files that are not applications or if all the listed apps are not installed, app installation status does not report success.
 
-NOTE!
-- The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file. 
-
-- Mac Terminal can be used to lookup and confirm the included app details of an installed app.
-For example, to look up the bundle ID and build number of Company Portal, run the following:
-defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier
-Then, run the following:
-defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion
-- Alternatively, the CFBundleIdentifier and CFBundleVersion can be found under <app_name>.app/Contents/Info.plist file of a mounted DMG file on a Mac.
-
 > [!NOTE]
 > - The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file. 
 > - Mac Terminal can be used to lookup and confirm the included app details of an installed app.
-> For example, to look up the bundle ID and build number of Company Portal, run the following:
-> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`
+>   For example, to look up the bundle ID and build number of Company Portal, run the following:
 > 
-> Then, run the following:
-> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion`
+>   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier```
+> 
+>   Then, run the following:
+> 
+>   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleVersion```
 >
-> - Alternatively, the `CFBundleIdentifier` and `CFBundleVersion` can be found under *<app_name>.app/Contents/Info.plist* file of a mounted DMG file on a Mac.
+> - Alternatively, the `CFBundleIdentifier` and `CFBundleVersion` can be found under the following:
+>
+>   ```<app_name>.app/Contents/Info.plist``` file of a mounted DMG file on a Mac.
 
 ## Step 4 – Select scope tags (optional)
 
