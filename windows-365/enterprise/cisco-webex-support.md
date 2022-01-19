@@ -28,11 +28,14 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Optimize Zoom on a Windows 365 Cloud PC
+# Optimize Cisco Webex on a Windows 365 Cloud PC
 
 Cisco Webex is a 3rd-party application that provides online meeting services including support for virtualized environments like Windows 365 Cloud PCs. The instructions in this article help you optimize traffic for Cisco Webex meetings when using the Microsoft Remote Desktop client on a Windows PC to access a Cloud PC.
 
-To optimize Cisco Webex, you’ll need to install the Cisco Webex VDI Client on the Cloud PC and the Webex App VDI plugin on the local Windows PC that the user will use to access the Cloud PC.
+To optimize Cisco Webex, you’ll need to:
+
+- Install the Cisco Webex VDI Client on the Cloud PC.
+- Install the Webex App VDI plugin on the local Windows PC that the user will use to access the Cloud PC.
 
 > [!NOTE]  
 > If you run into issues with Cisco Webex for VDI on your Cloud PC, contact Cisco support.
@@ -46,8 +49,8 @@ To optimize Cisco Webex, you’ll need to install the Cisco Webex VDI Client on 
 
 1. Have the user sign in to the Cloud PC as a local administrator and, in their browser, navigate to the [Webex VDI download page](https://www.webex.com/downloads/teams-vdi.html).
 2. In **Release date** column of the table, find the most recent date (for example, 12/14/2021).
-3. In the **HVD Installer** column of that row, select the appropriate link for your Windows system (32- or 64-bit) to download the MSI.
-4. You must set some required switches to install the VDI components. Therefore, to run the MSI, open an elevated command prompt and run the following install command. Replace the path and MSI filename with the correct path and filename that you downloaded.
+3. In the **HVD Installer** column of that row, select the appropriate link for your Windows system (32-bit or 64-bit) to download the MSI.
+4. You must set some required switches to install the VDI components. So, to run the MSI, open an elevated command prompt and run the following install command. Replace the path and MSI filename with the correct path and filename that you downloaded.
     `msiexec /i %path%\Webex.msi ALLUSERS=1 ENABLEVDI=1 AUTOUPGRADEENABLED=0`
 5. To complete the MSI installer, follow the installation instructions.
 
@@ -69,7 +72,7 @@ To benefit from these optimizations, users must sign in to their Cloud PC from a
 ## To confirm that the Cisco Webex client is using the optimizations
 
 1. Sign in to the Cloud PC from the Windows client.
-2. Open the Cisco Webex client adn sign in using your Cisco Webex credentials.
+2. Open the Cisco Webex client and sign in using your Cisco Webex credentials.
 3. Select your user profile icon > **Help** > **Health Checker**.
 4. The VDI section of the **Health Checker** shows the status of the optimizations.
 
