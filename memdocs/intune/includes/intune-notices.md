@@ -9,7 +9,36 @@ ms.author: erikje
 ms.custom: include file
 ---
 
-These notices provide important information that can help you prepare for future Intune changes and features.
+These notices provide important information that can help you prepare for future Intune changes and features.  
+
+### Plan for change: Intune is moving to support Android 8.0 and later in January 2022<!-- 10946003 -->  
+
+Microsoft Intune will be moving to support Android version 8.0 (Oreo) and later for mobile device management (MDM) enrolled devices on or shortly after January 7, 2022.  
+
+#### How does this affect you or your users?
+
+After January 7, 2022, MDM enrolled devices running Android version 7.x or earlier will no longer receive updates to the Android Company Portal or the Intune App. Enrolled devices will continue to have Intune policies applied but are no longer supported for any Intune scenarios. Company Portal and the Intune App will not be available for devices running Android 7.x and lower beginning mid-February; however, these devices will not be blocked from completing enrollment if the requisite app has been installed prior to this change. If you have MDM enrolled devices running Android 7.x or below, update them to Android version 8.0 (Oreo) or higher or replace them with a device on Android version 8.0 or higher.  
+
+> [!NOTE]
+> [Microsoft Teams devices](https://www.microsoft.com/en-us/microsoft-teams/across-devices/devices?rtc=2) are not impacted by this announcement and will continue to be supported regardless of their Android OS version.  
+
+#### How can you prepare?  
+
+Notify your helpdesk, if applicable, of this upcoming change in support. You can identify how many devices are currently running Android 7.x or below by navigating to **Devices** > **All devices** > **Filter**. Then filter by OS and sort by OS version. There are two admin options to help inform your users or block enrollment.
+
+Here's how you can warn users:
+
+- Create an app protection policy and configure [conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch) with a min OS version requirement that warns users.  
+- Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the action for non-compliance to send an email or push notification to users before marking them noncompliant.  
+
+Here's how you can block devices running on versions earlier than Android 8.0:  
+
+- Create an app protection policy and configure conditional launch with a min OS version requirement that blocks users from app access.  
+- Utilize a device compliance policy for Android device administrator or Android Enterprise to make devices running Android 7.x or earlier non-compliant. 
+-  Set [enrollment restrictions](../fundamentals/manage-os-versions.md) that prevent devices running Android 7.x or earlier from enrolling.  
+
+> [!NOTE]
+> Intune app protection policies are supported on devices running Android 9.0 and later. See MC282986 for more details.  
 
 ### Plan for change: Intune APP/MAM is moving to support Android 9 and higher<!-- 10937255 -->
 
@@ -204,33 +233,4 @@ If you continue to use an unsupported version of Windows 10, your users won't ge
 
 #### How can you prepare?
 
-In the Microsoft Endpoint Manager admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.
-
-### Plan for change: Intune is moving to support Android 8.0 and later in January 2022  
-
-Microsoft Intune will be moving to support Android version 8.0 (Oreo) and later for mobile device management (MDM) enrolled devices on or shortly after January 7, 2022.  
-
-#### How does this affect you or your users?
-
-After January 7, 2022, MDM enrolled devices running Android version 7.x or earlier will no longer receive updates to the Android Company Portal or the Intune App. Enrolled devices will continue to have Intune policies applied but are no longer supported for any Intune scenarios. Company Portal and the Intune App will not be available for devices running Android 7.x and lower beginning mid-February; however, these devices will not be blocked from completing enrollment if the requisite app has been installed prior to this change. If you have MDM enrolled devices running Android 7.x or below, update them to Android version 8.0 (Oreo) or higher or replace them with a device on Android version 8.0 or higher.  
-
-> [!NOTE]
-> [Microsoft Teams devices](https://www.microsoft.com/en-us/microsoft-teams/across-devices/devices?rtc=2) are not impacted by this announcement and will continue to be supported regardless of their Android OS version.  
-
-#### How can you prepare?  
-
-Notify your helpdesk, if applicable, of this upcoming change in support. You can identify how many devices are currently running Android 7.x or below by navigating to **Devices** > **All devices** > **Filter**. Then filter by OS and sort by OS version. There are two admin options to help inform your users or block enrollment.
-
-Here's how you can warn users:
-
-- Create an app protection policy and configure [conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch) with a min OS version requirement that warns users.  
-- Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the action for non-compliance to send an email or push notification to users before marking them noncompliant.  
-
-Here's how you can block devices running on versions earlier than Android 8.0:  
-
-- Create an app protection policy and configure conditional launch with a min OS version requirement that blocks users from app access.  
-- Utilize a device compliance policy for Android device administrator or Android Enterprise to make devices running Android 7.x or earlier non-compliant. 
--  Set [enrollment restrictions](../fundamentals/manage-os-versions.md) that prevent devices running Android 7.x or earlier from enrolling.  
-
-> [!NOTE]
-> Intune app protection policies are supported on devices running Android 9.0 and later. See MC282986 for more details.  
+In the Microsoft Endpoint Manager admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.  
