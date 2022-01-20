@@ -174,7 +174,7 @@ Following are the relevant settings for each profile type:
 - **Compatible TPM startup key** - This setting must not be set to *Require startup key with TPM*
 - **Compatible TPM startup key and PIN** - This setting must not be set to *Require startup key and PIN with TPM*
 
-> ![WARNING]  
+> [!WARNING]  
 > While neither the endpoint security or device configuration policies configure the TPM settings by default, some versions of the [security baseline for Microsoft Defender for Endpoint](../protect/security-baselines.md#available-security-baselines) will configure both *Compatible TPM startup PIN* and *Compatible TPM startup key* by default. These configurations might block silent enablement of BitLocker.
 >
 > If you deploy this baseline to devices on which you want to silently enable BitLocker, review your baseline configurations for possible conflicts. To remove conflicts, either reconfigure the settings in the baselines to remove the conflict, or remove applicable devices from receiving the baseline instances that configure TPM settings that block silent enablement of BitLocker.
