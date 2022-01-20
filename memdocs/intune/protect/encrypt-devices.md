@@ -149,8 +149,7 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 - **Warning for other disk encryption** = *Block*.
 - **Allow standard users to enable encryption during Azure AD Join** = *Allow*
 
-
-> [!TIP]
+> [!TIP]  
 > While the setting labels and options in the following two policy types are different from each other, they both apply the same configuration to Windows encryption CSPs that manage BitLocker on Windows devices.
 
 #### TPM startup PIN or key
@@ -174,6 +173,11 @@ Following are the relevant settings for each profile type:
 - **Compatible TPM startup PIN** - This setting must not be set to *Require startup PIN with TPM*
 - **Compatible TPM startup key** - This setting must not be set to *Require startup key with TPM*
 - **Compatible TPM startup key and PIN** - This setting must not be set to *Require startup key and PIN with TPM*
+
+> ![WARNING]  
+> While neither the endpoint security or device configuration policies configure the TPM settings by default, the [security baseline for Microsoft Defender for Endpoint](../protect/security-baselines.md#available-security-baselines) does configure both *Compatible TPM startup PIN* and *Compatible TPM startup key*, and might configure these settings in a way that blocks silent enablement of BitLocker.
+>
+> If you deploy this baseline to devices on which you want to silently enable BitLocker, review the baselines configuration for possible conflicts. To remove conflicts, either reconfigure the settings in the baseline to remove them, or remove applicable devices from receiving the baseline instances that configure the TPM settings that block silent enablement of BitLocker.
 
 ### View details for recovery keys
 
