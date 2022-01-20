@@ -38,7 +38,7 @@ Edge for iOS and Android is designed to enable users to browse the web and suppo
 
 This feature applies to:
 - iOS/iPadOS 14.0 or later
-- Android 8.0 or later
+- Android 8.0 or later for enrolled devices and Android 9.0 or later for unenrolled devices
 
 > [!NOTE]
 > Edge for iOS and Android doesn't consume settings that users set for the native browser on their devices, because Edge for iOS and Android can't access these settings.
