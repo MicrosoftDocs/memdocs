@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Windows 10 VPN settings in Microsoft Intune
-description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, conditional access, and DNS and proxy settings for Windows 10 and Windows Holographic for Business devices.
+title: Windows 10/11 VPN settings in Microsoft Intune
+description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, conditional access, and DNS and proxy settings for Windows 10/11 and Windows Holographic for Business devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2021
+ms.date: 01/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +27,7 @@ ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 and Windows Holographic device settings to add VPN connections using Intune
+# Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -38,12 +38,13 @@ As part of your mobile device management (MDM) solution, use these settings to a
 
 These settings apply to devices running:
 
+- Windows 11
 - Windows 10
 - Windows Holographic for Business
 
 ## Before you begin
 
-- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
+- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows client VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
 - These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
@@ -57,7 +58,7 @@ These settings apply to devices running:
   - **Import**: Browse to a comma-separated file that includes a list of servers in the format: description, IP address or FQDN, Default server. Choose **OK** to import these servers into the **Servers** list.
   - **Export**: Exports the list of servers to a comma-separated-values (csv) file.
 
-- **Register IP addresses with internal DNS**: Select **Enable** to configure the Windows 10 VPN profile to dynamically register the IP addresses assigned to the VPN interface with the internal DNS. Select **Disable** to not dynamically register the IP addresses.
+- **Register IP addresses with internal DNS**: Select **Enable** to configure the Windows client VPN profile to dynamically register the IP addresses assigned to the VPN interface with the internal DNS. Select **Disable** to not dynamically register the IP addresses.
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 
@@ -192,7 +193,7 @@ For more information about creating custom EAP XML, see [EAP configuration](/win
 
       The type of app determines the app identifier. For a universal app, enter the package family name, such as `Microsoft.Office.OneNote_8wekyb3d8bbwe`. For a desktop app, enter the file path of the app, such as `%windir%\system32\notepad.exe`.
 
-      To get the package family name, you can use the `Get-AppxPackage` Windows PowerShell cmdlet. For example, to get the OneNote package family name, open Windows PowerShell, and enter `Get-AppxPackage *OneNote`. For more information, see [Find a PFN for an app that's installed on a Windows 10 computer](../../configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn.md#find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer) and [Get-AppxPackage cmdlet](/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps).
+      To get the package family name, you can use the `Get-AppxPackage` Windows PowerShell cmdlet. For example, to get the OneNote package family name, open Windows PowerShell, and enter `Get-AppxPackage *OneNote`. For more information, see [Find a PFN for an app that's installed on a Windows client computer](../../configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn.md#find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer) and [Get-AppxPackage cmdlet](/powershell/module/appx/get-appxpackage).
 
   > [!IMPORTANT]
   > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
