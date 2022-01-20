@@ -39,6 +39,8 @@ As part of your mobile device management (MDM) solution, use these settings to c
 
 For more information on this feature, see [Upgrade Windows 10/11 editions or enable S mode](edition-upgrade-configure-windows-10.md).
 
+For information on other options to upgrade Windows editions, see [Windows 10/11 edition upgrade](/windows/deployment/upgrade/windows-10-edition-upgrades).
+
 ## Before you begin
 
 Create a [Windows 10/11 edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
