@@ -35,7 +35,9 @@ Before setting up Microsoft Intune, review the supported operating systems and b
 
 For help installing Intune on your device, see [using managed devices to get work done](../user-help/use-managed-devices-to-get-work-done.md) and [Intune network bandwidth usage](network-bandwidth-use.md).
 
+
 For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).  
+
 
 ## Intune supported operating systems
 

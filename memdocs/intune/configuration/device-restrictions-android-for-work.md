@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -79,7 +79,6 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Auto grant**: Permissions are automatically granted.
   - **Auto deny**: Permissions are automatically denied.
 - **Date and Time changes**: **Block** prevents users from manually setting the date and time. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to the set date and time on the device.
-- **Safe boot**: **Block** prevents users from rebooting the device into safe mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to reboot the device in safe mode.
 - **Roaming data services**: **Block** prevents data roaming over the cellular network. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow data roaming when the device is on a cellular network.
 - **Wi-Fi access point configuration**: **Block** prevents users from creating or changing any Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
 - **Bluetooth configuration**: **Block** prevents users from configuring Bluetooth on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using Bluetooth on the device.
@@ -87,8 +86,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **USB file transfer**: **Block** prevents transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow transferring files.
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 - **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.  
-- **Developer settings​**: Choose **Allow** to let users access developer settings on the device.​ When set to **Not configured** (default), Intune doesn’t change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.  
-- **Debugging features**: Choose **Allow** to let users use debugging features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from using the debugging features on the device.
+- **Developer settings**: Choose **Allow** to let users access developer settings on the device. When set to **Not configured** (default), Intune doesn’t change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
 - **Microphone adjustment**: **Block** prevents users from unmuting the microphone and adjusting the microphone volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device.
 - **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. If an email isn't entered, anyone can unlock the device after it's restored to the factory settings. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
 
