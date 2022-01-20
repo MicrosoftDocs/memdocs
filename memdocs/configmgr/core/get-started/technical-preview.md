@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/10/2021
+ms.date: 01/27/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -21,7 +21,7 @@ This article provides details about the monthly technical preview branch of Conf
 
 Because this release is a technical preview, details and functionality are subject to change.
 
-This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **2101** for January (`01`) of 2021 (`21`). Separate articles dedicated to each preview version detail the individual features.
+This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **2201** for January (`01`) of 2022 (`22`). Separate articles dedicated to each preview version detail the individual features.
 
 For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](../plan-design/changes/whats-new-incremental-versions.md).
 
@@ -124,10 +124,24 @@ The following features are available with the most recent Configuration Manager 
 ### Technical preview version 2112
 <!-- all items are in 2111 CB -->
 
-- [Customize maximum run time for other software update types](2021/technical-preview-2112.md#bkmk_maxruntime) <!--12770887-->
-- [Console and user experience improvements](2021/technical-preview-2112.md#bkmk_ux) <!--12726153-->
-- [Exclude data warehouse reporting tables from synchronization](2021/technical-preview-2112.md#bkmk_warehouse) <!--12441118-->
-- [A new remote assistance tool](2021/technical-preview-2112.md#bkmk_cmgrc) <!--4575930-->
+- [3601042](2022/technical-preview-2201.md) <!--3601042-->
+- [4497776](2022/technical-preview-2201.md) <!--4497776-->
+- [4639895](2022/technical-preview-2201.md) <!--4639895-->
+- [6374854](2022/technical-preview-2201.md) <!--6374854-->
+- [7079837](2022/technical-preview-2201.md) <!--7079837-->
+- [7281922](2022/technical-preview-2201.md) <!--7281922-->
+- [7759984](2022/technical-preview-2201.md) <!--7759984-->
+- [9070525](2022/technical-preview-2201.md) <!--9070525-->
+- [9495651](2022/technical-preview-2201.md) <!--9495651-->
+- [10024154](2022/technical-preview-2201.md) <!--10024154-->
+- [10454717](2022/technical-preview-2201.md) <!--10454717-->
+- [11754191](2022/technical-preview-2201.md) <!--11754191-->
+- [12451634](2022/technical-preview-2201.md) <!--12451634-->
+- [12486335](2022/technical-preview-2201.md) <!--12486335-->
+- [12487076](2022/technical-preview-2201.md) <!--12487076-->
+- [12558856](2022/technical-preview-2201.md) <!--12558856-->
+- [12707738](2022/technical-preview-2201.md) <!--12707738-->
+- [12769623](2022/technical-preview-2201.md) <!--12769623-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -146,7 +160,13 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+### Technical preview version 2112
+<!-- all items are in 2111 CB -->
 
+- [Customize maximum run time for other software update types](2021/technical-preview-2112.md#bkmk_maxruntime) <!--12770887-->
+- [Console and user experience improvements](2021/technical-preview-2112.md#bkmk_ux) <!--12726153-->
+- [Exclude data warehouse reporting tables from synchronization](2021/technical-preview-2112.md#bkmk_warehouse) <!--12441118-->
+- [A new remote assistance tool](2021/technical-preview-2112.md#bkmk_cmgrc) <!--4575930-->
 
 
 ## Features in previous technical previews
@@ -161,6 +181,9 @@ The following features were released with previous versions of the Configuration
 
 | Feature        | Technical preview version |
 |----------------|---------------------------|
+|Customize maximum run time for other software update types <!--12770887--> | [Tech preview 2112](2021/technical-preview-2112.md#bkmk_maxruntime)|
+|Console and user experience improvements <!--12726153-->| [Tech preview 2112](2021/technical-preview-2112.md#bkmk_ux)|
+|Exclude data warehouse reporting tables from synchronization <!--12441118--> | [Tech preview 2112](2021/technical-preview-2112.md#bkmk_warehouse)|
 | Branding in the Windows Update native reboot experience <!--10543514--> | [Tech preview 2110](2021/technical-preview-2110.md#bkmk_brand) |
 | Tenant attach: Software updates information <!--6024419--> | [Tech preview 2107](2021/technical-preview-2107.md#bkmk_sum) |
 | Intune role-based access control for tenant attach <!--8126836--> | [Tech preview 2106](2021/technical-preview-2106.md#bkmk_rbac) |
