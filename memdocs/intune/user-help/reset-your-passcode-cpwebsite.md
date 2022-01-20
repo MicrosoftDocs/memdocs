@@ -2,7 +2,7 @@
 # required metadata
 
 title: Reset device passcode from Intune Company Portal website | Microsoft Docs
-description:
+description: Use the Company Portal website to reset a lost or forgotten device PIN or password. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
