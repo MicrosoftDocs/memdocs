@@ -2,13 +2,13 @@
 # required metadata
 
 title: Use group policy analytics to import GPOs in Microsoft Intune
-description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that have the same Configuration Service Provider (CSP) setting in the cloud, and assign to your Windows 10 users and devices.
+description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that have the same Configuration Service Provider (CSP) setting in the cloud, and assign to your Windows 10/11 users and devices.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/18/2021
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,7 +41,8 @@ If your organization uses GPOs, and you want to move some workloads to Microsoft
 
 This feature applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. 
 
@@ -99,11 +100,11 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
     - **Value**: Shows the value imported from the GPO. It shows different values, such `true`, `900`, `Enabled`, `false`, and so on.
     - **Scope**: Shows if the imported GPO targets users or targets devices.
-    - **Min OS Version**: Shows the minimum Windows OS version build numbers that the GPO setting applies. It may show `18362` (1903), `17130` (1803), and other Windows 10 versions.
+    - **Min OS Version**: Shows the minimum Windows OS version build numbers that the GPO setting applies. It may show `18362` (1903), `17130` (1803), and other Windows client versions.
 
       For example, if a policy setting shows `18362`, then the setting supports build `18362` and newer builds.
 
-    - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows 10. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
+    - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows client. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
 
       For more information on CSPs, see the [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
@@ -136,7 +137,7 @@ Currently, the Group Policy analytics (preview) tool only supports non-ADMX sett
 
     - **Ready for migration**: The policy has a matching setting in Intune, and is ready to be migrated to Intune.
     - **Not supported**: The policy doesn't have a matching setting. Typically, policy settings that show this status aren't exposed to MDM providers, including Intune.
-    - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10 and newer.
+    - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10/11.
 
 3. Select the **Reports** tab > **Group policy migration readiness**. In this report, you can:
 
@@ -174,7 +175,7 @@ At any time, you can delete imported GPOs:
 
 ## Next steps
 
-- [Use Windows 10 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
+- [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
 
 - [Add endpoint protection settings in Microsoft Endpoint Manager](../protect/endpoint-protection-configure.md)
 
