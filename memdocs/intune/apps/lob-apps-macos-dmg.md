@@ -76,7 +76,6 @@ Select the app package file:
     - **Description**: Enter the description of the app. The description appears in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
     - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
-    - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL appears in the company portal.
     - **Privacy URL**: Optionally, enter the URL of a website that contains privacy information for this app. The URL appears in the company portal.
     - **Developer**: Optionally, enter the name of the app developer.
@@ -120,7 +119,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Step 5 - Assignments
 
-1. Select the **Required, Available for enrolled devices**, or **Uninstall group assignments** for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+1. Select the **Required group assignments** for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 2. Click **Next** to display the **Review + create** page.
 
 ## Step 6 – Review + create
@@ -134,6 +133,12 @@ The app you have created appears in the apps list where you can assign it to the
 > [!NOTE]
 > If the *.dmg* file contains multiple apps, then Microsoft Intune will only report that the app is successfully installed when all installed apps are detected on the device.
 
+## Next steps
+
+- The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](apps-deploy.md).
+- Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](apps-monitor.md).
+- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../fundamentals/device-lifecycle.md)
+
 ## Known issues
 
 - **"Uninstall" and "Available for enrolled devices" assignment types are not available**: only "Required" assignment type is currently supported. 
@@ -146,9 +151,19 @@ The app you have created appears in the apps list where you can assign it to the
   ![DMG apps may display a warning to end-users on launch](./media/lob-apps-macos-dmg/lob-apps-macos-dmg-01.png)
 
 - **Some app icons may not display immediately after installation**: some app icons may take some time after installation to start displaying on the installed device.
+- **Monitoring reports only show error code**: failed app installations only show an error code in "device status" monitoring reports. To show error details, refresh the browser window or refer to the table in the Troubleshooting section.
 
-## Next steps
 
-- The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](apps-deploy.md).
-- Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](apps-monitor.md).
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../fundamentals/device-lifecycle.md)
+## Troubleshooting
+
+macOS app installation may not be successful due to any of the following reasons provided in the table below. To resolve these errors, follow the remediation steps. If the app remains assigned, failed installations are retried at the next agent check-in.
+
+| Error code | Error message | Remediation steps |
+|------------|---------------|-------------------|
+| 0x87D30137 | The device doesn't meet the minimum OS requirement set by the admin. | Update macOS to the minimum OS version required by the admin. |
+| 0x87D3013E | The DMG file doesn't contain any supported app. It must contain at least one .app file. | Ensure that the uploaded file contains one or more .app files. |
+| 0x87D30139 | The DMG file couldn't be mounted for installation. Check the DMG file if the error persists. | Try manually mounting the DMG file to verify that the volume loads successfully. |
+| 0x87D3013B | The app couldn't be installed to the Applications directory. Sync the device to retry installing the app. | Ensure that the device can install apps locally to the Applications directory. |
+| 0x87D3012F, 0x87D30130, 0x87D30133, 0x87D30134, 0x87D30136,| The app couldn't be installed due to an internal error. Contact Intune support if the error persists. | Something went wrong while installing the app using Intune. Try installing the app manually or try creating a new macOS app profile containing the app. Contact Intune support if the error persists. |
+| 0x87D30131, 0x87D30132 | The app couldn't be downloaded. Sync the device to retry installing the app. | Something went wrong while downloading the app. This may happen if the network is poor or the app size is large. |
+| 0x87D30135 | The app couldn't be installed due to a device error. Sync the device to retry installing the app. | This could be due to insufficient disk space or the app could not be written to the folder. Ensure that the device can install apps to the Applications folder. |
