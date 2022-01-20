@@ -76,7 +76,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 
   - Android 4 and later
   - Enrolled devices that run Windows 8.1 and later
-  - Enrolled devices that run Windows 10/11 desktop
+  - Enrolled devices that run Windows 10/11
   - Windows Holographic for Business
 
 ## VPN connection types
