@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 01/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,10 +31,10 @@ ms.collection:
 
 # Supported operating systems and browsers in Intune
 
-Before setting up Microsoft Intune, review the supported operating systems, versions, and browsers. 
+Before setting up Microsoft Intune, review the supported operating systems and browsers.
 
-> [!NOTE]
-> Intune requires Android 6.x or higher for device enrollment scenarios. For Intune app protection policies, Intune requires Android 9.0 or higher. This requirement does NOT apply to [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) as these devices will continue to be supported.
+For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).  
+
 
 ## Intune supported operating systems
 

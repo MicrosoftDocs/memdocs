@@ -48,7 +48,7 @@ This section only applies to the Company Portal app. Some devices will give you 
 
 ## Downgrade your version of Android
 
-This section only applies to the Company Portal app. If your device offers you the option to downgrade to Android 6.0 and later, then do so. There is a risk of data loss if you try to downgrade your device. Otherwise, we recommend that you contact your company support to resolve this issue. Get contact information for your company support on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+This section only applies to the Company Portal app. If your device offers you the option to downgrade to Android 8.0 or later, then do so. There is a risk of data loss if you try to downgrade your device. Otherwise, we recommend that you contact your company support to resolve this issue. Get contact information for your company support on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## Specific manufacturer issues
 
