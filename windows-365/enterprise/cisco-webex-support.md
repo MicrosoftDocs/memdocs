@@ -38,7 +38,7 @@ To optimize Cisco Webex, you’ll need to:
 - Install the Webex App VDI plugin on the local Windows PC that the user will use to access the Cloud PC.
 
 > [!NOTE]  
-> If you run into issues with Cisco Webex for VDI on your Cloud PC, contact Cisco support.
+> If you run into issues with Cisco Webex for VDI on your Cloud PC, contact [Cisco support](https://help.webex.com/contact).
 
 ## Requirements
 
@@ -67,7 +67,7 @@ For more information on these installation steps, see [Cisco's Deployment guide 
 
 ## To use the optimized Cisco Webex client
 
-To benefit from these optimizations, users must sign in to their Cloud PC from a Windows PC. After doing so, the user can open Cisco Webex from the Cloud PC.
+To benefit from these optimizations, users must sign in to their Cloud PC from a Windows PC. After doing so, the user can open Cisco Webex from the Cloud PC and use the WebEx client optimized for Windows 365 Cloud PC!
 
 ## To confirm that the Cisco Webex client is using the optimizations
 
