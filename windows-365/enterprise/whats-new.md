@@ -48,6 +48,13 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of January 17, 2022
+
+#### New documentation article: Optimize Cisco Webex on a Windows 365 Cloud PC<!--37106382-->
+
+We’ve just published a new help documentation article. For more information, see [Optimize Cisco Webex on a Windows 365 Cloud PC](cisco-webex-support.md).
+
+<!-- ########################## -->
 ## Week of January 10, 2022
 
 #### New documentation: Data encryption in Windows 365<!--36626607-->
