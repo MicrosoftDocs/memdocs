@@ -67,7 +67,7 @@ For more information on these installation steps, see [Cisco's Deployment guide 
 
 ## To use the optimized Cisco Webex client
 
-To benefit from these optimizations, users must sign in to their Cloud PC from a Windows PC. After doing so, the user can open Cisco Webex from the Cloud PC and use the WebEx client optimized for Windows 365 Cloud PC!
+To benefit from these optimizations, users must sign in to their Cloud PC from a Windows PC. After doing so, the user can open Cisco Webex from the Cloud PC and use the WebEx client optimized for Windows 365 Cloud PC.
 
 ## To confirm that the Cisco Webex client is using the optimizations
 
