@@ -363,7 +363,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't required to set a PIN. This setting must be enabled to show the sub-settings.
           - **Choose complexity of PIN for sign-in session**: Select the complexity of the session PIN. Your options:
             -  **Not configured**: Intune doesn't change or update this setting. By default, MHS requires at least one character in the session PIN.
-            -  **Simple**: Requires numbers. There are no restrictions on repeating (444) or or ordered (123, 321, 246) sequences.
+            -  **Simple**: Requires numbers. There are no restrictions on repeating (444) or ordered (123, 321, 246) sequences.
             - **Complex**: Allows users to create a PIN with alphanumeric characters. Can't use repeating (444) or ordered (123, 321, 246) sequences.
 
             For more information on this setting, see **Complexity of session PIN** at [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
