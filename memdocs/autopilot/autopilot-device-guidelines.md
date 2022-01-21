@@ -36,6 +36,7 @@ The following best practices ensure that devices can easily be provisioned as pa
 - Before shipping devices to an Autopilot customer or channel partner, the OEM should upload 4K Hardware Hashes to Microsoft by using the CBR report. The hashes should be collected using the OA3 Tool RS3+ run in Audit mode on full OS.
 - Microsoft requires that OEM shipping drivers get published to Windows Update within 30 days of the CBR submission date. System firmware and driver updates are published to Windows Update within 14 days.
 - The OEM ensures that the PKID provisioned in the SMBIOS is passed on to the channel.
+- When using VMs for Autopilot testing, they must be a minimum of 2 processors with 4gb of memory, else you may run into application install issues after May 2021 builds of Windows 10. *Note the minimum system requirements for Windows 11 are 2 processors and 4gb memory.
 
 ## Software best practice guidelines for Windows Autopilot
 
