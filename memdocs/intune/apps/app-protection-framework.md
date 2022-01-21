@@ -106,7 +106,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 
 | Setting | Setting description |             Value  |             Platform        |
 |-----------------|--------------------------------------------------------|-----------------------|----------------------------------------|
-| Data   Transfer |             Backup org data to…  |             Allow  |             iOS/iPadOS, Android        |
+| Data   Transfer |             Back up org data to…  |             Allow  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Send org   data to other apps  |             All apps  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Receive   data from other apps  |             All apps  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Restrict   cut, copy, and paste between apps  |             Any app  |             iOS/iPadOS, Android        |
@@ -163,7 +163,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 
 | Setting | Setting description |             Value  |             Platform        | Notes |
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Transfer |       Backup org   data to…  |          Block  |          iOS/iPadOS,   Android  |                  |
+| Data Transfer |       Back up org   data to…  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Send org   data to other apps  |          Policy   managed apps  |          iOS/iPadOS,   Android  |          <p>With   iOS/iPadOS, administrators can configure this value to be "Policy managed   apps", "Policy managed apps with OS sharing", or "Policy managed apps   with Open-In/Share filtering". </p><p>Policy managed apps with OS   sharing is available when the device is also enrolled with Intune. This   setting allows data transfer to other policy managed apps, as well as   file transfers to other apps that have are managed by   Intune. </p><p>Policy managed apps with Open-In/Share filtering   filters the OS Open-in/Share dialogs to only display policy managed   apps. </p><p> For more information, see [iOS app protection policy   settings](app-protection-policy-settings-ios.md).</p> |
 | Data Transfer |       Select apps to exempt  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
