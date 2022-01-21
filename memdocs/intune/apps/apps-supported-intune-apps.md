@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2021
+ms.date: 01/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -77,8 +77,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft PowerPoint|[iOS](https://apps.apple.com/us/app/microsoft-powerpoint/id586449534)|✔|No settings|✔|N/A|✖|✖|✔|
 |Microsoft SharePoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft SharePoint|[iOS](https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✖|✖|
-|Microsoft Teams|[iOS](https://apps.apple.com/us/app/microsoft-teams/id1113153706)|✔|No settings|✔|N/A|✔|✖|✖|
+|Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✔|✔|
+|Microsoft Teams|[iOS](https://apps.apple.com/us/app/microsoft-teams/id1113153706)|✔|No settings|✔|N/A|✔|✔|✔|
 |Microsoft To-Do|[Android](https://play.google.com/store/apps/details?id=com.microsoft.todos)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft To-Do|[iOS](https://apps.apple.com/us/app/microsoft-to-do/id1212616790)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Word|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word)|✔|No settings|✔|N/A|✖|✖|✔|
