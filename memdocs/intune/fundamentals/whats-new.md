@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2022
+ms.date: 01/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -114,6 +114,17 @@ The following [tenant attach](../../configmgr/tenant-attach/index.yml) features 
 - Scripts
 - Bitlocker Recovery Keys
 - Collections
+
+### Device security
+
+#### New Account protection policy to configure users in local groups on devices in public preview<!--5663034 -->
+In public preview, you can use a new profile for Intune Account protection policies to manage the membership of the built-in local groups on Windows 10 and 11 devices. 
+
+Each Windows device comes with a set of built-in local groups. Each local group contains a set of users that have rights within that group. With the new Local user group membership (preview) profile for endpoint security Account protection policies, you can manage which users are members of those local groups.  
+
+To configure local group memberships, you select the built-in local account to modify and then choose the users to add, remove, or replace in the group with other users. Each device that receives the policy the updates the membership of those local groups. Modification of the group membership on each device is done by using the is done using the [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
+
+To learn more, see [Manage local groups on Windows devices](../protect/endpoint-security-account-protection-policy.md#manage-local-groups-on-windows-devices). 
 
 ## Week of January 3, 2022
 
