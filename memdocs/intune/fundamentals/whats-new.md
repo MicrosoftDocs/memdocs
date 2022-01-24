@@ -112,7 +112,7 @@ The following [tenant attach](../../configmgr/tenant-attach/index.yml) features 
 - Resource explorer
 - CMPivot
 - Scripts
-- Bitlocker Recovery Keys
+- BitLocker Recovery Keys
 - Collections
 
 ### Device security
