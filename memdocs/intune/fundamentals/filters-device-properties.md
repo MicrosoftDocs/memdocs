@@ -178,34 +178,34 @@ This article describes the different [device properties](#device-properties) and
 
   | Supported value | OS SKU definition |
   | ---- | --- |
-  | **Education** | Windows 10 Education (SKU 121) |
-  | **EducationN**  | Windows 10 Education (SKU 122) |
-  | **Enterprise** | Windows 10 Enterprise (SKU 4) |
-  | **EnterpriseEval** | Windows 10 Enterprise Evaluation (SKU 72) |
-  | **EnterpriseG** | Windows 10 Enterprise G (SKU 171) |
-  | **EnterpriseGN** | Windows 10 Enterprise G N (SKU 172) |
-  | **EnterpriseS** | Windows 10 Enterprise LTSB (SKU 125) |
-  | **EnterpriseSEval** | Windows 10 Enterprise LTSB Evaluation (SKU 129) |
-  | **EnterpriseSN** | Windows 10 Enterprise LTSB N (SKU 162) |
-  | **ServerRdsh** | Windows 10 Enterprise Multi-session (SKU 175) |
-  | **EnterpriseN** | Windows 10 Enterprise N (SKU 27) |
-  | **EnterpriseNEval** | Windows 10 Enterprise N Evaluation (SKU 84) |
-  | **Holographic** | Windows 10 Holographic (SKU 136) |
-  | **Core** | Windows 10 Home (SKU 101) |
-  | **CoreCountrySpecific** | Windows 10 Home China (SKU 99) |
-  | **CoreN** | Windows 10 Home N (SKU 98) |
-  | **CoreSingleLanguage** | Windows 10 Home single language (SKU 100) |
-  | **IoTUAP** | Windows 10 IoT Core (SKU 123) |
-  | **IoTUAPCommercial** | Windows 10 IoT Core Commercial (SKU 131) |
-  | **IoTEnterprise** | Windows 10 IoT Enterprise (SKU 188) |
-  | **Professional** | Windows 10 Professional (SKU 48) |
-  | **ProfessionalEducation** | Windows 10 Professional Education (SKU 164) |
-  | **ProfessionalEducationN** | Windows 10 Professional Education N (SKU 165) |
-  | **ProfessionalWorkstation** | Windows 10 Professional for workstation (SKU 161) |
-  | **ProfessionalN** | Windows 10 Professional for workstation N (SKU 162) |
-  | **BusinessN** | Windows 10 Professional N (SKU 49) |
-  | **ProfessionalSingleLanguage** | Windows 10 Professional Single Language (SKU 138) |
-  | **PPIPro** | Windows 10 TeamOS (SKU 119) |
+  | **Education** | Windows 10/11 Education (121) |
+  | **EducationN**  | Windows 10/11 Education (122) |
+  | **Enterprise** | Windows 10/11 Enterprise (4) |
+  | **EnterpriseEval** | Windows 10/11 Enterprise Evaluation (72) |
+  | **EnterpriseG** | Windows 10/11 Enterprise G (171) |
+  | **EnterpriseGN** | Windows 10/11 Enterprise G N (172) |
+  | **EnterpriseS** | Windows 10 Enterprise LTSC (125) |
+  | **EnterpriseSEval** | Windows 10 Enterprise LTSC Evaluation (129) |
+  | **EnterpriseSN** | Windows 10 Enterprise LTSC N (162) |
+  | **EnterpriseN** | Windows 10/11 Enterprise N (27) |
+  | **EnterpriseNEval** | Windows 10/11 Enterprise N Evaluation (84) |
+  | **Holographic** | Windows 10 Holographic (136) |
+  | **Core** | Windows 10/11 Home (10/111) |
+  | **CoreCountrySpecific** | Windows 10/11 Home China (99) |
+  | **CoreN** | Windows 10/11 Home N (98) |
+  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |
+  | **IoTUAP** | Windows 10 IoT Core (123) |
+  | **IoTUAPCommercial** | Windows 10 IoT Core Commercial (131) |
+  | **IoTEnterprise** | Windows 10/11 IoT Enterprise (188) |
+  | **Professional** | Windows 10/11 Professional (48) |
+  | **ProfessionalEducation** | Windows 10/11 Professional Education (164) |
+  | **ProfessionalEducationN** | Windows 10/11 Professional Education N (165) |
+  | **ProfessionalWorkstation** | Windows 10/11 Professional for workstation (161) |
+  | **ProfessionalN** | Windows 10/11 Professional for workstation N (162) |
+  | **BusinessN** | Windows 10/11 Professional N (49) |
+  | **ProfessionalSingleLanguage** | Windows 10/11 Professional Single Language (138) |
+  | **PPIPro** | Windows 10 TeamOS (119) |
+  | **ServerRdsh** | Windows 10/11 Enterprise multi-session (175) |
 
   This property applies to:
 

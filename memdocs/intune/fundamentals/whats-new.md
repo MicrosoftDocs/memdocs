@@ -1570,7 +1570,7 @@ You can now use a new locate device remote action to get the geographical locati
 - Windows 10 version 1909 (10.0.18363.1350) or later
 - Windows 10 version 1809 (10.0.17763.1728) or later
 
-To see the new action, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > choose a Windows client device > **Locate device**.
+To see the new action, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > choose a device > **Locate device**.
 
 This action will work in a similar manner as the current [Locate device action for Apple devices](..\remote-actions\device-locate.md) (but will not include any lost mode functionality).
 
