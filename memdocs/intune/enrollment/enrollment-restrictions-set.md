@@ -89,7 +89,7 @@ Default restrictions are automatically provided for both device type and device 
    > [!Note]
    > Windows 10 and Windows 11 do not provide the rev number during enrollment, so for example, if you enter in 10.0.17134.100, and the device is 10.0.17134.174, it will be blocked during enrollment.  
 
-6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
+6. Under **Personally-owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
 8. Choose **Next** to go to the **Scope tags** page.
 9. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
@@ -126,7 +126,7 @@ Default restrictions are automatically provided for both device type and device 
       - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
       - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
       - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
-    - **Personally owned**: Select **Allow** to permit devices to enroll and operate as personally owned devices.  
+    - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer**: Enter a comma-separated list of the manufacturers that you want to block.  
 
 6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies. When you're done, select **Next**. 
@@ -200,7 +200,6 @@ The following filter properties are always available to use with enrollment poli
 
 * OS version 
 * Operating System SKU 
-* Ownership
 * Enrollment profile name
 
 **iOS/iPadOS and macOS**  
