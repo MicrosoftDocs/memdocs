@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/11/2021
+ms.date: 01/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Filter reports and troubleshooting in Microsoft Endpoint Manager
 
-When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 Devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Endpoint Manager admin center.
 

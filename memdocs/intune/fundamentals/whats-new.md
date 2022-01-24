@@ -87,7 +87,8 @@ For more information on filters, see [Use filters (preview) when assigning your 
 
 Applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ### Device configuration
 
@@ -101,7 +102,9 @@ This new option is available in the following locations in the Endpoint Manager 
 For more information, see [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md) and [Assignment failures report](reports.md#assignment-failures-report-operational).
 
 Applies to:
-- Windows 10 and newer
+
+- Windows 11
+- Windows 10
 
 #### New Timeout and Block iCloud Private Relay settings for iOS/iPadOS and macOS devices<!-- 10370284 -->
 On iOS/iPadOS and macOS devices, you can create a device restrictions policy that manages features on the device (**Devices** > **Configuration Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Device restrictions**).
@@ -136,8 +139,10 @@ Settings Catalog is available and supported on U.S. Government GCC High and DoD.
 For more information on Settings Catalog, and what it is, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
 
 Applies to:
+
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 #### Enter the certificate common name in Wi-Fi profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile devices<!-- 12439458 -->
 
@@ -170,7 +175,9 @@ For related information, see:
 - [Microsoft Edge Browser Policy Documentation](/deployedge/microsoft-edge-policies)
 
 Applies to:
-- Windows 10 and newer
+
+- Windows 11
+- Windows 10
 - Microsoft Edge
 
 ### Intune apps
@@ -771,7 +778,8 @@ Applies to:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 #### Additional Android SafetyNet evaluation type support for conditional launch policies<!-- 9076664  -->
 
@@ -792,7 +800,7 @@ Intune can now display the contents of macOS LOB apps ( .intunemac files) in the
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
-#### Use filters on DFCI configuration profiles on Windows 10 RS5+ devices<!-- 8817773 -->
+#### Use filters on DFCI configuration profiles on Windows 10/11 devices<!-- 8817773 -->
 
 In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
 
@@ -801,6 +809,7 @@ In Endpoint Manager, you can create filters to target devices based on different
 
 Applies to:
 
+- Windows 11 on supported UEFI
 - Windows 10 RS5 (1809) and newer on supported UEFI
 
 #### New Deployment Channel setting for custom device configuration profiles on macOS devices<!--9683731 -->
@@ -960,15 +969,15 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-#### Export GPO XML file size increased to 4 MB when using group policy analytics (preview) on Windows 10 and later devices<!-- 9560131 -->
+#### Export GPO XML file size increased to 4 MB when using group policy analytics (preview) on Windows client devices<!-- 9560131 -->
 
 In Microsoft Endpoint Manager, you can use group policy analytics (preview) to analyze your on-premises GPOs, and determine how your GPOs translate in the cloud. To use this feature, you export your GPO as an XML file. The XML file size has increased from 750 KB to 4 MB.
 
 For more information on using group policy analytics, see [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](../configuration/group-policy-analytics.md).
 
 Applies to:
-
-- Windows 10 and later
+- Windows 11
+- Windows 10
 
 #### Device configuration reporting has been updated<!-- 10005568  -->
 
@@ -1087,18 +1096,18 @@ The previous connectors remain in support but are no longer available for downlo
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Use filters to assign Windows 10 update rings in Endpoint Manager admin center - public preview<!-- 7423515   -->
+#### Use filters to assign Windows client update rings in Endpoint Manager admin center - public preview<!-- 7423515   -->
 
 In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies.
 
-When assigning Windows 10 update ring policies, you can use filters (**Devices** > **Windows** > **Windows 10 Update Rings**). You can filter the devices that get the update rings policy based on a device property, such as the OS version, device manufacturer, and more. After you create the filter, use the filter when you assign the update rings policy.
+When assigning Windows client update ring policies, you can use filters (**Devices** > **Windows** > **Windows 10 Update Rings**). You can filter the devices that get the update rings policy based on a device property, such as the OS version, device manufacturer, and more. After you create the filter, use the filter when you assign the update rings policy.
 
 - For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
-- For more information on Windows 10 update rings policies, see [Windows 10 update rings policy in Intune](../protect/windows-10-update-rings.md).
+- For more information on Windows client update rings policies, see [Windows client update rings policy in Intune](../protect/windows-10-update-rings.md).
 
 Applies to:
-
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 #### Collect diagnostics remote action moved to general availability<!--10022807   -->
 
@@ -1257,11 +1266,12 @@ Applies to:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 #### Use the EnrollmentProfileName property when creating a filter for Android Enterprise<!-- 10022750   -->
 
-In Endpoint Manager, you can create [filters](filters.md) to target devices based on different properties, including device name, manufacturer, and more. On iOS/iPadOS and Windows 10 and newer devices, you can create a filter using the enrollment profile name. The enrollment profile name property is available for Android Enterprise devices.
+In Endpoint Manager, you can create [filters](filters.md) to target devices based on different properties, including device name, manufacturer, and more. On iOS/iPadOS and Windows 10/11 devices, you can create a filter using the enrollment profile name. The enrollment profile name property is available for Android Enterprise devices.
 
 To see the filter properties you can configure, go to [Device properties, operators, and rule editing when creating filters](filters-device-properties.md).
 
@@ -1370,19 +1380,19 @@ Applies to:
 
 Support has ended for the **Restart** remote action on corporate-owned devices with a work profile. The **Restart** button has been removed from the **Device** page for corporate-owned devices with a work profile. If you try to restart devices using bulk device actions, the corporate-owned work profile devices won't restart and those device actions will be marked report as **Not supported**. Other device types that are included in the bulk device action will restart as normal for that action.
 
-### Windows 10 Enterprise multi-session support (public preview)<!--8666391  -->
+### Windows 10/11 Enterprise multi-session support (public preview)<!--8666391  -->
 
-Windows 10 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure which allows multiple concurrent user sessions. This gives users a familiar Windows 10 experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
+Windows 10/11 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure which allows multiple concurrent user sessions. This gives users a familiar Windows client experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
 
-Microsoft Intune lets you manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 client. You can now enroll Hybrid Azure AD joined VMs in Intune automatically and target with OS scope policies and apps.
+Microsoft Intune lets you manage multi-session remote desktops with device-based configurations like a shared, user-less Windows client. You can now enroll Hybrid Azure AD joined VMs in Intune automatically and target with OS scope policies and apps.
 
 You can:
 
-- Host multiple concurrent user sessions using the Windows 10 Enterprise multi-session SKU exclusive to Azure Virtual Desktop on Azure.
-- Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
+- Host multiple concurrent user sessions using the Windows 10/11 Enterprise multi-session SKU exclusive to Azure Virtual Desktop on Azure.
+- Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10/11 Enterprise client.
 - Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with device scope policies and apps.
 
-For more information, see [Windows 10 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
+For more information, see [Windows 10/11 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -1487,11 +1497,12 @@ Applies to:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
-#### Use Intune policy to expedite installation of Windows 10 security updates<!-- 5584682    -->
+#### Use Intune policy to expedite installation of Windows 10/11 security updates<!-- 5584682    -->
 
-In public preview, you can use Intune’s **Windows 10 quality updates** policy to [expedite the install of the most recent Windows 10 security updates](../protect/windows-10-expedite-updates.md) to devices you manage with Intune.
+In public preview, you can use Intune’s **Windows 10 quality updates** policy to [expedite the install of the most recent Windows 10/11 security updates](../protect/windows-10-expedite-updates.md) to devices you manage with Intune.
 
 When you expedite an update, devices can start the download and install of the update as soon as possible, without having to wait for the device to check in for updates. Other than expediting the install of the update, use of this policy leaves your existing update deployment policies and processes untouched.
 
@@ -1549,16 +1560,17 @@ Applies to:
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Locate device remote action for Windows 10 devices<!--710717  -->
+#### Locate device remote action for Windows client devices<!--710717  -->
 
 You can now use a new locate device remote action to get the geographical location of a device. Supported devices include:
 
+- Windows 11
 - Windows 10 version 20H2 (10.0.19042.789) or later
 - Windows 10 version 2004 (10.0.19041.789) or later
 - Windows 10 version 1909 (10.0.18363.1350) or later
 - Windows 10 version 1809 (10.0.17763.1728) or later
 
-To see the new action, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > choose a Windows 10 > **Locate device**.
+To see the new action, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > choose a Windows client device > **Locate device**.
 
 This action will work in a similar manner as the current [Locate device action for Apple devices](..\remote-actions\device-locate.md) (but will not include any lost mode functionality).
 
@@ -1732,17 +1744,18 @@ Applies to:
 - macOS
 - Microsoft Edge
 
-#### Windows 10 in cloud configuration is available as a Guided Scenario<!-- 9272086  -->
+#### Windows 10/11 in cloud configuration is available as a Guided Scenario<!-- 9272086  -->
 
-Windows 10 in cloud configuration is a Microsoft-recommended device configuration for Windows 10. Windows 10 in cloud configuration is optimized for the cloud and designed for users with focused workflow needs.
+Windows 10/11 in cloud configuration is a Microsoft-recommended device configuration for Windows 10/11. Windows 10/11 in cloud configuration is optimized for the cloud and designed for users with focused workflow needs.
 
-There's a guided scenario that automatically adds the apps, and creates the policies that configures your Windows 10 devices in a cloud configuration.
+There's a guided scenario that automatically adds the apps, and creates the policies that configures your Windows 10/11 devices in a cloud configuration.
 
-For more information, see [Guided scenario for Windows 10 in cloud configuration](../fundamentals/cloud-configuration.md).
+For more information, see [Guided scenario for Windows 10/11 in cloud configuration](../fundamentals/cloud-configuration.md).
 
 Applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -1851,7 +1864,7 @@ Using Intune app protection policies, you can add a new conditional launch setti
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
-#### Use Cisco AnyConnect as a VPN connection type for Windows 10 and Windows Holographic for Business<!-- 2605377 -->
+#### Use Cisco AnyConnect as a VPN connection type for Windows 10/11 and Windows Holographic for Business<!-- 2605377 -->
 
 You can create VPN profiles using Cisco AnyConnect as a connection type (**Devices** > **Device configuration** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Cisco AnyConnect** for connection type) without needing to use custom profiles.
 
@@ -1861,21 +1874,23 @@ For more information on VPN profiles in Intune, see [Create VPN profiles to conn
 
 Applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 - Windows Holographic for Business
 
-#### Run Microsoft Edge version 87 and newer in single app kiosk mode on Windows 10 devices<!-- 8271248   -->
+#### Run Microsoft Edge version 87 and newer in single app kiosk mode on Windows 10/11 devices<!-- 8271248   -->
 
-On Windows 10 and newer devices, you configure a device to run as a kiosk that runs one app, or runs many apps (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Kiosk**). When you select single app mode, you can:
+On Windows client devices, you configure a device to run as a kiosk that runs one app, or runs many apps (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Kiosk**). When you select single app mode, you can:
 
 - Run Microsoft Edge version 87 and newer.
 - Select **Add Microsoft Edge legacy browser** to run Microsoft Edge version 77 and older.
 
-For more information on the settings you can configure in kiosk mode, see [Kiosk settings for Windows 10 and newer devices](../configuration/kiosk-settings-windows.md).
+For more information on the settings you can configure in kiosk mode, see [Kiosk settings for Windows client devices](../configuration/kiosk-settings-windows.md).
 
 Applies to:
 
-- Windows 10 and newer in single-app kiosk mode
+- Windows 11 in single-app kiosk mode
+- Windows 10 in single-app kiosk mode
 - Microsoft Edge version 87 and newer
 - Microsoft Edge version 77 and older
 
@@ -1891,12 +1906,13 @@ If you want to create Administrative Templates, and use all the available settin
 
 For more information, see:
 
-- [Use Windows 10 templates to configure group policy settings](../configuration/administrative-templates-windows.md)
+- [Use Windows 10/11 templates to configure group policy settings](../configuration/administrative-templates-windows.md)
 - [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
 
 Applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device enrollment
@@ -2116,13 +2132,13 @@ Applies to:
 - Android Enterprise Personally-Owned Work Profile
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-#### Settings catalog and Templates when creating device configuration profiles for macOS and Windows 10 devices<!-- 8673623 8254609  -->
+#### Settings catalog and Templates when creating device configuration profiles for macOS and Windows client devices<!-- 8673623 8254609  -->
 
-There are UI updates when creating device configuration profiles for macOS and Windows 10 devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** or **Windows 10 and later** for platform).
+There are UI updates when creating device configuration profiles for macOS and Windows 10/11 devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** or **Windows 10 and later** for platform).
 
 The profile shows **Settings catalog - preview** and **Templates**:
 
-- **Settings catalog - preview**: Use this option to start from scratch and select settings you want from the library of available settings. For macOS, the settings catalog includes settings to configure the Microsoft Edge version 77 and newer. Settings catalog for Windows 10 includes many existing settings, and new settings, all in one place.
+- **Settings catalog - preview**: Use this option to start from scratch and select settings you want from the library of available settings. For macOS, the settings catalog includes settings to configure the Microsoft Edge version 77 and newer. Settings catalog for Windows client includes many existing settings, and new settings, all in one place.
 - **Templates**: Use this option to configure all the existing profiles, such as device restrictions, device features, VPN, Wi-Fi, and more.
 
 This is only a UI change, and doesn't impact existing profiles.
@@ -2130,8 +2146,9 @@ This is only a UI change, and doesn't impact existing profiles.
 For more information, see [Settings catalog](../configuration/settings-catalog.md).
 
 Applies to:
-- macOS device configuration
-- Windows 10 device configuration
+- macOS
+- Windows 11
+- Windows 10
 
 #### Home screen layout updates on supervised iOS/iPadOS devices<!-- 8710594 7978976    -->
 
@@ -2166,7 +2183,8 @@ For more information on this feature in Intune, see [Configure Microsoft Edge po
 
 Applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 #### Locale support in email notifications for non-compliance<!--7604191    -->
 
