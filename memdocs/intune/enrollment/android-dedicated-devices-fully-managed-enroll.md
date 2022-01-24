@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/20/2021
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -37,11 +37,11 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 
 | Enrollment method | Minimum Android OS version for dedicated and fully managed devices |
 | ----- | ----- |
-| Near Field Communication | 6.0 |
-| Token entry | 6.0 |
-| QR code | 7.0 |
+| Near Field Communication | 8.0 |
+| Token entry | 8.0 |
+| QR code | 8.0 |
 | Zero Touch  | 8.0<br><br> On participating manufacturers. |
-| [Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md)  | 6.0<br><br> On Samsung Knox 2.8 or higher devices only. |
+| [Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md)  | 8.0<br><br> On Samsung Knox 2.8 or higher devices only. |
 
 > [!TIP]
 > Corporate-owned work profile (COPE) device management is available on Android version 8.0 and newer.
@@ -51,15 +51,15 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 
 ## Enroll by using Near Field Communication (NFC)
 
-For Android devices 6 and newer devices that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
+Create a specially-formatted NFC tag to provision NFC-supported devices running Android 8.0 or later. You can use your own app or any NFC tag-creation tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
 
-For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android 8-10. It's not available on Android 11
+For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android versions 8.0 to 10.0. It's not supported with Android 11.0 or later. 
 
 ## Enroll by using a token
 
-- For Android 6 and newer devices, you can use the token value, such as `12345`, to enroll the device.
-- Android 6.1 and newer versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
-- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11. For further details, refer to the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
+- For Android 8.0 and later devices, you can use the token value, such as `12345`, to enroll the device.
+- You can leverage QR code scanning when using the **afw#setup** enrollment method to enroll devices running Android 8.0 and later.  
+- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is only supported on devices running Android versions 8.0 to 10.0. It's not supported with Android 11.0 or later. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
 
 ### Steps
 
@@ -75,14 +75,14 @@ For corporate-owned work profile (COPE) devices, the NFC enrollment method is on
 
 ## Enroll by using a QR code
 
-On Android 7 and newer devices, you can scan the QR code from the enrollment profile to enroll the device.
+Scan the QR code from the enrollment profile to enroll devices running Android 8.0 and later.   
 
 > [!Note]
 > Browser zoom can cause devices to not be able to scan QR code. Increasing the browser zoom resolves the issue.
 
-1. To launch a QR read on the Android device, tap multiple times on the first screen you see after a wipe.
-2. For Android 7 and 8 devices, you'll be prompted to install a QR reader. Android 9 and newer devices already have a QR reader installed.
-3. Use the QR reader to scan the enrollment profile QR code and then follow the on-screen prompts to enroll.
+1. After you wipe the device, tap the first screen you see repeatedly to launch the QR reader.    
+2. On devices running Android 8.0, you'll be prompted to install a QR reader. Devices running Android 9 and later are pre-installed with a QR reader.
+3. Use the QR reader to scan the enrollment profile QR code and then follow the on-screen prompts to enroll.  
 
 ## Enroll by using Google Zero Touch
 
@@ -109,7 +109,7 @@ To use Google's Zero Touch system, the device must support it and be affiliated 
 4. Choose **Apply**.
 
 ## Enroll by using Knox Mobile Enrollment
-To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 6 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).
+To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
 
 ## Next steps
 

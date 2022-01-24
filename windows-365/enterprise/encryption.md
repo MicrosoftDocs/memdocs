@@ -47,7 +47,7 @@ The following Windows 365 Enterprise and Business objects are automatically encr
   - Snapshots
   - Images
 
-Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](/windows-365/enterprise/privacy-personal-data).
+Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
 
 ## Encryption of data in transit
 

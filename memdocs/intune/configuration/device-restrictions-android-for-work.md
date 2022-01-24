@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -79,7 +79,6 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Auto grant**: Permissions are automatically granted.
   - **Auto deny**: Permissions are automatically denied.
 - **Date and Time changes**: **Block** prevents users from manually setting the date and time. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to the set date and time on the device.
-- **Safe boot**: **Block** prevents users from rebooting the device into safe mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to reboot the device in safe mode.
 - **Roaming data services**: **Block** prevents data roaming over the cellular network. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow data roaming when the device is on a cellular network.
 - **Wi-Fi access point configuration**: **Block** prevents users from creating or changing any Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
 - **Bluetooth configuration**: **Block** prevents users from configuring Bluetooth on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using Bluetooth on the device.
@@ -87,8 +86,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **USB file transfer**: **Block** prevents transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow transferring files.
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 - **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.  
-- **Developer settings​**: Choose **Allow** to let users access developer settings on the device.​ When set to **Not configured** (default), Intune doesn’t change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.  
-- **Debugging features**: Choose **Allow** to let users use debugging features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from using the debugging features on the device.
+- **Developer settings**: Choose **Allow** to let users access developer settings on the device. When set to **Not configured** (default), Intune doesn’t change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
 - **Microphone adjustment**: **Block** prevents users from unmuting the microphone and adjusting the microphone volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device.
 - **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. If an email isn't entered, anyone can unlock the device after it's restored to the factory settings. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
 
@@ -365,7 +363,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't required to set a PIN. This setting must be enabled to show the sub-settings.
           - **Choose complexity of PIN for sign-in session**: Select the complexity of the session PIN. Your options:
             -  **Not configured**: Intune doesn't change or update this setting. By default, MHS requires at least one character in the session PIN.
-            -  **Simple**: Requires numbers. There are no restrictions on repeating (444) or or ordered (123, 321, 246) sequences.
+            -  **Simple**: Requires numbers. There are no restrictions on repeating (444) or ordered (123, 321, 246) sequences.
             - **Complex**: Allows users to create a PIN with alphanumeric characters. Can't use repeating (444) or ordered (123, 321, 246) sequences.
 
             For more information on this setting, see **Complexity of session PIN** at [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
@@ -627,7 +625,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   This setting applies to:
 
-  - Android 6.0 and newer personally owned devices with a work profile
+  - Android 8.0 and newer personally owned devices with a work profile
 
 - **Screen capture**: **Block** prevents screenshots or screen captures on the device in the work profile. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
 
@@ -635,7 +633,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   This setting applies to:
 
-  - Android 6.0 and newer personally owned devices with a work profile
+  - Android 8.0 and newer personally owned devices with a work profile
 
 - **Search work contacts from personal profile**: **Block** prevents users from searching for work contacts in apps in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow searching for work contacts in the personal profile.
 
@@ -649,7 +647,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   This setting applies to:
 
-  - Android 7.0 and newer personally owned devices with a work profile
+  - Android 8.0 and newer personally owned devices with a work profile
 
   Also configure:
 
