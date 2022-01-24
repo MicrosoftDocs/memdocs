@@ -121,7 +121,7 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2112
+### Technical preview version 2201
 <!-- all items are in 2111 CB -->
 
 - [3601042](2022/technical-preview-2201.md) <!--3601042-->

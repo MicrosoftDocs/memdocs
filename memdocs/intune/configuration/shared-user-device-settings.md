@@ -2,13 +2,13 @@
 # required metadata
 
 title: Shared or multi-user device settings in Microsoft Intune
-description: Add and use Windows 10 and Windows Holographic for Business devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft HoloLens. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
+description: Add and use Windows 10/11 and Windows Holographic for Business devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft HoloLens. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 01/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,8 +33,8 @@ ms.collection: M365-identity-device-management
 
 Devices that have multiple users are called shared devices, and are a common part of mobile device management (MDM) solutions. Using Microsoft Intune, you can customize shared devices running the following platforms:
 
-- Windows 10 Professional and newer
-- Windows 10 Enterprise and newer
+- Windows 10/11 Professional
+- Windows 10/11 Enterprise
 - Windows Holographic for Business, such as the HoloLens
 
 For example, schools have devices that are typically used by many students. With this setting, the school Intune administrator can turn on the Shared PC feature to allow one user at a time. Students can't switch between different signed-in accounts on the device. When the student signs out, you also choose to remove all user-specific settings.
@@ -63,7 +63,7 @@ When the profile is created in Intune, you deploy or assign the profile to devic
 6. Select **Next**.
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Windows 10 and newer](shared-user-device-settings-windows.md)
+    - [Windows 10/11](shared-user-device-settings-windows.md)
     - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
 8. Select **Next**.
@@ -85,5 +85,5 @@ The next time each device checks in, the policy is applied.
 
 ## Next steps
 
-- See all the settings for [Windows 10 and newer](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+- See all the settings for [Windows 10/11](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
 - After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
