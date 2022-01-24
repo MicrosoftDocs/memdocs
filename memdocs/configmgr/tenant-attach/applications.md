@@ -75,8 +75,6 @@ You can filter the application list based on the status. The application status 
 1. Select **Applications**.
 1. Select the application and choose **Install**.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-install.png" alt-text="Screenshot of application installation from Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-install.png":::
-
 You can export all of the data currently in the view into a .csv file. At the top of the page, select the **Export** option to create the file. If the view exceeds 500 rows, only the first 500 are exported.
 
 ## <a name="bkmk_user"></a> Deploy an application to a user
