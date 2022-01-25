@@ -63,11 +63,6 @@ Devices must run Windows 10 or Windows 11.
 
 Use the Local user group membership (preview) profile to manage the users that are members of the built-in local groups on Windows 10/11 devices that receive this policy.
 
-### Additional prerequisites for *local user group membership* profiles
-
-- Devices must be Azure Active Directory (Azure AD) Joined, and managed by Intune
-- Users must be in your Azure AD
-
 ### Configure the profile
 
 This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
