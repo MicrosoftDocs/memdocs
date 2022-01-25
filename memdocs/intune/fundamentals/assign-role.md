@@ -41,6 +41,8 @@ To create, edit, or assign roles, your account must have one of the following pe
 2. On the **Endpoint Manager roles - All roles** blade, choose the built-in role you want to assign > **Assignments** > **+ Assign**.
 
 5. On the **Basics** page, enter an **Assignment name** and optional **Assignment description**, and then choose **Next**.
+For step #5 in this doc, we need to call out the following with a note:
+The All users and All devices are Intune virtual groups and not AAD security groups. As a result, for Scope group assignment purposes you cannot use them as parents of AAD security groups. If you need both All users/All devices and specific AAD security groups for scope group assignments, you must add them separately with separate assignments. Otherwise, even if you have All users for the role's scope group assignment the admin in this role won't have access to specific AAD user groups. For AAD security groups, nesting is supported.
 
 6. On the **Admin Groups** page, select the group that contains the user you want to give the permissions to. Choose **Next**
 
