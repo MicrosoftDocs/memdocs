@@ -38,7 +38,10 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Prerequisites for Account protection profiles
 
-Devices must run Windows 10 or Windows 11.
+Devices must run:
+
+- Windows 10 20H2 or later
+- Windows 11
 
 ## Account protection profiles
 
@@ -65,7 +68,7 @@ Use the Local user group membership (preview) profile to manage the users that a
 
 ### Configure the profile
 
-This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
+This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes additional details on how configurations apply, and an FAQ about the use of the CSP. 
 
 When configuring this profile, on the *Configuration settings* page you can create multiple rules to manage which built-in local groups you want to change, the group action to take, and the method to select the users.
 
@@ -78,15 +81,15 @@ The following are the configurations you can make:
 - **Group and user action**: Configure the action to apply to the selected groups. This action will apply to the users you select for this same action and grouping of local accounts.  Actions you can choose include:
   - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy are not changed.
   - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy are not changed.
-  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action.  This option works in the same way as a Restricted Group and any group members that are not specified in the policy are removed.
+  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action. This option works in the same way as a Restricted Group and any group members that are not specified in the policy are removed.
 
   > [!CAUTION]
-  > If the same group is configured with both a Replace and Update action, the Replace action wins. This is not considered a conflict.
-
+  > If the same group is configured with both a Replace and Update action, the Replace action wins. This is not considered a conflict. Such a configuration can occur when you deploy multiple policies to the same device, or when this CSP is also configured by use of Microsoft Graph.
+  
 - **User selection type**: Choose how to select users. Options include:
 
   - **Users**: Select the users and user groups from your Azure Active Directory (Azure AD).
-  - **Manual**:  Specify Azure AD users and groups manually, by username, domain/username, or their security identifier (SID).
+  - **Manual**:  Specify Azure AD users and groups manually, by username, domain/username, or the groups security identifier (SID).
 
 - **Selected user(s)**: Depending on your selection for *User selection type*, you’ll use one of the following options:
 
