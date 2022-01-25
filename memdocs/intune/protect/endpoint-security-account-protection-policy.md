@@ -38,7 +38,7 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Prerequisites for Account protection profiles
 
-- To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 1.
+- To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
 - To support the *Local user group membership (preview)* profile, devices must run Windows 10 20H2 or later, or Windows 11.
 
 ## Account protection profiles
