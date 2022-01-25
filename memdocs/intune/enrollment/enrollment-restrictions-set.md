@@ -311,6 +311,6 @@ To access the device enrollment page:
     > ![Example image of the Device enrollment page, showing a table of enrollment profiles.](./media/enrollment-restrictions-set/enrollment-page-report-2112.png)  
 
 >[!NOTE]
->You must enable filters to view the device enrollment page. Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.
+>You must [enable filters (in preview)](../fundamentals/filters.md#enable-filters-public-preview) to view the device enrollment page. Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.
 >This page is not available for Android devices. 
 
