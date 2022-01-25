@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Overview of Windows 365 deployment
 
-Once your organization has purchased one or more Windows 365 licenses, the Windows 365 node in Microsoft Endpoint Manager will become active for management. At this point, you're able to begin provisioning Cloud PC's. 
+After your organization has purchased one or more Windows 365 licenses, the Windows 365 node in Microsoft Endpoint Manager will become active for management. At this point, you can provision Cloud PCs. 
 
 To set up your system to provision on-demand Cloud PCs to your users, follow these steps:
 
