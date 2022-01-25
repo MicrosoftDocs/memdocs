@@ -64,6 +64,9 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 Use the Local user group membership (preview) profile to manage the users that are members of the built-in local groups on Windows 10/11 devices that receive this policy.
 
+> [!TIP]
+> To learn more about support for managing administrator privileges using Azure Active Directory (Azure AD) groups, see [Assign local admins to Azure AD joined devices](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-azure-ad-groups-preview) in the Azure AD documentation.
+
 ### Configure the profile
 
 This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes additional details on how configurations apply, and an FAQ about the use of the CSP. 
@@ -86,12 +89,12 @@ The following are the configurations you can make:
 
 - **User selection type**: Choose how to select users. Options include:
 
-  - **Users**: Select the users and user groups from your Azure Active Directory (Azure AD).
+  - **Users**: Select the users and user groups from your Azure AD.
   - **Manual**:  Specify Azure AD users and groups manually, by username, domain/username, or the groups security identifier (SID).
 
 - **Selected user(s)**: Depending on your selection for *User selection type*, you’ll use one of the following options:
 
-  - **Select user(s)**: Select the users and user groups from your Azure Active Directory (Azure AD).
+  - **Select user(s)**: Select the users and user groups from your Azure AD.
   - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *Username, Domain/username*, or by *security identifier (SID)*.
 
     :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
