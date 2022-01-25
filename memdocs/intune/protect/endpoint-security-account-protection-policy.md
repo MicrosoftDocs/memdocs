@@ -38,18 +38,16 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Prerequisites for Account protection profiles
 
-Devices must run:
-
-- Windows 10 20H2 or later
-- Windows 11
+- To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 1.
+- To support the *Local user group membership (preview)* profile, devices must run Windows 10 20H2 or later, or Windows 11.
 
 ## Account protection profiles
 
-*Account protection profiles are in Preview*.
+*Account protection profiles are in preview*.
 
 **Windows 10/11 profiles**:
 
-- **Account protection** **(Preview)** – Settings for account protection policies help you protect user credentials.
+- **Account protection (preview)** – Settings for account protection policies help you protect user credentials.
 
   The account protection policy is focused on settings for  Windows Hello and Credential Guard, which is part of Windows identity and access management.
 
@@ -85,7 +83,7 @@ The following are the configurations you can make:
 
   > [!CAUTION]
   > If the same group is configured with both a Replace and Update action, the Replace action wins. This is not considered a conflict. Such a configuration can occur when you deploy multiple policies to the same device, or when this CSP is also configured by use of Microsoft Graph.
-  
+
 - **User selection type**: Choose how to select users. Options include:
 
   - **Users**: Select the users and user groups from your Azure Active Directory (Azure AD).
