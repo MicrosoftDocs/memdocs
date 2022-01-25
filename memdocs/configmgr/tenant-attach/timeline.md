@@ -83,7 +83,7 @@ You will receive a time out error if the following condition applies:
 
 - You're opening **Timeline** for the very first time after restarting SMSExecutive on the service connection point's on-premises server. 
 
-To workaround the issue, reload the **Timeline** page.
+To work around the issue, reload the **Timeline** page.
 
 ## Next steps
 
