@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2022
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -129,7 +129,7 @@ When you use filters, conflict resolution is handled using the following methods
 
 ### Filter mode
 
-When there's a device with conflicting assignments for the same policy, the follow precedence applies:
+When there's a device with conflicting assignments for the same policy, the following precedence applies:
 
 1. **Exclude** mode applies. **Exclude** wins over **No filter**, and wins over **Include** mode.
 2. **No filter** mode applies. **No filter** wins over **Include** mode.

@@ -6,7 +6,7 @@ description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune 
 author: MandiOhlinger 
 ms.author: mandia 
 manager: dougeby 
-ms.date: 01/24/2022
+ms.date: 01/25/2022
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -33,7 +33,7 @@ A key task of any Administrator is to protect and secure an organization’s res
 
 Device management enables organizations to protect and secure their resources and data, and from different devices.
 
-Using a device management provider, organization can make sure that only authorized people and devices get access to proprietary information. Similarly, device users can feel at ease accessing work data from their phone, because they know their device meet their organization's security requirements. As an organization, you might ask - **What should we use to protect our resources?**
+Using a device management provider, organization can make sure that only authorized people and devices get access to proprietary information. Similarly, device users can feel at ease accessing work data from their phone, because they know their device meets their organization's security requirements. As an organization, you might ask - **What should we use to protect our resources?**
 
 The answer is [Microsoft Intune](what-is-intune.md). Intune offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
 

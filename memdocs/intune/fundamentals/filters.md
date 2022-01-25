@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2022
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -167,12 +167,12 @@ After the filter is created, it's ready to use when assigning your apps or polic
 3. Assign your policy to a users group or a devices group.
 4. Select **Edit filter**. Your options:
 
-    - **Do not apply a filter**: All targeted users or devices recieve the app or policy without filtering.
-    - **Include filtered devices in assignment**: Devices that match the filter conditions recieve the app or policy. Devices that don't match the filter conditions don't receive the app or policy.
+    - **Do not apply a filter**: All targeted users or devices receive the app or policy without filtering.
+    - **Include filtered devices in assignment**: Devices that match the filter conditions receive the app or policy. Devices that don't match the filter conditions don't receive the app or policy.
 
       A list of filters that match the policy platform is shown.
 
-    - **Exclude filtered devices in assignment**: Devices that match the filter conditions don't recieve the app or policy. Devices that don't match the filter conditions receive the app or policy.
+    - **Exclude filtered devices in assignment**: Devices that match the filter conditions don't receive the app or policy. Devices that don't match the filter conditions receive the app or policy.
 
       A list of filters that match the policy platform is shown.
 
