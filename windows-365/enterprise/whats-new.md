@@ -48,18 +48,25 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of January 17, 2022
+
+#### New documentation article: Optimize Cisco Webex on a Windows 365 Cloud PC<!--37106382-->
+
+We’ve published a new help documentation article. For more information, see [Optimize Cisco Webex on a Windows 365 Cloud PC](cisco-webex-support.md).
+
+<!-- ########################## -->
 ## Week of January 10, 2022
 
 #### New documentation: Data encryption in Windows 365<!--36626607-->
 
-We've just added information to the help documentation about encryption for Windows 365 Cloud PCs. For more information, see [Data encryption in Windows 365](encryption.md).
+We've added information to the help documentation about encryption for Windows 365 Cloud PCs. For more information, see [Data encryption in Windows 365](encryption.md).
 
 <!-- ########################## -->
 ## Week of January 3, 2022
 
 #### New documentation: Gallery image update cycle<!--36626607-->
 
-We've just added information to the help documentation about the update cycle for Windows 365 Cloud PC gallery images. For more information, see [Gallery image update cycle](device-images.md#gallery-image-update-cycle).
+We've added information to the help documentation about the update cycle for Windows 365 Cloud PC gallery images. For more information, see [Gallery image update cycle](device-images.md#gallery-image-update-cycle).
 
 <!-- ########################## -->
 ## Week of December 13, 2021
@@ -85,7 +92,7 @@ The **Provisioning policies** page has a new column: **Image status**. It tells 
 
 #### New documentation article: Optimize Zoom on a Windows 365 Cloud PC<!--37106382-->
 
-We’ve just published a new help documentation article. For more information, see [Optimize Zoom on a Windows 365 Cloud PC](zoom-support.md).
+We’ve published a new help documentation article. For more information, see [Optimize Zoom on a Windows 365 Cloud PC](zoom-support.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
