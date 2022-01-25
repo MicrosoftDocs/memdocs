@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -191,7 +191,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`).
   2. The Setup Assistant prompts the user for information, and enrolls the device in Intune. The device isn't registered in Azure AD.
 
-- **Enroll with user affinity + Setup Assistant with modern authentication + Company Portal app**:
+- **Enroll with user affinity + Setup Assistant with modern authentication**:
 
   :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/ade-user-affinity-setup-assistant-modern-authentication.png" alt-text="In the Endpoint Manager admin center and Microsoft Intune, enroll iOS/iPadOS devices using automated device enrollment (ADE). Select enroll with user affinity, and use the Setup Assistant for authentication. The Company Portal app automatically installs.":::
 
@@ -199,20 +199,21 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete. The device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices. At this point, however, the device isn't fully registered with Azure AD. 
-  3. The Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again.
-  4. Users complete registration in Company Portal, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies. 
+  2. Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete. The device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices.
 
-- **Enroll with user affinity + Setup Assistant with modern authentication - Company Portal app**:
+      At this point, the device isn't fully registered with Azure AD.
 
-  :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/ade-user-affinity-setup-assistant-modern-authentication.png" alt-text="In the Endpoint Manager admin center and Microsoft Intune, enroll iOS/iPadOS devices using automated device enrollment (ADE). Select enroll with user affinity and use the Setup Assistant for authentication. The Company Portal app automatically installs.":::
+  3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Azure AD registration in the Company Portal app, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies.
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`) and their organization Azure AD credentials.
+  4. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
 
-      When users enter their Azure AD credentials, the enrollment starts.
+      1. Users sign in to the Apple app store with their Apple ID (`user@iCloud.com` or `user@gmail.com`). When they sign in, the Company Portal app automatically installs.
 
-  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
-  3. The Company Portal app automatically installs. Users don't need to open the Company Portal app, or sign in to the app. If they don't sign in, then the device isn't registered with Azure AD. The device is shown as non-compliant in Azure AD since it has not completed registration within the Company Portal. Any resources depending on conditional access aren't available.
+          This extra sign-in step slows the enrollment, especially if users don't sign in immediately.
+
+          If they don't sign in to the app store, then the Company Portal app doesn't install. If the app isn't installed, then users can't register the device in Azure AD. Since the device hasn't completed registration, the device shows as non-compliant in Azure AD. Any resources depending on conditional access aren't available.
+
+      2. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Azure AD registration in the Company Portal app, which fully registers the device with Azure AD. At the next check-in, users gain access to corporate resources protected by conditional access policies.
 
 - **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
 
