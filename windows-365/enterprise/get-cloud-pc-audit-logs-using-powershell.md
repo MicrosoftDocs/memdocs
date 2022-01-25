@@ -62,9 +62,15 @@ To get audit log events for up to seven days for your Windows 365 tenant, follow
 
 You can view audit data in multiple ways.
 
-#### List audit events
+#### Get entire list of audit events, including the audit actor
 
-To see a list of audit events, use the following command:
+To get the entire list of audit events including the actor (person who performed the action), use the following command:
+
+```Get-MgDeviceManagementVirtualEndpointAuditEvent | Select-Object -Property Actor,ActivityDateTime,ActivityType,ActivityResult -ExpandProperty Actor | Format-Table UserId, UserPrincipalName, ActivityType, ActivityDateTime, ActivityResult```
+
+#### Get a list of audit events
+
+To get a list of audit events without the audit actor, use the following command:
 
 ```Get-MgDeviceManagementVirtualEndpointAuditEvent```
 
@@ -74,14 +80,7 @@ To get only the top N events, use the following parameters: ```Get-MgDeviceManag
 
 #### Get a single event by event ID
 
-You can use the following command to a single event: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
-
-#### Get audit actor
-
-You can also find out who performed an audit event by running the following commands:
-
-```$res=Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```dotnetcli
-```$res.Actor```
+You can use the following command to get a single audit event, where you will need to provide the {event ID}: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
 
 <!-- ########################## -->
 ## Next steps
