@@ -212,7 +212,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
       When users enter their Azure AD credentials, the enrollment starts.
 
   2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
-  3. The Company Portal app automatically installs. Users don't need to open the Company Portal app, or sign in to the app. If they don't sign in, then the device isn't registered with Azure AD. The device isn't shown in a user's device list in Azure AD. Any resources depending on conditional access aren't available.
+  3. The Company Portal app automatically installs. Users don't need to open the Company Portal app, or sign in to the app. If they don't sign in, then the device isn't registered with Azure AD. The device is shown as non-compliant in Azure AD since it has not completed registration within the Company Portal. Any resources depending on conditional access aren't available.
 
 - **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
 
