@@ -84,6 +84,8 @@ The Remote help app supports the following capabilities:
 
 Remote help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remoteassistance.support.services.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
 
+In some cases requesting a code from the app might require further whitelisting for IP's (152.199.19.160) these are used by Microsoft.
+
 Both the helper and sharer must be able to reach these endpoints over port 443:
 
 | Domain/Name                       | Description                                           |
