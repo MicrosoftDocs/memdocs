@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Add device images for Windows 365
+title: Add or delete custom device images for Windows 365
 titleSuffix:
-description: Learn how to add device images for Windows 365.
+description: Learn how to add or delete custom device images for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
