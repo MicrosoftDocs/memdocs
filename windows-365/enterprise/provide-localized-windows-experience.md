@@ -37,7 +37,7 @@ There are two different ways to provide a localized Windows experience when user
 - Configure a provisioning policy
 - Create a custom device image
 
-## Configure a provisoning policy
+## Configure a provisioning policy
 
 To make sure that the correct language packs are available on the Cloud PC at first sign-in, you can configure a provisioning policy:
 
