@@ -52,7 +52,7 @@ A few things to keep in mind:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
     - **Custom image**:  Choose **Select** > select an image from the list > **Select**. This will show the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
 1. Select **Next**.
-1.	On the **Configuration** page, choose a language pack in the drop down. The selected language pack will be installed on Cloud PCs provisioned with this policy. Select **Next**.
+1.	On the **Configuration** page, choose a language pack in the dropdown. The selected language pack will be installed on Cloud PCs provisioned with this policy. Select **Next**.
 1. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**.
 1. On the **Review + create** page, select **Create**. It can take up to 60 minutes for the policy creation process to complete, depending on when the Azure AD connect sync last happened.
 

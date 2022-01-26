@@ -100,7 +100,7 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
 3. In Server Manager, open **Group Policy Management** and create a new Group Policy object linked to the Organization Unit (OU) or domain that will contain the Cloud PCs for those users.
 4. Right-click the new Group Policy object, and select **Edit...**
 5. Navigate to **User Configuration** > **Preferences** > **Windows Settings**, right-click **Registry**, and select **New** > **Registry Item**.
-6. Enter the following details in the **General** tab. Here is an example that shows Spanish (Spain) with language code es-ES:
+6. Enter the following details in the **General** tab. Here's an example that shows Spanish (Spain) with language code es-ES:
     - Action: Replace
     - Hive: HKEY_CURRENT_USER
     - Key Path: Control Panel\Desktop
@@ -119,7 +119,7 @@ The following steps configure [Group Policy Preferences](/previous-versions/wind
 9. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
 10. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
 11. In the "Group Policy Management Editor", navigate to **User Configuration** > **Preferences** > **Control Panel Settings**, right-click **Regional Options**, and select **New** > **Regional Options**.
-12. Under **User Locale**, select the language and region combination that matches the registry key you created above.
+12. Under **User Locale**, select the language and region combination that matches the registry key you created in a previous step.
 13. After selecting your desired language and region combination from the dropdown, the dropdown menu may be underlined in red. This indicates that the selection isn't confirmed. Press the **F5** function key on your keyboard to confirm the selection, resulting in a green underlined dropdown menu.
 
     Before hitting **F5**:
