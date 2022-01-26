@@ -36,9 +36,7 @@ Devices are evaluated against these filters to meet the rules you configure. The
 Use this article to learn more about the reporting features, and to help troubleshoot filters and conflicts.
 
 > [!IMPORTANT]
-> 
-> - From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
-> - This feature is in [public preview](public-preview.md). The entry point to filter evaluation results will change, and become more integrated into policy and app reports.
+> From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
 
 ## Reports
 
@@ -54,12 +52,12 @@ You can use the following reports to get more information on your filters:
 This report shows every app or policy with a filter that's been applied. For each evaluated app or policy, you can see the applied filters, and get more detailed information.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All Devices** > select a device > **Filter evaluation (preview)**. The following information is shown:
+2. Select **Devices** > **All Devices** > select a device > **Filter evaluation**. The following information is shown:
 
     - The filters that were evaluated.
     - The date and time the evaluation occurred.
     - The evaluation results: **Match** or **No match**
-    - If the filter was using Include or Exclude mode
+    - If the filter is using Include or Exclude mode
     - The filter name, description, and rules
     - The properties that were evaluated, such as `deviceName`.  
     - The available apps that can be assigned to the device.  
