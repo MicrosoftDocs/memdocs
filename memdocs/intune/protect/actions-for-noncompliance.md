@@ -190,6 +190,9 @@ When you specify multiple messages and locales, non-compliant end users receive 
    - **Subject**
    - **Message body text**
 
+   > [!NOTE] 
+   > The maximum number of characters for the Subject is 78, and the maximum number of characters for the message body text is 2000.
+
    Before continuing, you must select the checkbox for *Is Default* for one of the messages. Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**. 
 
    > [!div class="mx-imgBorder"]
