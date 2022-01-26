@@ -82,8 +82,7 @@ In the Endpoint Manager admin center, you can create filters, and then use these
 
 * [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)   
 
-For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](../fundamentals/filters.md
-).  
+For more information on filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md).  
 
 Applies to:
 
@@ -201,7 +200,7 @@ For more information, see:
 ### Device enrollment
 
 #### Apply device type filters to Windows and Apple enrollment restriction policies (preview)<!-- 9284419 -->  
-Use the new assignment filters in **Enrollment Restrictions** to include or exclude devices based on device type. For example, you can allow personal devices, while also blocking devices running Windows 10 Home, by applying the **operatingsystemSKU** assignment filter. Filters are currently in public preview and can be applied to Windows, macOS, and iOS enrollment policies, with Android support coming at a later date. Enabling the filters public preview in your tenant also enables a new setup experience for enrollment restrictions. For more information about how to create filters, see [Create a filter](../fundamentals/filters.md). For more information about using filters with enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md). 
+Use the new assignment filters in **Enrollment Restrictions** to include or exclude devices based on device type. For example, you can allow personal devices, while also blocking devices running Windows 10 Home, by applying the **operatingsystemSKU** assignment filter. Filters can be applied to Windows, macOS, and iOS enrollment policies, with Android support coming at a later date. Filters also enable a new setup experience for enrollment restrictions. For more information about how to create filters, see [Create a filter](../fundamentals/filters.md). For more information about using filters with enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md). 
 
 #### Use filters on Windows Enrollment Status Page profile assignments<!-- 7423484 -->
 Filters allow you to include or exclude devices in policy or app assignments based on different device properties. When you create an Enrollment Status Page (ESP) profile, you'll be able to use filters when assigning the profile. The **All users** and **All devices** assignment options will also be available. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Enroll devices** > **Enrollment Status Page** > **Create**. For more information about filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md). For more information about ESP profiles, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md). 
@@ -255,7 +254,7 @@ This feature is rolling out over the next week and should soon be available for 
 You can set the update priority of Managed Google Play apps on dedicated, fully managed, and corporate-owned with a work profile Android Enterprise devices. Select **High Priority** to update an app as soon as the developer has published the update, regardless of charge status, Wi-Fi capability, or end user activity on the device. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
 
 #### Clear app data between sessions for Android Enterprise dedicated devices enrolled with shared device mode (public preview)<!-- 8663319 -->
-Using Intune, you can choose to clear app data for applications that have not integrated with Shared device mode to ensure user privacy between sign-in sessions. Users will be required to initiate a sign-out from an application that has integrated with AAD's Shared device mode in order for IT-specified apps to have their data cleared. This functionality will be available for Android Enterprise dedicated devices enrolled with shared device mode on Android 9 or later.
+Using Intune, you can choose to clear app data for applications that have not integrated with Shared device mode to ensure user privacy between sign-in sessions. Users will be required to initiate a sign-out from an application that has integrated with Azure AD's Shared device mode in order for IT-specified apps to have their data cleared. This functionality will be available for Android Enterprise dedicated devices enrolled with shared device mode on Android 9 or later.
 
 #### Export underlying discovered apps list data<!-- 9370255 -->
 In addition to exporting the summarized discovered apps list data, you can export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the additional new experience also provides the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data is a list of every device and each app discovered for that device. This functionality has been added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
@@ -769,7 +768,7 @@ The version of the iOS/iPadOS Company Portal and the macOS Company Portal are sy
 
 If you’re using filters for assigning apps as available, you can now use the filter evaluation report on a device to determine if an app has been made available for install. You can see this report per device, under **Devices > All Devices > select a device > Filter evaluation (preview)**.
 
-- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+- For more information on filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 - For more information on filter reports, see [Filter reports and troubleshooting in Microsoft Endpoint Manager](filters-reports-troubleshoot.md).
 
 Applies to:
@@ -804,7 +803,7 @@ Intune can now display the contents of macOS LOB apps (`.intunemac` files) in th
 
 In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
 
-- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
+- For more information on filters, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 - For more information on the DFCI profile, see [Use Device Firmware Configuration Interface profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md).
 
 Applies to:
@@ -1102,8 +1101,8 @@ In the Endpoint Manager admin center, you can create filters, and then use these
 
 When assigning Windows client update ring policies, you can use filters (**Devices** > **Windows** > **Windows 10 Update Rings**). You can filter the devices that get the update rings policy based on a device property, such as the OS version, device manufacturer, and more. After you create the filter, use the filter when you assign the update rings policy.
 
-- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
-- For more information on Windows client update rings policies, see [Windows client update rings policy in Intune](../protect/windows-10-update-rings.md).
+- For more information on filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+- For more information on Windows 10 update rings policies, see [Windows 10 update rings policy in Intune](../protect/windows-10-update-rings.md).
 
 Applies to:
 - Windows 11
@@ -1483,13 +1482,13 @@ In addition, the following applies to configuration of the *Hide the Virus and t
 
 There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
 
-- **Devices** > **Filters (preview)** > **Create**
-- **Apps** > **Filters (preview)**> **Create**
-- **Tenant administration** > **Filters (preview)**> **Create**
+- **Devices** > **Filters** > **Create**
+- **Apps** > **Filters** > **Create**
+- **Tenant administration** > **Filters** > **Create**
 
 You can filter the scope of affected devices using device properties. For example, you can filter on the OS version, device manufacturer, and more. After you create the filter, you can use the filter when you assign a policy or profile.
 
-For more information, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+For more information, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 
 Applies to:
 
@@ -1549,7 +1548,7 @@ Applies to:
 
 #### Disable NFC pairing on iOS/iPadOS devices running 14.2 and newer<!-- 9112701   -->
 
-On supervised iOS/iPadOS devices, you can create a device restrictions profile that disables NFC (**Devices** > **Configuration  profiles**> **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Connected devices** > **Disable near field communication (NFC)**). When you disable this feature, it prevents devices from pairing with other NFC-enabled devices, and disables NFC.
+On supervised iOS/iPadOS devices, you can create a device restrictions profile that disables NFC (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Connected devices** > **Disable near field communication (NFC)**). When you disable this feature, it prevents devices from pairing with other NFC-enabled devices, and disables NFC.
 
 To see this setting, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
@@ -1680,11 +1679,11 @@ Endpoint analytics [startup performance](../../analytics/startup-performance.md)
 
 When creating an Automated Device Enrollment profile, can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD Multi-Factor Authentication during the setup assistant screens. This will require an additional Azure AD login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
 
-Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when the user lands on the home screen after the setup screens, however the device will not be fully registered with AAD until the Company Portal login. The device will not show up in a given user's device list in the AAD portal until the Company Portal login. If the tenant has multifactor  authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during enrollment during Setup Assistant. Multifactor  authentication is not required, but it is available for this authentication method within Conditional Access if needed.
+Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when the user lands on the home screen after the setup screens, however the device will not be fully registered with Azure AD until the Company Portal login. The device will not show up in a given user's device list in the Azure AD portal until the Company Portal login. If the tenant has multifactor  authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during enrollment during Setup Assistant. Multifactor  authentication is not required, but it is available for this authentication method within Conditional Access if needed.
 
 This method has the following options for installing the Company Portal:
 
-- For iOS/iPadOS: The **Install Company Portal** setting will not be there when choosing this flow for iOS/iPadOS. The CP will be a required app on the device with the correct app configuration policy once the end user lands on the home screen. User must sign in with Azure AD credentials into the CP after enrollment to gain access to resources protected by Conditional Access and be fully AAD registered.
+- For iOS/iPadOS: The **Install Company Portal** setting will not be there when choosing this flow for iOS/iPadOS. The CP will be a required app on the device with the correct app configuration policy on it once the end user lands on the home screen. User must sign in with Azure AD credentials into the CP after enrollment to gain access to resources protected by Conditional Access and be fully Azure AD registered.
 - For macOS: Users must sign into the Company Portal to complete Azure AD registration and gain access to resources protected by Conditional Access. The end user will not be locked to the CP after landing on the home page, but an additional login into the CP will be required to access corporate resources and be compliant.  For more information, see [Add the macOS Company Portal app](../apps/apps-company-portal-macos.md).
 
 For information on how to use this authentication method on iOS/iPadOS devices, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
@@ -1699,7 +1698,7 @@ For information on how to use this authentication method on macOS devices, see [
 
 #### Intune management agent for macOS devices is now a universal app<!-- 9294405 -->
 
-When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. For more information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. For more information, see [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-dmg.md).
 
 ### Device security
 
@@ -2009,7 +2008,7 @@ By default, Intune Administrators and Azure Active Directory administrators have
 
 #### Scope tag support for customization policies for Intune for Government and 21Vianet<!--9419267  -->
 
-You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options.
+You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Customization** where you will see **Scope tags** configuration options.
 
 <!-- ########################## -->
 ## Week of February 22, 2021
@@ -2370,7 +2369,7 @@ Win32 apps added to Intune cannot be removed if they are in a dependency relatio
 
 #### Scope tag support for customization policies<!--6182440  -->
 
-You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. This feature is now available for Intune for Government or Intune operated by 21Vianet.
+You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Customization** where you will see **Scope tags** configuration options. This feature is now available for Intune for Government or Intune operated by 21Vianet.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
