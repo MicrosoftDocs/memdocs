@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/06/2022
+ms.date: 01/25/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -104,7 +104,7 @@ Default restrictions are automatically provided for both device type and device 
 ## Create a device platform restriction (preview)  
 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then [enable the filters public preview](../fundamentals/filters.md#enable-filters-public-preview) in your tenant.  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. In the side menu, go to **Devices** and scroll down to **Policy**. Select **Enrollment device platform restrictions**. You can also access this policy by going to **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.  
 
 3. At the top of the page, select the tab that corresponds with the platform you're configuring. Your options:  
@@ -209,10 +209,7 @@ The following filter properties are always available to use with enrollment poli
 * Ownership 
 * Enrollment profile name 
 
-For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.   
-
->[!NOTE]
->To use filters on enrollment restriction and enrollment status assignments, you must [enable the filters public preview in your tenant](../fundamentals/filters.md#enable-filters-public-preview).  
+For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.
 
 ## Blocking personal Android devices
 - If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
@@ -311,6 +308,6 @@ To access the device enrollment page:
     > ![Example image of the Device enrollment page, showing a table of enrollment profiles.](./media/enrollment-restrictions-set/enrollment-page-report-2112.png)  
 
 >[!NOTE]
->You must [enable filters (in preview)](../fundamentals/filters.md#enable-filters-public-preview) to view the device enrollment page. Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.
+>Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.
 >This page is not available for Android devices. 
 

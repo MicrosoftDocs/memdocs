@@ -31,18 +31,18 @@ landingContent:
         links:
           - text: Troubleshoot tenant attach and device actions
             url: troubleshoot.md
-          - text: Troubleshoot ConfigMgr client details (preview)
+          - text: Troubleshoot ConfigMgr client details
             url: troubleshoot-client-details.md
  # Card
   - title: Get information about uploaded devices
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: View ConfigMgr client details (preview)
+          - text: View ConfigMgr client details
             url: client-details.md
-          - text: Device timeline (preview)
+          - text: Device timeline
             url: timeline.md
-          - text: Resource explorer (preview)
+          - text: Resource explorer
             url: resource-explorer.md
  # Card
   - title: Top tasks
