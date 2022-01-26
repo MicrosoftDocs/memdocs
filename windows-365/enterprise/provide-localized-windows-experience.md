@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/03/2021
+ms.date: 02/07/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -32,14 +32,31 @@ ms.collection: M365-identity-device-management
 
 For users to be productive on their Windows 365 Cloud PC, it's important for Windows to use a display language that they're comfortable with. Users can always change the display language themselves through the Settings app in Windows. But the Windows experience is more welcoming if the user sees the right language immediately, starting when they first sign in.
 
-To provide a localized Windows experience when users first sign in, there are two steps:
+There are two different ways to provide a localized Windows experience when users first sign in:
+
+- Configure a provisioning policy
+- Create a custom device image
+
+## Configure a provisioning policy
+
+To make sure that the correct language packs are available on the Cloud PC at first sign-in, you can configure a provisioning policy:
+
+- [Create a provisioning policy](create-provisioning-policy.md) and choose a **Language & Region pack** under **Configuration**. There are 38 Windows language packs available for Windows 365.
+
+All Cloud PCs provisioned with this policy will have the chosen language pack at the first sign-in experience.
+
+You can also [edit provisioning policies](edit-provisioning-policy.md) to change the Language & Region configuration. After saving the policy and [reprovisioning](reprovision-cloud-pc.md) the associated Cloud PCs, the chosen language pack will be on the Cloud PCs.
+
+## Create a custom device image
+
+To create a custom device image that gives users a localized Windows experience, follow these steps:
 
 1. [Create a custom device image with the languages installed](#create-a-custom-image-with-the-languages-installed).
 2. [Configure the default language using Group Policy](#configure-the-default-language-using-group-policy).
 
 Cloud PCs provisioned from this image will be fully configured to work in any of the installed languages, without any user action. When the user signs in to the Cloud PC, Group Policy will evaluate the device and set the appropriate pre-installed language as the user's preferred language for Windows.
 
-## Create a custom image with the languages installed
+### Create a custom image with the languages installed
 
 Creating a custom image with the languages installed is the best way to make sure that the desired languages are available on the Cloud PC when the user signs in.
 
@@ -48,7 +65,7 @@ Before starting the custom image process, check if your language is supported by
 - The language you want to provide for your users is supported by the PowerShell script, follow the steps to [Add languages to Windows using a script and capture the image](#add-languages-to-windows-using-a-script-and-capture-the-image). Windows 10 custom images only.
 - The language you want to provide for your users isn't supported by the PowerShell script, follow the steps to [Add languages to Windows manually and capture the image](#add-languages-to-windows-manually-and-capture-the-image).
 
-### Add languages to Windows using a script and capture the image
+#### Add languages to Windows using a script and capture the image
 
 To add a language using the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) script:
 
@@ -61,18 +78,18 @@ To add a language using the [Windows 365 Language Installer](https://www.powersh
 
 After you're done adding the desired languages and are ready to capture the image, follow the steps to [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
 
-### Add languages to Windows manually and capture the image
+#### Add languages to Windows manually and capture the image
 
 To manually install the desired languages to your Windows 10/11 Enterprise custom image, follow the steps in [Add language packs to a Windows 10/11 multi-session image](/azure/virtual-desktop/language-packs) up to and including [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
 
 > [!NOTE]
 > Though these instructions are written specifically for Windows 10/11 Enterprise multi-session, these same steps apply to Windows 10/11 Enterprise.
 
-### Upload the custom image
+#### Upload the custom image
 
 To upload the custom image to the Windows 365 service, after you've captured the image as an Azure managed image, follow the steps in [Add or delete device images](add-device-images.md).
 
-## Configure the default language using Group Policy
+### Configure the default language using Group Policy
 
 Now that the languages are installed on the image that users will receive, you must create a Group Policy to apply the correct pre-installed language as the default for your users.
 
