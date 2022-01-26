@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/11/2021
+ms.date: 01/19/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,7 +30,10 @@ ms.collection:
 ---
 
 # Enroll your device with Company Portal  
-Enroll your personal or corporate-owned Android device to get secure access to company email, apps, and data. Company Portal supports Android devices, including Samsung Knox, running Android 4.4 and later.  
+Enroll your personal or corporate-owned Android device with Intune Company Portal to get secure access to company email, apps, and data. 
+
+Company Portal supports devices running Android 8.0 and later, including devices secured by Samsung KNOX Standard 2.4 and later. To learn how to update your Android device, see [Check & update your Android version](https://support.google.com/android/answer/7680439).  
+  
 </br>
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 

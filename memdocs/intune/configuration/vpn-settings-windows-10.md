@@ -44,7 +44,6 @@ These settings apply to devices running:
 ## Before you begin
 
 - [Deploy your VPN app](../apps/apps-add.md), and create a [Windows client VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client app you choose. Some settings are only available for specific VPN clients.
-
 - These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 ## User scope or Device scope
@@ -57,6 +56,7 @@ These settings apply to devices running:
 Existing VPN profiles apply to their existing scope. By default, new VPN profiles are installed in the user scope *except* for the profiles with device tunnel enabled. VPN profiles with device tunnel enabled use the device scope.
 
 ## Connection type
+
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 

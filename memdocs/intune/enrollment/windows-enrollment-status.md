@@ -99,7 +99,7 @@ To turn on the Enrollment Status Page, follow the steps below.
 8. Choose **Settings** > *choose the settings you want to apply to this profile* > **Save**.
 
 > [!NOTE]
-> Due to OS restrictions, only a subset of filters are available to use when assigning **Enrollment Status Page** policies. The filter picker will only show filters that have rules defined for `osVersion`, `operatingSystemSKU`, `deviceOwnership`, and `enrollmentProfileName` properties. Filters that contain other properties are not shown.
+> Due to OS restrictions, only a subset of filters are available to use when assigning **Enrollment Status Page** policies. The filter picker will only show filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties are not shown.
 
 ## Set the enrollment status page priority
 

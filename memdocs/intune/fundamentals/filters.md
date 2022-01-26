@@ -53,6 +53,7 @@ This feature applies to:
 - macOS
 - Windows 10/11
 
+
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
 ## How filters work
