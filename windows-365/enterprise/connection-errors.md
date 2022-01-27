@@ -32,12 +32,14 @@ ms.collection: M365-identity-device-management
 
 The following errors can occur when connecting to a Cloud PC.
 
-## We couldn't connect because there are currently no available resources
+## Specific connection errors
+
+### We couldn't connect because there are currently no available resources
 
 **Potential cause**: The Cloud PC hasn’t completed provisioning.
 **Possible solution**: Wait for provisioning to complete. Provisioning time can be variable and may exceed 45 minutes or more.
 
-## We couldn't connect to the gateway because of an error. If this keeps happening, ask your admin or tech support for help.
+### We couldn't connect to the gateway because of an error. If this keeps happening, ask your admin or tech support for help.
 
 **Potential cause**: This error can be caused by network configuration settings, like:
 
@@ -49,7 +51,7 @@ The following errors can occur when connecting to a Cloud PC.
 
 **Possible solution**: Review the settings and confirm that they aren’t interfering with connections.
 
-## The remote PC ended your session. If this keeps happening, contact your network administrator for assistance. Error code: 0x3
+### The remote PC ended your session. If this keeps happening, contact your network administrator for assistance. Error code: 0x3
 
 **Potential cause**: This error can occur when the Cloud PC’s processor is overutilized.
 **Possible solution**: If the issue persists, try restarting the Cloud PC from the admin portal.
