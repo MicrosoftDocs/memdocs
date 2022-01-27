@@ -2,7 +2,7 @@
 # required metadata
 title: Troubleshoot connection errors
 titleSuffix:
-description: Troubleshoot provisioning errors in Windows 365.
+description: Troubleshoot connection errors in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
