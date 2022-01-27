@@ -37,6 +37,7 @@ The following errors can occur when connecting to a Cloud PC.
 ### We couldn't connect because there are currently no available resources
 
 **Potential cause**: The Cloud PC hasn’t completed provisioning.
+
 **Possible solution**: Wait for provisioning to complete. Provisioning time can be variable and may exceed 45 minutes or more.
 
 ### We couldn't connect to the gateway because of an error. If this keeps happening, ask your admin or tech support for help.
@@ -45,7 +46,7 @@ The following errors can occur when connecting to a Cloud PC.
 
 - Custom DNS Settings
 - Network Virtual Appliance blocking
-- Network Security group configuration 
+- Network Security group configuration
 - Resource Locks
 - Blocks on required endpoints
 
@@ -53,7 +54,8 @@ The following errors can occur when connecting to a Cloud PC.
 
 ### The remote PC ended your session. If this keeps happening, contact your network administrator for assistance. Error code: 0x3
 
-**Potential cause**: This error can occur when the Cloud PC’s processor is overutilized.
+**Potential cause**: This error can occur when the Cloud PC’s processor is over-utilized.
+
 **Possible solution**: If the issue persists, try restarting the Cloud PC from the admin portal.
 
 ## Other connection error causes
