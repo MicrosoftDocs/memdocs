@@ -20,7 +20,7 @@ The following table lists the log files that contain information related to the 
 
 - For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
 - For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
-- For troubleshooting client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**.
+- For troubleshooting client traffic, use **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**.
 
 #### <a name="bkmk_note1"></a> Note 1: Logs synchronized from Azure
 
