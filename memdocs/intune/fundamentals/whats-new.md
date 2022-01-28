@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/07/2022
+ms.date: 01/28/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,9 +60,76 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of January 3, 2022 
+## Week of January 24, 2022 (Service release 2201)
 
-### Device management  
+### App management
+
+#### Deploy DMG-type applications to managed macOS devices<!-- 1171356 -->
+You can upload and deploy DMG-type applications to managed Macs from Microsoft Endpoint Manager using the **required** assignment type. DMG is the file extension for Apple disk image files. DMG-type apps are deployed using the [Microsoft Intune MDM agent for macOS](..\apps\lob-apps-macos-agent.md). You can add a DMG app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **macOS app (DMG)**.  For more information, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md).
+
+### Device management
+
+#### Choose either user or device scope when creating Windows VPN profiles<!-- 10685553 -->
+You can create a VPN profile for Windows devices that configures VPN settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile).
+
+When you create a profile, use the **Use this VPN profile with a user/device scope** setting to apply the profile to the user scope or the device scope:
+- **User scope**: The VPN profile is installed within the user's account on the device.
+- **Device scope**: The VPN profile is installed in the device context and applies to all users on the device.
+
+Existing VPN profiles will apply to their existing scope, and aren't impacted by this change. All VPN profiles are installed in the user scope *except* for the profiles with device tunnel enabled, which requires device scope.
+
+For more information on VPN settings you can currently configure, see [Windows device settings to add VPN connections using Intune](../configuration/vpn-settings-windows-10.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### Filters are Generally Available (GA)<!-- 12466893 -->
+You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters is now generally available (GA).
+
+For more information on filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md).
+
+#### Automatic device clean-up rules support for Android Enterprise devices<!-- 9797532 -->
+Intune supports the creation of rules to automatically remove devices that appear to be inactive, stale, or unresponsive. You can now use these clean-up rules with Android Enterprise devices that previously did not support them. These rules are now supported for:
+- Android Enterprise Fully Managed
+- Android Enterprise Dedicated
+- Android Enterprise Corporate-Owned with Work Profile
+
+To learn more about clean-up rules, see [Automatically delete devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+
+#### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!-- 12636207 -->
+Intune’s remote action to [*Collect diagnostics*](../remote-actions/collect-diagnostics.md) now collects additional details from Windows 365 (Coud-PC) devices. The new details for Windows 365 devices include the following registry data: 
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector 
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
+
+For information about remote actions supported for Windows 365 devices, see [Remotely manage Windows 365 devices](/windows-365/enterprise/remotely-manage-cloud-pc).
+
+#### Tenant attach features are Generally Available (GA)<!--12976713 -->
+The following [tenant attach](../../configmgr/tenant-attach/index.yml) features are now generally available:
+- Client details
+- Applications
+- Device timeline
+- Resource explorer
+- CMPivot
+- Scripts
+- BitLocker Recovery Keys
+- Collections
+
+### Device security
+
+#### New Account protection policy to configure users in local groups on devices in public preview<!--5663034 -->
+In public preview, you can use a new profile for Intune Account protection policies to manage the membership of the built-in local groups on Windows 10 and 11 devices. 
+
+Each Windows device comes with a set of built-in local groups. Each local group contains a set of users that have rights within that group. With the new Local user group membership (preview) profile for endpoint security Account protection policies, you can manage which users are members of those local groups.  
+
+To configure local group memberships, you select the built-in local account to modify and then choose the users to add, remove, or replace in the group with other users. Each device that receives the policy the updates the membership of those local groups. Modification of the group membership on each device is done by using the [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
+
+To learn more, see [Manage local groups on Windows devices](../protect/endpoint-security-account-protection-policy.md#manage-local-groups-on-windows-devices). 
+
+## Week of January 3, 2022
+
+### Device management
+ 
 #### Preview filtered device list before deployment <!-- 7541587 -->
 Now as you create or edit a filter in Microsoft Intune, you can preview the list of filtered devices. The new view eliminates the need to apply test filters, because you can immediately preview the impact a filter has on devices and adjust filter rules to achieve your desired outcome. For more information about using filters in Microsoft Intune, see [Create a filter](../fundamentals/filters.md).  
 
