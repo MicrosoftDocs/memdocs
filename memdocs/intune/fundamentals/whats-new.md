@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/26/2022
+ms.date: 01/28/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -104,7 +104,7 @@ Intune’s remote action to [*Collect diagnostics*](../remote-actions/collect-di
 
 For information about remote actions supported for Windows 365 devices, see [Remotely manage Windows 365 devices](/windows-365/enterprise/remotely-manage-cloud-pc).
 
-#### Tenant attach features are generally available <!--12976713 -->
+#### Tenant attach features are Generally Available (GA)<!--12976713 -->
 The following [tenant attach](../../configmgr/tenant-attach/index.yml) features are now generally available:
 - Client details
 - Applications
