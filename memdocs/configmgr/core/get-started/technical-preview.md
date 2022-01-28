@@ -124,24 +124,16 @@ The following features are available with the most recent Configuration Manager 
 ### Technical preview version 2201
 <!-- all items are in 2111 CB -->
 
-- [3601042](2022/technical-preview-2201.md) <!--3601042-->
-- [4497776](2022/technical-preview-2201.md) <!--4497776-->
-- [4639895](2022/technical-preview-2201.md) <!--4639895-->
-- [6374854](2022/technical-preview-2201.md) <!--6374854-->
-- [7079837](2022/technical-preview-2201.md) <!--7079837-->
-- [7281922](2022/technical-preview-2201.md) <!--7281922-->
-- [7759984](2022/technical-preview-2201.md) <!--7759984-->
-- [9070525](2022/technical-preview-2201.md) <!--9070525-->
-- [9495651](2022/technical-preview-2201.md) <!--9495651-->
-- [10024154](2022/technical-preview-2201.md) <!--10024154-->
-- [10454717](2022/technical-preview-2201.md) <!--10454717-->
-- [11754191](2022/technical-preview-2201.md) <!--11754191-->
-- [12451634](2022/technical-preview-2201.md) <!--12451634-->
-- [12486335](2022/technical-preview-2201.md) <!--12486335-->
-- [12487076](2022/technical-preview-2201.md) <!--12487076-->
-- [12558856](2022/technical-preview-2201.md) <!--12558856-->
-- [12707738](2022/technical-preview-2201.md) <!--12707738-->
-- [12769623](2022/technical-preview-2201.md) <!--12769623-->
+- [Visualize content distribution status](2022/technical-preview-2201.md#bkmk_contentviz) <!--9495651-->
+- [Custom icon support for task sequences and packages](2022/technical-preview-2201.md#bkmk_tsico) <!--12486335-->
+- [Prefer cloud-based software update points on switching](2022/technical-preview-2201.md#bkmk_cmgsup) <!--7759984-->
+- [LEDBAT support for software update points](2022/technical-preview-2201.md#bkmk_ledbat) <!--4639895-->
+- [Improvements to Power BI Report Server Integration](2022/technical-preview-2201.md#bkmk_reports) <!--12487076-->
+- [Tenant attach features are generally available ](2022/technical-preview-2201.md#bkmk_ta) <!--6374854-->
+- [Deployment Status client notification actions](2022/technical-preview-2201.md#bkmk_notify) <!--7079837-->
+- [Sort by icon in the console](2022/technical-preview-2201.md#bkmk_sortico) <!--3877839-->
+- [PowerShell release notes preview](2022/technical-preview-2201.md#bkmk_powershell) <!--12654996-->
+- [Improved notice for content on task sequence media](2022/technical-preview-2201.md#bkmk_tsmedia) <!--12895956-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
