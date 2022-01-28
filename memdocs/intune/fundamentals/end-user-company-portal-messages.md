@@ -32,7 +32,7 @@ ms.collection:
 # Help end users understand Company Portal app messages
 
 > [!NOTE]
-> The following information applies only on devices with Android 6.0+ and iOS 10+.
+> The following information applies only on devices with Android 8.0+ and iOS 10+.
 
 Understand the different app messages that end users may see in the Company Portal. These app messages are commonly displayed at different points in the enrollment process. Learn where the messages appear, what the messages mean, and what happens if users deny access. Additionally, learn how to best explain the messages to users.
 
