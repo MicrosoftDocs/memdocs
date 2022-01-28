@@ -34,6 +34,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [9070525](includes/2201/9070525.md)]
 [!INCLUDE [9495651](includes/2201/9495651.md)]
 [!INCLUDE [10024154](includes/2201/10024154.md)]
+[!INCLUDE [3877839](includes/2201/3877839.md)]
 [!INCLUDE [10454717](includes/2201/10454717.md)]
 [!INCLUDE [11754191](includes/2201/11754191.md)]
 [!INCLUDE [12451634](includes/2201/12451634.md)]
