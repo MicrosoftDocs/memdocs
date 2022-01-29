@@ -62,9 +62,9 @@ Use the following steps to create a Managed Apps app configuration policy. After
     For information about app configuration settings for specific Microsoft apps, see:
 
     - [Manage web access by using Edge for iOS and Android with Microsoft Intune](manage-microsoft-edge.md)
-    - [Manage collaboration experiences using Office for iOS and Android with Microsoft Intune](manage-microsoft-office.md)
+    - [Manage collaboration experiences in Office for iOS and Android with Microsoft Intune](manage-microsoft-office.md)
     - [Deploying Outlook for iOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
-    - [Manage team collaboration experiences by using Teams for iOS and Android with Microsoft Intune](manage-microsoft-teams.md)
+    - [Manage collaboration experiences in Teams for iOS and Android with Microsoft Intune](manage-microsoft-teams.md)
 
 7. Click **Next** to display the **Assignments** page.
 8. Click **Select groups to include**.

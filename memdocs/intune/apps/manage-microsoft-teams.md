@@ -31,7 +31,7 @@ ms.collection:
 - Android
 ---
 
-# Manage team collaboration experiences by using Teams for iOS and Android with Microsoft Intune
+# Manage collaboration experiences in Teams for iOS and Android with Microsoft Intune
 
 Microsoft Teams is the hub for team collaboration in Microsoft 365 that integrates the people, content, and tools your team needs to be more engaged and effective.
 

@@ -31,7 +31,7 @@ ms.collection:
 - Android
 ---
 
-# Manage collaboration experiences using Office for iOS and Android with Microsoft Intune
+# Manage collaboration experiences in Office for iOS and Android with Microsoft Intune
 
 Office for iOS and Android delivers several key benefits including:
 
