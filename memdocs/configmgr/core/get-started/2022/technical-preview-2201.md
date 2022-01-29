@@ -44,6 +44,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [12558856](includes/2201/12558856.md)]
 [!INCLUDE [12707738](includes/2201/12707738.md)]
 [!INCLUDE [12769623](includes/2201/12769623.md)]
+[!INCLUDE [12654996](includes/2201/12654996.md)]
 
 <!-- ## General known issues  -->
  
