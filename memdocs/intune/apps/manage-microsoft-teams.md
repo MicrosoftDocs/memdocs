@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 01/28/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -31,7 +31,7 @@ ms.collection:
 - Android
 ---
 
-# Manage team collaboration access by using Teams for iOS and Android with Microsoft Intune
+# Manage team collaboration experiences by using Teams for iOS and Android with Microsoft Intune
 
 Microsoft Teams is the hub for team collaboration in Microsoft 365 that integrates the people, content, and tools your team needs to be more engaged and effective.
 
