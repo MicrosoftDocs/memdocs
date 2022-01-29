@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-The Intune App SDK supports app configuration delivery through the mobile app management (MAM) channel. Within the Intune portal, the MAM channel is referred to as a Managed Apps App Configuration Policy. The MAM channel is different than the MDM OS platform channels that are offered when a device is enrolled. 
+The Intune App Software Development Kit (SDK) supports app configuration delivery through the mobile app management (MAM) channel. Within the Intune portal, the MAM channel is referred to as a Managed Apps app configuration policy. The MAM channel is different than the mobile device management (MDM) OS platform channels that are offered when a device is enrolled.
 
 To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../developer/app-sdk.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
 
@@ -41,9 +41,9 @@ By using the MAM channel, apps can receive app configuration policies regardless
 
 For more information, see [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md).
 
-# Add a Managed apps app configuration policy
+## Add a Managed apps app configuration policy
 
-If you are using Microsoft Endpoint Manager as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
+Use the following steps to create a Managed Apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.
@@ -51,7 +51,7 @@ If you are using Microsoft Endpoint Manager as your mobile app management provid
     - **Name**: The name of the profile that will appear in the portal.
     - **Description**: The  description of the profile that will appear in the portal.
     - **Device enrollment type**: Managed apps is selected.
-4. Choose either **Select public apps** or **Select custom apps** to choose the app that you are going to configure. Select the app from the list of apps that you have approved and synchronized with Intune.
+4. Choose either **Select public apps** or **Select custom apps** to choose the app that you are going to configure. Select the app from the list of apps that you've approved and synchronized with Intune.
 5. Click **Next** to display the **Settings** page.
 6. The **Settings page** provides options that are displayed based on the app that you're configuring:
 
@@ -82,7 +82,7 @@ If you are using Microsoft Endpoint Manager as your mobile app management provid
 
 Intune can generate certain tokens and send them to the managed application. For example, if your app configuration can use an email setting, you can add a dynamic email by using a token. Type the name expected by the app in the **Name** field, and then type `{{mail}}` in the **Value** field.
 
-Intune supports the following token types in the configuration settings. Other custom key/value pairs are not supported.
+Intune supports the following token types in the configuration settings. Other custom key/value pairs aren't supported.
 
 - \{\{userprincipalname\}\}—for example, John@contoso.com
 - \{\{mail\}\}—for example, John@contoso.com
