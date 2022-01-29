@@ -33,7 +33,11 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-The Intune App SDK supports app configuration delivery through the mobile app management (MAM) channel. Within the Intune portal, the MAM channel is referred to as a Managed Apps App Configuration Policy. The MAM channel is different than the MDM OS platform channels that are offered when a device is enrolled. By using the MAM channel, apps can receive app configuration policies regardless of the device enrollment state. Consult your app vendor for details for which app config keys they support.
+The Intune App SDK supports app configuration delivery through the mobile app management (MAM) channel. Within the Intune portal, the MAM channel is referred to as a Managed Apps App Configuration Policy. The MAM channel is different than the MDM OS platform channels that are offered when a device is enrolled. 
+
+To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../developer/app-sdk.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
+
+By using the MAM channel, apps can receive app configuration policies regardless of the device enrollment state. Documentation from the app vendor should be reviewed to see what configurations are available and how the configurations influence the behavior of the app.
 
 For more information, see [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md).
 
