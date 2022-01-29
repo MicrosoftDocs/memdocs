@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Configuration policies for managed apps without device enrollment
+title: Configuration policies for Intune App SDK managed apps
 titleSuffix: Microsoft Intune
-description: Learn how to configure policies for managed apps without device enrollment.
+description: Learn how to configure policies for Intune App SDK managed apps.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Managed apps app configuration policies
+# App configuration policies for Intune App SDK managed apps
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
