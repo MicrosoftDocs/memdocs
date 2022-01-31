@@ -99,7 +99,7 @@ The following are the configurations you can make:
 
     :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
 
-Choosing the Manual option can be helpful in scenarios where you want to manage your on-prem Active Directory users from Active Directory to a local group for a hybrid Azure AD joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member’s username. Values from Active Directory must be used for hybrid joined devices, while values from Azure AD must be used for Azure AD join. Azure AD group SIDs can be obtained using [Graph API for Groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#json-representation).
+Choosing the Manual option can be helpful in scenarios where you want to manage your on-prem Active Directory users from Active Directory to a local group for a hybrid Azure AD joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member’s username. Values from Active Directory must be used for hybrid joined devices, while values from Azure AD must be used for Azure AD join. Azure AD group SIDs can be obtained using [Graph API for Groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0#json-representation).
 
 ### Conflicts
 
