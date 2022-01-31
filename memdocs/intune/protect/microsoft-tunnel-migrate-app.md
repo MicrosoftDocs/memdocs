@@ -58,7 +58,7 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
 
   In January 2022, a preview version of Microsoft Defender for Endpoint became available as the Microsoft Tunnel client app for iOS/iPadOS devices for use with the Microsoft Tunnel Gateway in Microsoft Intune.
 
-  The preview version of Microsoft Defender for Endpoint is accessible on TestFlight. Users will need to install this on their own devices and need an Apple ID to do so. You will not be able to deploy the app to your users’ devices through Intune until the app has been released to general availability. The TestFlight link to download the app is here: [https://aka.ms/mdeiosbeta](https://aka.ms/mdeiosbeta)
+  The preview version of Microsoft Defender for Endpoint is available from the Apple app store. You can use Intune to deploy this app.
 
   To configure the Microsoft Defender for Endpoint app to connect to Tunnel, you'll need to create a new VPN profile with the *Microsoft Tunnel (preview)* connection type.
 
@@ -210,22 +210,20 @@ Use of the Defender for Endpoint as the Tunnel client app will eventually be req
 
 Migrating to Defender for Endpoint requires the following broad actions, which are described in the following sections:
 
-1. Have users get and install the Defender for Endpoint app from TestFlight.
+1. Deploy Microsoft Defender for Endpoint to supported devices.
 2. Review and record your current Tunnel configurations.
 3. Create new VPN profiles that use *Microsoft Tunnel (preview)* as the connection type.
 4. Clean up your previous deployments.
 
 The server settings stay exactly the same regardless of the client you’re using.
 
-### Install the TestFlight version of Defender for Endpoint
+### Install the preview version of Defender for Endpoint
 
-Defender for Endpoint app isn't available to deploy to iOS/iPadOS devices through Intune. Instead, each user must access *TestFlight* (testflight.apple.com) to install the app. Users will need their Apple ID to complete the installation.
+The preview version of Microsoft Defender for Endpoint with support for Microsoft Tunnel on iOS, is available from the Apple app store.
 
-1. On an iOS/iPadOS device that will use Defender for Endpoint as the Tunnel client app, browse to [https://aka.ms/mdeiosv2beta]( https://aka.ms/mdeiosv2beta). You're prompted to install the TestFlight app on the device or open TestFlight if it is already installed.
-
-2. On the TestFlight app, follow the onscreen instructions to install Microsoft Defender for Endpoint. Verify that the version number is **1.1.21030301**.
-
-3. Sign in and onboard the Defender for Endpoint using their corporate account.
+1. Locate and **Approve** the app in the Apple app store for your tenant, and then **Sync** it. For information on this process, see [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+2. **Assign** the app to groups.
+3. Complete the assignment, and then ask users to install the Microsoft Defender for Endpoint app.
 
 ### Review and record your current Tunnel configurations for iOS/iPadOS
 
