@@ -117,9 +117,9 @@ This task list provides an overview. For more specific information, see [Apple B
   > 
   >   During the Setup Assistant, users must enter their organization Azure AD credentials (`user@contoso.com`). When they enter their credentials, the enrollment starts, and the Company Portal app installs. If you want, users can also enter their Apple ID to access Apple specific features, such as Apple Pay.
   > 
-  >   After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Azure AD, and doesn't show in a user's device list in Azure AD.
+  >   After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Azure AD, and shows as non-compliant in a user's device list in Azure AD. The device shows as compliant in the Microsoft Endpoint Manager admin center.
   > 
-  >   After the Company Portal app installs, which takes some time, users open the Company Portal app, and sign with their organization Azure AD account (`user@contoso.com`) again. During this second login, any conditional access policies are evaluated, and Azure AD registration is complete. Users can install and use organizational resources, including LOB apps.
+  >   After the Company Portal app installs, which takes some time, users open the Company Portal app, and sign with their organization Azure AD account (`user@contoso.com`) again. During this second login, any conditional access policies are evaluated, and Azure AD registration is complete. Users can install and use organizational resources, including LOB apps. The device shows as compliant in Azure AD.
   > - If you don't want to use the device before the Company Portal app installs, then use the **Company Portal** app option. The **Company Portal** app option locks the device until the Company Portal app installs. When the install completes, the Company Portal app opens automatically. Users sign in with their Azure AD organization account (`user@contoso.com`), and can use the device.
 
 - If you use the Company Portal app, then decide how the Company Portal app will be installed on the devices. Make this decision before you create the enrollment profile.
@@ -201,9 +201,9 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
   2. Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete. The device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices.
 
-      At this point, the device isn't fully registered with Azure AD.
+      At this point, the device isn't fully registered with Azure AD and shows as non-compliant in Azure AD. The device shows it is compliant in the Microsoft Endpoint Manager admin center.
 
-  3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Azure AD registration in the Company Portal app, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies.
+  3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Azure AD registration in the Company Portal app, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies and the device shows as being compliant in Azure AD.
 
   4. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
 

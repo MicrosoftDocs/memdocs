@@ -19,9 +19,6 @@ ms.localizationpriority: high
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the admin center.
 
-> [!Important]
-> The boundary groups tab functions only for stand alone sites. The tab will be empty in the admin center for anything other than a standalone primary site.
-
 ## Prerequisites
 
 - All of the prerequisites for [Microsoft Endpoint Manager tenant attach](device-sync-actions.md) and a tenant attached environment.
