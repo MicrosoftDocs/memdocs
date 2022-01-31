@@ -204,7 +204,7 @@ For deployments of the original Microsoft Tunnel app:
 
 ## Migrate iOS/iPadOS devices to Defender for Endpoint
 
-When you're ready to use Microsoft Defender for Endpoint for iOS/iPadOS devices, migrate supported devices from the standalone tunnel client app to the new app. You can also deploy the new app to other devices that haven't previously used the Microsoft Tunnel.
+When you're ready to use the preview version of Microsoft Defender for Endpoint for iOS/iPadOS devices, migrate supported devices from the standalone tunnel client app to the new app. You can also deploy the new app to other devices that haven't previously used the Microsoft Tunnel.
 
 Use of the Defender for Endpoint as the Tunnel client app will eventually be required. This is because the standalone Tunnel client app will go away, and Defender for Endpoint app will then be the only supported Tunnel app.
 
