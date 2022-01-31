@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/26/2022
+ms.date: 01/31/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -89,15 +89,17 @@ The following are the configurations you can make:
 
 - **User selection type**: Choose how to select users. Options include:
 
-  - **Users**: Select the users and user groups from your Azure AD.
-  - **Manual**:  Specify Azure AD users and groups manually, by username, domain/username, or the groups security identifier (SID).
+  - **Users**: Select the users and user groups from your Azure AD. (Supported for Azure AD joined devices only).
+  - **Manual**:  Specify Azure AD users and groups manually, by username, domain/username, or the groups security identifier (SID). (Supported for Azure AD joined and hybrid joined devices).
 
 - **Selected user(s)**: Depending on your selection for *User selection type*, you’ll use one of the following options:
 
   - **Select user(s)**: Select the users and user groups from your Azure AD.
-  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *Username, Domain/username*, or by *security identifier (SID)*.
+  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain/username*, or by *Username*.
 
     :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
+
+Choosing the Manual option can be helpful in scenarios where you want to manage your on-prem Active Directory users from Active Directory to a local group for a hybrid Azure AD joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member’s username. Values from Active Directory must be used for hybrid joined devices, while values from Azure AD must be used for Azure AD join. Azure AD group SIDs can be obtained using [Graph API for Groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0#json-representation).
 
 ### Conflicts
 
