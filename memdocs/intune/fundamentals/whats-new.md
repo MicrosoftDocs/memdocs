@@ -60,6 +60,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of January 31, 2022
+
+### Device security
+
+#### Public preview of Tunnel client functionality in Microsoft Defender for Endpoint app for iOS/iPadOS<!-- 9851681  -->
+
+Microsoft Tunnel client functionality for iOS/iPadOS is migrating into the Microsoft Defender for Endpoint app. With this preview, you can start to use a preview version of Microsoft Defender for Endpoint as the Tunnel app for supported devices. The existing Tunnel client remains available, but will eventually be phased out in favor of the Defender for Endpoint app.
+
+This public preview applies to:  
+
+- iOS/iPadOS
+
+For this preview, you download a preview version of Microsoft Defender for Endpoint from the Apple app store, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md).
+
 ## Week of January 3, 2022 
 
 ### Device management  
