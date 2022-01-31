@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/26/2022
+ms.date: 01/31/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mawierci, heenamac
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -160,7 +160,7 @@ For more information on Windows Autopilot, see [Windows Autopilot overview](../.
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You purchase devices from an [OEM that supports the Windows Autopilot deployment service](https://aka.ms/windowsautopilot), or from resellers or distributors that are in the [Cloud Solution Partners (CSP)](https://partner.microsoft.com/membership/cloud-solution-provider) program. | ✔️ |
-| Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
+| Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. <br/><br/>A hybrid Azure AD join scenario may not be the right solution for your organization. We recommend planning and implementing a full Azure AD-joined system. For more information, see the [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog.|
 | You have remote workers, and want to send devices directly to these users. | ✔️ |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ <br/><br/> You can update existing desktops running older Windows versions, such as Windows 7, to Windows 10. This option also uses Microsoft Endpoint Configuration Manager. |
@@ -232,13 +232,13 @@ With User enrollment, you can "register" the devices with Azure AD or "join" the
 - **Register**: When you register devices in Azure AD, the devices show as personal in the Endpoint Manager admin center. Users get access to organization resources, such as email. This option is common for BYOD or personal devices.
 - **Join**: When you join devices in Azure AD, the devices are fully managed by Intune, and will receive any policies you create. This option is common for organization-owned devices. If users want their personal devices fully managed by Intune (and their organization IT), then they can join their personal devices.
 
-> [!NOTE]
-> In the  **Settings** app > **Accounts** > **Access school or work**, you may see an **Enroll only in device management** option. This option doesn't register the device in Azure AD. From an Intune perspective, we don't recommend this MDM-only option for BYOD or personal devices. As a result, this guide doesn't include any additional information.
+> [!WARNING]
+> In the **Settings** app > **Accounts** > **Access school or work**, you may see an **Enroll only in device management** option. This option doesn't register the device in Azure AD. From an Intune perspective, we don't recommend this MDM-only option for BYOD or personal devices. As a result, this guide doesn't include any additional information or guidance.
 
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| REMOVE? Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
+| Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. <br/><br/>A hybrid Azure AD join scenario may not be the right solution for your organization. We recommend planning and implementing a full Azure AD-joined system. For more information, see the [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog. |
 | You have Azure AD Premium. |❌ Azure AD Premium isn't required.<br/><br/> ✔️   If the devices join Azure AD, then they can use Azure AD Premium features, such as conditional access. |
 | You have remote or hybrid workers. | ✔️ <br/><br/> Users should know that their personal devices might be managed by the organization IT. |
 | Devices are personal or BYOD. | ✔️ |
