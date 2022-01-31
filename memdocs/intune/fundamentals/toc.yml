@@ -58,7 +58,7 @@ items:
       href: guided-scenarios-cloud-managed-pc.md   
     - name: Secure Microsoft Office mobile apps
       href: guided-scenarios-office-mobile.md              
-    - name: Windows 10 in cloud configuration
+    - name: Windows 10/11 in cloud configuration
       href: cloud-configuration.md
   - name: Common scenarios
     href: common-scenarios.md

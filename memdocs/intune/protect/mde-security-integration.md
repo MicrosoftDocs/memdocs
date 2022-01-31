@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2021
+ms.date: 01/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,10 +28,7 @@ ms.reviewer: mattcall
 
 ---
 
-# Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager
-
->[!Note]
-> ***This feature is in public preview*** *and will roll out to tenants gradually over the next few weeks. You can confirm your tenant has received this capability when the relevant toggles show in both the Microsoft Endpoint Manager admin center and Microsoft Defender for Endpoint.*
+# Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager (Preview)
 
 With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Endpoint Manager directly to your onboarded devices without requiring a full Microsoft Endpoint Manager device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Endpoint Manager service can receive security configurations for Microsoft Defender directly from Endpoint Manager.
 
@@ -63,7 +60,7 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Co-existence with Microsoft Endpoint Configuration Manager
 
-When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). In some environments it may be desired to use Security Management for Microsoft Defender. When using Security Management for Microsoft Defender with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
+When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](../../configmgr/tenant-attach/endpoint-security-get-started.md). In some environments it may be desired to use Security Management for Microsoft Defender. When using Security Management for Microsoft Defender with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
 
 ### Active Directory joined devices
 
@@ -93,4 +90,4 @@ Due to the limited scope of Server core installations, these are not supported b
 
 ## Next steps
 
-[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)  
+[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)

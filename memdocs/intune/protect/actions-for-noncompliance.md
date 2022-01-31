@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 01/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -64,6 +64,13 @@ When you enable this action:
   Intune uses the email address defined in the end user's profile and not their user principal name (UPN). If there is no defined email address defined in the user's profile, then Intune does not send a notification email. When the email is sent, Intune includes details about the noncompliant device in the email notification.
 
   This action is supported on all platforms supported by Intune.
+
+   > [!NOTE] 
+   > In the commercial cloud, notification emails are sent from: IntuneNotificationService@microsoft.com
+   > 
+   > In government clouds, notification emails are sent from: microsoft-noreply@microsoft.com
+   > 
+   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not recieve the email notification. 
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
@@ -130,6 +137,13 @@ When you enable this action:
 
   - When multiple compliance policies include the same compliance conditions, and include the push notification action with the same schedule, Intune sends multiple notifications to the same device on the same day.
 
+> [!NOTE]
+> The following actions for noncompliance are not supported for devices that are managed by a [device compliance management partner](../protect/device-compliance-partners.md):  
+> - Send push notification to end user
+> - Remotely lock the noncompliant device
+> - Retire the noncompliant device
+> - Send push notification to end user
+
 ## Before you begin
 
 You can [add actions for noncompliance](#add-actions-for-noncompliance) when you configure device compliance policy, or later by editing the policy. You can add additional actions to each policy to meet your needs. Keep in mind that each compliance policy automatically includes the default action for noncompliance that marks devices as noncompliant,  with a schedule set to zero days.
@@ -175,6 +189,9 @@ When you specify multiple messages and locales, non-compliant end users receive 
    - **Locale**
    - **Subject**
    - **Message body text**
+
+   > [!NOTE] 
+   > The maximum number of characters for the Subject is 78, and the maximum number of characters for the message body text is 2000.
 
    Before continuing, you must select the checkbox for *Is Default* for one of the messages. Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**. 
 

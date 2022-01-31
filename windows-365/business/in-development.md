@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 12/09/2021
+ms.date: 01/13/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -55,7 +55,17 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 <!-- ***********************************************-->
 ## Upcoming features
 
-Check back here for announcements of upcoming features.
+### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
+
+For admins with a Windows 365 license, a link to [windows365.microsoft.com](https://windows365.microsoft.com) will be added to the Microsoft 365 admin center home page.
+
+### End user manual connectivity check<!--37679345 -->
+
+End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### Point-in-time restore<!--37063579 -->
+
+Users will be able to restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points will be available.
 
 ## Next steps
 
