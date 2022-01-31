@@ -24,27 +24,16 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2201/1234567.md)] -->
 
-[!INCLUDE [3601042](includes/2201/3601042.md)]
-[!INCLUDE [12895956](includes/2201/12895956.md)]
-[!INCLUDE [4497776](includes/2201/4497776.md)]
-[!INCLUDE [4639895](includes/2201/4639895.md)]
-[!INCLUDE [6374854](includes/2201/6374854.md)]
-[!INCLUDE [7079837](includes/2201/7079837.md)]
-[!INCLUDE [7281922](includes/2201/7281922.md)]
-[!INCLUDE [7759984](includes/2201/7759984.md)]
-[!INCLUDE [9070525](includes/2201/9070525.md)]
-[!INCLUDE [9495651](includes/2201/9495651.md)]
-[!INCLUDE [10024154](includes/2201/10024154.md)]
-[!INCLUDE [3877839](includes/2201/3877839.md)]
-[!INCLUDE [10454717](includes/2201/10454717.md)]
-[!INCLUDE [11754191](includes/2201/11754191.md)]
-[!INCLUDE [12451634](includes/2201/12451634.md)]
-[!INCLUDE [12486335](includes/2201/12486335.md)]
-[!INCLUDE [12487076](includes/2201/12487076.md)]
-[!INCLUDE [12558856](includes/2201/12558856.md)]
-[!INCLUDE [12707738](includes/2201/12707738.md)]
-[!INCLUDE [12769623](includes/2201/12769623.md)]
-[!INCLUDE [12654996](includes/2201/12654996.md)]
+[!INCLUDE [Visualize content distribution status](includes/2201/9495651.md)]
+[!INCLUDE [Custom icon support for task sequences and packages](includes/2201/12486335.md)]
+[!INCLUDE [Prefer cloud-based software update points on switching](includes/2201/7759984.md)]
+[!INCLUDE [LEDBAT support for software update points](includes/2201/4639895.md)]
+[!INCLUDE [Improvements to Power BI Report Server Integration](includes/2201/12487076.md)]
+[!INCLUDE [Tenant attach features are generally available](includes/2201/6374854.md)]
+[!INCLUDE [Deployment Status client notification actions](includes/2201/7079837.md)]
+[!INCLUDE [Sort by icon in the console](includes/2201/3877839.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2201/12654996.md)]
+[!INCLUDE [Improved notice for content on task sequence media](includes/2201/12895956.md)]
 
 <!-- ## General known issues  -->
  
