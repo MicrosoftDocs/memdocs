@@ -95,7 +95,7 @@ The following are the configurations you can make:
 - **Selected user(s)**: Depending on your selection for *User selection type*, you’ll use one of the following options:
 
   - **Select user(s)**: Select the users and user groups from your Azure AD.
-  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *Username, Domain\username*, or by *security identifier (SID)*. This can be helpful in scenarios such as a Hybrid AADJ device where you want to add an on-premises user from Active Directory to a local group.
+  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *Username, Domain\username*, or by *security identifier (SID)*.
 
     :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
 
