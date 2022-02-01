@@ -164,6 +164,11 @@ Use the Microsoft Intune cloud app or Microsoft Intune Enrollment cloud app to e
 ### Create terms of use for Android (AOSP) user-associated devices<!-- 8506575 -->
 Require Android (AOSP) users to accept your organization's terms and conditions before using the Intune Company Portal app. This feature will be available for corporate-owned, user-associated devices only. For more information about creating terms of use in Intune, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).
 
+### Support for Audio Alert on Android Dedicated (COSU) devices<!-- 10567852 -->
+You'll be able to use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise dedicated device.
+
+For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
+
 <!-- ***********************************************-->
 
 ## Device security
