@@ -37,13 +37,15 @@ The Intune App Software Development Kit (SDK) supports app configuration deliver
 
 To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../developer/app-sdk.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
 
-By using the MAM channel, apps can receive app configuration policies regardless of the device enrollment state. For information on which apps support app configuration, see [Microsoft Intune protected apps](apps-supported-intune-apps.md). Documentation from the app vendor should be reviewed to see what configurations are available and how the configurations influence the behavior of the app.
+By using the MAM channel, apps can receive app configuration policies regardless of the device enrollment state. For information on which apps support app configuration through the MAM channel, see [Microsoft Intune protected apps](apps-supported-intune-apps.md). Documentation from the app vendor should be reviewed to see what configurations are available and how the configurations influence the behavior of the app.
 
 For more information, see [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md).
 
+[!INCLUDE [android-supported-os](../includes/android-supported-os.md)]
+
 ## Add a Managed apps app configuration policy
 
-Use the following steps to create a Managed Apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
+Use the following steps to create a Managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.

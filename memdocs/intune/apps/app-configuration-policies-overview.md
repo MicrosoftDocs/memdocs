@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/28/2022
+ms.date: 02/01/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -61,7 +61,7 @@ You can assign an app configuration policy to a group of end-users and devices b
 
 App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the Mobile Application Management (MAM) channel.
 
-These different app configuration policy channels are represented by these two options  with Intune:
+Intune represents these different app configuration policy channels as:
 
 - **Managed devices** - The device is managed by Intune as the unified endpoint management provider. The app must be pinned to the management profile on iOS/iPadOS or deployed through Managed Google Play on Android devices. In addition, the app supports the desired app configuration.
 - **Managed apps** - An app that has either integrated the Intune App SDK or have been wrapped using the Intune Wrapping Tool and supports App Protection Policies (APP). In this configuration, neither the device's enrollment state or how the app is delivered to the device matter. The app supports the desired app configuration.
@@ -70,19 +70,22 @@ These different app configuration policy channels are represented by these two o
 
 Apps may handle app configuration policy settings differently with respect to user preference. For example, with Outlook for iOS and Android, the Focused Inbox app configuration setting will respect the user setting, allowing the user to override admin intent. Other settings may let you control whether a user can or cannot change the setting based on the admin intent.
 
+[!INCLUDE [android-supported-os](../includes/android-supported-os.md)]
+
 ### Managed devices
 
-Selecting **Managed devices** as the **Device Enrollment Type** specifically refers to apps deployed by Intune on the enrolled device and thus are managed by Intune.
+Selecting **Managed devices** as the **Device Enrollment Type** specifically refers to apps deployed by Intune on the enrolled device and thus are managed by Intune as the enrollment provider.
 
-To support app configuration for apps deployed through Intune on enrolled devices, apps must be written to support the use of app configurations as defined by the OS. Consult your app vendor for details for which app config keys they support for delivery through the MDM OS channel. There are generally three scenarios for app configuration delivery in using the MDM OS channel:
+To support app configuration for apps deployed through Intune on enrolled devices, apps must be written to support the use of app configurations as defined by the OS. Consult your app vendor for details for which app config keys they support for delivery through the MDM OS channel. There are generally four scenarios for app configuration delivery in using the MDM OS channel:
 
 - Only allow work or school accounts
+- Account setup configuration settings
 - General app configuration settings
 - S/MIME configuration settings
 
 ### Managed apps
 
-Selecting **Managed apps** as the **Device Enrollment Type** specifically refers to apps configured by an Intune App Protection Policy on devices regardless of the enrollment state.
+Selecting **Managed apps** as the **Device Enrollment Type** specifically refers to apps configured with an Intune App Protection Policy on devices regardless of the enrollment state.
 
 To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../developer/app-sdk.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
 
@@ -95,13 +98,14 @@ Delivery of app configuration through the MAM channel does not require the devic
 > [!NOTE]
 > Intune managed apps will check-in with an interval of 30 minutes for Intune App Configuration Policy status, when deployed in conjunction with an Intune App Protection Policy. If an Intune App Protection Policy isn't assigned to the user, then the Intune App Configuration Policy check-in interval is set to 720 minutes.
 
-For information on which apps support app configuration, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
+For information on which apps support app configuration though the MAM channel, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 
 ## Android Enterprise app configuration policies
 
-For Android Enterprise app configuration policies, you can select the device enrollment type before creating an app configuration profile. You can account for certificate profiles that are based on enrollment type. 
+For Android Enterprise app configuration policies, you can select the device enrollment type before creating an app configuration profile. You can account for certificate profiles that are based on enrollment type.
 
 Enrollment type can be one of the following:
+
 - **All Profile Types**: If a new profile is created and **All Profile Types** is selected for device enrollment type, you will not be able to associate a certificate profile with the app config policy. This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
 - **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only**: If a new profile is created and **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only** is selected, **Fully Managed, Dedicated, and Corporate-Owned Work Profile** certificate policies created under **Device** > **Configuration profiles** can be utilized. This option supports certificate-based authentication, and username and password authentication. **Fully Managed** relates to Android Enterprise fully managed devices (COBO). **Dedicated** relates to Android Enterprise dedicated devices (COSU). **Corporate-Owned Work Profile** relates to Android Enterprise corporate-owned work profile (COPE).
 - **Personally-Owned Work Profile Only**: If a new profile is created and **Personally-Owned Work Profile Only** is selected, Work Profile certificate policies created under **Device** > **Configuration profiles** can be utilized. This option supports certificate-based authentication, and username and password authentication.
