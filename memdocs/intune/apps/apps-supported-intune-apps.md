@@ -62,7 +62,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Excel|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)|✔|No settings|✔|N/A|✖|✖|✔|
 |Microsoft Excel|[iOS](https://apps.apple.com/us/app/microsoft-excel/id586683407)|✔|No settings|✔|N/A|✖|✖|✔|
 |Microsoft Launcher|[Android](https://play.google.com/store/apps/details?id=com.microsoft.launcher)|✔|✔ see [Launcher app config](configure-microsoft-launcher.md)|✖|N/A|✖|✖|N/A|
-|Microsoft Lists|[iOS](https://apps.apple.com/us/app/microsoft-lists/id1530637363)|✔|No settings|✔|N/A|N/A|✖|✖|
+|Microsoft Lists|[iOS](https://apps.apple.com/us/app/microsoft-lists/id1530637363)|✔|No settings|✔|N/A|N/A|✔|✔|
 |Microsoft Office|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
 |Microsoft Office|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
 |Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|
@@ -110,7 +110,6 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Dynamics CRM|[iOS](https://apps.apple.com/app/microsoft-dynamics-crm/id678800460)|✔|No settings|
 |Microsoft Kaizala|[Android](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer)|✔|No settings|
 |Microsoft Kaizala|[iOS](https://apps.apple.com/app/microsoft-kaizala/id1112208399)|✔|No settings|
-|Microsoft Lists|[iOS](https://apps.apple.com/app/microsoft-lists/id1530637363)|✔|No settings|
 |Microsoft PowerApps|[Android](https://play.google.com/store/apps/details?id=com.microsoft.msapps)|✔|No settings|
 |Microsoft PowerApps|[iOS](https://apps.apple.com/us/app/powerapps/id1047318566)|✔|No settings|
 |Microsoft Power Automate|[Android](https://play.google.com/store/apps/details?id=com.microsoft.flow)|✔|No settings|
