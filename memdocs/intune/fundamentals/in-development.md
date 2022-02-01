@@ -72,13 +72,6 @@ This feature targets devices that operate on Android 11+. For devices that opera
 
 <!-- ***********************************************-->
 
-## Device security
-
-With this capability, when configuring the policy you’ll be able to select users from the Azure AD group picker, or manually add users by their SID.
-
-
-<!-- ***********************************************-->
-
 ## Scripting
 
 ### Intune Data Warehouse updates<!-- 9370034 -->
