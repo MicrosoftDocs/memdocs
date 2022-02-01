@@ -32,6 +32,9 @@ Windows Autopilot is designed to simplify all parts of the Windows device lifecy
 - How Windows Autopilot [device profiles](#profile-download) are downloaded
 - [Key activities](#key-troubleshooting-activities) to perform during troubleshooting
 
+## Windows Autopilot diagnostics page
+On Windows 11, you can open the Autopilot diagnostic page to view additional detailed troubleshooting information about the Autopilot provisioning process. The diagnostics page can be enabled by going to the ESP profile and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. Once it is enabled you can select the **View Diagnostics button** or the keyboard shortcut Ctrl+Shift+D to access any diagnostic information. The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
+
 ## Windows Autopilot flow
 
 Whether you're performing user-driven or self-deploying device deployments, the troubleshooting process is about the same. It's useful to understand the flow for a specific device:
