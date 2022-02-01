@@ -183,7 +183,6 @@ Due to the absence of the Google Play Store in China, Android devices must obtai
 
 - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
 - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-- [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
 
 #### Best practice: make sure your Company Portal apps are up-to-date <!--879465-->
@@ -328,7 +327,6 @@ Previously, admins would go to either the Intune console or the Configuration Ma
 __Company Portal app for Android now available in China__ <!--VSO 658093-->
 We are publishing the Company Portal app for Android for download in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android will be available for download on the following stores:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-* [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 * [Tencent](https://www.tencent.com/en-us/index.html)
 * [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
 
