@@ -186,7 +186,6 @@ For corporate devices, data about managed and unmanaged apps continues to be inc
 The `applicationInventory` entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 <!-- ***********************************************-->
-<!--## Security-->
 
 ## Notices
 
