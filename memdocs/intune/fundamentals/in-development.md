@@ -179,6 +179,15 @@ For personally-owned iOS/iPadOS devices:
 
 For corporate devices, data about managed and unmanaged apps continues to be included with requests for app data by your MTD vendor.  
 
+<!-- ***********************************************-->
+
+## Monitor and troubleshoot
+
+### Remote help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
+
+The remote help page in the Microsoft Endpoint Manager admin center is moving and will be directly under **Tenant administration** instead of **Connectors and tokens**. 
+
+For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
 
 <!-- ***********************************************-->
 
