@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 02/01/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,13 +46,16 @@ As an Intune administrator, you can enroll Android devices in the following ways
     - [Corporate-owned, user associated devices](android-aosp-corporate-owned-user-associated-enroll.md): For corporate-owned, single user devices intended exclusively for work and not personal use. Admins can manage the entire device.  
     - [Corporate-owned, userless devices](android-aosp-corporate-owned-userless-enroll.md): For corporate-owned, shared devices. Admins can manage the entire device.  
 
+> [!TIP]
+> For guidance on which enrollment method is right for your organization, see [Deployment guide: Enroll Android devices in Microsoft Intune](..fundamentals/deployment-guide-enrollment-android.md).
+
 ## Prerequisites
 
-To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you are first setting up Intune for mobile device management.
+To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you’re first setting up Intune for mobile device management.
 
 For Android Enterprise, refer to the following support article from Google to ensure that Android Enterprise is available in your country or region: https://support.google.com/work/android/answer/6270910
 
-For devices manufactured by Zebra Technologies, you may need to grant the Company Portal additional permissions depending on the capabilities of the specific device. [Mobility Extensions on Zebra devices](../configuration/android-zebra-mx-overview.md) has more details.
+For devices manufactured by Zebra Technologies, you may need to grant the Company Portal more permissions depending on the capabilities of the specific device. [Mobility Extensions on Zebra devices](../configuration/android-zebra-mx-overview.md) has more details.
 
 For Samsung Knox Standard devices, there are [more prerequisites](android-samsung-knox-mobile-enroll.md).
 
