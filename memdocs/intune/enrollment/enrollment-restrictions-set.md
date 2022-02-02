@@ -67,7 +67,7 @@ Default restrictions are automatically provided for both device type and device 
 
 ## Create a device type restriction
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll Devices** > **Enrollment restrictions** > **Create restriction** > **Device type restriction**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll Devices** > **Enrollment device platform restrictions** > **Create restriction** > **Device type restriction**.
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 3. Choose **Next** to go to the **Platform settings** page.
 4. Under **Platform**, choose **Allow** for the platforms that you want this restriction to allow.
