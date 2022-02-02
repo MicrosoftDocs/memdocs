@@ -62,7 +62,7 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Manage local groups on Windows devices
 
-Use the Local user group membership (preview) profile to manage the users that are members of the built-in local groups on Windows 10/11 devices that receive this policy.
+Use the Local user group membership (preview) profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
 
 > [!TIP]
 > To learn more about support for managing administrator privileges using Azure Active Directory (Azure AD) groups, see [Assign local admins to Azure AD joined devices](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-azure-ad-groups-preview) in the Azure AD documentation.
