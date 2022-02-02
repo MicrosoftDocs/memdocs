@@ -58,7 +58,7 @@ This article:
 To learn more, see:
 
 - [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
-- [Getting start with Azure AD authentication](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
+- [Getting start with Azure AD authentication](/azure/devops/integrate/get-started/authentication/oauth)
 - [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Understand OAuth 2.0](https://oauth.net/2/)
 
@@ -124,7 +124,7 @@ The following Intune API permissions are available when adding an application th
 
 If you are a partner interested in integrating with Intune using these API permissions, contact the [Microsoft Intelligent Security Association](https://www.microsoft.com/security/business/intelligent-security-association)] team for information.
 
-When finished, choose **Add permissions** to save you changes.
+When finished, choose **Add permissions** to save your changes.
 
 At this point, you may also:
 
