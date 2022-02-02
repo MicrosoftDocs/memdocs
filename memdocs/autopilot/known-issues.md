@@ -133,6 +133,10 @@ The client is likely unable to access all the required Azure AD/MSA-related URLs
 
 Using PPKGs in combination with Windows Autopilot isn't recommended.
 
+## Autopilot & Device-based Conditional Access policies
+There should be a consideration for Conditional Access policies that enforce device compliance when Autopiloting Hybrid Azure AD Joined devices. There are 2 devices ID's for the same device name after the Autopilot process is completed (1 Azure AD Joined Device which is compliant and 1 Hybrid Azure AD Joined device whose compliance state says 'N/A', viewed from the Devices List on Azure Portal). The Intune service is only able to sync with the new device id that points to the Hybrid device once the user successfully sign-in's once. once this occurs, then the device ID pointing to the Hybrid Azure AD Joined device reports as 'Compliant'. This could cause issues for users in scope of a device-based Conditional Access policy that blocks based on compliance.
+
+
 ## Next steps
 
 [Windows Autopilot - resolved issues](resolved-issues.md)
