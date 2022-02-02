@@ -124,7 +124,7 @@ The following Intune API permissions are available when adding an application th
 
 If you are a partner interested in integrating with Intune using these API permissions, contact the [Microsoft Intelligent Security Association](https://www.microsoft.com/security/business/intelligent-security-association)] team for information.
 
-When finished, choose **Add permissions** to save you changes.
+When finished, choose **Add permissions** to save your changes.
 
 At this point, you may also:
 
