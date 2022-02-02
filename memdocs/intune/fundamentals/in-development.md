@@ -129,7 +129,6 @@ New settings include:
   - Print Footer
   - Print MAC Address
   - Require Admin To Add Printers
-  - Require Admin To Print Locally
   - Show Only Managed Printers
   - User Printer List
     - Device URI
