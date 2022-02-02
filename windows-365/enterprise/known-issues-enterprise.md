@@ -36,4 +36,4 @@ The following items are known issues for Windows 365 Enterprise.
 
 ## Next steps
 
-[Troubleshoot Windows 365 Business Cloud PC setup issues](troubleshoot-windows-365-business.md)
+[Troubleshoot Windows 365 Enterprise Cloud PC](troubleshooting.md)
