@@ -214,7 +214,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
    - **Security**:
 
-     - Add the **NDES service account and NDES service computer **. This account requires **Read** and **Enroll** permissions to this template.
+     - Add the **NDES service account and NDES service computer**. This account requires **Read** and **Enroll** permissions to this template.
 
      - Add additional Accounts for Intune administrators who will create SCEP profiles. These accounts require **Read** permissions to the template to enable these admins to browse to this template while creating SCEP profiles.
 
