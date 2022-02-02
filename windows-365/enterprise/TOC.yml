@@ -155,6 +155,8 @@ items:
   items:
     - name: Troubleshooting
       href: troubleshooting.md
+    - name: Known issues 
+      href: known-issues-enterprise.md
     - name: On-premises network connections
       href: troubleshoot-on-premises-network-connection.md
     - name: On-premises network connection health checklist

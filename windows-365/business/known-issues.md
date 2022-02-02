@@ -1,5 +1,5 @@
 ---
-title: Known issues for Windows 365 Business Cloud PC setup issues
+title: Known issues for Windows 365 Business Cloud PC
 description: Learn about known issues for Windows 365 Business.
 f1.keywords:
 - NOCSH
