@@ -2,12 +2,12 @@
 # required metadata
 
 title: Android device enrollment guide for  Microsoft Intune
-description: Enroll Android and Android Enterprise corporate-owned work profile, personally owned devices with a work profile, fully managed, and dedicated devices in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
+description: Enroll Android and Android Enterprise corporate-owned work profile, personally owned devices with a work profile, fully managed, AOSP, and dedicated devices in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2022
+ms.date: 02/02/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -125,7 +125,12 @@ This task list provides an overview. For more specific information, see [Set up 
 
 ### Android Enterprise dedicated devices end user tasks
 
-It's not recommended for users to enroll Android Enterprise dedicated devices. This task should be completed by administrators.
+Admins can complete the enrollment themselves, and then give the devices to the users. Or, users can enroll the devices using the following steps:
+
+1. Users turn on the device, and are prompted for information, including the enrollment method: NFC, Token, QR Code, or Google Zero Touch.
+2. After they enter the required information, your enrollment profile applies to the device. When the enrollment wizard completes, the device is ready to use.
+
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Android Enterprise fully managed
 
@@ -218,8 +223,6 @@ The specific steps depend on how you configured the enrollment profile. For the 
 
 Also referred to as AOSP. Currently in [public preview](public-preview.md). These devices are organization-owned, and don't use Google Mobile Services (GMS). They can be kiosk-style devices that aren't associated with a single or specific user, or can have one user. They're used exclusively for organization work; not personal use.
 
-**NEED EXAMPLES OF DEVICES THAT USE AOSP**
-
 When you create the Intune enrollment profile, you decide if the devices are userless, or are associated with a single user. For more information on these options, see:
 
 - [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
@@ -228,10 +231,10 @@ When you create the Intune enrollment profile, you decide if the devices are use
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ❌ <br/><br/> AOSP doesn't use the [GMS](https://www.android.com/gms/) (opens Android's web site). |
+| Uses Google Mobile Services (GMS). | ❌ <br/><br/> AOSP doesn't use the [GMS](https://www.android.com/gms/) (opens Android's web site). Device that can't or won't use GMS can use AOSP enrollment, including countries that don't allow GMS. |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Can only enroll one device at a time. |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article).|
@@ -244,12 +247,12 @@ When you create the Intune enrollment profile, you decide if the devices are use
 
 This task list provides an overview. For more specific information, see enrollment for [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md) and [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
 
-- Be sure your devices are [supported](supported-devices-browsers.md), and can scan QR codes.
+- Be sure your devices are [supported](supported-devices-browsers.md).
 - Factory reset the devices. This step is required. New devices might not require a factory reset.
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile, and have your device group(s) ready. For the specific steps, see:
   - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md) 
   - [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
-- Enroll the devices in Intune by scanning the QR code. For the specific steps, see:
+- Enroll the devices in Intune. For the specific steps, see:
   - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md) 
   - [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
 
@@ -257,7 +260,16 @@ This task list provides an overview. For more specific information, see enrollme
 
 ### Android Open Source Project end user tasks
 
-It's not recommended for users to enroll AOSP devices. This task should be completed by administrators.
+The specific steps depend on how you configured the enrollment profile.
+
+Admins can complete the enrollment themselves, and then give the devices to the users. Or, users can enroll the devices using the following steps:
+
+1. Users turn on the device, and are prompted for information, including the enrollment method: QR Code. If you created a user-associated devices enrollment profile, then they may be asked to sign in with their organization credentials (`user@contoso.com`).
+2. If you created a userless devices enrollment profile, then wait for the enrollment wizard to complete. When it does, the device is ready to use.
+
+    If you created a user-associated devices enrollment profile, then users enter the required information, and your enrollment profile applies to the device. For more specific steps, see [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
+
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Android device administrator
 

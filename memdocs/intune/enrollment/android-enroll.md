@@ -47,7 +47,7 @@ As an Intune administrator, you can enroll Android devices in the following ways
     - [Corporate-owned, userless devices](android-aosp-corporate-owned-userless-enroll.md): For corporate-owned, shared devices. Admins can manage the entire device.  
 
 > [!TIP]
-> For guidance on which enrollment method is right for your organization, see [Deployment guide: Enroll Android devices in Microsoft Intune](..fundamentals/deployment-guide-enrollment-android.md).
+> For guidance on which enrollment method is right for your organization, see [Deployment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 
 ## Prerequisites
 
