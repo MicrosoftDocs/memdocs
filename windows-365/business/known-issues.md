@@ -1,5 +1,5 @@
 ---
-title: Known issues for Windows 365 Business Cloud PC setup issues
+title: Known issues for Windows 365 Business Cloud PC
 description: Learn about known issues for Windows 365 Business.
 f1.keywords:
 - NOCSH
@@ -87,6 +87,8 @@ Sending outbound email messages directly on port 25 from a Windows 365 Business 
 If your email service uses Simple Mail Transfer Protocol (SMTP) for your email client application, you can use their web interface, if available.
 
 Or you can ask your email service provider for help to configure their email client app to use secure SMTP over Transport Layer Security (TLS), which uses a different port.
+
+[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 
 ## Next steps
 
