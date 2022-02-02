@@ -188,8 +188,6 @@ You can configure Intune to automatically remove devices that appear to be inact
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
 
-Device cleanup rules don't support Android Enterprise devices, including fully managed, dedicated, corporate-owned work profile, and personally-owned work profile.
-
 If a removed device checks in before its device certification expires, it will reappear in the console.
 
 The device clean up rule doesn't trigger a wipe or retire.
