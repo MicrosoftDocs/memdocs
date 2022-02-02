@@ -185,11 +185,11 @@ Due to the absence of the Google Play Store in China, Android devices must obtai
 - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
 - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
 
-#### Best practice: make sure your Company Portal apps are up-to-date <!--879465-->
+#### Best practice: make sure your Company Portal apps are up to date <!--879465-->
 
 In December 2016, we released an update that enabled enforcement for multi-factor authentication (MFA) on a group of users when they enroll an iOS, Android, Windows 8.1+, or Windows Phone 8.1+ device. This feature cannot work without certain baseline versions of the Company Portal app for Android (v5.0.3419.0+) and iOS (v2.1.17+).
 
-Microsoft is continuously improving Intune by adding new functions to both the console and the Company Portal apps on all supported platforms. As a result, Microsoft only releases fixes for issues that we find in the current version of the Company Portal app. We therefore recommend to use the latest versions of the Company Portal apps for the best user experience.
+Microsoft is continuously improving Intune by adding new functions to both the console and the Company Portal apps on all supported platforms. As a result, Microsoft only releases fixes for issues that we find in the current version of the Company Portal app. We therefore recommend using the latest versions of the Company Portal apps for the best user experience.
 
 >[!Tip]
 > Have your users set their devices to automatically update apps from the appropriate app store. If you have made the Android Company Portal app available on a network share, you can download the latest version from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49140).
