@@ -432,9 +432,9 @@ These settings can be enabled in the [Microsoft Endpoint Manager admin center](h
 - BitLocker system drive policy: **Configure**
   - Startup authentication required: **Yes**
   - Compatible TPM startup: **Required**
-  - Compatible TPM startup PIN: **Not configured**
-  - Compatible TPM startup key: **Not configured**
-  - Compatible TPM startup key and PIN: **Not configured**
+  - Compatible TPM startup PIN: **Blocked**
+  - Compatible TPM startup key: **Blocked**
+  - Compatible TPM startup key and PIN: **Blocked**
   - Disable BitLocker on devices where TPM is incompatible: **Not configured**
   - Enable preboot recovery message and url: **Not configured**
 - System drive recovery: **Configure**
