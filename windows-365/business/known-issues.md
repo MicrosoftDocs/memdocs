@@ -88,7 +88,7 @@ If your email service uses Simple Mail Transfer Protocol (SMTP) for your email c
 
 Or you can ask your email service provider for help to configure their email client app to use secure SMTP over Transport Layer Security (TLS), which uses a different port.
 
-[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](././includes/known-issues.md)]
+[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../../includes/known-issues.md)]
 
 ## Next steps
 
