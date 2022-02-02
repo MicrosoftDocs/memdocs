@@ -98,7 +98,7 @@ Delivery of app configuration through the MAM channel does not require the devic
 > [!NOTE]
 > Intune managed apps will check-in with an interval of 30 minutes for Intune App Configuration Policy status, when deployed in conjunction with an Intune App Protection Policy. If an Intune App Protection Policy isn't assigned to the user, then the Intune App Configuration Policy check-in interval is set to 720 minutes.
 
-For information on which apps support app configuration though the MAM channel, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
+For information on which apps support app configuration through the MAM channel, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 
 ## Android Enterprise app configuration policies
 
