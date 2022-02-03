@@ -462,12 +462,12 @@ End of comment -->
 #### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Add new users**: **Block** prevents users from adding new users. Each user has a personal space on the device for custom Home screens, accounts, apps, and settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add other users to the device.
+- **User can configure credentials (work profile-level)**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
 
 #### Fully managed and dedicated devices
 
 - **User removal**: **Block** prevents users from removing users. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove other users from the device.
 - **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add their personal Google account.
-- **User can configure credentials**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
 
 #### Dedicated devices
 
