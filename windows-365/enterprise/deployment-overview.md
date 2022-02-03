@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/08/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 To set up your system to provision on-demand Cloud PCs to your users, follow these steps:
 
 1. [Assign licenses to users](assign-licenses.md).
-2. [Create on-premises network connection](create-on-premises-network-connection.md).
+2. [Create on-premises network connection](create-on-premises-network-connection.md) (optional).
 3. [Provide localized Windows experience](provide-localized-windows-experience.md) (optional).
 3. [Add device images](add-device-images.md) (optional).
 4. [Create a provisioning policy](create-provisioning-policy.md).

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 02/08/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -36,23 +36,23 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Domain Join | Azure AD without Azure Virtual Network (VNet) support. | Hybrid Azure AD with VNet support.<br>For other domain support, see [In development for Windows 365 Enterprise](./enterprise/in-development.md). |
+| Domain Join | Azure AD Join without Azure Virtual Network (VNet) support. | Azure AD Join without VNet support.<br>Azure AD Join with VNet support.<br>Hybrid Azure AD with VNet support.<br>For other domain support, see [In development for Windows 365 Enterprise](./enterprise/in-development.md). |
 
 ## Purchasing and licensing comparisons
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Purchase channels | Web direct, self-service, Cloud Solution Provider (CSP). | Web direct, Enterprise Agreements (EA), CSP. |
-| License assignment | Microsoft 365 Admin Center or the Azure AD portal. | Microsoft 365 Admin Center. |
+| License assignment | Microsoft 365 Admin Center or the Azure AD portal. | Microsoft 365 Admin Center or the Azure AD portal. |
 | Licensing requirements | No licensing pre-requirements to buy and deploy Windows 365 Business. Other features (like device management) can be used if users are licensed for Microsoft Endpoint Management.| Each user must be licensed for Windows 10 or 11 Enterprise (when available), Microsoft Endpoint Manager, and Azure AD P1. |
-| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>- 2 GB RAM = 12 GB outbound data<br>- 4 or 8 GB RAM = 20 GB outbound data<br>- 16 GB RAM = 40 GB outbound data<br>- 32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs.
+| Networking costs | Outbound data/month is based on the RAM of the Cloud PC:<br>- 2 GB RAM = 12 GB outbound data<br>- 4 or 8 GB RAM = 20 GB outbound data<br>- 16 GB RAM = 40 GB outbound data<br>- 32 GB RAM = 70 GB outbound data<br>Data bandwidth may be restricted when these levels are exceeded. | When providing a network, Networking goes through the customer's Azure VNet and isn't included in the license. [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/) applies for these network usage costs. <br>If using a Microsoft-hosted network, the same charges (as described in Windows 365 Business networking charges) apply.|
 | Seat limits | Capped to 300 seats per tenant. [Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/Windows365/MOSA) | No seat cap per tenant. [Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/Windows365/MOSA) |
 
 ## Administrative comparisons
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Provisioning | Provisioning is simplified and uses default configurations.<br>Cloud PCs are automatically provisioned with a standard image after a Cloud PC license is assigned. | Provisioning is configurable and customizable to the needs of the organization.<br>Admins set up the VNet, configure user permissions (local admin or not), and assign the policy to an Azure AD group.<br>Cloud PCs are then provisioned by using standard gallery images or custom images (admin choice). |
+| Provisioning | Provisioning is simplified and uses default configurations.<br>Cloud PCs are automatically provisioned with a standard image after a Cloud PC license is assigned. | Provisioning is configurable and customizable to the needs of the organization.<br>Admins select the network, configure user permissions (local admin or not), and assign the policy to an Azure AD group.<br>Cloud PCs are then provisioned by using standard gallery images or custom images (admin choice). |
 | Policy management | Not Supported. | Group Policy Objects (GPO) and Intune MDM are supported. |
 | Application deployment | Supported only if you have Intune license. | Supported. |
 | Windows updates | Default Windows Update for Business settings are configured for users. With an Intune license these can be edited. | Can be managed by using Microsoft Endpoint Manager. |
@@ -75,7 +75,7 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Conditional Access | Conditional Access policies can be deployed only by using Azure AD with an Azure AD P1 license. | Conditional Access policies can be deployed by using the Microsoft Endpoint Manager admin center or Azure AD. |
-| [Per-user multi-factor authentication (MFA)](/azure/active-directory/authentication/howto-mfa-userstates) | Only MFA using [Azure AD Conditional Access](/azure/active-directory/authentication/tutorial-enable-azure-mfa) is supported. Legacy per-user MFA is not supported. | Supported. |
+| [Per-user multi-factor authentication (MFA)](/azure/active-directory/authentication/howto-mfa-userstates) | Only MFA using [Azure AD Conditional Access](/azure/active-directory/authentication/tutorial-enable-azure-mfa) is supported. Legacy per-user MFA is not supported. | Legacy per-user MFA is supported for user connections to Hybrid Azure AD joined Cloud PCs but is not supported for user connections to Azure AD joined Cloud PCs. |
 | Security baselines | Not supported. | Dedicated Security Baselines can be edited and deployed by using Microsoft Endpoint Manager. |
 | Microsoft Defender for Endpoint | Supported if the customer separately has the requisite E5 license. | Integration with Defender for Endpoint. If the customer has an E5 license, all Cloud PCs will respond to Defender for Endpoint policies and show up in MDE dashboards. |
 

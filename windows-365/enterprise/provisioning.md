@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/08/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -41,7 +41,7 @@ Admins need only provide a few configuration details to set up the provisioning 
 
 At a high level, the full provisioning process looks like this:
 
-1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you’ll provide details for the [on-premises network connection](on-premises-network-connections.md), the [image](device-images.md) used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
+1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you’ll provide details for the network, the [image](device-images.md) used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
 2. When a user in the Azure AD user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC and sends access information to the user. This automation has three stages which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article](automated-provisioning-steps.md).
 3. The end user receives the access information and can then sign in to the Windows Cloud PC from anywhere.
 
@@ -51,11 +51,12 @@ A Windows 365 provisioning policy is an object in the Microsoft Endpoint Manager
 
 As the admin, you provide the following required information when creating a provisioning policy:
 
-- **On-premises network connection**: The on-premises network connection (OPNC) lets the policy connect to your on-premises resources. It identifies:
+- **Network**: A Microsoft-hosted network or an on-premises network connection (OPNC) dictates how the device will join Azure AD and how its network will be managed. Depending on the join type, an OPNC may have information detailing:
   - The Azure subscription that will be associated with the Cloud PC.
   - The domain and Organizational Unit (OU) to join.
   - The Active Directory credentials to use.
 - **Image**: A Windows image is used as the reference image for all Cloud PCs provisioned with this policy. You can choose either a gallery image or supply your own custom image.
+- **Configuration**: You can control more settings that are configured when the Cloud PC is provisioned.
 - **Assignment**:  The assignment identifies one or more Azure AD user groups. Windows 365 will automatically provision a Cloud PC for each licensed user in the policy’s Azure AD user groups. If a user is later added to the user groups, they will also get a Cloud PC.
 
 Without this information, Windows 365 can’t provision the Cloud PCs.

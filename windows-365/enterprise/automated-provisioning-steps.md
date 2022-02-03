@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/08/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -44,9 +44,12 @@ Core provisioning is optimized to only perform absolutely necessary steps to mak
 
 1. **Allocate Azure capacity**: When provisioning first begins, Windows 365 allocates Azure capacity in the customer’s supported region of choice. Customers don’t need to manage capacity and allocation manually.
 2. **Create VM**: A virtual machine is created based on the Windows 365 license assigned to the user. Each Windows 365 license includes hardware capacity information. The VM is created with these specs.
-3. **Perform vNic injection**: When the VM is created, a virtual NIC is created and injected into the customers provided vNet. This lets the Cloud PC connect to the customers on-premises network.
-4. **Active Directory domain join**: After the VM is running, an Active Directory domain join operation is performed to join the machine to the customer's domain.
-5. **Hybrid Azure AD Join**: To enable the cloud management scenarios, a Hybrid Azure AD Join must occur. At this stage, the Cloud PC is domain joined and should be a member of an Azure AD syncing OU. In this step, we wait for the computer object to appear in Azure AD.
+3. **Attach the VM to the appropriate network**: When the VM is created, a virtual NIC is also created. If the provisioning policy specifies a Microsoft hosted network, the NIC is attached to an existing or new virtual network in the selected region specifically for the customer. If the provisioning policy specifies an on-premises network connection, the NIC is injected into the customers provided vNet. This lets the Cloud PC connect to the customers on-premises network.
+4. **Join to Azure AD**: After the VM is running, the device will be joined to Azure AD in one of two ways:
+  
+    - Through Azure AD Join: the device performs the Azure AD Join operation and has no Windows Server Active Directory dependency.
+    - Through Hybrid Azure AD Join: the device performs the domain join operation on the customer’s domain and is then registered to Azure AD through synchronization or federation. In this step, we wait for the computer object to appear in Azure AD before proceeding.
+
 6. **Intune MDM enroll**: After the Azure AD object is available, the Cloud PC is enrolled in Intune. This is performed as a device enrollment and no user credentials need to be provided.
 7. **Primary user assignment**: The Cloud PC user is assigned to the Intune primary user to make sure self service and reporting scenarios work seamlessly.
 
