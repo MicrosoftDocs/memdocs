@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Create a dynamic device group for all Cloud PCs
+title: Create a dynamic device group containing your Cloud PCs
 titleSuffix:
-description: Learn how to create dynamic device groups for all Cloud PCs.
+description: Learn how to create dynamic device groups containing your Cloud PCs.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
