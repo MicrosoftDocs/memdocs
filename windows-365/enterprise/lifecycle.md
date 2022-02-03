@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/08/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -38,7 +38,7 @@ The Cloud PC lifecycle has five stages:
 
 ## Provision
 
-Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are [provisioned](provisioning.md) in the Windows 365 service, connected to your Azure subscription’s network, hybrid joined to your Azure AD, and enrolled into Microsoft Endpoint Manager.
+Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are [provisioned](provisioning.md) in the Windows 365 service, connected to Azure, joined to your Azure AD, and enrolled into Microsoft Endpoint Manager.
 
 By assigning a Windows 365 license to a user and adding them to a group targeted with a [provisioning policy](provisioning.md), you trigger automatic provisioning of the user’s Cloud PC.
 
@@ -48,7 +48,12 @@ Windows 365 also has monitoring infrastructure and synthetic provisioning tests 
 
 ## Configure
 
-Cloud PCs need to be configured and secured, just like any other endpoint in your environment. To make this seamless, as part of provisioning, every Windows 365 Cloud PC is [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) and enrolled into Microsoft Endpoint Manager. This means that every Cloud PC is instantly ready for [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview) and management through Microsoft Endpoint Manager, including [co-management](/mem/configmgr/comanage/overview) if needed.
+Cloud PCs need to be configured and secured, just like any other endpoint in your environment. To make this seamless, as part of provisioning, every Windows 365 Cloud PC is either:
+
+- [Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join) or
+- [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+
+ After being joined, Cloud PCs are enrolled into Microsoft Endpoint Manager. This means that every Cloud PC is instantly ready for [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview) and management through Microsoft Endpoint Manager, including [co-management](/mem/configmgr/comanage/overview) if needed.
 
 Microsoft Endpoint Manager helps you to validate that your Cloud PCs are compliant by using [compliance policies](/mem/intune/protect/device-compliance-get-started). Windows 365 also provides an optimized [security baseline](/mem/intune/protect/security-baselines) for Cloud PCs. This optional baseline helps you make sure that your Cloud PCs are securely configured with minimal overhead. These baselines have been optimized to ensure that remote connectivity is not impacted.
 
