@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 02/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -128,7 +128,8 @@ There are thousands of settings available in the settings catalog. To make it ea
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="In Settings Catalog, filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
 
-> [!NOTE] When filtering settings to a specific edition, setting for Edge, Office, and OneDrive will be filtered out as thier applicabillity is not determined by the OS Version or Edition.
+  > [!NOTE]
+  > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, then the Edge, Office, and OneDrive settings aren't shown.
 
 ## Duplicate a profile  
 
