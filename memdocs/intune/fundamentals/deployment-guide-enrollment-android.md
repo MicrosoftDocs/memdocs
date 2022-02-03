@@ -57,7 +57,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 ---
 | Feature | Use this enrollment option when |
 | --- | --- | 
-| Uses Google Mobile Services (GMS). | ✔️ |
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are personal or BYOD. | ✔️ <br/><br/> You can mark these devices as corporate or personal. |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -99,7 +99,7 @@ Previously referred to as COSU. These devices are organization-owned, and suppor
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ✔️ Add text <br/><br/> ❌ Add text|
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -139,7 +139,7 @@ Previously referred to as COBO. These devices are organization-owned, and have o
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ✔️ |
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -183,7 +183,7 @@ Previously referred to as COPE. These devices are organization-owned, and have o
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ✔️ |
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -221,9 +221,12 @@ The specific steps depend on how you configured the enrollment profile. For the 
 
 ## Android Open Source Project
 
+> [!NOTE]
+> Currently, there's limited OEM support for this enrollment method.
+
 Also referred to as AOSP. Currently in [public preview](public-preview.md). These devices are organization-owned, and don't use Google Mobile Services (GMS). They can be kiosk-style devices that aren't associated with a single or specific user, or can have one user. They're used exclusively for organization work; not personal use.
 
-When you create the Intune enrollment profile, you decide if the devices are userless, or are associated with a single user. For more information on these options, see:
+When you create the Intune enrollment profile, you decide if the devices are userless, or are associated with a single user. For more information on these options, including supported OEMs, see:
 
 - [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
 - [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
@@ -231,7 +234,7 @@ When you create the Intune enrollment profile, you decide if the devices are use
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ❌ <br/><br/> AOSP doesn't use the [GMS](https://www.android.com/gms/) (opens Android's web site). Device that can't or won't use GMS can use AOSP enrollment, including countries that don't allow GMS. |
+| Use Google Mobile Services (GMS). | ❌ AOSP doesn't use [GMS](https://www.android.com/gms/) (opens Android's web site). For example, some countries don't support GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Can only enroll one device at a time. |
