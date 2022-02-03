@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/8/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -35,7 +35,7 @@ All [on-premises network connections](on-premises-network-connections.md) (OPNC)
 To edit an on-premises network connection:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > select the connection you want to edit > **Properties**.
-2. On the **Properties** page, you can edit the **General** and **AD domain** settings by selecting **Edit** next to each header.
+2. For all OPNCs, you can edit the **General** settings by selecting **Edit** next to each header. You can edit all settings except **Join type**. For Hybrid Azure AD Join connections, you can also edit the **AD domain** settings.
 
 After the edits have been saved, the OPNC checks are run to verify the configuration.
 

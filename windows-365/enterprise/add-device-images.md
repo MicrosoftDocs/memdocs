@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Add device images for Windows 365
+title: Add custom device images for Windows 365
 titleSuffix:
-description: Learn how to add device images for Windows 365.
+description: Learn how to add custom device images for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -40,9 +40,15 @@ If you want to use a custom device image, you can add it into your Azure subscri
 
 You can upload the custom image to the Windows 365 service by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
+> [!NOTE]
+> For Azure AD Join on-premises network connections (OPNC) without your own network, you can upload custom images from your Azure subscription. You must first [create an on-premises network connection](create-on-premises-network-connection.md) with the Azure subscription associated with the targeted custom images.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
 ![Screenshot of add device image](./media/add-device-images/add-device-image.png)
-2. In the **Add image** pane, provide the following information:
+
+3. In the **Add image** pane, provide the following information:
     - **Image name**: The name of the image you want to add.
     - **Image version**: A version number of the image with this format: Major(int).Minor(int).Patch(int) format. For example: 0.0.1, 1.5.13.
     - **Source Image**: Choose an image to add. The list will populate with all custom images from your subscription that meet the pre-requisites.

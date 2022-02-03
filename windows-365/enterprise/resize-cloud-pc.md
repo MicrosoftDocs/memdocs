@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/06/2021
+ms.date: 02/08/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -34,7 +34,7 @@ The **Resize** remote action lets you upgrade a Cloud PC’s RAM, CPU, and stora
 
 ## Requirements
 
-To resize a Cloud PC, the admin must have any of the following built in Azure Active Directory roles:
+To resize a Cloud PC, the admin must have any of the following built in Azure Active Directory (Azure AD) roles:
 
 - Global Admin
 - Intune Service Admin
@@ -43,9 +43,12 @@ Alternatively, you can assign a custom role that includes the permissions of the
 
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node
 
-Resizing isn’t supported for group-based licenses.
-
 The **Resize** remote action is supported for paid, preview, and trial licenses.
+
+Resizing isn’t supported for:
+
+- Cloud PCs provisioned through group-based licenses.
+- Cloud PCs that are Azure AD joined.
 
 ## Resize a Cloud PC
 

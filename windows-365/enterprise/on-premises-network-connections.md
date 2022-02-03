@@ -120,7 +120,7 @@ Each tenant has a limit of 10 on-premises network connections. If your organizat
 
 ## User sign in
 
-When users attempt to sign in to their Cloud PC, user authentication occurs. 
+When users attempt to sign in to their Cloud PC, user authentication occurs.
 
 For Hybrid Azure AD Join OPNCs, the OPNC is used to route the authentication request to your domain controllers. If the OPNC or the network connection to your domain is unhealthy, user sign in can't occur. Windows cached credentials can't be used over the remote desktop channel, so domain controller availability is critical. Ensure your network is stable or place a domain controller server on the same subnet as your Cloud PCs.
 
