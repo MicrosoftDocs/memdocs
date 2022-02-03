@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/02/2022
+ms.date: 02/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -234,13 +234,13 @@ When you create the Intune enrollment profile, you decide if the devices are use
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Use Google Mobile Services (GMS). | ❌ AOSP doesn't use [GMS](https://www.android.com/gms/) (opens Android's web site). For example, some countries don't support GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
+| Use Google Mobile Services (GMS). | ❌ <br/><br/> Device doesn't support [GMS](https://www.android.com/gms/) (opens Android's web site). Some countries don't support GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Can only enroll one device at a time. |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ |
-| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article).|
+| Devices are personal or BYOD. | ❌ <br/><br/> [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article) support [GMS](https://www.android.com/gms/) (opens Android's web site).|
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the optional device enrollment manager (DEM) account | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -270,7 +270,7 @@ Admins can complete the enrollment themselves, and then give the devices to the 
 1. Users turn on the device, and are prompted for information, including the enrollment method: QR Code. If you created a user-associated devices enrollment profile, then they may be asked to sign in with their organization credentials (`user@contoso.com`).
 2. If you created a userless devices enrollment profile, then wait for the enrollment wizard to complete. When it does, the device is ready to use.
 
-    If you created a user-associated devices enrollment profile, then users enter the required information, and your enrollment profile applies to the device. For more specific steps, see [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
+    If you created a user-associated devices enrollment profile, then users enter the required information. Then, wait for the enrollment wizard to complete. For more specific steps, see [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
