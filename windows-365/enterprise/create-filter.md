@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 ---
 # Create a filter for Cloud PCs
 
-You can create a filter to use when creating Intune policies and configurations. The filter you create can target all or some Cloud PCs, depending on the rules you configure. There are three different categories of filters you can create for Cloud PCs:
+You can create a filter to use when creating Intune policies and configurations. The filter you create can target all or some Cloud PCs, depending on the rules you configure. You can also use the filter that you create to exclude Cloud PCs from existing policies that are intended for physical devices only. There are three different categories of filters you can create for Cloud PCs:
 
 - [All Cloud PCs](#create-a-filter-for-all-cloud-pcs): This type of filter is useful for applying policies and configurations to all Cloud PCs in your organization.
 - [All Cloud PCs from a specific provisioning policy](#create-a-filter-for-all-cloud-pcs-from-a-specific-provisioning-policy): This type of filter is useful for applying policies and configurations to Cloud PCs based on the same image and location.
@@ -92,3 +92,16 @@ In these steps, you will use the Model device property to create the filter.
 5. After the validation completes, select **Next**.
 6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 7. On the **Review + create** page, select **Create**.
+
+Once you have created the filter, you can use the filter in the assignment page in [supported policies](/mem/intune/fundamentals/filters-supported-workloads).
+
+For additional information on using filters in Intune, see the following how-to guides:
+
+- [Create a filter (Intune how-to guide)](/mem/intune/fundamentals/filters)
+- [Supported filter properties](/mem/intune/fundamentals/filters-device-properties)
+- [Filter reporting and troubleshooting](/mem/intune/fundamentals/filters-reports-troubleshoot)
+
+<!-- ########################## -->
+## Next steps
+
+[Create device configuration profile](create-device-configuration-profile.md).
