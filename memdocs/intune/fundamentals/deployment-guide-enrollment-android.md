@@ -57,7 +57,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 ---
 | Feature | Use this enrollment option when |
 | --- | --- | 
-| Uses Google Mobile Services (GMS). | ✔️ |
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are personal or BYOD. | ✔️ <br/><br/> You can mark these devices as corporate or personal. |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -99,7 +99,7 @@ Previously referred to as COSU. These devices are organization-owned, and suppor
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ✔️ Add text <br/><br/> ❌ Add text|
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -139,7 +139,7 @@ Previously referred to as COBO. These devices are organization-owned, and have o
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ✔️ |
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -183,7 +183,7 @@ Previously referred to as COPE. These devices are organization-owned, and have o
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ✔️ |
+| Use Google Mobile Services (GMS). | ✔️ |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -231,7 +231,7 @@ When you create the Intune enrollment profile, you decide if the devices are use
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Uses Google Mobile Services (GMS). | ❌ <br/><br/> AOSP doesn't use the [GMS](https://www.android.com/gms/) (opens Android's web site). Device that can't or won't use GMS can use AOSP enrollment, including countries that don't allow GMS. |
+| Use Google Mobile Services (GMS). | ❌ AOSP doesn't use [GMS](https://www.android.com/gms/) (opens Android's web site). If your devices can't use GMS, then AOSP enrollment might be right your organization. For example, some countries don't allow GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Can only enroll one device at a time. |
