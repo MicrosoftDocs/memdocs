@@ -261,6 +261,9 @@ To mitigate both cases, renew the secret key.
 
 For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
 
+> [!NOTE]
+> You need to have at least the "Cloud Application Administrator" Azure AD role assigned to be able to renew the key.
+
 ### Renew key for created app
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
