@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create a dynamic device group containing your Cloud PCs
 
-You can create a dynamic device group that contains your Cloud PCs. Policies targeting this device group will target all or some Cloud PCs, depending on the rules you configure. There are three different groups you can create for Cloud PCs:
+You can create a dynamic device group that contains your Cloud PCs. Policies targeting this device group will target all or some Cloud PCs, depending on the rules you configure. There are three different categories of groups you can create for Cloud PCs:
 
 - [All Cloud PCs](#create-a-dynamic-device-group-for-all-cloud-pcs): This type of group is useful for applying policies and configurations to all Cloud PCs in your organization.
 - [All Cloud PCs from a specific provisioning policy](#create-a-dynamic-device-group-for-all-cloud-pcs-from-a-specific-provisioning-policy): This type of group is useful for applying policies and configurations to Cloud PCs based on the same image and location.
