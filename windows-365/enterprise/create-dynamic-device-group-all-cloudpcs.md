@@ -57,6 +57,8 @@ In these steps, you’ll use the Device Model device property to create the dyna
 
 ## Create a dynamic device group for all Cloud PCs from a specific provisioning policy
 
+For the example below, we use "UX Engineering" as the name of the provisioning policy. Anywhere you see "UX Engineering" replace it with the name of your provisioning policy.
+
 In these steps, you’ll use the Enrollment Profile Name device property to create the dynamic device group.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
@@ -75,6 +77,8 @@ In these steps, you’ll use the Enrollment Profile Name device property to crea
 8. After the validation completes, select **Save** > **Create**.
 
 ## Create a dynamic device group for all Cloud PCs with a specific configuration
+
+For the example below, we use 2 vCPU and 4GB RAM as the configuration. Anywhere you see "2vCPU/4GB" replace it with the desired configuration. You can also target a specific Cloud PC size by adding the OS storage as part of the configuration. You can follow the below steps and create a filter for any of the configurations that make up Cloud PC sizes.
 
 In these steps, you will use the Device Model device property to create the dynamic device group.
 
