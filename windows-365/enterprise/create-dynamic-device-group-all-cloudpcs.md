@@ -104,4 +104,4 @@ In these steps, you will use the Device Model device property to create the dyna
 <!-- ########################## -->
 ## Next steps
 
-[Create a dynamic device group containing all Cloud PCs for a specific configuration](create-dynamic-device-group-for-specific-configuration.md).
+[Create a filter](create-filter.md).
