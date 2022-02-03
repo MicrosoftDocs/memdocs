@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 01/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -136,7 +136,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
   This feature applies to:  
   - macOS 10.13 and newer
 
-- **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
+- **Block screenshots and screen recording**: **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)  
 

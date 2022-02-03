@@ -60,7 +60,7 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Co-existence with Microsoft Endpoint Configuration Manager
 
-When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). In some environments it may be desired to use Security Management for Microsoft Defender. When using Security Management for Microsoft Defender with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
+When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](../../configmgr/tenant-attach/endpoint-security-get-started.md). In some environments it may be desired to use Security Management for Microsoft Defender. When using Security Management for Microsoft Defender with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
 
 ### Active Directory joined devices
 
@@ -90,4 +90,4 @@ Due to the limited scope of Server core installations, these are not supported b
 
 ## Next steps
 
-[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)  
+[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)

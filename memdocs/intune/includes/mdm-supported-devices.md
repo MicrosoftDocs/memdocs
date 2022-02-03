@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 10/05/2021
+ms.date: 01/19/2022
 ms.localizationpriority: high
 ---
 
@@ -16,8 +16,10 @@ ms.localizationpriority: high
 
 ### Google
 
-- Android 6.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
-- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
+- Android 8.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
+- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)  
+
+[!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Microsoft
 
@@ -31,6 +33,7 @@ ms.localizationpriority: high
 - Surface Hub
 - Windows 10 (Home, S, Pro, Education, and Enterprise versions)
 - Windows 10 and Windows 11 Cloud PCs on Windows 365
+- Windows 10 Enterprise 2021 LTSC
 - Windows 10 Enterprise 2019 LTSC
 
   For more information about managing devices running Windows 10 2019 LTSC, see [What's new in Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019)
