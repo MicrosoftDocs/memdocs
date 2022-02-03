@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/01/2022
+ms.date: 02/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -195,14 +195,6 @@ For corporate devices, data about managed and unmanaged apps continues to be inc
 The remote help page in the Microsoft Endpoint Manager admin center is moving and will be directly under **Tenant administration** instead of **Connectors and tokens**. 
 
 For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
-
-<!-- ***********************************************-->
-
-## Scripting
-
-### Intune Data Warehouse updates<!-- 9370034 -->
-
-The `applicationInventory` entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 <!-- ***********************************************-->
 
