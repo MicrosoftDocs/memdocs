@@ -97,7 +97,7 @@ The following table lists the various options for *assigning* apps to users and 
 The app is now assigned to the groups that you selected. For more information about including and excluding app assignments, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 
 > [!Tip]
-> Intune supports assigning apps to nested groups too. For example, if you assigned an app to the "Enineering Global" group and have "Engineering APAC", "Engineering EMEA" and "Engineering US" nested as child groups, the members of those child groups will also be targeted with the assignment.
+> Intune supports assigning apps to nested groups too. For example, if you assigned an app to the "Engineering Global" group and have "Engineering APAC", "Engineering EMEA" and "Engineering US" nested as child groups, the members of those child groups will also be targeted with the assignment.
 
 ## How conflicts between app intents are resolved
 
