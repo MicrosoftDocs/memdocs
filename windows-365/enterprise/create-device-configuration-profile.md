@@ -47,8 +47,13 @@ Now that you’ve created a dynamic device group or a filter for all Cloud PCs, 
 7. Select **Next**.
 8. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 9. On the **Assignments** page, choose the following selections, based on if you're using a dynamic device group or a filter:
+   
    a. **Dynamic device group**: Select **Add groups** > search for and select the dynamic device group for all Cloud PCs > **Select**.
-   b. **Filter**: Select **Add all devices**, **Edit filter** > **Include filtered devices in assignment** > search for and select the filter for all Cloud PCs.
+   
+   b. **Filter**: Select an existing user group, **Edit filter** > **Include filtered devices in assignment** > search for and select the filter for all Cloud PCs.
+   
+   c. **Filter**: Select **Add all devices** or **Add all users**, **Edit filter** > **Include filtered devices in assignment** > search for and select the filter for all Cloud PCs.
+   
 10. Choose **Select** > **Next**.
 11. On the **Applicability Rules** page, select **Next**.
 12. On the **Review + create** page, review the settings. You’ll see all the settings you selected along with the assignment to “All Cloud PCs”.
