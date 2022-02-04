@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 02/04/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -115,7 +115,7 @@ Check the device compliance reports for the following error codes and insight in
 - 65009: Invalid json for the discovered setting
 - 65010: Invalid datatype for the discovered setting
 
-To see errors related to the PowerShell script, add the following line to the end of the PowerShell script file: `return $hash | ConvertTo-Json -Compress`
+To see errors related to the PowerShell script, ensure the following line is at the end of the PowerShell script file: `return $hash | ConvertTo-Json -Compress`
 
 ### PowerShell scripts aren’t visible to select, or remain visible after being deleted
 
