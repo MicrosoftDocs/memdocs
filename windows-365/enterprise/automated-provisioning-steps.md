@@ -40,7 +40,7 @@ There are three stages that Windows 365 automatically completes for Cloud PC pro
 
 ## Core provisioning
 
-Core provisioning is optimized to only perform absolutely necessary steps to make sure a Cloud PC is provisioned successfully.
+Core provisioning is optimized to only perform necessary steps to make sure a Cloud PC is provisioned successfully.
 
 1. **Allocate Azure capacity**: When provisioning first begins, Windows 365 allocates Azure capacity in the customer’s supported region of choice. Customers don’t need to manage capacity and allocation manually.
 2. **Create VM**: A virtual machine is created based on the Windows 365 license assigned to the user. Each Windows 365 license includes hardware capacity information. The VM is created with these specs.
@@ -74,7 +74,7 @@ After core provisioning is complete, Windows 365 optimizes the configuration to 
 
 Unlike core provisioning, if one or more of these optimizations fail for some reason, provisioning will still succeed. The Cloud PC will be marked as **Success with warnings** and the process will move onto the assignment stage.
 
-In the case of failure, you can manually trigger a reprovisioning if you prefer to see post provisioning configuration succeed.
+If an optimization fails, you can manually trigger a reprovisioning if you prefer to see post provisioning configuration succeed.
 
 ## Assignment
 

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Edit on-premises network connection
 
-All [on-premises network connections](on-premises-network-connections.md) (OPNC) are periodically checked to ensure that the environment is ready for use when provisioning Cloud PCs. If these [checks](health-checks.md) fail, you may need to need to fix your networking setup on Azure or edit one of the properties provided.
+All [on-premises network connections](on-premises-network-connections.md) (OPNC) get periodically checked to make sure that the environment is ready for provisioning Cloud PCs. If these [checks](health-checks.md) fail, you may need to fix your networking setup on Azure or edit one of the properties provided.
 
 To edit an on-premises network connection:
 
@@ -39,7 +39,7 @@ To edit an on-premises network connection:
 
 After the edits have been saved, the OPNC checks are run to verify the configuration.
 
-You cannot edit an OPNC if it is running checks. You must wait for the checks to pass/fail before edit functionality becomes available.
+You can't edit an OPNC if it's running checks. You must wait for the checks to pass/fail before edit functionality becomes available.
 
 <!-- ########################## -->
 ## Next steps

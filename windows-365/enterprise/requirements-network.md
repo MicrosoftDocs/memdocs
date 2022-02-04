@@ -45,9 +45,9 @@ To use your own network and provision Azure AD joined Cloud PCs, you must meet t
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
-To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, as well as the following:
+To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, and the following:
 
-- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this, define your AD DS DNS servers as the DNS servers for the virtual network.
+- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To support this resolution, define your AD DS DNS servers as the DNS servers for the virtual network.
 - The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 
 ## Allow network connectivity

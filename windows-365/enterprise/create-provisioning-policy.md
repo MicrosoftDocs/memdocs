@@ -30,7 +30,10 @@ ms.collection: M365-identity-device-management
 
 # Create provisioning policies
 
-Cloud PCs are created and assigned to users based on provisioning policies. These policies hold key provisioning rules and settings that let the Windows 365 service set up and configure the right Cloud PCs for your users. After provisioning policies are created and assigned to the Azure AD user security groups or Microsoft 365 Groups, the Windows 365 service checks for appropriate licensing for each user and configures the Cloud PCs accordingly.
+Cloud PCs are created and assigned to users based on provisioning policies. These policies hold key provisioning rules and settings that let the Windows 365 service set up and configure the right Cloud PCs for your users. After provisioning policies are created and assigned to the Azure AD user security groups or Microsoft 365 Groups, the Windows 365 service:
+
+1. Checks for appropriate licensing for each user.
+2. Configures the Cloud PCs accordingly.
 
 A few things to keep in mind:
 
@@ -51,11 +54,11 @@ A few things to keep in mind:
 4. For **On-premises network connection**, select the connection to use for this policy > **Next**.
 5. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
-    - **Custom image**:  Choose **Select** > select an image from the list > **Select**. This will show the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
+    - **Custom image**:  Choose **Select** > select an image from the list > **Select**. You'll see the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
 6. Select **Next**.
 7. On the **Configuration** page, choose a language pack in the dropdown. The selected language pack will be installed on Cloud PCs provisioned with this policy. Select **Next**.
 8. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**.
-9. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete, depending on when the Azure AD connect sync last happened.
+9. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete The time depends on when the Azure AD connect sync last happened.
 
 <!-- ########################## -->
 ## Next steps

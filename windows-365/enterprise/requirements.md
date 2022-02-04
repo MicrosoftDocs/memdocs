@@ -36,9 +36,9 @@ To use Cloud PCs, you must meet the following requirements:
 
 None, if you plan on provisioning Azure AD joined Cloud PCs on a Microsoft hosted network.
 
-If you choose to provision Cloud PCs on your own network, an active Azure subscription with the following configurations are required:
+If you choose to provision Cloud PCs on your own network, an active Azure subscription with the following configurations is required:
 
-- Sufficient permissions to grant Windows 365 each of the following:
+- Sufficient permissions to grant Windows 365:
   - A reader role on the subscription.
   - Network contributor permissions on the resource group.
   - A network contributor role on the vNet.
@@ -57,7 +57,7 @@ None, if you plan on provisioning Azure AD joined Cloud PCs on a Microsoft hoste
 If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following configurations on your domain are required:
 
 - If an organizational unit is specified, ensure it exists and is valid.
-- An Active Directory user account with sufficient permissions to join the computer into the specified organizational unit within the Active Directory domain. If you do not specify an organizational unit, the user account must have sufficient permissions to join the computer to the Active Directory domain.
+- An Active Directory user account with sufficient permissions to join the computer into the specified organizational unit within the Active Directory domain. If you don't specify an organizational unit, the user account must have sufficient permissions to join the computer to the Active Directory domain.
 - User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Azure Active Directory.
 
 ## Licensing requirements
@@ -76,7 +76,7 @@ You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.c
 
 ## Supported Azure regions for Cloud PC provisioning
 
-Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we leverage features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
+Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
 
 - US Central
 - US East

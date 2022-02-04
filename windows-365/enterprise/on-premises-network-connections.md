@@ -37,7 +37,7 @@ An on-premises network connection (OPNC) is an object in the Microsoft Endpoint 
 
 ## Network connection types
 
-There are two kinds of OPNCs based on their join type. Both let you manage traffic and Cloud PC access to network based resources but they ave different connectivity requirements.
+There are two kinds of OPNCs based on their join type. Both let you manage traffic and Cloud PC access to network based resources but they have different connectivity requirements.
 
 - **Azure AD Join**: Doesn't require connectivity to a Windows Server Active Directory (AD) domain.
 - **Hybrid Azure AD Join**: Requires connectivity to a Windows Server AD domain. You must provide the AD domain details when you [create the OPNC](create-on-premises-network-connection.md).
@@ -47,15 +47,15 @@ There are two kinds of OPNCs based on their join type. Both let you manage traff
 
 When a Cloud PC is provisioned, the information in the OPNC is used by the provisioning policy to provision the Cloud PC the Azure subnet. The information required in an OPNC includes:
 
-- **Network details**: The Azure subscription, resource group, virtual network, and subnet that the Cloud PC will be associated with. When a provisioning policy runs, it creates a Cloud PC in the Microsoft hosted Azure subscription. To connect to a customers on-premises network, a virtual network interface card (vNic) is injected into a customer provided Azure virtual network (vNet). To create this vNic, Windows 365 needs sufficient access to an Azure subscription.
+- **Network details**: The Azure subscription, resource group, virtual network, and subnet that the Cloud PC will be associated with. When a provisioning policy runs, it creates a Cloud PC in the Microsoft hosted Azure subscription. To connect to a customers on-premises network, a virtual network interface card (vNic) is injected into a customer-provided Azure virtual network (vNet). To create this vNic, Windows 365 needs sufficient access to an Azure subscription.
 - **Active Directory domain**: The Active Directory domain to join, an Organizational Unit (OU) destination for the computer object, and Active Directory user credentials with sufficient permissions to perform the domain join. When a provisioning policy runs, the Cloud PC is joined to this Active Directory domain. The credentials will be stored securely in the Windows 365 service.
 
-During provisioning, the Cloud PC is connected to the Azure subnet and joined to a domain (either Windows Server Active Directory or Azure Active Directory (Azure AD)). This results in a Cloud PC that is:
+During provisioning, the Cloud PC is connected to the Azure subnet and joined to a domain (either Windows Server Active Directory or Azure Active Directory (Azure AD)). This process results in a Cloud PC that is:
 
 - On your network.
 - Registered to Azure AD.
 - Enrolled into Microsoft Endpoint Manager.
-- Ready to accept user sign in requests.
+- Ready to accept user sign-in requests.
 
 The OPNC settings are applied to the Cloud PC only at the time of provisioning.
 
@@ -72,7 +72,7 @@ While this first OPNC health check is underway, you can’t assign it to a provi
 
 ## Periodic health checks
 
-After provisioning, the information in an OPNC is also used to monitor the connection health between your network-based resources and the Cloud PC hosted in the Microsoft hosted subscription. Windows 365 will report configuration issues that may cause provisioning failures or poor end-user experiences. This reduces your management overhead. For more information on these periodic checks, see [On-premises network connection health checks](health-checks.md).
+After provisioning, the information in an OPNC is also used to monitor the connection health between your network-based resources and the Cloud PC hosted in the Microsoft hosted subscription. Windows 365 will report configuration issues that may cause provisioning failures or poor end-user experiences. This monitoring reduces your management overhead. For more information on these periodic checks, see [On-premises network connection health checks](health-checks.md).
 
 ## Health check frequency
 
@@ -103,7 +103,7 @@ For a full list of requirements, see [Windows 365 requirements](requirements.md)
 
 Changing the settings in an OPNC won’t affect Cloud PCs previously provisioned with that OPNC. Only Cloud PCs provisioned after the changes to the OPNC will reflect such later changes.
 
-If you want to change the OPNC related settings on a previously provisioned Cloud PC, you must reprovision the Cloud PC. This is a destructive action, so be sure this is an action you really want to take. For more information, see [reprovisioning](provisioning.md#reprovisioning).  
+If you want to change the OPNC related settings on a previously provisioned Cloud PC, you must reprovision the Cloud PC. Reprovisioning is a destructive action, so be sure it's an action you really want to take. For more information, see [reprovisioning](provisioning.md#reprovisioning).  
 
 ## Delete an on-premises network connection
 
@@ -116,13 +116,13 @@ After completing either of these operations, you can delete the OPNC.
 
 ## Maximum on-premises network connections
 
-Each tenant has a limit of 10 on-premises network connections. If your organization needs more than 10 on-premises network connections, please contact support.
+Each tenant has a limit of 10 on-premises network connections. If your organization needs more than 10 on-premises network connections, contact support.
 
 ## User sign in
 
 When users attempt to sign in to their Cloud PC, user authentication occurs.
 
-For Hybrid Azure AD Join OPNCs, the OPNC is used to route the authentication request to your domain controllers. If the OPNC or the network connection to your domain is unhealthy, user sign in can't occur. Windows cached credentials can't be used over the remote desktop channel, so domain controller availability is critical. Ensure your network is stable or place a domain controller server on the same subnet as your Cloud PCs.
+For Hybrid Azure AD Join OPNCs, the OPNC is used to route the authentication request to your domain controllers. If the OPNC or the network connection to your domain is unhealthy, user sign-in can't occur. Windows cached credentials can't be used over the remote desktop channel, so domain controller availability is critical. Ensure your network is stable or place a domain controller server on the same subnet as your Cloud PCs.
 
 For Azure AD Join OPNCs, the OPNC is used to route the authentication request to Azure AD. Windows cached credentials can’t be used over the remote desktop channel, so connectivity to Azure AD is critical.
 
