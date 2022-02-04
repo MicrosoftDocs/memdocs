@@ -72,15 +72,15 @@ Some other possible causes for Cloud PC connection failures include:
 
 ### Using a client PC with Remote Credential Guard enabled
 
-**Possible solution**: Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This is only possible using a VPN solution. Using a KDC proxy is not currently available for Windows 365.
+**Possible solution**: Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This connection is only possible using a VPN solution. Using a KDC proxy isn't currently available for Windows 365.
 
 ## Other troubleshooting steps
 
 ### Move the Cloud PC to a new organizational unit (OU) with no group policies
 
-Connection problems may be caused by settings delivered by group policies. To test this, you can move the Cloud PC to a separate OU that’s blocked from receiving group policies.
+Connection problems may be caused by settings delivered by group policies. To test this possible cause, you can move the Cloud PC to a separate OU that’s blocked from receiving group policies.
 
-### On-premises Group Policy Objects (GPO) may affect a Cloud PC's provisioning or behaviour
+### On-premises Group Policy Objects (GPO) may affect a Cloud PC's provisioning or behavior
 
 Settings delivered by group policies may cause connection problems. To test this, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
