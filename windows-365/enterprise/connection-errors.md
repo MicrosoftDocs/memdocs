@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2022
+ms.date: 02/08/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -36,9 +36,9 @@ The following errors can occur when connecting to a Cloud PC.
 
 ### We couldn't connect because there are currently no available resources
 
-**Potential cause**: The Cloud PC hasn’t completed provisioning.
+**Potential cause**: There may be a resource issue on your Cloud PC.
 
-**Possible solution**: Wait for provisioning to complete. Provisioning time can be variable and may exceed 45 minutes or more.
+**Possible solution**: Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > select the cog icon next to the Cloud PC > **Restart**.
 
 ### We couldn't connect to the gateway because of an error. If this keeps happening, ask your admin or tech support for help.
 
@@ -56,7 +56,7 @@ The following errors can occur when connecting to a Cloud PC.
 
 **Potential cause**: This error can occur when the Cloud PC’s processor is over-utilized.
 
-**Possible solution**: If the issue persists, try restarting the Cloud PC from the admin portal.
+**Possible solution**: If the issue persists, sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > select the cog icon next to the Cloud PC > **Restart**.
 
 ## Other connection error causes
 
@@ -68,17 +68,21 @@ Some other possible causes for Cloud PC connection failures include:
 
 ### Signing in to the Cloud PC with Azure Active Directory-only user accounts
 
-**Possible solution**: ??
+**Possible solution**: Windows 365 is currently a Hybrid Azure Active Directory (Azure AD) Join device, requiring users to sign in with their on-premises Active Directory account.
 
 ### Using a client PC with Remote Credential Guard enabled
 
-**Possible solution**: Turn off Remote Credential Guard on the client PC used to access the Cloud PC.
+**Possible solution**: Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This is only possible using a VPN solution. Using a KDC proxy is not currently available for Windows 365.
 
 ## Other troubleshooting steps
 
 ### Move the Cloud PC to a new organizational unit (OU) with no group policies
 
 Connection problems may be caused by settings delivered by group policies. To test this, you can move the Cloud PC to a separate OU that’s blocked from receiving group policies.
+
+### On-premises Group Policy Objects (GPO) may affect a Cloud PC's provisioning or behaviour
+
+Settings delivered by group policies may cause connection problems. To test this, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
 ## Next steps
 
