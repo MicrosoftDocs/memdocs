@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Rollout options for Windows Updates in Microsoft Intune
 
-Use rollout options in Microsoft Intune policies for *Feature updates for Windows 10 and later*. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to to devices that receive your policies.
+Use rollout options in Microsoft Intune policies for *Feature updates for Windows 10 and later*. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to devices that receive your policies.
 
 > [!TIP]  
 > The default behavior for Windows Update is to make an update available to an assigned device  right away. This doesn’t mean the update will install right away. Instead, when an update is made available, the device becomes eligible to install it. Before a device can install an available update, the device must connect to Windows Update and scan for updates. When the need for an update is confirmed and the device is eligible, the  Windows Update service then offers the update to that device. After a device completes the update, it is then dependent on user behavior and other settings like Deadline.
@@ -56,11 +56,11 @@ To configure this option, you set the following values. Windows Update uses thes
 
 - **Days between groups** – Windows Update uses this value to determine how many offer groups to use when making the update available to devices.
 
-  For example, you set the first group availability to be January 1, and the final group of availability to be January 10. Then you set three days between groups. The results are that Windows Update creates four groups to use for making the update available. Windows Update then makes the update available to devices in the first group on the 1st, available to devices in the next group on the 4th, and so on. The update is offered to devices in the last group on the 10th.  In this example, a quarter of the devices that receive the policy are assigned to each group, and devices can only receive the update offer after the group they're assigned to becomes eligible.
+  For example, you set the first group availability to be January 1, and the final group of availability to be January 10. Then you set three days between groups. The results are that Windows Update creates four groups to use for making the update available. Windows Update then makes the update available to devices in the first group on January 1, available to devices in the next group on January 4, and so on. The update is offered to devices in the last group on the 10th.  In this example, a quarter of the devices that receive the policy are assigned to each group, and devices can only receive the update offer after the group they're assigned to becomes eligible.
 
 The following behaviors apply to the management of offer groups:
 
-- Windows Update assigns targeted devices to the groups randomly, keeping groups evenly-sized.
+- Windows Update assigns targeted devices to the groups randomly, keeping groups evenly sized.
 
 - If you edit a policy to change the date for the first or final group availability, or change the number of days between groups for the policy:
   - Windows Update recalculates the number of groups to use, if necessary.
