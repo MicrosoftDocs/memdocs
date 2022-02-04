@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 In this example, we’ll apply a **Device restrictions** [device configuration profile](/mem/intune/configuration/device-profile-create) and apply it to **All Cloud PCs**. You will need either a dynamic device group or a filter to accomplish this task.
 
 > [!NOTE]
-> If you haven’t already, follow the steps to either [create a dynamic device group containing all Cloud PCs](create-dynamic-device-group-all-cloudpcs.md#create-a-dynamic-device-group-for-all-cloud-pcs) or [create a filter for all Cloud PCs](create-filter#create-a-filter-for-all-cloud-pcs), then return here to create the device configuration profile.
+> If you haven’t already, follow the steps to either [create a dynamic device group containing all Cloud PCs](create-dynamic-device-group-all-cloudpcs.md#create-a-dynamic-device-group-for-all-cloud-pcs) or [create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs), then return here to create the device configuration profile.
 
 Now that you’ve created a dynamic device group or a filter for all Cloud PCs, you can target policies to apply to all Cloud PCs in the tenant. To do so, follow these steps:
 
