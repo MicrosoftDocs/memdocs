@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2021 
+ms.date: 02/08/2022 
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -34,15 +34,21 @@ Windows 365 is a cloud-based service that lets users connect through the interne
 
 Each customer has its specific requirements based on the workload they use to pre-calculate the network requirements of their Cloud PC environment.  
 
+>[!Note]
+>This article only applies if you plan on provisioning Cloud PCs on your own Azure virtual network, as opposed to a Microsoft-hosted network.
+
 ## General network requirements
 
-To use Cloud PCs, you must meet the following requirements:
+To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
 
 - Azure virtual network: You must have a virtual network (vNET) in your Azure subscription in the same region as where the Windows 365 desktops are created.
-- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this, define your AD DS DNS servers as the DNS servers for the virtual network.
-- The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
+
+To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, as well as the following:
+
+- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this, define your AD DS DNS servers as the DNS servers for the virtual network.
+- The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 
 ## Allow network connectivity
 
