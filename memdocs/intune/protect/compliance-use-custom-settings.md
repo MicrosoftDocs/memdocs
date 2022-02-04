@@ -89,14 +89,13 @@ During the workflow to create a compliance policy, on the *Compliance settings* 
 5. Complete the compliance policy creation task and assign the policy to devices.
 
 > [!NOTE]  
-> When a Windows device receives a compliance policy with custom settings, the device runs an MSI that installs services that enable the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
+> When a Windows device receives a compliance policy with custom settings, it checks for the presence of [Intune Management Extensions](../apps/intune-management-extension.md). If not found, the device runs an MSI that installs the extensions, enabling the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
 >
 > - Checking for new or updated PowerShell scripts every eight hours.
 > - Running the discovery scripts every eight hours.
 > - Running scripts that download when a user selects Check Compliance on the device. However, there is no check for new or updated scripts when Check Compliance is run.
 > - Don't support push notifications to enable custom compliance to run on demand.
 >
-> For more  information, see [Add PowerShell Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune.
 
 ## Monitor custom compliance policy
 
