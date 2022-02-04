@@ -79,6 +79,9 @@ The following are the configurations you can make:
 
 - **Local group**:  Select one or more groups from the drop-down. These groups will all apply the same Group and user action  to the users you assign.  You can create more than one grouping of local groups in a single profile and assign different actions and groups of users to each grouping of local groups.
 
+> [!NOTE]
+> The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [Managing administrator privileges using Azure AD groups](https://docs.microsoft.com/azure/active-directory/devices/assign-local-admin#:~:text=Administrator%20privileges%20using%20both%20policies%20are%20evaluated%20only%20for%20the%20following%20well%2Dknown%20groups%20on%20a%20Windows%2010%20device%20%2D%20Administrators%2C%20Users%2C%20Guests%2C%20Power%20Users%2C%20Remote%20Desktop%20Users%20and%20Remote%20Management%20Users.) documentation. 
+
 - **Group and user action**: Configure the action to apply to the selected groups. This action will apply to the users you select for this same action and grouping of local accounts.  Actions you can choose include:
   - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy are not changed.
   - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy are not changed.
