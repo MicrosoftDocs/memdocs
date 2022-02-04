@@ -49,6 +49,7 @@ With the Windows 365 service, you can:
 - Manage your Cloud PCs like your organization’s other devices in [Microsoft Endpoint Manager](/intune/). Based on your configuration, Cloud PCs are either:
   - Joined to your enterprise Active Directory domain and synced to Azure AD.
   - Directly joined to Azure AD.
+  
   Regardless of the join type, your Cloud PCs are fully managed by Microsoft Endpoint Manager. Windows 365 is fully integrated into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are seamlessly managed in Microsoft Endpoint Manager like any other supported device, including configuration, apps, and updates.
 - [Configure provisioning policies](create-provisioning-policy.md) to create custom Cloud PC configurations.
 - Use device groups, policies, and security baselines to customize your Cloud PC configurations to support different user needs.

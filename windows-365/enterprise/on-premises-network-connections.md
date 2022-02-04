@@ -129,5 +129,6 @@ For Azure AD Join OPNCs, the OPNC is used to route the authentication request to
 <!-- ########################## -->
 ## Next steps
 
-[Learn about device images](device-images.md).
+[Learn about device images](device-images.md)
+
 [Create an on-premises network connection](create-on-premises-network-connection.md)
