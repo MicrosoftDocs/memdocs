@@ -44,7 +44,7 @@ Before you can add custom settings to a policy, you’ll need to prepare the Pow
 
 - The JSON file defines the settings you want to base your custom compliance on, and the acceptable values for those settings. You can also configure messages for device users for how to restore compliance for each setting. You’ll upload the file when you create a compliance policy that will include custom compliance settings.
 
-After you’ve deployed custom compliance settings and devices have reported back, you’ll be able to view the results alongside the built-in compliance setting details in the Microsoft Endpoint Manager admin center.  Custom settings can also be used for conditional access decisions, the same as the built-in compliance settings. 
+After you’ve deployed custom compliance settings and devices have reported back, you’ll be able to view the results alongside the built-in compliance setting details in the Microsoft Endpoint Manager admin center.  Custom compliance settings will be used for conditional access decisions, the same way built-in compliance settings are.  Together they form a compound rule set, equally affecting the device compliance state.
 
 ## Prerequisites
 
