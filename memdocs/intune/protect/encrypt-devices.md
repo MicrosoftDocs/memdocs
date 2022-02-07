@@ -73,9 +73,6 @@ Use one of the following procedures to create the policy type you prefer.
 
 4. On the **Configuration settings** page, configure settings for BitLocker to meet your business needs.  
 
-   > [!TIP]
-   > If you want to enable BitLocker silently, you must use a Endpoint protection template as part of a device configuration profile and not an Endpoint security policy. See [Silently enable BitLocker on devices](#silently-enable-bitlocker-on-devices) in this article for additional prerequisites and the specific setting configurations you must use.
-
    Select **Next**.
 
 5. On the **Scope (Tags)** page, choose **Select scope tags** to open the Select tags pane to assign scope tags to the profile.
