@@ -5,8 +5,8 @@ title: Use bulk device actions in Microsoft Intune device.
 titleSuffix:
 description: Use bulk remote device actions.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 09/27/2021
 ms.topic: how-to

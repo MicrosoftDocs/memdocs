@@ -82,6 +82,12 @@ items:
           href: app-sideload-windows.md
         - name: macOS LOB apps
           href: lob-apps-macos.md
+        - name: macOS app management
+          items:
+          - name: Intune management agent for macOS
+            href: lob-apps-macos-agent.md
+          - name: Add a macOS DMG app
+            href: lob-apps-macos-dmg.md                    
         - name: Win32 app management
           items:
           - name: Win32 app management overview

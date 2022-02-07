@@ -4,8 +4,8 @@
 title: Rename a device with Microsoft Intune
 description: Rename a device by using Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 09/27/2021
 ms.topic: how-to

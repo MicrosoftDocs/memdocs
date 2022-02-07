@@ -5,8 +5,8 @@ title: Network requirements and bandwidth details for Microsoft Intune
 titleSuffix: 
 description: Review network configuration requirements and bandwidth details for Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 05/17/2019
 ms.topic: conceptual

@@ -339,11 +339,13 @@ Preinstall the Configuration Manager client on a reference computer that you use
 
 2. At a command prompt, type `net stop ccmexec` to stop the SMS Agent Host service (CcmExec.exe) on the reference computer.  
 
-3. Delete the SMSCFG.INI file from the Windows folder on the reference computer.  
+3. Delete the SMSCFG.INI file from the Windows folder on the reference computer.
 
-4. Remove any certificates that are stored in the local computer store on the reference computer. For example, if you use PKI certificates, before you image the computer, remove the certificates in the **Personal** store for **Computer** and **User**.  
+4. Remove the certificates from the local computer's **SMS** certificate store.   
 
-5. If the clients are installed in a different Configuration Manager hierarchy than the hierarchy of the reference computer, remove the trusted root key from the reference computer.  
+5. Remove any other valid client authentication certificates that are stored in the local computer store on the reference computer. For example, if you use PKI certificates, before you image the computer, remove the certificates in the **Personal** store for **Computer** and **User**.  
+
+6. If the clients are installed in a different Configuration Manager hierarchy than the hierarchy of the reference computer, remove the trusted root key from the reference computer.  
 
     > [!NOTE]  
     > If clients can't query Active Directory Domain Services to locate a management point, they use the trusted root key to determine trusted management points. If you deploy all imaged clients in the same hierarchy as that of the master computer, leave the trusted root key in place.

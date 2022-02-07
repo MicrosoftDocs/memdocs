@@ -4,13 +4,13 @@
 title: Quickstart - Create and assign a custom role in Intune
 description: Quickstart - Create and assign a custom role for a remote device manager.
 services: microsoft-intune
-author: ErikjeMS
+author: Smritib17
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
-ms.author: erikje
+ms.author: smbhardwaj
 ms.assetid: 0b3ac749-4a61-4717-bf08-e0e6a15c3b0a
 # optional metadata
 

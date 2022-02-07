@@ -72,7 +72,7 @@ You can also choose to grant permission for all tenant accounts to use the app w
 
 [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
-[Getting started with Azure AD authentication](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth).
+[Getting started with Azure AD authentication](/azure/devops/integrate/get-started/authentication/oauth).
 
 [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
 
