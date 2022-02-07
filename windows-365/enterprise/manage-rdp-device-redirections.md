@@ -42,18 +42,18 @@ The following redirections can be managed by using the appropriate setting:
 | --- | --- |
 | Audio input | Allow audio recording redirection |
 | Audio output | Allow audio and video playback redirection |
-| Cameras | Do not allow video capture redirection |
-| Clipboard | Do not allow Clipboard redirection |
-| Printers | Do not allow client printer redirection |
-| COM ports | Do not allow COM port redirection |
-| Drives | Do not allow drive redirection |
-| Smartcards | Do not allow smart card device redirection |
-| USB drives| Do not allow supported Plug and Play device redirection |
+| Cameras | Don't allow video capture redirection |
+| Clipboard | Don't allow Clipboard redirection |
+| Printers | Don't allow client printer redirection |
+| COM ports | Don't allow COM port redirection |
+| Drives | Don't allow drive redirection |
+| Smartcards | Don't allow smart card device redirection |
+| USB drives| Don't allow supported Plug and Play device redirection |
 
-There are two mechanisms to control these redirections:
+There are two ways to manage these redirections:
 
-- Settings Catalog: Available as a device configuration policy option in Microsoft Endpoint Manager and can be used to manage both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
-- Group Policy Object (GPO): Available as part of Windows Server Active Directory and can be used to manage hybrid Azure AD join Cloud PCs only.
+- Settings Catalog: Use a device configuration policy in Microsoft Endpoint Manager. Supports both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
+- Group Policy Object (GPO): Use GPOs in Windows Server Active Directory. Supports hybrid Azure AD join Cloud PCs only.
 
 Follow the appropriate guidance to manage RDP device redirections.
 
@@ -80,7 +80,7 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 8. On the *Review + create** page, select **Create**.
 
-See [settings catalog](/mem/intune/configuration/settings-catalog) for any additional guidance on creating a device configuration policy through the settings catalog.
+For more help using the settings catalog to create a device configuration policy, see [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog).
 
 > [!Note]
 > The settings catalog configures policies by using the Policy CSP. To make sure that these settings take precedence over a conflicting GPO, you can also configure the [ControlPolicyConflict CSP]( /windows/client-management/mdm/policy-csp-controlpolicyconflict#controlpolicyconflict-policies).
@@ -110,7 +110,7 @@ The following table lists which peripherals are supported for redirection based 
 | Scanners | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) |
 | Screen capture protection | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) |
 | Serial port | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) |
-| Smart cards | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) (Windows sign in not supported) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) |
+| Smart cards | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) (Windows sign-in isn't supported) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) |
 | Speakers | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) |
 | Start menu integration | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) |
 | Teams AV | ![Supported](./media/manage-rdp-device-restrictions/checkmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) | ![Not supported](./media/manage-rdp-device-restrictions/xmark.png) |
