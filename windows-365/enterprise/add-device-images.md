@@ -39,22 +39,21 @@ If you want to use a custom device image, you can add it into your Azure subscri
 
 ## Add a custom device image
 
-You can upload the custom image to the Windows 365 service by following these steps:
+For both hybrid Azure Active Directory (Azure AD) join and Azure AD join connections, you can upload the custom image to the Windows 365 service by following these steps:
 
-> [!NOTE]
-> For Azure AD Join on-premises network connections (OPNC) without your own network, you can upload custom images from your Azure subscription. You must first [create an on-premises network connection](create-on-premises-network-connection.md) with the Azure subscription associated with the targeted custom images.
+1. For Azure AD join on-premises network connections (OPNC) without your own network, you can upload custom images from your Azure subscription. You must first [create an on-premises network connection](create-on-premises-network-connection.md) with the Azure subscription associated with the targeted custom images.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
+3. Select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
 ![Screenshot of add device image](./media/add-device-images/add-device-image.png)
 
-3. In the **Add image** pane, provide the following information:
+4. In the **Add image** pane, provide the following information:
     - **Image name**: The name of the image you want to add.
     - **Image version**: A version number of the image with this format: Major(int).Minor(int).Patch(int) format. For example: 0.0.1, 1.5.13.
     - **Source Image**: Choose an image to add. The list will populate with all custom images from your subscription that meet the pre-requisites.
 
-3. Select **Add** to add the image to your device image list.
+5. Select **Add** to add the image to your device image list.
 
 ## Delete a custom device image
 
