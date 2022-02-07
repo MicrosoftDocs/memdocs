@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 02/11/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -246,3 +246,13 @@ The following are common Linux commands you might use with a tunnel server.
 - `curl <URL>` – Checks access to a website. For example: `curl https://microsoft.com`
 
 - `./<filename>` -  Run a script.
+
+### Manually load ip_tables
+
+Use the following commands to check for, and manually load if necessary, ip_tables in the Linux server kernel. Use the sudo context:
+
+- Validate the presence of ip_tables on the server: `lsmod |grep ip_tables`
+
+- Create a config file that will get ip_tables loaded into kernel during boot time: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
+
+- To load ip_tables into the kernel immediately: `/sbin/modprobe ip_tables`
