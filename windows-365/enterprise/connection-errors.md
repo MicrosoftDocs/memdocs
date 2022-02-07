@@ -32,12 +32,12 @@ ms.collection: M365-identity-device-management
 
 The following errors can occur when connecting to a Cloud PC.
 
-## Errors when connecting to an Azure AD Join Cloud PC
+## Errors when connecting to an Azure AD join Cloud PC
 
-**Potential cause**: There a range of errors that can occur when connecting to an Azure AD Join Cloud PC, due to any one of the following reasons:
+**Potential cause**: Possible causes for connection errors include:
 
-- Windows logon works directly against Azure AD, potentially triggering Azure AD authentication controls
-- Logon attempts from the Windows desktop client to a Cloud PC uses a different protocol, called PKU2U
+- Windows sign-in works directly against Azure AD, potentially triggering Azure AD authentication controls.
+- Sign-in attempts from the Windows desktop client to a Cloud PC use a different protocol, called PKU2U.
 
 **Possible solution**: Follow the guidance to [troubleshoot connections to Azure AD joined VMs](/azure/virtual-desktop/troubleshoot-azure-ad-connections?context=/windows-365/context/pr-context).
 
