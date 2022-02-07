@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/08/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -30,13 +30,9 @@ ms.collection: M365-identity-device-management
 
 # Create on-premises network connection
 
-[On-premises network connections](on-premises-network-connections.md) (OPNC) are required so that Cloud PCs can:
+[On-premises network connections](on-premises-network-connections.md) (OPNC) let you provision Cloud PCs that are attached to a virtual network that you manage.
 
-- Be provisioned.
-- Be joined to your company’s domain.
-- Have connectivity to your organization’s on-premises resources.
-
-You can have up to 10 connections per tenant.
+You can have up to 10 OPNCs per tenant.
 
 As part of the connection process, the Windows 365 service is granted the following permissions:
 
@@ -46,12 +42,12 @@ As part of the connection process, the Windows 365 service is granted the follow
 
 ## Requirements
 
-To create a connection, you must:
+To create an OPNC, you must:
 
 - Be an [Intune Administrator in Azure AD](/azure/active-directory/roles/permissions-reference).
-- Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network with connectivity to your on-premises domain controller and network.
+- Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network.
 
-## To create an on-premises network connection
+## To create a Hybrid Azure Active Directory Join OPNC
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create connection**.
 ![Screenshot of create connection](./media/create-on-premises-network-connection/create-connection.png)
@@ -63,7 +59,7 @@ To create a connection, you must:
 6. On the **AD domain** page, provide the following information:
     - **AD domain name**: The DNS name of the Active Directory domain that you want to use for connecting and provisioning Cloud PCs. For example, corp.contoso.com.
     - **Organizational unit**: This is optional. An organizational unit (OU) is a container within an Active Directory domain, which can hold users, groups, and computers. Make sure that this OU is enabled to sync with Azure AD Connect. Provisioning will fail if this OU is not syncing.
-    - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU. 
+    - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU.
     - AD domain password: The password for the user specified above.
     - Confirm AD domain password: The password for the user specified above.
 
