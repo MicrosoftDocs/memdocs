@@ -361,8 +361,6 @@ In the context of sudo, run the following commands on your Linux server to valid
 
 In the context of sudo, run the following command on your Linux server to create a config file that will load the ip_tables into kernel during boot time: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
 
-
-
 ## Next steps
 
 [Configure Microsoft Tunnel](microsoft-tunnel-configure.md)
