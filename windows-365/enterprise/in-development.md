@@ -90,17 +90,6 @@ Administrators and users will be able to restore a Cloud PC to a state from a pr
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
-
-Intune’s remote action to Collect diagnostics will soon collect additional details from Windows 365 Cloud PCs.
-
-The new details for Windows 365 Cloud PCs include the following registry data:
-
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
-
-To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
-
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
