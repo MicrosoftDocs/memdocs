@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/01/2022
+ms.date: 02/07/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of February 7, 2022
+
+### App management
+
+#### Advanced logging setting in Company Portal app<!-- 12859998  -->
+The **Enable Advanced Logging** setting is available in the Intune Company Portal app for iOS/iPadOS and macOS. Device users can able to enable or disable advanced logging on a device. By turning on advanced logging, detailed log reports will be sent to Microsoft to troubleshoot issues. By default, the **Enable Advanced Logging** setting will be off. Device users should keep this setting off unless otherwise instructed by their organization's IT admin. For related information, see [Share Company Portal usage data with Microsoft](../user-help/turn-off-microsoft-usage-data-collection-ios.md) and [Manage Company Portal preferences for macOS](../user-help/intune-company-portal-preferences-macos.md).
 
 ## Week of January 31, 2022
 
