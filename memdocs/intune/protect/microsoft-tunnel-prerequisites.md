@@ -341,19 +341,19 @@ For more information about this tool, see [Reference for mst-cli](../protect/mic
 
 ### Manually load ip_tables
 
-While most Linux distributions include the ip_tables module, some distributions might not. For example, REHL 8.5 doesn't load the ip_tables by default.
+While most Linux distributions automatically load the ip_tables module, some distributions might not. For example, REHL 8.5 doesn't load the ip_tables by default.
 
-To check for the presence of this module, run the most recent version of mst-readiness tool on the server to validate its presence. The check for ip_tables was added to the readiness tools script on February 11 2022.
+To check for the presence of this module, run the most recent version of mst-readiness tool on the Linux server. The check for ip_tables was added to the readiness tools script on February 11 2022.
 
-If the module isn’t present, the tool will stop on the ip_tables module check. In this scenario, you can run the following commands to manually load the ip_tables module, and then validate they're now present.
+If the module isn’t present, the tool stops on the ip_tables module check. In this scenario, you can run the following commands to manually load the module.
 
 **Manually load the ip_tables module**:
 
-In the context of sudo, run the following commands on your Linux server to validate the presence of the tables, and then to manually load them if necessary:
+In the context of sudo, run the following commands on your Linux server:
 
 1. Validate the presence of ip_tables on the server: `lsmod |grep ip_tables`
 
-2. If ip_tables isn't present, run the following to load the module into the kernel immediately, without a restart:  Run `/sbin/modprobe ip_tables`
+2. If ip_tables isn't present, run the following to load the module into the kernel immediately, without a restart: `/sbin/modprobe ip_tables`
 
 3. Rerun the validation to confirm the tables are now loaded: `lsmod |grep ip_tables`
 
