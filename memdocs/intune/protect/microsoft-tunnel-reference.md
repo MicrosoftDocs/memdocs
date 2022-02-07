@@ -253,6 +253,6 @@ Use the following commands to check for, and manually load if necessary, ip_tabl
 
 - Validate the presence of ip_tables on the server: `lsmod |grep ip_tables`
 
-- Create a config file that will get ip_tables loaded into kernel during boot time: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
+- Create a config file that will load the ip_tables into kernel when the server boots: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
 
 - To load ip_tables into the kernel immediately: `/sbin/modprobe ip_tables`
