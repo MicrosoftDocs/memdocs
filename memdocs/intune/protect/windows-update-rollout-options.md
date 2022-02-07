@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 02/07/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,6 +71,28 @@ The following behaviors apply to the management of offer groups:
 - If the policy assignment changes to add or remove devices from receiving the policy:
   - New devices are distributed to the remaining offer groups.
   - For devices that are no longer targeted by the policy but were offered the update, Windows Update will attempt to retract the offer. However, the offer can’t be retracted if the device has started processing that offer.
+
+## Intelligent rollouts
+
+To enhance your use of gradual rollouts, you can configure **Intelligent rollouts**.
+
+With intelligent rollouts, the Windows Update for Business Deployment Service uses data that it collects from devices to optimize the inclusion of devices to the various offer groups. With this optimization, the first group that receives the update offer will include the fewest number of devices while including the largest pool of variations. By optimizing the membership of that first group, you have an increased opportunity to identify issues while affecting the smallest possible set of devices.
+
+To enable intelligent rollout, you use a settings catalog profile from Device configuration to enable WUfB Cloud Processing. Then, assign the profile to the same groups that are assigned to your Feature update profiles.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Go to **Devices** > **Configuration profiles** > **Create profile**.
+
+3. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog (preview)**.
+
+4. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow WUfB Cloud Processing**.  You’ll find this setting in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window.
+
+5. Set *Allow WUfB Cloud Processing* to **Enabled**.
+
+6. On the **Assignments** page, assign the profile to the same groups you use for your Feature update profiles, and then complete and *Create* this settings catalog profile, to deploy it.
+
+After the profile deploys, devices that use gradual rollouts for Feature update profiles will also have intelligent optimization applied.
 
 ## Next steps
 
