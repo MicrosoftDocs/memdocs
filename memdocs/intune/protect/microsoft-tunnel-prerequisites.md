@@ -56,7 +56,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   - Red Hat (RHEL) 8.4
   - Red Hat (RHEL) 8.5
     > [!NOTE]
-    > This version of RHEL doesn't automatically load the ip_tables module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually_load_ip_tables) after the server installs.
+    > This version of RHEL doesn't automatically load the ip_tables module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) after the server installs.
   - Ubuntu 18.04
   - Ubuntu 20.04
 
@@ -301,12 +301,11 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 Before you start a server install, we recommend you download and run the most recent version of the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
-
 - Validates that the Azure Active Directory (Azure AD) account you use to install Microsoft Tunnel has the required roles to complete enrollment.
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
 
-- Checks for the presence of the ip_tables module on the Linux server. This check was added to the script on February 11 2022, when support for RHEL 8.5 was added. RHEL 8.5 doesn’t load the ip_tables module by default. If they are missing after the Linux server installs, you must [manually load the ip_tables module](#manually_load_ip_tables).
+- Checks for the presence of the ip_tables module on the Linux server. This check was added to the script on February 11 2022, when support for RHEL 8.5 was added. RHEL 8.5 doesn’t load the ip_tables module by default. If they are missing after the Linux server installs, you must [manually load the ip_tables module](#manually-load-ip_tables).
 
 > [!IMPORTANT]
 > The readiness tool doesn't validate inbound ports, which is a common misconfiguration. After the readiness tool runs, review the [firewall prerequisites](#firewall) and manually validate your firewalls pass inbound traffic.
