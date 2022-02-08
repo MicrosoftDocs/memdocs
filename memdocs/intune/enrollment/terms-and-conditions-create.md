@@ -114,8 +114,8 @@ To edit terms and conditions:
 2. From the table, choose the terms and conditions you want to edit.  
 3. Select **Properties** and then next to **Terms**, select **Edit.**
 4. Adjust the existing content as needed. 
-5. If you edit the meaning of the terms at all, select **Require users to re-accept, and increment the version number to *next version*.**
-3. Select **Review + save+**.  
+5. If you edit the meaning of the terms at all, select the checkbox next to **Require users to re-accept, and increment the version number to *next version*.** In place of *next step*, you will see the actual version number. 
+3. Select **Review + save**.  
 4. Review the summary for your terms and conditions, and then select **Save**.  
 
 Users only have to accept the updated terms and conditions once. This means that a user associated with multiple enrolled devices will not need to accept the terms and conditions on each device.  
