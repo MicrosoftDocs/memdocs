@@ -66,12 +66,6 @@ Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These de
 
 When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States). For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
 
-### New supported Azure regions: US Central and German West Central<!--37678838 -->
-
-Two new Azure regions are now for Windows 365 Cloud PC provisioning: US Central and German West Central.
-
-For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
@@ -86,7 +80,14 @@ The new details for Windows 365 Cloud PCs include the following registry data:
 
 To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+## Provisioning
 
+### New supported Azure regions: US Central and German West Central<!--37678838 -->
+
+Two new Azure regions are now for Windows 365 Cloud PC provisioning: US Central and German West Central.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 
 <!-- ########################## -->
 ## Week of January 17, 2022
