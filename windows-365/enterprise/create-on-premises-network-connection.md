@@ -47,9 +47,10 @@ To create an OPNC, you must:
 - Be an [Intune Administrator in Azure AD](/azure/active-directory/roles/permissions-reference).
 - Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network.
 
+
 ## To create a Hybrid Azure Active Directory Join OPNC
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create connection**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create** > **Hybrid Azure AD Join**.
 ![Screenshot of create connection](./media/create-on-premises-network-connection/create-connection.png)
 2. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
 ![Screenshot of connection name](./media/create-on-premises-network-connection/connection-name.png)
@@ -66,6 +67,15 @@ To create an OPNC, you must:
 
 7. Select **Next**.
 8. On the **Review + Create** page, select **Create**.
+
+## To create an Azure Active Directory Join OPNC
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create** > **Azure AD Join (preview)**.
+2. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
+3. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy OPNC](health-checks.md), you won't be able to proceed.
+4. Select a **Virtual network** and **Subnet**.
+5. Select **Next**.
+6. On the **Review + Create** page, select **Create**.
 
 <!-- ########################## -->
 ## Next steps
