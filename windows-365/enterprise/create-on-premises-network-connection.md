@@ -50,18 +50,20 @@ To create an OPNC, you must:
 ## To create an Azure Active Directory Join OPNC
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create** > **Azure AD Join (preview)**.
+![Screenshot of create connection dropdown](./media/create-on-premises-network-connection/create-connection-dropdown.png)
 2. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
+![Screenshot of connection name](./media/create-on-premises-network-connection/create-aadj-connection.png)
 3. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy OPNC](health-checks.md), you won't be able to proceed.
-4. Select a **Virtual network** and **Subnet**.
+4. Select a **Virtual network** and **Subnet**.6
 5. Select **Next**.
 6. On the **Review + Create** page, select **Create**.
 
 ## To create a Hybrid Azure Active Directory Join OPNC
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create** > **Hybrid Azure AD Join**.
-![Screenshot of create connection](./media/create-on-premises-network-connection/create-connection.png)
+![Screenshot of create connection dropdown](./media/create-on-premises-network-connection/create-connection-dropdown.png)
 2. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
-![Screenshot of connection name](./media/create-on-premises-network-connection/connection-name.png)
+![Screenshot of connection name](./media/create-on-premises-network-connection/create-hybridaadj-connection.png)
 3. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy OPNC](health-checks.md), you won't be able to proceed.
 4. Select a **Virtual network** and **Subnet**.
 5. Select **Next**.
