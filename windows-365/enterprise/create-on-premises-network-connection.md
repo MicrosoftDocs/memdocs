@@ -53,7 +53,6 @@ To create an OPNC, you must:
 2. Depending on the type of OPNC you want to create, choose **Azure AD Join (preview)** or **Hybrid Azure AD Join**.
 ![Screenshot of create connection dropdown](./media/create-on-premises-network-connection/create-connection-dropdown.png)
 3. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
-![Screenshot of connection name](./media/create-on-premises-network-connection/create-aadj-connection.png)
 4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy OPNC](health-checks.md), you won't be able to proceed.
 5. Select a **Virtual network** and **Subnet**.
 6. Select **Next**.
