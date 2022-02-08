@@ -48,6 +48,23 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of February 7, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+## Monitor and troubleshoot
+
+### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
+
+Intune’s remote action to Collect diagnostics now collects additional details from Windows 365 Cloud PCs.
+
+The new details for Windows 365 Cloud PCs include the following registry data:
+
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
+
+To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+
+<!-- ########################## -->
 ## Week of January 17, 2022
 
 #### New documentation article: Optimize Cisco Webex on a Windows 365 Cloud PC<!--37106382-->
