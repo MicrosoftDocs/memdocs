@@ -41,7 +41,7 @@ If you want to use a custom device image, you can add it into your Azure subscri
 
 For both hybrid Azure Active Directory (Azure AD) join and Azure AD join connections, you can upload the custom image to the Windows 365 service by following these steps:
 
-1. For Azure AD join on-premises network connections (OPNC) without your own network, you can upload custom images from your Azure subscription. You must first [create an on-premises network connection](create-on-premises-network-connection.md) with the Azure subscription associated with the targeted custom images.
+1. For Azure AD join on-premises network connections (OPNC) without your own network, you must first [create an on-premises network connection](create-on-premises-network-connection.md) with the Azure subscription associated with the targeted custom images.
 
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
