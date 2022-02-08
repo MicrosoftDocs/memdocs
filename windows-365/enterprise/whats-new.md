@@ -51,9 +51,9 @@ Learn what new features are available in Windows 365 Enterprise.
 ## Week of February 7, 2022 (Service release 2201)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-## Device management
+### Device management
 
-### Support for Azure AD joined Cloud PCs<-- 35060203 36751258-->
+#### Support for Azure AD joined Cloud PCs<!-- 35060203 36751258-->
 
 Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These devices can run in either:
 
@@ -62,14 +62,14 @@ Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These de
   - You don't need to create an on-premises network connection.
 - Your own network (using an on-premises network connection)
 - 
-### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
+#### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
 
 When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States). For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-## Monitor and troubleshoot
+### Monitor and troubleshoot
 
-### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
+#### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
 
 Intune’s remote action to Collect diagnostics now collects additional details from Windows 365 Cloud PCs.
 
@@ -81,9 +81,9 @@ The new details for Windows 365 Cloud PCs include the following registry data:
 To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-## Provisioning
+### Provisioning
 
-### New supported Azure regions: US Central and German West Central<!--37678838 -->
+#### New supported Azure regions: US Central and German West Central<!--37678838 -->
 
 Two new Azure regions are now for Windows 365 Cloud PC provisioning: US Central and German West Central.
 
