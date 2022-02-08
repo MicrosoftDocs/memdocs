@@ -87,7 +87,7 @@ An acceptance report provides the details of an individual's agreement to your t
 
 To view and export acceptance reports: 
 
-1. Go to **Tenant administration** > **Terms and Conditions**.
+1. Go to **Tenant administration** > **Terms and conditions**.
 2. Select your terms from the table. 
 3. Select **Acceptance Reporting** to view available reports.  
 4. Select **Export** to save the reports to your device.  
