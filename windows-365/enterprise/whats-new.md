@@ -61,7 +61,7 @@ Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These de
   - You don’t need to bring any Azure infrastructure
   - You don't need to create an on-premises network connection.
 - Your own network (using an on-premises network connection)
-- 
+
 #### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
 
 When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States). For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
