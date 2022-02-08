@@ -44,15 +44,17 @@ Complete these steps to create an Intune terms and conditions policy.
 2. Select **Create**.
 3. On the **Basics** page, enter the following information:
 
-   - **Name**: Give these terms and conditions a name so that you can recognize it in Intune later. Users don't see this name.
-   - **Description**: Optionally, describe the purpose of this set of terms to help you identify them later.  
+   - **Name**: Give your policy a name so that you can recognize it in Intune later. Users don't see this name.  
+   - **Description**: Optionally, describe the purpose or intended use for this specific set of terms.   
 
 4. Select **Next**.
 5. On the **Terms** page, enter the following information:
 
    - **Title**: The display name for your terms. Users see the title in the Company Portal app.  
    - **Terms and conditions**: The terms and conditions that users see and must either accept or reject.
-   - **Summary of Terms**: The summary is shown to the device users, and explains that by continuing to enroll their devices, they are accepting Company Portal terms and conditions. For example, *By enrolling your device, you're agreeing to the terms of use set out by Contoso. Read the terms carefully before proceeding.*
+   - **Summary of Terms**: The summary is shown to the device users, and explains that by continuing to enroll their devices, they are accepting Company Portal terms and conditions.  
+   
+      Example message: *By enrolling your device, you're agreeing to the terms of use set out by Contoso. Read the terms carefully before proceeding.*
 
 5. Select **Next**.
 
@@ -62,22 +64,20 @@ Complete these steps to create an Intune terms and conditions policy.
     - **Add all users**: Choose this option to assign these terms and conditions to all device users.
     - **Add groups**: Choose this option to assign these terms and conditions to users in select groups.  
 
-8. Select **Next**,
+8. Select **Next**.
 9. Review the summary of your new terms and conditions, and then select **Create**.  
 
-## How terms appear in Company Portal  
-Terms and conditions are visible in the Intune Company Portal app to device users who are in scope. The following image shows what the title and summary of terms look like in the app. Intune formats the title with bold font to make it stand out, with the summary of terms positioned directly under it.  
+## How it looks to users   
+Targeted users can see the terms and conditions in the Intune Company Portal app. The following image shows what the title and summary of terms look like in the app. Intune formats the title with bold font to make it stand out, with the summary of terms positioned directly under it.  
 
 ![Example image of the drafted terms in the Intune and then what it looks like in Company Portal.](./media/terms-and-conditions-create/terms-summary-terms.png)
 
-The device user can tap **Read terms** to expand and read the terms and conditions. The following image shows what the terms and conditions look like when expanded. 
+Devuce users can tap **Read terms** to expand the terms and conditions to full view. The following image shows what the terms and conditions look like when expanded. 
 
 ![Example image of the drafted terms and conditions message in Intune and then what it looks like in Company Portal.](./media/terms-and-conditions-create/terms-properties-terms.png)  
 
-
 ## Monitor acceptance of terms 
-
-An acceptance report provides the details of an individual's agreement to your terms and conditions. Details include:  
+An acceptance report provides the details of an individual's agreement to your terms and conditions. Intune reports the following details:  
 
 * User name: The name of the user who accepted the terms.
 * Accepted version: The version that was accepted. 
@@ -95,7 +95,7 @@ To view and export acceptance reports:
 > [!NOTE]
 > Report data is updated every 24 hours and can take up to 12 hours to finish generating. Because of this, data in the report can have up to a 36 hour latency.  
 
-## Provide localized terms to device users  
+## Provide localized terms and conditions  
 You can create multiple policies using localized text, and then target each policy to the appropriate groups of users.   
 
 ## Update terms and conditions  
