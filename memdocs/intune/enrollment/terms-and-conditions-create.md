@@ -52,7 +52,7 @@ Complete these steps to create an Intune terms and conditions policy.
 
    - **Title**: The display name for your terms. Users see the title in the Company Portal app.  
    - **Terms and conditions**: The terms and conditions that users see and must either accept or reject.
-   - **Summary of Terms**: Enter a brief, high-level explaination of what the user is agreeing to. This text is visible to device users.   
+   - **Summary of Terms**: Enter a brief, high-level explanation of what the user is agreeing to. This text is visible to device users.   
    
       Example message: *By enrolling your device, you're agreeing to the terms of use set out by Contoso. Read the terms carefully before proceeding.*  
 
