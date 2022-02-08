@@ -81,11 +81,11 @@ Windows 365 uses both Microsoft Azure AD and on-premises Active Directory Domain
 When configuring Cloud PCs to use Hybrid Azure AD Join, AD DS provides:
 
 - On-premises domain join for the Cloud PCs.
-- User authentication for the Remote Desktop Protocol (RDP) connection.
+- User authentication for the Remote Desktop Protocol (RDP) connections.
 
-When configuring Cloud PCs to use Azure AD Join, AD DS provides:
+When configuring Cloud PCs to use Azure AD Join, Azure AD provides:
 
-- Azure AD provides the domain join mechanism
+- The domain join mechanism for the Cloud PCs.
 - User authentication for RDP connections.
 
 ### Azure AD
