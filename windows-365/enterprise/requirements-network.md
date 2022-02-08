@@ -86,6 +86,15 @@ You must allow traffic in your Azure network configuration to the following serv
 
 All endpoints connect over port 443.
 
+### Remote Desktop Protocol (RDP) broker service endpoints
+
+Azure Virtual Desktop RDP broker service endpoints are critical to Cloud PC performance. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints.
+
+To make it easier to configure network security controls, use Azure Virtual Desktop service tags to identity those endpoints for direct routing using an [Azure Networking User Defined Route (UDR)](/azure/virtual-network/virtual-networks-udr-overview). A UDR will result in direct routing between your virtual network and the RDP broker for lowest latency. For more information about Azure Service Tags, see (Azure service tags overview)[/azure/virtual-desktop/network-connectivity].
+
+Changing the network routes of a Cloud PC (at the network layer or at the Cloud PC layer (e.g. VPN)), might break the connection between the Cloud PC and the Azure Virtual Desktop RDP broker. If so, the end user will be disconnected from their Cloud PC until a connection be established.
+
+
 ## DNS requirements
 
 As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to join on-prem Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-prem AD environment.
