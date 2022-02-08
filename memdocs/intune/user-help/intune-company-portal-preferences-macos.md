@@ -52,9 +52,9 @@ To turn off data collection in Company Portal, clear the checkbox next to **Allo
 The **Enable Advanced Logging** setting is available in the Intune Company Portal app for macOS devices. Device users can able to enable or disable advanced logging on a device. By turning on advanced logging, detailed log reports will be sent to Microsoft to troubleshoot issues. By default, the **Enable Advanced Logging** setting will be off. Device users should keep this setting off unless otherwise instructed by their organization's IT admin.
 
 To modify this setting on an macOS device:
-1. Open the **Settings** app.
-2. Find **Comp Portal**.
-3. Under **Diagnostics**, turn on or off the **Enable Advanced Logging** toggle.
+1. Open the Company Portal app.
+2. Go to the menu bar and select **Company Portal** > **Preferences**. 
+3. Under **Advanced logging**, modify the checkbox next to **Turn on advanced logging**.
 
 ## Next steps  
 
