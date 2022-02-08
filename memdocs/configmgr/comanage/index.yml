@@ -20,12 +20,6 @@ metadata:
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
-highlightedContent: 
-  items: 
-    - title: Understand co-management
-      itemType: learn
-      url: /learn/modules/understand-co-management/
-
 landingContent:
   - title: About co-management
     linkLists:
@@ -33,6 +27,8 @@ landingContent:
         links:
           - text: What is co-management?
             url: overview.md
+          - text: Learn module - Understand co-management
+            url: /learn/modules/understand-co-management/         
           - text: Paths to co-management
             url: quickstart-paths.md
 
