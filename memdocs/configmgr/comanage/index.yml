@@ -27,7 +27,7 @@ landingContent:
         links:
           - text: What is co-management?
             url: overview.md
-          - text: Learn module - Understand co-management
+          - text: Understand co-management (step-by-step)
             url: /learn/modules/understand-co-management/         
           - text: Paths to co-management
             url: quickstart-paths.md
