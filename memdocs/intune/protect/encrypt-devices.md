@@ -167,11 +167,11 @@ powercfg /a
 ```
 If the device supports modern standby, it will show that Standby (S0 Low Power Idle) Network Connected is available
 
-![Docs_BL_PowerCfg_Surface_S0_Possible](https://user-images.githubusercontent.com/44718379/152707579-06d14ccb-02ac-4b98-aad5-d91b0ebeca74.png)
+:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_s0_possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 available.":::
 
 If the device does not support modern standby, such as a virtual machine, it will show that Standby (S0 Low Power Idle) Network Connected is not supported
 
-![Docs_BL_PowerCfg_VM_noS0Possible](https://user-images.githubusercontent.com/44718379/152707599-22c37cb0-dd2c-4f52-9262-e61ee67ff905.png)
+:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_nos0possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 un-available.":::
 
 To verify the encryption type, run the following command from an elevated (admin) command prompt:
 
@@ -180,12 +180,13 @@ manage-bde -status c:
 ```
 The 'Conversion Status' field will reflect the encryption type as either Used Space Only encrypted or Fully Encrypted.
 
-![Docs_BL_UsedSpaceOnly](https://user-images.githubusercontent.com/44718379/152707629-2b32e169-d1c8-4ca6-8532-3caf32a7af00.png)
-![Docs_BL_FullyEncrypted](https://user-images.githubusercontent.com/44718379/152707640-5dc2f2df-aaeb-43fc-8714-3e2c35420aed.png)
+:::image type="content" source="./media/encrypt-devices/docs_bl_usedspaceonly.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting fully encrypted.":::
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_fullyencrypted.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting used space only encryption.":::
 
 To change the disk encryption type between full disk encryption and used space only encryption, leverage the'Enforce drive encryption type on operating system drives' setting within settings catalog.
 
-![Docs_BL_SettingsCatalog_Control_Encryption](https://user-images.githubusercontent.com/44718379/152707736-48d83500-5f60-4ff5-be85-f600fcdf57f6.png)
+:::image type="content" source="./media/encrypt-devices/docs_bl_settingscatalog_control_encryption.png" alt-text="Screenshot of Intune settings catalog displaying Enforce drive encryption type on operating system drives setting and drop-down list to select from full or used space only encryption types.":::
 
 #### TPM startup PIN or key
 
