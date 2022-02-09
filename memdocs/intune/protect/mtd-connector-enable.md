@@ -87,12 +87,10 @@ You can decide which MTD toggle options you need to enable according to your org
 
   Choose from the following options:
 
-  - **On** - Data shared with the partner includes unmanage apps (apps that aren't deployed through Intune) in addition to the apps that are deployed through Intune.
-  - **Off** - Data about unmanaged apps isn't provided to the partner. Intune shares the details for only the apps that are deployed through Intune.
+  - **On** - Allows this Mobile Threat Defense partner to request a list of iOS/iPadOS applications from Intune for personally-owned iOS/iPadOS devices. This list includes unmanaged apps (apps not deployed through Intune) as well as the apps that were deployed through Intune. 
+  - **Off** - Data about unmanaged apps isn't provided to the partner. Intune does share data for the apps that are deployed through Intune.
 
-   Regardless of this settings configuration, for corporate devices Intune sends data about both managed and unmanaged apps when your MTD vender requests application inventory data.
-
-
+  This setting has no effect for corporate devices. For corporate devices, Intune sends data about both managed and unmanaged apps when requested by this MTD vender.
 
 - **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version. Details of the minimum supported version would be shared within the docs for the Mobile Threat Defense vendor.
 
