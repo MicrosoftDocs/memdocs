@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/29/2021
+ms.date: 01/31/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,6 +57,7 @@ The following compliance partners are supported as generally available:
 - JAMF Pro
 - MobileIron Device Compliance Cloud
 - MobileIron Device Compliance On-prem
+- SOTI MobiControl
 - VMware Workspace ONE UEM (formerly AirWatch)
 
 ## Prerequisites

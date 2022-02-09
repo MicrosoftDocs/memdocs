@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/04/2022
+ms.date: 01/28/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -159,7 +159,7 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 You can use a proxy server with Microsoft Tunnel. The following considerations can help you configure the Linux server and your environment for success:
 
-### Configure an internal proxy for Docker
+### Configure an outbound proxy for Docker
 
 - If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines:
 
@@ -182,9 +182,13 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
   > [!NOTE]  
   > Microsoft Tunnel doesn’t support Azure AD App Proxy, or similar proxy solutions.
 
-### Configure an internal proxy for Podman
+### Configure an outbound proxy for Podman
 
 The following details can help you configure an internal proxy when using RHEL 8.4, and Podman:
+
+- Authenticated proxies aren't supported.
+
+- The proxy can’t perform break and inspect because the Linux server uses TLS mutual authentication when connecting to Intune.
 
 - Podman reads HTTP Proxy information stored in **/etc/profile.d/http_proxy.sh**. If this file doesn't exist on your server, create it. Edit **http_proxy.sh** to add the following two lines. In the following lines, *10.10.10.1:3128* is an example address:port entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP *address:port*:
 
