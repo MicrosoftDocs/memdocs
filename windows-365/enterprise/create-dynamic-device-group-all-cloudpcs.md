@@ -91,9 +91,9 @@ In these steps, you will use the Device Model device property to create the dyna
 4. For **Membership type**, choose **Dynamic Device**.
 5. Select **Add dynamic query**.
 6. On the **Dynamic membership rules** page, enter the following:
-    1. **Property** = “deviceModel”.
-    2. **Operator** = “Contains”.
-    3. **Value** = “Cloud PC”.
+    1. **Property** = “deviceModel”
+    2. **Operator** = “Contains”
+    3. **Value** = “Cloud PC”
 7. Select **Add expression** and enter the following:
     1. **Property** = “deviceModel”
     2. **Operator** = “Contains”
