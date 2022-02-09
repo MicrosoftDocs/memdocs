@@ -60,6 +60,7 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 | Monitoring | Not supported. | Endpoint Analytics reporting and monitoring, service health, and operational health alerts. |
 | Troubleshooting | Not supported | Microsoft Endpoint Manager troubleshooting including the Troubleshooting blade, device management actions, and reprovisioning of Cloud PCs to their initial state. |
 | Partner/programmatic access | Not supported | Partners can manage Cloud PCs through Microsoft 365 Lighthouse or restful web APIs (Graph) to support Managed Service Provider tooling for up to 300 seats.  |
+| Universal Print | Not supported. | Supported. |
 
 ## End user comparisons
 
