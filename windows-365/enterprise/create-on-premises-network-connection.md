@@ -44,8 +44,6 @@ As part of the connection process, the Windows 365 service is granted the follow
 - Network contributor permission on the specified resource group.
 - Network contributor permission on the virtual network.
 
-To ensure the on-premises network connection checks can run successfully, ensure your PowerShell execution policy is configured to allow RemoteSigned scripts to be run.  [More information](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
-
 ## Requirements
 
 To create a connection, you must:
