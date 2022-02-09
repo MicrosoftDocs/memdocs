@@ -64,20 +64,9 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
-### Support for Azure AD joined Cloud PCs<!-- 35060203-->
-
-Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These devices will run in a Microsoft-hosted network, so customers:
-
-- Don’t need their own Azure infrastructure
-- Don’t need to create an on-premises network connection.
-
 ### Operating system end of support status for Cloud PCs<!--36852572 -->
 
 The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
-
-### Configure installed language and region for provisioning Cloud PCs<!--37095808-->
-
-When creating a provisioning policy, you’ll be able to configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States).
 
 ### Point-in-time restore<!--37063579 -->
 
@@ -90,29 +79,13 @@ Administrators and users will be able to restore a Cloud PC to a state from a pr
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
-
-Intune’s remote action to Collect diagnostics will soon collect additional details from Windows 365 Cloud PCs.
-
-The new details for Windows 365 Cloud PCs include the following registry data:
-
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
-
-To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
-
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
 <!-- ***********************************************-->
-## Provisioning
+<!-- ## Provisioning -->
 
-### New supported Azure regions: US Central and German West Central<!--37678838 -->
-
-Two new Azure regions will be supported for Windows 365 Cloud PC provisioning: US Central and German West Central.
-
-For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->
