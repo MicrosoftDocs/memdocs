@@ -146,6 +146,45 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 > [!TIP]  
 > While the setting labels and options in the following two policy types are different from each other, they both apply the same configuration to Windows encryption CSPs that manage BitLocker on Windows devices.
 
+### Full disk vs Used Space only encryption 
+
+Three settings determine whether an OS drive will be encrypted using used space only or full disk encryption:
+- Whether the hardware of the device is [modern standby](/windows-hardware/design/device-experiences/modern-standby) capable
+- Whether silent enablement has been configured for BitLocker 
+  - ('Warning for other disk encryption' = Block or 'Hide prompt about third-party encryption' = Yes)
+- Configuration of the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) 
+  - (Enforce drive encryption type on operating system drives)
+
+Assuming that SystemDrivesEncryptionType has not been configured, the following is the expected behaviour. When silent enablement is configured on a modern standby device, the OS drive will be encrypted using used space only encryption. When silent enablement is configured on a device which is not capable of modern standby, the OS drive will be encrypted using full disk encryption. The result is the same whether you are using an [Endpoint Security disk encryption policy for BitLocker](/mem/intune/protect/encrypt-devices#create-an-endpoint-security-policy-for-bitlocker) or a [Device Configuration profile for endpoint protection for BitLocker](/mem/intune/protect/encrypt-devices#create-an-endpoint-security-policy-for-bitlocker). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog as shown below.
+
+To verify whether the hardware is modern standby capable, run the following command from a command prompt:
+
+```console
+powercfg /a
+```
+If the device supports modern standby, it will show that Standby (S0 Low Power Idle) Network Connected is available
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_s0_possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 available.":::
+
+If the device does not support modern standby, such as a virtual machine, it will show that Standby (S0 Low Power Idle) Network Connected is not supported
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_nos0possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 un-available.":::
+
+To verify the encryption type, run the following command from an elevated (admin) command prompt:
+
+```console
+manage-bde -status c:
+```
+The 'Conversion Status' field will reflect the encryption type as either Used Space Only encrypted or Fully Encrypted.
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_usedspaceonly.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting fully encrypted.":::
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_fullyencrypted.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting used space only encryption.":::
+
+To change the disk encryption type between full disk encryption and used space only encryption, leverage the'Enforce drive encryption type on operating system drives' setting within settings catalog.
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_settingscatalog_control_encryption.png" alt-text="Screenshot of Intune settings catalog displaying Enforce drive encryption type on operating system drives setting and drop-down list to select from full or used space only encryption types.":::
+
 #### TPM startup PIN or key
 
 A device **must not require** use of a startup PIN or startup key.
