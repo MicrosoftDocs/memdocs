@@ -37,7 +37,7 @@ With the 2022 Intune release, functionality has been added to the [Enrollment St
 
 See the following example:
 
-![Application pickter](images/app-picker.png)
+![Application picker](images/app-picker.png)
 
 ## Autopilot agility rolling out
 
