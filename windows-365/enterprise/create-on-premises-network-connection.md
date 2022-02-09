@@ -44,7 +44,7 @@ As part of the connection process, the Windows 365 service is granted the follow
 - Network contributor permission on the specified resource group.
 - Network contributor permission on the virtual network.
 
-To ensure the on-premises network connection checks can run successfully, ensure your PowerShell execution policy is configured to allow RemoteSigned scripts to be run. If your execution policy is set via Group Policy, ensure the GPO targeted at the Organizational Unit (OU) defined in the on-premises network connection is configured to allow RemoteSigned scripts. [More information](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
+To ensure the on-premises network connection checks can run successfully, ensure your PowerShell execution policy is configured to allow RemoteSigned scripts to be run.  [More information](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
 ## Requirements
 
@@ -52,6 +52,7 @@ To create a connection, you must:
 
 - Be an [Intune Administrator in Azure AD](/azure/active-directory/roles/permissions-reference).
 - Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network with connectivity to your on-premises domain controller and network.
+- Make sure that your PowerShell execution policy is configured to allow RemoteSigned scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the OPNC is configured to allow RemoteSigned scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
 ## To create an on-premises network connection
 
