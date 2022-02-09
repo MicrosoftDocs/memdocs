@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/8/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -30,16 +30,16 @@ ms.collection: M365-identity-device-management
 
 # Edit on-premises network connection
 
-All [on-premises network connections](on-premises-network-connections.md) (OPNC) are periodically checked to ensure that the environment is ready for use when provisioning Cloud PCs. If these [checks](health-checks.md) fail, you may need to need to fix your networking setup on Azure or edit one of the properties provided.
+All [on-premises network connections](on-premises-network-connections.md) (OPNC) get periodically checked to make sure that the environment is ready for provisioning Cloud PCs. If these [checks](health-checks.md) fail, you may need to fix your networking setup on Azure or edit one of the properties provided.
 
 To edit an on-premises network connection:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > select the connection you want to edit > **Properties**.
-2. On the **Properties** page, you can edit the **General** and **AD domain** settings by selecting **Edit** next to each header.
+2. For all OPNCs, you can edit the **General** settings by selecting **Edit** next to each header. You can edit all settings except **Join type**. For Hybrid Azure AD Join connections, you can also edit the **AD domain** settings.
 
 After the edits have been saved, the OPNC checks are run to verify the configuration.
 
-You cannot edit an OPNC if it is running checks. You must wait for the checks to pass/fail before edit functionality becomes available.
+You can't edit an OPNC if it's running checks. You must wait for the checks to pass/fail before edit functionality becomes available.
 
 <!-- ########################## -->
 ## Next steps
