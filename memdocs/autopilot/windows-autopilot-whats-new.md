@@ -13,7 +13,7 @@ author: greg-lindsay
 ms.author: greglin
 manager: dougeby
 ms.reviewer: jubaptis
-ms.date: 10/20/2021
+ms.date: 02/09/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -27,6 +27,17 @@ ms.topic: article
 - Windows 11
 - Windows 10
 - Windows Holographic, version 2004
+
+## Enrollment Status Page
+
+With the 2022 Intune release, functionality has been added to the Enrollment Status Page UI. The application picker for selecting blocking apps has additional improvements for admins:
+- Search box added for easier selection of apps
+- Fixes issue where store apps could not be differentiated between Online and Offline modes
+- Adds a new column for Version to see which version of the application is selected
+
+See the following example:
+
+![Application pickter](images/app-picker.png)
 
 ## Autopilot agility rolling out
 
