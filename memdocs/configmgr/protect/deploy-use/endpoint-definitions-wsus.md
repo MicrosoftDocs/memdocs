@@ -34,20 +34,6 @@ If you use WSUS to keep your antimalware definitions up to date, you can configu
 
 1. Select **OK** to close the **Software Update Point Component Properties** window.
 
-## Synchronize definition updates for standalone WSUS
-
-Use the following procedure to configure Endpoint Protection updates when your WSUS server isn't integrated into your Configuration Manager environment.
-
-1. In the WSUS administration console, expand **Computers**, select **Options**, and then select **Products and Classifications**.
-
-1. To specify the **Products** updated with WSUS, switch to the **Products** tab.
-
-    - For Windows 10 and later: Under Microsoft > Windows, select **Microsoft Defender Antivirus**.
-
-    - For Windows 8.1 and earlier: Under Microsoft > Forefront, select **System Center Endpoint Protection**.
-
-1. Switch to the **Classifications** tab. Select **Definition Updates** and **Updates**.
-
 ## Approve definition updates
 
 Endpoint Protection definition updates must be approved and downloaded to the WSUS server before they're offered to clients that request the list of available updates. Clients connect to the WSUS server to check for applicable updates and then request the latest approved definition updates.
