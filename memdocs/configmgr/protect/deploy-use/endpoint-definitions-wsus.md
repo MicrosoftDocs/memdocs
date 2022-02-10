@@ -1,7 +1,7 @@
 ---
 title: Endpoint Protection malware definitions from WSUS
 titleSuffix: Configuration Manager
-ms.date: 04/23/2020
+ms.date: 02/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
