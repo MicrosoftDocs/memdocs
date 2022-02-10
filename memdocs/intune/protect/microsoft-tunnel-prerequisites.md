@@ -34,7 +34,7 @@ At a high level, you’ll need the following to use the Microsoft Tunnel:
 - An Azure subscription.
 - An Intune subscription.
 - A Linux server that runs containers. This server can be on-premises or in the cloud:
-  - Podman for Red Hat Enterprise Linux (RHEL) 8.4 and later
+  - Podman for Red Hat Enterprise Linux (RHEL) 8.4 and 8.5  (See the [Linux server](#linux-server) requirements.)
   - Docker for all other Linux distributions
 - A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
 - Devices that run Android or iOS/iPadOS.
@@ -49,16 +49,17 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 Set up a Linux based virtual machine or a physical server on which Microsoft Tunnel Gateway will install.
 
-- **Linux distribution** - The following are supported:
+- **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require: 
+  
+  |Distributon version    | Container requirements   | Considerations     |
+  |-----------------------|--------------------------|--------------------|
+  | CentOS 7.4+           | Docker CE                | CentOS 8+ isn’t supported |
+  | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
+  | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
+  | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) after the server installs.|
+  | Ubuntu 18.04           | Docker CE               |                    |
+  | Ubuntu 20.04           | Docker CE               |                    |
 
-  - CentOS 7.4+(CentOS 8+ isn’t supported)
-  - Red Hat (RHEL) 7.4+
-  - Red Hat (RHEL) 8.4
-  - Red Hat (RHEL) 8.5
-    > [!NOTE]
-    > This version of RHEL doesn't automatically load the ip_tables module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) after the server installs.
-  - Ubuntu 18.04
-  - Ubuntu 20.04
 
 - **Size the Linux server**: Use the following guidance to meet your expected use:
 
@@ -75,17 +76,21 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **CPU**: 64-bit AMD/Intel processor.
 
-- **Install Docker CE or Podman**: Install Podman version 3.0 on RHEL 8.4 and later. For all other versions of RHEL or other Linux distributions, install Docker version 19.03 CE or later.
-  Microsoft Tunnel requires Docker (or Podman on RHEL 8.4 and later) on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
+- **Install Docker CE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
+  - Docker version 19.03 CE or later
+  - Podman version 3.0
+  
+
+  Microsoft Tunnel requires Docker or Podman on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
   For information about installing and configuring Docker or Podman, see:
 
   - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
     > [!NOTE]
-    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7. The version installed on RHEL 7 by default is too old to support Microsoft Tunnel Gateway. Red Hat Enterprise Linux 8 does not support Docker. For RHEL 8.4 and later, install and use Podman instead.
+    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-  - [Install Podman on Red Hat Enterprise Linux 8.4 and later (scroll down to RHEL8)](https://podman.io/getting-started/installation).  
-    Podman is the container solution used on RHEL 8.4, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
+  - [Install Podman on Red Hat Enterprise Linux 8.4 and 8.5 (scroll down to RHEL8)](https://podman.io/getting-started/installation)  
+    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
 with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
@@ -187,7 +192,7 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 ### Configure an outbound proxy for Podman
 
-The following details can help you configure an internal proxy when using RHEL 8.4 and later, and Podman:
+The following details can help you configure an internal proxy when using Podmam:
 
 - Authenticated proxies aren't supported.
 

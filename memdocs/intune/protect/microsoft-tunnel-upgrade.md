@@ -173,7 +173,7 @@ Changes in this release:
 
 - Added ability to get a client network trace
 - Added ability to enabled resource access tracking
-- Added support for Podman when using Red Hat Enterprise Linux 8.4
+- Added support for Podman when using [some versions](../protect/microsoft-tunnel-prerequisites.md#linux-servers) of Red Hat Enterprise Linux
 - Minor bug fixes
 
 ### September 7, 2021
