@@ -65,7 +65,7 @@ items:
       - name: PowerShell script for custom settings
         href: compliance-custom-script.md    
     - name: Location-based compliance
-      href: use-network-locations.md
+      href: ./create-compliance-policy.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance

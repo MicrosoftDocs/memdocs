@@ -2,12 +2,12 @@
 # required metadata
 
 title: Import Wi-Fi settings for Windows devices in Microsoft Intune
-description: Export Wi-Fi settings from a Windows device as an XML file using netsh wlan. Then, import this file in Intune to create a Wi-Fi profile for devices running Windows 8.1, Windows 10, and Windows Holographic for Business.
+description: Export Wi-Fi settings from a Windows device as an XML file using the network shell (netsh wlan) command. Then, import this file in Intune to create a Wi-Fi profile for devices running Windows 8.1, Windows 10/11, and Windows Holographic for Business.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 01/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,8 +32,8 @@ On Windows devices, you can export Wi-Fi settings to an XML file, and then impor
 
 This feature applies to:
 
-- Windows 10 and newer
-- Windows 10 desktop or mobile
+- Windows 11
+- Windows 10
 - Windows Holographic for Business
 - Windows 8.1 and newer
 
@@ -41,7 +41,7 @@ This article shows you how to export Wi-Fi settings from a Windows device, and t
 
 > [!NOTE]
 >
-> - On Windows 10 and newer, you can [create a Wi-Fi profile](wi-fi-settings-windows.md) directly in Intune. You don't have to import a file.
+> - On Windows 10/11, you can [create a Wi-Fi profile](wi-fi-settings-windows.md) directly in Intune. You don't have to import a file.
 > - For Windows 8.1 devices, you must export and import Wi-Fi settings to create and deploy Wi-Fi profiles.
 
 ## Export Wi-Fi settings from a Windows device
@@ -59,7 +59,7 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 >
 >   `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
 >
-> - Using a pre-shared key with Windows 10 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile works as expected.
+> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile works as expected.
 > - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
 
 ## Import the Wi-Fi settings into Intune
@@ -70,7 +70,7 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 
     - **Platform**: Select **Windows 8.1 and later**.
 
-      Even though you select Windows 8.1, this feature still applies to Windows 10 and Windows Holographic.
+      Even though you select Windows 8.1, this feature still applies to Windows 10/11 and Windows Holographic.
 
     - **Profile**: Select **Wi-Fi import**.
 
@@ -78,7 +78,7 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 5. In **Basics**, enter the following properties:
 
     - **Name**: This setting is the profile name. You must enter the same name as the `name` attribute in the Wi-Fi profile xml. If you enter a different name, the profile will fail.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended. For example, enter `Imported Wi-Fi profile for Windows 10 Holographic devices`.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended. For example, enter `Imported Wi-Fi profile for Windows Holographic devices`.
 
 6. Select **Next**.
 7. In **Configuration settings**, enter the following properties:

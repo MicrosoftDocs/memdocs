@@ -2,12 +2,12 @@
 # required metadata
 
 title: Restrict devices features using policy in Microsoft Intune
-description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, and Windows 10 devices in Microsoft Intune and Endpoint Manager.
+description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, and Windows 10/11 client devices in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 01/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -48,8 +48,9 @@ This feature applies to:
 - Android Enterprise personally-owned devices with a work profile
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
-- Windows 8.1 and newer
+- Windows 11
+- Windows 10
+- Windows 8.1
 
 This article shows you how to create a device restrictions profile. You can also see all the available settings for the different platforms.
 
@@ -89,7 +90,7 @@ This article shows you how to create a device restrictions profile. You can also
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Windows 10 and newer](device-restrictions-windows-10.md)
+    - [Windows 10/11](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 

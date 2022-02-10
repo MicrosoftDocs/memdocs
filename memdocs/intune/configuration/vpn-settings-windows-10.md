@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Windows 10 VPN settings in Microsoft Intune
-description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, conditional access, and DNS and proxy settings for Windows 10 and Windows Holographic for Business devices.
+title: Windows 10/11 VPN settings in Microsoft Intune
+description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, conditional access, and DNS and proxy settings for Windows 10/11 and Windows Holographic for Business devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2021
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +27,7 @@ ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 and Windows Holographic device settings to add VPN connections using Intune
+# Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -38,138 +38,162 @@ As part of your mobile device management (MDM) solution, use these settings to a
 
 These settings apply to devices running:
 
-- Windows 10
+- Windows 10/11
 - Windows Holographic for Business
 
 ## Before you begin
 
-- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
-
+- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows client VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client app you choose. Some settings are only available for specific VPN clients.
 - These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
-## Base VPN
+## User scope or Device scope
 
-- **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
-- **Servers**: Add one or more VPN servers that devices connect to. When you add a server, you enter the following information:
-  - **Description**: Enter a descriptive name for the server, such as **Contoso VPN server**.
-  - **IP address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect to, such as **192.168.1.1** or **vpn.contoso.com**.
-  - **Default server**: Enables this server as the default server that devices use to establish the connection. Set only one server as the default.
-  - **Import**: Browse to a comma-separated file that includes a list of servers in the format: description, IP address or FQDN, Default server. Choose **OK** to import these servers into the **Servers** list.
-  - **Export**: Exports the list of servers to a comma-separated-values (csv) file.
+- **Use this VPN profile with a user/device scope**: Apply the profile to the user scope or the device scope:
 
-- **Register IP addresses with internal DNS**: Select **Enable** to configure the Windows 10 VPN profile to dynamically register the IP addresses assigned to the VPN interface with the internal DNS. Select **Disable** to not dynamically register the IP addresses.
+  - **User scope**: The VPN profile is installed within the user's account on the device, such as `user@contoso.com`. If another user signs in to the device, the VPN profile isn't available.
+  - **Device scope**: The VPN profile is installed in the device context, and applies to all users on the device.
+
+Existing VPN profiles apply to their existing scope. By default, new VPN profiles are installed in the user scope *except* for the profiles with device tunnel enabled. VPN profiles with device tunnel enabled use the device scope.
+
+## Connection type
+
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 
-  - **Cisco AnyConnect**
-  - **Pulse Secure**
-  - **F5 Access**
-  - **SonicWall Mobile Connect**
   - **Check Point Capsule VPN**
+  - **Cisco AnyConnect**
   - **Citrix**
+  - **F5 Access**
   - **Palo Alto Networks GlobalProtect**
-  - **Automatic**
-  - **IKEv2**
-  - **L2TP**
-  - **PPTP**
+  - **Pulse Secure**
+  - **SonicWall Mobile Connect**
+  - **Automatic (Native type)**
+  - **IKEv2 (Native type)**
+  - **L2TP (Native type)**
+  - **PPTP (Native type)**
 
-  When you choose a VPN connection type, you may also be asked for the following settings:
+## Base VPN
 
-  - **Always On**: **Enable** automatically connects to the VPN connection when the following events happen:
-    - Users sign into their devices
-    - The network on the device changes
-    - The screen on the device turns back on after being turned off
+The following settings are shown depending on the connection type you select. Not all settings are available for all connection types.
 
-    To use device tunnel connections, such as IKEv2, **Enable** this setting.
+- **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections. For example, enter `Contoso VPN`.
+- **Servers**: Add one or more VPN servers that devices connect to. When you add a server, you enter the following information:
 
-  - **Authentication method**: Select how you want users to authenticate to the VPN server. Your options:
-    - **Username and password**: Require users to enter their domain username and password to authenticate, such as `user@contoso.com`, or `contoso\user`.
-    - **Certificates**: Select an existing user client certificate profile to authenticate the user. This option provides enhanced features, such as zero-touch experience, on-demand VPN, and per-app VPN.
+  - **Import**: Browse to a comma-separated file that includes a list of servers in the format: description, IP address or FQDN, Default server. Choose **OK** to import these servers into the **Servers** list.
+  - **Export**: Exports the existing list of servers to a comma-separated-values (csv) file.
+  - **Description**: Enter a descriptive name for the server, such as **Contoso VPN server**.
+  - **VPN server address**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect to, such as **192.168.1.1** or **vpn.contoso.com**.
+  - **Default server**: **True** enables this server as the default server that devices use to establish the connection. Set only one server as the default. **False** (default) doesn't use this VPN server as the default server.
 
-      To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
+- **Register IP addresses with internal DNS**: Select **Enable** to configure the VPN profile to dynamically register the IP addresses assigned to the VPN interface with the internal DNS. Select **Disable** to not dynamically register the IP addresses.
 
-    - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+- **Always On**: **Enable** automatically connects to the VPN connection when the following events happen:
+  - Users sign into their devices.
+  - The network on the device changes.
+  - The screen on the device turns back on after being turned off.
 
-    - **Machine certificates** (IKEv2 only): Select an existing device client certificate profile to authenticate the device.
+  To use device tunnel connections, such as IKEv2, **Enable** this setting.
 
-      If you use [device tunnel connections](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), you must select this option.
+  **Disable** doesn't automatically turn on the VPN connection. Users might have to turn on the VPN manually.
 
-      To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
+- **Authentication method**: Select how you want users to authenticate to the VPN server. Your options:
 
-    - **EAP** (IKEv2 only): Select an existing Extensible Authentication Protocol (EAP) client certificate profile to authenticate. Enter the authentication parameters in the **EAP XML** setting.
-  - **Remember credentials at each logon**: Choose to cache the authentication credentials.
-  - **Custom XML**: Enter any custom XML commands that configure the VPN connection.
-  - **EAP XML**: Enter any EAP XML commands that configure the VPN connection. For more information, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
+  - **Certificates**: Select an existing user client certificate profile to authenticate the user. This option provides enhanced features, such as zero-touch experience, on-demand VPN, and per-app VPN.
 
-  - **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to PCs joined to Azure Active Directory (AD).
+    To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).  
 
-    To use this feature, the following are required:
+  - **Username and password**: Require users to enter their domain username and password to authenticate, such as `user@contoso.com`, or `contoso\user`.
 
-    - **Connection type** setting is set to **IKEv2**.
-    - **Always On** setting is set to **Enable**.
-    - **Authentication method** setting is set to **Machine certificates**.
+  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
 
-    Only assign one profile per device with **Device Tunnel** enabled.
+  - **EAP** (IKEv2 only): Select an existing Extensible Authentication Protocol (EAP) client certificate profile to authenticate. Enter the authentication parameters in the **EAP XML** setting.
 
-  **IKE Security Association Parameters** (IKEv2 only): These cryptography settings are used during IKE security association negotiations (also known as `main mode` or `phase 1`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
+    For more information on EAP authentication, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access) and [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
-  - **Encryption algorithm**: Select the encryption algorithm used on the VPN server. For example, if your VPN server uses AES 128 bit, then select **AES-128** from the list.
+  - **Machine certificates** (IKEv2 only): Select an existing device client certificate profile to authenticate the device.
 
-    When set to **Not configured**, Intune doesn't change or update this setting.
+    If you use [device tunnel connections](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), you must select **Machine certificates**.
 
-  - **Integrity check algorithm**: Select the integrity algorithm used on the VPN server. For example, if your VPN server uses SHA1-96, then select **SHA1-96** from the list.
+    To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
 
-    When set to **Not configured**, Intune doesn't change or update this setting.
+- **Remember credentials at each logon**: **Enable** caches the authentication credentials. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not cache the authentication credentials.
+- **Custom XML**: Enter any custom XML commands that configure the VPN connection.
+- **EAP XML**: Enter any EAP XML commands that configure the VPN connection.
 
-  - **Diffie-Hellman group**: Select the Diffie-Hellman computation group used on the VPN server. For example, if your VPN server uses Group2 (1024 bits), then select **2** from the list.
+  For more information, including creating custom EAP XML, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
-    When set to **Not configured**, Intune doesn't change or update this setting.
+- **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to devices joined to Azure Active Directory (AD).
 
-  **Child Security Association Parameters** (IKEv2 only): These cryptography settings are used during child security association negotiations (also known as `quick mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
+  To use this feature, you must configure the following settings:
 
-  - **Cipher transform algorithm**: Select the algorithm used on the VPN server. For example, if your VPN server uses AES-CBC 128 bit, then select **CBC-AES-128** from the list.
+  - **Connection type**: Set to **IKEv2**.
+  - **Always On**: Set to **Enable**.
+  - **Authentication method**: Set to **Machine certificates**.
 
-    When set to **Not configured**, Intune doesn't change or update this setting.
+  Only assign one profile per device with **Device Tunnel** enabled.
 
-  - **Authentication transform algorithm**: Select the algorithm used on the VPN server. For example, if your VPN server uses AES-GCM 128 bit, then select **GCM-AES-128** from the list.
+### IKE Security Association Parameters (IKEv2 only)
 
-    When set to **Not configured**, Intune doesn't change or update this setting.
+These cryptography settings are used during IKE security association negotiations (also known as `main mode` or `phase 1`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
 
-  - **Perfect forward secrecy (PFS) group**: Select the Diffie-Hellman computation group used for perfect forward secrecy (PFS) on the VPN server. For example, if your VPN server uses Group2 (1024 bits), then select **2** from the list.
+- **Encryption algorithm**: Select the encryption algorithm used on the VPN server. For example, if your VPN server uses AES 128 bit, then select **AES-128** from the list.
 
-    When set to **Not configured**, Intune doesn't change or update this setting.
+  When set to **Not configured**, Intune doesn't change or update this setting.
+
+- **Integrity check algorithm**: Select the integrity algorithm used on the VPN server. For example, if your VPN server uses SHA1-96, then select **SHA1-96** from the list.
+
+  When set to **Not configured**, Intune doesn't change or update this setting.
+
+- **Diffie-Hellman group**: Select the Diffie-Hellman computation group used on the VPN server. For example, if your VPN server uses Group2 (1024 bits), then select **2** from the list.
+
+  When set to **Not configured**, Intune doesn't change or update this setting.
+
+### Child Security Association Parameters (IKEv2 only)
+
+These cryptography settings are used during child security association negotiations (also known as `quick mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
+
+- **Cipher transform algorithm**: Select the algorithm used on the VPN server. For example, if your VPN server uses AES-CBC 128 bit, then select **CBC-AES-128** from the list.
+
+  When set to **Not configured**, Intune doesn't change or update this setting.
+
+- **Authentication transform algorithm**: Select the algorithm used on the VPN server. For example, if your VPN server uses AES-GCM 128 bit, then select **GCM-AES-128** from the list.
+
+  When set to **Not configured**, Intune doesn't change or update this setting.
+
+- **Perfect forward secrecy (PFS) group**: Select the Diffie-Hellman computation group used for perfect forward secrecy (PFS) on the VPN server. For example, if your VPN server uses Group2 (1024 bits), then select **2** from the list.
+
+  When set to **Not configured**, Intune doesn't change or update this setting.
 
 ### Pulse Secure example
 
-```
+```xml
 <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
 ```
 
 ### F5 Edge Client example
 
-```
+```xml
 <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
 ```
 
 ### SonicWALL Mobile Connect example
+
 **Login group or domain**: This property can't be set in the VPN profile. Instead, Mobile Connect parses this value when the user name and domain are entered in the `username@domain` or `DOMAIN\username` formats.
 
 Example:
 
-```
+```xml
 <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
 ```
 
 ### CheckPoint Mobile VPN example
 
-```
+```xml
 <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
 ```
 
-### Writing custom XML
-For more information about writing custom XML commands, see each manufacturer's VPN documentation.
-
-For more information about creating custom EAP XML, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
+> [!TIP]
+> For more information about writing custom XML commands, see the manufacturer's VPN documentation.
 
 ## Apps and Traffic Rules
 
@@ -192,7 +216,7 @@ For more information about creating custom EAP XML, see [EAP configuration](/win
 
       The type of app determines the app identifier. For a universal app, enter the package family name, such as `Microsoft.Office.OneNote_8wekyb3d8bbwe`. For a desktop app, enter the file path of the app, such as `%windir%\system32\notepad.exe`.
 
-      To get the package family name, you can use the `Get-AppxPackage` Windows PowerShell cmdlet. For example, to get the OneNote package family name, open Windows PowerShell, and enter `Get-AppxPackage *OneNote`. For more information, see [Find a PFN for an app that's installed on a Windows 10 computer](../../configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn.md#find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer) and [Get-AppxPackage cmdlet](/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps).
+      To get the package family name, you can use the `Get-AppxPackage` Windows PowerShell cmdlet. For example, to get the OneNote package family name, open Windows PowerShell, and enter `Get-AppxPackage *OneNote`. For more information, see [Find a PFN for an app that's installed on a Windows client computer](../../configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn.md#find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer) and [Get-AppxPackage cmdlet](/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps).
 
   > [!IMPORTANT]
   > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).

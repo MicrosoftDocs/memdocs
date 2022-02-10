@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/04/2022
+ms.date: 02/09/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,69 +65,141 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Deploy DMG-type applications to managed macOS devices<!-- 1171356 -->
-You will be able to upload and deploy DMG-type applications to managed Macs from Microsoft Endpoint Manager using the **required** assignment type. DMG is the file extension for Apple disk image files. DMG-type apps are deployed using the Intune MDM agent for macOS devices. You can add a DMG app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **macOS app (DMG)**. 
+### iOS Company Portal minimum required version<!-- 13016075 -->
+With the March 2203 release of the MS Authenticator app, users will be required to update to v5.2203 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
 ### Password complexity for Android devices<!-- 9321870 -->
 The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn't meet the minimum password requirement, you'll be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. 
 
 This feature targets devices that operate on Android 11+. For devices that operate on Android 10 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
 
-<!-- ***********************************************-->
+### Improvements to Win32 App Log collection<!-- 9978316 -->
+Win32 App Log collection via Intune Management Extension has moved to the Windows 10 device diagnostic platform, reducing time to collect logs from 1-2 hours to 5 minutes.  We've also increased the size from 60mb to 250mb.  Along with performance improvements, the app logs will also be available under the **Device diagnostics monitor** action for each device, as well as the managed app monitor. For information about how to collect diagnostics, see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md) and [Troubleshooting Win32 app installations with Intune](/troubleshoot/mem/intune/troubleshoot-win32-app-install).
 
-## Device security
-
-### New Account protection policy to configure users in local groups on devices<!--5663034 -->
-We’re adding a new policy under endpoint security Account protection that you can use to manage the local user groups on a device. The settings are from the [Windows Client Management CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups).  (**Endpoint security** > **Account protection** > **Local Group Restrictions**).
-
-With this capability, when configuring the policy you’ll be able to select users from the Azure AD group picker, or manually add users by their SID.
-
-### Use Microsoft Defender for Endpoint as the Tunnel app for iOS devices (public preview)<!-- 9851681 -->
-As part of a public preview, you'll soon be able to use the Microsoft Defender for Endpoint client app as [Microsoft Tunnel app](../protect/microsoft-tunnel-overview.md) for your iOS devices.  Eventually, Defender for Endpoint will replace the use of the standalone Tunnel client app for iOS devices as it has for Android devices.
+### Advanced logging setting in Company Portal app<!-- 12859998 -->
+A new **Enable Advanced Logging** setting will be available in the Intune Company Portal app for iOS and macOS. Device users will be able to enable or disable advanced logging on a device. By turning on advanced logging, detailed log reports will be sent to Microsoft to troubleshoot issues. By default, the **Enable Advanced Logging** setting will be off. Device users should keep this setting off unless otherwise instructed by their organization's IT admin.
 
 <!-- ***********************************************-->
 
 ## Device configuration
 
-### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--  12636207 -->
-Intune’s remote action to [*Collect diagnostics*](../remote-actions/collect-diagnostics.md) will soon collect additional details from Windows 365 (Coud-PC) devices.  (**Devices** > **Windows** > *select a Windows 365 device* > **Collect diagnostics**)
+### On Android Enterprise, use the Connect Automatically setting on enterprise Wi-Fi profiles<!-- 10697036 -->
 
-The new details for Windows 365 devices include the following registry data:
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector 
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
+On Android Enterprise devices, you can create Wi-Fi profiles that include common enterprise Wi-Fi settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned work profile** > **Wi-Fi** for profile type > **Enterprise** for Wi-Fi type).
 
-### Automatic device clean-up rules support for Android Enterprise devices<!-- 9797532 -->
-Intune supports the creation of rules to automatically remove devices that appear to be inactive, stale, or unresponsive. You'll soon be able to use these clean-up rules with Android Enterprise devices that previously did not support them. This support is coming for:
-- Android Enterprise Fully Managed
-- Android Enterprise Dedicated
-- Android Enterprise Corporate-Owned with Work Profile
+You can configure the **Connect automatically** setting that automatically connects to your Wi-Fi network when devices are in range.
 
-To learn more about clean-up rules, see [Automatically delete devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
-
-### Choose a user or device scope when creating Windows VPN profiles<!-- 10685553 -->
-You will be able to create a VPN profile for Windows devices that configures VPN settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile).
-
-When you create a profile, there's a new **Use this VPN profile with a user/device scope** setting that lets you apply the profile to the user scope or the device scope:
-- **User scope**: The VPN profile is installed within the user's account on the device.
-- **Device scope**: The VPN profile is installed in the device context and applies to all users on the device.
-
-Existing VPN profiles will apply to their existing scope, and are not impacted by this change. Currently, all VPN profiles are installed in the user scope *except* for the profiles with device tunnel enabled, which requires device scope.
-
-For more information on VPN settings you can currently configure, see [Windows device settings to add VPN connections using Intune](../configuration/vpn-settings-windows-10.md).
+To see the settings you can currently configure, go to [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices](../configuration/wi-fi-settings-android-enterprise.md).
 
 Applies to:
-- Windows 11
-- Windows 10
+
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+### New macOS settings in the Settings Catalog<!-- 12987685 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. When you create a Settings Catalog policy, there are new settings available for macOS devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog (preview)** for profile type).
+
+New settings include:
+
+- Accounts > Caldav:
+  - Cal DAV Account Description
+  - Cal DAV Host Name
+  - Cal DAV Password
+  - Cal DAV Port
+  - Cal DAV Principal URL
+  - Cal DAV Username
+  - Cal DAV Use SSL
+
+- Accounts > Carddav:
+  - Card DAV Account Description
+  - Card DAV Host Name
+  - Card DAV Password
+  - Card DAV Port
+  - Card DAV Principal URL
+  - Card DAV Username
+  - Card DAV Use SSL
+
+- Networking > Domains > Email Domains
+
+- Printing > Printing:
+  - Allow Local Printers
+  - Default Printer
+    - Device URI
+    - Display Name
+  - Footer Font Name
+  - Footer Font Size
+  - Print Footer
+  - Print MAC Address
+  - Require Admin To Add Printers
+  - Show Only Managed Printers
+  - User Printer List
+    - Device URI
+    - Display Name
+    - Location
+    - Model
+    - PPD URL
+    - Printer Locked
+
+- Profile Removal Password > Removal Password
+
+- Proxies > Global HTTP Proxy:
+  - Proxy Captive Login Allowed
+  - Proxy PAC Fallback Allowed
+  - Proxy PAC URL
+  - Proxy Password
+  - Proxy Server
+  - Proxy Server Port
+  - Proxy Type
+  - Proxy Username
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 <!-- ***********************************************-->
-## Scripting
 
-### Intune Data Warehouse updates<!-- 9370034 -->
+## Device enrollment
 
-The `applicationInventory` entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+### Enforce Azure AD terms of use with Microsoft Intune or Microsoft Intune Enrollment cloud apps<!-- 12522105 -->
+Use the Microsoft Intune cloud app or Microsoft Intune Enrollment cloud app to enforce a conditional access, Azure AD Terms of Use policy on iOS and iPadOS devices during automated device enrollment.  Both apps will ensure that users accept the terms of use before enrolling if required by your conditional access policy. This functionality will be available when you select Setup Assistant with modern authentication as the authentication method.  
 
 <!-- ***********************************************-->
-<!--## Security-->
+
+## Device management
+
+### Create terms of use for Android (AOSP) user-associated devices<!-- 8506575 -->
+Require Android (AOSP) users to accept your organization's terms and conditions before using the Intune Company Portal app. This feature will be available for corporate-owned, user-associated devices only. For more information about creating terms of use in Intune, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).
+
+### Support for Audio Alert on Android Dedicated (COSU) devices<!-- 10567852 -->
+You'll be able to use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise dedicated device.
+
+For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
+
+<!-- ***********************************************-->
+
+## Device security
+
+### Manage the app inventory data for iOS/iPadOS devices that Intune sends to third-party MTD partners<!-- 10722315 -->
+
+You’ll soon have more control over the application inventory data for personally-owned iOS/iPadOS devices that Intune sends to your chosen third-party Mobile Threat Defense (MTD) partner. You’ll configure what data is sent with a new setting that’s available when you configure the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector). The new setting is **Send full application inventory data on personally-owned iOS/iPadOS Devices**.
+
+For personally-owned iOS/iPadOS devices:
+
+- When set to **On**: If your MTD partner syncs app data and requests a list of the iOS/iPadOS applications from Intune, that list includes unmanage apps (those not deployed through Intune) in addition to those deployed through Intune.  This is the current behavior.
+- When set to **Off**: Data on unmanaged apps won’t be provided, and the MTD partner only receives details about apps that were deployed through Intune.
+
+For corporate devices, data about managed and unmanaged apps continues to be included with requests for app data by your MTD vendor.  
+
+<!-- ***********************************************-->
+
+## Monitor and troubleshoot
+
+### Remote help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
+
+The remote help page in the Microsoft Endpoint Manager admin center is moving and will be directly under **Tenant administration** instead of **Connectors and tokens**. 
+
+For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
+
+<!-- ***********************************************-->
 
 ## Notices
 

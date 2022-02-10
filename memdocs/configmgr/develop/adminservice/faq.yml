@@ -35,7 +35,7 @@ sections:
       - question: |
           Are Swagger definitions available?
         answer: |
-          No, the administration service currently doesn't publish an [OpenAPI (Swagger) document](https://apidocs.microsoft.com/).
+          No, the administration service currently doesn't publish an [OpenAPI (Swagger) document](https://swagger.io/docs/).
           
   - name: Remote access
     questions:
