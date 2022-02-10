@@ -160,7 +160,9 @@ Windows 365 uses the Azure network infrastructure. An Azure subscription is requ
 - Office data (like email and OneDrive for Business file sync) incurs egress charges if the Cloud PC and a user’s data reside in different regions.
 - RDP networking traffic always incurs egress charges.
 
-For more information about costs associated with data transfers, see [Bandwidth pricing]( https://azure.microsoft.com/pricing/details/bandwidth/). When you use a Microsoft-hosted network: [!INCLUDE [Outbound data rates](../includes/outbound-data-rates.md)]
+If you bring your own network, see [Bandwidth pricing]( https://azure.microsoft.com/pricing/details/bandwidth/).
+
+If you use a Microsoft-hosted network: [!INCLUDE [Outbound data rates](../includes/outbound-data-rates.md)]
 
 <!-- ########################## -->
 ## Next steps
