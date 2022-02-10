@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 02/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -213,6 +213,8 @@ The following are known limitations when working with AOSP devices in Intune:
 * [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-aosp.md) to restrict settings on devices. 
 
 * [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).   
+
+* Create a policy that requires users to accept your [terms and conditions](terms-and-conditions-create.md) before enrollment. 
 
 * For more information about how to get started with AOSP, see [Android source requirements](https://source.android.com/setup/build/requirements)(opens Android source documentation). 
 
